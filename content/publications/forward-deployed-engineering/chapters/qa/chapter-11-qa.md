@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `build-a-production-vertical-slice.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but includes executable code and completes the vertical-slice professional job without programming-tutorial padding. Phase 09 may reopen only for a concrete coverage gap.
+Phase 09 added an end-to-end reviewer trace, consequential failure drill, clean-checkout supportability test, and failure repairs. The companion remains executable and programming tutorials remain out of scope. A second depth/duplication audit is still required.

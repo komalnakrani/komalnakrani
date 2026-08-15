@@ -413,6 +413,27 @@ Observe whether the user can confirm equipment, distinguish evidence from sugges
 
 UAT is not “we showed it and they liked it.” It does not transfer formal risk acceptance to participants. [CLM-102]
 
+### Work one Orchid UAT scenario
+
+Role: a qualified technician reviewer using the intended device under degraded but supported connectivity.
+
+Starting state: ticket has two plausible equipment candidates, one stale manual, current approved evidence for one candidate, and inventory whose first response is lost after acceptance.
+
+The participant must:
+
+1. recognize ambiguity and avoid premature evidence/model access;
+2. resolve equipment using the approved workflow;
+3. inspect source/version and distinguish evidence from suggestion;
+4. handle the stale source visibly;
+5. route qualified approval under the correct regional permission;
+6. recognize unknown inventory completion and reconcile rather than resubmit;
+7. use fallback/support when the connectivity window is exceeded;
+8. complete the non-digital handoff and locate the audit/support record.
+
+Acceptance evidence includes correctness, prohibited action absence, state interpretation, time within the owned window, assistance, fallback, accessibility observations, and participant reasoning at decision points. Stop if the protocol could create unsafe/external effects. Use synthetic or appropriately governed data.
+
+A passing participant does not approve production risk. The result is one evidence row with stated representation and limitations.
+
 ## Use simulation and monitoring for different evidence
 
 Static evaluation may miss multi-step behavior, timing, tool interaction, reviewer workload, and operational adaptation. Deployment-like simulation can expose more of that path but still cannot reproduce every real user, dependency, adversary, workload, or production tail. [CLM-099]
@@ -438,6 +459,56 @@ Every failed/inconclusive row receives:
 Known limitations belong in the release packet, support material, and user/operator communication where relevant. A waiver cannot change an observed failure into a pass. [CLM-104]
 
 The FDE prepares evidence/options. Designated authorities decide risk within delegated scope.
+
+## Conduct the chapter verification exercise
+
+Start from five risks:
+
+- wrong equipment/evidence binding;
+- duplicate external effect after unknown completion;
+- wrong tenant/region/qualification;
+- prohibited or unsupported suggestion;
+- low-connectivity timeout/retry amplification and unusable fallback.
+
+For each, write the requirement/control, observable criterion, cheapest credible method, data/provenance/version, expected result, observed result, evidence type, segment, limitation, owner, and release disposition.
+
+Then build evidence at several layers. A unit assertion can test a state transition. A contract test can test schema plus semantic invariants. An integration test can exercise adapter finality. End-to-end evidence can prove the bounded synthetic path. Evaluation can measure critical AI behavior. UAT can observe a representative workflow. Security/accessibility review can test versioned scoped criteria. Simulation can combine timing and failure. None replaces the others automatically.
+
+Calibrate two graders against human labels. Preserve disagreements and inspect shared failure modes. If both model graders were trained on similar assumptions, agreement is not independence. Use the rubric and decision purpose to decide whether the grader is advisory, blocking, or unsuitable. [CLM-098]
+
+Create an aggregate that appears to pass while one high-consequence equipment family fails. The correct disposition is not aggregate pass. Restrict release, repair or formally disposition the segment through designated authority, and keep the limitation visible. [CLM-096]
+
+Finally, conduct the UAT scenario above and write one failed/inconclusive row. The exercise passes when the packet tells the release owner exactly which claims are supported, which are not, and what exposure those limitations permit.
+
+## Failure modes and repairs
+
+### Test count becomes confidence
+
+Repair: trace consequence and requirement to credible observed evidence; keep suite conditions and non-proof explicit. [CLM-093]
+
+### Schema pass becomes semantic correctness
+
+Repair: assert workflow meaning, authorization, quality, intent, finality, and reconciliation as well as structure. [CLM-092]
+
+### Aggregate conceals a critical segment
+
+Repair: preserve segments, counts, uncertainty, and blocking disposition. [CLM-096]
+
+### Evaluation data leaks across decisions
+
+Repair: provenance, permissions, versions, splits, leakage checks, correction history, and representativeness limits. [CLM-097]
+
+### Model grader becomes objective authority
+
+Repair: explicit rubric, calibration, disagreement review, shared-failure analysis, and appropriate human/domain ownership. [CLM-098]
+
+### Demonstration becomes UAT
+
+Repair: representative roles/tasks/context, predefined criteria, observed assistance, stop/retest, privacy, and limitations. [CLM-102]
+
+### Waiver erases failure
+
+Repair: preserve failed observation, consequence, scope, conditions, owner, authority, expiry, and release effect. [CLM-104]
 
 ## Orchid `OA-07` current packet
 

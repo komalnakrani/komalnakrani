@@ -37,7 +37,8 @@
 - Representative adapter, performance, customer identity, UI/accessibility/UAT, provider model, monitoring, migration, and recovery evidence remain explicitly open.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 3,100 manuscript words plus executable verification code; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added a worked UAT scenario, five-risk verification exercise, layered evidence design, grader calibration, critical-segment disposition, and failure repairs.
+- 3,529 manuscript words plus executable verification code after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 13 may assume
 

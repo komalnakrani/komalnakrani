@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `prove-behavior-before-production.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but completes the verification job with executable evidence structures and no test-theory padding. Phase 09 may reopen only for a concrete coverage gap.
+Phase 09 added a worked UAT protocol, five-risk matrix exercise, layered evidence choices, grader calibration, critical-segment disposition, and failure repairs. Generic test theory remains out of scope. A second depth/duplication audit is still required.

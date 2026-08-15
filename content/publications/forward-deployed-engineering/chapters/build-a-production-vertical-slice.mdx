@@ -446,6 +446,70 @@ Automated setup and consistent release processes reduce manual variance. They do
 
 A clean local path is valuable reproducibility evidence and onboarding/support infrastructure. It is still separate from evidence in a customer-like environment. [CLM-089]
 
+### Trace the slice as a reviewer
+
+Use one synthetic intent and read the trace in operational order:
+
+1. Configuration is parsed and rejected if a secret field or wrong residency appears.
+2. The feature control defaults closed; no dependency call occurs until explicitly enabled for the synthetic scope.
+3. The ticket's equipment candidates remain missing, confirmed, or ambiguous rather than being coerced into a match.
+4. Contract validation checks structural and semantic equipment/region rules.
+5. Evidence and inventory adapters receive only the confirmed, authorized context.
+6. Unknown inventory completion preserves the intent and enters reconciliation rather than blind retry.
+7. The deterministic model double suggests only when approved evidence exists and budget permits; otherwise it abstains/falls back.
+8. Deterministic policy and qualified approval remain separate decisions.
+9. The final state, minimized metric, and audit event share safe correlation identifiers.
+
+At each step ask: what input was trusted, what state can emerge, what external effect can occur, what evidence is emitted, and who owns the next action? A function-level review can miss a semantic break between individually correct components.
+
+### Run the consequential failure drill
+
+Execute the happy path once to establish the trace shape. Then inject:
+
+- ambiguous equipment before evidence access;
+- successful evidence retrieval followed by inventory rejection;
+- missing response after external inventory acceptance;
+- expired or wrong-region authorization;
+- model budget exhaustion;
+- prohibited policy result;
+- feature disabled at construction.
+
+For each injection, record expected and observed state, dependencies contacted, external effects, audit/metric evidence, user/fallback behavior, owner, and non-proof. The test passes only when failure remains truthful and bounded. `Error returned` is insufficient if an external effect may already have happened or sensitive work continued after a failed boundary.
+
+### Review supportability from a clean checkout
+
+Give the repository to a reviewer who has not run it. They should locate setup, commands, module boundaries, configuration schema, synthetic fixtures, tests, failure injections, evidence output, and debt without private instructions.
+
+Record every hidden step: assumed runtime, global package, missing environment value, undocumented port, stale command, secret request, or unclear owner. Repair the repository or add an explicit prerequisite. The original author succeeding from a warmed environment does not prove reproducibility.
+
+This exercise also tests the repository map. If the reviewer cannot identify where a contract, policy, adapter, test, signal, or debt is owned, the structure does not yet support handoff.
+
+## Failure modes and repairs
+
+### Happy path becomes production proof
+
+Repair: inject consequential failures, preserve explicit states, and record the real integration/UI/environment/performance evidence still missing.
+
+### Mock becomes the dependency contract
+
+Repair: state what the double encodes and does not prove; validate representative adapter semantics and failures later. [CLM-087]
+
+### Orchestration hides contract meaning
+
+Repair: implement/validate semantic contracts first and keep intent, finality, error, authorization, and reconciliation visible.
+
+### Feature flag becomes permanent architecture
+
+Repair: owner, default, scope, interaction tests, evidence, expiry, and removal. [CLM-088]
+
+### Local setup depends on the author
+
+Repair: clean-checkout reproduction with documented runtime, deterministic fixtures, no secrets, and inspectable failures. [CLM-089]
+
+### TODO hides accepted risk
+
+Repair: debt reason, consequence, owner, trigger, exit, and release effect. [CLM-090]
+
 ## Production quality is a portfolio of evidence
 
 Functional correctness competes and cooperates with reliability, security, performance, cost, usability/accessibility, maintainability, operational support, and recovery. Provider architecture guidance and ISO's quality-model record help enumerate concerns, but no provider checklist decides Orchid's tradeoffs. [CLM-080]

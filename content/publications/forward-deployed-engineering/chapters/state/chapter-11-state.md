@@ -38,7 +38,8 @@
 - Real adapters, customer environment, workload identity, production UI, telemetry exporter, performance, and recovery remain future representative evidence.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 3,650 manuscript words plus executable code; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added a reviewer trace, consequential failure drill, clean-checkout supportability test, and explicit implementation failure repairs.
+- 4,102 manuscript words plus executable code after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 12 may assume
 
