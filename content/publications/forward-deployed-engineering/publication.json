@@ -93,6 +93,15 @@
       "minutes": 60,
       "sourceFile": "chapters/fit-the-customer-environment.mdx",
       "objectiveIds": ["FDE-K04", "FDE-K06", "FDE-K08", "FDE-K09"]
+    },
+    {
+      "order": 9,
+      "slug": "put-ai-inside-a-bounded-workflow",
+      "title": "Put AI Inside a Bounded Workflow",
+      "summary": "Decide when AI belongs, decompose tasks, bound model and tool behavior, evaluate by workflow consequence, and preserve deterministic controls and accountable human decisions.",
+      "minutes": 70,
+      "sourceFile": "chapters/put-ai-inside-a-bounded-workflow.mdx",
+      "objectiveIds": ["FDE-K03", "FDE-K04", "FDE-K07", "FDE-K08", "FDE-K09"]
     }
   ],
   "registries": {

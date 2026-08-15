@@ -1,0 +1,44 @@
+# Chapter 09 State - Put AI Inside a Bounded Workflow
+
+## Concepts introduced
+
+- mechanism ladder and AI decision record
+- workflow-consequence error taxonomy
+- task/case/grader/trace/harness/suite and capability/regression
+- segmented evaluation, leakage/grader calibration, whole-path evaluation
+- control ladder, human review, tool/agent boundary, abstention/fallback, bundle version
+
+## Terminology locked
+
+- Model output is suggestion/evidence transformation, not authority/fact by itself.
+- Deterministic policy, authorization, budgets, and stop live outside the model.
+- Human-in-the-loop is not a safety claim without designed evidence.
+
+## Examples and cases used
+
+- Orchid retrieval plus bounded suggestion; no automatic safety action/order
+- synthetic common versus safety-critical aggregate trap
+- model timeout/cost fallback; prohibited suggestion; missing equipment/evidence
+- vendor eval/agent guides labeled volatile/attributed
+
+## Figures
+
+- `F09.1` mechanism/control ladder placeholder present.
+- `F09.2` error-consequence-eval-control matrix placeholder present.
+
+## Project and companion progress
+
+- `OA-05` AI section complete.
+- Companion adds deterministic model, budget fallback, policy ladder, segmented evaluator; 15 cumulative tests pass.
+
+## Unresolved gaps
+
+- Production model/provider/thresholds remain future versioned decisions; default is deterministic double.
+- No blocking source gap.
+- Final figures wait for Phase 10.
+- Approximately 3,200 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+
+## Chapter 10 may assume
+
+- system/AI risks, controls, data/tools, identities, evaluation evidence, and formal decision needs are explicit;
+- framework alignment must not become compliance/risk acceptance.

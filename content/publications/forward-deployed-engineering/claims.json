@@ -336,6 +336,66 @@
       "chapterSlug": "fit-the-customer-environment",
       "statement": "The environment-difference matrix and topology/identity/configuration records in this chapter are original FDE synthesis tools rather than formal external standards.",
       "sourceIds": ["SRC-007", "SRC-021", "SRC-022", "SRC-024", "SRC-032"]
+    },
+    {
+      "id": "CLM-057",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "AI risk management should be lifecycle- and use-case-specific and the cited framework version/revision state should remain visible.",
+      "sourceIds": ["SRC-034", "SRC-035"]
+    },
+    {
+      "id": "CLM-058",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "A simpler deterministic or composable workflow is preferable when it satisfies the operational requirement without unnecessary autonomy or uncertainty.",
+      "sourceIds": ["SRC-038"]
+    },
+    {
+      "id": "CLM-059",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "Evaluation design benefits from explicit task, trial, data, grader, transcript or outcome, harness, suite, and capability-versus-regression distinctions.",
+      "sourceIds": ["SRC-036", "SRC-037"]
+    },
+    {
+      "id": "CLM-060",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "Agentic behavior requires bounded tools and data plus ground truth, checkpoints, stopping conditions, and recovery appropriate to consequence.",
+      "sourceIds": ["SRC-038"]
+    },
+    {
+      "id": "CLM-061",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "The model is one component inside a broader production system that includes data, interfaces, controls, evaluation, monitoring, operation, and users.",
+      "sourceIds": ["SRC-039"]
+    },
+    {
+      "id": "CLM-062",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "Deployment-like simulation can expose behavior missed by static evaluation while still leaving production-tail limitations.",
+      "sourceIds": ["SRC-041"]
+    },
+    {
+      "id": "CLM-063",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "Human review does not automatically make an AI-assisted workflow safe, attentive, scalable, qualified, or accountable.",
+      "sourceIds": ["SRC-034", "SRC-035", "SRC-038"]
+    },
+    {
+      "id": "CLM-064",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "Current generative-AI risk and security taxonomies can prompt system-specific discovery but do not provide complete threat coverage or certification.",
+      "sourceIds": ["SRC-035", "SRC-040"]
+    },
+    {
+      "id": "CLM-065",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "The NIST AI RMF 1.0 was under active revision at the research cutoff and should be cited as a versioned framework rather than timeless current status.",
+      "sourceIds": ["SRC-034"]
+    },
+    {
+      "id": "CLM-066",
+      "chapterSlug": "put-ai-inside-a-bounded-workflow",
+      "statement": "The specific OpenAI Evals platform documented at the research cutoff was scheduled for late-2026 deprecation, so durable prose should teach portable evaluation concepts rather than interface promises.",
+      "sourceIds": ["SRC-036"]
     }
   ]
 }
