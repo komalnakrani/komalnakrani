@@ -43,11 +43,15 @@
 
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
 
+## Active issue
+
+- Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
+
 ## Exact next action
 
-Close issue #1 with the lean-build and remote-tree evidence, then open one Komal
-issue for the reusable publication model, source registry, manuscript validation,
-editions, errata, figures, and PDF delivery.
+Execute issue #2: implement and verify the reusable publication truth model,
+source registry, canonical manuscript validation, editions, errata, figures, and
+reproducible PDF delivery. Then bootstrap the Forward Deployed Engineer role.
 
 ## Resume instructions
 
