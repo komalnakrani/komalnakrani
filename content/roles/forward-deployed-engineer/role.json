@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "slug": "forward-deployed-engineer",
+  "title": "Forward Deployed Engineer",
+  "summary": "A customer-embedded engineer who converts ambiguous, high-value workflows into secure, adopted, supportable production systems and reusable product learning.",
+  "status": "draft",
+  "boundary": {
+    "includes": [
+      "Lead the evidence and engineering chain from workflow discovery through production adoption, stabilization, handoff, and field learning.",
+      "Build and verify production behavior across customer interfaces, data, controls, operating constraints, and ownership boundaries.",
+      "Prepare decision-quality evidence and escalate formal risk, safety, privacy, legal, and business decisions to accountable owners."
+    ],
+    "excludes": [
+      "Act as legal counsel, independent auditor, safety authority, privacy officer, or unilateral security and business risk acceptor.",
+      "Own general account health, commercial pricing, renewals, enterprise transformation, or every component in the customer environment.",
+      "Represent the provisional Komal publication domains as an Abhyaas certification standard before cross-repo reconciliation."
+    ]
+  },
+  "competencies": [
+    {
+      "id": "FDE-C01",
+      "title": "Role, ethics, and outcome ownership",
+      "description": "Hold the deployed outcome while respecting authority, safety, and adjacent-role boundaries.",
+      "objectives": [{ "id": "FDE-K01", "statement": "Define and lead a bounded production outcome without claiming authority assigned to another role." }]
+    },
+    {
+      "id": "FDE-C02",
+      "title": "Workflow discovery and domain learning",
+      "description": "Build evidence-backed models of work, users, decisions, data, exceptions, incentives, and failure cost.",
+      "objectives": [{ "id": "FDE-K02", "statement": "Discover and validate the real workflow while distinguishing observation, report, inference, and unresolved evidence." }]
+    },
+    {
+      "id": "FDE-C03",
+      "title": "Outcome contracts, scope, and sequencing",
+      "description": "Define success and guardrails, control scope, expose dependencies, and sequence a safe path to value.",
+      "objectives": [{ "id": "FDE-K03", "statement": "Contract measurable outcomes and select the smallest safe production path with explicit decisions and exit criteria." }]
+    },
+    {
+      "id": "FDE-C04",
+      "title": "Architecture and customer integration",
+      "description": "Define system, interface, deployment, and ownership boundaries under customer constraints.",
+      "objectives": [{ "id": "FDE-K04", "statement": "Design implementable system and integration boundaries with explicit trust, failure, and ownership semantics." }]
+    },
+    {
+      "id": "FDE-C05",
+      "title": "Production engineering",
+      "description": "Build, test, review, diagnose, and maintain production-grade application and automation code.",
+      "objectives": [{ "id": "FDE-K05", "statement": "Implement and diagnose a representative end-to-end path with safe failures, reviewable code, and support evidence." }]
+    },
+    {
+      "id": "FDE-C06",
+      "title": "Data contracts and quality",
+      "description": "Integrate bounded data paths with explicit semantics, lineage, validation, and exception handling.",
+      "objectives": [{ "id": "FDE-K06", "statement": "Design semantic data and interface contracts that handle invalid, missing, late, duplicate, and ambiguous states." }]
+    },
+    {
+      "id": "FDE-C07",
+      "title": "AI and model integration and evaluation",
+      "description": "Use AI conditionally, measure behavior, define controls, and connect model quality to workflow risk.",
+      "objectives": [{ "id": "FDE-K07", "statement": "Select and bound AI behavior with task-specific evaluations, deterministic controls, and accountable human decisions." }]
+    },
+    {
+      "id": "FDE-C08",
+      "title": "Security, privacy, governance, and compliance",
+      "description": "Discover risk, design controls, produce evidence, respect formal authority, and escalate responsibly.",
+      "objectives": [{ "id": "FDE-K08", "statement": "Integrate security and governance evidence into delivery while routing formal decisions to accountable owners." }]
+    },
+    {
+      "id": "FDE-C09",
+      "title": "Verification, reliability, and operations",
+      "description": "Make production claims testable through acceptance evidence, telemetry, objectives, recovery, and operations.",
+      "objectives": [{ "id": "FDE-K09", "statement": "Verify, observe, release, recover, and stabilize the deployment against explicit user and system promises." }]
+    },
+    {
+      "id": "FDE-C10",
+      "title": "Rollout, adoption, enablement, and handoff",
+      "description": "Cross the production threshold safely and leave a used, stable, supportable system.",
+      "objectives": [{ "id": "FDE-K10", "statement": "Prove safe rollout and representative use, then transfer operation, support, access, and change ownership." }]
+    },
+    {
+      "id": "FDE-C11",
+      "title": "Field learning and product leverage",
+      "description": "Convert repeated evidence into reusable components, playbooks, and product feedback without premature abstraction.",
+      "objectives": [{ "id": "FDE-K11", "statement": "Separate customer-specific work from reusable product leverage using evidence, isolation, and a validation path." }]
+    },
+    {
+      "id": "FDE-C12",
+      "title": "Engagement leadership and portfolio judgment",
+      "description": "Align decisions, manage ambiguity and tradeoffs, communicate evidence, and lead multiple deployments.",
+      "objectives": [{ "id": "FDE-K12", "statement": "Lead and communicate deployment decisions at multiple altitudes with explicit confidence, authority, and escalation." }]
+    }
+  ]
+}

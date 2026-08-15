@@ -1,0 +1,473 @@
+---
+title: The Deployed Outcome
+slug: the-deployed-outcome
+summary: Define the Forward Deployed Engineer's unit of accountability, lifecycle, role boundary, and evidence-based meaning of done.
+minutes: 45
+sourceIds:
+  - SRC-001
+  - SRC-002
+  - SRC-003
+  - SRC-004
+  - SRC-005
+  - SRC-006
+  - SRC-007
+  - SRC-008
+claimIds:
+  - CLM-001
+  - CLM-002
+  - CLM-003
+  - CLM-004
+  - CLM-005
+  - CLM-006
+  - CLM-007
+  - CLM-008
+objectiveIds:
+  - FDE-K01
+  - FDE-K11
+  - FDE-K12
+figureIds: []
+---
+
+A production deployment can fail while every software task is marked complete.
+
+The repository may contain reviewed code. The release pipeline may be green. The model may perform well on a benchmark. The customer may even have attended a polished demonstration. Yet the people who do the work may avoid the system, the critical exception may still require an undocumented workaround, the support team may not know how to diagnose failure, or the organization may be unable to operate the change after the delivery team leaves.
+
+That gap--between shipped output and an owned production outcome--is the central problem of forward deployed engineering.
+
+Current employer descriptions use the title differently, but they repeatedly place Forward Deployed Engineers across more of the lifecycle than implementation alone: discovery, design, production engineering, rollout, adoption, and the return of field learning into product work. Some organizations use the narrower title Forward Deployed Software Engineer for an engineering-heavy version of the work. These are observations about present employers, not a universal standard for the profession. The operating model in this book is a synthesis designed to make the work explicit, testable, and teachable. It does not grant authority merely because someone carries the title. [CLM-001] [CLM-007]
+
+The synthesis begins with a demanding definition:
+
+> A deployed outcome is measurable, sustained workflow value achieved in the live operating environment, inside explicit guardrails, with evidence that the system is used, supportable, and owned.
+
+Each word rules out a familiar way to declare victory too early.
+
+- **Measurable** means that a decision can be informed by evidence. It does not require false precision.
+- **Sustained** means that the result survives beyond a demonstration or launch-day observation window.
+- **Workflow value** means an improvement in the work and its consequences, not merely more software activity.
+- **Live operating environment** means real dependencies, identities, policies, users, queues, failure modes, and ownership are present.
+- **Guardrails** mean value is not obtained through unacceptable safety, privacy, security, reliability, accessibility, cost, or human consequences.
+- **Used** means the intended participants actually incorporate the capability into representative work, not merely that accounts exist.
+- **Supportable** means degradation can be detected, diagnosed, contained, corrected, and communicated by named people with the necessary access and evidence.
+- **Owned** means ongoing operation, change, risk decisions, and support do not depend on an unrecorded personal relationship with the FDE.
+
+This definition is not a slogan. It is a test for project decisions. It determines what must be discovered, which evidence belongs in scope, where architecture ends, what “production-ready” must mean, and when the FDE should stop rather than ship.
+
+## The unit of accountability
+
+Traditional engineering plans often make the component or feature the unit of work. “Build the inventory adapter” is a clear implementation task. “Add retrieval” can be a clear technical task. “Deploy version 1.3” is a clear release task. Each can be necessary. None says why the customer should accept the change or what evidence would show that it helped.
+
+Forward deployed work changes the unit of accountability from a component to a bounded operational result.
+
+Consider Orchid Equipment Services, the fictional company used throughout this book. Orchid maintains industrial equipment for customers in several regions. Service requests arrive through inconsistent channels. A technician may search manuals, old tickets, an equipment registry, inventory records, and personal notes before deciding what to inspect, which part to carry, or when to escalate. Leaders ask for “an AI copilot trained on our manuals and service history.”
+
+If the team accepts the request as its unit of work, it can produce a chatbot and still learn almost nothing about the deployed outcome. The interface could respond fluently while equipment identifiers do not reconcile, current inventory is unavailable, unsafe actions are presented confidently, low-connectivity sites time out, or technicians ignore suggestions that hide their evidence.
+
+The outcome-oriented unit is different:
+
+> Improve evidence-supported field-service resolution for a bounded equipment family, region, and technician cohort, while preserving qualified approval for safety-relevant decisions, regional data constraints, service reliability, auditable evidence, and an operable support path.
+
+That statement is not yet a finished outcome contract. It contains no baseline, target, observation window, or decision rights; Chapter 4 will add them. But it already changes the engineering conversation.
+
+It asks whether the equipment registry and ticket identifiers agree. It makes inventory freshness and failure semantics material. It exposes the difference between summarizing evidence and authorizing action. It requires the team to identify who is qualified to approve safety-relevant recommendations. It makes low-connectivity behavior part of the path, not a later optimization. It treats the support model as a design input. A production outcome pulls the whole socio-technical path into view.
+
+Public service guidance offers a useful durable analogy: a service is understood through the outcome it enables across a user’s path, not solely through its digital interface. This book transfers that idea carefully to customer deployments. It does not claim that every commercial deployment should copy a government delivery process. It does claim that an interface is only one participant in a service or workflow. [CLM-003]
+
+## Release, deployment, and outcome are different events
+
+The words *release* and *deployment* are often used interchangeably. That ambiguity causes trouble in this role, so this book uses them precisely.
+
+A **release** is a controlled change to code, configuration, data schema, model, prompt, policy, or another system artifact. A release has a version, evidence, owner, and recovery path. It may enter production gradually. It may remain disabled behind a feature control. A release is an event inside a larger system of change.
+
+A **deployment**, in this book, is the complete socio-technical change from scoped problem through production adoption and ownership. It includes releases, but also workflow discovery, decision rights, user and operator preparation, controls, rollout, stabilization, support, handoff, and measured learning.
+
+A **production outcome** is the result the deployment is intended to create and sustain.
+
+The distinctions matter because the evidence differs:
+
+| Claim | Necessary evidence examples | What the evidence does not prove |
+| --- | --- | --- |
+| “The release completed.” | artifact/version, automated checks, environment record, release log | representative workflow value, adoption, long-term reliability |
+| “The deployment is in production.” | enabled production path, real dependencies and identities, bounded user exposure | success, safety, supportability, or customer ownership |
+| “The path is being used.” | representative task events, cohort and frequency, observed workflow integration | outcome improvement, correctness, voluntary trust, guardrail compliance |
+| “The system is supportable.” | signals, runbooks, access, on-call/support owner, rehearsed diagnosis/recovery | that every failure is covered or the owner can evolve the system |
+| “The outcome is achieved.” | outcome and guardrail evidence over an agreed window, adoption and operating evidence, limitations | perfect causal attribution or permanent value |
+
+Software release or user activity is therefore evidence, but neither is complete outcome evidence. [CLM-006]
+
+This prevents two opposite errors. The first is technical reduction: “We deployed it, so the customer must manage the rest.” The second is unlimited expansion: “Because we own the outcome, every organizational problem belongs to us.” A disciplined FDE avoids both.
+
+## The deployed-outcome lifecycle
+
+The lifecycle used in this book has ten movements:
+
+1. **Discover the work.** Learn how the workflow actually operates, including decisions, data, exceptions, incentives, handoffs, and failure cost.
+2. **Contract the outcome.** Define evidence of value, adoption, guardrails, non-goals, assumptions, decision rights, and stop/exit criteria.
+3. **Scope the first safe production path.** Choose the smallest path that crosses representative constraints and can produce decision-quality evidence.
+4. **Design the deployment.** Make system, interface, data, environment, identity, security, governance, operating, and ownership boundaries explicit.
+5. **Build representative behavior.** Implement an end-to-end vertical slice under production constraints, including controlled failure behavior.
+6. **Verify claims.** Connect workflow risk and acceptance criteria to tests, evaluations, user acceptance, controls, and known limitations.
+7. **Launch deliberately.** Review readiness, choose a rollout pattern, bound blast radius, name decision authority, and precommit to stop/recovery triggers.
+8. **Stabilize under real conditions.** Use production evidence to contain failure, correct the system, and confirm support readiness.
+9. **Transfer ownership.** Demonstrate that users and operators can perform, diagnose, release, recover, support, and evolve the bounded system.
+10. **Turn field evidence into leverage.** Preserve the customer boundary while converting repeated evidence into product feedback, playbooks, configurable capability, or reusable components.
+
+[FIGURE F01.2: A circular deployed-outcome lifecycle showing the ten movements, with solid forward arrows and dotted evidence-return arrows from verification, launch, stabilization, handoff, and field learning to earlier decisions. The figure distinguishes a software release as one event inside the larger deployment loop.]
+
+This is not a waterfall. Every later movement can invalidate an earlier assumption. A contract test can reveal that the supposed interface semantics were wrong. A security review can make the selected scope impossible. A canary can show that an aggregate evaluation hid a critical cohort failure. Stabilization can reveal that the support owner lacks the required access. Adoption work can prove that the technically correct interface does not fit the actual workflow.
+
+Returning to an earlier decision is not automatically rework or failure. It is the expected response to stronger evidence. The failure is erasing the decision history and pretending the new state was always known.
+
+The lifecycle is an original synthesis, not a formal external standard. Its purpose is to connect the practices repeatedly observed in current deployment-oriented roles with durable service, engineering, and risk principles. [CLM-005]
+
+## Outcome leadership without authority inflation
+
+“Own the outcome” is dangerous when used carelessly. It can become permission for an engineer to collect unnecessary data, make domain decisions without qualification, accept risk for someone else, or pressure users into a launch. It can also become a cultural demand for permanent availability and personal heroics.
+
+This book uses **outcome leadership** instead of unlimited outcome ownership. Outcome leadership means maintaining the chain of evidence and decisions required to reach a bounded result. It includes doing hard technical work, making gaps visible, bringing the right owner to a decision, recommending a course, and escalating when consequence exceeds authority.
+
+It does not mean that the FDE personally holds every decision right.
+
+Current deployment descriptions themselves make access, policy, approval, security, and escalation material. Durable security and privacy guidance likewise treats trust and risk as explicit organizational concerns rather than privileges inherited from location or job title. Outcome leadership does not remove those boundaries. [CLM-004]
+
+Use five separate questions whenever ownership language becomes vague:
+
+1. **Who is affected by the decision?** This identifies users and stakeholders, not authority.
+2. **Who has relevant evidence or expertise?** This identifies contributors, not necessarily approvers.
+3. **Who can execute the change?** This identifies an implementation owner, not necessarily a risk owner.
+4. **Who is accountable for accepting the consequence?** This identifies the decision authority.
+5. **Who must assemble evidence and drive the decision to closure?** This is often where the FDE leads.
+
+The same person can answer several questions, but the questions should not be collapsed.
+
+Suppose Orchid Assist proposes a recommendation that affects a safety-relevant inspection sequence. The FDE can discover how evidence reaches the technician, implement deterministic eligibility rules, design an approval gate, produce evaluation results, and recommend a bounded rollout. A qualified Orchid owner must define the operational safety rule. Security and privacy owners must decide whether the access and data-handling design meets the organization’s requirements. The business owner must accept the consequences of the rollout choice. The FDE drives the technical evidence chain and escalates missing decisions; the title does not confer the other authorities.
+
+This is not a retreat from accountability. “That is not my decision” is incomplete when the decision is necessary for the deployed outcome. A professional response is:
+
+> “This decision belongs to the regional safety owner. I have documented the affected workflow, alternatives, test evidence, residual uncertainty, and the date by which a decision is required. Until that approval exists, the production path remains blocked.”
+
+The sentence holds the deployment while respecting the boundary.
+
+## A practical responsibility classifier
+
+At the start of an engagement, classify work into four categories.
+
+### FDE core
+
+Core work directly maintains the chain from workflow evidence to production outcome. Examples include:
+
+- discovering the real workflow and its exceptions;
+- translating evidence into outcome, guardrail, scope, and exit decisions;
+- designing and building the representative production path;
+- making interfaces, data, identity, controls, failure, and ownership explicit;
+- producing verification, rollout, recovery, stabilization, adoption, and handoff evidence;
+- converting field evidence into product learning.
+
+Core does not mean exclusive. A product manager, designer, data engineer, security engineer, SRE, implementation lead, or customer specialist may share the work. “Core” means the FDE cannot ignore the missing link and still claim the deployed outcome is owned.
+
+### Shared
+
+Shared work requires joint judgment or execution. Architecture review, threat modeling, user research, production readiness, incident response, and adoption diagnosis commonly fit here. The local operating model must name who recommends, approves, executes, and is informed.
+
+### Supporting
+
+Supporting work helps the engagement but is not normally the FDE’s defining accountability. Preparing a demonstration, helping a customer engineer understand an API, improving a deployment template, or writing a field note can support the outcome. Supporting work becomes suspect when it consumes the engagement without advancing evidence or removing a material blocker.
+
+### Specialist-owned or outside scope
+
+Some work belongs to a qualified or formally authorized role: legal interpretation, independent audit, formal risk acceptance, clinical or safety authorization, employment decisions, commercial pricing, or enterprise-wide transformation governance. The FDE may supply technical evidence and implement an approved decision. The FDE does not impersonate the owner.
+
+Outside scope also includes work with no defensible relationship to the bounded outcome. Saying no is not abandonment when the request would distract the team or expand risk without evidence.
+
+[FIGURE F01.1: A boundary map with the FDE at the intersection of customer workflow, production engineering, and product learning. Surrounding regions show software engineering, product, security/privacy/safety authority, account/commercial work, and strategy. Overlaps are labeled shared; formal decision rights remain outside the FDE boundary unless explicitly assigned.]
+
+The classifier should be applied to tasks, not to people. A customer engineer can perform FDE-core work. An FDE can perform supporting implementation. The goal is to clarify the responsibility chain, not defend organizational territory.
+
+## The responsibility charter
+
+The first capstone artifact, `OA-01 Responsibility Charter and Discovery Plan`, begins with a short responsibility charter. It is intentionally created before deep discovery and revised when evidence changes.
+
+A useful charter contains the following.
+
+### Engagement purpose
+
+One paragraph states the operational hypothesis, target boundary, and why the work matters. It avoids promising a solution before discovery.
+
+For Orchid:
+
+> The Orchid Assist engagement will determine whether a bounded evidence-assisted path can improve field-service resolution for a selected equipment family and region without weakening qualified safety decisions, regional data handling, reliability, cost control, technician judgment, or operational ownership.
+
+The wording says “determine whether” because the outcome is not yet proven. It describes a bounded workflow, not a feature commitment.
+
+### FDE responsibilities
+
+List responsibilities as observable work: maintain evidence and decision records; lead technical discovery; design and implement the bounded vertical slice; coordinate verification and rollout evidence; expose material gaps; prepare decisions for accountable owners; support stabilization and handoff; return validated patterns to product owners.
+
+Avoid personality claims such as “be scrappy,” “do whatever it takes,” or “ensure customer happiness.” They cannot be reviewed and can hide unsafe expectations.
+
+### Decision and authority limits
+
+Name decisions the FDE may make, decisions the FDE recommends, and decisions requiring other approval. Include data access, production change, security/privacy exception, safety rule, go/no-go, external communication, and engagement exit where relevant.
+
+### Evidence obligations
+
+State how assumptions, contradictions, decisions, tests, limitations, incidents, and changes will be recorded. The charter should require that a missing approval, unknown owner, or unsupported claim remains visible.
+
+### Escalation triggers
+
+Examples include:
+
+- requested access or data cannot be tied to a legitimate discovery question;
+- a formal decision has no accountable owner;
+- a safety, privacy, security, legal, or compliance consequence exceeds the team’s authority;
+- the selected scope cannot produce representative evidence;
+- a deadline would require bypassing a material control or recovery test;
+- the customer cannot staff operation or handoff;
+- new evidence invalidates the outcome hypothesis;
+- repeated customer-specific work suggests product leverage, but isolation or ownership is unclear.
+
+### Exit conditions
+
+The engagement is not designed to continue forever. Initial exit language might require that the bounded system has an accepted outcome review, explicit limitations, a customer-owned operating/support model, demonstrated release and recovery, resolved privileged access, and a disposition for reusable work. Later chapters will make these conditions testable.
+
+### Named non-scope
+
+For Orchid, early non-scope can include automatic execution of safety-relevant actions, all equipment families, all regions, enterprise data remediation, and replacement of the customer’s safety, security, privacy, legal, or support authority. Non-scope can change through documented decision; it cannot change through quiet expectation.
+
+## Evidence changes the meaning of “done”
+
+Teams often use *done* as a local state: code merged, ticket closed, demo accepted, production flag enabled. Local completion remains useful. The FDE must connect it to the next evidence obligation.
+
+Use this pattern:
+
+> **The deliverable is complete when** [local evidence]. **The deployment may advance when** [gate evidence and authority]. **The outcome may be claimed when** [operational evidence over a defined boundary and window].
+
+For example:
+
+> The inventory adapter is complete when its versioned contract, success and error behavior, authentication path, retry/idempotency behavior, reconciliation process, tests, observability, and owner review satisfy the selected criteria. The deployment may advance to a production cohort when integrated evidence, security/operations approval, capacity assumptions, and recovery triggers pass the readiness gate. Improved first-visit resolution may be claimed only after the agreed cohort and observation window show the outcome direction without violating safety, escalation, latency, reliability, privacy, cost, or adoption guardrails, subject to the stated attribution limitations.
+
+The longer statement is not bureaucracy. It prevents one kind of evidence from impersonating another.
+
+## Failure modes of outcome language
+
+### The hero contract
+
+“You own the outcome” becomes “you are personally responsible for everything.” The FDE accumulates privileged access, makes undocumented exceptions, becomes the only operator, and compensates for organizational gaps through availability. Short-term progress masks an untransferable system.
+
+Repair: replace personal heroics with named decision rights, operating owners, escalation triggers, and handoff evidence. Treat bus-factor reduction as part of the outcome.
+
+### The feature contract
+
+The team delivers the requested feature accurately but never tests whether the feature changes representative work. The customer’s stated solution becomes the problem definition.
+
+Repair: preserve the request as evidence, then verify the current workflow, outcome, constraints, and failure cost before committing the design.
+
+### The activity contract
+
+Logins, prompts, generated documents, or recommendation counts become success. Activity can rise because users are confused, repeating failed attempts, or complying with policy.
+
+Repair: connect activity to segmented workflow outcomes, guardrails, support signals, and qualitative evidence. Activity is a diagnostic measure, not the outcome by default.
+
+### The authority shortcut
+
+The FDE makes a safety, privacy, security, or business decision because the accountable owner is slow or absent.
+
+Repair: make the missing owner and consequence visible. Reduce scope, delay, or stop. Escalation is a production skill.
+
+### The permanent pilot
+
+The system remains “pilot” indefinitely. It has real users and consequences but avoids production standards, operating ownership, or a stop decision.
+
+Repair: define pilot entrance, observation, guardrail, support, exit, and shutdown criteria. Small exposure changes blast radius, not the need for responsibility.
+
+### The productization reflex
+
+One customer-specific component is renamed a platform. Its embedded assumptions become invisible dependencies for future deployments.
+
+Repair: maintain a pattern ledger. Separate observation from invariant. Require an isolation and validation plan before abstraction. Some current FDE role descriptions explicitly include reusable patterns and product feedback; that makes evidence discipline more important, not less. [CLM-008]
+
+## Tradeoffs belong inside the outcome
+
+An outcome statement that mentions only benefit is incomplete. Real deployments trade among speed, scope, reliability, security, privacy, safety, performance, cost, maintainability, accessibility, user effort, and future leverage. The task is not to maximize every attribute. It is to make the important tradeoffs explicit enough for the right owner to decide.
+
+Suppose the Orchid team can improve recommendation latency by caching manuals and inventory results at regional sites. The change could improve low-connectivity performance, but it introduces freshness, storage, access, revocation, and data-residency questions. The FDE’s job is not to say “latency wins” or “security says no.” The job is to model the affected workflow, quantify or bound the latency need, identify the data and threat consequences, propose alternatives, test feasible controls, and route the decision to the owners who can accept the remaining consequence.
+
+A decision record should show:
+
+- the outcome or risk that triggered the decision;
+- the evidence and its confidence;
+- alternatives considered, including no change;
+- consequences and affected parties;
+- assumptions and expiration conditions;
+- who recommends, approves, and executes;
+- the decision and date;
+- validation and rollback/revisit triggers.
+
+This structure lets later evidence change the decision without rewriting history.
+
+## Field learning is part of delivery
+
+A forward deployed engagement produces two potential forms of value. The first is the bounded customer outcome. The second is validated learning that improves later delivery or the product itself.
+
+The second is not guaranteed. It must not justify extracting customer data, generalizing confidential assumptions, or building a platform from one anecdote. But ignoring repeated field evidence wastes an important property of the role.
+
+Current employer descriptions explicitly mention codifying patterns, tools, playbooks, building blocks, and product feedback. This supports the existence of the practice, not a claim that every organization structures it identically. [CLM-008]
+
+Field learning can become:
+
+- a clearer discovery question;
+- an integration or evaluation playbook;
+- a reusable test harness;
+- a configurable product capability;
+- a safer default;
+- a missing diagnostic signal;
+- documentation that prevents a recurrent misunderstanding;
+- a product requirement backed by repeated consequence;
+- or a decision not to generalize because the invariants are weak.
+
+Chapter 18 will define evidence thresholds and isolation rules. For now, the charter should establish that learning is recorded and routed, while customer boundaries remain intact.
+
+## The Orchid responsibility charter, first pass
+
+The following condensed record shows the level expected after this chapter. It is a draft to be revised as discovery proceeds.
+
+**Purpose.** Determine whether a bounded Orchid Assist path can improve evidence-supported field-service resolution for one equipment family and region within safety, data, reliability, cost, adoption, and ownership guardrails.
+
+**FDE leads.** Technical discovery; evidence and decision records; bounded design and implementation; interface/data/control evidence; verification; readiness recommendation; rollout technical leadership; stabilization; technical adoption blockers; handoff evidence; field-learning packet.
+
+**Shared.** Workflow research with technicians and service operations; architecture with customer IT/data/platform owners; threat and control work with security/privacy; evaluation and approval design with qualified domain owners; rollout and incident work within Orchid’s operating model.
+
+**Specialist/authority owned.** Safety rule and approval; privacy/legal interpretation; security exception/risk acceptance; regional data decision; business outcome target; production go/no-go acceptance; external customer communication; employment/incentive policy.
+
+**Initial non-scope.** Autonomous safety-relevant action; automatic parts ordering; multilingual voice; all equipment families/regions; enterprise identifier remediation; replacement of customer systems or governance functions.
+
+**Escalate when.** Access lacks a named purpose; accountable owner is missing; representative data cannot be used safely; guardrail evidence cannot be produced; deadline requires bypassing a material control; customer cannot own operation; outcome hypothesis is contradicted.
+
+**Initial exit hypothesis.** Outcome and guardrail review completed; limitations accepted by named owners; representative users can perform the workflow; support owns signals/runbooks; customer engineers demonstrate release/recovery; privileged FDE access is revoked or explicitly time-bounded; reusable work has an isolation-aware disposition.
+
+The charter is intentionally uncomfortable. It exposes decisions that a feature plan could hide. It gives the team permission to delay, reduce, or stop work when the evidence chain cannot be completed.
+
+## What the FDE should be able to say
+
+At the end of an engagement, a mature FDE should be able to make a statement like this:
+
+> “For the named technician cohort, equipment family, region, and observation window, the deployment changed the agreed workflow measures in the reported direction. The safety, escalation, reliability, privacy, cost, and adoption guardrails remained within their accepted bounds except for these stated limitations. The customer team has demonstrated the defined operating, support, release, and recovery responsibilities. These claims rely on the recorded evidence and have these attribution limits. Two patterns may justify reusable investment; one remains customer-specific. The following owner will review the outcome and open risks on the stated date.”
+
+It is a stronger statement than “we shipped.” It is also more modest than “we transformed the customer.” It names the boundary, evidence, limitations, ownership, and next decision.
+
+That combination--technical depth, operational continuity, evidence discipline, and authority restraint--is the foundation of the role.
+
+## Working the boundary through concrete decisions
+
+Role boundaries become useful only when they change a decision. The following situations show how the classifier operates under pressure.
+
+### A customer asks for a production export
+
+The sponsor says that a full export of service tickets will make discovery faster. The export contains customer identifiers, technician notes, location data, and attachments. The FDE has credentials that could retrieve it.
+
+The technical ability to obtain data is not the authority to collect it. The core FDE responsibility is to name the discovery question and find the minimum evidence that can answer it. Data access and handling are shared with the customer’s data, security, and privacy owners. Formal permission and risk decisions belong to the authorized customer roles.
+
+A weak response is to accept the export and promise to delete it later. Another weak response is to refuse all evidence and declare discovery impossible. The outcome-led response decomposes the request:
+
+- Which workflow hypotheses require ticket evidence?
+- Which fields, time window, equipment family, and region are material?
+- Can counts, redacted samples, synthetic fixtures, supervised queries, or customer-run analysis answer the early questions?
+- Who approves access and handling, and when does access expire?
+- Where will the evidence reside, who can see it, and how will deletion be verified?
+- What decision becomes impossible if the minimized evidence is insufficient?
+
+The FDE owns bringing this decision to closure because discovery cannot proceed responsibly without it. The FDE does not own the customer’s privacy or legal interpretation.
+
+### The customer wants an automatic action
+
+Orchid leadership wants the system to order the most likely replacement part as soon as a recommendation is generated. Automatic ordering could reduce delay, but an incorrect order can create cost, stock imbalance, or a missed safety-relevant inspection.
+
+The request spans all four categories. Understanding the operational decision and designing a representative path are FDE core. Integration and control design are shared with inventory, service operations, and customer engineering. Spending authority, safety policy, and acceptable error consequences are specialist or business-owner decisions. A demonstration of automatic ordering might be supporting work; it must not silently become a commitment.
+
+The initial charter can place automatic ordering outside scope while retaining an evidence path. The bounded deployment may show a recommended part, provenance, stock state, and a qualified approval action without executing the order. If later evidence and authority support automation, the scope changes through a recorded decision.
+
+This is not timid engineering. It is sequencing reversibility. The first path produces evidence about data quality, recommendation behavior, user trust, and inventory semantics before the system creates a financially or operationally consequential side effect.
+
+### A dependency team misses a date
+
+The identity team cannot deliver the planned workload identity before the pilot window. The FDE is asked to use a shared long-lived credential “temporarily.”
+
+Coordinating the dependency and proposing alternatives are core to the deployment. Implementing the identity mechanism is shared or customer-owned, depending on the operating model. Accepting the risk of the temporary credential is not implied by the FDE title.
+
+The decision record should compare at least these choices: delay; reduce the path to a non-production environment; use a properly scoped temporary mechanism with expiration, storage, rotation, monitoring, and named acceptance; or change the design. The record must show which outcome evidence is lost by delay and which risk is introduced by the workaround. If no authorized owner accepts an adequate option, the path remains blocked.
+
+The common failure is not that dependencies slip. It is that schedule pressure converts an exception into an invisible architecture decision.
+
+### Users do not adopt the system
+
+After rollout, use remains low. A leader asks the FDE to “drive adoption.”
+
+Adoption diagnosis is FDE core because the deployed outcome depends on representative use. Training, communications, workflow policy, product design, performance, access, evidence visibility, incentives, and support may each be shared with different owners. General workforce performance management is outside the FDE boundary.
+
+The FDE should not begin by assuming resistance. The system may be slow at field sites, require duplicate entry, omit the evidence technicians need, fail on the most common exception, or conflict with local responsibility. The outcome-led response collects segmented evidence, observes representative work, and identifies the smallest test that distinguishes these explanations. Chapter 17 will develop this diagnosis fully.
+
+### The same integration appears at a second customer
+
+A similar ticket-system adapter appears in another engagement. A product leader asks the FDE to make it a shared service.
+
+Recording the pattern and supplying evidence are core. Designing a reusable component may be shared with product and platform engineering. Roadmap priority and long-term service ownership do not transfer automatically to the FDE.
+
+Two adapters with similar endpoints may contain different identity, data, error, tenancy, version, and support semantics. The professional response is not “never abstract until the third occurrence,” because severe repeated cost or product risk can justify earlier work. It is also not “build a platform now.” The response is a pattern record: what repeated, what varied, which consequence matters, what evidence exists, what customer boundaries apply, what maintenance commitment follows, and which validation would disconfirm the proposed invariant.
+
+These examples share a structure. The FDE remains responsible for the continuity of the outcome even when another person holds the decision authority. Continuity means that the gap has an owner, evidence, consequence, option set, due date, and escalation path. It does not mean the FDE quietly makes the decision.
+
+## How an outcome claim matures
+
+The outcome statement should mature as the evidence matures. Treat it as a controlled claim, not a marketing sentence.
+
+### Stage 1: request
+
+> “Give every technician an AI copilot.”
+
+This is evidence of stakeholder intent. It is not yet a problem statement or outcome.
+
+### Stage 2: discovery hypothesis
+
+> “Technicians may be losing time and first-visit effectiveness because evidence needed for inspection and parts decisions is fragmented across systems and informal knowledge.”
+
+This is a testable hypothesis. It remains uncertain until the workflow and exceptions are observed.
+
+### Stage 3: bounded outcome contract
+
+> “For the selected equipment family, region, and technician cohort, reduce the agreed measure of evidence-gathering and resolution delay while improving or preserving first-visit success, with no unacceptable change in safety escalation, incorrect-part consequence, privacy, reliability, cost, or support burden.”
+
+This version requires definitions, baselines, targets, segments, windows, and decision rights. Chapter 4 supplies them.
+
+### Stage 4: readiness claim
+
+> “The bounded path has produced the required verification, UAT, control, operability, recovery, user/support preparation, and approval evidence for the stated cohort rollout; these gaps remain and have this disposition.”
+
+This supports a decision to expose the system. It does not claim the production outcome.
+
+### Stage 5: production outcome claim
+
+> “During the named observation window, the bounded cohort showed the stated outcome direction and guardrail state, with these adoption, reliability, support, and attribution limitations.”
+
+This is the claim the deployment exists to support. It remains bounded in time and context.
+
+### Stage 6: ownership and leverage claim
+
+> “The customer has demonstrated the accepted operating and change responsibilities; these patterns are supported for reuse, these remain customer-specific, and these require further validation.”
+
+The maturity sequence prevents language from outrunning evidence. A request is not a hypothesis; a hypothesis is not a contract; verification is not a production result; a production result is not permanent value; one result is not a platform.
+
+At every stage, store the claim beside its evidence, limitations, owner, and next decision. If a later stage fails, retain the earlier history. That history is how the next design becomes better without inventing hindsight.
+
+## Chapter close: the first gate
+
+Before entering the customer system, the FDE should have a provisional answer to five questions:
+
+1. What bounded operational result are we trying to learn or achieve?
+2. Which parts of the evidence-and-decision chain will the FDE lead?
+3. Which decisions belong to customer or specialist authorities?
+4. What conditions require escalation, reduced scope, delay, or stop?
+5. What would make the deployment operable and independent of the FDE?
+
+The answers will change. Their purpose is not to predict the engagement perfectly. Their purpose is to prevent ambiguity from silently becoming unlimited authority or unlimited obligation.
+
+Chapter 2, *Enter the Customer System*, turns the provisional charter into a legitimate discovery plan. It separates impact, knowledge, access, responsibility, and decision authority; ties each access request to a question; and establishes an evidence ladder that keeps reported opinion from becoming production fact.

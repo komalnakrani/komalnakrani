@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "slug": "forward-deployed-engineering",
+  "roleSlug": "forward-deployed-engineer",
+  "series": {
+    "slug": "forward-deployed-engineering",
+    "title": "Forward Deployed Engineering"
+  },
+  "volume": 1,
+  "title": "Forward Deployed Engineering",
+  "subtitle": "From Ambiguous Workflow to Production Outcome",
+  "description": "A practical field book for converting ambiguous customer workflows into secure, adopted, supportable production systems and reusable product learning.",
+  "author": "Komal Nakrani",
+  "language": "en",
+  "status": "draft",
+  "cover": "blueprint",
+  "edition": {
+    "version": "1.0.0",
+    "label": "First edition draft",
+    "publishedAt": null,
+    "copyrightYear": 2026,
+    "canonicalUrl": "https://komalnakrani.com/books/forward-deployed-engineering/"
+  },
+  "chapters": [
+    {
+      "order": 1,
+      "slug": "the-deployed-outcome",
+      "title": "The Deployed Outcome",
+      "summary": "Define the Forward Deployed Engineer's unit of accountability, lifecycle, role boundary, and evidence-based meaning of done.",
+      "minutes": 45,
+      "sourceFile": "chapters/the-deployed-outcome.mdx",
+      "objectiveIds": ["FDE-K01", "FDE-K11", "FDE-K12"]
+    }
+  ],
+  "registries": {
+    "sources": "sources.json",
+    "claims": "claims.json",
+    "figures": "figures.json",
+    "errata": "errata.json"
+  },
+  "pdf": {
+    "enabled": true,
+    "filename": "forward-deployed-engineering-v1.0.0.pdf"
+  }
+}

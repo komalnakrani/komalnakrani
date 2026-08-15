@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "claims": [
+    {
+      "id": "CLM-001",
+      "chapterSlug": "the-deployed-outcome",
+      "statement": "Current employer descriptions place Forward Deployed Engineers across discovery, implementation, deployment, adoption, and field feedback rather than at software delivery alone.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-003", "SRC-004"]
+    },
+    {
+      "id": "CLM-002",
+      "chapterSlug": "the-deployed-outcome",
+      "statement": "Current deployment-oriented employer materials explicitly connect technical delivery to measurable customer workflow results.",
+      "sourceIds": ["SRC-001", "SRC-004"]
+    },
+    {
+      "id": "CLM-003",
+      "chapterSlug": "the-deployed-outcome",
+      "statement": "A service is understood through the outcome it enables across the user's path, not solely through a digital interface.",
+      "sourceIds": ["SRC-006"]
+    },
+    {
+      "id": "CLM-004",
+      "chapterSlug": "the-deployed-outcome",
+      "statement": "Outcome leadership does not remove the need for explicit access, policy, approval, privacy, and risk-ownership boundaries.",
+      "sourceIds": ["SRC-005", "SRC-007", "SRC-008"]
+    },
+    {
+      "id": "CLM-005",
+      "chapterSlug": "the-deployed-outcome",
+      "statement": "The deployed-outcome lifecycle in this book is an original synthesis and operating model rather than a formal external standard.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-004", "SRC-006"]
+    },
+    {
+      "id": "CLM-006",
+      "chapterSlug": "the-deployed-outcome",
+      "statement": "Evidence of software release or user activity is not by itself complete evidence of sustained workflow value inside guardrails.",
+      "sourceIds": ["SRC-001", "SRC-004", "SRC-006"]
+    },
+    {
+      "id": "CLM-007",
+      "chapterSlug": "the-deployed-outcome",
+      "statement": "Forward Deployed Software Engineer is used here as a narrower engineering-heavy employer title rather than as a universal synonym for every FDE role.",
+      "sourceIds": ["SRC-003"]
+    },
+    {
+      "id": "CLM-008",
+      "chapterSlug": "the-deployed-outcome",
+      "statement": "Some current FDE descriptions explicitly include codifying field patterns, tools, playbooks, reusable building blocks, and product feedback.",
+      "sourceIds": ["SRC-002", "SRC-005"]
+    }
+  ]
+}
