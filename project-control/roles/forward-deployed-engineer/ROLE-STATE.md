@@ -5,23 +5,26 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal preparatory Phase 01 - role validation and boundary
+- Current global phase: Komal Phase 04 - book scope
 - Last updated: 2026-08-16
 - Last completed issue: Komal publication foundation #2
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#4](https://github.com/alpeshznakrani/komalnakrani/issues/4)
+- Active issue: pending Phase 04 child issue
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
 
-- canonical role name: pending evidence verdict
-- role boundary: pending Phase 01
+- canonical role name: Forward Deployed Engineer
+- canonical abbreviation: FDE
+- narrower alias: Forward Deployed Software Engineer (FDSE)
+- role verdict: PROCEED
+- role boundary: customer-embedded ownership from ambiguous workflow discovery through production, adoption, stabilization, handoff, and field-to-platform reuse
 - competency standard version: deferred to Abhyaas
 - exam blueprint version: deferred to Abhyaas
 - book structure: pending Phase 04
 - book titles: pending Phase 05
 - volume count: pending Phase 04
-- terminology decisions: pending Phase 01/05
+- terminology decisions: FDE canonical; FDSE treated as a narrower engineering-heavy alias; AI is a specialization, not the universal role definition
 - course decision: pending Phase 13 AUTO evaluation
 - certification title: deferred to Abhyaas
 - authorship: all Komal publications are original and written fresh
@@ -45,7 +48,7 @@
 
 ## Completed gates
 
-- [ ] 01 role validation
+- [x] 01 role validation
 - [ ] 02 competency standard (deferred)
 - [ ] 03 exam blueprint (deferred)
 - [ ] 04 book scope
@@ -67,18 +70,17 @@
 
 ## Current work
 
-Execute primary-source role validation in issue #4.
+Open and execute Phase 04 book scope using the locked role definition and boundary.
 
 ## Unresolved blockers
 
-None.
+None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred until the Komal-first lock is released.
 
 ## Research gaps
 
-- Whether the title is durable across employers or primarily a company-specific label.
-- The consistent core across enterprise software, AI, data, and public-sector deployments.
-- Boundary with applied AI engineering, solutions architecture, and customer engineering.
-- Durable responsibilities versus employer-specific platforms and tools.
+- Validate scope depth and volume count against the complete engagement lifecycle.
+- Determine which AI-specific material belongs in the durable core versus examples/labs.
+- Establish a technology-neutral running case that can demonstrate integration, governance, rollout, operations, and adoption.
 
 ## Quality debt
 
@@ -86,9 +88,8 @@ None at role start.
 
 ## Exact next action
 
-Build the structured evidence register from current official sources, then write the role validation and adjacent-role boundary reports.
+Open the Phase 04 child issue, decide one-volume versus multi-volume scope, and lock reader profile, outcomes, exclusions, and coverage matrix.
 
 ## Resume instructions
 
-Read this file, both local issue specifications, the GitHub root/active issues, and
-`project-control/role-factory/FACTORY-STATE.md`; then resume only the active child issue.
+Read this file, the role-validation evidence and boundary reports, the GitHub root/active issues, and `project-control/role-factory/FACTORY-STATE.md`; then resume only the active child issue.
