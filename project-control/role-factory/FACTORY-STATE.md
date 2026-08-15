@@ -32,26 +32,28 @@
 - Active source: stripped to a lean Komal visual/publishing shell.
 - Removed from active source: 1,477 inherited files, including all prior books,
   chapters, covers, figures, identity assets, solution pages, and integrations.
-- Recovery: ignored generated/inherited artifacts moved to
-  `/Users/alpesh/.Trash/komal-pruned.HQW19h`; original Git tree retained under a
-  local archive ref until the lean replacement is verified.
+- Recovery: ignored generated/inherited artifacts were moved to
+  `/Users/alpesh/.Trash/komal-pruned.HQW19h`. After the clean remote was verified,
+  the temporary archive ref and inherited Git objects were permanently pruned;
+  `.git` is now approximately 220 KB.
 - Lean build: PASS, 4 static pages in 649 milliseconds on final verification.
-- Dependencies: 337 packages; audit reports 7 advisories (1 low, 6 high).
+- Publication foundation: implemented at `a55a1ea`; full `npm run check` PASS.
+- PDF proof: deterministic six-page A4 output, SHA-256
+  `f74b9961fc1d390f14e123297c1afe6b8126fcca1bda0e7f8648a07221fb9320`,
+  all rendered pages visually verified.
+- Dependencies: 329 packages; audit reports 8 advisories (1 low, 1 moderate, 6 high).
 - Abhyaas issue #25: open but paused by the Komal-first execution decision.
 
 ## Completed issue
 
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
-
-## Active issue
-
 - Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
 
 ## Exact next action
 
-Execute issue #2: implement and verify the reusable publication truth model,
-source registry, canonical manuscript validation, editions, errata, figures, and
-reproducible PDF delivery. Then bootstrap the Forward Deployed Engineer role.
+Bootstrap the Forward Deployed Engineer as the first Komal-only role: create its
+root issue and `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`,
+then execute role research and boundary validation before deciding book count.
 
 ## Resume instructions
 

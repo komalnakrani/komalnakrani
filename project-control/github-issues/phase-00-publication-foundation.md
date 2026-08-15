@@ -23,16 +23,16 @@ Build the reusable Komal publication foundation that turns fresh, source-backed 
 
 ## Acceptance criteria
 
-- [ ] Schemas represent every publication truth object and reject unknown/invalid states.
-- [ ] Empty production catalogs still build without publishing fixtures or placeholders.
-- [ ] A fixture proves valid publications pass and malformed publications fail validation.
-- [ ] Public routes are generated only for `published` manifests.
-- [ ] Edition and errata URLs are stable and book-scoped.
-- [ ] Figure records require source file, alt text, caption, and chapter mapping.
-- [ ] Source records support chapter/claim traceability and access metadata.
-- [ ] PDF output is deterministic, versioned, checksum-addressable, rendered to PNG, and visually verified.
-- [ ] `npm run build` and the publication validation suite pass.
-- [ ] Factory state records the next role bootstrap action.
+- [x] Schemas represent every publication truth object and reject unknown/invalid states.
+- [x] Empty production catalogs still build without publishing fixtures or placeholders.
+- [x] A fixture proves valid publications pass and malformed publications fail validation.
+- [x] Public routes are generated only for `published` manifests.
+- [x] Edition and errata URLs are stable and book-scoped.
+- [x] Figure records require source file, alt text, caption, and chapter mapping.
+- [x] Source records support chapter/claim traceability and access metadata.
+- [x] PDF output is deterministic, versioned, checksum-addressable, rendered to PNG, and visually verified.
+- [x] `npm run build` and the publication validation suite pass.
+- [x] Factory state records the next role bootstrap action.
 
 ## Verification
 
