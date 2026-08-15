@@ -55,14 +55,15 @@
 
 - Role: Applied AI Engineer
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Active child: [#26 - Build Applied AI Engineering chapter blueprints](https://github.com/alpeshznakrani/komalnakrani/issues/26), 21-blueprint/42-figure/11-domain/12-milestone acceptance complete and closure pending
+- Phase parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27), ready while bounded children execute sequentially
+- Active child: [#28 - Write Applied AI Engineering chapters 01-03](https://github.com/alpeshznakrani/komalnakrani/issues/28)
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Commit Applied AI Engineer Phase 07 blueprints, close issue #26, then open Komal
-Phase 08 original manuscript and executable companion production. Do not enter
-deferred Abhyaas work.
+Write, validate, commit, and close Applied AI Engineer Phase 08 child #28 for
+Chapters 01-03, then open only the next manuscript batch. Do not enter deferred
+Abhyaas work.
 
 ## Resume instructions
 

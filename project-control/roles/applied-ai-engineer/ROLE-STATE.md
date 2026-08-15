@@ -5,11 +5,12 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 07 acceptance complete - Phase 08 transition pending
+- Current global phase: Komal Phase 08 manuscript production - Chapters 01-03 active
 - Last updated: 2026-08-16
-- Last completed issue: Phase 06 #25, 21 research packs / 55 sources / 118 claims / 12 cases
+- Last completed issue: Phase 07 #26, 21 verified blueprints
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Active issue: [#26](https://github.com/alpeshznakrani/komalnakrani/issues/26)
+- Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27)
+- Active issue: [#28](https://github.com/alpeshznakrani/komalnakrani/issues/28)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -74,7 +75,7 @@
 
 ## Current work
 
-Phase 07 acceptance is complete. Exactly 21 blueprints match the frozen titles/order; every required writing/implementation field is present. All 42 forecast figures are assigned once, all 11 domains and 12 `PF-*` milestones are covered, every source/case reference remains inside its chapter's verified research pack, and chapter word ranges total 132,500–164,000. The provider-neutral companion advances as one Patchwork system from local baselines through data/context, evaluation, failure, controls, release, incident, migration, reuse, and portfolio verification.
+Phase 08 parent #27 is open and child #28 is the only active manuscript unit. Chapters 01-03 must establish complete original prose, learning/state/QA records, production source/claim mappings, six frozen figure anchors, and the first provider-neutral contract artifacts before Chapters 04-06 can open.
 
 ## Unresolved blockers
 
@@ -95,8 +96,8 @@ None. Blueprint QA confirms 21/21 title/order matches, ten required section grou
 
 ## Exact next action
 
-Commit and close Phase 07 issue #26, then open Komal Phase 08 to write the complete original manuscript and executable companion in bounded sequential batches.
+Write and immediately QA Applied AI Engineering Chapters 01-03 under issue #28. Do not open Chapters 04-06 until this batch is committed, pushed, and closed.
 
 ## Resume instructions
 
-Read this file, the role root/active issues, `project-control/role-factory/FACTORY-STATE.md`, architecture, research, all 21 blueprints, and blueprint verification before resuming only Phase 07.
+Read this file, the role root, Phase 08 parent #27, active issue #28, architecture, research packs, blueprints 01-03, and blueprint verification before resuming only Chapters 01-03.
