@@ -56,14 +56,14 @@
 - Role: Applied AI Engineer
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27), ready while bounded children execute sequentially
-- Last completed child: [#28 - Write Applied AI Engineering chapters 01-03](https://github.com/alpeshznakrani/komalnakrani/issues/28), accepted at commit `aadc7c5`
-- Active child: [#29 - Write Applied AI Engineering chapters 04-06](https://github.com/alpeshznakrani/komalnakrani/issues/29)
+- Last completed child: [#29 - Write Applied AI Engineering chapters 04-06](https://github.com/alpeshznakrani/komalnakrani/issues/29), accepted through commit `11002c2`
+- Active child: [#30 - Write Applied AI Engineering chapters 07-09](https://github.com/alpeshznakrani/komalnakrani/issues/30)
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Write, validate, commit, and close Applied AI Engineer Phase 08 child #29 for
-Chapters 04-06, then open only the next manuscript batch. Do not enter deferred
+Write, validate, commit, and close Applied AI Engineer Phase 08 child #30 for
+Chapters 07-09, then open only the next manuscript batch. Do not enter deferred
 Abhyaas work.
 
 ## Resume instructions
