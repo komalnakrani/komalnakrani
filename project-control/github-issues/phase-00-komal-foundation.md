@@ -24,13 +24,13 @@ Establish the copied Astro site as the durable KomalNakrani.com repository basel
 
 ## Acceptance criteria
 
-- [ ] A lean visual shell is tracked in `alpeshznakrani/komalnakrani` without
+- [x] A lean visual shell is tracked in `alpeshznakrani/komalnakrani` without
   inherited content, the nested SEO repository, generated output, secrets, or
   oversized local archives.
-- [ ] Production build completes successfully.
-- [ ] Foundation audit identifies implemented capabilities with file evidence.
-- [ ] Missing capabilities are classified by launch impact and converted into one exact next executable action.
-- [ ] Factory state records repositories, locked UI decision, active issue, and next action.
+- [x] Production build completes successfully.
+- [x] Foundation audit identifies implemented capabilities with file evidence.
+- [x] Missing capabilities are classified by launch impact and converted into one exact next executable action.
+- [x] Factory state records repositories, locked UI decision, active issue, and next action.
 
 ## Verification
 
