@@ -48,20 +48,20 @@
 
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
 - Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
-- Forward Deployed Engineer: Phases 01 and 04-08, including all nineteen manuscripts, learning/state/QA records, front matter, five appendices, and the 64-test provider-neutral companion.
+- Forward Deployed Engineer: Phases 01 and 04-09, including all nineteen manuscripts, learning/state/QA records, front matter, five appendices, the 64-test provider-neutral companion, and whole-book content acceptance at `a8d9c45`.
 
 ## Active role
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#16 - Audit FDE whole book](https://github.com/alpeshznakrani/komalnakrani/issues/16)
+- Active child: [#17 - Produce FDE publication visuals](https://github.com/alpeshznakrani/komalnakrani/issues/17)
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Continue Forward Deployed Engineer Phase 09 issue #16. First blueprint pass and
-cross-book metadata/packaging repairs are complete; run the second professional-
-depth pass on Chapters 13-19, then the final duplication/source/continuity gate.
+Continue Forward Deployed Engineer Phase 10 issue #17. Phase 09 content is locked
+and accepted; define the deterministic visual system, produce all 38 frozen
+figures, integrate their accessibility metadata, and run visual/publication gates.
 
 ## Resume instructions
 

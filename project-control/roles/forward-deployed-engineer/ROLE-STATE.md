@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 09 - whole-book QA
+- Current global phase: Komal Phase 10 - publication visuals
 - Last updated: 2026-08-16
-- Last completed issue: Phase 08 root #9 and child #15
+- Last completed issue: Phase 09 #16 at commit `a8d9c45`
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#16](https://github.com/alpeshznakrani/komalnakrani/issues/16)
+- Active issue: [#17](https://github.com/alpeshznakrani/komalnakrani/issues/17)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -38,7 +38,7 @@
 - competency standard: deferred to Abhyaas
 - objective map: deferred to Abhyaas
 - exam blueprint: deferred to Abhyaas
-- book architecture: pending under `project-control/roles/forward-deployed-engineer/books/`
+- book architecture: complete under `project-control/roles/forward-deployed-engineer/books/forward-deployed-engineering/`
 - manuscript(s): Chapters 01-19, front matter, five appendices, learning packs, state handoffs, and immediate QA complete under `content/publications/forward-deployed-engineering/`
 - figure manifest: all 38 frozen placeholders through `F19.2`; production visuals pending Phase 10
 - PDF(s): pending under `output/pdf/`
@@ -47,7 +47,7 @@
 - bank specification: deferred to Abhyaas
 - question bank: deferred to Abhyaas
 - simulation report: deferred to Abhyaas
-- final QA: pending under `project-control/roles/forward-deployed-engineer/qa/`
+- whole-book QA: Phase 09 PASS under `project-control/roles/forward-deployed-engineer/qa/`; final publication QA remains Phase 19
 
 ## Completed gates
 
@@ -59,7 +59,7 @@
 - [x] 06 research
 - [x] 07 chapter blueprints
 - [x] 08 manuscript
-- [ ] 09 book QA
+- [x] 09 book QA
 - [ ] 10 visuals
 - [ ] 11 publication
 - [ ] 12 preparation library (deferred)
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Phase 08 is closed. Phase 09 first blueprint pass is complete for all nineteen chapters. Cross-reference, claim/source, objective, part-introduction, appendix-template, and first duplication defects are repaired and automated checks are clean. A second depth pass remains open for Chapters 13-19, followed by the final manual source/continuity read.
+Phase 09 is closed at `a8d9c45`. The 71,194-word manuscript passes all nineteen blueprint mappings, chapter QA/state reconciliation, source/claim/objective/cross-reference checks, duplication and continuity review, executable checks, publication tests/build, demo/rehearsal, and source/build hash verification. Phase 10 owns the frozen 38-item figure plan and may not silently change content.
 
 ## Unresolved blockers
 
@@ -87,11 +87,11 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 
 ## Quality debt
 
-Phase 09 must audit the shorter late chapters against every approved blueprint concept and failure mode; validator success alone does not establish complete prose coverage.
+Phase 10 must preserve legibility, grayscale differentiation, accessibility text, visual semantics, Orchid fictionality, authority boundaries, and web/PDF consistency across all 38 figures.
 
 ## Exact next action
 
-Run the second professional-depth pass on Chapters 13-19, expanding only concrete worked-mechanism, failure, authority, and application gaps; then rerun cumulative duplication/source/continuity gates.
+Define the Komal figure system and deterministic asset pipeline, then produce and verify `F01.1` through `F19.2` against the frozen manifest.
 
 ## Resume instructions
 
