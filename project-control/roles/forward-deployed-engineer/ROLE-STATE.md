@@ -73,7 +73,7 @@
 
 ## Current work
 
-Phase 08 is closed. Under Phase 09 issue #16, map all nineteen blueprints to the actual manuscripts and correct coverage, depth, duplication, terminology, continuity, architecture, source, series, and executable-consistency gaps.
+Phase 08 is closed. Phase 09 baseline and four required QA records exist. The first depth repair expanded Chapters 15-19 from 4,946 combined baseline words to 13,434 with worked readiness, incident, ownership, reuse, and portfolio protocols. These chapters remain open for a second depth/duplication pass.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ Phase 09 must audit the shorter late chapters against every approved blueprint c
 
 ## Exact next action
 
-Create the Phase 09 coverage matrix from Chapters 01-19, starting with an exact blueprint/manuscript depth inventory and the compressed late-chapter risk.
+Expand and audit Chapters 13-14, then run the second depth/duplication pass across Chapters 15-19 before moving backward through Chapters 06-12 and 01-05.
 
 ## Resume instructions
 

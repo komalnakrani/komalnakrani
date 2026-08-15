@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `lead-beyond-one-deployment.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but covers portfolio leadership without generic management/career padding.
+Phase 09 reopened the compressed baseline and added worked portfolio allocation, cadence, staffing, delegation, multi-altitude escalation, capacity building, technical-depth practice, growth evidence, dossier review, exercise, and failure repairs. Generic people management remains out of scope. A second depth/duplication audit remains open.

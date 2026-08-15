@@ -56,6 +56,16 @@ Do not begin with “root cause.” Initial priorities are impact, command, cont
 
 The companion rejects a record where an FDE silently names themselves commander without explicit designation.
 
+### Write the first ten-minute record
+
+Before a deep technical theory, record who declared the incident and who commands, the affected workflow/cohorts, observed and worst credible near-term consequence, current exposure, containment options, first evidence requests, next update, and authorized communicator.
+
+For a fictional Orchid low-connectivity cohort:
+
+> At 10:07 support confirmed technicians at two sites cannot complete evidence review within the operating window. No prohibited approval is confirmed. Expansion is held. Customer operations commands; the FDE leads technical diagnosis. Current unknowns are site connectivity, retry amplification, stale configuration, and evidence-service latency. Offline fallback remains available but adds manual time. Next update is 10:25.
+
+This is safer than `system slow, engineering investigating`. It states impact, boundary, containment, uncertainty, and cadence without inventing cause.
+
 ## Run parallel incident tracks
 
 [FIGURE F16.1: Parallel incident/stabilization timeline. Shared time axis carries impact/command, diagnosis/evidence, containment/recovery, communications/support, and correction/verification tracks. Decision points link confidence-tagged evidence to action; restoration begins stabilization rather than ending it.]
@@ -82,6 +92,14 @@ Systemic condition, durable change, regression evidence, monitoring window, owne
 
 These parallel tracks are original synthesis, not a universal incident standard. [CLM-141]
 
+### Coordinate tracks through decisions
+
+Parallel does not mean independent. Each track reports decisions and evidence through command.
+
+If diagnosis finds retry amplification, containment must choose whether to isolate the cohort, disable suggestion, cap retry work, or activate fallback. Communications explains user effect without exposing speculation. Evidence preservation captures version/correlation state before configuration changes. Correction records the lasting system change after recovery.
+
+Use a decision log entry with timestamp, decision, facts/unknowns, options, consequence, authority, action owner, review trigger, and linked evidence. The log prevents a fast response from becoming an unauditable sequence of chat messages.
+
 ## Keep a confidence-tagged timeline
 
 Each entry includes time/timezone, track, statement, confidence, evidence, actor/decision, and correction history.
@@ -91,6 +109,17 @@ Each entry includes time/timezone, track, statement, confidence, evidence, actor
 - **unknown:** important unresolved question.
 
 Do not rewrite old entries to look certain. Append corrections and decision changes. The companion requires evidence for a confirmed entry and preserves chronology.
+
+An example sequence:
+
+- `10:07 confirmed`: two sites exceed the evidence-review latency window; linked support cases.
+- `10:10 confirmed`: expansion held by release owner.
+- `10:13 probable`: retry demand may amplify evidence-service saturation; trace sample supports correlation, capacity evidence incomplete.
+- `10:17 decision`: isolate two sites and cap new suggestion work; operations authority; review at 10:30.
+- `10:23 disproved`: stale configuration not present; release/config hashes match.
+- `10:28 confirmed`: retry queue drains after isolation; user fallback remains available.
+
+The timeline preserves the disproved hypothesis because it explains why the team stopped pursuing it.
 
 Metrics, traces, logs, workflow state, data/model/policy, and support answer different questions. [CLM-145]
 
@@ -108,6 +137,10 @@ An update states:
 
 The companion rejects a “probable” ETA presented as ETA. [CLM-143]
 
+### Use a fixed update structure
+
+Write impact, confirmed facts, labeled unknowns/hypotheses, actions/owners, user fallback, next cadence, and authority in that order. If no credible restoration estimate exists, say so and give the next evidence checkpoint. A confident cadence is not a speculative resolution time. Customer/public communications remain with the authorized owner. [CLM-151]
+
 Avoid speculative cause, blame, invented reassurance, and sensitive technical detail in broad channels. Communications use the customer-approved owner/process.
 
 ## Diagnose by consequence and boundary
@@ -124,11 +157,21 @@ For Orchid low-connectivity review failure:
 
 For an AI-quality incident, service health can remain green. Investigate equipment binding, evidence freshness, retrieval, model/prompt/index, policy, reviewer workload, critical segments, and support reports. [CLM-150]
 
+### Follow a boundary-first diagnostic sequence
+
+Ask which boundary can produce the observed state: user/device/connectivity; identity/tenant/region; interface semantics; dependency capacity/finality; retrieval/provenance; model/prompt/policy/reviewer; release/config/migration; or telemetry/support measurement.
+
+For each candidate, name the next discriminating evidence before broad searching. Compare affected and unaffected cohorts, versions, and workflow states. Preserve tails and critical segments. Metrics show magnitude/trend; traces show path/timing; logs show selected events; workflow state shows user consequence; support reports show lived symptoms. None is a universal truth source. [CLM-145]
+
 ## Balance evidence preservation and containment
 
 Preserve release/config/policy/model identifiers, correlation/intent IDs, timeline, decisions, minimized telemetry, relevant artifacts, and access/audit state.
 
 Do not delay necessary harm reduction merely to collect perfect evidence. Do not casually copy sensitive payloads or alter/delete evidence. Follow customer incident, privacy, security, safety, and legal procedures. [CLM-146]
+
+Use an evidence-preservation decision: what is needed to understand or prove the state, what is safe/legal to retain, who can access it, and whether collection delays containment. Preserve identifiers, versions, decisions, and minimized diagnostic state before copying raw content. If an authorized forensic process exists, follow it; the FDE does not improvise specialist collection.
+
+When immediate shutdown would erase volatile evidence but continued operation can harm users, consequence comes first. Record the lost evidence and why containment was chosen. Honest uncertainty is preferable to additional harm for a perfect timeline.
 
 ## Separate restore from correct
 
@@ -138,11 +181,19 @@ Do not delay necessary harm reduction merely to collect perfect evidence. Do not
 
 A workaround can restore quickly and remain dangerous as permanent architecture. Restoration does not end stabilization. [CLM-144]
 
+For the Orchid example, isolating two sites and activating manual evidence review may restore an acceptable user path. It does not correct retry amplification, weak capacity gating, or the signal that failed to distinguish new demand from retries. The restoration record states current limitations and support burden. The corrective record changes budgets, queue behavior, tests, alerts, and the runbook, then verifies the affected cohort.
+
+Define restoration acceptance separately from stabilization exit. Restoration may require an acceptable bounded workflow now; stabilization requires durable correction and evidence over time.
+
 ## Find contributing conditions, not a person to blame
 
 Ask how design, review, data, defaults, access, alerts, rollout, workload, incentives, documentation, ownership, or recovery made the event possible or harder.
 
 Blameless learning is not accountability-free. It preserves evidence, actions, owners, local legal/safety/employment obligations, and real decision responsibility. [CLM-147]
+
+Avoid stopping at a label such as `operator error`, `bad deploy`, `model hallucination`, or `customer network`. Ask what system conditions made the action possible, hard to detect, or hard to recover: confusing defaults, missing review, ambiguous ownership, inadequate capacity test, hidden configuration, poor evidence display, unavailable access, incentive conflict, or weak rollout.
+
+A contributing-condition analysis can include workflow, software, data, environment, controls, tools, documentation, staffing, communication, and decision rights. It should not speculate about individuals. Where misconduct, safety, legal, or employment processes apply, route them to the designated authority rather than using a technical post-incident review as a substitute.
 
 [FIGURE F16.2: Symptom-to-system-change learning loop. User impact and detection flow through timeline/decisions, contributing conditions across workflow/system/organization, containment/restoration, durable corrective actions, verification/monitoring, owner transfer, then updated design/test/signal/runbook/product pattern.]
 
@@ -165,6 +216,12 @@ For stale configuration: version/promote/validate config, fail closed, correlate
 
 For quality regression: restrict model/cohort, restore known bundle/fallback, add critical cases/segments/graders, verify policy/review, monitor the correction.
 
+### Verify corrective action, not ticket closure
+
+For retry amplification, a completed action is not `added limit`. It includes a stable intent/reconciliation contract, separate new/retry capacity, bounded queue/fallback, a representative failure test, observable cohort signals, an owner, and evidence that recovery no longer amplifies load under the tested condition.
+
+For stale configuration, verify version binding, promotion checks, drift detection, fail-closed behavior, and recovery with the affected environment. For a quality regression, bind model/prompt/index/policy/grader versions and confirm critical segments plus human-review behavior. Close only when the observed evidence meets the stated pass condition.
+
 ## Define stabilization exit evidence
 
 Require:
@@ -181,6 +238,51 @@ Require:
 - communications closeout authorized.
 
 The companion refuses exit when only `impactContained` and `serviceRestored` are true. [CLM-148]
+
+### Conduct a timed stabilization exercise
+
+Inject a low-connectivity latency increase followed by retry amplification. Give participants changing evidence: first a support report, then healthy aggregate availability, then cohort latency, then a trace sample, then evidence that configuration is current.
+
+Evaluate whether the team:
+
+1. establishes customer command and technical roles;
+2. states impact and holds expansion;
+3. keeps confirmed/probable/unknown distinct;
+4. chooses next discriminating evidence;
+5. contains consequence without destroying evidence casually;
+6. communicates fallback and cadence without speculative ETA;
+7. restores an acceptable workflow;
+8. finds systemic contributing conditions;
+9. writes verifiable corrective actions;
+10. refuses stabilization exit until correction, regression evidence, observation, ownership, and residual-risk disposition exist.
+
+The output is the timeline, decision log, updates, containment/recovery record, contributing conditions, corrective actions, verification window, and stabilization decision. Speed matters, but coherence and safe judgment matter more.
+
+## Failure modes and repairs
+
+### Debugging starts before command
+
+Repair: name impact, commander, leads, exposure, containment authority, log, and cadence first.
+
+### A hypothesis becomes external fact
+
+Repair: preserve confidence labels, evidence, corrections, and authorized communications. Do not promise an unsupported ETA. [CLM-143]
+
+### Healthy infrastructure hides workflow harm
+
+Repair: inspect workflow, data, model/policy, approval, cohort, and support evidence as well as service metrics. [CLM-145] [CLM-150]
+
+### Restoration closes the incident
+
+Repair: keep stabilization open through durable correction, regression evidence, observation, ownership, and residual-risk disposition. [CLM-148]
+
+### Blame replaces explanation
+
+Repair: identify systemic contributing conditions and evidence-bearing corrective actions while preserving real accountability and formal processes. [CLM-147]
+
+### A permanent workaround becomes the architecture
+
+Repair: record its limitations/expiry and deliver the durable system change or an explicit accepted exception.
 
 ## Complete `OA-10` stabilization layer
 

@@ -59,9 +59,9 @@
 
 ## Exact next action
 
-Execute Forward Deployed Engineer Phase 09 issue #16. Build the nineteen-chapter
-blueprint coverage matrix and correct depth, duplication, terminology,
-continuity, architecture, source, series, and executable-consistency gaps.
+Continue Forward Deployed Engineer Phase 09 issue #16. The blueprint matrix and
+first Chapters 15-19 depth repair are complete; expand/audit Chapters 13-14,
+then perform the second late-chapter depth and duplication pass.
 
 ## Resume instructions
 

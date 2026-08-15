@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `cross-the-production-threshold.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but completes the readiness decision job without ceremonial checklist padding. Phase 09 may reopen only for a concrete coverage gap.
+Phase 09 reopened the compressed baseline and added a worked readiness table, defensible options, rollout-pattern reasoning, critical-case observation, formal exception, review exercise, and failure repairs. It remains below the blueprint forecast and is not final until the second depth/duplication audit closes.

@@ -37,9 +37,11 @@
 - Real portfolio authority, staffing, outcomes, and career decisions remain organizational/personal context.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- 875 manuscript words plus executable portfolio evidence; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added a decision-grade portfolio record, four-engagement allocation, cadence/staffing, detailed delegation, three-altitude escalation, capacity ladder, technical-depth habit, six-month growth plan, dossier review, exercise, and failure repairs.
+- 3,441 manuscript words plus executable portfolio evidence after the first depth repair; a second blueprint-depth review remains open.
 
-## Phase 08 close may assume
+## Phase 09 may assume
 
 - all nineteen chapters, learning packs, state handoffs, QA records, and companion layers exist;
-- front matter and five appendices index the actual dossier without new unsupported claims.
+- front matter and five appendices index the actual dossier without new unsupported claims;
+- final Phase 09 acceptance still requires the full blueprint-depth, duplication, terminology, continuity, and source audit.

@@ -37,7 +37,8 @@
 - Real representative-user, accessibility, customer-operator, authority, and access-revocation evidence remain deployment-specific.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 1,000 manuscript words plus executable ownership evidence; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added testable friction records, five non-use patterns, adoption evidence limits, whole-task observation, accessibility/task layers, demonstrated acceptance scenarios, access-state transfer, explicit exception, exercise, and failure repairs.
+- 2,487 manuscript words plus executable ownership evidence after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 18 may assume
 

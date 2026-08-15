@@ -37,7 +37,8 @@
 - Real customer evidence, authority, cohort, user/support readiness, and production observation remain context-specific.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 1,250 manuscript words plus executable readiness code; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 expanded the criterion table, option comparison, pattern selection, critical-case window, trigger/exception records, conflicting-stakeholder exercise, and failure repairs.
+- 2,130 manuscript words plus executable readiness code after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 16 may assume
 

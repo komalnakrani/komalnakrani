@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `stabilize-under-real-conditions.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but covers the incident leadership job without specialist-forensics padding. Phase 09 may reopen only for a concrete gap.
+Phase 09 reopened the compressed baseline and added a worked opening record/timeline, decision coordination, calibrated update method, boundary diagnosis, restoration/correction example, corrective verification, timed exercise, and failure repairs. Specialist forensics remain out of scope. A second depth/duplication audit is still required.

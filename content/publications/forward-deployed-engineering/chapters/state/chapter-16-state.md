@@ -37,7 +37,8 @@
 - Real customer incident authority/process, forensics, communications, evidence retention, and stabilization targets remain context-specific.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 1,050 manuscript words plus executable incident evidence; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added a first-ten-minute record, cross-track decision log, confidence timeline, update protocol, boundary-first diagnosis, evidence/containment judgment, timed exercise, and failure repairs.
+- 2,115 manuscript words plus executable incident evidence after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 17 may assume
 

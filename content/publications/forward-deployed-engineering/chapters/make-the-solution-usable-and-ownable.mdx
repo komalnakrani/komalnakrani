@@ -62,6 +62,28 @@ Use ten categories:
 
 The companion requires evidence, a next test, and owner for each diagnosis and marks `userBlame: false`. This taxonomy is original synthesis. [CLM-153] [CLM-154]
 
+### Turn a non-use signal into a testable diagnosis
+
+Start with observed behavior, not an attitude label.
+
+Weak entry: `Technicians resist the new workflow.`
+
+Evidence-bearing entry:
+
+> In 8 of 12 observed pump-family tasks, technicians opened the suggestion but returned to manual search before approval. The interface does not show source version or the evidence passage beside the proposed action. Hypothesis: trust/evidence friction. Next test: show evidence-first review to the same role across representative clear, ambiguous, and missing-evidence tasks. Owner: product workflow owner. Alternative hypotheses: latency, equipment-match confidence, policy, or incentive.
+
+The second entry can be disproved. If bypass remains after evidence visibility improves, inspect the alternatives. Perhaps the suggestion arrives after the technician has completed manual search, or supervisors measure another completion path. The taxonomy routes evidence; it does not diagnose personality.
+
+Keep a friction record with signal, cohort/task, candidate categories, evidence, confidence, next discriminating test, owner, repair, observation window, and outcome/guardrail effect. Close rejected hypotheses rather than leaving every possible cause open.
+
+Five non-use patterns imply different tests:
+
+1. **Never starts:** verify eligibility, access, device/network, awareness, and whether the workflow trigger exists.
+2. **Starts then abandons:** inspect latency, state clarity, evidence, accessibility, error recovery, and time pressure.
+3. **Completes but bypasses later:** inspect trust, result quality, downstream handoff, incentives, and support burden.
+4. **High use with weak outcome:** inspect coerced use, wrong task, gaming, rework, guardrail harm, and attribution.
+5. **Works for one segment only:** inspect role, site, language, assistive technology, connectivity, data quality, equipment family, and consequence.
+
 ## Triangulate adoption evidence
 
 Do not use one metric:
@@ -76,6 +98,24 @@ Do not use one metric:
 - qualitative observation/interview.
 
 Login or usage can be coerced by policy. Satisfaction excludes people who left. Low support can mean ease or inaccessible support. Outcome can change for unrelated reasons. Signals are complementary. [CLM-155]
+
+### Build an adoption evidence table
+
+For each target cohort, put signals beside the claims they can and cannot support:
+
+| Signal | Can support | Cannot establish alone |
+| --- | --- | --- |
+| eligible/repeat use | exposure and repeated interaction | correct use, outcome, voluntariness |
+| task completion/error/time | workflow performance under observed conditions | sustained outcome or every segment |
+| fallback/bypass/dropout | friction location and recovery behavior | cause without another test |
+| support reason/resolution | operating burden and recurring defects | absence of unreported friction |
+| evidence inspection/approval | review behavior and control use | correctness of the underlying suggestion |
+| satisfaction/trust report | perceived usefulness/confidence | behavior, accessibility, or outcome |
+| outcome/guardrail movement | bounded operational change | attribution to one feature or transferability |
+
+Segment the table and record missingness. If users who abandon the workflow also stop answering surveys, a favorable satisfaction average is selected evidence. If telemetry excludes offline completion, low use may be a measurement boundary rather than rejection.
+
+Support demand deserves special care. Rising tickets can mean worsening quality, wider legitimate adoption, improved reporting, or a newly visible limitation. Classify reasons and connect them to releases, cohorts, and resolution evidence. [CLM-161]
 
 ## Observe the whole task
 
@@ -94,17 +134,35 @@ Whole-journey evidence includes non-digital steps, workarounds, exceptions, and 
 
 The injected bypass has a specific cause: recommendations omit visible supporting evidence. Classify `trust-evidence`, test an evidence-first review design, and observe task behavior. Do not send generic retraining first.
 
+### Run a whole-task observation
+
+Prepare representative scenarios, roles, devices, connectivity, permissions, and exceptions. Ask the participant to work as normal. Avoid coaching unless safety or the protocol requires it; record every intervention.
+
+Capture the task trigger, prior context, equipment/data state, evidence inspected, decisions, hesitation, backtracking, workarounds, non-digital actions, handoffs, error/fallback/recovery, completion, time, correctness, assistance, accessibility context, and what the user expected next.
+
+Afterward, ask why at specific moments without treating the explanation as complete truth. Combine observation, artifact state, telemetry, and interview evidence.
+
+For Orchid, a successful click path still fails if the technician carries the wrong part because inventory was stale, or if a qualified approver cannot reconstruct the evidence. The unit is the operational task, not the screen. [CLM-162]
+
 ## Use training for knowledge, not design debt
 
 Training is appropriate when the workflow/design/control is sound and the remaining gap is knowledge/practice. It should contain role-specific tasks, examples/exceptions, safety/authority boundaries, fallback/support, and verification.
 
 Do not train around missing access, misleading state, slow performance, inaccessible UI, invisible evidence, bad policy, or absent support. [CLM-156]
 
+Verify learning through consequential work. Technicians should identify evidence, uncertainty, fallback, and escalation. Qualified reviewers should distinguish a suggestion from an approved decision. Support should diagnose a cohort without exposing payloads. Operators should release, hold, recover, and reconcile. Decision owners should locate current limitations and exceptions.
+
+Evidence is a completed task, accurate explanation, correct escalation, or successful rehearsal, not attendance. If a person succeeds only while the FDE prompts each step, record assisted performance and retest after repair.
+
 ## Combine accessibility criteria and task evidence
 
 Apply relevant WCAG 2.2 criteria with keyboard/focus/semantics/zoom/reflow/error/assistive-technology checks. Then observe representative users performing consequential tasks.
 
 Conformance evidence does not alone prove usability for every context. [CLM-157]
+
+Accessibility work has two linked layers. Criteria-based checks find barriers in semantics, keyboard path, focus, contrast, reflow, error identification, labels, status messages, and assistive-technology compatibility. Representative task observation tests whether the complete workflow works in its intended context, including time pressure, evidence comparison, offline behavior, and support.
+
+Do not claim `accessible` from an automated scan. Record criteria/version/scope, methods, tools, manual results, assistive contexts, defects, owners, retests, and limitations. Designated accessibility expertise owns formal interpretations where required; the FDE integrates evidence and repairs into delivery.
 
 ## Build the ownership acceptance model
 
@@ -125,6 +183,14 @@ For each area require owner plus demonstrated evidence:
 
 Ownership is demonstrated capability, not delivery of a folder or RACI. [CLM-159] [CLM-164]
 
+### Define acceptance evidence precisely
+
+For each area, write a scenario and observable pass condition. `Has runbook` is weak. `Customer operator detects an injected low-connectivity degradation, locates the current runbook, chooses the correct cohort hold, and records escalation without FDE intervention` is testable.
+
+Evidence can be pass, assisted, failed, not run, or exception. `Assisted` records what the FDE did because it identifies the remaining dependency. A signed document cannot overwrite a failed demonstration.
+
+Use more than one operator for high-consequence areas. One expert's success can hide a single-person dependency. Test backup access, off-hours escalation, and the failed dependency where relevant. Keep evidence synthetic or appropriately governed; ownership testing does not justify unsafe production experiments.
+
 ### Run supervised acceptance
 
 Customer operators, not the FDE, perform:
@@ -140,11 +206,32 @@ Customer operators, not the FDE, perform:
 
 The FDE observes and records assistance. If intervention is necessary, ownership is not yet demonstrated for that area.
 
+### Run the Orchid acceptance session
+
+Begin with the current bounded scope and limitations. Name customer decision authority and the FDE's observer/support role. Then execute a sequence:
+
+1. A technician encounters an ambiguous equipment match and uses the stop/fallback path.
+2. A qualified reviewer inspects source/version and rejects a suggestion lacking evidence.
+3. Support identifies a degraded low-connectivity cohort without reading sensitive payloads.
+4. Operations holds that cohort, uses the runbook, and communicates through the named channel.
+5. Release owner reviews the packet and declines a release with a critical gap.
+6. Operators run the partial-migration rehearsal, choose roll-forward from actual state, and verify recovery.
+7. A customer owner records an expiring open-risk exception within delegated authority.
+8. The team locates the change path, tests a bounded correction, and names product-learning ownership.
+
+Record who acted, access used, evidence, assistance, result, gap, owner, and retest. Do not convert a synthetic rehearsal into a production recovery claim.
+
 ## Transfer and revoke access
 
 Inventory human/workload/support/emergency permissions. Ensure customer owners have required release/recover/support access, test it, and remove FDE privileges.
 
 The companion blocks transfer when customer permission is missing or the FDE retains a required privileged permission. [CLM-160]
+
+Access transfer is a state transition, not an email request. Inventory accounts, roles, groups, tokens, workload identities, emergency credentials, support paths, local devices, and third-party consoles. For each, record purpose, owner, scope, environment, expiry, last use, approval, test evidence, and revocation state.
+
+Test customer access before removing the last working FDE path, but do not leave both paths indefinitely. Sequence transfer, demonstration, rollback for the access change itself, revocation, verification, and audit review. Rotate or invalidate shared material rather than assuming removal from a group eliminates copied credentials.
+
+If support access continues, define ticket/incident trigger, approved actor, time bound, permitted actions, customer visibility, audit, and removal. The customer must retain an operating path that does not depend on the FDE being available.
 
 Continuing support access must be explicit, purpose/time/scope bounded, approved, audited, revocable, and not the only operating path.
 
@@ -161,6 +248,50 @@ If the customer cannot yet own an area, record:
 - expiry/escalation/exit.
 
 Do not disappear or stay forever. [CLM-163]
+
+An exception is acceptable only when the residual dependency is visible and governed. For example:
+
+> Recovery key rotation remains assisted for 14 days because the backup operator has not completed the failed-identity exercise. Customer security owns the exception; the FDE may observe but not approve emergency use. Scope is the internal cohort. Monitoring is the access audit plus recovery readiness check. Retest is 30 August. If it fails or the cohort changes, exposure remains held. FDE privileged access expires after the successful retest or on 31 August, whichever comes first.
+
+This is different from `FDE will help as needed`. It states consequence, scope, authority, evidence, and exit.
+
+## Failure modes and repairs
+
+### Logins become adoption
+
+Repair: combine whole-task completion, outcome/guardrail, support, dropout, satisfaction, and segments; preserve attribution limits.
+
+### Users are blamed for bypass
+
+Repair: describe observed behavior, use the friction taxonomy, run the next discriminating test, and give the repair an owner. [CLM-154]
+
+### Training conceals product debt
+
+Repair: use training only for verified knowledge gaps; repair workflow, access, evidence, performance, policy, accessibility, or support defects in the system. [CLM-156]
+
+### Accessibility is an automated score
+
+Repair: combine versioned criteria/manual/assistive checks with representative end-to-end task evidence. [CLM-157]
+
+### Handoff is a document transfer
+
+Repair: require customer demonstrations for release, recovery, support, decisions, access, and change. Record assistance. [CLM-158]
+
+### The FDE remains the hidden operator
+
+Repair: test customer paths, revoke privilege, and formalize residual support with expiry and exit. [CLM-160] [CLM-163]
+
+### Exit happens while customer readiness is unresolved
+
+Repair: choose explicit delay, reduced scope, supported exception, or disengagement. Preserve the owner and consequence; do not silently disappear.
+
+## Conduct the chapter exercise
+
+Given five fictional non-use signals, classify likely friction categories but select only the next discriminating test, not a final diagnosis. Then run a ten-area ownership acceptance tabletop with at least one failed and one assisted result.
+
+Produce a segmented adoption evidence table, whole-task observation record, friction hypotheses/tests/repairs, role-specific enablement evidence, accessibility record, ten-area results, access transfer/revocation inventory, and explicit exception or final acceptance.
+
+Pass when representative users can complete the task, customer operators demonstrate consequential operating work, all assistance is visible, and the designated authority accepts the bounded state.
 
 ## Complete `OA-10`
 

@@ -18,8 +18,10 @@ Audit the actual nineteen-chapter manuscript as one book. Compare it against the
 
 ## Canonical outputs
 
-- `project-control/roles/forward-deployed-engineer/qa/phase-09-coverage-matrix.md`
-- `project-control/roles/forward-deployed-engineer/qa/phase-09-whole-book-qa.md`
+- `project-control/roles/forward-deployed-engineer/qa/book-coverage.md` (including the nineteen-chapter blueprint matrix)
+- `project-control/roles/forward-deployed-engineer/qa/book-duplication.md`
+- `project-control/roles/forward-deployed-engineer/qa/book-consistency.md`
+- `project-control/roles/forward-deployed-engineer/qa/book-revision-log.md`
 - corrected manuscripts, learning packs, state handoffs, QA records, registries, companion, and front/back matter as required
 
 ## Acceptance criteria

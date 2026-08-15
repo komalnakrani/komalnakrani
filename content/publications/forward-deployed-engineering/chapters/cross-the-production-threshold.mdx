@@ -76,6 +76,23 @@ Missing evidence is never silently “not applicable” or passed. [CLM-130]
 
 The five-way disposition and packet are original synthesis tools. [CLM-129]
 
+### Build a criterion table that can reject the launch
+
+Every row needs criterion, consequence, required evidence/version, observed evidence, freshness/coverage, disposition, owner/authority, condition, and next trigger.
+
+For fictional Orchid:
+
+| Criterion | Evidence state | Disposition |
+| --- | --- | --- |
+| equipment/evidence binding across clear, ambiguous, and missing states | current contract and slice tests pass | met for bounded pump family |
+| prohibited suggestion blocked before approval | critical-segment evaluation passes; limited production-like volume | met for internal cohort, uncertainty recorded |
+| qualified review | representative internal task evidence passes | met for internal cohort only |
+| low-connectivity fallback | synthetic test passes; target field-site evidence missing | reduced scope; exclude low-connectivity sites |
+| break-glass recovery under failed identity dependency | not executed | gap; blocks safety-relevant/wider cohort |
+| support/command schedule | named and rehearsed for 48-hour window | met under stated window |
+
+The table prevents a green aggregate from hiding an unexecuted consequential control. It also lets supported value continue in a narrower cohort without pretending the gap disappeared.
+
 ## Separate facts, unknowns, judgments, and preferences
 
 ### Facts
@@ -118,6 +135,14 @@ Example:
 
 This is not indecision. It separates supported value from unsupported consequence.
 
+### Present real options in the meeting
+
+Do not frame the decision as `launch or fail`. Present go for the exact supported cohort; conditional go under a legitimate exception; reduced scope that removes the unsupported state; delay until named evidence/authority arrives; and stop when a bounded safe path does not exist.
+
+For each option, state value gained or delayed, users affected, residual uncertainty, operating cost, reversibility, evidence learned, and recovery. A reduced scope that excludes the hardest representative condition may produce little learning. A delay can preserve a safer migration window. A stop can be correct.
+
+The designated authority chooses. Preserve the FDE recommendation, dissent, conditions, and trigger so future readers do not confuse the final decision with unanimous technical belief.
+
 ## Choose rollout pattern by evidence need
 
 [FIGURE F15.2: Rollout-pattern comparison across internal, shadow, canary, cohort, region, and full exposure. Columns compare user effect, evidence gained, comparability, representativeness, blast radius, reversibility/external state, duration/volume, support/command, and stop/recovery needs.]
@@ -144,6 +169,12 @@ All intended exposure. Appropriate only when evidence/ownership/capacity/recover
 
 A small cohort is not automatically low consequence. One safety-critical site or irreversible external action can be high risk. [CLM-132]
 
+### Match pattern to the uncertainty
+
+Choose shadow when the main unknown is data/quality/capacity and user effect must remain zero, while still governing data and cost. Choose canary when changed behavior can be compared meaningfully and stopped. Choose cohort/region when workflow, support, or environment representation matters. Use internal exposure for rehearsal, not as a substitute for customer evidence. Full exposure is not a learning shortcut.
+
+Record why rejected patterns do not answer the decision. If Orchid's uncertainty is whether technicians can evaluate evidence under intermittent connectivity, an office internal cohort is not representative. If safety-relevant recommendations cannot be safely shadowed because reviewers may treat outputs as advice, the shadow design needs stronger isolation or rejection.
+
 ## Define the observation window
 
 Record:
@@ -157,6 +188,8 @@ Record:
 - criteria to widen, hold, reduce, stop, or recover.
 
 Do not choose the window after seeing a convenient green period. A short quiet canary may prove little. Simulation strengthens evidence but cannot remove production-tail unknowns. [CLM-135]
+
+Define minimum critical-case coverage as well as time and volume. A 48-hour window with no ambiguous equipment or degraded dependency cannot support those claims. If a needed case does not occur naturally and safe simulation is credible, inject it under controlled conditions and label the evidence type.
 
 ## Precommit triggers and actions
 
@@ -172,6 +205,8 @@ Examples:
 - cost/capacity guardrail: restrict/defer/fallback.
 
 Decide actions before impact. [CLM-140]
+
+For every trigger bind detection, threshold/evidence state, affected scope, immediate action, owner/authority, communication, recovery path, and re-entry criterion. A dashboard threshold without an action is not a gate. A trigger decided after impact is a reaction, not a precommitment.
 
 ## Make exceptions formal and expiring
 
@@ -190,6 +225,12 @@ An exception requires:
 Silence, attendance, or deadline is not acceptance. [CLM-136]
 
 The companion makes an exception invalid without designated authority and expiry. It yields conditional go, never full go.
+
+An exception cannot convert failed evidence into success. It says a named authority accepts a stated residual condition for a bounded scope under explicit controls. If authority, consequence, or expiry is missing, the row remains a gap.
+
+Example:
+
+> Conditional go for internal non-safety users for 48 hours despite incomplete field-site connectivity evidence. Product release owner accepts reduced representativeness; low-connectivity sites are excluded, offline fallback remains available, support is staffed, and latency/fallback use is reviewed every four hours. Expiry is the end of the window. Any included-site loss of fallback or evidence-binding anomaly stops exposure. This exception does not permit the safety-relevant or low-connectivity cohort.
 
 ## Prepare people and command
 
@@ -216,6 +257,50 @@ It must not label the control met because documentation exists. The appropriate 
 3. formal conditional exception only if designated authority can legitimately accept the consequence and recovery conditions.
 
 The companion test chooses delay for an unresolved gap even when the cohort is one site. Deadline pressure is recorded, not promoted.
+
+### Conduct the readiness review
+
+Give participants the packet plus conflicting positions: a product stakeholder wants the announced date, operations wants a smaller cohort, security notes unexecuted recovery access, and technicians want the evidence display fixed.
+
+The review must:
+
+1. confirm decision authority and the exact decision;
+2. separate facts, unknowns, judgments, and pressure;
+3. disposition every criterion;
+4. state the consequence of the material gap;
+5. compare go, conditional, reduced, delay, and stop;
+6. select cohort, pattern, window, and critical-case coverage;
+7. precommit widen, hold, stop, and recovery actions;
+8. staff command, support, and communications;
+9. record decision, conditions, dissent, and next trigger.
+
+Pass when a reviewer can see why the exposure is supported and which evidence would change it. The exercise fails if the date determines evidence state or the FDE self-approves an exception.
+
+## Failure modes and repairs
+
+### Missing becomes not applicable
+
+Repair: missing, stale, inconclusive, failed, and unexecuted evidence stays a gap until justified scope exclusion or formal decision. [CLM-130]
+
+### The small pilot is called safe
+
+Repair: examine consequence, representativeness, external state, critical-case coverage, support, and recovery rather than user count. [CLM-132]
+
+### Canary ends when the chart is green
+
+Repair: predefine time, volume, critical segments, absolute/comparative criteria, confounders, and decision actions. [CLM-131]
+
+### The meeting allows only go
+
+Repair: present all five dispositions with consequence and opportunity cost. Readiness is a decision system, not launch theater. [CLM-134]
+
+### The FDE accepts adjacent risk
+
+Repair: recommend and escalate; named customer authorities own formal exceptions and risk decisions. [CLM-138]
+
+### Triggers are invented during impact
+
+Repair: bind detection, action, authority, communication, recovery, and re-entry before exposure. [CLM-140]
 
 ## Complete `OA-09`
 

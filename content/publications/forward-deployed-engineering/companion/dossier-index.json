@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-16T02:22:00+05:30",
+  "generatedAt": "2026-08-16T02:31:30+05:30",
   "hashAlgorithm": "sha256",
-  "sourceHash": "e224023eae5821e46c6bc83dcabf445d320234e4c314a6b47fede349597cd216",
+  "sourceHash": "1784d03c1cacbe53f155d784b19f631b2f961106244a42c72d272e39fac021b7",
   "sourceHashScope": "Sorted SHA-256 digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
   "buildHash": "fd2b740ff1a46e6b26ec388466ba8cc0436fe7af9c98929951e79a778055b42c",
   "buildHashScope": "Sorted SHA-256 digest stream for every file in the Astro dist directory produced by npm run build.",

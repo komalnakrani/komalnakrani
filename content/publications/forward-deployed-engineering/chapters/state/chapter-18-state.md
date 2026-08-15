@@ -37,7 +37,8 @@
 - Real independent contexts, product owner/roadmap, maintenance economics, and customer contractual review remain future evidence.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 800 manuscript words plus executable leverage evidence; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added a bounded outcome argument, worked pattern ledger, negative cases, twelve-artifact classification, contract-cost/reversibility analysis, consequence-versus-frequency decision, filled packet review, exercise, and failure repairs.
+- 3,261 manuscript words plus executable leverage evidence after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 19 may assume
 
