@@ -22,13 +22,13 @@ Prove whether Forward Deployed Engineer is a credible standalone professional ro
 
 ## Acceptance criteria
 
-- [ ] Role title is supported by current official employer evidence.
-- [ ] Responsibilities cover implementation, architecture, deployment, operations, security/governance, stakeholders, and deliverables.
-- [ ] Evidence spans multiple employers and industries rather than one company vocabulary.
-- [ ] Adjacent-role overlap and explicit non-scope are resolved.
-- [ ] Every material claim maps to a structured source record.
-- [ ] Research limitations and unstable/tool-specific details are explicit.
-- [ ] Verdict is supported and actionable for book-scope work.
+- [x] Role title is supported by current official employer evidence.
+- [x] Responsibilities cover implementation, architecture, deployment, operations, security/governance, stakeholders, and deliverables.
+- [x] Evidence spans multiple employers and industries rather than one company vocabulary.
+- [x] Adjacent-role overlap and explicit non-scope are resolved.
+- [x] Every material claim maps to a structured source record.
+- [x] Research limitations and unstable/tool-specific details are explicit.
+- [x] Verdict is supported and actionable for book-scope work.
 
 ## Verification
 

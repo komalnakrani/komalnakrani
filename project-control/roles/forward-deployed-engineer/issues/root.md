@@ -2,7 +2,7 @@
 
 - Name: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
-- Current global phase: Komal Phase 19 - hostile final QA
+- Current global phase: Komal Phase 19 complete - role closure pending
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 - Abhyaas root issue: deferred by the locked Komal-first execution order
 
@@ -23,7 +23,7 @@ Complete the original book, learning, visual, web, PDF, and optional-course ecos
 - [x] 11 web + PDF publication
 - [x] 13 optional course decision and delivery if justified
 - [ ] 18 cross-repository integration (deferred until Abhyaas resumes)
-- [ ] 19 final hostile QA PASS
+- [x] 19 final hostile QA PASS
 
 ## Locked boundaries
 
@@ -38,4 +38,4 @@ Complete the original book, learning, visual, web, PDF, and optional-course ecos
 
 ## Next executable action
 
-Execute Phase 19 issue #20 and close this role only after the complete Komal ecosystem earns an exact `PASS`.
+Commit the exact Phase 19 `PASS`, close issue #20 and this role root, then advance to the next approved Komal role. Abhyaas remains deferred.

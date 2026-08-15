@@ -22,15 +22,15 @@ Design the complete learning architecture for the single original Komal book bef
 
 ## Acceptance criteria
 
-- [ ] The architecture preserves the locked single-book thesis.
-- [ ] Every chapter passes at least one chapter-existence test.
-- [ ] Entry audience and exit capability are explicit and credible.
-- [ ] Every provisional competency domain maps to primary chapters and observable evidence.
-- [ ] The project grows as one coherent deployment dossier rather than disconnected toys.
-- [ ] Case-study requirements prevent a single industry or AI pattern from becoming universal.
-- [ ] Visual forecast supports decisions, architecture, sequence, comparison, or diagnosis.
-- [ ] Terminology and version conventions are locked.
-- [ ] No inherited manuscript, MLOps volume shape, or Alpesh content is reused.
+- [x] The architecture preserves the locked single-book thesis.
+- [x] Every chapter passes at least one chapter-existence test.
+- [x] Entry audience and exit capability are explicit and credible.
+- [x] Every provisional competency domain maps to primary chapters and observable evidence.
+- [x] The project grows as one coherent deployment dossier rather than disconnected toys.
+- [x] Case-study requirements prevent a single industry or AI pattern from becoming universal.
+- [x] Visual forecast supports decisions, architecture, sequence, comparison, or diagnosis.
+- [x] Terminology and version conventions are locked.
+- [x] No inherited manuscript, MLOps volume shape, or Alpesh content is reused.
 
 ## Verification
 

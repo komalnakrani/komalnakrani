@@ -24,13 +24,13 @@ Determine the minimum justified number of original Komal books needed to teach F
 
 ## Acceptance criteria
 
-- [ ] Every durable role cluster has an explicit depth estimate.
-- [ ] One-book and plausible multi-volume options are compared.
-- [ ] The decision is based on learning/reference utility, not product count or inherited structure.
-- [ ] Each retained volume has a distinct one-sentence thesis and reader transformation.
-- [ ] Domain ownership, dependencies, and non-overlap rules are explicit.
-- [ ] Deferred certification artifacts are recorded as a later compatibility gate, not silently invented.
-- [ ] `books/book-scope-decision.md` is complete and actionable for Phase 05.
+- [x] Every durable role cluster has an explicit depth estimate.
+- [x] One-book and plausible multi-volume options are compared.
+- [x] The decision is based on learning/reference utility, not product count or inherited structure.
+- [x] Each retained volume has a distinct one-sentence thesis and reader transformation.
+- [x] Domain ownership, dependencies, and non-overlap rules are explicit.
+- [x] Deferred certification artifacts are recorded as a later compatibility gate, not silently invented.
+- [x] `books/book-scope-decision.md` is complete and actionable for Phase 05.
 
 ## Verification
 

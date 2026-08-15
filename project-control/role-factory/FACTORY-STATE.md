@@ -41,27 +41,26 @@
 - FDE PDF: deterministic 338-page A4 edition, SHA-256
   `96b5bce887d315ceb5390287eb693b0ead4b9ed3328470913c9dd07f9a91b050`,
   with all pages rendered and visually verified.
-- Dependencies: 329 packages; audit reports 8 advisories (1 low, 1 moderate, 6 high).
+- Dependencies: 348 audited packages; Astro 7.2.2 and `@astrojs/mdx` 7.0.5; audit reports zero vulnerabilities.
 - Abhyaas issue #25: open but paused by the Komal-first execution decision.
 
 ## Completed issue
 
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
 - Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
-- Forward Deployed Engineer: Phases 01, 04-11, and 13, including all nineteen manuscripts, 38 final figures, complete web/PDF edition, 64-test provider-neutral companion, and six-module/12-test guided lab course.
+- Forward Deployed Engineer: Phases 01, 04-11, 13, and 19, including all nineteen manuscripts, 38 final figures, complete web/PDF edition, 64-test provider-neutral companion, six-module/12-test guided lab course, and hostile final QA `PASS`.
 
 ## Active role
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#20 - Hostile final QA for Forward Deployed Engineer](https://github.com/alpeshznakrani/komalnakrani/issues/20)
+- Active child: [#20 - Hostile final QA for Forward Deployed Engineer](https://github.com/alpeshznakrani/komalnakrani/issues/20), acceptance complete and closure pending
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Execute Forward Deployed Engineer Phase 19 issue #20, fix every blocking defect,
-and close the Komal role only after an exact `PASS`. Do not enter deferred Abhyaas
-work.
+Commit the Forward Deployed Engineer Phase 19 `PASS`, close issue #20 and role root
+#3, then initialize the next approved Komal role. Do not enter deferred Abhyaas work.
 
 ## Resume instructions
 

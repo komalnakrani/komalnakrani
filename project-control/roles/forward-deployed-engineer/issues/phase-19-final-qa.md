@@ -27,12 +27,12 @@ Audit the complete Komal Forward Deployed Engineer role as one public learning e
 
 ## Acceptance criteria
 
-- [ ] Every required evidence category is recorded in one final QA report.
-- [ ] All blocking findings are fixed and reverified, not merely listed.
-- [ ] The final verdict is exactly `PASS` or `FAIL`.
-- [ ] `PASS` is issued only with zero unresolved blocking defects.
-- [ ] Komal and Abhyaas scope are separated explicitly; deferred Abhyaas work is not claimed complete.
-- [ ] The role root closes only after the Komal ecosystem passes and its resumable state is committed.
+- [x] Every required evidence category is recorded in one final QA report.
+- [x] All blocking findings are fixed and reverified, not merely listed.
+- [x] The final verdict is exactly `PASS` or `FAIL`.
+- [x] `PASS` is issued only with zero unresolved blocking defects.
+- [x] Komal and Abhyaas scope are separated explicitly; deferred Abhyaas work is not claimed complete.
+- [x] The role root closes only after the Komal ecosystem passes and its resumable state is committed.
 
 ## Handoff
 

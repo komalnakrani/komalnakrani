@@ -39,15 +39,15 @@ The root issue remains open until every manuscript, learning, state, and compani
 
 ## Acceptance criteria
 
-- [ ] All nineteen actual chapter manuscripts exist; none is an outline disguised as prose.
-- [ ] All nineteen learning packs and state handoffs exist.
-- [ ] Every material claim resolves through the production source/claim registries.
-- [ ] Every frozen figure has a correctly placed placeholder.
-- [ ] The companion is runnable locally without paid services or secrets.
-- [ ] Orchid and constructed satellite cases remain clearly fictional.
-- [ ] No unresolved blocking `SOURCE GAP` remains.
-- [ ] Immediate chapter QA is recorded for all chapters.
-- [ ] Full publication validation, tests, build, companion tests, and diff checks pass.
+- [x] All nineteen actual chapter manuscripts exist; none is an outline disguised as prose.
+- [x] All nineteen learning packs and state handoffs exist.
+- [x] Every material claim resolves through the production source/claim registries.
+- [x] Every frozen figure had a correctly placed production placeholder before Phase 10 replacement.
+- [x] The companion is runnable locally without paid services or secrets.
+- [x] Orchid and constructed satellite cases remain clearly fictional.
+- [x] No unresolved blocking `SOURCE GAP` remains.
+- [x] Immediate chapter QA is recorded for all chapters.
+- [x] Full publication validation, tests, build, companion tests, and diff checks pass.
 
 ## Handoff
 

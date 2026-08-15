@@ -47,15 +47,15 @@ Every `blueprints/chapter-XX.md` must define:
 
 ## Acceptance criteria
 
-- [ ] Exactly nineteen chapter blueprint files exist and match the frozen titles/order.
-- [ ] Every required blueprint field is present and actionable.
-- [ ] Every chapter owns a distinct professional job and capstone advancement.
-- [ ] All Phase 06 source/case IDs resolve and limitations are preserved.
-- [ ] All frozen figure IDs are assigned once with a defined teaching purpose.
-- [ ] All provisional Komal domains have sufficient depth and no silent gap.
-- [ ] The local companion has one coherent end-to-end shape, not disconnected code samples.
-- [ ] Major chapters receive appropriate 8,000–15,000-word ranges without padding; supporting chapters receive justified smaller ranges.
-- [ ] Chapter handoffs form one continuous deployment lifecycle.
+- [x] Exactly nineteen chapter blueprint files exist and match the frozen titles/order.
+- [x] Every required blueprint field is present and actionable.
+- [x] Every chapter owns a distinct professional job and capstone advancement.
+- [x] All Phase 06 source/case IDs resolve and limitations are preserved.
+- [x] All frozen figure IDs are assigned once with a defined teaching purpose.
+- [x] All provisional Komal domains have sufficient depth and no silent gap.
+- [x] The local companion has one coherent end-to-end shape, not disconnected code samples.
+- [x] Major chapters receive appropriate 8,000–15,000-word ranges without padding; supporting chapters receive justified smaller ranges.
+- [x] Chapter handoffs form one continuous deployment lifecycle.
 
 ## Verification
 

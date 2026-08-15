@@ -21,13 +21,13 @@ Create an auditable, chapter-specific research foundation for all nineteen froze
 
 ## Acceptance criteria
 
-- [ ] All nineteen chapters have research packs.
-- [ ] Major planned factual claims map to source IDs.
-- [ ] Normative/version-specific claims use official standards or documentation where available.
-- [ ] Disputed or context-dependent practices are labeled rather than universalized.
-- [ ] Every public case separates verified facts from inference and records limitations.
-- [ ] Every chapter has explicit remaining gaps, even if none are release-blocking.
-- [ ] No manuscript prose is presented as complete during research.
+- [x] All nineteen chapters have research packs.
+- [x] Major planned factual claims map to source IDs.
+- [x] Normative/version-specific claims use official standards or documentation where available.
+- [x] Disputed or context-dependent practices are labeled rather than universalized.
+- [x] Every public case separates verified facts from inference and records limitations.
+- [x] Every chapter has explicit remaining gaps, even if none are release-blocking.
+- [x] No manuscript prose is presented as complete during research.
 
 ## Verification
 
