@@ -2,7 +2,7 @@
 
 - Name: Applied AI Engineer
 - Slug: `applied-ai-engineer`
-- Current global phase: Komal Phase 08 manuscript production - Chapters 01-03 active
+- Current global phase: Komal Phase 08 manuscript production - Chapters 04-06 active
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 - Abhyaas root issue: deferred by the locked Komal-first execution order
 
@@ -39,4 +39,4 @@ Complete the original Komal book, learning, visual, web, PDF, and optional-cours
 
 ## Next executable action
 
-Complete and close Phase 08 child #28 for Chapters 01-03, then open only the next bounded manuscript child. Do not enter Abhyaas.
+Complete and close Phase 08 child #29 for Chapters 04-06, then open only the next bounded manuscript child. Do not enter Abhyaas.

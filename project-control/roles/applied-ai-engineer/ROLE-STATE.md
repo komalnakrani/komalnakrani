@@ -5,12 +5,12 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 08 manuscript production - Chapters 01-03 active
+- Current global phase: Komal Phase 08 manuscript production - Chapters 04-06 active
 - Last updated: 2026-08-16
-- Last completed issue: Phase 07 #26, 21 verified blueprints
+- Last completed issue: Phase 08 child #28, complete Chapters 01-03 and contract companion foundation
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27)
-- Active issue: [#28](https://github.com/alpeshznakrani/komalnakrani/issues/28)
+- Active issue: [#29](https://github.com/alpeshznakrani/komalnakrani/issues/29)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -40,7 +40,7 @@
 - source register: 55 primary/official records, all used, 118 unique planned claim IDs
 - case-study register: 11 public/primary cases plus one explicitly constructed Patchwork case, all used
 - chapter blueprints: 21 verified files plus `blueprints/blueprint-verification.md`
-- manuscript(s): pending
+- manuscript(s): Chapters 01-03 complete at commit `aadc7c5`; Chapters 04-21 pending
 - figure manifest: pending
 - PDF(s): pending
 - preparation resources: deferred
@@ -75,7 +75,7 @@
 
 ## Current work
 
-Phase 08 parent #27 is open and child #28 is the only active manuscript unit. Chapters 01-03 must establish complete original prose, learning/state/QA records, production source/claim mappings, six frozen figure anchors, and the first provider-neutral contract artifacts before Chapters 04-06 can open.
+Phase 08 parent #27 remains open. Child #28 is accepted and closed at commit `aadc7c5`: 17,067 words across Chapters 01-03, three learning/state/QA sets, 15 production claims, 21 source records, six original figure anchors, and a 15-clause provider-neutral contract companion with five passing tests. Child #29 is the only active manuscript unit for Chapters 04-06.
 
 ## Unresolved blockers
 
@@ -92,12 +92,12 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 ## Quality debt
 
-None. Blueprint QA confirms 21/21 title/order matches, ten required section groups in every file, 42/42 unique figure assignments, 11/11 domains, 12/12 dossier milestones, source/case subset integrity, continuous handoffs, credible word ranges, and passing publication validation/tests plus diff checks.
+None. Chapters 01-03 and their companion pass canonical `npm run check`; the check now includes both publication companion suites. Blueprint QA remains complete for all 21 chapters.
 
 ## Exact next action
 
-Write and immediately QA Applied AI Engineering Chapters 01-03 under issue #28. Do not open Chapters 04-06 until this batch is committed, pushed, and closed.
+Write and immediately QA Applied AI Engineering Chapters 04-06 under issue #29. Advance `PF-03` and `PF-04`, and do not open Chapters 07-09 until this batch is committed, pushed, and closed.
 
 ## Resume instructions
 
-Read this file, the role root, Phase 08 parent #27, active issue #28, architecture, research packs, blueprints 01-03, and blueprint verification before resuming only Chapters 01-03.
+Read this file, the role root, Phase 08 parent #27, active issue #29, completed chapter states 01-03, architecture, research packs, blueprints 04-06, and blueprint verification before resuming only Chapters 04-06.
