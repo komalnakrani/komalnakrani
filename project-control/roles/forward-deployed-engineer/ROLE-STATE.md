@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-12, `OA-05`, `OA-06`, and `OA-07` are complete. Write Chapters 13-14 and extend the companion through observability, release, migration, and recovery under child issue #13.
+Chapters 01-13 and `OA-05` through the operating layer of `OA-08` are complete. Write Chapter 14 and extend the companion through release, migration, recovery, and rehearsal under child issue #13.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Write Chapter 13 and the provider-neutral signal catalog/diagnostic companion from the approved blueprint and Chapter 12 state.
+Write Chapter 14 and the provider-neutral release/migration/recovery rehearsal companion from the approved blueprint and Chapter 13 state.
 
 ## Resume instructions
 

@@ -676,6 +676,58 @@
       "license": "OpenAI documentation terms",
       "notes": "Volatile vendor guidance used for layered safeguards, testing, monitoring, and human review; not a system-specific risk assessment or guarantee.",
       "usedIn": { "chapterSlugs": ["prove-behavior-before-production"], "claimIds": ["CLM-101"] }
+    },
+    {
+      "id": "SRC-053",
+      "type": "documentation",
+      "title": "Set up and manage user support",
+      "authors": ["UK Government Digital Service"],
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/service-manual/helping-people-to-use-your-service/set-up-and-manage-user-support",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Open Government Licence",
+      "notes": "Official service guidance used for support demand, service levels, feedback, and improvement loops; channels remain organization-specific.",
+      "usedIn": { "chapterSlugs": ["make-the-system-observable-and-operable"], "claimIds": ["CLM-111"] }
+    },
+    {
+      "id": "SRC-054",
+      "type": "book",
+      "title": "Service Level Objectives",
+      "authors": ["Betsy Beyer", "Chris Jones", "Jennifer Petoff", "Niall Richard Murphy"],
+      "publisher": "Google Site Reliability Engineering",
+      "url": "https://sre.google/sre-book/service-level-objectives/",
+      "publishedAt": "2016-01-01",
+      "accessedAt": "2026-08-16",
+      "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+      "notes": "First-party engineering book chapter used for user-relevant indicators/objectives tied to decisions; targets require contextual adaptation.",
+      "usedIn": { "chapterSlugs": ["make-the-system-observable-and-operable"], "claimIds": ["CLM-106"] }
+    },
+    {
+      "id": "SRC-055",
+      "type": "documentation",
+      "title": "Signals",
+      "authors": ["OpenTelemetry Authors"],
+      "publisher": "OpenTelemetry",
+      "url": "https://opentelemetry.io/docs/concepts/signals/",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Apache License 2.0",
+      "notes": "Current official project documentation used for traces, metrics, and logs as distinct signals; APIs and product support remain version-sensitive.",
+      "usedIn": { "chapterSlugs": ["make-the-system-observable-and-operable"], "claimIds": ["CLM-107"] }
+    },
+    {
+      "id": "SRC-056",
+      "type": "standard",
+      "title": "Incident Response Recommendations and Considerations for Cybersecurity Risk Management",
+      "authors": ["National Institute of Standards and Technology"],
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+      "publishedAt": "2025-04-03",
+      "accessedAt": "2026-08-16",
+      "license": "United States government work",
+      "notes": "NIST SP 800-61r3 used for integrating incident response into risk management; not a universal incident-command script.",
+      "usedIn": { "chapterSlugs": ["make-the-system-observable-and-operable"], "claimIds": ["CLM-113"] }
     }
   ]
 }

@@ -129,6 +129,15 @@
       "minutes": 80,
       "sourceFile": "chapters/prove-behavior-before-production.mdx",
       "objectiveIds": ["FDE-K05", "FDE-K06", "FDE-K07", "FDE-K08", "FDE-K09"]
+    },
+    {
+      "order": 13,
+      "slug": "make-the-system-observable-and-operable",
+      "title": "Make the System Observable and Operable",
+      "summary": "Design promise-linked signals, actionable objectives and alerts, privacy-safe cohort views, support feedback, and evidence-first diagnostic paths.",
+      "minutes": 75,
+      "sourceFile": "chapters/make-the-system-observable-and-operable.mdx",
+      "objectiveIds": ["FDE-K06", "FDE-K07", "FDE-K09", "FDE-K10"]
     }
   ],
   "registries": {

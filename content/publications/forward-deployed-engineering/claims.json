@@ -624,6 +624,78 @@
       "chapterSlug": "prove-behavior-before-production",
       "statement": "Known limitations, failed criteria, and waivers require explicit consequence, owner, authority, scope, conditions, expiry, and release disposition.",
       "sourceIds": ["SRC-034", "SRC-043", "SRC-044"]
+    },
+    {
+      "id": "CLM-105",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "The promise-to-failure-to-signal map, signal catalog, and diagnostic evidence tree are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-016", "SRC-039", "SRC-050", "SRC-054", "SRC-055"]
+    },
+    {
+      "id": "CLM-106",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Service indicators and objectives are most useful when they reflect user-relevant behavior and connect to a precommitted operational decision or tradeoff.",
+      "sourceIds": ["SRC-019", "SRC-054"]
+    },
+    {
+      "id": "CLM-107",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Metrics, traces, and logs provide distinct but correlatable telemetry signals, while current instrumentation APIs and product support remain version-sensitive.",
+      "sourceIds": ["SRC-055"]
+    },
+    {
+      "id": "CLM-108",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Service availability alone cannot establish workflow usefulness, data quality, model quality, policy correctness, user adoption, or supportability.",
+      "sourceIds": ["SRC-016", "SRC-039", "SRC-050"]
+    },
+    {
+      "id": "CLM-109",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Global averages can conceal degradation in a consequential cohort, site, region, workflow state, evidence-quality segment, or latency tail.",
+      "sourceIds": ["SRC-016", "SRC-019", "SRC-050", "SRC-054"]
+    },
+    {
+      "id": "CLM-110",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Production AI operation requires monitoring system, data, workflow, model, policy, review, fallback, and outcome behavior rather than model-service uptime alone.",
+      "sourceIds": ["SRC-039", "SRC-050"]
+    },
+    {
+      "id": "CLM-111",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Support demand and feedback are operating signals that can reveal service defects, exclusion, training burden, and adoption friction.",
+      "sourceIds": ["SRC-053"]
+    },
+    {
+      "id": "CLM-112",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Telemetry should be purpose-bound, minimized, access-controlled, retained deliberately, and cost/cardinality constrained rather than collecting sensitive payloads by default.",
+      "sourceIds": ["SRC-008", "SRC-042", "SRC-055"]
+    },
+    {
+      "id": "CLM-113",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Incident response should connect preparation, detection, response, recovery, and improvement to organizational cybersecurity risk management.",
+      "sourceIds": ["SRC-042", "SRC-056"]
+    },
+    {
+      "id": "CLM-114",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "Data-quality and software-quality models can structure operational questions without prescribing local indicators or thresholds.",
+      "sourceIds": ["SRC-030", "SRC-045"]
+    },
+    {
+      "id": "CLM-115",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "An alert without an accountable owner, urgency, evidence link, and first diagnostic action is notification noise rather than an operational control.",
+      "sourceIds": ["SRC-019", "SRC-048", "SRC-054"]
+    },
+    {
+      "id": "CLM-116",
+      "chapterSlug": "make-the-system-observable-and-operable",
+      "statement": "A dashboard is a view over selected evidence and does not by itself provide operability, diagnosis, response authority, or recovery capability.",
+      "sourceIds": ["SRC-019", "SRC-047", "SRC-054", "SRC-055"]
     }
   ]
 }
