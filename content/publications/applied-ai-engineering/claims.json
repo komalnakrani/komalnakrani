@@ -26,6 +26,11 @@
     {"id":"CLM-023","chapterSlug":"make-task-data-representative","statement":"Weak data definitions and ownership can compound through organizational and technical stages into downstream product failures.","sourceIds":["SRC-013","SRC-014"]},
     {"id":"CLM-024","chapterSlug":"make-task-data-representative","statement":"Aggregate composition and performance can hide consequential segment and intersection failures, requiring contextual predeclared analysis.","sourceIds":["SRC-049","SRC-050"]},
     {"id":"CLM-025","chapterSlug":"make-task-data-representative","statement":"Multimodal transfer and product evaluation remain dependent on the actual datasets, populations, labels, and task context.","sourceIds":["SRC-015","SRC-020"]},
-    {"id":"CLM-026","chapterSlug":"make-task-data-representative","statement":"Permission, privacy, derived-data, and adversarial assumptions belong in the dataset record and application-specific review.","sourceIds":["SRC-038","SRC-039","SRC-041"]}
+    {"id":"CLM-026","chapterSlug":"make-task-data-representative","statement":"Permission, privacy, derived-data, and adversarial assumptions belong in the dataset record and application-specific review.","sourceIds":["SRC-038","SRC-039","SRC-041"]},
+    {"id":"CLM-027","chapterSlug":"engineer-context-and-retrieval","statement":"Retrieval systems commonly separate broad candidate generation from more expensive scoring or downstream use under effectiveness and efficiency tradeoffs.","sourceIds":["SRC-016","SRC-017","SRC-021"]},
+    {"id":"CLM-028","chapterSlug":"engineer-context-and-retrieval","statement":"Approximate similarity search trades exact neighbor recovery and resource use for scalable retrieval without establishing product relevance or compatibility.","sourceIds":["SRC-018"]},
+    {"id":"CLM-029","chapterSlug":"engineer-context-and-retrieval","statement":"Retrieved evidence can augment generation while remaining an independent source of permission, freshness, relevance, and faithful-use failure.","sourceIds":["SRC-019"]},
+    {"id":"CLM-030","chapterSlug":"engineer-context-and-retrieval","statement":"Multimodal retrieval is a complete applied AI product path that does not inherently require a language generator.","sourceIds":["SRC-015","SRC-020"]},
+    {"id":"CLM-031","chapterSlug":"engineer-context-and-retrieval","statement":"Context paths require structural, semantic, privacy, permission, and security controls across source, index, trace, and downstream use.","sourceIds":["SRC-009","SRC-038","SRC-040","SRC-041"]}
   ]
 }
