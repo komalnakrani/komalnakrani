@@ -183,6 +183,15 @@
       "minutes": 70,
       "sourceFile": "chapters/turn-field-evidence-into-product-leverage.mdx",
       "objectiveIds": ["FDE-K01", "FDE-K05", "FDE-K10", "FDE-K11", "FDE-K12"]
+    },
+    {
+      "order": 19,
+      "slug": "lead-beyond-one-deployment",
+      "title": "Lead Beyond One Deployment",
+      "summary": "Allocate attention across deployments, delegate with authority and evidence, communicate shared facts at multiple altitudes, and grow capability without abandoning engineering depth or inflating authority.",
+      "minutes": 70,
+      "sourceFile": "chapters/lead-beyond-one-deployment.mdx",
+      "objectiveIds": ["FDE-K01", "FDE-K03", "FDE-K11", "FDE-K12"]
     }
   ],
   "registries": {

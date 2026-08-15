@@ -39,8 +39,8 @@
 - objective map: deferred to Abhyaas
 - exam blueprint: deferred to Abhyaas
 - book architecture: pending under `project-control/roles/forward-deployed-engineer/books/`
-- manuscript(s): Chapters 01-17 complete under `content/publications/forward-deployed-engineering/chapters/`
-- figure manifest: frozen placeholders through `F17.2`; production visuals pending Phase 10
+- manuscript(s): Chapters 01-19, front matter, five appendices, learning packs, state handoffs, and immediate QA complete under `content/publications/forward-deployed-engineering/`
+- figure manifest: all 38 frozen placeholders through `F19.2`; production visuals pending Phase 10
 - PDF(s): pending under `output/pdf/`
 - preparation resources: pending
 - certification page: deferred to Abhyaas
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-18 and `OA-05` through the product layer of `OA-11` are complete. Write Chapter 19, front matter, five appendices, and companion closure under child issue #15.
+Phase 08 acceptance is complete: 19 manuscripts, 19 learning packs, 19 state handoffs, 19 immediate QA records, 38 figure placeholders, front matter, five appendices, 61 sources, 188 claims, and 64 companion tests pass. Commit and close child #15 and root #9, then begin Phase 09 whole-book QA.
 
 ## Unresolved blockers
 
@@ -87,11 +87,11 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 
 ## Quality debt
 
-None at role start.
+Phase 09 must audit the shorter late chapters against every approved blueprint concept and failure mode; validator success alone does not establish complete prose coverage.
 
 ## Exact next action
 
-Write Chapter 19 and the portfolio/dossier closure companion from the approved blueprint and Chapter 18 state.
+Commit and push the accepted Phase 08 checkpoint, close #15 and #9 with evidence, and open the Phase 09 whole-book QA issue.
 
 ## Resume instructions
 

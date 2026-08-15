@@ -59,9 +59,9 @@
 
 ## Exact next action
 
-Execute Forward Deployed Engineer issue #15: write Chapter 18 and build the
-pattern/reuse classification companion before completing portfolio leadership
-and the book's front/back matter.
+Close Forward Deployed Engineer Phase 08 child #15 and root #9 from the passing
+19-chapter cumulative gate, then begin Phase 09 whole-book QA. Audit actual
+coverage before accepting the shorter late chapters.
 
 ## Resume instructions
 

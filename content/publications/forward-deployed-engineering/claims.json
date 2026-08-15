@@ -1056,6 +1056,78 @@
       "chapterSlug": "turn-field-evidence-into-product-leverage",
       "statement": "Reuse decisions should remain versioned and reversible as new contexts disconfirm the proposed invariant or reveal unacceptable maintenance cost.",
       "sourceIds": ["SRC-031", "SRC-043", "SRC-061"]
+    },
+    {
+      "id": "CLM-177",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "The portfolio record, ordinal attention model, delegation contract, multi-altitude memo, and capability-evidence path are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-004", "SRC-042", "SRC-054", "SRC-056", "SRC-059"]
+    },
+    {
+      "id": "CLM-178",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "Portfolio attention should consider consequence, reversibility, evidence gap, and decision latency while preserving narrative judgment rather than pretending an arithmetic score is truth.",
+      "sourceIds": ["SRC-042", "SRC-054", "SRC-056", "SRC-059"]
+    },
+    {
+      "id": "CLM-179",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "The loudest customer, largest deadline, or most senior requester is not automatically the highest-consequence or most time-sensitive evidence decision.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-054"]
+    },
+    {
+      "id": "CLM-180",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "Delegation requires an objective, bounded authority, evidence expectations, constraints, review points, escalation, and accountable owner rather than task transfer alone.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-004", "SRC-056"]
+    },
+    {
+      "id": "CLM-181",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "Executive, operational, and technical communications can differ in detail while preserving the same facts, uncertainty, authority, decision, and review trigger.",
+      "sourceIds": ["SRC-001", "SRC-004", "SRC-056"]
+    },
+    {
+      "id": "CLM-182",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "Seniority increases responsibility for decision quality, system capacity, delegation, and escalation; it does not confer legal, security, privacy, safety, audit, or business risk authority by title.",
+      "sourceIds": ["SRC-008", "SRC-042", "SRC-056"]
+    },
+    {
+      "id": "CLM-183",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "Evidence-based growth is demonstrated through progressively harder outcomes, systems, ambiguity, leadership, product leverage, and boundary judgment rather than tenure, title, travel, or burnout.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-004"]
+    },
+    {
+      "id": "CLM-184",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "Portfolio reviews should preserve outcome and guardrail trajectory, adoption, evidence gaps, dependency age, readiness, leverage, next decision, owner, confidence, and review trigger for each engagement.",
+      "sourceIds": ["SRC-016", "SRC-054", "SRC-059"]
+    },
+    {
+      "id": "CLM-185",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "Direct engineering depth remains necessary at portfolio level because architecture, failure, evidence, and reuse decisions cannot be delegated responsibly without technical understanding.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-004"]
+    },
+    {
+      "id": "CLM-186",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "A persistent escalation should become an owned control, product capability, operating practice, or explicit accepted gap rather than permanent heroic coordination.",
+      "sourceIds": ["SRC-042", "SRC-056", "SRC-059", "SRC-061"]
+    },
+    {
+      "id": "CLM-187",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "Opportunity cost and the consequence of delayed attention should be explicit when allocating FDE capacity across deployments.",
+      "sourceIds": ["SRC-054", "SRC-059"]
+    },
+    {
+      "id": "CLM-188",
+      "chapterSlug": "lead-beyond-one-deployment",
+      "statement": "A completed deployment dossier should identify source/build provenance, issue and risk state, reuse disposition, current limitations, and next owners so closure is resumable and auditable.",
+      "sourceIds": ["SRC-043", "SRC-049", "SRC-056", "SRC-059"]
     }
   ]
 }

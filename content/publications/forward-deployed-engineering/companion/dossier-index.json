@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-16T02:19:13+05:30",
+  "hashAlgorithm": "sha256",
+  "sourceHash": "fae260eb3de4e2759d786c4b4887f37d2ca8db03857402cb0813142152ec08ec",
+  "sourceHashScope": "Sorted SHA-256 digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
+  "buildHash": "fd2b740ff1a46e6b26ec388466ba8cc0436fe7af9c98929951e79a778055b42c",
+  "buildHashScope": "Sorted SHA-256 digest stream for every file in the Astro dist directory produced by npm run build.",
+  "issueState": {
+    "roleRoot": "#3 OPEN",
+    "phase08Root": "#9 OPEN - acceptance gate passed; closure pending commit and push",
+    "phase08Child": "#15 OPEN - acceptance gate passed; closure pending commit and push",
+    "nextPhase": "Phase 09 whole-book QA"
+  },
+  "riskState": {
+    "blockingSourceGaps": 0,
+    "openExceptions": 0,
+    "knownLimitations": [
+      "All companion evidence is synthetic and local.",
+      "Whole-book coverage, duplication, terminology, continuity, architecture, source, and series consistency remain subject to Phase 09 audit.",
+      "The 38 frozen figure placeholders require final artwork and accessibility review in Phase 10.",
+      "Real integrations, customer identity, performance, accessibility, UAT, recovery, authority, and production outcomes require representative evidence."
+    ]
+  },
+  "reuseState": {
+    "proposal": "No platform claim accepted from the single Orchid case.",
+    "deferred": "Intent and reconciliation seam awaits evidence from a third distinct context.",
+    "rejected": "Orchid-specific mappings, thresholds, fixtures, and approval rules remain customer-isolated.",
+    "nextReviewTrigger": "Third-context evidence with maintenance, compatibility, isolation, cost, owner, validation, and disconfirmation records."
+  },
+  "nextOwner": {
+    "phase09": "Komal whole-book QA owner",
+    "phase10": "Komal figure production and accessibility owner",
+    "phase11": "Komal publication and PDF release owner",
+    "fictionalCustomer": "Named Orchid operations, product, security, and release authorities in OA-10",
+    "productLearning": "Product owner after the third-context review trigger"
+  }
+}
