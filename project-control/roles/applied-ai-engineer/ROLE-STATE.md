@@ -5,11 +5,11 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 06 acceptance complete - Phase 07 transition pending
+- Current global phase: Komal Phase 07 acceptance complete - Phase 08 transition pending
 - Last updated: 2026-08-16
-- Last completed issue: Phase 05 #24, architecture version 1.0.0
+- Last completed issue: Phase 06 #25, 21 research packs / 55 sources / 118 claims / 12 cases
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Active issue: [#25](https://github.com/alpeshznakrani/komalnakrani/issues/25)
+- Active issue: [#26](https://github.com/alpeshznakrani/komalnakrani/issues/26)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -38,6 +38,7 @@
 - chapter research: 21 packs under `project-control/roles/applied-ai-engineer/books/applied-ai-engineering/sources/`
 - source register: 55 primary/official records, all used, 118 unique planned claim IDs
 - case-study register: 11 public/primary cases plus one explicitly constructed Patchwork case, all used
+- chapter blueprints: 21 verified files plus `blueprints/blueprint-verification.md`
 - manuscript(s): pending
 - figure manifest: pending
 - PDF(s): pending
@@ -57,7 +58,7 @@
 - [x] 04 book scope
 - [x] 05 book architecture
 - [x] 06 research
-- [ ] 07 chapter blueprints
+- [x] 07 chapter blueprints
 - [ ] 08 manuscript
 - [ ] 09 book QA
 - [ ] 10 visuals
@@ -73,7 +74,7 @@
 
 ## Current work
 
-Phase 06 acceptance is complete. All 21 frozen chapters have focused research packs containing 118 unique material claim IDs. All 55 registered sources and all 12 registered cases are used and resolve bidirectionally from chapter evidence. Sources span standards, primary research, official documentation, first-party engineering, and retrospectives across predictive, retrieval/ranking, multimodal, generative, human-AI, security, operations, and change practice. URL QA records 48 direct successes, seven access-restricted/anti-bot sources, and zero 404/5xx failures. Every case separates reported fact, allowed inference, verified outcome, and limitation.
+Phase 07 acceptance is complete. Exactly 21 blueprints match the frozen titles/order; every required writing/implementation field is present. All 42 forecast figures are assigned once, all 11 domains and 12 `PF-*` milestones are covered, every source/case reference remains inside its chapter's verified research pack, and chapter word ranges total 132,500–164,000. The provider-neutral companion advances as one Patchwork system from local baselines through data/context, evaluation, failure, controls, release, incident, migration, reuse, and portfolio verification.
 
 ## Unresolved blockers
 
@@ -83,18 +84,19 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 - Preserve the finding that the exact title is employer-defined and aliases require responsibility evidence.
 - Preserve the LLM/agent-heavy 2026 source skew without treating it as the universal role definition.
-- Phase 07 must convert each research pack into an executable blueprint without upgrading case inference into fact or copying research notes as manuscript prose.
-- Preserve explicit source limitations, evaluator bias, benchmark context, version volatility, and authority boundaries in every blueprint.
+- Phase 08 must write every chapter fresh from its blueprint, expanding explanation and original examples without copying research notes or importing another role's prose.
+- Companion implementation must default to local deterministic behavior and synthetic data; provider adapters remain optional and versioned.
+- Preserve explicit source limitations, evaluator bias, benchmark context, version volatility, and authority boundaries in manuscript claims and exercises.
 - Keep FDE customer-engagement ownership, MLE model/data lifecycle ownership, research capability creation, and formal risk authority outside the core boundary.
 
 ## Quality debt
 
-None. Research QA confirms 21/21 packs, 55/55 sources used, 12/12 cases used, 118/118 unique claims, all references resolved, all source uses declared in chapter mappings, no duplicate URLs or placeholder gaps, low maximum 12-word shingle overlap (0.00420), and clean publication/diff checks.
+None. Blueprint QA confirms 21/21 title/order matches, ten required section groups in every file, 42/42 unique figure assignments, 11/11 domains, 12/12 dossier milestones, source/case subset integrity, continuous handoffs, credible word ranges, and passing publication validation/tests plus diff checks.
 
 ## Exact next action
 
-Commit and close Phase 06 issue #25, then open Komal Phase 07 to build detailed blueprints for all 21 frozen chapters.
+Commit and close Phase 07 issue #26, then open Komal Phase 08 to write the complete original manuscript and executable companion in bounded sequential batches.
 
 ## Resume instructions
 
-Read this file, the role root/active issues, `project-control/role-factory/FACTORY-STATE.md`, the frozen architecture, source/case registers, and all 21 research packs before resuming only Phase 06.
+Read this file, the role root/active issues, `project-control/role-factory/FACTORY-STATE.md`, architecture, research, all 21 blueprints, and blueprint verification before resuming only Phase 07.
