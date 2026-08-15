@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-15 and `OA-05` through `OA-09` are complete. Write Chapters 16-17 and extend the companion through stabilization, adoption, and ownership acceptance under child issue #14.
+Chapters 01-16 and `OA-05` through the stabilization layer of `OA-10` are complete. Write Chapter 17 and extend the companion through adoption and ownership acceptance under child issue #14.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Write Chapter 16 and the timed incident/stabilization evidence model from the approved blueprint and Chapter 15 state.
+Write Chapter 17 and the adoption-friction/ownership-acceptance model from the approved blueprint and Chapter 16 state.
 
 ## Resume instructions
 

@@ -1,0 +1,207 @@
+---
+title: Stabilize Under Real Conditions
+slug: stabilize-under-real-conditions
+summary: Operate inside customer incident command, contain impact, communicate calibrated facts, restore service, correct systemic conditions, and prove stabilization exit.
+minutes: 75
+sourceIds:
+  - SRC-008
+  - SRC-039
+  - SRC-042
+  - SRC-043
+  - SRC-050
+  - SRC-055
+  - SRC-056
+  - SRC-059
+  - SRC-061
+claimIds:
+  - CLM-141
+  - CLM-142
+  - CLM-143
+  - CLM-144
+  - CLM-145
+  - CLM-146
+  - CLM-147
+  - CLM-148
+  - CLM-149
+  - CLM-150
+  - CLM-151
+  - CLM-152
+objectiveIds:
+  - FDE-K01
+  - FDE-K05
+  - FDE-K08
+  - FDE-K09
+  - FDE-K10
+  - FDE-K12
+figureIds: []
+---
+
+When reality contradicts readiness, first protect people and the workflow. Then establish truth.
+
+The FDE may be the deepest technical lead, but operates inside the customer's incident structure. Incident command, customer/public communications, legal/privacy/security/safety decisions, and business authority remain explicitly designated. [CLM-142] [CLM-151]
+
+## Establish command and impact before deep debugging
+
+Confirm:
+
+- incident commander and deputies;
+- technical, customer-impact, and communications leads;
+- affected users/cohorts/workflow/data and consequence;
+- current exposure and containment authority;
+- evidence/timeline/decision log location;
+- update cadence, escalation, and next checkpoint;
+- access, privacy, safety, legal, and support constraints.
+
+Do not begin with “root cause.” Initial priorities are impact, command, containment options, and evidence-safe coordination.
+
+The companion rejects a record where an FDE silently names themselves commander without explicit designation.
+
+## Run parallel incident tracks
+
+[FIGURE F16.1: Parallel incident/stabilization timeline. Shared time axis carries impact/command, diagnosis/evidence, containment/recovery, communications/support, and correction/verification tracks. Decision points link confidence-tagged evidence to action; restoration begins stabilization rather than ending it.]
+
+### Impact and command
+
+Who is affected, what can/cannot be done, how consequence changes, which authority decides.
+
+### Diagnosis and evidence
+
+Correlated metrics, traces, events, workflow/data/model/policy/support evidence; hypotheses and falsification.
+
+### Containment and recovery
+
+Disable/hold/isolate/fallback/reconcile/rollback/roll-forward/restore/stop, then verify user-visible state.
+
+### Communications and support
+
+Confirmed impact/actions/unknowns/next cadence through authorized owners; support scripts and escalation.
+
+### Correction and learning
+
+Systemic condition, durable change, regression evidence, monitoring window, owners/dates.
+
+These parallel tracks are original synthesis, not a universal incident standard. [CLM-141]
+
+## Keep a confidence-tagged timeline
+
+Each entry includes time/timezone, track, statement, confidence, evidence, actor/decision, and correction history.
+
+- **confirmed:** supported by named evidence;
+- **probable:** current hypothesis with basis and test;
+- **unknown:** important unresolved question.
+
+Do not rewrite old entries to look certain. Append corrections and decision changes. The companion requires evidence for a confirmed entry and preserves chronology.
+
+Metrics, traces, logs, workflow state, data/model/policy, and support answer different questions. [CLM-145]
+
+## Communicate calibrated facts
+
+An update states:
+
+- observed impact/scope;
+- confirmed facts and evidence time;
+- unknowns/hypotheses labeled;
+- containment/restoration actions and consequence;
+- next update time;
+- approved workaround/support path;
+- ETA only when authorized and genuinely supported.
+
+The companion rejects a “probable” ETA presented as ETA. [CLM-143]
+
+Avoid speculative cause, blame, invented reassurance, and sensitive technical detail in broad channels. Communications use the customer-approved owner/process.
+
+## Diagnose by consequence and boundary
+
+For Orchid low-connectivity review failure:
+
+1. confirm affected cohort and whether safety workflow is blocked/misleading;
+2. hold expansion and enable truthful fallback;
+3. compare release/config/site/dependency and retry/new-demand signals;
+4. trace equipment/evidence/inventory/model/policy/approval path;
+5. inspect capacity, stale configuration, timeout and retry amplification;
+6. preserve minimized evidence and reconcile unknown intents;
+7. choose containment/recovery using Chapter 14's state tree.
+
+For an AI-quality incident, service health can remain green. Investigate equipment binding, evidence freshness, retrieval, model/prompt/index, policy, reviewer workload, critical segments, and support reports. [CLM-150]
+
+## Balance evidence preservation and containment
+
+Preserve release/config/policy/model identifiers, correlation/intent IDs, timeline, decisions, minimized telemetry, relevant artifacts, and access/audit state.
+
+Do not delay necessary harm reduction merely to collect perfect evidence. Do not casually copy sensitive payloads or alter/delete evidence. Follow customer incident, privacy, security, safety, and legal procedures. [CLM-146]
+
+## Separate restore from correct
+
+**Restore:** return an acceptable user-visible state: disable feature, isolate cohort, fallback, rollback/roll-forward, restore, reconcile.
+
+**Correct:** remove/mitigate contributing system conditions, verify regressions, update controls/signals/runbooks/ownership, and monitor.
+
+A workaround can restore quickly and remain dangerous as permanent architecture. Restoration does not end stabilization. [CLM-144]
+
+## Find contributing conditions, not a person to blame
+
+Ask how design, review, data, defaults, access, alerts, rollout, workload, incentives, documentation, ownership, or recovery made the event possible or harder.
+
+Blameless learning is not accountability-free. It preserves evidence, actions, owners, local legal/safety/employment obligations, and real decision responsibility. [CLM-147]
+
+[FIGURE F16.2: Symptom-to-system-change learning loop. User impact and detection flow through timeline/decisions, contributing conditions across workflow/system/organization, containment/restoration, durable corrective actions, verification/monitoring, owner transfer, then updated design/test/signal/runbook/product pattern.]
+
+## Write corrective actions as system changes
+
+Each action contains:
+
+- contributing condition/consequence;
+- system/control/test/signal/runbook/process change;
+- owner/due date/priority;
+- verification method/data/environment;
+- observed evidence and residual gap;
+- escalation if overdue.
+
+“Be more careful” is not a corrective system action. [CLM-149]
+
+For retry amplification: separate new/retry budgets, preserve intent/reconciliation, cap/queue/fallback, add cohort capacity tests/signals, and verify failure recovery.
+
+For stale configuration: version/promote/validate config, fail closed, correlate release state, add drift signal and rollback/roll-forward exercise.
+
+For quality regression: restrict model/cohort, restore known bundle/fallback, add critical cases/segments/graders, verify policy/review, monitor the correction.
+
+## Define stabilization exit evidence
+
+Require:
+
+- impact contained and affected state reconciled;
+- service/workflow restored under current scope;
+- durable correction implemented and reviewed;
+- regression/failure/recovery evidence passes;
+- monitoring window complete across affected cohorts/tails;
+- support/adoption state understood;
+- corrective actions ownered/tracked;
+- customer operators own current runbooks/access;
+- residual risk/exception formally disposed;
+- communications closeout authorized.
+
+The companion refuses exit when only `impactContained` and `serviceRestored` are true. [CLM-148]
+
+## Complete `OA-10` stabilization layer
+
+The artifact contains command/roles, impact, chronological confidence-tagged timeline, decision log, customer updates, evidence, containment/restoration, contributing conditions, corrective actions, verification window, residual risk, and stabilization disposition.
+
+Incident response connects detection/response/recovery/improvement to organizational risk management. [CLM-152]
+
+The companion adds five tests for evidence-backed chronology, command boundary, speculative ETA rejection, systemic corrective action, and restoration-versus-stabilization.
+
+## The Chapter 16 gate
+
+Stabilization exits only when:
+
+- customer command/communications authority is explicit;
+- impact/facts/unknowns/decisions/timeline remain auditable;
+- containment and recovered user state are verified;
+- evidence is preserved without delaying harm reduction;
+- durable correction and regression evidence exist;
+- observation covers affected cohorts/quality;
+- corrective actions and residual risks are ownered;
+- customer operators/support accept the current state;
+- companion incident tests pass.
+
+Chapter 17, *Make the Solution Usable and Ownable*, tests whether users can succeed and customer operators can release, recover, support, and decide without hidden FDE dependency.

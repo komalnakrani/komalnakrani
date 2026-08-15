@@ -840,6 +840,78 @@
       "chapterSlug": "cross-the-production-threshold",
       "statement": "Stop, rollback, roll-forward, isolation, fallback, and communication triggers should be defined before exposure rather than improvised during impact.",
       "sourceIds": ["SRC-057", "SRC-058", "SRC-059"]
+    },
+    {
+      "id": "CLM-141",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "The parallel incident tracks, confidence-tagged timeline, and stabilization exit record are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-050", "SRC-055", "SRC-056", "SRC-061"]
+    },
+    {
+      "id": "CLM-142",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "An FDE should operate within the customer's designated incident structure and cannot silently assume incident command or public/customer communications authority.",
+      "sourceIds": ["SRC-042", "SRC-056"]
+    },
+    {
+      "id": "CLM-143",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Incident updates should separate confirmed facts, probable hypotheses, unknowns, actions, next cadence, and explicitly qualified estimates.",
+      "sourceIds": ["SRC-055", "SRC-056"]
+    },
+    {
+      "id": "CLM-144",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Containment and restoration can be urgent while durable correction still requires root or contributing-condition analysis, regression evidence, and monitored verification.",
+      "sourceIds": ["SRC-056", "SRC-061"]
+    },
+    {
+      "id": "CLM-145",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Metrics, traces, logs, workflow state, data quality, model/policy behavior, and support evidence answer different incident questions and should be correlated safely.",
+      "sourceIds": ["SRC-039", "SRC-050", "SRC-055"]
+    },
+    {
+      "id": "CLM-146",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Incident evidence should be preserved in a purpose-bound, access-controlled form without delaying necessary harm containment or copying sensitive content casually.",
+      "sourceIds": ["SRC-008", "SRC-042", "SRC-056"]
+    },
+    {
+      "id": "CLM-147",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Blameless learning seeks systemic contributing conditions and corrective actions while preserving accountability, evidence, and local legal, safety, and employment obligations.",
+      "sourceIds": ["SRC-061"]
+    },
+    {
+      "id": "CLM-148",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Restoration alone does not prove stabilization; durable correction, regression evidence, observation, ownership transfer, and residual-risk disposition remain necessary.",
+      "sourceIds": ["SRC-056", "SRC-059", "SRC-061"]
+    },
+    {
+      "id": "CLM-149",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "A corrective action should change the system, control, test, signal, runbook, ownership, or process and include an owner, date, verification method, and evidence.",
+      "sourceIds": ["SRC-043", "SRC-056", "SRC-061"]
+    },
+    {
+      "id": "CLM-150",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Production AI incidents can be quality, data, retrieval, policy, approval, workflow, or cohort incidents even when infrastructure remains available.",
+      "sourceIds": ["SRC-039", "SRC-050"]
+    },
+    {
+      "id": "CLM-151",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Public or customer-impact communications require an authorized owner and should avoid speculative cause or ETA claims.",
+      "sourceIds": ["SRC-056"]
+    },
+    {
+      "id": "CLM-152",
+      "chapterSlug": "stabilize-under-real-conditions",
+      "statement": "Incident response connects preparation, detection, containment, recovery, and improvement to broader organizational risk management.",
+      "sourceIds": ["SRC-042", "SRC-056"]
     }
   ]
 }

@@ -780,6 +780,19 @@
       "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
       "notes": "First-party engineering book chapter used for launch review, operability, ownership, and readiness questions; process should scale to local risk rather than imitate Google structure.",
       "usedIn": { "chapterSlugs": ["cross-the-production-threshold"], "claimIds": ["CLM-133", "CLM-134"] }
+    },
+    {
+      "id": "SRC-061",
+      "type": "book",
+      "title": "Postmortem Culture: Learning from Failure",
+      "authors": ["Google Site Reliability Engineering"],
+      "publisher": "Google Site Reliability Engineering",
+      "url": "https://sre.google/sre-book/postmortem-culture/",
+      "publishedAt": "2016-01-01",
+      "accessedAt": "2026-08-16",
+      "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+      "notes": "First-party engineering book chapter used for blameless learning records that connect impact, contributing conditions, actions, and follow-up; local legal/safety/employment duties remain authoritative.",
+      "usedIn": { "chapterSlugs": ["stabilize-under-real-conditions"], "claimIds": ["CLM-147"] }
     }
   ]
 }

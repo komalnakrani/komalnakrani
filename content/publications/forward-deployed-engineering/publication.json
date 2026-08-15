@@ -156,6 +156,15 @@
       "minutes": 70,
       "sourceFile": "chapters/cross-the-production-threshold.mdx",
       "objectiveIds": ["FDE-K01", "FDE-K03", "FDE-K08", "FDE-K09", "FDE-K10", "FDE-K12"]
+    },
+    {
+      "order": 16,
+      "slug": "stabilize-under-real-conditions",
+      "title": "Stabilize Under Real Conditions",
+      "summary": "Operate inside customer incident command, contain impact, communicate calibrated facts, restore service, correct systemic conditions, and prove stabilization exit.",
+      "minutes": 75,
+      "sourceFile": "chapters/stabilize-under-real-conditions.mdx",
+      "objectiveIds": ["FDE-K01", "FDE-K05", "FDE-K08", "FDE-K09", "FDE-K10", "FDE-K12"]
     }
   ],
   "registries": {
