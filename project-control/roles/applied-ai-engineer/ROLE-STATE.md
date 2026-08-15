@@ -5,11 +5,11 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 04 acceptance complete - Phase 05 transition pending
+- Current global phase: Komal Phase 05 acceptance complete - Phase 06 transition pending
 - Last updated: 2026-08-16
-- Last completed issue: Phase 01 #22, verdict `PROCEED`
+- Last completed issue: Phase 04 #23, decision `SINGLE BOOK`
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Active issue: [#23](https://github.com/alpeshznakrani/komalnakrani/issues/23)
+- Active issue: [#24](https://github.com/alpeshznakrani/komalnakrani/issues/24)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -20,8 +20,8 @@
 - exam blueprint version: deferred to Abhyaas
 - book scope: one original book spanning the complete AI-system evidence loop
 - book thesis: Applied AI engineering turns uncertain model capability into useful, measurable, reliable, and governable product behavior through an evidence loop from real task through operation and change
-- book structure: pending Phase 05
-- book title: pending evidence and architecture
+- book structure: 1 book, 6 parts, 21 chapters, 6 appendices; architecture version 1.0.0
+- book title: *Applied AI Engineering: From Model Capability to Dependable Product Behavior*
 - volume count: 1 (`SINGLE BOOK`)
 - terminology decisions: Applied AI Engineer canonical; AI Engineer, Applied AI Software Engineer, and Applied ML titles require responsibility evidence; Agentic AI Engineer and LLM Engineer remain narrower specializations
 - course decision: pending Phase 13 AUTO review
@@ -34,7 +34,7 @@
 - competency standard: deferred to Abhyaas
 - objective map: deferred to Abhyaas
 - exam blueprint: deferred to Abhyaas
-- book architecture: pending Phase 05; scope recommends approximately 18-21 chapters in five or six parts
+- book architecture: `project-control/roles/applied-ai-engineer/books/applied-ai-engineering/architecture.md`
 - manuscript(s): pending
 - figure manifest: pending
 - PDF(s): pending
@@ -52,7 +52,7 @@
 - [ ] 02 competency standard (deferred)
 - [ ] 03 exam blueprint (deferred)
 - [x] 04 book scope
-- [ ] 05 book architecture
+- [x] 05 book architecture
 - [ ] 06 research
 - [ ] 07 chapter blueprints
 - [ ] 08 manuscript
@@ -70,7 +70,7 @@
 
 ## Current work
 
-Phase 04 acceptance is complete with decision `SINGLE BOOK`. One coherent evidence loop connects task/value, behavior contract, mechanism choice, data/context, production integration, evaluation, controls, operational quality, release, feedback, change, and advanced leadership. The strongest two-volume split failed because both halves require the same task, evaluation, control, release, and change artifacts. The book remains model-family-neutral and requires non-LLM, multimodal/predictive, retrieval/recommendation, generative, and conditional agentic cases.
+Phase 05 acceptance is complete. *Applied AI Engineering: From Model Capability to Dependable Product Behavior* has a frozen six-part, 21-chapter evidence-loop architecture, 11 mapped Komal publication domains, 12 cumulative `PF-*` dossier milestones, 42 forecast technical figures, and six appendices. The original Patchwork Find capstone begins as a provider-neutral non-LLM multimodal retrieval/ranking product; generative and bounded tool behavior must earn inclusion through evaluation. Satellite cases enforce high-consequence human authority, agent bounds, and predictive/non-generative transfer.
 
 ## Unresolved blockers
 
@@ -80,17 +80,17 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 - Preserve the finding that the exact title is employer-defined and aliases require responsibility evidence.
 - Preserve the LLM/agent-heavy 2026 source skew without treating it as the universal role definition.
-- Phase 05 must realize the required non-LLM and multimodal/predictive case coverage in the architecture.
+- Phase 06 must source every chapter's material claims, including non-LLM/multimodal/predictive evidence and limitations of current LLM/agent-heavy sources.
 - Keep FDE customer-engagement ownership, MLE model/data lifecycle ownership, research capability creation, and formal risk authority outside the core boundary.
 
 ## Quality debt
 
-None. Phase 04 covers all 11 durable clusters, compares one-, two-, three-, and four-plus-volume structures, preserves adjacent-role boundaries, and gives Phase 05 an actionable one-book handoff.
+None. Architecture validation confirms 21 unique ordered chapters, all 11 domains and all chapters mapped, 12 ordered milestones, 42 unique figures at two per chapter, full modality/mechanism constraints, and clean publication/diff checks.
 
 ## Exact next action
 
-Commit and close Phase 04 issue #23 with `SINGLE BOOK`, then open Komal Phase 05 to design the original book architecture.
+Commit and close Phase 05 issue #24, then open Komal Phase 06 to create source-backed chapter research and an original case-study register.
 
 ## Resume instructions
 
-Read this file, the role root/active issues, `project-control/role-factory/FACTORY-STATE.md`, the Phase 01 research, and `books/book-scope-decision.md` before resuming only Phase 04.
+Read this file, the role root/active issues, `project-control/role-factory/FACTORY-STATE.md`, Phase 01 research, `books/book-scope-decision.md`, and all four architecture outputs before resuming only Phase 05.

@@ -55,14 +55,14 @@
 
 - Role: Applied AI Engineer
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Active child: [#23 - Decide Applied AI Engineer book scope and volume count](https://github.com/alpeshznakrani/komalnakrani/issues/23), decision `SINGLE BOOK`, acceptance complete and closure pending
+- Active child: [#24 - Design Applied AI Engineering book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/24), 21-chapter architecture acceptance complete and closure pending
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Commit Applied AI Engineer Phase 04 decision `SINGLE BOOK`, close issue #23, then
-open Komal Phase 05 to design the original book architecture. Do not enter
-deferred Abhyaas work.
+Commit Applied AI Engineer Phase 05 architecture, close issue #24, then open
+Komal Phase 06 source and case-study research. Do not enter deferred Abhyaas
+work.
 
 ## Resume instructions
 
