@@ -533,6 +533,71 @@
       "license": "OpenAI website terms",
       "notes": "First-party research article used for the limits of static evaluation and deployment-like simulation; simulation still cannot reproduce all production tails.",
       "usedIn": { "chapterSlugs": ["put-ai-inside-a-bounded-workflow"], "claimIds": ["CLM-062"] }
+    },
+    {
+      "id": "SRC-042",
+      "type": "standard",
+      "title": "Cybersecurity Framework 2.0",
+      "authors": ["National Institute of Standards and Technology"],
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/cyberframework",
+      "publishedAt": "2024-02-26",
+      "accessedAt": "2026-08-16",
+      "license": "United States government work",
+      "notes": "Outcome-oriented cybersecurity framework used by version for governance and risk conversations; it does not prescribe or certify a complete implementation.",
+      "usedIn": { "chapterSlugs": ["build-security-and-governance-into-delivery"], "claimIds": ["CLM-069"] }
+    },
+    {
+      "id": "SRC-043",
+      "type": "standard",
+      "title": "Secure Software Development Framework Version 1.1",
+      "authors": ["National Institute of Standards and Technology"],
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "publishedAt": "2022-02-03",
+      "accessedAt": "2026-08-16",
+      "license": "United States government work",
+      "notes": "NIST SP 800-218 final Version 1.1 used for integrating secure software practices into the lifecycle; a later revision was draft at the research cutoff.",
+      "usedIn": { "chapterSlugs": ["build-security-and-governance-into-delivery"], "claimIds": ["CLM-070"] }
+    },
+    {
+      "id": "SRC-044",
+      "type": "standard",
+      "title": "Application Security Verification Standard",
+      "authors": ["OWASP Foundation"],
+      "publisher": "OWASP Foundation",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "publishedAt": "2025-05-01",
+      "accessedAt": "2026-08-16",
+      "license": "OWASP project terms",
+      "notes": "ASVS 5.0.0 used as versioned application-security verification criteria; scope and level remain contextual owner decisions.",
+      "usedIn": { "chapterSlugs": ["build-security-and-governance-into-delivery"], "claimIds": ["CLM-072"] }
+    },
+    {
+      "id": "SRC-045",
+      "type": "standard",
+      "title": "ISO/IEC 25010:2023 Systems and software Quality Requirements and Evaluation",
+      "authors": ["International Organization for Standardization", "International Electrotechnical Commission"],
+      "publisher": "International Organization for Standardization",
+      "url": "https://www.iso.org/standard/78176.html",
+      "publishedAt": "2023-11-01",
+      "accessedAt": "2026-08-16",
+      "license": "ISO website and standard terms",
+      "notes": "Official standard record used only for scope/version and the existence of a product-quality model; copyrighted requirements are not reproduced.",
+      "usedIn": { "chapterSlugs": ["build-security-and-governance-into-delivery"], "claimIds": ["CLM-079"] }
+    },
+    {
+      "id": "SRC-046",
+      "type": "standard",
+      "title": "Web Content Accessibility Guidelines 2.2",
+      "authors": ["World Wide Web Consortium"],
+      "publisher": "World Wide Web Consortium",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "publishedAt": "2024-12-12",
+      "accessedAt": "2026-08-16",
+      "license": "W3C document license",
+      "notes": "W3C Recommendation used for versioned, testable web accessibility criteria; conformance does not by itself establish complete usability or accessibility for every context.",
+      "usedIn": { "chapterSlugs": ["build-security-and-governance-into-delivery"], "claimIds": ["CLM-073"] }
     }
   ]
 }

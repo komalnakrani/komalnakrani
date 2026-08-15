@@ -1,0 +1,44 @@
+# Chapter 10 State - Build Security and Governance Into Delivery
+
+## Concepts introduced
+
+- asset/threat/risk/control/implementation/verification/evidence/disposition chain
+- contextual risk statements and inherent/controlled/residual views
+- control records, data handling, minimized auditability, secrets lifecycle
+- workflow-plus-system threat modeling, least privilege, separation of duties, break-glass
+- versioned framework mappings, exceptions, evidence invalidation, authority routing
+
+## Terminology locked
+
+- Framework alignment is not implementation, verification, certification, compliance, or risk acceptance.
+- Evidence-complete is distinct from approved.
+- The FDE prepares evidence and routes decisions; explicitly designated authorities approve residual risks/exceptions.
+
+## Examples and cases used
+
+- Orchid qualified safety-step approval control
+- tenant/region resource authorization and audit allowlist
+- fictional regional logging exception and break-glass exposure decision
+- NIST/OWASP/W3C/ISO records used by version and limitation only
+
+## Figures
+
+- `F10.1` risk-to-control-to-evidence chain placeholder present.
+- `F10.2` authority/escalation map placeholder present.
+
+## Project and companion progress
+
+- `OA-05` design dossier complete through governance/control evidence.
+- Companion adds control assessment, scoped authority routing, minimized audit events; 19 cumulative tests pass.
+
+## Unresolved gaps
+
+- Customer-specific legal, privacy, safety, accessibility, security, audit, and business decisions remain designated-owner work.
+- No blocking source gap.
+- Final figures wait for Phase 10.
+- Approximately 3,850 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+
+## Chapter 11 may assume
+
+- one bounded vertical slice has explicit contracts, environment, AI, control, evidence, and authority constraints;
+- implementation cannot substitute a happy-path demo for representative evidence.

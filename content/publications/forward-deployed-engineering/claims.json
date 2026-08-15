@@ -396,6 +396,84 @@
       "chapterSlug": "put-ai-inside-a-bounded-workflow",
       "statement": "The specific OpenAI Evals platform documented at the research cutoff was scheduled for late-2026 deprecation, so durable prose should teach portable evaluation concepts rather than interface promises.",
       "sourceIds": ["SRC-036"]
+    },
+    {
+      "id": "CLM-067",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "Network location alone does not establish trust; authorization decisions should protect named resources in the context of each request.",
+      "sourceIds": ["SRC-007"]
+    },
+    {
+      "id": "CLM-068",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "OAuth 2.0 deployments should apply RFC 9700 within their actual flow and threat model rather than treating protocol use as a security claim.",
+      "sourceIds": ["SRC-032"]
+    },
+    {
+      "id": "CLM-069",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "A versioned cybersecurity framework can organize desired outcomes and governance conversations but does not prescribe, verify, or certify a complete implementation.",
+      "sourceIds": ["SRC-042"]
+    },
+    {
+      "id": "CLM-070",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "Secure software practices should be integrated across the development lifecycle rather than deferred to one final security gate.",
+      "sourceIds": ["SRC-043"]
+    },
+    {
+      "id": "CLM-071",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "A privacy risk framework supports contextual organizational risk management but is not legal advice or a jurisdiction-specific compliance determination.",
+      "sourceIds": ["SRC-008"]
+    },
+    {
+      "id": "CLM-072",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "OWASP ASVS 5.0.0 provides versioned application-security verification criteria whose scope and level require system context and accountable ownership.",
+      "sourceIds": ["SRC-044"]
+    },
+    {
+      "id": "CLM-073",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "WCAG 2.2 provides testable web accessibility success criteria, while conformance alone does not prove complete usability or accessibility for every user and context.",
+      "sourceIds": ["SRC-046"]
+    },
+    {
+      "id": "CLM-074",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "Versioned AI risk and community security taxonomies can prompt discovery but do not replace a system-specific threat model or confer certification.",
+      "sourceIds": ["SRC-034", "SRC-035", "SRC-040"]
+    },
+    {
+      "id": "CLM-075",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "The asset-to-threat-to-risk-to-control-to-evidence chain in this chapter is an original synthesis tool, not a formal external standard.",
+      "sourceIds": ["SRC-007", "SRC-008", "SRC-042", "SRC-043", "SRC-044"]
+    },
+    {
+      "id": "CLM-076",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "A policy or framework label is not control evidence until the deployment connects an objective to an implementation, verification method, evidence, owner, and disposition.",
+      "sourceIds": ["SRC-042", "SRC-043", "SRC-044"]
+    },
+    {
+      "id": "CLM-077",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "Logging for auditability should remain purpose-bound and minimized because excessive event content can create additional privacy and security exposure.",
+      "sourceIds": ["SRC-008", "SRC-042"]
+    },
+    {
+      "id": "CLM-078",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "An FDE can prepare evidence and route a decision but cannot self-designate formal authority to accept legal, security, privacy, safety, audit, accessibility, or business risk.",
+      "sourceIds": ["SRC-008", "SRC-034", "SRC-042"]
+    },
+    {
+      "id": "CLM-079",
+      "chapterSlug": "build-security-and-governance-into-delivery",
+      "statement": "Security, reliability, usability, accessibility, privacy, and other quality concerns interact but are not interchangeable and require contextual tradeoffs and evidence.",
+      "sourceIds": ["SRC-008", "SRC-042", "SRC-045", "SRC-046"]
     }
   ]
 }

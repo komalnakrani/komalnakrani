@@ -102,6 +102,15 @@
       "minutes": 70,
       "sourceFile": "chapters/put-ai-inside-a-bounded-workflow.mdx",
       "objectiveIds": ["FDE-K03", "FDE-K04", "FDE-K07", "FDE-K08", "FDE-K09"]
+    },
+    {
+      "order": 10,
+      "slug": "build-security-and-governance-into-delivery",
+      "title": "Build Security and Governance Into Delivery",
+      "summary": "Turn threats and risks into proportionate controls, implementation evidence, minimized access and data, and decisions routed to designated authorities.",
+      "minutes": 75,
+      "sourceFile": "chapters/build-security-and-governance-into-delivery.mdx",
+      "objectiveIds": ["FDE-K01", "FDE-K04", "FDE-K07", "FDE-K08", "FDE-K09"]
     }
   ],
   "registries": {
