@@ -198,6 +198,48 @@
       "chapterSlug": "scope-the-first-safe-production-path",
       "statement": "Production exposure should not be used merely to discover whether an unacceptable safety, privacy, or authorization control works.",
       "sourceIds": ["SRC-005", "SRC-007", "SRC-008", "SRC-021", "SRC-022"]
+    },
+    {
+      "id": "CLM-034",
+      "chapterSlug": "draw-the-real-system-boundary",
+      "statement": "The C4 model provides hierarchical context and container abstractions without requiring one notation or diagramming tool.",
+      "sourceIds": ["SRC-023"]
+    },
+    {
+      "id": "CLM-035",
+      "chapterSlug": "draw-the-real-system-boundary",
+      "statement": "Architecture decisions should make operational, security, reliability, performance, cost, identity, and failure tradeoffs explicit rather than maximize one attribute in isolation.",
+      "sourceIds": ["SRC-021", "SRC-022", "SRC-024"]
+    },
+    {
+      "id": "CLM-036",
+      "chapterSlug": "draw-the-real-system-boundary",
+      "statement": "Network location alone is not a sufficient basis for trust; resource access requires explicit authentication and authorization appropriate to the request.",
+      "sourceIds": ["SRC-007"]
+    },
+    {
+      "id": "CLM-037",
+      "chapterSlug": "draw-the-real-system-boundary",
+      "statement": "A first-party Cloudflare postmortem distinguishes configured state from operational state and reports recovery complexity across divergent distributed states.",
+      "sourceIds": ["SRC-025"]
+    },
+    {
+      "id": "CLM-038",
+      "chapterSlug": "draw-the-real-system-boundary",
+      "statement": "A first-party Cloudflare postmortem reports that control-plane and data-plane separation limited one class of impact while the impaired control plane remained operationally consequential.",
+      "sourceIds": ["SRC-026"]
+    },
+    {
+      "id": "CLM-039",
+      "chapterSlug": "draw-the-real-system-boundary",
+      "statement": "A structural diagram does not by itself establish runtime ownership, trust, data authority, failure propagation, or recovery behavior.",
+      "sourceIds": ["SRC-023", "SRC-024"]
+    },
+    {
+      "id": "CLM-040",
+      "chapterSlug": "draw-the-real-system-boundary",
+      "statement": "The responsibility, trust, data, runtime, and failure annotations in this chapter are an original extension used for FDE deployment decisions rather than a formal C4 standard.",
+      "sourceIds": ["SRC-007", "SRC-021", "SRC-022", "SRC-023", "SRC-024"]
     }
   ]
 }

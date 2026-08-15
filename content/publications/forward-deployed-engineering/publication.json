@@ -66,6 +66,15 @@
       "minutes": 55,
       "sourceFile": "chapters/scope-the-first-safe-production-path.mdx",
       "objectiveIds": ["FDE-K02", "FDE-K03", "FDE-K04", "FDE-K08", "FDE-K12"]
+    },
+    {
+      "order": 6,
+      "slug": "draw-the-real-system-boundary",
+      "title": "Draw the Real System Boundary",
+      "summary": "Express structural, runtime, data, trust, failure, and responsibility boundaries with explicit ownership and architecture decisions.",
+      "minutes": 60,
+      "sourceFile": "chapters/draw-the-real-system-boundary.mdx",
+      "objectiveIds": ["FDE-K03", "FDE-K04", "FDE-K08", "FDE-K09"]
     }
   ],
   "registries": {

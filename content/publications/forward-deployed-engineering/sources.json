@@ -286,6 +286,58 @@
       "license": "Microsoft documentation terms",
       "notes": "Provider guidance used as a question set for reliability, security, cost, operations, and performance tradeoffs, not proof of architecture quality.",
       "usedIn": { "chapterSlugs": ["scope-the-first-safe-production-path"], "claimIds": ["CLM-029", "CLM-031"] }
+    },
+    {
+      "id": "SRC-023",
+      "type": "documentation",
+      "title": "The C4 model for visualising software architecture",
+      "authors": ["Simon Brown"],
+      "publisher": "C4 model",
+      "url": "https://c4model.com/",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Creative Commons Attribution 4.0 International",
+      "notes": "Official method documentation used for hierarchical context/container abstractions and notation/tool independence; responsibility/trust/failure annotations are book additions.",
+      "usedIn": { "chapterSlugs": ["draw-the-real-system-boundary"], "claimIds": ["CLM-034", "CLM-039"] }
+    },
+    {
+      "id": "SRC-024",
+      "type": "documentation",
+      "title": "Architecture design principles",
+      "authors": ["Microsoft"],
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-ie/azure/architecture/guide/design-principles/",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Microsoft documentation terms",
+      "notes": "Provider architecture guidance used for provider-neutral questions about failure, operations, identity, and recovery; examples are not mandatory.",
+      "usedIn": { "chapterSlugs": ["draw-the-real-system-boundary"], "claimIds": ["CLM-035", "CLM-037"] }
+    },
+    {
+      "id": "SRC-025",
+      "type": "report",
+      "title": "Cloudflare outage on February 20, 2026",
+      "authors": ["Cloudflare"],
+      "publisher": "Cloudflare",
+      "url": "https://blog.cloudflare.com/cloudflare-outage-february-20-2026/",
+      "publishedAt": "2026-02-20",
+      "accessedAt": "2026-08-16",
+      "license": "Cloudflare website terms",
+      "notes": "First-party postmortem used for configured versus operational state and distributed recovery; all facts remain attributed to Cloudflare.",
+      "usedIn": { "chapterSlugs": ["draw-the-real-system-boundary"], "claimIds": ["CLM-037"] }
+    },
+    {
+      "id": "SRC-026",
+      "type": "report",
+      "title": "Deep dive into Cloudflare's September 12 dashboard and API outage",
+      "authors": ["Cloudflare"],
+      "publisher": "Cloudflare",
+      "url": "https://blog.cloudflare.com/deep-dive-into-cloudflares-sept-12-dashboard-and-api-outage/",
+      "publishedAt": "2025-09-12",
+      "accessedAt": "2026-08-16",
+      "license": "Cloudflare website terms",
+      "notes": "First-party postmortem used for control-plane/data-plane separation, request amplification, capacity, and observability; facts remain attributed.",
+      "usedIn": { "chapterSlugs": ["draw-the-real-system-boundary"], "claimIds": ["CLM-038"] }
     }
   ]
 }
