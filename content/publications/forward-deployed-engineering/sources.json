@@ -767,6 +767,19 @@
       "license": "Microsoft documentation terms",
       "notes": "Volatile provider guidance used for documenting operations, change, release, disaster recovery, and improvement; Azure responsibilities require translation.",
       "usedIn": { "chapterSlugs": ["engineer-release-and-recovery"], "claimIds": ["CLM-125"] }
+    },
+    {
+      "id": "SRC-060",
+      "type": "book",
+      "title": "Reliable Product Launches at Scale",
+      "authors": ["Google Site Reliability Engineering"],
+      "publisher": "Google Site Reliability Engineering",
+      "url": "https://sre.google/sre-book/reliable-product-launches/",
+      "publishedAt": "2016-01-01",
+      "accessedAt": "2026-08-16",
+      "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+      "notes": "First-party engineering book chapter used for launch review, operability, ownership, and readiness questions; process should scale to local risk rather than imitate Google structure.",
+      "usedIn": { "chapterSlugs": ["cross-the-production-threshold"], "claimIds": ["CLM-133", "CLM-134"] }
     }
   ]
 }

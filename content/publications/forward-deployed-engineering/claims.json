@@ -768,6 +768,78 @@
       "chapterSlug": "engineer-release-and-recovery",
       "statement": "Recovery access must be exercised under the dependency failure it is designed to survive; routine control should not be weakened merely to simplify break-glass use.",
       "sourceIds": ["SRC-007", "SRC-019", "SRC-056", "SRC-059"]
+    },
+    {
+      "id": "CLM-129",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "The readiness evidence packet, five-way disposition, and go/no-go record in this chapter are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-043", "SRC-045", "SRC-054", "SRC-057", "SRC-058", "SRC-060"]
+    },
+    {
+      "id": "CLM-130",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "Missing, stale, or unexecuted evidence is a gap rather than a passed criterion, regardless of launch deadline.",
+      "sourceIds": ["SRC-043", "SRC-044", "SRC-057", "SRC-058", "SRC-060"]
+    },
+    {
+      "id": "CLM-131",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "A canary is partial and time-limited exposure whose decision needs meaningful comparison plus absolute health and quality criteria.",
+      "sourceIds": ["SRC-054", "SRC-057"]
+    },
+    {
+      "id": "CLM-132",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "A small cohort can still carry high consequence, weak representativeness, insufficient volume, or irreversible external effects, so cohort size alone does not establish safety.",
+      "sourceIds": ["SRC-057", "SRC-058"]
+    },
+    {
+      "id": "CLM-133",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "Production readiness should examine operability, ownership, support, capacity, recovery, and known limitations in proportion to deployment risk.",
+      "sourceIds": ["SRC-049", "SRC-059", "SRC-060"]
+    },
+    {
+      "id": "CLM-134",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "A formal readiness review can support go, conditional go, reduced scope, delay, or stop; it should not become a ceremonial checklist whose desired answer is predetermined.",
+      "sourceIds": ["SRC-057", "SRC-058", "SRC-060"]
+    },
+    {
+      "id": "CLM-135",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "Deployment-like simulation can strengthen readiness evidence while still leaving real-user, real-dependency, adversarial, workload, and production-tail unknowns.",
+      "sourceIds": ["SRC-041"]
+    },
+    {
+      "id": "CLM-136",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "A readiness exception requires an explicitly designated authority, stated consequence and scope, compensating conditions, monitoring, expiry, and recovery trigger.",
+      "sourceIds": ["SRC-042", "SRC-043", "SRC-058", "SRC-060"]
+    },
+    {
+      "id": "CLM-137",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "Deadline, commercial pressure, or stakeholder preference is decision context and cannot substitute for verification or control evidence.",
+      "sourceIds": ["SRC-043", "SRC-044", "SRC-058", "SRC-060"]
+    },
+    {
+      "id": "CLM-138",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "An FDE can provide a calibrated recommendation and consequences but cannot self-designate authority to accept customer security, privacy, safety, legal, operational, or business risk.",
+      "sourceIds": ["SRC-008", "SRC-034", "SRC-042"]
+    },
+    {
+      "id": "CLM-139",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "Readiness includes command schedule, support/user preparation, stakeholder communications, and escalation ownership rather than technical deployment mechanics alone.",
+      "sourceIds": ["SRC-053", "SRC-059", "SRC-060"]
+    },
+    {
+      "id": "CLM-140",
+      "chapterSlug": "cross-the-production-threshold",
+      "statement": "Stop, rollback, roll-forward, isolation, fallback, and communication triggers should be defined before exposure rather than improvised during impact.",
+      "sourceIds": ["SRC-057", "SRC-058", "SRC-059"]
     }
   ]
 }

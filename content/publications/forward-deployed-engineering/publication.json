@@ -147,6 +147,15 @@
       "minutes": 80,
       "sourceFile": "chapters/engineer-release-and-recovery.mdx",
       "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K08", "FDE-K09"]
+    },
+    {
+      "order": 15,
+      "slug": "cross-the-production-threshold",
+      "title": "Cross the Production Threshold",
+      "summary": "Use readiness evidence, unresolved risk, authority, cohort design, signals, communications, and recovery triggers to choose go, conditional go, reduced scope, delay, or stop.",
+      "minutes": 70,
+      "sourceFile": "chapters/cross-the-production-threshold.mdx",
+      "objectiveIds": ["FDE-K01", "FDE-K03", "FDE-K08", "FDE-K09", "FDE-K10", "FDE-K12"]
     }
   ],
   "registries": {
