@@ -1,0 +1,50 @@
+# Chapter 05 State - Scope the First Safe Production Path
+
+## Concepts introduced
+
+- first safe production path and scope cone
+- must-prove/must-build/defer/reject
+- complete scope-option comparison
+- dependency network, decision-oriented risk register, uncertainty/evidence modes
+- reversible milestones, evidence gates, scope debt, and change triggers
+
+## Terminology locked
+
+- Small means least exposure that remains representative of the uncertainty-bearing boundary.
+- Production evidence is used only after lower-consequence evidence/control gates pass.
+- Dependency includes owner, evidence, confidence/date, consequence, alternative, and escalation.
+
+## Examples and cases used
+
+- Orchid manual evidence, bounded suggestion, and automatic-order options
+- identity, equipment match, low connectivity, ERP semantics, approval, support dependencies
+- multilingual voice and automatic-order change requests
+- fictional regulated workflow stopped for missing legitimate authority/representativeness
+
+## Claims not to repeat in full
+
+- Do not re-teach the scope cone or four buckets.
+- Chapter 6 uses the selected boundary to draw architecture.
+- Chapters 11-15 implement the milestones/evidence gates and refer back to `OA-04`.
+
+## Figures
+
+- `F05.1` scope cone placeholder present.
+- `F05.2` dependency/evidence network placeholder present.
+
+## Project progress
+
+- `OA-04` selected Region West/equipment/cohort path, included/deferred/rejected capabilities, dependencies, risks, milestones, scope change, and stop criteria are complete.
+
+## Unresolved gaps
+
+- Fictional owners/dates/values remain explicit case inputs.
+- No blocking source gap.
+- Final figures wait for Phase 10.
+- Approximately 4,100 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+
+## Chapter 06 may assume
+
+- the selected path must cross identity, data, integration, control, environment, failure, and operations boundaries;
+- automatic external action and broad expansion are deferred;
+- architecture must expose every dependency/owner/failure assumption used by scope.

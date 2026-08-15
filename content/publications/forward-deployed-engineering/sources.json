@@ -260,6 +260,32 @@
       "license": "OpenAI website terms",
       "notes": "Vendor/customer story used only for an attributed adoption figure and evaluation practice; outcomes are not independently verified.",
       "usedIn": { "chapterSlugs": ["contract-for-an-outcome"], "claimIds": ["CLM-025"] }
+    },
+    {
+      "id": "SRC-021",
+      "type": "documentation",
+      "title": "AWS Well-Architected Framework",
+      "authors": ["Amazon Web Services"],
+      "publisher": "Amazon Web Services",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "AWS documentation terms",
+      "notes": "Provider guidance used for provider-neutral tradeoff questions across operational excellence, security, reliability, performance, cost, and sustainability.",
+      "usedIn": { "chapterSlugs": ["scope-the-first-safe-production-path"], "claimIds": ["CLM-029", "CLM-031"] }
+    },
+    {
+      "id": "SRC-022",
+      "type": "documentation",
+      "title": "What is the Azure Well-Architected Framework?",
+      "authors": ["Microsoft"],
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/what-is-well-architected-framework",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Microsoft documentation terms",
+      "notes": "Provider guidance used as a question set for reliability, security, cost, operations, and performance tradeoffs, not proof of architecture quality.",
+      "usedIn": { "chapterSlugs": ["scope-the-first-safe-production-path"], "claimIds": ["CLM-029", "CLM-031"] }
     }
   ]
 }

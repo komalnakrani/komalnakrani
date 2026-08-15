@@ -1,0 +1,593 @@
+---
+title: Scope the First Safe Production Path
+slug: scope-the-first-safe-production-path
+summary: Select the least exposed end-to-end path that produces representative production evidence with explicit dependencies, uncertainty, change, and stop criteria.
+minutes: 55
+sourceIds:
+  - SRC-001
+  - SRC-004
+  - SRC-005
+  - SRC-007
+  - SRC-008
+  - SRC-017
+  - SRC-021
+  - SRC-022
+claimIds:
+  - CLM-028
+  - CLM-029
+  - CLM-030
+  - CLM-031
+  - CLM-032
+  - CLM-033
+objectiveIds:
+  - FDE-K02
+  - FDE-K03
+  - FDE-K04
+  - FDE-K08
+  - FDE-K12
+figureIds: []
+---
+
+The smallest feature is not always the smallest risk.
+
+A team can remove identity, audit, recovery, exception handling, or representative integration from a pilot and call the result an MVP. The feature list becomes shorter. The most important uncertainty remains untouched. When those obligations return near launch, the project discovers that the prototype proved the easiest part.
+
+The first safe production path has a different purpose. It is the least exposure that crosses enough of the real workflow, data, integration, control, environment, and operating boundary to produce decision-quality evidence.
+
+Current deployment-oriented employer materials describe diagnosing and prioritizing workflows before build/deployment. Cloud architecture frameworks, though provider-specific, offer a compatible reminder: operational excellence, security, reliability, performance, cost, and related quality concerns involve contextual tradeoffs. A scoped path cannot be called safe because it ignored those concerns. [CLM-028] [CLM-029] [CLM-031]
+
+## Replace “MVP” with a decision
+
+The term *minimum viable product* carries too many meanings. It can mean a market test, a prototype, a first sellable product, or an excuse to omit production obligations.
+
+This book uses **first safe production path** with five conditions:
+
+1. **End to end.** It reaches from a representative workflow trigger to an operational result or explicit safe escalation.
+2. **Representative.** It crosses the boundaries where material uncertainty lives.
+3. **Bounded.** User, case, capability, environment, data, time, and blast radius are limited.
+4. **Reversible or containable.** Exposure can stop, isolate, or recover under known authority.
+5. **Decision-producing.** Evidence can support continue, change, reduce, delay, or stop.
+
+Benefits evidence should make all those dispositions legitimate rather than assume the project must continue. [CLM-030]
+
+For Orchid, “chat with manuals” is small but not representative. It bypasses equipment matching, current work state, inventory, qualified approval, low connectivity, identity, audit, support, and evidence visibility.
+
+A stronger first path is:
+
+> For a named Region West technician cohort and selected equipment family, take an eligible service request from confirmed equipment match through visible evidence retrieval and ranked next-action suggestion, apply deterministic eligibility rules, require qualified approval for safety-relevant action, expose current inventory as read-only evidence, record the decision/audit state, and provide explicit fallback/escalation when identity, connectivity, data, dependency, or model behavior is insufficient.
+
+This is still a hypothesis. Detailed architecture follows. The scope statement identifies the boundaries that evidence must cross.
+
+## Narrow through the scope cone
+
+Use a sequence of filters.
+
+### 1. Outcome relevance
+
+Does the capability directly support an `OA-03` outcome, guardrail, adoption, or risk-reduction hypothesis?
+
+If no, reject or defer it. A feature can be attractive and irrelevant to the current decision.
+
+### 2. Consequence and guardrail
+
+Which harm or degradation could the path create? What must be prevented, approved, detected, contained, or excluded before exposure?
+
+### 3. Uncertainty
+
+Which unknown could invalidate the outcome, architecture, control, usability, operation, or ownership model? The first path should cross the most consequential uncertainty that can be tested legitimately.
+
+### 4. Dependency reality
+
+Which external owner, system, data, approval, environment, or operating capability is required? A dependency without owner/evidence/date is not a plan.
+
+### 5. Representativeness
+
+Would the path succeed only because it avoids the actual identifier, network, approval, data, user, or support condition? If yes, it is a demo boundary, not a production evidence boundary.
+
+### 6. Reversibility and blast radius
+
+Can the team limit users/cases/actions, preserve old behavior, stop exposure, reconcile state, communicate impact, and recover?
+
+### 7. Evidence yield
+
+Which decision becomes better after the path runs? If the expected evidence cannot change a decision, the scope may be work rather than learning.
+
+[FIGURE F05.1: A scope cone narrowing Orchid's broad “AI copilot” request through outcome relevance, consequence/guardrails, uncertainty, dependencies, representativeness, reversibility, and evidence yield into one selected equipment family, region, cohort, and evidence-assisted decision path. Rejected/deferred capabilities remain visible outside the cone.]
+
+The cone is an original synthesis, not a formal standard. [CLM-032]
+
+## Classify work into four buckets
+
+### Must prove
+
+Uncertainty that must be resolved before the next commitment. Examples:
+
+- Can equipment ambiguity be detected before evidence retrieval?
+- Can a qualified approval path work under the selected identities?
+- Can low-connectivity users receive evidence or a safe fallback?
+- Can ERP inventory reads and timeout behavior be interpreted reliably?
+- Can recommendation errors be evaluated by workflow consequence?
+- Can support detect and diagnose the selected path?
+
+“Must prove” may produce a test, simulation, customer decision, or measured evidence rather than shipped code.
+
+### Must build
+
+Behavior required to obtain evidence safely. Examples:
+
+- bounded request/equipment-match path;
+- evidence retrieval with provenance;
+- deterministic eligibility and approval gate;
+- safe timeout/fallback state;
+- audit event and basic signals;
+- feature/cohort control;
+- exception and reconciliation path.
+
+### Defer
+
+Potentially valuable work whose absence does not invalidate the current evidence and whose risk is contained. For Orchid:
+
+- multilingual voice;
+- automatic parts ordering;
+- every equipment family/region;
+- broad personalization;
+- general product platform;
+- enterprise identifier remediation.
+
+Each deferral needs a consequence and revisit trigger. “Later” without a trigger is hidden abandonment.
+
+### Reject
+
+Work that does not support the bounded outcome, creates unjustified risk, duplicates another owner, or cannot be made legitimate. Rejection can change with evidence, but the current decision is explicit.
+
+## Scope by uncertainty, not by component
+
+A common plan divides work into UI, API, model, data, and deployment components. Each team can finish while the end-to-end uncertainty remains.
+
+Instead, define vertical milestones:
+
+1. **Evidence skeleton.** One synthetic/approved case moves through request, equipment match, evidence retrieval, deterministic policy, approval, audit, and inspectable result using controlled adapters.
+2. **Representative contract.** Validate selected schemas, semantics, identity, timeout, retry, and reconciliation behavior against customer-owned environments.
+3. **Failure-bearing slice.** Inject duplicate ID, missing manual, stale inventory, low connectivity, model refusal/error, denied approval, and ambiguous dependency response.
+4. **Verification slice.** Connect high-consequence workflow risks to tests/evals/UAT and limitations.
+5. **Operating slice.** Signals, alerts, runbook, release/recovery, support access, and ownership rehearsal.
+6. **Bounded production cohort.** Expose only when readiness evidence and authority exist.
+
+Each milestone ends in a decision, not a percent-complete report.
+
+## Build the dependency network
+
+A task list hides external ownership and evidence gates. Use a dependency network with these fields:
+
+- dependency ID and capability/evidence required;
+- why the selected scope needs it;
+- provider and accountable owner;
+- consumer and integration owner;
+- interface/decision/approval artifact;
+- earliest evidence date and latest safe date;
+- confidence and basis;
+- failure/late consequence;
+- workaround/alternative and new risk;
+- escalation trigger;
+- status/change history.
+
+[FIGURE F05.2: Orchid dependency network linking equipment registry, ticketing, manuals, ERP inventory, identity, network/region, safety approval, security/privacy decisions, support, and pilot users to vertical milestones. Evidence gates and external owners are distinct from calendar tasks; the critical uncertainty path is highlighted.]
+
+Example:
+
+`DEP-ID-01 equipment match semantics`
+
+- Needed for: prevent retrieval/recommendation against wrong equipment.
+- Owner: customer equipment-registry owner; domain validation by service operations.
+- Evidence: field definitions, unique-match rules, mismatch sample, exception owner.
+- Latest safe date: before contract/vertical-slice acceptance.
+- Failure consequence: scope must block automation at ambiguity and may remain manual.
+
+`DEP-AUTH-02 qualified approval identity`
+
+- Needed for: safety-relevant recommendation path.
+- Owner: safety/domain authority plus identity/platform owner.
+- Evidence: approval rule, authorized role, token/identity mapping, audit requirement, fallback.
+- Failure consequence: safety-relevant path excluded; non-safety evidence path may continue only if separation is credible.
+
+The network should show where one missing decision blocks several technical tasks. Escalation happens before the deadline, not when the integration branch waits.
+
+## Convert uncertainty into an experiment or decision
+
+Not every unknown needs production exposure.
+
+Use an uncertainty record:
+
+- proposition;
+- consequence if false;
+- current evidence/confidence;
+- least risky credible test;
+- required data/access/owner;
+- expected decision states;
+- stop condition;
+- evidence produced and limitation.
+
+### Reproduce outside production
+
+Use synthetic fixtures, sandbox, simulation, interface contract review, or customer-run query where the behavior can be represented credibly.
+
+### Observe in a controlled shadow path
+
+Run without changing user/system decisions. Shadow evidence can test latency, data availability, matching, or recommendation behavior but does not prove usability, adoption, or action consequence.
+
+### User-test representative tasks
+
+Use approved realistic tasks and users to test workflow fit, evidence visibility, accessibility, and decision support before live consequence.
+
+### Bound a production cohort
+
+Use production only when real operating conditions are necessary, prior evidence supports exposure, guardrails/owners/recovery exist, and blast radius is explicit.
+
+Production exposure should not be used merely to discover whether an unacceptable safety, privacy, or authorization control works. [CLM-033]
+
+## Make milestones reversible
+
+A reversible milestone limits commitment while improving evidence.
+
+Record:
+
+- entrance evidence;
+- capability/data/user boundary;
+- allowed/prohibited actions;
+- observation window;
+- success/guardrail/stop evidence;
+- authority present;
+- rollback/isolation/cleanup;
+- exit decision.
+
+Reversibility is not binary. A read-only suggestion can still change human behavior. A shadow path can still process sensitive data. A small cohort can still contain high-consequence cases. Evaluate reversibility by consequence and state, not by feature label.
+
+## Estimate with ranges and evidence
+
+FDE work contains unknown customer dependencies. A single date hides them.
+
+Separate:
+
+- known implementation work;
+- dependency/approval wait;
+- discovery/contract uncertainty;
+- environment/integration uncertainty;
+- verification/operating evidence window;
+- contingency triggered by named risks.
+
+Use ranges tied to assumptions and evidence dates. Example:
+
+> The local controlled slice is estimated at X-Y engineering days after contract/schema decisions. Customer-environment integration cannot be dated beyond a confidence range until `DEP-ID-01` and `DEP-AUTH-02` evidence exists. The production observation window is governed by eligible case volume and cannot be compressed through engineering effort.
+
+The book does not invent the values for Orchid. The structure prevents a delivery date from silently including unresolved authority and evidence.
+
+## Compare complete scope options
+
+Teams often compare one detailed preferred option with vague alternatives. Make each option complete enough to expose its evidence and consequence.
+
+For Orchid, compare three paths.
+
+### Option A: manual evidence workspace
+
+The system confirms equipment identity, gathers/manual-links evidence, and records the technician’s supported decision. It uses deterministic ranking or search only; no generated suggestion.
+
+- Evidence gained: identifier/data/integration/workflow fit, evidence visibility, latency, adoption, approval/audit, support.
+- Evidence not gained: model error/control/cost behavior.
+- Consequence: lower AI uncertainty; may leave more technician synthesis effort.
+- Reversibility: high if read-only and cohort-bounded.
+
+### Option B: bounded suggestion path
+
+Option A plus a replaceable model interface that summarizes/ranks evidence. Deterministic eligibility and qualified approval constrain consequence.
+
+- Evidence gained: Option A plus task-specific model quality, trust, review burden, latency/cost, fallback.
+- Consequence: adds non-deterministic error, evaluation, data/tool, monitoring, and change-control requirements.
+- Reversibility: moderate; suggestions can affect decisions even when no automatic side effect occurs.
+
+### Option C: automatic parts order
+
+Option B plus an external write that reserves/orders a part.
+
+- Evidence gained: full action outcome and operational integration.
+- Consequence: financial/stock state, intent/retry/reconciliation, approval, fraud/abuse, rollback, and customer communication.
+- Reversibility: lower, because an external effect can survive application rollback.
+
+The scope decision should not ask which option looks most innovative. It asks which option is the least risky credible way to test the contracted hypothesis.
+
+If workflow evidence shows that evidence fragmentation is the core problem and the value of generated suggestions is uncertain, Option A may be the correct first production path while Option B remains a controlled evaluation. If model assistance is central and controls are ready, Option B may be justified. Option C requires a separate outcome and authority case.
+
+Use an option table:
+
+| Field | A | B | C |
+| --- | --- | --- | --- |
+| Outcome hypothesis tested | evidence assembly | evidence plus suggestion | evidence, suggestion, action |
+| Critical uncertainty | data/workflow fit | model behavior/review | side-effect semantics/control |
+| New authority | limited | AI/control approval | financial/stock/action approval |
+| Failure consequence | wrong/missing evidence | misleading suggestion | duplicate/wrong action |
+| Required recovery | fallback/manual path | disable/fallback/review | reconcile/cancel/compensate |
+| Exposure boundary | read-only cohort | suggestion cohort | write-enabled subset |
+
+Document why the chosen option dominates for the current decision and what evidence would move the team to another.
+
+## Build a decision-oriented risk register
+
+A risk register should alter scope or milestones, not collect generic concerns.
+
+Each risk record includes:
+
+- risk ID and precise condition/consequence;
+- affected outcome, guardrail, user, or owner;
+- current evidence and uncertainty;
+- likelihood language only at the supported precision;
+- severity/consequence and reversibility;
+- prevention/reduction/detection/containment/recovery actions;
+- accountable risk/decision owner;
+- trigger or leading evidence;
+- milestone/gate affected;
+- residual risk and acceptance status;
+- review date.
+
+Avoid multiplying subjective numbers into a false score. Categories can support prioritization, but high consequence, missing authority, and irreversible state should remain visible even if occurrence is uncertain.
+
+Example:
+
+`R-IDENT-01: ambiguous equipment binding causes evidence/recommendation for the wrong asset.`
+
+- Evidence: observed ambiguity; frequency unknown.
+- Consequence: wrong manual/history/part, possible safety impact.
+- Scope response: confirmation/reconciliation required before suggestion; ambiguous cases block/escalate.
+- Gate: must pass contract and high-consequence tests before cohort exposure.
+- Owner: registry/data/domain owners for semantics; FDE for implementation/evidence; safety owner for consequence acceptance.
+
+`R-CONN-02: low-connectivity users cannot obtain evidence or complete approval within workflow need.`
+
+- Evidence: intermittent connectivity stipulated; measured performance missing.
+- Consequence: abandonment, delay, unsafe workaround, hidden exclusion.
+- Scope response: include representative site simulation/user evidence and safe fallback; segment rollout.
+- Gate: latency/fallback evidence before low-connectivity cohort exposure.
+
+`R-OWN-03: support cannot diagnose or recover the path without FDE access.`
+
+- Evidence: operating model incomplete.
+- Consequence: prolonged incident and permanent embedded dependency.
+- Scope response: signals/runbook/access/recovery rehearsal are must-build/must-prove, not post-pilot work.
+
+The register connects discovery to architecture and later readiness. It should shrink, change, or block scope when mitigation evidence is absent.
+
+## Sequence learning before irreversible commitment
+
+Good sequencing reduces uncertainty in the order that prevents waste or harm.
+
+For Orchid:
+
+1. **Resolve authority blockers first.** Identify safety, regional data, identity, support, and rollout owners. No technical elegance compensates for ownerless consequence.
+2. **Resolve semantic blockers before integration volume.** Confirm equipment identity, ticket state, inventory meaning, and approval rules before building broad adapters.
+3. **Prove local failure behavior.** Use synthetic/controlled doubles to exercise missing/duplicate/late/timeout/deny states.
+4. **Test representative customer contracts.** Validate real schemas, identities, networks, rate/timeout behavior, audit, and operating ownership within approved environments.
+5. **Verify high-consequence behavior.** Connect workflow risks to tests/evals/UAT/control evidence before polishing breadth.
+6. **Rehearse release/recovery/support.** A path that only the delivery team can operate is not ready for live evidence.
+7. **Expose the smallest decision-valid cohort.** Choose users/cases that reveal the target uncertainty without hiding consequential segments.
+
+This order may differ when an uncertainty is cheap and decisive. A two-day customer-run query can reject a data assumption before weeks of implementation. A short supervised user exercise can show that provenance is missing. An architecture review can reveal that a regional boundary invalidates the proposed topology.
+
+Use **evidence gates**, not phase labels:
+
+> “Proceed to customer-environment integration when equipment-match semantics, selected fields, identity path, and interface error behavior are owner-reviewed, versioned, and testable.”
+
+That is stronger than “integration starts in sprint three.”
+
+## Define scope debt
+
+Deferral creates debt when the omitted behavior will become necessary or the current shortcut increases future cost/risk.
+
+Record:
+
+- deferred item and reason;
+- affected user/case/environment;
+- current containment;
+- consequence if the scope expands;
+- evidence or milestone that triggers repayment;
+- owner;
+- whether current architecture preserves a path to change.
+
+For example, excluding low-connectivity sites is not harmless if the intended population includes them. The debt record should say the pilot claim excludes those sites, which evidence is required, how rollout prevents accidental inclusion, and who owns the expansion decision.
+
+Deferring automatic ordering may be appropriate without architecture for it. But if the current interface contract discards caller intent or reconciliation state, later expansion becomes harder. The architecture decision should preserve relevant boundaries only when justified; it should not build the full future feature.
+
+Scope debt prevents “out of scope” from becoming “forgotten” or from leaking into outcome claims.
+
+## Use change budgets for attention, not permission
+
+A bounded delivery horizon benefits from a visible change budget: how much scope, dependency, or uncertainty can enter before an explicit re-plan is required.
+
+The budget need not be a number. Triggers can include:
+
+- new user population or region;
+- new sensitive data category;
+- new external write or irreversible action;
+- new formal authority/control path;
+- new model/tool autonomy;
+- dependency owner/date change affecting critical path;
+- critical segment or guardrail failure;
+- outcome definition change that breaks baseline comparability.
+
+Crossing a trigger does not forbid the change. It requires a decision showing what moves, which evidence becomes invalid, and who accepts the consequence.
+
+## Control change with the same scope cone
+
+When an executive requests multilingual voice and automatic parts ordering for the pilot, do not answer from preference.
+
+For each change:
+
+1. Which contracted outcome, guardrail, or uncertainty does it serve?
+2. Which new users, data, identity, model, interface, action, support, and authority enter?
+3. Which milestone/evidence becomes invalid?
+4. Which capability leaves the current scope or which date/evidence moves?
+5. Can it be tested separately with lower consequence?
+6. Who accepts the trade?
+
+### Multilingual voice
+
+It may improve access for a target group, but it adds audio capture, transcription behavior, language/dialect evaluation, privacy/retention, latency, noise/environment, accessibility, user correction, and support constraints. If target user evidence shows it is essential for the selected cohort, the scope decision may change. Without that evidence and control design, defer it; do not call it cosmetic.
+
+### Automatic parts ordering
+
+It adds financial/stock side effects, intent/idempotency/reconciliation, approval, rollback, fraud/abuse, inventory accuracy, and support consequences. A read-only recommended-part path can produce evidence with lower consequence. Defer automatic action until its separate outcome/control case is justified.
+
+Change control should state the rejected alternative and evidence needed to reconsider it.
+
+## Include a stopped deployment
+
+Consider a fictional regulated-document workflow. The team is asked to extract and route sensitive case files, but no legitimate owner can authorize the proposed data use, affected-user access is absent, and the available sample excludes the highest-consequence cases.
+
+The correct output may be a stopped deployment with:
+
+- verified problem and consequence;
+- missing authority/access/representativeness;
+- alternatives considered;
+- evidence that cannot be produced legitimately;
+- stop decision and owner;
+- conditions required to reopen.
+
+Stopping is not a failure of FDE ownership. Proceeding would create confidence without authority or representative evidence.
+
+## Handle evidence that cannot be learned safely in production
+
+Some uncertainty is important precisely because failure is unacceptable. “Try it with a few users” is not a responsible default.
+
+Separate evidence modes.
+
+### Specification and authority evidence
+
+A qualified owner defines prohibited and required behavior. The FDE records the rule, scope, version, approval, and testable implications. Example: which equipment/action combinations require qualified approval. Production users do not discover the policy through exposure.
+
+### Static and contract evidence
+
+Schemas, configuration, policy-as-code, permission maps, and interface contracts can prove that required structure exists. They cannot prove runtime behavior, but they can reject invalid designs early.
+
+### Simulation and fault injection
+
+Synthetic cases exercise unsafe suggestions, denied identities, stale data, ambiguous completion, dependency outage, and low-connectivity states without creating real consequence. Simulation must state which production conditions it cannot reproduce.
+
+### Expert/user review
+
+Qualified owners and representative users evaluate realistic cases, evidence visibility, decision fit, and fallback. Review does not substitute for live operating evidence, but it can block a path before exposure.
+
+### Shadow evidence
+
+The system observes approved production inputs or receives mirrored events without changing the operational decision. Shadowing can reveal distribution, latency, and behavior gaps. It still has data/security/cost consequences and cannot prove adoption.
+
+### Staged production evidence
+
+Only after earlier gates pass, expose a bounded cohort with real command, support, guardrails, recovery, and authority. Production evidence addresses conditions that cannot be credibly represented elsewhere.
+
+Map each uncertainty to the least consequential evidence mode that can answer it. Escalate when no legitimate method can provide adequate evidence. The answer may be to exclude the capability or stop the deployment.
+
+## Defend scope at three altitudes
+
+The same scope decision needs different explanations without changing facts.
+
+### Technical
+
+Describe interfaces, state, failure, identity, data, controls, tests, environments, and recovery. Example: automatic ERP writes are deferred because completion semantics, intent identity, reconciliation, and compensating action are unresolved; read-only inventory evidence remains included.
+
+### Operational
+
+Describe workflow, cohort, owner, support, exception, and effect. Example: technicians can see current part evidence but cannot create a reservation through Orchid Assist; the existing approved process remains the action path.
+
+### Executive
+
+Describe outcome evidence, consequence, timing, and decision. Example: the pilot can test whether evidence assembly improves selected service decisions before taking financial/stock action; adding automatic orders would introduce unresolved control/recovery dependencies and move the readiness date.
+
+The three explanations must reconcile. Executive brevity does not permit deleting a material risk. Technical depth does not permit avoiding the outcome trade.
+
+## Review scope as evidence changes
+
+Schedule scope review at evidence gates, not arbitrary ceremonies. Ask:
+
+- Did the outcome or critical segment change?
+- Which assumption became evidence or was disproved?
+- Which dependency date/owner/confidence changed?
+- Did a guardrail/control become harder or easier?
+- Is the selected path still the least exposure that crosses the critical uncertainty?
+- Can a deferred item now be rejected, or must it enter?
+- Does the estimate range or observation window change?
+- Which artifacts/tests/figures/claims must be updated?
+
+Record “no scope change” with the evidence reviewed when the decision is material. This prevents silent drift while avoiding change-control theater for trivial implementation details.
+
+## Orchid `OA-04` scope and delivery plan
+
+**Selected boundary.** One named equipment family; Region West; named pilot technician cohort; eligible request definition pending `OA-03`; evidence-assisted supported-resolution/escalation path.
+
+**Included path.** Confirm equipment identity; retrieve visible evidence; show read-only inventory state; generate/rank bounded suggestion through a replaceable interface; deterministic eligibility; qualified approval where required; audit; safe fallback/escalation; basic signals and support/recovery path.
+
+**Must prove.** Match ambiguity, data provenance/quality, low-connectivity behavior, dependency semantics, evaluation by consequence, identity/approval/audit, user evidence visibility, operability.
+
+**Deferred.** Voice, multilingual expansion, automatic order, all families/regions, general platform, enterprise data cleanup.
+
+**Rejected for current path.** Autonomous safety-relevant action; broad production export; ownerless risk exception.
+
+**Dependencies.** Registry, ticketing, manuals, ERP read semantics, identity, regional topology/data decision, qualified approval, security/privacy review, support, representative users.
+
+**Milestones.** Evidence skeleton; representative contracts; failure-bearing slice; verification; operations/recovery; readiness; bounded cohort.
+
+**Stop conditions.** Missing formal owner, unacceptable guardrail/control gap, inability to detect equipment ambiguity, no safe fallback, no support/recovery owner, or evidence that invalidates the outcome hypothesis.
+
+All dates, baselines, thresholds, owners, and measured frequencies remain explicit fictional-case inputs rather than invented facts.
+
+## Scoping failure modes
+
+### Feature-list slice
+
+The path contains visible capabilities but avoids real dependencies and failures.
+
+Repair: define the end-to-end uncertainty-bearing boundary.
+
+### Hidden dependency optimism
+
+External approvals/systems appear as task dates with no owner/evidence.
+
+Repair: dependency network plus latest-safe escalation.
+
+### Prototype in production
+
+A “small pilot” processes real users/data without operating and risk obligations.
+
+Repair: scale requirements to consequence; bound exposure but keep necessary controls/ownership.
+
+### Everything is must-have
+
+No work can be deferred because scope is not tied to decisions.
+
+Repair: must-prove/must-build/defer/reject with outcome/evidence trace.
+
+### Deadline as acceptance
+
+The seasonal peak converts unresolved evidence into assumed pass.
+
+Repair: precommit reduce/delay/stop options and authority.
+
+### False precision
+
+One date combines engineering, approvals, dependencies, and observation volume.
+
+Repair: ranges/assumptions/evidence dates; separate calendar wait from work.
+
+## The Chapter 5 gate
+
+Before detailed architecture, `OA-04` must show:
+
+- selected user/case/environment/capability boundary;
+- vertical-slice start/end and representative boundaries;
+- must-prove/must-build/defer/reject decisions;
+- dependency network with owners/evidence/dates/escalation;
+- uncertainty records and least-risk tests;
+- reversible milestones with entrance/exit/stop;
+- scope-change rule;
+- risks, assumptions, ranges, and explicit non-goals;
+- trace from every included capability to outcome or risk evidence.
+
+The path is small only if it limits exposure while retaining the boundaries needed to learn safely.
+
+Chapter 6, *Draw the Real System Boundary*, turns this path into explicit structural, runtime, data, trust, failure, and responsibility boundaries. It will make visible what the scope expects each customer and product system to own.

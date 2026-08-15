@@ -57,6 +57,15 @@
       "minutes": 55,
       "sourceFile": "chapters/contract-for-an-outcome.mdx",
       "objectiveIds": ["FDE-K01", "FDE-K02", "FDE-K03", "FDE-K10", "FDE-K12"]
+    },
+    {
+      "order": 5,
+      "slug": "scope-the-first-safe-production-path",
+      "title": "Scope the First Safe Production Path",
+      "summary": "Select the least exposed end-to-end path that produces representative production evidence with explicit dependencies, uncertainty, change, and stop criteria.",
+      "minutes": 55,
+      "sourceFile": "chapters/scope-the-first-safe-production-path.mdx",
+      "objectiveIds": ["FDE-K02", "FDE-K03", "FDE-K04", "FDE-K08", "FDE-K12"]
     }
   ],
   "registries": {

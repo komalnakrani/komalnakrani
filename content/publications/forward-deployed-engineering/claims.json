@@ -162,6 +162,42 @@
       "chapterSlug": "contract-for-an-outcome",
       "statement": "The metric-tree, attribution-ladder, and outcome-contract structures in this chapter are original synthesis tools rather than formal external standards.",
       "sourceIds": ["SRC-016", "SRC-017", "SRC-018", "SRC-019"]
+    },
+    {
+      "id": "CLM-028",
+      "chapterSlug": "scope-the-first-safe-production-path",
+      "statement": "Current deployment-oriented employer materials describe diagnosing and prioritizing workflows before building or deploying the path.",
+      "sourceIds": ["SRC-001", "SRC-004"]
+    },
+    {
+      "id": "CLM-029",
+      "chapterSlug": "scope-the-first-safe-production-path",
+      "statement": "Architecture and scope decisions involve explicit tradeoffs across reliability, security, operational excellence, performance, cost, and other contextual quality concerns.",
+      "sourceIds": ["SRC-021", "SRC-022"]
+    },
+    {
+      "id": "CLM-030",
+      "chapterSlug": "scope-the-first-safe-production-path",
+      "statement": "Benefits evidence should allow a team to continue, change, reduce, or stop the planned path rather than treating completion as predetermined.",
+      "sourceIds": ["SRC-017"]
+    },
+    {
+      "id": "CLM-031",
+      "chapterSlug": "scope-the-first-safe-production-path",
+      "statement": "A smaller feature list is not necessarily a safer production path when it omits representative security, reliability, operating, or ownership constraints.",
+      "sourceIds": ["SRC-021", "SRC-022"]
+    },
+    {
+      "id": "CLM-032",
+      "chapterSlug": "scope-the-first-safe-production-path",
+      "statement": "The scope-cone, must-prove/must-build/defer/reject, and uncertainty-to-experiment structures in this chapter are original synthesis tools rather than formal external standards.",
+      "sourceIds": ["SRC-001", "SRC-004", "SRC-017", "SRC-021", "SRC-022"]
+    },
+    {
+      "id": "CLM-033",
+      "chapterSlug": "scope-the-first-safe-production-path",
+      "statement": "Production exposure should not be used merely to discover whether an unacceptable safety, privacy, or authorization control works.",
+      "sourceIds": ["SRC-005", "SRC-007", "SRC-008", "SRC-021", "SRC-022"]
     }
   ]
 }
