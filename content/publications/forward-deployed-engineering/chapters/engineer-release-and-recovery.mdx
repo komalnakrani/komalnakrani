@@ -64,6 +64,14 @@ The companion validates this binding and computes a deterministic SHA-256 hash o
 
 Semantic Versioning can signal compatibility expectations for a declared public API. It does not solve configuration, schema, data, deployment, or behavior compatibility. [CLM-120]
 
+### Review the complete release identity
+
+Imagine commit `abc123` produced artifact hash `H1`, but the canary uses policy bundle `P4`, prompt `M7`, schema `S3`, configuration `C9`, and feature state `on` for a named cohort. A rollback that changes only code to the prior artifact does not recreate the prior system. Schema/data, policy, index, configuration, and external effects may remain new.
+
+The release record should let an operator reconstruct the exact bundle and see which parts can change independently. Store links and hashes where appropriate, not secrets or sensitive content. If a material artifact cannot be identified, the release evidence is incomplete.
+
+Review provenance separately from identity. A hash can confirm equality with a recorded byte sequence; it does not prove who built it, which source/dependencies produced it, whether review occurred, or whether it is safe. Bind build and approval evidence explicitly.
+
 ## Design the release path as evidence gates
 
 A provider-neutral path can be:
@@ -80,6 +88,21 @@ A provider-neutral path can be:
 10. close evidence, remove/expire controls, and update operations.
 
 Automation and consistency reduce manual variance, but can consistently deploy a bad decision. Evidence/authority remain necessary. [CLM-118]
+
+### Walk one change through the gates
+
+For Orchid, suppose the change improves evidence retrieval and requires a new index plus backward-compatible evidence metadata.
+
+1. Contract tests prove old/new readers handle the declared metadata window.
+2. The index is built from approved synthetic/controlled evidence and receives a content/version record.
+3. Critical-segment evaluation binds model, prompt, index, policy, and grader versions.
+4. Migration capacity is checked before any persistent record changes.
+5. A representative environment injects stale index, missing evidence, partial migration, and unavailable identity recovery.
+6. The release owner reviews limitations and selects an internal cohort.
+7. Absolute wrong-binding/prohibited-action gates and comparative latency/fallback gates are watched.
+8. The team widens, holds, or recovers according to the precommitted record.
+
+The sequence is valuable because each gate can stop the change and names the evidence needed to continue. `CI passed` is only one input.
 
 ### Make each gate actionable
 
@@ -136,6 +159,10 @@ For every persistent/API/event change define:
 - rollback, roll-forward, isolation, or stop;
 - data owner/authority and evidence.
 
+Create a compatibility table across old/new readers, writers, schema, and externally visible effects. State which combinations are allowed and for how long. An expand/contract path might add nullable/new fields, deploy tolerant readers, deploy new writers, verify/backfill, then remove old behavior only after consumers and recovery paths are ready.
+
+Do not call a destructive step reversible because the migration script has a `down` function. Test whether information, external effects, and consumer interpretation can actually return. When old and new states must coexist, expose that window in monitoring and support.
+
 ### Capacity-gate before mutation
 
 The companion migration checks requested connections against a capacity limit before changing state. When requested capacity exceeds the limit, it stops with zero applied records.
@@ -180,6 +207,19 @@ The answer can be:
 Rollback is not universally safest after destructive or external change. [CLM-122]
 
 This tree is original synthesis, not a formal standard. [CLM-124]
+
+### Compare recovery options for one partial migration
+
+State: one of two records is schema v2, one is v1; old/new readers are compatible, no irreversible external action occurred, and a bounded v2 repair is tested.
+
+- **rollback code only:** may leave v2 data under old assumptions; reject unless compatibility and state restoration are proven.
+- **reverse migration:** risks losing new fields and requires an equally tested path; reject for this rehearsal.
+- **roll forward:** complete the second record, reconcile both, verify readers and user state; selected.
+- **isolate:** useful if consumers cannot tolerate divergence while repair runs.
+- **restore:** unnecessary here and could lose newer valid state; retain only if integrity/compatibility evidence supports it.
+- **stop/escalate:** required if authority, access, or state evidence is insufficient.
+
+The selection is not a preference for roll-forward. It follows the actual state and verified path.
 
 ## Treat backup and restore as different evidence
 
@@ -229,6 +269,14 @@ The local companion:
 6. states explicitly that this is not a production RTO claim.
 
 A local observation cannot become a production commitment. [CLM-126]
+
+### Conduct the release and recovery exercise
+
+Ask a second operator to reproduce the bundle from the release record, then run the synthetic migration. Inject capacity pressure before mutation and verify zero records change. Rerun within the limit, fail after one record, and confirm the state is labeled divergent. The operator must choose among rollback, roll-forward, isolation, restore, and stop using current evidence, then execute and verify the selected path.
+
+The rehearsal record must include rejected alternatives, access/authority, observed state, integrity/user verification, timing, assistance, and production limitations. Break one dependency used by recovery and prove the emergency path does not secretly depend on it.
+
+Pass when another operator can repeat the result and explain why the action is safe for the tested state. Fail if success depends on the original author narrating hidden steps, if only the infrastructure process is verified, or if local timing becomes a production RTO promise.
 
 ## Failure modes and repairs
 

@@ -52,7 +52,7 @@ No chapter is marked Phase 09 PASS yet.
 
 ## Revision checkpoint 1
 
-The first repair pass increased the canonical chapter total from 56,143 to 64,631 words without adding sources or unsupported claims:
+The first repair pass increased the canonical chapter total from 56,143 to 66,163 words without adding sources or unsupported claims:
 
 | Ch | Baseline | Checkpoint 1 | Repair result | Remaining disposition |
 | ---: | ---: | ---: | --- | --- |
@@ -61,5 +61,7 @@ The first repair pass increased the canonical chapter total from 56,143 to 64,63
 | 17 | 987 | 2,487 | Added testable adoption diagnosis, evidence table, task/accessibility protocols, demonstrated acceptance, access exit, and failures | OPEN: second depth/duplication pass |
 | 18 | 796 | 3,261 | Added bounded outcome argument, worked ledger, twelve-artifact classification, contract economics, reversible abstraction, packet, and failures | OPEN: second depth/duplication pass |
 | 19 | 875 | 3,441 | Added portfolio allocation, cadence/staffing, delegation, multi-altitude memo, capacity/depth/growth, closure, and failures | OPEN: second depth/duplication pass |
+| 13 | 1,993 | 2,863 | Added worked promise/indicator/cohort/alert/diagnosis/rehearsal plus failure repairs | OPEN: second depth/duplication pass |
+| 14 | 1,607 | 2,269 | Added release identity/provenance, gated change, compatibility, recovery comparison, and operator exercise | OPEN: second depth/duplication pass |
 
 This checkpoint closes demonstrated `model merely named` gaps. It does not use word count as automatic acceptance and does not yet close the chapters.

@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `engineer-release-and-recovery.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but covers the release/recovery decision job with executable rehearsal instead of CI/CD vendor tutorial padding. Phase 09 may reopen only for a concrete coverage gap.
+Phase 09 reopened the compressed baseline and added release identity/provenance, a gated Orchid change, compatibility-state reasoning, recovery-option comparison, and a second-operator exercise. CI/CD vendor tutorials remain out of scope. A second depth/duplication audit is still required.

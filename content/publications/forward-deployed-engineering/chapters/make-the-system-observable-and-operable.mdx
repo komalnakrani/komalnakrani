@@ -79,6 +79,19 @@ Examples:
 
 This map and the diagnostic tree are original synthesis tools. [CLM-105]
 
+### Turn one promise into an operating record
+
+Take `a qualified reviewer can reach a truthful evidence-backed state within the workflow window`.
+
+- **Failure states:** request unavailable, equipment ambiguous but shown as confirmed, evidence stale/missing, dependency completion unknown, policy/authorization wrong, review latency too high, or fallback absent.
+- **Signals:** completed/blocked/fallback/reconcile states; equipment confidence; evidence version/freshness; dependency finality; policy/authorization; review latency; support reason.
+- **Segments:** site/connectivity, equipment family, qualified role, release/config/model/policy bundle, and clear/ambiguous/missing state.
+- **Decision:** hold expansion if a critical segment has wrong binding or no truthful fallback; investigate latency only after state correctness is preserved.
+- **Owner:** workflow owner for the promise and boundary owners for contributing service/data/model/identity state.
+- **Blind spot:** offline completion may arrive late; freshness and coverage remain visible.
+
+The record refuses a common shortcut: treating a successful HTTP request as a successful review. It also shows why one promise needs several signals but one accountable operational decision.
+
 ## Maintain linked operating views
 
 ### Service and dependency
@@ -136,6 +149,16 @@ Objectives should represent user-relevant behavior and change a decision. [CLM-1
 
 Do not copy universal targets. A 99.9 percent availability target can coexist with unusable evidence, slow low-connectivity sites, or unsafe critical-segment behavior. Thresholds belong to accountable owners using outcome/risk/cost evidence.
 
+### Specify an indicator so two operators calculate the same thing
+
+Example bounded workflow indicator:
+
+> Numerator: eligible Orchid review intents in the internal pump-family cohort that reach `ready-for-review` or an approved truthful fallback within 30 seconds. Denominator: all eligible intents during the window, including blocked, failed, abandoned, and unresolved completion states. Exclude only preidentified synthetic rehearsal intents. Segment by connectivity and equipment-state class. Source is versioned workflow events; coverage heartbeat must be current. If coverage is stale, status is unknown, not green.
+
+The objective and 30-second value are fictional and require an owner. The mechanism is definitional: eligible population, good state, time boundary, exclusions, segmentation, source, missing behavior, and decision.
+
+Pair the indicator with action. A critical wrong-binding event stops the affected path. Sustained latency may hold widening and activate fallback. A low-volume ambiguous segment may require targeted evidence rather than an availability page.
+
 ## Preserve cohorts and tails
 
 An aggregate can be green while one site is unusable. In the companion, nine of ten connected samples succeed while the low-connectivity cohort has zero success and 5-second average latency. The cohort view exposes what a combined rate would soften.
@@ -154,6 +177,14 @@ Avoid unbounded high-cardinality labels such as raw customer text or every ident
 
 Global averages can conceal consequential degradation. [CLM-109]
 
+### Read aggregate and cohort together
+
+Suppose 90 of 100 intents complete. If all 10 failures belong to the only low-connectivity site, the conclusion is not `mostly healthy`; one intended cohort cannot use the workflow.
+
+If that site has only two events and both fail, the evidence is serious but statistically thin. Hold unsupported expansion, inspect the mechanism, and gather representative evidence. Do not dilute it into the aggregate or pretend two events estimate a universal rate.
+
+Always report count, denominator, window, coverage, and tail/segment with a rate. A percentage without exposure can hide rare critical failure and meaningless small samples.
+
 ## Make alerts actionable
 
 Every alert needs:
@@ -171,6 +202,21 @@ An ownerless alert with no first action is noise, not control. [CLM-115]
 
 Alert on user consequence or a strong leading indicator, not every metric movement. Page for urgent actionable conditions; use tickets/review queues for slower degradation. Test routing and runbook access.
 
+### Design one actionable alert
+
+`Orchid critical evidence-binding failure` might contain:
+
+- condition: any review-ready state where confirmed equipment and evidence equipment ID disagree;
+- segment: tenant, region, equipment family, release/config/policy bundle; no raw ticket text;
+- urgency: page workflow on-call and release owner immediately;
+- first action: stop affected suggestion path, preserve identifiers/versions, verify whether external approval occurred;
+- runbook: binding/reconciliation response with access prechecked;
+- escalation: designated security/safety/customer authority by consequence;
+- clear condition: affected state reconciled, control restored, and owner approves bounded re-entry;
+- review: every event becomes verification/regression evidence.
+
+Inject a synthetic mismatch. Confirm the route reaches a qualified owner, the link/query works, the first action is possible, and no sensitive content leaks into the notification.
+
 ## Follow an evidence-first diagnostic tree
 
 [FIGURE F13.2: Slow or untrusted recommendation diagnostic tree. Begin with user symptom and cohort. Branch through service/dependency health, connectivity/latency/fallback, equipment binding and evidence provenance/freshness, model bundle/output, policy/authorization/approval, UI/workflow/support, then containment and owner action.]
@@ -186,6 +232,20 @@ For “slow or untrusted recommendation”:
 7. Contain exposure, preserve evidence, assign owner, update tests/signals/runbook.
 
 The companion returns the next discriminating evidence rather than a confident root cause.
+
+### Walk a diagnosis without guessing
+
+Symptom: technicians at one site report slow and untrusted suggestions.
+
+1. Compare affected/unaffected sites and current release/config/model/policy versions.
+2. Aggregate service latency is normal; the site cohort shows a long tail and frequent fallback.
+3. Trace a representative approved/synthetic intent. Evidence waits after repeated inventory completion checks.
+4. Inspect intent state: requests are unknown completion and clients retry as new work.
+5. Contain by holding the site cohort and using truthful manual fallback; preserve and reconcile intent records.
+6. Verify evidence provenance. If it remains correct, do not mislabel the event an AI-quality failure.
+7. Assign retry/dependency correction, capacity test, cohort signal, and runbook update.
+
+Each step narrows hypotheses. The tree avoids jumping from `untrusted AI` to prompt changes when the observed boundary is retry/finality under weak connectivity.
 
 ## Bound telemetry by privacy, security, cost, and usefulness
 
@@ -280,6 +340,42 @@ A runbook contains:
 - last rehearsal and known gaps.
 
 Test it with someone other than its author. Verify links, access, queries, feature controls, reconciliation, and recovery under the target failure. A document that assumes unavailable identity or control plane is not an operating path.
+
+### Rehearse under the failed dependency
+
+Give an operator a synthetic alert while the normal identity path is unavailable. Observe whether the operator can authenticate through approved emergency access, find the cohort and versions, choose containment, preserve minimized evidence, communicate through the named owner, and verify recovery.
+
+Record assistance, timing, stale links, missing access, ambiguous steps, unsafe commands, and gaps. Repair and rerun. The goal is not a fast theatrical drill; it is a path another qualified operator can execute under the failure conditions it claims to address.
+
+## Failure modes and repairs
+
+### Dashboard equals observability
+
+Repair: connect promises to failures, segments, owners, next evidence, runbooks, authority, and recovery. [CLM-116]
+
+### Availability equals health
+
+Repair: include workflow, data/evidence, AI/policy/review, security/audit, support, adoption, capacity, and cost. [CLM-108]
+
+### Global green hides a cohort
+
+Repair: preserve legitimate segments, counts, tails, coverage, and consequence. [CLM-109]
+
+### Every metric pages
+
+Repair: page urgent actionable conditions; route slow degradation to review. Bind owner, evidence, first action, and clear condition. [CLM-115]
+
+### Telemetry becomes sensitive exhaust
+
+Repair: purpose-bound schemas, allowlists, safe identifiers, retention/access/export rules, and cardinality/cost budgets. [CLM-112]
+
+### Missing data looks healthy
+
+Repair: heartbeat, freshness, coverage, versioned queries, and explicit unknown state.
+
+### Runbook exists but cannot run
+
+Repair: exercise access, queries, controls, communications, and recovery under the representative failed dependency.
 
 ## Keep a blind-spot register
 

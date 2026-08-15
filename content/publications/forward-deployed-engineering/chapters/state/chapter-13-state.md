@@ -36,7 +36,8 @@
 - Production exporter/storage/queries/alerts, owner-approved thresholds, real support/capacity/cost evidence remain open.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 2,200 manuscript words plus executable signal code; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added a worked promise record, fully specified indicator/action, aggregate-versus-cohort reading, actionable alert, evidence-first diagnosis, failed-dependency rehearsal, and failure repairs.
+- 2,863 manuscript words plus executable signal code after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 14 may assume
 

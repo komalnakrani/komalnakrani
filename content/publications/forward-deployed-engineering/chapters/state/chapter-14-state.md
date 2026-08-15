@@ -37,7 +37,8 @@
 - Customer/production artifact signing, pipeline, migration load, restore, break-glass, owner-approved targets, and real cohort evidence remain future context-specific work.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 1,600 manuscript words plus executable release/recovery code; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added complete release identity/provenance review, a gated Orchid change walkthrough, compatibility reasoning, a partial-state option comparison, and a reproducible release/recovery exercise.
+- 2,269 manuscript words plus executable release/recovery code after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 15 may assume
 

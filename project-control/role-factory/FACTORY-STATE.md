@@ -59,9 +59,9 @@
 
 ## Exact next action
 
-Continue Forward Deployed Engineer Phase 09 issue #16. The blueprint matrix and
-first Chapters 15-19 depth repair are complete; expand/audit Chapters 13-14,
-then perform the second late-chapter depth and duplication pass.
+Continue Forward Deployed Engineer Phase 09 issue #16. First depth repairs for
+Chapters 13-19 are complete; audit/repair Chapters 11-12 next, then Chapters
+06-10, before the second late-chapter depth and duplication pass.
 
 ## Resume instructions
 

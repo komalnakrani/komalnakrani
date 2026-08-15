@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `make-the-system-observable-and-operable.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but covers the operator decision job without vendor dashboard tutorials. Phase 09 may reopen only for a concrete coverage gap.
+Phase 09 reopened the compressed baseline and added a worked operating promise, indicator, cohort interpretation, actionable alert, diagnostic walk, failed-dependency rehearsal, and failure repairs. Vendor dashboard tutorials remain out of scope. A second depth/duplication audit is still required.
