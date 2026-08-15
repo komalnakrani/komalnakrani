@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "claims": [
+    {"id":"CLM-001","chapterSlug":"behavior-not-magic","statement":"AI system quality and risk must be managed across a lifecycle and cannot be inferred from a model artifact alone.","sourceIds":["SRC-001","SRC-005","SRC-006"]},
+    {"id":"CLM-002","chapterSlug":"behavior-not-magic","statement":"Production readiness requires evidence across data, model, code, infrastructure, and monitoring surfaces.","sourceIds":["SRC-007"]},
+    {"id":"CLM-003","chapterSlug":"behavior-not-magic","statement":"System documentation can organize claims, limitations, and owners but does not independently verify those claims.","sourceIds":["SRC-001","SRC-055"]},
+    {"id":"CLM-004","chapterSlug":"behavior-not-magic","statement":"The accountable engineering object is combined system behavior for a defined task rather than isolated model capability.","sourceIds":["SRC-005","SRC-006"]},
+    {"id":"CLM-005","chapterSlug":"behavior-not-magic","statement":"Implementation ownership does not confer formal product, domain, safety, privacy, security, legal, or risk authority.","sourceIds":["SRC-001","SRC-054"]},
+    {"id":"CLM-006","chapterSlug":"start-with-the-user-task","statement":"Human-AI product design begins with the user task, interaction context, expectations, correction, and failure behavior.","sourceIds":["SRC-003","SRC-004"]},
+    {"id":"CLM-007","chapterSlug":"start-with-the-user-task","statement":"A simple non-machine-learning baseline is a legitimate and often essential comparison before added complexity.","sourceIds":["SRC-008"]},
+    {"id":"CLM-008","chapterSlug":"start-with-the-user-task","statement":"Product signals and business proxies can inform decisions but do not automatically establish task value and can mislead.","sourceIds":["SRC-021","SRC-031","SRC-053"]},
+    {"id":"CLM-009","chapterSlug":"start-with-the-user-task","statement":"Weak upstream task and data definitions can create cascading downstream failures across a sociotechnical system.","sourceIds":["SRC-013","SRC-014"]},
+    {"id":"CLM-010","chapterSlug":"start-with-the-user-task","statement":"Privacy and risk context should be identified before gathering data that may be unnecessary for the stated purpose.","sourceIds":["SRC-038","SRC-054"]},
+    {"id":"CLM-011","chapterSlug":"write-the-behavior-contract","statement":"Trustworthiness expectations are contextual and must connect intended use, affected people, consequence, and risk tolerance.","sourceIds":["SRC-001","SRC-054"]},
+    {"id":"CLM-012","chapterSlug":"write-the-behavior-contract","statement":"Users need explicit capability, limitation, correction, and failure interaction that can be tested in realistic scenarios.","sourceIds":["SRC-003","SRC-004","SRC-030"]},
+    {"id":"CLM-013","chapterSlug":"write-the-behavior-contract","statement":"Abstention creates a measurable risk-coverage tradeoff while raw model confidence may be poorly calibrated.","sourceIds":["SRC-024","SRC-025"]},
+    {"id":"CLM-014","chapterSlug":"write-the-behavior-contract","statement":"A provider model behavior specification and schema-constrained output are not an application behavior contract or semantic guarantee.","sourceIds":["SRC-043","SRC-045"]},
+    {"id":"CLM-015","chapterSlug":"write-the-behavior-contract","statement":"Domain review and formal authorization require named competent roles rather than an unspecified human-in-the-loop promise.","sourceIds":["SRC-001","SRC-051"]}
+  ]
+}

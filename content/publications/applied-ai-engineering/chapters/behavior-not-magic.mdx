@@ -1,0 +1,429 @@
+---
+title: "Behavior, Not Magic"
+slug: "behavior-not-magic"
+summary: "Establish product behavior as the unit of accountability and build a responsibility charter around a recursive evidence loop."
+minutes: 45
+sourceIds: ["SRC-001", "SRC-005", "SRC-006", "SRC-007", "SRC-054", "SRC-055"]
+claimIds: ["CLM-001", "CLM-002", "CLM-003", "CLM-004", "CLM-005"]
+objectiveIds: ["AAE-K01", "AAE-K02", "AAE-K11"]
+figureIds: ["FIG-001", "FIG-002"]
+---
+
+## The regression that survived a better prompt
+
+The first version looked persuasive. A repair-shop buyer typed, "I need a seal for a 2012 water pump," and the prototype returned three polished recommendations. Each card had a part name, an explanation, and a green compatibility badge. The team improved the prompt twice. The explanations became shorter and the badges looked more consistent. In the prepared demonstration, every example worked.
+
+Then a catalog update changed how shaft diameter was stored. Some listings used millimeters, some used inches, and a migration left older values without a unit. The model still produced fluent explanations. The ranking service still returned candidates. The user interface still showed a green badge. Yet one of the top results was dimensionally incompatible.
+
+"Make the prompt stricter" was not a repair plan. The prompt could not restore a missing unit, establish which source controlled compatibility, prevent an interface from translating an uncertain score into a green badge, or decide who was allowed to approve a claim that could waste a buyer's time and a seller's shipping cost. The failure crossed catalog semantics, retrieval, ranking, model context, application logic, interface language, and decision authority.
+
+This fictional product is **Patchwork Find**, a constructed repair-part discovery marketplace used throughout this book. Its users, listings, events, measurements, and outcomes are synthetic. Patchwork does not prove that any real marketplace has the same problem or that a specific mechanism will solve it. It gives us one continuous system in which decisions can accumulate and be challenged.
+
+The regression reveals the first principle of applied AI engineering: the accountable object is not a model response. It is the behavior of the combined product for a defined task and consequence. AI quality and risk live across a lifecycle, while learned components create dependencies that ordinary component boundaries can hide. A model can behave as tested and the product can still fail because the wrong context arrived, a rule was missing, a score was mistranslated, or authority was assumed. [CLM-001] [CLM-004]
+
+Applied AI engineering is therefore not the craft of placing magic behind an interface. It is the discipline of turning uncertain capability into useful, measurable, reliable, and governable behavior through evidence.
+
+## Four objects that teams routinely collapse
+
+Teams often use *model*, *AI*, *feature*, *system*, and *outcome* as if they name one thing. They do not. A useful responsibility boundary begins with four nested objects.
+
+### Capability
+
+A **capability** is something a learned or computational mechanism can do under stated conditions. A text model may extract dimensions from a description. An embedding model may place semantically similar listings near each other. A ranking model may order candidates using query and listing signals. A deterministic parser may normalize units.
+
+Capability evidence is conditional. "Extracted 93 percent of fields on dataset D under version V" is a capability claim. "Understands repair parts" is not. The first names the task surface, evidence, and version. The second hides the conditions that would make it false.
+
+Capability is also morally and operationally neutral. The ability to generate a seller question does not establish permission to contact a seller. The ability to rank a candidate does not establish that the candidate is compatible. The ability to return JSON does not establish that each field is true.
+
+### Component
+
+A **component** packages one or more capabilities behind an interface. It has inputs, outputs, versions, dependencies, latency, costs, failure modes, and an owner. Patchwork might have a measurement normalizer, hybrid retriever, compatibility filter, ranker, and explanation generator.
+
+Component quality matters, but it remains local. A ranker can improve a relevance measure while the product worsens for rare pump families. A generator can follow its output schema while citing the wrong listing field. A normalizer can be correct for explicit units and unsafe for missing ones. Component tests are necessary evidence, never the whole case.
+
+### Product behavior
+
+**Product behavior** is what a user and other affected parties can observe across the combined system. It includes what the product returns, refuses, asks, reveals, records, delays, escalates, and changes. It also includes behavior when evidence is missing, dependencies fail, the user corrects the system, or the system enters a degraded state.
+
+For Patchwork, "shows candidates" is too weak. A behavior clause could instead say:
+
+> Given a buyer's repair-part query with a named equipment family and complete required measurements, Patchwork proposes catalog candidates, displays the listing evidence used, labels unresolved constraints, and never describes compatibility as guaranteed.
+
+That clause spans data semantics, retrieval, application validation, interface language, and evidence display. It can be evaluated by examples and counterexamples. It does not claim a business outcome.
+
+### Authorized outcome
+
+An **authorized outcome** is the consequence the organization intends and is prepared to accept inside named constraints. It includes value, affected groups, guardrails, authority, and an observation window. An engineer may assemble technical evidence for the outcome. Product leadership decides whether the opportunity deserves priority. Domain owners define authoritative compatibility rules. Privacy, security, safety, legal, and business owners exercise the decision rights assigned by the organization.
+
+For Patchwork, an eventual outcome might concern a buyer's ability to find evidence-backed candidates with less wasted effort while not increasing misleading fit claims or inappropriate data use. That sentence is intentionally not a target. This fictional case has no real baseline, conversion rate, return rate, or financial forecast. Chapter 2 will build a falsifiable task hypothesis with synthetic evidence, not invent success.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f01-1-product-behavior-boundary.svg" alt="Nested boundary from model capability through model component and product behavior to an outcome authorized by named decision owners." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F01.1 - From capability to accountable behavior.</strong> Product accountability begins at observable combined behavior, while outcome authorization remains explicitly assigned.</figcaption>
+</figure>
+
+The boundary prevents two mistakes. The first is reduction: "The model passed, so the product is ready." The second is inflation: "I built the feature, so I can accept every consequence." Applied AI engineers reject both. They own the technical evidence chain for combined behavior and keep institutional decision rights explicit. [CLM-005]
+
+## The unit of accountability
+
+A unit of accountability tells a team what must remain connected when work is divided. If the unit is a prompt, the team optimizes prompt outputs. If it is a model endpoint, the team optimizes model calls. If it is a feature ticket, the team optimizes ticket completion. Those units can produce locally excellent work while the user-facing behavior remains unjustified.
+
+The Applied AI Engineer uses a **bounded behavior system** as the unit:
+
+> For a named user task and consequence, the combined data, learned mechanisms, deterministic software, interfaces, controls, people, and operating processes must exhibit specified behavior, with evidence strong enough for named owners to make release and risk decisions.
+
+The word *bounded* matters. The engineer does not own every upstream record, platform, roadmap decision, or business process. The engineer does own making dependencies and missing decisions visible when they affect the behavior claim.
+
+Imagine that Patchwork's catalog team owns listing ingestion, a search-platform team owns retrieval infrastructure, a product manager owns prioritization, a trust team defines prohibited marketplace claims, and an Applied AI Engineer owns the new discovery behavior. A dimensional-unit defect originates in ingestion. That does not make ingestion the engineer's permanent ownership. It does make the defect part of the behavior diagnosis. The engineer must trace the failure, demonstrate its consequence, establish a safe response, and route the correction to the owning team.
+
+This is why applied work feels broader than a model integration. Research on production ML systems repeatedly identifies cross-component coupling, data dependencies, feedback, and testing challenges. The exact topology changes across organizations, but the durable lesson is that learned behavior cannot be defended by pointing at a single component. [CLM-001] [CLM-004]
+
+## A demo answers only one kind of question
+
+A demonstration can answer: *Can we produce an interesting behavior in selected conditions?* That is useful. It can make an abstract capability concrete and reveal whether a hypothesis deserves more evidence.
+
+A demo does not by itself answer:
+
+- Does the behavior work on representative ordinary and consequential segments?
+- What happens with missing, contradictory, stale, unauthorized, or adversarial input?
+- Which dependency controls truth, and how is its version recorded?
+- Can the system clarify or abstain instead of guessing?
+- Can a user understand limitations and correct the system?
+- Are latency, capacity, and cost compatible with the task?
+- Can operators detect, diagnose, contain, and recover from failures?
+- Who may authorize release, accept residual risk, and approve changes?
+
+Production-readiness rubrics broaden testing across data, model, infrastructure, monitoring, and other system surfaces. They are useful as question generators, not universal scores. A team cannot earn readiness by accumulating points while ignoring one catastrophic behavior. [CLM-002]
+
+For example, a Patchwork demo might pass ten prepared searches. A readiness inquiry asks whether dimension parsing is versioned, whether missing-unit cases exist in evaluation, whether the interface distinguishes *similar* from *compatible*, whether a retrieval outage triggers a safe degraded state, and whether a catalog change replays behavior evidence. No single model metric answers those questions.
+
+## The evidence loop
+
+The book follows a recursive evidence loop with seven movements.
+
+1. **Task.** Name the actor, trigger, current path, consequence, affected groups, baseline, and evidence that the problem exists.
+2. **Behavior contract.** Specify what the product must, may, must not, and cannot reliably do; include uncertainty, clarification, abstention, escalation, and degradation.
+3. **Mechanism and system.** Choose the simplest adequate combination of deterministic logic, retrieval, ranking, predictive models, generative models, tools, interfaces, and people.
+4. **Evaluation.** Construct representative cases and decision-relevant judgments tied to consequences and segments.
+5. **Release and operation.** Bound exposure, preserve authority, observe behavior, control failure, and make recovery possible.
+6. **Feedback.** Interpret real use, corrections, incidents, cost, latency, drift, and affected-party signals without confusing activity with value.
+7. **Controlled change.** Revisit contracts, mechanisms, data, models, controls, and rollout evidence when a change invalidates an assumption.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f01-2-applied-ai-evidence-loop.svg" alt="Recursive evidence loop from task and behavior contract through mechanism, evaluation, release, operation, feedback, and controlled change." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F01.2 - The applied AI evidence loop.</strong> Every later observation can return the team to an earlier decision without erasing the evidence trail.</figcaption>
+</figure>
+
+The loop is not a claim that development must follow one sequence. A vertical slice may expose a task misunderstanding. An evaluator disagreement may reveal an incomplete contract. An incident may show that a "model failure" was a stale index or an ambiguous interface label. The engineering obligation is to return deliberately, update the affected decision, replay relevant evidence, and preserve why the new state is justified.
+
+The evidence loop also prevents novelty from becoming the roadmap. A new model release enters at controlled change. It does not skip the task, contract, evaluation, and release gates because a benchmark improved. A new agent framework is a possible mechanism, not a user need. A provider's behavior policy is an input to component risk, not Patchwork's application contract.
+
+## Evidence has a job
+
+Evidence is not a folder of screenshots created before launch. Every item should serve a decision. A useful evidence record contains:
+
+- **claim:** what the team believes;
+- **scope:** users, tasks, segments, versions, and conditions to which it applies;
+- **method:** how the observation was produced;
+- **result:** what was observed, including uncertainty and disagreement;
+- **limitation:** what the method cannot establish;
+- **owner:** who maintains the evidence;
+- **decision:** what the evidence supports, blocks, or leaves unresolved;
+- **expiry or trigger:** what change requires revalidation.
+
+Documentation can organize claims, limitations, owners, and lifecycle facts. It cannot make an unsupported claim true. A factsheet saying "safe for repair recommendations" is not verification. A contract linked to representative cases, control tests, incident history, and approval records is stronger because the claims can be challenged. [CLM-003]
+
+This distinction is easy to lose in mature processes. A complete form can look like evidence even when its values were copied forward. The Applied AI Engineer asks, "What decision would change if this field were false?" If there is no answer, the field may be ceremony. If the answer is consequential, the field needs traceable support.
+
+## Responsibility by decision, not title
+
+Job titles vary too much to define a durable boundary. One company may call the work AI Engineer, another Applied ML Engineer, another Software Engineer. A small team may give one person several roles. Classify responsibility through the decision and evidence, not the title.
+
+For each consequential decision, record seven fields:
+
+1. **Decision:** What choice must be made?
+2. **Artifact:** Where is the choice expressed?
+3. **Evidence:** What would justify or overturn it?
+4. **Consequence:** Who or what is affected if it is wrong?
+5. **Working owner:** Who drives the evidence and recommendation?
+6. **Authority:** Who is allowed to approve or accept the consequence?
+7. **Escalation:** What happens when evidence, authority, or timing is insufficient?
+
+Consider twelve mixed Patchwork decisions:
+
+| Decision | Primary working owner | Required authority or collaboration |
+| --- | --- | --- |
+| Define buyer task and behavior hypothesis | Product + Applied AI Engineer | Product priority remains with product owner |
+| Define authoritative compatibility rules | Catalog domain owner | Domain owner approves rule semantics |
+| Normalize units in listing ingestion | Catalog engineering | Catalog owner accepts migration plan |
+| Select retrieval and ranking mechanisms | Applied AI Engineer | Platform owner reviews shared constraints |
+| Define misleading-claim prohibitions | Trust/policy owner | Legal or formal policy authority where applicable |
+| Construct representative evaluation cases | Applied AI Engineer | Domain reviewers validate consequential judgments |
+| Set release threshold for behavior evidence | Applied AI Engineer recommends | Product/risk authorities approve exposure |
+| Approve collection of new buyer data | Privacy/product owners | Applicable privacy authority decides |
+| Implement explanation rendering | Product engineering | Design and accessibility review |
+| Contact a seller automatically | Out of current scope | Product, trust, privacy, and business authority required before design |
+| Purchase a part automatically | Prohibited in current scope | No implementation path exists in this contract |
+| Diagnose a production regression | Applied AI Engineer coordinates | Component owners correct their layers; incident authority governs response |
+
+The table separates **driving closure** from **possessing authority**. An engineer cannot use "not my area" to ignore a release-blocking decision. They can state the missing authority, prepare decision-quality evidence, and keep the affected behavior blocked. Conversely, "end to end" does not authorize them to redefine domain truth, gather unrestricted data, or accept institutional risk. [CLM-005]
+
+## Adjacent roles and healthy friction
+
+Applied AI work touches many disciplines. Healthy boundaries are not walls; they are explicit interfaces.
+
+### Product management
+
+Product management owns portfolio priority, product strategy, and value decisions. The Applied AI Engineer makes technical feasibility, evidence strength, behavioral limitations, and operating consequences legible. They may help write the hypothesis, but a technically feasible feature does not become a priority through engineering enthusiasm.
+
+### Research science
+
+Research creates or explains capability. Applied engineering decides whether available capability can support a dependable product behavior. The applied engineer can run experiments and adapt mechanisms without claiming novelty or research authority.
+
+### Machine learning engineering and platforms
+
+ML engineering often owns model, feature, training, deployment, and data lifecycle infrastructure. Platform teams own shared reliability, policy, and interfaces. Applied engineering integrates these assets into task behavior and supplies product-level requirements and regressions. In a small organization one person may do all three jobs; the artifacts should still show which decision is being made.
+
+### Product software engineering
+
+Product engineers build interfaces, services, and workflows. In some teams the Applied AI Engineer is a product engineer with deeper ownership of uncertain behavior and evaluation. The distinction is the evidence problem, not superior status.
+
+### Domain experts
+
+Domain experts define and judge facts that require domain competence. Patchwork catalog specialists decide whether the stated dimensional rules are valid. An engineer can encode and test the rule but cannot manufacture domain legitimacy by implementing it.
+
+### Security, privacy, safety, legal, and risk owners
+
+These functions define controls and exercise formal decision rights assigned by the organization. The Applied AI Engineer designs technical controls, produces test evidence, states residual limitations, and escalates. Implementation ownership never silently transfers approval authority.
+
+### Forward deployed engineering
+
+Forward deployed work owns an embedded customer deployment outcome across a customer environment and engagement. Applied AI engineering owns an AI-powered product behavior evidence loop. A person can perform both, but this book does not import customer-engagement ownership into the core role.
+
+The friction between these roles can improve the system. A product owner asks whether the task matters. A domain reviewer asks whether the judgment is valid. A platform owner asks whether the approach can operate. A privacy owner asks whether the data is necessary. The Applied AI Engineer keeps those questions connected to one falsifiable behavior.
+
+## Patchwork Find: responsibility charter v0.1
+
+The incoming request is, "Add an AI finder so buyers can describe a repair and get the right part." That sentence mixes interface, mechanism, task, and a guarantee. It also leaves the consequence and authority invisible.
+
+The first dossier artifact, `PF-01`, begins as a responsibility charter rather than a solution plan.
+
+### Working behavior hypothesis
+
+For buyers searching selected low-consequence repair-part categories, Patchwork may help turn natural-language needs and explicit measurements into an evidence-backed candidate set. The product must distinguish similarity from verified compatibility, expose the listing attributes used, ask for missing critical facts, and preserve ordinary search as a fallback.
+
+This is not yet approved for production. It is a hypothesis that tells us what evidence to seek.
+
+### Owned evidence
+
+The Applied AI Engineer drives:
+
+- task and baseline evidence with product and research partners;
+- behavior-contract versions and counterexamples;
+- mechanism comparisons, including deterministic and non-ML baselines;
+- combined-system architecture and inspectable interfaces;
+- representative evaluation design and limitation reporting;
+- operational budgets, telemetry, fallback, and recovery evidence;
+- change replay when catalogs, models, providers, or rules change.
+
+### Explicit non-scope
+
+The current charter does not include:
+
+- autonomous seller contact;
+- autonomous purchase or payment;
+- guaranteed-fit claims;
+- safety-critical or regulated part categories;
+- unrestricted use of buyer histories or private messages;
+- ownership of catalog ingestion, marketplace policy, product priority, or formal risk acceptance.
+
+### Required collaborators and authorities
+
+- Product owner: task priority, user promise, and rollout decision.
+- Catalog domain owner: compatibility semantics, exclusions, and domain review.
+- Search/platform owners: shared interfaces, reliability, and capacity constraints.
+- Trust, privacy, security, accessibility, and legal owners: applicable controls and decisions.
+- Applied AI Engineer: technical behavior evidence and recommendation.
+
+### Escalation triggers
+
+The work pauses or narrows when:
+
+- a required measurement has no authoritative semantic definition;
+- the evidence cannot distinguish similarity from compatibility;
+- a proposed data source lacks purpose or permission;
+- a critical segment has no competent reviewer;
+- the product promise exceeds evaluated behavior;
+- safe abstention or ordinary-search fallback is removed;
+- a change invalidates the evidence version attached to release.
+
+### Evidence-loop map v0.1
+
+| Movement | Current state | Next evidence |
+| --- | --- | --- |
+| Task | Broad request only | Observe candidate discovery and failure consequence |
+| Contract | Draft boundaries above | Define required, uncertain, abstaining, and prohibited states |
+| Mechanism | Undecided | Compare ordinary search, filters, hybrid retrieval/ranking, and bounded generation |
+| Evaluation | No representative set | Derive cases from task segments and contract clauses |
+| Release/operation | Not authorized | Define only after consequence, controls, and operating evidence exist |
+| Feedback | No production evidence | Preserve explicit synthetic status |
+| Change | Catalog units identified as a risk | Require semantic version and replay trigger |
+
+The charter does not make Patchwork ready. It makes missing evidence and authority visible early enough to change the work.
+
+## Failure patterns to recognize
+
+### Model equals system
+
+The team treats a model evaluation as the product evaluation. It misses retrieval emptiness, schema translation, permissions, interface claims, user correction, dependency failure, and operations.
+
+**Correction:** trace one behavior from user trigger through every component, control, person, and consequence. Test the seams as well as the model.
+
+### Demo equals readiness
+
+Prepared examples become an implicit release case. Variability and exceptions are deferred until after exposure.
+
+**Correction:** label the demo as capability evidence, then list the unanswered task, contract, segment, failure, authority, and operating questions.
+
+### Documentation equals verification
+
+A factsheet or checklist exists, so the team assumes the underlying claims are true.
+
+**Correction:** link each material claim to method, result, limitation, version, owner, and decision. Documentation is the index, not the proof. [CLM-003]
+
+### End to end equals unlimited ownership
+
+The engineer becomes the default owner for product decisions, upstream data, shared infrastructure, review, incident response, and formal risk.
+
+**Correction:** use the decision classifier. Drive necessary evidence to closure while keeping the actual authority named.
+
+### Title equals boundary
+
+A job title is used to decide whether work belongs. Important evidence falls between teams, or one person is granted implicit power.
+
+**Correction:** classify the decision, artifact, evidence, consequence, working owner, authority, and escalation independently of the title.
+
+### Fluency equals truth
+
+A persuasive explanation hides missing evidence. Users cannot tell a grounded result from a plausible narrative.
+
+**Correction:** make evidence presence, source, conflicts, and missing constraints product states. Generation may explain existing evidence; it cannot create the evidence that justifies compatibility.
+
+## A readiness conversation, not a readiness number
+
+Multi-layer readiness checks are valuable because they make blind spots discussable. Ask:
+
+- **Task:** Do we know who is trying to do what and what failure costs?
+- **Data/context:** Are semantics, provenance, permission, segments, and missing states explicit?
+- **Mechanism:** Is the simplest adequate baseline represented?
+- **System:** Are interfaces, validations, permissions, controls, and fallbacks inspectable?
+- **Evaluation:** Do cases represent ordinary and consequential behavior?
+- **Interaction:** Can users understand, correct, and exit the behavior?
+- **Operations:** Are latency, capacity, cost, telemetry, diagnosis, and recovery bounded?
+- **Authority:** Can every release and residual-risk decision reach a named owner?
+- **Change:** Do versions and triggers identify what evidence must be replayed?
+
+Do not average these into comfort. If Patchwork lacks a rule for missing units, a strong ranking score does not compensate. If the catalog owner has not approved the compatibility semantics, more test volume does not create authority. If ordinary search disappears during a pilot, an abstention path that strands the user is not safe.
+
+The output is a decision packet: supported claims, blocked claims, unresolved uncertainty, responsible owners, and the cheapest next evidence. That is more useful than a universal maturity label. [CLM-002]
+
+## Professional completion evidence
+
+You have completed the chapter's work when you can produce and defend the following artifacts.
+
+### Responsibility charter
+
+It names the behavior under investigation, owned technical evidence, non-scope, collaborators, formal authorities, and escalation triggers. It does not use "end to end" as a substitute for boundaries.
+
+### Boundary memo
+
+It distinguishes capability, component, product behavior, and authorized outcome for the same scenario. It identifies at least one place where a local success can coexist with a product failure.
+
+### Evidence-loop record
+
+It shows the current decision at every movement, the evidence version, its limitations, and what would cause a return. Empty states are acceptable; hidden states are not.
+
+### Decision classification
+
+For a mixed set of decisions, it names working ownership separately from approval authority. It includes what happens when the named authority is unavailable.
+
+### Failure trace
+
+It reconstructs one user-visible behavior across task, data/context, model or mechanism, application, interface, operation, and authority. The trace ends with corrective evidence, not "the AI was wrong."
+
+## Trace a failure without blaming "the AI"
+
+The fastest way to test whether a team understands the accountable object is to give it a failure and inspect the nouns in its diagnosis. Consider the original Patchwork unit regression in detail.
+
+### The observed behavior
+
+A buyer entered a shaft diameter of 0.625 inches. One listing recorded `shaft_diameter: 16` with no unit after a catalog migration. The retrieval service returned the listing because the text and category matched. The ranking service placed it first. An explanation component said the dimensions were a close match. The interface converted a ranking decision into a green compatibility badge. The buyer could not see that a unit was missing.
+
+Calling this a hallucination loses most of the evidence. The generated sentence was wrong, but it was made possible by decisions at several layers.
+
+### Task layer
+
+The product had not decided whether missing-unit listings belonged in compatibility assistance. The discovery promise remained broader than its evidence. Corrective action is a segment decision: exclude the state, clarify, or find an authoritative unit source.
+
+### Data and context layer
+
+The catalog represented a quantity without its semantic unit. The runtime context did not distinguish *unknown unit* from *millimeters*. Corrective evidence includes a semantic audit, migration history, source-owner decision, and explicit unknown state. More examples cannot repair an undefined field.
+
+### Mechanism layer
+
+Retrieval optimized broad candidate discovery and the ranker treated apparent dimensional closeness as useful. Neither component enforced the domain exclusion. Corrective work separates recall from compatibility control and tests missing-unit cases as a critical segment.
+
+### Application layer
+
+No deterministic gate prevented an unresolved critical constraint from entering the assisted result set. Corrective work adds a rule at the application boundary, versioned against domain authority. The learned component may still retrieve the candidate for ordinary exploration; the application cannot represent it as compatible.
+
+### Interface layer
+
+The green badge implied a stronger claim than the evidence. The explanation hid the unresolved unit. Corrective work makes matched, conflicting, and unknown evidence visually distinct and tests whether users can correct the measurement or return to ordinary search.
+
+### Operating layer
+
+The catalog schema changed without replaying behavior cases. Telemetry counted successful responses but did not expose the rate of unresolved critical attributes in accepted candidates. Corrective work maps catalog versions to evaluation replay and adds a promise-linked signal.
+
+### Authority layer
+
+Engineering had no approved domain rule for inferring or rejecting missing units, yet the implementation silently made one. Corrective work routes the semantic decision to the catalog domain owner and keeps assisted compatibility blocked until it exists.
+
+The trace produces multiple owned corrections, but one behavior disposition: this segment cannot show assisted compatibility until the semantic rule, application gate, interaction, tests, signals, and approval are aligned. That is system accountability. It does not require assigning the entire catalog platform to the Applied AI Engineer.
+
+## How leaders preserve the evidence boundary
+
+Senior engineers often create the most damage when they resolve ambiguity through authority theater. "I know this model" can silence a domain concern. "The risk team will block us later if it matters" can turn governance into cleanup. "Product asked for it" can erase a technical limitation. Applied AI leadership uses a different posture.
+
+First, state the claim at the correct layer. "The retriever improves recall on this frozen sample" is stronger than "the finder works" because it is narrower and testable. Second, expose the decision that remains. Third, name who can make it. Fourth, preserve a safe state while the decision is open.
+
+A useful review sentence has five parts:
+
+> On evaluation set E under versions V, behavior B satisfies criteria C for segments S. Limitation L remains. Owner O must decide D before exposure can expand.
+
+This format makes uncertainty actionable. It also protects specialists from being used as ceremonial reviewers. The domain owner receives the exact semantic decision. The privacy owner receives the proposed purpose and data flow. The release owner receives the behavior evidence and remaining limits. None must reverse-engineer a vague request to "approve the AI."
+
+Evidence-aware leadership also protects engineers. When formal authority is absent, the system stays in a named blocked or degraded state rather than depending on personal courage. When a business owner accepts a bounded risk, the decision record states the evidence and scope rather than transferring permanent blame to the person who wrote the code.
+
+## A review checklist for the responsibility charter
+
+Before accepting `PF-01` v0.1, ask a skeptical peer to answer these questions using only the artifact:
+
+- Can they identify the exact observable behavior under investigation?
+- Can they distinguish what the model may do from what the product promises?
+- Can they find at least one credible non-model failure?
+- Can they name the evidence the Applied AI Engineer owns?
+- Can they name each decision the engineer cannot authorize?
+- Can they see what happens when an authority is unavailable?
+- Can they tell that Patchwork is fictional and its evidence synthetic?
+- Can they identify which changes require a return through the loop?
+- Can they explain why seller contact and purchase are not merely disabled features but current contract exclusions?
+- Can they state the next evidence without selecting a model?
+
+If the answer to any question is no, revise the charter. A responsibility document succeeds when it changes decisions under pressure, not when it sounds comprehensive in a quiet review.
+
+## Chapter decision
+
+The Applied AI Engineer's unit of accountability is a bounded product behavior system for a defined task. The engineer maintains the technical evidence chain across models, data, software, interfaces, controls, people, operation, and change. They do not acquire product priority, domain truth, or formal risk authority merely by implementing the system.
+
+Patchwork Find now has `PF-01` responsibility charter and evidence-loop map v0.1. It does not yet have a credible task. The request still begins with a mechanism and a promise. Chapter 2 will observe the work, name the consequence, construct a baseline, and preserve a real possibility that Patchwork should use ordinary search, change the workflow, narrow the problem, or build nothing at all.

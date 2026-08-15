@@ -1,0 +1,577 @@
+---
+title: "Start With the User Task"
+slug: "start-with-the-user-task"
+summary: "Turn a request for AI into a falsifiable task, consequence, baseline, value hypothesis, evidence log, and valid stop path."
+minutes: 55
+sourceIds: ["SRC-003", "SRC-004", "SRC-008", "SRC-013", "SRC-014", "SRC-021", "SRC-031", "SRC-038", "SRC-053", "SRC-054"]
+claimIds: ["CLM-006", "CLM-007", "CLM-008", "CLM-009", "CLM-010"]
+objectiveIds: ["AAE-K01", "AAE-K02", "AAE-K08", "AAE-K11"]
+figureIds: ["FIG-003", "FIG-004"]
+---
+
+## An AI use case is not a user task
+
+"Add an AI finder" sounds like a requirement because it contains a verb and a feature. It is actually a mechanism preference attached to an interface label. It does not say who is trying to accomplish what, what happens today, which failure matters, or what evidence would make the idea unworthy of further work.
+
+Patchwork Find begins with that request. A fictional marketplace team imagines a conversational box where buyers describe a repair and receive the right part. The phrase *the right part* hides at least three different judgments: a listing can be textually relevant, dimensionally compatible, or authorized for a particular use. The evidence and consequence differ. A buyer looking for a decorative knob is not in the same situation as a buyer replacing a pressure-bearing component. A ranking that is useful for exploration may be unacceptable as a compatibility guarantee.
+
+If the team selects a model before separating those tasks, every later artifact inherits the confusion. It collects examples with inconsistent labels. It chooses a success metric because the platform already emits it. It treats clicks as proof of usefulness. It asks users whether they like a chat interface rather than whether the task improved. By the time the ambiguity appears in evaluation, the team has invested in an answer to a question nobody properly asked.
+
+Human-AI product design begins with what people are trying to accomplish and with observable interaction behavior: expectations, correction, control, and failure over time. It does not begin with a list of model capabilities. [CLM-006]
+
+This chapter turns a solution request into a falsifiable task brief. *Falsifiable* means evidence could cause the team to continue, narrow, change the workflow, choose a non-AI baseline, or stop.
+
+## Task anatomy
+
+A task is not a persona plus a goal. It is a situated attempt to change state under constraints. Record nine connected elements.
+
+### Actor
+
+Who performs the task, and what competence, access, incentives, and constraints do they have? "Buyer" is often too broad. A hobbyist who can measure an existing part, a repair technician with a service manual, and a household buyer guessing from a photograph bring different evidence.
+
+Do not turn the actor into a stereotype. The brief records what is known and how it was learned. It also records affected people who do not directly operate the interface, such as sellers who absorb returns or support staff who handle disputes.
+
+### Trigger
+
+What causes the task to begin? A part failed. A buyer discovered an incomplete assembly. A seller discontinued a listing. A previous order did not fit. Triggers influence urgency, available evidence, and willingness to wait for clarification.
+
+### Context and input
+
+What does the actor know, possess, and have permission to share? The context might include an equipment identifier, an old part number, dimensions, material, a photo, a manufacturer table, or only a description. The absence of information is not noise to hide. It is a task state that may require clarification or abstention.
+
+### Decision or action
+
+What decision does the actor need to make next? Browse candidate categories, compare likely replacements, ask a seller a question, or commit to a purchase are different actions. Patchwork's first boundary is discovery: help a buyer identify evidence-backed candidates worth reviewing. Seller contact and purchase remain outside scope.
+
+### Baseline
+
+What happens without the proposed behavior? The baseline is not "no AI." It is the actual current path: keyword search, categories, filters, external manuals, seller messages, support, and abandonment. It includes time, loops, failure, and compensating skill.
+
+### Friction
+
+Where does the current path consume effort or create avoidable error? A buyer may not know the catalog term. Listings may omit attributes. Unit conventions may differ. Search may require an exact part number. Friction is not automatically a product opportunity; sometimes it reflects information that cannot safely be inferred.
+
+### Consequence
+
+What happens when the task succeeds or fails? Consequence can include time, money, damaged trust, delay, unnecessary shipping, support burden, or physical risk. The consequence determines evidence strength and authority. This chapter does not invent Patchwork rates or revenue.
+
+### Affected groups
+
+Who receives benefits, errors, costs, exclusions, or new work? A more permissive retrieval system may help buyers discover obscure listings while creating more irrelevant seller questions. A photo workflow may exclude users with low bandwidth or create privacy concerns. The direct user is only one affected group.
+
+### Evidence
+
+How do we know each statement? Distinguish observed behavior, participant report, product event, support record, domain judgment, controlled comparison, and inference. Record sample and limitation. One interview can reveal a failure mode; it cannot establish prevalence.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f02-1-task-anatomy.svg" alt="Task anatomy connecting actor, trigger, context, decision, baseline, friction, consequence, affected groups, and evidence." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F02.1 - Anatomy of a falsifiable task.</strong> A task brief makes the current path and consequence visible before any AI mechanism is chosen.</figcaption>
+</figure>
+
+The anatomy is a chain. If the actor changes, the baseline and consequence may change. If the next action is only exploration, the contract can permit broad candidates that would be unacceptable for purchase authorization. If evidence for the trigger is weak, the team should not compensate by designing a richer mechanism.
+
+## Observe without manufacturing demand
+
+Solution-first discovery asks, "Would you use an AI assistant that finds the right part?" The question embeds novelty, benefit, and presumed correctness. Agreement reveals little.
+
+A task inquiry instead asks for recent instances:
+
+- What started the search?
+- What information did you have at the beginning?
+- Show the sequence you followed.
+- Where did you change terms, tools, or sources?
+- What made one candidate more credible than another?
+- When did you ask for help or stop?
+- What happened after the choice?
+- What evidence would have prevented the mistake?
+
+For Patchwork, all observations in this book are constructed. Suppose a synthetic session shows a buyer beginning with "rubber seal for garden pump," moving through categories, learning the term *mechanical seal*, checking a manufacturer diagram, and comparing shaft dimensions. The useful finding is not that conversational search wins. It is that vocabulary translation and evidence comparison appear in the path. Ordinary synonym expansion, category guidance, better attribute filters, or a structured measurement form may address them.
+
+A second constructed session begins with a complete manufacturer part number and fails because search punctuation differs. That is probably a deterministic normalization problem. Routing it through a generative model could add cost and uncertainty without task value.
+
+A third constructed session lacks a readable model plate and measurements. No mechanism can honestly promise a compatible part from the available evidence. The product may explain what to measure or how to find a label. The correct behavior can be clarification, not prediction.
+
+These examples keep mechanism options open. They also expose a no-build possibility: if the main problem is incomplete listing data rather than buyer language, the highest-value work may be seller-side attribute quality.
+
+## Build the baseline before the model
+
+A baseline serves three jobs.
+
+First, it describes the current task rather than an imagined empty state. Second, it creates a comparison that can falsify added complexity. Third, it often reveals a simpler improvement.
+
+Experienced ML engineering guidance recommends establishing simple rules and infrastructure before introducing more complex learning. Treat that as practical guidance, not a theorem. Some tasks genuinely require learned behavior. The obligation is to represent the simple alternative fairly. [CLM-007]
+
+For Patchwork, baseline candidates include:
+
+1. current keyword search;
+2. normalized keyword search with punctuation, spelling, and unit handling;
+3. category and attribute filters;
+4. synonym and catalog-term expansion;
+5. deterministic compatibility exclusions for known rules;
+6. a guided form that asks for required measurements;
+7. no product change, paired with seller listing-quality work.
+
+A learned retrieval or ranking mechanism must beat the relevant baseline on decision-quality evidence, not merely appear more intelligent. A generative explanation must add comprehension without inventing compatibility. A seller-question drafting tool must reduce formulation effort without sending anything automatically.
+
+The baseline should be versioned. "Current search" changes. Record configuration, index date, catalog snapshot, query handling, and user interface. Otherwise the team compares a new system against a memory.
+
+## From value language to a value hypothesis
+
+"Improve discovery" is directionally attractive and operationally useless. A value hypothesis should connect a task behavior to a consequence while exposing assumptions.
+
+Use this form:
+
+> For [actor and segment] in [trigger and context], if the product [observable behavior], then [task consequence] should improve relative to [versioned baseline], without worsening [guardrails], because [causal assumption]. We will reconsider if [disconfirming evidence].
+
+Patchwork's provisional hypothesis is:
+
+> For buyers in selected low-consequence pump-seal categories who possess an equipment family plus required measurements, if Patchwork retrieves and ranks candidates while exposing matching and unresolved attributes, then buyers should reach a defensible candidate set with fewer reformulation loops than versioned ordinary search, without increasing unsupported compatibility language, inappropriate data use, seller burden, or task abandonment. We will reconsider if attribute completeness, domain disagreement, or baseline improvements explain the friction better than retrieval and ranking.
+
+Every phrase can be challenged. *Selected* requires a segment decision. *Required measurements* requires domain authority. *Defensible candidate set* requires criteria. *Fewer reformulation loops* is only an intermediate task signal. It is not proof of correct purchase or business value. *Without increasing* requires guardrail evidence. The causal assumption may be wrong.
+
+Do not attach an invented ROI. A task hypothesis can be decision-worthy before financial causality is known. Product leadership can decide whether the possible value warrants the next evidence cost.
+
+## Hypotheses come in layers
+
+A single success statement often hides five separate assumptions.
+
+### User-value hypothesis
+
+The identified friction matters, and changing it improves a consequence the user values. A faster candidate list may not help if the buyer's real bottleneck is obtaining a measurement.
+
+### Behavior hypothesis
+
+The combined product can exhibit the necessary behavior on representative inputs. Patchwork must retrieve useful candidates, apply explicit exclusions, expose evidence, and abstain when required facts are absent.
+
+### Adoption hypothesis
+
+People can understand and incorporate the behavior into their task. A better ranking can fail if evidence is hidden, language overstates certainty, or clarification is too burdensome.
+
+### Operational hypothesis
+
+The behavior can run within acceptable latency, reliability, capacity, cost, privacy, security, and support constraints. A laboratory improvement may not survive the production path.
+
+### Business hypothesis
+
+The task improvement supports an organizational goal inside acceptable costs and externalities. This decision belongs with product and business owners, informed by technical evidence.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f02-2-hypothesis-tree.svg" alt="Hypothesis tree separating user value, product behavior, adoption, operations, and business assumptions with disconfirmation paths." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F02.2 - The hypothesis tree.</strong> The next experiment targets the uncertainty most likely to change the build, narrow, or stop decision.</figcaption>
+</figure>
+
+The tree prevents the model from absorbing every explanation. If users do not adopt the result, the cause may be weak interaction design, misplaced workflow timing, or lack of evidence rather than model quality. If a business proxy does not move, the task improvement may be too small, the causal link may be weak, or the measurement window may be wrong.
+
+## Choose the cheapest next evidence
+
+Teams often select the experiment that best showcases capability. Select the evidence most likely to change the decision.
+
+Rank uncertainties by:
+
+- consequence if wrong;
+- current confidence;
+- cost and time to test;
+- reversibility of proceeding;
+- dependency on the answer;
+- whether a named authority can act on the result.
+
+Suppose Patchwork has three uncertainties:
+
+- Can semantic retrieval find candidates missed by literal search?
+- Do listings contain enough reliable attributes for compatibility screening?
+- Will buyers provide required measurements before seeing results?
+
+The second uncertainty may stop the entire behavior. A sophisticated retrieval comparison is premature if catalog attributes cannot support the promised evidence. The cheapest next step might be a stratified attribute-completeness audit reviewed by a catalog specialist. The third might be tested with a guided form before a model exists. Only then does retrieval evidence become decisive.
+
+The output of an evidence step is not always "go." Valid decisions are:
+
+- **continue:** evidence supports the next uncertainty;
+- **narrow:** one segment or behavior remains credible;
+- **change the workflow:** the friction needs a non-model intervention;
+- **choose a deterministic baseline:** simple behavior is adequate;
+- **pause:** an authority, dependency, or sample is unavailable;
+- **stop:** expected consequence does not justify exposure or cost.
+
+Stopping is productive when it prevents a polished answer to the wrong problem.
+
+## Metrics are witnesses, not value itself
+
+Product signals are observations of behavior. They can support a hypothesis; they do not become the user's purpose merely because they are measurable.
+
+Search systems may use clicks, favorites, cart events, purchases, dwell time, query reformulations, and returns. These signals are not interchangeable. A click can reflect relevance, curiosity, misleading presentation, or position. A purchase can still lead to an incompatible part. A return may reflect fit, quality, shipping, or changed intent. Marketplace engineering cases show how teams use multiple signals and methods, while also illustrating that each proxy is context-specific. [CLM-008]
+
+Use a **proxy ladder**:
+
+1. **Observed task evidence:** Did the actor reach a defensible next decision? What errors occurred?
+2. **Product signal:** What instrumented behavior is plausibly related, such as reformulation or evidence expansion?
+3. **Business proxy:** What organizational outcome might follow, such as reduced support handling?
+4. **Causal assumption:** Why should one level influence the next?
+5. **Failure and gaming path:** How could the signal improve while the task worsens?
+
+For Patchwork, fewer reformulations could mean that candidate labels are clearer. It could also mean the interface discourages correction. More clicks could mean better recall. It could also mean noisier results. The team needs task review and guardrails before interpreting either direction.
+
+Controlled experiments can strengthen decisions when randomization is feasible, ethical, sufficiently powered, and connected to a meaningful metric. They are not a universal prescription. Some consequences are rare, delayed, or inappropriate to expose for learning. Some behavior requires specialist judgment before any online test. Experiment discipline includes knowing when not to randomize. [CLM-008]
+
+## Upstream definitions create downstream reality
+
+An AI team may inherit data labels, event names, and product categories as facts. They are decisions made by people under prior constraints.
+
+Suppose one catalog field is called `diameter`. Sellers use it for shaft diameter, outer housing diameter, or package diameter. A training set treats all values as the same feature. An evaluator judges ranking by purchase events. A dashboard shows improvement. The entire chain can be technically consistent and semantically wrong.
+
+Qualitative research on data cascades describes how undervalued upstream data work and unclear responsibility can create compounding downstream effects. The findings come from sampled high-stakes settings and do not establish prevalence across every AI product. The useful transfer is diagnostic: inspect how task, label, collection, and organizational decisions propagate. [CLM-009]
+
+For every task field, ask:
+
+- Who created the definition, for what earlier purpose?
+- Is the meaning stable across segments and time?
+- What state represents unknown, not applicable, conflicting, or inferred?
+- Who can correct it?
+- Which downstream behaviors treat it as authoritative?
+- What happens when the field changes?
+
+The Applied AI Engineer does not automatically own the source system. They do own refusing to hide a semantic defect behind model tuning.
+
+## Purpose before collection
+
+When a hypothesis is weak, teams sometimes compensate by collecting more data: buyer histories, messages, photos, precise location, device metadata, or long-term interaction traces. Collection can create privacy and security risk before it creates value.
+
+Start with purpose and necessity:
+
+1. Which contract clause needs the data?
+2. Can current or less sensitive evidence answer the question?
+3. What permission and user expectation apply?
+4. Who is affected if the data is exposed, misused, retained, or inferred from?
+5. How long is it needed, and who may access it?
+6. What deletion, correction, and audit behavior is required?
+7. Which privacy or legal authority must decide?
+
+Lifecycle privacy and AI risk resources support identifying context and governance before unnecessary processing. They are voluntary frameworks, not legal advice. The applicable organization and jurisdiction still determine authority. [CLM-010]
+
+Patchwork's initial task does not need private messages or autonomous browsing histories. The constructed brief begins with query text, explicit catalog fields, user-supplied measurements, and public listing evidence. If a later personalization hypothesis requests more data, it must earn a separate purpose, authority, and evidence case.
+
+Data minimization improves scientific clarity as well as privacy. When a system uses every available signal, it becomes harder to identify what behavior depends on, whether a proxy leaks the target, and how a user can understand or correct it.
+
+## Patchwork task brief v0.2
+
+`PF-01` now advances from responsibility charter to a task and evidence record.
+
+### Task statement
+
+**Actor:** Buyer searching selected low-consequence pump-seal categories, initially limited to users who can provide an equipment family and required measurements.
+
+**Trigger:** An existing seal needs replacement and an exact trusted part number is not producing an available listing.
+
+**Current path:** Keyword search, category browsing, attribute filters, external reference checking, listing comparison, and optional manual seller question.
+
+**Decision:** Identify a small candidate set worth manual review. Patchwork does not decide final compatibility, contact a seller, or purchase.
+
+**Friction:** Vocabulary mismatch, inconsistent unit representation, incomplete attributes, and difficulty comparing listing evidence.
+
+**Consequence:** Unsupported candidates can waste buyer and seller effort and create shipping, return, support, or equipment consequences. This version excludes high-consequence categories.
+
+**Affected groups:** Buyers, sellers, catalog specialists, support staff, trust/privacy/security owners, and marketplace operations.
+
+### Baseline record
+
+The required baseline is ordinary Patchwork search with versioned normalization, categories, filters, and current listing presentation. The team must separately test inexpensive improvements: punctuation and unit normalization, synonyms, structured measurement guidance, and listing-quality prompts.
+
+No baseline results are asserted yet. All later values must be labeled synthetic until real authorized research exists.
+
+### Value hypothesis
+
+The provisional hypothesis is the bounded statement introduced earlier: evidence-backed candidate discovery may reduce avoidable reformulation relative to the improved baseline without increasing unsupported compatibility language, inappropriate data use, seller burden, or abandonment.
+
+### Non-goals
+
+- guaranteed compatibility;
+- high-consequence or regulated categories;
+- autonomous seller messages;
+- autonomous purchase;
+- diagnosis of equipment failure;
+- use of private communications or broad behavioral history;
+- replacement of catalog-domain judgment.
+
+### Assumption ledger
+
+| Assumption | Current confidence | Cheapest next evidence | Decision if false |
+| --- | --- | --- | --- |
+| Required attributes exist and have stable semantics | Low | Stratified catalog audit + domain review | Stop or shift to catalog-quality work |
+| Vocabulary mismatch is material after baseline improvements | Low | Paired synthetic and authorized task comparison | Keep deterministic baseline |
+| Buyers can provide required measurements | Low | Guided-form usability evidence | Narrow segment or redesign task |
+| Evidence display supports correction | Unknown | Scenario-based interaction review | Redesign before model comparison |
+| Retrieval/ranking adds value beyond baseline | Unknown | Offline paired comparison after data gates | Reject learned mechanism |
+
+The most likely project-stopping assumption is attribute semantic quality. That is the next evidence target.
+
+### Evidence log format
+
+Each observation records `evidence_id`, source method, date, task segment, version, observation, confidence, contradiction, limitation, owner, and resulting decision. Reports, analytics, interviews, domain review, and experiments remain distinct evidence types.
+
+### Current decision
+
+**Continue only to task-data audit and baseline construction.** Do not select a model, promise conversational behavior, or collect additional personal data.
+
+## Design a task evidence plan
+
+The task brief says what must be learned; an evidence plan says how to learn it without pretending one method answers every question.
+
+### Separate discovery evidence from prevalence evidence
+
+A small observation can discover a behavior, workaround, or failure mode. It cannot tell you how common the behavior is. Analytics can show frequency in instrumented events but may not reveal intent or consequence. A domain review can establish whether a compatibility rule is meaningful but not whether buyers understand it. A controlled comparison can estimate a difference under its assignment and measurement conditions but may not generalize beyond them.
+
+Use each method for the claim it can support:
+
+| Claim | Credible evidence | Important limitation |
+| --- | --- | --- |
+| Buyers use non-catalog vocabulary | Task observation, query analysis with purpose and permission | Query text may not reveal the intended part or outcome |
+| Unit semantics are inconsistent | Stratified field audit, schema history, domain review | Sample and catalog families limit generalization |
+| Improved filters reduce reformulation | Versioned comparative task test | Reformulation is a task proxy, not successful fit |
+| Evidence display supports correction | Scenario-based interaction test | Test behavior may differ from production use |
+| A segment should be excluded | Consequence analysis plus domain and policy authority | Exclusion can create access burden that also needs review |
+| A business outcome changes | Suitable experiment or careful causal analysis | Not every consequence is ethical or feasible to randomize |
+
+The plan should include contradictions. If analytics suggest that exact part-number queries rarely reformulate but interviews emphasize the problem, do not average them. Check segment definitions, sampling, instrumentation, and the possibility that people leave the product before producing another event.
+
+### Make the observation unit explicit
+
+"Search success" can be measured per query, session, task, order, or resolved repair. Those units answer different questions. A session can contain several queries. A purchase can occur days later. A repair can use a part bought elsewhere. Select an observation unit that matches the decision and state what falls outside it.
+
+For Patchwork's early work, the unit is a **candidate-discovery task instance**: one constructed or authorized attempt by a defined buyer segment, beginning with a trigger and available evidence, ending when the user reaches a defensible candidate set, returns to ordinary search, asks for missing information, or stops. It is not an order and not a completed repair.
+
+### Sample by consequence, not convenience alone
+
+A random sample of popular queries may miss the states most important to the contract. Build a segment frame:
+
+- complete versus missing required measurements;
+- explicit versus absent units;
+- current versus legacy listing schema;
+- exact identifier versus descriptive need;
+- common versus sparse catalog family;
+- one source versus conflicting sources;
+- ordinary versus excluded consequence category;
+- first attempt versus correction after a failed purchase.
+
+The sample does not need equal volume in every segment. It needs enough deliberate representation to answer the next decision. Record weighting and avoid presenting a challenge set as production prevalence.
+
+### Define stopping rules before the attractive result
+
+An evidence step needs a precommitted decision rule. For the attribute audit:
+
+- If domain owners cannot define stable semantics for required fields, stop compatibility assistance and redirect work to catalog quality.
+- If stable semantics exist only in a narrow family, narrow the task to that family.
+- If semantics are stable and sufficiently represented for a bounded comparison, proceed to baseline and mechanism experiments.
+- If the audit sample is invalid, repair the evidence rather than interpreting it.
+
+The exact quantitative threshold cannot be invented in this fictional case. A real team would set it with consequence, domain, product, and risk owners. What matters here is that the decision branches exist before results arrive.
+
+### Preserve negative evidence
+
+Teams archive successful demos and forget stopped hypotheses. Preserve why a mechanism or task was rejected. Negative evidence prevents future teams from repeating an experiment after a model release while the real blocking condition remains unchanged.
+
+If Patchwork learns that required attributes are absent, record the catalog versions, segments, review method, and consequence. A future model with better language capability does not repair that absence. The project may resume only when the stopping assumption changes.
+
+## Walk through one Patchwork task instance
+
+Consider a constructed buyer trying to replace a mechanical seal in a small irrigation pump.
+
+### Initial state
+
+The buyer has a manufacturer family name, an old but unreadable part number, a ruler marked in millimeters, and the failed seal. They search "rubber ring pump leak." Ordinary keyword search returns gaskets, O-rings, and complete seal assemblies.
+
+The tempting interpretation is that semantic retrieval will solve vocabulary mismatch. The task anatomy reveals more.
+
+### Current path
+
+The buyer opens a category guide and learns that the assembly is called a mechanical seal. They find a diagram showing that shaft diameter and seat diameter matter. They measure approximately 16 mm and 28 mm. Several listings mention 5/8 inch shafts. They do not know whether the difference is measurement error, rounding, or incompatibility. They open seller descriptions and an external manual.
+
+The path contains at least four subproblems:
+
+1. translate a symptom description into a catalog category;
+2. identify which measurements control candidate selection;
+3. normalize and compare units without erasing tolerance;
+4. distinguish catalog similarity from verified fit.
+
+One model need not own all four. A category guide may solve the first. A domain-approved form can solve the second. Deterministic unit conversion plus tolerance rules may solve part of the third. Retrieval and ranking may help only after these controls.
+
+### Consequence and affected groups
+
+If the buyer orders an incompatible low-consequence seal, they lose time and shipping cost, the seller may handle a return, and support may mediate. The equipment remains unavailable longer. The same mechanism applied to a pressure-bearing or safety-relevant part would have a different consequence and must remain excluded.
+
+The marketplace benefits from easier discovery only if it does not externalize uncertainty onto sellers and support. A draft seller question may reduce buyer effort while increasing low-quality messages. That effect belongs in the task model even though sellers are not operating the finder.
+
+### Baseline opportunity
+
+Before learned retrieval, Patchwork can test:
+
+- category aliases from common symptom language;
+- a structured "what to measure" guide;
+- explicit unit selection rather than inference;
+- side-by-side listing attributes;
+- deterministic exclusion when a required dimension is known not to match.
+
+These improvements may deliver most of the value and create better inputs for a later ranking mechanism. Calling them a baseline does not make them disposable. They can remain the safety and fallback structure around learned behavior.
+
+### Falsification
+
+The AI request should stop or change if buyers cannot obtain the required measurements, catalog attributes lack stable meaning, ordinary improvements resolve the main friction, or evidence display does not support a defensible choice. It should narrow if only some families meet these conditions.
+
+This walkthrough demonstrates why the task, not conversational fluency, is the design center.
+
+The walkthrough also creates a reusable discipline: decompose the work until each uncertainty has an owner and a credible observation. Do not decompose until the user disappears into technical subtasks. The candidate-discovery instance remains the parent decision, so improvements in vocabulary, measurement guidance, normalization, retrieval, ranking, or explanation must return to the same consequence and baseline. That connection is what prevents a collection of clever components from masquerading as task success.
+
+Keep the original task statement visible in every experiment record. When a component result improves, reviewers should be able to state which task assumption changed, which did not, and whether the evidence supports continue, narrow, change, or stop. If they cannot, the experiment has become detached from product judgment.
+
+## Resolve common stakeholder disputes
+
+### "We already know users want it"
+
+Interest in a concept can justify discovery. It does not establish the exact task, consequence, or mechanism. Ask which observed behavior and decision would change if the concept were false.
+
+### "We need a model to learn anything"
+
+Some uncertainty requires a capability probe. Build the smallest throwaway probe and label what it can establish. Do not attach production identity, broad data collection, or a product promise merely to test retrieval feasibility.
+
+### "The metric is industry standard"
+
+A common metric can support comparison and still fail to represent this task. State its relationship to the consequence and the segments it hides. Preserve task-level review.
+
+### "A non-AI baseline makes the project less ambitious"
+
+A credible baseline makes the decision more ambitious because it demands incremental value rather than novelty. If simple behavior wins, the user receives a more predictable system and the team preserves capacity for a task that needs learning.
+
+### "We can collect everything and decide later"
+
+Purpose, permission, minimization, access, and retention are not post-processing steps. Unnecessary collection creates exposure and confounds the evidence. Begin with the smallest data path that can test the hypothesis.
+
+### "Product owns the value, so engineering need not challenge it"
+
+Product owns priority and value decisions. Engineering owns the credibility of technical assumptions and limitations. An engineer should not invent business authority, but must surface when the proposed mechanism cannot produce the promised evidence.
+
+## Write a fair baseline comparison
+
+A baseline comparison fails when it gives the new system richer inputs, more tuning, or friendlier cases than the existing path. Design the comparison as an engineering artifact.
+
+### Freeze the task cases
+
+Create task instances before interpreting mechanism results. Each case records the actor segment, trigger, available evidence, required decision, authoritative attributes, ambiguity, expected safe state, and consequence. Include ordinary and stopping cases. Do not remove cases because the new mechanism cannot answer them; an abstention can be correct.
+
+### Version every path
+
+Record query processing, synonym tables, unit normalization, category mappings, filter behavior, index snapshot, listing snapshot, and interface presentation for the baseline. Record the equivalent versions for each candidate system. A comparison against an unnamed legacy state cannot be replayed.
+
+### Equalize allowed evidence
+
+If hybrid retrieval receives normalized measurements and domain aliases, the improved keyword baseline should receive the same authorized preprocessing where applicable. If the new interface reveals listing attributes side by side, compare that interaction separately from the ranker. Otherwise the team attributes an interface or data improvement to a model.
+
+### Compare decisions, not only scores
+
+Record whether each path helped the user reach the contracted next decision: candidate set, clarification, abstention, ordinary fallback, or exclusion. Ranking metrics can describe ordering. They do not capture whether the product made an unsupported claim, hid missing evidence, or imposed extra correction burden.
+
+### Separate mechanism increments
+
+Use an experiment ladder:
+
+1. current versioned search;
+2. normalized search;
+3. normalized search plus domain aliases and structured filters;
+4. hybrid retrieval;
+5. hybrid retrieval plus ranking;
+6. the same candidate system plus evidence presentation;
+7. optional generated explanation over frozen candidate evidence.
+
+Each rung should answer whether its added complexity changes the task decision. If evidence presentation creates most of the improvement, do not credit generation. If deterministic exclusions prevent the consequential errors, preserve them even if the learned ranker improves average ordering.
+
+### Record total burden
+
+Measure clarification steps, required data, latency, correction effort, reviewer load, failure recovery, and operational cost alongside task quality. A system that slightly improves candidate ordering while doubling user effort or requiring an impossible review queue may not be adequate.
+
+### Precommit to interpretation
+
+Before running the comparison, write what would cause:
+
+- retention of the deterministic baseline;
+- inclusion of hybrid retrieval/ranking;
+- inclusion of generated explanation;
+- narrowing to a supported segment;
+- redesign of the interaction;
+- stop and return to catalog-quality work.
+
+The exact threshold belongs to the real consequence and authorized decision. In this synthetic case, the durable requirement is that every mechanism earns its incremental uncertainty and burden independently.
+
+This protocol protects the team from demo gravity. Once an attractive interface exists, people interpret every result in its favor. A frozen comparison makes the non-AI path a first-class candidate rather than a rhetorical obstacle.
+
+## Decide whether the task boundary is equitable
+
+A narrow task can reduce risk and still distribute burden unfairly. Patchwork's requirement for explicit measurements may favor experienced buyers, people with tools, and listings from well-resourced sellers. Excluding ambiguous cases can send more work to support or sellers. These are not reasons to remove evidence requirements. They are reasons to examine who pays for them.
+
+For each boundary, ask:
+
+- Which groups enter the supported path and which fall back?
+- Is the missing evidence realistically obtainable?
+- Does clarification require language, vision, dexterity, bandwidth, or equipment that some users lack?
+- Does a seller receive more repetitive questions because the buyer-facing system abstains?
+- Could better listing structure or public guidance reduce the burden upstream?
+- Does the fallback remain genuinely usable and accessible?
+
+The task decision may produce parallel paths. A buyer with exact identifiers may use deterministic lookup. A buyer with measurements may use assisted discovery. A buyer without either may receive a category guide rather than a speculative candidate. Product leadership can then see coverage as a consequence and investment choice, not only as a model metric.
+
+Record affected-group evidence separately from direct-user adoption. A behavior can feel helpful to one cohort while externalizing work or error to another. The evidence plan should include support and seller signals without treating complaint absence as approval.
+
+Equity analysis does not grant the Applied AI Engineer unilateral policy authority. It makes distribution visible to the owners who decide scope and investment. The engineer's obligation is to avoid presenting aggregate usefulness as if every supported and unsupported group experienced the same product.
+
+## Common task failures
+
+### Generic use case
+
+"Use AI for product discovery" has no actor, current path, consequence, or disconfirmation.
+
+**Repair:** write the full task anatomy and at least one condition that stops the work.
+
+### Engagement equals value
+
+The team optimizes clicks or time because they are available.
+
+**Repair:** build the proxy ladder and record how the metric could improve while task consequence worsens.
+
+### Solution-first interviews
+
+Participants evaluate an attractive concept rather than reveal real work.
+
+**Repair:** ask for recent instances, artifacts, sequence, exceptions, and outcome before discussing a mechanism.
+
+### Data before purpose
+
+The team gathers histories and messages "in case they help."
+
+**Repair:** tie every field to a contract clause, necessity test, retention behavior, access boundary, and authority.
+
+### Convenient baseline
+
+The new system is compared with an intentionally weak keyword implementation.
+
+**Repair:** include credible deterministic improvements and version the baseline.
+
+### Universal experiment prescription
+
+The team proposes an online test even when harmful exposure, sparse outcomes, or authority make it inappropriate.
+
+**Repair:** choose offline, simulation, specialist review, staged interaction testing, or no experiment as consequence requires.
+
+## Completion exercise
+
+Rewrite each request as a falsifiable task hypothesis:
+
+1. "Summarize every support ticket with an LLM."
+2. "Build an agent that approves expenses."
+3. "Personalize the onboarding flow."
+4. "Use computer vision to inspect every product."
+
+For each, include actor, trigger, current path, consequence, affected groups, baseline, evidence, disconfirmation, working owner, authority, and one deterministic or no-build alternative. Then identify the assumption most likely to stop the project. A response fails if its only rejection criterion is poor model accuracy.
+
+## Chapter decision
+
+A credible AI product begins with a task that can reject the AI proposal. The task brief connects actor, trigger, context, action, baseline, friction, consequence, affected groups, and evidence. The hypothesis tree keeps user value, behavior, adoption, operations, and business assumptions separate. Metrics remain imperfect witnesses, and data collection must earn a purpose before it expands.
+
+Patchwork now has `PF-01` v0.2: a responsibility charter, task brief, consequence map, versioned baseline plan, value hypothesis, evidence log format, non-goals, and an assumption ledger. The current decision is deliberately narrow: audit catalog semantics and construct fair baselines.
+
+The task still does not tell the system how to behave when evidence is sufficient, missing, contradictory, or unsafe. Chapter 3 will turn this task into `PF-02`, a versioned behavior and authority contract that a mechanism must satisfy before it can earn selection.

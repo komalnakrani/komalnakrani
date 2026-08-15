@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "contractId": "PF-02",
+  "version": "0.1.0",
+  "status": "draft",
+  "caseStatus": "fictional-synthetic",
+  "task": "Help buyers in selected low-consequence pump-seal categories discover evidence-backed candidates for manual review.",
+  "scope": {
+    "includedSegments": ["Named pump family with domain-required measurements"],
+    "excludedSegments": ["High-consequence, regulated, or unsupported catalog families"],
+    "prohibitedEffects": ["Guaranteed compatibility claim", "Automatic seller contact", "Purchase initiation or execution"]
+  },
+  "fallback": "Versioned ordinary catalog search and filters without an assisted compatibility claim",
+  "states": ["respond", "clarify", "abstain", "escalate", "degraded", "prohibited"],
+  "clauses": [
+    {"id":"PF-B01","state":"respond","trigger":"Request is inside the approved catalog segment","requiredBehavior":"Return only catalog-backed candidates and display source evidence","evidence":["catalog-family","listing-source"],"failureDisposition":"block","authority":"Applied AI release owner","changeTriggers":["catalog-family-policy","retrieval-version"]},
+    {"id":"PF-B02","state":"respond","trigger":"Candidate is displayed in the assisted result set","requiredBehavior":"Show matched, unresolved, and conflicting attributes separately","evidence":["listing-attributes","user-measurements"],"failureDisposition":"block","authority":"Catalog domain owner","changeTriggers":["attribute-schema","interface-semantics"]},
+    {"id":"PF-B03","state":"respond","trigger":"Explanation wording varies while candidate evidence is stable","requiredBehavior":"Preserve evidence meaning and avoid a guaranteed-fit implication","evidence":["semantic-criteria","counterexamples"],"failureDisposition":"narrow","authority":"Product and trust reviewers","changeTriggers":["model-version","prompt-version"]},
+    {"id":"PF-B04","state":"prohibited","trigger":"A deterministic compatibility exclusion is present","requiredBehavior":"Exclude the candidate regardless of ranking or generated explanation","evidence":["domain-rule","control-test"],"failureDisposition":"block","authority":"Catalog domain owner","changeTriggers":["domain-rule-version"]},
+    {"id":"PF-B05","state":"clarify","trigger":"A required measurement is missing from the request","requiredBehavior":"Ask for the named measurement and explain why it is required","evidence":["measurement-policy","approved-instruction"],"failureDisposition":"block","authority":"Catalog domain owner","changeTriggers":["measurement-policy"]},
+    {"id":"PF-B06","state":"abstain","trigger":"A unit is missing and alternative units change compatibility","requiredBehavior":"Withhold compatibility language and offer correction or ordinary search","evidence":["unit-normalization","critical-segment-test"],"failureDisposition":"block","authority":"Catalog domain owner","changeTriggers":["unit-rules","normalizer-version"]},
+    {"id":"PF-B07","state":"escalate","trigger":"Authorized catalog sources contain a resolvable semantic conflict","requiredBehavior":"Send the evidence packet to the named catalog review queue or abstain","evidence":["conflicting-sources","review-queue-objective"],"failureDisposition":"narrow","authority":"Catalog domain owner","changeTriggers":["review-policy"]},
+    {"id":"PF-B08","state":"abstain","trigger":"Authorized retrieval returns no supported candidate","requiredBehavior":"State that no supported candidate was found and never invent one","evidence":["retrieval-trace"],"failureDisposition":"block","authority":"Applied AI release owner","changeTriggers":["index-version","retrieval-version"]},
+    {"id":"PF-B09","state":"respond","trigger":"A candidate has matched and unresolved constraints","requiredBehavior":"Express evidence states without presenting a raw score as fit probability","evidence":["calibration-report","interface-test"],"failureDisposition":"narrow","authority":"Product release owner","changeTriggers":["score-semantics","interface-semantics"]},
+    {"id":"PF-B10","state":"respond","trigger":"The buyer corrects an entered measurement","requiredBehavior":"Recompute from the correction and retain the change in the local trace","evidence":["correction-test"],"failureDisposition":"warn-monitor","authority":"Product owner","changeTriggers":["input-schema"]},
+    {"id":"PF-B11","state":"degraded","trigger":"Generated explanation is unavailable but candidate evidence is intact","requiredBehavior":"Show structured candidate evidence without generated prose","evidence":["failure-injection-test"],"failureDisposition":"degrade","authority":"Applied AI release owner","changeTriggers":["generator-version","timeout-policy"]},
+    {"id":"PF-B12","state":"degraded","trigger":"Authoritative attribute semantics exceed the allowed freshness window","requiredBehavior":"Disable assisted compatibility and retain visibly distinct ordinary search","evidence":["source-version","freshness-policy"],"failureDisposition":"block","authority":"Catalog domain owner","changeTriggers":["freshness-policy","source-version"]},
+    {"id":"PF-B13","state":"respond","trigger":"The buyer explicitly requests a seller-question draft","requiredBehavior":"Create an editable bounded draft without sending or inventing facts","evidence":["explicit-user-action","draft-boundary-test"],"failureDisposition":"narrow","authority":"Trust and product owners","changeTriggers":["tool-permission","draft-template"]},
+    {"id":"PF-B14","state":"prohibited","trigger":"A request would contact a seller, initiate purchase, guarantee fit, or enter an excluded category","requiredBehavior":"Refuse the effect and preserve the allowed discovery fallback","evidence":["capability-boundary-test"],"failureDisposition":"block","authority":"Designated product and risk authority","changeTriggers":["scope-version","tool-permission"]},
+    {"id":"PF-B15","state":"degraded","trigger":"A mapped catalog, rule, model, provider, prompt, index, or interface version changes","requiredBehavior":"Replay mapped evidence before promoting the changed behavior","evidence":["version-diff","replay-report"],"failureDisposition":"block","authority":"Designated release authority","changeTriggers":["any-mapped-version"]}
+  ]
+}
