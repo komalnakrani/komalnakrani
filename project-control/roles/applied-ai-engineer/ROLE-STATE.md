@@ -5,11 +5,11 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 05 acceptance complete - Phase 06 transition pending
+- Current global phase: Komal Phase 06 acceptance complete - Phase 07 transition pending
 - Last updated: 2026-08-16
-- Last completed issue: Phase 04 #23, decision `SINGLE BOOK`
+- Last completed issue: Phase 05 #24, architecture version 1.0.0
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Active issue: [#24](https://github.com/alpeshznakrani/komalnakrani/issues/24)
+- Active issue: [#25](https://github.com/alpeshznakrani/komalnakrani/issues/25)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -35,6 +35,9 @@
 - objective map: deferred to Abhyaas
 - exam blueprint: deferred to Abhyaas
 - book architecture: `project-control/roles/applied-ai-engineer/books/applied-ai-engineering/architecture.md`
+- chapter research: 21 packs under `project-control/roles/applied-ai-engineer/books/applied-ai-engineering/sources/`
+- source register: 55 primary/official records, all used, 118 unique planned claim IDs
+- case-study register: 11 public/primary cases plus one explicitly constructed Patchwork case, all used
 - manuscript(s): pending
 - figure manifest: pending
 - PDF(s): pending
@@ -53,7 +56,7 @@
 - [ ] 03 exam blueprint (deferred)
 - [x] 04 book scope
 - [x] 05 book architecture
-- [ ] 06 research
+- [x] 06 research
 - [ ] 07 chapter blueprints
 - [ ] 08 manuscript
 - [ ] 09 book QA
@@ -70,7 +73,7 @@
 
 ## Current work
 
-Phase 05 acceptance is complete. *Applied AI Engineering: From Model Capability to Dependable Product Behavior* has a frozen six-part, 21-chapter evidence-loop architecture, 11 mapped Komal publication domains, 12 cumulative `PF-*` dossier milestones, 42 forecast technical figures, and six appendices. The original Patchwork Find capstone begins as a provider-neutral non-LLM multimodal retrieval/ranking product; generative and bounded tool behavior must earn inclusion through evaluation. Satellite cases enforce high-consequence human authority, agent bounds, and predictive/non-generative transfer.
+Phase 06 acceptance is complete. All 21 frozen chapters have focused research packs containing 118 unique material claim IDs. All 55 registered sources and all 12 registered cases are used and resolve bidirectionally from chapter evidence. Sources span standards, primary research, official documentation, first-party engineering, and retrospectives across predictive, retrieval/ranking, multimodal, generative, human-AI, security, operations, and change practice. URL QA records 48 direct successes, seven access-restricted/anti-bot sources, and zero 404/5xx failures. Every case separates reported fact, allowed inference, verified outcome, and limitation.
 
 ## Unresolved blockers
 
@@ -80,17 +83,18 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 - Preserve the finding that the exact title is employer-defined and aliases require responsibility evidence.
 - Preserve the LLM/agent-heavy 2026 source skew without treating it as the universal role definition.
-- Phase 06 must source every chapter's material claims, including non-LLM/multimodal/predictive evidence and limitations of current LLM/agent-heavy sources.
+- Phase 07 must convert each research pack into an executable blueprint without upgrading case inference into fact or copying research notes as manuscript prose.
+- Preserve explicit source limitations, evaluator bias, benchmark context, version volatility, and authority boundaries in every blueprint.
 - Keep FDE customer-engagement ownership, MLE model/data lifecycle ownership, research capability creation, and formal risk authority outside the core boundary.
 
 ## Quality debt
 
-None. Architecture validation confirms 21 unique ordered chapters, all 11 domains and all chapters mapped, 12 ordered milestones, 42 unique figures at two per chapter, full modality/mechanism constraints, and clean publication/diff checks.
+None. Research QA confirms 21/21 packs, 55/55 sources used, 12/12 cases used, 118/118 unique claims, all references resolved, all source uses declared in chapter mappings, no duplicate URLs or placeholder gaps, low maximum 12-word shingle overlap (0.00420), and clean publication/diff checks.
 
 ## Exact next action
 
-Commit and close Phase 05 issue #24, then open Komal Phase 06 to create source-backed chapter research and an original case-study register.
+Commit and close Phase 06 issue #25, then open Komal Phase 07 to build detailed blueprints for all 21 frozen chapters.
 
 ## Resume instructions
 
-Read this file, the role root/active issues, `project-control/role-factory/FACTORY-STATE.md`, Phase 01 research, `books/book-scope-decision.md`, and all four architecture outputs before resuming only Phase 05.
+Read this file, the role root/active issues, `project-control/role-factory/FACTORY-STATE.md`, the frozen architecture, source/case registers, and all 21 research packs before resuming only Phase 06.
