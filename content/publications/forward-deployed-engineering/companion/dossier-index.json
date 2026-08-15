@@ -13,8 +13,9 @@
     "phase09": "#16 CLOSED - acceptance verified at commit a8d9c45",
     "phase10": "#17 CLOSED - acceptance verified at commit 22920f7",
     "phase11": "#18 CLOSED - acceptance verified at commit e1f15aa",
-    "phase13": "#19 OPEN - acceptance complete; closure commit pending",
-    "nextPhase": "Phase 19 hostile Komal final QA pending issue creation"
+    "phase13": "#19 CLOSED - acceptance verified at commit 872d883",
+    "phase19": "#20 OPEN - hostile Komal final QA in progress",
+    "nextPhase": "Complete Phase 19 and close the Komal FDE role only on PASS"
   },
   "riskState": {
     "blockingSourceGaps": 0,

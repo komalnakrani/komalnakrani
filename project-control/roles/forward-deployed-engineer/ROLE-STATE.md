@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 13 complete - Phase 19 transition pending
+- Current global phase: Komal Phase 19 - hostile final QA
 - Last updated: 2026-08-16
-- Last completed issue: Phase 13 #19 acceptance prepared; closure commit pending
+- Last completed issue: Phase 13 #19 closed at commit `872d883`
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#19](https://github.com/alpeshznakrani/komalnakrani/issues/19)
+- Active issue: [#20](https://github.com/alpeshznakrani/komalnakrani/issues/20)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -74,7 +74,7 @@
 
 ## Current work
 
-Phase 13 acceptance is complete. The optional six-module course adds 6,449 words of guided demonstrations, labs, debugging, scenario walkthroughs, project checkpoints, and a dossier-defense capstone. The deterministic lab kit runs all modules, 12/12 course assertions pass, and eight course routes are integrated into the 36-page site. Phase 19 must now perform hostile role-level QA across the complete Komal FDE ecosystem.
+Phase 13 is closed at commit `872d883`. Phase 19 is executing a hostile role-level review across the complete Komal FDE ecosystem: role evidence, book, sources, figures, companion, web/PDF publication, and optional guided lab course. Abhyaas remains deferred.
 
 ## Unresolved blockers
 
@@ -92,7 +92,7 @@ No blocking content, visual, course, web, or PDF debt. The PDF is searchable, bo
 
 ## Exact next action
 
-Close Phase 13 with the recorded evidence, open Phase 19, and execute the hostile cross-asset review across the entire Komal FDE role.
+Execute Phase 19 issue #20, fix every blocking defect, record an exact `PASS` or `FAIL`, and close the Komal role only after a clean `PASS`.
 
 ## Resume instructions
 

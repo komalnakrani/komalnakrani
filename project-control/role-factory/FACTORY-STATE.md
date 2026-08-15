@@ -54,14 +54,14 @@
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#19 - Build FDE guided lab course](https://github.com/alpeshznakrani/komalnakrani/issues/19), acceptance complete and closure pending
+- Active child: [#20 - Hostile final QA for Forward Deployed Engineer](https://github.com/alpeshznakrani/komalnakrani/issues/20)
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Close Forward Deployed Engineer Phase 13 issue #19 with the recorded evidence,
-then open and execute Komal Phase 19 hostile role-level QA. Do not enter deferred
-Abhyaas work.
+Execute Forward Deployed Engineer Phase 19 issue #20, fix every blocking defect,
+and close the Komal role only after an exact `PASS`. Do not enter deferred Abhyaas
+work.
 
 ## Resume instructions
 
