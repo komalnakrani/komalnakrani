@@ -1,0 +1,53 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Btn from '../../../components/Btn.astro';
+import K from '../../../components/K.astro';
+import { COURSES } from '../../../data/courses';
+
+export function getStaticPaths() {
+  return COURSES.flatMap((course) => course.modules.map((module, index) => ({
+    params: { slug: course.slug, module: module.slug },
+    props: { course, module, index },
+  })));
+}
+
+const { course, module, index } = Astro.props;
+const previous = course.modules[index - 1];
+const next = course.modules[index + 1];
+const moduleSources = import.meta.glob('../../../../content/courses/*/modules/*.mdx');
+const moduleKey = `../../../../content/courses/${course.slug}/${module.sourceFile}`;
+const loadModule = moduleSources[moduleKey];
+if (!loadModule) throw new Error(`Validated course module is missing: ${moduleKey}`);
+const ModuleContent = ((await loadModule()) as { default: (_props: Record<string, unknown>) => unknown }).default;
+---
+<Layout title={`${module.title} | ${course.title} | Komal Nakrani`} description={module.summary}>
+  <main class="rise">
+    <article class="wrap read book-reader">
+      <Btn variant="ghost" href={`/courses/${course.slug}/`} icon="arrow-left">Course overview</Btn>
+      <div class="read-grid reader-grid" style="margin-top:20px">
+        <div>
+          <K idx={module.id} sig>{course.title}</K>
+          <h1 class="h1" style="margin:18px 0 0">{module.title}</h1>
+          <p class="lead" style="margin-top:16px">{module.summary}</p>
+          <aside class="course-command" aria-label="Module lab command">
+            <span>{module.labId} · deterministic local run</span>
+            <code>{module.labCommand}</code>
+          </aside>
+          <div class="prose book-prose course-prose">
+            <ModuleContent />
+          </div>
+          <nav class="chapter-nav" aria-label="Course module navigation">
+            <a href={previous ? `/courses/${course.slug}/${previous.slug}/` : `/courses/${course.slug}/`}>
+              <span>{previous ? 'Previous module' : 'Course'}</span>
+              <strong>{previous?.title ?? course.title}</strong>
+            </a>
+            <a href={next ? `/courses/${course.slug}/${next.slug}/` : `/courses/${course.slug}/`}>
+              <span>{next ? 'Next module' : 'Complete'}</span>
+              <strong>{next?.title ?? 'Course overview'}</strong>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>

@@ -4,7 +4,7 @@
   "hashAlgorithm": "sha256",
   "sourceHash": "d1353ee4fb46047efa2b36786484c276a84740aadb8c495382e10760a97b0b9a",
   "sourceHashScope": "SHA-256 of the sorted `shasum -a 256` digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
-  "buildHash": "e86f295eb828e05586a5f33f5355e32a37b4076644567088a8bc98aa45939db6",
+  "buildHash": "13ae49d470e940113582034fb8024ff597216ab23730564e85386f13b72eaa87",
   "buildHashScope": "SHA-256 of the sorted `shasum -a 256` digest stream for every file in the Astro dist directory produced by npm run build.",
   "issueState": {
     "roleRoot": "#3 OPEN",
@@ -13,8 +13,8 @@
     "phase09": "#16 CLOSED - acceptance verified at commit a8d9c45",
     "phase10": "#17 CLOSED - acceptance verified at commit 22920f7",
     "phase11": "#18 CLOSED - acceptance verified at commit e1f15aa",
-    "phase13": "#19 OPEN - FDE guided lab course",
-    "nextPhase": "#19 OPEN - build and verify optional guided lab course"
+    "phase13": "#19 OPEN - acceptance complete; closure commit pending",
+    "nextPhase": "Phase 19 hostile Komal final QA pending issue creation"
   },
   "riskState": {
     "blockingSourceGaps": 0,
@@ -33,11 +33,21 @@
     "rejected": "Orchid-specific mappings, thresholds, fixtures, and approval rules remain customer-isolated.",
     "nextReviewTrigger": "Third-context evidence with maintenance, compatibility, isolation, cost, owner, validation, and disconfirmation records."
   },
+  "courseState": {
+    "decision": "BUILD COURSE",
+    "course": "Forward Deployed Engineering Lab",
+    "moduleCount": 6,
+    "durationMinutes": 600,
+    "courseSourceHash": "5c1118e230e980496dea971aed8492abcc694d497d89abcafad195ab3cc1770b",
+    "labTests": "12/12 PASS",
+    "boundary": "Optional Komal learning material; not required by Abhyaas; not for live certification bank."
+  },
   "nextOwner": {
     "phase09": "Komal whole-book QA owner",
     "phase10": "Komal figure production and accessibility owner",
     "phase11": "Komal publication and PDF release owner - acceptance complete",
-    "phase13": "Komal course decision owner",
+    "phase13": "Komal course owner - acceptance complete",
+    "phase19": "Komal hostile final QA owner",
     "fictionalCustomer": "Named Orchid operations, product, security, and release authorities in OA-10",
     "productLearning": "Product owner after the third-context review trigger"
   }

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://komalnakrani.com/schemas/course.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "slug", "roleSlug", "publicationSlug", "title", "subtitle", "description", "author", "language", "status", "optional", "delivery", "level", "durationMinutes", "prerequisites", "outcomes", "certificationPolicy", "labKit", "modules"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "slug": { "$ref": "#/$defs/slug" },
+    "roleSlug": { "$ref": "#/$defs/slug" },
+    "publicationSlug": { "$ref": "#/$defs/slug" },
+    "title": { "type": "string", "minLength": 8 },
+    "subtitle": { "type": "string", "minLength": 12 },
+    "description": { "type": "string", "minLength": 50 },
+    "author": { "const": "Komal Nakrani" },
+    "language": { "const": "en" },
+    "status": { "enum": ["draft", "review", "published", "withdrawn"] },
+    "optional": { "const": true },
+    "delivery": { "const": "self-paced-guided-lab" },
+    "level": { "enum": ["foundational", "professional", "advanced"] },
+    "durationMinutes": { "type": "integer", "minimum": 120 },
+    "prerequisites": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 10 }
+    },
+    "outcomes": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 20 }
+    },
+    "certificationPolicy": {
+      "const": "Optional Komal learning material. Not required by Abhyaas. NOT FOR LIVE CERTIFICATION BANK."
+    },
+    "labKit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entry", "testsDirectory", "runCommand", "testCommand"],
+      "properties": {
+        "entry": { "const": "lab-kit/run.mjs" },
+        "testsDirectory": { "const": "lab-kit/tests" },
+        "runCommand": { "type": "string", "minLength": 20 },
+        "testCommand": { "type": "string", "minLength": 20 }
+      }
+    },
+    "modules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["order", "id", "slug", "title", "summary", "minutes", "sourceFile", "labId", "labCommand", "objectiveIds", "modalities"],
+        "properties": {
+          "order": { "type": "integer", "minimum": 1 },
+          "id": { "type": "string", "pattern": "^FDE-M[0-9]{2}$" },
+          "slug": { "$ref": "#/$defs/slug" },
+          "title": { "type": "string", "minLength": 6 },
+          "summary": { "type": "string", "minLength": 30 },
+          "minutes": { "type": "integer", "minimum": 30 },
+          "sourceFile": { "type": "string", "pattern": "^modules/[a-z0-9][a-z0-9-]*\\.mdx$" },
+          "labId": { "type": "string", "pattern": "^FDE-LAB-[0-9]{2}$" },
+          "labCommand": { "type": "string", "pattern": "^npm run course:fde -- --module [0-9]{2}$" },
+          "objectiveIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^FDE-K[0-9]{2}$" } },
+          "modalities": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "enum": ["demonstration", "guided-lab", "debugging", "scenario-walkthrough", "project-checkpoint", "capstone"] }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+  }
+}

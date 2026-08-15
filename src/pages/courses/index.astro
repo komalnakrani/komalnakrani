@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import K from '../../components/K.astro';
+import { COURSES } from '../../data/courses';
+---
+<Layout title="Courses | Komal Nakrani" description="Optional guided lab courses that add demonstrations, debugging, and project practice beyond Komal books.">
+  <main class="rise">
+    <section class="wrap" style="padding-top:64px">
+      <K sig>Guided practice</K>
+      <h1 class="h1" style="margin:18px 0 0">Courses</h1>
+      <p class="lead" style="margin-top:16px; max-width:760px">
+        Courses appear only when demonstrations, labs, debugging, and project work add a useful modality beyond the published book. Every course is optional.
+      </p>
+    </section>
+    <section class="wrap section" style="padding-top:54px">
+      {COURSES.length > 0 ? (
+        <div class="course-grid">{COURSES.map((course) => <CourseCard course={course} />)}</div>
+      ) : (
+        <p class="body-t">No course has passed publication review yet.</p>
+      )}
+    </section>
+  </main>
+</Layout>

@@ -36,7 +36,7 @@
   `/Users/alpesh/.Trash/komal-pruned.HQW19h`. After the clean remote was verified,
   the temporary archive ref and inherited Git objects were permanently pruned;
   `.git` is now approximately 220 KB.
-- Published FDE build: PASS, 28 static pages with nineteen chapter routes, edition and errata records, and a verified PDF download.
+- Published FDE build: PASS, 36 static pages with nineteen chapter routes, eight course routes, edition and errata records, and a verified PDF download.
 - Publication foundation: implemented at `a55a1ea`; full `npm run check` PASS.
 - FDE PDF: deterministic 338-page A4 edition, SHA-256
   `96b5bce887d315ceb5390287eb693b0ead4b9ed3328470913c9dd07f9a91b050`,
@@ -48,20 +48,20 @@
 
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
 - Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
-- Forward Deployed Engineer: Phases 01 and 04-11, including all nineteen manuscripts, 38 final figures, complete web edition, deterministic PDF, the 64-test provider-neutral companion, and publication acceptance prepared for Phase 11 closure.
+- Forward Deployed Engineer: Phases 01, 04-11, and 13, including all nineteen manuscripts, 38 final figures, complete web/PDF edition, 64-test provider-neutral companion, and six-module/12-test guided lab course.
 
 ## Active role
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#19 - Build FDE guided lab course](https://github.com/alpeshznakrani/komalnakrani/issues/19)
+- Active child: [#19 - Build FDE guided lab course](https://github.com/alpeshznakrani/komalnakrani/issues/19), acceptance complete and closure pending
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Execute Forward Deployed Engineer Phase 13 issue #19. Build the complete optional
-guided lab course and reusable course routes, verify every lab and rendered route,
-then continue to Komal Phase 19. Do not enter deferred Abhyaas work.
+Close Forward Deployed Engineer Phase 13 issue #19 with the recorded evidence,
+then open and execute Komal Phase 19 hostile role-level QA. Do not enter deferred
+Abhyaas work.
 
 ## Resume instructions
 

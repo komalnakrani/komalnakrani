@@ -29,14 +29,14 @@ Publish a complete, optional Komal course that guides a learner through one boun
 
 ## Acceptance criteria
 
-- [ ] The AUTO decision and non-duplication rationale are recorded.
-- [ ] Every module creates observable practice evidence beyond reading the book.
-- [ ] Demonstrations, labs, debugging, scenario walkthroughs, project work, and a capstone all exist.
-- [ ] Lab commands and fixtures run deterministically against synthetic local data.
-- [ ] Review rubrics state completion evidence and prohibited overclaims.
-- [ ] Course content is marked optional and `NOT FOR LIVE CERTIFICATION BANK`.
-- [ ] Course catalog, detail, and module routes build with complete navigation and no placeholder assets.
-- [ ] Desktop/mobile browser checks, link/asset checks, course validation/tests, companion tests, Astro build, and `git diff --check` pass.
+- [x] The AUTO decision and non-duplication rationale are recorded.
+- [x] Every module creates observable practice evidence beyond reading the book.
+- [x] Demonstrations, labs, debugging, scenario walkthroughs, project work, and a capstone all exist.
+- [x] Lab commands and fixtures run deterministically against synthetic local data.
+- [x] Review rubrics state completion evidence and prohibited overclaims.
+- [x] Course content is marked optional and `NOT FOR LIVE CERTIFICATION BANK`.
+- [x] Course catalog, detail, and module routes build with complete navigation and no placeholder assets.
+- [x] Desktop/mobile browser checks, link/asset checks, course validation/tests, companion tests, Astro build, and `git diff --check` pass.
 
 ## Handoff
 

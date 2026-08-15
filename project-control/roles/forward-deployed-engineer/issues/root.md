@@ -21,7 +21,7 @@ Complete the original book, learning, visual, web, PDF, and optional-course ecos
 - [x] 09 book / series consistency QA
 - [x] 10 original visuals and covers
 - [x] 11 web + PDF publication
-- [ ] 13 optional course decision and delivery if justified
+- [x] 13 optional course decision and delivery if justified
 - [ ] 18 cross-repository integration (deferred until Abhyaas resumes)
 - [ ] 19 final hostile QA PASS
 
@@ -38,4 +38,4 @@ Complete the original book, learning, visual, web, PDF, and optional-course ecos
 
 ## Next executable action
 
-Complete and verify the optional six-module FDE guided lab course under issue #19, then execute Komal Phase 19 hostile final QA.
+Close accepted Phase 13 issue #19 and execute Komal Phase 19 hostile final QA across the complete role ecosystem.

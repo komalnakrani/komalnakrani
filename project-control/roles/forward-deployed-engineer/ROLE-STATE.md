@@ -5,9 +5,9 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 13 - optional guided lab course
+- Current global phase: Komal Phase 13 complete - Phase 19 transition pending
 - Last updated: 2026-08-16
-- Last completed issue: Phase 11 #18 at commit `e1f15aa`
+- Last completed issue: Phase 13 #19 acceptance prepared; closure commit pending
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
 - Active issue: [#19](https://github.com/alpeshznakrani/komalnakrani/issues/19)
 - Cross-repo root issue: deferred by locked Komal-first execution order
@@ -43,6 +43,7 @@
 - figure manifest: all 38 final vectors through `F19.2`, registry/production metadata, accessible manuscript insertions, and byte-identical web mirrors complete
 - PDF(s): `output/pdf/forward-deployed-engineering-v1.0.0.pdf`, 338 pages, SHA-256 `96b5bce887d315ceb5390287eb693b0ead4b9ed3328470913c9dd07f9a91b050`; byte-identical public download mirror
 - preparation resources: pending
+- optional course: published `Forward Deployed Engineering Lab`, six modules, 600 minutes, deterministic lab kit and 12/12 course-lab assertions under `content/courses/forward-deployed-engineering-lab/`
 - certification page: deferred to Abhyaas
 - bank specification: deferred to Abhyaas
 - question bank: deferred to Abhyaas
@@ -63,7 +64,7 @@
 - [x] 10 visuals
 - [x] 11 publication
 - [ ] 12 preparation library (deferred)
-- [ ] 13 course decision
+- [x] 13 course decision
 - [ ] 14 certification (deferred)
 - [ ] 15 bank specification (deferred)
 - [ ] 16 question bank (deferred)
@@ -73,7 +74,7 @@
 
 ## Current work
 
-Phase 11 is closed. Phase 13 AUTO resolved to BUILD COURSE because paced demonstrations, failure injection, coached debugging, evidence reviews, and an integrated capstone create observable practice that the reference book alone cannot. The active work is a complete optional six-module guided lab course on the existing synthetic provider-neutral companion.
+Phase 13 acceptance is complete. The optional six-module course adds 6,449 words of guided demonstrations, labs, debugging, scenario walkthroughs, project checkpoints, and a dossier-defense capstone. The deterministic lab kit runs all modules, 12/12 course assertions pass, and eight course routes are integrated into the 36-page site. Phase 19 must now perform hostile role-level QA across the complete Komal FDE ecosystem.
 
 ## Unresolved blockers
 
@@ -87,11 +88,11 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 
 ## Quality debt
 
-No blocking content, visual, web, or PDF debt. The PDF is searchable, bookmarked, and supplies explicit text alternatives and long descriptions, but is not claimed as formally PDF/UA tagged.
+No blocking content, visual, course, web, or PDF debt. The PDF is searchable, bookmarked, and supplies explicit text alternatives and long descriptions, but is not claimed as formally PDF/UA tagged.
 
 ## Exact next action
 
-Implement the reusable course data/routes and the complete FDE guided lab course, then execute every lab and render/inspect the course surfaces.
+Close Phase 13 with the recorded evidence, open Phase 19, and execute the hostile cross-asset review across the entire Komal FDE role.
 
 ## Resume instructions
 

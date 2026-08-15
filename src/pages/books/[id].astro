@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Btn from '../../components/Btn.astro';
 import Cover from '../../components/Cover.astro';
 import K from '../../components/K.astro';
+import { courseForPublication } from '../../data/courses';
 import { BOOKS } from '../../data/publications';
 
 export function getStaticPaths() {
@@ -13,6 +14,7 @@ export function getStaticPaths() {
 }
 
 const { book } = Astro.props;
+const course = courseForPublication(book.slug);
 ---
 <Layout title={`${book.title} | Komal Nakrani`} description={book.description}>
   <main class="rise">
@@ -55,6 +57,7 @@ const { book } = Astro.props;
       <div class="reader-actions">
         <Btn variant="ghost" href={`/books/${book.slug}/editions/`}>Editions</Btn>
         <Btn variant="ghost" href={`/books/${book.slug}/errata/`}>Errata</Btn>
+        {course && <Btn variant="ghost" href={`/courses/${course.slug}/`}>Optional guided lab</Btn>}
       </div>
     </article>
   </main>

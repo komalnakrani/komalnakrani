@@ -2,16 +2,18 @@
 import Layout from '../../layouts/Layout.astro';
 import Btn from '../../components/Btn.astro';
 import BookCard from '../../components/BookCard.astro';
+import CourseCard from '../../components/CourseCard.astro';
 import K from '../../components/K.astro';
+import { coursesForRole } from '../../data/courses';
 import { ROLES, booksForRole } from '../../data/publications';
 
 export function getStaticPaths() {
   return ROLES.map((role) => ({
     params: { slug: role.slug },
-    props: { role, books: booksForRole(role.slug) },
+    props: { role, books: booksForRole(role.slug), courses: coursesForRole(role.slug) },
   }));
 }
-const { role, books } = Astro.props;
+const { role, books, courses } = Astro.props;
 ---
 <Layout title={`${role.title} | Komal Nakrani`} description={role.summary}>
   <main class="rise">
@@ -33,5 +35,13 @@ const { role, books } = Astro.props;
       <h2 class="h2" style="margin-top:12px">Books for this role</h2>
       {books.length > 0 ? <div class="catgrid" style="margin-top:28px">{books.map((book) => <BookCard book={book} />)}</div> : <p class="body-t" style="margin-top:18px">No publication has passed review for this role yet.</p>}
     </section>
+    {courses.length > 0 && (
+      <section class="wrap section">
+        <K idx="02">Optional guided practice</K>
+        <h2 class="h2" style="margin-top:12px">Courses for this role</h2>
+        <p class="body-t" style="margin-top:14px; max-width:760px">Courses add demonstrations, failure injection, debugging, and project practice beyond the book. They are never required by Abhyaas.</p>
+        <div class="course-grid" style="margin-top:28px">{courses.map((course) => <CourseCard course={course} />)}</div>
+      </section>
+    )}
   </main>
 </Layout>

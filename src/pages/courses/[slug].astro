@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Btn from '../../components/Btn.astro';
+import K from '../../components/K.astro';
+import { COURSES } from '../../data/courses';
+
+export function getStaticPaths() {
+  return COURSES.map((course) => ({ params: { slug: course.slug }, props: { course } }));
+}
+
+const { course } = Astro.props;
+const hours = Math.round((course.durationMinutes / 60) * 10) / 10;
+---
+<Layout title={`${course.title} | Komal Nakrani`} description={course.description}>
+  <main class="rise">
+    <article class="wrap read book-reader">
+      <Btn variant="ghost" href="/courses/" icon="arrow-left">All courses</Btn>
+      <header class="course-hero">
+        <div>
+          <K idx="Optional" sig>Self-paced guided lab</K>
+          <h1 class="h1" style="margin:18px 0 0">{course.title}</h1>
+          <p class="lead" style="margin-top:16px">{course.subtitle}</p>
+          <p class="body-t" style="margin-top:22px; max-width:760px">{course.description}</p>
+          <div class="reader-actions">
+            <Btn href={`/courses/${course.slug}/${course.modules[0].slug}/`} icon="book-open">Start module 1</Btn>
+            <Btn variant="ghost" href={`/books/${course.publicationSlug}/`}>Open the book</Btn>
+          </div>
+        </div>
+        <aside class="course-lab-panel" aria-label="Course facts">
+          <K idx={course.modules.length}>Practice sequence</K>
+          <dl>
+            <div><dt>Level</dt><dd>{course.level}</dd></div>
+            <div><dt>Duration</dt><dd>{hours} hours</dd></div>
+            <div><dt>Runtime</dt><dd>Local Node.js</dd></div>
+            <div><dt>External services</dt><dd>None</dd></div>
+          </dl>
+          <p>{course.certificationPolicy}</p>
+        </aside>
+      </header>
+
+      <section class="course-section">
+        <K idx="01">Capability at exit</K>
+        <h2 class="h2">What you will be able to produce</h2>
+        <ul class="course-outcomes">{course.outcomes.map((outcome) => <li>{outcome}</li>)}</ul>
+      </section>
+
+      <section class="course-section">
+        <K idx="02">Before you begin</K>
+        <h2 class="h2">Prerequisites</h2>
+        <ul class="course-outcomes">{course.prerequisites.map((item) => <li>{item}</li>)}</ul>
+      </section>
+
+      <section class="course-section" aria-label="Course modules">
+        <K idx="03">Course sequence</K>
+        <h2 class="h2">Six evidence gates</h2>
+        <div class="chapter-list" style="margin-top:22px">
+          {course.modules.map((module) => (
+            <a class="chapter-row" href={`/courses/${course.slug}/${module.slug}/`}>
+              <span class="chapter-no">{String(module.order).padStart(2, '0')}</span>
+              <span><strong>{module.title}</strong><em>{module.summary}</em></span>
+              <small>{module.minutes} min</small>
+            </a>
+          ))}
+        </div>
+      </section>
+    </article>
+  </main>
+</Layout>
