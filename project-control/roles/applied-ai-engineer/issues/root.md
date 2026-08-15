@@ -2,7 +2,7 @@
 
 - Name: Applied AI Engineer
 - Slug: `applied-ai-engineer`
-- Current global phase: Komal Phase 01 complete - Phase 04 transition pending
+- Current global phase: Komal Phase 04 acceptance complete - Phase 05 transition pending
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 - Abhyaas root issue: deferred by the locked Komal-first execution order
 
@@ -13,7 +13,7 @@ Complete the original Komal book, learning, visual, web, PDF, and optional-cours
 ## Phase checklist
 
 - [x] 01 role validation and adjacent-role boundary evidence
-- [ ] 04 book count / volume decision
+- [x] 04 book count / volume decision
 - [ ] 05 book / series architecture
 - [ ] 06 source and case-study research
 - [ ] 07 chapter blueprints
@@ -39,4 +39,4 @@ Complete the original Komal book, learning, visual, web, PDF, and optional-cours
 
 ## Next executable action
 
-Commit and close Phase 01 verdict `PROCEED`, then open Phase 04 book-scope work. Do not enter Abhyaas.
+Close Phase 04 with the locked `SINGLE BOOK` decision, then open Phase 05 book architecture. Do not enter Abhyaas.
