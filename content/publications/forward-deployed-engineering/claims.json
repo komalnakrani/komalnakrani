@@ -912,6 +912,78 @@
       "chapterSlug": "stabilize-under-real-conditions",
       "statement": "Incident response connects preparation, detection, containment, recovery, and improvement to broader organizational risk management.",
       "sourceIds": ["SRC-042", "SRC-056"]
+    },
+    {
+      "id": "CLM-153",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "The adoption-friction taxonomy, demonstration-over-document test, and ownership acceptance model are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-009", "SRC-012", "SRC-016", "SRC-053", "SRC-059", "SRC-060"]
+    },
+    {
+      "id": "CLM-154",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "Adoption friction should be investigated across capability, workflow fit, trust/evidence, access, performance, incentive, policy, accessibility, support, and knowledge rather than blamed on users by default.",
+      "sourceIds": ["SRC-009", "SRC-012", "SRC-053"]
+    },
+    {
+      "id": "CLM-155",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "Use, outcome, support demand, satisfaction, dropout, and segmented task evidence are complementary signals and are not interchangeable proof of adoption or value.",
+      "sourceIds": ["SRC-016", "SRC-018", "SRC-053"]
+    },
+    {
+      "id": "CLM-156",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "Training can repair a knowledge gap but should not conceal defective workflow fit, evidence visibility, access, performance, policy, or accessibility.",
+      "sourceIds": ["SRC-009", "SRC-012", "SRC-053"]
+    },
+    {
+      "id": "CLM-157",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "WCAG 2.2 criteria provide testable accessibility evidence while representative task performance and usability evidence remain necessary for the actual workflow.",
+      "sourceIds": ["SRC-046"]
+    },
+    {
+      "id": "CLM-158",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "A document, RACI, or walkthrough records intended knowledge/responsibility but does not prove that customer operators can release, recover, support, and decide with the required access.",
+      "sourceIds": ["SRC-053", "SRC-059", "SRC-060"]
+    },
+    {
+      "id": "CLM-159",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "Ownership acceptance should cover knowledge, access, telemetry, runbooks, release, recovery, support, decisions, open risk, and the change path with demonstrated evidence.",
+      "sourceIds": ["SRC-053", "SRC-059", "SRC-060"]
+    },
+    {
+      "id": "CLM-160",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "Privileged FDE access should be revoked when the customer accepts ownership, with any continuing support access explicit, least-privileged, time-bound, and owner-approved.",
+      "sourceIds": ["SRC-005", "SRC-007", "SRC-059"]
+    },
+    {
+      "id": "CLM-161",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "Support demand and feedback loops are part of the operating model and can reveal product, workflow, access, accessibility, training, or documentation defects.",
+      "sourceIds": ["SRC-053"]
+    },
+    {
+      "id": "CLM-162",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "Whole-journey task evidence should include non-digital steps, workarounds, handoffs, fallbacks, and support rather than evaluating the interface in isolation.",
+      "sourceIds": ["SRC-009", "SRC-012"]
+    },
+    {
+      "id": "CLM-163",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "A handoff exception needs explicit residual support, scope, owner, authority, evidence gap, expiry, and exit condition; indefinite hidden dependency is not an accepted handoff.",
+      "sourceIds": ["SRC-042", "SRC-053", "SRC-059"]
+    },
+    {
+      "id": "CLM-164",
+      "chapterSlug": "make-the-solution-usable-and-ownable",
+      "statement": "Customer ownership is demonstrated when representative users and operators can perform consequential tasks and make bounded decisions without FDE intervention.",
+      "sourceIds": ["SRC-009", "SRC-053", "SRC-059", "SRC-060"]
     }
   ]
 }

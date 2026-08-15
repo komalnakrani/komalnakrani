@@ -1,0 +1,188 @@
+---
+title: Make the Solution Usable and Ownable
+slug: make-the-solution-usable-and-ownable
+summary: Diagnose adoption friction without user blame and prove customer capability across use, operation, support, release, recovery, access, decisions, and change ownership.
+minutes: 70
+sourceIds:
+  - SRC-005
+  - SRC-007
+  - SRC-009
+  - SRC-012
+  - SRC-016
+  - SRC-018
+  - SRC-042
+  - SRC-046
+  - SRC-053
+  - SRC-059
+  - SRC-060
+claimIds:
+  - CLM-153
+  - CLM-154
+  - CLM-155
+  - CLM-156
+  - CLM-157
+  - CLM-158
+  - CLM-159
+  - CLM-160
+  - CLM-161
+  - CLM-162
+  - CLM-163
+  - CLM-164
+objectiveIds:
+  - FDE-K02
+  - FDE-K03
+  - FDE-K09
+  - FDE-K10
+  - FDE-K12
+figureIds: []
+---
+
+A deployed system is not successful if users must work around it or if only the FDE can operate it.
+
+Usability asks whether representative people can complete the real workflow. Ownership asks whether the customer can observe, support, release, recover, decide, and change the system without hidden FDE dependency.
+
+Documents support both. They prove neither. [CLM-158]
+
+## Diagnose adoption friction without blame
+
+Use ten categories:
+
+- **capability:** the function cannot perform the needed task;
+- **workflow fit:** sequence/handoff/exception conflicts with work;
+- **trust/evidence:** users cannot verify provenance, uncertainty, or consequence;
+- **access:** identity, qualification, device, network, or permission blocks;
+- **performance:** latency/reliability/connectivity makes use impractical;
+- **incentive:** local costs/metrics/authority discourage the intended path;
+- **policy:** required procedure/approval conflicts or is unclear;
+- **accessibility:** interaction excludes users/assistive contexts;
+- **support:** help/escalation/recovery is unavailable;
+- **knowledge:** users/operators lack correct mental model or practice.
+
+[FIGURE F17.1: Adoption-friction diagnostic map. Non-use/bypass/dropout/support signals branch into capability, workflow fit, trust/evidence, access, performance, incentive, policy, accessibility, support, and knowledge. Each branch links evidence, next test, owner, repair, and outcome/guardrail effect; no branch labels users as resistant.]
+
+The companion requires evidence, a next test, and owner for each diagnosis and marks `userBlame: false`. This taxonomy is original synthesis. [CLM-153] [CLM-154]
+
+## Triangulate adoption evidence
+
+Do not use one metric:
+
+- eligible use and repeat use;
+- task completion/time/error/rework/fallback;
+- outcome/guardrail movement with attribution limits;
+- support demand/reason/resolution;
+- satisfaction/trust/evidence inspection;
+- dropout/abandonment/manual bypass;
+- role/site/region/accessibility/connectivity/risk segments;
+- qualitative observation/interview.
+
+Login or usage can be coerced by policy. Satisfaction excludes people who left. Low support can mean ease or inaccessible support. Outcome can change for unrelated reasons. Signals are complementary. [CLM-155]
+
+## Observe the whole task
+
+For Orchid, observe a representative technician:
+
+1. receive/open ticket;
+2. confirm equipment or resolve ambiguity;
+3. inspect evidence/source/version;
+4. distinguish verified fact from suggestion;
+5. handle missing evidence/fallback/reconciliation;
+6. route qualified approval;
+7. complete non-digital inspection/handoff;
+8. record decision and find support.
+
+Whole-journey evidence includes non-digital steps, workarounds, exceptions, and support. [CLM-162]
+
+The injected bypass has a specific cause: recommendations omit visible supporting evidence. Classify `trust-evidence`, test an evidence-first review design, and observe task behavior. Do not send generic retraining first.
+
+## Use training for knowledge, not design debt
+
+Training is appropriate when the workflow/design/control is sound and the remaining gap is knowledge/practice. It should contain role-specific tasks, examples/exceptions, safety/authority boundaries, fallback/support, and verification.
+
+Do not train around missing access, misleading state, slow performance, inaccessible UI, invisible evidence, bad policy, or absent support. [CLM-156]
+
+## Combine accessibility criteria and task evidence
+
+Apply relevant WCAG 2.2 criteria with keyboard/focus/semantics/zoom/reflow/error/assistive-technology checks. Then observe representative users performing consequential tasks.
+
+Conformance evidence does not alone prove usability for every context. [CLM-157]
+
+## Build the ownership acceptance model
+
+[FIGURE F17.2: Ownership-transfer evidence model. Ten acceptance areas - knowledge, access, telemetry, runbook, release, recovery, support, decisions, open risk, change path - each require customer owner and demonstrated evidence. Customer authority accepts; privileged FDE access is revoked or explicitly bounded.]
+
+For each area require owner plus demonstrated evidence:
+
+1. knowledge: explain system/workflow/limitations;
+2. access: reach required systems under least privilege;
+3. telemetry: diagnose injected symptom/cohort;
+4. runbook: execute/escalate and improve steps;
+5. release: prepare/evidence-gate/hold a release;
+6. recovery: choose/execute/verify a recovery;
+7. support: triage/user communication/escalation;
+8. decisions: identify authority and record disposition;
+9. open risk: understand exceptions/expiry/residual support;
+10. change path: safely modify/test/release and feed product learning.
+
+Ownership is demonstrated capability, not delivery of a folder or RACI. [CLM-159] [CLM-164]
+
+### Run supervised acceptance
+
+Customer operators, not the FDE, perform:
+
+- identify a degraded cohort from signals;
+- inspect a correlated trace without sensitive payload;
+- hold/disable a feature cohort;
+- reconcile an unknown intent;
+- execute a synthetic release and partial-migration recovery;
+- restore/verify from approved evidence;
+- handle support/escalation;
+- record a decision/open risk.
+
+The FDE observes and records assistance. If intervention is necessary, ownership is not yet demonstrated for that area.
+
+## Transfer and revoke access
+
+Inventory human/workload/support/emergency permissions. Ensure customer owners have required release/recover/support access, test it, and remove FDE privileges.
+
+The companion blocks transfer when customer permission is missing or the FDE retains a required privileged permission. [CLM-160]
+
+Continuing support access must be explicit, purpose/time/scope bounded, approved, audited, revocable, and not the only operating path.
+
+## Make handoff exceptions explicit
+
+If the customer cannot yet own an area, record:
+
+- missing capability/evidence and consequence;
+- interim owner/support service;
+- exact FDE/vendor dependency;
+- access/control/monitoring;
+- authority and accepted residual risk;
+- delivery/retest date;
+- expiry/escalation/exit.
+
+Do not disappear or stay forever. [CLM-163]
+
+## Complete `OA-10`
+
+The artifact now includes adoption review, friction hypotheses/tests, enablement, user/operator/support material, accessibility/task evidence plan, RACI plus demonstrated acceptance, release/recovery exercise, open risks/exceptions, access transfer/revocation, and signed ownership decision.
+
+Support demand remains an operating/product signal. [CLM-161]
+
+The companion adds five tests: trust-friction diagnosis, document-only rejection, customer/FDE access transfer, retained-FDE-access block, and complete ten-area acceptance.
+
+## The Chapter 17 gate
+
+Handoff passes only when:
+
+- adoption is triangulated/segmented without user blame;
+- representative users complete whole-journey tasks;
+- accessibility and usability evidence are distinct;
+- customer owners demonstrate all ten areas;
+- support/decision/open-risk/change paths are explicit;
+- customer access is tested;
+- privileged FDE access is revoked or formally bounded;
+- exceptions are ownered/expiring;
+- signed authority accepts ownership;
+- companion ownership tests pass.
+
+Chapter 18 will convert bounded delivery evidence into product leverage without generalizing one customer workaround into a platform feature.

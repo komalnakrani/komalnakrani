@@ -7,9 +7,9 @@
 - Catalog version: master catalog dated 2026-08-16
 - Current global phase: Komal Phase 08 - full manuscript production
 - Last updated: 2026-08-16
-- Last completed issue: Phase 08.4 Chapters 11-14 #13
+- Last completed issue: Phase 08.5 Chapters 15-17 #14
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#14](https://github.com/alpeshznakrani/komalnakrani/issues/14) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
+- Active issue: pending next Phase 08 child (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -39,8 +39,8 @@
 - objective map: deferred to Abhyaas
 - exam blueprint: deferred to Abhyaas
 - book architecture: pending under `project-control/roles/forward-deployed-engineer/books/`
-- manuscript(s): Chapters 01-14 complete under `content/publications/forward-deployed-engineering/chapters/`
-- figure manifest: frozen placeholders through `F14.2`; production visuals pending Phase 10
+- manuscript(s): Chapters 01-17 complete under `content/publications/forward-deployed-engineering/chapters/`
+- figure manifest: frozen placeholders through `F17.2`; production visuals pending Phase 10
 - PDF(s): pending under `output/pdf/`
 - preparation resources: pending
 - certification page: deferred to Abhyaas
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-16 and `OA-05` through the stabilization layer of `OA-10` are complete. Write Chapter 17 and extend the companion through adoption and ownership acceptance under child issue #14.
+Chapters 01-17 and `OA-05` through `OA-10` are complete. Verify/close child issue #14, then open the ordered Chapters 18-19 plus front/back matter child issue.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Write Chapter 17 and the adoption-friction/ownership-acceptance model from the approved blueprint and Chapter 16 state.
+Run the cumulative Chapters 15-17 gate, close issue #14, and open the final Phase 08 manuscript child under root #9.
 
 ## Resume instructions
 

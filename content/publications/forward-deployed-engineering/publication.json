@@ -165,6 +165,15 @@
       "minutes": 75,
       "sourceFile": "chapters/stabilize-under-real-conditions.mdx",
       "objectiveIds": ["FDE-K01", "FDE-K05", "FDE-K08", "FDE-K09", "FDE-K10", "FDE-K12"]
+    },
+    {
+      "order": 17,
+      "slug": "make-the-solution-usable-and-ownable",
+      "title": "Make the Solution Usable and Ownable",
+      "summary": "Diagnose adoption friction without user blame and prove customer capability across use, operation, support, release, recovery, access, decisions, and change ownership.",
+      "minutes": 70,
+      "sourceFile": "chapters/make-the-solution-usable-and-ownable.mdx",
+      "objectiveIds": ["FDE-K02", "FDE-K03", "FDE-K09", "FDE-K10", "FDE-K12"]
     }
   ],
   "registries": {
