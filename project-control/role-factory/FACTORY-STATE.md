@@ -55,14 +55,14 @@
 
 - Role: Applied AI Engineer
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Active child: [#22 - Validate Applied AI Engineer role and boundary](https://github.com/alpeshznakrani/komalnakrani/issues/22)
+- Active child: [#22 - Validate Applied AI Engineer role and boundary](https://github.com/alpeshznakrani/komalnakrani/issues/22), verdict `PROCEED`, acceptance complete and closure pending
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Execute Applied AI Engineer Phase 01 issue #22 from current primary evidence, record
-one exact catalog verdict, and close it only when the role and adjacent boundaries
-are traceable. Do not enter deferred Abhyaas work.
+Commit Applied AI Engineer Phase 01 verdict `PROCEED`, close issue #22, then open
+Komal Phase 04 to decide the minimum justified original book/volume structure. Do
+not enter deferred Abhyaas work.
 
 ## Resume instructions
 

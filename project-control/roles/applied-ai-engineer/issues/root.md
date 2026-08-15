@@ -2,7 +2,7 @@
 
 - Name: Applied AI Engineer
 - Slug: `applied-ai-engineer`
-- Current global phase: Komal Phase 01 - role validation and boundary
+- Current global phase: Komal Phase 01 complete - Phase 04 transition pending
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 - Abhyaas root issue: deferred by the locked Komal-first execution order
 
@@ -12,7 +12,7 @@ Complete the original Komal book, learning, visual, web, PDF, and optional-cours
 
 ## Phase checklist
 
-- [ ] 01 role validation and adjacent-role boundary evidence
+- [x] 01 role validation and adjacent-role boundary evidence
 - [ ] 04 book count / volume decision
 - [ ] 05 book / series architecture
 - [ ] 06 source and case-study research
@@ -39,4 +39,4 @@ Complete the original Komal book, learning, visual, web, PDF, and optional-cours
 
 ## Next executable action
 
-Execute Phase 01 role validation from current primary employer/official evidence and issue exactly one catalog verdict.
+Commit and close Phase 01 verdict `PROCEED`, then open Phase 04 book-scope work. Do not enter Abhyaas.

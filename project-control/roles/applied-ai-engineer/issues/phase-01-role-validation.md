@@ -27,13 +27,13 @@ Issue exactly one: `PROCEED`, `RENAME TO <name>`, `MERGE WITH <role>`, `KEEP AS 
 
 ## Acceptance criteria
 
-- [ ] Current official evidence supports or rejects the canonical title explicitly.
-- [ ] Responsibilities cover implementation, architecture, evaluation, operations, security/governance, stakeholders, and deliverables.
-- [ ] Evidence spans multiple employers and industries rather than one company vocabulary.
-- [ ] Adjacent-role overlap and explicit non-scope are resolved at decision/accountability depth.
-- [ ] Every material claim maps to a structured source record.
-- [ ] Research limitations and unstable/tool-specific details are explicit.
-- [ ] The verdict is exact, supported, and actionable for Komal book-scope work.
+- [x] Current official evidence supports or rejects the canonical title explicitly.
+- [x] Responsibilities cover implementation, architecture, evaluation, operations, security/governance, stakeholders, and deliverables.
+- [x] Evidence spans multiple employers and industries rather than one company vocabulary.
+- [x] Adjacent-role overlap and explicit non-scope are resolved at decision/accountability depth.
+- [x] Every material claim maps to a structured source record.
+- [x] Research limitations and unstable/tool-specific details are explicit.
+- [x] The verdict is exact, supported, and actionable for Komal book-scope work.
 
 ## Handoff
 
