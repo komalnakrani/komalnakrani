@@ -75,6 +75,15 @@
       "minutes": 60,
       "sourceFile": "chapters/draw-the-real-system-boundary.mdx",
       "objectiveIds": ["FDE-K03", "FDE-K04", "FDE-K08", "FDE-K09"]
+    },
+    {
+      "order": 7,
+      "slug": "make-interfaces-and-data-explicit",
+      "title": "Make Interfaces and Data Explicit",
+      "summary": "Design versioned API, event, and data contracts with explicit semantics, quality, idempotent intent, exceptions, and reconciliation.",
+      "minutes": 65,
+      "sourceFile": "chapters/make-interfaces-and-data-explicit.mdx",
+      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K06", "FDE-K09"]
     }
   ],
   "registries": {

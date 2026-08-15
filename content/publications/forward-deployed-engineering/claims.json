@@ -240,6 +240,60 @@
       "chapterSlug": "draw-the-real-system-boundary",
       "statement": "The responsibility, trust, data, runtime, and failure annotations in this chapter are an original extension used for FDE deployment decisions rather than a formal C4 standard.",
       "sourceIds": ["SRC-007", "SRC-021", "SRC-022", "SRC-023", "SRC-024"]
+    },
+    {
+      "id": "CLM-041",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "OpenAPI 3.2.0 and AsyncAPI 3.0.0 provide versioned machine-readable descriptions for HTTP and message-driven interfaces respectively.",
+      "sourceIds": ["SRC-027", "SRC-028"]
+    },
+    {
+      "id": "CLM-042",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "JSON Schema Draft 2020-12 can express structural validation but cannot by itself establish business meaning or workflow correctness.",
+      "sourceIds": ["SRC-029"]
+    },
+    {
+      "id": "CLM-043",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "HTTP method idempotency semantics do not alone establish application-level retry safety or preserve caller intent.",
+      "sourceIds": ["SRC-014", "SRC-015"]
+    },
+    {
+      "id": "CLM-044",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "Client request identifiers can support safe retry only when the service defines semantic equivalence, conflicts, retention, completion, and late-arrival behavior.",
+      "sourceIds": ["SRC-015"]
+    },
+    {
+      "id": "CLM-045",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "ISO/IEC 25012 defines a general structured-data quality model that can inform contextual requirements and evaluation without prescribing local thresholds.",
+      "sourceIds": ["SRC-030"]
+    },
+    {
+      "id": "CLM-046",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "Semantic Versioning communicates compatibility expectations only after a public API is declared and does not replace deployment, schema, or data migration design.",
+      "sourceIds": ["SRC-031"]
+    },
+    {
+      "id": "CLM-047",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "An interface description or schema does not by itself establish ownership, ordering, consistency, timeout, retry, error, observability, support, or reconciliation behavior.",
+      "sourceIds": ["SRC-027", "SRC-028", "SRC-029"]
+    },
+    {
+      "id": "CLM-048",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "Exactly-once business effects are not obtained merely by applying an exactly-once label to message delivery or processing.",
+      "sourceIds": ["SRC-014", "SRC-015", "SRC-028"]
+    },
+    {
+      "id": "CLM-049",
+      "chapterSlug": "make-interfaces-and-data-explicit",
+      "statement": "The interface catalog, semantic data contract, and reconciliation structures in this chapter are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-014", "SRC-015", "SRC-027", "SRC-028", "SRC-029", "SRC-030", "SRC-031"]
     }
   ]
 }

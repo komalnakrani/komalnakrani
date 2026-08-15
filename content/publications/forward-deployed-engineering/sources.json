@@ -338,6 +338,71 @@
       "license": "Cloudflare website terms",
       "notes": "First-party postmortem used for control-plane/data-plane separation, request amplification, capacity, and observability; facts remain attributed.",
       "usedIn": { "chapterSlugs": ["draw-the-real-system-boundary"], "claimIds": ["CLM-038"] }
+    },
+    {
+      "id": "SRC-027",
+      "type": "standard",
+      "title": "OpenAPI Specification 3.2.0",
+      "authors": ["OpenAPI Initiative"],
+      "publisher": "OpenAPI Initiative",
+      "url": "https://spec.openapis.org/oas/v3.2.0.html",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Apache License 2.0",
+      "notes": "Versioned specification for machine-readable HTTP API descriptions; description does not guarantee semantic correctness or operation.",
+      "usedIn": { "chapterSlugs": ["make-interfaces-and-data-explicit"], "claimIds": ["CLM-041", "CLM-047"] }
+    },
+    {
+      "id": "SRC-028",
+      "type": "standard",
+      "title": "AsyncAPI Specification 3.0.0",
+      "authors": ["AsyncAPI Initiative"],
+      "publisher": "AsyncAPI Initiative",
+      "url": "https://www.asyncapi.com/docs/reference/specification/v3.0.0",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Apache License 2.0",
+      "notes": "Versioned protocol-agnostic specification for message-driven interfaces; does not replace domain semantics or operational delivery design.",
+      "usedIn": { "chapterSlugs": ["make-interfaces-and-data-explicit"], "claimIds": ["CLM-041", "CLM-047"] }
+    },
+    {
+      "id": "SRC-029",
+      "type": "standard",
+      "title": "JSON Schema Draft 2020-12",
+      "authors": ["JSON Schema project"],
+      "publisher": "JSON Schema",
+      "url": "https://json-schema.org/draft/2020-12",
+      "publishedAt": "2022-06-16",
+      "accessedAt": "2026-08-16",
+      "license": "JSON Schema specification terms",
+      "notes": "Versioned schema vocabulary for structural validation; structural validity is not semantic or business validity.",
+      "usedIn": { "chapterSlugs": ["make-interfaces-and-data-explicit"], "claimIds": ["CLM-042", "CLM-047"] }
+    },
+    {
+      "id": "SRC-030",
+      "type": "standard",
+      "title": "ISO/IEC 25012:2008 Data quality model",
+      "authors": ["International Organization for Standardization", "International Electrotechnical Commission"],
+      "publisher": "ISO",
+      "url": "https://www.iso.org/standard/35736.html",
+      "publishedAt": "2008-12-15",
+      "accessedAt": "2026-08-16",
+      "license": "ISO standard record terms",
+      "notes": "Official standard record used for the existence and scope of a structured-data quality model; copyrighted standard text is not reproduced.",
+      "usedIn": { "chapterSlugs": ["make-interfaces-and-data-explicit"], "claimIds": ["CLM-045"] }
+    },
+    {
+      "id": "SRC-031",
+      "type": "standard",
+      "title": "Semantic Versioning 2.0.0",
+      "authors": ["Tom Preston-Werner"],
+      "publisher": "Semantic Versioning",
+      "url": "https://semver.org/",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Creative Commons Attribution 3.0",
+      "notes": "Versioning specification used only where a public API is declared; it does not solve deployment or data compatibility by itself.",
+      "usedIn": { "chapterSlugs": ["make-interfaces-and-data-explicit"], "claimIds": ["CLM-046"] }
     }
   ]
 }
