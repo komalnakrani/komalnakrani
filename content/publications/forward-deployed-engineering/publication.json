@@ -84,6 +84,15 @@
       "minutes": 65,
       "sourceFile": "chapters/make-interfaces-and-data-explicit.mdx",
       "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K06", "FDE-K09"]
+    },
+    {
+      "order": 8,
+      "slug": "fit-the-customer-environment",
+      "title": "Fit the Customer Environment",
+      "summary": "Translate the logical design into explicit deployment topology, identity, secrets, configuration, tenancy, regional, network, capacity, and environment responsibilities.",
+      "minutes": 60,
+      "sourceFile": "chapters/fit-the-customer-environment.mdx",
+      "objectiveIds": ["FDE-K04", "FDE-K06", "FDE-K08", "FDE-K09"]
     }
   ],
   "registries": {

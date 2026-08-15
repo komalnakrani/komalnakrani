@@ -294,6 +294,48 @@
       "chapterSlug": "make-interfaces-and-data-explicit",
       "statement": "The interface catalog, semantic data contract, and reconciliation structures in this chapter are original FDE synthesis tools rather than formal standards.",
       "sourceIds": ["SRC-014", "SRC-015", "SRC-027", "SRC-028", "SRC-029", "SRC-030", "SRC-031"]
+    },
+    {
+      "id": "CLM-050",
+      "chapterSlug": "fit-the-customer-environment",
+      "statement": "Customer-environment architecture requires contextual tradeoffs across reliability, security, performance, operations, cost, and capacity rather than a provider-neutral claim of perfect parity.",
+      "sourceIds": ["SRC-021", "SRC-022", "SRC-024"]
+    },
+    {
+      "id": "CLM-051",
+      "chapterSlug": "fit-the-customer-environment",
+      "statement": "Trust should be evaluated for each resource request and should not be inherited solely from network location.",
+      "sourceIds": ["SRC-007"]
+    },
+    {
+      "id": "CLM-052",
+      "chapterSlug": "fit-the-customer-environment",
+      "statement": "Deployments that use OAuth 2.0 should account for RFC 9700 security best current practice within their actual flow and threat context.",
+      "sourceIds": ["SRC-032"]
+    },
+    {
+      "id": "CLM-053",
+      "chapterSlug": "fit-the-customer-environment",
+      "statement": "Environment parity is often incomplete, so consequential differences require explicit tests, controls, monitoring, or accepted gaps.",
+      "sourceIds": ["SRC-021", "SRC-022", "SRC-024"]
+    },
+    {
+      "id": "CLM-054",
+      "chapterSlug": "fit-the-customer-environment",
+      "statement": "A first-party Cloudflare postmortem reports that an access dependency complicated rollback and discusses break-glass access and tested known-good recovery identifiers.",
+      "sourceIds": ["SRC-033"]
+    },
+    {
+      "id": "CLM-055",
+      "chapterSlug": "fit-the-customer-environment",
+      "statement": "Private networking, IP allowlisting, or placement inside a VPC does not by itself establish user or workload identity, least privilege, tenant isolation, or data-residency compliance.",
+      "sourceIds": ["SRC-007", "SRC-021", "SRC-022", "SRC-024"]
+    },
+    {
+      "id": "CLM-056",
+      "chapterSlug": "fit-the-customer-environment",
+      "statement": "The environment-difference matrix and topology/identity/configuration records in this chapter are original FDE synthesis tools rather than formal external standards.",
+      "sourceIds": ["SRC-007", "SRC-021", "SRC-022", "SRC-024", "SRC-032"]
     }
   ]
 }

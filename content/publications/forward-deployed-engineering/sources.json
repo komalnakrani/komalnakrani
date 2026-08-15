@@ -403,6 +403,32 @@
       "license": "Creative Commons Attribution 3.0",
       "notes": "Versioning specification used only where a public API is declared; it does not solve deployment or data compatibility by itself.",
       "usedIn": { "chapterSlugs": ["make-interfaces-and-data-explicit"], "claimIds": ["CLM-046"] }
+    },
+    {
+      "id": "SRC-032",
+      "type": "standard",
+      "title": "Best Current Practice for OAuth 2.0 Security",
+      "authors": ["Torsten Lodderstedt", "John Bradley", "Andrey Labunets", "Daniel Fett"],
+      "publisher": "Internet Engineering Task Force",
+      "url": "https://www.rfc-editor.org/info/rfc9700/",
+      "publishedAt": "2025-01-01",
+      "accessedAt": "2026-08-16",
+      "license": "IETF Trust Legal Provisions",
+      "notes": "RFC 9700 used as the current OAuth 2.0 security best current practice where OAuth is actually used; not a universal identity design.",
+      "usedIn": { "chapterSlugs": ["fit-the-customer-environment"], "claimIds": ["CLM-052"] }
+    },
+    {
+      "id": "SRC-033",
+      "type": "report",
+      "title": "Cloudflare incident on October 30, 2023",
+      "authors": ["Cloudflare"],
+      "publisher": "Cloudflare",
+      "url": "https://blog.cloudflare.com/cloudflare-incident-on-october-30-2023/",
+      "publishedAt": "2023-10-30",
+      "accessedAt": "2026-08-16",
+      "license": "Cloudflare website terms",
+      "notes": "First-party postmortem used for break-glass/recovery dependency questions; it does not justify weakening routine controls.",
+      "usedIn": { "chapterSlugs": ["fit-the-customer-environment"], "claimIds": ["CLM-054"] }
     }
   ]
 }
