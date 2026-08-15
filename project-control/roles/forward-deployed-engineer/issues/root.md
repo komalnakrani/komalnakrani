@@ -2,7 +2,7 @@
 
 - Name: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
-- Current global phase: Komal preparatory Phase 01 - role validation and boundary
+- Current global phase: Komal Phase 13 - optional guided lab course
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 - Abhyaas root issue: deferred by the locked Komal-first execution order
 
@@ -12,15 +12,15 @@ Complete the original book, learning, visual, web, PDF, and optional-course ecos
 
 ## Phase checklist
 
-- [ ] 01 role validation and adjacent-role boundary evidence available
-- [ ] 04 book count / volume decision
-- [ ] 05 book / series architecture
-- [ ] 06 source and case-study research
-- [ ] 07 chapter blueprints
-- [ ] 08 full manuscript production
-- [ ] 09 book / series consistency QA
-- [ ] 10 original visuals and covers
-- [ ] 11 web + PDF publication
+- [x] 01 role validation and adjacent-role boundary evidence available
+- [x] 04 book count / volume decision
+- [x] 05 book / series architecture
+- [x] 06 source and case-study research
+- [x] 07 chapter blueprints
+- [x] 08 full manuscript production
+- [x] 09 book / series consistency QA
+- [x] 10 original visuals and covers
+- [x] 11 web + PDF publication
 - [ ] 13 optional course decision and delivery if justified
 - [ ] 18 cross-repository integration (deferred until Abhyaas resumes)
 - [ ] 19 final hostile QA PASS
@@ -38,4 +38,4 @@ Complete the original book, learning, visual, web, PDF, and optional-course ecos
 
 ## Next executable action
 
-Complete a primary-source role validation and adjacent-role boundary report with an explicit `PROCEED`/rename/merge/reject verdict.
+Complete and verify the optional six-module FDE guided lab course under issue #19, then execute Komal Phase 19 hostile final QA.

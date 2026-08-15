@@ -12,8 +12,9 @@
     "phase08Child": "#15 CLOSED - acceptance verified at commit 2ec5731",
     "phase09": "#16 CLOSED - acceptance verified at commit a8d9c45",
     "phase10": "#17 CLOSED - acceptance verified at commit 22920f7",
-    "phase11": "#18 OPEN - acceptance complete; closure commit pending",
-    "nextPhase": "Phase 13 AUTO course decision pending issue creation"
+    "phase11": "#18 CLOSED - acceptance verified at commit e1f15aa",
+    "phase13": "#19 OPEN - FDE guided lab course",
+    "nextPhase": "#19 OPEN - build and verify optional guided lab course"
   },
   "riskState": {
     "blockingSourceGaps": 0,

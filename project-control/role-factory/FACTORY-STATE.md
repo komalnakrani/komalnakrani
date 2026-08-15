@@ -54,14 +54,14 @@
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#18 - Publish FDE web edition and PDF](https://github.com/alpeshznakrani/komalnakrani/issues/18), acceptance complete and closure pending
+- Active child: [#19 - Build FDE guided lab course](https://github.com/alpeshznakrani/komalnakrani/issues/19)
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Close Forward Deployed Engineer Phase 11 issue #18 with the recorded acceptance
-evidence, then open and execute Phase 13's AUTO course decision. Do not enter
-deferred Abhyaas work.
+Execute Forward Deployed Engineer Phase 13 issue #19. Build the complete optional
+guided lab course and reusable course routes, verify every lab and rendered route,
+then continue to Komal Phase 19. Do not enter deferred Abhyaas work.
 
 ## Resume instructions
 

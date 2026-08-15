@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 11 complete - Phase 13 transition pending
+- Current global phase: Komal Phase 13 - optional guided lab course
 - Last updated: 2026-08-16
-- Last completed issue: Phase 11 #18 acceptance prepared; closure commit pending
+- Last completed issue: Phase 11 #18 at commit `e1f15aa`
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#18](https://github.com/alpeshznakrani/komalnakrani/issues/18)
+- Active issue: [#19](https://github.com/alpeshznakrani/komalnakrani/issues/19)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -28,7 +28,7 @@
 - book subtitle: From Ambiguous Workflow to Production Outcome
 - volume count: one
 - terminology decisions: FDE canonical; FDSE treated as a narrower engineering-heavy alias; AI is a specialization, not the universal role definition
-- course decision: pending Phase 13 AUTO evaluation
+- course decision: BUILD COURSE - FDE's failure injection, debugging, evidence-gated delivery, recovery, and ownership practice adds a distinct guided-lab modality beyond the book
 - certification title: deferred to Abhyaas
 - authorship: all Komal publications are original and written fresh
 
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Phase 11 acceptance is complete. The published web edition builds 28 static pages, including all nineteen chapters, edition and errata routes, and the role/library surfaces. The deterministic 338-page PDF includes all 38 figures and passed complete render, extraction, page-bound, link, bookmark, and accessibility-alternative checks. Phase 13 must now decide whether a separate Komal course adds material teaching value beyond the book and companion.
+Phase 11 is closed. Phase 13 AUTO resolved to BUILD COURSE because paced demonstrations, failure injection, coached debugging, evidence reviews, and an integrated capstone create observable practice that the reference book alone cannot. The active work is a complete optional six-module guided lab course on the existing synthetic provider-neutral companion.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ No blocking content, visual, web, or PDF debt. The PDF is searchable, bookmarked
 
 ## Exact next action
 
-Close Phase 11 with the recorded evidence, open Phase 13, and make the AUTO course decision without entering deferred Abhyaas phases.
+Implement the reusable course data/routes and the complete FDE guided lab course, then execute every lab and render/inspect the course surfaces.
 
 ## Resume instructions
 
