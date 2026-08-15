@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">F08.2 — Identity is bounded at every hop</title><desc id="desc">Identity flow from technician and approver sessions through gateway policy, bounded workload identity, downstream authorization, secret retrieval, audit, expiry and revocation, with denied region, tenant, and role paths. Reading order: Human session: Technician / approver; Gateway policy: Region · tenant · role; Workload identity: Short-lived · bounded; Resource auth: Explicit downstream action; Secrets: Certificate retrieval; Audit + revoke: Expiry · deny · trace.</desc>
+  <defs><style>text{font-family:&quot;Hanken Grotesk&quot;,&quot;Helvetica Neue&quot;,sans-serif}.mono{font-family:monospace}</style><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2C4A6E"/></marker></defs>
+  <rect width="1200" height="760" fill="#FFFFFF"/><path d="M0 132 H1200 M0 690 H1200" stroke="#D1D1D1"/>
+  <text x="60" y="58" class="mono" font-size="13" letter-spacing="2" fill="#2C4A6E">F08.2 · FORWARD DEPLOYED ENGINEERING</text>
+  <text x="60" y="103" text-anchor="start" font-size="30" font-weight="700" fill="#121212" class=""><tspan x="60" dy="0">Identity is bounded at every hop</tspan></text>
+  <g><g>
+    <rect x="60" y="190" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="60" y="190" width="6" height="170" rx="3" fill="#2C4A6E"/>
+    <text x="82" y="224" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="82" dy="0">Human session</tspan></text>
+    <text x="82" y="274" font-size="17" font-weight="450" fill="#454545"><tspan x="82" dy="0">• Technician / approver</tspan></text>
+  </g><g>
+    <rect x="428" y="190" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="428" y="190" width="6" height="170" rx="3" fill="#454545"/>
+    <text x="450" y="224" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="450" dy="0">Gateway policy</tspan></text>
+    <text x="450" y="274" font-size="17" font-weight="450" fill="#454545"><tspan x="450" dy="0">• Region · tenant · role</tspan></text>
+  </g><g>
+    <rect x="796" y="190" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="796" y="190" width="6" height="170" rx="3" fill="#2C4A6E"/>
+    <text x="818" y="224" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="818" dy="0">Workload identity</tspan></text>
+    <text x="818" y="274" font-size="17" font-weight="450" fill="#454545"><tspan x="818" dy="0">• Short-lived · bounded</tspan></text>
+  </g><g>
+    <rect x="60" y="415" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="60" y="415" width="6" height="170" rx="3" fill="#454545"/>
+    <text x="82" y="449" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="82" dy="0">Resource auth</tspan></text>
+    <text x="82" y="499" font-size="17" font-weight="450" fill="#454545"><tspan x="82" dy="0">• Explicit downstream action</tspan></text>
+  </g><g>
+    <rect x="428" y="415" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="428" y="415" width="6" height="170" rx="3" fill="#2C4A6E"/>
+    <text x="450" y="449" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="450" dy="0">Secrets</tspan></text>
+    <text x="450" y="499" font-size="17" font-weight="450" fill="#454545"><tspan x="450" dy="0">• Certificate retrieval</tspan></text>
+  </g><g>
+    <rect x="796" y="415" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="796" y="415" width="6" height="170" rx="3" fill="#454545"/>
+    <text x="818" y="449" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="818" dy="0">Audit + revoke</tspan></text>
+    <text x="818" y="499" font-size="17" font-weight="450" fill="#454545"><tspan x="818" dy="0">• Expiry · deny · trace</tspan></text>
+  </g><path d="M 410 275 L 420 275" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 778 275 L 788 275" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 968 364 L 232 407" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 410 500 L 420 500" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 778 500 L 788 500" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/></g>
+  <g class="mono" font-size="12" fill="#767676"><line x1="60" y1="721" x2="92" y2="721" stroke="#454545" stroke-width="3"/><text x="104" y="725">observed / required</text><line x1="290" y1="721" x2="322" y2="721" stroke="#767676" stroke-width="2" stroke-dasharray="7 6"/><text x="334" y="725">boundary / proposed</text><path d="M555 708 l13 13 -13 13 -13 -13 z" fill="#E7ECF2" stroke="#2C4A6E"/><text x="580" y="725">decision</text><text x="1140" y="725" text-anchor="end">ORCHID · FICTIONAL / SYNTHETIC</text></g>
+</svg>

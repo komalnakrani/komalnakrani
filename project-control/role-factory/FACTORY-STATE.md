@@ -59,9 +59,9 @@
 
 ## Exact next action
 
-Continue Forward Deployed Engineer Phase 10 issue #17. Phase 09 content is locked
-and accepted; define the deterministic visual system, produce all 38 frozen
-figures, integrate their accessibility metadata, and run visual/publication gates.
+Forward Deployed Engineer Phase 10 issue #17 has met acceptance locally. Commit
+and push the 38-figure visual system, close #17 with evidence, then open Phase 11
+publication/PDF assembly. Preserve the content and visual locks.
 
 ## Resume instructions
 

@@ -23,8 +23,8 @@
 
 ## Figures
 
-- `F09.1` mechanism/control ladder placeholder present.
-- `F09.2` error-consequence-eval-control matrix placeholder present.
+- `F09.1` mechanism/control ladder final vector asset and manifest record PASS.
+- `F09.2` error-consequence-eval-control matrix final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -35,7 +35,7 @@
 
 - Production model/provider/thresholds remain future versioned decisions; default is deterministic double.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added an explicit bounded-AI design/evaluation exercise covering decomposition, non-AI baseline, workflow-state cases, grader calibration, critical-segment disposition, controls, fallback, and authority.
 - 3,388 manuscript words after repair; final Phase 09 blueprint-depth, duplication, source, and continuity review passes.
 

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">F04.2 — Decision rights stay named</title><desc id="desc">Decision-rights matrix for outcome, safety, privacy, security exception, pilot scope, release, go or no-go, incident command, and handoff, separating FDE recommendation from approval. Reading order: Recommend: FDE prepares options and evidence; Approve: Named domain authority; Execute: Delegated delivery owner; Inform: Affected users and owners; Escalate: Missing evidence or authority blocks exposure.</desc>
+  <defs><style>text{font-family:&quot;Hanken Grotesk&quot;,&quot;Helvetica Neue&quot;,sans-serif}.mono{font-family:monospace}</style><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2C4A6E"/></marker></defs>
+  <rect width="1200" height="760" fill="#FFFFFF"/><path d="M0 132 H1200 M0 690 H1200" stroke="#D1D1D1"/>
+  <text x="60" y="58" class="mono" font-size="13" letter-spacing="2" fill="#2C4A6E">F04.2 · FORWARD DEPLOYED ENGINEERING</text>
+  <text x="60" y="103" text-anchor="start" font-size="30" font-weight="700" fill="#121212" class=""><tspan x="60" dy="0">Decision rights stay named</tspan></text>
+  <g><g>
+    <rect x="60" y="190" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="60" y="190" width="6" height="170" rx="3" fill="#2C4A6E"/>
+    <text x="82" y="224" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="82" dy="0">Recommend</tspan></text>
+    <text x="82" y="274" font-size="17" font-weight="450" fill="#454545"><tspan x="82" dy="0">• FDE prepares options and evidence</tspan></text>
+  </g><g>
+    <rect x="428" y="190" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="428" y="190" width="6" height="170" rx="3" fill="#454545"/>
+    <text x="450" y="224" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="450" dy="0">Approve</tspan></text>
+    <text x="450" y="274" font-size="17" font-weight="450" fill="#454545"><tspan x="450" dy="0">• Named domain authority</tspan></text>
+  </g><g>
+    <rect x="796" y="190" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="796" y="190" width="6" height="170" rx="3" fill="#2C4A6E"/>
+    <text x="818" y="224" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="818" dy="0">Execute</tspan></text>
+    <text x="818" y="274" font-size="17" font-weight="450" fill="#454545"><tspan x="818" dy="0">• Delegated delivery owner</tspan></text>
+  </g><g>
+    <rect x="60" y="415" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="60" y="415" width="6" height="170" rx="3" fill="#454545"/>
+    <text x="82" y="449" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="82" dy="0">Inform</tspan></text>
+    <text x="82" y="499" font-size="17" font-weight="450" fill="#454545"><tspan x="82" dy="0">• Affected users and owners</tspan></text>
+  </g><g>
+    <rect x="428" y="415" width="344" height="170" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="428" y="415" width="6" height="170" rx="3" fill="#2C4A6E"/>
+    <text x="450" y="449" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="450" dy="0">Escalate</tspan></text>
+    <text x="450" y="499" font-size="17" font-weight="450" fill="#454545"><tspan x="450" dy="0">• Missing evidence or authority blocks</tspan><tspan x="450" dy="20">exposure</tspan></text>
+  </g></g>
+  <g class="mono" font-size="12" fill="#767676"><line x1="60" y1="721" x2="92" y2="721" stroke="#454545" stroke-width="3"/><text x="104" y="725">observed / required</text><line x1="290" y1="721" x2="322" y2="721" stroke="#767676" stroke-width="2" stroke-dasharray="7 6"/><text x="334" y="725">boundary / proposed</text><path d="M555 708 l13 13 -13 13 -13 -13 z" fill="#E7ECF2" stroke="#2C4A6E"/><text x="580" y="725">decision</text><text x="1140" y="725" text-anchor="end">ORCHID · FICTIONAL / SYNTHETIC</text></g>
+</svg>

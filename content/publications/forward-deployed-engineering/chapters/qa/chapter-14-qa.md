@@ -11,7 +11,7 @@
 - Role boundary: PASS. Release, exception, emergency access, risk, and communications authority stay designated.
 - Failure/tradeoffs: PASS for bad automation, weak canary, capacity, divergent state, irreversible change, stale backup, access dependency, flag debt.
 - Examples: PASS. Synthetic only; no zero-downtime, one-click rollback, DR-ready, or production RTO claim.
-- Source gaps/figures: PASS. No blocking gap; both placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F14.1` and `F14.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 38 cumulative tests and deterministic rehearsal command.
 - Continuity/PDF: PASS to Chapter 15 and publication validation.
 

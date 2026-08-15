@@ -45,7 +45,9 @@ objectiveIds:
   - FDE-K07
   - FDE-K08
   - FDE-K09
-figureIds: []
+figureIds:
+  - FIG-023
+  - FIG-024
 ---
 
 A test is useful only in relation to a claim.
@@ -72,7 +74,10 @@ Examples:
 - Review-interface usability needs representative task observation, not only DOM assertions.
 - A real dependency's quotas, latency, identity, and failure behavior need evidence in a representative environment; a local double cannot provide it.
 
-[FIGURE F12.1: Verification stack arranged from cheap/narrow to costly/representative: static analysis and review; unit/property; schema/contract; component/integration; end-to-end/failure/recovery; AI capability/regression/adversarial; security/accessibility; representative performance; task-based UAT; deployment simulation; controlled production monitoring. Arrows show that higher layers complement rather than replace lower layers.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f12-1-verification-stack.svg" alt="Verification stack from static review and unit tests through contracts, integration, end-to-end failure, AI evaluation, security and accessibility, performance, UAT, simulation, and controlled production monitoring." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F12.1 - Use the cheapest credible evidence.</strong> Higher, more representative layers complement rather than replace lower, faster checks.</figcaption>
+</figure>
 
 This selection rule and traceability matrix are original FDE synthesis tools, not a formal standard. [CLM-091]
 
@@ -92,7 +97,10 @@ Each row contains:
 - pass/fail/inconclusive state;
 - release disposition, owner, authority, waiver/expiry where relevant.
 
-[FIGURE F12.2: Traceability map from outcome/guardrail, threat/risk, interface/data/AI/operating requirements, and acceptance criteria to unit, contract, integration, end-to-end, evaluation, security/accessibility, UAT, simulation, and rehearsal evidence. Each result flows to limitation and release/waiver disposition.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f12-2-evidence-traceability-map.svg" alt="Traceability map from outcomes, guardrails, risks, interface, data, AI and operating requirements through test, evaluation, UAT, simulation and rehearsal evidence to limitations and release disposition." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F12.2 - Every release claim needs a trace.</strong> Requirements flow to evidence, limitations, and a named release or waiver disposition.</figcaption>
+</figure>
 
 Do not write one row called “security testing” or “AI accuracy.” Decompose until a failed observation produces a meaningful action.
 

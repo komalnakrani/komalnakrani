@@ -11,7 +11,7 @@
 - Role boundary: PASS. Threshold/risk/waiver authority remains with designated owners.
 - Failure/tradeoffs: PASS for aggregate concealment, leakage, graders, flakiness, missing UAT, doubles, performance, simulation, and monitoring limits.
 - Examples: PASS. Synthetic only; no safety/security/accessibility/compliance/capacity claim.
-- Source gaps/figures: PASS. No blocking gap; both frozen placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F12.1` and `F12.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 28 cumulative tests; critical failure blocks, evidence types remain separate, disagreements persist.
 - Continuity/PDF: PASS to Chapter 13 and publication validation.
 

@@ -35,7 +35,9 @@ objectiveIds:
   - FDE-K08
   - FDE-K09
   - FDE-K10
-figureIds: []
+figureIds:
+  - FIG-027
+  - FIG-028
 ---
 
 A release is a decision to expose a particular system state to a particular cohort under particular evidence and recovery conditions.
@@ -59,7 +61,10 @@ Record together:
 - owner, approver, schedule, support/on-call;
 - stop/abort condition and recovery path.
 
-[FIGURE F14.1: Commit-to-evidence-to-cohort release path. Source produces hashed artifact; artifact joins configuration, schema/migration, feature controls, model/policy/evidence bundle, owner approval, and compatibility/recovery record. Gates lead to local/test, representative environment, canary/cohort, wider exposure, or stop/recover.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f14-1-commit-to-cohort-release-path.svg" alt="Release path from source and hashed artifact through configuration, schema and migration, feature controls, model and policy bundle, approval, compatibility and recovery record to test, canary, cohort, wider exposure or stop." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F14.1 - Release identity binds the whole change.</strong> Artifact, configuration, migration, policy, approvals, compatibility, and recovery move together.</figcaption>
+</figure>
 
 The companion validates this binding and computes a deterministic SHA-256 hash over the synthetic artifact record. A hash identifies bytes/record content; it does not prove provenance, security, or correctness by itself. [CLM-117]
 
@@ -182,7 +187,10 @@ Migration/recovery retries need stable intent and semantic equivalence. An accep
 
 ## Choose recovery from state and consequence
 
-[FIGURE F14.2: Recovery decision tree. Begin with externally visible state and containment need. Branch by dependency health, reversibility, destructive/externally visible data change, compatibility, verified restore evidence, and consequence. Outcomes are rollback, roll-forward, isolate, restore, or stop/escalate; every path ends with user-visible verification and evidence update.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f14-2-recovery-decision-tree.svg" alt="Recovery decision tree beginning with user-visible state and containment, then branching on dependency health, reversibility, external data change, compatibility, restore evidence, and consequence before verification." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F14.2 - Recovery follows external state.</strong> Rollback, roll-forward, isolate, restore, and stop are selected by state and consequence.</figcaption>
+</figure>
 
 Ask in order:
 

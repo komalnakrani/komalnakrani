@@ -26,7 +26,9 @@ objectiveIds:
   - FDE-K04
   - FDE-K08
   - FDE-K12
-figureIds: []
+figureIds:
+  - FIG-009
+  - FIG-010
 ---
 
 The smallest feature is not always the smallest risk.
@@ -93,7 +95,10 @@ Can the team limit users/cases/actions, preserve old behavior, stop exposure, re
 
 Which decision becomes better after the path runs? If the expected evidence cannot change a decision, the scope may be work rather than learning.
 
-[FIGURE F05.1: A scope cone narrowing Orchid's broad “AI copilot” request through outcome relevance, consequence/guardrails, uncertainty, dependencies, representativeness, reversibility, and evidence yield into one selected equipment family, region, cohort, and evidence-assisted decision path. Rejected/deferred capabilities remain visible outside the cone.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f05-1-safe-scope-cone.svg" alt="Scope cone narrowing a broad AI copilot request through outcome, consequence, uncertainty, dependency, representativeness, reversibility, and evidence yield to one bounded Orchid path." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F05.1 - Narrow toward representative evidence.</strong> Small means least exposed while still crossing the uncertainty-bearing boundary.</figcaption>
+</figure>
 
 The cone is an original synthesis, not a formal standard. [CLM-032]
 
@@ -172,7 +177,10 @@ A task list hides external ownership and evidence gates. Use a dependency networ
 - escalation trigger;
 - status/change history.
 
-[FIGURE F05.2: Orchid dependency network linking equipment registry, ticketing, manuals, ERP inventory, identity, network/region, safety approval, security/privacy decisions, support, and pilot users to vertical milestones. Evidence gates and external owners are distinct from calendar tasks; the critical uncertainty path is highlighted.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f05-2-dependency-evidence-network.svg" alt="Dependency network linking ticketing, equipment registry, manuals, inventory, identity, network, approvals, support, and pilot users to vertical milestones and a critical uncertainty path." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F05.2 - Dependencies are decision gates.</strong> External owners and evidence gates govern sequencing more honestly than a calendar alone.</figcaption>
+</figure>
 
 Example:
 

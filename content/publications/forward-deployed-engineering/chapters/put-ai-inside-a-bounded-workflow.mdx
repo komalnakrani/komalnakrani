@@ -31,7 +31,9 @@ objectiveIds:
   - FDE-K07
   - FDE-K08
   - FDE-K09
-figureIds: []
+figureIds:
+  - FIG-017
+  - FIG-018
 ---
 
 AI should enter the workflow only after the workflow can say no to it.
@@ -54,7 +56,10 @@ Consider five mechanisms:
 4. constrained model-selected tool/action under policy;
 5. bounded agentic planning/execution.
 
-[FIGURE F09.1: Mechanism/control ladder from deterministic rule through retrieval, model suggestion, constrained action, and bounded agent. Each step adds uncertainty, data/tool permission, evaluation, monitoring, latency/cost, recovery, and authority requirements. Orchid stops at evidence retrieval plus bounded suggestion and qualified approval.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f09-1-mechanism-control-ladder.svg" alt="Mechanism ladder from deterministic rule through retrieval, model suggestion, constrained action, and bounded agent, with Orchid stopping at evidence retrieval plus suggestion and qualified approval." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F09.1 - Use the least uncertain mechanism.</strong> Every step upward adds evaluation, permission, monitoring, recovery, latency, cost, and authority needs.</figcaption>
+</figure>
 
 Choose the lowest mechanism that satisfies the outcome. First-party agent engineering guidance similarly recommends simple composable workflows when sufficient and emphasizes ground truth, checkpoints, and stopping conditions for agents. It is vendor practice, not a universal standard. [CLM-058] [CLM-060]
 
@@ -123,7 +128,10 @@ For Orchid:
 
 Record consequence, detectability, control, evaluation, threshold owner, and release action.
 
-[FIGURE F09.2: Risk/evaluation matrix with error types against workflow consequence, detectability, deterministic/human/system controls, evaluation segment/grader, and release/stop threshold. Aggregate quality cannot hide the safety-critical equipment segment.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f09-2-ai-risk-evaluation-matrix.svg" alt="AI risk and evaluation matrix mapping error type to workflow consequence, detectability, deterministic, human and system controls, evaluation segment and grader, and release or stop threshold." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F09.2 - Evaluate by workflow consequence.</strong> Aggregate quality cannot hide a critical segment or an error without a safe control.</figcaption>
+</figure>
 
 ## Design evaluation as a system
 

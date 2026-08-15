@@ -23,8 +23,8 @@
 
 ## Figures
 
-- `F13.1` multi-layer signal map placeholder present.
-- `F13.2` diagnostic tree placeholder present.
+- `F13.1` multi-layer signal map final vector asset and manifest record PASS.
+- `F13.2` diagnostic tree final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -35,7 +35,7 @@
 
 - Production exporter/storage/queries/alerts, owner-approved thresholds, real support/capacity/cost evidence remain open.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added a worked promise record, fully specified indicator/action, aggregate-versus-cohort reading, actionable alert, evidence-first diagnosis, failed-dependency rehearsal, and failure repairs.
 - The second depth pass added blind-spot, capacity/cost/support, and operator operability exercises.
 - 3,314 manuscript words plus executable signal code after Phase 09 depth repair.

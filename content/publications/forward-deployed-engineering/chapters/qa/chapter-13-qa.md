@@ -11,7 +11,7 @@
 - Role boundary: PASS. Threshold, incident command, communication, and risk authority stay designated.
 - Failure/tradeoffs: PASS for cohort hiding, stale/missing signal, retry demand, sensitive telemetry, alert noise, cardinality/cost.
 - Examples: PASS. Synthetic only; no production SLO/telemetry claim.
-- Source gaps/figures: PASS. No blocking gap; both placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F13.1` and `F13.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 32 cumulative tests; cohort failure visible and sensitive telemetry rejected.
 - Continuity/PDF: PASS to Chapter 14 and publication validation.
 

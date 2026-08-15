@@ -35,7 +35,9 @@ objectiveIds:
   - FDE-K10
   - FDE-K11
   - FDE-K12
-figureIds: []
+figureIds:
+  - FIG-031
+  - FIG-032
 ---
 
 When reality contradicts readiness, first protect people and the workflow. Then establish truth.
@@ -70,7 +72,10 @@ This is safer than `system slow, engineering investigating`. It states impact, b
 
 ## Run parallel incident tracks
 
-[FIGURE F16.1: Parallel incident/stabilization timeline. Shared time axis carries impact/command, diagnosis/evidence, containment/recovery, communications/support, and correction/verification tracks. Decision points link confidence-tagged evidence to action; restoration begins stabilization rather than ending it.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f16-1-incident-stabilization-timeline.svg" alt="Parallel incident timeline with impact and command, diagnosis and evidence, containment and recovery, communication and support, and correction and verification tracks, showing restoration begins stabilization." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F16.1 - Incident work runs in parallel.</strong> Impact, diagnosis, recovery, communications, and correction share one confidence-tagged timeline.</figcaption>
+</figure>
 
 ### Impact and command
 
@@ -197,7 +202,10 @@ Avoid stopping at a label such as `operator error`, `bad deploy`, `model halluci
 
 A contributing-condition analysis can include workflow, software, data, environment, controls, tools, documentation, staffing, communication, and decision rights. It should not speculate about individuals. Where misconduct, safety, legal, or employment processes apply, route them to the designated authority rather than using a technical post-incident review as a substitute.
 
-[FIGURE F16.2: Symptom-to-system-change learning loop. User impact and detection flow through timeline/decisions, contributing conditions across workflow/system/organization, containment/restoration, durable corrective actions, verification/monitoring, owner transfer, then updated design/test/signal/runbook/product pattern.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f16-2-incident-learning-loop.svg" alt="Learning loop from user impact and detection through timeline, contributing workflow, system and organizational conditions, containment, restoration, corrective action, verification, owner transfer and updated system artifacts." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F16.2 - Learning changes the system.</strong> A durable incident response updates design, tests, signals, runbooks, ownership, and product patterns.</figcaption>
+</figure>
 
 ## Write corrective actions as system changes
 

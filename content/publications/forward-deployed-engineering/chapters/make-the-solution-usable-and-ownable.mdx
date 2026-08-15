@@ -36,7 +36,9 @@ objectiveIds:
   - FDE-K10
   - FDE-K11
   - FDE-K12
-figureIds: []
+figureIds:
+  - FIG-033
+  - FIG-034
 ---
 
 A deployed system is not successful if users must work around it or if only the FDE can operate it.
@@ -60,7 +62,10 @@ Use ten categories:
 - **support:** help/escalation/recovery is unavailable;
 - **knowledge:** users/operators lack correct mental model or practice.
 
-[FIGURE F17.1: Adoption-friction diagnostic map. Non-use/bypass/dropout/support signals branch into capability, workflow fit, trust/evidence, access, performance, incentive, policy, accessibility, support, and knowledge. Each branch links evidence, next test, owner, repair, and outcome/guardrail effect; no branch labels users as resistant.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f17-1-adoption-friction-map.svg" alt="Adoption diagnostic map branching non-use, bypass, dropout and support signals into capability, workflow fit, trust, access, performance, incentive, policy, accessibility, support and knowledge." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F17.1 - Non-use is diagnostic evidence.</strong> Repair follows a tested friction hypothesis, not a judgment that users resist change.</figcaption>
+</figure>
 
 The companion requires evidence, a next test, and owner for each diagnosis and marks `userBlame: false`. This taxonomy is original synthesis. [CLM-153] [CLM-154]
 
@@ -168,7 +173,10 @@ Do not claim `accessible` from an automated scan. Record criteria/version/scope,
 
 ## Build the ownership acceptance model
 
-[FIGURE F17.2: Ownership-transfer evidence model. Ten acceptance areas - knowledge, access, telemetry, runbook, release, recovery, support, decisions, open risk, change path - each require customer owner and demonstrated evidence. Customer authority accepts; privileged FDE access is revoked or explicitly bounded.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f17-2-ownership-transfer-evidence.svg" alt="Ownership-transfer model across knowledge, access, telemetry, runbook, release, recovery, support, decisions, open risk, and change path, each with customer owner and demonstrated evidence." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F17.2 - Ownership must be demonstrated.</strong> Customer authority accepts ten operating areas and hidden FDE dependency is removed.</figcaption>
+</figure>
 
 For each area require owner plus demonstrated evidence:
 

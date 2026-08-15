@@ -40,7 +40,7 @@
 - exam blueprint: deferred to Abhyaas
 - book architecture: complete under `project-control/roles/forward-deployed-engineer/books/forward-deployed-engineering/`
 - manuscript(s): Chapters 01-19, front matter, five appendices, learning packs, state handoffs, and immediate QA complete under `content/publications/forward-deployed-engineering/`
-- figure manifest: all 38 frozen placeholders through `F19.2`; production visuals pending Phase 10
+- figure manifest: all 38 final vectors through `F19.2`, registry/production metadata, accessible manuscript insertions, and byte-identical web mirrors complete
 - PDF(s): pending under `output/pdf/`
 - preparation resources: pending
 - certification page: deferred to Abhyaas
@@ -60,7 +60,7 @@
 - [x] 07 chapter blueprints
 - [x] 08 manuscript
 - [x] 09 book QA
-- [ ] 10 visuals
+- [x] 10 visuals
 - [ ] 11 publication
 - [ ] 12 preparation library (deferred)
 - [ ] 13 course decision
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Phase 09 is closed at `a8d9c45`. The 71,194-word manuscript passes all nineteen blueprint mappings, chapter QA/state reconciliation, source/claim/objective/cross-reference checks, duplication and continuity review, executable checks, publication tests/build, demo/rehearsal, and source/build hash verification. Phase 10 owns the frozen 38-item figure plan and may not silently change content.
+Phase 09 is closed at `a8d9c45`. Phase 10 acceptance is complete: all 38 final SVGs, registry and production metadata, captions, alt text, long descriptions, manuscript insertions, chapter state/QA updates, public mirrors, color/grayscale proofs, and deterministic regeneration pass. GitHub #17 awaits this acceptance commit and closure.
 
 ## Unresolved blockers
 
@@ -87,11 +87,11 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 
 ## Quality debt
 
-Phase 10 must preserve legibility, grayscale differentiation, accessibility text, visual semantics, Orchid fictionality, authority boundaries, and web/PDF consistency across all 38 figures.
+No Phase 10 visual debt. Phase 11 must preserve the verified SVG semantics and accessibility metadata during full web/PDF assembly.
 
 ## Exact next action
 
-Define the Komal figure system and deterministic asset pipeline, then produce and verify `F01.1` through `F19.2` against the frozen manifest.
+Commit and push the verified 38-figure set, close Phase 10 issue #17 with evidence, then open Phase 11 publication/PDF assembly without redesigning content or figures.
 
 ## Resume instructions
 

@@ -16,7 +16,7 @@
 - Failure modes/tradeoffs: PASS. Hero, feature, activity, authority, permanent-pilot, and productization failures are treated with repair paths.
 - Examples: PASS. Orchid and all decision drills are fictional/hypothetical and contain no invented public outcome.
 - Source gaps: PASS. No blocking `SOURCE GAP` marker remains.
-- Figure gaps: PASS for Phase 08. `F01.1` and `F01.2` placeholders exist; artwork is correctly deferred.
+- Source gaps/figures: PASS. No blocking source gap; `F01.1` and `F01.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Continuity: PASS. Chapter 2 receives a provisional charter and explicit discovery assumptions.
 - PDF compatibility: PASS after deterministic punctuation normalization; publication validation passes.
 

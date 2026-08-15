@@ -11,7 +11,7 @@
 - Role boundary: PASS. No sales/people/legal/security/risk authority inflation.
 - Failure/tradeoffs: PASS for loudness, false score, permanent escalation, weak delegation, strategy without depth, burnout.
 - Examples: PASS. All portfolio cases explicitly fictional.
-- Source gaps/figures: PASS. No blocking gap; both placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F19.1` and `F19.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. Six Chapter 19 portfolio/dossier tests and 64 cumulative tests pass.
 - Continuity/PDF: PASS to Appendix E and Phase 09.
 

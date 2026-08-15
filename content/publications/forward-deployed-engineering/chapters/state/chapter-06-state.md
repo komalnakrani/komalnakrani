@@ -29,8 +29,8 @@
 
 ## Figures
 
-- `F06.1` annotated C4-style context placeholder present.
-- `F06.2` failure/ownership matrix placeholder present.
+- `F06.1` annotated C4-style context final vector asset and manifest record PASS.
+- `F06.2` failure/ownership matrix final vector asset and manifest record PASS.
 
 ## Project progress
 
@@ -40,7 +40,7 @@
 
 - Interface/data, environment/identity, AI, and governance portions remain Chapters 7-10.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 blueprint mapping found boundaries, walkthroughs, cases, failures, exercise evidence, figures, sources, and handoff represented in complete prose; no unambiguous first-pass content gap was added.
 - 3,834 manuscript words; final Phase 09 depth, duplication, source, and continuity review passes without padding.
 

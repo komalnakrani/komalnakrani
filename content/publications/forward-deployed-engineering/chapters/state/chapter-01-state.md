@@ -34,8 +34,8 @@
 
 ## Figures
 
-- `F01.1` FDE responsibility boundary map - placeholder present.
-- `F01.2` deployed-outcome lifecycle - placeholder present.
+- `F01.1` FDE responsibility boundary map - final vector asset and manifest record PASS.
+- `F01.2` deployed-outcome lifecycle - final vector asset and manifest record PASS.
 
 ## Project progress
 
@@ -45,7 +45,7 @@
 ## Unresolved gaps
 
 - No blocking source gap.
-- Final figures and their production registry records wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 blueprint mapping found all required role/outcome/boundary/artifact/case/failure/figure/handoff elements and added an explicit responsibility-classification/charter exercise.
 - Chapter word count is 5,747 after repair; final Phase 09 depth, duplication, source, and continuity review passes.
 

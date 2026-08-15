@@ -25,7 +25,9 @@ objectiveIds:
   - FDE-K01
   - FDE-K11
   - FDE-K12
-figureIds: []
+figureIds:
+  - FIG-001
+  - FIG-002
 ---
 
 A production deployment can fail while every software task is marked complete.
@@ -112,7 +114,10 @@ The lifecycle used in this book has ten movements:
 9. **Transfer ownership.** Demonstrate that users and operators can perform, diagnose, release, recover, support, and evolve the bounded system.
 10. **Turn field evidence into leverage.** Preserve the customer boundary while converting repeated evidence into product feedback, playbooks, configurable capability, or reusable components.
 
-[FIGURE F01.2: A circular deployed-outcome lifecycle showing the ten movements, with solid forward arrows and dotted evidence-return arrows from verification, launch, stabilization, handoff, and field learning to earlier decisions. The figure distinguishes a software release as one event inside the larger deployment loop.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f01-2-deployed-outcome-lifecycle.svg" alt="Circular lifecycle from discovery and outcome contract through build, verification, launch, stabilization, ownership, and product learning, with evidence returning to earlier decisions." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F01.2 - The deployed-outcome lifecycle.</strong> Release is one event inside a larger evidence loop from discovery through ownership and field learning.</figcaption>
+</figure>
 
 This is not a waterfall. Every later movement can invalidate an earlier assumption. A contract test can reveal that the supposed interface semantics were wrong. A security review can make the selected scope impossible. A canary can show that an aggregate evaluation hid a critical cohort failure. Stabilization can reveal that the support owner lacks the required access. Adoption work can prove that the technically correct interface does not fit the actual workflow.
 
@@ -179,7 +184,10 @@ Some work belongs to a qualified or formally authorized role: legal interpretati
 
 Outside scope also includes work with no defensible relationship to the bounded outcome. Saying no is not abandonment when the request would distract the team or expand risk without evidence.
 
-[FIGURE F01.1: A boundary map with the FDE at the intersection of customer workflow, production engineering, and product learning. Surrounding regions show software engineering, product, security/privacy/safety authority, account/commercial work, and strategy. Overlaps are labeled shared; formal decision rights remain outside the FDE boundary unless explicitly assigned.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f01-1-fde-responsibility-boundary.svg" alt="Boundary map placing the FDE between customer workflow, production engineering, and product learning, with formal authorities outside the shared delivery area." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F01.1 - The FDE responsibility boundary.</strong> The FDE integrates workflow, engineering, and product learning while formal authority remains explicitly assigned.</figcaption>
+</figure>
 
 The classifier should be applied to tasks, not to people. A customer engineer can perform FDE-core work. An FDE can perform supporting implementation. The goal is to clarify the responsibility chain, not defend organizational territory.
 

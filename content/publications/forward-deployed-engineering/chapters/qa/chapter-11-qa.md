@@ -11,7 +11,7 @@
 - Role boundary: PASS. Qualified/formal authority remains separate from model, policy, and FDE evidence work.
 - Failure/tradeoffs: PASS for ambiguity, downstream rejection, unknown completion, dependency failure, feature state, double realism, and debt.
 - Examples: PASS. Synthetic fixture only; no customer data, secret, paid service, or integration/outcome claim.
-- Source gaps/figures: PASS. No blocking gap; both frozen placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F11.1` and `F11.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. Demo is inspectable; 24 cumulative tests cover the five new slice behaviors.
 - Continuity/PDF: PASS to Chapter 12 and publication validation.
 

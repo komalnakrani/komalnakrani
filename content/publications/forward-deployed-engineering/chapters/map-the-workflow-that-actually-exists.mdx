@@ -23,7 +23,9 @@ objectiveIds:
   - FDE-K02
   - FDE-K03
   - FDE-K06
-figureIds: []
+figureIds:
+  - FIG-005
+  - FIG-006
 ---
 
 The most dangerous workflow diagram is the one everyone recognizes and nobody actually follows.
@@ -87,7 +89,10 @@ For example, a request may be `received`, `triaged`, `assigned`, `in-field`, `aw
 
 The state model should name transition evidence. What makes a request `awaiting-approval` rather than merely paused? Who can move it? Can a transition be reversed? Which external system is authoritative? What happens when systems disagree?
 
-[FIGURE F03.1: Orchid current-state swimlane and state map from incoming service request through dispatch, equipment identification, evidence gathering, site inspection, safety approval, inventory, resolution, record update, escalation, and reopen. Solid paths are observed; dashed paths are reported or unresolved. Waiting states and unofficial personal-note/manual channels are visible.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f03-1-orchid-workflow-state-map.svg" alt="Swimlane-style workflow from service request through dispatch, equipment identification, evidence, inspection, approval, inventory, resolution, record update, escalation, and reopen." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F03.1 - Orchid current workflow and state.</strong> Observed work, waiting states, unofficial channels, decisions, and reopen loops stay visible.</figcaption>
+</figure>
 
 ### 3. The decision and evidence table
 
@@ -133,7 +138,10 @@ Place the normal path in the center and surround it with exception families:
 - handoff, ownership, and support;
 - cancellation, reopen, and changed intent.
 
-[FIGURE F03.2: Exception topology around the Orchid normal path. Branches show identifier mismatch, missing manual, stale inventory, low connectivity, policy/approval, safety escalation, API timeout after write, inaccessible interface, support gap, cancellation, and reopened ticket. Each branch names owner, evidence, and return or terminal state.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f03-2-exception-topology.svg" alt="Exception topology around the Orchid normal path, including identifier mismatch, missing manual, stale inventory, low connectivity, approval, API timeout, accessibility, support, cancellation, and reopen." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F03.2 - Exceptions define the real workflow.</strong> Each exception names evidence, owner, response, and a return or terminal state.</figcaption>
+</figure>
 
 The topology prevents exception handling from becoming “show an error.” It asks what work follows, who performs it, which state is authoritative, and how the main path resumes or ends.
 

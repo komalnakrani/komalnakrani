@@ -24,8 +24,8 @@
 
 ## Figures
 
-- `F12.1` layered verification stack placeholder present.
-- `F12.2` risk/criterion-to-evidence traceability placeholder present.
+- `F12.1` layered verification stack final vector asset and manifest record PASS.
+- `F12.2` risk/criterion-to-evidence traceability final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -36,7 +36,7 @@
 
 - Representative adapter, performance, customer identity, UI/accessibility/UAT, provider model, monitoring, migration, and recovery evidence remain explicitly open.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added a worked UAT scenario, five-risk verification exercise, layered evidence design, grader calibration, critical-segment disposition, and failure repairs.
 - 3,529 manuscript words plus executable verification code after repair; final Phase 09 blueprint-depth, duplication, source, and continuity review passes.
 

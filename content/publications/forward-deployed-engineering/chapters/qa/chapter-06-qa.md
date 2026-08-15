@@ -16,7 +16,7 @@
 - Failure modes/tradeoffs: PASS. Ownership, trust, arrow semantics, authority, framework, service granularity, and logo failures have repairs.
 - Examples: PASS. Orchid design is fictional; no public architecture is copied.
 - Source gaps: PASS. No blocking `SOURCE GAP` remains.
-- Figure gaps: PASS for Phase 08. Both placeholders exist.
+- Source gaps/figures: PASS. No blocking source gap; `F06.1` and `F06.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Continuity: PASS. `OA-05` hands explicit arrows/propositions/failures to Chapter 7.
 - PDF compatibility: PASS. Publication validation accepts the MDX.
 

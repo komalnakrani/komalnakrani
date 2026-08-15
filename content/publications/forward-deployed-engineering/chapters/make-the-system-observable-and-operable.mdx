@@ -38,7 +38,9 @@ objectiveIds:
   - FDE-K09
   - FDE-K10
   - FDE-K11
-figureIds: []
+figureIds:
+  - FIG-025
+  - FIG-026
 ---
 
 An observable system helps an operator decide which evidence to inspect next. An operable system gives that operator the authority, runbook, configuration, recovery path, and ownership needed to act.
@@ -66,7 +68,10 @@ For every production promise, record:
 
 `promise -> failure condition -> signal -> segment -> objective/threshold -> owner -> alert/first action -> runbook -> blind spot`
 
-[FIGURE F13.1: Multi-layer signal map. Workflow promises connect to service/dependency, workflow/adoption, data/evidence, AI/policy/review, security/audit, support, capacity/cost, and outcome signals. Correlation and version identifiers link layers; privacy/cardinality/retention constraints bound collection.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f13-1-multi-layer-signal-map.svg" alt="Signal map connecting workflow promises to service, dependency, adoption, data, AI, policy, security, audit, support, capacity, cost, and outcome signals." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F13.1 - Observe the workflow, not only infrastructure.</strong> Correlation and version identity connect signals while privacy, cardinality, and retention bound collection.</figcaption>
+</figure>
 
 Examples:
 
@@ -221,7 +226,10 @@ Inject a synthetic mismatch. Confirm the route reaches a qualified owner, the li
 
 ## Follow an evidence-first diagnostic tree
 
-[FIGURE F13.2: Slow or untrusted recommendation diagnostic tree. Begin with user symptom and cohort. Branch through service/dependency health, connectivity/latency/fallback, equipment binding and evidence provenance/freshness, model bundle/output, policy/authorization/approval, UI/workflow/support, then containment and owner action.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f13-2-recommendation-diagnostic-tree.svg" alt="Diagnostic tree for a slow or untrusted recommendation, branching from user symptom and cohort through dependency, connectivity, equipment binding, evidence freshness, model bundle, policy, authorization, UI, support, containment and owner action." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F13.2 - Diagnose from symptom to boundary.</strong> Evidence-first branching prevents an immediate and often-wrong code change.</figcaption>
+</figure>
 
 For “slow or untrusted recommendation”:
 

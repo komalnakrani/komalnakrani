@@ -15,7 +15,7 @@
 - Failure modes/tradeoffs: PASS. VPC, staging, credentials, secrets, region, break-glass, capacity have repair paths.
 - Examples: PASS. Companion identities/configs are synthetic; secret-looking fixture is explicitly non-real and rejected.
 - Source gaps: PASS. No blocking `SOURCE GAP`.
-- Figures: PASS for Phase 08.
+- Source gaps/figures: PASS. No blocking source gap; `F08.1` and `F08.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 11 cumulative tests; no external dependency or secret.
 - Continuity: PASS to bounded AI design.
 - PDF compatibility: PASS through publication validation.

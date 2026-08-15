@@ -24,8 +24,8 @@
 
 ## Figures
 
-- `F19.1` portfolio heatmap placeholder present.
-- `F19.2` capability-evidence path placeholder present.
+- `F19.1` portfolio heatmap final vector asset and manifest record PASS.
+- `F19.2` capability-evidence path final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -36,7 +36,7 @@
 
 - Real portfolio authority, staffing, outcomes, and career decisions remain organizational/personal context.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added a decision-grade portfolio record, four-engagement allocation, cadence/staffing, detailed delegation, three-altitude escalation, capacity ladder, technical-depth habit, six-month growth plan, dossier review, exercise, and failure repairs.
 - The second depth pass added the weekly decision review, protected stop/reopen state, and founding-versus-mature leadership transfer.
 - 3,777 manuscript words plus executable portfolio evidence after Phase 09 depth repair.

@@ -24,8 +24,8 @@
 
 ## Figures
 
-- `F14.1` commit-to-evidence-to-cohort path placeholder present.
-- `F14.2` state/consequence recovery tree placeholder present.
+- `F14.1` commit-to-evidence-to-cohort path final vector asset and manifest record PASS.
+- `F14.2` state/consequence recovery tree final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -36,7 +36,7 @@
 
 - Customer/production artifact signing, pipeline, migration load, restore, break-glass, owner-approved targets, and real cohort evidence remain future context-specific work.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added complete release identity/provenance review, a gated Orchid change walkthrough, compatibility reasoning, a partial-state option comparison, and a reproducible release/recovery exercise.
 - The second depth pass added feature-control lifecycle, semantic restore verification, failed-dependency break-glass, and cross-change recovery selection.
 - 2,740 manuscript words plus executable release/recovery code after Phase 09 depth repair.

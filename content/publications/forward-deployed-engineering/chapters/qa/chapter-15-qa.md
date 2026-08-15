@@ -11,7 +11,7 @@
 - Role boundary: PASS. FDE recommends; designated owners accept risk/release.
 - Failure/tradeoffs: PASS for missing evidence, deadline, small cohort, weak canary, missing command/support, improvised triggers.
 - Examples: PASS. Orchid remains fictional; no production launch/outcome claim.
-- Source gaps/figures: PASS. No blocking gap; both placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F15.1` and `F15.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 43 cumulative tests; gaps delay and exceptions stay conditional.
 - Continuity/PDF: PASS to Chapter 16 and publication validation.
 

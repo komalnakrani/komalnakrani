@@ -37,7 +37,9 @@ objectiveIds:
   - FDE-K08
   - FDE-K09
   - FDE-K12
-figureIds: []
+figureIds:
+  - FIG-019
+  - FIG-020
 ---
 
 Security does not arrive when a reviewer opens a checklist. Governance does not arrive when a committee name appears on a diagram.
@@ -87,7 +89,10 @@ Use this sequence:
 7. **Evidence.** Which versioned result shows what happened, in which environment, at what time, with which limits?
 8. **Owner disposition.** Who operates/remediates the control, and which designated authority approves, rejects, restricts, or accepts an exception?
 
-[FIGURE F10.1: Risk-to-control-to-evidence chain. Asset/obligation and threat/failure produce a contextual risk statement. The chain continues through control objective, implementation, verification, versioned evidence, operating owner, and designated approval or exception. Feedback arrows send failed verification and changed context back to threat/risk discovery.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f10-1-risk-control-evidence-chain.svg" alt="Chain from asset and threat through contextual risk, control objective, implementation, verification, versioned evidence, operating owner, and designated approval or exception, with failed verification returning to discovery." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F10.1 - Control claims require executed evidence.</strong> Contextual risk flows through objective, implementation, verification, ownership, and authority.</figcaption>
+</figure>
 
 This is an original synthesis structure for FDE delivery, not a formal external standard. [CLM-075]
 
@@ -309,7 +314,10 @@ Create an authority map for each consequential decision:
 | accessibility release | product/engineering | accessibility/user owner | designated release authority | test/remediate; no universal conformance claim |
 | production exposure | delivery/product/operations | all relevant owners | named business/release authority | recommend cohort/stop; no unilateral risk acceptance |
 
-[FIGURE F10.2: Authority and escalation map. Evidence preparation flows from FDE/engineering to domain, security, privacy, operations, accessibility, legal, and business owners. Formal approval or exception flows only from explicitly designated authority. A feedback path requests missing evidence; a stop path blocks exposure when required authority or evidence is absent.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f10-2-authority-escalation-map.svg" alt="Authority map routing FDE and engineering evidence to domain, security, privacy, operations, accessibility, legal, and business owners, with missing evidence returning and absent authority blocking exposure." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F10.2 - Evidence flows to authority.</strong> The FDE prepares and recommends; designated authorities approve, reject, or request evidence.</figcaption>
+</figure>
 
 The map must name actual roles or groups in the customer context, delegation scope, quorum if relevant, response time, escalation, expiry, and substitute. A generic “security approved” field is weak if no accountable identity, scope, date, evidence bundle, or conditions are recorded.
 

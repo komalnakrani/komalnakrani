@@ -29,8 +29,8 @@
 
 ## Figures
 
-- `F08.1` deployment topology placeholder present.
-- `F08.2` identity flow placeholder present.
+- `F08.1` deployment topology final vector asset and manifest record PASS.
+- `F08.2` identity flow final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -41,7 +41,7 @@
 
 - Production identity/topology/capacity values remain fictional dependencies.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added a three-environment review exercise with identity, network, configuration, secret, time, isolation, capacity, connectivity, recovery, and ownership failure injections.
 - 3,308 manuscript words after repair; final Phase 09 blueprint-depth, duplication, source, and continuity review passes.
 

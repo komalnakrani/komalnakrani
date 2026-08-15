@@ -25,8 +25,8 @@
 
 ## Figures
 
-- `F11.1` end-to-end vertical-slice trace placeholder present.
-- `F11.2` component-to-owner/test/config/signal/runbook map placeholder present.
+- `F11.1` end-to-end vertical-slice trace final vector asset and manifest record PASS.
+- `F11.2` component-to-owner/test/config/signal/runbook map final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -37,7 +37,7 @@
 
 - Real adapters, customer environment, workload identity, production UI, telemetry exporter, performance, and recovery remain future representative evidence.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added a reviewer trace, consequential failure drill, clean-checkout supportability test, and explicit implementation failure repairs.
 - 4,102 manuscript words plus executable code after repair; final Phase 09 blueprint-depth, duplication, source, and continuity review passes.
 

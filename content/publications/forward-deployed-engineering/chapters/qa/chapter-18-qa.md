@@ -11,7 +11,7 @@
 - Role boundary: PASS. Product roadmap/customer-data authority explicit.
 - Failure/tradeoffs: PASS for DRY/platform, leakage, one-context prevalence, compatibility/maintenance, premature abstraction.
 - Examples: PASS. Synthetic classifications only.
-- Source gaps/figures: PASS. No blocking gap; both placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F18.1` and `F18.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 58 cumulative tests.
 - Continuity/PDF: PASS to Chapter 19 and publication validation.
 

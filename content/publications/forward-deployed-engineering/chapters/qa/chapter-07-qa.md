@@ -15,7 +15,7 @@
 - Failure modes/tradeoffs: PASS. Schema, retry, exactly-once, null, canonical model, version, and owner failures have repairs.
 - Examples: PASS. All companion data/effects are synthetic.
 - Source gaps: PASS. No blocking `SOURCE GAP`.
-- Figures: PASS for Phase 08. Both placeholders exist.
+- Source gaps/figures: PASS. No blocking source gap; `F07.1` and `F07.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. Seven Node built-in tests; no dependency, secret, paid service, or customer data.
 - Continuity: PASS. Chapter 8 receives explicit environment/identity requirements.
 - PDF compatibility: PASS through publication validation.

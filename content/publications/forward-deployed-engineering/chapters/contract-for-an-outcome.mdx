@@ -26,7 +26,9 @@ objectiveIds:
   - FDE-K07
   - FDE-K10
   - FDE-K12
-figureIds: []
+figureIds:
+  - FIG-007
+  - FIG-008
 ---
 
 A convincing prototype can be evidence of technical possibility and still be evidence against the deployment.
@@ -102,7 +104,10 @@ Guardrails show whether apparent benefit is achieved by an unacceptable trade. O
 
 A guardrail can stop or reduce rollout even when the primary outcome improves.
 
-[FIGURE F04.1: Orchid metric tree with the contracted workflow outcome at the top; branches for leading workflow, adoption/use, system/quality, and guardrails. Arrows show hypotheses rather than guaranteed causality. Red gaming paths show ticket closure improving through exclusion, transfer, or premature closure while safe resolution worsens.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f04-1-orchid-metric-tree.svg" alt="Metric tree with safe resolution outcome above workflow, adoption, system quality, and guardrail branches, plus gaming paths where closure improves while safe resolution worsens." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F04.1 - Outcome evidence needs guardrails.</strong> Metric branches show hypotheses and gaming paths, not guaranteed causality.</figcaption>
+</figure>
 
 ## Define every measure as a contract
 
@@ -384,7 +389,10 @@ For each outcome, guardrail, scope, and gate decision, name four actions:
 - **execute:** performs the change or operation;
 - **inform:** needs timely decision/result information.
 
-[FIGURE F04.2: Orchid decision-rights matrix mapping outcome definition, safety rule, privacy/data boundary, security exception, pilot scope, technical release, go/no-go, incident command, and handoff acceptance to recommend, approve, execute, and inform roles. FDE recommendations are visually separate from formal acceptance.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f04-2-decision-rights-matrix.svg" alt="Decision-rights matrix for outcome, safety, privacy, security exception, pilot scope, release, go or no-go, incident command, and handoff, separating FDE recommendation from approval." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F04.2 - Decision rights stay named.</strong> Recommend, approve, execute, and inform are separated for every consequential decision.</figcaption>
+</figure>
 
 The FDE can recommend the technical path and maintain the evidence chain. Orchid’s service owner defines/accepts business outcome consequences. Qualified safety owners define approval rules. Security/privacy/regional owners handle their formal decisions. The customer’s rollout authority accepts go/no-go consequences. Execution can belong to different engineering or operations teams.
 

@@ -18,13 +18,13 @@ Turn the frozen `F01.1` through `F19.2` specifications into a coherent, accessib
 
 ## Acceptance criteria
 
-- [ ] `F01.1` through `F19.2` each resolve to one final source-controlled figure and publication asset.
-- [ ] No inherited Alpesh identity, image, text, or content appears in the visual set.
-- [ ] Every figure matches the frozen Phase 09 purpose and does not imply unsupported outcome, certification, compliance, safety, security, or authority.
-- [ ] Every asset has figure ID, title, caption, alt text, long-description disposition, chapter, source type, dimensions/viewBox, and status metadata.
-- [ ] Complex figures remain understandable in grayscale and at final PDF scale.
-- [ ] Web and PDF paths resolve; no placeholder syntax remains in canonical chapters.
-- [ ] Visual QA, publication validation/tests, companion tests, Astro build, demo/rehearsal, hash verification, and `git diff --check` pass.
+- [x] `F01.1` through `F19.2` each resolve to one final source-controlled figure and publication asset.
+- [x] No inherited Alpesh identity, image, text, or content appears in the visual set.
+- [x] Every figure matches the frozen Phase 09 purpose and does not imply unsupported outcome, certification, compliance, safety, security, or authority.
+- [x] Every asset has figure ID, title, caption, alt text, long-description disposition, chapter, source type, dimensions/viewBox, and status metadata.
+- [x] Complex figures remain understandable in grayscale and at final PDF scale.
+- [x] Web and PDF paths resolve; no placeholder syntax remains in canonical chapters.
+- [x] Visual QA, publication validation/tests, companion tests, Astro build, demo/rehearsal, hash verification, and `git diff --check` pass.
 
 ## Handoff
 

@@ -11,7 +11,7 @@
 - Role boundary: PASS. Qualified owners define/accept domain consequences.
 - Failure/tradeoffs: PASS for aggregate, leakage, graders, tools, human review, abstention, versioning, latency/cost.
 - Examples: PASS. Synthetic only; no model/provider outcome claim.
-- Source gaps/figures: PASS. No blocking gap; both placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F09.1` and `F09.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 15 cumulative tests; deterministic default, no paid service/secret.
 - Continuity/PDF: PASS to Chapter 10 and publication validation.
 

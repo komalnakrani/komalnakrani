@@ -28,8 +28,8 @@
 
 ## Figures
 
-- `F02.1` stakeholder/evidence map placeholder present.
-- `F02.2` evidence ladder placeholder present.
+- `F02.1` stakeholder/evidence map final vector asset and manifest record PASS.
+- `F02.2` evidence ladder final vector asset and manifest record PASS.
 
 ## Project progress
 
@@ -39,7 +39,7 @@
 ## Unresolved gaps
 
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 blueprint mapping found discovery/access/evidence/trust/case/failure/figure/handoff elements and added an explicit two-week discovery/conflicting-evidence exercise.
 - 5,012 manuscript words after repair; final Phase 09 depth, duplication, source, and continuity review passes.
 

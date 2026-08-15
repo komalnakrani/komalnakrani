@@ -30,8 +30,8 @@
 
 ## Figures
 
-- `F03.1` Orchid swimlane/state map placeholder present.
-- `F03.2` exception topology placeholder present.
+- `F03.1` Orchid swimlane/state map final vector asset and manifest record PASS.
+- `F03.2` exception topology final vector asset and manifest record PASS.
 
 ## Project progress
 
@@ -42,7 +42,7 @@
 
 - Fictional-case measurement gaps remain deliberate inputs to Chapter 4; no public outcome is claimed.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 blueprint mapping found all workflow/state/evidence/exception/case/failure/figure/handoff elements and added an explicit multi-view mapping and validation exercise.
 - 4,729 manuscript words after repair; final Phase 09 depth, duplication, source, and continuity review passes.
 

@@ -29,8 +29,8 @@
 
 ## Figures
 
-- `F04.1` metric tree placeholder present.
-- `F04.2` decision-rights matrix placeholder present.
+- `F04.1` metric tree final vector asset and manifest record PASS.
+- `F04.2` decision-rights matrix final vector asset and manifest record PASS.
 
 ## Project progress
 
@@ -40,7 +40,7 @@
 
 - Fictional baseline, targets, thresholds, windows, and formal owners remain explicit synthetic-case inputs, not source gaps.
 - No blocking external source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 blueprint mapping found all metric/outcome/guardrail/adoption/attribution/rights/criteria/case/failure/figure/handoff elements and added an explicit contract/gaming/segment exercise.
 - 4,211 manuscript words after repair; final Phase 09 depth, duplication, source, and continuity review passes.
 

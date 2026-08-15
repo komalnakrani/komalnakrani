@@ -16,7 +16,7 @@
 - Failure modes/tradeoffs: PASS. Sponsor-only, data-first, interview theater, access accumulation, contradiction, retention/reproducibility, and representation risks have repair paths.
 - Examples: PASS. Orchid examples are fictional; no frequency or outcome is invented.
 - Source gaps: PASS. No blocking `SOURCE GAP` remains.
-- Figure gaps: PASS for Phase 08. Both frozen placeholders exist.
+- Source gaps/figures: PASS. No blocking source gap; `F02.1` and `F02.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Continuity: PASS. `OA-01` hands explicit evidence, access, stakeholder, and gap state to Chapter 3.
 - PDF compatibility: PASS. Publication validation accepts the canonical MDX.
 

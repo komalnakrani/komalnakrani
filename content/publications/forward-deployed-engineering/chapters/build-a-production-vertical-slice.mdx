@@ -38,7 +38,9 @@ objectiveIds:
   - FDE-K08
   - FDE-K09
   - FDE-K11
-figureIds: []
+figureIds:
+  - FIG-021
+  - FIG-022
 ---
 
 A vertical slice is small in breadth and complete in consequence.
@@ -62,7 +64,10 @@ For fictional Orchid Assist, the slice begins with a technician opening a synthe
 9. emit a minimized audit event and inspectable metric;
 10. return a visible state: ready for review, blocked, fallback, or reconciliation.
 
-[FIGURE F11.1: End-to-end vertical-slice trace. Synthetic ticket and intent flow through environment/feature control, equipment reconciliation and contract, approved evidence store, inventory adapter, bounded model, qualified approval, deterministic policy, audit, metric, and review response. Branches show missing/ambiguous equipment blocked early, dependency fallback, rejected inventory blocked, and unknown completion routed to reconciliation.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f11-1-vertical-slice-trace.svg" alt="End-to-end trace from synthetic ticket and intent through environment control, equipment reconciliation, evidence store, inventory adapter, bounded model, qualified approval, deterministic policy, audit, metric, and response." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F11.1 - One consequential path, end to end.</strong> The slice crosses contracts, evidence, policy, approval, audit, metrics, and controlled failure.</figcaption>
+</figure>
 
 That sentence is the implementation contract. It includes the failure states, not just the successful result.
 
@@ -108,7 +113,10 @@ Choose realism deliberately. A local double is appropriate for deterministic con
 
 For every component, record purpose, owner, contract, configuration, signal, failure behavior, test, runbook, and debt.
 
-[FIGURE F11.2: Component-to-owner/test/config/signal/runbook map. Rows cover vertical-slice orchestrator, equipment contract/reconciliation, evidence store, inventory adapter, model interface, policy, authorization, audit, metrics, and feature/environment configuration. Columns link implementation file, owner, contract/version, tests, configuration, signal, failure state, runbook, and open debt.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f11-2-component-supportability-map.svg" alt="Supportability matrix for orchestrator, equipment contract, evidence store, inventory adapter, model, policy, authorization, audit, metrics, and feature configuration across owner, test, signal, runbook, and debt." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F11.2 - Code is not supportability.</strong> Every runtime component connects to owner, contract, test, configuration, signal, failure, runbook, and debt.</figcaption>
+</figure>
 
 The companion's map is intentionally compact:
 

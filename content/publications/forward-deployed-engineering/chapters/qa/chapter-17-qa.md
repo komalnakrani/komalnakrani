@@ -11,7 +11,7 @@
 - Role boundary: PASS. Customer authority/ownership and FDE access exit explicit.
 - Failure/tradeoffs: PASS for blame, training-around-defect, login-only, document-only, no access, hidden FDE dependency.
 - Examples: PASS. Synthetic only; no real adoption/handoff outcome.
-- Source gaps/figures: PASS. No blocking gap; both placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F17.1` and `F17.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 53 cumulative tests.
 - Continuity/PDF: PASS to Chapter 18 and publication validation.
 

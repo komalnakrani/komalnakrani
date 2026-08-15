@@ -16,7 +16,7 @@
 - Failure modes/tradeoffs: PASS. Happy path, idealized future, unreadable diagram, false owner/frequency, tool worship, and error-message exceptions have repair paths.
 - Examples: PASS. Orchid findings are explicitly constructed; measurements remain gaps unless defined as synthetic.
 - Source gaps: PASS. No blocking `SOURCE GAP` remains.
-- Figure gaps: PASS for Phase 08. Both frozen placeholders exist.
+- Source gaps/figures: PASS. No blocking source gap; `F03.1` and `F03.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Continuity: PASS. `OA-02` hands a decision-ready current-state model and problem statement to Chapter 4.
 - PDF compatibility: PASS. Publication validation accepts the canonical MDX.
 

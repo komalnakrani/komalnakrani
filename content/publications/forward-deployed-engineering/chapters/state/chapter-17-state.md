@@ -24,8 +24,8 @@
 
 ## Figures
 
-- `F17.1` adoption-friction map placeholder present.
-- `F17.2` ownership-transfer model placeholder present.
+- `F17.1` adoption-friction map final vector asset and manifest record PASS.
+- `F17.2` ownership-transfer model final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -36,7 +36,7 @@
 
 - Real representative-user, accessibility, customer-operator, authority, and access-revocation evidence remain deployment-specific.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added testable friction records, five non-use patterns, adoption evidence limits, whole-task observation, accessibility/task layers, demonstrated acceptance scenarios, access-state transfer, explicit exception, exercise, and failure repairs.
 - The second depth pass added repair-experiment routing, ownership/engagement exit states, and an explicit absence-of-FDE test.
 - 2,939 manuscript words plus executable ownership evidence after Phase 09 depth repair.

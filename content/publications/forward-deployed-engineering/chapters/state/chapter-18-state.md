@@ -24,8 +24,8 @@
 
 ## Figures
 
-- `F18.1` reuse ladder placeholder present.
-- `F18.2` field-to-product packet placeholder present.
+- `F18.1` reuse ladder final vector asset and manifest record PASS.
+- `F18.2` field-to-product packet final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -36,7 +36,7 @@
 
 - Real independent contexts, product owner/roadmap, maintenance economics, and customer contractual review remain future evidence.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 added a bounded outcome argument, worked pattern ledger, negative cases, twelve-artifact classification, contract-cost/reversibility analysis, consequence-versus-frequency decision, filled packet review, exercise, and failure repairs.
 - The second depth pass added founding-versus-mature organization transfer, a product-learning review agenda, and preservation of rejected learning.
 - 3,570 manuscript words plus executable leverage evidence after Phase 09 depth repair.

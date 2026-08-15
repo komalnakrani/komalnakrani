@@ -22,7 +22,9 @@ objectiveIds:
   - FDE-K02
   - FDE-K08
   - FDE-K12
-figureIds: []
+figureIds:
+  - FIG-003
+  - FIG-004
 ---
 
 The first technical failure in a deployment often occurs before anyone writes code. It happens when the team enters the customer system with the wrong permission, the wrong witnesses, or the wrong standard of evidence.
@@ -78,7 +80,10 @@ For each person or group, consider at least six dimensions:
 5. **Influence.** How can this person accelerate, resist, interpret, or reshape the deployment?
 6. **Decision authority.** Which named choice can this person approve, reject, accept, or escalate?
 
-[FIGURE F02.1: A stakeholder and evidence map showing impact, knowledge, access, responsibility, influence, and decision authority as separate dimensions. The Orchid sponsor has influence and business authority but not complete workflow knowledge; technicians have high impact and workflow knowledge but no authority to accept regional data risk; security and regional owners hold specific decisions.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f02-1-stakeholder-evidence-map.svg" alt="Stakeholder matrix showing sponsor, technician, regional owner, security owner, and FDE across impact, workflow knowledge, access, influence, responsibility, and authority." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F02.1 - Stakeholders are not interchangeable.</strong> Impact, knowledge, access, influence, responsibility, and decision authority are recorded separately.</figcaption>
+</figure>
 
 The dimensions may point in different directions. A sponsor may have high influence and business authority but limited knowledge of field exceptions. A technician may have deep workflow knowledge and high impact but no authority to accept privacy risk. A platform engineer may control access to an API but not own the service operation that depends on it. A support analyst may see failure patterns that leadership dashboards omit.
 
@@ -104,7 +109,10 @@ This book uses five practical levels:
 - **Reproduced.** The team can trigger or reconstruct the behavior under controlled, documented conditions.
 - **Production evidence.** The behavior is supported by live operating evidence across the bounded context and observation window.
 
-[FIGURE F02.2: An evidence ladder from reported to observed, measured, reproduced, and production evidence. Side annotations show that movement upward does not make evidence universal: every rung retains source, context, sample, confidence, contradiction, and limitation.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f02-2-evidence-ladder.svg" alt="Five-step evidence ladder from reported to observed, measured, reproduced, and production evidence, with source, context, sample, confidence, contradiction, and limitation retained at every rung." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F02.2 - Evidence ladder with retained limits.</strong> Confidence can rise from reported to production evidence without making any observation universal.</figcaption>
+</figure>
 
 The ladder is not a ranking of human worth. Reported evidence can reveal a safety consequence no event log contains. Production metrics can be misleading when event semantics changed. A reproduced failure may be more useful for engineering than a weak production correlation. The ladder helps the team state what kind of support it has.
 

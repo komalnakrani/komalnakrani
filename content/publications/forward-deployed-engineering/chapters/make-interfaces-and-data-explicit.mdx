@@ -28,7 +28,9 @@ objectiveIds:
   - FDE-K06
   - FDE-K07
   - FDE-K09
-figureIds: []
+figureIds:
+  - FIG-013
+  - FIG-014
 ---
 
 An interface is not explicit because its JSON parses.
@@ -92,7 +94,10 @@ Example:
 - Invalid/multiple: workflow blocks suggestion and enters reconciliation.
 - Provenance: registry version and observation timestamp retained.
 
-[FIGURE F07.2: Data-contract anatomy for Orchid equipment evidence showing field type, semantic meaning/non-meaning, proposition owner, provenance, quality rule, version, sensitivity, invalid/missing/conflicting behavior, and exception owner. A valid schema with ambiguous business meaning is contrasted with a complete contract.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f07-2-data-contract-anatomy.svg" alt="Data-contract anatomy for Orchid equipment evidence, contrasting a valid but ambiguous schema with semantic meaning, proposition owner, provenance, quality rule, version, sensitivity, and invalid or conflicting behavior." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F07.2 - A contract is more than a schema.</strong> Meaning, provenance, quality, version, sensitivity, and exception behavior complete the field definition.</figcaption>
+</figure>
 
 The companion implements this distinction. A synthetic record can satisfy structural fields and still fail the Region West residency rule. The validator is deliberately small and provider-neutral; it demonstrates that semantic checks sit alongside structure.
 
@@ -157,7 +162,10 @@ The companion `IntentLedger` demonstrates:
 
 The first Orchid scope keeps ERP integration read-only. The ledger prepares the concept without authorizing a write path.
 
-[FIGURE F07.1: Sequence diagram from ticket/equipment confirmation through manual/inventory reads with correlation, timeout, retry decision, idempotent intent, unknown state, status lookup, and reconciliation. The user sees explicit uncertain state; no duplicate effect is hidden.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f07-1-integration-reconciliation-sequence.svg" alt="Sequence from ticket and equipment confirmation through manual and inventory reads, showing correlation, timeout, retry decision, idempotent intent, unknown state, status lookup, and reconciliation." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F07.1 - Intent survives partial failure.</strong> Correlation, idempotent intent, status lookup, and reconciliation make uncertainty visible.</figcaption>
+</figure>
 
 ## Do not promise exactly-once business effects
 

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">F13.2 — Diagnose from symptom to boundary</title><desc id="desc">Diagnostic tree for a slow or untrusted recommendation, branching from user symptom and cohort through dependency, connectivity, equipment binding, evidence freshness, model bundle, policy, authorization, UI, support, containment and owner action. Reading order: Symptom + cohort: Slow · absent · untrusted; Service path: Dependency · network · fallback; Evidence path: Equipment · provenance · freshness; Decision path: Model bundle · policy · approval; Workflow path: UI · task · support; Contain + own: Safe state · next evidence · owner.</desc>
+  <defs><style>text{font-family:&quot;Hanken Grotesk&quot;,&quot;Helvetica Neue&quot;,sans-serif}.mono{font-family:monospace}</style><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2C4A6E"/></marker></defs>
+  <rect width="1200" height="760" fill="#FFFFFF"/><path d="M0 132 H1200 M0 690 H1200" stroke="#D1D1D1"/>
+  <text x="60" y="58" class="mono" font-size="13" letter-spacing="2" fill="#2C4A6E">F13.2 · FORWARD DEPLOYED ENGINEERING</text>
+  <text x="60" y="103" text-anchor="start" font-size="30" font-weight="700" fill="#121212" class=""><tspan x="60" dy="0">Diagnose from symptom to boundary</tspan></text>
+  <g><g>
+    <rect x="390" y="175" width="420" height="125" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="390" y="175" width="6" height="125" rx="3" fill="#2C4A6E"/>
+    <text x="412" y="209" text-anchor="start" font-size="17" font-weight="700" fill="#121212" class=""><tspan x="412" dy="0">Symptom + cohort</tspan></text>
+    <text x="412" y="251" font-size="15" font-weight="450" fill="#454545"><tspan x="412" dy="0">• Slow · absent · untrusted</tspan></text>
+  </g><g>
+    <rect x="60" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="60" y="420" width="6" height="165" rx="3" fill="#454545"/>
+    <text x="82" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="82" dy="0">Service path</tspan></text>
+    <text x="82" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="82" dy="0">• Dependency · network ·</tspan><tspan x="82" dy="18">fallback</tspan></text>
+  </g><g>
+    <rect x="279.6" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="279.6" y="420" width="6" height="165" rx="3" fill="#2C4A6E"/>
+    <text x="301.6" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="301.6" dy="0">Evidence path</tspan></text>
+    <text x="301.6" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="301.6" dy="0">• Equipment · provenance</tspan><tspan x="301.6" dy="18">· freshness</tspan></text>
+  </g><g>
+    <rect x="499.2" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="499.2" y="420" width="6" height="165" rx="3" fill="#454545"/>
+    <text x="521.2" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="521.2" dy="0">Decision path</tspan></text>
+    <text x="521.2" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="521.2" dy="0">• Model bundle · policy ·</tspan><tspan x="521.2" dy="18">approval</tspan></text>
+  </g><g>
+    <rect x="718.8" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="718.8" y="420" width="6" height="165" rx="3" fill="#2C4A6E"/>
+    <text x="740.8" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="740.8" dy="0">Workflow path</tspan></text>
+    <text x="740.8" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="740.8" dy="0">• UI · task · support</tspan></text>
+  </g><g>
+    <rect x="938.4" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="938.4" y="420" width="6" height="165" rx="3" fill="#454545"/>
+    <text x="960.4" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="960.4" dy="0">Contain + own</tspan></text>
+    <text x="960.4" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="960.4" dy="0">• Safe state · next</tspan><tspan x="960.4" dy="18">evidence · owner</tspan></text>
+  </g><path d="M 600 305 L 160.8 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 600 305 L 380.40000000000003 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 600 305 L 600 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 600 305 L 819.5999999999999 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 600 305 L 1039.2 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/></g>
+  <g class="mono" font-size="12" fill="#767676"><line x1="60" y1="721" x2="92" y2="721" stroke="#454545" stroke-width="3"/><text x="104" y="725">observed / required</text><line x1="290" y1="721" x2="322" y2="721" stroke="#767676" stroke-width="2" stroke-dasharray="7 6"/><text x="334" y="725">boundary / proposed</text><path d="M555 708 l13 13 -13 13 -13 -13 z" fill="#E7ECF2" stroke="#2C4A6E"/><text x="580" y="725">decision</text><text x="1140" y="725" text-anchor="end">ORCHID · FICTIONAL / SYNTHETIC</text></g>
+</svg>

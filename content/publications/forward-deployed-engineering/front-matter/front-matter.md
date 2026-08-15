@@ -28,7 +28,7 @@ This book treats a deployment as a decision system. Every chapter creates eviden
 - Use Chapters 15-17 for readiness, stabilization, and ownership.
 - Use Chapters 18-19 only after bounded field evidence exists.
 - Complete the learning packs; they are marked `NOT FOR LIVE CERTIFICATION BANK` and are not a certification exam.
-- Treat figure placeholders as frozen production IDs until Phase 10 artwork replaces them.
+- Treat final figures `F01.1` through `F19.2` as decision artifacts: read their visible structure with the caption and use the embedded long description when visual detail is inaccessible.
 
 The book assumes production-engineering basics. Appendix A contains reusable artifact structures; Appendix B contains gates; Appendix C explains the executable companion; Appendix D defines terminology/source use; Appendix E indexes the completed fictional dossier.
 

@@ -11,7 +11,7 @@
 - Role boundary: PASS. Customer command/comms/specialist authority explicit.
 - Failure/tradeoffs: PASS for debug-before-command, speculative ETA, restore-only, blame, evidence/containment, AI quality.
 - Examples: PASS. Synthetic incident only; no real outcome/root-cause claim.
-- Source gaps/figures: PASS. No blocking gap; both placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F16.1` and `F16.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 48 cumulative tests.
 - Continuity/PDF: PASS to Chapter 17 and publication validation.
 

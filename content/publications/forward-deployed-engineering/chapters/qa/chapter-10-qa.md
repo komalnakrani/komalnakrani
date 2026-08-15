@@ -11,7 +11,7 @@
 - Role boundary: PASS. Evidence preparation is explicitly separated from formal legal/security/privacy/safety/audit/accessibility/business authority.
 - Failure/tradeoffs: PASS for checklist theater, framework naming, logging, access, reviewer workload, exceptions, and break-glass dependency.
 - Examples: PASS. Orchid remains fictional; no compliance, certification, security, safety, or outcome claim.
-- Source gaps/figures: PASS. No blocking gap; both frozen placeholders present.
+- Source gaps/figures: PASS. No blocking source gap; `F10.1` and `F10.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Companion: PASS. 19 cumulative tests; documentation-only control fails, evidence remains pending approval, authority is scoped, audit is minimized.
 - Continuity/PDF: PASS to Chapter 11 and publication validation.
 

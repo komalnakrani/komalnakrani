@@ -16,7 +16,7 @@
 - Failure modes/tradeoffs: PASS. Feature slicing, hidden dependency, pilot exposure, false precision, and deadline pressure have repair paths.
 - Examples: PASS. All Orchid and stopped-deployment facts are explicitly fictional.
 - Source gaps: PASS. No blocking `SOURCE GAP` remains.
-- Figure gaps: PASS for Phase 08. Both placeholders exist.
+- Source gaps/figures: PASS. No blocking source gap; `F05.1` and `F05.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Continuity: PASS. `OA-04` hands explicit boundaries/dependencies to Chapter 6.
 - PDF compatibility: PASS. Publication validation accepts the MDX.
 

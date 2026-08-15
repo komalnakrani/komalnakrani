@@ -24,8 +24,8 @@
 
 ## Figures
 
-- `F15.1` evidence-to-decision readiness gate placeholder present.
-- `F15.2` rollout-pattern comparison placeholder present.
+- `F15.1` evidence-to-decision readiness gate final vector asset and manifest record PASS.
+- `F15.2` rollout-pattern comparison final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -36,7 +36,7 @@
 
 - Real customer evidence, authority, cohort, user/support readiness, and production observation remain context-specific.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 expanded the criterion table, option comparison, pattern selection, critical-case window, trigger/exception records, conflicting-stakeholder exercise, and failure repairs.
 - The second depth pass added post-exposure dispositions, bundle stability, migration cutover transfer, and a final go/no-go record.
 - 2,565 manuscript words plus executable readiness code after Phase 09 depth repair.

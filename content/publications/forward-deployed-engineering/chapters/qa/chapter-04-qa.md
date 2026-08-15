@@ -16,7 +16,7 @@
 - Failure modes/tradeoffs: PASS. Vanity, aggregate, target/baseline, guardrail/action, causal, and authority failures have repairs.
 - Examples: PASS. No fictional Orchid number is represented as measured.
 - Source gaps: PASS. No blocking `SOURCE GAP` remains.
-- Figure gaps: PASS for Phase 08. Both placeholders exist.
+- Source gaps/figures: PASS. No blocking source gap; `F04.1` and `F04.2` final vector assets, registry records, alt text, long descriptions, grayscale differentiation, and small-size review pass.
 - Continuity: PASS. `OA-03` gives Chapter 5 decision criteria for safe scope.
 - PDF compatibility: PASS. Publication validation accepts the MDX.
 

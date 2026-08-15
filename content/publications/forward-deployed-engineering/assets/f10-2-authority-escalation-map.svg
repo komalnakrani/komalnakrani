@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">F10.2 — Evidence flows to authority</title><desc id="desc">Authority map routing FDE and engineering evidence to domain, security, privacy, operations, accessibility, legal, and business owners, with missing evidence returning and absent authority blocking exposure. Reading order: FDE + engineering: Implement · verify · recommend; Domain owner: Workflow and safety decision; Security / privacy: Control and data decision; Operations / accessibility: Operability and task access; Legal / business: Obligation and outcome decision; Stop path: Required evidence or authority absent.</desc>
+  <defs><style>text{font-family:&quot;Hanken Grotesk&quot;,&quot;Helvetica Neue&quot;,sans-serif}.mono{font-family:monospace}</style><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2C4A6E"/></marker></defs>
+  <rect width="1200" height="760" fill="#FFFFFF"/><path d="M0 132 H1200 M0 690 H1200" stroke="#D1D1D1"/>
+  <text x="60" y="58" class="mono" font-size="13" letter-spacing="2" fill="#2C4A6E">F10.2 · FORWARD DEPLOYED ENGINEERING</text>
+  <text x="60" y="103" text-anchor="start" font-size="30" font-weight="700" fill="#121212" class=""><tspan x="60" dy="0">Evidence flows to authority</tspan></text>
+  <g><g>
+    <rect x="390" y="175" width="420" height="125" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="390" y="175" width="6" height="125" rx="3" fill="#2C4A6E"/>
+    <text x="412" y="209" text-anchor="start" font-size="17" font-weight="700" fill="#121212" class=""><tspan x="412" dy="0">FDE + engineering</tspan></text>
+    <text x="412" y="251" font-size="15" font-weight="450" fill="#454545"><tspan x="412" dy="0">• Implement · verify · recommend</tspan></text>
+  </g><g>
+    <rect x="60" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="60" y="420" width="6" height="165" rx="3" fill="#454545"/>
+    <text x="82" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="82" dy="0">Domain owner</tspan></text>
+    <text x="82" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="82" dy="0">• Workflow and safety</tspan><tspan x="82" dy="18">decision</tspan></text>
+  </g><g>
+    <rect x="279.6" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="279.6" y="420" width="6" height="165" rx="3" fill="#2C4A6E"/>
+    <text x="301.6" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="301.6" dy="0">Security / privacy</tspan></text>
+    <text x="301.6" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="301.6" dy="0">• Control and data</tspan><tspan x="301.6" dy="18">decision</tspan></text>
+  </g><g>
+    <rect x="499.2" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="499.2" y="420" width="6" height="165" rx="3" fill="#454545"/>
+    <text x="521.2" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="521.2" dy="0">Operations /</tspan><tspan x="521.2" dy="22">accessibility</tspan></text>
+    <text x="521.2" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="521.2" dy="0">• Operability and task</tspan><tspan x="521.2" dy="18">access</tspan></text>
+  </g><g>
+    <rect x="718.8" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="718.8" y="420" width="6" height="165" rx="3" fill="#2C4A6E"/>
+    <text x="740.8" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="740.8" dy="0">Legal / business</tspan></text>
+    <text x="740.8" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="740.8" dy="0">• Obligation and outcome</tspan><tspan x="740.8" dy="18">decision</tspan></text>
+  </g><g>
+    <rect x="938.4" y="420" width="201.6" height="165" rx="8" fill="#FFFFFF" stroke="#D1D1D1" stroke-width="2" />
+    <rect x="938.4" y="420" width="6" height="165" rx="3" fill="#454545"/>
+    <text x="960.4" y="454" text-anchor="start" font-size="19" font-weight="700" fill="#121212" class=""><tspan x="960.4" dy="0">Stop path</tspan></text>
+    <text x="960.4" y="504" font-size="15" font-weight="450" fill="#454545"><tspan x="960.4" dy="0">• Required evidence or</tspan><tspan x="960.4" dy="18">authority absent</tspan></text>
+  </g><path d="M 600 305 L 160.8 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 600 305 L 380.40000000000003 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 600 305 L 600 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 600 305 L 819.5999999999999 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/><path d="M 600 305 L 1039.2 412" fill="none" stroke="#2C4A6E" stroke-width="3"  marker-end="url(#arrow)"/></g>
+  <g class="mono" font-size="12" fill="#767676"><line x1="60" y1="721" x2="92" y2="721" stroke="#454545" stroke-width="3"/><text x="104" y="725">observed / required</text><line x1="290" y1="721" x2="322" y2="721" stroke="#767676" stroke-width="2" stroke-dasharray="7 6"/><text x="334" y="725">boundary / proposed</text><path d="M555 708 l13 13 -13 13 -13 -13 z" fill="#E7ECF2" stroke="#2C4A6E"/><text x="580" y="725">decision</text><text x="1140" y="725" text-anchor="end">ORCHID · FICTIONAL / SYNTHETIC</text></g>
+</svg>

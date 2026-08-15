@@ -30,8 +30,8 @@
 
 ## Figures
 
-- `F07.1` integration/retry/reconciliation sequence placeholder present.
-- `F07.2` contract anatomy placeholder present.
+- `F07.1` integration/retry/reconciliation sequence final vector asset and manifest record PASS.
+- `F07.2` contract anatomy final vector asset and manifest record PASS.
 
 ## Project and companion progress
 
@@ -42,7 +42,7 @@
 
 - Customer interface semantics/thresholds remain fictional-case dependencies.
 - No blocking source gap.
-- Final figures wait for Phase 10.
+- Phase 10 final vector assets, manifest records, accessibility text, grayscale differentiation, and small-size review PASS.
 - Phase 09 blueprint mapping found contracts, intent/reconciliation, security/capacity, tests, lab, sample record, change handling, failures, figures, and handoff represented; no unambiguous first-pass content gap was added.
 - 3,699 manuscript words; final Phase 09 depth, duplication, source, and continuity review passes without padding.
 

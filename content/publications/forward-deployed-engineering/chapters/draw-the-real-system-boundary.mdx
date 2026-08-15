@@ -24,7 +24,9 @@ objectiveIds:
   - FDE-K04
   - FDE-K08
   - FDE-K09
-figureIds: []
+figureIds:
+  - FIG-011
+  - FIG-012
 ---
 
 An architecture diagram can be accurate and still conceal the deployment.
@@ -81,7 +83,10 @@ For Orchid:
 
 A bounded system that coordinates the selected workflow. It does not become the owner of every customer record or decision merely because it reads or displays them.
 
-[FIGURE F06.1: C4-style Orchid context view showing technicians, dispatch, qualified approvers, support, customer engineers, Orchid Assist, ticketing, equipment registry, inventory/ERP, manuals, identity, telemetry, and audit. Enclosures mark Region West data and operational ownership. Trust/data boundaries and external-owner labels overlay the structural view.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f06-1-orchid-system-context.svg" alt="System context showing technicians, dispatch, approvers, support, Orchid Assist, ticketing, equipment registry, inventory, manuals, identity, telemetry, and audit within ownership and Region West boundaries." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F06.1 - The real Orchid system boundary.</strong> Actors, services, data, trust, region, operations, and external ownership appear in one context.</figcaption>
+</figure>
 
 Write a relationship sentence for every arrow:
 
@@ -327,7 +332,10 @@ For every material dependency or container, complete a failure/ownership matrix:
 | approval service/identity unavailable | action unauthorized | authorization failure | block/escalate | restore authorized path | identity/approval owners |
 | telemetry unavailable | blind operation | self/independent health evidence | hold/ramp stop based on risk | restore evidence path | ops owner |
 
-[FIGURE F06.2: Failure/ownership matrix connecting each Orchid failure to propagation, detection, containment/fallback, correction/reconciliation, and accountable owner. Configured state versus operational state is shown as a separate failure dimension.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f06-2-failure-ownership-matrix.svg" alt="Failure and ownership matrix connecting Orchid failures to propagation, detection, containment or fallback, correction or reconciliation, and accountable owner, including configured versus operational state." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F06.2 - Failure must end with ownership.</strong> Propagation, detection, containment, correction, reconciliation, and owner remain connected.</figcaption>
+</figure>
 
 The matrix exposes ownerless arrows. If the deployment has a fallback but no one can invoke it, the fallback is not operational.
 

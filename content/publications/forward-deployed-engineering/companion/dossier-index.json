@@ -1,17 +1,17 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-16T03:00:00+05:30",
+  "generatedAt": "2026-08-16T03:05:00+05:30",
   "hashAlgorithm": "sha256",
-  "sourceHash": "ec285026ab5060e2fd515ee1dbb9a02a694b0e0683af05ef0cb19be362e33786",
+  "sourceHash": "67d76e2db61e275cf7d206513b84f642d0c8e3e1695ad2d7a4b75d27042c534f",
   "sourceHashScope": "Sorted SHA-256 digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
-  "buildHash": "fd2b740ff1a46e6b26ec388466ba8cc0436fe7af9c98929951e79a778055b42c",
+  "buildHash": "277b6d8e7b9cfa5cb874aca2f66236b68807d433dcfb4b69ec686ae48f899f9b",
   "buildHashScope": "Sorted SHA-256 digest stream for every file in the Astro dist directory produced by npm run build.",
   "issueState": {
     "roleRoot": "#3 OPEN",
     "phase08Root": "#9 CLOSED - acceptance verified at commit 2ec5731",
     "phase08Child": "#15 CLOSED - acceptance verified at commit 2ec5731",
     "phase09": "#16 CLOSED - acceptance verified at commit a8d9c45",
-    "nextPhase": "#17 OPEN - Phase 10 publication visuals"
+    "nextPhase": "#17 OPEN - Phase 10 acceptance verified; closure pending this visual-lock commit"
   },
   "riskState": {
     "blockingSourceGaps": 0,
@@ -19,7 +19,7 @@
     "knownLimitations": [
       "All companion evidence is synthetic and local.",
       "Phase 09 content, duplication, terminology, continuity, architecture, source, executable, and series-consistency audits pass; future changes must reopen a documented content defect.",
-      "The 38 frozen figure placeholders require final artwork and accessibility review in Phase 10.",
+      "All 38 final vectors and accessibility records pass Phase 10; Phase 11 must preserve them during full publication/PDF assembly.",
       "Real integrations, customer identity, performance, accessibility, UAT, recovery, authority, and production outcomes require representative evidence."
     ]
   },

@@ -23,7 +23,9 @@ objectiveIds:
   - FDE-K06
   - FDE-K08
   - FDE-K09
-figureIds: []
+figureIds:
+  - FIG-015
+  - FIG-016
 ---
 
 A logical design does not run in a customer environment.
@@ -53,7 +55,10 @@ For Orchid, the topology must show:
 - external network/DNS/certificate dependencies;
 - approved egress and denied paths.
 
-[FIGURE F08.1: Orchid Region West deployment topology from technician device through network/ingress to customer runtime, workflow/adapters/stores, customer systems, control plane, telemetry, and support. Region/tenant/data boundaries, intermittent-connectivity path, owners, ingress/egress, and correlated dependencies are labeled.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f08-1-region-west-topology.svg" alt="Topology from technician device through network and ingress to customer runtime, workflow services, adapters, stores, customer systems, control plane, telemetry, and support with region and tenant boundaries." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F08.1 - Region West deployment topology.</strong> Connectivity, tenancy, regional, capacity, and operating assumptions are visible before launch.</figcaption>
+</figure>
 
 Do not imply a runtime choice before it is decided. Use capability labels first; record selected provider/product as a versioned alternative.
 
@@ -105,7 +110,10 @@ For a technician request:
 
 For safety approval, require a separately authorized qualified identity. The FDE does not define qualification.
 
-[FIGURE F08.2: Identity flow showing technician and qualified approver sessions, gateway policy decision, bounded Orchid workload identity, downstream resource authorization, secret/certificate retrieval, audit, expiry/revocation, and denied region/tenant/role paths. Human identity is not forwarded as unrestricted service authority.]
+<figure class="book-figure">
+  <img src="/assets/publications/forward-deployed-engineering/f08-2-identity-authorization-flow.svg" alt="Identity flow from technician and approver sessions through gateway policy, bounded workload identity, downstream authorization, secret retrieval, audit, expiry and revocation, with denied region, tenant, and role paths." width="1200" height="760" loading="lazy" decoding="async" />
+  <figcaption><strong>F08.2 - Identity is bounded at every hop.</strong> Human context informs policy but never becomes unrestricted service authority.</figcaption>
+</figure>
 
 The companion authorization model checks principal, resource, operation, tenant, region, permission, and expiry. It is a teaching model, not a production identity provider.
 

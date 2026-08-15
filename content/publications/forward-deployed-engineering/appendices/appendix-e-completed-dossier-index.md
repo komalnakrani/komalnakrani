@@ -3,7 +3,7 @@
 ## Manuscript evidence
 
 - Chapters 01-19: canonical MDX, learning pack, state handoff, immediate QA.
-- Frozen figures: `F01.1` through `F19.2` placeholders; artwork deferred to Phase 10.
+- Final figures: `F01.1` through `F19.2`, with canonical SVGs, web mirrors, captions, alt text, long descriptions, hashes, and Phase 10 QA records.
 - Registries: publication, sources, claims, figures, errata.
 
 ## Orchid dossier
@@ -35,4 +35,4 @@
 
 ## Provenance and next owners
 
-Source/build hashes and exact GitHub issue state are generated at the Phase 08 close and recorded in the companion dossier index. Phase 09 owns whole-book audit; Phase 10 owns figures; Phase 11 owns publication/PDF release.
+Source/build hashes and exact GitHub issue state are recorded in the companion dossier index. Phase 09 whole-book audit and Phase 10 figures are complete; Phase 11 owns publication/PDF release.
