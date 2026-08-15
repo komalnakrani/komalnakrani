@@ -49,11 +49,18 @@
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
 - Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
 
+## Active role
+
+- Role: Forward Deployed Engineer
+- Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
+- Active child: [#4 — Validate Forward Deployed Engineer role and boundary](https://github.com/alpeshznakrani/komalnakrani/issues/4)
+- State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
+
 ## Exact next action
 
-Bootstrap the Forward Deployed Engineer as the first Komal-only role: create its
-root issue and `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`,
-then execute role research and boundary validation before deciding book count.
+Execute Forward Deployed Engineer issue #4: complete primary-source role research,
+adjacent-role boundary validation, and an explicit role verdict before deciding
+book count.
 
 ## Resume instructions
 
