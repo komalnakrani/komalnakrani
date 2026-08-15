@@ -1,0 +1,12 @@
+---
+interface Props {
+  idx?: string | number;
+  sig?: boolean;}
+const { idx, sig } = Astro.props;
+const hasIdx = idx !== undefined && idx !== '' && idx !== null;
+---
+<div class={'k' + (sig ?' sig' : '')}>
+  {hasIdx && <span class="idx">{idx}</span>}
+  {hasIdx && <span style="color: var(--line-2)">/</span>}
+  <span><slot /></span>
+</div>

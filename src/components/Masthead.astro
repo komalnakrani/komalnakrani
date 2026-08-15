@@ -1,0 +1,41 @@
+---
+import Icon from './Icon.astro';
+
+const nav = [
+  ['/roles/', 'Roles'],
+  ['/books/', 'Books'],
+] as const;
+---
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="wm" href="/" aria-label="Komal Nakrani home">
+      <span class="glyph">KN</span>
+      <span class="wmt">Komal Nakrani</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      {nav.map(([href, label]) => <a class="nav-link" href={href}>{label}</a>)}
+    </nav>
+    <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" data-menu-btn>
+      <span data-menu-icon-closed><Icon name="menu" /></span>
+      <span data-menu-icon-open hidden><Icon name="x" /></span>
+    </button>
+  </div>
+  <div class="mobile-nav" data-mobile-nav>
+    {nav.map(([href, label]) => <a href={href}>{label}</a>)}
+  </div>
+</header>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-menu-btn]');
+  const navigation = document.querySelector<HTMLElement>('[data-mobile-nav]');
+  const closed = document.querySelector<HTMLElement>('[data-menu-icon-closed]');
+  const open = document.querySelector<HTMLElement>('[data-menu-icon-open]');
+  if (button && navigation && closed && open) {
+    button.addEventListener('click', () => {
+      const expanded = navigation.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(expanded));
+      closed.hidden = expanded;
+      open.hidden = !expanded;
+    });
+  }
+</script>

@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Btn from '../components/Btn.astro';
+import K from '../components/K.astro';
+---
+<Layout>
+  <main class="rise">
+    <section class="wrap hero">
+      <div class="hero-grid">
+        <div>
+          <K idx="01" sig>Original role-based learning</K>
+          <h1 class="display" style="margin-top: 22px">
+            Learn the work.<br />Understand the judgment.<br /><span class="grad">Build real mastery.</span>
+          </h1>
+          <p class="lead">
+            Komal Nakrani publishes fresh, evidence-led books for applied AI and production engineering roles.
+            Every title begins with role research, maps to explicit competencies, and carries its sources with it.
+          </p>
+          <div class="hero-cta">
+            <Btn variant="primary" size="lg" href="/roles/" iconRight="arrow-right">Explore roles</Btn>
+            <Btn variant="secondary" size="lg" href="/books/" icon="book-open">Browse books</Btn>
+          </div>
+        </div>
+        <div class="portrait">
+          <div class="portrait-block" style="display:grid; place-items:center; padding:42px">
+            <div style="position:relative; z-index:2; color:white; max-width:320px">
+              <K sig>Publishing standard</K>
+              <p class="h2" style="color:white; margin-top:18px">Nothing inherited. Nothing relabelled. Every book written fresh.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="sec-head">
+        <div><K idx="02">The method</K><h2 class="h2" style="margin-top:12px">From role evidence to a usable book</h2></div>
+      </div>
+      <div class="help">
+        <div class="hc"><span class="hk">01</span><span class="hn">Research</span><span class="hd">Define the role from current, attributable evidence.</span></div>
+        <div class="hc"><span class="hk">02</span><span class="hn">Map</span><span class="hd">Turn responsibilities into explicit competencies and learning objectives.</span></div>
+        <div class="hc"><span class="hk">03</span><span class="hn">Write</span><span class="hd">Build original chapters, examples, figures, and references from the ground up.</span></div>
+        <div class="hc"><span class="hk">04</span><span class="hn">Verify</span><span class="hd">Review claims, sources, accessibility, edition identity, and publication quality.</span></div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,22 @@
+.DS_Store
+.astro/
+dist/
+node_modules/
+tmp/
+.wrangler/
+
+.env
+.env.*
+!.env.example
+
+# The SEO toolkit is a separate nested repository and is not part of this site.
+alpeshseo/
+
+# Generated publication artifacts and local browser/PDF work files.
+book-pdfs/
+playwright-report/
+test-results/
+
+# Local tool caches.
+scripts/__pycache__/
+*.pyc

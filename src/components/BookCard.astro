@@ -1,0 +1,15 @@
+---
+import Cover from './Cover.astro';
+import type { Book } from '../data/publications';
+
+interface Props { book: Book }
+const { book } = Astro.props;
+---
+<a class="bookcard" href={`/books/${book.slug}/`}>
+  <Cover book={book} />
+  <div style="display:flex; flex-direction:column; gap:6px">
+    <div class="bm">{book.edition} · {book.status}</div>
+    <h3 class="bt">{book.title}</h3>
+    <div class="bp"><b>{book.chapters.length}</b> chapters</div>
+  </div>
+</a>

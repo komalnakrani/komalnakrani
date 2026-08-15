@@ -1,0 +1,10 @@
+{
+  "name": "Komal Nakrani",
+  "short_name": "Komal Nakrani",
+  "description": "Original role-based books for applied AI and production engineering.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f6f6",
+  "theme_color": "#121212",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

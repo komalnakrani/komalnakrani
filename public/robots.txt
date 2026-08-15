@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://komalnakrani.com/sitemap-index.xml

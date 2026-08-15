@@ -1,0 +1,15 @@
+---
+import type { Book } from '../data/publications';
+
+interface Props { book: Book }
+const { book } = Astro.props;
+---
+<div class={'cover cv-' + book.cover} aria-label={`${book.title} cover`}>
+  <div class="cv-k">{book.series}</div>
+  <div class="cv-mid">
+    <div class="cv-t">{book.title}</div>
+    <div class="cv-s">{book.subtitle}</div>
+    <div class="cv-rule"></div>
+    <div class="cv-a">Komal Nakrani</div>
+  </div>
+</div>

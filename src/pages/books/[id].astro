@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Btn from '../../components/Btn.astro';
+import Cover from '../../components/Cover.astro';
+import K from '../../components/K.astro';
+import { BOOKS } from '../../data/publications';
+
+export function getStaticPaths() {
+  return BOOKS.filter((book) => book.status === 'published').map((book) => ({
+    params: { id: book.slug },
+    props: { book },
+  }));
+}
+
+const { book } = Astro.props;
+---
+<Layout title={`${book.title} | Komal Nakrani`} description={book.description}>
+  <main class="rise">
+    <article class="wrap read book-reader">
+      <Btn variant="ghost" href="/books/" icon="arrow-left">All books</Btn>
+      <header class="reader-hero">
+        <div class="reader-cover"><Cover book={book} /></div>
+        <div>
+          <K idx={book.edition} sig>{book.series} · Volume {book.volume}</K>
+          <h1 class="h1" style="margin:18px 0 0">{book.title}</h1>
+          <p class="lead" style="margin-top:14px">{book.subtitle}</p>
+          <p class="body-t" style="margin-top:22px">{book.description}</p>
+        </div>
+      </header>
+      <section class="reader-toc" aria-label="Table of contents">
+        <K>Table of contents</K>
+        <div class="chapter-list" style="margin-top:18px">
+          {book.chapters.map((chapter, index) => (
+            <a class="chapter-row" href={`/books/${book.slug}/${chapter.slug}/`}>
+              <span class="chapter-no">{String(index + 1).padStart(2, '0')}</span>
+              <span><strong>{chapter.title}</strong><em>{chapter.summary}</em></span>
+              <small>{chapter.minutes} min</small>
+            </a>
+          ))}
+        </div>
+      </section>
+    </article>
+  </main>
+</Layout>

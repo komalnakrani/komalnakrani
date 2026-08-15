@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+interface Props {
+  variant?: 'primary' | 'secondary' | 'ghost' | 'signal';
+  size?: 'lg';
+  icon?: string;
+  iconRight?: string;
+  href?: string;
+  target?: string;
+  class?: string;}
+const { variant = 'primary', size, icon, iconRight, href, target, class: extra } = Astro.props;
+const cls = ['btn', 'btn-' + variant, size === 'lg' ?'btn-lg' : '', extra ??''].join(' ').trim();
+const rel = target === '_blank' ?'noopener noreferrer' : undefined;
+const Tag = href ?'a' : 'button';
+---
+<Tag class={cls} href={href} target={target} rel={rel}>
+  {icon && <Icon name={icon} />}
+  <slot />
+  {iconRight && <Icon name={iconRight} />}
+</Tag>
