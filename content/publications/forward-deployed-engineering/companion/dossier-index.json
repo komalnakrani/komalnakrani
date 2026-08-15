@@ -1,16 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-16T02:19:13+05:30",
+  "generatedAt": "2026-08-16T02:22:00+05:30",
   "hashAlgorithm": "sha256",
-  "sourceHash": "fae260eb3de4e2759d786c4b4887f37d2ca8db03857402cb0813142152ec08ec",
+  "sourceHash": "e224023eae5821e46c6bc83dcabf445d320234e4c314a6b47fede349597cd216",
   "sourceHashScope": "Sorted SHA-256 digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
   "buildHash": "fd2b740ff1a46e6b26ec388466ba8cc0436fe7af9c98929951e79a778055b42c",
   "buildHashScope": "Sorted SHA-256 digest stream for every file in the Astro dist directory produced by npm run build.",
   "issueState": {
     "roleRoot": "#3 OPEN",
-    "phase08Root": "#9 OPEN - acceptance gate passed; closure pending commit and push",
-    "phase08Child": "#15 OPEN - acceptance gate passed; closure pending commit and push",
-    "nextPhase": "Phase 09 whole-book QA"
+    "phase08Root": "#9 CLOSED - acceptance verified at commit 2ec5731",
+    "phase08Child": "#15 CLOSED - acceptance verified at commit 2ec5731",
+    "nextPhase": "#16 OPEN - Phase 09 whole-book QA"
   },
   "riskState": {
     "blockingSourceGaps": 0,

@@ -84,6 +84,6 @@ test("the committed dossier index carries real SHA-256 hashes and resumable stat
   assert.match(record.sourceHash, /^[a-f0-9]{64}$/);
   assert.match(record.buildHash, /^[a-f0-9]{64}$/);
   assert.equal(record.riskState.blockingSourceGaps, 0);
-  assert.match(record.issueState.phase08Child, /^#15 OPEN/);
+  assert.match(record.issueState.phase08Child, /^#15 CLOSED/);
   assert.ok(record.nextOwner.phase09);
 });

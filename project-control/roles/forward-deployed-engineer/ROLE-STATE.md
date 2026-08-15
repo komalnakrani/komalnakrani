@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 08 - full manuscript production
+- Current global phase: Komal Phase 09 - whole-book QA
 - Last updated: 2026-08-16
-- Last completed issue: Phase 08.5 Chapters 15-17 #14
+- Last completed issue: Phase 08 root #9 and child #15
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#15](https://github.com/alpeshznakrani/komalnakrani/issues/15) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
+- Active issue: [#16](https://github.com/alpeshznakrani/komalnakrani/issues/16)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -58,7 +58,7 @@
 - [x] 05 book architecture
 - [x] 06 research
 - [x] 07 chapter blueprints
-- [ ] 08 manuscript
+- [x] 08 manuscript
 - [ ] 09 book QA
 - [ ] 10 visuals
 - [ ] 11 publication
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Phase 08 acceptance is complete: 19 manuscripts, 19 learning packs, 19 state handoffs, 19 immediate QA records, 38 figure placeholders, front matter, five appendices, 61 sources, 188 claims, and 64 companion tests pass. Commit and close child #15 and root #9, then begin Phase 09 whole-book QA.
+Phase 08 is closed. Under Phase 09 issue #16, map all nineteen blueprints to the actual manuscripts and correct coverage, depth, duplication, terminology, continuity, architecture, source, series, and executable-consistency gaps.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ Phase 09 must audit the shorter late chapters against every approved blueprint c
 
 ## Exact next action
 
-Commit and push the accepted Phase 08 checkpoint, close #15 and #9 with evidence, and open the Phase 09 whole-book QA issue.
+Create the Phase 09 coverage matrix from Chapters 01-19, starting with an exact blueprint/manuscript depth inventory and the compressed late-chapter risk.
 
 ## Resume instructions
 

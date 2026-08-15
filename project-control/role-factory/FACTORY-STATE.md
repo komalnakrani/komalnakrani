@@ -48,20 +48,20 @@
 
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
 - Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
-- Forward Deployed Engineer: Phases 01 and 04-07, plus Phase 08 manuscript children [#10](https://github.com/alpeshznakrani/komalnakrani/issues/10), [#11](https://github.com/alpeshznakrani/komalnakrani/issues/11), and [#12](https://github.com/alpeshznakrani/komalnakrani/issues/12).
+- Forward Deployed Engineer: Phases 01 and 04-08, including all nineteen manuscripts, learning/state/QA records, front matter, five appendices, and the 64-test provider-neutral companion.
 
 ## Active role
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#15 — Write FDE Chapters 18-19 and front/back matter](https://github.com/alpeshznakrani/komalnakrani/issues/15)
+- Active child: [#16 - Audit FDE whole book](https://github.com/alpeshznakrani/komalnakrani/issues/16)
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Close Forward Deployed Engineer Phase 08 child #15 and root #9 from the passing
-19-chapter cumulative gate, then begin Phase 09 whole-book QA. Audit actual
-coverage before accepting the shorter late chapters.
+Execute Forward Deployed Engineer Phase 09 issue #16. Build the nineteen-chapter
+blueprint coverage matrix and correct depth, duplication, terminology,
+continuity, architecture, source, series, and executable-consistency gaps.
 
 ## Resume instructions
 
