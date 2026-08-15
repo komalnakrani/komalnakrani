@@ -984,6 +984,78 @@
       "chapterSlug": "make-the-solution-usable-and-ownable",
       "statement": "Customer ownership is demonstrated when representative users and operators can perform consequential tasks and make bounded decisions without FDE intervention.",
       "sourceIds": ["SRC-009", "SRC-053", "SRC-059", "SRC-060"]
+    },
+    {
+      "id": "CLM-165",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "The pattern ledger, reuse ladder, abstraction-timing test, and field-to-product packet are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-004", "SRC-005", "SRC-031", "SRC-061"]
+    },
+    {
+      "id": "CLM-166",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "Observed FDE practices include codifying field patterns into reusable building blocks, playbooks, and product feedback, but employer descriptions do not prove a universal abstraction threshold.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-004", "SRC-005"]
+    },
+    {
+      "id": "CLM-167",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "One customer implementation does not establish a repeated market pattern or justify a platform claim; invariant, variance, contexts, and disconfirming evidence remain necessary.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-004", "SRC-061"]
+    },
+    {
+      "id": "CLM-168",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "Customer-specific data, identifiers, assumptions, permissions, and contract constraints must be isolated from reusable code, tests, documentation, and product learning.",
+      "sourceIds": ["SRC-005", "SRC-007", "SRC-008"]
+    },
+    {
+      "id": "CLM-169",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "A reusable public contract creates compatibility, versioning, maintenance, support, security, documentation, and ownership obligations that duplicated local code may not have.",
+      "sourceIds": ["SRC-027", "SRC-028", "SRC-029", "SRC-031", "SRC-043"]
+    },
+    {
+      "id": "CLM-170",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "Semantic Versioning can communicate compatibility for a declared public API but cannot define the correct abstraction boundary or maintenance policy.",
+      "sourceIds": ["SRC-031"]
+    },
+    {
+      "id": "CLM-171",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "A severe product gap can justify product attention from one deployment without being misrepresented as a repeated implementation pattern.",
+      "sourceIds": ["SRC-004", "SRC-005", "SRC-061"]
+    },
+    {
+      "id": "CLM-172",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "Reusable leverage can take the form of code, configuration, a service, reference architecture, playbook, documentation, tests/evaluation, or product feedback rather than a platform component by default.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-005"]
+    },
+    {
+      "id": "CLM-173",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "Field-to-product proposals should preserve problem, workflow, evidence, workaround, invariant, variance, impact, uncertainty, owner, maintenance, compatibility, validation, and disconfirmation.",
+      "sourceIds": ["SRC-001", "SRC-002", "SRC-005", "SRC-061"]
+    },
+    {
+      "id": "CLM-174",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "Premature abstraction can conceal meaningful workflow and authority differences while increasing compatibility and support burden.",
+      "sourceIds": ["SRC-027", "SRC-028", "SRC-031", "SRC-043"]
+    },
+    {
+      "id": "CLM-175",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "Outcome and adoption evidence need attribution limitations and cannot by themselves establish the value of a reusable product proposal across other contexts.",
+      "sourceIds": ["SRC-016", "SRC-017", "SRC-018"]
+    },
+    {
+      "id": "CLM-176",
+      "chapterSlug": "turn-field-evidence-into-product-leverage",
+      "statement": "Reuse decisions should remain versioned and reversible as new contexts disconfirm the proposed invariant or reveal unacceptable maintenance cost.",
+      "sourceIds": ["SRC-031", "SRC-043", "SRC-061"]
     }
   ]
 }

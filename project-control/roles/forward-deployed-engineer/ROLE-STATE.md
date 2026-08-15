@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-17 and `OA-05` through `OA-10` are complete. Write Chapters 18-19, front matter, five appendices, and companion closure under child issue #15.
+Chapters 01-18 and `OA-05` through the product layer of `OA-11` are complete. Write Chapter 19, front matter, five appendices, and companion closure under child issue #15.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Write Chapter 18 and the evidence-based pattern/reuse classification companion from the approved blueprint and Chapter 17 state.
+Write Chapter 19 and the portfolio/dossier closure companion from the approved blueprint and Chapter 18 state.
 
 ## Resume instructions
 
