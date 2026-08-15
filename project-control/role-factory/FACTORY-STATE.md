@@ -54,14 +54,14 @@
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#14 — Write FDE Chapters 15-17 and ownership companion](https://github.com/alpeshznakrani/komalnakrani/issues/14)
+- Active child: [#15 — Write FDE Chapters 18-19 and front/back matter](https://github.com/alpeshznakrani/komalnakrani/issues/15)
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Execute Forward Deployed Engineer issue #14: write Chapter 15 and build the
-readiness disposition/cohort gate before advancing to stabilization, adoption,
-and ownership acceptance.
+Execute Forward Deployed Engineer issue #15: write Chapter 18 and build the
+pattern/reuse classification companion before completing portfolio leadership
+and the book's front/back matter.
 
 ## Resume instructions
 

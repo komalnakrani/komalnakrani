@@ -9,7 +9,7 @@
 - Last updated: 2026-08-16
 - Last completed issue: Phase 08.5 Chapters 15-17 #14
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: pending next Phase 08 child (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
+- Active issue: [#15](https://github.com/alpeshznakrani/komalnakrani/issues/15) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-17 and `OA-05` through `OA-10` are complete. Verify/close child issue #14, then open the ordered Chapters 18-19 plus front/back matter child issue.
+Chapters 01-17 and `OA-05` through `OA-10` are complete. Write Chapters 18-19, front matter, five appendices, and companion closure under child issue #15.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Run the cumulative Chapters 15-17 gate, close issue #14, and open the final Phase 08 manuscript child under root #9.
+Write Chapter 18 and the evidence-based pattern/reuse classification companion from the approved blueprint and Chapter 17 state.
 
 ## Resume instructions
 
