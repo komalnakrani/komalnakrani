@@ -1,4 +1,4 @@
-# Appendix D - Glossary and Source-Use Guide
+# Appendix D - Glossary and Source Use
 
 ## Core terms
 

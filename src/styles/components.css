@@ -79,6 +79,7 @@
   aspect-ratio: 700/637;
   box-shadow: var(--sh-lg);
 }
+/* impeccable-disable-next-line codex-grid-background -- intentional portrait blueprint texture */
 .portrait-block::before {
   content: "";
   position: absolute;
@@ -910,7 +911,7 @@ a.hc:hover {
   line-height: 1.32;
   letter-spacing: -0.022em;
   color: var(--ink);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--accent); /* impeccable-disable-line side-tab -- semantic editorial pull-quote marker, not a card accent */
   padding: 4px 0 4px 24px;
   margin: 36px 0;
 }
@@ -991,6 +992,20 @@ a.hc:hover {
   align-items: end;
   padding: 22px 0 40px;
   border-bottom: 1px solid var(--line-2);
+}
+.reader-hero > * {
+  min-width: 0;
+}
+.reader-hero .k,
+.reader-grid .k {
+  max-width: 100%;
+  flex-wrap: wrap;
+  overflow-wrap: anywhere;
+}
+.reader-hero .h1,
+.reader-grid .h1 {
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 .reader-cover {
   max-width: 260px;
@@ -1167,7 +1182,7 @@ a.hc:hover {
 .book-prose blockquote {
   margin: 34px 0;
   padding: 22px 24px;
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--accent); /* impeccable-disable-line side-tab -- semantic blockquote convention, not a card accent */
   background: var(--surface);
   color: var(--ink);
   border-radius: var(--r-sm);
@@ -1203,7 +1218,8 @@ a.hc:hover {
   color: var(--ink);
   font-family: var(--mono);
   font-size: 0.86em;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .book-callout {
   margin: 34px 0;

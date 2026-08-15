@@ -5,9 +5,9 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 11 - publication and PDF
+- Current global phase: Komal Phase 11 complete - Phase 13 transition pending
 - Last updated: 2026-08-16
-- Last completed issue: Phase 10 #17 at commit `22920f7`
+- Last completed issue: Phase 11 #18 acceptance prepared; closure commit pending
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
 - Active issue: [#18](https://github.com/alpeshznakrani/komalnakrani/issues/18)
 - Cross-repo root issue: deferred by locked Komal-first execution order
@@ -41,7 +41,7 @@
 - book architecture: complete under `project-control/roles/forward-deployed-engineer/books/forward-deployed-engineering/`
 - manuscript(s): Chapters 01-19, front matter, five appendices, learning packs, state handoffs, and immediate QA complete under `content/publications/forward-deployed-engineering/`
 - figure manifest: all 38 final vectors through `F19.2`, registry/production metadata, accessible manuscript insertions, and byte-identical web mirrors complete
-- PDF(s): pending under `output/pdf/`
+- PDF(s): `output/pdf/forward-deployed-engineering-v1.0.0.pdf`, 338 pages, SHA-256 `96b5bce887d315ceb5390287eb693b0ead4b9ed3328470913c9dd07f9a91b050`; byte-identical public download mirror
 - preparation resources: pending
 - certification page: deferred to Abhyaas
 - bank specification: deferred to Abhyaas
@@ -61,7 +61,7 @@
 - [x] 08 manuscript
 - [x] 09 book QA
 - [x] 10 visuals
-- [ ] 11 publication
+- [x] 11 publication
 - [ ] 12 preparation library (deferred)
 - [ ] 13 course decision
 - [ ] 14 certification (deferred)
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Phases 09 and 10 are closed. The content-locked manuscript and all 38 verified final SVGs are ready for Phase 11 full web/PDF assembly. Phase 11 must inspect the actual rendered artifacts before switching publication and role status to published.
+Phase 11 acceptance is complete. The published web edition builds 28 static pages, including all nineteen chapters, edition and errata routes, and the role/library surfaces. The deterministic 338-page PDF includes all 38 figures and passed complete render, extraction, page-bound, link, bookmark, and accessibility-alternative checks. Phase 13 must now decide whether a separate Komal course adds material teaching value beyond the book and companion.
 
 ## Unresolved blockers
 
@@ -87,11 +87,11 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 
 ## Quality debt
 
-No content or visual debt. Phase 11 must complete front/back matter assembly, deterministic PDF rendering, web route rendering, metadata, links, downloads, and actual artifact inspection.
+No blocking content, visual, web, or PDF debt. The PDF is searchable, bookmarked, and supplies explicit text alternatives and long descriptions, but is not claimed as formally PDF/UA tagged.
 
 ## Exact next action
 
-Upgrade the publication/PDF pipeline to assemble the complete accepted book and verified visuals; render and inspect web and PDF artifacts before publishing.
+Close Phase 11 with the recorded evidence, open Phase 13, and make the AUTO course decision without entering deferred Abhyaas phases.
 
 ## Resume instructions
 

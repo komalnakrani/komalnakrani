@@ -4,7 +4,7 @@
 
 Komal Nakrani
 
-First edition draft, version 1.0.0 (2026)
+First edition, version 1.0.0 (2026)
 
 Copyright (c) 2026 Komal Nakrani. All rights reserved except where separately stated for cited sources or companion dependencies. This book is original. The fictional Orchid Equipment Services and all constructed satellite scenarios are not real customer or employer outcomes.
 

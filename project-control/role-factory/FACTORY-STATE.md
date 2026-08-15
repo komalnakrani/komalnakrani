@@ -36,11 +36,11 @@
   `/Users/alpesh/.Trash/komal-pruned.HQW19h`. After the clean remote was verified,
   the temporary archive ref and inherited Git objects were permanently pruned;
   `.git` is now approximately 220 KB.
-- Lean build: PASS, 4 static pages on the current manuscript checkpoint.
+- Published FDE build: PASS, 28 static pages with nineteen chapter routes, edition and errata records, and a verified PDF download.
 - Publication foundation: implemented at `a55a1ea`; full `npm run check` PASS.
-- PDF proof: deterministic six-page A4 output, SHA-256
-  `f74b9961fc1d390f14e123297c1afe6b8126fcca1bda0e7f8648a07221fb9320`,
-  all rendered pages visually verified.
+- FDE PDF: deterministic 338-page A4 edition, SHA-256
+  `96b5bce887d315ceb5390287eb693b0ead4b9ed3328470913c9dd07f9a91b050`,
+  with all pages rendered and visually verified.
 - Dependencies: 329 packages; audit reports 8 advisories (1 low, 1 moderate, 6 high).
 - Abhyaas issue #25: open but paused by the Komal-first execution decision.
 
@@ -48,20 +48,20 @@
 
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
 - Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
-- Forward Deployed Engineer: Phases 01 and 04-09, including all nineteen manuscripts, learning/state/QA records, front matter, five appendices, the 64-test provider-neutral companion, and whole-book content acceptance at `a8d9c45`.
+- Forward Deployed Engineer: Phases 01 and 04-11, including all nineteen manuscripts, 38 final figures, complete web edition, deterministic PDF, the 64-test provider-neutral companion, and publication acceptance prepared for Phase 11 closure.
 
 ## Active role
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#18 - Publish FDE web edition and PDF](https://github.com/alpeshznakrani/komalnakrani/issues/18)
+- Active child: [#18 - Publish FDE web edition and PDF](https://github.com/alpeshznakrani/komalnakrani/issues/18), acceptance complete and closure pending
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Continue Forward Deployed Engineer Phase 11 issue #18. Assemble the accepted
-content and visuals into the complete web edition and deterministic PDF, inspect
-the real rendered artifacts, and publish only after every gate passes.
+Close Forward Deployed Engineer Phase 11 issue #18 with the recorded acceptance
+evidence, then open and execute Phase 13's AUTO course decision. Do not enter
+deferred Abhyaas work.
 
 ## Resume instructions
 

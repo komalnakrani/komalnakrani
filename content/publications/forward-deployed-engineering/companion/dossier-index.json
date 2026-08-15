@@ -1,18 +1,19 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-16T03:10:00+05:30",
+  "generatedAt": "2026-08-16T03:31:26+05:30",
   "hashAlgorithm": "sha256",
-  "sourceHash": "67d76e2db61e275cf7d206513b84f642d0c8e3e1695ad2d7a4b75d27042c534f",
-  "sourceHashScope": "Sorted SHA-256 digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
-  "buildHash": "277b6d8e7b9cfa5cb874aca2f66236b68807d433dcfb4b69ec686ae48f899f9b",
-  "buildHashScope": "Sorted SHA-256 digest stream for every file in the Astro dist directory produced by npm run build.",
+  "sourceHash": "d1353ee4fb46047efa2b36786484c276a84740aadb8c495382e10760a97b0b9a",
+  "sourceHashScope": "SHA-256 of the sorted `shasum -a 256` digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
+  "buildHash": "e86f295eb828e05586a5f33f5355e32a37b4076644567088a8bc98aa45939db6",
+  "buildHashScope": "SHA-256 of the sorted `shasum -a 256` digest stream for every file in the Astro dist directory produced by npm run build.",
   "issueState": {
     "roleRoot": "#3 OPEN",
     "phase08Root": "#9 CLOSED - acceptance verified at commit 2ec5731",
     "phase08Child": "#15 CLOSED - acceptance verified at commit 2ec5731",
     "phase09": "#16 CLOSED - acceptance verified at commit a8d9c45",
     "phase10": "#17 CLOSED - acceptance verified at commit 22920f7",
-    "nextPhase": "#18 OPEN - Phase 11 web/PDF publication"
+    "phase11": "#18 OPEN - acceptance complete; closure commit pending",
+    "nextPhase": "Phase 13 AUTO course decision pending issue creation"
   },
   "riskState": {
     "blockingSourceGaps": 0,
@@ -20,7 +21,8 @@
     "knownLimitations": [
       "All companion evidence is synthetic and local.",
       "Phase 09 content, duplication, terminology, continuity, architecture, source, executable, and series-consistency audits pass; future changes must reopen a documented content defect.",
-      "All 38 final vectors and accessibility records pass Phase 10; Phase 11 must preserve them during full publication/PDF assembly.",
+      "All 38 final vectors and accessibility records are preserved in the published web and PDF editions.",
+      "The PDF is searchable, bookmarked, and includes captions, immediate text alternatives, and full long descriptions; it is not claimed as formally PDF/UA tagged.",
       "Real integrations, customer identity, performance, accessibility, UAT, recovery, authority, and production outcomes require representative evidence."
     ]
   },
@@ -33,7 +35,8 @@
   "nextOwner": {
     "phase09": "Komal whole-book QA owner",
     "phase10": "Komal figure production and accessibility owner",
-    "phase11": "Komal publication and PDF release owner",
+    "phase11": "Komal publication and PDF release owner - acceptance complete",
+    "phase13": "Komal course decision owner",
     "fictionalCustomer": "Named Orchid operations, product, security, and release authorities in OA-10",
     "productLearning": "Product owner after the third-context review trigger"
   }

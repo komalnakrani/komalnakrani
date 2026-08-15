@@ -4,6 +4,7 @@
    Type: Space Grotesk (display) · Hanken Grotesk (body) · JetBrains Mono
    Color: cool near-white, ink near-black, electric indigo + rare green.
    ===================================================================== */
+/* impeccable-disable-next-line overused-font -- inherited, user-approved Komal visual system */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
@@ -63,6 +64,7 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+/* impeccable-disable-next-line codex-grid-background -- intentional engineering-notebook surface */
 body {
   background: var(--bg);
   color: var(--ink);

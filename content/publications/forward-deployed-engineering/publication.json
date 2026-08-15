@@ -12,12 +12,12 @@
   "description": "A practical field book for converting ambiguous customer workflows into secure, adopted, supportable production systems and reusable product learning.",
   "author": "Komal Nakrani",
   "language": "en",
-  "status": "draft",
+  "status": "published",
   "cover": "blueprint",
   "edition": {
     "version": "1.0.0",
-    "label": "First edition draft",
-    "publishedAt": null,
+    "label": "First edition",
+    "publishedAt": "2026-08-16",
     "copyrightYear": 2026,
     "canonicalUrl": "https://komalnakrani.com/books/forward-deployed-engineering/"
   },

@@ -19,8 +19,14 @@ const { book } = Astro.props;
     <h1 class="h1" style="margin-top:18px">{book.edition.label}</h1>
     <dl class="specrow" style="margin-top:34px; max-width:820px">
       <div><dt class="sk">Book</dt><dd class="sv">{book.title}</dd></div>
-      <div><dt class="sk">Published</dt><dd class="sv">{book.edition.publishedAt}</dd></div>
+      <div><dt class="sk">Published</dt><dd class="sv"><time datetime={book.edition.publishedAt ?? undefined}>{book.edition.publishedAt}</time></dd></div>
       <div><dt class="sk">Status</dt><dd class="sv">{book.status}</dd></div>
     </dl>
+    {book.pdf.enabled && (
+      <div class="reader-actions">
+        <Btn href={`/downloads/${book.pdf.filename}`} icon="file-text">Download this edition</Btn>
+        <Btn variant="ghost" href={`/books/${book.slug}/${book.chapters[0].slug}/`} icon="book-open">Read online</Btn>
+      </div>
+    )}
   </main>
 </Layout>

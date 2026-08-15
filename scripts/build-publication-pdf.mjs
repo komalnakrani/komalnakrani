@@ -12,8 +12,9 @@ function option(name, fallback) {
 const root = path.resolve(option('--root', process.cwd()));
 const slug = option('--slug');
 const outputDirectory = path.resolve(option('--output-dir', path.join(root, 'output/pdf')));
+const proof = process.argv.includes('--proof');
 if (!slug) {
-  console.error('Usage: npm run build:pdf -- --slug <publication-slug> [--root <fixture-root>] [--output-dir <directory>]');
+  console.error('Usage: npm run build:pdf -- --slug <publication-slug> [--proof] [--root <fixture-root>] [--output-dir <directory>]');
   process.exit(2);
 }
 
@@ -29,7 +30,8 @@ if (!publication) {
   console.error(`Publication not found: ${slug}`);
   process.exit(1);
 }
-if (publication.manifest.status !== 'published' || !publication.manifest.pdf.enabled) {
+const proofable = proof && ['draft', 'review'].includes(publication.manifest.status);
+if ((!proofable && publication.manifest.status !== 'published') || !publication.manifest.pdf.enabled) {
   console.error(`Publication ${slug} is not an enabled published PDF edition.`);
   process.exit(1);
 }

@@ -3,7 +3,7 @@
   "slug": "forward-deployed-engineer",
   "title": "Forward Deployed Engineer",
   "summary": "A customer-embedded engineer who converts ambiguous, high-value workflows into secure, adopted, supportable production systems and reusable product learning.",
-  "status": "draft",
+  "status": "published",
   "boundary": {
     "includes": [
       "Lead the evidence and engineering chain from workflow discovery through production adoption, stabilization, handoff, and field learning.",

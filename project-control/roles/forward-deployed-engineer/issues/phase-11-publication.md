@@ -18,14 +18,14 @@ Assemble the accepted Phase 09 prose and Phase 10 visuals into a complete, deter
 
 ## Acceptance criteria
 
-- [ ] The publication and role are marked published only after final artifacts pass.
-- [ ] All public web routes build and render the full nineteen-chapter edition.
-- [ ] All 38 figures render with captions and accessible alternatives on web and PDF.
-- [ ] The PDF contains complete front matter, five parts, nineteen chapters, five appendices, sources, figure registry, and edition record.
-- [ ] PDF render inspection finds no clipping, blank pages, broken glyphs, missing figures, unreadable tables/code, or incorrect page furniture.
-- [ ] Web desktop/mobile inspection finds no overflow, broken links/assets, inaccessible navigation, or placeholder content.
-- [ ] Deterministic rebuilds produce the recorded source/PDF/build hashes.
-- [ ] Publication validation/tests, 64 companion tests, Astro build, demo/rehearsal, link/asset checks, and `git diff --check` pass.
+- [x] The publication and role are marked published only after final artifacts pass.
+- [x] All public web routes build and render the full nineteen-chapter edition.
+- [x] All 38 figures render with captions and accessible alternatives on web and PDF.
+- [x] The PDF contains complete front matter, five parts, nineteen chapters, five appendices, sources, figure registry, and edition record.
+- [x] PDF render inspection finds no clipping, blank pages, broken glyphs, missing figures, unreadable tables/code, or incorrect page furniture.
+- [x] Web desktop/mobile inspection finds no overflow, broken links/assets, inaccessible navigation, or placeholder content.
+- [x] Deterministic rebuilds produce the recorded source/PDF/build hashes.
+- [x] Publication validation/tests, 64 companion tests, Astro build, demo/rehearsal, link/asset checks, and `git diff --check` pass.
 
 ## Handoff
 
