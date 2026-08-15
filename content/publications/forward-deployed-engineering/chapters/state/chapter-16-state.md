@@ -38,7 +38,8 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added a first-ten-minute record, cross-track decision log, confidence timeline, update protocol, boundary-first diagnosis, evidence/containment judgment, timed exercise, and failure repairs.
-- 2,115 manuscript words plus executable incident evidence after the first depth repair; a second blueprint-depth review remains open.
+- The second depth pass added a complete stabilization report, continued Orchid incident through exit, non-AI document-migration transfer, and simulation review.
+- 2,625 manuscript words plus executable incident evidence after Phase 09 depth repair.
 
 ## Chapter 17 may assume
 

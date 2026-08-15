@@ -37,7 +37,7 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added an explicit bounded-AI design/evaluation exercise covering decomposition, non-AI baseline, workflow-state cases, grader calibration, critical-segment disposition, controls, fallback, and authority.
-- 3,388 manuscript words after the first depth repair; a second blueprint-depth review remains open.
+- 3,388 manuscript words after repair; final Phase 09 blueprint-depth, duplication, source, and continuity review passes.
 
 ## Chapter 10 may assume
 

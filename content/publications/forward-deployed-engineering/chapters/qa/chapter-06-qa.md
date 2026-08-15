@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `draw-the-real-system-boundary.mdx`
 - Word count: approximately 3,800
-- Status: Phase 09 blueprint mapping complete; second whole-book review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-Phase 09 found every blueprint family in complete prose, including boundary walkthroughs, transfer cases, design review, failures, and the Orchid artifact. It remains below forecast, so final depth/duplication/continuity acceptance stays open.
+Phase 09 found every blueprint family in complete prose, including boundary walkthroughs, transfer cases, design review, failures, and the Orchid artifact. It remains below forecast without padding; final depth, duplication, source, and continuity acceptance passes.

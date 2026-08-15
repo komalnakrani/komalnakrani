@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `stabilize-under-real-conditions.mdx`
-- Status: Phase 09 first depth repair complete; second coverage review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-Phase 09 reopened the compressed baseline and added a worked opening record/timeline, decision coordination, calibrated update method, boundary diagnosis, restoration/correction example, corrective verification, timed exercise, and failure repairs. Specialist forensics remain out of scope. A second depth/duplication audit is still required.
+Phase 09 added opening/timeline/decision/update/diagnosis, restoration/correction, corrective verification, complete stabilization report, continued Orchid scenario, non-AI transfer, timed review, and failures. Specialist forensics remain out of scope. No concrete blueprint mechanism remains merely named.

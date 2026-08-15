@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `lead-beyond-one-deployment.mdx`
-- Status: Phase 09 first depth repair complete; second coverage review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-Phase 09 reopened the compressed baseline and added worked portfolio allocation, cadence, staffing, delegation, multi-altitude escalation, capacity building, technical-depth practice, growth evidence, dossier review, exercise, and failure repairs. Generic people management remains out of scope. A second depth/duplication audit remains open.
+Phase 09 added portfolio allocation/cadence/staffing/delegation/memos/capacity/depth/growth, dossier review, weekly decision review, stop/reopen protection, maturity transfer, exercise, and failures. Generic people management remains out of scope. No concrete blueprint mechanism remains merely named.

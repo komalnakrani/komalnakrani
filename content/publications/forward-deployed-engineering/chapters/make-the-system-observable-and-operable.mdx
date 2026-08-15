@@ -385,6 +385,42 @@ For every missing, delayed, or sampled signal record the promise/failure, affect
 
 “We cannot measure it yet” is acceptable only when it changes the decision. A hidden blind spot is not.
 
+### Write a blind-spot record
+
+Example:
+
+> Offline technicians can complete manual fallback without emitting an event until reconnect. Promise affected: truthful completion and support visibility for low-connectivity sites. Consequence: the dashboard can undercount fallback burden and overstate timely completion. Alternative evidence: delayed sync plus support sample and scheduled task observation. Release restriction: do not widen to additional offline sites. Owner: workflow operations. Trigger: implement signed queued state with freshness/coverage signal before the next cohort review.
+
+The record changes exposure and evidence collection. It is not a backlog note hidden beneath a green dashboard.
+
+## Work capacity, cost, and support as one operating decision
+
+Suppose the Orchid evidence path has 40 concurrent review intents, inventory allows 20 concurrent calls, the model budget allows 15 suggestions per minute, and three low-connectivity sites retry after eight seconds. Qualified reviewers can process 12 critical cases per hour.
+
+An incomplete capacity plan scales only the application service. A complete plan asks:
+
+- can intent identity/reconciliation prevent retry demand from becoming new external work?
+- where does bounded queuing preserve truthful user state?
+- when should the system abstain or use manual fallback as model budget is exhausted?
+- can reviewer capacity preserve the qualified-control latency?
+- which evidence, telemetry, and support work grows with each cohort?
+- what cost is per eligible, completed, fallback, and failed intent?
+- which cohort/feature stops first under saturation?
+
+Precommit behavior. New suggestion work may queue visibly or fall back, while safety-relevant review cannot be bypassed for throughput. Capacity limits should stop before external mutation where possible. Cost optimization cannot remove required evidence or authorization.
+
+### Connect support cases to the same state model
+
+Do not classify all tickets as `user issue` or `AI quality`. Use equipment state, evidence state, dependency finality, policy/authorization, connectivity, review, fallback, and release bundle.
+
+For each support reason, link count/cohort, first useful response, resolution, recurrence, defect or knowledge classification, owner, and product/test/signal/runbook update. A repeated question about evidence provenance may indicate interface design debt. A spike in unknown-completion tickets may reveal reconciliation or connectivity failure. The same state language lets support evidence join engineering diagnosis without copying sensitive content.
+
+## Conduct the operability exercise
+
+Give a second operator three symptoms: a global-green but failed low-connectivity cohort, a critical evidence-binding alert, and a dashboard with stale coverage. The operator must select next evidence, use approved queries/access, contain the affected path, communicate through authority, and choose a runbook/recovery action.
+
+Then inject retry demand plus model/reviewer budget pressure. Require an explicit queue/restrict/fallback decision and record user state, guardrails, support, and cost. Pass when the operator acts without raw sensitive payloads or hidden FDE knowledge and every missing signal changes the release or investigation decision.
+
 ## Complete `OA-08` operating layer
 
 The artifact now includes:

@@ -305,6 +305,50 @@ Repair: recommend and escalate; named customer authorities own formal exceptions
 
 Repair: bind detection, action, authority, communication, recovery, and re-entry before exposure. [CLM-140]
 
+## Operate the decision after exposure begins
+
+A signed go record is not the end of readiness. During the observation window, preserve the selected cohort, bundle, evidence coverage, staffing, and conditions. Record every hold, exception, configuration change, support spike, missing signal, and departure from the plan.
+
+At each cadence, choose one of:
+
+- **widen:** criteria and critical-case coverage support the next named cohort;
+- **continue:** the current window needs more evidence and conditions remain bounded;
+- **hold:** stop widening while a gap is investigated;
+- **reduce:** remove an unsupported cohort/capability without pretending full success;
+- **recover:** execute rollback, roll-forward, isolate, restore, or fallback by actual state;
+- **stop:** end exposure and preserve evidence when the path is not supportable.
+
+The post-window record should compare expected and observed behavior, not merely say `pilot complete`. Include outcome/guardrail/adoption signals, critical segments, incidents/support, capacity/cost, recovery, limitations, confounders, and the next authority decision.
+
+### Keep the decision bundle stable enough to interpret
+
+If code, configuration, model, prompt, index, policy, cohort, training, and support all change during one window, a favorable or unfavorable result becomes hard to interpret. Freeze material parts where possible and record necessary changes as new evidence versions.
+
+An urgent correction may be necessary. Do not delay it for experimental purity. Contain harm, version the change, reset the claim/window if needed, and state what evidence is no longer comparable.
+
+### Distinguish rollout from migration cutover
+
+A cohort feature can often be disabled. A data migration or external workflow cutover may mutate state that cannot be assigned back to a control group. For these changes, readiness emphasizes compatibility, capacity, reconciliation, recovery access, cutover command, and the last safe decision point.
+
+Suppose a fictional analytics deployment replaces a nightly file with streaming events. A 5 percent consumer cohort does not limit upstream schema or backlog consequence if all events enter the new pipeline. The rollout unit must reflect the actual state boundary, not the UI audience. This non-AI transfer case changes the decision and prevents `small cohort` language from hiding shared infrastructure risk.
+
+## Write the final go/no-go record
+
+Use this decision summary:
+
+- exact decision, scope, cohort, bundle, and window;
+- evidence packet version and critical claims;
+- facts, unknowns, judgments, and pressure;
+- met/gap/exception/reduced/block table;
+- options and consequences;
+- FDE recommendation and dissent;
+- designated authority and decision;
+- conditions, owners, expiry, and communications;
+- widen/continue/hold/reduce/recover/stop triggers;
+- post-window evidence and next decision.
+
+Another reviewer should be able to understand why the authority chose the path even if they disagree. That auditability matters when later production evidence contradicts the original assumptions.
+
 ## Complete `OA-09`
 
 The readiness artifact includes:

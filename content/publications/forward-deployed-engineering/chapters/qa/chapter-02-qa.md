@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `enter-the-customer-system.mdx`
 - Word count: approximately 4,900
-- Status: Phase 09 first depth repair complete; cumulative review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-Phase 09 confirmed the discovery/access job and added an explicit two-week plan with conflicting evidence and bounded data-access decisions. It remains below forecast without padding; cumulative duplication/terminology/continuity review stays open.
+Phase 09 confirmed the discovery/access job and added an explicit two-week plan with conflicting evidence and bounded data-access decisions. It remains below forecast without padding; cumulative duplication, terminology, source, and continuity gates pass.

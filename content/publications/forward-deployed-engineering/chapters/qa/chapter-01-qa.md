@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `the-deployed-outcome.mdx`
 - Word count: approximately 5,600 excluding separate learning/state/QA material
-- Status: Phase 09 first depth repair complete; cumulative review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-Phase 09 confirmed the professional decisions, artifact, failures, cases, and continuity, then added an explicit responsibility-classification/charter exercise. It remains shorter than forecast without padding; cumulative duplication/terminology/continuity review stays open.
+Phase 09 confirmed the professional decisions, artifact, failures, cases, and continuity, then added an explicit responsibility-classification/charter exercise. It remains shorter than forecast without padding; cumulative duplication, terminology, source, and continuity gates pass.

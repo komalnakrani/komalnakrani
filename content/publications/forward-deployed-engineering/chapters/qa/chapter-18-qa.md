@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `turn-field-evidence-into-product-leverage.mdx`
-- Status: Phase 09 first depth repair complete; second coverage review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-Phase 09 reopened the compressed baseline and added worked outcome/ledger/classification/product-packet decisions, maintenance and compatibility consequences, reversible abstraction, exercise, and failure repairs. Generic product management remains out of scope. A second depth/duplication audit remains open.
+Phase 09 added worked outcome/ledger/classification/packet decisions, contract costs, reversible abstraction, maturity transfer, review agenda, rejected learning, exercise, and failures. Generic product management remains out of scope. No concrete blueprint mechanism remains merely named.

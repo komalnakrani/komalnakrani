@@ -38,7 +38,8 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added a bounded outcome argument, worked pattern ledger, negative cases, twelve-artifact classification, contract-cost/reversibility analysis, consequence-versus-frequency decision, filled packet review, exercise, and failure repairs.
-- 3,261 manuscript words plus executable leverage evidence after the first depth repair; a second blueprint-depth review remains open.
+- The second depth pass added founding-versus-mature organization transfer, a product-learning review agenda, and preservation of rejected learning.
+- 3,570 manuscript words plus executable leverage evidence after Phase 09 depth repair.
 
 ## Chapter 19 may assume
 

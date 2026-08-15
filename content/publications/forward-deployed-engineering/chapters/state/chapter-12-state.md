@@ -38,7 +38,7 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added a worked UAT scenario, five-risk verification exercise, layered evidence design, grader calibration, critical-segment disposition, and failure repairs.
-- 3,529 manuscript words plus executable verification code after the first depth repair; a second blueprint-depth review remains open.
+- 3,529 manuscript words plus executable verification code after repair; final Phase 09 blueprint-depth, duplication, source, and continuity review passes.
 
 ## Chapter 13 may assume
 

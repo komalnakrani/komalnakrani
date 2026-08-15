@@ -44,7 +44,7 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 blueprint mapping found all workflow/state/evidence/exception/case/failure/figure/handoff elements and added an explicit multi-view mapping and validation exercise.
-- 4,729 manuscript words after the first depth repair; cumulative review remains open.
+- 4,729 manuscript words after repair; final Phase 09 depth, duplication, source, and continuity review passes.
 
 ## Chapter 04 may assume
 

@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `engineer-release-and-recovery.mdx`
-- Status: Phase 09 first depth repair complete; second coverage review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-Phase 09 reopened the compressed baseline and added release identity/provenance, a gated Orchid change, compatibility-state reasoning, recovery-option comparison, and a second-operator exercise. CI/CD vendor tutorials remain out of scope. A second depth/duplication audit is still required.
+Phase 09 added release identity/provenance, gated Orchid change, compatibility-state reasoning, recovery comparison, feature lifecycle, restore/break-glass protocols, transfer cases, and a second-operator exercise. CI/CD vendor tutorials remain out of scope. No concrete blueprint mechanism remains merely named.

@@ -37,7 +37,8 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added a worked promise record, fully specified indicator/action, aggregate-versus-cohort reading, actionable alert, evidence-first diagnosis, failed-dependency rehearsal, and failure repairs.
-- 2,863 manuscript words plus executable signal code after the first depth repair; a second blueprint-depth review remains open.
+- The second depth pass added blind-spot, capacity/cost/support, and operator operability exercises.
+- 3,314 manuscript words plus executable signal code after Phase 09 depth repair.
 
 ## Chapter 14 may assume
 

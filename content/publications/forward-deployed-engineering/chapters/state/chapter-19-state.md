@@ -38,10 +38,12 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added a decision-grade portfolio record, four-engagement allocation, cadence/staffing, detailed delegation, three-altitude escalation, capacity ladder, technical-depth habit, six-month growth plan, dossier review, exercise, and failure repairs.
-- 3,441 manuscript words plus executable portfolio evidence after the first depth repair; a second blueprint-depth review remains open.
+- The second depth pass added the weekly decision review, protected stop/reopen state, and founding-versus-mature leadership transfer.
+- 3,777 manuscript words plus executable portfolio evidence after Phase 09 depth repair.
 
-## Phase 09 may assume
+## Phase 10 may assume
 
 - all nineteen chapters, learning packs, state handoffs, QA records, and companion layers exist;
 - front matter and five appendices index the actual dossier without new unsupported claims;
-- final Phase 09 acceptance still requires the full blueprint-depth, duplication, terminology, continuity, and source audit.
+- Phase 09 blueprint-depth, duplication, terminology, continuity, source, executable, publication, and build acceptance passes;
+- prose is content-locked, and Phase 10 may change only visual implementation and accessibility metadata unless it opens a documented content defect.

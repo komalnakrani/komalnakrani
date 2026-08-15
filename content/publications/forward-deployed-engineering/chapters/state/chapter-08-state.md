@@ -43,7 +43,7 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added a three-environment review exercise with identity, network, configuration, secret, time, isolation, capacity, connectivity, recovery, and ownership failure injections.
-- 3,308 manuscript words after the first depth repair; a second blueprint-depth review remains open.
+- 3,308 manuscript words after repair; final Phase 09 blueprint-depth, duplication, source, and continuity review passes.
 
 ## Chapter 09 may assume
 

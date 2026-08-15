@@ -1,6 +1,6 @@
 # Forward Deployed Engineering - Duplication Audit
 
-Status: IN PROGRESS under Phase 09 issue #16
+Status: PASS under Phase 09 issue #16
 
 ## Intentional reinforcement
 
@@ -49,4 +49,19 @@ No deletion is authorized by this initial record; every consolidation must prese
 - Figure placeholders: 38 unique IDs; no repeated figure ID.
 - Orchid examples: repeated scenario state advances from discovery through closure; no real customer/employer outcome is implied.
 
-The duplication audit stays open through the second depth pass because new prose can introduce repetition.
+This checkpoint remained provisional until the second depth pass completed.
+
+## Second-pass result
+
+After all depth and packaging revisions, 560 manuscript prose paragraphs of 220+ characters were compared across chapters:
+
+- exact normalized duplicates: 0;
+- near-duplicate candidates at the review threshold: 0;
+- duplicate figure IDs: 0;
+- repeated full case stories without changed decision: 0 in manual review.
+
+Intentional recurrence remains limited to applying canonical evidence, authority, intent/reconciliation, release/recovery, and ownership models at new lifecycle decisions.
+
+## Final acceptance
+
+PASS. Post-revision scans and manual review find no accidental duplicate teaching, copied case progression, or repeated figure identity. Canonical concepts recur only when a later lifecycle decision changes their application.

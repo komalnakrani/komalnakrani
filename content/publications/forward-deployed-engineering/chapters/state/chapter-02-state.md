@@ -41,7 +41,7 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 blueprint mapping found discovery/access/evidence/trust/case/failure/figure/handoff elements and added an explicit two-week discovery/conflicting-evidence exercise.
-- 5,012 manuscript words after the first depth repair; cumulative review remains open.
+- 5,012 manuscript words after repair; final Phase 09 depth, duplication, source, and continuity review passes.
 
 ## Chapter 03 may assume
 

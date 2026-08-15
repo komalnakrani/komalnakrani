@@ -1,6 +1,6 @@
 # Forward Deployed Engineering - Book Coverage Audit
 
-Status: IN PROGRESS under Phase 09 issue #16
+Status: PASS under Phase 09 issue #16
 
 ## Audit method
 
@@ -41,14 +41,14 @@ The Phase 09 baseline contains 56,143 whitespace-delimited words across the nine
 - Source and claim registries contain 61 sources and 188 claims; publication validation reports no unresolved registry reference or blocking `SOURCE GAP`.
 - The provider-neutral companion has 64 passing tests and executable demo/recovery rehearsal paths.
 
-## Open coverage work
+## Coverage work disposition
 
-1. Expand Chapters 13-19 from compressed models into complete teaching prose with worked artifacts, decision paths, failure diagnosis, tradeoffs, and authority boundaries.
-2. Audit Chapters 06-12 line by line; expand mechanisms that depend on headings/checklists or companion code without adequate explanation.
-3. Audit Chapters 01-05 for the remaining blueprint cases, transfer decisions, and completion evidence; preserve their comparatively mature prose.
-4. Reconcile every completed repair in `book-revision-log.md`, then rerun source/objective/figure/project coverage checks.
+1. PASS: Chapters 13-19 now teach the required worked artifacts, decision paths, failure diagnosis, tradeoffs, and authority boundaries.
+2. PASS: Chapters 06-12 were audited line by line; Chapters 08-09 and 11-12 received demonstrated repairs, while Chapters 06-07 and 10 required no padding.
+3. PASS: Chapters 01-05 retain their mature prose and now expose explicit completion exercises.
+4. PASS: every repair is reconciled in `book-revision-log.md`; source, objective, figure, project, duplication, continuity, executable, and build checks pass.
 
-No chapter is marked Phase 09 PASS yet.
+All nineteen chapters are marked Phase 09 PASS. Content-specific limitations are explicit teaching boundaries; final artwork and accessibility metadata transfer to Phase 10.
 
 ## Revision checkpoint 1
 
@@ -86,4 +86,36 @@ This checkpoint closes demonstrated `model merely named` gaps. It does not use w
 - Reconciled all primary and secondary `competency-to-chapter.csv` mappings with manuscript and publication objective IDs; automated check now returns zero errors.
 - Reconciled all 188 claim markers, chapter declarations, source declarations, and named chapter cross-references; automated check now returns zero errors.
 
-Remaining coverage work is the second depth pass across Chapters 13-19 and final manual source/continuity read across all nineteen chapters.
+The second depth pass across Chapters 13-19 and the final manual source/continuity read across all nineteen chapters are complete.
+
+## Revision checkpoint 2
+
+The second depth pass completed the remaining late-chapter worked application without vendor or generic-management padding:
+
+| Ch | Checkpoint 1 | Checkpoint 2 | Added decision depth |
+| ---: | ---: | ---: | --- |
+| 13 | 2,863 | 3,314 | Blind-spot record, capacity/cost/support decision, second-operator operability exercise |
+| 14 | 2,269 | 2,740 | Feature-control lifecycle, semantic restore, failed-dependency break-glass, cross-change recovery cases |
+| 15 | 2,130 | 2,565 | Post-exposure dispositions, bundle stability, migration cutover transfer, final decision record |
+| 16 | 2,115 | 2,625 | Full stabilization report, incident-to-exit example, non-AI migration transfer, exercise review |
+| 17 | 2,487 | 2,939 | Repair experiments, exit states, explicit absence-of-FDE ownership test |
+| 18 | 3,261 | 3,570 | Founding/mature organization transfer, review agenda, rejected-learning preservation |
+| 19 | 3,441 | 3,777 | Weekly portfolio decision review, protected stop/reopen state, maturity transfer |
+
+The canonical nineteen-chapter manuscript is now 71,194 whitespace-delimited words including metadata. Every chapter remains below its aspirational blueprint forecast, but the audit no longer finds a required mechanism, tradeoff, failure response, authority boundary, worked application, exercise, case transfer, figure, or project handoff that is merely named. Further length would be padding unless a reviewer supplies a new concrete gap.
+
+## Satellite and transfer coverage
+
+- non-AI infrastructure/data migration: Chapters 15-16;
+- regulated/public document workflow: Chapters 16 and 19;
+- public-sector/high-governance conditions: Chapters 10, 17, and 19;
+- real-time voice: Chapters 5 and 19;
+- data/analytics without generative AI: Chapter 15;
+- founding-FDE and mature multi-role organizations: Chapters 18-19;
+- stopped deployment/engagement as correct outcome: Chapters 5 and 19.
+
+Every transfer changes a decision rather than decorating the Orchid narrative.
+
+## Final acceptance
+
+PASS. The 71,194-word canonical manuscript satisfies all nineteen approved blueprint mappings without outline-like placeholders or unsupported expansion. Automated objective, claim, source, cross-reference, figure, publication, companion, build, demo, rehearsal, duplication, and diff gates pass. The 38 frozen figure specifications transfer to Phase 10; no prose-architecture debt transfers with them.

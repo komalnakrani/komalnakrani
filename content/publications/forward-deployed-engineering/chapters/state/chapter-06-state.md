@@ -42,7 +42,7 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 blueprint mapping found boundaries, walkthroughs, cases, failures, exercise evidence, figures, sources, and handoff represented in complete prose; no unambiguous first-pass content gap was added.
-- 3,834 manuscript words; a second duplication/continuity/depth review remains open.
+- 3,834 manuscript words; final Phase 09 depth, duplication, source, and continuity review passes without padding.
 
 ## Chapter 07 may assume
 

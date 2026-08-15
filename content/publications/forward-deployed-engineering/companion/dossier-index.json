@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-16T02:46:00+05:30",
+  "generatedAt": "2026-08-16T02:55:00+05:30",
   "hashAlgorithm": "sha256",
-  "sourceHash": "e5ff6e15f75865943ffadad56f0be91bfb96b66a223a3f1d2ef6583177c00904",
+  "sourceHash": "ec285026ab5060e2fd515ee1dbb9a02a694b0e0683af05ef0cb19be362e33786",
   "sourceHashScope": "Sorted SHA-256 digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
   "buildHash": "fd2b740ff1a46e6b26ec388466ba8cc0436fe7af9c98929951e79a778055b42c",
   "buildHashScope": "Sorted SHA-256 digest stream for every file in the Astro dist directory produced by npm run build.",
@@ -10,14 +10,14 @@
     "roleRoot": "#3 OPEN",
     "phase08Root": "#9 CLOSED - acceptance verified at commit 2ec5731",
     "phase08Child": "#15 CLOSED - acceptance verified at commit 2ec5731",
-    "nextPhase": "#16 OPEN - Phase 09 whole-book QA"
+    "nextPhase": "#16 OPEN - Phase 09 acceptance verified; closure pending this content-lock commit"
   },
   "riskState": {
     "blockingSourceGaps": 0,
     "openExceptions": 0,
     "knownLimitations": [
       "All companion evidence is synthetic and local.",
-      "Whole-book coverage, duplication, terminology, continuity, architecture, source, and series consistency remain subject to Phase 09 audit.",
+      "Phase 09 content, duplication, terminology, continuity, architecture, source, executable, and series-consistency audits pass; future changes must reopen a documented content defect.",
       "The 38 frozen figure placeholders require final artwork and accessibility review in Phase 10.",
       "Real integrations, customer identity, performance, accessibility, UAT, recovery, authority, and production outcomes require representative evidence."
     ]

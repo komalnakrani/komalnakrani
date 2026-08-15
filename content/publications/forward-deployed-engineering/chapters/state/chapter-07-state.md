@@ -44,7 +44,7 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 blueprint mapping found contracts, intent/reconciliation, security/capacity, tests, lab, sample record, change handling, failures, figures, and handoff represented; no unambiguous first-pass content gap was added.
-- 3,699 manuscript words; a second duplication/continuity/depth review remains open.
+- 3,699 manuscript words; final Phase 09 depth, duplication, source, and continuity review passes without padding.
 
 ## Chapter 08 may assume
 

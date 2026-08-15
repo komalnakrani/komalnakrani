@@ -38,7 +38,8 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 expanded the criterion table, option comparison, pattern selection, critical-case window, trigger/exception records, conflicting-stakeholder exercise, and failure repairs.
-- 2,130 manuscript words plus executable readiness code after the first depth repair; a second blueprint-depth review remains open.
+- The second depth pass added post-exposure dispositions, bundle stability, migration cutover transfer, and a final go/no-go record.
+- 2,565 manuscript words plus executable readiness code after Phase 09 depth repair.
 
 ## Chapter 16 may assume
 

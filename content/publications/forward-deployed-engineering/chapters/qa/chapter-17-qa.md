@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `make-the-solution-usable-and-ownable.mdx`
-- Status: Phase 09 first depth repair complete; second coverage review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-Phase 09 reopened the compressed baseline and added worked adoption diagnosis, evidence limits, whole-task protocol, accessibility evidence, supervised ownership acceptance, access transfer, exception, exercise, and failure repairs. Broad change management remains out of scope. A second depth/duplication audit remains open.
+Phase 09 added adoption diagnosis/evidence/task/accessibility, supervised acceptance/access/exception, repair experiments, exit states, absence testing, and failure repairs. Broad change management remains out of scope. No concrete blueprint mechanism remains merely named.

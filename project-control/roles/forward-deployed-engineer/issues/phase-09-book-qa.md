@@ -26,15 +26,15 @@ Audit the actual nineteen-chapter manuscript as one book. Compare it against the
 
 ## Acceptance criteria
 
-- [ ] All nineteen blueprint-to-manuscript mappings have an explicit `PASS`, corrected gap, or justified intentional disposition.
-- [ ] No chapter is an outline, compressed checklist, or glossary entry disguised as finished teaching prose.
-- [ ] Every required failure mode includes detection or evidence, response, authority, and consequence where the blueprint requires them.
-- [ ] The Orchid case and companion form one continuous, internally consistent deployment dossier.
-- [ ] Intentional repetition is identified; accidental duplication and terminology drift are corrected.
-- [ ] Objective, architecture, figure, source, claim, and chapter-manifest coverage reconcile.
-- [ ] All fictional/synthetic cases and non-proof limitations remain explicit.
-- [ ] All Phase 09 findings are closed or transferred with a named later-phase owner only when genuinely visual/publication-specific.
-- [ ] Publication validation, publication tests, companion tests, Astro build, companion demo/rehearsal, hash verification, and `git diff --check` pass.
+- [x] All nineteen blueprint-to-manuscript mappings have an explicit `PASS`, corrected gap, or justified intentional disposition.
+- [x] No chapter is an outline, compressed checklist, or glossary entry disguised as finished teaching prose.
+- [x] Every required failure mode includes detection or evidence, response, authority, and consequence where the blueprint requires them.
+- [x] The Orchid case and companion form one continuous, internally consistent deployment dossier.
+- [x] Intentional repetition is identified; accidental duplication and terminology drift are corrected.
+- [x] Objective, architecture, figure, source, claim, and chapter-manifest coverage reconcile.
+- [x] All fictional/synthetic cases and non-proof limitations remain explicit.
+- [x] All Phase 09 findings are closed or transferred with a named later-phase owner only when genuinely visual/publication-specific.
+- [x] Publication validation, publication tests, companion tests, Astro build, companion demo/rehearsal, hash verification, and `git diff --check` pass.
 
 ## Handoff
 

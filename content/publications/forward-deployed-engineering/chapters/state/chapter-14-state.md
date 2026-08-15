@@ -38,7 +38,8 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added complete release identity/provenance review, a gated Orchid change walkthrough, compatibility reasoning, a partial-state option comparison, and a reproducible release/recovery exercise.
-- 2,269 manuscript words plus executable release/recovery code after the first depth repair; a second blueprint-depth review remains open.
+- The second depth pass added feature-control lifecycle, semantic restore verification, failed-dependency break-glass, and cross-change recovery selection.
+- 2,740 manuscript words plus executable release/recovery code after Phase 09 depth repair.
 
 ## Chapter 15 may assume
 

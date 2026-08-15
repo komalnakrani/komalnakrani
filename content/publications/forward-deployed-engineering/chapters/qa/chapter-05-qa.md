@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `scope-the-first-safe-production-path.mdx`
 - Word count: approximately 4,100
-- Status: Phase 09 first depth repair complete; cumulative review open
+- Status: Phase 09 PASS
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-Phase 09 confirmed the complete scoping job and added an explicit three-option decision with late-change, authority, and unsafe-production-evidence injections. It remains below forecast without padding; cumulative duplication/terminology/continuity review stays open.
+Phase 09 confirmed the complete scoping job and added an explicit three-option decision with late-change, authority, and unsafe-production-evidence injections. It remains below forecast without padding; cumulative duplication, terminology, source, and continuity gates pass.

@@ -42,7 +42,7 @@
 - No blocking external source gap.
 - Final figures wait for Phase 10.
 - Phase 09 blueprint mapping found all metric/outcome/guardrail/adoption/attribution/rights/criteria/case/failure/figure/handoff elements and added an explicit contract/gaming/segment exercise.
-- 4,211 manuscript words after the first depth repair; cumulative review remains open.
+- 4,211 manuscript words after repair; final Phase 09 depth, duplication, source, and continuity review passes.
 
 ## Chapter 05 may assume
 

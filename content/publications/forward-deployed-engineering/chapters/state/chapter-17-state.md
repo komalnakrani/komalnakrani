@@ -38,7 +38,8 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added testable friction records, five non-use patterns, adoption evidence limits, whole-task observation, accessibility/task layers, demonstrated acceptance scenarios, access-state transfer, explicit exception, exercise, and failure repairs.
-- 2,487 manuscript words plus executable ownership evidence after the first depth repair; a second blueprint-depth review remains open.
+- The second depth pass added repair-experiment routing, ownership/engagement exit states, and an explicit absence-of-FDE test.
+- 2,939 manuscript words plus executable ownership evidence after Phase 09 depth repair.
 
 ## Chapter 18 may assume
 

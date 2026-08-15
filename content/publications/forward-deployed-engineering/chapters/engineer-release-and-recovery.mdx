@@ -279,6 +279,52 @@ The rehearsal record must include rejected alternatives, access/authority, obser
 
 Pass when another operator can repeat the result and explain why the action is safe for the tested state. Fail if success depends on the original author narrating hidden steps, if only the infrastructure process is verified, or if local timing becomes a production RTO promise.
 
+## Manage feature controls as temporary release state
+
+A feature flag can reduce exposure, but it also creates multiple system configurations. Record the default, scope, owner, creation decision, prerequisites, interacting controls, on/off behavior, signals, stop/recovery use, expiry, removal criteria, and data/schema compatibility.
+
+Test at least the material combinations. Turning off the interface may not stop background work. Turning off the model may still leave stale suggestions in a cache. A cohort flag may not reverse external inventory effects. A recovery switch that was never exercised can fail when needed.
+
+At each release review classify a control as:
+
+- active experiment/exposure control with current decision window;
+- intentional long-lived operational control with permanent owner/tests;
+- expired/dead state awaiting removal;
+- unsafe/unowned divergence that blocks widening.
+
+Remove code/config/data paths when the decision closes. If removal itself is risky, plan and verify it as a release.
+
+## Design a restore test that proves usable state
+
+Choose a representative backup version and record what it contains and omits: data, schema, configuration, encryption/key dependency, index/evidence versions, audit, and external effects. Restore into an approved isolated environment using the access path expected during incident conditions.
+
+Verify:
+
+- cryptographic or storage integrity where appropriate;
+- schema/application/config compatibility;
+- record counts plus semantic invariants;
+- tenant/region and access boundaries;
+- missing interval and external-effect reconciliation;
+- user-visible workflow state;
+- observed time, bottlenecks, and assistance;
+- cleanup/protection of restored sensitive data.
+
+The test can reveal that a backup is valid bytes but unusable with the current application, or that inventory reservations after the backup cannot be reconstructed. Those are recovery gaps, not minor documentation issues.
+
+## Exercise break-glass without normalizing it
+
+Disable the normal identity dependency in the rehearsal. The authorized operator must invoke the approved emergency path, authenticate independently enough to survive the failure, receive only the required scope/duration, perform named recovery actions, notify designated owners, generate audit evidence, and exit/rotate access afterward.
+
+Record every dependency. If emergency access relies on DNS, secrets, approval service, device posture, or network control that shares the incident failure, repair the design or state the limitation. Do not respond by leaving permanent broad credentials available.
+
+The FDE can help implement and exercise the mechanism. Customer security/operations authorities decide eligibility, conditions, and residual risk. [CLM-128]
+
+## Transfer the recovery tree across changes
+
+For a stateless UI defect with no external effects, rollback may be simple. For an append-only event schema, roll-forward with compatible readers may be safer. For a corrupted tenant-specific index, isolate and rebuild may preserve other cohorts. For a regional data loss with verified backup, restore plus reconciliation may be necessary. For unknown authority or state, stop and escalate.
+
+Using several change types prevents the team from memorizing one preferred action. The tree is a decision method: actual external state, reversibility, compatibility, access, evidence, and consequence determine the path.
+
 ## Failure modes and repairs
 
 ### “Pipeline means safe”

@@ -39,7 +39,7 @@
 - No blocking source gap.
 - Final figures wait for Phase 10.
 - Phase 09 added a reviewer trace, consequential failure drill, clean-checkout supportability test, and explicit implementation failure repairs.
-- 4,102 manuscript words plus executable code after the first depth repair; a second blueprint-depth review remains open.
+- 4,102 manuscript words plus executable code after repair; final Phase 09 blueprint-depth, duplication, source, and continuity review passes.
 
 ## Chapter 12 may assume
 
