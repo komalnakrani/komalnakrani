@@ -104,6 +104,45 @@
       "license": "United States government work",
       "notes": "Risk- and outcome-based privacy framework used to reinforce organizational ownership and contextual risk decisions; not legal advice.",
       "usedIn": { "chapterSlugs": ["the-deployed-outcome"], "claimIds": ["CLM-004"] }
+    },
+    {
+      "id": "SRC-009",
+      "type": "documentation",
+      "title": "Understand users and their needs",
+      "authors": ["UK Government Digital Service"],
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/service-manual/service-standard/point-1-understand-user-needs",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Open Government Licence",
+      "notes": "Government service-standard guidance used for whole-problem and context-first discovery; transfer requires judgment.",
+      "usedIn": { "chapterSlugs": ["enter-the-customer-system"], "claimIds": ["CLM-009", "CLM-010"] }
+    },
+    {
+      "id": "SRC-010",
+      "type": "documentation",
+      "title": "Start by learning user needs",
+      "authors": ["UK Government Digital Service"],
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Open Government Licence",
+      "notes": "Guidance for interviewing and observing real users, reviewing existing evidence, and treating opinions as assumptions until tested.",
+      "usedIn": { "chapterSlugs": ["enter-the-customer-system"], "claimIds": ["CLM-009", "CLM-010", "CLM-012"] }
+    },
+    {
+      "id": "SRC-011",
+      "type": "documentation",
+      "title": "Introduction to designing government services",
+      "authors": ["UK Government Digital Service"],
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/service-manual/design/introduction-designing-government-services",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Open Government Licence",
+      "notes": "High-governance service guidance used for end-to-end, front-to-back, cross-channel, and secure-by-design discovery questions.",
+      "usedIn": { "chapterSlugs": ["enter-the-customer-system"], "claimIds": ["CLM-009", "CLM-013"] }
     }
   ]
 }

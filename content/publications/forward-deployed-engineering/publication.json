@@ -30,6 +30,15 @@
       "minutes": 45,
       "sourceFile": "chapters/the-deployed-outcome.mdx",
       "objectiveIds": ["FDE-K01", "FDE-K11", "FDE-K12"]
+    },
+    {
+      "order": 2,
+      "slug": "enter-the-customer-system",
+      "title": "Enter the Customer System",
+      "summary": "Plan legitimate discovery, distinguish stakeholder dimensions, minimize access and data, and keep evidence confidence explicit.",
+      "minutes": 50,
+      "sourceFile": "chapters/enter-the-customer-system.mdx",
+      "objectiveIds": ["FDE-K01", "FDE-K02", "FDE-K08", "FDE-K12"]
     }
   ],
   "registries": {

@@ -48,6 +48,42 @@
       "chapterSlug": "the-deployed-outcome",
       "statement": "Some current FDE descriptions explicitly include codifying field patterns, tools, playbooks, reusable building blocks, and product feedback.",
       "sourceIds": ["SRC-002", "SRC-005"]
+    },
+    {
+      "id": "CLM-009",
+      "chapterSlug": "enter-the-customer-system",
+      "statement": "Discovery should begin with the user's whole problem and context rather than a preselected technical solution.",
+      "sourceIds": ["SRC-009", "SRC-010", "SRC-011"]
+    },
+    {
+      "id": "CLM-010",
+      "chapterSlug": "enter-the-customer-system",
+      "statement": "Interviews, observation, and existing evidence provide distinct inputs for learning how real users perform a workflow.",
+      "sourceIds": ["SRC-009", "SRC-010"]
+    },
+    {
+      "id": "CLM-011",
+      "chapterSlug": "enter-the-customer-system",
+      "statement": "Access and data collection should be tied to a named discovery question and limited by purpose, owner, handling, and expiry.",
+      "sourceIds": ["SRC-005", "SRC-007", "SRC-008"]
+    },
+    {
+      "id": "CLM-012",
+      "chapterSlug": "enter-the-customer-system",
+      "statement": "Stakeholder opinion is evidence of what a person reports and should remain an assumption about the workflow until it is tested appropriately.",
+      "sourceIds": ["SRC-010"]
+    },
+    {
+      "id": "CLM-013",
+      "chapterSlug": "enter-the-customer-system",
+      "statement": "End-to-end and front-to-back discovery includes channels, operational processes, technology, and security rather than the visible interface alone.",
+      "sourceIds": ["SRC-011"]
+    },
+    {
+      "id": "CLM-014",
+      "chapterSlug": "enter-the-customer-system",
+      "statement": "The stakeholder and evidence models in this chapter are original synthesis tools for separating impact, knowledge, access, responsibility, authority, and confidence.",
+      "sourceIds": ["SRC-009", "SRC-010", "SRC-011"]
     }
   ]
 }
