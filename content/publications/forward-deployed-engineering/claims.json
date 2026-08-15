@@ -120,6 +120,48 @@
       "chapterSlug": "map-the-workflow-that-actually-exists",
       "statement": "The coordinated workflow views and resolution test in this chapter are an original synthesis for deployment decisions rather than a formal modeling standard.",
       "sourceIds": ["SRC-010", "SRC-011", "SRC-012", "SRC-013"]
+    },
+    {
+      "id": "CLM-021",
+      "chapterSlug": "contract-for-an-outcome",
+      "statement": "Outcome and use measures should be defined early enough to guide service decisions rather than added only after launch.",
+      "sourceIds": ["SRC-016"]
+    },
+    {
+      "id": "CLM-022",
+      "chapterSlug": "contract-for-an-outcome",
+      "statement": "Benefits require an explicit baseline and continuing evidence that can support continue, change, or stop decisions.",
+      "sourceIds": ["SRC-017"]
+    },
+    {
+      "id": "CLM-023",
+      "chapterSlug": "contract-for-an-outcome",
+      "statement": "Use, satisfaction, dropout, and segmented workflow evidence are complementary signals and should not be treated as interchangeable proof of value.",
+      "sourceIds": ["SRC-016", "SRC-018"]
+    },
+    {
+      "id": "CLM-024",
+      "chapterSlug": "contract-for-an-outcome",
+      "statement": "User-relevant service indicators and objectives are useful when they are connected to explicit actions and tradeoffs.",
+      "sourceIds": ["SRC-019"]
+    },
+    {
+      "id": "CLM-025",
+      "chapterSlug": "contract-for-an-outcome",
+      "statement": "A vendor customer story reports 98 percent active use by Morgan Stanley advisor teams, but the figure remains attributed and does not independently prove productivity, correctness, or customer benefit.",
+      "sourceIds": ["SRC-020"]
+    },
+    {
+      "id": "CLM-026",
+      "chapterSlug": "contract-for-an-outcome",
+      "statement": "An outcome contract should make it possible to continue, change, reduce, or stop a deployment when benefit and guardrail evidence do not justify the path.",
+      "sourceIds": ["SRC-017", "SRC-019"]
+    },
+    {
+      "id": "CLM-027",
+      "chapterSlug": "contract-for-an-outcome",
+      "statement": "The metric-tree, attribution-ladder, and outcome-contract structures in this chapter are original synthesis tools rather than formal external standards.",
+      "sourceIds": ["SRC-016", "SRC-017", "SRC-018", "SRC-019"]
     }
   ]
 }

@@ -195,6 +195,71 @@
       "license": "AWS website terms",
       "notes": "First-party engineering pattern used to show that caller intent and ambiguous completion are workflow concerns; no quantitative outcome claim.",
       "usedIn": { "chapterSlugs": ["map-the-workflow-that-actually-exists"], "claimIds": ["CLM-019"] }
+    },
+    {
+      "id": "SRC-016",
+      "type": "documentation",
+      "title": "Using data to improve your service: an introduction",
+      "authors": ["UK Government Digital Service"],
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Open Government Licence",
+      "notes": "Official service guidance for defining performance data early and understanding use across segments; examples remain public-service specific.",
+      "usedIn": { "chapterSlugs": ["contract-for-an-outcome"], "claimIds": ["CLM-021", "CLM-023"] }
+    },
+    {
+      "id": "SRC-017",
+      "type": "documentation",
+      "title": "Measuring service benefits",
+      "authors": ["UK Government Digital Service"],
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/service-manual/measuring-success/measuring-service-benefits",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Open Government Licence",
+      "notes": "Official guidance for baselining and monitoring benefit evidence to support continue, change, or stop decisions; does not establish causal attribution alone.",
+      "usedIn": { "chapterSlugs": ["contract-for-an-outcome"], "claimIds": ["CLM-022", "CLM-026"] }
+    },
+    {
+      "id": "SRC-018",
+      "type": "documentation",
+      "title": "Measuring user satisfaction",
+      "authors": ["UK Government Digital Service"],
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/service-manual/measuring-success/measuring-user-satisfaction",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Open Government Licence",
+      "notes": "Official guidance used for continuous satisfaction and dropout evidence; satisfaction is one signal, not proof of workflow value.",
+      "usedIn": { "chapterSlugs": ["contract-for-an-outcome"], "claimIds": ["CLM-023"] }
+    },
+    {
+      "id": "SRC-019",
+      "type": "book",
+      "title": "Service Level Objectives",
+      "authors": ["Betsy Beyer", "Chris Jones", "Jennifer Petoff", "Niall Richard Murphy"],
+      "publisher": "Google Site Reliability Engineering",
+      "url": "https://sre.google/sre-book/service-level-objectives/",
+      "publishedAt": "2016-01-01",
+      "accessedAt": "2026-08-16",
+      "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+      "notes": "First-party engineering book chapter used for user-relevant indicators/objectives tied to action and tradeoffs; practices require contextual adaptation.",
+      "usedIn": { "chapterSlugs": ["contract-for-an-outcome"], "claimIds": ["CLM-024"] }
+    },
+    {
+      "id": "SRC-020",
+      "type": "web",
+      "title": "Morgan Stanley uses AI evals to shape the future of financial services",
+      "authors": ["OpenAI"],
+      "publisher": "OpenAI",
+      "url": "https://openai.com/index/morgan-stanley/",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "OpenAI website terms",
+      "notes": "Vendor/customer story used only for an attributed adoption figure and evaluation practice; outcomes are not independently verified.",
+      "usedIn": { "chapterSlugs": ["contract-for-an-outcome"], "claimIds": ["CLM-025"] }
     }
   ]
 }

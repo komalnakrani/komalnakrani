@@ -48,6 +48,15 @@
       "minutes": 55,
       "sourceFile": "chapters/map-the-workflow-that-actually-exists.mdx",
       "objectiveIds": ["FDE-K02", "FDE-K03", "FDE-K06"]
+    },
+    {
+      "order": 4,
+      "slug": "contract-for-an-outcome",
+      "title": "Contract for an Outcome",
+      "summary": "Turn workflow evidence into measurable outcomes, guardrails, adoption signals, decision rights, assumptions, non-goals, and exit criteria.",
+      "minutes": 55,
+      "sourceFile": "chapters/contract-for-an-outcome.mdx",
+      "objectiveIds": ["FDE-K01", "FDE-K02", "FDE-K03", "FDE-K10", "FDE-K12"]
     }
   ],
   "registries": {
