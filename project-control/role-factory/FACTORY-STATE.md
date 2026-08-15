@@ -54,14 +54,14 @@
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#13 — Write FDE Chapters 11-14 and production companion](https://github.com/alpeshznakrani/komalnakrani/issues/13)
+- Active child: [#14 — Write FDE Chapters 15-17 and ownership companion](https://github.com/alpeshznakrani/komalnakrani/issues/14)
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Execute Forward Deployed Engineer issue #13: write Chapter 11 and build the
-runnable synthetic production vertical slice before advancing to verification,
-observability, and recovery.
+Execute Forward Deployed Engineer issue #14: write Chapter 15 and build the
+readiness disposition/cohort gate before advancing to stabilization, adoption,
+and ownership acceptance.
 
 ## Resume instructions
 

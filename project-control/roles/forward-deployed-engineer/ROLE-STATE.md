@@ -9,7 +9,7 @@
 - Last updated: 2026-08-16
 - Last completed issue: Phase 08.4 Chapters 11-14 #13
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: pending next Phase 08 child (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
+- Active issue: [#14](https://github.com/alpeshznakrani/komalnakrani/issues/14) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-14 and `OA-05` through `OA-08` are complete. Open the next ordered child issue for Chapters 15-17, then write rollout, stabilization, adoption, and handoff.
+Chapters 01-14 and `OA-05` through `OA-08` are complete. Write Chapters 15-17 and extend the companion through readiness, stabilization, adoption, and ownership acceptance under child issue #14.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Verify and close issue #13, then open the ordered Chapters 15-17 child issue under root Phase 08 #9.
+Write Chapter 15 and the evidence-based readiness disposition/cohort gate from the approved blueprint and Chapter 14 state.
 
 ## Resume instructions
 
