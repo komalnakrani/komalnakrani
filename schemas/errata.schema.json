@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://komalnakrani.com/schemas/errata.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "errata"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "errata": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "editionVersion", "status", "reportedAt", "resolvedAt", "chapterSlug", "location", "description", "correction"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^ERR-[0-9]{3,}$" },
+          "editionVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+          "status": { "enum": ["open", "corrected", "declined"] },
+          "reportedAt": { "type": "string", "format": "date" },
+          "resolvedAt": { "type": ["string", "null"], "format": "date" },
+          "chapterSlug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "location": { "type": "string", "minLength": 3 },
+          "description": { "type": "string", "minLength": 20 },
+          "correction": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

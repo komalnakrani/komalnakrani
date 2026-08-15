@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
@@ -7,5 +8,5 @@ export default defineConfig({
   trailingSlash: 'ignore',
   build: { format: 'directory' },
   devToolbar: { enabled: false },
-  integrations: [sitemap()],
+  integrations: [mdx(), sitemap()],
 });

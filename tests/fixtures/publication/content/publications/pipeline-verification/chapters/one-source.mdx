@@ -1,0 +1,23 @@
+---
+title: One canonical source
+slug: one-source
+summary: Why web and PDF editions must originate from the same reviewed manuscript.
+minutes: 4
+sourceIds:
+  - SRC-001
+claimIds:
+  - CLM-001
+objectiveIds:
+  - PV-O01
+figureIds: []
+---
+
+## The drift problem
+
+A web chapter and a downloadable edition become unreliable when editors maintain them separately. A correction may reach one version and miss the other, leaving readers unable to tell which statement is current.
+
+The publication pipeline therefore treats this MDX file as the canonical prose. The web reader and PDF builder consume the same chapter order, title, summary, objective mapping, and source identifiers. A release can change presentation, but it cannot silently substitute a second body of text.
+
+## The release rule
+
+Validation runs before either output is accepted. It checks that the chapter belongs to the manifest, that every source and objective exists, and that public records are explicitly marked as published. This fixture is stored under tests and never enters the production catalog.

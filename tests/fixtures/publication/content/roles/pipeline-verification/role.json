@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "slug": "pipeline-verification",
+  "title": "Publication Pipeline Verification",
+  "summary": "A non-production role fixture used only to verify publication contracts and release tooling.",
+  "status": "published",
+  "boundary": {
+    "includes": ["Verify deterministic publication tooling and validation behavior."],
+    "excludes": ["Represent a real professional role or a public Komal learning path."]
+  },
+  "competencies": [
+    {
+      "id": "PV-C01",
+      "title": "Publication integrity",
+      "description": "Validate that a canonical manuscript produces traceable web and PDF publication artifacts.",
+      "objectives": [
+        {
+          "id": "PV-O01",
+          "statement": "Explain how one canonical source prevents drift between web and downloadable editions."
+        },
+        {
+          "id": "PV-O02",
+          "statement": "Verify that a release records its edition, sources, checksum, and correction path."
+        }
+      ]
+    }
+  ]
+}

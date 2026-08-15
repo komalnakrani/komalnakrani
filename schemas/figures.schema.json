@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://komalnakrani.com/schemas/figures.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "figures"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "file", "alt", "caption", "chapterSlug", "creator", "sourceIds", "license"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^FIG-[0-9]{3,}$" },
+          "file": { "type": "string", "pattern": "^assets/[a-z0-9][a-z0-9-]*\\.(png|jpg|jpeg|webp|svg)$" },
+          "alt": { "type": "string", "minLength": 20 },
+          "caption": { "type": "string", "minLength": 20 },
+          "chapterSlug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "creator": { "type": "string", "minLength": 2 },
+          "sourceIds": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^SRC-[0-9]{3,}$" } },
+          "license": { "type": "string", "minLength": 2 }
+        }
+      }
+    }
+  }
+}

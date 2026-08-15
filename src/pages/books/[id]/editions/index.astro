@@ -1,0 +1,24 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import Btn from '../../../../components/Btn.astro';
+import K from '../../../../components/K.astro';
+import { BOOKS } from '../../../../data/publications';
+
+export function getStaticPaths() {
+  return BOOKS.map((book) => ({ params: { id: book.slug }, props: { book } }));
+}
+const { book } = Astro.props;
+---
+<Layout title={`Editions | ${book.title} | Komal Nakrani`} description={`Published editions of ${book.title}.`}>
+  <main class="wrap" style="padding-top:64px; padding-bottom:96px">
+    <Btn variant="ghost" href={`/books/${book.slug}/`} icon="arrow-left">Book overview</Btn>
+    <div style="margin-top:34px"><K sig>Publication record</K></div>
+    <h1 class="h1" style="margin-top:18px">Editions</h1>
+    <div style="margin-top:34px; border-top:1px solid var(--line-2); padding-top:24px; max-width:760px">
+      <a class="brow" href={`/books/${book.slug}/editions/${book.edition.version}/`}>
+        <div><h2 class="h3">{book.edition.label}</h2><p class="small">Version {book.edition.version}</p></div>
+        <span class="tag">{book.status}</span>
+      </a>
+    </div>
+  </main>
+</Layout>

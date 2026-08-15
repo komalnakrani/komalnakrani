@@ -21,7 +21,7 @@ const { book } = Astro.props;
       <header class="reader-hero">
         <div class="reader-cover"><Cover book={book} /></div>
         <div>
-          <K idx={book.edition} sig>{book.series} · Volume {book.volume}</K>
+          <K idx={book.edition.label} sig>{book.series.title} · Volume {book.volume}</K>
           <h1 class="h1" style="margin:18px 0 0">{book.title}</h1>
           <p class="lead" style="margin-top:14px">{book.subtitle}</p>
           <p class="body-t" style="margin-top:22px">{book.description}</p>
@@ -39,6 +39,10 @@ const { book } = Astro.props;
           ))}
         </div>
       </section>
+      <div style="display:flex; gap:18px; margin-top:28px">
+        <Btn variant="ghost" href={`/books/${book.slug}/editions/`}>Editions</Btn>
+        <Btn variant="ghost" href={`/books/${book.slug}/errata/`}>Errata</Btn>
+      </div>
     </article>
   </main>
 </Layout>

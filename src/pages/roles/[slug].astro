@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Btn from '../../components/Btn.astro';
+import BookCard from '../../components/BookCard.astro';
+import K from '../../components/K.astro';
+import { ROLES, booksForRole } from '../../data/publications';
+
+export function getStaticPaths() {
+  return ROLES.map((role) => ({
+    params: { slug: role.slug },
+    props: { role, books: booksForRole(role.slug) },
+  }));
+}
+const { role, books } = Astro.props;
+---
+<Layout title={`${role.title} | Komal Nakrani`} description={role.summary}>
+  <main class="rise">
+    <section class="wrap" style="padding-top:64px">
+      <Btn variant="ghost" href="/roles/" icon="arrow-left">All roles</Btn>
+      <div style="margin-top:34px"><K sig>Role learning path</K></div>
+      <h1 class="h1" style="margin-top:18px">{role.title}</h1>
+      <p class="lead" style="margin-top:16px; max-width:760px">{role.summary}</p>
+    </section>
+    <section class="wrap section" style="padding-top:54px">
+      <h2 class="h2">Role boundary</h2>
+      <div class="help" style="margin-top:24px">
+        <div class="hc"><span class="hk">In</span><span class="hn">Included</span><span class="hd">{role.boundary.includes.join(' ')}</span></div>
+        <div class="hc"><span class="hk">Out</span><span class="hn">Excluded</span><span class="hd">{role.boundary.excludes.join(' ')}</span></div>
+      </div>
+    </section>
+    <section class="wrap section">
+      <K idx="01">Original publications</K>
+      <h2 class="h2" style="margin-top:12px">Books for this role</h2>
+      {books.length > 0 ? <div class="catgrid" style="margin-top:28px">{books.map((book) => <BookCard book={book} />)}</div> : <p class="body-t" style="margin-top:18px">No publication has passed review for this role yet.</p>}
+    </section>
+  </main>
+</Layout>

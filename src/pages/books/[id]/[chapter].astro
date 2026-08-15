@@ -16,6 +16,11 @@ export function getStaticPaths() {
 const { book, chapter, index } = Astro.props;
 const previous = book.chapters[index - 1];
 const next = book.chapters[index + 1];
+const chapterModules = import.meta.glob('../../../../content/publications/*/chapters/*.mdx');
+const chapterKey = `../../../../content/publications/${book.slug}/${chapter.sourceFile}`;
+const loadChapter = chapterModules[chapterKey];
+if (!loadChapter) throw new Error(`Validated chapter module is missing: ${chapterKey}`);
+const ChapterContent = ((await loadChapter()) as { default: (_props: Record<string, unknown>) => unknown }).default;
 ---
 <Layout title={`${chapter.title} | ${book.title} | Komal Nakrani`} description={chapter.summary}>
   <main class="rise">
@@ -27,7 +32,7 @@ const next = book.chapters[index + 1];
           <h1 class="h1" style="margin:18px 0 0">{chapter.title}</h1>
           <p class="lead" style="margin-top:16px">{chapter.summary}</p>
           <div class="prose book-prose">
-            <slot />
+            <ChapterContent />
           </div>
           <nav class="chapter-nav" aria-label="Chapter navigation">
             <a href={previous ? `/books/${book.slug}/${previous.slug}/` : `/books/${book.slug}/`}>

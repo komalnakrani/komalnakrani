@@ -7,13 +7,21 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "validate:publications": "node scripts/validate-publications.mjs",
+    "test:publications": "node --test tests/publication-validation.test.mjs",
+    "build:pdf": "node scripts/build-publication-pdf.mjs",
+    "check": "npm run validate:publications && npm run test:publications && npm run build",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^6.0.3",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.4.6"
   },
   "devDependencies": {
-    "@fontsource/space-grotesk": "^5.2.10"
+    "@fontsource/space-grotesk": "^5.2.10",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "gray-matter": "^4.0.3"
   }
 }
