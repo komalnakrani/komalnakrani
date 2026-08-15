@@ -474,6 +474,72 @@
       "chapterSlug": "build-security-and-governance-into-delivery",
       "statement": "Security, reliability, usability, accessibility, privacy, and other quality concerns interact but are not interchangeable and require contextual tradeoffs and evidence.",
       "sourceIds": ["SRC-008", "SRC-042", "SRC-045", "SRC-046"]
+    },
+    {
+      "id": "CLM-080",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "Production quality spans interacting functional, operational, security, reliability, performance, cost, usability, maintainability, and recovery concerns rather than happy-path correctness alone.",
+      "sourceIds": ["SRC-045", "SRC-047", "SRC-048"]
+    },
+    {
+      "id": "CLM-081",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "The vertical-slice coverage test, repository map, review lens, and debt record in this chapter are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-043", "SRC-045", "SRC-047", "SRC-048"]
+    },
+    {
+      "id": "CLM-082",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "Versioned OpenAPI, AsyncAPI, and JSON Schema artifacts can make interface structures testable but do not establish domain semantics, workflow correctness, or production behavior by themselves.",
+      "sourceIds": ["SRC-027", "SRC-028", "SRC-029"]
+    },
+    {
+      "id": "CLM-083",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "HTTP method semantics alone do not make an application operation safely retryable when intent equivalence or external completion is ambiguous.",
+      "sourceIds": ["SRC-014", "SRC-015"]
+    },
+    {
+      "id": "CLM-084",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "Secure development and application verification should be integrated into implementation and review rather than added after a functional slice is complete.",
+      "sourceIds": ["SRC-043", "SRC-044"]
+    },
+    {
+      "id": "CLM-085",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "A model is one replaceable component inside a production path whose contracts, data, policy, authorization, audit, operation, and failure behavior remain system responsibilities.",
+      "sourceIds": ["SRC-038", "SRC-039"]
+    },
+    {
+      "id": "CLM-086",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "Release automation and consistency can reduce manual variance but do not replace review, verification, evidence, or recovery design.",
+      "sourceIds": ["SRC-049"]
+    },
+    {
+      "id": "CLM-087",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "A deterministic test double proves only the behavior encoded in that double and cannot establish the real dependency's semantics, authorization, performance, availability, or failure distribution.",
+      "sourceIds": ["SRC-027", "SRC-028", "SRC-029", "SRC-045"]
+    },
+    {
+      "id": "CLM-088",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "A feature control reduces exposure only when default state, scope, owner, observability, interaction testing, expiry, and removal are explicit.",
+      "sourceIds": ["SRC-047", "SRC-048"]
+    },
+    {
+      "id": "CLM-089",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "A clean, documented, automated local path improves reproducibility while remaining distinct from evidence in a representative customer environment.",
+      "sourceIds": ["SRC-049"]
+    },
+    {
+      "id": "CLM-090",
+      "chapterSlug": "build-a-production-vertical-slice",
+      "statement": "Explicit debt records preserve the reason, consequence, owner, trigger, and exit condition of a compromise; an unowned TODO does not.",
+      "sourceIds": ["SRC-043", "SRC-045", "SRC-047"]
     }
   ]
 }

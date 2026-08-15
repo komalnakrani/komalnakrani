@@ -111,6 +111,15 @@
       "minutes": 75,
       "sourceFile": "chapters/build-security-and-governance-into-delivery.mdx",
       "objectiveIds": ["FDE-K01", "FDE-K04", "FDE-K07", "FDE-K08", "FDE-K09"]
+    },
+    {
+      "order": 11,
+      "slug": "build-a-production-vertical-slice",
+      "title": "Build a Production Vertical Slice",
+      "summary": "Implement one small, reviewable path across contracts, data, integrations, bounded AI, authorization, audit, telemetry, configuration, and controlled failure.",
+      "minutes": 80,
+      "sourceFile": "chapters/build-a-production-vertical-slice.mdx",
+      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K06", "FDE-K07", "FDE-K08"]
     }
   ],
   "registries": {

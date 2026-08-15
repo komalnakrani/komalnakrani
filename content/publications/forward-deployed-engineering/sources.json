@@ -598,6 +598,45 @@
       "license": "W3C document license",
       "notes": "W3C Recommendation used for versioned, testable web accessibility criteria; conformance does not by itself establish complete usability or accessibility for every context.",
       "usedIn": { "chapterSlugs": ["build-security-and-governance-into-delivery"], "claimIds": ["CLM-073"] }
+    },
+    {
+      "id": "SRC-047",
+      "type": "documentation",
+      "title": "AWS Well-Architected Framework",
+      "authors": ["Amazon Web Services"],
+      "publisher": "Amazon Web Services",
+      "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "AWS documentation terms",
+      "notes": "Volatile provider guidance used only for the provider-neutral principle that production quality spans interacting operational, security, reliability, performance, cost, and sustainability concerns.",
+      "usedIn": { "chapterSlugs": ["build-a-production-vertical-slice"], "claimIds": ["CLM-080"] }
+    },
+    {
+      "id": "SRC-048",
+      "type": "documentation",
+      "title": "Architecture design principles",
+      "authors": ["Microsoft"],
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-ie/azure/architecture/guide/design-principles/",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Microsoft documentation terms",
+      "notes": "Volatile provider guidance used for contextual failure, operations, identity, and self-healing design questions; Azure examples are not required architecture.",
+      "usedIn": { "chapterSlugs": ["build-a-production-vertical-slice"], "claimIds": ["CLM-080"] }
+    },
+    {
+      "id": "SRC-049",
+      "type": "book",
+      "title": "Release Engineering",
+      "authors": ["Dinanath Khatri", "David Glasser", "Release Engineering team"],
+      "publisher": "Google Site Reliability Engineering",
+      "url": "https://sre.google/sre-book/release-engineering/",
+      "publishedAt": "2016-01-01",
+      "accessedAt": "2026-08-16",
+      "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+      "notes": "First-party engineering book chapter used for automation, consistency, reproducibility, and release process principles; large-scale Google practice requires adaptation.",
+      "usedIn": { "chapterSlugs": ["build-a-production-vertical-slice"], "claimIds": ["CLM-086", "CLM-089"] }
     }
   ]
 }
