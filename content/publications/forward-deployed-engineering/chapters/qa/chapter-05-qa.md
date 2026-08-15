@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `scope-the-first-safe-production-path.mdx`
 - Word count: approximately 4,100
-- Status: accepted for Phase 08 continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; cumulative review open
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-The chapter is below the blueprint forecast. Immediate QA found the complete scoping job present without padding; Phase 09 may reopen only for a concrete coverage or continuity gap.
+Phase 09 confirmed the complete scoping job and added an explicit three-option decision with late-change, authority, and unsafe-production-evidence injections. It remains below forecast without padding; cumulative duplication/terminology/continuity review stays open.

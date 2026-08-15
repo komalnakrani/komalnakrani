@@ -43,7 +43,8 @@
 - Fictional-case measurement gaps remain deliberate inputs to Chapter 4; no public outcome is claimed.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 4,600 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 blueprint mapping found all workflow/state/evidence/exception/case/failure/figure/handoff elements and added an explicit multi-view mapping and validation exercise.
+- 4,729 manuscript words after the first depth repair; cumulative review remains open.
 
 ## Chapter 04 may assume
 

@@ -34,6 +34,8 @@ The FDE’s job is to translate the logical boundary into deployable responsibil
 
 Provider architecture guidance offers question sets for reliability, security, performance, operations, cost, and capacity. NIST zero trust guidance rejects implicit trust based only on network location. Use these principles in context; do not call a design safe because it is inside a VPC or follows a provider diagram. [CLM-050] [CLM-051] [CLM-055]
 
+The environment-difference matrix and topology, identity, and configuration records in this chapter are original synthesis tools rather than formal external standards. [CLM-056]
+
 ## Draw the deployment topology
 
 Start from Chapter 6 containers and place each into its actual or proposed runtime.
@@ -511,6 +513,23 @@ The FDE may execute early work, but the target operating model must be visible f
 **Recovery access.** Independent, least, time-bound, audited, rehearsed break-glass plan.
 
 **Companion.** Authorization and environment/config validation with 4 additional passing tests.
+
+## Conduct the environment review exercise
+
+Take the logical Orchid design and instantiate it for three fictional environments: a customer cloud account, a vendor-managed regional service, and a disconnected edge site.
+
+For each, produce topology, identity flow, network policy, secret/config lifecycle, tenant/region isolation, capacity/connectivity budget, telemetry/support access, break-glass path, and owner matrix. Then inject:
+
+- expired technician permission;
+- workload identity scoped to the wrong tenant/region;
+- blocked egress or DNS failure;
+- stale configuration with successful deployment status;
+- secret rotation while a worker remains active;
+- clock skew affecting expiry/audit order;
+- capacity saturation plus retry demand;
+- unavailable normal identity during recovery.
+
+Record observed state, user/fallback behavior, data/external effects, evidence, owner, and recovery. Pass when the same logical workflow contracts remain clear while environment-specific responsibilities and failure behavior are explicit. Fail if an administrator identity, copied production data, hidden FDE command, or environment name substitutes for representative evidence.
 
 ## Environment failure modes
 

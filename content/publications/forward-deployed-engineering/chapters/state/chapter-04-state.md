@@ -41,7 +41,8 @@
 - Fictional baseline, targets, thresholds, windows, and formal owners remain explicit synthetic-case inputs, not source gaps.
 - No blocking external source gap.
 - Final figures wait for Phase 10.
-- Approximately 4,100 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 blueprint mapping found all metric/outcome/guardrail/adoption/attribution/rights/criteria/case/failure/figure/handoff elements and added an explicit contract/gaming/segment exercise.
+- 4,211 manuscript words after the first depth repair; cumulative review remains open.
 
 ## Chapter 05 may assume
 

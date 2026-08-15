@@ -34,7 +34,7 @@ The repository may contain reviewed code. The release pipeline may be green. The
 
 That gap--between shipped output and an owned production outcome--is the central problem of forward deployed engineering.
 
-Current employer descriptions use the title differently, but they repeatedly place Forward Deployed Engineers across more of the lifecycle than implementation alone: discovery, design, production engineering, rollout, adoption, and the return of field learning into product work. Some organizations use the narrower title Forward Deployed Software Engineer for an engineering-heavy version of the work. These are observations about present employers, not a universal standard for the profession. The operating model in this book is a synthesis designed to make the work explicit, testable, and teachable. It does not grant authority merely because someone carries the title. [CLM-001] [CLM-007]
+Current employer descriptions use the title differently, but they repeatedly place Forward Deployed Engineers across more of the lifecycle than implementation alone: discovery, design, production engineering, rollout, adoption, measurable workflow results, and the return of field learning into product work. Some organizations use the narrower title Forward Deployed Software Engineer for an engineering-heavy version of the work. These are observations about present employers, not a universal standard for the profession. The operating model in this book is a synthesis designed to make the work explicit, testable, and teachable. It does not grant authority merely because someone carries the title. [CLM-001] [CLM-002] [CLM-007]
 
 The synthesis begins with a demanding definition:
 
@@ -457,6 +457,14 @@ This is the claim the deployment exists to support. It remains bounded in time a
 The maturity sequence prevents language from outrunning evidence. A request is not a hypothesis; a hypothesis is not a contract; verification is not a production result; a production result is not permanent value; one result is not a platform.
 
 At every stage, store the claim beside its evidence, limitations, owner, and next decision. If a later stage fails, retain the earlier history. That history is how the next design becomes better without inventing hindsight.
+
+## Conduct the responsibility exercise
+
+Take a fictional request to `build an AI assistant for field service`. Classify at least twelve decisions as FDE core, shared, supporting, or specialist/outside scope. Include workflow discovery, data access, architecture, security exception, safety threshold, release, adoption, incident command, commercial promise, product roadmap, customer ownership, and reusable pattern review.
+
+For each decision record the FDE action, named authority, required evidence, escalation trigger, and exit. Then write a one-page responsibility charter with purpose, outcome boundary, non-scope, evidence obligations, access limits, and handoff conditions.
+
+Pass when the charter makes the FDE accountable for integrating the deployed outcome without claiming authority over adjacent formal decisions. A reviewer should be able to point to what `done` means, what evidence can reject it, and how the engagement stops or transfers.
 
 ## Chapter close: the first gate
 

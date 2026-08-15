@@ -32,6 +32,8 @@ This book treats a deployment as a decision system. Every chapter creates eviden
 
 The book assumes production-engineering basics. Appendix A contains reusable artifact structures; Appendix B contains gates; Appendix C explains the executable companion; Appendix D defines terminology/source use; Appendix E indexes the completed fictional dossier.
 
+The five part introductions are maintained in `part-introductions.md` and belong in the web/PDF sequence before Chapters 1, 6, 11, 15, and 18. They state the reader transformation and dossier handoff for each stage without repeating chapter instruction.
+
 ## Running case and companion
 
 Orchid Equipment Services is fictional. Orchid Assist integrates a synthetic ticket, equipment candidates, approved evidence, inventory state, bounded model suggestion, deterministic policy, qualified approval, audit, telemetry, release/recovery, readiness, stabilization, ownership, reuse, and portfolio closure.

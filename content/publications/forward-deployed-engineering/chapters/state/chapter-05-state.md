@@ -41,7 +41,8 @@
 - Fictional owners/dates/values remain explicit case inputs.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 4,100 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 blueprint mapping found all scope/dependency/uncertainty/estimation/risk/stopped-case/failure/figure/handoff elements and added an explicit three-option safe-scope exercise.
+- 4,188 manuscript words after the first depth repair; cumulative review remains open.
 
 ## Chapter 06 may assume
 

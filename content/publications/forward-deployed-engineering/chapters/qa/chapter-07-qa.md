@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `make-interfaces-and-data-explicit.mdx`
 - Word count: approximately 3,700
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 blueprint mapping complete; second whole-book review open
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint range; immediate QA found the contract/reconciliation job complete without padding. Phase 09 may reopen only for a concrete gap.
+Phase 09 found every blueprint family in complete prose, including the executable lab and contract review packet; no protocol tutorial was added. It remains below forecast, so final depth/duplication/continuity acceptance stays open.

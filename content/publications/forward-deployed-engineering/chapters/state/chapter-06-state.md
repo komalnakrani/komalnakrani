@@ -41,7 +41,8 @@
 - Interface/data, environment/identity, AI, and governance portions remain Chapters 7-10.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 3,800 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 blueprint mapping found boundaries, walkthroughs, cases, failures, exercise evidence, figures, sources, and handoff represented in complete prose; no unambiguous first-pass content gap was added.
+- 3,834 manuscript words; a second duplication/continuity/depth review remains open.
 
 ## Chapter 07 may assume
 

@@ -46,7 +46,8 @@
 
 - No blocking source gap.
 - Final figures and their production registry records wait for Phase 10.
-- Chapter word count is approximately 5,600; intentionally below blueprint range because the professional job is complete without padding. Phase 09 may request expansion only for a demonstrated learning gap.
+- Phase 09 blueprint mapping found all required role/outcome/boundary/artifact/case/failure/figure/handoff elements and added an explicit responsibility-classification/charter exercise.
+- Chapter word count is 5,747 after the first depth repair; final duplication/continuity review remains open.
 
 ## Chapter 02 may assume
 

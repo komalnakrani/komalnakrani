@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `build-security-and-governance-into-delivery.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 blueprint mapping complete; second whole-book review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but completes the governance job without reproducing standards or padding. Phase 09 may reopen only for a concrete coverage gap.
+Phase 09 found every blueprint family and a complete control-repair/authority-routing exercise; no specialist substitution or framework padding was added. It remains below forecast, so final depth/duplication/continuity acceptance stays open.

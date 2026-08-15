@@ -24,8 +24,10 @@ claimIds:
   - CLM-065
   - CLM-066
 objectiveIds:
+  - FDE-K02
   - FDE-K03
   - FDE-K04
+  - FDE-K06
   - FDE-K07
   - FDE-K08
   - FDE-K09
@@ -514,6 +516,18 @@ The companion’s deterministic model interface can be replaced by a provider ad
 **Versions.** Model interface, model/test double, prompt, retrieval/index, tool, policy, grader, dataset.
 
 **Companion.** Deterministic model, budget fallback, control ladder, segmented evaluator; 4 additional tests.
+
+## Conduct the bounded-AI design exercise
+
+Start with the stakeholder request `use AI to recommend the fix`. Decompose the workflow into equipment confirmation, approved evidence retrieval, inventory state, candidate generation, eligibility policy, qualified review, and recorded action.
+
+For each step decide deterministic logic, search/retrieval, model behavior, human judgment, or rejection. Justify why AI is needed, what non-AI baseline exists, which errors matter, and which action remains prohibited.
+
+Build a small versioned evaluation set covering clear, ambiguous, missing, conflicting, stale, adversarial, low-connectivity, and critical equipment states. Define graders and segment dispositions before results. Inject an aggregate pass with one critical prohibited suggestion and require a blocking decision. Calibrate a model grader against qualified human labels and preserve disagreement.
+
+Then run the companion under missing evidence, exhausted budget, policy denial, expired qualification, and feature-disabled conditions. Confirm abstention/fallback is visible, dependencies/tools remain scoped, and the model never becomes the authorization or approval authority.
+
+Pass when a reviewer can see the task, evidence, system bundle, errors, controls, owners, residual limits, and stop/disable path. Fail if the proposal relies on prompt wording, an aggregate benchmark, or `human in the loop` without qualification, evidence, workload, authority, and interface design.
 
 ## AI failure modes
 

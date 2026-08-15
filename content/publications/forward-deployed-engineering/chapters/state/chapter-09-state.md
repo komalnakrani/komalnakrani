@@ -36,7 +36,8 @@
 - Production model/provider/thresholds remain future versioned decisions; default is deterministic double.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 3,200 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 added an explicit bounded-AI design/evaluation exercise covering decomposition, non-AI baseline, workflow-state cases, grader calibration, critical-segment disposition, controls, fallback, and authority.
+- 3,388 manuscript words after the first depth repair; a second blueprint-depth review remains open.
 
 ## Chapter 10 may assume
 

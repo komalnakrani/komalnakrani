@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `the-deployed-outcome.mdx`
 - Word count: approximately 5,600 excluding separate learning/state/QA material
-- Status: accepted for Phase 08 continuity; subject to whole-book Phase 09 QA
+- Status: Phase 09 first depth repair complete; cumulative review open
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-The chapter is shorter than its blueprint forecast. Immediate QA found no missing professional decision, artifact, failure mode, exercise need, or continuity link that would justify padding. Whole-book QA may reopen it only with a concrete coverage finding.
+Phase 09 confirmed the professional decisions, artifact, failures, cases, and continuity, then added an explicit responsibility-classification/charter exercise. It remains shorter than forecast without padding; cumulative duplication/terminology/continuity review stays open.

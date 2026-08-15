@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `fit-the-customer-environment.mdx`
 - Word count: approximately 3,300
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint range; immediate QA found the environment/IAM job complete without padding. Phase 09 may reopen only for a concrete gap.
+Phase 09 added the missing explicit environment review exercise across customer cloud, vendor-managed region, and disconnected edge with consequential failure injections. Cloud certification tutorials remain out of scope. A second depth/duplication audit remains open.

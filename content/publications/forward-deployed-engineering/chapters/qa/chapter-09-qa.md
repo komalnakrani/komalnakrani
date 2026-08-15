@@ -2,7 +2,7 @@
 
 - QA date: 2026-08-16
 - Manuscript: `put-ai-inside-a-bounded-workflow.mdx`
-- Status: accepted for continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; second coverage review open
 
 ## Gate review
 
@@ -17,4 +17,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast but covers the bounded-AI professional job without padding. Phase 09 may reopen only for a concrete gap.
+Phase 09 added the missing explicit bounded-AI design/evaluation exercise with workflow-state cases, grader calibration, critical-segment disposition, controls, fallback, and authority. Vendor tutorials remain out of scope. A second depth/duplication audit remains open.

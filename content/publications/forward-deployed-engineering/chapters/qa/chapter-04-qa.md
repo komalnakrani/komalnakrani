@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `contract-for-an-outcome.mdx`
 - Word count: approximately 4,100
-- Status: accepted for Phase 08 continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; cumulative review open
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-The chapter is below its blueprint forecast, but immediate QA found the outcome-contract job complete without padding. Phase 09 may reopen only for a concrete coverage or continuity finding.
+Phase 09 confirmed the outcome-contract job and added an explicit metric contract, gaming, segment, rights, and stop-criteria exercise. It remains below forecast without padding; cumulative duplication/terminology/continuity review stays open.

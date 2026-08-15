@@ -56,7 +56,7 @@
       "summary": "Turn workflow evidence into measurable outcomes, guardrails, adoption signals, decision rights, assumptions, non-goals, and exit criteria.",
       "minutes": 55,
       "sourceFile": "chapters/contract-for-an-outcome.mdx",
-      "objectiveIds": ["FDE-K01", "FDE-K02", "FDE-K03", "FDE-K10", "FDE-K12"]
+      "objectiveIds": ["FDE-K01", "FDE-K02", "FDE-K03", "FDE-K07", "FDE-K10", "FDE-K12"]
     },
     {
       "order": 5,
@@ -65,7 +65,7 @@
       "summary": "Select the least exposed end-to-end path that produces representative production evidence with explicit dependencies, uncertainty, change, and stop criteria.",
       "minutes": 55,
       "sourceFile": "chapters/scope-the-first-safe-production-path.mdx",
-      "objectiveIds": ["FDE-K02", "FDE-K03", "FDE-K04", "FDE-K08", "FDE-K12"]
+      "objectiveIds": ["FDE-K01", "FDE-K02", "FDE-K03", "FDE-K04", "FDE-K08", "FDE-K12"]
     },
     {
       "order": 6,
@@ -83,7 +83,7 @@
       "summary": "Design versioned API, event, and data contracts with explicit semantics, quality, idempotent intent, exceptions, and reconciliation.",
       "minutes": 65,
       "sourceFile": "chapters/make-interfaces-and-data-explicit.mdx",
-      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K06", "FDE-K09"]
+      "objectiveIds": ["FDE-K02", "FDE-K04", "FDE-K05", "FDE-K06", "FDE-K07", "FDE-K09"]
     },
     {
       "order": 8,
@@ -101,7 +101,7 @@
       "summary": "Decide when AI belongs, decompose tasks, bound model and tool behavior, evaluate by workflow consequence, and preserve deterministic controls and accountable human decisions.",
       "minutes": 70,
       "sourceFile": "chapters/put-ai-inside-a-bounded-workflow.mdx",
-      "objectiveIds": ["FDE-K03", "FDE-K04", "FDE-K07", "FDE-K08", "FDE-K09"]
+      "objectiveIds": ["FDE-K02", "FDE-K03", "FDE-K04", "FDE-K06", "FDE-K07", "FDE-K08", "FDE-K09"]
     },
     {
       "order": 10,
@@ -110,7 +110,7 @@
       "summary": "Turn threats and risks into proportionate controls, implementation evidence, minimized access and data, and decisions routed to designated authorities.",
       "minutes": 75,
       "sourceFile": "chapters/build-security-and-governance-into-delivery.mdx",
-      "objectiveIds": ["FDE-K01", "FDE-K04", "FDE-K07", "FDE-K08", "FDE-K09"]
+      "objectiveIds": ["FDE-K01", "FDE-K03", "FDE-K04", "FDE-K07", "FDE-K08", "FDE-K09", "FDE-K12"]
     },
     {
       "order": 11,
@@ -119,7 +119,7 @@
       "summary": "Implement one small, reviewable path across contracts, data, integrations, bounded AI, authorization, audit, telemetry, configuration, and controlled failure.",
       "minutes": 80,
       "sourceFile": "chapters/build-a-production-vertical-slice.mdx",
-      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K06", "FDE-K07", "FDE-K08"]
+      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K06", "FDE-K07", "FDE-K08", "FDE-K09", "FDE-K11"]
     },
     {
       "order": 12,
@@ -128,7 +128,7 @@
       "summary": "Trace workflow risk and acceptance claims to typed verification evidence, representative segments, calibrated graders, task-based UAT, limitations, and release disposition.",
       "minutes": 80,
       "sourceFile": "chapters/prove-behavior-before-production.mdx",
-      "objectiveIds": ["FDE-K05", "FDE-K06", "FDE-K07", "FDE-K08", "FDE-K09"]
+      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K06", "FDE-K07", "FDE-K08", "FDE-K09"]
     },
     {
       "order": 13,
@@ -137,7 +137,7 @@
       "summary": "Design promise-linked signals, actionable objectives and alerts, privacy-safe cohort views, support feedback, and evidence-first diagnostic paths.",
       "minutes": 75,
       "sourceFile": "chapters/make-the-system-observable-and-operable.mdx",
-      "objectiveIds": ["FDE-K06", "FDE-K07", "FDE-K09", "FDE-K10"]
+      "objectiveIds": ["FDE-K05", "FDE-K06", "FDE-K07", "FDE-K09", "FDE-K10", "FDE-K11"]
     },
     {
       "order": 14,
@@ -146,7 +146,7 @@
       "summary": "Bind versioned artifacts and evidence to progressive release gates, compatible migration, explicit recovery choice, verified restoration, and executed rehearsal.",
       "minutes": 80,
       "sourceFile": "chapters/engineer-release-and-recovery.mdx",
-      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K08", "FDE-K09"]
+      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K08", "FDE-K09", "FDE-K10"]
     },
     {
       "order": 15,
@@ -155,7 +155,7 @@
       "summary": "Use readiness evidence, unresolved risk, authority, cohort design, signals, communications, and recovery triggers to choose go, conditional go, reduced scope, delay, or stop.",
       "minutes": 70,
       "sourceFile": "chapters/cross-the-production-threshold.mdx",
-      "objectiveIds": ["FDE-K01", "FDE-K03", "FDE-K08", "FDE-K09", "FDE-K10", "FDE-K12"]
+      "objectiveIds": ["FDE-K01", "FDE-K03", "FDE-K04", "FDE-K07", "FDE-K08", "FDE-K09", "FDE-K10", "FDE-K12"]
     },
     {
       "order": 16,
@@ -164,7 +164,7 @@
       "summary": "Operate inside customer incident command, contain impact, communicate calibrated facts, restore service, correct systemic conditions, and prove stabilization exit.",
       "minutes": 75,
       "sourceFile": "chapters/stabilize-under-real-conditions.mdx",
-      "objectiveIds": ["FDE-K01", "FDE-K05", "FDE-K08", "FDE-K09", "FDE-K10", "FDE-K12"]
+      "objectiveIds": ["FDE-K01", "FDE-K05", "FDE-K07", "FDE-K08", "FDE-K09", "FDE-K10", "FDE-K11", "FDE-K12"]
     },
     {
       "order": 17,
@@ -173,7 +173,7 @@
       "summary": "Diagnose adoption friction without user blame and prove customer capability across use, operation, support, release, recovery, access, decisions, and change ownership.",
       "minutes": 70,
       "sourceFile": "chapters/make-the-solution-usable-and-ownable.mdx",
-      "objectiveIds": ["FDE-K02", "FDE-K03", "FDE-K09", "FDE-K10", "FDE-K12"]
+      "objectiveIds": ["FDE-K01", "FDE-K02", "FDE-K03", "FDE-K09", "FDE-K10", "FDE-K11", "FDE-K12"]
     },
     {
       "order": 18,

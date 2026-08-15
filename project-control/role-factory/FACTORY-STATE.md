@@ -59,9 +59,9 @@
 
 ## Exact next action
 
-Continue Forward Deployed Engineer Phase 09 issue #16. First depth repairs for
-Chapters 11-19 are complete; audit/repair Chapters 06-10 next, before the
-second later-chapter depth/duplication pass and final Chapters 01-05 review.
+Continue Forward Deployed Engineer Phase 09 issue #16. First blueprint pass and
+cross-book metadata/packaging repairs are complete; run the second professional-
+depth pass on Chapters 13-19, then the final duplication/source/continuity gate.
 
 ## Resume instructions
 

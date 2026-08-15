@@ -19,16 +19,19 @@ Status: IN PROGRESS under Phase 09 issue #16
 - PASS: Orchid and named satellite cases are presented as fictional/constructed in the reviewed late chapters.
 - PASS: companion behavior matches the manuscripts for intent/reconciliation, bounded AI/policy, evidence authority, observability, release/recovery, readiness, incident, ownership, reuse, and portfolio closure.
 - PASS WITH LATER OWNER: 38 placeholder IDs are complete; final visual accuracy/alt text belongs to Phase 10.
-- OPEN: enforce first-nearby cross-reference naming and prevent vague use of `ready`, `secure`, `reliable`, `done`, `solution`, and `AI` without evidence/boundary.
-- OPEN: verify part transitions and front/back matter after depth revisions.
+- PASS: first-nearby named chapter references reconcile to the publication manifest after repairing the stale Chapter 11 working title in Chapter 10.
+- PASS: contextual review found `ready`, `secure`, `reliable`, `done`, `solution`, and `AI` used as quoted requests, evidence-qualified states, or explicit anti-vagueness examples rather than unsupported conclusions.
+- PASS: five part introductions now state reader transformation and dossier handoff; front matter points to their insertion locations.
+- PASS: Appendix A now includes purpose, inputs, completion, structure, and a filled fictional Orchid example for `OA-01` through `OA-11`; Appendix B now defines disposition/authority use and a filled gate record.
+- PASS: all approved primary and secondary competency-to-chapter mappings reconcile with MDX and publication objective metadata after repairing 20 missing secondary IDs.
+- PASS: all 188 declared claims are used in their owning manuscript, and every claim source is declared by the chapter after repairing Chapter 15's missing `SRC-045` entry.
 - OPEN: recheck dossier source hash after every canonical publication edit.
 
 ## Technical/source checks to complete
 
-1. Verify every manuscript claim marker appears in front matter `claimIds` and the claim registry points to sources admitted by `sourceIds`.
-2. Check source volatility/version/access dates and synthesis labels against chapter research packs.
-3. Confirm no current tool is presented as a durable professional principle.
-4. Confirm no chapter makes certification, legal, security, privacy, safety, audit, accessibility, or risk-acceptance claims beyond scope.
-5. Verify every capstone artifact update is consistent with `project-map.md` and the prior chapter state.
+1. Check source volatility/version/access dates and synthesis labels against chapter research packs. (Registry structure and synthesis-claim use pass; manual source-pack sampling remains.)
+2. Confirm no current tool is presented as a durable professional principle. (Initial chapter review passes; cumulative second-depth edits must preserve it.)
+3. Confirm no chapter makes certification, legal, security, privacy, safety, audit, accessibility, or risk-acceptance claims beyond scope. (Initial review passes; final hostile read remains.)
+4. Verify every capstone artifact update is consistent with `project-map.md` and the prior chapter state. (All `OA-01` through `OA-11` references exist; final continuity read remains.)
 
 Final status remains OPEN until all revisions and the cumulative gate pass.

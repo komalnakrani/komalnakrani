@@ -52,7 +52,7 @@ No chapter is marked Phase 09 PASS yet.
 
 ## Revision checkpoint 1
 
-The first repair pass has increased the canonical chapter total from 56,143 to 67,229 words without adding sources or unsupported claims:
+The first repair pass has increased the canonical chapter total from 56,143 to 68,271 words without adding sources or unsupported claims:
 
 | Ch | Baseline | Checkpoint 1 | Repair result | Remaining disposition |
 | ---: | ---: | ---: | --- | --- |
@@ -65,5 +65,25 @@ The first repair pass has increased the canonical chapter total from 56,143 to 6
 | 14 | 1,607 | 2,269 | Added release identity/provenance, gated change, compatibility, recovery comparison, and operator exercise | OPEN: second depth/duplication pass |
 | 11 | 3,585 | 4,102 | Added reviewer trace, consequential failure drill, clean-checkout supportability test, and failure repairs | OPEN: second depth/duplication pass |
 | 12 | 2,980 | 3,529 | Added worked UAT scenario, five-risk matrix, layered evidence/grader exercise, critical-segment disposition, and failure repairs | OPEN: second depth/duplication pass |
+| 06 | 3,834 | 3,834 | Blueprint mapping found complete boundary models, walkthroughs, cases, review, failures, artifact, and handoff; no unambiguous repair | OPEN: second depth/duplication/continuity pass |
+| 07 | 3,699 | 3,699 | Blueprint mapping found complete contract/reconciliation mechanisms, lab, change handling, failures, packet, and handoff; no unambiguous repair | OPEN: second depth/duplication/continuity pass |
+| 08 | 3,157 | 3,308 | Added explicit three-environment review with consequential identity/network/config/secret/isolation/capacity/recovery injections | OPEN: second depth/duplication pass |
+| 09 | 3,195 | 3,388 | Added explicit bounded-AI decomposition/evaluation/control/fallback/authority exercise | OPEN: second depth/duplication pass |
+| 10 | 3,851 | 3,851 | Blueprint mapping found complete threat/control/evidence/authority models, Orchid artifact, exercise, failures, and handoff; no unambiguous repair | OPEN: second depth/duplication/continuity pass |
+| 01 | 5,617 | 5,747 | Confirmed full role/outcome/boundary progression and added explicit responsibility-classification/charter exercise | OPEN: cumulative review |
+| 02 | 4,896 | 5,012 | Confirmed discovery/access/evidence progression and added explicit two-week conflicting-evidence exercise | OPEN: cumulative review |
+| 03 | 4,617 | 4,729 | Confirmed multi-view workflow/exception progression and added explicit mapping/validation exercise | OPEN: cumulative review |
+| 04 | 4,095 | 4,211 | Confirmed outcome/guardrail/rights progression and added explicit metric/gaming/segment contract exercise | OPEN: cumulative review |
+| 05 | 4,071 | 4,188 | Confirmed scope/dependency/stopped-case progression and added explicit three-option safe-scope exercise | OPEN: cumulative review |
 
 This checkpoint closes demonstrated `model merely named` gaps. It does not use word count as automatic acceptance and does not yet close the chapters.
+
+## Architecture and packaging repairs
+
+- Added five part introductions for the chapter boundaries 1/6/11/15/18 and linked them from front matter.
+- Expanded Appendix A from labels into usable `OA-01` through `OA-11` templates with purpose, inputs, completion, structure, and filled fictional Orchid examples.
+- Expanded Appendix B with evidence status, owner/authority, decision-record fields, and a filled fictional readiness example.
+- Reconciled all primary and secondary `competency-to-chapter.csv` mappings with manuscript and publication objective IDs; automated check now returns zero errors.
+- Reconciled all 188 claim markers, chapter declarations, source declarations, and named chapter cross-references; automated check now returns zero errors.
+
+Remaining coverage work is the second depth pass across Chapters 13-19 and final manual source/continuity read across all nineteen chapters.

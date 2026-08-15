@@ -40,3 +40,13 @@ Later revisions must link to the canonical model and teach only the new decision
 - Check Appendices A-B so their summaries do not replace or duplicate chapter teaching.
 
 No deletion is authorized by this initial record; every consolidation must preserve prerequisites and the case/dossier transition.
+
+## Checkpoint results
+
+- Exact paragraph normalization across manuscripts, front matter, and appendices: 0 duplicate paragraphs of 180+ characters.
+- Near-duplicate manuscript paragraph scan using normalized token-set similarity: 0 candidates at the review threshold.
+- Manual review of Chapters 13-19 expansions: repeated evidence/authority/reconciliation concepts apply the canonical home to a new operating decision rather than copying the definition.
+- Figure placeholders: 38 unique IDs; no repeated figure ID.
+- Orchid examples: repeated scenario state advances from discovery through closure; no real customer/employer outcome is implied.
+
+The duplication audit stays open through the second depth pass because new prose can introduce repetition.

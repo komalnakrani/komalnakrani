@@ -73,7 +73,7 @@
 
 ## Current work
 
-Phase 08 is closed. Phase 09 baseline and four required QA records exist. First depth repairs are complete for Chapters 11-19 with worked implementation, verification, operating, recovery, readiness, incident, ownership, reuse, and portfolio protocols. These chapters remain open for a second depth/duplication pass.
+Phase 08 is closed. Phase 09 first blueprint pass is complete for all nineteen chapters. Cross-reference, claim/source, objective, part-introduction, appendix-template, and first duplication defects are repaired and automated checks are clean. A second depth pass remains open for Chapters 13-19, followed by the final manual source/continuity read.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ Phase 09 must audit the shorter late chapters against every approved blueprint c
 
 ## Exact next action
 
-Audit and repair Chapters 06-10 next, before the second depth/duplication pass across Chapters 11-19 and final review of Chapters 01-05.
+Run the second professional-depth pass on Chapters 13-19, expanding only concrete worked-mechanism, failure, authority, and application gaps; then rerun cumulative duplication/source/continuity gates.
 
 ## Resume instructions
 

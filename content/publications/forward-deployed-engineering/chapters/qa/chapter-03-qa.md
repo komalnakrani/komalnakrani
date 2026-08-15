@@ -3,7 +3,7 @@
 - QA date: 2026-08-16
 - Manuscript: `map-the-workflow-that-actually-exists.mdx`
 - Word count: approximately 4,600
-- Status: accepted for Phase 08 continuity; subject to Phase 09 whole-book QA
+- Status: Phase 09 first depth repair complete; cumulative review open
 
 ## Gate review
 
@@ -22,4 +22,4 @@
 
 ## Deliberate limitation
 
-The chapter is below the blueprint forecast. Immediate QA found no missing professional mapping decision or artifact that justifies padding. Phase 09 may reopen it only through a concrete coverage, continuity, or evidence finding.
+Phase 09 confirmed the mapping decisions/artifacts and added an explicit multi-view workflow/exception validation exercise. It remains below forecast without padding; cumulative duplication/terminology/continuity review stays open.

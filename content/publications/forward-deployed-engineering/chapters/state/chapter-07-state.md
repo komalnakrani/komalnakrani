@@ -43,7 +43,8 @@
 - Customer interface semantics/thresholds remain fictional-case dependencies.
 - No blocking source gap.
 - Final figures wait for Phase 10.
-- Approximately 3,700 manuscript words; accepted without padding, subject to Phase 09 coverage audit.
+- Phase 09 blueprint mapping found contracts, intent/reconciliation, security/capacity, tests, lab, sample record, change handling, failures, figures, and handoff represented; no unambiguous first-pass content gap was added.
+- 3,699 manuscript words; a second duplication/continuity/depth review remains open.
 
 ## Chapter 08 may assume
 
