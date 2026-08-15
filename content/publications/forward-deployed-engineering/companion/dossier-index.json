@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-16T03:05:00+05:30",
+  "generatedAt": "2026-08-16T03:10:00+05:30",
   "hashAlgorithm": "sha256",
   "sourceHash": "67d76e2db61e275cf7d206513b84f642d0c8e3e1695ad2d7a4b75d27042c534f",
   "sourceHashScope": "Sorted SHA-256 digest stream for every file under content/publications/forward-deployed-engineering, excluding companion/dossier-index.json and any output directory.",
@@ -11,7 +11,8 @@
     "phase08Root": "#9 CLOSED - acceptance verified at commit 2ec5731",
     "phase08Child": "#15 CLOSED - acceptance verified at commit 2ec5731",
     "phase09": "#16 CLOSED - acceptance verified at commit a8d9c45",
-    "nextPhase": "#17 OPEN - Phase 10 acceptance verified; closure pending this visual-lock commit"
+    "phase10": "#17 CLOSED - acceptance verified at commit 22920f7",
+    "nextPhase": "#18 OPEN - Phase 11 web/PDF publication"
   },
   "riskState": {
     "blockingSourceGaps": 0,

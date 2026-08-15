@@ -54,14 +54,14 @@
 
 - Role: Forward Deployed Engineer
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#17 - Produce FDE publication visuals](https://github.com/alpeshznakrani/komalnakrani/issues/17)
+- Active child: [#18 - Publish FDE web edition and PDF](https://github.com/alpeshznakrani/komalnakrani/issues/18)
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Forward Deployed Engineer Phase 10 issue #17 has met acceptance locally. Commit
-and push the 38-figure visual system, close #17 with evidence, then open Phase 11
-publication/PDF assembly. Preserve the content and visual locks.
+Continue Forward Deployed Engineer Phase 11 issue #18. Assemble the accepted
+content and visuals into the complete web edition and deterministic PDF, inspect
+the real rendered artifacts, and publish only after every gate passes.
 
 ## Resume instructions
 

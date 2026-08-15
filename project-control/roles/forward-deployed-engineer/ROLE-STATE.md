@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 10 - publication visuals
+- Current global phase: Komal Phase 11 - publication and PDF
 - Last updated: 2026-08-16
-- Last completed issue: Phase 09 #16 at commit `a8d9c45`
+- Last completed issue: Phase 10 #17 at commit `22920f7`
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#17](https://github.com/alpeshznakrani/komalnakrani/issues/17)
+- Active issue: [#18](https://github.com/alpeshznakrani/komalnakrani/issues/18)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Phase 09 is closed at `a8d9c45`. Phase 10 acceptance is complete: all 38 final SVGs, registry and production metadata, captions, alt text, long descriptions, manuscript insertions, chapter state/QA updates, public mirrors, color/grayscale proofs, and deterministic regeneration pass. GitHub #17 awaits this acceptance commit and closure.
+Phases 09 and 10 are closed. The content-locked manuscript and all 38 verified final SVGs are ready for Phase 11 full web/PDF assembly. Phase 11 must inspect the actual rendered artifacts before switching publication and role status to published.
 
 ## Unresolved blockers
 
@@ -87,11 +87,11 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 
 ## Quality debt
 
-No Phase 10 visual debt. Phase 11 must preserve the verified SVG semantics and accessibility metadata during full web/PDF assembly.
+No content or visual debt. Phase 11 must complete front/back matter assembly, deterministic PDF rendering, web route rendering, metadata, links, downloads, and actual artifact inspection.
 
 ## Exact next action
 
-Commit and push the verified 38-figure set, close Phase 10 issue #17 with evidence, then open Phase 11 publication/PDF assembly without redesigning content or figures.
+Upgrade the publication/PDF pipeline to assemble the complete accepted book and verified visuals; render and inspect web and PDF artifacts before publishing.
 
 ## Resume instructions
 
