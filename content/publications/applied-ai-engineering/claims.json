@@ -15,6 +15,11 @@
     {"id":"CLM-012","chapterSlug":"write-the-behavior-contract","statement":"Users need explicit capability, limitation, correction, and failure interaction that can be tested in realistic scenarios.","sourceIds":["SRC-003","SRC-004","SRC-030"]},
     {"id":"CLM-013","chapterSlug":"write-the-behavior-contract","statement":"Abstention creates a measurable risk-coverage tradeoff while raw model confidence may be poorly calibrated.","sourceIds":["SRC-024","SRC-025"]},
     {"id":"CLM-014","chapterSlug":"write-the-behavior-contract","statement":"A provider model behavior specification and schema-constrained output are not an application behavior contract or semantic guarantee.","sourceIds":["SRC-043","SRC-045"]},
-    {"id":"CLM-015","chapterSlug":"write-the-behavior-contract","statement":"Domain review and formal authorization require named competent roles rather than an unspecified human-in-the-loop promise.","sourceIds":["SRC-001","SRC-051"]}
+    {"id":"CLM-015","chapterSlug":"write-the-behavior-contract","statement":"Domain review and formal authorization require named competent roles rather than an unspecified human-in-the-loop promise.","sourceIds":["SRC-001","SRC-051"]},
+    {"id":"CLM-016","chapterSlug":"choose-the-simplest-adequate-mechanism","statement":"Simple rules and pipelines are legitimate baselines and may be the correct first mechanism for a bounded product task.","sourceIds":["SRC-008","SRC-023"]},
+    {"id":"CLM-017","chapterSlug":"choose-the-simplest-adequate-mechanism","statement":"Mechanism selection requires multi-scenario product and operational evidence rather than a single model score or average latency.","sourceIds":["SRC-026","SRC-033"]},
+    {"id":"CLM-018","chapterSlug":"choose-the-simplest-adequate-mechanism","statement":"Multimodal representations can support product retrieval without requiring conversational generation, prompting, or autonomous action.","sourceIds":["SRC-015","SRC-020"]},
+    {"id":"CLM-019","chapterSlug":"choose-the-simplest-adequate-mechanism","statement":"Candidate retrieval, ranking, and generated output solve different problems and create different evidence and failure surfaces.","sourceIds":["SRC-016","SRC-019","SRC-021"]},
+    {"id":"CLM-020","chapterSlug":"choose-the-simplest-adequate-mechanism","statement":"Tool or agent capability is justified only when bounded action creates task value that simpler suggestion or confirmed workflows cannot provide.","sourceIds":["SRC-040","SRC-044"]}
   ]
 }
