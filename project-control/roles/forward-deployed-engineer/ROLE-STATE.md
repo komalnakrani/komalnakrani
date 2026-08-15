@@ -7,9 +7,9 @@
 - Catalog version: master catalog dated 2026-08-16
 - Current global phase: Komal Phase 08 - full manuscript production
 - Last updated: 2026-08-16
-- Last completed issue: Phase 08.3 Chapters 07-10 #12
+- Last completed issue: Phase 08.4 Chapters 11-14 #13
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#13](https://github.com/alpeshznakrani/komalnakrani/issues/13) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
+- Active issue: pending next Phase 08 child (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -39,8 +39,8 @@
 - objective map: deferred to Abhyaas
 - exam blueprint: deferred to Abhyaas
 - book architecture: pending under `project-control/roles/forward-deployed-engineer/books/`
-- manuscript(s): Chapters 01-10 complete under `content/publications/forward-deployed-engineering/chapters/`
-- figure manifest: frozen placeholders through `F10.2`; production visuals pending Phase 10
+- manuscript(s): Chapters 01-14 complete under `content/publications/forward-deployed-engineering/chapters/`
+- figure manifest: frozen placeholders through `F14.2`; production visuals pending Phase 10
 - PDF(s): pending under `output/pdf/`
 - preparation resources: pending
 - certification page: deferred to Abhyaas
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-13 and `OA-05` through the operating layer of `OA-08` are complete. Write Chapter 14 and extend the companion through release, migration, recovery, and rehearsal under child issue #13.
+Chapters 01-14 and `OA-05` through `OA-08` are complete. Open the next ordered child issue for Chapters 15-17, then write rollout, stabilization, adoption, and handoff.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Write Chapter 14 and the provider-neutral release/migration/recovery rehearsal companion from the approved blueprint and Chapter 13 state.
+Verify and close issue #13, then open the ordered Chapters 15-17 child issue under root Phase 08 #9.
 
 ## Resume instructions
 

@@ -728,6 +728,45 @@
       "license": "United States government work",
       "notes": "NIST SP 800-61r3 used for integrating incident response into risk management; not a universal incident-command script.",
       "usedIn": { "chapterSlugs": ["make-the-system-observable-and-operable"], "claimIds": ["CLM-113"] }
+    },
+    {
+      "id": "SRC-057",
+      "type": "book",
+      "title": "Canarying Releases",
+      "authors": ["Google Site Reliability Engineering"],
+      "publisher": "Google Site Reliability Workbook",
+      "url": "https://sre.google/workbook/canarying-releases/",
+      "publishedAt": "2018-01-01",
+      "accessedAt": "2026-08-16",
+      "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+      "notes": "First-party engineering book chapter used for partial time-limited rollout, comparison, and absolute health gates; design remains system-specific.",
+      "usedIn": { "chapterSlugs": ["engineer-release-and-recovery"], "claimIds": ["CLM-119"] }
+    },
+    {
+      "id": "SRC-058",
+      "type": "documentation",
+      "title": "Recommendations for safe deployment practices",
+      "authors": ["Microsoft"],
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Microsoft documentation terms",
+      "notes": "Volatile provider guidance used for small quality-gated changes, progressive exposure, health checks, and stop/recovery paths; mechanisms and thresholds remain contextual.",
+      "usedIn": { "chapterSlugs": ["engineer-release-and-recovery"], "claimIds": ["CLM-119"] }
+    },
+    {
+      "id": "SRC-059",
+      "type": "documentation",
+      "title": "Prepare for cloud operations",
+      "authors": ["Microsoft"],
+      "publisher": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-gb/azure/cloud-adoption-framework/manage/ready",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Microsoft documentation terms",
+      "notes": "Volatile provider guidance used for documenting operations, change, release, disaster recovery, and improvement; Azure responsibilities require translation.",
+      "usedIn": { "chapterSlugs": ["engineer-release-and-recovery"], "claimIds": ["CLM-125"] }
     }
   ]
 }

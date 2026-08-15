@@ -696,6 +696,78 @@
       "chapterSlug": "make-the-system-observable-and-operable",
       "statement": "A dashboard is a view over selected evidence and does not by itself provide operability, diagnosis, response authority, or recovery capability.",
       "sourceIds": ["SRC-019", "SRC-047", "SRC-054", "SRC-055"]
+    },
+    {
+      "id": "CLM-117",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "A release record should bind code, artifact provenance, configuration, schema, migration, feature controls, evidence, cohort, stop conditions, owner, and recovery path.",
+      "sourceIds": ["SRC-043", "SRC-049", "SRC-057", "SRC-058"]
+    },
+    {
+      "id": "CLM-118",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "Release automation and consistency reduce manual variance but can also deploy a bad decision consistently, so evidence gates and authority remain necessary.",
+      "sourceIds": ["SRC-049"]
+    },
+    {
+      "id": "CLM-119",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "Progressive exposure is useful when changes are small, cohorts and comparisons are meaningful, health criteria are absolute as well as relative, and abort/recovery paths are precommitted.",
+      "sourceIds": ["SRC-057", "SRC-058"]
+    },
+    {
+      "id": "CLM-120",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "Semantic Versioning communicates compatibility expectations only for a declared public API and does not solve deployment, configuration, schema, or data migration compatibility by itself.",
+      "sourceIds": ["SRC-031"]
+    },
+    {
+      "id": "CLM-121",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "Retry-safe recovery depends on preserving caller intent and external completion state; transport or method-level idempotency is insufficient by itself.",
+      "sourceIds": ["SRC-014", "SRC-015"]
+    },
+    {
+      "id": "CLM-122",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "Rollback may be unsafe or impossible after destructive, externally visible, or compatibility-breaking state changes; roll-forward, isolation, restore, or stop can be the safer action.",
+      "sourceIds": ["SRC-015", "SRC-049", "SRC-057", "SRC-058"]
+    },
+    {
+      "id": "CLM-123",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "A backup record is not recovery evidence until restoration, integrity, scope, access, and observed timing are tested under stated conditions.",
+      "sourceIds": ["SRC-019", "SRC-047", "SRC-059"]
+    },
+    {
+      "id": "CLM-124",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "The state-and-consequence recovery tree and rehearsal record in this chapter are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-015", "SRC-049", "SRC-057", "SRC-058", "SRC-059"]
+    },
+    {
+      "id": "CLM-125",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "Operational readiness connects documented change, release, recovery, support, ownership, and continuous improvement to executed evidence rather than documents alone.",
+      "sourceIds": ["SRC-049", "SRC-056", "SRC-059"]
+    },
+    {
+      "id": "CLM-126",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "A recovery-time observation from a local synthetic rehearsal must remain explicitly separate from a production recovery-time commitment.",
+      "sourceIds": ["SRC-019", "SRC-047", "SRC-059"]
+    },
+    {
+      "id": "CLM-127",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "Feature controls require owner, scope, default, observability, compatibility, expiry, removal, and recovery behavior so they do not become permanent divergent state.",
+      "sourceIds": ["SRC-057", "SRC-058"]
+    },
+    {
+      "id": "CLM-128",
+      "chapterSlug": "engineer-release-and-recovery",
+      "statement": "Recovery access must be exercised under the dependency failure it is designed to survive; routine control should not be weakened merely to simplify break-glass use.",
+      "sourceIds": ["SRC-007", "SRC-019", "SRC-056", "SRC-059"]
     }
   ]
 }

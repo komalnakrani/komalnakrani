@@ -138,6 +138,15 @@
       "minutes": 75,
       "sourceFile": "chapters/make-the-system-observable-and-operable.mdx",
       "objectiveIds": ["FDE-K06", "FDE-K07", "FDE-K09", "FDE-K10"]
+    },
+    {
+      "order": 14,
+      "slug": "engineer-release-and-recovery",
+      "title": "Engineer Release and Recovery",
+      "summary": "Bind versioned artifacts and evidence to progressive release gates, compatible migration, explicit recovery choice, verified restoration, and executed rehearsal.",
+      "minutes": 80,
+      "sourceFile": "chapters/engineer-release-and-recovery.mdx",
+      "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K08", "FDE-K09"]
     }
   ],
   "registries": {
