@@ -9,7 +9,7 @@
 - Last updated: 2026-08-16
 - Last completed issue: Komal publication foundation #2
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: pending Phase 04 child issue
+- Active issue: [#5](https://github.com/alpeshznakrani/komalnakrani/issues/5)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -21,7 +21,9 @@
 - role boundary: customer-embedded ownership from ambiguous workflow discovery through production, adoption, stabilization, handoff, and field-to-platform reuse
 - competency standard version: deferred to Abhyaas
 - exam blueprint version: deferred to Abhyaas
-- book structure: pending Phase 04
+- book scope: SINGLE BOOK
+- book thesis: a professional FDE converts an ambiguous, high-value customer workflow into a secure, adopted, supportable production system and converts field evidence into reusable product leverage
+- book structure: pending Phase 05
 - book titles: pending Phase 05
 - volume count: pending Phase 04
 - terminology decisions: FDE canonical; FDSE treated as a narrower engineering-heavy alias; AI is a specialization, not the universal role definition
@@ -70,7 +72,7 @@
 
 ## Current work
 
-Open and execute Phase 04 book scope using the locked role definition and boundary.
+Verify and close the completed Phase 04 single-book scope decision in issue #5.
 
 ## Unresolved blockers
 
@@ -88,7 +90,7 @@ None at role start.
 
 ## Exact next action
 
-Open the Phase 04 child issue, decide one-volume versus multi-volume scope, and lock reader profile, outcomes, exclusions, and coverage matrix.
+Run Phase 04 verification, commit the single-book decision, close issue #5, and open Phase 05 book architecture.
 
 ## Resume instructions
 
