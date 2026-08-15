@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 04 - book scope
+- Current global phase: Komal Phase 05 - book architecture
 - Last updated: 2026-08-16
 - Last completed issue: Komal publication foundation #2
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#5](https://github.com/alpeshznakrani/komalnakrani/issues/5)
+- Active issue: [#6](https://github.com/alpeshznakrani/komalnakrani/issues/6)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -23,8 +23,9 @@
 - exam blueprint version: deferred to Abhyaas
 - book scope: SINGLE BOOK
 - book thesis: a professional FDE converts an ambiguous, high-value customer workflow into a secure, adopted, supportable production system and converts field evidence into reusable product leverage
-- book structure: pending Phase 05
-- book titles: pending Phase 05
+- book structure: one book, five parts, nineteen chapters, five appendices
+- book title: Forward Deployed Engineering
+- book subtitle: From Ambiguous Workflow to Production Outcome
 - volume count: pending Phase 04
 - terminology decisions: FDE canonical; FDSE treated as a narrower engineering-heavy alias; AI is a specialization, not the universal role definition
 - course decision: pending Phase 13 AUTO evaluation
@@ -53,7 +54,7 @@
 - [x] 01 role validation
 - [ ] 02 competency standard (deferred)
 - [ ] 03 exam blueprint (deferred)
-- [ ] 04 book scope
+- [x] 04 book scope
 - [ ] 05 book architecture
 - [ ] 06 research
 - [ ] 07 chapter blueprints
@@ -72,7 +73,7 @@
 
 ## Current work
 
-Verify and close the completed Phase 04 single-book scope decision in issue #5.
+Verify the complete Phase 05 architecture, competency coverage, project map, and visual forecast in issue #6.
 
 ## Unresolved blockers
 
@@ -80,9 +81,9 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 
 ## Research gaps
 
-- Validate scope depth and volume count against the complete engagement lifecycle.
-- Determine which AI-specific material belongs in the durable core versus examples/labs.
-- Establish a technology-neutral running case that can demonstrate integration, governance, rollout, operations, and adoption.
+- Source the nineteen frozen chapters at the depth defined by the architecture.
+- Identify primary standards, documentation, public engineering evidence, and transfer cases chapter by chapter.
+- Test whether the constructed Orchid case needs additional constraints to exercise every planned artifact without becoming implausible.
 
 ## Quality debt
 
@@ -90,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Run Phase 04 verification, commit the single-book decision, close issue #5, and open Phase 05 book architecture.
+Validate architecture references and CSV structure, commit Phase 05, close issue #6, and open Phase 06 source and case-study research.
 
 ## Resume instructions
 
