@@ -39,6 +39,15 @@
       "minutes": 50,
       "sourceFile": "chapters/enter-the-customer-system.mdx",
       "objectiveIds": ["FDE-K01", "FDE-K02", "FDE-K08", "FDE-K12"]
+    },
+    {
+      "order": 3,
+      "slug": "map-the-workflow-that-actually-exists",
+      "title": "Map the Workflow That Actually Exists",
+      "summary": "Model actors, decisions, state, data, tools, handoffs, incentives, exceptions, and failure cost without idealizing the current workflow.",
+      "minutes": 55,
+      "sourceFile": "chapters/map-the-workflow-that-actually-exists.mdx",
+      "objectiveIds": ["FDE-K02", "FDE-K03", "FDE-K06"]
     }
   ],
   "registries": {

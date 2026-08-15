@@ -143,6 +143,58 @@
       "license": "Open Government Licence",
       "notes": "High-governance service guidance used for end-to-end, front-to-back, cross-channel, and secure-by-design discovery questions.",
       "usedIn": { "chapterSlugs": ["enter-the-customer-system"], "claimIds": ["CLM-009", "CLM-013"] }
+    },
+    {
+      "id": "SRC-012",
+      "type": "documentation",
+      "title": "Map a user's whole problem",
+      "authors": ["UK Government Digital Service"],
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/service-manual/design/map-a-users-whole-problem",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Open Government Licence",
+      "notes": "Official guidance used for whole-journey mapping and broken handoffs; it does not prescribe one notation.",
+      "usedIn": { "chapterSlugs": ["map-the-workflow-that-actually-exists"], "claimIds": ["CLM-015", "CLM-017"] }
+    },
+    {
+      "id": "SRC-013",
+      "type": "standard",
+      "title": "Business Process Model and Notation Version 2.0.2",
+      "authors": ["Object Management Group"],
+      "publisher": "Object Management Group",
+      "url": "https://www.omg.org/spec/BPMN",
+      "publishedAt": "2014-01-03",
+      "accessedAt": "2026-08-16",
+      "license": "Object Management Group specification terms",
+      "notes": "Versioned formal process-modeling notation cited as one optional representation, not a mandatory discovery method.",
+      "usedIn": { "chapterSlugs": ["map-the-workflow-that-actually-exists"], "claimIds": ["CLM-018"] }
+    },
+    {
+      "id": "SRC-014",
+      "type": "standard",
+      "title": "RFC 9110: HTTP Semantics",
+      "authors": ["Roy Fielding", "Mark Nottingham", "Julian Reschke"],
+      "publisher": "Internet Engineering Task Force",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "publishedAt": "2022-06-01",
+      "accessedAt": "2026-08-16",
+      "license": "IETF Trust Legal Provisions",
+      "notes": "Used narrowly to ground the distinction between transport-level method semantics and workflow-level completion/intent.",
+      "usedIn": { "chapterSlugs": ["map-the-workflow-that-actually-exists"], "claimIds": ["CLM-019"] }
+    },
+    {
+      "id": "SRC-015",
+      "type": "web",
+      "title": "Making retries safe with idempotent APIs",
+      "authors": ["Malcolm Featonby"],
+      "publisher": "Amazon Web Services",
+      "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "AWS website terms",
+      "notes": "First-party engineering pattern used to show that caller intent and ambiguous completion are workflow concerns; no quantitative outcome claim.",
+      "usedIn": { "chapterSlugs": ["map-the-workflow-that-actually-exists"], "claimIds": ["CLM-019"] }
     }
   ]
 }

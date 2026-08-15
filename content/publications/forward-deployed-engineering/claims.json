@@ -84,6 +84,42 @@
       "chapterSlug": "enter-the-customer-system",
       "statement": "The stakeholder and evidence models in this chapter are original synthesis tools for separating impact, knowledge, access, responsibility, authority, and confidence.",
       "sourceIds": ["SRC-009", "SRC-010", "SRC-011"]
+    },
+    {
+      "id": "CLM-015",
+      "chapterSlug": "map-the-workflow-that-actually-exists",
+      "statement": "A current-state workflow model should cover the user's whole journey and broken handoffs rather than only the proposed interface.",
+      "sourceIds": ["SRC-006", "SRC-011", "SRC-012"]
+    },
+    {
+      "id": "CLM-016",
+      "chapterSlug": "map-the-workflow-that-actually-exists",
+      "statement": "Observation of real users can expose differences between reported procedure, actual work, and solution-shaped requirements.",
+      "sourceIds": ["SRC-009", "SRC-010"]
+    },
+    {
+      "id": "CLM-017",
+      "chapterSlug": "map-the-workflow-that-actually-exists",
+      "statement": "Journey and experience maps can expose cross-channel handoffs and gaps that are invisible in a single service component.",
+      "sourceIds": ["SRC-012"]
+    },
+    {
+      "id": "CLM-018",
+      "chapterSlug": "map-the-workflow-that-actually-exists",
+      "statement": "BPMN 2.0.2 is a standardized process notation, but its existence does not make it mandatory or sufficient for workflow discovery.",
+      "sourceIds": ["SRC-013"]
+    },
+    {
+      "id": "CLM-019",
+      "chapterSlug": "map-the-workflow-that-actually-exists",
+      "statement": "Technical retry behavior can change the operational workflow because method semantics, caller intent, and ambiguous completion determine the next decision.",
+      "sourceIds": ["SRC-014", "SRC-015"]
+    },
+    {
+      "id": "CLM-020",
+      "chapterSlug": "map-the-workflow-that-actually-exists",
+      "statement": "The coordinated workflow views and resolution test in this chapter are an original synthesis for deployment decisions rather than a formal modeling standard.",
+      "sourceIds": ["SRC-010", "SRC-011", "SRC-012", "SRC-013"]
     }
   ]
 }
