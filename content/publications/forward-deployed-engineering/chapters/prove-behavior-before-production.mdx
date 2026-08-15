@@ -1,0 +1,478 @@
+---
+title: Prove Behavior Before Production
+slug: prove-behavior-before-production
+summary: Trace workflow risk and acceptance claims to typed verification evidence, representative segments, calibrated graders, task-based UAT, limitations, and release disposition.
+minutes: 80
+sourceIds:
+  - SRC-014
+  - SRC-015
+  - SRC-027
+  - SRC-028
+  - SRC-029
+  - SRC-030
+  - SRC-034
+  - SRC-035
+  - SRC-036
+  - SRC-037
+  - SRC-039
+  - SRC-041
+  - SRC-043
+  - SRC-044
+  - SRC-045
+  - SRC-046
+  - SRC-050
+  - SRC-051
+  - SRC-052
+claimIds:
+  - CLM-091
+  - CLM-092
+  - CLM-093
+  - CLM-094
+  - CLM-095
+  - CLM-096
+  - CLM-097
+  - CLM-098
+  - CLM-099
+  - CLM-100
+  - CLM-101
+  - CLM-102
+  - CLM-103
+  - CLM-104
+objectiveIds:
+  - FDE-K05
+  - FDE-K06
+  - FDE-K07
+  - FDE-K08
+  - FDE-K09
+figureIds: []
+---
+
+A test is useful only in relation to a claim.
+
+“The suite passed” does not say which risk was challenged, which environment and system version ran, which data or users were represented, what was observed, what remains unknown, or who can release the system despite a gap.
+
+Verification turns a deployment promise into decision-quality evidence:
+
+`requirement or risk -> criterion -> method and data -> expected result -> observed result -> limitation -> owner disposition`
+
+The FDE builds this trace across the whole workflow. The FDE does not convert finite test passage into proof of safety, security, accessibility, quality, compliance, or absence of failure. [CLM-093]
+
+## Use the cheapest credible evidence
+
+Choose the least expensive method that can credibly support the specific claim. “Cheapest” does not mean weakest. “Credible” depends on consequence and uncertainty.
+
+Examples:
+
+- A pure function mapping unknown completion to reconciliation can be verified with a deterministic unit test.
+- Consumer/provider compatibility may require contract tests plus representative integration behavior.
+- Tenant isolation requires negative authorization tests at the enforcement boundary, not a UI screenshot.
+- Recovery requires an executed rehearsal from a representative state, not code review alone.
+- AI quality needs datasets, graders, segments, versions, and uncertainty, not one example.
+- Review-interface usability needs representative task observation, not only DOM assertions.
+- A real dependency's quotas, latency, identity, and failure behavior need evidence in a representative environment; a local double cannot provide it.
+
+[FIGURE F12.1: Verification stack arranged from cheap/narrow to costly/representative: static analysis and review; unit/property; schema/contract; component/integration; end-to-end/failure/recovery; AI capability/regression/adversarial; security/accessibility; representative performance; task-based UAT; deployment simulation; controlled production monitoring. Arrows show that higher layers complement rather than replace lower layers.]
+
+This selection rule and traceability matrix are original FDE synthesis tools, not a formal standard. [CLM-091]
+
+## Build `OA-07` as a verification matrix
+
+Each row contains:
+
+- requirement, risk, control, or acceptance-criterion ID;
+- exact criterion and consequence of failure;
+- evidence type and method;
+- data/fixture/user/environment provenance;
+- system/config/policy/model/evidence versions;
+- expected result and threshold owner;
+- observed result, date, and evidence location;
+- segment/cohort and uncertainty;
+- known limitation/non-proof;
+- pass/fail/inconclusive state;
+- release disposition, owner, authority, waiver/expiry where relevant.
+
+[FIGURE F12.2: Traceability map from outcome/guardrail, threat/risk, interface/data/AI/operating requirements, and acceptance criteria to unit, contract, integration, end-to-end, evaluation, security/accessibility, UAT, simulation, and rehearsal evidence. Each result flows to limitation and release/waiver disposition.]
+
+Do not write one row called “security testing” or “AI accuracy.” Decompose until a failed observation produces a meaningful action.
+
+### Example matrix rows
+
+| Risk/claim | Criterion | Method/type | Current observation | Limitation/disposition |
+| --- | --- | --- | --- | --- |
+| wrong equipment drives evidence | ambiguous equipment never reaches retrieval | end-to-end deterministic assertion | blocked before store call | synthetic fixture; candidate |
+| external completion is misread | accepted/no response becomes reconciliation | contract/end-to-end deterministic assertion | `reconcile` with intent ID | no real adapter; candidate only locally |
+| prohibited suggestion reaches user | prohibited output is blocked for every critical case | deterministic policy plus segmented eval | local cases blocked | provider/adversarial coverage incomplete; no production release |
+| unqualified safety approval | wrong tenant/region/expiry/permission denied | authorization negative tests | local denials pass | production identity/qualification mapping absent |
+| audit leaks payload | event contains allowlisted fields only | deterministic assertion/static review | secret/raw payload absent | exporter/storage/access/retention untested |
+| user cannot inspect evidence | representative users complete review task | task-based UAT/user acceptance | not yet observed | release of safety-relevant path blocked |
+
+The last row is not a failed automated test. It is missing user evidence with release consequence. “Not tested” must remain distinct from passed.
+
+### Define criterion before running
+
+Precommit the expected behavior, threshold, stop/waiver rule, and authority before seeing the result. Otherwise teams can move the target after an inconvenient failure.
+
+For a statistical criterion, record numerator, denominator, exclusions, confidence/uncertainty method where meaningful, critical segment floors, and minimum sample adequacy. For a deterministic invariant, define exactly which versions and environments it covers. For expert judgment, define qualification/rubric/disagreement handling. For UAT, define task completion and unacceptable assistance or error.
+
+Threshold selection is a risk/business/domain decision supported by evidence. The FDE can show tradeoffs and sensitivity but should not invent tolerance.
+
+### Keep evidence types distinct
+
+The companion recognizes four types:
+
+- **deterministic assertion:** for a fixed input/version/environment, a defined property held or failed;
+- **statistical estimate:** observed rate/distribution with sample, segments, uncertainty, and assumptions;
+- **expert judgment:** qualified reviewer decision under rubric and stated evidence;
+- **user acceptance:** representative user completed or failed a defined task under recorded conditions.
+
+These support different claims. Do not average them into one “confidence” score. [CLM-103]
+
+## Derive tests from risk and workflow state
+
+Start from the workflow map, outcome contract, architecture, contracts, AI error taxonomy, and control matrix. For Orchid, the critical families are:
+
+### Binding and data
+
+- missing/ambiguous/retired equipment;
+- correct structure but wrong regional residency;
+- stale/conflicting/missing manual;
+- wrong equipment evidence returned by cache/index;
+- source version changes;
+- incomplete/duplicate/out-of-order data;
+- cross-tenant/region query attempts.
+
+### Intent and dependencies
+
+- same intent/same semantics replay;
+- same intent/different semantics conflict;
+- upstream success/downstream rejection;
+- accepted request/no final response;
+- late success after timeout;
+- dependency timeout/unavailable/malformed response;
+- rate/capacity constraint and retry amplification.
+
+### Identity and controls
+
+- missing/expired identity;
+- wrong tenant, region, resource, operation, or qualification;
+- requester equals approver where separation is required;
+- secret in configuration/log;
+- feature disabled or wrong cohort;
+- audit event missing or over-collecting;
+- approval evidence complete but formal decision pending.
+
+### AI and review
+
+- supported suggestion with correct evidence;
+- unsupported statement or fabricated citation;
+- prohibited/safety action;
+- missing evidence requiring abstention;
+- untrusted retrieved instruction;
+- tool request outside permission;
+- timeout/cost fallback;
+- aggregate quality hiding a critical family failure;
+- reviewer unable to inspect evidence or detect wrong context.
+
+### Operation and recovery
+
+- signal/alert/runbook path for each material state;
+- migration compatibility and partial deployment;
+- rollback impossible after data change;
+- backup present but restore invalid;
+- break-glass dependency unavailable;
+- support cannot identify release/config/policy bundle.
+
+Chapter 12 records the method and current result; Chapters 13-14 build remaining signal/recovery evidence.
+
+## Layer the verification stack
+
+No single layer dominates every claim.
+
+### Static analysis and review
+
+Find suspicious source/config/dependency patterns, secret material, unreachable branches, unsafe defaults, and unclear ownership early. Static tools can produce false positives/negatives and cannot establish runtime semantics.
+
+### Unit and property tests
+
+Challenge pure contracts, state transitions, authorization predicates, redaction, budgets, and invariants quickly. Add generated boundary inputs where useful. They do not prove adapter/environment behavior.
+
+### Contract tests
+
+Verify provider/consumer expectations, examples, errors, compatibility, and semantic additions beyond schema. Test both sides when possible. A shared mistaken contract can still pass.
+
+### Integration/component tests
+
+Exercise real protocol/identity/configuration and representative dependency behavior. Include denied, timeout, quota, partial, malformed, duplicate, and late-response paths. A test environment may still differ materially from production.
+
+### End-to-end tests
+
+Trace representative user intent across components and controls. Keep a small consequential set: broad E2E suites can become slow, flaky, opaque, and expensive. Use lower layers for precise coverage.
+
+### Failure, load, and recovery evidence
+
+Inject dependency impairment, concurrency, backpressure, retry amplification, capacity pressure, migration state, and recovery actions. Measure user-visible state and containment, not merely process survival.
+
+### Evaluation, security, accessibility, and UAT
+
+Apply their specialized data, rubric, version, qualification, and user-context requirements. They complement the engineering stack rather than becoming an end-stage stamp.
+
+When a high-level test fails, add a lower-level regression near the defect plus preserve the high-level case when it represents a consequential promise.
+
+## Control flakiness without erasing failure
+
+Repeatedly rerunning until green destroys evidence. For each nondeterministic failure:
+
+- preserve seed/input/system/environment and raw result;
+- classify product defect, test defect, environment defect, or unknown;
+- measure recurrence and segment;
+- quarantine only with owner, consequence, expiry, and release rule;
+- create a deterministic reproduction or improved diagnostic where possible;
+- do not exclude the case from the aggregate without disclosure.
+
+AI outputs may be probabilistic, but policy and authorization invariants can still be deterministic. For statistical behavior, run recorded trials, report distributions and failure classes, and retain critical failures instead of averaging them away.
+
+## Verify data and answer correctness separately
+
+A query can execute successfully and still answer the wrong question. A retrieval can return a valid document and still bind the wrong equipment/version. Verify:
+
+- source authority and provenance;
+- selection/filter/join/binding semantics;
+- freshness/completeness/consistency rules;
+- missing/duplicate/conflicting states;
+- transformation/aggregation meaning;
+- tenant/region access;
+- answer/evidence relationship;
+- user interpretation and action.
+
+ISO/IEC 25012's official record supports use of a structured data-quality model, but Orchid's concrete criteria and thresholds remain local. The book does not reproduce copyrighted requirements.
+
+## Plan representative performance evidence
+
+Local execution time is not a capacity claim. Define workload from workflow evidence:
+
+- arrival rate, concurrency, bursts, request sizes, cohort/site patterns;
+- dependency quotas and connection pools;
+- model/retrieval latency/cost distribution;
+- timeouts, retries, cancellation, backpressure;
+- warm/cold/cache conditions;
+- data volume and migration/maintenance overlap;
+- acceptable user-visible latency and fallback;
+- capacity owner and scaling/stop action.
+
+Measure tails and segments, not only averages. Verify that overload fails safely: reject/defer/fallback with truthful state rather than queueing invisibly, duplicating effects, or exhausting a shared dependency. Do not extrapolate production capacity from a laptop benchmark.
+
+## Test the contracts and their semantics
+
+OpenAPI, AsyncAPI, and JSON Schema artifacts can anchor structural compatibility. Add semantic assertions for:
+
+- resource/tenant/region binding;
+- authorization and qualification;
+- accepted/rejected/unknown completion;
+- request intent equivalence/conflict;
+- ordering, duplication, freshness, and reconciliation;
+- error visibility and retry guidance;
+- data-quality and provenance rules.
+
+Schemas cannot prove that a valid equipment ID belongs to the ticket or that a timestamp is fresh enough for the decision. HTTP method semantics cannot make an external business effect safe to retry without application intent and completion rules. [CLM-092]
+
+Use producer/consumer examples, negative cases, compatibility checks, and representative adapter tests. Freeze the contract version with the evidence result.
+
+## Design the AI evaluation as a system test
+
+An evaluation needs explicit anatomy:
+
+- **task:** bounded workflow behavior;
+- **case/trial:** one context/input/evidence/permission state;
+- **dataset:** versioned set with provenance and segments;
+- **grader/rubric:** how acceptable/prohibited behavior is judged;
+- **trace/outcome:** intermediate actions and final workflow result;
+- **harness:** system bundle and execution/recording logic;
+- **suite:** decision-relevant collection;
+- **purpose:** capability, regression, release, diagnosis, or monitoring.
+
+Portable concepts matter more than a vendor evaluation UI. [CLM-094]
+
+### Separate capability from regression
+
+Capability asks whether an approach can satisfy the task under defined conditions. Regression asks whether a change preserves accepted behavior. [CLM-095]
+
+An exploratory case can find a possible design. It should not automatically become the only release case. Curate validated cases, held-out and rotating variants, adversarial cases, stable high-consequence regressions, and new production-derived cases under permission/minimization.
+
+### Freeze the system bundle
+
+Record:
+
+- code/release and environment/config;
+- model/provider/version/parameters;
+- prompt/system instructions;
+- retrieval corpus/index/chunking/ranking;
+- tools/adapters and permissions;
+- policy/authorization/approval;
+- dataset and graders;
+- latency/cost budgets;
+- time and dependency versions.
+
+A changed index or policy can invalidate a “same model” score.
+
+## Govern evaluation data
+
+For every dataset/case record:
+
+- source and permission;
+- synthetic, constructed, public, customer-approved, or production-derived status;
+- collection/construction procedure;
+- version/change/correction history;
+- development/validation/test/held-out/monitoring use;
+- segment and consequence;
+- leakage/tuning exposure;
+- sensitive-data handling/retention;
+- representativeness and known omissions.
+
+The companion uses synthetic cases only. Production traces are not a free dataset. They may include customer content, identities, sensitive decisions, and model/provider retention issues.
+
+Leakage changes the claim. A seen/memorized case can still be useful for regression but is weak independent capability evidence. [CLM-097]
+
+## Preserve segments and uncertainty
+
+Suppose 99 common cases pass and one safety-critical equipment-family case fails. The aggregate is 99 percent. The release disposition is still blocked if the owner precommitted that critical failure as unacceptable.
+
+Segment by legitimate decision factors such as:
+
+- workflow consequence;
+- equipment family;
+- evidence quality/freshness;
+- normal/exception/adversarial/fallback state;
+- user role/qualification;
+- tenant/region/site/connectivity;
+- language or accessibility context;
+- model/policy/version;
+- latency/cost band.
+
+Do not slice so finely that every cell hides uncertainty. Report sample counts, failure counts, disagreement, missing coverage, and uncertainty. Avoid false precision when examples are constructed or few.
+
+An aggregate can conceal unacceptable segment failure. [CLM-096]
+
+The companion verification report keeps common and safety-critical segments separate and blocks a critical failure even when most rows pass.
+
+## Calibrate graders
+
+### Deterministic graders
+
+Use for exact invariants: schema, required evidence ID, prohibited action absent, policy state, permission, latency/cost budget, audit redaction, tenant/region binding.
+
+### Human/domain graders
+
+Use for contextual usefulness, completeness, calibrated uncertainty, evidence interpretation, and workflow appropriateness. Record qualification, rubric, examples, order/blinding where feasible, disagreement, and escalation.
+
+### Model graders
+
+Use only after comparing against qualified human labels across critical segments. Test prompt/order/verbosity sensitivity and shared failure modes. A model grader can prefer fluent unsupported answers or mirror the evaluated model's blind spot.
+
+The companion calibration output reports agreement and case-level disagreement instead of promoting a grader to authority. Graders need rubrics/calibration and are not objective by assumption. [CLM-098]
+
+## Add adversarial and misuse cases
+
+Use the threat model to test:
+
+- retrieved content instructing the model to ignore policy;
+- cross-tenant evidence/reference injection;
+- fabricated/stale tool results;
+- encoded or indirect prohibited requests;
+- secret/sensitive-data extraction attempts;
+- permission and argument escalation;
+- repeated calls exhausting budget/capacity;
+- manipulation of evaluator or feedback data;
+- reviewer automation bias and concealed evidence;
+- malformed/oversized/unexpected interface input.
+
+Security guides can prompt categories, but the cases must match Orchid's architecture and workflow. Layered safeguards reduce risk; passing them does not establish a complete guarantee. [CLM-101]
+
+## Select security and accessibility evidence by version
+
+With accountable owners, map relevant NIST SSDF/OWASP ASVS practices to implementation and verification. Record ASVS 5.0.0 selections, scope, result, gaps, and evidence rather than claiming broad alignment.
+
+For WCAG 2.2, combine automated checks with keyboard, focus, semantics, zoom/reflow, error, and assistive-technology inspection plus real task evidence where appropriate. Passing selected criteria does not establish complete usability/accessibility for every context.
+
+ISO product/data quality records can help organize attributes, but operational criteria/thresholds remain contextual. Versioned criteria support evidence, not automatic certification. [CLM-101]
+
+## Make UAT a protocol, not a demonstration
+
+Define:
+
+- representative roles, qualifications, contexts, devices/connectivity, and access needs;
+- exact tasks and starting state;
+- acceptance/guardrail criteria;
+- data and environment;
+- observation and evidence method;
+- facilitation limits and assistance;
+- issue severity, stop, retest, and sign-off path;
+- participant consent/privacy and data handling;
+- known non-represented users/conditions.
+
+Observe whether the user can confirm equipment, distinguish evidence from suggestion, notice uncertainty, recover from fallback/reconciliation, exercise approval correctly, and find support.
+
+UAT is not “we showed it and they liked it.” It does not transfer formal risk acceptance to participants. [CLM-102]
+
+## Use simulation and monitoring for different evidence
+
+Static evaluation may miss multi-step behavior, timing, tool interaction, reviewer workload, and operational adaptation. Deployment-like simulation can expose more of that path but still cannot reproduce every real user, dependency, adversary, workload, or production tail. [CLM-099]
+
+Production monitoring remains necessary for data/workflow/model quality, drift, cohorts, latency/cost, fallbacks, overrides, support, security, and outcomes. Service availability alone cannot establish usefulness or trustworthiness. [CLM-100]
+
+Do not use “we will monitor” to waive a foreseeable high-consequence control that should be verified before exposure. Monitoring detects after or during behavior; it is not always prevention.
+
+## Handle failures, limitations, and waivers honestly
+
+Every failed/inconclusive row receives:
+
+- consequence and affected segment;
+- containment or scope restriction;
+- root-cause/hypothesis status;
+- remediation/verification owner;
+- release effect;
+- formal waiver authority if permitted;
+- compensating controls and monitoring;
+- expiry/retest trigger;
+- evidence link and decision date.
+
+Known limitations belong in the release packet, support material, and user/operator communication where relevant. A waiver cannot change an observed failure into a pass. [CLM-104]
+
+The FDE prepares evidence/options. Designated authorities decide risk within delegated scope.
+
+## Orchid `OA-07` current packet
+
+The current companion provides 28 cumulative tests across:
+
+- structure/semantics and region residency;
+- missing/confirmed/ambiguous equipment;
+- intent replay/conflict and unknown completion;
+- authorization/qualified approval;
+- environment/secret configuration;
+- model abstention/budgets/policy;
+- critical-segment evaluation;
+- control evidence/authority/audit minimization;
+- end-to-end success/rejection/reconciliation/default-closed feature;
+- verification record completeness, evidence type, critical disposition, grader disagreement.
+
+This is strong deterministic evidence for the synthetic local bundle. It is not evidence for real customer integrations, performance, production identity, UI/UAT/accessibility, provider-model quality, real monitoring, migration, release, or recovery. Those limitations remain explicit.
+
+## The Chapter 12 gate
+
+Before release planning, `OA-07` must contain:
+
+- risk/requirement/control-to-evidence matrix;
+- unit, property, contract, integration, end-to-end, failure, and recovery plans;
+- AI task/case/data/grader/trace/harness/suite/purpose records;
+- capability/regression and held-out/leakage boundaries;
+- provenance/version/system bundle;
+- consequential segments and uncertainty;
+- grader calibration/disagreement;
+- adversarial/security/accessibility selection and scope;
+- task-based UAT protocol;
+- observed results, limitations, owners, and disposition;
+- waiver authority/expiry where allowed;
+- passing local companion plus explicit non-proof.
+
+The gate passes when every material release claim has the cheapest credible evidence available now or an explicit ownered limitation that restricts release.
+
+Chapter 13, *Make the System Observable and Operable*, carries these claims and limitations into signals, objectives, alerts, diagnostic paths, runbooks, capacity/cost, and explicit blind spots.

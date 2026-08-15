@@ -540,6 +540,90 @@
       "chapterSlug": "build-a-production-vertical-slice",
       "statement": "Explicit debt records preserve the reason, consequence, owner, trigger, and exit condition of a compromise; an unowned TODO does not.",
       "sourceIds": ["SRC-043", "SRC-045", "SRC-047"]
+    },
+    {
+      "id": "CLM-091",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "The cheapest-credible-evidence rule and risk-to-criterion-to-method-to-observation-to-limitation-to-disposition matrix are original FDE synthesis tools rather than formal standards.",
+      "sourceIds": ["SRC-034", "SRC-043", "SRC-044", "SRC-045", "SRC-046"]
+    },
+    {
+      "id": "CLM-092",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Interface specifications and schemas can anchor structural contract tests while workflow semantics, authorization, data quality, and safe retry need additional assertions.",
+      "sourceIds": ["SRC-014", "SRC-015", "SRC-027", "SRC-028", "SRC-029", "SRC-030"]
+    },
+    {
+      "id": "CLM-093",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Passing a finite test or evaluation suite samples defined behavior under recorded conditions and does not prove the absence of security, safety, reliability, accessibility, or quality failures.",
+      "sourceIds": ["SRC-034", "SRC-035", "SRC-043", "SRC-044", "SRC-046"]
+    },
+    {
+      "id": "CLM-094",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "AI evaluation benefits from explicit tasks, cases or trials, data provenance, graders, traces or outcomes, a versioned harness, a suite, and a decision purpose.",
+      "sourceIds": ["SRC-036", "SRC-037", "SRC-051"]
+    },
+    {
+      "id": "CLM-095",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Capability evaluation asks whether an approach can meet a task under defined conditions, while regression evaluation checks whether a changed system preserves accepted behavior.",
+      "sourceIds": ["SRC-037"]
+    },
+    {
+      "id": "CLM-096",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "An aggregate pass rate can conceal an unacceptable failure in a high-consequence workflow, user, equipment, region, or evidence-quality segment.",
+      "sourceIds": ["SRC-034", "SRC-035", "SRC-037"]
+    },
+    {
+      "id": "CLM-097",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Evaluation data needs recorded provenance, permission, construction, version, split, leakage status, segment, correction history, and known representativeness limits.",
+      "sourceIds": ["SRC-036", "SRC-037"]
+    },
+    {
+      "id": "CLM-098",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Human, deterministic, and model-based graders require explicit rubrics and appropriate calibration; model graders can share failure modes and are not objective by assumption.",
+      "sourceIds": ["SRC-036", "SRC-037"]
+    },
+    {
+      "id": "CLM-099",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Deployment-like simulation can reveal behavior missed by static evaluation while still leaving production-tail, real-user, and real-dependency limitations.",
+      "sourceIds": ["SRC-041"]
+    },
+    {
+      "id": "CLM-100",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Production monitoring of data, workflow, and model quality complements pre-release verification and cannot be replaced by service availability alone.",
+      "sourceIds": ["SRC-039", "SRC-050"]
+    },
+    {
+      "id": "CLM-101",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Versioned security, accessibility, software-quality, and layered AI-safety criteria can support release evidence without proving complete safety, security, accessibility, quality, or compliance.",
+      "sourceIds": ["SRC-043", "SRC-044", "SRC-045", "SRC-046", "SRC-052"]
+    },
+    {
+      "id": "CLM-102",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "User acceptance testing should observe representative users completing defined tasks with acceptance criteria; it is not an informal demonstration or transfer of formal risk authority to participants.",
+      "sourceIds": ["SRC-043", "SRC-045", "SRC-046"]
+    },
+    {
+      "id": "CLM-103",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Deterministic assertions, statistical estimates, expert judgments, and user-acceptance observations support different claim types and should not be merged into an undifferentiated pass label.",
+      "sourceIds": ["SRC-034", "SRC-037", "SRC-045"]
+    },
+    {
+      "id": "CLM-104",
+      "chapterSlug": "prove-behavior-before-production",
+      "statement": "Known limitations, failed criteria, and waivers require explicit consequence, owner, authority, scope, conditions, expiry, and release disposition.",
+      "sourceIds": ["SRC-034", "SRC-043", "SRC-044"]
     }
   ]
 }

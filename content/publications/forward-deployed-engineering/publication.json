@@ -120,6 +120,15 @@
       "minutes": 80,
       "sourceFile": "chapters/build-a-production-vertical-slice.mdx",
       "objectiveIds": ["FDE-K04", "FDE-K05", "FDE-K06", "FDE-K07", "FDE-K08"]
+    },
+    {
+      "order": 12,
+      "slug": "prove-behavior-before-production",
+      "title": "Prove Behavior Before Production",
+      "summary": "Trace workflow risk and acceptance claims to typed verification evidence, representative segments, calibrated graders, task-based UAT, limitations, and release disposition.",
+      "minutes": 80,
+      "sourceFile": "chapters/prove-behavior-before-production.mdx",
+      "objectiveIds": ["FDE-K05", "FDE-K06", "FDE-K07", "FDE-K08", "FDE-K09"]
     }
   ],
   "registries": {

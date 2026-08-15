@@ -637,6 +637,45 @@
       "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
       "notes": "First-party engineering book chapter used for automation, consistency, reproducibility, and release process principles; large-scale Google practice requires adaptation.",
       "usedIn": { "chapterSlugs": ["build-a-production-vertical-slice"], "claimIds": ["CLM-086", "CLM-089"] }
+    },
+    {
+      "id": "SRC-050",
+      "type": "documentation",
+      "title": "Monitoring ML systems",
+      "authors": ["Google"],
+      "publisher": "Google for Developers",
+      "url": "https://developers.google.com/machine-learning/crash-course/production-ml-systems/monitoring",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "Google documentation terms",
+      "notes": "First-party education/practice source used for monitoring data and model quality in addition to service health; workflow metrics and thresholds remain contextual.",
+      "usedIn": { "chapterSlugs": ["prove-behavior-before-production"], "claimIds": ["CLM-100"] }
+    },
+    {
+      "id": "SRC-051",
+      "type": "documentation",
+      "title": "Agent evals",
+      "authors": ["OpenAI"],
+      "publisher": "OpenAI Developers",
+      "url": "https://developers.openai.com/api/docs/guides/agent-evals",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "OpenAI documentation terms",
+      "notes": "Volatile vendor documentation used only for portable trace/behavior evaluation concepts; specific interfaces are replaceable.",
+      "usedIn": { "chapterSlugs": ["prove-behavior-before-production"], "claimIds": ["CLM-094"] }
+    },
+    {
+      "id": "SRC-052",
+      "type": "documentation",
+      "title": "Safety best practices",
+      "authors": ["OpenAI"],
+      "publisher": "OpenAI Developers",
+      "url": "https://developers.openai.com/api/docs/guides/safety-best-practices",
+      "publishedAt": null,
+      "accessedAt": "2026-08-16",
+      "license": "OpenAI documentation terms",
+      "notes": "Volatile vendor guidance used for layered safeguards, testing, monitoring, and human review; not a system-specific risk assessment or guarantee.",
+      "usedIn": { "chapterSlugs": ["prove-behavior-before-production"], "claimIds": ["CLM-101"] }
     }
   ]
 }

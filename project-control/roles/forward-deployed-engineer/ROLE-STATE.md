@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-10 and `OA-05` are complete. Write Chapters 11-14 and extend the companion through the vertical slice, verification, observability, release, migration, and recovery under child issue #13.
+Chapters 01-12, `OA-05`, `OA-06`, and `OA-07` are complete. Write Chapters 13-14 and extend the companion through observability, release, migration, and recovery under child issue #13.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Write Chapter 11 and the runnable provider-neutral vertical slice from the approved blueprint and Chapter 10 state.
+Write Chapter 13 and the provider-neutral signal catalog/diagnostic companion from the approved blueprint and Chapter 12 state.
 
 ## Resume instructions
 
