@@ -9,7 +9,7 @@
 - Last updated: 2026-08-16
 - Last completed issue: Phase 07 blueprints #8
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#10](https://github.com/alpeshznakrani/komalnakrani/issues/10) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
+- Active issue: [#11](https://github.com/alpeshznakrani/komalnakrani/issues/11) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Write and immediately QA Chapters 01–03 plus their learning packs, state handoffs, and production registry entries under child issue #10.
+Write and immediately QA Chapters 04-06 plus their learning packs, state handoffs, and production registry entries under child issue #11. Chapters 01-03 are complete.
 
 ## Unresolved blockers
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Create the draft publication manifest/registries, then write Chapter 01 from its approved blueprint and research pack without compressing it into an outline.
+Write Chapter 04 from its approved blueprint/research pack, using the Chapter 03 workflow state and preserving fictional baselines/targets as explicit gaps.
 
 ## Resume instructions
 
