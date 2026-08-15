@@ -7,9 +7,9 @@
 - Catalog version: master catalog dated 2026-08-16
 - Current global phase: Komal Phase 08 - full manuscript production
 - Last updated: 2026-08-16
-- Last completed issue: Phase 07 blueprints #8
+- Last completed issue: Phase 08.3 Chapters 07-10 #12
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#12](https://github.com/alpeshznakrani/komalnakrani/issues/12) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
+- Active issue: [#13](https://github.com/alpeshznakrani/komalnakrani/issues/13) (root Phase 08: [#9](https://github.com/alpeshznakrani/komalnakrani/issues/9))
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -39,8 +39,8 @@
 - objective map: deferred to Abhyaas
 - exam blueprint: deferred to Abhyaas
 - book architecture: pending under `project-control/roles/forward-deployed-engineer/books/`
-- manuscript(s): pending under `content/publications/`
-- figure manifest: pending per publication
+- manuscript(s): Chapters 01-10 complete under `content/publications/forward-deployed-engineering/chapters/`
+- figure manifest: frozen placeholders through `F10.2`; production visuals pending Phase 10
 - PDF(s): pending under `output/pdf/`
 - preparation resources: pending
 - certification page: deferred to Abhyaas
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Chapters 01-06 are complete. Write Chapters 07-10 and their companion foundations under child issue #12, completing the `OA-05` design dossier.
+Chapters 01-10 and `OA-05` are complete. Write Chapters 11-14 and extend the companion through the vertical slice, verification, observability, release, migration, and recovery under child issue #13.
 
 ## Unresolved blockers
 
@@ -82,7 +82,7 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 ## Research gaps
 
 - Preserve blueprint non-scope, source limitations, and manuscript prohibitions during Phase 08 writing.
-- Build the provider-neutral local companion as one coherent repository alongside the manuscript.
+- Continue the provider-neutral local companion as one coherent repository alongside the manuscript.
 - Keep all constructed satellite scenarios explicitly fictional and outcome-free unless the text supplies synthetic measurements.
 
 ## Quality debt
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Write Chapter 07 and the provider-neutral contract/failure-harness companion foundation from the approved blueprint and Chapter 06 state.
+Write Chapter 11 and the runnable provider-neutral vertical slice from the approved blueprint and Chapter 10 state.
 
 ## Resume instructions
 
