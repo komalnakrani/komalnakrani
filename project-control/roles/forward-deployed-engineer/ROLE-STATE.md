@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 05 - book architecture
+- Current global phase: Komal Phase 06 - source and case-study research
 - Last updated: 2026-08-16
 - Last completed issue: Komal publication foundation #2
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#6](https://github.com/alpeshznakrani/komalnakrani/issues/6)
+- Active issue: [#7](https://github.com/alpeshznakrani/komalnakrani/issues/7)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -26,7 +26,7 @@
 - book structure: one book, five parts, nineteen chapters, five appendices
 - book title: Forward Deployed Engineering
 - book subtitle: From Ambiguous Workflow to Production Outcome
-- volume count: pending Phase 04
+- volume count: one
 - terminology decisions: FDE canonical; FDSE treated as a narrower engineering-heavy alias; AI is a specialization, not the universal role definition
 - course decision: pending Phase 13 AUTO evaluation
 - certification title: deferred to Abhyaas
@@ -55,8 +55,8 @@
 - [ ] 02 competency standard (deferred)
 - [ ] 03 exam blueprint (deferred)
 - [x] 04 book scope
-- [ ] 05 book architecture
-- [ ] 06 research
+- [x] 05 book architecture
+- [x] 06 research
 - [ ] 07 chapter blueprints
 - [ ] 08 manuscript
 - [ ] 09 book QA
@@ -73,7 +73,7 @@
 
 ## Current work
 
-Verify the complete Phase 05 architecture, competency coverage, project map, and visual forecast in issue #6.
+Phase 06 research is complete: 55 sources, 10 cases, and 19 chapter-specific research packs have passed cross-reference and publication validation.
 
 ## Unresolved blockers
 
@@ -81,9 +81,9 @@ None. Phase 01 is complete; Phase 02 and Phase 03 remain intentionally deferred 
 
 ## Research gaps
 
-- Source the nineteen frozen chapters at the depth defined by the architecture.
-- Identify primary standards, documentation, public engineering evidence, and transfer cases chapter by chapter.
-- Test whether the constructed Orchid case needs additional constraints to exercise every planned artifact without becoming implausible.
+- Preserve research limitations and source stability in every Phase 07 blueprint.
+- Define a provider-neutral local companion implementation for the executable chapters.
+- Add a stopped-deployment satellite scenario without inventing a public outcome.
 
 ## Quality debt
 
@@ -91,7 +91,7 @@ None at role start.
 
 ## Exact next action
 
-Validate architecture references and CSV structure, commit Phase 05, close issue #6, and open Phase 06 source and case-study research.
+Commit and close Phase 06 issue #7, then open Phase 07 and create all nineteen chapter blueprints from the frozen architecture and research packs.
 
 ## Resume instructions
 
