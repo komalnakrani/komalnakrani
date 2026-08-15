@@ -2,7 +2,7 @@
 
 - Name: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
-- Current global phase: Komal Phase 19 complete - role closure pending
+- Current global phase: Komal role complete - root closed at commit `5061fe8`
 - State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
 - Abhyaas root issue: deferred by the locked Komal-first execution order
 
@@ -38,4 +38,4 @@ Complete the original book, learning, visual, web, PDF, and optional-course ecos
 
 ## Next executable action
 
-Commit the exact Phase 19 `PASS`, close issue #20 and this role root, then advance to the next approved Komal role. Abhyaas remains deferred.
+No Komal FDE work remains. The factory has advanced to Applied AI Engineer. Abhyaas remains deferred.

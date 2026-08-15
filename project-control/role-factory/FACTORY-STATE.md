@@ -48,19 +48,21 @@
 
 - Komal: [#1 — Establish Komal repository baseline and audit publishing platform](https://github.com/alpeshznakrani/komalnakrani/issues/1)
 - Komal: [#2 — Build source-backed web and PDF publication pipeline](https://github.com/alpeshznakrani/komalnakrani/issues/2)
+- Forward Deployed Engineer: [#3 — complete Komal learning ecosystem](https://github.com/alpeshznakrani/komalnakrani/issues/3), hostile final QA `PASS` at commit `5061fe8`.
 - Forward Deployed Engineer: Phases 01, 04-11, 13, and 19, including all nineteen manuscripts, 38 final figures, complete web/PDF edition, 64-test provider-neutral companion, six-module/12-test guided lab course, and hostile final QA `PASS`.
 
 ## Active role
 
-- Role: Forward Deployed Engineer
-- Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active child: [#20 - Hostile final QA for Forward Deployed Engineer](https://github.com/alpeshznakrani/komalnakrani/issues/20), acceptance complete and closure pending
-- State: `project-control/roles/forward-deployed-engineer/ROLE-STATE.md`
+- Role: Applied AI Engineer
+- Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
+- Active child: [#22 - Validate Applied AI Engineer role and boundary](https://github.com/alpeshznakrani/komalnakrani/issues/22)
+- State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 
 ## Exact next action
 
-Commit the Forward Deployed Engineer Phase 19 `PASS`, close issue #20 and role root
-#3, then initialize the next approved Komal role. Do not enter deferred Abhyaas work.
+Execute Applied AI Engineer Phase 01 issue #22 from current primary evidence, record
+one exact catalog verdict, and close it only when the role and adjacent boundaries
+are traceable. Do not enter deferred Abhyaas work.
 
 ## Resume instructions
 

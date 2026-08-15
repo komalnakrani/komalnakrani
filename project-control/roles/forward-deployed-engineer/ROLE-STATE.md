@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 19 complete - role closure pending
+- Current global phase: Komal role complete - closed at commit `5061fe8`
 - Last updated: 2026-08-16
-- Last completed issue: Phase 19 #20 acceptance prepared; closure commit pending
+- Last completed issue: Phase 19 #20 closed at commit `5061fe8`
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#20](https://github.com/alpeshznakrani/komalnakrani/issues/20)
+- Active issue: none - role root closed
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -92,8 +92,8 @@ No blocking role, content, source, visual, companion, course, security, web, or 
 
 ## Exact next action
 
-Commit the Phase 19 `PASS`, close issue #20 and root #3, then initialize the next approved Komal role without entering Abhyaas.
+No FDE action remains in Komal. Resume the active Applied AI Engineer state from the factory file; do not enter Abhyaas.
 
 ## Resume instructions
 
-Read this file, the role-validation evidence and boundary reports, the GitHub root/active issues, and `project-control/role-factory/FACTORY-STATE.md`; then resume only the active child issue.
+This role is complete. Read `project-control/role-factory/FACTORY-STATE.md` and resume its active Komal role; reopen FDE only for a documented defect or new edition.

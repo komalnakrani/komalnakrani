@@ -7,15 +7,15 @@
   "buildHash": "7bfbe3b712eba19221c64a22f1a74452fbe2dc0de0f42ca34db6566ac1daeedb",
   "buildHashScope": "SHA-256 of the sorted `shasum -a 256` digest stream for every file in the Astro dist directory produced by npm run build.",
   "issueState": {
-    "roleRoot": "#3 OPEN",
+    "roleRoot": "#3 CLOSED - Komal role accepted at commit 5061fe8",
     "phase08Root": "#9 CLOSED - acceptance verified at commit 2ec5731",
     "phase08Child": "#15 CLOSED - acceptance verified at commit 2ec5731",
     "phase09": "#16 CLOSED - acceptance verified at commit a8d9c45",
     "phase10": "#17 CLOSED - acceptance verified at commit 22920f7",
     "phase11": "#18 CLOSED - acceptance verified at commit e1f15aa",
     "phase13": "#19 CLOSED - acceptance verified at commit 872d883",
-    "phase19": "#20 OPEN - hostile Komal final QA PASS; closure commit pending",
-    "nextPhase": "Close the Komal FDE role and initialize the next approved Komal role"
+    "phase19": "#20 CLOSED - hostile Komal final QA PASS at commit 5061fe8",
+    "nextPhase": "Applied AI Engineer Komal Phase 01 active"
   },
   "riskState": {
     "blockingSourceGaps": 0,
@@ -48,7 +48,7 @@
     "phase10": "Komal figure production and accessibility owner",
     "phase11": "Komal publication and PDF release owner - acceptance complete",
     "phase13": "Komal course owner - acceptance complete",
-    "phase19": "Komal hostile final QA owner - PASS; closure pending",
+    "phase19": "Komal hostile final QA owner - PASS and closed",
     "fictionalCustomer": "Named Orchid operations, product, security, and release authorities in OA-10",
     "productLearning": "Product owner after the third-context review trigger"
   }
