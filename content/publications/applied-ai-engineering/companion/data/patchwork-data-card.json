@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "PF-04",
+  "version": "0.1.0",
+  "name": "patchwork-catalog-synthetic",
+  "caseStatus": "fictional-synthetic",
+  "representativenessClaim": "none",
+  "seed": 20260816,
+  "purpose": "Exercise local candidate, permission, freshness, missingness, duplicate, leakage, and behavior-state mechanics.",
+  "units": ["listing-version", "query-instance"],
+  "population": "Constructed low-consequence pump-seal fixtures emitted by generator version 0.1.0 only.",
+  "excludedPopulation": ["Real buyers", "Real sellers", "Real marketplaces", "High-consequence categories", "Production outcomes"],
+  "labelProcess": "Constructed expected states authored for deterministic software tests; no real domain ground-truth claim.",
+  "partitions": ["development", "tuning", "challenge", "release-evaluation"],
+  "segments": ["missing-unit", "missing-dimension", "long-tail", "stale", "unauthorized", "ambiguous-feature", "duplicate-cluster", "conflicting-evidence", "excluded-category"],
+  "knownLimitations": ["No real distribution", "No real image variability", "No user or seller behavior", "No compatibility or fairness evidence"],
+  "prohibitedUses": ["Production model training", "Real-world prevalence", "Product performance", "Compatibility safety", "Fairness certification", "Release approval", "External action"],
+  "retention": "Repository fixture retained with the publication; contains no real personal or commercial data.",
+  "refreshTriggers": ["Task scope", "Contract clause", "Generator", "Schema", "Label criterion", "Split grouping", "Known leakage route", "Mechanism interface"],
+  "owner": "Komal Applied AI Engineering publication"
+}
