@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 06 source research prepared under issue `#41`
+- Current global phase: Phase 07 chapter blueprints in progress under issue `#44`
 - Last updated: 2026-08-16
-- Last completed issue: `#39` — Phase 05 book architecture
-- Active issue: `#41` — Phase 06 source research
+- Last completed issue: `#41` — Phase 06 source research
+- Active issue: `#44` — Phase 07 chapter blueprints
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -54,7 +54,7 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; issues `#37`, `#38`, an
 - [ ] 03 deferred to Abhyaas
 - [x] 04 accepted/committed/closed (`#38`, `18332c3`)
 - [x] 05 accepted/committed/closed (`#39`, `18332c3`)
-- [ ] 06 artifacts prepared; coordinator acceptance/commit/closure pending
+- [x] 06 accepted/committed/closed (`#41`, `717367e`)
 - [ ] 07 chapter blueprints
 - [ ] 08 manuscript
 - [ ] 09 book QA
@@ -67,7 +67,7 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; issues `#37`, `#38`, an
 
 ## Current work
 
-Phase 06 artifacts are locally complete for issue #41: 66 primary/authoritative sources, 22 series claims, 99 limitation-aware chapter claims, 14 bounded case records, and one structured research pack for every frozen chapter. JSON/reference/chapter/link/asset checks pass. Root owns final review, commit/push, issue update/closure, shared factory state, and Phase 07 dispatch.
+Phase 06 is accepted at `717367e`: 66 primary/authoritative sources, 22 series claims, 99 limitation-aware chapter claims, 14 bounded case records, and 33/33 research packs. Phase 07 issue #44 is active to create 33 production blueprints in frozen volume order while preserving Mosaic Desk continuity and allocating all 66 forecast figures.
 
 ## Unresolved blockers
 
@@ -89,8 +89,8 @@ None for Phase 06 research. Coordinator acceptance is a workflow gate, not a res
 
 ## Exact next action
 
-Root reviews Phase 06 artifacts and the scoped diff, commits and closes #41 only if accepted, then opens/claims Phase 07. Phase 07 starts with the Volume 1 Chapter 1 blueprint using `books/llm-engineering/phase-07-handoff.md`; it proceeds in architecture order and creates no manuscript or images.
+Create and QA all 33 chapter blueprints under #44 using `books/llm-engineering/phase-07-handoff.md`. Proceed in architecture order and create no manuscript, companion code, publication files, or images.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commit `18332c3`, issue #41, this state, architecture, project map, visual forecast, all Phase 06 registers, verification report, and Phase 07 handoff. Inspect git status because parallel agents share the worktree. Work only in `project-control/roles/llm-engineer/`; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits `18332c3` and `717367e`, issue #44, this state, architecture, project map, visual forecast, all Phase 06 registers, verification report, and Phase 07 handoff. Inspect git status because parallel agents share the worktree. Work only in `project-control/roles/llm-engineer/`; do not edit shared factory state, another role, git state, or Abhyaas.

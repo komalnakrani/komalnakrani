@@ -5,10 +5,10 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 06 source research in progress under issue `#40`
+- Current global phase: Phase 07 chapter blueprints in progress under issue `#43`
 - Last updated: 2026-08-16
-- Last completed issue: `#35` — Phase 05 book architecture
-- Active issue: `#40` — Phase 06 source research
+- Last completed issue: `#40` — Phase 06 source research
+- Active issue: `#43` — Phase 07 chapter blueprints
 - Role root issue: `#32` — open
 
 ## Locked accepted decisions
@@ -62,7 +62,7 @@ and `#35` are closed with `status:done`.
 - [x] 01 accepted/committed/closed (`#33`, `b59c3f5`)
 - [x] 04 accepted/committed/closed (`#34`, `b59c3f5`)
 - [x] 05 accepted/committed/closed (`#35`, `b59c3f5`)
-- [ ] 06
+- [x] 06 accepted/committed/closed (`#40`, `abed872`)
 - [ ] 07
 - [ ] 08
 - [ ] 09
@@ -74,11 +74,10 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 06 production research artifacts have been prepared locally for issue
-`#40`: 44 primary/authoritative sources, 12 bounded cases/patterns including the
-fictional FieldOps capstone, 40 limitation-aware claims, and one research pack
-for every frozen chapter. Root owns final review, commit/push, issue update/
-closure, shared factory state, and Phase 07 dispatch.
+Phase 06 is accepted at `abed872`: 44 primary/authoritative sources, 12 bounded
+cases/patterns, 40 limitation-aware claims, and 20/20 research packs. Phase 07
+issue `#43` is active to create all 20 production blueprints while advancing one
+continuous FieldOps Relay dossier and allocating the accepted figure forecast.
 
 ## Unresolved blockers
 
@@ -104,14 +103,14 @@ closure, shared factory state, and Phase 07 dispatch.
 
 ## Exact next action
 
-Root should review Phase 06 artifacts and validation for issue `#40`, commit and
-close only if accepted, then open/claim Phase 07 and convert each chapter pack
-into a production blueprint using `sources/phase-07-handoff.md`.
+Create and QA all 20 chapter blueprints under issue `#43` using
+`sources/phase-07-handoff.md`. Do not create manuscript prose, companion code,
+publication files, or image assets in Phase 07.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commit `b59c3f5`, active issue `#40`, this
-file, all Phase 06 registers, verification report, and Phase 07 handoff. Inspect
+Read repository `AGENTS.md`, accepted commits `b59c3f5` and `abed872`, active
+issue `#43`, this file, all Phase 06 registers, verification report, and Phase 07 handoff. Inspect
 git status because parallel agents share the worktree. Do not edit shared
 factory state or other role directories from this lane. Do not enter Abhyaas
 while the Komal-first decision remains locked.

@@ -57,30 +57,32 @@
 
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27)
-- Last completed child: [#30 - Write Applied AI Engineering chapters 07-09](https://github.com/alpeshznakrani/komalnakrani/issues/30), accepted at commit `e55eaa4`
-- Active child: [#31 - Write Applied AI Engineering chapters 10-12](https://github.com/alpeshznakrani/komalnakrani/issues/31)
-- Visual state: Chapters 01-09 use 18 final ImageGen PNG teaching figures; all earlier SVG placeholders were removed.
+- Last completed child: [#31 - Write Applied AI Engineering chapters 10-12](https://github.com/alpeshznakrani/komalnakrani/issues/31), accepted at commit `4f9c0cd`
+- Active child: [#42 - Write Applied AI Engineering chapters 13-15](https://github.com/alpeshznakrani/komalnakrani/issues/42)
+- Visual state: Chapters 01-12 use 24 final ImageGen PNG teaching figures; all earlier SVG placeholders were removed and no WebP derivatives are stored.
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 
 ### Agentic AI Engineer
 
 - Root issue: [#32](https://github.com/alpeshznakrani/komalnakrani/issues/32)
 - Phases 01, 04, and 05: accepted at commit `b59c3f5`; canonical decision is one 20-chapter book.
-- Active phase: [#40 - Research Agentic AI Engineering sources and cases](https://github.com/alpeshznakrani/komalnakrani/issues/40)
+- Phase 06: accepted at commit `abed872` with 44 sources, 40 claims, 12 cases, and 20 research packs.
+- Active phase: [#43 - Blueprint all Agentic AI Engineering chapters](https://github.com/alpeshznakrani/komalnakrani/issues/43)
 - State: `project-control/roles/agentic-ai-engineer/ROLE-STATE.md`
 
 ### LLM Engineer
 
 - Root issue: [#36](https://github.com/alpeshznakrani/komalnakrani/issues/36)
 - Phases 01, 04, and 05: accepted at commit `18332c3`; canonical decision is a 33-chapter two-volume series.
-- Active phase: [#41 - Research LLM Engineering sources and cases](https://github.com/alpeshznakrani/komalnakrani/issues/41)
+- Phase 06: accepted at commit `717367e` with 66 sources, 99 chapter claims, 14 cases, and 33 research packs.
+- Active phase: [#44 - Blueprint all LLM Engineering chapters](https://github.com/alpeshznakrani/komalnakrani/issues/44)
 - State: `project-control/roles/llm-engineer/ROLE-STATE.md` (created during active Phase 06)
 
 ## Exact next action
 
-Advance the three isolated Komal lanes in parallel: Applied AI Chapters 10-12
-under #31, Agentic AI source research under #40, and LLM Engineering source
-research under #41. Keep shared publication/factory integration root-owned.
+Advance the three isolated Komal lanes in parallel: Applied AI Chapters 13-15
+under #42, all Agentic AI chapter blueprints under #43, and all LLM Engineering
+chapter blueprints under #44. Keep shared publication/factory integration root-owned.
 Do not enter deferred Abhyaas work.
 
 ## Resume instructions
