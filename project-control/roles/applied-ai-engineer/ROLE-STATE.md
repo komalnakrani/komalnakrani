@@ -5,12 +5,12 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 08 manuscript production - Chapters 13-15 active
+- Current global phase: Komal Phase 08 manuscript production - Chapters 16-18 active
 - Last updated: 2026-08-16
-- Last completed issue: Phase 08 child #31, complete Chapters 10-12 and evaluation/experiment companion progression
+- Last completed issue: Phase 08 child #42, complete Chapters 13-15 and failure/budget/observability companion progression
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27)
-- Active issue: [#42](https://github.com/alpeshznakrani/komalnakrani/issues/42)
+- Active issue: [#49](https://github.com/alpeshznakrani/komalnakrani/issues/49)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -40,8 +40,8 @@
 - source register: 55 primary/official records, all used, 118 unique planned claim IDs
 - case-study register: 11 public/primary cases plus one explicitly constructed Patchwork case, all used
 - chapter blueprints: 21 verified files plus `blueprints/blueprint-verification.md`
-- manuscript(s): Chapters 01-12 complete through commit `4f9c0cd`; Chapters 13-21 pending
-- figure manifest: `content/publications/applied-ai-engineering/figures.json`, complete through `FIG-024`
+- manuscript(s): Chapters 01-15 complete through commit `fb8e89b`; Chapters 16-21 pending
+- figure manifest: `content/publications/applied-ai-engineering/figures.json`, complete through `FIG-030`
 - PDF(s): pending
 - preparation resources: deferred
 - optional course: pending Phase 13
@@ -75,7 +75,7 @@
 
 ## Current work
 
-Phase 08 parent #27 remains open. Children #28-#31 are accepted and closed. Chapters 01-12 total 77,783 words with twelve learning/state/QA sets, 64 traced claims, twenty-four final ImageGen PNG figures, and a provider-neutral companion that now includes consequence-oriented error policy, calibrated judgment, and reproducible experiment evidence through 55 passing tests. Child #42 is active for Chapters 13-15.
+Phase 08 parent #27 remains open. Children #28-#31 and #42 are accepted and closed. Chapters 01-15 total 96,789 words with fifteen learning/state/QA sets, 82 traced claims, thirty final ImageGen PNG figures, and a provider-neutral companion that now includes bounded failure recovery, tail-aware resource budgets, and privacy-conscious observability through 73 passing tests. Child #49 is active for Chapters 16-18.
 
 ## Unresolved blockers
 
@@ -92,12 +92,12 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 ## Quality debt
 
-None. Chapters 01-12 and both companions pass canonical `npm run check`: 137 tests, Astro build, and 630 built-site reference checks. Blueprint QA remains complete for all 21 chapters. Applied AI has no SVG or WebP artwork; Chapters 01-12 use labeled ImageGen PNG figures.
+None. Chapters 01-15 and both companions pass canonical `npm run check`: 155 tests, Astro build, and 630 built-site reference checks. Blueprint QA remains complete for all 21 chapters. Applied AI has no SVG or WebP artwork; Chapters 01-15 use labeled ImageGen PNG figures.
 
 ## Exact next action
 
-Write and immediately QA Applied AI Engineering Chapters 13-15 under issue #42. Advance Patchwork through bounded failure handling, resource budgets, and privacy-conscious observability. Create PNG figure anchors only; root owns ImageGen production.
+Write and immediately QA Applied AI Engineering Chapters 16-18 under issue #49. Advance Patchwork through implemented controls, bounded release, and incident learning. Create PNG figure anchors only; root owns ImageGen production.
 
 ## Resume instructions
 
-Read this file, the role root, Phase 08 parent #27, active issue #42, completed chapter states 10-12, architecture, research packs, blueprints 13-15, and blueprint verification before resuming only Chapters 13-15.
+Read this file, the role root, Phase 08 parent #27, active issue #49, completed chapter states 13-15, architecture, research packs, blueprints 16-18, and blueprint verification before resuming only Chapters 16-18.

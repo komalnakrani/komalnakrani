@@ -57,9 +57,9 @@
 
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27)
-- Last completed child: [#31 - Write Applied AI Engineering chapters 10-12](https://github.com/alpeshznakrani/komalnakrani/issues/31), accepted at commit `4f9c0cd`
-- Active child: [#42 - Write Applied AI Engineering chapters 13-15](https://github.com/alpeshznakrani/komalnakrani/issues/42)
-- Visual state: Chapters 01-12 use 24 final ImageGen PNG teaching figures; all earlier SVG placeholders were removed and no WebP derivatives are stored.
+- Last completed child: [#42 - Write Applied AI Engineering chapters 13-15](https://github.com/alpeshznakrani/komalnakrani/issues/42), accepted at commit `fb8e89b`
+- Active child: [#49 - Write Applied AI Engineering chapters 16-18](https://github.com/alpeshznakrani/komalnakrani/issues/49)
+- Visual state: Chapters 01-15 use 30 final ImageGen PNG teaching figures; all earlier SVG placeholders were removed and no WebP derivatives are stored.
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 
 ### Agentic AI Engineer
@@ -82,8 +82,8 @@
 
 ## Exact next action
 
-Advance the three isolated Komal lanes in parallel: Applied AI Chapters 13-15
-under #42, Agentic AI Chapters 1-3 under #47, and LLM Engineering Volume 1
+Advance the three isolated Komal lanes in parallel: Applied AI Chapters 16-18
+under #49, Agentic AI Chapters 1-3 under #47, and LLM Engineering Volume 1
 Chapters 1-3 under #48. Keep shared publication/factory integration root-owned.
 Do not enter deferred Abhyaas work.
 
