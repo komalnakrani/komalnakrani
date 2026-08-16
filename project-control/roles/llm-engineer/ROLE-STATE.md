@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 2 Chapters 13-15 locally complete under `#70`
+- Current global phase: Phase 08 manuscript production and hostile series QA under parent `#46`; locally complete under `#71`
 - Last updated: 2026-08-16
-- Last completed issue: `#68` — Phase 08 Volume 2 Chapters 10-12, accepted at `73964d2`
-- Active issue: `#70` — Phase 08 Volume 2 Chapters 13-15, locally complete pending coordinator acceptance
+- Last completed issue: `#70` — Phase 08 Volume 2 Chapters 13-15, accepted at `874ae8c`
+- Active issue: `#71` — Phase 08 Volume 2 Chapters 16-17 and hostile series QA, locally complete pending coordinator acceptance
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -47,14 +47,15 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - chapter blueprints: 33 files in `books/llm-engineering/blueprints/`
 - Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
 - Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
-- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, Volume 1 child bodies, and Volume 2 child bodies through Chapters 13-15
+- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, Volume 1 child bodies, and all Volume 2 child bodies through Chapters 16-17/series QA
 - Volume 1 Chapters 1-16, all records, full deterministic companion, and hostile whole-volume verification: accepted at `fce705f`
 - Volume 2 Chapters 1-3, learning/state/QA, production records, and MD-09 deterministic companion: accepted at `f47fb54`
 - Volume 2 Chapters 4-6 and MD-10/instruction-data artifacts: accepted at `599972a`
 - Volume 2 Chapters 7-9, records, completed MD-11, and blocked MD-12 experiment: accepted at `1a828a8`
 - Volume 2 Chapters 10-12, records, deterministic MD-12 comparison, and MD-13 preference rejection: accepted at `73964d2`
-- Volume 2 Chapters 13-15, MD-13 advanced-method rejection, blocked MD-14 package, and MD-15 workload plan: locally complete under `#70`
-- generated visuals, Volume 2 Chapters 16-17, final publication, PDF, course, and final QA: not started
+- Volume 2 Chapters 13-15, MD-13 advanced-method rejection, blocked MD-14 package, and MD-15 workload plan: accepted at `874ae8c`
+- Volume 2 Chapters 16-17, MD-15 serving frontier, MD-16 hold/change replay, and hostile two-volume QA: locally complete under `#71`
+- generated visuals, final publication, PDF, course, and final QA: not started
 
 ## Completed gates
 
@@ -76,11 +77,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 
 ## Current work
 
-Volume 1 and Volume 2 Chapters 1-12 are accepted through `73964d2`. Chapters 13-15 add 2,986 words, nine exact claims, six pending anchors, three learning/state/QA sets, and 12 deterministic tests. Advanced methods are rejected, the package remains blocked, and capacity evidence is workload-specific and synthetic. Series total is 69,340 words, 93 exact claims, 62 pending anchors, and 124/124 LLM tests.
+All 33 manuscripts are complete: 72,012 words, 99 exact claims, 66 pending anchors, MD-01..MD-16, and 132/132 deterministic tests. Volume 2 closes with a synthetic behavior-resource frontier, graceful degradation, release hold, layered tokenizer/runtime diagnosis, simulated rollback, distributed authority, and no fabricated execution or outcome. Hostile Volume 2 and two-volume verification pass locally.
 
 ## Unresolved blockers
 
-No manuscript blocker. Sixty-two cumulative raster figure assets remain intentionally pending root ImageGen production. Volume 2 Chapter 16 must not start until root accepts `#70`. Abhyaas remains intentionally deferred.
+No manuscript blocker. All 66 raster figure assets remain intentionally pending root ImageGen production. Publication/PDF work remains gated on visual production and coordinator acceptance. Abhyaas remains intentionally deferred.
 
 ## Research gaps and volatile evidence
 
@@ -93,14 +94,14 @@ No manuscript blocker. Sixty-two cumulative raster figure assets remain intentio
 
 ## Quality debt
 
-- Volume 1 has all sixteen manuscripts and a hostile whole-volume verification; Volume 2 Chapters 1-15 are drafted and Chapters 16-17 remain unwritten.
-- All sixty-two current manuscript anchors and production figure specifications exist, but no image/vector asset exists; visual production remains ImageGen-only raster.
+- Both volumes contain all 33 manuscripts and hostile per-volume/series verification.
+- All 66 manuscript anchors and production figure specifications exist, but no LLM image/vector asset exists; visual production remains ImageGen-only raster.
 - The publication stays draft and is not registered as a launched Komal title; final PDF and publication QA remain future gates.
 
 ## Exact next action
 
-Wait for coordinator acceptance of `#70`; do not start Volume 2 Chapter 16 beforehand. Chapter 16 must inherit the blocked exact package and workload-specific capacity plan.
+Wait for coordinator acceptance of `#71`; then proceed only to the explicitly assigned visual, publication, PDF, or final-QA gate.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits through `73964d2`, parent #46, child #70, this state, Volume 2 Chapters 1-15, MD-13 rejection, blocked MD-14 package, and MD-15 workload plan. Inspect git status. Do not start Chapter 16 without root acceptance. Work only in LLM paths; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits through `874ae8c`, parent #46, child #71, this state, all 33 manuscripts, MD-16 final artifact, and hostile series verification. Inspect git status. Do not begin a later gate without root acceptance. Work only in LLM paths; do not edit shared factory state, another role, git state, or Abhyaas.

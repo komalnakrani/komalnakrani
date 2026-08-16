@@ -14,6 +14,8 @@ import {auditPreferenceSimulation} from "./lib/preference-optimization.mjs";
 import {auditAdvanced} from "./lib/advanced-method-decision.mjs";
 import {auditPackage} from "./lib/model-system-package.mjs";
 import {auditCapacity} from "./lib/inference-capacity.mjs";
+import {auditServingFrontier} from "./lib/serving-frontier.mjs";
+import {auditReleaseChange} from "./lib/release-diagnosis-change.mjs";
 async function load(path){return JSON.parse(await readFile(new URL(path,import.meta.url)));}
 const result = {
   baseline:auditFrozenBaseline(await load("./md09/mosaic-frozen-adaptation-baseline.json")),
@@ -30,7 +32,9 @@ const result = {
   preferenceSimulation:auditPreferenceSimulation(await load("./md13/mosaic-preference-optimization-simulation.json")),
   advancedDecision:auditAdvanced(await load("./md13/mosaic-advanced-method-decision.json")),
   modelPackage:auditPackage(await load("./md14/mosaic-model-system-package.json")),
-  inferenceCapacity:auditCapacity(await load("./md15/mosaic-inference-capacity-simulation.json"))
+  inferenceCapacity:auditCapacity(await load("./md15/mosaic-inference-capacity-simulation.json")),
+  servingFrontier:auditServingFrontier(await load("./md15/mosaic-serving-frontier.json")),
+  releaseChange:auditReleaseChange(await load("./md16/mosaic-release-diagnosis-change.json"))
 };
 console.log(JSON.stringify(result,null,2));
 if (Object.values(result).some((part)=>part.errors.length)) process.exitCode=1;
