@@ -20,6 +20,26 @@
       "creator": "Komal Nakrani",
       "sourceIds": [],
       "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-003",
+      "file": "assets/f02-1-autonomy-staircase.png",
+      "alt": "Colorful three-dimensional staircase with four labeled steps: Fixed, Assisted, One Agent, and Multiple Agents. A separate Coordination and Authority Burden rail gains more locks, controls, and connections beside the higher steps, while a neutral balance indicates that height is not superiority.",
+      "caption": "F02.1 - More model-directed control brings additional coordination and authority burden; staircase height does not represent superiority.",
+      "chapterSlug": "earn-the-right-to-use-autonomy",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-004",
+      "file": "assets/f02-2-simple-versus-swarm.png",
+      "alt": "Colorful three-dimensional comparison between a compact Simple Path conveyor and a branching Multiple Agents network. Four gated tests labeled Measured Benefit, Separable Work, Contained Failure, and Budget can block entry to the branching route while the simple route remains available.",
+      "caption": "F02.2 - A multiple-agent topology must clear four rejection tests; the diagram makes no comparative performance claim.",
+      "chapterSlug": "earn-the-right-to-use-autonomy",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
     }
   ]
 }
