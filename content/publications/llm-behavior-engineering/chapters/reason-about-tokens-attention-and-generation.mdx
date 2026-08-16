@@ -66,7 +66,7 @@ Tokenization changes which units enter the model. Fragmentation can alter sequen
 
 An open-weight checkpoint expects the tokenizer and special-token conventions used for its training. Pairing the wrong tokenizer or template with weights can produce severe behavior changes without a clean runtime error. Managed paths may hide or abstract this surface; the limitation should be recorded rather than guessed.
 
-Subword tokenization therefore changes sequence length and representation with language-specific and domain-specific effects. Foundational subword research demonstrates techniques and motivations, but effects for Mosaic must be measured using the actual tokenizer, model, and template. Token count is a diagnostic and budget input, not a quality score. [CLM-008]
+Subword tokenization changes sequence length and representation, with language- and domain-specific effects. Foundational subword research demonstrates techniques and motivations, but effects for Mosaic must be measured using the actual tokenizer, model, and template. Token count is a diagnostic and budget input, not a quality score. [CLM-008]
 
 ## The template is part of the input
 
@@ -116,7 +116,7 @@ Moving an instruction or fact changes positions and interactions. Repeating text
 
 Attention-based computation can combine information from prior context. It does not determine whether a source is authorized, whether a warranty rule is controlling, or whether a proposed effect is permitted. Those remain system and authority decisions.
 
-The original Transformer paper is a foundational mechanism source. Its reported machine-translation results and hardware conditions are historical research evidence, not evidence that a current chat model is truthful, safe, or fit for Mosaic Desk. The bounded claim is that Transformer generation conditions each next token on represented prior context through attention-based layers; modern architectures add variations and other mechanisms. [CLM-007]
+The original Transformer paper is a foundational mechanism source. `LLME-CASE-001` retains its machine-translation task, hardware, and historical limits rather than turning those results into Mosaic evidence. The paper does not establish that a current chat model is truthful, safe, or fit for this system. Transformer generation conditions each next token on represented prior context through attention-based layers. Modern architectures add variations and other mechanisms. [CLM-007]
 
 <figure class="book-figure book-figure--pending" data-figure-id="V1-F03.1" data-image="/assets/publications/llm-behavior-engineering/v1-f03-1-token-attention-next.png">
   <div role="img" aria-label="Text passes through a tokenizer into positioned token pieces, then through an attention-based field to next-token scores and an output token.">Pending ImageGen figure V1-F03.1</div>

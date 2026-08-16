@@ -16,7 +16,7 @@
       "number": 1,
       "slug": "the-model-is-not-the-behavior",
       "title": "The Model Is Not the Behavior",
-      "wordCount": 3318,
+      "wordCount": 3331,
       "claims": [
         {"productionId":"CLM-001","acceptedId":"V1-C01-CL01"},
         {"productionId":"CLM-002","acceptedId":"V1-C01-CL02"},
@@ -31,7 +31,7 @@
       "number": 2,
       "slug": "write-the-language-task-contract",
       "title": "Write the Language-Task Contract",
-      "wordCount": 2993,
+      "wordCount": 3001,
       "claims": [
         {"productionId":"CLM-004","acceptedId":"V1-C02-CL01"},
         {"productionId":"CLM-005","acceptedId":"V1-C02-CL02"},
@@ -46,7 +46,7 @@
       "number": 3,
       "slug": "reason-about-tokens-attention-and-generation",
       "title": "Reason About Tokens, Attention, and Generation",
-      "wordCount": 3324,
+      "wordCount": 3327,
       "claims": [
         {"productionId":"CLM-007","acceptedId":"V1-C03-CL01"},
         {"productionId":"CLM-008","acceptedId":"V1-C03-CL02"},

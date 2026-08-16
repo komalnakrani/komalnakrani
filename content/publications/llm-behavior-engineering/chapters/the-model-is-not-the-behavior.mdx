@@ -69,7 +69,7 @@ An **outcome** is a consequence in the surrounding workflow. It might concern re
 
 An engineer can show that a proposal met a defined rubric on a frozen case set. That does not prove that service outcomes improved, that reviewers can handle the workload, or that residual risk is acceptable. Product, domain, safety, privacy, security, legal, and operational authorities make the decisions assigned to them.
 
-The core claim follows: a response is one observation from a configured system, not proof of dependable product behavior. Research on instruction-following models, evaluation frameworks, and iterative model optimization all reinforces the need to state conditions and measure behavior, but none defines Mosaic Desk's complete accountability model for us. That model is an engineering synthesis for this system. [CLM-001]
+A model response is one observation from a configured system, not proof of dependable product behavior. Research on instruction-following models, evaluation frameworks, and iterative model optimization all reinforces the need to state conditions and measure behavior, but none defines Mosaic Desk's complete accountability model for us. That model is an engineering synthesis for this system. [CLM-001]
 
 <figure class="book-figure book-figure--pending" data-figure-id="V1-F01.1" data-image="/assets/publications/llm-behavior-engineering/v1-f01-1-model-system-outcome.png">
   <div role="img" aria-label="A language model core sits inside layers for configuration, deterministic software, evaluation, users, and authority, ending in an observed outcome.">Pending ImageGen figure V1-F01.1</div>
@@ -111,7 +111,7 @@ For the Mosaic demo, the first ledger might ask:
 
 Those questions can change the design before expensive work accumulates. They also establish the habit of regression. A prompt change, model migration, tokenizer change, or provider update later in the lifecycle should replay relevant evidence rather than rely on a fresh demonstration.
 
-Evaluation must therefore be designed into development because outputs and versions can vary. Provider evaluation tools and current guidance can help implement datasets and runs, but they are replaceable machinery. Their existence does not select Mosaic's case population, define warranty correctness, or prove complete coverage. No evaluation set establishes the absence of every failure. [CLM-002]
+Evaluation must be designed into development because model outputs and versions can vary. Provider evaluation tools and current guidance can help implement datasets and runs, but they are replaceable machinery. Their existence does not select Mosaic's case population, define warranty correctness, or prove complete coverage. No evaluation set establishes the absence of every failure. [CLM-002]
 
 This is true for managed and open-weight paths alike. A managed endpoint may hide exact weights or tokenizer details and may offer hosted evaluation features. An open-weight path may expose the checkpoint, tokenizer, template, and runtime. Greater observability helps diagnosis; it does not remove the need for representative cases, uncertainty, or authority.
 
@@ -215,9 +215,9 @@ Use the request as a boundary test.
 5. **Name human authority.** A designated warranty authority decides whether and how approval can occur.
 6. **Name the current decision.** Keep Mosaic proposal-only; create an escalation state rather than an approval field.
 
-The prompt-injection risk pattern sharpens the boundary. Untrusted case text can contain instructions that compete with the application's intended control path. Separating instructions from data, minimizing privileges, validating outputs, and retaining human authority are useful controls. They do not guarantee prevention, and they do not make the LLM Engineer the security authority. Mosaic's example is constructed; it is not a reported incident or a measured control outcome.
+The prompt-injection risk pattern sharpens the boundary. Untrusted case text can contain instructions that compete with the application's intended control path. Separating instructions from data, minimizing privileges, validating outputs, and retaining human authority are useful controls. They do not guarantee prevention, and they do not make the LLM Engineer the security authority. `LLME-CASE-014` bounds this lesson to an evolving system trust-boundary risk; it supplies no prevention rate. Mosaic's example is constructed, not a reported incident or measured control outcome.
 
-Technical controls and documentation help organize and enforce parts of the boundary, but they do not transfer formal domain or risk authority. NIST's generative AI profile is voluntary cross-sector guidance, and model cards are a transparency practice. Neither approves Mosaic Desk. Organization-specific decision rights must be recorded locally. [CLM-003]
+Technical controls and documentation do not transfer formal risk or domain authority to the LLM engineer. They can help organize and enforce parts of the boundary. NIST's generative AI profile is voluntary cross-sector guidance, and model cards are a transparency practice. Neither approves Mosaic Desk. Organization-specific decision rights must be recorded locally. [CLM-003]
 
 ## The evidence ledger skeleton
 

@@ -9,7 +9,7 @@ Result: `PASS - MANUSCRIPT COMPLETE, IMAGEGEN ASSETS PENDING`
 ## Production counts
 
 - Chapters: 3/3 in frozen Volume 1 order.
-- Words: 9,635 total (`3,318`, `2,993`, `3,324`).
+- Words: 9,659 total (`3,331`, `3,001`, `3,327`) after the Volume 1 exact-claim/case hardening pass.
 - Assigned claims: 9/9 unique production claims, exactly three per chapter, mapped to all nine accepted blueprint claim IDs.
 - Production sources: 14; all 14 reachable with HTTP 200 on 2026-08-16 and all limitations retained.
 - Bounded cases: `LLME-CASE-014` in Chapters 1-2; `LLME-CASE-001` in Chapter 3.

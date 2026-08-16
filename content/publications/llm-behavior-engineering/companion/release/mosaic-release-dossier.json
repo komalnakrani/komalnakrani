@@ -1,0 +1,42 @@
+{
+  "id": "MD-08-RELEASE-DOSSIER",
+  "version": "0.1.0",
+  "fictional": true,
+  "candidate": {
+    "id": "MOSAIC-BASELINE-RELEASE-CANDIDATE",
+    "adapterVersion": "managed-0.1.0",
+    "baselineVersion": "BASELINE-0.1.0",
+    "taskContractVersion": "mosaic-language-task-0.1.0",
+    "messageVersion": "0.1.0",
+    "schemaVersion": "mosaic-proposal-0.1.0",
+    "corpusVersion": "MOSAIC-CORPUS-2026-08-16-A",
+    "evaluationSetVersion": "MD-06-EVALUATION-SET-0.1.0",
+    "judgeVersion": "calibrated-judge-system-0.1.0"
+  },
+  "readinessGates": [
+    {"id":"behavior","owner":"llmEngineering","status":"evidence-attached","evidence":["BASELINE-0.1.0","MD-06-EVALUATION-SET-0.1.0","MD-07-ISOLATED-EXPERIMENT"]},
+    {"id":"authorization","owner":"security","status":"authority-review-required","evidence":["authorization-before-context-tests"]},
+    {"id":"privacy","owner":"privacy","status":"authority-review-required","evidence":["privacy-minimized-signal-catalog"]},
+    {"id":"reliability-capacity","owner":"platformSre","status":"authority-review-required","evidence":["synthetic-budget-fixture-only"]},
+    {"id":"domain","owner":"domain","status":"authority-review-required","evidence":["rubric-and-escalation-record"]},
+    {"id":"release","owner":"release","status":"not-approved","evidence":[]}
+  ],
+  "signals": [
+    {"id":"terminal-state-rate","purpose":"detect changes in success, abstain, degraded, fail-closed, and escalate states","fields":["traceHash","systemVersion","segmentId","terminalState","timestampBucket"],"rawContent":false,"directIdentifier":false,"retention":"pending-privacy-authority","owner":"llmEngineering","decision":"pause and replay"},
+    {"id":"citation-validation-rate","purpose":"detect missing or invalid evidence references","fields":["traceHash","systemVersion","languageSegment","citationState","timestampBucket"],"rawContent":false,"directIdentifier":false,"retention":"pending-privacy-authority","owner":"llmEngineering","decision":"pause affected segment"},
+    {"id":"tail-duration","purpose":"detect response-duration budget regressions","fields":["systemVersion","path","durationBucket","loadBucket","timestampBucket"],"rawContent":false,"directIdentifier":false,"retention":"pending-privacy-authority","owner":"platformSre","decision":"contain or rollback"},
+    {"id":"authorization-exclusion","purpose":"detect evidence rejected before ranking or assembly","fields":["policyVersion","reasonCode","sourceClass","timestampBucket"],"rawContent":false,"directIdentifier":false,"retention":"pending-privacy-authority","owner":"security","decision":"contain and investigate policy path"}
+  ],
+  "stages": [
+    {"order":1,"id":"offline","outputVisible":false,"effectAllowed":false,"authority":"llmEngineering-evidence"},
+    {"order":2,"id":"internal","outputVisible":true,"effectAllowed":false,"authority":"product-and-domain"},
+    {"order":3,"id":"shadow","outputVisible":false,"effectAllowed":false,"authority":"privacy-security-platform"},
+    {"order":4,"id":"bounded-cohort","outputVisible":true,"effectAllowed":false,"authority":"formal-release"}
+  ],
+  "rollbackTriggers": ["authorization hard failure", "required abstention miss", "fabricated citation", "protected segment pass-to-fail", "tail-duration hard-gate regression", "unknown behavior identity"],
+  "fallback": {"mode":"previous-qualified-adapter-or-human-queue","preserveAbstention":true,"preserveEscalation":true,"effect":null},
+  "incidentRoles": {"incidentCommander":"designated-operations-owner","platformContainment":"platformSre","behaviorDiagnosis":"llmEngineering","privacyDecision":"privacy","securityDecision":"security","domainDecision":"domain"},
+  "releaseDisposition": "hold-for-authority-review",
+  "productionOutcomeClaim": false,
+  "effects": []
+}

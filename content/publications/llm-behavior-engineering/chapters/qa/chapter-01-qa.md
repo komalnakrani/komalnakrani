@@ -1,7 +1,7 @@
 # Chapter 01 QA - The Model Is Not the Behavior
 
 - Manuscript status: `PASS`
-- Manuscript word count: 3318
+- Manuscript word count: 3331
 - Mosaic milestone: `MD-01` responsibility boundary v0.1.0
 - Production claims: `CLM-001`, `CLM-002`, `CLM-003`
 - Accepted-claim mapping: `V1-C01-CL01`, `V1-C01-CL02`, `V1-C01-CL03`

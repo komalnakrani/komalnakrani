@@ -1,6 +1,6 @@
 # LLM Behavior Engineering deterministic companion
 
-This companion supports the first fifteen chapters with local, provider-neutral, synthetic artifacts. It makes no model call, needs no secret, and does not simulate a production outcome.
+This companion supports all sixteen Volume 1 chapters with local, provider-neutral, synthetic artifacts. It makes no model call, needs no secret, and does not simulate a production outcome.
 
 - `contracts/mosaic-responsibility-charter.json` records the Chapter 1 system/evidence/authority boundary.
 - `contracts/mosaic-language-task-contract.json` records the Chapter 2 task, states, clauses, segments, non-goals, and owners.
@@ -17,6 +17,7 @@ This companion supports the first fifteen chapters with local, provider-neutral,
 - `evaluation/mosaic-evaluation-set.json` supplies the Chapter 13 population statement, provenance-rich cases, family-aware splits, leakage injection, coverage matrix, and declared gaps.
 - `evaluation/mosaic-error-taxonomy.json` supplies the Chapter 14 consequence-aware taxonomy, judge stack, order/verbosity bias fixture, credible anchor, and retained disagreements.
 - `experiments/` supplies the Chapter 15 preregistered one-variable comparison, paired raw transitions, visible segment/tail regressions, confounded alternative, and disposition.
+- `release/` supplies the Chapter 16 provider-neutral adapter, authority-bound readiness packet, privacy-minimized signal catalog, staged release/fallback plan, layered failure diagnosis, migration replay, and rejected adaptation referral.
 - `lib/` validates contracts and produces deterministic token/template traces.
 - `tests/` proves the chapter acceptance invariants.
 
@@ -31,4 +32,4 @@ The tokenizers are teaching fixtures, not replicas of any provider or open-weigh
 
 The access, baseline, and message artifacts validate decision and software-contract mechanics only. Their candidate records, outputs, latency/cost fields, and attack handling are synthetic. They establish no live model capability, privacy approval, security assurance, or production result.
 
-The output, context, retrieval, provenance, evaluation, judgment, and experiment artifacts likewise validate bounded interface mechanics only. Synthetic teaching units are not real tokens; source units and cases are not a production corpus or population; scores, bias behavior, durations, and classifications are fixtures rather than measured product results. Passing validation does not establish factual correctness, representativeness, judge validity, answer quality, retrieval quality, source authority, security, or authorization.
+The output, context, retrieval, provenance, evaluation, judgment, experiment, release, and migration artifacts likewise validate bounded interface mechanics only. Synthetic teaching units are not real tokens; source units and cases are not a production corpus or population; scores, bias behavior, durations, classifications, signals, and dispositions are fixtures rather than measured product results. Passing validation does not establish factual correctness, representativeness, judge validity, answer quality, retrieval quality, source authority, security, authorization, production readiness, migration fitness, or justification for adaptation.

@@ -14,6 +14,7 @@ import { evaluateJointFixture, validateJointFixture } from "./lib/joint-evaluati
 import { coverageGaps, splitLeakage, validateEvaluationSet } from "./lib/evaluation-cases.mjs";
 import { calibrationResults, validateErrorAndJudgeSystem } from "./lib/judge-calibration.mjs";
 import { confoundedChanges, experimentSummary, planIdentity, validateExperiment } from "./lib/isolated-experiment.mjs";
+import { adaptationDisposition, migrationSummary, privacyUnsafeSignals, validateMigrationHandoff, validateReleaseDossier, validateServiceAdapter } from "./lib/release-change.mjs";
 
 const load = async (relative) => JSON.parse(await readFile(new URL(relative, import.meta.url), "utf8"));
 const charter = await load("./contracts/mosaic-responsibility-charter.json");
@@ -34,6 +35,9 @@ const jointEvaluation = await load("./evaluation/mosaic-joint-evaluation.json");
 const evaluationSet = await load("./evaluation/mosaic-evaluation-set.json");
 const errorTaxonomy = await load("./evaluation/mosaic-error-taxonomy.json");
 const isolatedExperiment = await load("./experiments/mosaic-isolated-experiment.json");
+const serviceAdapter = await load("./release/mosaic-service-adapter.json");
+const releaseDossier = await load("./release/mosaic-release-dossier.json");
+const migrationHandoff = await load("./release/mosaic-migration-handoff.json");
 
 console.log(JSON.stringify({
   charterErrors: validateCharter(charter),
@@ -76,5 +80,18 @@ console.log(JSON.stringify({
     planIdentity: planIdentity(isolatedExperiment.plan),
     summary: experimentSummary(isolatedExperiment),
     confoundedChanges: confoundedChanges(isolatedExperiment)
+  },
+  release: {
+    adapterErrors: validateServiceAdapter(serviceAdapter),
+    dossierErrors: validateReleaseDossier(releaseDossier),
+    privacyUnsafeSignalIds: privacyUnsafeSignals(releaseDossier).map((signal) => signal.id),
+    releaseDisposition: releaseDossier.releaseDisposition
+  },
+  migration: {
+    errors: validateMigrationHandoff(migrationHandoff),
+    summary: migrationSummary(migrationHandoff),
+    failureLayers: migrationHandoff.failureInjections.map((item) => item.layer),
+    adaptationDisposition: adaptationDisposition(migrationHandoff.adaptationReferral),
+    volume2Status: migrationHandoff.volume2Handoff.status
   }
 }, null, 2));

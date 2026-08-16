@@ -1,7 +1,7 @@
 # Chapter 03 QA - Reason About Tokens, Attention, and Generation
 
 - Manuscript status: `PASS`
-- Manuscript word count: 3324
+- Manuscript word count: 3327
 - Mosaic milestone: `MD-02` mechanism inspection opened
 - Production claims: `CLM-007`, `CLM-008`, `CLM-009`
 - Accepted-claim mapping: `V1-C03-CL01`, `V1-C03-CL02`, `V1-C03-CL03`

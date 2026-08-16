@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapters 13-15 locally complete under `#58`
+- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapter 16 and hostile whole-volume verification locally complete under `#60`
 - Last updated: 2026-08-16
-- Last completed issue: `#57` — Phase 08 Volume 1 Chapters 10-12, accepted at `e19d530`
-- Active issue: `#58` — Phase 08 Volume 1 Chapters 13-15, locally complete pending coordinator acceptance
+- Last completed issue: `#58` — Phase 08 Volume 1 Chapters 13-15, accepted at `a89460a`
+- Active issue: `#60` — Phase 08 Volume 1 Chapter 16 and Volume 1 verification, locally complete pending coordinator acceptance
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -47,10 +47,10 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - chapter blueprints: 33 files in `books/llm-engineering/blueprints/`
 - Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
 - Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
-- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, and Phase 08 child bodies through Chapters 13-15
-- Volume 1 Chapters 1-12 manuscripts, learning/state/QA records, production manifests, and deterministic companion implementation: accepted through `e19d530`
-- Volume 1 Chapters 13-15 manuscripts, learning/state/QA records, production manifest/currentness/verification, and deterministic companion increments: locally complete under `#58`
-- generated visuals, Chapter 16 and Volume 2 Chapters 1-17, final publication, PDF, course, and final QA: not started
+- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, and Phase 08 child bodies through Chapter 16/Volume 1 QA
+- Volume 1 Chapters 1-15 manuscripts, learning/state/QA records, production manifests, and deterministic companion implementation: accepted through `a89460a`
+- Volume 1 Chapter 16, all Volume 1 records, full deterministic companion, and hostile whole-volume verification: locally complete under `#60`
+- generated visuals, Volume 2 Chapters 1-17, final publication, PDF, course, and final QA: not started
 
 ## Completed gates
 
@@ -72,11 +72,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 
 ## Current work
 
-Phase 07 is accepted at `9d9e1c3`. Volume 1 Chapters 1-12 are accepted through `e19d530`. Chapters 13-15 are locally complete under `#58`: 7,619 manuscript words (`2,523`, `2,571`, `2,525`), nine exact assigned claims, six pending PNG anchors, three learning/state/QA sets, and 12/12 new deterministic tests. Cumulatively, Chapters 1-15 total 41,422 manuscript words, 45 claims, 30 anchors, fifteen learning/state/QA sets, and 60/60 passing companion tests. `MD-06` is complete with a segmented leakage-aware case asset, consequence-aware error system, and calibrated judgment evidence; `MD-07` is open with a preregistered controlled experiment packet and explicit `revise` disposition.
+Phase 07 is accepted at `9d9e1c3`. Volume 1 Chapters 1-15 are accepted through `a89460a`. Chapter 16 is locally complete under `#60` at 3,039 words with three exact claims, two pending PNG anchors, one learning/state/QA set, and four new tests. The hostile pass corrected exact-claim/case drift in Chapters 1-3/6 and reconciled word records. Cumulatively, all sixteen Volume 1 chapters total 44,485 words, 48 exact claims, 43 reachable sources, 32 accessible anchors, sixteen learning/state/QA sets, and 64/64 passing companion tests. `MD-01..MD-08` is continuous. The release candidate remains held for named-authority review, the migration candidate is held with a qualified fallback, two failure layers remain separate, and adaptation is not justified.
 
 ## Unresolved blockers
 
-No content blocker. Thirty cumulative raster figure assets for Chapters 1-15 remain intentionally pending root ImageGen production. Abhyaas remains intentionally deferred.
+No manuscript blocker. Thirty-two cumulative raster figure assets for Volume 1 remain intentionally pending root ImageGen production. Volume 2 is intentionally blocked until root accepts `#60`. Abhyaas remains intentionally deferred.
 
 ## Research gaps and volatile evidence
 
@@ -89,14 +89,14 @@ No content blocker. Thirty cumulative raster figure assets for Chapters 1-15 rem
 
 ## Quality debt
 
-- Only Volume 1 Chapters 1-15 have manuscripts; Volume 1 Chapter 16 and Volume 2 Chapters 1-17 remain unwritten.
-- The first thirty manuscript anchors and production figure specifications exist, but no image/vector asset exists; later visual production remains ImageGen-only raster.
+- Volume 1 has all sixteen manuscripts and a hostile whole-volume verification; Volume 2 Chapters 1-17 remain unwritten.
+- All thirty-two Volume 1 manuscript anchors and production figure specifications exist, but no image/vector asset exists; visual production remains ImageGen-only raster.
 - The publication stays draft and is not registered as a launched Komal title; final PDF and publication QA remain future gates.
 
 ## Exact next action
 
-After coordinator acceptance of #58, write and immediately QA Volume 1 Chapter 16, *Release, Observe, and Change the Model*. Complete `MD-08` with a bounded readiness packet, privacy-minimized signals, staged release and rollback, provider-migration replay, whole-system diagnosis, and an evidence-based adaptation referral. Root separately owns ImageGen production.
+Wait for coordinator acceptance of `#60`; do not start Volume 2 beforehand. After explicit activation, Volume 2 Chapter 1 must audit the frozen `MD-08` handoff and preserve `audit-required-no-adaptation-approved` until new evidence establishes a stable, valuable, data-supported, adaptation-sensitive residual after simpler repairs.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, `9d9e1c3`, `9a66d79`, `f53b7bd`, `39e8c4d`, and `e19d530`, parent #46, child #58, this state, the locally complete Chapters 13-15 verification, Chapter 16 blueprint/research pack, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in the LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, `9d9e1c3`, `9a66d79`, `f53b7bd`, `39e8c4d`, `e19d530`, and `a89460a`, parent #46, child #60, this state, `production/volume-1-verification.md`, Chapter 16 records, and the frozen `MD-08` handoff. Inspect git status because parallel agents share the worktree. Do not start Volume 2 without root acceptance. Work only in the LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.

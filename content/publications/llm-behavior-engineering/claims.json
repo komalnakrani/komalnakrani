@@ -6,9 +6,9 @@
     {"id":"CLM-003","chapterSlug":"the-model-is-not-the-behavior","statement":"Technical controls and documentation do not transfer formal risk or domain authority to the LLM engineer.","sourceIds":["SRC-008","SRC-052"]},
     {"id":"CLM-004","chapterSlug":"write-the-language-task-contract","statement":"Success criteria should specify task, inputs, outputs, failure behavior, consequence, and judgment method before model optimization.","sourceIds":["SRC-011","SRC-009"]},
     {"id":"CLM-005","chapterSlug":"write-the-language-task-contract","statement":"Representative language and consequence segments are required because aggregate performance can hide important failures.","sourceIds":["SRC-009","SRC-037"]},
-    {"id":"CLM-006","chapterSlug":"write-the-language-task-contract","statement":"Human review is a designed authority and control relationship, not a generic safety guarantee.","sourceIds":["SRC-008","SRC-065"]},
+    {"id":"CLM-006","chapterSlug":"write-the-language-task-contract","statement":"Human review is a designed authority/control relationship, not a generic safety guarantee.","sourceIds":["SRC-008","SRC-065"]},
     {"id":"CLM-007","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Transformer generation conditions each next token on represented prior context through attention-based layers.","sourceIds":["SRC-001"]},
-    {"id":"CLM-008","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Subword tokenization changes sequence length and representation, with language-specific and domain-specific effects.","sourceIds":["SRC-002","SRC-003"]},
+    {"id":"CLM-008","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Subword tokenization changes sequence length and representation, with language- and domain-specific effects.","sourceIds":["SRC-002","SRC-003"]},
     {"id":"CLM-009","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Decoding and chat-template configuration are part of behavior identity and must be versioned.","sourceIds":["SRC-014","SRC-015"]},
     {"id":"CLM-010","chapterSlug":"select-a-model-and-access-posture","statement":"Public benchmark or scale alone cannot establish fitness for a specific task and deployment posture.","sourceIds":["SRC-004","SRC-005","SRC-009"]},
     {"id":"CLM-011","chapterSlug":"select-a-model-and-access-posture","statement":"Managed and weight-access paths expose different control, inspection, hosting, adaptation, and operational surfaces.","sourceIds":["SRC-007","SRC-041","SRC-052"]},
@@ -45,6 +45,9 @@
     {"id":"CLM-042","chapterSlug":"name-errors-and-judgment-methods","statement":"Model graders should be calibrated against credible human or domain judgments and retain disagreement/limitations.","sourceIds":["SRC-027","SRC-029","SRC-032","SRC-033"]},
     {"id":"CLM-043","chapterSlug":"run-experiments-that-isolate-change","statement":"A causal model-system claim needs a baseline, explicit hypothesis, controlled variable family, repeated trials where relevant, and decision criteria.","sourceIds":["SRC-007","SRC-010","SRC-011"]},
     {"id":"CLM-044","chapterSlug":"run-experiments-that-isolate-change","statement":"Aggregate gains should not erase segment regressions or uncertainty.","sourceIds":["SRC-009","SRC-031"]},
-    {"id":"CLM-045","chapterSlug":"run-experiments-that-isolate-change","statement":"An experiment should end in retain, revise, reject, scope, or release disposition rather than score collection alone.","sourceIds":["SRC-007","SRC-032"]}
+    {"id":"CLM-045","chapterSlug":"run-experiments-that-isolate-change","statement":"An experiment should end in retain, revise, reject, scope, or release disposition rather than score collection alone.","sourceIds":["SRC-007","SRC-032"]},
+    {"id":"CLM-046","chapterSlug":"release-observe-and-change-the-model","statement":"Release evidence spans behavior, reliability, latency/cost, privacy/security controls, owners, observability, and rollback.","sourceIds":["SRC-008","SRC-032","SRC-063","SRC-065"]},
+    {"id":"CLM-047","chapterSlug":"release-observe-and-change-the-model","statement":"Model/provider migration requires replay of frozen task evidence and recording changed limitations.","sourceIds":["SRC-007","SRC-010","SRC-064"]},
+    {"id":"CLM-048","chapterSlug":"release-observe-and-change-the-model","statement":"Adaptation is justified only after residual failures survive simpler task, context, retrieval, prompt, schema, and evaluation repairs.","sourceIds":["SRC-007","SRC-011","SRC-019"]}
   ]
 }

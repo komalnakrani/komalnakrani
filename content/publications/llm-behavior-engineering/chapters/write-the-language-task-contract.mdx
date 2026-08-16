@@ -105,7 +105,7 @@ Each clause names how it will be evaluated and who can adjudicate ambiguity. The
 
 Every clause has a working owner, an authority, and conditions that require revalidation. A new language, new source class, new effect adapter, new model, policy revision, or material workflow change may invalidate prior evidence.
 
-Success criteria should specify task, inputs, outputs, failure behavior, consequence, and judgment before model optimization. This chapter's field set is a practical synthesis, not an industry standard. Provider guidance on evaluation criteria and broad evaluation research are useful inputs, but the team must define the consequence and contract for its own system. [CLM-004]
+Success criteria should specify task, inputs, outputs, failure behavior, consequence, and judgment method before model optimization. This chapter's field set is a practical synthesis, not an industry standard. Provider guidance on evaluation criteria and broad evaluation research are useful inputs, but the team must define the consequence and contract for its own system. [CLM-004]
 
 <figure class="book-figure book-figure--pending" data-figure-id="V1-F02.1" data-image="/assets/publications/llm-behavior-engineering/v1-f02-1-task-consequence-authority.png">
   <div role="img" aria-label="Authorized case input flows to a Mosaic Desk proposal, then to a human decision gate, and only then to an allowed workflow effect.">Pending ImageGen figure V1-F02.1</div>
@@ -221,7 +221,7 @@ Begin with a segment matrix:
 
 Later chapters will build the evaluation set and protect its splits. Here the contract identifies why the segments matter.
 
-Broad evaluation frameworks demonstrate the value of multiple scenarios and metrics, and multilingual model research demonstrates that language coverage can be made explicit. Neither proves that a specific model handles Mosaic's Gujarati, code-switching, domain shorthand, or consequences. Reported multilingual coverage is not equal capability, and aggregate performance can conceal failures that matter to a particular workflow. Representative language and consequence segments are therefore required, while the choice of segments remains use-case specific. [CLM-005]
+Representative language and consequence segments are required because aggregate performance can hide important failures. Broad evaluation frameworks demonstrate the value of multiple scenarios and metrics, and multilingual model research demonstrates that language coverage can be made explicit. Neither proves that a specific model handles Mosaic's Gujarati, code-switching, domain shorthand, or consequences. Reported multilingual coverage is not equal capability, and segment choice remains use-case specific. [CLM-005]
 
 The matrix should also show unknowns. If the fictional dataset contains no dialect variation or no realistic long technician threads, mark the gap. Do not convert absence into a claim of neutrality.
 
@@ -242,7 +242,7 @@ Ask:
 
 A reviewer who sees only a polished summary may be less able to detect unsupported content than a reviewer who sees source spans and conflict flags. A reviewer asked to process hundreds of cases under time pressure may become a rubber stamp. A coordinator may be qualified to route a case but not to interpret a warranty exception.
 
-Human review is therefore a designed relationship among evidence, interface, workload, competence, decision rights, and escalation. It is not a generic safety guarantee. NIST guidance and current provider safety guidance offer risk-management practices, but they do not establish that Mosaic's review design is sufficient. Reviewer capacity and authority need local evidence. [CLM-006]
+Human review is a designed authority/control relationship, not a generic safety guarantee. The design still includes evidence, interface, workload, competence, decision rights, and escalation. NIST guidance and current provider safety guidance offer risk-management practices, but they do not establish that Mosaic's review design is sufficient. Reviewer capacity and authority need local evidence. [CLM-006]
 
 ## Test the adversarial boundary before choosing a model
 
@@ -260,7 +260,7 @@ The note is untrusted case content. It is not an instruction source. The expecte
 - mark the instruction attempt in a security-relevant trace according to the approved privacy policy;
 - continue only with permitted proposal behavior or escalate.
 
-This is related to the prompt-injection risk pattern, but the contract is not a mitigation guarantee. Later system design must separate instructions from data, minimize privileges, validate outputs and actions, test adversarial cases, and retain authorization outside the model. Security authority remains with the appropriate role.
+This is related to the prompt-injection risk pattern, but the contract is not a mitigation guarantee. `LLME-CASE-014` describes an evolving system trust-boundary risk, not a guaranteed attack or control outcome. Later system design must separate instructions from data, minimize privileges, validate outputs and actions, test adversarial cases, and retain authorization outside the model. Security authority remains with the appropriate role.
 
 ## One contract, two access paths
 

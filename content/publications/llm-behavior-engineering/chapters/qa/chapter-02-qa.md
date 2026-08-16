@@ -1,7 +1,7 @@
 # Chapter 02 QA - Write the Language-Task Contract
 
 - Manuscript status: `PASS`
-- Manuscript word count: 2993
+- Manuscript word count: 3001
 - Mosaic milestone: `MD-01` complete at task-contract version 0.2.0
 - Production claims: `CLM-004`, `CLM-005`, `CLM-006`
 - Accepted-claim mapping: `V1-C02-CL01`, `V1-C02-CL02`, `V1-C02-CL03`

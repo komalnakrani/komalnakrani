@@ -1,0 +1,48 @@
+{
+  "id": "MD-08-SERVICE-ADAPTER",
+  "version": "0.1.0",
+  "fictional": true,
+  "semanticContract": {
+    "requestSchema": "mosaic-proposal-request-0.1.0",
+    "responseSchema": "mosaic-proposal-0.1.0",
+    "terminalStates": ["success", "abstain", "degraded", "fail-closed", "escalate"],
+    "effect": null,
+    "outputAuthority": "proposal-only"
+  },
+  "trustZones": [
+    {"name":"application-control","trust":"trusted-control","instructionCapable":true},
+    {"name":"authorized-intent","trust":"authorized-intent","instructionCapable":false},
+    {"name":"retrieved-evidence","trust":"untrusted-data","instructionCapable":false},
+    {"name":"model-output","trust":"untrusted-proposal","instructionCapable":false}
+  ],
+  "implementations": [
+    {
+      "id": "managed-0.1.0",
+      "path": "managed",
+      "sharedResponsibilities": ["task contract", "authorization before context", "schema validation", "evaluation replay", "release evidence"],
+      "llmEngineeringResponsibilities": ["request mapping", "behavior configuration identity", "behavior gates", "migration replay"],
+      "providerResponsibilities": ["underlying model service", "provider runtime", "provider lifecycle notices"],
+      "platformResponsibilities": ["network integration", "secrets delivery", "service budgets", "operational alerts"],
+      "unavailableEvidence": ["checkpoint digest", "training corpus", "provider scheduler internals"]
+    },
+    {
+      "id": "open-weight-0.1.0",
+      "path": "open-weight",
+      "sharedResponsibilities": ["task contract", "authorization before context", "schema validation", "evaluation replay", "release evidence"],
+      "llmEngineeringResponsibilities": ["request mapping", "behavior configuration identity", "behavior gates", "migration replay", "checkpoint and tokenizer compatibility evidence"],
+      "providerResponsibilities": [],
+      "platformResponsibilities": ["artifact access", "runtime and kernels", "hardware and capacity", "serving reliability", "operational alerts"],
+      "requiredEvidence": ["checkpoint digest", "tokenizer digest", "chat template version", "runtime version", "hardware and quantization identity"]
+    }
+  ],
+  "authorities": {
+    "product": "scope and user tradeoffs",
+    "domain": "technical truth and consequence",
+    "privacy": "signal purpose, access, retention, and deletion",
+    "security": "threat and residual-risk decision",
+    "platformSre": "runtime, capacity, reliability, and rollback operation",
+    "release": "formal progression decision",
+    "llmEngineering": "behavior evidence and recommendation"
+  },
+  "effects": []
+}

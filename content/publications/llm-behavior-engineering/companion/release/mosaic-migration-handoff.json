@@ -1,0 +1,45 @@
+{
+  "id": "MD-08-MIGRATION-HANDOFF",
+  "version": "0.1.0",
+  "fictional": true,
+  "trigger": {"type":"managed-provider-deprecation","caseId":"LLME-CASE-013","noticeSnapshot":"synthetic-notice-2026-08-16","scheduleStable":false},
+  "migration": {
+    "currentAdapter": "managed-current-0.1.0",
+    "candidateAdapter": "managed-replacement-0.1.0",
+    "frozenTaskContract": "mosaic-language-task-0.1.0",
+    "frozenEvaluationSet": "MD-06-EVALUATION-SET-0.1.0",
+    "frozenJudgeSystem": "calibrated-judge-system-0.1.0",
+    "shadowOnly": true,
+    "rollbackTarget": "managed-current-0.1.0",
+    "replayResults": [
+      {"caseId":"MIG-EN-FORMAT","segment":"English/supporting","currentPass":false,"candidatePass":true,"currentState":"answer","candidateState":"answer","citationValid":true},
+      {"caseId":"MIG-GU-CITATION","segment":"Gujarati/supporting","currentPass":true,"candidatePass":false,"currentState":"answer","candidateState":"answer","citationValid":false},
+      {"caseId":"MIG-GUE-CONFLICT","segment":"Gujarati-English/conflicting","currentPass":true,"candidatePass":true,"currentState":"escalate","candidateState":"escalate","citationValid":true}
+    ],
+    "resources": {"currentP99TeachingDuration":90,"candidateP99TeachingDuration":135,"hardGate":110,"unit":"synthetic-duration-units","productionLatencyClaim":false},
+    "changedLimitations": ["candidate internals remain unavailable", "Gujarati citation behavior regressed in one synthetic protected case", "candidate tail duration exceeded the synthetic gate", "provider schedule and replacement guidance remain volatile"],
+    "expectedDisposition": "hold-and-keep-current-fallback"
+  },
+  "failureInjections": [
+    {"id":"FI-PROVIDER-BEHAVIOR","layer":"model-provider-adapter","symptom":"English formatting improves while Gujarati citation and tail duration regress","containment":"keep candidate in shadow and retain current fallback","owner":"llmEngineering-and-platformSre"},
+    {"id":"FI-RETRIEVAL-PERMISSION","layer":"retrieval-authorization","symptom":"a revoked source reaches the rerankable candidate set","containment":"fail closed, revoke candidate corpus version, and repair policy path","owner":"security-and-retrieval-owner"}
+  ],
+  "adaptationReferral": {
+    "candidateResidual": "Gujarati citation loss observed during provider replacement replay",
+    "stableAcrossRuns": false,
+    "valuableForApprovedScope": "undecided-by-product-and-domain",
+    "dataSupported": false,
+    "adaptationSensitive": false,
+    "simplerRepairsRemaining": ["qualify a different replacement", "inspect adapter and template mapping", "repair retrieval permission regression", "replay context and citation validation"],
+    "disposition": "not-justified",
+    "authority": "Volume 2 may audit evidence but cannot infer approval"
+  },
+  "volume2Handoff": {
+    "status": "audit-required-no-adaptation-approved",
+    "baselineDossier": "MD-01-through-MD-08",
+    "requiredFirstAction": "reconstruct identities and test whether the residual survives simpler repairs",
+    "forbiddenInference": "a provider migration regression proves that weight adaptation is needed"
+  },
+  "productionOutcomeClaim": false,
+  "effects": []
+}
