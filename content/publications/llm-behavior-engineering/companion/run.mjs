@@ -11,6 +11,9 @@ import { eligibleUnits, validateRetrievalQuestion } from "./lib/retrieval-questi
 import { runRetrievalPipeline, validateRetrievalPipeline } from "./lib/retrieval-pipeline.mjs";
 import { assembleProvenance, validateProvenanceFixture } from "./lib/provenance-assembler.mjs";
 import { evaluateJointFixture, validateJointFixture } from "./lib/joint-evaluation.mjs";
+import { coverageGaps, splitLeakage, validateEvaluationSet } from "./lib/evaluation-cases.mjs";
+import { calibrationResults, validateErrorAndJudgeSystem } from "./lib/judge-calibration.mjs";
+import { confoundedChanges, experimentSummary, planIdentity, validateExperiment } from "./lib/isolated-experiment.mjs";
 
 const load = async (relative) => JSON.parse(await readFile(new URL(relative, import.meta.url), "utf8"));
 const charter = await load("./contracts/mosaic-responsibility-charter.json");
@@ -28,6 +31,9 @@ const retrievalQuestion = await load("./retrieval/mosaic-retrieval-question.json
 const retrievalPipeline = await load("./retrieval/mosaic-retrieval-pipeline.json");
 const provenanceAssembly = await load("./context/mosaic-provenance-assembly.json");
 const jointEvaluation = await load("./evaluation/mosaic-joint-evaluation.json");
+const evaluationSet = await load("./evaluation/mosaic-evaluation-set.json");
+const errorTaxonomy = await load("./evaluation/mosaic-error-taxonomy.json");
+const isolatedExperiment = await load("./experiments/mosaic-isolated-experiment.json");
 
 console.log(JSON.stringify({
   charterErrors: validateCharter(charter),
@@ -57,5 +63,18 @@ console.log(JSON.stringify({
     errors: validateProvenanceFixture(provenanceAssembly),
     scenarios: provenanceAssembly.scenarios.map((scenario) => assembleProvenance(provenanceAssembly, scenario.id))
   },
-  jointEvaluation: { errors: validateJointFixture(jointEvaluation), cases: evaluateJointFixture(jointEvaluation) }
+  jointEvaluation: { errors: validateJointFixture(jointEvaluation), cases: evaluateJointFixture(jointEvaluation) },
+  evaluationSet: {
+    errors: validateEvaluationSet(evaluationSet),
+    rawLeakage: splitLeakage(evaluationSet.cases, "rawSplit"),
+    repairedLeakage: splitLeakage(evaluationSet.cases),
+    gaps: coverageGaps(evaluationSet)
+  },
+  judgment: { errors: validateErrorAndJudgeSystem(errorTaxonomy), calibration: calibrationResults(errorTaxonomy) },
+  experiment: {
+    errors: validateExperiment(isolatedExperiment),
+    planIdentity: planIdentity(isolatedExperiment.plan),
+    summary: experimentSummary(isolatedExperiment),
+    confoundedChanges: confoundedChanges(isolatedExperiment)
+  }
 }, null, 2));

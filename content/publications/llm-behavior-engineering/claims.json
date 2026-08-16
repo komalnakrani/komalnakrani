@@ -36,6 +36,15 @@
     {"id":"CLM-033","chapterSlug":"assemble-context-with-provenance","statement":"Context ordering and position can affect use, so packing policy needs direct evaluation.","sourceIds":["SRC-016","SRC-012"]},
     {"id":"CLM-034","chapterSlug":"evaluate-retrieval-and-generation-together","statement":"End-to-end RAG quality can fail at corpus, query, retrieval, ranking, context, generation, citation, or evaluation layers.","sourceIds":["SRC-019","SRC-020","SRC-022","SRC-025"]},
     {"id":"CLM-035","chapterSlug":"evaluate-retrieval-and-generation-together","statement":"Retrieval metrics and generated-answer metrics answer different questions and should not be collapsed prematurely.","sourceIds":["SRC-024","SRC-025"]},
-    {"id":"CLM-036","chapterSlug":"evaluate-retrieval-and-generation-together","statement":"Groundedness or faithfulness metrics do not prove source truth or organizational authority.","sourceIds":["SRC-008","SRC-025","SRC-026"]}
+    {"id":"CLM-036","chapterSlug":"evaluate-retrieval-and-generation-together","statement":"Groundedness or faithfulness metrics do not prove source truth or organizational authority.","sourceIds":["SRC-008","SRC-025","SRC-026"]},
+    {"id":"CLM-037","chapterSlug":"build-representative-evaluation-cases","statement":"Evaluation cases need documented provenance, segments, coverage, exclusions, split identity, and refresh policy.","sourceIds":["SRC-009","SRC-010","SRC-036"]},
+    {"id":"CLM-038","chapterSlug":"build-representative-evaluation-cases","statement":"Duplicate or contaminated cases can inflate apparent generalization and invalidate comparisons.","sourceIds":["SRC-035","SRC-034"]},
+    {"id":"CLM-039","chapterSlug":"build-representative-evaluation-cases","statement":"Multilingual coverage requires direct per-language/task evidence rather than an English aggregate.","sourceIds":["SRC-037","SRC-009"]},
+    {"id":"CLM-040","chapterSlug":"name-errors-and-judgment-methods","statement":"Criteria, error category, consequence, severity, detectability, segment, and disposition are distinct evaluation fields.","sourceIds":["SRC-009","SRC-011","SRC-031"]},
+    {"id":"CLM-041","chapterSlug":"name-errors-and-judgment-methods","statement":"LLM judges can exhibit position, verbosity, and self-preference biases.","sourceIds":["SRC-028","SRC-030"]},
+    {"id":"CLM-042","chapterSlug":"name-errors-and-judgment-methods","statement":"Model graders should be calibrated against credible human or domain judgments and retain disagreement/limitations.","sourceIds":["SRC-027","SRC-029","SRC-032","SRC-033"]},
+    {"id":"CLM-043","chapterSlug":"run-experiments-that-isolate-change","statement":"A causal model-system claim needs a baseline, explicit hypothesis, controlled variable family, repeated trials where relevant, and decision criteria.","sourceIds":["SRC-007","SRC-010","SRC-011"]},
+    {"id":"CLM-044","chapterSlug":"run-experiments-that-isolate-change","statement":"Aggregate gains should not erase segment regressions or uncertainty.","sourceIds":["SRC-009","SRC-031"]},
+    {"id":"CLM-045","chapterSlug":"run-experiments-that-isolate-change","statement":"An experiment should end in retain, revise, reject, scope, or release disposition rather than score collection alone.","sourceIds":["SRC-007","SRC-032"]}
   ]
 }

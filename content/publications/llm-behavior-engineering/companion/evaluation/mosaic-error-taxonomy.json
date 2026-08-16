@@ -1,0 +1,36 @@
+{
+  "id": "MD-06-ERROR-AND-JUDGE-SYSTEM",
+  "version": "0.1.0",
+  "fictional": true,
+  "taxonomyVersion": "taxonomy-0.1.0",
+  "requiredErrorFields": ["id", "criterion", "category", "consequence", "severity", "detectability", "segment", "control", "disposition", "judgeMethod", "workingOwner", "authorityOwner"],
+  "specimens": [
+    {"id":"ERR-QUALIFIER","criterion":"claim support","category":"qualifier-loss","consequence":"overgeneralized service proposal","severity":"designated","detectability":"domain-or-calibrated-support-review","segment":"English/supporting","control":"claim-span validation","disposition":"block-and-revise","judgeMethod":"span-check-plus-domain-anchor","workingOwner":"llm-engineering","authorityOwner":"service-domain"},
+    {"id":"ERR-UNAUTHORIZED","criterion":"permission","category":"authorization-breach","consequence":"forbidden content exposure","severity":"critical-local","detectability":"deterministic","segment":"all","control":"eligibility gate","disposition":"fail-closed","judgeMethod":"deterministic-check","workingOwner":"security-platform","authorityOwner":"privacy-security"},
+    {"id":"STATE-ABSTAIN","criterion":"answerability state","category":"appropriate-abstention","consequence":"bounded non-answer when evidence absent","severity":"not-an-error","detectability":"deterministic-plus-rubric","segment":"English/absent","control":"answerability contract","disposition":"accept","judgeMethod":"state-check","workingOwner":"llm-engineering","authorityOwner":"product-domain"}
+  ],
+  "judgeStack": ["deterministic-check", "reference", "model-grader", "trained-human", "domain-specialist", "accountable-authority"],
+  "calibration": {
+    "rubricVersion": "support-rubric-0.1.0",
+    "judgeVersion": "deliberately-biased-judge-0.1.0",
+    "pair": {
+      "id": "PAIR-EQUIVALENT",
+      "candidates": [
+        {"id":"A","supported":true,"words":12,"text":"Concise supported proposal with the required condition."},
+        {"id":"B","supported":true,"words":35,"text":"Longer supported proposal with the same required condition plus repeated background and polished but irrelevant explanatory detail."}
+      ],
+      "credibleAnchor": "equivalent-on-support"
+    },
+    "orderRuns": [
+      {"order":["A","B"],"mode":"position","observedWinner":"A"},
+      {"order":["B","A"],"mode":"position","observedWinner":"B"},
+      {"order":["A","B"],"mode":"verbosity","observedWinner":"B"}
+    ],
+    "disagreements": [
+      {"id":"DIS-ORDER","type":"position-bias","anchor":"equivalent-on-support","status":"retained"},
+      {"id":"DIS-LENGTH","type":"verbosity-bias","anchor":"equivalent-on-support","status":"retained"}
+    ]
+  },
+  "authority": {"modelGrader":false,"humanReviewer":"bounded rubric judgment","domain":"source correctness and policy meaning","release":"formal progression decision"},
+  "effects": []
+}

@@ -1,0 +1,31 @@
+{
+  "id": "MD-06-EVALUATION-SET",
+  "version": "0.1.0",
+  "fictional": true,
+  "population": {
+    "statement": "Synthetic authorized service-proposal requests for supported appliance families and declared language/evidence states",
+    "timeBoundary": "teaching fixture 2026-08-16",
+    "languages": ["English", "Gujarati", "Gujarati-English"],
+    "evidenceStates": ["supporting", "conflicting", "absent"],
+    "nonScope": ["warranty approval", "safety-critical diagnosis", "customer contact", "record mutation"]
+  },
+  "schemaRequired": ["id", "version", "familyId", "sourceRoute", "provenance", "permission", "language", "appliance", "risk", "evidenceState", "expectedBehavior", "rubric", "ambiguity", "split", "rawSplit"],
+  "cases": [
+    {"id":"CASE-EN-01","version":"1","familyId":"FAM-TEMPLATE-1","sourceRoute":"synthetic","provenance":"fixture-author","permission":"teaching-only","language":"English","appliance":"W17","risk":"ordinary","evidenceState":"supporting","expectedBehavior":"answer","rubric":"RUBRIC-0.1","ambiguity":[],"split":"development","rawSplit":"development"},
+    {"id":"CASE-EN-01-PARA","version":"1","familyId":"FAM-TEMPLATE-1","sourceRoute":"transformed-synthetic","provenance":"CASE-EN-01 paraphrase","permission":"teaching-only","language":"English","appliance":"W17","risk":"ordinary","evidenceState":"supporting","expectedBehavior":"answer","rubric":"RUBRIC-0.1","ambiguity":[],"split":"development","rawSplit":"holdout"},
+    {"id":"CASE-EN-02","version":"1","familyId":"FAM-CONFLICT-EN","sourceRoute":"expert-authored-synthetic","provenance":"fixture-author","permission":"teaching-only","language":"English","appliance":"W17","risk":"designated","evidenceState":"conflicting","expectedBehavior":"escalate","rubric":"RUBRIC-0.1","ambiguity":["domain adjudication required"],"split":"holdout","rawSplit":"holdout"},
+    {"id":"CASE-GU-01","version":"1","familyId":"FAM-GU-SUPPORT","sourceRoute":"expert-authored-synthetic","provenance":"qualified-review-fixture","permission":"teaching-only","language":"Gujarati","appliance":"W17","risk":"ordinary","evidenceState":"supporting","expectedBehavior":"answer","rubric":"RUBRIC-0.1","ambiguity":[],"split":"holdout","rawSplit":"holdout"},
+    {"id":"CASE-GUE-01","version":"1","familyId":"FAM-GUE-CONFLICT","sourceRoute":"expert-authored-synthetic","provenance":"qualified-review-fixture","permission":"teaching-only","language":"Gujarati-English","appliance":"W17","risk":"designated","evidenceState":"conflicting","expectedBehavior":"escalate","rubric":"RUBRIC-0.1","ambiguity":["code-switch scope"],"split":"calibration","rawSplit":"calibration"},
+    {"id":"CASE-EN-03","version":"1","familyId":"FAM-ABSENT-EN","sourceRoute":"synthetic","provenance":"fixture-author","permission":"teaching-only","language":"English","appliance":"W17","risk":"ordinary","evidenceState":"absent","expectedBehavior":"abstain","rubric":"RUBRIC-0.1","ambiguity":[],"split":"holdout","rawSplit":"holdout"}
+  ],
+  "declaredGaps": [
+    {"language":"Gujarati","evidenceState":"conflicting","reason":"no authorized independently reviewed case family"},
+    {"language":"Gujarati","evidenceState":"absent","reason":"not yet authored and reviewed"},
+    {"language":"Gujarati-English","evidenceState":"supporting","reason":"not yet authored and reviewed"},
+    {"language":"Gujarati-English","evidenceState":"absent","reason":"not yet authored and reviewed"}
+  ],
+  "splitPolicy": {"groupBy":"familyId","protected":["holdout"],"trainingUse":false,"exposureLedger":true},
+  "deduplication": {"methods":["exact digest","normalized text","source lineage","family ID","near-duplicate review"],"limitations":"false positives and false negatives remain"},
+  "refreshTriggers": ["scope change", "source revision", "permission change", "new failure family", "contamination discovery", "language coverage change"],
+  "effects": []
+}

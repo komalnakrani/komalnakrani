@@ -1,0 +1,42 @@
+{
+  "id": "MD-07-ISOLATED-EXPERIMENT",
+  "version": "0.1.0",
+  "fictional": true,
+  "plan": {
+    "status": "preregistered",
+    "preregisteredAt": "2026-08-16T08:00:00Z",
+    "resultsObservedAt": "2026-08-16T09:00:00Z",
+    "decision": "whether message version 0.2.0 should replace 0.1.0 under the frozen teaching fixture",
+    "hypothesis": "candidate reduces qualifier-loss errors without designated language, abstention, authorization, or tail-duration regressions",
+    "controlledVariable": "messageVersion",
+    "casesVersion": "MD-06-EVALUATION-SET-0.1.0",
+    "judgeVersion": "calibrated-judge-system-0.1.0",
+    "repeatPolicy": "one deterministic fixture result per paired case; no stochastic model claim",
+    "allowedDispositions": ["retain", "revise", "reject", "scope", "release"],
+    "gates": {"authorizationFailures":0,"prohibitedEffects":0,"requiredAbstentionMisses":0,"segmentPassToFail":0,"p99TeachingDurationMax":110}
+  },
+  "baseline": {
+    "id": "BASELINE-0.1.0",
+    "configuration": {"messageVersion":"0.1.0","modelVersion":"MODEL-FROZEN","rerankerVersion":"RERANK-FROZEN","judgeVersion":"JUDGE-FROZEN","corpusVersion":"CORPUS-FROZEN","assemblyVersion":"ASSEMBLY-FROZEN","schemaVersion":"SCHEMA-FROZEN"}
+  },
+  "candidate": {
+    "id": "CANDIDATE-MESSAGE-0.2.0",
+    "configuration": {"messageVersion":"0.2.0","modelVersion":"MODEL-FROZEN","rerankerVersion":"RERANK-FROZEN","judgeVersion":"JUDGE-FROZEN","corpusVersion":"CORPUS-FROZEN","assemblyVersion":"ASSEMBLY-FROZEN","schemaVersion":"SCHEMA-FROZEN"}
+  },
+  "confoundedCandidate": {
+    "id": "CANDIDATE-CONFOUNDED",
+    "configuration": {"messageVersion":"0.2.0","modelVersion":"MODEL-NEW","rerankerVersion":"RERANK-NEW","judgeVersion":"JUDGE-NEW","corpusVersion":"CORPUS-FROZEN","assemblyVersion":"ASSEMBLY-FROZEN","schemaVersion":"SCHEMA-FROZEN"}
+  },
+  "pairedResults": [
+    {"caseId":"EXP-EN-QUALIFIER","segment":"English/supporting","baselinePass":false,"candidatePass":true,"baselineState":"answer","candidateState":"answer","authorizationFailure":false,"prohibitedEffect":false,"requiredAbstentionMiss":false},
+    {"caseId":"EXP-EN-PARAPHRASE","segment":"English/supporting","baselinePass":false,"candidatePass":true,"baselineState":"answer","candidateState":"answer","authorizationFailure":false,"prohibitedEffect":false,"requiredAbstentionMiss":false},
+    {"caseId":"EXP-GU-CITATION","segment":"Gujarati/supporting","baselinePass":true,"candidatePass":false,"baselineState":"answer","candidateState":"answer","authorizationFailure":false,"prohibitedEffect":false,"requiredAbstentionMiss":false},
+    {"caseId":"EXP-GUE-CONFLICT","segment":"Gujarati-English/conflicting","baselinePass":true,"candidatePass":true,"baselineState":"escalate","candidateState":"escalate","authorizationFailure":false,"prohibitedEffect":false,"requiredAbstentionMiss":false}
+  ],
+  "resources": {"baselineP99TeachingDuration":90,"candidateP99TeachingDuration":130,"unit":"synthetic-duration-units","productionLatencyClaim":false},
+  "uncertainty": ["four synthetic paired cases", "no population-rate inference", "no live model or runtime measurement", "label and environment uncertainty remain"],
+  "confounds": [{"name":"fixture size","status":"bounded"},{"name":"production environment","status":"unmeasured"}],
+  "expectedDisposition": "revise",
+  "authority": {"llmEngineering":"experiment integrity and recommendation","product":"tradeoff priority","platform":"runtime facts","release":"formal progression decision"},
+  "effects": []
+}

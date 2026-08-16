@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "batchId": "V1-13-15",
+  "issue": 58,
+  "parentIssue": 46,
+  "status": "manuscript-complete-assets-pending",
+  "producedAt": "2026-08-16",
+  "mosaicDesk": {"fictional":true,"start":"MD-06-first-joint-evaluation-evidence","end":"MD-07-experiment-packet-opened","inventedProductionOutcomes":false},
+  "chapters": [
+    {"number":13,"slug":"build-representative-evaluation-cases","title":"Build Representative Evaluation Cases","wordCount":2523,"claims":[{"productionId":"CLM-037","acceptedId":"V1-C13-CL01"},{"productionId":"CLM-038","acceptedId":"V1-C13-CL02"},{"productionId":"CLM-039","acceptedId":"V1-C13-CL03"}],"caseIds":["LLME-CASE-006","LLME-CASE-007"],"figureIds":["V1-F13.1","V1-F13.2"],"companionTestsAdded":4,"qaStatus":"pass"},
+    {"number":14,"slug":"name-errors-and-judgment-methods","title":"Name Errors and Judgment Methods","wordCount":2571,"claims":[{"productionId":"CLM-040","acceptedId":"V1-C14-CL01"},{"productionId":"CLM-041","acceptedId":"V1-C14-CL02"},{"productionId":"CLM-042","acceptedId":"V1-C14-CL03"}],"caseIds":["LLME-CASE-005"],"figureIds":["V1-F14.1","V1-F14.2"],"companionTestsAdded":4,"qaStatus":"pass"},
+    {"number":15,"slug":"run-experiments-that-isolate-change","title":"Run Experiments That Isolate Change","wordCount":2525,"claims":[{"productionId":"CLM-043","acceptedId":"V1-C15-CL01"},{"productionId":"CLM-044","acceptedId":"V1-C15-CL02"},{"productionId":"CLM-045","acceptedId":"V1-C15-CL03"}],"caseIds":["LLME-CASE-004","LLME-CASE-005"],"figureIds":["V1-F15.1","V1-F15.2"],"companionTestsAdded":4,"qaStatus":"pass"}
+  ],
+  "figures": [
+    {"id":"V1-F13.1","chapter":13,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f13-1-evaluation-population.png","labels":["language","appliance","risk","evidence","covered","gap"],"alt":"A defined case population is sampled into language, appliance, risk, and evidence-condition trays, with covered and missing intersections visibly marked.","evidenceRole":"Explains declared coverage and visible gaps without reporting population frequency.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F13.2","chapter":13,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f13-2-case-lifecycle.png","labels":["source","annotate","split","freeze","refresh","retire"],"alt":"Evaluation cases move from authorized source through annotation, family-aware split, freeze, refresh, and retirement behind leakage barriers.","evidenceRole":"Explains leakage-aware lifecycle controls without claiming contamination is fully detectable.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F14.1","chapter":14,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f14-1-error-topology.png","labels":["criterion","consequence","severity","detectability","segment","control","disposition"],"alt":"One error specimen connects to separate criterion, consequence, severity, detectability, segment, control, and disposition records.","evidenceRole":"Separates error fields without defining a universal severity scale.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F14.2","chapter":14,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f14-2-judgment-stack.png","labels":["check","reference","grader","human","domain","authority"],"alt":"Judgment escalates from deterministic check to reference, grader, human, domain specialist, and accountable authority as ambiguity and consequence increase.","evidenceRole":"Shows judgment escalation and retained disagreement without treating any judge as infallible.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F15.1","chapter":15,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f15-1-controlled-experiment.png","labels":["baseline","one change","trials","slices","controls"],"alt":"Baseline and candidate systems share frozen controls while one unlocked variable is compared across paired cases, repeated trials, and segment lenses.","evidenceRole":"Explains controlled comparison without claiming causality beyond the experiment design.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F15.2","chapter":15,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f15-2-disposition-gates.png","labels":["retain","revise","reject","scope","release"],"alt":"Experiment evidence, regressions, uncertainty, and confounds enter retain, revise, reject, scope, or release disposition gates.","evidenceRole":"Connects evidence to explicit disposition while preserving release as an authority handoff.","assetStatus":"pending-root-imagegen"}
+  ],
+  "companion": {"runner":"companion/run.mjs","testPattern":"companion/tests/*.test.mjs","testsAdded":12,"cumulativeTests":60,"expectedPassing":60,"providerCalls":0,"deterministic":true},
+  "limitations": [
+    "Mosaic Desk cases, judgments, experiment results, regressions, and dispositions are fictional and synthetic.",
+    "The evaluation-set fixture demonstrates provenance, segmentation, family-aware splits, gaps, and version identity; it proves no target-population representativeness or freedom from contamination.",
+    "The judgment fixture exposes deterministic position and verbosity biases for teaching; it does not estimate any live judge's accuracy or transfer domain authority.",
+    "The experiment fixture demonstrates isolation, paired evidence, segment regressions, hard gates, and disposition logic; it reports no live-model quality, latency, or causal outcome.",
+    "Figure records are semantic anchors only; root owns ImageGen production."
+  ]
+}

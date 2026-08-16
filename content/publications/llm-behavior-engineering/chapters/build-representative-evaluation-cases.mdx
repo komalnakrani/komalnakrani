@@ -1,0 +1,245 @@
+---
+title: "Build Representative Evaluation Cases"
+slug: "build-representative-evaluation-cases"
+summary: "Turn intended use into a documented, segmented, leakage-aware evaluation asset whose coverage and gaps remain explicit."
+minutes: 100
+sourceIds: ["SRC-009", "SRC-010", "SRC-034", "SRC-035", "SRC-036", "SRC-037"]
+claimIds: ["CLM-037", "CLM-038", "CLM-039"]
+objectiveIds: ["LLME-K01", "LLME-K06", "LLME-K10"]
+figureIds: []
+---
+
+## A convenient case list is not a population
+
+Chapter 12 opened `MD-06` with diagnostic cases: retrieval success followed by unsupported generation, retrieval absence followed by correct abstention, authorization failure, and source-authority dispute. Those cases expose failure layers. They do not show how often the layers matter across Mosaic Desk's intended work.
+
+An engineer can make almost any system look good by collecting cases it already handles. A random sample can also mislead when the source pool excludes rare languages, unresolved conflicts, missing attachments, or consequential edge conditions. "Representative" means representative of a named population for a named claim, not generally realistic.
+
+Mosaic therefore starts with a population statement:
+
+> Authorized service-proposal requests for supported appliance families, received through the defined channels during a bounded time period, across the declared language, evidence-state, thread-length, and consequence segments.
+
+The statement immediately reveals non-scope. It does not include warranty approval, safety-critical diagnosis, customer contact, autonomous repair scheduling, unsupported appliances, or records whose use lacks privacy and domain authorization.
+
+## Map behavior clauses to population cells
+
+Return to the Chapter 2 language-task contract. Each behavior clause becomes a coverage question.
+
+For example, "abstain when required evidence is absent" needs cases where evidence is present, partly present, stale only, conflicting, unauthorized only, and genuinely absent. "Preserve multilingual intent" needs direct cases for each declared language and code-switched pattern. "Do not execute effects" needs adversarial requests that attempt warranty approval, customer contact, or record mutation.
+
+Build a matrix across dimensions that can change behavior or consequence:
+
+- language and code-switch pattern;
+- appliance family and confirmed/ambiguous identity;
+- short, long, and multi-party thread structure;
+- evidence condition and source authority;
+- exact identifier versus paraphrase;
+- ordinary versus designated high-consequence proposal;
+- nominal, edge, adversarial, and out-of-scope intent;
+- attachment present, referenced-but-absent, or inaccessible;
+- current, stale, conflicting, and another-tenant evidence;
+- expected answer, partial, abstain, escalate, or fail-closed state.
+
+Do not fill every mathematical intersection mechanically. Many cells are impossible, immaterial, or unsupported by authorized data. Prioritize plausible and consequential intersections, document the rationale, and keep empty cells visible.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V1-F13.1" data-image="/assets/publications/llm-behavior-engineering/v1-f13-1-evaluation-population.png">
+  <div role="img" aria-label="A defined case population is sampled into language, appliance, risk, and evidence-condition trays, with covered and missing intersections visibly marked.">Pending ImageGen figure V1-F13.1</div>
+  <figcaption><strong>V1-F13.1 - Coverage is relative to a declared population.</strong> Essential labels: language, appliance, risk, evidence, covered, gap. Patterns supplement color. The figure supports `CLM-037` and `CLM-039`; it reports no population frequency.</figcaption>
+  <details><summary>Long description</summary><p>A colorful three-dimensional mosaic of case tiles flows into four transparent trays labeled language, appliance, risk, and evidence. Some intersections contain tagged case cards while others show an outlined gap marker. A boundary frame names intended use and excludes warranty approval and external actions.</p></details>
+</figure>
+
+## Give every case a provenance-rich record
+
+A case is a versioned evidence object, not just prompt text and an expected answer.
+
+Record:
+
+- stable case ID, version, and family/cluster ID;
+- source class: authorized operational sample, expert-authored, transformed, or synthetic;
+- source provenance, collection interval, and permission decision;
+- de-identification or transformation steps and their owners;
+- scenario, input, referenced attachments, and source snapshot;
+- expected answerability and behavior state;
+- required and prohibited properties rather than only one reference string;
+- evidence-unit IDs and qualifying spans;
+- language, appliance, risk, evidence, difficulty, and attack tags;
+- rubric, annotator roles, independent labels, disagreement, and adjudication;
+- split, freeze version, and exposure history;
+- known ambiguity, unsupported claims, and refresh trigger;
+- retention, deletion, and training-use prohibition.
+
+Evaluation cases need documented provenance, segments, coverage, exclusions, split identity, and refresh policy. Holistic evaluation, provider evaluation guidance, and datasheet practice motivate these fields, while documentation alone does not prove representativeness, legality, safety, or adequacy. Mosaic's sampling claim remains bounded to its defined population and current evidence. [CLM-037]
+
+Privacy owners authorize data access and transformations. Domain owners establish source meaning and expected outcomes. The LLM engineer owns the evaluation schema, traceability, measurement integrity, and disclosed gaps. No production record becomes an evaluation or training record merely because it would be useful.
+
+## Keep real, transformed, and synthetic cases distinct
+
+Each route answers different coverage needs.
+
+Authorized operational samples can reflect actual channel structure, but they carry privacy, consent, retention, selection, and historical-system concerns. Expert-authored cases can target rare consequences and explicit source states, but expert assumptions may not match prevalence. Transformations can remove identifiers or create controlled pairs, but they may alter language and evidence relationships. Synthetic cases can exercise missing cells, injection attempts, and controlled failure states, but they can repeat generator blind spots.
+
+Label the route. Never present synthetic frequency as real distribution. Do not use a generated Gujarati translation as proof of Gujarati adequacy. Keep the source case, transformation instruction, tool/model version, reviewer decision, and relationship between variants.
+
+`LLME-CASE-006` documents sourcing, filtering, deduplication, and limitations for the large Dolma pretraining corpus. Mosaic borrows the durable process lesson, not the corpus scale or data rights. A documented corpus is evidence of a pipeline, not blanket authorization or a task-specific sampling plan.
+
+## Write labels as claims with authority
+
+One reference answer is often too narrow for an open language task. Prefer structured expected properties:
+
+- required behavior state;
+- facts or evidence units that may support each field;
+- qualifiers that must remain;
+- acceptable uncertainty;
+- prohibited claims and effects;
+- citation targets and source-state requirements;
+- judge method and authority required.
+
+Keep ambiguity explicit. Two qualified reviewers may disagree about whether a note supports a cause or only a symptom. The case record should preserve both judgments and the adjudication state. An unresolved domain dispute is a valid evaluation condition, not missing clerical work.
+
+Appropriate abstention is a positive expected behavior when the evidence contract requires it. Do not label every empty proposal as failure. Conversely, do not reward abstention on answerable low-risk cases simply because it avoids hallucination.
+
+## Select cases with a documented rationale
+
+A coverage matrix does not prescribe how many cases each cell receives. Write a selection rule before browsing candidate records.
+
+Use several routes:
+
+- proportional sampling when the source population and frequency claim are credible;
+- deliberate oversampling for rare but consequential states;
+- boundary sampling around ambiguous appliance identity, dates, and source authority;
+- adversarial construction for instruction-bearing evidence and prohibited-effect requests;
+- negative controls where retrieval or generation is intentionally unnecessary;
+- out-of-scope cases that verify refusal and routing behavior.
+
+Keep the route on each record. A set with deliberately oversampled conflicts can test conflict behavior but cannot estimate the operational conflict rate without weighting and a credible source population. A convenience sample from escalated tickets can expose hard cases but will not represent ordinary use.
+
+Document why each cell is thin, full, excluded, or unknown. Reasons can include missing authorization, no qualified annotator, unsupported product scope, insufficient independent families, or a later milestone. "No data" and "not applicable" are different states.
+
+Use a budget openly. Allocate annotation and domain-review capacity first to contract-critical and consequence-heavy cells, then to common nominal behavior. Do not manufacture low-quality labels to make the matrix look complete. A declared gap is stronger evidence than a filled cell with unknown provenance.
+
+## Audit the case lifecycle
+
+Case governance continues after freeze. A periodic audit asks:
+
+- Did any source permission, retention rule, or owner change?
+- Did the current source revision invalidate expected properties?
+- Did a protected case appear in a prompt, training set, retrieval corpus, or public example?
+- Did a model/provider receive a case outside authorized terms?
+- Did new duplicates or family relationships become visible?
+- Did a product-scope or population change require a new segment?
+- Did annotator guidance or domain authority change?
+- Does a retired case still appear in headline results?
+
+Record deletions as tombstones with non-sensitive identity, reason, affected set versions, and rerun requirements. Do not keep prohibited source text merely for reproducibility. The evaluation claim may need to narrow when evidence must be deleted.
+
+Separate refresh from drift detection. Production monitoring may suggest a new failure family, but monitoring data enters the set only through authorization, provenance, labeling, split, and exposure controls. A failure seen during development cannot be promoted into a pristine holdout case.
+
+## Create split firewalls before tuning
+
+Divide cases by intended use:
+
+- development cases are visible for debugging and prompt/retrieval iteration;
+- calibration cases tune graders and rater guidance without selecting product behavior directly;
+- holdout cases support bounded comparison after decisions are frozen;
+- protected critical cases may be inspected only under controlled review;
+- retired cases remain traceable but no longer support current claims.
+
+Split related cases together. A customer thread, its paraphrase, translation, shortened version, synthetic counterfactual, and templated siblings share a family ID. If siblings cross development and holdout, the system can learn the template while the holdout appears novel.
+
+Detect exact digest overlap, normalized overlap, shared source identifiers, near-duplicate text, template signatures, and semantic similarity. Each method has false positives and false negatives. Human review may be required for high-impact clusters.
+
+Duplicate or contaminated cases can inflate apparent generalization and invalidate comparisons. Data deduplication and corpus-documentation research support contamination controls, but overlap detection is imperfect and threshold choices can erase legitimate repetition or miss transformed copies. Record the method, threshold, reviewer, and unresolved clusters. [CLM-038]
+
+Evaluation data must not silently enter instruction tuning, preference data, examples, retrieval corpora, or judge prompts. Maintain an exposure ledger for every model, prompt author, grader, and optimization run that could have seen a protected case.
+
+## Separate coverage from count
+
+Twenty nearly identical English cases do not compensate for a missing Gujarati conflict case. Report both record count and coverage cells.
+
+For each slice, publish:
+
+- number of independent case families;
+- source routes and time range;
+- answerability and consequence distribution;
+- label completeness and disagreement;
+- development/calibration/holdout allocation;
+- known duplicate or contamination risk;
+- what the slice can and cannot support.
+
+Intersections matter. Gujarati nominal cases do not establish Gujarati behavior under conflicting evidence. Long English threads do not establish long code-switched behavior. A tiny intersection can reveal a critical failure without supporting a stable rate estimate.
+
+Multilingual coverage requires direct per-language/task evidence rather than an English aggregate. The Aya work makes multilingual data and evaluation explicit, and holistic evaluation motivates scenario-level reporting. Its reported language coverage does not transfer automatically to Mosaic, and language fluency does not establish cultural, domain, or policy authority. [CLM-039]
+
+`LLME-CASE-007` contributes this bounded multilingual lesson. Mosaic must name which Gujarati and code-switched tasks were tested, which were absent, who reviewed them, and which claims remain unsupported.
+
+## Freeze a releaseable evaluation-set card
+
+The set card binds:
+
+- population and intended-use claim;
+- collection and authorization window;
+- case schema and source routes;
+- coverage matrix and selection rationale;
+- label and adjudication process;
+- split and family-grouping policy;
+- deduplication and contamination methods;
+- hashes for manifests and protected partitions;
+- known gaps, prohibited uses, and unsupported populations;
+- refresh, re-label, retire, and deletion triggers;
+- owners for privacy, domain, evaluation, and release decisions.
+
+Refresh is controlled change. New appliance families, source-policy revisions, observed failure families, language shifts, changed product scope, or discovered contamination can trigger a new version. Do not mutate the holdout in place and preserve an audit path from the old version.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V1-F13.2" data-image="/assets/publications/llm-behavior-engineering/v1-f13-2-case-lifecycle.png">
+  <div role="img" aria-label="Evaluation cases move from authorized source through annotation, family-aware split, freeze, refresh, and retirement behind leakage barriers.">Pending ImageGen figure V1-F13.2</div>
+  <figcaption><strong>V1-F13.2 - Evaluation data has a controlled lifecycle.</strong> Essential labels: source, annotate, split, freeze, refresh, retire. Firewall and family-link icons make leakage controls visible. The figure supports `CLM-038`; it is not evidence that contamination is fully detectable.</figcaption>
+  <details><summary>Long description</summary><p>A bright three-dimensional case factory receives source cards through an authorization gate. Cards move to annotation desks, then family-linked cards travel together through split lanes. A glass firewall protects a frozen holdout vault. Later triggers route a copied version through refresh or retirement without overwriting the original.</p></details>
+</figure>
+
+## Preserve provider neutrality
+
+Managed and open-weight candidates consume the same frozen case IDs, source snapshots, behavior criteria, and judge records. Adapter-specific traces can differ: a managed path may expose request IDs and token counts while hiding internals; an open-weight path may expose tokenizer, template, runtime, hardware, and artifact digests. Those differences belong in run identity, not case selection.
+
+Do not give one path easier cases because a feature is unavailable. Mark a candidate incompatible or define an honest adapter. Data-use permission for evaluation also does not imply permission to upload a case to a managed provider or to retain it in a self-hosted log; privacy/security owners decide both paths.
+
+## Failure injection: leakage and a missing language cell
+
+The synthetic inventory contains 60 records but only 18 independent families. A templated English washer thread appears in development, and a lightly paraphrased sibling appears in holdout. Random row splitting misses the relationship. Meanwhile, all Gujarati cases are short and supporting; none contains conflicting evidence.
+
+Repair it:
+
+1. assign family IDs from source and transformation lineage;
+2. group the templated siblings into one split;
+3. run exact, normalized, source-ID, and near-duplicate checks;
+4. record the removed or moved records and threshold limitations;
+5. mark Gujarati-conflict as an uncovered cell;
+6. add a clearly synthetic, qualified-review case only if authorized;
+7. report that one synthetic case closes a mechanics gap, not population adequacy;
+8. freeze manifests and exposure history;
+9. prohibit evaluation records from training or examples without separate authorization;
+10. retain no customer, quality, or prevalence claim.
+
+The repaired aggregate may have fewer cases. It has stronger evidence because family independence and missing coverage are visible.
+
+## Practice: repair a biased inventory
+
+Given a case inventory concentrated in short English supporting-evidence requests:
+
+1. define the intended population and non-scope;
+2. map behavior clauses to coverage cells;
+3. tag language, appliance, risk, evidence, answerability, and attack conditions;
+4. trace provenance and authorization for every record;
+5. distinguish operational, expert, transformed, and synthetic routes;
+6. define structured labels and adjudication;
+7. cluster families and repair split leakage;
+8. publish missing and thin intersections;
+9. freeze a set card, manifests, hashes, and exposure ledger;
+10. write prohibited uses and refresh triggers.
+
+Pass when every contract clause and consequential slice has visible support or a declared gap, every record has provenance/split/rubric/ambiguity, and no synthetic or random sample is presented as statistical population proof.
+
+The final review must also confirm that deletion requests, permission changes, and discovered exposure can invalidate or narrow earlier evaluation claims without preserving prohibited content for convenience.
+
+## The MD-06 case asset
+
+Mosaic exits Chapter 13 with a versioned population statement, coverage matrix, provenance-rich case schema, structured labels, family-aware split manifest, contamination report, multilingual gaps, protected holdout, exposure ledger, and evaluation-set card. It still lacks calibrated judgment instruments. Chapter 14 will turn raw failures into a consequence-aware taxonomy and decide which checks, graders, humans, domain specialists, and authorities can credibly judge each field.

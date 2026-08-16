@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapters 10-12 locally complete under `#57`
+- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapters 13-15 locally complete under `#58`
 - Last updated: 2026-08-16
-- Last completed issue: `#54` — Phase 08 Volume 1 Chapters 7-9, accepted at `39e8c4d`
-- Active issue: `#57` — Phase 08 Volume 1 Chapters 10-12, locally complete pending coordinator acceptance
+- Last completed issue: `#57` — Phase 08 Volume 1 Chapters 10-12, accepted at `e19d530`
+- Active issue: `#58` — Phase 08 Volume 1 Chapters 13-15, locally complete pending coordinator acceptance
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -47,10 +47,10 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - chapter blueprints: 33 files in `books/llm-engineering/blueprints/`
 - Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
 - Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
-- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, and Phase 08 child bodies through Chapters 10-12
-- Volume 1 Chapters 1-9 manuscripts, learning/state/QA records, production manifests, and deterministic companion implementation: accepted through `39e8c4d`
-- Volume 1 Chapters 10-12 manuscripts, learning/state/QA records, production manifest/currentness/verification, and deterministic companion increments: locally complete under `#57`
-- generated visuals, Chapters 13-33, final publication, PDF, course, and final QA: not started
+- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, and Phase 08 child bodies through Chapters 13-15
+- Volume 1 Chapters 1-12 manuscripts, learning/state/QA records, production manifests, and deterministic companion implementation: accepted through `e19d530`
+- Volume 1 Chapters 13-15 manuscripts, learning/state/QA records, production manifest/currentness/verification, and deterministic companion increments: locally complete under `#58`
+- generated visuals, Chapter 16 and Volume 2 Chapters 1-17, final publication, PDF, course, and final QA: not started
 
 ## Completed gates
 
@@ -72,11 +72,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 
 ## Current work
 
-Phase 07 is accepted at `9d9e1c3`. Volume 1 Chapters 1-9 are accepted through `39e8c4d`. Chapters 10-12 are locally complete under `#57`: 7,784 manuscript words (`2,585`, `2,532`, `2,667`), nine exact assigned claims, six pending PNG anchors, three learning/state/QA sets, and 12/12 new deterministic tests. Cumulatively, Chapters 1-12 total 33,803 manuscript words, 36 claims, 24 anchors, twelve learning/state/QA sets, and 48/48 passing companion tests. `MD-05` is complete with traceable retrieval and provenance-aware assembly; `MD-06` is open with component-plus-joint diagnostic evidence and a disputed-case queue.
+Phase 07 is accepted at `9d9e1c3`. Volume 1 Chapters 1-12 are accepted through `e19d530`. Chapters 13-15 are locally complete under `#58`: 7,619 manuscript words (`2,523`, `2,571`, `2,525`), nine exact assigned claims, six pending PNG anchors, three learning/state/QA sets, and 12/12 new deterministic tests. Cumulatively, Chapters 1-15 total 41,422 manuscript words, 45 claims, 30 anchors, fifteen learning/state/QA sets, and 60/60 passing companion tests. `MD-06` is complete with a segmented leakage-aware case asset, consequence-aware error system, and calibrated judgment evidence; `MD-07` is open with a preregistered controlled experiment packet and explicit `revise` disposition.
 
 ## Unresolved blockers
 
-No content blocker. Twenty-four cumulative raster figure assets for Chapters 1-12 remain intentionally pending root ImageGen production. Abhyaas remains intentionally deferred.
+No content blocker. Thirty cumulative raster figure assets for Chapters 1-15 remain intentionally pending root ImageGen production. Abhyaas remains intentionally deferred.
 
 ## Research gaps and volatile evidence
 
@@ -89,14 +89,14 @@ No content blocker. Twenty-four cumulative raster figure assets for Chapters 1-1
 
 ## Quality debt
 
-- Only Volume 1 Chapters 1-12 have manuscripts; Chapters 13-33 remain unwritten.
-- The first twenty-four manuscript anchors and production figure specifications exist, but no image/vector asset exists; later visual production remains ImageGen-only raster.
+- Only Volume 1 Chapters 1-15 have manuscripts; Volume 1 Chapter 16 and Volume 2 Chapters 1-17 remain unwritten.
+- The first thirty manuscript anchors and production figure specifications exist, but no image/vector asset exists; later visual production remains ImageGen-only raster.
 - The publication stays draft and is not registered as a launched Komal title; final PDF and publication QA remain future gates.
 
 ## Exact next action
 
-After coordinator acceptance of #57, write and immediately QA Volume 1 Chapters 13-15 in the next child batch: *Build Representative Evaluation Cases*, *Name Errors and Judgment Methods*, and *Run Experiments That Isolate Change*. Continue `MD-06` with segmented, leakage-aware cases and calibrated judges, then open `MD-07` with controlled attributable experiments. Root separately owns ImageGen production.
+After coordinator acceptance of #58, write and immediately QA Volume 1 Chapter 16, *Release, Observe, and Change the Model*. Complete `MD-08` with a bounded readiness packet, privacy-minimized signals, staged release and rollback, provider-migration replay, whole-system diagnosis, and an evidence-based adaptation referral. Root separately owns ImageGen production.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, `9d9e1c3`, `9a66d79`, `f53b7bd`, and `39e8c4d`, parent #46, child #57, this state, the locally complete Chapters 10-12 verification, Chapters 13-15 blueprints/research packs, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in the LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, `9d9e1c3`, `9a66d79`, `f53b7bd`, `39e8c4d`, and `e19d530`, parent #46, child #58, this state, the locally complete Chapters 13-15 verification, Chapter 16 blueprint/research pack, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in the LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.
