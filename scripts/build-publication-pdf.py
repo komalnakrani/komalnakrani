@@ -20,6 +20,7 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.pdfgen import canvas
 from reportlab.platypus import (
+    Image as FlowableImage,
     KeepTogether,
     LongTable,
     PageBreak,
@@ -90,6 +91,14 @@ def scaled_svg(file: Path, max_width: float = CONTENT_WIDTH, max_height: float =
     return drawing
 
 
+def scaled_figure(file: Path, max_width: float = CONTENT_WIDTH, max_height: float = 115 * mm):
+    if file.suffix.lower() == ".svg":
+        return scaled_svg(file, max_width=max_width, max_height=max_height)
+    image = FlowableImage(str(file))
+    image._restrictSize(max_width, max_height)
+    return image
+
+
 def table_flowable(rows: list[list[str]], styles: dict) -> LongTable:
     column_count = max(len(row) for row in rows)
     normalized = [row + [""] * (column_count - len(row)) for row in rows]
@@ -119,13 +128,14 @@ def table_flowable(rows: list[list[str]], styles: dict) -> LongTable:
 
 def figure_flowables(block: str, publication_dir: Path, styles: dict) -> list:
     image = re.search(r'<img src="([^"]+)" alt="([^"]+)"', block)
-    caption = re.search(r"<figcaption><strong>(.*?)</strong>\s*(.*?)</figcaption>", block, flags=re.DOTALL)
+    caption = re.search(r"<figcaption>(?:<strong>(.*?)</strong>\s*)?(.*?)</figcaption>", block, flags=re.DOTALL)
     if not image or not caption:
         raise ValueError("Malformed book figure block")
     filename = Path(image.group(1)).name
     figure_file = publication_dir / "assets" / filename
-    drawing = scaled_svg(figure_file)
-    caption_text = f"<b>{inline_markup(caption.group(1))}</b> {inline_markup(caption.group(2))}"
+    drawing = scaled_figure(figure_file)
+    lead = caption.group(1)
+    caption_text = f"<b>{inline_markup(lead)}</b> {inline_markup(caption.group(2))}" if lead else inline_markup(caption.group(2))
     alternative = f'<b>Text alternative:</b> {inline_markup(image.group(2))}'
     return [KeepTogether([drawing, Spacer(1, 2.5 * mm), Paragraph(caption_text, styles["KomalCaption"]), Paragraph(alternative, styles["KomalFigureAlt"]), Spacer(1, 5 * mm)])]
 
@@ -164,7 +174,7 @@ def markdown_flowables(raw: str, styles: dict, publication_dir: Path, skip_first
             code.append(line)
             index += 1
             continue
-        if line.startswith('<figure class="book-figure">'):
+        if re.match(r"<figure(?:\s+[^>]*)?>", line.strip()):
             flush_paragraph()
             block_lines = [line]
             index += 1
@@ -306,7 +316,7 @@ def build(publication_dir: Path, output_dir: Path) -> dict:
     sources = load_json(publication_dir / manifest["registries"]["sources"])["sources"]
     figures = load_json(publication_dir / manifest["registries"]["figures"])["figures"]
     figure_production_file = publication_dir / "figure-production.json"
-    figure_production = load_json(figure_production_file)["figures"]
+    figure_production = load_json(figure_production_file)["figures"] if figure_production_file.exists() else []
     production_by_registry = {figure["registryId"]: figure for figure in figure_production}
     errata = load_json(publication_dir / manifest["registries"]["errata"])["errata"]
     front_file = publication_dir / "front-matter/front-matter.md"
@@ -382,8 +392,9 @@ def build(publication_dir: Path, output_dir: Path) -> dict:
     story.extend([figure_heading, Paragraph("All figures are original Komal synthesis. Orchid and satellite contexts are fictional/synthetic.", styles["KomalQuote"]), Spacer(1, 4 * mm)])
     for figure in figures:
         story.append(Paragraph(f'<b>{html.escape(figure["id"])}</b> - {inline_markup(figure["caption"])}', styles["BodyText"]))
-        production = production_by_registry[figure["id"]]
-        story.append(Paragraph(f'<b>Long description:</b> {inline_markup(production["longDescription"])}', styles["KomalFigureAlt"]))
+        production = production_by_registry.get(figure["id"], {})
+        long_description = production.get("longDescription", figure["alt"])
+        story.append(Paragraph(f'<b>Long description:</b> {inline_markup(long_description)}', styles["KomalFigureAlt"]))
         story.append(Spacer(1, 2 * mm))
     story.append(PageBreak())
 
@@ -428,10 +439,12 @@ def build(publication_dir: Path, output_dir: Path) -> dict:
     input_files = [
         publication_dir / "publication.json", publication_dir / manifest["registries"]["sources"],
         publication_dir / manifest["registries"]["claims"], publication_dir / manifest["registries"]["figures"],
-        publication_dir / manifest["registries"]["errata"], figure_production_file, front_file, part_file, *appendix_files,
+        publication_dir / manifest["registries"]["errata"], front_file, part_file, *appendix_files,
         *[publication_dir / chapter["sourceFile"] for chapter in manifest["chapters"]],
         *[publication_dir / figure["file"] for figure in figures],
     ]
+    if figure_production_file.exists():
+        input_files.append(figure_production_file)
     reader = PdfReader(str(output_file))
     record = {
         "schemaVersion": 1, "publication": manifest["slug"], "editionVersion": manifest["edition"]["version"],
