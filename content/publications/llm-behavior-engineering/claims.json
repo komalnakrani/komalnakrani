@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "claims": [
+    {"id":"CLM-001","chapterSlug":"the-model-is-not-the-behavior","statement":"A model response is one observation from a configured system, not proof of dependable product behavior.","sourceIds":["SRC-006","SRC-007","SRC-009"]},
+    {"id":"CLM-002","chapterSlug":"the-model-is-not-the-behavior","statement":"Evaluation must be designed into development because model outputs and versions can vary.","sourceIds":["SRC-007","SRC-010","SRC-011"]},
+    {"id":"CLM-003","chapterSlug":"the-model-is-not-the-behavior","statement":"Technical controls and documentation do not transfer formal risk or domain authority to the LLM engineer.","sourceIds":["SRC-008","SRC-052"]},
+    {"id":"CLM-004","chapterSlug":"write-the-language-task-contract","statement":"Success criteria should specify task, inputs, outputs, failure behavior, consequence, and judgment method before model optimization.","sourceIds":["SRC-011","SRC-009"]},
+    {"id":"CLM-005","chapterSlug":"write-the-language-task-contract","statement":"Representative language and consequence segments are required because aggregate performance can hide important failures.","sourceIds":["SRC-009","SRC-037"]},
+    {"id":"CLM-006","chapterSlug":"write-the-language-task-contract","statement":"Human review is a designed authority and control relationship, not a generic safety guarantee.","sourceIds":["SRC-008","SRC-065"]},
+    {"id":"CLM-007","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Transformer generation conditions each next token on represented prior context through attention-based layers.","sourceIds":["SRC-001"]},
+    {"id":"CLM-008","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Subword tokenization changes sequence length and representation, with language-specific and domain-specific effects.","sourceIds":["SRC-002","SRC-003"]},
+    {"id":"CLM-009","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Decoding and chat-template configuration are part of behavior identity and must be versioned.","sourceIds":["SRC-014","SRC-015"]}
+  ]
+}

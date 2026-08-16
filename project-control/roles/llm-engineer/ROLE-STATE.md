@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapters 1-3 active under `#48`
+- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapters 1-3 locally complete under `#48`, pending coordinator acceptance
 - Last updated: 2026-08-16
 - Last completed issue: `#44` — Phase 07 chapter blueprints
-- Active issue: `#48` — Phase 08 Volume 1 Chapters 1-3
+- Active issue: `#48` — Phase 08 Volume 1 Chapters 1-3, locally complete
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -48,7 +48,8 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
 - Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
 - issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, and `issues/phase-08-v1-chapters-01-03.md`
-- manuscript, companion implementation, generated visuals, publication, PDF, course, and final QA: not started
+- Volume 1 Chapters 1-3 manuscripts, learning/state/QA records, production manifests, and deterministic companion implementation: complete locally
+- generated visuals, remaining manuscripts, final publication, PDF, course, and final QA: not started
 
 ## Completed gates
 
@@ -70,11 +71,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 
 ## Current work
 
-Phase 07 is accepted at `9d9e1c3`: 33/33 production blueprints map all 99 claims, 66 sources, 14 cases, 66 figure records, and continuous MD-01 through MD-16 transitions. Phase 08 parent #46 is open and child #48 is active for Volume 1 Chapters 1-3.
+Phase 07 is accepted at `9d9e1c3`: 33/33 production blueprints map all 99 claims, 66 sources, 14 cases, 66 figure records, and continuous MD-01 through MD-16 transitions. Under Phase 08 child #48, Volume 1 Chapters 1-3 are complete locally: 9,635 manuscript words, 9/9 assigned claims, 6/6 pending PNG anchors, 3 learning/state/QA record sets, 14 rechecked sources, and 12/12 deterministic companion tests. `MD-01` is complete and `MD-02` is opened. Full `npm run check` passes.
 
 ## Unresolved blockers
 
-None. Coordinator acceptance is a workflow gate, not a content blocker. Abhyaas remains intentionally deferred.
+No content blocker. Six raster figure assets remain intentionally pending root ImageGen production; coordinator acceptance is a workflow gate. Abhyaas remains intentionally deferred.
 
 ## Research gaps and volatile evidence
 
@@ -87,14 +88,14 @@ None. Coordinator acceptance is a workflow gate, not a content blocker. Abhyaas 
 
 ## Quality debt
 
-- No manuscript, companion, image prompts, final raster figures, publication, or PDF exists yet.
-- The accepted visual forecast and 66 blueprint figure records are semantic specifications only; no image/vector asset exists.
-- Phase 08 must add manuscript anchors/captions/accessibility text without generating art; later visual production remains ImageGen-only raster.
+- Only Volume 1 Chapters 1-3 have manuscripts; Chapters 4-33 remain unwritten.
+- The first six manuscript anchors and production figure specifications exist, but no image/vector asset exists; later visual production remains ImageGen-only raster.
+- The publication stays draft and is not registered as a launched Komal title; final PDF and publication QA remain future gates.
 
 ## Exact next action
 
-Write and immediately QA Volume 1 Chapters 1-3 under #48, advancing Mosaic Desk through MD-01 and into MD-02. Create PNG figure anchors only; root owns later ImageGen production.
+Coordinator reviews and accepts child #48, then opens the next bounded Phase 08 writing batch. Chapter 4 must continue `MD-02` by comparing candidates against the frozen contract and evidence requirements. Root separately owns ImageGen production for `V1-F01.1` through `V1-F03.2`.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, and `9d9e1c3`, parent #46, active child #48, this state, the first three Volume 1 blueprints/research packs, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in `project-control/roles/llm-engineer/`; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, and `9d9e1c3`, parent #46, child #48, this state, `content/publications/llm-behavior-engineering/production/v1-chapters-01-03-verification.md`, the next accepted blueprints/research packs, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in the LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.

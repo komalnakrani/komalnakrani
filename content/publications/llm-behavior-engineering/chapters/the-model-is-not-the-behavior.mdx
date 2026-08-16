@@ -1,0 +1,267 @@
+---
+title: "The Model Is Not the Behavior"
+slug: "the-model-is-not-the-behavior"
+summary: "Separate a model response from configured system behavior, outcome evidence, and accountable human authority."
+minutes: 65
+sourceIds: ["SRC-006", "SRC-007", "SRC-008", "SRC-009", "SRC-010", "SRC-011", "SRC-052"]
+claimIds: ["CLM-001", "CLM-002", "CLM-003"]
+objectiveIds: ["LLME-K01", "LLME-K12"]
+figureIds: []
+---
+
+## The demo that answered the wrong question
+
+The first Mosaic Desk demonstration is easy to like.
+
+A service coordinator opens a fictional appliance case. The customer says that a washer stops after the rinse cycle. A technician note mentions an intermittent latch. A service bulletin describes a latch inspection. Mosaic Desk returns a neat summary, lists the two observations, and proposes that a qualified reviewer check the bulletin before scheduling work.
+
+The prose is calm. The structure is tidy. The source identifier is visible. Nothing in the example looks reckless.
+
+Someone watching the demonstration asks the question that turns an experiment into a dangerous promise: "If it can read the bulletin, why not let it approve the warranty too?"
+
+That question does not reveal a missing prompt sentence. It reveals a missing system boundary.
+
+The generated response is one observation. It came from a particular input, a particular arrangement of instructions and evidence, a particular model and access path, a particular decoding configuration, and a particular surrounding application. It does not tell us how the system behaves when the appliance identity is missing, when two bulletins conflict, when Gujarati and English appear in the same note, when the relevant attachment is absent, when a source is unauthorized, or when a case contains instructions that try to override the application. It does not establish that the displayed source supports every generated sentence. It certainly does not give the model, the software, or the engineer authority to approve a warranty.
+
+Mosaic Desk is the fictional, synthetic system used across this series. It proposes a structured case summary and possible next steps from synthetic descriptions, technician notes, manuals, bulletins, warranty terms, and parts metadata. It cannot contact a customer, order a part, approve warranty work, make a safety-critical repair decision, or alter a system of record. Human authorities retain those decisions. No example in this book reports a real service network, customer, safety event, quality result, or business outcome.
+
+The demonstration did answer a useful question: can a selected configuration produce an interesting proposal for this prepared case? It did not answer the engineering question: can the configured system exhibit bounded behavior for the intended task, under representative conditions, with evidence strong enough for named people to make their decisions?
+
+That gap is where LLM engineering begins.
+
+## Six things hiding behind one response
+
+When a response appears in a user interface, teams often speak as if "the model" caused and owns everything they see. That shorthand makes design conversations faster, but it makes diagnosis and accountability worse. Separate six objects.
+
+### 1. The response
+
+A **response** is the concrete sequence returned on one run. It is observable evidence, but weak evidence by itself. A response can be copied, compared, parsed, annotated, or rejected. It cannot tell us its own generating conditions unless the surrounding system recorded them.
+
+The prepared Mosaic response is a specimen. It belongs in an evidence set with its input, configuration, timestamp, source bundle, raw output, validation result, and reviewer notes. A screenshot without those conditions is a souvenir, not a reproducible record.
+
+### 2. The model
+
+A **model** is a versioned learned artifact or managed capability used to generate the response. Depending on the access posture, the team may know a provider model identifier, a checkpoint hash, a tokenizer, a model card, a training lineage, or only some subset.
+
+The model influences the response, but it does not supply the whole task. It did not decide which service records were authorized, which instructions were placed first, which fields the application displayed, whether a proposed action was permitted, or what happened after the user clicked.
+
+### 3. The inference configuration
+
+The **inference configuration** includes instructions, message roles, templates, context, decoding settings, output constraints, tool or retrieval state, and provider/runtime options. Change the configuration and the observed behavior may change even when the named model stays constant.
+
+This point is often hidden by a model alias. Two calls to a model with different templates, evidence ordering, or decoding settings are not the same behavior experiment. A managed service may also change behavior behind a stable-looking interface. An open-weight checkpoint can behave differently under a different tokenizer template or runtime. The relevant identity is therefore larger than a model name.
+
+### 4. The deterministic system
+
+The **deterministic system** receives input, selects or retrieves context, validates access, constructs messages, parses output, applies schemas and semantic checks, presents uncertainty, enforces permissions, and controls effects. It is where many guarantees must live.
+
+If Mosaic Desk must never approve a warranty, the application should not expose an approval effect to the model. If every proposal needs a valid evidence reference, software should validate the identifier against the supplied bundle. An instruction that says "do not approve" can reinforce the behavior contract; it is not an authorization control.
+
+### 5. The observed system behavior
+
+**System behavior** is what users and downstream systems can observe across repeated cases and states. It includes what the system proposes, omits, asks, cites, refuses, escalates, delays, records, and does when a dependency fails.
+
+"Produces a good summary" is not yet a behavior claim. "For an authorized synthetic case with the required evidence, the configured system proposes a structured summary that distinguishes observed facts from next-step options, validates every cited source identifier, and routes unresolved warranty or safety decisions to a named reviewer" is closer. It names conditions, output properties, and authority.
+
+### 6. The outcome and its authority
+
+An **outcome** is a consequence in the surrounding workflow. It might concern review effort, resolution time, error rate, access to service, user understanding, safety, cost, or another effect. Outcomes need their own evidence and authorization. They cannot be inferred from polished language.
+
+An engineer can show that a proposal met a defined rubric on a frozen case set. That does not prove that service outcomes improved, that reviewers can handle the workload, or that residual risk is acceptable. Product, domain, safety, privacy, security, legal, and operational authorities make the decisions assigned to them.
+
+The core claim follows: a response is one observation from a configured system, not proof of dependable product behavior. Research on instruction-following models, evaluation frameworks, and iterative model optimization all reinforces the need to state conditions and measure behavior, but none defines Mosaic Desk's complete accountability model for us. That model is an engineering synthesis for this system. [CLM-001]
+
+<figure class="book-figure book-figure--pending" data-figure-id="V1-F01.1" data-image="/assets/publications/llm-behavior-engineering/v1-f01-1-model-system-outcome.png">
+  <div role="img" aria-label="A language model core sits inside layers for configuration, deterministic software, evaluation, users, and authority, ending in an observed outcome.">Pending ImageGen figure V1-F01.1</div>
+  <figcaption><strong>V1-F01.1 - The model is inside the accountable system.</strong> Essential labels: model, system, outcome. The figure separates a learned component from configuration, software, evidence, users, and authority. It illustrates the boundary; it does not measure causal contribution.</figcaption>
+  <details><summary>Long description</summary><p>At the center is a translucent block labeled model. Around it are distinct shells for messages and context, deterministic software and controls, evaluation evidence, the user workflow, and an accountable decision gate. A solid path reaches an observed outcome only after all shells. A dotted path from the model directly to the outcome is labeled unsupported inference.</p></details>
+</figure>
+
+## Observation, inference, and decision
+
+A practical evidence review uses three columns.
+
+| Layer | What belongs here | Mosaic example |
+|---|---|---|
+| Observation | Directly recorded result under named conditions | The response contains source ID `SB-4` and two proposed next steps. |
+| Inference | Interpretation supported to some degree by observations | The instruction and schema may be helping the model separate facts from proposals. |
+| Decision | Action a named owner is authorized to take | Continue a bounded evaluation; do not authorize warranty approval. |
+
+The columns prevent an attractive chain of overstatement.
+
+One response contains a citation. That is an observation. "The model is grounded" is an inference that needs more cases, source-entailment checks, and failure tests. "The feature can make warranty decisions" is a decision that neither the observation nor the inference supports.
+
+The distinction also makes negative evidence useful. Suppose the same configured system sees a Gujarati-English note and omits the uncertainty about the appliance model. The observation does not prove that the model is generally poor at Gujarati, nor that tokenization caused the omission. It identifies a case and a failure worth classifying. The team can add comparable language cases, inspect configuration, and design an experiment. Good engineering narrows claims before it expands them.
+
+## Why evaluation starts now
+
+Many teams postpone evaluation until they have selected a model, refined a prompt, or built retrieval. That sequence encourages local optimization against memorable examples. It also makes the first baseline impossible to reconstruct.
+
+Evaluation begins when the first behavior claim is written. At this stage, evaluation does not mean a large benchmark or a single score. It means attaching an observation method to a claim.
+
+For the Mosaic demo, the first ledger might ask:
+
+- Did the output distinguish observed facts from proposals?
+- Did every factual statement map to supplied evidence?
+- Did missing or conflicting evidence remain visible?
+- Did the output remain proposal-only?
+- Did the application block prohibited effects?
+- Which language and consequence segments have not been tested?
+- What configuration produced the observation?
+
+Those questions can change the design before expensive work accumulates. They also establish the habit of regression. A prompt change, model migration, tokenizer change, or provider update later in the lifecycle should replay relevant evidence rather than rely on a fresh demonstration.
+
+Evaluation must therefore be designed into development because outputs and versions can vary. Provider evaluation tools and current guidance can help implement datasets and runs, but they are replaceable machinery. Their existence does not select Mosaic's case population, define warranty correctness, or prove complete coverage. No evaluation set establishes the absence of every failure. [CLM-002]
+
+This is true for managed and open-weight paths alike. A managed endpoint may hide exact weights or tokenizer details and may offer hosted evaluation features. An open-weight path may expose the checkpoint, tokenizer, template, and runtime. Greater observability helps diagnosis; it does not remove the need for representative cases, uncertainty, or authority.
+
+## Build the responsibility charter
+
+The responsibility charter is the first durable Mosaic artifact. It is not an org chart. It records the system boundary and the decisions that must stay connected.
+
+Start with five passes.
+
+### Pass 1: inventory the path
+
+List every component that can change what the user sees or what the system does:
+
+- input capture and normalization;
+- authorized evidence and context selection;
+- message construction and model adapter;
+- model or checkpoint access;
+- decoding and output constraints;
+- structural and semantic validation;
+- interface wording and uncertainty display;
+- human review and escalation;
+- telemetry, retention, and incident controls;
+- any effect adapter, if one exists.
+
+At this point, Mosaic has no customer-contact, part-order, warranty-approval, or system-of-record mutation adapter. That absence is a deliberate boundary, not unfinished plumbing.
+
+### Pass 2: mark what is observable and configurable
+
+For each component, record what the team can inspect and change.
+
+A managed path may expose a model identifier, request parameters, response metadata, and provider documentation while withholding checkpoint internals. An open-weight path may expose weights, tokenizer files, chat templates, and runtime options, while creating additional packaging, security, capacity, and maintenance responsibilities. Do not write "fully observable" merely because weights are downloadable. Training data, post-training details, numerical kernels, and hardware behavior can remain incomplete or difficult to audit.
+
+Use three values when necessary: yes, no, and partially observable. "Unknown" is a valid engineering result.
+
+### Pass 3: turn assumptions into claims
+
+An assumption becomes manageable when written as something that evidence could challenge.
+
+Weak: "The model follows policy."
+
+Testable: "For the frozen policy-conflict set under configuration C, the system identifies both supplied policy versions, avoids selecting a warranty outcome, and escalates to the warranty authority."
+
+The second statement does not guarantee behavior outside its cases. It does name what to observe.
+
+### Pass 4: attach owners and authorities
+
+The **working owner** drives the artifact, evidence, diagnosis, and recommendation. The **authority** can approve the relevant consequence.
+
+For example:
+
+| Decision | Working owner | Required authority |
+|---|---|---|
+| Define proposal schema and evidence trace | LLM Engineer with application engineer | Product owner for workflow fit |
+| Define authoritative warranty interpretation | Domain specialist | Warranty policy authority |
+| Approve collection and retention of case content | Engineering supplies purpose and data flow | Privacy/legal authority |
+| Define threat controls and residual security risk | Security engineering with application team | Security authority |
+| Operate model-serving capacity | Platform/SRE | Service owner |
+| Approve release scope | LLM Engineer supplies behavior evidence | Named release and product authorities |
+
+One person can occupy several roles in a small organization. The fields should still remain separate. A person who wrote the prompt should know when they are acting as an engineer and when they are exercising a separately assigned domain or release authority.
+
+### Pass 5: record unresolved ownership
+
+An unresolved owner is not a minor administrative gap. If nobody can say which bulletin controls a conflict, no amount of prompt optimization can make the system's warranty proposal authoritative. Record the gap, narrow the system, and escalate it.
+
+The companion charter keeps four such questions visible: privacy purpose and retention, security threat acceptance, warranty policy interpretation, and release priority. Later chapters may resolve them, but they cannot silently disappear.
+
+## A workbench, not one heroic owner
+
+LLM systems touch many professional boundaries. The durable approach is a shared workbench with explicit stations.
+
+- **LLM behavior:** prompt, context, model access, generation, adaptation evidence, and behavior-facing release gates.
+- **Applied AI product system:** broader product behavior and integration across learned components.
+- **Agent effects:** delegated tool use, durable action, recovery, and trajectory evidence. Mosaic is not an autonomous agent.
+- **Machine learning engineering:** model/data lifecycle and predictive systems beyond the specific language-model scope.
+- **AI Research:** new capabilities and research claims.
+- **Platform, SRE, and MLOps:** shared serving, capacity, reliability, training infrastructure, and operational mechanisms.
+- **Evaluation specialists:** measurement design and evaluator validity where deeper specialization is needed.
+- **Product and domain:** priority, workflow, consequence, and authoritative truth.
+- **Privacy, legal, security, and safety:** the formal decisions and controls assigned to those functions.
+- **FDE or customer delivery:** customer-embedded discovery, deployment, adoption, and handoff when that role exists.
+
+The LLM Engineer does not become passive at a boundary. If a missing privacy decision blocks evaluation data, the engineer describes the intended use, data flow, minimization options, and technical consequence. If a domain definition is missing, the engineer supplies counterexamples and shows which claims cannot be evaluated. Continuous technical accountability means driving the evidence to the right decision, not taking every decision right.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V1-F01.2" data-image="/assets/publications/llm-behavior-engineering/v1-f01-2-role-boundary-workbench.png">
+  <div role="img" aria-label="A shared LLM workbench has separate stations for behavior engineering, agent effects, platform operations, assurance, product, and domain authority.">Pending ImageGen figure V1-F01.2</div>
+  <figcaption><strong>V1-F01.2 - One workbench, distinct decision rights.</strong> Essential labels: behavior, agent effects, platform, assurance. The stations share evidence while the human authority gate remains separate. The figure is an ownership aid, not an organizational standard.</figcaption>
+  <details><summary>Long description</summary><p>A central case dossier rests on a table. Separate stations around it are labeled behavior, agent effects, platform, and assurance. Additional unlabeled human stations represent product and domain owners. Lines carry evidence between stations, but only the human decision gate can authorize a consequential outcome. No station is shown as universally superior.</p></details>
+</figure>
+
+## The warranty-approval failure injection
+
+Return to the stakeholder request: let Mosaic approve warranties.
+
+Use the request as a boundary test.
+
+1. **Name the proposed effect.** A warranty status would change or become represented as approved.
+2. **Name the evidence required.** Authoritative terms, case facts, policy version, eligibility rules, exceptions, and an evaluation population would be needed.
+3. **Name the uncertain layers.** Evidence could be missing, language could be ambiguous, policies could conflict, and the model could generate unsupported reasoning.
+4. **Name deterministic controls.** The system must not expose approval authority to generated text. Source identifiers and output fields require validation.
+5. **Name human authority.** A designated warranty authority decides whether and how approval can occur.
+6. **Name the current decision.** Keep Mosaic proposal-only; create an escalation state rather than an approval field.
+
+The prompt-injection risk pattern sharpens the boundary. Untrusted case text can contain instructions that compete with the application's intended control path. Separating instructions from data, minimizing privileges, validating outputs, and retaining human authority are useful controls. They do not guarantee prevention, and they do not make the LLM Engineer the security authority. Mosaic's example is constructed; it is not a reported incident or a measured control outcome.
+
+Technical controls and documentation help organize and enforce parts of the boundary, but they do not transfer formal domain or risk authority. NIST's generative AI profile is voluntary cross-sector guidance, and model cards are a transparency practice. Neither approves Mosaic Desk. Organization-specific decision rights must be recorded locally. [CLM-003]
+
+## The evidence ledger skeleton
+
+Chapter 1 ends with a ledger, not a confidence score.
+
+Each row contains:
+
+| Field | Question |
+|---|---|
+| Claim ID | What exactly are we asserting? |
+| Scope | For which task, cases, languages, versions, and conditions? |
+| Configuration | Which model access, instructions, context, decoding, software, and evaluator produced the evidence? |
+| Method | How was the observation collected and judged? |
+| Result | What happened, including disagreement and failure? |
+| Limitation | What does the method not establish? |
+| Working owner | Who maintains the artifact and drives diagnosis? |
+| Authority | Who can make the consequential decision? |
+| Disposition | Retain, revise, reject, narrow, escalate, or investigate? |
+| Recheck trigger | Which change invalidates the evidence? |
+
+The first Mosaic ledger has no production metrics. It records the demo, its missing cases, the proposal-only boundary, the prohibited effects, and unresolved authorities. That is honest progress. A fabricated reliability percentage would make the artifact look mature while weakening it.
+
+## Practice: turn a demo into an evidence question
+
+Take this statement: "Mosaic gives accurate, safe service recommendations."
+
+Rewrite it without the adjectives.
+
+One possible decomposition is:
+
+- For a named synthetic case set, does the configured system distinguish supplied facts from proposed next steps?
+- Does every factual field cite a source record that was actually supplied?
+- Does the system abstain or escalate when appliance identity, required evidence, or authority is missing?
+- Does deterministic software prevent generated output from approving warranties or initiating effects?
+- Which language and consequence segments are represented, and which are absent?
+
+Now create a charter row for each question. Attach a proposed method, limitation, working owner, authority, and recheck trigger. If a row has no credible authority or evidence method, narrow the task rather than filling the cell with confidence.
+
+Pass the exercise only when another reviewer can point to every consequential claim and answer four questions: what was observed, what was inferred, who maintains the evidence, and who may decide.
+
+## The handoff to the task contract
+
+The `MD-01` responsibility charter now establishes four invariants.
+
+First, Mosaic Desk is proposal-only. Second, generated language cannot authorize effects. Third, behavior claims belong to a complete versioned configuration and a defined case population. Fourth, formal decisions remain with named human authorities.
+
+What the charter does not yet specify is the language task itself. "Summarize a case" remains too vague. Chapter 2 will define inputs, outputs, behavior states, evidence requirements, non-goals, segments, failure behavior, judges, and escalation. The charter tells us who owns those decisions. The task contract will make them testable.

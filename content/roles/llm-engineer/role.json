@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "slug": "llm-engineer",
+  "title": "LLM Engineer",
+  "summary": "An engineer who turns language-model behavior into explicit, measurable, adaptable, and operable systems while preserving evidence and authority boundaries.",
+  "status": "draft",
+  "boundary": {
+    "includes": [
+      "Define language-task contracts and engineer prompts, context, retrieval, structured output, evaluation, adaptation, and inference evidence.",
+      "Diagnose language-model-system behavior across managed and open-weight paths and preserve behavior-facing release and change gates.",
+      "Prepare technical evidence and limitations while routing product, domain, legal, privacy, security, safety, platform, and formal decisions to named authorities."
+    ],
+    "excludes": [
+      "Set product priority, domain truth, legal or licensing interpretation, privacy approval, security architecture, or formal safety and risk acceptance.",
+      "Own shared MLOps and platform infrastructure, frontier model research, customer-embedded delivery, or autonomous-agent orchestration by default.",
+      "Treat a fluent response, benchmark, model card, schema, or operational metric as sufficient proof of product fitness."
+    ]
+  },
+  "competencies": [
+    {"id":"LLME-C01","title":"Language tasks and behavior contracts","description":"Specify language tasks, consequences, states, limits, and authority as measurable contracts.","objectives":[{"id":"LLME-K01","statement":"Define task, consequence, output, uncertainty, non-goals, abstention, escalation, authority, and measurable claims."}]},
+    {"id":"LLME-C02","title":"Transformer and token literacy","description":"Use model mechanisms at engineering depth without claiming research or interpretability authority.","objectives":[{"id":"LLME-K02","statement":"Use transformer, token, context, and generation mechanisms to predict engineering consequences and design tests."}]},
+    {"id":"LLME-C03","title":"Model and access selection","description":"Select managed, hosted, open-weight, adapted, or hybrid paths using task evidence and constraints.","objectives":[{"id":"LLME-K03","statement":"Compare model and access postures using representative behavior, control, cost, privacy, and lifecycle evidence."}]},
+    {"id":"LLME-C04","title":"Prompt and context interfaces","description":"Engineer versioned instructions, messages, decoding, output schemas, validation, and context budgets.","objectives":[{"id":"LLME-K04","statement":"Build prompt, message, structured-output, validation, and context interfaces with explicit failure behavior."}]},
+    {"id":"LLME-C05","title":"Retrieval and grounding","description":"Build attributable retrieval, reranking, context assembly, and empty-evidence behavior.","objectives":[{"id":"LLME-K05","statement":"Engineer retrieval, reranking, provenance, permission, freshness, citation, conflict, and grounding evidence."}]},
+    {"id":"LLME-C06","title":"Language-model evaluation","description":"Construct representative cases, error taxonomies, calibrated judgments, and regression gates.","objectives":[{"id":"LLME-K06","statement":"Create representative evaluations, segmented judgments, error taxonomies, experiments, and release dispositions."}]},
+    {"id":"LLME-C07","title":"Language data and adaptation evidence","description":"Build traceable data recipes, baselines, partitions, and adaptation experiments.","objectives":[{"id":"LLME-K07","statement":"Construct reproducible language data and adaptation evidence with provenance, separation, retention, and limitations."}]},
+    {"id":"LLME-C08","title":"Post-training methods","description":"Select and assess supervised, parameter-efficient, preference, distillation, or continued-pretraining methods.","objectives":[{"id":"LLME-K08","statement":"Choose and execute the smallest justified post-training method while preserving target and protected behavior evidence."}]},
+    {"id":"LLME-C09","title":"Inference and operational quality","description":"Connect behavior to memory, latency, throughput, capacity, cost, observability, and recovery.","objectives":[{"id":"LLME-K09","statement":"Qualify inference and operational behavior under workload, resource, fallback, and recovery constraints."}]},
+    {"id":"LLME-C10","title":"Responsible controls and authority","description":"Implement technical controls without absorbing formal decision rights.","objectives":[{"id":"LLME-K10","statement":"Implement and test privacy, security, safety, misuse, provenance, governance, and human-authority controls."}]},
+    {"id":"LLME-C11","title":"Release and change","description":"Release, diagnose, migrate, roll back, and learn through model-system change.","objectives":[{"id":"LLME-K11","statement":"Bound releases, diagnose incidents, replay evidence, migrate models and runtimes, and preserve rollback and limitations."}]},
+    {"id":"LLME-C12","title":"Model-system leadership","description":"Set evidence standards and coordinate specialist decisions without collapsing authority.","objectives":[{"id":"LLME-K12","statement":"Lead model-system evidence and tradeoff decisions while preserving specialist and formal authority boundaries."}]}
+  ]
+}

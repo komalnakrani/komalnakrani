@@ -1,0 +1,21 @@
+{
+  "id": "MD-01-RESPONSIBILITY",
+  "version": "0.1.0",
+  "system": "Mosaic Desk",
+  "fictional": true,
+  "taskStatus": "proposal-only",
+  "components": [
+    {"id":"input","kind":"application","observable":true,"configurable":true,"owner":"application engineering"},
+    {"id":"context","kind":"evidence interface","observable":true,"configurable":true,"owner":"LLM engineering"},
+    {"id":"model","kind":"language model","observable":"partial","configurable":"path-dependent","owner":"LLM engineering"},
+    {"id":"validator","kind":"deterministic control","observable":true,"configurable":true,"owner":"application engineering"},
+    {"id":"human-gate","kind":"authority","observable":true,"configurable":false,"owner":"service-domain authority"}
+  ],
+  "claims": [
+    {"id":"RC-01","statement":"The system can emit a proposed structured case summary.","scope":"synthetic fixtures and named configuration only","evidence":["schema fixture","case replay"],"limitation":"Does not establish correctness or production reliability.","workingOwner":"LLM engineering","authority":"product owner"},
+    {"id":"RC-02","statement":"Evidence references must identify supplied source records.","scope":"proposal fields","evidence":["deterministic validator"],"limitation":"A valid reference does not prove the source is correct.","workingOwner":"LLM engineering","authority":"service-domain authority"},
+    {"id":"RC-03","statement":"Mosaic Desk cannot approve warranty or safety-critical repair decisions.","scope":"all states","evidence":["prohibited-effect tests","human gate"],"limitation":"Organizational enforcement requires the application and operating process.","workingOwner":"application engineering","authority":"service-domain authority"},
+    {"id":"RC-04","statement":"Mosaic Desk cannot contact a customer, order a part, or mutate a system of record.","scope":"all states","evidence":["absence of effect adapters","interface tests"],"limitation":"Future integrations require renewed authorization and threat review.","workingOwner":"application engineering","authority":"product and security authorities"}
+  ],
+  "unresolvedOwners": ["privacy purpose and retention","security threat acceptance","warranty policy interpretation","release priority"]
+}
