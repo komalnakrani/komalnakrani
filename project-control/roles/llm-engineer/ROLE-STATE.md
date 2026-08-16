@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 2 Chapters 10-12 locally complete under `#68`
+- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 2 Chapters 13-15 locally complete under `#70`
 - Last updated: 2026-08-16
-- Last completed issue: `#67` — Phase 08 Volume 2 Chapters 7-9, accepted at `1a828a8`
-- Active issue: `#68` — Phase 08 Volume 2 Chapters 10-12, locally complete pending coordinator acceptance
+- Last completed issue: `#68` — Phase 08 Volume 2 Chapters 10-12, accepted at `73964d2`
+- Active issue: `#70` — Phase 08 Volume 2 Chapters 13-15, locally complete pending coordinator acceptance
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -47,13 +47,14 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - chapter blueprints: 33 files in `books/llm-engineering/blueprints/`
 - Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
 - Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
-- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, Volume 1 child bodies, and Volume 2 child bodies through Chapters 10-12
+- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, Volume 1 child bodies, and Volume 2 child bodies through Chapters 13-15
 - Volume 1 Chapters 1-16, all records, full deterministic companion, and hostile whole-volume verification: accepted at `fce705f`
 - Volume 2 Chapters 1-3, learning/state/QA, production records, and MD-09 deterministic companion: accepted at `f47fb54`
 - Volume 2 Chapters 4-6 and MD-10/instruction-data artifacts: accepted at `599972a`
 - Volume 2 Chapters 7-9, records, completed MD-11, and blocked MD-12 experiment: accepted at `1a828a8`
-- Volume 2 Chapters 10-12, records, deterministic MD-12 comparison, and MD-13 preference rejection: locally complete under `#68`
-- generated visuals, Volume 2 Chapters 13-17, final publication, PDF, course, and final QA: not started
+- Volume 2 Chapters 10-12, records, deterministic MD-12 comparison, and MD-13 preference rejection: accepted at `73964d2`
+- Volume 2 Chapters 13-15, MD-13 advanced-method rejection, blocked MD-14 package, and MD-15 workload plan: locally complete under `#70`
+- generated visuals, Volume 2 Chapters 16-17, final publication, PDF, course, and final QA: not started
 
 ## Completed gates
 
@@ -75,11 +76,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 
 ## Current work
 
-Volume 1 and Volume 2 Chapters 1-9 are accepted through `1a828a8`. Chapters 10-12 add 3,630 words, nine exact claims, six pending anchors, three learning/state/QA sets, and 12 deterministic tests. No-tune, SFT, PEFT, and preference candidates are compared through common target, retention, language, control, resource, and compatibility evidence. The actual run remains blocked; simulated loss-only, protected-regression, and proxy-only candidates are rejected. Series total is 66,354 words, 84 exact claims, 56 pending anchors, and 112/112 LLM tests.
+Volume 1 and Volume 2 Chapters 1-12 are accepted through `73964d2`. Chapters 13-15 add 2,986 words, nine exact claims, six pending anchors, three learning/state/QA sets, and 12 deterministic tests. Advanced methods are rejected, the package remains blocked, and capacity evidence is workload-specific and synthetic. Series total is 69,340 words, 93 exact claims, 62 pending anchors, and 124/124 LLM tests.
 
 ## Unresolved blockers
 
-No manuscript blocker. Fifty-six cumulative raster figure assets remain intentionally pending root ImageGen production. Volume 2 Chapter 13 must not start until root accepts `#68`. Abhyaas remains intentionally deferred.
+No manuscript blocker. Sixty-two cumulative raster figure assets remain intentionally pending root ImageGen production. Volume 2 Chapter 16 must not start until root accepts `#70`. Abhyaas remains intentionally deferred.
 
 ## Research gaps and volatile evidence
 
@@ -92,14 +93,14 @@ No manuscript blocker. Fifty-six cumulative raster figure assets remain intentio
 
 ## Quality debt
 
-- Volume 1 has all sixteen manuscripts and a hostile whole-volume verification; Volume 2 Chapters 1-12 are drafted and Chapters 13-17 remain unwritten.
-- All fifty-six current manuscript anchors and production figure specifications exist, but no image/vector asset exists; visual production remains ImageGen-only raster.
+- Volume 1 has all sixteen manuscripts and a hostile whole-volume verification; Volume 2 Chapters 1-15 are drafted and Chapters 16-17 remain unwritten.
+- All sixty-two current manuscript anchors and production figure specifications exist, but no image/vector asset exists; visual production remains ImageGen-only raster.
 - The publication stays draft and is not registered as a launched Komal title; final PDF and publication QA remain future gates.
 
 ## Exact next action
 
-Wait for coordinator acceptance of `#68`; do not start Volume 2 Chapter 13 beforehand. Chapter 13 must inherit the explicit preference rejection, remaining-error ledger, blocked compatibility, and no-training-outcome boundary.
+Wait for coordinator acceptance of `#70`; do not start Volume 2 Chapter 16 beforehand. Chapter 16 must inherit the blocked exact package and workload-specific capacity plan.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits through `1a828a8`, parent #46, child #68, this state, Volume 2 Chapters 1-12, MD-12 simulations, and MD-13 rejection. Inspect git status. Do not start Chapter 13 without root acceptance. Work only in LLM paths; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits through `73964d2`, parent #46, child #70, this state, Volume 2 Chapters 1-15, MD-13 rejection, blocked MD-14 package, and MD-15 workload plan. Inspect git status. Do not start Chapter 16 without root acceptance. Work only in LLM paths; do not edit shared factory state, another role, git state, or Abhyaas.

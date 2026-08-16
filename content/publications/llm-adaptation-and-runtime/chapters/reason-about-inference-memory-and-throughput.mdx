@@ -1,0 +1,78 @@
+---
+title: "Reason About Inference Memory and Throughput"
+slug: "reason-about-inference-memory-and-throughput"
+summary: "Build a workload-specific resource model that separates weights, KV state, prefill, decode, concurrency, throughput, and latency tails."
+minutes: 115
+sourceIds: ["SRC-050", "SRC-054", "SRC-055", "SRC-058", "SRC-059", "SRC-060", "SRC-062"]
+claimIds: ["CLM-043", "CLM-044", "CLM-045"]
+objectiveIds: ["LLME-K02", "LLME-K09", "LLME-K12"]
+figureIds: []
+---
+
+## Capacity starts with a workload
+
+MD-15 receives a blocked package, so Mosaic builds a deterministic worksheet and synthetic queue trace only. Define short-message, long-thread, and burst classes; input/output distributions; arrival and concurrency; streaming, TTFT, inter-token and end-to-end budgets; cache/privacy rules; errors; and behavior constraints.
+
+Inference memory includes weights plus runtime state such as KV cache whose size depends on model, sequence, precision, and batch or concurrency. [CLM-043] Add activations, workspaces, allocator fragmentation, graph/communication buffers, adapter state, and safety margin.
+
+For a simplified decoder, KV bytes depend on active sequences, retained tokens, layers, key/value factor, KV heads, head dimension, and bytes per element. Architecture, grouping, paging, quantization, and prefix reuse change the result. Expose every factor and validate peak memory on the exact stack.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F15.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f15-1-inference-memory-warehouse.png">
+  <div role="img" aria-label="Finite shelves hold weights, workspace, activations, KV cache, adapter state, and safety margin while concurrent sequences consume cache blocks.">Pending ImageGen figure V2-F15.1</div>
+  <figcaption><strong>V2-F15.1 - Weights share memory with growing request state.</strong> Essential labels: weights, workspace, activations, KV, adapter, margin, concurrency. Supports CLM-043 and CLM-045.</figcaption>
+  <details><summary>Long description</summary><p>A realistic memory warehouse fills with fixed weight crates and growing KV blocks for short and long sequences.</p></details>
+</figure>
+
+## Separate prefill, decode, and user-visible tails
+
+Prefill processes context and creates request state; decode repeatedly produces tokens while reading growing state. Time to first token exposes queueing and prefill. Inter-token latency exposes decode cadence. End-to-end latency also depends on output length.
+
+Prefill and decode have different compute and memory behavior, and batching, caching, and routing alter throughput and tail latency. [CLM-044] Report prompt/output throughput, completed requests, TTFT, inter-token, end-to-end latency, cancellations, timeouts, and errors separately. Preserve p50, p95, and p99 per workload class with sample counts; averages hide bursts.
+
+Warm and cold runs answer different questions. Record load, compilation, cache, allocator, repeated prompts, package, hardware, runtime, and order.
+
+## Batching can win throughput and lose interaction
+
+Waiting to batch raises queue delay even when utilization improves. Paged KV, continuous batching, chunked prefill, and prefix caching change the frontier under particular stacks. Published PagedAttention throughput is not portable.
+
+The fixture compares interactive-small-batch and throughput-large-batch. The larger batch completes more synthetic tokens per unit but breaches p99 TTFT during bursts, so it is rejected for interactive routing.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F15.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f15-2-scheduling-tail-tradeoff.png">
+  <div role="img" aria-label="Short, long, and burst arrivals enter batching and cache scheduling; a larger batch raises throughput while p99 TTFT crosses the interactive limit.">Pending ImageGen figure V2-F15.2</div>
+  <figcaption><strong>V2-F15.2 - Utilization can lengthen a user-visible tail.</strong> Essential labels: arrivals, batch, cache, TTFT, throughput, p99 tail, limit. Supports CLM-044; trace is synthetic.</figcaption>
+  <details><summary>Long description</summary><p>A colorful scheduler fills a throughput gauge while its burst tail crosses a marked interactive limit.</p></details>
+</figure>
+
+## Keep performance evidence causal and bounded
+
+Hold package/workload fixed while varying one choice. Sweep concurrency and capture queue, prefill, decode, post-processing, peak memory, cache occupancy, batch composition, token counts, cancellations, and failures.
+
+Task-level capacity models should record hardware, runtime, and configuration and escalate kernel or platform work to adjacent specialists. [CLM-045] Precision, kernels, sharding, parallelism, topology, scheduler, and compiler behavior require target-hardware validation. FlashAttention and FSDP explain mechanisms, not universal multipliers.
+
+LLM engineering owns workload definitions, behavior constraints, package identity, and user-visible interpretation. Platform/SRE owns fleet capacity and reliability; kernel specialists own low-level optimization. Managed paths expose client-observed behavior and declared limits, not hidden hardware or schedulers.
+
+The companion records an explicit memory formula, three workloads, two synthetic traces, percentiles, hard budgets, and specialist handoff. modelExecuted and benchmarkExecuted remain false.
+
+## Turn budgets into a load plan
+
+The load plan crosses three request classes with warm and cold state, low-to-burst arrival rates, and bounded concurrency steps. Each cell records scheduled and completed requests, prompt/output tokens, queue time, prefill time, per-token decode intervals, end-to-end duration, memory high-water mark, cache occupancy, batch sizes, cancellation, timeout, and error reason. Raw traces retain package and configuration identity without retaining sensitive prompts.
+
+Begin below expected capacity, then raise one dimension at a time until a declared limit, not until the server crashes. Stop on out-of-memory, invalid output, behavior drift, timeout budget, unstable tail, or measurement corruption. Recovery between cells restores a known warm or cold state. Capacity is the region that repeatedly satisfies all applicable constraints, not the single highest completed sample.
+
+Use Little's Law only when its assumptions and units fit the observed stable interval; do not paste queueing formulas over bursty or overloaded traces. Report offered load separately from completed throughput. A system that drops requests can appear fast if only successful completions are timed.
+
+## Keep quality coupled to serving choices
+
+Truncation, prefix reuse, quantization, speculative decoding, batching, and parallel execution can alter behavior or its evidence. The benchmark therefore replays frozen target, citation, abstention, language, schema, and control cases for each serving candidate. A capacity winner that changes contract behavior is rejected before cost comparison.
+
+Speculative decoding evidence is bounded to draft/target pairing and acceptance behavior. Quantization support is bounded to the exact model, layers, calibration, kernels, hardware, and runtime. vLLM and TensorRT-LLM documentation describe fast-moving implementations. Record versions and remeasure instead of importing a headline.
+
+## Produce a specialist-ready handoff
+
+When p99 TTFT or memory fails, hand platform and kernel specialists the smallest reproducible package identity, workload generator, trace, hardware/runtime configuration, expected contract, failure threshold, and one-variable experiment. Do not prescribe a kernel rewrite from an application trace. Specialists return measured alternatives and new constraints for behavior replay.
+
+For the managed comparator, the same load distribution and client timing boundaries apply, but internal memory and scheduling remain unknown. Compare observable service behavior, quotas, errors, cost, and change controls without pretending equivalence to open-weight internals.
+
+### Practice
+
+Calculate the KV ledger and reject the headline throughput configuration that violates p99 TTFT. Pass when workload, package, hardware, runtime, warm state, tails, errors, behavior constraints, and authority are visible.

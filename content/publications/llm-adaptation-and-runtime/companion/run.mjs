@@ -11,6 +11,9 @@ import {auditTrainingExperiment} from "./lib/training-experiment.mjs";
 import {auditSftSimulation} from "./lib/sft-supervision.mjs";
 import {auditPeftSimulation} from "./lib/peft-adaptation.mjs";
 import {auditPreferenceSimulation} from "./lib/preference-optimization.mjs";
+import {auditAdvanced} from "./lib/advanced-method-decision.mjs";
+import {auditPackage} from "./lib/model-system-package.mjs";
+import {auditCapacity} from "./lib/inference-capacity.mjs";
 async function load(path){return JSON.parse(await readFile(new URL(path,import.meta.url)));}
 const result = {
   baseline:auditFrozenBaseline(await load("./md09/mosaic-frozen-adaptation-baseline.json")),
@@ -24,7 +27,10 @@ const result = {
   trainingExperiment:auditTrainingExperiment(await load("./md12/mosaic-training-experiment.json")),
   sftSimulation:auditSftSimulation(await load("./md12/mosaic-sft-checkpoint-simulation.json")),
   peftSimulation:auditPeftSimulation(await load("./md12/mosaic-peft-candidate-simulation.json")),
-  preferenceSimulation:auditPreferenceSimulation(await load("./md13/mosaic-preference-optimization-simulation.json"))
+  preferenceSimulation:auditPreferenceSimulation(await load("./md13/mosaic-preference-optimization-simulation.json")),
+  advancedDecision:auditAdvanced(await load("./md13/mosaic-advanced-method-decision.json")),
+  modelPackage:auditPackage(await load("./md14/mosaic-model-system-package.json")),
+  inferenceCapacity:auditCapacity(await load("./md15/mosaic-inference-capacity-simulation.json"))
 };
 console.log(JSON.stringify(result,null,2));
 if (Object.values(result).some((part)=>part.errors.length)) process.exitCode=1;

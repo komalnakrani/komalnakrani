@@ -1,0 +1,74 @@
+---
+title: "Package and Version the Model System"
+slug: "package-and-version-the-model-system"
+summary: "Bind every behavior-facing component, lineage link, compatibility result, limitation, and rollback state into one fail-closed release identity."
+minutes: 110
+sourceIds: ["SRC-008", "SRC-013", "SRC-015", "SRC-018", "SRC-041", "SRC-052", "SRC-053", "SRC-062"]
+claimIds: ["CLM-040", "CLM-041", "CLM-042"]
+objectiveIds: ["LLME-K07", "LLME-K09", "LLME-K10", "LLME-K11"]
+figureIds: []
+---
+
+## A checkpoint is not a model system
+
+MD-14 receives simulated peft-r8-attn only as a packaging exercise. No adapter bytes exist and template compatibility remains blocked. A trustworthy manifest must preserve that state.
+
+Deployable identity must bind base or checkpoint, tokenizer and template, adapter, configuration, schema, runtime, provenance and license facts, and integrity metadata. [CLM-040] Inventory base revision and digest; tokenizer and special tokens; exact template and golden serialization; adapter configuration and merge state; generation defaults and schema; dtype, quantization, runtime, hardware and lock; data/training/evaluation lineage; rights facts, limitations, owners, promotion and rollback.
+
+Use content identities, not final-v2 filenames. Every digest names algorithm and object scope. Missing artifacts remain absent and never receive pretend hashes.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F14.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f14-1-model-system-crate.png">
+  <div role="img" aria-label="One versioned crate contains separately labeled base, tokenizer, template, adapter, configuration, schema, runtime, license, evidence, and hash compartments.">Pending ImageGen figure V2-F14.1</div>
+  <figcaption><strong>V2-F14.1 - Release identity spans the behavior-facing system.</strong> Essential labels: base, tokenizer, template, adapter, config, schema, runtime, license, evidence, hash. Supports CLM-040 and CLM-041.</figcaption>
+  <details><summary>Long description</summary><p>A colorful realistic crate has fitted compartments for every system component; the adapter slot is marked absent.</p></details>
+</figure>
+
+## Trace claims to sources
+
+Lineage runs from MD-09 hypothesis and inspection through MD-10 data, MD-11 learning evidence, MD-12 plan/simulations, and MD-13 rejection. It answers which records could influence a candidate, which renderer/mask would be used, which run produced it, and which evidence permits promotion. Here the run is none, so package status is blocked-plan-only.
+
+Managed dependencies retain provider, dated endpoint/model ID, API/schema, region posture, options, evaluation snapshot, and fallback. Hidden tokenizer, weights, kernels, and topology are not invented.
+
+## Verify combinations before load
+
+Compatibility checks base/config digests, tokenizer/embedding assumptions, special-token behavior, template family and golden serialization, adapter base/targets/rank/dtype/quantization, merge state, schema/stops/defaults, and runtime support.
+
+The failure injection supplies a validly hashed adapter with the wrong tokenizer and old template. Integrity passes; compatibility stops before load. A second fixture has the right tuple but no adapter artifact. It remains incomplete.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F14.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f14-2-compatibility-lock.png">
+  <div role="img" aria-label="Matched base, tokenizer, template, adapter, and runtime keys open a lock while a validly hashed mismatched combination stops.">Pending ImageGen figure V2-F14.2</div>
+  <figcaption><strong>V2-F14.2 - Integrity cannot substitute for compatibility.</strong> Essential labels: match, mismatch, hash, compatibility, stop. Supports CLM-042.</figcaption>
+  <details><summary>Long description</summary><p>A three-dimensional lock accepts a correctly shaped component chain while a shiny wrong-tokenizer key hits a mechanical stop.</p></details>
+</figure>
+
+## Cards disclose; authorities decide
+
+Model cards document intended use, evaluation, and limitations but do not approve deployment. [CLM-041] Mosaic's card states the fictional evidence, non-executable package, template failure, protected suites, rejected candidates, excluded uses, untested segments, maintenance triggers, and required authorities.
+
+Legal interprets licenses. Security owns supply-chain controls. Platform owns registries and promotion. Product, domain, and language authorities own fit and consequence. Packaging completeness grants none of these approvals.
+
+Artifact format and checksums improve integrity and handling but do not prove provenance or behavioral compatibility. [CLM-042] Safe serialization can reduce executable deserialization surfaces; it cannot make malicious, mislicensed, or unsuitable weights trustworthy. Verify provenance and digests at acquisition, storage, promotion, and load, then replay behavior fixtures.
+
+Rollback restores the prior complete package: weights, tokenizer, template, schema, defaults, runtime binding, and routing. The companion inventories components, binds lineage, rejects three mismatches, and sets promotion to blocked-missing-artifact-and-template-compatibility.
+
+## Make promotion a state machine
+
+A package moves through explicit states: inventory-incomplete, integrity-verified, compatibility-verified, behavior-evidence-complete, authority-reviewed, release-candidate, staged, and released. Skipping a state is invalid. A failed check returns to a named earlier state or rejects the package; it does not receive a verbal exception hidden in notes.
+
+For Mosaic, base and tokenizer digests are synthetic teaching identities, the adapter is absent, and training-versus-serving templates conflict. The state machine therefore stops at inventory-incomplete and compatibility-blocked. It cannot be called a release candidate even though the JSON schema validates.
+
+Compatibility fixtures include golden serialization of a normal dialogue, system control, tool-shaped data, empty/long inputs, Gujarati-English shorthand, stop-token behavior, padding, and structured output. Replay compares exact bytes where deterministic and semantic contract outcomes where runtime variation is expected. Tolerances must be declared before comparison.
+
+The adapter-lineage case is bounded: LoRA and PEFT research motivates binding adapter and base, but no paper proves this fictional package. The lifecycle case shows that managed APIs and schemas change; it supports dated identities and migration evidence, not permanence.
+
+## Write a useful change card
+
+The change card answers what changed, why, from which evidence, who is affected, which cases improved or regressed, what resources changed, which limits remain, and how to detect and recover from failure. It links raw cases and rejected candidates rather than presenting only a winning score.
+
+Known limitations are actionable: template incompatibility blocks execution; no adapter bytes or training run exist; language evidence is finite and synthetic; provider internals are unavailable; safety, legal, privacy, domain, and production approval are absent. Each limitation names an owner or revisit condition without implying that the LLM engineer owns every resolution.
+
+Rollback verification checks that the prior package can still resolve, load in its compatible environment, replay critical fixtures, and reclaim routing without ambiguous mixed state. Registry implementation, signing infrastructure, access policy, and disaster recovery remain platform/security depth; the package declares the evidence contract those systems must preserve.
+
+### Practice
+
+Verify the manifest and diagnose wrong base, wrong tokenizer/template, and missing adapter. Pass when integrity, provenance, compatibility, behavior evidence, approval, and rollback stay separate.
