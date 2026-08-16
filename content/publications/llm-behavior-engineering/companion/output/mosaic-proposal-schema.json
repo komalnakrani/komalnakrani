@@ -1,0 +1,25 @@
+{
+  "id": "MD-03-PROPOSAL-SCHEMA",
+  "version": "0.1.0",
+  "fictional": true,
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "caseId", "traceId", "state", "observations", "nextSteps", "uncertainty"],
+  "properties": {
+    "schemaVersion": {"type":"string","const":"0.1.0"},
+    "caseId": {"type":"string"},
+    "traceId": {"type":"string"},
+    "state": {"type":"string","enum":["required","uncertain","abstain","escalate","degraded"]},
+    "observations": {"type":"array"},
+    "nextSteps": {"type":"array"},
+    "uncertainty": {"type":"array"},
+    "escalation": {"type":["object","null"]}
+  },
+  "itemContract": {
+    "observations": ["text", "evidenceRefs"],
+    "nextSteps": ["proposal", "evidenceRefs"],
+    "uncertainty": ["reason", "missingOrConflictingRefs"]
+  },
+  "prohibitedEffectFields": ["warrantyApproved", "customerContacted", "partOrdered", "repairAuthorized", "recordMutation"],
+  "authority": "Every conforming object remains an untrusted proposal for deterministic validation and authorized human review."
+}

@@ -5,6 +5,9 @@ import { traceMessage } from "./lib/token-trace.mjs";
 import { eligibleCandidates, validateAccessDecision } from "./lib/access-decision.mjs";
 import { baselineIdentity, validateBaseline } from "./lib/baseline.mjs";
 import { messageIdentity, renderSemanticBundle, validateMessageBoundary } from "./lib/message-boundary.mjs";
+import { validateProposal } from "./lib/proposal-validator.mjs";
+import { packContext } from "./lib/context-packer.mjs";
+import { eligibleUnits, validateRetrievalQuestion } from "./lib/retrieval-question.mjs";
 
 const load = async (relative) => JSON.parse(await readFile(new URL(relative, import.meta.url), "utf8"));
 const charter = await load("./contracts/mosaic-responsibility-charter.json");
@@ -15,6 +18,10 @@ const baseline = await load("./baseline/mosaic-baseline-manifest.json");
 const results = await load("./baseline/mosaic-result-fixtures.json");
 const messages = await load("./messages/mosaic-message-contract.json");
 const messageFixture = await load("./messages/mosaic-message-fixture.json");
+const proposalSchema = await load("./output/mosaic-proposal-schema.json");
+const outputFixtures = await load("./output/mosaic-output-fixtures.json");
+const contextLedger = await load("./context/mosaic-context-ledger.json");
+const retrievalQuestion = await load("./retrieval/mosaic-retrieval-question.json");
 
 console.log(JSON.stringify({
   charterErrors: validateCharter(charter),
@@ -35,5 +42,8 @@ console.log(JSON.stringify({
     identity: messageIdentity(messages, messageFixture),
     managed: renderSemanticBundle(messages, messageFixture, "managed-0.1.0"),
     openWeight: renderSemanticBundle(messages, messageFixture, "open-template-0.1.0")
-  }
+  },
+  output: outputFixtures.fixtures.map((fixture) => ({id:fixture.id,...validateProposal(fixture.raw,proposalSchema,outputFixtures,fixture.repairAttempts??0)})),
+  context: packContext(contextLedger),
+  retrieval: {errors:validateRetrievalQuestion(retrievalQuestion),eligibleUnitIds:eligibleUnits(retrievalQuestion).map((unit)=>unit.id)}
 }, null, 2));

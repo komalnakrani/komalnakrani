@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "batchId": "V1-07-09",
+  "issue": 54,
+  "parentIssue": 46,
+  "status": "manuscript-complete-assets-pending",
+  "producedAt": "2026-08-16",
+  "mosaicDesk": {"fictional":true,"start":"MD-03-instruction-state-complete","end":"MD-05-retrieval-problem-opened","inventedProductionOutcomes":false},
+  "chapters": [
+    {"number":7,"slug":"make-outputs-typed-and-bounded","title":"Make Outputs Typed and Bounded","wordCount":2567,"claims":[{"productionId":"CLM-019","acceptedId":"V1-C07-CL01"},{"productionId":"CLM-020","acceptedId":"V1-C07-CL02"},{"productionId":"CLM-021","acceptedId":"V1-C07-CL03"}],"caseIds":["LLME-CASE-014"],"figureIds":["V1-F07.1","V1-F07.2"],"companionTestsAdded":4,"qaStatus":"pass"},
+    {"number":8,"slug":"budget-context-deliberately","title":"Budget Context Deliberately","wordCount":2503,"claims":[{"productionId":"CLM-022","acceptedId":"V1-C08-CL01"},{"productionId":"CLM-023","acceptedId":"V1-C08-CL02"},{"productionId":"CLM-024","acceptedId":"V1-C08-CL03"}],"caseIds":["LLME-CASE-002"],"figureIds":["V1-F08.1","V1-F08.2"],"companionTestsAdded":4,"qaStatus":"pass"},
+    {"number":9,"slug":"design-the-retrieval-question","title":"Design the Retrieval Question","wordCount":2786,"claims":[{"productionId":"CLM-025","acceptedId":"V1-C09-CL01"},{"productionId":"CLM-026","acceptedId":"V1-C09-CL02"},{"productionId":"CLM-027","acceptedId":"V1-C09-CL03"}],"caseIds":["LLME-CASE-003"],"figureIds":["V1-F09.1","V1-F09.2"],"companionTestsAdded":4,"qaStatus":"pass"}
+  ],
+  "figures": [
+    {"id":"V1-F07.1","chapter":7,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f07-1-validation-ladder.png","labels":["parse","schema","semantic","display"],"alt":"Generated output crosses parse, schema, semantic and provenance gates before bounded display.","evidenceRole":"Explains validation layers without claiming truth or authorization.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F07.2","chapter":7,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f07-2-bounded-output-states.png","labels":["valid","repair","abstain","escalate","fail closed"],"alt":"A validator routes output into five explicit effect-free states.","evidenceRole":"Defines fallback behavior without assigning approval authority.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F08.1","chapter":8,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f08-1-context-budget.png","labels":["control","history","evidence","output"],"alt":"Finite context space is allocated to control, evidence, history and reserved output.","evidenceRole":"Illustrates a semantic budget, not a real model capacity or optimal ratio.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F08.2","chapter":8,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f08-2-context-failures.png","labels":["oversized","stale","conflicting","unauthorized","absent"],"alt":"Five visibly different context failures lead to bounded responses.","evidenceRole":"Supports failure classification without measuring prevalence.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F09.1","chapter":9,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f09-1-evidence-path-decision.png","labels":["parametric","lookup","search","retrieve","abstain"],"alt":"An evidence need routes to one of five bounded information paths.","evidenceRole":"Operationalizes the retrieval decision without declaring retrieval superior.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F09.2","chapter":9,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f09-2-source-authority-shelves.png","labels":["owner","fresh","allowed"],"alt":"Source families retain owner, freshness and permission metadata before relevance ranking.","evidenceRole":"Supports source qualification without claiming a universal hierarchy.","assetStatus":"pending-root-imagegen"}
+  ],
+  "companion": {"runner":"companion/run.mjs","testPattern":"companion/tests/*.test.mjs","testsAdded":12,"cumulativeTests":36,"expectedPassing":36,"providerCalls":0,"deterministic":true},
+  "limitations": [
+    "Mosaic Desk, all outputs, context units, sources, and results are fictional and synthetic.",
+    "The proposal validator is pedagogical and does not replace a complete schema, factuality, permission, or authorization system.",
+    "Context teaching units are not real tokens and no live position, cache, latency, cost, or quality result is claimed.",
+    "The retrieval fixture selects no embedding model, index, store, chunker, or reranker and proves no retrieval quality.",
+    "Figure records are semantic anchors only; root owns ImageGen production."
+  ]
+}

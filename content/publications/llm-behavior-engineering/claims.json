@@ -18,6 +18,15 @@
     {"id":"CLM-015","chapterSlug":"establish-a-reproducible-baseline","statement":"A deterministic test double verifies software contracts but cannot establish live-model quality.","sourceIds":["SRC-009","SRC-010"]},
     {"id":"CLM-016","chapterSlug":"engineer-instructions-and-messages","statement":"Instructions, examples, delimiters, message roles, and templates are configuration surfaces whose effects must be evaluated.","sourceIds":["SRC-012","SRC-015"]},
     {"id":"CLM-017","chapterSlug":"engineer-instructions-and-messages","statement":"Untrusted retrieved or user content can carry indirect instructions that conflict with application intent.","sourceIds":["SRC-017","SRC-018"]},
-    {"id":"CLM-018","chapterSlug":"engineer-instructions-and-messages","statement":"Prompt instructions alone are not evidence of an effective security or safety control.","sourceIds":["SRC-008","SRC-017","SRC-065"]}
+    {"id":"CLM-018","chapterSlug":"engineer-instructions-and-messages","statement":"Prompt instructions alone are not evidence of an effective security or safety control.","sourceIds":["SRC-008","SRC-017","SRC-065"]},
+    {"id":"CLM-019","chapterSlug":"make-outputs-typed-and-bounded","statement":"Schema-constrained generation can improve syntactic conformance to supported JSON Schema.","sourceIds":["SRC-013"]},
+    {"id":"CLM-020","chapterSlug":"make-outputs-typed-and-bounded","statement":"Syntactic validity does not establish factual correctness, permission, provenance, or authorization.","sourceIds":["SRC-008","SRC-013","SRC-026"]},
+    {"id":"CLM-021","chapterSlug":"make-outputs-typed-and-bounded","statement":"Abstention, escalation, repair, and fail-closed behavior should be explicit product states rather than improvised prose.","sourceIds":["SRC-008","SRC-011"]},
+    {"id":"CLM-022","chapterSlug":"budget-context-deliberately","statement":"Context-window capacity does not guarantee equal or reliable use of information at every position.","sourceIds":["SRC-016"]},
+    {"id":"CLM-023","chapterSlug":"budget-context-deliberately","statement":"Longer context can increase input cost and latency, so selection and caching choices require workload measurement.","sourceIds":["SRC-063","SRC-066"]},
+    {"id":"CLM-024","chapterSlug":"budget-context-deliberately","statement":"Truncation, conflict, staleness, and authorization are distinct context failure states.","sourceIds":["SRC-008","SRC-017"]},
+    {"id":"CLM-025","chapterSlug":"design-the-retrieval-question","statement":"Retrieval is justified only when external evidence ownership, freshness, or coverage materially improves the task.","sourceIds":["SRC-019","SRC-008"]},
+    {"id":"CLM-026","chapterSlug":"design-the-retrieval-question","statement":"Relevance does not establish source authority, permission, currency, or answerability.","sourceIds":["SRC-008","SRC-017","SRC-026"]},
+    {"id":"CLM-027","chapterSlug":"design-the-retrieval-question","statement":"A retrieval-grounded system needs independent retrieval and generated-behavior claims.","sourceIds":["SRC-019","SRC-025"]}
   ]
 }
