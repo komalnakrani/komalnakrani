@@ -1,7 +1,7 @@
 # Immediate QA - Chapter 12
 
 - Chapter: *Run Experiments That Change Decisions*
-- Manuscript word count: 6,500
+- Manuscript word count: 6,518
 - Status: PASS
 
 ## Checks

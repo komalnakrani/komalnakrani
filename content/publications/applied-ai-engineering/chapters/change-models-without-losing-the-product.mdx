@@ -154,8 +154,10 @@ Use five states:
 
 <figure>
   <img src="/assets/publications/applied-ai-engineering/f19-1-compatibility-matrix.png" alt="Colorful three-dimensional compatibility matrix comparing current and candidate across ordinary relevance, permission, freshness, calibrated abstention, long-tail compatibility, tail latency, cost, user comprehension, and tool effects, with essential labels for unchanged, improved, regressed, unknown, and untestable." width="1568" height="1003" loading="lazy" decoding="async" />
-  <figcaption>F19.1 - A candidate can improve aggregate relevance while regressing the behavior and operational clauses that keep the product bounded.</figcaption>
+  <figcaption>F19.1 - A favorable aggregate cannot override a critical regression or unresolved unknown and untestable rows.</figcaption>
 </figure>
+
+F19.1 is a schematic compatibility-state example, not a rendering of the PF-12 row values. It uses `equivalent` as the visual label for the chapter's `unchanged` state and includes favorable operational rows to show that one critical regression still blocks an aggregate win. The exact synthetic PF-12 matrix below separately records latency and cost regression and remains the executable evidence.
 
 Patchwork's matrix says:
 
@@ -253,9 +255,11 @@ Stop states are:
 `delayed`, `reduced scope`, `fallback`, `stopped`, and `rolled back`.
 
 <figure>
-  <img src="/assets/publications/applied-ai-engineering/f19-2-migration-state-machine.png" alt="Colorful three-dimensional migration state machine moving from inventory through replay, review, shadow, bounded cohort, migrated, and retired, with stop branches for delay, reduced scope, deterministic fallback, stop, and rollback, plus short labels for authority and evidence." width="1568" height="1003" loading="lazy" decoding="async" />
-  <figcaption>F19.2 - Model change is a controlled release with explicit evidence, stop states, fallback, rollback, and retirement proof.</figcaption>
+  <img src="/assets/publications/applied-ai-engineering/f19-2-migration-state-machine.png" alt="Colorful three-dimensional conceptual migration map with inventory, shadow, replay, bounded cohort, ramp, and retire stations; version, hash, evidence, and owner labels; a central rollback route; and explicit delay and stop branches." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption>F19.2 - The conceptual map keeps rollback, delay, stop, evidence, and ownership visible across migration stages.</figcaption>
 </figure>
+
+The rendered map is not the canonical transition ordering. PF-12 uses the ordered state machine stated above: replay precedes review and shadow, and retirement follows verified migration. Treat `ramp` in the image as staged migration, never as permission to skip review.
 
 Each transition requires evidence and authority. A critical regression in replay returns delay/reduce, not shadow. A critical cohort signal rolls back. Retirement requires old-path dependency removal, retained rollback evidence, and updated runbooks.
 

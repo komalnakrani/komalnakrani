@@ -310,9 +310,11 @@ For a shared service:
 PF-12 remains local deterministic library evidence. It makes no service-level claim.
 
 <figure>
-  <img src="/assets/publications/applied-ai-engineering/f20-2-portability-seam-map.png" alt="Colorful three-dimensional seam map separating a shared result schema, evaluation runner, and redaction mechanism from consumer-local task contract, data permission, metrics, thresholds, controls, fallback, owners, and authority, with short labels for validate, isolate, version, and disconfirm." width="1568" height="1003" loading="lazy" decoding="async" />
+  <img src="/assets/publications/applied-ai-engineering/f20-2-portability-seam-map.png" alt="Colorful three-dimensional portability map with behavior and evaluation contracts at the center, provider, context, policy, and runtime adapters inside a reusable seam, and task data, thresholds, segments, authority, and local evidence explicitly outside it." width="1568" height="1003" loading="lazy" decoding="async" />
   <figcaption>F20.2 - Portability lives at a narrow tested seam; product meaning, evidence, thresholds, data, controls, and authority stay with each consumer.</figcaption>
 </figure>
+
+F20.2 illustrates the general contract-and-adapter seam, not the PF-12 v0.2 asset selection. The ledger's earned mechanisms remain the result schema, evaluation runner, and redaction utility; each consumer must still revalidate every adapter and local decision shown around the seam.
 
 ## Price maintenance and coordination honestly
 

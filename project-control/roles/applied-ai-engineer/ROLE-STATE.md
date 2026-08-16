@@ -5,7 +5,7 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 09 complete-book QA active under #55
+- Current global phase: Komal Phase 09 whole-book verification PASS under #55; root acceptance pending
 - Last updated: 2026-08-16
 - Last completed issue: Phase 08 child #52 and parent #27, complete 21-chapter manuscript and companion
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
@@ -40,7 +40,7 @@
 - source register: 55 primary/official records, all used, 118 unique planned claim IDs
 - case-study register: 11 public/primary cases plus one explicitly constructed Patchwork case, all used
 - chapter blueprints: 21 verified files plus `blueprints/blueprint-verification.md`
-- manuscript(s): all 21 chapters complete through commit `51be79f`; 133,810 words
+- manuscript(s): all 21 chapters complete; Phase 09 content lock totals 133,981 words
 - figure manifest: `content/publications/applied-ai-engineering/figures.json`, complete through `FIG-042`
 - PDF(s): pending
 - preparation resources: deferred
@@ -61,7 +61,7 @@
 - [x] 06 research
 - [x] 07 chapter blueprints
 - [x] 08 manuscript
-- [ ] 09 book QA
+- [x] 09 book QA
 - [ ] 10 visuals
 - [ ] 11 publication
 - [ ] 12 preparation library (deferred)
@@ -75,7 +75,7 @@
 
 ## Current work
 
-Phase 08 parent #27 and all manuscript children are accepted and closed. The complete book has 21 fresh chapters totaling 133,810 words, 21 learning/state/QA sets, 118 traced claims, 55 sources, 42 final ImageGen PNG teaching figures, and a provider-neutral Patchwork companion with 109 passing tests. Phase 09 hostile complete-book QA is active under #55.
+Phase 09 hostile whole-book verification is `PASS` under #55. The content-locked draft has 21 fresh chapters totaling 133,981 words, 21 learning/state/QA sets, 118 traced claims, 55 sources, 42 final ImageGen PNG teaching figures, and a provider-neutral Patchwork companion with 109 passing tests. The durable report is `project-control/roles/applied-ai-engineer/qa/phase-09-verification.md`; root acceptance and issue closure are pending.
 
 ## Unresolved blockers
 
@@ -85,19 +85,19 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 - Preserve the finding that the exact title is employer-defined and aliases require responsibility evidence.
 - Preserve the LLM/agent-heavy 2026 source skew without treating it as the universal role definition.
-- Phase 08 must write every chapter fresh from its blueprint, expanding explanation and original examples without copying research notes or importing another role's prose.
+- Preserve the fresh/original manuscript boundary in every later revision; do not copy research notes or import another role's prose.
 - Companion implementation must default to local deterministic behavior and synthetic data; provider adapters remain optional and versioned.
 - Preserve explicit source limitations, evaluator bias, benchmark context, version volatility, and authority boundaries in manuscript claims and exercises.
 - Keep FDE customer-engagement ownership, MLE model/data lifecycle ownership, research capability creation, and formal risk authority outside the core boundary.
 
 ## Quality debt
 
-None. All 21 chapters and the completed companion pass canonical `npm run check`, Astro build, 630 built-site reference checks, and 109 companion tests. Blueprint QA remains complete for all chapters. Applied AI has no SVG or WebP artwork; all chapters use labeled ImageGen PNG figures. Phase 09 hostile QA remains to certify the full-book whole.
+No blocking Phase 09 debt. All 21 chapters and the completed companion pass canonical `npm run check`, Astro build, built-site reference checks, and 109 companion tests. Claims/sources, learning/state/QA, deterministic output, and all 42 PNG figures reconcile. Seven source URLs remain explicitly access-restricted to automation. The planned six appendices, front/back matter, PDF, and final publication rendering remain later-phase assembly work rather than hidden current artifacts.
 
 ## Exact next action
 
-Perform hostile complete-book QA under issue #55 across continuity, originality, claims, sources, authority boundaries, figures, exercises, companion behavior, and publication integrity; repair any in-scope defects and produce a durable verification report.
+Root-review and accept the Phase 09 `PASS` under #55. Do not enter Phase 10/11 from this task; begin the next phase only after root acceptance and state transition.
 
 ## Resume instructions
 
-Read this file, active issue #55, all 21 chapter state/QA records, architecture, research and claim registers, figure registry, ImageGen production log, companion tests, and publication validators before resuming Phase 09 only.
+Read this file, active issue #55, and `project-control/roles/applied-ai-engineer/qa/phase-09-verification.md`. Reopen Phase 09 only for a demonstrated defect; otherwise await root acceptance before changing phase.

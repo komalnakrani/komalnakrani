@@ -1,7 +1,7 @@
 # Immediate QA - Chapter 11
 
 - Chapter: *Combine Machine, Human, and Domain Judgment*
-- Manuscript word count: 6,526
+- Manuscript word count: 6,528
 - Status: PASS
 
 ## Checks
