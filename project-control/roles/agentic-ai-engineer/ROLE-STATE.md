@@ -58,9 +58,9 @@ and `#35` are closed with `status:done`.
 - Phase 07 verification: `books/agentic-ai-engineering/blueprints/verification-report.md`
 - Phase 08 handoff: `books/agentic-ai-engineering/blueprints/phase-08-handoff.md`
 - Phase 08 prepared issue body: `issues/phase-08-manuscript.md`
-- manuscripts: Chapters 1-3 accepted at `b48f375`; Chapters 4-6 accepted at `d3b86f4`; 29,529 words total through Chapter 6
-- publication records and deterministic companion: accepted through Chapter 6
-- figure anchors: `F01.1` through `F06.2` specified; root-owned PNG artwork pending; no image or SVG assets created in this lane
+- manuscripts: Chapters 1-6 accepted through `d3b86f4`; Chapters 7-9 complete locally under `#53`; 37,008 words total through Chapter 9
+- publication records and deterministic companion: complete locally through Chapter 9
+- figure anchors: `F01.1` through `F09.2` specified; root-owned PNG artwork pending; no image or SVG assets created in this lane
 - publication/PDF/course/final QA: not started
 
 ## Completed gates
@@ -80,11 +80,11 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 08 Chapters 1-6 are accepted through `d3b86f4`: 29,529 manuscript words,
-`AR-01` through `AR-05`, deterministic companion artifacts, six learning/state/QA
-records, and twelve specified PNG anchors. Combined tests pass 14/14, with
-publication, build, reference, format, and scoped diff checks passing. Child #53
-is active for Chapters 7-9 while root-owned ImageGen production remains separate.
+Phase 08 Chapters 7-9 are complete locally under active child `#53`: 7,479
+words, `AR-06` and frozen/final `AR-07`, three schemas, ten new tests, records,
+and six pending PNG anchors. Combined Agentic tests pass 24/24 and the full
+repository check passes. The single-agent topology is retained and general
+multi-agent cost-effectiveness remains contested.
 
 ## Unresolved blockers
 
@@ -103,17 +103,16 @@ is active for Chapters 7-9 while root-owned ImageGen production remains separate
 
 ## Quality debt
 
-- Chapters 7-20 remain unwritten; Chapters 7-9 are now active.
+- Chapters 10-20 remain unwritten.
 - ImageGen assets and their provenance/visual QA remain pending root production.
 - The Agentic publication stays draft and therefore is not listed in the
   built public book index.
 
 ## Exact next action
 
-Write and immediately QA Chapters 7-9 under #53, advancing from `AR-05 v1.0.0`
-through explicit state/context/artifact/memory handling, a one-agent baseline,
-and evidence-gated handoffs without widening identity, delegation, capability,
-or effect authority. Root separately owns ImageGen production.
+Parent reviews Chapters 7-9, root produces and visually QA-checks `F07.1`
+through `F09.2`, then Chapter 10 advances the selected one-agent topology from
+`AR-07 v1.0.0` into durable execution without widening authority.
 
 ## Resume instructions
 

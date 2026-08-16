@@ -1,0 +1,242 @@
+---
+title: "Add Handoffs and Multiple Agents Only With Evidence"
+slug: "add-handoffs-and-multiple-agents-only-with-evidence"
+summary: "Treat routing, specialists, workers, reviewers, and remote agents as controlled topology hypotheses with explicit handoffs, ownership, authority, cancellation, aggregation, cost, and rejection evidence."
+minutes: 90
+sourceIds: ["SRC-003", "SRC-010", "SRC-013", "SRC-031", "SRC-042"]
+claimIds: ["CLM-017", "CLM-018"]
+objectiveIds: ["AGE-K02-01", "AGE-K04-01", "AGE-K06-01", "AGE-K07-01", "AGE-K11-01"]
+---
+
+# Add Handoffs and Multiple Agents Only With Evidence
+
+`AR-07 v0.1.0` freezes one agent, one owner, seven tasks, five capabilities, one effect, and a layered evidence report. Now a topology experiment can be honest.
+
+Adding an agent is not adding intelligence to a diagram. It introduces a delegation boundary. Someone must partition the task, state, context, scope, budget, evidence, and completion. Someone must cancel late work, reconcile conflicts, prevent duplicates, and remain accountable for the final run.
+
+Multi-agent systems add delegation, context partitioning, aggregation, and coordination choices. Current frameworks and protocols expose different patterns, but none establishes a universal best topology. [CLM-017]
+
+FieldOps tests one read-only manual specialist. It holds everything else constant and never delegates `reserve_part`. The deterministic comparison shows equal expected dispositions, slightly lower synthetic context units, and higher action, handoff, and coordination units. That fixture is not real model, latency, token, cost, or production evidence. Its honest disposition is to retain one agent.
+
+## 1. Write topology hypotheses
+
+Every topology starts as a falsifiable hypothesis.
+
+### Router
+
+Hypothesis: a router reduces invalid capability selection by sending tasks to narrower components. Cost: one more decision, possible misrouting, state transfer, and ambiguous ownership. FieldOps rejects it because the frozen baseline has no routing failure.
+
+### Specialist
+
+Hypothesis: a manual specialist isolates a large evidence context and reduces main-agent context burden. Cost: handoff, repeated context, return validation, latency, and coordination. FieldOps tests this bounded read-only slice.
+
+### Parallel workers
+
+Hypothesis: workers reduce elapsed search time across independent manuals. Cost: multiplied context and calls, aggregation, late results, and duplicate work. FieldOps manuals are not yet a sufficiently broad independent search workload, and shared inventory makes effect work non-independent.
+
+### Reviewer
+
+Hypothesis: a second model catches unsupported proposals. Cost: another correlated model decision, review latency, and a new completion question. FieldOps deterministic compatibility, freshness, schema, and approval checks already govern the proposal; no measured gap justifies a reviewer agent.
+
+### Remote agent
+
+Hypothesis: an external specialist provides a capability unavailable locally. Cost: discovery trust, protocol translation, identity, authority, state, effect, evidence, and recovery boundaries. FieldOps has no such need, so remote orchestration is deferred.
+
+Do not use "more accurate" or "more scalable" without a task slice and measure. Name which baseline failure should improve and which added failure must remain within limit.
+
+## 2. Contract the handoff
+
+A message is not a handoff. A handoff transfers bounded responsibility and evidence while preserving a final owner.
+
+The `AR-07` handoff includes:
+
+- source and target agents;
+- task slice;
+- owner before and owner during the slice;
+- final accountable owner;
+- authoritative state reference and version;
+- evidence and artifact references;
+- permitted capabilities;
+- delegated scope, resource, and expiry;
+- action, context, and effect budgets;
+- completion and return predicates;
+- cancellation propagation;
+- timeout and lease;
+- duplicate-work key;
+- error and escalation;
+- aggregation and validation rule.
+
+FieldOps delegates only `search_manual`, two actions, forty synthetic context units, and zero effects. The source agent remains final run owner. The specialist returns cited passages with trust labels or an explicit no-evidence result. The source validates provenance, version, conflict, scope, and context budget before admitting the artifact.
+
+The handoff cannot expand `AR-05`. It carries a narrower scope and expiry. The target cannot obtain `reserve_part`, approval authority, a broader audience, another tenant, or a new principal. A framework transfer API may move control; local policy decides what that means.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F09.1" data-png="/assets/publications/agentic-ai-engineering/f09-1-accountable-handoff-relay.png">
+  <div role="img" aria-label="Pending colorful realistic 3D relay where a source and read-only specialist exchange a sealed handoff baton. The baton is labeled Owner, State, Authority, Cancel, and Complete. A separate final-owner marker remains with the source, and the target has no effect tool. No relationship depends on color.">ImageGen raster pending: F09.1</div>
+  <figcaption><strong>F09.1 - Accountable handoff relay.</strong> Essential labels: Owner, State, Authority, Cancel, Complete. Evidence role: a responsibility-transfer scaffold, not proof of correct coordination.</figcaption>
+</figure>
+
+### Ownership semantics
+
+During the slice, the specialist owns its read actions and returned artifact. The source owns the whole run, aggregation, proposal, effect, and disposition. If the specialist disappears, the source has an explicit timeout path. "Both own it" is rejected.
+
+### State semantics
+
+The handoff references state version seven. The target cannot write authoritative run state. It returns an artifact referencing the version it observed. If the source has advanced, the result is stale and must be revalidated or rejected.
+
+### Cancellation semantics
+
+Parent cancellation propagates to the branch. A late result is recorded for diagnosis but not aggregated after lease expiry. Cancellation cannot depend on the target reading a natural-language message.
+
+### Completion semantics
+
+The specialist completes when it returns cited permitted evidence or explicit no-evidence. It never declares the FieldOps task complete. The source evaluates the task predicate.
+
+## 3. Change topology only
+
+Use the `AR-07 v0.1.0` freeze. The task set, policy double, capabilities, contracts, identity, authority, budgets, data, effect gate, and evidence schema remain unchanged. Only the manual evidence step becomes a handoff.
+
+Run the same seven deterministic cases. Report outcomes and coordination separately.
+
+The injected fixture shows:
+
+- both designs match seven expected dispositions;
+- both produce zero forbidden and duplicate effects;
+- one agent uses twenty-four action steps and no handoff messages;
+- the specialist design uses twenty-five action steps and six handoff messages;
+- synthetic context units fall from 470 to 445;
+- coordination units rise from zero to twelve.
+
+These numbers are companion mechanics, not provider cost or performance evidence. They demonstrate how to report a trade-off without converting it into a general fact.
+
+The small context reduction does not solve a baseline failure. Outcome and control remain equal while coordination grows. FieldOps therefore rejects the specialist for this task set.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F09.2" data-png="/assets/publications/agentic-ai-engineering/f09-2-gain-cost-balance.png">
+  <div role="img" aria-label="Pending crisp realistic 3D balance labeled Measured Gain on one side and Coordination Cost on the other. The scene states No Universal Winner and shows separate weights for outcome, context, actions, handoffs, latency, and authority risk without numeric performance claims. No relationship depends on color.">ImageGen raster pending: F09.2</div>
+  <figcaption><strong>F09.2 - Topology trade-off.</strong> Essential labels: Measured Gain, Coordination Cost, No Universal Winner. Evidence role: a decision scaffold; it makes no universal topology, cost, or performance claim.</figcaption>
+</figure>
+
+## 4. Inject coordination failures
+
+### Two workers target one part
+
+Neither worker receives the effect capability. If a proposed handoff adds `reserve_part` or an effect budget, validation fails. The final owner alone can advance the original approval-bound effect path. A duplicate-work key prevents two identical manual searches from being accepted as independent work.
+
+### Stale state version
+
+The target returns an artifact derived from version six while the run is at seven. Reject it or explicitly revalidate every dependency. Do not merge because the prose still looks relevant.
+
+### Cancelled branch
+
+The source cancels. The target returns anyway. The result is ignored for the active run and recorded as late-after-cancel. It cannot consume budget or revive the task.
+
+### Late result
+
+The lease expires before return. Record the artifact under diagnostic retention if allowed, but do not aggregate it. A new handoff requires current state and delegation.
+
+### Conflicting recommendations
+
+Two read artifacts cite different manual editions. Preserve the conflict and provenance. The final owner escalates to the domain owner. An aggregator must not vote domain truth into existence.
+
+### Orphaned owner
+
+A handoff says the specialist owns the slice but names no return owner. Reject the contract before execution. Every branch needs a final accountable owner and a timeout disposition.
+
+Coordination faults are not model-only faults. They arise from leases, versions, cancellation, shared state, duplicate identity, and aggregation rules. Diagnose those controls before prompt behavior.
+
+## 5. Report cost, latency, and control honestly
+
+The general claim that multiple agents are more cost-effective is contested. Anthropic reports strong results for a bounded parallel research system and materially higher token use. Transfer depends on task value, breadth, independence, concurrency, latency, aggregation, and coordination. It does not establish general cost-effectiveness. [CLM-018]
+
+Google documentation describes delegation and composition patterns, not comparative superiority. The A2A v1.0.0 specification provides task, message, and artifact vocabulary for remote interoperability. It does not establish trust in remote capability claims, local authorization, effect semantics, or business completion. [CLM-017]
+
+Report at least outcome, policy violations, invalid actions, effect behavior, recovery, action steps, model/context units, tool units, handoff messages, coordination work, elapsed-time distribution, human review, and trace completeness. Separate task segments. Parallelism can lower elapsed time while increasing tokens and failure surface.
+
+Cost also includes design, evaluation, deployment, on-call, incident diagnosis, and security review. A token comparison alone is incomplete. A quality score alone can hide duplicate effects or orphaned authority.
+
+## 6. Dispose of the experiment
+
+`AR-07 v1.0.0` retains the single-agent topology and no separation. The manual specialist produced no material outcome or control gain on the frozen synthetic workload.
+
+The rejected design remains documented with its handoff contract and falsifiers. Reconsider when the manual corpus creates independently searchable branches, one-agent context failures exceed an accepted threshold, and controlled trials show segment gain within authority, cost, latency, and coordination limits.
+
+This is not a claim that specialists never help. It is a local decision with a clear reopening condition. The general cost-effectiveness claim remains contested. [CLM-018]
+
+Chapter 10 receives one selected agent, one final owner, no retained handoff, cancellation and recovery semantics, and the exact future handoff contract if a later workload earns separation. Distributed durability must preserve these conclusions rather than smuggling topology or authority expansion into infrastructure.
+
+## Compare the topology families precisely
+
+A **router** selects an owner from a set. Its contract needs routing inputs, candidate capabilities, confidence or deterministic rule, fallback, and ownership transfer. A router that merely asks another model where to send work can add nondeterminism without isolation.
+
+A **specialist** owns a bounded slice with narrower context or capability. The gain can be better context focus or privilege separation. It still needs return evidence and a final owner.
+
+A **worker** receives delegated work, often in parallel. Workers require duplicate keys, leases, branch budgets, cancellation fan-out, late-result handling, and aggregation. They must not race on shared effects.
+
+A **reviewer** evaluates an artifact or trajectory. State whether it can block, request revision, escalate, or merely advise. A model reviewer does not gain formal authority from its label.
+
+A **remote agent** crosses an organizational or protocol boundary. Local claims about identity, capability, trust, data handling, effect semantics, completion, and audit must be verified. Protocol compatibility is not authorization.
+
+These roles can be combined, but each added responsibility needs an owner and evidence. Do not call every tool call a delegation or every parallel request an agent.
+
+## Specify aggregation before branching
+
+Aggregation determines whether branch outputs can become run evidence.
+
+For independent search, aggregation can deduplicate citations and preserve provenance. For rankings, it needs a deterministic or evaluated rule. For conflicting domain recommendations, it must preserve disagreement and escalate. For effects, workers should return proposals only; the final owner and exact authority gate remain singular.
+
+Define which artifacts are admissible, how versions are compared, how duplicates are identified, how missing branches count, when late results are ignored, and who decides conflict. If aggregation is "the main agent reads everything," context and reasoning burden may simply move rather than disappear.
+
+Branch completion is not task completion. A manual specialist can finish its search while the parent task remains blocked on inventory or authority. The final run owner evaluates the original predicate.
+
+## Preserve cancellation and recovery
+
+Parent cancellation propagates to every branch and prevents new dispatch. Each branch acknowledges when possible. The parent does not wait forever for acknowledgement; its lease and timeout determine disposition.
+
+A branch crash returns ownership to the source under the handoff rule. Retrying the branch uses the same duplicate-work identity when semantics match. A new target does not receive broader authority.
+
+Late results are immutable evidence but not automatically current. Record them for diagnosis under retention policy, then reject active aggregation after expiry. If a result may have caused an effect, reconciliation is required even when the branch is cancelled. FieldOps prevents this by delegating zero effect budget.
+
+Chapter 10 will add durable storage and crash recovery. The semantic requirement is already fixed: one final owner, propagating cancel, bounded leases, duplicate identity, and one terminal disposition.
+
+## Treat remote interoperability as an extra boundary
+
+A2A vocabulary for tasks, states, messages, artifacts, streaming, and notifications can help components communicate. It does not tell FieldOps whether a remote agent is trustworthy, whether its artifact meets local provenance, or whether it may reserve stock.
+
+Map remote states into local `AR-03` states without accepting unknown transitions. Map remote artifacts into `AR-06` records with trust, permission, freshness, and deletion. Map remote identities and scopes through `AR-05`. Never forward a local approval or token unless an explicit specialist-owned protocol and policy permits it.
+
+Remote capability descriptions are claims. Verify schemas, owners, versions, consequence, errors, data handling, and audit. Keep real effects behind local capability adapters and authority when possible. Chapter 18 owns protocol-depth decisions; this chapter only establishes the handoff boundary.
+
+## Common orchestration mistakes
+
+**Message as handoff:** text omits ownership, version, scope, lease, cancel, and completion. Use the contract.
+
+**Multi-agent as maturity:** topology is not a ladder. Keep the least complex evidenced design.
+
+**Change the model or budget:** comparison no longer isolates topology.
+
+**Measure quality only:** report cost, latency, policy, state, effects, recovery, and coordination.
+
+**Workers share effect tools:** parallel proposals can race. Keep effects centralized unless a stronger domain-specific concurrency design is proven.
+
+**Reviewer becomes authority:** model critique can inform validation but cannot grant formal approval.
+
+**Context isolation assumed private:** separate contexts still need tenant, principal, purpose, retention, and provider-data controls.
+
+**Late result merged for convenience:** version and lease rules exist precisely because the world changes.
+
+**No final owner:** shared responsibility becomes orphaned failure. Name one accountable owner across every branch.
+
+## Topology decision packet
+
+Deliver the frozen baseline reference, topology hypothesis table, complete handoff, held-constant list, case-level results, coordination-fault report, resource measures, limitations, disposition, and reconsideration triggers.
+
+Reviewers must be able to answer what changed, which segment improved, which failures worsened, which scopes moved, who remained accountable, and why the result transfers or does not. Vendor examples are attributed and bounded.
+
+The FieldOps packet says no material gain. That negative result is useful. It prevents an unevidenced architecture from becoming operational debt while preserving a testable specialist design for future conditions.
+
+## Learning lab
+
+Compare the frozen baseline with the read-only manual specialist. Score controlled experiment 6, handoff completeness 6, coordination-failure handling 4, and honest disposition 4. Automatic failure occurs if tools, budgets, authority, task data, or completion change; if workers receive effect capability; or if contested multi-agent cost-effectiveness becomes a general fact.
+
+## Chapter checkpoint
+
+FieldOps finishes Part III's first topology decision with evidence: one agent remains selected. Handoffs are accountable transfers, not messages. Additional agents must earn their existence on a named segment while preserving state, authority, cancellation, evidence, and one final owner.

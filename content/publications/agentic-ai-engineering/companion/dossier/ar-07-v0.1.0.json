@@ -1,0 +1,19 @@
+{
+  "id":"AR-07","version":"0.1.0","fictional":true,"sourceState":"AR-06 v1.0.0",
+  "configuration":{"topology":"single-agent","runOwner":"fieldops-agent-001","contracts":["AR-02@1.0.0","AR-03@1.0.0","AR-04@1.0.0","AR-05@1.0.0","AR-06@1.0.0"],"policyDouble":"fieldops-single-agent-double@1.0.0","capabilities":["read_equipment","search_manual","check_inventory","propose_reservation","reserve_part"],"budgets":{"turns":8,"actions":12,"effects":1,"contextUnits":120}},
+  "taskSet":[
+    {"id":"complete-request","expected":"verified_complete"},
+    {"id":"missing-manual","expected":"escalated"},
+    {"id":"stale-availability","expected":"refresh-or-escalate"},
+    {"id":"typed-tool-error","expected":"bounded-recovery"},
+    {"id":"ambiguous-effect","expected":"reconcile-then-verify"},
+    {"id":"cancel-before-effect","expected":"cancelled"},
+    {"id":"context-overflow","expected":"compact-or-stop"}
+  ],
+  "measures":["expected-disposition-match","completion-predicate","allowed-action-rate","unnecessary-calls","invalid-arguments","state-invariants","effect-invariants","recovery-disposition","action-steps","simulated-context-units","simulated-tool-units","trace-coverage"],
+  "syntheticBaseline":{"cases":7,"expectedDispositionMatches":7,"forbiddenEffects":0,"duplicateEffects":0,"unresolvedAmbiguousEffects":0,"actionSteps":24,"handoffMessages":0,"simulatedContextUnits":470,"simulatedToolUnits":15,"note":"Deterministic fixture output only; not model, production, business, latency, or cost evidence."},
+  "faults":[{"id":"missing-manual","control":"escalate"},{"id":"stale-availability","control":"refresh once then escalate"},{"id":"typed-tool-error","control":"typed bounded retry"},{"id":"ambiguous-effect","control":"ledger reconciliation"},{"id":"cancellation","control":"harness wins before effect"},{"id":"context-overflow","control":"priority compaction then stop if still over budget"}],
+  "removalProposals":[{"id":"remove-generic-router","reason":"one owner and five fixed capabilities need no router"},{"id":"remove-memory-from-effect-path","reason":"fresh authoritative evidence is required"},{"id":"remove-framework-session-as-state","reason":"AR-03 remains authoritative"}],
+  "freeze":{"taskSetHash":"sha256:fieldops-taskset-07-v1","contractVersions":["AR-02@1.0.0","AR-03@1.0.0","AR-04@1.0.0","AR-05@1.0.0","AR-06@1.0.0"],"toolVersions":["read_equipment@1.0.0","search_manual@1.0.0","check_inventory@1.0.0","propose_reservation@1.0.0","reserve_part@1.0.0"],"policyVersion":"fieldops-policy-double@1.0.0","budgetVersion":"fieldops-budgets@1.0.0","evidenceVersion":"fieldops-evidence-schema@1.0.0"},
+  "limitations":["Synthetic deterministic measurements are comparison mechanics only.","One agent is not assumed best for every workload.","No real provider, person, inventory, or effect is used."]
+}

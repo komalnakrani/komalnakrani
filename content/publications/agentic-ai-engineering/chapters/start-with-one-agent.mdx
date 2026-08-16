@@ -1,0 +1,193 @@
+---
+title: "Start With One Agent"
+slug: "start-with-one-agent"
+summary: "Integrate the accepted contracts into one reproducible FieldOps vertical slice and freeze a measurable single-agent baseline before topology experiments."
+minutes: 85
+sourceIds: ["SRC-001", "SRC-002", "SRC-003", "SRC-005", "SRC-010", "SRC-013", "SRC-034", "SRC-040", "SRC-042"]
+claimIds: ["CLM-015", "CLM-016"]
+objectiveIds: ["AGE-K02-01", "AGE-K03-01", "AGE-K04-01", "AGE-K06-01"]
+---
+
+# Start With One Agent
+
+Six chapters produced contracts, not a complete system. FieldOps has a responsibility charter, autonomy ceiling, task contract, inspectable loop, capability catalog, delegation envelope, and state lifecycle. Chapter 8 connects them behind stable interfaces with one run owner and one deterministic policy double.
+
+This is the control for every later topology claim. A single-agent baseline should be measured before routing or multi-agent coordination. Some workloads may justify early separation because privilege or context cannot safely coexist, but the evidence burden remains: name the incompatibility and preserve the same task and authority boundaries. [CLM-015]
+
+The objective is not to prove that one agent is universally best. It is to make the current system reproducible enough that adding a router, specialist, reviewer, or remote agent changes topology rather than everything at once.
+
+The output is `AR-07 v0.1.0`, a frozen synthetic baseline. Its measurements are deterministic fixture results, not live model, production, business, latency, or cost evidence.
+
+## 1. Define the baseline as a control
+
+A baseline is a configuration plus a comparison contract.
+
+Freeze the task set, goal and completion, model policy double, tools, tool versions, data fixtures, identity and delegation, state policy, budgets, effect boundary, evidence schema, and expected dispositions. Record hashes and versions.
+
+The baseline measures:
+
+- expected disposition match;
+- completion predicate result;
+- allowed and forbidden actions;
+- unnecessary calls and invalid arguments;
+- state and effect invariants;
+- recovery disposition;
+- action steps;
+- simulated context and tool units;
+- trace coverage.
+
+Do not optimize these synthetic numbers as if they represented production. Their role is reproducibility. Chapter 9 will change only topology and observe the same fields.
+
+The one-agent design has one accountable run owner. It does not mean the model owns policy, authority, state, or services. It means one model-directed component proposes the next bounded action while deterministic controls and adjacent owners retain their decisions.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F08.1" data-png="/assets/publications/agentic-ai-engineering/f08-1-one-agent-workbench.png">
+  <div role="img" aria-label="Pending colorful realistic 3D workbench labeled One Agent with organized stations labeled Tools, State, Policy, and Evidence. Several empty specialist booths remain visibly unused by design. A single run-owner badge connects all stations, while the effect gate remains separate. No relationship depends on color.">ImageGen raster pending: F08.1</div>
+  <figcaption><strong>F08.1 - Single-agent workbench.</strong> Essential labels: One Agent, Tools, State, Policy, Evidence. Evidence role: an integration scaffold; unused specialists are intentional, not missing functionality.</figcaption>
+</figure>
+
+## 2. Wire the one-agent architecture
+
+The vertical slice has nine components.
+
+**Task intake** validates the request and creates the `AR-02` task contract reference. **Run store** creates the `AR-03` identity, state, counters, and event stream. **Context assembler** applies `AR-06` permission, freshness, trust, and budget rules. **Model adapter** exposes local proposal types to a deterministic double. **Validator** checks state, schema, contract, budget, identity, authority, and capability admission. **Capability adapters** implement `AR-04` results and errors. **Delegation and approval gate** applies `AR-05`. **Effect ledger and verifier** establish external outcome. **Evidence reporter** produces the layered baseline record.
+
+Interfaces matter more than framework choices. The context assembler never writes state. The model adapter never dispatches tools. A capability adapter never decides the next state. The approval gate never invents product completion. The trace reporter never becomes effect truth.
+
+A current provider SDK can simplify loop execution, tools, handoffs, sessions, and traces while exposing useful controls. That is a bounded example of one SDK, not evidence of superiority, portability, or the FieldOps implementation. [CLM-016]
+
+Keep provider code behind the adapter. If an SDK session conflicts with `AR-03`, the local run store wins. If a framework handoff exists, it remains unused until Chapter 9 admits a local contract.
+
+## 3. Use a deterministic policy double
+
+The double chooses from predefined actions based on fixture state. It makes no network call and uses no model. That gives exact failure reproduction.
+
+For the complete path, it requests equipment, searches a manual, checks inventory, forms a proposal, waits for approval, requests one reservation, and suggests completion after verification. For a missing field, it asks one bounded question. For stale availability, it requests one refresh then escalates. For an ambiguous effect, it enters reconciliation. On cancellation, it emits nothing further.
+
+The double is not a substitute for model evaluation. It proves integration mechanics: legal transitions, context admission, typed tool results, authority gates, and terminal dispositions. Later evaluation can replace the proposal source while preserving the harness.
+
+Do not use a live model to establish the first baseline. Nondeterminism, provider change, and prompt iteration make integration defects harder to reproduce. After the deterministic slice passes, a model adapter can be evaluated against the same tasks.
+
+## 4. Walk the FieldOps vertical slice
+
+### Intake and first observation
+
+The synthetic request enters with principal, tenant, equipment identifier, and maintenance description. The harness creates a task and run. `AR-05` supplies identity references; no credential enters context.
+
+The assembler includes the task, current `OBSERVING` state, allowed proposal types, and remaining budget. The double proposes `read_equipment`. Validation admits it. The result is typed and enters authoritative workflow state.
+
+### Manual evidence
+
+The assembler projects the equipment family and approved source list. The double proposes `search_manual`. Retrieved text is labeled untrusted evidence. If it includes the malicious instruction from Chapter 7, the context can quote it but policy and capability scope remain unchanged.
+
+The complete fixture returns a cited compatible passage. The missing-manual fixture returns `NOT_FOUND` and transitions to `ESCALATED` rather than inventing evidence.
+
+### Missing information
+
+One task lacks a required condition. The double proposes `ask_missing_information`. The action is bounded communication inside the synthetic fixture and consumes a budget. The response becomes a typed observation, not a new authority grant.
+
+### Inventory
+
+`check_inventory` returns part, slots, observation time, and revision. The stale fixture triggers one refresh. Persistent staleness escalates. The context budget includes only the relevant slot records.
+
+### Proposal and approval
+
+The harness canonicalizes part, slot, quantity, principal, task, run, scope, and evidence. `AR-05` approval binds exactly those fields. The run waits and resumes through revalidation.
+
+### Reservation and verification
+
+`reserve_part` remains the only effect. It receives a trusted credential outside model context and one live exact approval. On committed response, the harness verifies the ledger. On timeout-after-commit, it reconciles by key and then verifies. On cancellation before dispatch, no effect occurs.
+
+Only verified state satisfies completion. The deterministic report carries every event and evidence reference.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F08.2" data-png="/assets/publications/agentic-ai-engineering/f08-2-vertical-slice-evidence-path.png">
+  <div role="img" aria-label="Pending crisp realistic 3D vertical path from Request through Read, Evidence, Proposal, Approval, Effect, Verify, and Disposition. One agent moves a bounded workpiece while separate deterministic gates inspect state, policy, identity, and evidence. No additional agents appear and no relationship depends on color.">ImageGen raster pending: F08.2</div>
+  <figcaption><strong>F08.2 - FieldOps vertical slice.</strong> Essential labels: Request, Evidence, Proposal, Approval, Effect, Verify, Disposition. Evidence role: a causal integration scaffold, not an outcome or performance claim.</figcaption>
+</figure>
+
+## 5. Diagnose the failure set
+
+**Missing manual:** escalation with no proposal. **Stale availability:** one refresh then escalation. **Typed tool error:** only the contract's retryable code follows a bounded retry. **Ambiguous effect:** reconciliation before any redispatch. **Cancellation:** harness wins before effect. **Context overflow:** compact in `AR-06` priority order and stop if required invariants still do not fit.
+
+Diagnose in layers: task contract, run transition, context admission, proposal parsing, capability validation, identity/authority, effect evidence, and completion. Avoid blaming the one agent for a stale source or malformed adapter result.
+
+One agent can still be too complex. It may accumulate context, responsibilities, or privilege that should not coexist. Measure those facts. Context overflow, incompatible scopes, or independently secured services can become hypotheses for separation. They do not automatically justify more agents.
+
+## 6. Freeze and simplify
+
+`AR-07 v0.1.0` freezes seven tasks, five capabilities, five inherited contracts, one policy double, four budgets, twelve measure names, and evidence versions. The fixture reports seven expected disposition matches, zero forbidden or duplicate effects, twenty-four action steps, no handoff messages, and synthetic context/tool units. These are injected deterministic outputs only.
+
+Record three removal proposals. Remove a generic router because one owner and five fixed capabilities do not need it. Remove memory from the effect path because fresh authoritative evidence is required. Remove framework session state as authority because `AR-03` already owns it.
+
+Simplicity is not line count. It is the number of independent semantics the team must preserve. A thin abstraction that hides cancellation or authority makes the system operationally more complex.
+
+The baseline stays frozen during Chapter 9. Changing prompts, tools, task data, budgets, model policy, or evidence rules would confound the topology comparison. If a defect must be fixed, version the baseline and rerun both designs.
+
+## Inspect each integration seam
+
+At the **task-to-run seam**, reject a run whose contract version, principal, or task ID does not match. At the **run-to-context seam**, assemble only records permitted for the current principal, tenant, task, state, and purpose. At the **context-to-model seam**, expose proposals but no credentials or authority records that the model can replay.
+
+At the **model-to-validator seam**, preserve raw output while consuming only a typed local proposal. At the **validator-to-capability seam**, derive trusted identity fields from run state rather than accepting model values. At the **capability-to-observation seam**, validate output schema, provenance, freshness, and effect semantics.
+
+At the **proposal-to-approval seam**, canonicalize one immutable effect. At the **approval-to-effect seam**, revalidate identity, audience, scope, expiry, revocation, cancellation, stock, and budget. At the **effect-to-completion seam**, reconcile ambiguity and verify authoritative state.
+
+Each seam has one owner, contract, test, event, and failure disposition. A vertical slice is complete when the seams connect without bypass, not when a demo produces plausible text.
+
+## Build the baseline report
+
+The report starts with the freeze identity. It then lists each case and expected disposition, actual disposition, first divergent event, action sequence, admitted context records, capability results, policy decisions, authority decisions, effects, verification, budgets, and trace coverage.
+
+Aggregate only after preserving cases. Seven of seven expected dispositions is a fixture consistency result, not a reliability estimate. Zero forbidden effects proves the deterministic scenarios exercised their declared controls, not that every attack is covered.
+
+Report synthetic resource units with explicit names. `simulatedContextUnits` is not tokens. `simulatedToolUnits` is not money. Chapter 9 can compare the same units under the same fixture but cannot publish them as operational cost.
+
+Keep negative outcomes visible. Missing-manual escalation is correct. Cancellation is correct. A safe stop on context overflow can be correct. Product success and control success are related but distinct dimensions.
+
+### Three removal reviews
+
+The generic router is removed because every admitted task currently starts with the same owner and small capability set. A router would add misrouting and ownership questions without solving a measured problem.
+
+Cross-run memory is removed from the effect path. Fresh equipment, manual, compatibility, inventory, proposal, approval, and ledger evidence are required. Memory may help prepare a query but cannot satisfy effect predicates.
+
+Framework session state is removed from canonical control. It may cache or transport provider messages, but `AR-03` remains the only run-state authority.
+
+Removal evidence matters because multi-agent systems often emerge from layers that were never needed. Simplify before multiplying owners.
+
+## Failure-by-failure diagnosis
+
+For **missing manual**, confirm that the approved source set was correct, retrieval returned no evidence, and no memory or model claim filled the gap. Disposition is escalation.
+
+For **stale availability**, confirm output validation succeeded, freshness failed, one refresh was allowed, and no proposal used the stale record. Persistent failure escalates.
+
+For **typed tool error**, confirm the adapter mapped raw failure to a local code, retry policy matched that code, counters advanced, and retry stopped at the bound.
+
+For **ambiguous effect**, confirm the run entered `RECOVERING`, reused the original idempotency identity, queried the ledger, recorded one effect, and verified completion. A second key is forbidden.
+
+For **cancellation**, confirm the event sequence shows cancellation before dispatch and the model's later proposal was denied. If a call was already in flight, record reconciliation duty.
+
+For **context overflow**, inspect assembler exclusions and compaction. Required task, authority, and conflict facts must remain. If they do not fit, stop rather than sending an unsafe partial view.
+
+This diagnostic discipline produces topology hypotheses. Repeated context overflow isolated to manuals might justify a specialist. Repeated invalid selection across disjoint capability domains might justify routing. A failure caused by stale inventory does not.
+
+## Common baseline mistakes
+
+**Live model as integration test:** failures cannot be reproduced. Keep deterministic contract tests and add model trials later.
+
+**Framework object as architecture:** local authority and state disappear inside provider types. Preserve stable application interfaces.
+
+**Measure final answer only:** hidden invalid actions and recovery failures go unseen. Capture trajectory, state, policy, effects, and evidence.
+
+**Change several components at once:** topology results become uninterpretable. Version and freeze every comparison input.
+
+**Add specialists before pressure exists:** coordination cost arrives before a named benefit. Keep empty booths empty.
+
+**One agent gets every privilege:** one run owner does not require one broad credential. Capabilities remain separately scoped and resolved.
+
+**Baseline becomes permanent truth:** revisit it when tasks, models, policies, data, or constraints change. A control is versioned evidence, not doctrine.
+
+## Learning lab
+
+Produce the component map, vertical-slice sequence, baseline report, and three removal proposals. Score integration 6, reproducibility 5, layered evidence 5, and simplicity disposition 4. Automatic failure occurs if the model double bypasses a gate, the fixture performs a real effect, or the next chapter is allowed to change more than topology.
+
+## Chapter checkpoint
+
+FieldOps has its first complete provider-neutral slice and a frozen one-agent control. Chapter 9 receives exact task, tool, contract, identity, state, budget, evidence, and synthetic measurement versions. Any additional agent must express a falsifiable gain, preserve one final owner, and beat or complement this baseline without widening effect authority.
