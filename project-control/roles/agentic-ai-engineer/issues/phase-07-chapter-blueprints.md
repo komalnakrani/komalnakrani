@@ -24,16 +24,16 @@ executable handoffs for manuscript and companion production, not draft prose.
 
 ## Deliverables
 
-- [ ] one blueprint for every chapter using the exact frozen title/order;
-- [ ] claim/source/case IDs mapped at section and artifact level;
-- [ ] explicit learning objectives, prerequisite bridge and adjacent-role limits;
-- [ ] section sequence with estimated depth and no duplicated chapter ownership;
-- [ ] `AR-*` inputs, modifications, executable evidence and acceptance checks;
-- [ ] provider-neutral implementation plan and deterministic companion path;
-- [ ] failure injections, diagnostics, exercises and answer/assessment intent;
-- [ ] figure insertion anchors and learning purpose from the accepted forecast;
-- [ ] limitation, disputed-claim, version/currentness and re-verification notes;
-- [ ] manuscript writer checklist forbidding invented outcomes and unsupported
+- [x] one blueprint for every chapter using the exact frozen title/order;
+- [x] claim/source/case IDs mapped at section and artifact level;
+- [x] explicit learning objectives, prerequisite bridge and adjacent-role limits;
+- [x] section sequence with estimated depth and no duplicated chapter ownership;
+- [x] `AR-*` inputs, modifications, executable evidence and acceptance checks;
+- [x] provider-neutral implementation plan and deterministic companion path;
+- [x] failure injections, diagnostics, exercises and answer/assessment intent;
+- [x] figure insertion anchors and learning purpose from the accepted forecast;
+- [x] limitation, disputed-claim, version/currentness and re-verification notes;
+- [x] manuscript writer checklist forbidding invented outcomes and unsupported
   generalization.
 
 ## Visual constraints
@@ -52,3 +52,15 @@ scenes and only with original-photo identity references.
 - protocol/framework/vendor material is isolated behind stable local contracts;
 - no manuscript prose, image asset, publication file, Abhyaas work or global
   registry mutation occurs.
+
+## Prepared completion evidence
+
+- `books/agentic-ai-engineering/blueprints/chapter-01.md` through
+  `chapter-20.md`
+- `books/agentic-ai-engineering/blueprints/verification-report.md`
+- `books/agentic-ai-engineering/blueprints/phase-08-handoff.md`
+- `issues/phase-08-manuscript.md`
+
+Root should review the verification report, commit/push if accepted, update and
+close issue #43, then open the Phase 08 root and child issues. This file records
+local completion only and does not claim GitHub mutation.

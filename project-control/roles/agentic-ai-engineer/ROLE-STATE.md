@@ -53,6 +53,11 @@ and `#35` are closed with `status:done`.
 - chapter research packs: `books/agentic-ai-engineering/sources/research-packs/`
 - Phase 06 verification/handoff: `books/agentic-ai-engineering/sources/verification-report.md`,
   `books/agentic-ai-engineering/sources/phase-07-handoff.md`
+- Phase 07 blueprints: `books/agentic-ai-engineering/blueprints/chapter-01.md`
+  through `chapter-20.md`
+- Phase 07 verification: `books/agentic-ai-engineering/blueprints/verification-report.md`
+- Phase 08 handoff: `books/agentic-ai-engineering/blueprints/phase-08-handoff.md`
+- Phase 08 prepared issue body: `issues/phase-08-manuscript.md`
 - manuscripts: not started
 - figure manifest/assets: not started; no image or SVG assets created
 - publication/PDF/course/final QA: not started
@@ -74,10 +79,10 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 06 is accepted at `abed872`: 44 primary/authoritative sources, 12 bounded
-cases/patterns, 40 limitation-aware claims, and 20/20 research packs. Phase 07
-issue `#43` is active to create all 20 production blueprints while advancing one
-continuous FieldOps Relay dossier and allocating the accepted figure forecast.
+Phase 07 production artifacts are locally complete under issue `#43`: 20/20
+blueprints, all 40 claims, 44 sources, 12 cases, 38 accepted chapter figures,
+and one continuous `AR-01` through `AR-14` FieldOps dossier are mapped. Phase 08
+handoff and issue granularity are prepared. Root review/acceptance remains.
 
 ## Unresolved blockers
 
@@ -96,16 +101,16 @@ continuous FieldOps Relay dossier and allocating the accepted figure forecast.
 
 ## Quality debt
 
-- No blueprints, companion implementation, manuscripts, generated visuals, or
-  publication exists yet.
+- No companion implementation, manuscripts, generated visuals, or publication
+  exists yet.
 - The visual forecast is a production specification only; ImageGen assets and
   their provenance/QA remain future work.
 
 ## Exact next action
 
-Create and QA all 20 chapter blueprints under issue `#43` using
-`sources/phase-07-handoff.md`. Do not create manuscript prose, companion code,
-publication files, or image assets in Phase 07.
+Root should review the Phase 07 verification report, commit/push and close issue
+`#43` only if accepted, then open the Phase 08 root plus seven manuscript child
+issues from `blueprints/phase-08-handoff.md` and `issues/phase-08-manuscript.md`.
 
 ## Resume instructions
 
