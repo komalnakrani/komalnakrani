@@ -5,41 +5,40 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: staged Phase 01, 04, and 05 working artifacts awaiting
-  root GitHub issue lifecycle and acceptance
+- Current global phase: Phase 06 source research in progress under issue `#40`
 - Last updated: 2026-08-16
-- Last completed issue: none for this role
-- Active issue: none created by this parallel lane
-- Cross-repo root issue: deferred under Komal-first execution
+- Last completed issue: `#35` — Phase 05 book architecture
+- Active issue: `#40` — Phase 06 source research
+- Role root issue: `#32` — open
 
-## Locked decisions in staged artifacts
+## Locked accepted decisions
 
 - canonical role name: Agentic AI Engineer
-- proposed Phase 01 verdict: `PROCEED`
+- Phase 01 verdict: `PROCEED`
 - role boundary: bounded, model-directed tool action with explicit state,
   delegated authority, trajectory evidence, durable execution, and recovery
-- proposed book structure: `SINGLE BOOK`
-- proposed title: *Agentic AI Engineering*
-- proposed subtitle: *Designing, Evaluating, and Operating Systems That Act*
-- proposed volume count: 1
-- proposed chapters: 20 across six parts
-- proposed primary case: fictional FieldOps Relay
-- proposed dossier prefix: `AR`
+- book structure: `SINGLE BOOK`
+- title: *Agentic AI Engineering*
+- subtitle: *Designing, Evaluating, and Operating Systems That Act*
+- volume count: 1
+- chapters: 20 across six parts
+- primary case: fictional FieldOps Relay
+- dossier prefix: `AR`
 - visual direction: ImageGen-only colorful crisp 3D/realistic raster; no SVG;
   short essential labels where needed; mascot only when pedagogically useful,
   preserving Komal's identity from `/Applications/ServBay/www/komal/mascot/`
 - course decision: not evaluated
 - certification title: deferred to Abhyaas
 
-These decisions become authoritative only after root issue review, commits, and
-phase acceptance. This file does not claim GitHub issue creation or closure.
+Phases 01, 04, and 05 were accepted in commit `b59c3f5`; issues `#33`, `#34`,
+and `#35` are closed with `status:done`.
 
-## Canonical staged files
+## Canonical files
 
 - role research: `research/role-validation.md`
 - adjacent-role boundary: `research/adjacent-role-boundary.md`
 - evidence register: `research/evidence-register.json`
-- staged verification: `research/verification-report.md`
+- Phase 01 verification: `research/verification-report.md`
 - book scope: `books/book-scope-decision.md`
 - book architecture: `books/agentic-ai-engineering/architecture.md`
 - competency mapping: `books/agentic-ai-engineering/competency-to-chapter.csv`
@@ -47,15 +46,22 @@ phase acceptance. This file does not claim GitHub issue creation or closure.
 - visual forecast: `books/agentic-ai-engineering/visual-forecast.md`
 - issue bodies: `issues/root.md`, `issues/phase-01-role-validation.md`,
   `issues/phase-04-book-scope.md`, `issues/phase-05-book-architecture.md`
+- Phase 06 sources: `books/agentic-ai-engineering/sources/source-register.json`
+- case register: `books/agentic-ai-engineering/sources/case-study-register.json`
+- claim register/mapping: `books/agentic-ai-engineering/sources/claim-register.json`,
+  `books/agentic-ai-engineering/sources/claim-to-chapter.csv`
+- chapter research packs: `books/agentic-ai-engineering/sources/research-packs/`
+- Phase 06 verification/handoff: `books/agentic-ai-engineering/sources/verification-report.md`,
+  `books/agentic-ai-engineering/sources/phase-07-handoff.md`
 - manuscripts: not started
 - figure manifest/assets: not started; no image or SVG assets created
 - publication/PDF/course/final QA: not started
 
 ## Completed gates
 
-- [ ] 01 accepted/committed/closed
-- [ ] 04 accepted/committed/closed
-- [ ] 05 accepted/committed/closed
+- [x] 01 accepted/committed/closed (`#33`, `b59c3f5`)
+- [x] 04 accepted/committed/closed (`#34`, `b59c3f5`)
+- [x] 05 accepted/committed/closed (`#35`, `b59c3f5`)
 - [ ] 06
 - [ ] 07
 - [ ] 08
@@ -68,9 +74,11 @@ phase acceptance. This file does not claim GitHub issue creation or closure.
 
 ## Current work
 
-Parallel-lane deliverables for Phase 01, 04, and 05 have been drafted and
-locally validated. Root owns GitHub issue creation, phase review, commit/push,
-shared factory state, and next-phase dispatch.
+Phase 06 production research artifacts have been prepared locally for issue
+`#40`: 44 primary/authoritative sources, 12 bounded cases/patterns including the
+fictional FieldOps capstone, 40 limitation-aware claims, and one research pack
+for every frozen chapter. Root owns final review, commit/push, issue update/
+closure, shared factory state, and Phase 07 dispatch.
 
 ## Unresolved blockers
 
@@ -79,31 +87,31 @@ shared factory state, and next-phase dispatch.
 
 ## Research gaps
 
-- Phase 06 must build chapter-specific technical sources and contradictions;
-  Phase 01 employer evidence cannot serve as a technical book source pack.
-- Dynamic/withdrawn job postings should be re-verified when Phase 01 is accepted.
+- Phase 01 employer evidence remains excluded from the technical book source
+  pack.
 - NIST's 2026 agent identity paper is a concept paper, not final guidance.
-- MCP, A2A, hosted agent runtimes, model APIs, frameworks, and security guidance
-  require edition-date verification.
+- MCP 2026-07-28 remains a release candidate and MCP 2025-11-25 Tasks is
+  experimental; A2A main-branch material must be pinned to the v1.0.0 tag or a
+  commit before manuscript publication.
+- NIST AI RMF 1.0 is under revision as of verification date.
 
 ## Quality debt
 
-- No book claim/source register, chapter packs, case register, blueprints,
-  companion, manuscripts, generated visuals, or publication exists yet.
+- No blueprints, companion implementation, manuscripts, generated visuals, or
+  publication exists yet.
 - The visual forecast is a production specification only; ImageGen assets and
   their provenance/QA remain future work.
 
 ## Exact next action
 
-Root should review the staged Phase 01 evidence, create/claim the root and Phase
-01 GitHub issues, run the link/claim validation evidence, accept and commit Phase
-01 if it passes, then execute Phase 04 and Phase 05 through their issue lifecycle
-before assigning Phase 06.
+Root should review Phase 06 artifacts and validation for issue `#40`, commit and
+close only if accepted, then open/claim Phase 07 and convert each chapter pack
+into a production blueprint using `sources/phase-07-handoff.md`.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, factory state, the active GitHub issue, this file,
-and the relevant prepared issue body. Inspect git status because parallel agents
-share the worktree. Do not edit shared factory state or other role directories
-from this lane. Do not enter Abhyaas while the Komal-first decision remains
-locked.
+Read repository `AGENTS.md`, accepted commit `b59c3f5`, active issue `#40`, this
+file, all Phase 06 registers, verification report, and Phase 07 handoff. Inspect
+git status because parallel agents share the worktree. Do not edit shared
+factory state or other role directories from this lane. Do not enter Abhyaas
+while the Komal-first decision remains locked.
