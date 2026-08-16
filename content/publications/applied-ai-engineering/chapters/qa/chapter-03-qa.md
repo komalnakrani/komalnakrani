@@ -21,4 +21,4 @@
 
 ## Residual limits
 
-Structural companion validation does not establish semantic correctness or approval. Artwork is a Phase 08 placeholder. No blocking source gap remains.
+Structural companion validation does not establish semantic correctness or approval. Artwork is original ImageGen raster work and remains subject to whole-book Phase 10 visual QA. No blocking source gap remains.

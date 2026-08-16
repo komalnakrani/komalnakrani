@@ -66,7 +66,7 @@ The application may show structured evidence, make a behavior-state decision, or
 Show the user evidence appropriate to the task and record a privacy-conscious trace of transformations, inclusion/exclusion, scores, versions, state, and fallback. A trace supports diagnosis; it should not copy sensitive payloads without purpose.
 
 <figure class="book-figure">
-  <img src="/assets/publications/applied-ai-engineering/f06-1-retrieval-context-pipeline.svg" alt="Retrieval pipeline separating query transformation, source selection, candidate generation, permission and freshness filters, ranking, context assembly, downstream use, user evidence, and trace." width="1200" height="760" loading="lazy" decoding="async" />
+  <img src="/assets/publications/applied-ai-engineering/f06-1-retrieval-context-pipeline.png" alt="Retrieval pipeline separating query transformation, source selection, candidate generation, permission and freshness filters, ranking, context assembly, downstream use, user evidence, and trace." width="1568" height="1003" loading="lazy" decoding="async" />
   <figcaption><strong>F06.1 - The retrieval and context pipeline.</strong> Each stage creates a distinct failure and evidence surface, so a product regression can be localized instead of blamed on the model.</figcaption>
 </figure>
 
@@ -192,7 +192,7 @@ These states have different next actions and telemetry. Do not collapse them int
 The user-facing behavior may say no supported candidates were found and offer ordinary search, a correction, or a narrower query. It must not generate a plausible listing from model memory. Empty retrieval is evidence about the current path, not permission to bypass it.
 
 <figure class="book-figure">
-  <img src="/assets/publications/applied-ai-engineering/f06-2-evidence-state-tree.svg" alt="Decision tree routing authorized fresh evidence to ranking, stale evidence to degraded behavior, conflicting evidence to abstention or domain escalation, unauthorized evidence to exclusion, and absent evidence to safe fallback." width="1200" height="760" loading="lazy" decoding="async" />
+  <img src="/assets/publications/applied-ai-engineering/f06-2-evidence-state-tree.png" alt="Decision tree routing authorized fresh evidence to ranking, stale evidence to degraded behavior, conflicting evidence to abstention or domain escalation, unauthorized evidence to exclusion, and absent evidence to safe fallback." width="1568" height="1003" loading="lazy" decoding="async" />
   <figcaption><strong>F06.2 - The evidence-state decision tree.</strong> Stale, conflicting, unauthorized, and absent evidence are distinct product states and none permits a generated substitute.</figcaption>
 </figure>
 

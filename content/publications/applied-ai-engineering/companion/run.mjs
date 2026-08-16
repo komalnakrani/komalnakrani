@@ -3,6 +3,9 @@ import { validateContract } from "./lib/validate-contract.mjs";
 import { generateDataset } from "./data/generate-dataset.mjs";
 import { dataFitnessReport } from "./lib/validate-data.mjs";
 import { retrieve } from "./lib/retrieval.mjs";
+import { runVerticalSlice } from "./lib/vertical-slice.mjs";
+import { generateEvaluationCases } from "./evaluation/generate-cases.mjs";
+import { contaminationReport, coverageReport, splitHash } from "./lib/evaluation.mjs";
 
 const url = new URL("./contracts/patchwork-behavior-contract.json", import.meta.url);
 const contract = JSON.parse(await readFile(url, "utf8"));
@@ -24,4 +27,9 @@ if (dataReport.structuralErrors.length || dataReport.cleanLeakage.length) {
   const retrieval = retrieve(query, dataset.records, "hybrid");
   console.log(`PASS ${dataset.version}: ${dataset.records.length} fictional records, naive leakage detected and grouped split clean`);
   console.log(`PASS retrieval: ${retrieval.state}, ${retrieval.candidates.length} deduplicated candidates, generation=${retrieval.trace.generatedFallback}`);
+  const slice = runVerticalSlice({ request: query, records: dataset.records });
+  const cases = generateEvaluationCases();
+  const coverage = coverageReport(cases, contract.clauses.map((clause) => clause.id));
+  console.log(`PASS vertical slice: ${slice.state}, effects=${slice.effects.length}, trace=${slice.trace.traceId}`);
+  console.log(`PASS evaluation suite v${cases[0].suiteVersion}: ${cases.length} synthetic cases, split=${splitHash(cases)}, leakage=${contaminationReport(cases).length}, visible-gaps=${coverage.uncoveredClauses.length}`);
 }

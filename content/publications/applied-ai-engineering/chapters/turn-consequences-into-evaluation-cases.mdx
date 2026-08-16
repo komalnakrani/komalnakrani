@@ -1,0 +1,948 @@
+---
+title: "Turn Consequences Into Evaluation Cases"
+slug: "turn-consequences-into-evaluation-cases"
+summary: "Build a versioned evaluation set whose cases, segments, provenance, ambiguity, coverage, splits, leakage controls, and limits map to the behavior contract."
+minutes: 80
+sourceIds: ["SRC-001", "SRC-003", "SRC-010", "SRC-011", "SRC-023", "SRC-026", "SRC-028", "SRC-030", "SRC-049", "SRC-050", "SRC-054"]
+claimIds: ["CLM-042", "CLM-043", "CLM-044", "CLM-045", "CLM-046", "CLM-047"]
+objectiveIds: ["AAE-K02", "AAE-K04", "AAE-K06", "AAE-K08"]
+figureIds: ["FIG-017", "FIG-018"]
+---
+
+## A test set begins with a claim
+
+Patchwork's team has 500 synthetic queries. A dashboard reports that 92 percent returned a candidate. The number looks like evaluation. It is not yet evidence for a product decision.
+
+Which behavior clauses were exercised? Did the queries include missing units, conflicting sources, permission denial, long-tail categories, stale evidence, empty results, corrections, timeouts, or invalid output? Were copied listings split across development and release evaluation? Does **returned a candidate** mean the candidate was useful, permitted, compatible, understandable, or merely nonempty? Which population does 92 percent describe?
+
+An evaluation set is not a bag of rows. It is a versioned argument about behavior under defined conditions. Each case connects input and context to contract clauses, criteria, segments, data states, mechanisms, expected behavior, consequence, provenance, ambiguity, and limitations.
+
+The first sentence in an evaluation-set card should complete this form:
+
+> This set can support a decision about ___ for ___ under ___, subject to ___; it cannot support ___ .
+
+For `PF-07` v0.1:
+
+> This synthetic suite can support deterministic verification that Patchwork's local vertical slice enters declared behavior states and blocks effects under selected constructed conditions. It cannot support claims about real catalog coverage, compatibility, users, prevalence, model quality, fairness, safety, or production release.
+
+That sentence is more valuable than the case count.
+
+## Derive cases from consequence
+
+Start with what failure costs the user or another affected party.
+
+For Patchwork, selected consequences include:
+
+- spending money on a wrong candidate;
+- delaying a repair;
+- presenting unsupported fit confidence;
+- hiding missing or conflicting evidence;
+- exposing unauthorized seller content;
+- using stale attributes;
+- inventing a candidate when evidence is empty;
+- ignoring a user correction;
+- producing a partial result after timeout;
+- creating an unauthorized external action;
+- assisting an excluded high-consequence category.
+
+Map each consequence to a contract clause and observable system state. **Wrong candidate cost** maps to evidence and incompatibility clauses. **Unauthorized exposure** maps to permission and scope. **Ignored correction** maps to the correction clause and interaction sequence. **Unwanted message** maps to the prohibited effect and zero-effect assertion.
+
+This mapping prevents metric-first evaluation. A team cannot choose top-k accuracy or an LLM judge until it knows which consequence and criterion the judgment must represent.
+
+## The anatomy of one evaluation case
+
+Each case records:
+
+- stable case ID and suite version;
+- fictional/synthetic status;
+- partition;
+- behavior-contract clause IDs;
+- task and affected segments;
+- data/context states;
+- mechanisms and component versions;
+- input and permitted context;
+- expected behavior state;
+- criteria and acceptable variation;
+- prohibited outcomes and effect count;
+- consequence category and severity assumptions;
+- provenance and construction method;
+- construction/duplicate group;
+- ambiguity and reviewer needs;
+- known limitations;
+- change and retirement triggers.
+
+Dataset documentation research motivates explicit composition, collection/construction, intended use, and limitations. Applied to evaluation assets, these records improve scrutiny but do not prove fitness. [CLM-042]
+
+Consider `PF-E003`, missing unit:
+
+```json
+{
+  "caseId": "PF-E003",
+  "suiteVersion": "0.1.0",
+  "partition": "challenge",
+  "contractClauseIds": ["PF-B06"],
+  "segments": ["ambiguous-unit"],
+  "dataStates": ["ambiguous"],
+  "mechanisms": ["query-validation", "policy"],
+  "consequences": ["wrong-unit-cost"],
+  "input": {
+    "family": "common-seal",
+    "text": "seal diameter 16",
+    "shaftDiameter": {"value": 16, "unit": null}
+  },
+  "expected": {
+    "state": "abstain",
+    "effectCount": 0,
+    "reasonCodes": ["RETRIEVAL_ABSTAIN"]
+  },
+  "provenance": "deterministic-fixture-generator",
+  "constructionGroup": "missing-unit"
+}
+```
+
+The expected value is not **the correct seal**. It is a product behavior under insufficient evidence.
+
+## Scenario, case, and row
+
+Use these terms deliberately.
+
+A **scenario** describes a meaningful context and sequence: a buyer enters an ambiguous measurement, sees clarification, corrects it, and reviews a candidate. It may contain several turns and system events.
+
+An **evaluation case** packages the inputs, context, expected criteria, segments, consequences, and versioned evidence needed to assess one behavior proposition. A case may be single-turn or interactional.
+
+A **row** is a storage unit. One scenario may produce many rows, and duplicate rows may belong to one construction group. Randomly splitting rows can leak the same underlying case across development and release evaluation.
+
+Evaluation design operates at the case and scenario level. File formats come later.
+
+## Build several kinds of cases
+
+### Ordinary cases
+
+Represent common supported work as currently understood. Patchwork includes explicit family, measurement, unit, fresh permitted catalog evidence, and no conflict. Ordinary cases test that controls do not make the product unusable.
+
+Do not infer prevalence from a convenient set. If the real population is unknown, say so.
+
+### Edge cases
+
+Exercise boundaries likely to occur: missing measurements, unusual punctuation, alternate unit notation, duplicate listings, near-threshold dimensions, sparse descriptions, absent optional image, correction, and empty retrieval.
+
+An edge is relative to the contract and mechanism, not inherently rare.
+
+### Rare severe cases
+
+Construct low-frequency but high-consequence states: an excluded safety-critical category, a known incompatibility paired with high similarity, or permission metadata loss. These cases test containment. Their inclusion does not estimate occurrence likelihood.
+
+### Adversarial cases
+
+Challenge assumptions deliberately: seller text that instructs the model to ignore policy, oversized fields, unknown candidate IDs, duplicate tool proposals, or content designed to induce certainty. Adversarial cases reveal control behavior; they are not representative samples.
+
+### Interaction cases
+
+Evaluate behavior over time: user correction, repeated request, superseded state, optional explanation failure, reviewer disagreement, interrupted draft, and model/provider change. Human-AI interaction research and integration testing motivate scenario-based evaluation beyond static model inputs. [CLM-046]
+
+### Change cases
+
+Freeze cases that must replay when data, context, policy, interface, model, provider, or presentation changes. A change case records the old disposition, new disposition, and allowed reasons for difference.
+
+## Cover the contract, not merely the mechanism
+
+Patchwork's 15 behavior clauses include respond, clarify, abstain, escalate, degrade, prohibited action, correction, fallback, draft boundary, and change replay. The first generated suite covers many but not all.
+
+That gap is good evidence.
+
+`PF-07` v0.1 leaves `PF-B03` explanation variation, `PF-B07` domain escalation, `PF-B09` score presentation, `PF-B13` requested draft, and `PF-B15` full change replay unsupported or partially supported. The coverage report must list them. The release disposition is therefore not **complete**. It is **continue evaluation development; no release claim**.
+
+A coverage tool that turns missing cells red is more honest than one that reports 67 percent as if every cell has equal consequence.
+
+## The coverage matrix
+
+Map cases across five dimensions:
+
+1. contract clause;
+2. user/task segment;
+3. data or context state;
+4. mechanism or component;
+5. failure consequence.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f09-1-clause-segment-case-coverage.png" alt="Colorful tactile three-dimensional coverage board connecting behavior clauses, user segments, data states, mechanisms, and consequences to evaluation-case tiles, with bright empty cells deliberately visible." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption><strong>F09.1 - Coverage is a mapped argument with visible holes.</strong> A case count cannot show which clauses, segments, states, mechanisms, and consequences remain unsupported.</figcaption>
+</figure>
+
+The matrix is not one enormous Cartesian product. Use consequence to choose intersections.
+
+For example:
+
+- `PF-B06` × ambiguous unit × query validation × wrong-unit cost;
+- `PF-B04` × high-similarity incompatible item × ranking/policy × wrong-candidate cost;
+- `PF-B08` × long-tail × absent evidence × retrieval/presentation × invention risk;
+- `PF-B11` × timeout × provider adapter/fallback × silent-partial-result risk;
+- `PF-B14` × unauthorized actor × identity/permission × access or action risk;
+- `PF-B10` × user correction × state management × ignored-correction risk.
+
+Prioritize cells by severity, uncertainty, change exposure, and detectability. Record why omitted intersections are lower priority or unknown.
+
+## Segment before aggregate
+
+Aggregate results can hide consequential differences. Official and peer-reviewed evaluations have demonstrated context-specific performance variation across demographic and intersectional groups; those studies do not transfer their findings to Patchwork, but they establish why segment analysis can change the interpretation of an average. [CLM-045]
+
+Patchwork's synthetic segments are product and data states, not human demographic claims:
+
+- common versus long-tail family;
+- text-only versus constructed image-feature input;
+- explicit versus missing measurement;
+- explicit versus missing unit;
+- fresh versus stale source;
+- permitted versus denied permission;
+- single versus duplicate listing cluster;
+- sufficient versus conflicting evidence;
+- ordinary versus excluded category;
+- initial versus corrected input;
+- success versus dependency failure.
+
+For real users, segment selection would require purpose, privacy, affected-party, measurement, sample-size, and authority review. Do not collect sensitive attributes merely because a dashboard can group them.
+
+Predeclare critical segments before comparing systems. Otherwise the team can search many slices and highlight a flattering one. Exploratory findings remain useful when labeled and confirmed on new evidence.
+
+## Metrics are functions, not product definitions
+
+A metric library can calculate accuracy, precision, recall, ranking measures, error, and calibration. It cannot define the relevant population, consequence, criterion, threshold, or authority. Risk frameworks likewise require contextual mapping. [CLM-043]
+
+For Patchwork, useful measurements may include:
+
+- contract-state agreement;
+- critical exclusion violations;
+- candidate inclusion for cases with known constructed candidates;
+- top-position consequential error;
+- permission leakage count;
+- evidence completeness;
+- unsupported claim count;
+- correction success;
+- abstention coverage and error among responded cases;
+- timeout fallback correctness;
+- effect count;
+- trace completeness.
+
+Each metric needs a denominator. **Permission violations: 0** means little if no denied case exists. **100 percent state agreement** can hide that every case is ordinary. Pair every aggregate with coverage and segment tables.
+
+Do not call constructed expected states ground truth when domain judgments are conditional. Use **expected behavior under contract v0.1**, **reference criterion**, or **review disposition**.
+
+## Holistic does not mean representative
+
+Broad benchmark frameworks can evaluate multiple scenarios and metrics transparently. That is valuable benchmark evidence. It does not establish that the benchmark represents a specific product population or consequence. [CLM-044]
+
+Use public benchmarks to answer scoped questions:
+
+- Does a model family demonstrate a capability worth testing?
+- How does a known implementation compare under the benchmark protocol?
+- Which failure categories or metrics might inform a product evaluation?
+- Can a regression be reproduced against a public reference?
+
+Do not say:
+
+- the model is good enough for Patchwork because it leads a benchmark;
+- benchmark accuracy predicts buyer value;
+- broad scenario coverage means the product's critical segments are covered;
+- benchmark safety results authorize a release.
+
+Product cases must reconnect mechanism evidence to the behavior contract.
+
+## Design provenance from the beginning
+
+Record where every case came from:
+
+- deterministic fixture generator;
+- authorized historical task sample;
+- user-reported failure with permission;
+- incident reconstruction;
+- domain-expert construction;
+- adversarial exercise;
+- public benchmark under its license;
+- model-generated proposal reviewed and accepted by a named author;
+- duplicate or transformation of another case.
+
+For real cases, record consent or legal basis where applicable, source permissions, de-identification, retention, access, and prohibited reuse. Do not paste production conversations into an evaluation file because they are convenient.
+
+Generated cases need scrutiny. A model can reproduce its own habits, miss unknown failure modes, or leak benchmark content. Use generation to propose variation, then validate construction, provenance, and consequence. Keep model-generated cases out of a clean evaluation split if the evaluated model or its training provenance creates a contamination concern that cannot be resolved.
+
+## Freeze the release split
+
+Use separate purposes:
+
+- **development**: examples engineers inspect while building;
+- **evaluator development**: cases used to tune rubrics, graders, or reviewer guidance;
+- **challenge**: targeted edge, rare, adversarial, and failure cases available for diagnosis;
+- **release evaluation**: frozen cases reserved for decision evidence.
+
+The labels do not create separation. Group related cases by canonical source, duplicate cluster, construction template, incident, user/session, and temporal origin before splitting. A paraphrase of a development case is not clean release evidence.
+
+Record a deterministic split hash over case ID, suite version, partition, and construction group. The hash does not prove absence of leakage; it proves which declared split was used.
+
+## Detect contamination
+
+Contamination occurs when answer-bearing information crosses a boundary that the evidence claim assumes is independent.
+
+Routes include:
+
+- duplicate or near-duplicate content;
+- shared construction template;
+- same user, session, seller, item, or incident;
+- future information entering a historical case;
+- labels or reviewer notes becoming features;
+- release cases used in prompts or demonstrations;
+- evaluator tuned on release disagreements;
+- model trained on a public benchmark;
+- repeated manual debugging against frozen cases;
+- metrics or thresholds selected after reading release results.
+
+The companion detects a simple route: one `constructionGroup` appearing in both release evaluation and another partition. It deliberately does not claim semantic duplicate detection.
+
+When leakage is discovered, do not relabel the case and preserve the old score. Mark the evidence contaminated, identify affected decisions, move the case to development or challenge, construct a genuinely new held-out group, increment the suite version, and rerun the decision packet.
+
+## A contamination event
+
+Patchwork has `ordinary-16mm` in development. An engineer copies it, changes **mechanical seal** to **pump shaft seal**, and places the copy in release evaluation. The IDs differ and a random row split appears clean. The construction group reveals the shared answer pattern.
+
+The contamination report returns:
+
+```json
+{
+  "constructionGroup": "ordinary-16mm",
+  "partitions": ["development", "release-evaluation"]
+}
+```
+
+Response:
+
+1. invalidate release results that depended on the leaked case;
+2. move both variants to development;
+3. inspect other template siblings;
+4. generate a new case from a distinct construction group;
+5. have a reviewer confirm that it tests the same clause without answer transfer;
+6. increment the suite version and hash;
+7. record the change and limitation.
+
+Leakage is an evidence failure, not a data-cleaning inconvenience.
+
+## Evaluate interaction, not just output
+
+Static input-output cases miss timing and correction.
+
+Patchwork interaction scenarios include:
+
+### Missing measurement and clarification
+
+The user omits shaft diameter. The interface asks for the exact missing field and explains why. The user supplies 16 mm. The system recomputes under a new request generation. Success means the correction changes the evidence path; the old request cannot overwrite it.
+
+### Conflicting evidence and escalation
+
+Two permitted sources disagree. The system preserves both, removes compatibility language, and offers the named catalog review path or abstention. Success is not choosing one source fluently.
+
+### Explanation timeout
+
+Structured evidence is valid; optional prose times out. The interface degrades without losing candidate evidence or implying failure of retrieval.
+
+### Draft interruption
+
+The user requests a seller-question draft, edits it, and leaves. No message is sent. A late adapter response cannot overwrite the edit. Returning later shows the correct draft state only if retention and product scope authorize it.
+
+### Provider change
+
+The same cases run against the old and proposed adapters. Differences are classified by behavior clause and consequence, not only string similarity.
+
+These scenarios test the combined system and human interaction. [CLM-046]
+
+## Handle ambiguity explicitly
+
+Not every case has one uncontested expected answer.
+
+Record:
+
+- which facts are explicit;
+- which evidence conflicts;
+- which criteria are conditional;
+- acceptable behavior variants;
+- unacceptable outcomes;
+- reviewer competence;
+- disagreement disposition;
+- authority.
+
+For ambiguous compatibility, acceptable variants might be clarify or abstain with named evidence. A specific candidate recommendation may be unacceptable. Evaluation can be decisive about boundaries without pretending the domain fact is settled.
+
+Keep ambiguous cases. Removing them because scoring is harder trains the evaluation set toward easy certainty.
+
+## Keep evaluator development separate
+
+Later chapters will combine deterministic checks, human review, and model-based grading. The data split must anticipate that work.
+
+Cases used to develop a rubric or tune a grader are evaluator-development cases. Once reviewer examples, criteria, or expected rationales have influenced the evaluator, those cases cannot provide independent evidence about that evaluator.
+
+Track:
+
+- evaluator ID and version;
+- cases and labels used during development;
+- rubric version;
+- reviewer guidance;
+- calibration cases;
+- frozen cases not seen during development;
+- disagreement and adjudication.
+
+The evaluator can leak even when the product model does not.
+
+## Continuous evaluation without continuous laundering
+
+Provider-authored guidance often recommends task-specific, continuously expanded evaluation sets. That is a useful workflow principle, but provider APIs are volatile and coverage remains application-owned. [CLM-047]
+
+Add cases from:
+
+- newly observed, authorized failures;
+- user corrections;
+- incident reconstruction;
+- new segments;
+- data/context change;
+- policy change;
+- model/provider change;
+- threat findings;
+- evaluator disagreement;
+- retired assumptions.
+
+Do not continuously edit the same frozen set and compare scores as if nothing changed. Version the suite. Preserve old cases where permitted. Distinguish:
+
+- fixed regression core;
+- current release set;
+- rotating challenge set;
+- exploratory incoming cases;
+- retired or invalid cases.
+
+Report results by suite version and split hash.
+
+## The evaluation-set lifecycle
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f09-2-evaluation-set-lifecycle.png" alt="Bright realistic three-dimensional circular workshop showing case discovery, permission review, construction, grouping, split freeze, evaluation, decision, production learning, refresh, and retirement, with a sealed release set and visible contamination alarm." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption><strong>F09.2 - Evaluation cases are governed engineering assets.</strong> Provenance, grouping, freeze, decision use, refresh, and retirement remain visible throughout the lifecycle.</figcaption>
+</figure>
+
+### Discover
+
+Identify a consequence, contract gap, user correction, change risk, or observed failure.
+
+### Authorize
+
+Confirm purpose, data permission, access, retention, affected-party concerns, and reviewer authority.
+
+### Construct
+
+Create input, context, expected criteria, unacceptable outcomes, segments, and provenance. Assign construction groups before splitting.
+
+### Review
+
+Check realism, ambiguity, domain meaning, privacy/security, and whether the case can change a decision.
+
+### Partition and freeze
+
+Group related material, assign purpose-specific partitions, record suite version, and compute the split hash.
+
+### Execute and judge
+
+Run the versioned system, record component versions and traces, apply criteria, preserve disagreement, and report by segment.
+
+### Decide
+
+Issue a release disposition tied to evidence and named authority: go, conditional go, reduce scope, delay, or stop.
+
+### Learn and refresh
+
+Add authorized production findings to incoming sets, not silently to the frozen result. Reassess coverage and contamination.
+
+### Retire
+
+Retire cases whose source permission, relevance, semantics, or reproducibility no longer supports use. Preserve a change record where allowed.
+
+## Coverage has no universal percentage
+
+Teams often ask, **How many cases are enough?** There is no context-free number.
+
+The answer depends on:
+
+- behavior-clause diversity;
+- consequence severity;
+- population and segment variation;
+- mechanism complexity;
+- data/context states;
+- interaction paths;
+- change frequency;
+- evaluator reliability;
+- statistical objective;
+- acceptable uncertainty;
+- release scope;
+- monitoring and rollback.
+
+Ten carefully constructed control cases can be decisive for a prohibited effect. Ten thousand duplicated ordinary prompts can miss the same effect entirely.
+
+Case quantity affects precision for defined estimates. It does not create a valid population, criterion, label process, or independent split. Chapter 12 will connect sample size and uncertainty to decisions.
+
+## Use a gap register
+
+Every coverage report should produce a gap register with:
+
+- uncovered clause or intersection;
+- consequence and severity assumption;
+- reason for gap;
+- evidence needed;
+- owner;
+- target version;
+- release implication;
+- accepted authority if deferred.
+
+For `PF-07` v0.1:
+
+| Gap | Evidence needed | Current disposition |
+| --- | --- | --- |
+| Explanation variation | bounded semantic criteria and cases | structured explanation only; no quality claim |
+| Domain escalation | conflict packet and reviewer workflow cases | abstain; no escalation service claim |
+| Score presentation | interface comprehension and overconfidence cases | raw score hidden |
+| Draft request flow | interaction cases around edit/cancel | draft code tested; no product-use claim |
+| Full change replay | old/new adapter and data versions | no migration claim |
+| Long-tail population | authorized representative source | no coverage or release claim |
+
+The gap register prevents **not measured** from becoming **passed**.
+
+## Write the evaluation-set card as a decision record
+
+The card should let a reviewer understand the suite without opening every case.
+
+### Identity and status
+
+Record suite ID, semantic version, status, owner, creation date, last review, case schema, generator version, source revision, and split hash. Mark whether the suite is draft, frozen for a specific decision, superseded, contaminated, or retired.
+
+### Intended decision
+
+Name the decision and candidate dispositions. **Evaluate the system** is too vague. A stronger statement is: **determine whether the local slice preserves contract states and zero effects under ten constructed scenarios before developing quality criteria**.
+
+### System under evaluation
+
+Record behavior-contract, data, context, policy, interface, retrieval, adapter, presentation, and tool-boundary versions. The same suite run against a different configuration is a different evidence event.
+
+### Population and sampling
+
+Describe the intended task population, observed or constructed source, sampling method, excluded populations, time window, and known unknowns. `PF-07` has no observed population and no sampling claim. Its cases are purposive synthetic constructions.
+
+### Composition
+
+List counts by partition, clause, segment, data state, mechanism, consequence, provenance, and ambiguity. Keep counts descriptive. They do not estimate prevalence unless the design supports that inference.
+
+### Case construction and labels
+
+Explain who or what authored cases, what source evidence was permitted, how expected behavior was derived, what reviewer competence was required, and how disagreement was handled. State whether a model proposed any content and how contamination was assessed.
+
+### Intended and prohibited use
+
+Examples of intended use: contract mechanics, failure injection, regression, adapter conformance, and coverage-gap discovery. Prohibited use: real-world performance, compatibility, fairness certification, safety authorization, public ranking, model training, and release approval.
+
+### Partition policy
+
+Define grouping keys, temporal boundaries, development exposure, evaluator-development use, freeze event, access control, and conditions that invalidate release evidence.
+
+### Limitations and gaps
+
+List missing clauses, segments, mechanisms, interaction paths, real-user evidence, evaluator evidence, and operational context. Connect each material gap to release disposition.
+
+### Change and retirement
+
+Define triggers: behavior-contract change, data/context change, new observed failure, provider/model change, case exposure, permission withdrawal, semantic drift, duplicate discovery, or evaluator change. Record what causes a major, minor, or patch suite version under the project policy.
+
+The card is evidence navigation. It cannot make weak cases strong, but it can stop users from making claims the suite was never designed to support.
+
+## Turn a clause into a family of cases
+
+Take `PF-B06`: when a unit is missing and alternative units change compatibility, withhold compatibility language and offer correction or ordinary search.
+
+One case is insufficient. Build a small family:
+
+1. bare integer `16` with no unit;
+2. text says `16` while structured field omits unit;
+3. text says `16 mm` but structured field says `in`;
+4. locale notation uses a comma decimal;
+5. user selects unit after clarification;
+6. correction arrives while old request is in flight;
+7. a candidate title contains `16 mm`, tempting the system to infer the user's unit;
+8. optional image evidence strongly resembles a 16 mm item;
+9. adapter explanation assumes millimeters despite abstention state;
+10. ordinary search is selected without assisted compatibility wording.
+
+Map each to the same clause and different mechanisms or interactions. The family shows whether the system preserves the rule across representation, retrieval, ranking, generation, interface, and state.
+
+Do the same for permission. Test denied source, missing metadata, permission change after retrieval, denied content in a duplicate cluster, cache built before withdrawal, trace redaction, and provider context exclusion. A single **unauthorized actor** case does not cover source permission.
+
+Case families reveal hidden implementation coupling. They also help determine which cases belong in development versus a clean release split.
+
+## Separate deterministic oracle from judgment rubric
+
+Some expectations are exact:
+
+- effect count must equal zero;
+- an unauthorized candidate ID must not appear;
+- a missing unit must not produce a compatibility claim;
+- a trace must contain required versions;
+- a prohibited category must not call the adapter;
+- a release construction group must not cross partitions.
+
+These can use deterministic assertions.
+
+Other expectations require judgment:
+
+- Is the clarification understandable?
+- Does an explanation preserve uncertainty?
+- Is a result useful for the user's next step?
+- Does the interface overstate evidence?
+- Is the fallback meaningfully distinct?
+- Is a domain escalation packet sufficient?
+
+These need a rubric, examples, reviewer guidance, calibration, and disagreement handling. Do not force them into exact string equality merely to automate the test.
+
+An evaluation case may contain both. First run deterministic gates. Only outputs that pass can enter more expensive judgment. A fluent explanation cannot compensate for a permission violation.
+
+Chapter 11 will choose evaluator methods. The case schema should already record which criteria are deterministic, machine-judged, generally human-judged, or domain-authority decisions.
+
+## Build a run manifest
+
+Every evaluation execution writes an immutable manifest with:
+
+- run ID and time;
+- suite ID/version and split hash;
+- selected partition and case IDs;
+- behavior contract and clause versions;
+- dataset/context/index versions;
+- query, candidate, policy, result, and trace schema versions;
+- mechanism, model/provider, adapter, prompt, and configuration versions;
+- code revision and environment;
+- evaluator and rubric versions;
+- random seeds and nondeterminism settings;
+- timeout, retry, cost, and capacity configuration;
+- result artifact references;
+- contamination status;
+- operator and decision purpose.
+
+Without a manifest, two scores with the same suite name may describe different systems. A hash of the split is only one component. Reproducibility requires the whole evidence context.
+
+For provider-hosted models, record the most precise tested version available and the access date. If the provider can change behavior silently, mark the limitation and retain replay signals. Do not invent precision the provider does not expose.
+
+## Report outcomes at three levels
+
+### Case-level
+
+Show input/context references, expected criteria, actual terminal state, reason codes, trace, deterministic failures, reviewer judgments, disagreement, and limitation. Case-level detail supports diagnosis.
+
+### Segment and clause level
+
+Aggregate within predeclared groups. Show denominator, result, uncertainty where meaningful, critical failures, and coverage. Keep rare severe failures visible even if their count is small.
+
+### Decision level
+
+Summarize what changed, which release disposition the evidence supports, conditions, gaps, rollback triggers, and named authority. Do not paste an average into the decision field.
+
+For `PF-07`, the decision-level result is simple: deterministic mechanics pass for selected synthetic cases; important contract gaps remain; no real-population or release claim is supported.
+
+## Think statistically only after defining the estimand
+
+If an evaluation will estimate a rate, define exactly what the rate refers to.
+
+An estimand might be: **the proportion of supported current-task requests from a defined time window and region for which the system presents an ineligible candidate under contract v1.2**. That sentence specifies population, unit, time, scope, behavior, and version.
+
+Then decide sampling, labeling, weighting, missing data, dependence, uncertainty, and segment reporting. A confidence interval around a biased convenience sample does not repair representativeness. Repeated queries from one user or duplicates from one listing family are not independent merely because rows differ.
+
+For rare severe failures, random sampling may be inefficient. Combine population sampling for rate estimation with targeted challenge cases for containment. Report them separately. Challenge-set failure rate is not prevalence.
+
+`PF-07` does not estimate any population parameter, so it reports exact constructed case outcomes and refuses percentage language that implies generalization.
+
+## Manage reviewer and author access
+
+A frozen set loses independence when engineers repeatedly inspect it. Use practical access controls:
+
+- development cases are broadly visible;
+- evaluator-development cases are visible to rubric/evaluator authors;
+- challenge cases may be visible for diagnosis after a gate;
+- release cases are restricted until an authorized run;
+- expected labels can be separated from inputs when feasible;
+- run results are disclosed according to decision protocol;
+- every exposure is recorded.
+
+Access control does not need secrecy theatre. Small teams may not support strict organizational separation. Then state the limitation, use temporal holds, independent construction, blinded review, or fresh cases, and reduce the strength of the claim.
+
+Do not punish engineers for finding a release-case defect. Invalidate or downgrade the evidence, move the case to development, and create a fresh holdout. A culture that hides exposure produces worse contamination.
+
+## Treat production failures carefully
+
+Real failures are valuable and sensitive. Before turning one into a case:
+
+1. contain and resolve the incident under the incident process;
+2. confirm purpose and authority for reuse;
+3. minimize or synthesize personal, confidential, or security-sensitive content;
+4. preserve the behavior mechanism and consequence without unnecessary payload;
+5. assign provenance and access;
+6. group related incident variants;
+7. decide which partitions may use them;
+8. record whether the case became known to developers;
+9. define retention and deletion;
+10. verify the transformed case still tests the failure.
+
+An incident-derived synthetic case should not be presented as the original event. Record the transformation. Conversely, excessive sanitization can remove the feature that caused failure; have a competent reviewer validate fidelity.
+
+Production feedback can update the suite without becoming automatic truth. User reports can be mistaken, strategic, incomplete, or outside scope. Treat them as evidence leads, then adjudicate against the contract and domain.
+
+## Evaluate change with paired cases
+
+When comparing system A and B, run the same frozen cases under matched conditions and preserve paired outcomes.
+
+For each case classify:
+
+- unchanged pass;
+- unchanged failure;
+- intended improvement;
+- intended tradeoff;
+- unexpected regression;
+- changed abstention/coverage;
+- operational-only change;
+- unable to compare because evidence or version differs.
+
+Pairing reduces noise from different case composition but does not eliminate provider nondeterminism or time effects. Repeat where the decision requires it and record settings.
+
+Do not average away asymmetric consequence. One new permission exposure can block a migration even if many wording scores improve. Chapter 12 will formalize experiment disposition; the case suite provides the paired substrate.
+
+## Give each gap an acquisition plan
+
+**More data** is not a plan. For each gap, specify:
+
+- missing decision or claim;
+- target population/segment/state;
+- acceptable source and permission;
+- collection or construction method;
+- criterion and reviewer;
+- grouping and partition rule;
+- minimum useful evidence and why;
+- privacy/security/domain review;
+- cost and time;
+- stop or narrow alternative.
+
+For the long-tail gap, Patchwork might need authorized catalog samples stratified by supported families, domain-reviewed attribute semantics, and user-task evidence. If that cannot be acquired responsibly, narrow the product to supported families. The evaluation plan should preserve a valid **no** decision.
+
+## Make retirement visible
+
+Cases age. Retire or supersede when:
+
+- source permission is withdrawn;
+- task or behavior clause is removed;
+- field semantics change;
+- a case becomes impossible or irrelevant;
+- provenance cannot be verified;
+- expected behavior is shown to be wrong;
+- the case has been overexposed;
+- a stronger representative source replaces it;
+- a vulnerability detail should move to restricted testing;
+- a provider or interface no longer exists and the case has no durable lesson.
+
+Retirement does not mean deletion in every context. Preserve the ID, reason, affected runs, replacement, and authority where retention is allowed. Historical regression cores can remain valuable if their scope is honest.
+
+## Review a case before admitting it
+
+Use a short admission review for every case family.
+
+**Decision relevance:** Which decision could this change? If none, keep it exploratory or remove it.
+
+**Contract linkage:** Which clause, state, or explicit general path does it exercise? A case without linkage may reveal a missing contract; resolve that gap rather than assigning a convenient clause.
+
+**Consequence fidelity:** Does it preserve the condition that creates consequence? Sanitization that removes partial state can destroy a timeout case's purpose.
+
+**Provenance and permission:** Can the team explain origin, transformations, access, retention, and prohibited reuse? Unknown provenance blocks strong claims.
+
+**Independence:** Which construction, duplicate, incident, user, item, session, time, model, or reviewer group connects it to other cases? Assign groups before partition.
+
+**Oracle or rubric quality:** Is expected behavior derived from a current contract and competent authority? Are acceptable variants and disagreements preserved?
+
+**Operational realism:** Does it include relevant identity, permission, context, time, failure, and interface state, or is it merely a prompt detached from product behavior?
+
+**Limitation:** What can it not show? If the limitation invalidates the intended decision, acquire different evidence.
+
+Admission review makes case quality a governed decision rather than an accumulation contest.
+
+## Keep generation reproducible and varied
+
+A deterministic generator exposes templates, parameters, seed, and construction groups. It should not hide near duplicates behind new IDs. Vary supported family, explicit attributes, missing/conflicting/stale/denied evidence, modality, duplicate cluster, actor scope, request generation, adapter failure, correction, and terminal state.
+
+Then review plausibility. Determinism makes construction reproducible, not realistic. Store grouping metadata separately from system inputs when it could leak expected behavior; `constructionGroup: missing-unit` helps splitting but must not become a model feature.
+
+## Publish claims with denominators and scope
+
+Compare **The system passed 100 percent of tests** with:
+
+> Under `PF-07` `0.1.0` and its recorded split hash, the local slice matched expected terminal state and zero-effect assertions for ten deterministic synthetic cases. Five clauses remain uncovered or partial; no real-population or release claim is supported.
+
+The second statement names evidence, version, outcome, denominator, gap, and limitation. Use the same discipline for failures. **Two of three constructed timeout cases rendered partial results under adapter 0.2.0** is actionable; **reliability fell** is not.
+
+If an aggregate excludes invalid or ambiguous cases, report the exclusion and reason. A changed denominator can change the conclusion.
+
+## The PF-07 acceptance packet
+
+Package the evaluation-set card; schema and generator version; suite manifest and split hash; coverage matrix; partition/group record; contamination report; case outcomes and traces; segment/clause summary; gap register; known exposures and evaluator use; limitations and prohibited claims; and decision disposition with named authority.
+
+The packet lets Chapter 10 define errors without losing provenance and makes later model/provider replay possible because the original evidence object remains identifiable.
+
+## Run a suite integrity review
+
+Before using results, choose several cases and reconstruct their path from source to decision. Verify case ID, construction group, provenance, permission, partition, contract clause, expected criteria, system versions, actual trace, evaluator, and outcome. Recompute the split hash from the manifest. Run the contamination detector and inspect near-duplicate risks the simple detector cannot see.
+
+Ask whether any engineer, prompt, grader, reviewer, or threshold saw the release case before the frozen run. Ask whether a provider model may have trained on a public source behind the case. Uncertain exposure does not always invalidate every use, but it reduces the supported claim and belongs in the limitation.
+
+Check that all reported denominators match the frozen manifest, failed executions are not silently dropped, and ambiguous cases retain their status. Compare the gap register with release language. If marketing or product copy makes a claim tied to an uncovered clause, the evidence packet must stop it.
+
+## Prefer case deletion to weak inflation
+
+More cases create maintenance, review, and contamination surface. Remove cases that duplicate the same construction without adding precision, consequence, segment, or mechanism coverage. Merge exact duplicates under one canonical group. Retire cases with unverifiable provenance or obsolete semantics.
+
+Keep cases that disconfirm the team, expose a severe boundary, preserve a production lesson, or distinguish competing decisions. An evaluation set is strong because each case has a job and the gaps are honest, not because the directory is large.
+
+## State the current disposition
+
+`PF-07` v0.1 passes its structural and contamination mechanics. Ten synthetic cases validate, the split hash is reproducible, the intentionally leaked group is detected, and uncovered clauses remain visible. The correct disposition is **continue**: use the suite for deterministic development and failure regression while building error criteria, evaluator evidence, and representative authorized cases. It is not a release gate yet.
+
+Record that disposition in the dossier with owner, date, evidence links, limitations, and next decision. A future run must not overwrite it. The history should show how new cases, criteria, or observed evidence changed the supported claim.
+
+This discipline turns evaluation from a score-producing ceremony into a learning system. Cases state what the team believes matters; failures challenge that belief; gaps show where it lacks evidence; versioned decisions keep the learning accountable.
+
+## Build PF-07 v0.1
+
+The deterministic fixture generator creates ten cases across development, challenge, and release-evaluation partitions. Each maps clauses, segments, data states, mechanisms, and consequences. Every expected effect count is zero.
+
+The suite includes:
+
+- ordinary explicit 16 mm success;
+- missing measurement clarification;
+- ambiguous unit abstention;
+- empty-evidence abstention;
+- excluded-category prohibition;
+- provider timeout degradation;
+- invalid structured-output abstention;
+- authorization failure;
+- stale-source abstention;
+- user-correction success.
+
+The coverage report exposes unmapped clauses. The contamination detector checks construction groups across release and non-release partitions. The split hash makes the declared partition reproducible. Tests inject a copied group and require detection.
+
+This is a teaching set. Its counts are choices, not marketplace estimates.
+
+## Evaluate the vertical slice with the suite
+
+For each case:
+
+1. load exact suite, contract, dataset, interface, policy, retrieval, and adapter versions;
+2. create the actor and scenario state;
+3. run the slice locally;
+4. capture terminal state, reason codes, result, trace, and effects;
+5. compare deterministic criteria;
+6. preserve unexpected differences;
+7. aggregate only after clause and segment results are visible;
+8. issue no claim beyond the set's scope.
+
+The expected state can be tested exactly for deterministic cases. Explanation quality, human comprehension, or domain judgments require richer criteria and evaluators in Chapters 10 and 11.
+
+## Change one variable and watch coverage
+
+Suppose the team adds inch conversion. The mechanism change affects explicit-unit and ambiguous-unit cases. It may require:
+
+- ordinary inch examples;
+- boundary conversion values;
+- rounding and tolerance cases;
+- malformed and mixed-unit cases;
+- correction from inches to millimeters;
+- display evidence showing original and normalized values;
+- domain approval for tolerance semantics.
+
+The old suite remains useful for regression but no longer covers the expanded claim. Increment the suite, add groups, update the coverage matrix, and preserve the limitation until new evidence passes.
+
+Suppose the team adds generated explanations. The change creates new mechanism, data, security, interaction, and evaluator dimensions. Do not merely run old candidate cases and compare output strings. Add unsupported-fact, certainty inflation, conflict preservation, citation, instruction-like content, timeout fallback, and user-comprehension cases.
+
+The behavior claim expands; evaluation must expand with it.
+
+## Avoid common evaluation anti-patterns
+
+### Benchmark as population
+
+Using a public benchmark as if it represented product users. Correct by defining the product task population and treating benchmark results as scoped mechanism evidence.
+
+### Random row split
+
+Splitting near duplicates across development and release. Correct by grouping source, session, item, template, incident, and time before partitioning.
+
+### Golden-answer worship
+
+Forcing one answer where criteria are conditional or disputed. Correct by recording acceptable variants, unacceptable outcomes, ambiguity, and authority.
+
+### Aggregate-only reporting
+
+Hiding critical segments behind a mean. Correct by predeclaring segment and consequence views.
+
+### Case-count confidence
+
+Treating volume as coverage. Correct with a clause/segment/state/mechanism/consequence matrix and gap register.
+
+### Tuning on release failures
+
+Repeatedly editing against the frozen set and still calling it held out. Correct by moving exposed cases to development and creating a fresh independent release set.
+
+### Evaluator leakage
+
+Tuning a grader on release rationales. Correct with an evaluator-development split and separate calibration evidence.
+
+### Silent set mutation
+
+Adding cases without changing version or denominator. Correct with immutable run manifests, suite versions, hashes, and change records.
+
+### Synthetic realism claim
+
+Treating generated fixtures as distribution evidence. Correct by limiting them to mechanics, controls, and hypothesized failures until representative authorized evidence exists.
+
+## Apply the method to the satellite cases
+
+### Care-operations routing
+
+Cases would map administrative versus clinical-boundary messages, urgency indicators, language/format segments, ambiguity, professional review, escalation time, and prohibited clinical claims. Domain experts define criteria and authority. Synthetic cases can test routing mechanics; they cannot establish clinical safety.
+
+### Bounded engineering assistant
+
+Cases would cover diagnostic summary, reversible proposal, invalid tool arguments, stale state, permission failure, explicit confirmation, duplicate proposal, interruption, recovery, and absent destructive capability. Effect tests must prove unauthorized actions remain impossible.
+
+### Predictive forecast
+
+Cases would cover normal demand, sparse history, missing feature, regime change, cold start, stale data, extreme value, baseline comparison, abstention, and planner override. Evaluation need not mention prompts or generation.
+
+The common structure transfers. The population, criteria, consequence, and authority do not.
+
+## Practice: build a defensible suite
+
+Start with one behavior contract and running slice.
+
+Required work:
+
+1. list consequential failures and permitted outcomes;
+2. map every clause to at least one planned case or visible gap;
+3. define task/user segments, data states, mechanisms, interactions, and consequences;
+4. create ordinary, edge, rare severe, adversarial, interaction, and change cases;
+5. document provenance, permission, ambiguity, and limitations;
+6. group duplicates and shared construction routes;
+7. assign development, evaluator-development, challenge, and release purposes;
+8. freeze a version and split hash;
+9. inject one contamination event and detect it;
+10. publish coverage and gaps together.
+
+Required output is `PF-07`: evaluation-set card, scenario suite, coverage matrix, split manifest, contamination report, and gap register.
+
+Completion evidence must show that every case maps to a clause and a segment or explicit general path; gaps remain visible; a leaked release case is invalidated; hashes reproduce the declared set; and no synthetic count becomes a real-population claim.
+
+The adjacent-role limit is explicit. Applied AI engineering owns suite mechanics and technical evidence. Domain, product, privacy, security, legal, safety, and formal risk authorities retain their decisions.
+
+## Handoff to consequential error
+
+An evaluation case says what situation to run and which behavior proposition matters. It does not yet provide a complete error taxonomy, severity model, detectability judgment, threshold, or tradeoff decision.
+
+Chapter 10 will name the errors that matter. It will distinguish a harmless wording variation from permission exposure, incompatible candidate presentation, ignored correction, and unauthorized effect. The coverage matrix and gap register now give that judgment a structured place to land.

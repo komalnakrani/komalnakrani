@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://komalnakrani.com/books/applied-ai-engineering/companion/contracts/applied-ai-interfaces.schema.json",
+  "title": "Patchwork combined-system interfaces",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "interfaceSetId", "version", "caseStatus", "boundaries"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "interfaceSetId": {"const": "PF-05"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "caseStatus": {"const": "fictional-synthetic"},
+    "boundaries": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "owner", "trust", "stateOwner", "validator", "failureDisposition", "authority"],
+        "properties": {
+          "name": {"enum": ["query", "candidate", "rankedResult", "policy", "explanation", "toolProposal", "trace", "providerAdapter"]},
+          "owner": {"type": "string", "minLength": 3},
+          "trust": {"enum": ["untrusted", "validated-data", "deterministic-control", "evidence-record"]},
+          "stateOwner": {"type": "string", "minLength": 3},
+          "validator": {"type": "string", "minLength": 3},
+          "failureDisposition": {"enum": ["block", "abstain", "degrade", "diagnose-only"]},
+          "authority": {"type": "string", "minLength": 3}
+        }
+      }
+    }
+  }
+}

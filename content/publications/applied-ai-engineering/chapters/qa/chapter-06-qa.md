@@ -20,4 +20,4 @@
 
 ## Residual limits
 
-Exact synthetic cosine search is not an ANN benchmark, production embedding evaluation, relevance estimate, or release claim. Artwork remains a Phase 08 original placeholder.
+Exact synthetic cosine search is not an ANN benchmark, production embedding evaluation, relevance estimate, or release claim. Artwork is original ImageGen raster work pending Phase 10 whole-book visual QA.

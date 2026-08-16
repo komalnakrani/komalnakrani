@@ -19,4 +19,4 @@
 
 ## Residual limits
 
-The selected portfolio is conditional, not release evidence. Artwork is a Phase 08 original placeholder pending Phase 10 visual production QA.
+The selected portfolio is conditional, not release evidence. Artwork is original ImageGen raster work pending Phase 10 whole-book visual QA.

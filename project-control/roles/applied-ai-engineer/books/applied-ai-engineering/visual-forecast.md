@@ -91,7 +91,7 @@ Every final figure must:
 1. Draft a low-fidelity evidence sketch during each chapter research pack.
 2. Validate the sketch against the claim, decision, competency domain, and `PF-*` artifact.
 3. Revise after blueprint and manuscript logic stabilizes; do not use artwork to conceal an unresolved claim.
-4. Create the final canonical vector/source figure through a deterministic or inspectable process.
+4. Create the final canonical raster figure with ImageGen through an inspectable prompt, review, and provenance process.
 5. Export web and print variants from the same canonical source.
 6. Run label, contrast, grayscale, small-size, reading-order, alt-text, long-description, and PDF-render checks.
 7. Record versions, source hashes, export hashes, provenance, reviewer, and QA disposition.

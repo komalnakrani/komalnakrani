@@ -14,10 +14,10 @@
 - Prerequisite: PASS. Assumes ordinary application literacy only.
 - Failure depth: PASS. The unit regression is traced across task, data/context, mechanism, application, interface, operation, and authority.
 - Example integrity: PASS. Patchwork is repeatedly marked fictional/synthetic; no marketplace outcome is invented.
-- Figures: PASS. `F01.1` and `F01.2` appear at their frozen teaching anchors with accessible original SVG placeholders.
+- Figures: PASS. `F01.1` and `F01.2` appear at their frozen teaching anchors with accessible original ImageGen PNG artwork.
 - Continuity: PASS. `PF-01` v0.1 hands a mechanism-neutral task problem to Chapter 2.
 - Pipeline: PASS at immediate validation; publication validation and tests pass.
 
 ## Residual limits
 
-No blocking source gap. Artwork is an original Phase 08 placeholder pending Phase 10 production visual QA. Publication remains draft.
+No blocking source gap. Artwork is original ImageGen raster work and remains subject to whole-book Phase 10 visual QA. Publication remains draft.

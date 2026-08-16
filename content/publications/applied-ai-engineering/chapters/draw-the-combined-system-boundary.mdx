@@ -1,0 +1,725 @@
+---
+title: "Draw the Combined System Boundary"
+slug: "draw-the-combined-system-boundary"
+summary: "Separate learned behavior, deterministic policy, application state, trust, failure, ownership, and authority so every consequential claim crosses validation before use."
+minutes: 80
+sourceIds: ["SRC-005", "SRC-006", "SRC-007", "SRC-009", "SRC-037", "SRC-039", "SRC-041", "SRC-042", "SRC-043", "SRC-044", "SRC-048", "SRC-052", "SRC-055"]
+claimIds: ["CLM-032", "CLM-033", "CLM-034", "CLM-035", "CLM-036"]
+objectiveIds: ["AAE-K02", "AAE-K03", "AAE-K05", "AAE-K08"]
+figureIds: ["FIG-013", "FIG-014"]
+---
+
+## A model box is not a system diagram
+
+The Patchwork team sketches its first architecture on a whiteboard. A large rectangle says **AI model**. An arrow enters from **user** and another exits to **answer**. The drawing feels decisive because it fits on one screen. It is also useless for the first serious incident.
+
+Where was permission checked? Which service owns the current task state? Can seller text alter policy? What happens when retrieval returns five candidates and the adapter returns four? Who decides that an unresolved dimension requires abstention? Does a generated seller question remain a draft, or can some tool send it? Which version belongs in the trace? Who may approve the compatibility wording? The model rectangle answers none of these questions.
+
+An applied AI architecture is a map of decisions and obligations. Its purpose is not to display every deployment resource. Its purpose is to make observable behavior explainable before success or failure becomes expensive. The map must expose where information changes form, where trust changes, where state persists, where failure propagates, where an effect can occur, and where decision rights change hands.
+
+ML systems collect dependencies in data, configuration, serving code, monitoring, surrounding services, and team processes. Production-readiness research therefore treats the model as one surface among many, not as a self-contained application. [CLM-032] Patchwork begins by redrawing the system around the behavior contract instead of around the most novel component.
+
+## Start with the consequence path
+
+Draw from the user's consequence backward.
+
+For Patchwork Find, the permitted consequence is modest: a buyer sees evidence-backed candidate listings for manual review, or receives a clear request for missing information, abstention, degraded result, or ordinary-search fallback. The prohibited consequences include a guaranteed fit claim, automatic seller contact, purchase execution, and assistance in excluded high-consequence categories.
+
+That distinction tells us which paths require stronger controls. A retrieval score can influence candidate order. It cannot grant permission. A learned explanation can influence wording. It cannot change deterministic incompatibility. A tool proposal can create an editable draft. It cannot send a message. The interface can display a candidate. It cannot convert unresolved evidence into a compatibility guarantee.
+
+Write every consequential path as a sequence:
+
+1. an actor presents input under an identity and purpose;
+2. the application validates shape and scope;
+3. authorized data and context are selected;
+4. deterministic and learned mechanisms produce candidate evidence;
+5. policy evaluates eligibility and behavior state;
+6. untrusted presentation output is validated against that state;
+7. the interface exposes evidence, uncertainty, correction, and fallback;
+8. any proposed effect reaches a separate permission and confirmation boundary;
+9. a privacy-conscious trace records versions and decisions;
+10. named owners review evidence and named authorities approve consequential change.
+
+The sequence prevents architecture by noun. **Model**, **database**, **API**, and **frontend** are nouns. **Validate permission before candidate content crosses the adapter**, **block a deterministic conflict before presentation**, and **require explicit confirmation before any seller contact** are decisions.
+
+## Use multiple boundary lenses
+
+One diagram cannot carry every question without becoming unreadable. Draw several aligned views with the same component names and IDs.
+
+### Responsibility boundary
+
+Responsibility identifies who builds, operates, diagnoses, and corrects a component. It is not the same as authority. The Applied AI Engineer may own the orchestration implementation and release evidence. The catalog domain owner owns compatibility rules and attribute semantics. The platform owner may operate identity, queues, and trace storage. The product owner may own interaction semantics. Privacy, security, legal, safety, and formal risk authorities retain their decision rights.
+
+For each component, name:
+
+- implementation owner;
+- runtime operator;
+- first diagnostic owner;
+- correction owner;
+- change reviewer;
+- release approver;
+- escalation destination.
+
+An unlabeled shared box is not shared ownership. It is deferred conflict.
+
+### Trust boundary
+
+Trust states what may be assumed about information after a boundary. Patchwork treats user text, seller content, retrieved text, learned scores, provider responses, generated explanations, and tool arguments as untrusted. Schema validation can establish shape. Permission policy can establish allowed use for a particular purpose. Domain rules can establish a deterministic exclusion. None of those checks establishes universal truth.
+
+Use narrow trust labels:
+
+- **untrusted input**: syntactically and semantically unverified;
+- **shape-valid**: conforms to an interface schema;
+- **purpose-authorized**: allowed for the actor and task at this time;
+- **policy-eligible**: passes named deterministic conditions;
+- **evidence-backed**: connected to permitted sources with visible limits;
+- **approved for effect**: separately authorized for the exact action;
+- **evidence record**: retained for a stated diagnostic or governance purpose.
+
+Avoid the label **trusted** without a predicate. Trusted for display does not mean trusted for compatibility. Trusted for diagnosis does not mean visible to the buyer.
+
+### Data boundary
+
+Trace where data originates, transforms, derives, caches, indexes, persists, and leaves. Include permission and deletion obligations for derived representations. An embedding, feature vector, score, or trace reference does not escape the source's purpose merely because it is numerically transformed.
+
+Patchwork separates:
+
+- current-task user input;
+- synthetic catalog source records;
+- derived lexical and vector-like representations;
+- authorized candidate metadata;
+- policy facts and rule versions;
+- user-visible evidence;
+- diagnostic metadata;
+- prohibited payloads that must not enter broad logs.
+
+Data contracts and version intent improve change detection, but structural compatibility does not prove semantic fitness. [CLM-033] A field can remain a number while its unit, source authority, or freshness meaning changes.
+
+### Identity boundary
+
+Every request and effect has a principal. Name the user, service identity, environment, tenant or scope, and delegated capability. A provider API key identifies an application to a provider; it does not represent the buyer's authority to contact a seller. An internal service credential does not authorize a product promise.
+
+Patchwork's discovery request requires `patchwork:discover`. A future seller-question draft requires explicit user intent. A send operation, if ever justified, would require a different capability, confirmation event, idempotency key, audit record, and product approval. Version 0.1 has no send capability.
+
+### State boundary
+
+State answers what survives the current function call and who owns transitions. Candidate state belongs to retrieval only until validation. Behavior state belongs to policy. UI state belongs to the application. Tool proposal state belongs to a gateway. Review state belongs to a named queue and authority. Trace state belongs to a store with retention and access policy.
+
+Do not let a framework's in-memory object become the accidental system of record. Define stable state values and transitions: received, authenticated, normalized, candidates-produced, policy-decided, validated, presented, draft-proposed, confirmed, effected, failed, recovered, and closed. Patchwork v0.1 stops at presented or draft-proposed.
+
+### Runtime and dependency boundary
+
+Mark process, service, network, queue, storage, cache, provider, and human-runtime boundaries. A local function failure differs from a remote timeout. A queue retry differs from a repeated model call. A model adapter can return after the user has abandoned the request. A human review can exceed the task's useful window.
+
+For each dependency, state timeout, retry eligibility, idempotency semantics, fallback, circuit behavior, version evidence, and owner. Chapter 13 will deepen failure engineering; this chapter establishes where a failure can cross.
+
+### Failure boundary
+
+Trace failure forward until contained. A malformed query should stop before retrieval. Missing permission metadata should exclude evidence. A stale source should degrade or abstain according to the contract. Partial provider output should stop before presentation. A trace-write failure may allow a low-consequence response only if the behavior contract and operating policy say so; it may also require fail-closed behavior where audit evidence is mandatory.
+
+Each path needs four assignments:
+
+- who detects it;
+- what contains it;
+- who corrects it;
+- who approves return to normal behavior.
+
+### Authority boundary
+
+Authority is the right to decide, not the presence of a person. **Human review** is an activity. A useful architecture names what the reviewer sees, what expertise they need, how quickly they must act, what dispositions are available, and which role owns the final decision.
+
+Patchwork's catalog domain owner can approve compatibility-rule semantics. Product authority can approve interaction wording and scope. Security authority can approve security controls under the organization's process. The Applied AI Engineer supplies implementation and evidence. None may silently absorb the other's formal role.
+
+## Separate the learned and deterministic responsibilities
+
+The most important line in an applied AI architecture is not model versus non-model. It is uncertain evidence versus authorized consequence.
+
+Learned components may:
+
+- create representations;
+- propose candidates;
+- rank permitted candidates;
+- classify a bounded input;
+- summarize a frozen evidence packet;
+- draft reversible content;
+- estimate or express uncertainty under a tested interpretation.
+
+Deterministic application components must retain:
+
+- input schema validation;
+- identity and permission enforcement;
+- scope exclusions;
+- required-field checks;
+- known incompatibility rules;
+- state transition rules;
+- timeout and retry limits;
+- effect gating;
+- confirmation requirements;
+- version capture;
+- audit/trace policy;
+- fallback selection where the contract defines it.
+
+This does not mean deterministic code is automatically correct. Rules can be stale, contradictory, or badly implemented. It means their authority and test surface are explicit. A rule that blocks a known incompatibility is inspectable in a way a prompt sentence is not.
+
+## Validation before use
+
+Every boundary follows a simple pattern:
+
+**receive -> validate -> interpret under a contract -> decide -> use -> record**
+
+Receiving structured output is not validation. Some providers can constrain output to a schema, which strengthens the interface. Provider documentation also makes clear that application integration still owns tool execution and its surrounding logic. Shape conformance does not establish factual correctness, permission, business invariants, or safe effect. [CLM-034]
+
+Patchwork therefore validates provider envelopes twice:
+
+1. **structural validation** checks schema version, adapter version, status, required fields, types, bounds, and unknown fields;
+2. **semantic/effect validation** checks candidate membership, permission, freshness, deterministic exclusions, contract state, scope, and allowed presentation or tool effect.
+
+If an adapter returns four IDs after retrieval authorized three, the unknown ID is not ignored and the partial list is not displayed. The whole result enters `abstain: UNVALIDATED_CANDIDATE`. If an explanation says **guaranteed fit**, the application removes the explanation or blocks the result; it does not weaken policy to preserve fluency.
+
+## The combined layered architecture
+
+Patchwork uses the following logical layers.
+
+### 1. Interface and task layer
+
+Collect current-task text, explicit measurements and units, selected family, optional image reference, correction, and requested action. Show the contract's capability and limitation. Preserve the original input beside normalized fields.
+
+### 2. Application boundary
+
+Assign trace identity, authenticate, authorize scope, validate query shape, choose feature configuration, enforce request budgets, and own the user-visible state. The application does not infer compatibility.
+
+### 3. Context and data boundary
+
+Select permitted catalog versions, construct lexical or vector-like inputs, retrieve candidates, enforce source permission and freshness, deduplicate, and assemble provenance. Seller text remains inert data.
+
+### 4. Learned mechanism boundary
+
+The local reference adapter is deterministic. Optional provider adapters may contribute representation, ranking, or explanation. Each emits a versioned envelope. No provider response directly writes product state.
+
+### 5. Policy boundary
+
+Apply scope, permission, required-input, incompatibility, conflict, absence, and presentation rules. Produce a behavior state and reason codes. Policy owns eligibility; ranking owns order among eligible candidates.
+
+### 6. Presentation boundary
+
+Translate the policy-approved structure into the interface. Display matched, unresolved, and conflicting evidence; never a raw score as a fit probability. A generated explanation, if enabled, is replaceable and may degrade independently.
+
+### 7. Tool/effect boundary
+
+Accept only known proposal types. Validate arguments, permission, current state, confirmation, idempotency, and effect scope. Version 0.1 can produce an editable seller-question draft with `confirmed: false` and `effect: draft-only`; it has no external connector.
+
+### 8. Evidence and operation layer
+
+Record privacy-conscious transition metadata, contract/interface/component versions, decision reasons, fallback, and effect attempts. Diagnostics cannot expose denied seller content to unauthorized operators.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f07-1-combined-layered-architecture.png" alt="Colorful layered three-dimensional architecture showing the user interface, application, authorized data and retrieval, learned adapter, deterministic policy, presentation, tool gateway, trace, and named human authorities as distinct connected zones." width="1586" height="992" loading="lazy" decoding="async" />
+  <figcaption><strong>F07.1 - The combined layered architecture.</strong> Learned components propose evidence and wording; deterministic application boundaries validate scope, policy, state, and effects before anything reaches a user or tool.</figcaption>
+</figure>
+
+The diagram is logical, not a deployment prescription. A small implementation can run several layers in one process. The contracts still matter because logical boundaries let tests and future extraction preserve responsibility.
+
+## Three views for PF-05
+
+`PF-05` is not one poster. It is an architecture set with three aligned views.
+
+### Context view
+
+The context view names actors, external systems, supported outcomes, prohibited outcomes, and authorities. Patchwork users submit current-task evidence. Catalog sources provide permitted synthetic records. The provider adapter is optional. The tool gateway offers draft-only capability. Product, catalog-domain, security, privacy, and release authorities surround the path with distinct decisions.
+
+### Container and contract view
+
+The container view names the interface contracts: query, candidate, ranked result, policy decision, explanation, tool proposal, trace, and provider adapter. Each has a version, owner, validator, trust state, failure disposition, and authority.
+
+An interface registry records these facts. It improves traceability and discovery. It does not prove that two implementations preserve behavior. Registries and system documentation are mechanisms for evidence organization, not behavioral compatibility certificates. [CLM-036]
+
+### Consequence sequence view
+
+The sequence view follows success and failure. A success crosses authentication, query validation, retrieval eligibility, ranking, provider-envelope validation, policy, presentation, and trace. An invalid output stops before result creation. A timeout produces degraded behavior. Authorization failure stops before retrieval. A seller-question request produces a draft and no effect.
+
+Use exact reason codes. **Something went wrong** cannot support diagnosis or evaluation.
+
+## Trust, state, and authority must align
+
+A subtle architecture failure occurs when the trust boundary, state owner, and authority point to different places without a handoff.
+
+Suppose a generated explanation says a candidate is compatible. The explanation service owns the string but not the claim. The application owns presentation state but not catalog semantics. The catalog domain owner owns the rule meaning but is not in the runtime. The design needs an executable policy derived from approved rules, a version record linking the rule to its owner, and a presentation validator that prevents the explanation from exceeding the approved state.
+
+The authority is exercised through a controlled artifact, not by putting a human on every request.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f07-2-trust-state-authority-boundary.png" alt="Vivid three-dimensional boundary map with untrusted inputs outside, validated data and deterministic control in the center, product state and draft-only tools beyond gated checkpoints, and named owners and authorities connected to each gate." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption><strong>F07.2 - Trust, state, and authority are separate dimensions.</strong> A value moves only when its validator, state owner, failure disposition, and decision authority are all explicit.</figcaption>
+</figure>
+
+## Model the tool proposal before the tool
+
+Teams often connect a tool because a provider SDK makes function calling convenient. Reverse the order.
+
+First define the proposal:
+
+```json
+{
+  "kind": "seller-question-draft",
+  "candidateId": "PW-L001",
+  "question": "Can you confirm the measured shaft diameter and unit?",
+  "effect": "draft-only",
+  "confirmed": false
+}
+```
+
+Then define what validates it, who may request it, what state permits it, what evidence it can use, and what effects are absent. Only after those decisions should an implementation bind the proposal to a capability.
+
+The proposal is untrusted even if a model produced schema-valid arguments. A generated candidate ID must belong to the current authorized result set. The question must not invent facts, promise compatibility, contain hidden recipients, or broaden scope. The application, not the model, sets `effect` and initial confirmation state.
+
+This chapter does not authorize a send tool. The absence is an architectural control, not an unfinished demo.
+
+## Design the provider seam honestly
+
+A provider adapter isolates syntax and transport. It does not create behavioral portability.
+
+The stable envelope records:
+
+- schema version;
+- adapter version;
+- provider/model version where applicable;
+- request and output versions;
+- status: `ok`, `invalid`, or `timeout`;
+- structured candidate IDs or explanation;
+- latency and usage metadata where permitted;
+- refusal or truncation state;
+- limitations.
+
+The application validates the envelope and then validates the contents against current state. A replacement provider must pass contract cases, segment evaluation, operational budgets, control tests, and replay evidence. Matching the same JSON shape is necessary and insufficient.
+
+Semantic versioning provides useful vocabulary for compatibility intent. Applied AI behavior also depends on data, context, policy, prompt, model, and operation. Patchwork records all these versions without pretending a major/minor/patch number can summarize the evidence. [CLM-033]
+
+## Treat trace as evidence, not omniscience
+
+A trace is a designed record of selected facts. It cannot recreate unrecorded state and should not become a privacy leak.
+
+Patchwork captures:
+
+- trace ID and current-task query ID;
+- contract and interface-set versions;
+- component and adapter versions;
+- state transitions and reason codes;
+- permitted candidate references and exclusion categories;
+- policy decision and evidence references;
+- presentation mode;
+- proposed and completed effect counts;
+- timeout and fallback state;
+- retention and access class.
+
+It avoids raw denied content, secrets, unnecessary user text, and provider payload copies. For a denied source, the broadly accessible trace can say `permission exclusion count: 1`; a narrower diagnostic path may hold a protected reference if authorized.
+
+Trace failure needs a disposition. Some systems must block without required audit evidence. A low-consequence discovery path might serve a degraded result and increment a separate durable counter. The choice belongs in policy and authority, not in a logging library default.
+
+## Reject plausible but unsafe placements
+
+Architecture becomes sharper when the team records rejected alternatives.
+
+### Rejection 1: put compatibility policy in the prompt
+
+This placement is attractive because all instructions sit together. It is rejected because seller content and model behavior share the same probabilistic surface; rule precedence is hard to prove; a provider change can alter compliance; and failure can produce fluent overstatement. Compatibility exclusions remain deterministic and are tested outside generation.
+
+### Rejection 2: let the adapter call tools
+
+This placement shortens the demo. It is rejected because provider output would cross from proposal to effect without product identity, current state, permission, confirmation, idempotency, or recovery controls. The adapter may propose. The tool gateway decides whether an approved capability exists.
+
+### Rejection 3: filter permissions after ranking and generation
+
+This placement lets one shared index feed every downstream component. It is rejected because unauthorized content can influence scores, context, caches, traces, and wording before removal. Patchwork enforces permission as early as feasible and repeats effect-relevant checks at the last responsible boundary.
+
+### Rejection 4: use the model registry as release proof
+
+A registry supplies version metadata and lifecycle records. It is rejected as sole release evidence because the same model version can behave differently with changed data, context, policy, interface, or load, and a new model can preserve behavior under sufficient replay. Release depends on the combined dossier.
+
+### Rejection 5: label one box human-in-the-loop
+
+This placement hides task, timing, competence, evidence, workload, and rights. It is replaced by named review states and authority. A catalog review queue can resolve an attribute conflict; it cannot approve enterprise security risk unless that role also holds that authority.
+
+## Trace failure propagation
+
+Walk two failures from origin to consequence.
+
+### Failure trace A: permission metadata disappears
+
+1. A new index build omits permission metadata.
+2. Candidate validation sees `unknown`, not `allowed`.
+3. The eligibility boundary fails closed and excludes candidates.
+4. Ranking receives no eligible candidates.
+5. Policy selects abstention with ordinary-search fallback.
+6. The interface states that no supported assisted candidate is available.
+7. Trace records index version, unknown-permission count, and fallback without exposing content.
+8. Operations detect an exclusion-rate change.
+9. The index owner corrects construction.
+10. Permission and behavior cases replay before release authority restores normal operation.
+
+The user sees reduced assistance rather than an unauthorized result. The containment worked. Diagnosis remains possible because versions and exclusion categories survived.
+
+### Failure trace B: provider returns partial invalid output
+
+1. Retrieval produces three permitted candidates.
+2. An optional adapter times out after serializing an incomplete envelope.
+3. Structural validation finds no schema version and a string where an ID array is required.
+4. The orchestrator discards the entire provider result.
+5. No presentation state and no tool proposal are created from it.
+6. Policy selects structured fallback if valid candidate evidence remains, or abstention if the failed provider function was required.
+7. Trace records `INVALID_PROVIDER_OUTPUT`, component version, and zero effects.
+8. The adapter owner diagnoses; the release owner decides whether the component remains disabled.
+
+Partial output never becomes partial authority.
+
+## Failure ownership table
+
+| Failure | Detection | Containment | Correction | Return authority |
+| --- | --- | --- | --- | --- |
+| Invalid query shape | application validator | block request | application owner | product release owner |
+| Unknown permission | candidate validator | exclude/abstain | data/index owner | catalog and release owners |
+| Deterministic conflict | policy service | exclude candidate | catalog rule owner | catalog domain owner |
+| Invalid provider output | adapter validator | discard/degrade | adapter owner | release owner |
+| Overstated explanation | presentation validator | remove/block prose | explanation owner | product/trust reviewers |
+| Unauthorized tool proposal | tool gateway | block proposal | application/tool owner | product/security authority |
+| Trace policy violation | trace validator | redact/block per policy | observability owner | privacy/security authority |
+
+The table is a compact operating contract. It also reveals overload: if one team owns every row, the organizational boundary may be unrealistic.
+
+## Security is a system property
+
+AI security taxonomies and frameworks describe attacks and controls across data, models, applications, supply chains, and runtime. They help teams ask better questions; they do not replace an application-specific threat model. [CLM-035]
+
+For Patchwork, inspect:
+
+- malicious or malformed user input;
+- seller text that imitates control instructions;
+- poisoned or withdrawn catalog records;
+- representation and index integrity;
+- unauthorized candidate inference;
+- provider request and response handling;
+- explanation overstatement;
+- tool-argument manipulation;
+- identity confusion between user, service, and provider;
+- dependency and package integrity;
+- secret exposure;
+- trace leakage;
+- denial through expensive or oversized requests;
+- version rollback and supply-chain change.
+
+Then bind controls to exact boundaries. Input limits belong at ingress. Permission belongs before downstream use and before effect. Seller text isolation belongs in context assembly. Capability restriction belongs at the tool gateway. Secret handling belongs at runtime configuration. Version provenance belongs in build and release records. Monitoring belongs at the signals it can diagnose.
+
+Defense in depth does not mean duplicating every check everywhere. Place an authoritative check where it owns the decision and a last-responsible check before irreversible consequence.
+
+## Bound humans with the same rigor as services
+
+A human review queue has a schema too:
+
+- review objective;
+- eligible case states;
+- required evidence packet;
+- redaction and access;
+- reviewer competence;
+- allowed dispositions;
+- service-time expectation;
+- conflict and escalation route;
+- decision record;
+- quality review;
+- authority.
+
+If a review cannot finish before the result is useful, the runtime behavior must abstain or use another allowed path. Do not show a provisional claim and call later review a control.
+
+Human disagreement is data about the criterion or evidence. It is not automatically resolved by majority vote. Chapter 11 will develop calibrated judgment; here the architecture preserves the disagreement and routes the decision.
+
+## PF-05 architecture set v0.1
+
+Patchwork records the following locked decisions.
+
+### Stable contracts
+
+`query`, `candidate`, `rankedResult`, `policy`, `explanation`, `toolProposal`, `trace`, and `providerAdapter` each have a schema version, owner, validator, trust state, state owner, failure disposition, and authority.
+
+### Trust assumptions
+
+User, seller, model/provider, explanation, and tool-proposal content are untrusted. Shape validation never implies meaning. Permission is purpose-specific. Domain policy remains deterministic. Evidence-backed presentation never guarantees fit.
+
+### State ownership
+
+The request service owns current-task state. Retrieval owns candidate production only. Policy owns behavior state. The application owns presentation. The tool gateway owns proposal and confirmation state. The trace store owns evidence records under retention/access policy.
+
+### Effect boundary
+
+No external action exists. Seller questions are draft-only, editable, unconfirmed, and grounded in current authorized evidence. Any future effect requires a new capability contract, threat/control review, evaluation cases, rollout plan, and named authority.
+
+### Provider seam
+
+Local deterministic behavior is the reference path. Optional adapters are replaceable and emit versioned envelopes. Adapter compatibility is tested behaviorally, not inferred from interface shape.
+
+### Ownership and authority
+
+Applied AI engineering owns the implemented path and evidence packet. Product, catalog domain, platform, privacy, security, and release roles retain their named decisions. The publication does not claim a universal organization chart.
+
+## A boundary review conversation
+
+Review the map with questions that force exactness.
+
+**What can this component claim?** Retrieval can claim that a candidate was produced under a mechanism and version. It cannot claim compatibility.
+
+**What can it change?** Ranking can change order among eligible candidates. It cannot restore an excluded record.
+
+**What state does it own?** The provider adapter owns no product state. It returns an envelope.
+
+**What does failure look like?** Timeout, invalid output, empty output, refusal, cost exhaustion, or version mismatch must be distinct.
+
+**Who corrects it?** The adapter owner corrects transport and mapping. The catalog owner corrects domain rules. The data owner corrects source metadata.
+
+**Who authorizes consequence?** Product release authority approves bounded presentation. A future effect would require additional authority.
+
+**What evidence survives?** IDs, versions, reason codes, policy outcomes, and zero-effect proof survive under a privacy-conscious trace.
+
+If the answers remain **the AI team**, the boundary is not ready.
+
+## Durable and replaceable parts
+
+Durable decisions:
+
+- consequence-first mapping;
+- trust and authority separation;
+- validation before use;
+- state ownership;
+- proposal/effect separation;
+- permission before downstream use;
+- stable behavior states and reason codes;
+- evidence-bearing versions;
+- explicit failure containment.
+
+Replaceable choices:
+
+- orchestration framework;
+- provider SDK;
+- model family;
+- registry product;
+- diagramming tool;
+- queue implementation;
+- storage engine;
+- schema-validation library.
+
+Keep architecture at the level where replaceable technology can move without erasing why the system behaves as it does.
+
+## Read the architecture as a set of invariants
+
+A useful way to challenge the drawing is to convert every important arrow into an invariant. An invariant is a condition the system must preserve across implementation choices and failure states. It is stronger than a diagram label and narrower than a product aspiration.
+
+Patchwork's first invariants are:
+
+- no candidate content crosses into assisted presentation without purpose-specific permission;
+- no rank score can override scope, permission, freshness, or deterministic incompatibility;
+- no explanation can add a fact or degree of certainty absent from the structured evidence state;
+- no provider output creates application state until structural and semantic validation pass;
+- no tool proposal is an effect, and no effect exists in v0.1;
+- no missing, conflicting, stale, or empty evidence is replaced by model memory;
+- no behavior change is considered portable merely because the interface shape stayed stable;
+- no formal approval is inferred from implementation ownership;
+- every terminal behavior carries contract, interface, component, and policy versions;
+- every failure either reaches a named safe state or stops the request.
+
+These invariants become contract tests. If the team changes frameworks, moves services, combines processes, or replaces a provider, the same tests run. The architecture can evolve while its justified behavior remains inspectable.
+
+An invariant also exposes a false requirement. Suppose someone proposes, **Every request must have a generated explanation**. The behavior contract requires comprehensible evidence, not generation. Structured presentation can satisfy the requirement and survive provider failure. Rewriting the proposal as an invariant, **every displayed candidate exposes matched and unresolved evidence**, keeps the user promise while removing an accidental mechanism dependency.
+
+## Work through a success sequence in detail
+
+Take synthetic request `PW-Q001`: *16 mm mechanical seal*, family `common-seal`, explicit unit `mm`.
+
+### Ingress
+
+The interface creates a request under the current authenticated actor. It preserves the original text and structured measurement. The application assigns a trace ID and records contract `0.1.0`, query schema `1`, environment `local`, and feature configuration. It validates size, supported family, numeric bounds, and unit. The actor has `patchwork:discover`.
+
+No model is involved. If the user lacked the scope, the request would terminate here with `AUTHORIZATION_FAILED`. This placement limits both data exposure and cost.
+
+### Context and candidate production
+
+The context layer selects synthetic catalog version `0.1.0`. Lexical and vector-like channels produce candidates through the stable candidate contract. Permission, freshness, required fields, conflict, and deterministic incompatibility remove ineligible records. The trace records permitted candidate IDs and safe exclusion categories.
+
+The ranker orders eligible candidates and supplies channel evidence. It cannot change eligibility. Candidate `PW-L008` has a strong constructed similarity but denied assisted permission, so it never enters the ranked-result contract.
+
+### Optional adapter
+
+The deterministic reference adapter receives only eligible candidate IDs. Its envelope says `status: ok`, `adapterVersion: local-0.1.0`, and `outputVersion: 0.1.0`. If a learned provider later supplies wording, it receives a minimal frozen evidence packet, not the complete catalog or policy configuration.
+
+The adapter's output remains untrusted. Structural validation checks fields. Semantic validation verifies that every ID belongs to the current candidate set and that explanation wording stays within the behavior state.
+
+### Policy and presentation
+
+Policy rechecks the effect-relevant conditions using current versions. It emits `respond` with reason `VALIDATED_STRUCTURED_RESULT`, clause IDs, candidate references, and `guaranteesCompatibility: false`. Presentation renders evidence, unresolved fields, and correction controls. It never exposes the internal ordering score as fit probability.
+
+### Trace and completion
+
+The trace ends with `presented: NO_EXTERNAL_EFFECT`. The result contains an empty effect list. An operator can reconstruct the versions and decisions without viewing denied content. The evidence supports only a local synthetic mechanics claim.
+
+Writing this sequence reveals missing contracts faster than adding boxes. If the team cannot say which object crosses each arrow, who validates it, and what state results from failure, the architecture is incomplete.
+
+## Distinguish contract, configuration, registry, and evidence
+
+These artifacts are often mixed together.
+
+### Contract
+
+A contract defines allowed shape and behavior at a boundary. The query schema says which fields exist. The behavior contract says how states respond to conditions. A contract is versioned and testable.
+
+### Configuration
+
+Configuration selects values within a contract: timeout, enabled adapter, candidate limit, freshness window, or feature state. Configuration changes can alter behavior and therefore belong in traces and replay, even if code is unchanged.
+
+### Registry
+
+A registry helps discover named versions, owners, lifecycle status, and metadata. A model registry may point to an artifact. An interface registry may list validators. A registry record is not evidence that the artifact is suitable for Patchwork's task.
+
+### Evidence record
+
+Evidence records the result of a defined check under versions and conditions: a contract test, evaluation run, threat/control test, load test, review decision, or release disposition. Evidence has scope and expiration. Passing a schema test does not answer a segment-quality question.
+
+Separating these artifacts prevents a common release error: **the new model is registered, therefore it is approved**. Registration supports identification. Approval requires the applicable evidence and authority.
+
+## Design state transitions before persistence
+
+Teams sometimes begin with a database table and let columns define system state. Begin with the transition rules instead.
+
+For Patchwork discovery:
+
+| Current state | Event | Preconditions | Next state | Invalid transition response |
+| --- | --- | --- | --- | --- |
+| received | authorize | valid identity and scope | authorized | prohibited |
+| authorized | validate query | supported shape and task | query-valid | clarify/prohibited |
+| query-valid | retrieve | permitted sources selected | candidates-produced | abstain/degraded |
+| candidates-produced | apply policy | validated candidates and current rules | policy-decided | abstain |
+| policy-decided | validate presentation | allowed state and evidence | presentable | abstain/degraded |
+| presentable | render | interface available | presented | degraded |
+| presented | propose draft | explicit request and eligible candidate | draft-proposed | block |
+| draft-proposed | send | capability absent | no transition | prohibited |
+
+Persist only what the product and operating model need. Current local runs can keep request state in memory while emitting a deterministic trace. A production service might persist state for recovery. Either way, the transition contract prevents a delayed adapter response from reviving a request already closed or superseded.
+
+State needs concurrency semantics. If the buyer corrects 16 inches to 16 millimeters while the first request is in flight, the old response must not overwrite the new state. Use a request generation or compare-and-set condition. If a future draft is edited after creation, an adapter retry must not replace the user's edit. The system, not a conversational model, owns these rules.
+
+## Boundary choices create operating costs
+
+More explicit separation adds code, serialization, validation, latency, and coordination. That cost is real. The decision is not **maximum services**. It is **minimum separation that preserves consequence, diagnosis, and authority**.
+
+A small team may implement query validation, retrieval, policy, adapter, and trace in one module. Keep typed internal contracts and separate functions. A larger system may split them into services because they scale, change, or have different trust requirements. Do not distribute a system merely to make the diagram impressive.
+
+Use four questions before creating a runtime boundary:
+
+1. Does the component need a different trust or identity domain?
+2. Does it require independent scaling or failure containment?
+3. Does it have a different owner or change cadence?
+4. Does extraction materially improve evidence, security, or recovery?
+
+If all are no, a logical boundary can be enough. If permission enforcement and provider execution require different network access and secrets, a runtime boundary may be justified.
+
+Interfaces also create compatibility burden. Every schema needs evolution rules. Every remote call needs timeout behavior. Every queue needs duplication and ordering semantics. Every owner handoff needs an operating agreement. Boundary clarity is not free; it should be purchased where consequence warrants it.
+
+## Review infrastructure without letting it dominate
+
+Infrastructure matters because it can alter behavior. A queue can reorder requests. A cache can serve stale policy. Autoscaling can create tail latency. A secret store can block startup. An index build can omit permission fields. A trace sink can backpressure the request.
+
+Map infrastructure to behavior questions:
+
+- What user state appears when this dependency is unavailable?
+- Can a stale cache broaden permission or only reduce availability?
+- Can a retry duplicate a proposal or effect?
+- Which version can be reconstructed after deployment?
+- Does failover change data region, provider, model, or evidence?
+- Can an operator safely disable the learned component while retaining structured service?
+- Which capacity limit produces clarification, abstention, degradation, or ordinary fallback?
+
+Do not draw every subnet or cluster in the book's logical view. Link to deployment diagrams owned by the platform team. The Applied AI view records infrastructure only where it changes trust, state, failure, or behavior.
+
+## Build the boundary test inventory
+
+Before the vertical slice exists, list the checks each boundary owes.
+
+### Query boundary
+
+Test missing measurement, missing unit, unsupported family, malformed numeric value, oversized text, unknown field, unauthenticated actor, wrong scope, correction race, and version mismatch.
+
+### Candidate boundary
+
+Test unknown permission, denied permission, stale record, missing provenance, conflicting source, representation-version mismatch, duplicate cluster, instruction-like content, and deterministic incompatibility.
+
+### Ranked-result boundary
+
+Test unknown candidate ID, duplicate ID, score outside declared bounds, non-finite score, missing reason, reordered excluded candidate, and partial list.
+
+### Explanation boundary
+
+Test unsupported facts, certainty inflation, hidden conflict, missing source, prohibited wording, instruction reflection, oversized output, refusal, truncation, and provider-version change.
+
+### Tool-proposal boundary
+
+Test unknown tool kind, unauthorized candidate, invented recipient, effectful default, preconfirmed proposal, duplicate idempotency key, stale request state, edited draft, interruption, and absent connector.
+
+### Trace boundary
+
+Test missing version, secret or payload leakage, denied-content disclosure, invalid transition, repeated event, retention class, access class, trace-sink failure, and correlation across fallback.
+
+The inventory is not a promise that each test proves safety. It is the minimum evidence surface Chapter 8 can begin executing.
+
+## Apply the method to a non-generative satellite
+
+Consider a fictional demand-forecasting service that predicts next-week replenishment ranges. There is no retrieval, prompting, or chat. The same boundary method still applies.
+
+Inputs cross a data and identity boundary. Feature construction has provenance and version. A learned forecast produces uncertain evidence. Deterministic policy constrains eligible items and maximum automated adjustment. An inventory planner owns review. A supply-chain authority approves thresholds and any automated effect. The application handles missing data, stale forecasts, timeout, fallback to the existing planning baseline, and trace.
+
+This case proves the architecture is about uncertain learned behavior inside software, not about language-model fashion. The learned/deterministic line and consequence/effect line remain useful across mechanism families.
+
+## Apply the method to higher consequence
+
+Now consider the fictional care-operations message router from the architecture. It may categorize administrative messages and place them into work queues. It must not make clinical claims.
+
+The consequence path requires stronger authority and fallback. A classification can propose a queue. Deterministic rules block messages containing named emergency indicators from ordinary routing and show an approved immediate instruction. A trained operations specialist may review ambiguous routing, but a clinician owns clinical interpretation. Security and privacy boundaries constrain message content and traces. The system's state and time budgets must reflect that delay can itself matter.
+
+The architecture pattern transfers; the actual rules, data, reviewers, and authorization do not. This is why a reusable diagram never constitutes permission to reuse a control.
+
+## Practice: draw and challenge a combined system
+
+Use your Chapter 3 behavior contract, Chapter 4 mechanism record, Chapter 5 data card, and Chapter 6 context contract.
+
+Produce three aligned views:
+
+1. context and consequence;
+2. containers, contracts, trust, and ownership;
+3. success plus failure sequences.
+
+For every interface, record input, output, version, validator, trust before/after, state owner, timeout, fallback, trace fields, and authority. For every effect, prove validation, permission, confirmation, idempotency, recovery, and named authorization. If any is absent, remove the effect from the first slice.
+
+Reject at least three alternative placements. Trace one permission failure and one partial-output or timeout failure to containment, correction, and authorized recovery.
+
+The adjacent-role limit is explicit: the Applied AI Engineer produces the architecture and implementation evidence but does not self-authorize enterprise security, privacy, legal, safety, catalog-domain, or product-risk decisions.
+
+Completion evidence is not a beautiful diagram. It is a set of contracts and tests that make every consequential claim and effect cross named validation and authority.
+
+## Run a boundary tabletop
+
+Gather the implementation, product, domain, platform, privacy, security, and release roles that actually exist for the proposed scope. Use the three `PF-05` views and one concrete request. Inject permission metadata loss, an old request's candidate ID, a rule change during execution, explanation-policy contradiction, trace-store failure, a user correction during an in-flight request, a preconfirmed tool proposal, and an unversioned provider change.
+
+For each event, point to detection, containment, user state, diagnostic evidence, correction owner, and restoration authority. Record every answer that depends on tribal knowledge as an architecture gap. The tabletop should produce decisions: move permission enforcement earlier, add a request generation, reject preconfirmed proposals, define trace-failure policy, or narrow scope. Update contracts and tests with those decisions.
+
+Repeat after meaningful changes. This is not a one-time approval ceremony; it discovers when the implemented path no longer matches the responsibility story.
+
+## The architecture acceptance packet
+
+Before implementation, package the consequence and prohibited-effect statement; three aligned views; eight interface definitions; trust, state, failure, ownership, and authority table; invariant list; rejected placements; two failure traces; boundary test inventory; provider-seam limitation; gaps; and reviewer decisions.
+
+The packet does not authorize production. It establishes that the slice can be implemented without inventing authority inside code. If reviewers disagree, preserve the disputed assumption and choose abstention or narrower scope until the proper authority resolves it.
+
+One final check is counterfactual removal. Remove the learned adapter: structured discovery and safe states should remain. Remove explanation: evidence remains comprehensible. Remove tool proposals: core discovery still works. Remove permission or policy: the assisted path must stop, because those are mandatory controls. This exercise distinguishes optional capability from load-bearing authority and gives Chapter 8 its degraded-mode requirements.
+
+Record the result as a dependency classification: required for permission, required for policy, required for basic usefulness, optional enhancement, diagnostic only, or future prohibited capability. Attach the allowed state when each dependency is absent. A dependency with no declared absence state is a hidden single point of behavioral ambiguity.
+
+When an architecture review ends, a new engineer should be able to answer two questions without asking the diagram's author: **What prevents this value from becoming a consequence?** and **Who may change that prevention?** If either answer is missing, keep the path disabled or narrower.
+
+## Handoff to the running slice
+
+`PF-05` v0.1 now gives Chapter 8 a buildable path. It defines what is stable, what is untrusted, what can fail, which state belongs where, and which actions do not exist.
+
+The next chapter will execute five outcomes locally: success, abstention, invalid output, timeout, and authorization failure. If the code cannot make those outcomes visible, the architecture is decorative. If invalid or partial output can produce a result or effect, the boundary is wrong.
