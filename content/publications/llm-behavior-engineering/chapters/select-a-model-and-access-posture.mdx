@@ -1,0 +1,237 @@
+---
+title: "Select a Model and Access Posture"
+slug: "select-a-model-and-access-posture"
+summary: "Choose a reversible model and access path from task evidence, hard constraints, responsibility, and lifecycle risk."
+minutes: 80
+sourceIds: ["SRC-004", "SRC-005", "SRC-007", "SRC-009", "SRC-041", "SRC-052", "SRC-064"]
+claimIds: ["CLM-010", "CLM-011", "CLM-012"]
+objectiveIds: ["LLME-K03", "LLME-K09", "LLME-K10"]
+figureIds: []
+---
+
+## The candidate that wins before the task begins
+
+Mosaic Desk enters this chapter with two useful artifacts and no chosen model. `MD-01` defines the language task: produce a proposal for authorized review, preserve evidence identity, expose uncertainty, and never approve warranty or make a safety-critical repair decision. Chapter 3 opened `MD-02` with mechanism risks: tokenization and templates affect representation, context is finite, decoding changes responses, and behavior identity is larger than a model name.
+
+The team now receives a model comparison spreadsheet. One candidate is highlighted in green because it has the highest public benchmark score. Another is described as "private" because its weights can be downloaded. A third is described as "safe" because it is accessed through a managed API. The cells for Gujarati cases, residence constraints, structured proposals, operational staffing, migration effort, and version-change policy are empty.
+
+The sheet ranks what is easy to copy, not what Mosaic needs to decide.
+
+Model selection is two coupled decisions:
+
+1. Which configured capability deserves a bounded trial against the language-task contract?
+2. Through which access posture can the organization operate that capability with acceptable control, evidence, cost, and change responsibility?
+
+A model can be plausible and its access posture unacceptable. An access posture can satisfy governance constraints and its candidate behavior fail the task. Neither decision can be replaced by model scale, a leaderboard, a license label, or a vendor category.
+
+Public benchmark or scale alone cannot establish fitness for a specific task and deployment posture. Scaling research established useful empirical relationships in studied pretraining regimes, and later compute-optimal work revised important conclusions about the allocation of model size, data, and compute. Those studies do not test Mosaic's proposal contract, Gujarati-English cases, authorized evidence, response-time assumptions, or human decision boundary. HELM likewise demonstrates why scenarios and metrics should be broad and explicit; it does not turn a public aggregate into Mosaic release evidence. [CLM-010]
+
+## Freeze the question before comparing answers
+
+Start with the contract, not a catalog.
+
+For Mosaic, the comparison packet contains the same synthetic cases, input bundles, semantic output expectations, prohibited effects, and judgment methods for every candidate. It also contains constraints that behavior trials cannot waive.
+
+### Hard gates
+
+A hard gate makes a posture ineligible regardless of its weighted score. Examples include:
+
+- the approved residence and data-handling posture cannot be met;
+- required evidence cannot be sent to the access path;
+- the organization cannot accept the license or service terms;
+- the path cannot return or be deterministically converted into the proposal boundary the application requires;
+- no team owns the runtime, incident, patching, capacity, or lifecycle obligation;
+- the migration or fallback path is absent for a material dependency.
+
+These are example gate categories, not approvals. Privacy, security, legal, procurement, platform, and domain owners decide within their authority. The LLM engineer assembles technical facts, identifies unknowns, and shows how each fact affects the behavior contract.
+
+### Comparative evidence
+
+Candidates that survive the hard gates can be compared on named dimensions:
+
+- behavior on identical contract cases and language slices;
+- invalid, uncertain, abstain, escalate, and degraded behavior;
+- observable token, template, decoding, and version surfaces;
+- response-time distribution under a stated synthetic workload;
+- cost inputs under a dated, explicit calculation;
+- data interface, retention, and logging facts;
+- supported output constraints and validation seam;
+- inspection and adaptation options;
+- operational skill, hardware, capacity, and recovery burden;
+- model and interface lifecycle controls;
+- portability of requests, results, evaluations, and evidence.
+
+Do not force unlike systems to expose identical internals. A managed service may not reveal its tokenizer or weights. A self-hosted path may expose both but require the team to qualify kernels and hardware. The comparison schema should contain `not observable`, `not supported`, and `owner decision pending` rather than invented equivalence.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V1-F04.1" data-image="/assets/publications/llm-behavior-engineering/v1-f04-1-access-postures.png">
+  <div role="img" aria-label="Five access booths expose different combinations of model control, hosting responsibility, inspection, adaptation, and external dependency.">Pending ImageGen figure V1-F04.1</div>
+  <figcaption><strong>V1-F04.1 - Access redistributes responsibility.</strong> Essential labels: managed, hosted, self-hosted, adapted, hybrid. Each booth exposes different control and operating surfaces. The figure supports responsibility comparison; it does not declare one posture safer, cheaper, or better.</figcaption>
+  <details><summary>Long description</summary><p>Five colorful three-dimensional booths share one request-and-result rail. The managed booth exposes an API panel but hides weights and runtime. Hosted and self-hosted booths progressively expose artifacts, runtime, and hardware controls. The adapted booth adds a versioned adapter package. The hybrid booth connects two bounded paths. Responsibility tokens move between an external provider and the organization at each booth.</p></details>
+</figure>
+
+## Five postures, no automatic winner
+
+The labels below are working categories. Actual offerings can combine them.
+
+### Managed model access
+
+The organization sends a request to an externally operated model service. The provider commonly owns weight packaging, inference infrastructure, capacity engineering, and much of the runtime lifecycle. The application team owns the request contract, allowed data, evaluation, validation, user experience, and effects. Provider identifiers, data interfaces, supported controls, quotas, and deprecation behavior become dependencies.
+
+Managed does not mean safe, compliant, stable, or operationally free. It means a particular boundary of service and responsibility must be inspected.
+
+### Hosted open-weight access
+
+An external service operates a weight-access model selected by the customer or host. This may expose more checkpoint choice or configuration while retaining an external serving dependency. The exact split for artifact selection, patches, runtime version, scaling, logging, and support belongs in the record. "Hosted weights" is not a single assurance category.
+
+### Self-hosted open-weight access
+
+The organization selects and operates the checkpoint, tokenizer, template, runtime, hardware, scaling, patching, and recovery path. This can increase control and evidence depth. It also assigns compatibility, capacity, supply-chain, security, and lifecycle duties to teams that must be able to perform them.
+
+Open weight access does not by itself establish data privacy. Deployment topology, telemetry, storage, access control, operators, and downstream systems determine what happens to data.
+
+### Adapted model access
+
+An adapted path adds a changed checkpoint or adapter to any of the above operating postures. It creates further identity, provenance, evaluation, packaging, compatibility, and rollback obligations. This volume does not choose adaptation. Volume 2 begins only if simpler repairs leave a stable, valuable, evidence-backed residual failure.
+
+### Hybrid access
+
+A hybrid design routes bounded request classes to different paths or retains a qualified fallback. It can reduce dependence on one capability, but it adds routing evidence, behavior consistency questions, duplicated qualification, and failure coordination. Hybrid is an architecture, not a synonym for resilience.
+
+Managed and weight-access paths expose different control, inspection, hosting, adaptation, and operational surfaces. Official optimization guidance illustrates the dependence between evaluation and model-system changes; LoRA research shows one way weight access can enable an adaptation surface; model cards improve disclosure about intended use and limitations. None of these sources proves that an access posture is fit for Mosaic. Provider terms, supported controls, and actual operations remain volatile and local. [CLM-011]
+
+## Replace ranking with a constraint frontier
+
+A single weighted total hides two different ideas: disqualification and preference. Keep them separate.
+
+First apply hard gates. Then compare the survivors across evidence dimensions. Weighting can help expose priorities, but it must not manufacture precision. A score such as `4.3` is meaningless unless its rubric, evidence, and owner are visible.
+
+For each dimension, record:
+
+| Field | Question |
+|---|---|
+| Criterion | What fact or behavior is being compared? |
+| Evidence | Which frozen case, document, test, or measurement supports it? |
+| Observation | What was actually seen? |
+| Limitation | What cannot this evidence establish? |
+| Change surface | What can the team configure, inspect, or replace? |
+| Working owner | Who obtains and maintains the evidence? |
+| Authority | Who accepts the domain decision? |
+| Trigger | What change requires requalification? |
+
+The result is a frontier, not a universal rank. One survivor may offer stronger Mosaic behavior with more external lifecycle dependence. Another may offer greater artifact control with unacceptable operational load. A third may be cheaper at a synthetic test volume but fail the evidence-residence gate. The decision chooses a bounded starting posture under current facts.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V1-F04.2" data-image="/assets/publications/llm-behavior-engineering/v1-f04-2-constraint-frontier.png">
+  <div role="img" aria-label="Candidate artifacts balance across behavior, privacy, latency, cost, control, and change after hard constraints remove ineligible paths.">Pending ImageGen figure V1-F04.2</div>
+  <figcaption><strong>V1-F04.2 - Selection is a constraint frontier.</strong> Essential labels: behavior, privacy, latency, cost, control, change. Hard gates remove candidates before weighted comparison. The artwork operationalizes the selection method; it is not empirical candidate performance.</figcaption>
+  <details><summary>Long description</summary><p>A bright workbench has a gate on the left and six mechanical balance arms on the right. Candidate blocks that fail residence or typed-boundary gates fall into a rejected tray. Remaining blocks occupy different positions across behavior, privacy, latency, cost, control, and change arms; no single podium or first-place marker appears.</p></details>
+</figure>
+
+## The Mosaic comparison record
+
+The companion supplies synthetic candidate records for three postures. It does not call a model and does not report product performance. Its purpose is to validate the decision mechanics.
+
+The first record represents a managed path. It exposes a provider identifier and request settings while marking tokenizer and weight identity `not observable`. The second represents hosted open weights, with checkpoint and tokenizer revisions visible but serving operations assigned externally according to a hypothetical contract. The third represents a self-hosted path, with runtime and hardware identity visible and platform ownership required.
+
+Each candidate is tested against the same synthetic gates and evidence-field requirements. One candidate deliberately has the strongest public-benchmark note and fails a residence gate. That candidate is rejected before preferences are scored. The exercise demonstrates a decision rule; it does not imply that any real model has these properties.
+
+Run the full companion test suite:
+
+```bash
+node --test content/publications/llm-behavior-engineering/companion/tests/*.test.mjs
+```
+
+Inspect `selection/mosaic-access-candidates.json` and answer:
+
+1. Which fields are observations, assumptions, and owner decisions?
+2. Which candidate is ineligible, and which hard gate rejects it?
+3. Which responsibilities move when access posture changes?
+4. Which preference could change without invalidating a hard constraint?
+5. What would force the decision to be replayed?
+
+## Failure injection: the winner cannot be used
+
+The highlighted benchmark candidate fails the approved residence requirement for the evidence bundle. A stakeholder suggests masking customer names and proceeding.
+
+That suggestion may deserve privacy review, but it does not silently change the gate. Redaction effectiveness, re-identification risk, allowed purpose, and remaining sensitive fields require evidence and privacy authority. Until the competent owner changes the constraint, the candidate is ineligible.
+
+The useful result is not "benchmark quality does not matter." It is that public evidence helped discover a candidate, while task and deployment evidence controlled the decision.
+
+Now inject a second failure. The preferred managed path receives a deprecation notice.
+
+`LLME-CASE-013` establishes only that provider-managed identifiers and endpoints can have deprecation schedules. The official page is volatile. It is not a recommendation, a stable timetable, or evidence that Mosaic experienced a migration. Use it to rehearse the lifecycle response:
+
+1. record the notice and affected identifier;
+2. identify the deadline from the current official source;
+3. select replacement candidates without assuming equivalence;
+4. replay the frozen contract cases and operational measurements;
+5. record changed limits, cost inputs, and unknowns;
+6. obtain domain-specific decisions from their owners;
+7. retain a fallback or rollback path where the interfaces permit one.
+
+Model lifecycle/deprecation risk should be treated as an architecture input before release. Current provider documentation proves that managed dependencies can change; it does not standardize schedules across providers or guarantee that a suggested replacement preserves behavior. Build the migration seam accordingly. [CLM-012]
+
+## Design the migration seam now
+
+A reversible choice needs a seam that is semantic, not merely syntactic.
+
+Define a provider-neutral request containing the authorized case reference, message contract version, evidence references, behavior-state expectations, and trace identifiers. Define a provider-neutral result that can represent raw provider output, normalized proposal fields, validation status, usage observations, latency observation, error class, and unavailable metadata. Keep provider-specific fields in an adapter envelope.
+
+The seam must not erase meaningful differences. If one path supports a constrained output and another returns free text, the common result records that difference and the validator's disposition. If one path exposes a tokenizer and another does not, the manifest preserves both facts. Portability means the application can compare and change dependencies without pretending they are identical.
+
+The seam also keeps authority outside model access. No adapter can approve a warranty, contact a customer, order a part, modify the case record, or accept residual risk. Those remain application and human decisions.
+
+## Make cost and response time comparable without pretending they are fixed
+
+Cost and latency are often used as if they were permanent model attributes. They are observations from a workload and an operating boundary.
+
+For a managed path, a dated cost worksheet may include input and output units, cached versus uncached behavior where documented, auxiliary features, retries, storage, network, and support commitments. For a self-hosted path, include reserved or utilized accelerator time, replicas, memory headroom, idle capacity, orchestration, engineering operations, observability, and recovery. Hosted-weight and hybrid designs combine parts of both.
+
+Do not force all inputs into one fictional per-request number. Mark fixed, variable, allocated, excluded, and unknown costs. Record the workload: input/output distribution, language slices, concurrency, retry behavior, region, batchability, and availability assumptions. Change the workload and the comparison expires.
+
+Response time requires the same discipline. A median from sequential smoke cases does not establish a tail under concurrency. Measure the request boundary consistently, retain the distribution, and separate provider/model time from application validation or queueing when the interface permits it. A faster synthetic trial cannot waive an invalid-output or residence gate.
+
+The responsible statement is dated and conditional: "Under fixture workload W and configuration C, we observed these response-time and cost inputs; the result does not predict production." Procurement and platform owners may use that evidence within their decisions. The LLM engineer does not turn an illustrative worksheet into a service commitment.
+
+## Preserve rejected alternatives as reusable evidence
+
+A decision log that records only the winner destroys information. For each rejected posture, preserve the gate or tradeoff that controlled the rejection, the evidence used, the owner, and the trigger that could reopen it.
+
+The self-hosted Mosaic fixture is rejected because no team owns runtime operations. It is not labeled technically inferior. If an accountable platform owner and capacity evidence later exist, the candidate can re-enter qualification. The benchmark-leading hosted candidate is rejected by current residence and allowed-data-interface gates. It cannot re-enter because its score improves; the relevant authority must change or the deployment facts must change.
+
+This structure also prevents path loyalty. A provisional managed selection is not a permanent endorsement. It is the least-unjustified option under the current synthetic record. Every alternative keeps its limits visible, and every trigger points back to the common cases and migration seam.
+
+## Practice: choose, invalidate, recover
+
+Build a decision record for at least one managed and one open-weight posture.
+
+1. Copy the `MD-01` behavior clauses and Chapter 3 mechanism risks into the comparison header.
+2. Name every hard gate and its authority before scoring preferences.
+3. Run the same frozen cases through each real candidate, or clearly mark the run as future work.
+4. Record observable and changeable surfaces without filling unknowns by analogy.
+5. Assign operations, privacy, security, legal/license, procurement, domain, and behavior-evidence owners.
+6. Compare dated cost and response-time inputs under one stated workload.
+7. Choose a bounded posture and record at least one justified rejection.
+8. Invalidate the preferred candidate with one hard constraint.
+9. Select the next reversible option and list requalification triggers.
+
+Pass when another reviewer can trace the decision from contract to evidence, see why the rejected paths lost, identify every unresolved owner, and replay the selection after a change. Fail if parameter count, benchmark rank, managed/open label, or an unexplained weighted total decides alone.
+
+## The completed MD-02 decision
+
+Mosaic Desk completes `MD-02` with a provisional access decision rather than a permanent winner.
+
+The dossier now contains:
+
+- the frozen `MD-01` task and authority contract;
+- the mechanism-consequence sheet from Chapter 3;
+- common synthetic candidate cases;
+- hard gates and named authorities;
+- evidence dimensions with observations and limitations;
+- managed, hosted-weight, self-hosted, adapted, and hybrid responsibility maps;
+- a selected bounded posture and rejected alternatives;
+- explicit `not observable` surfaces;
+- provider-neutral request/result/error seams;
+- lifecycle and requalification triggers;
+- a deprecation rehearsal with no claimed Mosaic outcome.
+
+The decision permits baseline construction. It does not approve production, establish privacy or security acceptance, guarantee cost or latency, or endorse a provider. Chapter 5 freezes the first replayable run identity. From that point, a claimed improvement must be compared with a known configuration rather than a screenshot or model label.

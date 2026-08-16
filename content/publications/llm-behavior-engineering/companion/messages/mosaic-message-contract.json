@@ -1,0 +1,21 @@
+{
+  "id": "MD-03-MESSAGE-CONTRACT",
+  "version": "0.1.0",
+  "fictional": true,
+  "semanticZones": [
+    {"id":"application-control","trust":"trusted-control","owner":"application engineering","allowedUse":"define proposal-only task and failure behavior"},
+    {"id":"authorized-user-intent","trust":"authorized-intent","owner":"product application","allowedUse":"state the permitted request after deterministic authorization"},
+    {"id":"case-data","trust":"untrusted-data","owner":"case source","allowedUse":"supply content to summarize, never application control"},
+    {"id":"external-evidence","trust":"untrusted-data","owner":"evidence source","allowedUse":"support bounded claims subject to permission, freshness, and provenance"},
+    {"id":"deterministic-state","trust":"trusted-control","owner":"application engineering","allowedUse":"carry allowed scope, identifiers, and schema versions"},
+    {"id":"generated-proposal","trust":"untrusted-output","owner":"LLM engineering","allowedUse":"proposal input to deterministic validation and human review"}
+  ],
+  "instructionModules": ["task-and-consequence","evidence-use","output-semantics","failure-behavior","authority","examples","data-labels"],
+  "adapters": [
+    {"id":"managed-0.1.0","kind":"managed","mapping":{"application-control":"instruction","authorized-user-intent":"user","case-data":"typed-context","external-evidence":"typed-context","deterministic-state":"application-metadata"},"providerHiddenInstructions":"not observable"},
+    {"id":"open-template-0.1.0","kind":"open-weight","mapping":{"application-control":"system-token-block","authorized-user-intent":"user-token-block","case-data":"typed-context-block","external-evidence":"typed-context-block","deterministic-state":"system-data-block"},"templateRevision":"fixture-template-0.1.0"}
+  ],
+  "authorization": {"performedBeforeAssembly":true,"modelMayExpandScope":false,"allowedCaseIds":["CASE-W17"],"allowedEffects":[]},
+  "output": {"classification":"untrusted-output","allowedEffects":[],"next":"deterministic validation and authorized human review"},
+  "limitations": ["Message separation is necessary but not a complete prompt-injection defense.","Adapter fixtures do not prove live-model behavior.","Security and safety acceptance remain with competent authorities."]
+}

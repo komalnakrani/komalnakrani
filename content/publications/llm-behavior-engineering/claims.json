@@ -9,6 +9,15 @@
     {"id":"CLM-006","chapterSlug":"write-the-language-task-contract","statement":"Human review is a designed authority and control relationship, not a generic safety guarantee.","sourceIds":["SRC-008","SRC-065"]},
     {"id":"CLM-007","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Transformer generation conditions each next token on represented prior context through attention-based layers.","sourceIds":["SRC-001"]},
     {"id":"CLM-008","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Subword tokenization changes sequence length and representation, with language-specific and domain-specific effects.","sourceIds":["SRC-002","SRC-003"]},
-    {"id":"CLM-009","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Decoding and chat-template configuration are part of behavior identity and must be versioned.","sourceIds":["SRC-014","SRC-015"]}
+    {"id":"CLM-009","chapterSlug":"reason-about-tokens-attention-and-generation","statement":"Decoding and chat-template configuration are part of behavior identity and must be versioned.","sourceIds":["SRC-014","SRC-015"]},
+    {"id":"CLM-010","chapterSlug":"select-a-model-and-access-posture","statement":"Public benchmark or scale alone cannot establish fitness for a specific task and deployment posture.","sourceIds":["SRC-004","SRC-005","SRC-009"]},
+    {"id":"CLM-011","chapterSlug":"select-a-model-and-access-posture","statement":"Managed and weight-access paths expose different control, inspection, hosting, adaptation, and operational surfaces.","sourceIds":["SRC-007","SRC-041","SRC-052"]},
+    {"id":"CLM-012","chapterSlug":"select-a-model-and-access-posture","statement":"Model lifecycle/deprecation risk should be treated as an architecture input before release.","sourceIds":["SRC-064","SRC-007"]},
+    {"id":"CLM-013","chapterSlug":"establish-a-reproducible-baseline","statement":"A reproducible behavior baseline identifies model, prompt/messages, context, decoding, schema, evaluator, and runtime configuration.","sourceIds":["SRC-007","SRC-010","SRC-014","SRC-015"]},
+    {"id":"CLM-014","chapterSlug":"establish-a-reproducible-baseline","statement":"Repeated trials are needed when stochastic behavior can affect the decision.","sourceIds":["SRC-010","SRC-032"]},
+    {"id":"CLM-015","chapterSlug":"establish-a-reproducible-baseline","statement":"A deterministic test double verifies software contracts but cannot establish live-model quality.","sourceIds":["SRC-009","SRC-010"]},
+    {"id":"CLM-016","chapterSlug":"engineer-instructions-and-messages","statement":"Instructions, examples, delimiters, message roles, and templates are configuration surfaces whose effects must be evaluated.","sourceIds":["SRC-012","SRC-015"]},
+    {"id":"CLM-017","chapterSlug":"engineer-instructions-and-messages","statement":"Untrusted retrieved or user content can carry indirect instructions that conflict with application intent.","sourceIds":["SRC-017","SRC-018"]},
+    {"id":"CLM-018","chapterSlug":"engineer-instructions-and-messages","statement":"Prompt instructions alone are not evidence of an effective security or safety control.","sourceIds":["SRC-008","SRC-017","SRC-065"]}
   ]
 }

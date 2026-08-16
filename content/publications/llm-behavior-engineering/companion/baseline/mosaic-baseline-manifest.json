@@ -1,0 +1,18 @@
+{
+  "id": "MD-03-BASELINE",
+  "version": "0.1.0",
+  "fictional": true,
+  "purpose": "deterministic contract baseline for controlled comparisons",
+  "task": {"contractVersion":"0.2.0","caseSetVersion":"seed-0.1.0","evidenceBundleVersion":"synthetic-0.1.0"},
+  "access": {"posture":"managed","candidateId":"CAND-MANAGED-A","decisionVersion":"0.1.0"},
+  "model": {"identifier":"synthetic-managed-a","revision":"not observable","tokenizer":"not observable","serverTemplate":"not observable"},
+  "messages": {"contractVersion":"0.0.0-baseline","adapterVersion":"managed-0.1.0","renderedTemplate":"not observable"},
+  "generation": {"strategy":"greedy fixture","temperature":0,"topP":1,"maxOutputUnits":256,"seed":"not supported by fixture"},
+  "context": {"policyVersion":"mechanism-sheet-0.1.0","retrieval":"off","tools":"off"},
+  "output": {"schemaVersion":"proposal-semantics-0.1.0","deterministicValidatorVersion":"fixture-0.1.0"},
+  "execution": {"codeRevision":"fixture-0.1.0","clientVersion":"fixture-0.1.0","providerRuntime":"not observable","region":"synthetic-region","concurrency":1,"cache":"off","hardware":"not observable"},
+  "evaluation": {"evaluatorVersion":"contract-checks-0.1.0","trialPlan":"three deterministic fixture replays; future live count must follow observed variance and consequence"},
+  "evidence": {"rawOutputPolicy":"synthetic only","retentionOwner":"privacy authority required before non-synthetic use","containsSecrets":false},
+  "knownNondeterminism": ["A future managed runtime may vary despite fixed exposed request fields."],
+  "unsupportedClaims": ["live model quality","factuality","multilingual capability","production latency","production cost","privacy approval","security assurance","bitwise provider determinism"]
+}

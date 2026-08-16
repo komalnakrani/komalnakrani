@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "batchId": "V1-04-06",
+  "issue": 51,
+  "parentIssue": 46,
+  "status": "manuscript-complete-assets-pending",
+  "producedAt": "2026-08-16",
+  "mosaicDesk": {
+    "fictional": true,
+    "start": "MD-02-opened",
+    "end": "MD-03-instruction-state-complete",
+    "inventedProductionOutcomes": false
+  },
+  "chapters": [
+    {
+      "number": 4,
+      "slug": "select-a-model-and-access-posture",
+      "title": "Select a Model and Access Posture",
+      "wordCount": 2830,
+      "claims": [
+        {"productionId":"CLM-010","acceptedId":"V1-C04-CL01"},
+        {"productionId":"CLM-011","acceptedId":"V1-C04-CL02"},
+        {"productionId":"CLM-012","acceptedId":"V1-C04-CL03"}
+      ],
+      "caseIds": ["LLME-CASE-013"],
+      "figureIds": ["V1-F04.1", "V1-F04.2"],
+      "companionTestsAdded": 4,
+      "qaStatus": "pass"
+    },
+    {
+      "number": 5,
+      "slug": "establish-a-reproducible-baseline",
+      "title": "Establish a Reproducible Baseline",
+      "wordCount": 2687,
+      "claims": [
+        {"productionId":"CLM-013","acceptedId":"V1-C05-CL01"},
+        {"productionId":"CLM-014","acceptedId":"V1-C05-CL02"},
+        {"productionId":"CLM-015","acceptedId":"V1-C05-CL03"}
+      ],
+      "caseIds": [],
+      "constructedExperiment": true,
+      "figureIds": ["V1-F05.1", "V1-F05.2"],
+      "companionTestsAdded": 4,
+      "qaStatus": "pass"
+    },
+    {
+      "number": 6,
+      "slug": "engineer-instructions-and-messages",
+      "title": "Engineer Instructions and Messages",
+      "wordCount": 3011,
+      "claims": [
+        {"productionId":"CLM-016","acceptedId":"V1-C06-CL01"},
+        {"productionId":"CLM-017","acceptedId":"V1-C06-CL02"},
+        {"productionId":"CLM-018","acceptedId":"V1-C06-CL03"}
+      ],
+      "caseIds": ["LLME-CASE-014"],
+      "figureIds": ["V1-F06.1", "V1-F06.2"],
+      "companionTestsAdded": 4,
+      "qaStatus": "pass"
+    }
+  ],
+  "figures": [
+    {"id":"V1-F04.1","chapter":4,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f04-1-access-postures.png","labels":["managed","hosted","self-hosted","adapted","hybrid"],"alt":"Five access booths expose different model-control, inspection, hosting, adaptation, and operations surfaces.","evidenceRole":"Supports responsibility distribution without declaring a universally superior posture.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F04.2","chapter":4,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f04-2-constraint-frontier.png","labels":["behavior","privacy","latency","cost","control","change"],"alt":"Candidates occupy a constraint frontier after hard gates remove ineligible options.","evidenceRole":"Operationalizes task-specific selection; it is not measured candidate performance.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F05.1","chapter":5,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f05-1-configuration-lockbox.png","labels":["model","prompt","context","runtime"],"alt":"A lockbox binds all behavior-facing versions into one baseline identity.","evidenceRole":"Defines manifest completeness without claiming bitwise determinism.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F05.2","chapter":5,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f05-2-repeated-trials.png","labels":["same config","trials","variation"],"alt":"Repeated trials from one configuration occupy a visible variation band.","evidenceRole":"Separates repeated observations from configuration change without prescribing a distribution.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F06.1","chapter":6,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f06-1-message-trust-stack.png","labels":["control","user","context","untrusted"],"alt":"Trusted control and authorized intent remain separate from untrusted case and evidence content.","evidenceRole":"Supports the semantic trust boundary but does not claim separation alone prevents attacks.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F06.2","chapter":6,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f06-2-ablation-workbench.png","labels":["baseline","remove one","compare"],"alt":"One instruction module changes while model, cases, adapter, decoding, and evaluator stay fixed.","evidenceRole":"Illustrates controlled ablation without claiming a measured improvement.","assetStatus":"pending-root-imagegen"}
+  ],
+  "companion": {
+    "runner": "companion/run.mjs",
+    "testPattern": "companion/tests/*.test.mjs",
+    "testsAdded": 12,
+    "cumulativeTests": 24,
+    "expectedPassing": 24,
+    "providerCalls": 0,
+    "deterministic": true
+  },
+  "limitations": [
+    "Mosaic Desk, every candidate, every result, and every adversarial fixture in this batch are fictional and synthetic.",
+    "The conditional access selection is a decision-mechanics fixture, not a provider recommendation or approval.",
+    "The baseline proves deterministic software-contract mechanics, not live language-model quality or determinism.",
+    "Message separation and delimiters are necessary engineering structures, not complete prompt-injection defenses.",
+    "Figure records are semantic anchors only; no image asset exists until root runs ImageGen.",
+    "Managed and open-weight paths share behavior evidence requirements while retaining different unknowns and operational responsibilities."
+  ]
+}
