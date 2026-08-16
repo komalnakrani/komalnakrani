@@ -1,7 +1,7 @@
 # Chapter 05 QA
 
 - Status: PASS
-- Manuscript words (`wc -w`): 4321
+- Manuscript words (`wc -w`): 9017; frozen 9,000-11,000 gate passed
 - Claims: 2/2; sources: 5/5; cases: 3/3 and bounded
 - Figure anchors: exactly 2 (`F05.1`, `F05.2`), PNG paths only, no asset
 - Dossier: `AR-03 v1.0.0` to `AR-04 v1.0.0`

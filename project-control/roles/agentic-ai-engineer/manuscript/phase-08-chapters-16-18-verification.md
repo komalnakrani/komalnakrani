@@ -2,8 +2,8 @@
 
 ## Coverage
 
-- Manuscripts: 3/3, 26,522 words
-- Frozen gates: Chapter 16 `8,225/8,000-10,000`; Chapter 17 `9,287/9,000-11,000`; Chapter 18 `9,010/9,000-11,000`
+- Manuscripts: 3/3, 26,531 words
+- Frozen gates: Chapter 16 `8,225/8,000-10,000`; Chapter 17 `9,296/9,000-11,000`; Chapter 18 `9,010/9,000-11,000`
 - Claims: 6/6 (`AGE-BCLM-031` through `036`); exact source/case manifests preserved
 - Dossier: `AR-11 v1.0.0`, `AR-12 v1.0.0`, `AR-13 v0.1.0`
 - Learning/state/QA: 3/3 each; figures: 6, exactly 2/chapter, no assets

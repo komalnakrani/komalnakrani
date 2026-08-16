@@ -7,7 +7,8 @@ This report covers only the Agentic AI Engineering publication and role-local co
 ## Production coverage
 
 - Manuscripts: 3/3 in frozen order
-- Manuscript words: 16,234 by `wc -w` (Chapter 01: 5,357; Chapter 02: 5,101; Chapter 03: 5,776)
+- Manuscript words: 23,910 by `wc -w` after hostile depth repair (Chapter 01: 7,797; Chapter 02: 8,102; Chapter 03: 8,011)
+- Frozen depth gates: Chapter 01 `7,797/7,000-9,000`; Chapter 02 `8,102/7,500-9,500`; Chapter 03 `8,011/8,000-10,000`
 - Production claims: 6/6, mapped one-to-one to accepted `AGE-BCLM-001` through `006`
 - Assigned source mappings: 15 chapter assignments across 9 unique production sources
 - Case assignments: 5, with FieldOps marked fictional and provider cases bounded
@@ -41,6 +42,7 @@ All checks passed on 2026-08-16:
 - `npm run build`: passed, 36 pages built
 - `npm run check:site`: 630 local references across 36 HTML pages passed
 - figure count: exactly 2 PNG anchors per chapter and 6 total
+- hostile depth repair: all three accepted blueprint ranges pass without changing claim, source, case, dossier, figure, or authority scope
 - asset scan: zero PNG, SVG, or WebP assets created in the publication lane
 - forbidden-dash scan: passed for all three MDX files
 - scoped `git diff --check`: passed

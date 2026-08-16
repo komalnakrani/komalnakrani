@@ -1,7 +1,7 @@
 # Chapter 03 QA
 
 - Status: PASS
-- Manuscript words (`wc -w`): 5776
+- Manuscript words (`wc -w`): 8011
 - Assigned claims present: 2/2 (`CLM-005`, `CLM-006`)
 - Assigned sources in frontmatter: 6/6
 - Assigned cases bounded: 2/2; provider confirmations do not establish formal authority

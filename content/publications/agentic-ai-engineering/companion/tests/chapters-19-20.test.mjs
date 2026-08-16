@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {diffTrajectory,compatibilityDecision,migrateCheckpoint,patternDisposition,leadershipBrief} from '../lib/change-and-evidence-leadership.mjs';
+test('same outcome still exposes changed actions',()=>assert.equal(diffTrajectory({outcome:'ok',actions:1,state:'s',effects:0,authority:'a',recovery:'r',efficiency:1,evidence:'e'},{outcome:'ok',actions:2,state:'s',effects:0,authority:'a',recovery:'r',efficiency:1,evidence:'e'}).actions,'changed'));
+test('hard stop regression rejects compatibility',()=>assert.equal(compatibilityDecision({hardGates:[true,false],evidenceComplete:true}),'rejected'));
+test('incomplete replay stays inconclusive',()=>assert.equal(compatibilityDecision({hardGates:[true],evidenceComplete:false}),'inconclusive'));
+test('narrowed compatible scope remains explicit',()=>assert.equal(compatibilityDecision({hardGates:[true,true],scopeNarrowed:true,evidenceComplete:true}),'compatible-with-narrowing'));
+test('unknown effect retains old reconciler',()=>assert.equal(migrateCheckpoint({effectState:'unknown',requiredIdentity:true}),'retain-old-reconciler'));
+test('changed proposal semantics require new approval',()=>assert.equal(migrateCheckpoint({effectState:'none',approvalSchemaChanged:true,requiredIdentity:true}),'revalidate-proposal-and-approval'));
+test('one case cannot become shared platform evidence',()=>assert.equal(patternDisposition({caseCount:1,receivingOwner:'platform',transferConditions:true,residualLimits:true}),'retain-local'));
+test('repeated case without receiving owner is held',()=>assert.equal(patternDisposition({caseCount:3,receivingOwner:null,transferConditions:true,residualLimits:true}),'hold-no-owner'));
+test('leadership brief never converts dossier into enterprise readiness',()=>assert.equal(leadershipBrief({supported:['bounded'],disconfirmed:['universal'],unknown:['production'],externalDecisions:['risk']}).enterpriseReady,false));

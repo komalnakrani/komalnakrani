@@ -1,7 +1,7 @@
 # Chapter 01 QA
 
 - Status: PASS
-- Manuscript words (`wc -w`): 5357
+- Manuscript words (`wc -w`): 7797
 - Assigned claims present: 2/2 (`CLM-001`, `CLM-002`)
 - Assigned sources in frontmatter: 3/3
 - Assigned cases bounded: 1/1; FieldOps explicitly fictional

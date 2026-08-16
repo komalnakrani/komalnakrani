@@ -2,7 +2,8 @@
 
 ## Coverage
 
-- Manuscripts: 3/3, 13,295 words total
+- Manuscripts: 3/3, 27,047 words total after hostile depth repair
+- Frozen depth gates: Chapter 04 `9,016/9,000-11,000`; Chapter 05 `9,017/9,000-11,000`; Chapter 06 `9,014/9,000-11,000`
 - Claims: 6/6, mapped from `AGE-BCLM-007` through `AGE-BCLM-012`
 - Chapter source assignments: 17 across 16 unique primary, specification, RFC, research, or authoritative provider sources
 - Case assignments: 8 across bounded cases `002`, `004`, `005`, `008`, `009`, and fictional `012`

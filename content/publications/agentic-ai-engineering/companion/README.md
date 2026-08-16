@@ -53,3 +53,6 @@ or the superiority of any model, provider, or multi-agent topology.
 ## Chapters 16-18
 
 `operations-release-protocols.mjs` and `chapters-16-18.test.mjs` provide deterministic examples for joint envelopes, unknown-effect reconciliation, bounded release gates, local completion, and protocol compatibility. Dossiers progress through `AR-11 v1.0.0`, `AR-12 v1.0.0`, and `AR-13 v0.1.0`. They are synthetic teaching artifacts, not production assurance or authority.
+## Chapters 19-20
+
+`change-and-evidence-leadership.mjs` and `chapters-19-20.test.mjs` provide deterministic examples for layered trajectory comparison, compatibility, state migration, evidence-earned pattern disposition, and uncertainty-preserving leadership briefs. `AR-13 v1.0.0` closes the version/replay record; `AR-14 v1.0.0` closes the synthetic capstone evidence chain without production, ROI, safety, legal, or enterprise-readiness claims.

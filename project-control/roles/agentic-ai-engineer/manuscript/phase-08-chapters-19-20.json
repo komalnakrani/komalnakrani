@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "role": "agentic-ai-engineer",
+  "publication": "agentic-ai-engineering",
+  "phase": "08",
+  "issue": 64,
+  "status": "complete-pending-parent-acceptance",
+  "chapters": [
+    {
+      "number": 19,
+      "slug": "replay-change-across-model-tool-policy-and-harness",
+      "words": 9029,
+      "claims": [
+        "AGE-BCLM-037",
+        "AGE-BCLM-038"
+      ],
+      "productionClaims": [
+        "CLM-037",
+        "CLM-038"
+      ],
+      "sources": [
+        "AGE-BSRC-019",
+        "AGE-BSRC-020",
+        "AGE-BSRC-021",
+        "AGE-BSRC-025",
+        "AGE-BSRC-028",
+        "AGE-BSRC-031",
+        "AGE-BSRC-033",
+        "AGE-BSRC-035",
+        "AGE-BSRC-039",
+        "AGE-BSRC-041"
+      ],
+      "cases": [
+        "AGE-CASE-006",
+        "AGE-CASE-008",
+        "AGE-CASE-010",
+        "AGE-CASE-012"
+      ],
+      "dossierIn": "AR-13 v0.1.0",
+      "dossierOut": "AR-13 v1.0.0",
+      "figures": [
+        "F19.1",
+        "F19.2"
+      ]
+    },
+    {
+      "number": 20,
+      "slug": "lead-the-evidence-not-the-hype",
+      "words": 8236,
+      "claims": [
+        "AGE-BCLM-039",
+        "AGE-BCLM-040"
+      ],
+      "productionClaims": [
+        "CLM-039",
+        "CLM-040"
+      ],
+      "sources": [
+        "AGE-BSRC-001",
+        "AGE-BSRC-013",
+        "AGE-BSRC-018",
+        "AGE-BSRC-021",
+        "AGE-BSRC-029",
+        "AGE-BSRC-034",
+        "AGE-BSRC-036",
+        "AGE-BSRC-037"
+      ],
+      "cases": [
+        "AGE-CASE-001",
+        "AGE-CASE-002",
+        "AGE-CASE-003",
+        "AGE-CASE-004",
+        "AGE-CASE-005",
+        "AGE-CASE-006",
+        "AGE-CASE-007",
+        "AGE-CASE-008",
+        "AGE-CASE-009",
+        "AGE-CASE-010",
+        "AGE-CASE-011",
+        "AGE-CASE-012"
+      ],
+      "dossierIn": "AR-13 v1.0.0",
+      "dossierOut": "AR-14 v1.0.0",
+      "figures": [
+        "F20.1",
+        "F20.2"
+      ]
+    }
+  ],
+  "companion": {
+    "dossier": [
+      "ar-13-v1.0.0.json",
+      "ar-14-v1.0.0.json"
+    ],
+    "library": "content/publications/agentic-ai-engineering/companion/lib/change-and-evidence-leadership.mjs",
+    "tests": "content/publications/agentic-ai-engineering/companion/tests/chapters-19-20.test.mjs",
+    "testCount": 9
+  }
+}

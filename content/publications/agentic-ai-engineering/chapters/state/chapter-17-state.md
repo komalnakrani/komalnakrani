@@ -1,6 +1,6 @@
 # Chapter 17 State Record
 
-- Manuscript: 9,287 words; frozen 9,000-11,000 gate passed
+- Manuscript: 9,296 words; frozen 9,000-11,000 gate passed
 - Input: `AR-11 v1.0.0`; output: `AR-12 v1.0.0`
 - Claims: `CLM-033`, `CLM-034`; sources `014`, `015`, `028`, `029`, `030`, `036`, `037`, `043`; cases `003`, `004`, `005`, `012`
 - Figures: exactly `F17.1`, `F17.2`; root ImageGen pending

@@ -44,6 +44,50 @@ Hypothesis: an external specialist provides a capability unavailable locally. Co
 
 Do not use "more accurate" or "more scalable" without a task slice and measure. Name which baseline failure should improve and which added failure must remain within limit.
 
+### Turn architecture preferences into testable statements
+
+A topology hypothesis needs five clauses: the observed baseline failure, proposed structural change, task segment changed, metric expected to improve, and regressions that reject it. For example:
+
+> Because the one-agent baseline exceeds its context budget while comparing independent manuals, delegate only manual retrieval to two read-only workers; expect lower parent context and elapsed retrieval time, and reject the design if outcome falls, total context exceeds its limit, provenance is lost, cancellation fails, or any worker gains effect authority.
+
+That statement can lose. "Use specialists for scale" cannot. Write the experiment card before implementation:
+
+| Field | Question |
+| --- | --- |
+| Baseline defect | Which case, trace, or threshold failed? |
+| Changed segment | Which bounded work moves? |
+| Held constant | Which tasks, models, tools, data, policies, budgets, and graders remain exact? |
+| Predicted gain | Which measure should move, and in which direction? |
+| Added surface | Which handoffs, queues, identities, scopes, and failures appear? |
+| Rejection rule | What result retains one agent? |
+| Reopening rule | Which future change makes retesting rational? |
+
+The FieldOps experiment passes the discipline test because it names manual search, holds `AR-07` constant, gives the specialist zero effect budget, and records a rejection rule. It does not pass adoption because the synthetic trade did not solve a baseline failure.
+
+### Diagnose each family before choosing it
+
+A router helps only when route selection is a measured source of error or cost. Test unknown routes, overlapping capabilities, a missing specialist, and timeout. Decide who owns the task before and after routing. When stable task labels already map deterministically, a model router can add variability without gain.
+
+A specialist helps when a bounded domain context, privilege set, or criterion differs materially. It must return an artifact the parent can validate. If the parent forwards the entire history and rereads everything, specialization may duplicate context. Measure parent and total system context.
+
+Parallel workers help when branches are independent and aggregation is cheaper than sequential work. Ask whether they read shared mutable state, compete for one limit, cause the same effect, depend on each other, or require judgment to reconcile. Static document searches may qualify; reservations of one scarce part do not.
+
+A reviewer helps when a named defect is detectable from its evidence and review changes disposition. Measure defect recall, false blocks, correlated misses, latency, and escalation. A second model is not automatically independent assurance and never becomes authorized by its label.
+
+A remote agent is justified by a capability or boundary that cannot reasonably remain local. It adds discovery, identity, availability, governance, protocol, and evidence questions. Its capability card is a claim until locally verified.
+
+### Counterexamples to topology by instinct
+
+**The tiny prompt becomes a swarm.** Planner, researcher, critic, writer, and judge divide seven deterministic steps. Quality is unchanged, but five completion predicates appear. Collapse the design until a measured defect earns separation.
+
+**The specialist receives everything.** The whole transcript and tool history are forwarded to avoid omissions. Isolation disappears, sensitive data spreads, and the parent still validates all output. Narrow the artifact or retain one agent.
+
+**Workers race a scarce effect.** Two branches reserve the same part. Even if an adapter deduplicates one request, ownership and messaging conflict. Workers propose; one effect owner commits.
+
+**The reviewer votes confidence.** Two models agree, so the proposal is called approved. Agreement is neither authority nor truth. Preserve policy gates and human approval where required.
+
+**The remote agent says complete.** Its protocol task is terminal, but no local receipt proves business completion. Admit its artifact as evidence, then evaluate the original predicate.
+
 ## 2. Contract the handoff
 
 A message is not a handoff. A handoff transfers bounded responsibility and evidence while preserving a final owner.
@@ -67,6 +111,72 @@ The `AR-07` handoff includes:
 - aggregation and validation rule.
 
 FieldOps delegates only `search_manual`, two actions, forty synthetic context units, and zero effects. The source agent remains final run owner. The specialist returns cited passages with trust labels or an explicit no-evidence result. The source validates provenance, version, conflict, scope, and context budget before admitting the artifact.
+
+### A handoff schema that can be validated
+
+Represent the transfer as data. A compact contract includes:
+
+```json
+{
+  "handoffId": "handoff-manual-07",
+  "source": "fieldops-main",
+  "target": "manual-specialist",
+  "taskSlice": "find compatibility passages for EQ-104",
+  "stateRef": {"id": "state-1042", "version": 7},
+  "ownerDuringSlice": "manual-specialist",
+  "finalOwner": "fieldops-main",
+  "allowedCapabilities": ["search_manual"],
+  "delegation": {"tenant": "North", "resource": "manual-corpus", "expiresAt": "10:05Z"},
+  "budgets": {"actions": 2, "contextUnits": 40, "effects": 0},
+  "duplicateKey": "EQ-104:manual:edition-set-7",
+  "leaseExpiresAt": "10:04Z",
+  "completeWhen": "cited passages or explicit no-evidence",
+  "cancelRef": "cancel-run-1042",
+  "onTimeout": "return ownership and continue no-evidence path"
+}
+```
+
+Validate twice. Admission checks known agents, permitted slice, current version, narrow delegation, budget, completion, timeout, cancellation, and owner. Return checks artifact identity, citations, observed version, lease, budget use, prohibited actions, trust labels, and completion. Missing final owner, effect budget in a read-only slice, unknown capability, expired delegation, or absent cancellation reference fails before dispatch.
+
+### Transfer reference plus selected context
+
+Do not serialize every parent detail. Send stable references to authoritative state and the minimum snapshot required. Mark fields authoritative, derived, untrusted, or display-only. The target returns artifacts; it cannot silently edit parent state.
+
+The version is a concurrency boundary. If the parent advances from seven to eight, revalidate equipment, manual set, purpose, permission, and freshness. Never merge because prose still looks relevant.
+
+Name what the specialist intentionally does not receive: inventory, personal data, approvals, effect ledger, unrelated tenants, and chain-of-thought. If missing context prevents work, return `insufficient-context` with requested fields. The parent may revise the handoff within policy or keep the task.
+
+### Authority only narrows
+
+Derive a child envelope limited by task, resource, tenant, capability, consequence, duration, and budget. Bind it to target and handoff. Its expiry cannot exceed the parent's, and parent revocation propagates.
+
+The FieldOps specialist reads a permitted North manual corpus. It cannot use a reservation token, approve, contact a technician, or access another tenant. If it needs a forbidden action, it escalates. Credentials resolve at its capability boundary. Forwarding bearer tokens obscures identity and can cross audiences.
+
+### Completion and return differ
+
+The target completion predicate describes its slice. The return predicate describes what the source receives. Parent completion remains unchanged.
+
+The specialist completes with cited passages or explicit no-evidence. "Done," uncited prose, an out-of-scope passage, or an over-budget result fails return. Explicit no-evidence lists searched corpus, version, query scope, stop reason, and limitations. Without it, the parent cannot distinguish exhaustive search from interruption.
+
+### Cancellation is a protocol
+
+Parent cancellation writes authoritative state and prevents new dispatch. Branches check a cancellation revision at action boundaries. The parent waits only to its deadline. Late work cannot revive the run.
+
+If a result commits before cancellation, it may be admitted when current. If cancellation commits first, it is diagnostic only. If an external effect may have occurred, reconcile it. FieldOps avoids that ambiguity with zero delegated effects.
+
+### Duplicate work needs semantic identity
+
+Retries, replacement, router duplication, and resubmission can create identical handoffs. Derive a duplicate key from stable inputs and purpose. A registry records active and completed attempts.
+
+A new manual edition can justify a new key. Two intentional independent searches need distinct evidence roles so aggregation does not mistake them for accidental duplicates.
+
+### Worked handoff trace
+
+At version seven, FieldOps dispatches `handoff-manual-07`. The specialist reads two permitted passages and builds `manual-evidence-19`. Meanwhile, the parent receives a corrected serial and advances to version eight.
+
+The artifact returns before expiry. Identity, capability, budget, and provenance pass, but version validation fails. The serial now maps to a different equipment revision, so the passages are incompatible. The owner records `stale-incompatible` and does not aggregate.
+
+It may issue a new handoff with the new record and key. The old result remains trace evidence. No effect or completion occurred. This is successful coordination even though the work was unusable.
 
 The handoff cannot expand `AR-05`. It carries a narrower scope and expiry. The target cannot obtain `reserve_part`, approval authority, a broader audience, another tenant, or a new principal. A framework transfer API may move control; local policy decides what that means.
 
@@ -108,6 +218,98 @@ The injected fixture shows:
 
 These numbers are companion mechanics, not provider cost or performance evidence. They demonstrate how to report a trade-off without converting it into a general fact.
 
+### Build a comparison that isolates topology
+
+Run baseline and candidate from the same immutable case manifests. Pin task inputs, expected dispositions, capability schemas, policy version, context allowance, model or policy double, retry rules, evaluator, and random seeds. Reset mutable synthetic state between runs. Record exact versions in each trace.
+
+Do not tune the specialist on held-out failures while leaving the baseline frozen. Improvements from extra instructions, a larger budget, newer model, or cleaner evidence belong to separate experiments. The topology trial asks one narrow causal question: what changed because responsibility was divided?
+
+Use paired case records:
+
+| Measure | Baseline | Candidate | Interpretation rule |
+| --- | ---: | ---: | --- |
+| Correct disposition | per case | per case | Any regression is visible, not averaged away |
+| Forbidden effects | count | count | Must remain zero |
+| Duplicate effects | count | count | Must remain zero |
+| Parent actions | count | count | Separate from worker actions |
+| Total actions | count | count | Reveals displaced work |
+| Parent context | units | units | Tests isolation claim |
+| Total context | units | units | Tests total resource burden |
+| Handoff messages | count | count | Direct coordination load |
+| Coordination units | units | units | Validation, routing, waiting, aggregation |
+| Elapsed steps | distribution | distribution | Parallel gain needs distribution, not one best run |
+| Trace completeness | required fields | required fields | Missing evidence is a regression |
+
+Report case-level deltas before aggregates. A topology might improve six easy searches but fail the one stale-state case that protects an effect. An average score can hide that unacceptable regression.
+
+### Interpret the FieldOps result
+
+Both designs produce all seven expected dispositions and zero prohibited effects. This establishes parity only inside the deterministic fixture. The specialist reduces synthetic context by twenty-five units, adds one action, six messages, and twelve coordination units. It does not demonstrate real token savings, latency improvement, quality gain, or cost-effectiveness.
+
+Ask whether the context reduction addresses a declared constraint. It does not: the baseline was inside budget and had no context-caused failure. The added coordination has real semantic obligations even if synthetic units are small. Therefore retain one agent.
+
+A team tempted to adopt the specialist because its parent context is lower is optimizing a proxy without a problem. A team rejecting all specialization forever would also overgeneralize. The packet preserves reopening conditions: larger independently searchable corpora, repeatable context failures, and controlled evidence of segment gain within control limits.
+
+### Segment before attributing gain
+
+End-to-end totals cannot explain where a topology helped. Divide the trajectory into task understanding, manual search, compatibility validation, proposal construction, human approval, effect, verification, and reporting. Assign time, context, actions, failures, and wait separately.
+
+Parallel manual search can reduce that segment while the approval queue dominates end-to-end time. A specialist can lower parent context while total context rises because instructions and evidence repeat. A reviewer can catch one proposal defect while increasing false blocks elsewhere. Segment reporting makes these truths coexist.
+
+Use distributions over repeated runs when behavior is variable. Median alone hides tail coordination failures. Report upper quantiles, timeouts, cancellations, and incomplete branches. Do not translate provider-reported token use into your currency cost without exact model, pricing date, caching, and workload evidence.
+
+### Account for nested budgets
+
+Topology changes how a budget is consumed even when the numeric ceiling stays fixed. In the one-agent baseline, every admitted action decrements one run counter. In a branched design, a careless implementation may give each worker a fresh copy of the full budget, multiplying permitted work. Another may count only parent actions, making worker activity invisible. Neither holds the experiment constant.
+
+Define a root budget and child envelopes. Child action and context allowances are reservations inside the root allowance, not additions to it. Dispatch reserves the envelope; completed work settles actual use; unused allowance returns only if policy permits and the lease is closed. Retries use the same logical branch budget unless the final owner explicitly allocates more under the unchanged root ceiling. Effect budget stays zero for the manual specialist and one at the parent.
+
+The accounting record should distinguish reserved, consumed, released, and rejected units. A timed-out worker may consume tool and context units even if its artifact is never admitted. Excluding that work would make unreliable candidates appear efficient. A duplicate-active dispatch can count as coordination work without consuming the worker action envelope. A late result still belongs in total resource accounting even when cancellation rules keep it out of active run state.
+
+This scheme also exposes starvation. If the parent assigns forty context units to a specialist but still needs enough context to interpret the return, the branch cannot claim all remaining capacity. Reserve a parent continuation allowance before dispatch. The same is true for elapsed deadline: a branch lease must leave time for return validation, conflict handling, approval, effect, and verification. Parallel work that consumes the entire task horizon has not accelerated useful completion.
+
+### Distinguish isolation from duplication
+
+Parent context reduction is only one side of context partitioning. Compute at least four views: parent input, each child input, total input across components, and repeated invariant input. The child may receive a compact equipment family and search purpose while the parent avoids raw manual passages. That is genuine isolation. If every worker receives the whole task history, policies, tools, and prior results, the candidate may lower one component's view while multiplying total exposure and cost.
+
+Track sensitive fields separately from volume. A smaller context can still be worse if it crosses a new provider or tenant boundary. The handoff manifest lists each field class disclosed to the target, its purpose, retention, and deletion rule. Context isolation is not privacy by default; it is a design opportunity that must be enforced through admission and scoped transport.
+
+Also record repeated instructions. Specialists often need role, output, citation, budget, and stop rules. Those tokens or synthetic units are coordination overhead even when they do not appear in the task artifact. Caching may reduce provider billing under specific implementations, but the experiment should first report logical units and then, if applicable, a dated cached-cost calculation.
+
+### Evaluate branch utility, not branch activity
+
+Multiple agents can generate impressive amounts of work that the final owner cannot use. Add an artifact-admission funnel:
+
+1. branches dispatched;
+2. branches completed before lease expiry;
+3. artifacts structurally valid;
+4. artifacts within scope and current state;
+5. artifacts non-duplicate;
+6. artifacts admitted into parent evidence;
+7. admitted artifacts that change a downstream decision.
+
+The last measure is task-specific and should not become a universal score. It answers a practical question: did the added branch contribute evidence the baseline lacked? In FieldOps, the manual specialist returns valid evidence, but it does not change disposition or repair a context failure. Its activity is real; its marginal utility on the frozen task set is not material.
+
+Do not punish safe no-evidence returns. If a branch searches its complete permitted corpus and finds nothing, its explicit negative artifact may correctly cause escalation. That can be high utility even though no passage is admitted. Define utility against the task and control outcome, not number of positive findings.
+
+### Design paired trials for a live model later
+
+The deterministic comparison proves mechanics. A later model study should randomize or counterbalance ordering so provider drift, cache state, or evaluator fatigue does not consistently favor one topology. Use the same sampled task for both designs where possible, and preserve grouping by task family so correlated variants do not leak across tuning and evaluation.
+
+Repeat stochastic runs enough to describe variability rather than reporting one appealing trace. Predeclare primary and guardrail measures. Blind human reviewers to topology when feasible, and give them the same evidence views. Calibrate model graders against human-labeled cases before relying on them. Record refusals, parse failures, timeouts, and incomplete runs rather than rerunning them out of the dataset.
+
+Matched model capacity matters. Giving two specialists and a parent three times the total turn or context allowance answers a different question from topology under a fixed budget. It may be useful to run both a fixed-total-budget study and a fixed-per-agent study, but label them separately. The first asks whether coordination allocates the same resources better. The second asks what additional resources plus topology can buy.
+
+Latency needs a clock model. Separate queue time, model time, tool time, branch wait, aggregation, approval wait, effect, and verification. For parallel branches, report the critical path and total work. A candidate can lower critical-path search time while increasing end-to-end tail because one missing branch blocks aggregation. Define whether partial aggregation is allowed before trials.
+
+### Write an authority diff
+
+Even when the intention is "read-only specialist," compare the baseline and candidate authority surfaces field by field. List principals, execution identities, audiences, tenants, resources, capabilities, credential resolvers, consequence classes, expiry, revocation path, and effect budgets. Every added or widened value needs an owner and rationale.
+
+The best FieldOps candidate adds a target identity and manual-corpus read scope while removing access to inventory, approvals, reservations, and unrelated context. The parent retains the same scope it had in the baseline. The candidate therefore increases the number of identities and delegation checks but does not increase business-effect authority. If an orchestration framework automatically copies parent tools to the child, the implementation violates the experiment contract even if the prompt says not to use them.
+
+Run negative authority tests at admission and execution. Change tenant, target, corpus, expiry, capability, or handoff identity. Attempt indirect effect through crafted returned content. Revoke the parent while the branch is live. A topology cannot pass because the happy path was read-only; it must demonstrate that the enforced envelope remains read-only under mutation.
+
 The small context reduction does not solve a baseline failure. Outcome and control remain equal while coordination grows. FieldOps therefore rejects the specialist for this task set.
 
 <figure className="book-figure book-figure--pending" data-figure-id="F09.2" data-png="/assets/publications/agentic-ai-engineering/f09-2-gain-cost-balance.png">
@@ -143,6 +345,48 @@ A handoff says the specialist owns the slice but names no return owner. Reject t
 
 Coordination faults are not model-only faults. They arise from leases, versions, cancellation, shared state, duplicate identity, and aggregation rules. Diagnose those controls before prompt behavior.
 
+### A coordination fault diagnostic tree
+
+When the candidate fails, first identify the violated invariant.
+
+**Wrong or duplicate effect:** inspect capability grants, effect budget, semantic idempotency key, owner revision, and aggregation. Do not begin by rewriting worker instructions.
+
+**Stale result admitted:** inspect state reference, dependency set, lease expiry, and return validator. A polished artifact can still be stale.
+
+**Cancelled work revived:** inspect authoritative cancellation order, callback revision, dispatch registry, and terminal-state guard.
+
+**Branch never returns:** inspect lease, heartbeat, timeout disposition, retry identity, and final owner. Infinite waiting is an ownership defect.
+
+**Conflict hidden:** inspect artifact provenance and aggregator rule. Voting or summarization may have erased disagreement.
+
+**Budget exceeded:** inspect whether parent and child budgets were additive or nested, whether retries reused identity, and whether reporting counts rejected work.
+
+**Authority widened:** compare the child envelope to the parent's task, tenant, resources, audiences, expiry, capabilities, and consequence. Framework control transfer is not policy delegation.
+
+**Trace cannot explain outcome:** verify every branch has correlation, parent, state version, owner, capability, artifact, and disposition fields. Observability added after the incident cannot reconstruct missing authority.
+
+### Failure trace: duplicate dispatch
+
+A router times out after sending `handoff-manual-07` and retries to another worker. Both acquire independent process jobs, but the dispatch registry uses the same semantic key. The second admission observes an active lease and returns `duplicate-active`. If the first later fails and its lease expires, replacement may acquire the same logical work identity with a new attempt number.
+
+The aggregator accepts at most one completed artifact version for that key unless the experiment explicitly requests independent searches. It records both attempts. No worker owns an effect. This design turns transport retry into bounded repeated computation rather than duplicated business action.
+
+### Failure trace: cancel and late return
+
+The requester cancels at state revision nine while a specialist is reading. Cancellation commits before the artifact callback. The callback presents expected revision seven and an expired lease. FieldOps records `late-after-cancel` for diagnosis and refuses aggregation. It does not charge the active run's remaining action budget or transition from cancelled.
+
+If retention policy forbids storing the artifact, retain only metadata and rejection reason. Cancellation controls future authority; data retention remains a separate contract.
+
+### Failure trace: conflicting manuals
+
+Two intentionally independent reviewers cite different editions. The aggregator groups claims by equipment revision and source edition rather than taking a majority. It finds both passages applicable under incomplete metadata. The final owner creates a conflict artifact and escalates to a qualified domain reviewer.
+
+Adding a third model vote would not establish which manual governs. The topology succeeds when it preserves uncertainty and stops, not when it manufactures consensus.
+
+### Failure trace: orphaned ownership
+
+The parent dispatches work and marks itself `delegated`, while the target believes it is only advisory. A crash leaves neither responsible for timeout. Admission should reject this contract because `finalOwner` and timeout disposition are absent. In a live incident, an operator claims the run through a guarded lease transfer, cancels branches, reconciles possible effects, and records the repair. Prompting agents to "coordinate better" does not fix the missing owner state.
+
 ## 5. Report cost, latency, and control honestly
 
 The general claim that multiple agents are more cost-effective is contested. Anthropic reports strong results for a bounded parallel research system and materially higher token use. Transfer depends on task value, breadth, independence, concurrency, latency, aggregation, and coordination. It does not establish general cost-effectiveness. [CLM-018]
@@ -153,7 +397,106 @@ Report at least outcome, policy violations, invalid actions, effect behavior, re
 
 Cost also includes design, evaluation, deployment, on-call, incident diagnosis, and security review. A token comparison alone is incomplete. A quality score alone can hide duplicate effects or orphaned authority.
 
+### Use a full topology cost ledger
+
+Separate variable run cost from fixed engineering and operational cost. The run ledger includes model input and output, tool calls, storage, network transfer, retries, worker idle time, aggregation, human review, and elapsed latency. The ownership ledger includes design, threat modeling, evaluations, deployment units, credentials, dashboards, alerts, incident response, upgrades, and retirement.
+
+Record units before money. Prices change, caching differs, and internal policy doubles are not provider calls. A reproducible record can later apply a dated price table. A currency total without units cannot be audited.
+
+For parallel designs, distinguish sum latency from wall-clock latency. Three ten-second branches may complete in roughly ten seconds while consuming thirty seconds of worker time. Queueing, rate limits, tail branches, and aggregation can erase the expected wall-clock gain. Measure from the user's request to verified completion, not only from dispatch to first result.
+
+Control cost belongs beside resource cost. Count new identities, delegations, queues, leases, cancellation paths, schemas, network boundaries, and on-call alerts. Some controls are categorical gates: one unauthorized effect rejects the candidate even if mean quality rises.
+
+### Bound the disputed economics claim
+
+The approved parallel-research case reports strong performance in its specific research setting and materially higher token use. It is evidence that parallel agents can help a broad, valuable, decomposable research workload under that implementation. It is not evidence that every workload becomes cheaper, faster, or better.
+
+Transfer requires similarity in breadth, branch independence, value of improved outcome, acceptable token multiplier, concurrency, latency objective, aggregation quality, and failure consequence. FieldOps currently differs: only one narrow read segment is eligible, the baseline already succeeds, and later work touches shared authority and effects. The correct use of the case is to motivate a hypothesis, not settle it. [CLM-018]
+
+Framework documentation likewise demonstrates available composition patterns. It can guide implementation vocabulary but provides no comparative control. Protocol task, message, and artifact types enable interoperability, not trust or economic superiority. Keep these evidence classes separate. [CLM-017]
+
+### Decide with thresholds, not enthusiasm
+
+Before trials, define hard gates and tradeable measures. Hard gates for FieldOps include zero forbidden effects, zero duplicate effects, preserved authority, deterministic cancellation, complete traces, and one final owner. Tradeable measures include context, action count, elapsed time, and coordination work.
+
+Then define materiality. A one-unit context improvement does not justify a service. A large latency gain might justify extra tokens for an urgent read-only search, but not if tail failures exceed the timeout objective. The decision record should say which trade the organization accepts and who owns it.
+
+Use four dispositions:
+
+- `retain`: keep the baseline because no candidate clears adoption gates.
+- `separate`: adopt the exact bounded slice that demonstrated gain.
+- `retest`: evidence is inconclusive and a named experiment can resolve it.
+- `reject`: the topology violates a hard control or lacks a plausible gain.
+
+Avoid "pilot" as a disposition without exposure, success, stop, and owner fields.
+
 ## 6. Dispose of the experiment
+
+### Write the disposition as an engineering decision
+
+A disposition should be reproducible by someone who preferred the other architecture. Record the decision date, exact baseline and candidate versions, frozen workload, accepted thresholds, observed deltas, hard-gate results, limitations, owner, and reconsideration trigger. Attach traces rather than screenshots of a dashboard.
+
+For FieldOps, the decision reads:
+
+```text
+Decision: retain one agent.
+Compared: AR-07 v0.1.0 baseline against read-only manual specialist candidate.
+Workload: seven deterministic synthetic cases.
+Outcome: equal expected dispositions; zero forbidden and duplicate effects.
+Resource delta: parent context -25 synthetic units; actions +1;
+handoff messages +6; coordination units +12.
+Reason: context reduction does not repair a baseline failure and candidate adds
+coordination obligations without material outcome or control gain.
+Reopen when: corpus branches become independently searchable, accepted context
+failures recur, and paired trials show segment gain inside control thresholds.
+```
+
+The decision does not say one agent is universally optimal. It says the candidate failed to earn adoption on this workload. That precision prevents a negative result from becoming doctrine.
+
+### Preserve rejected work without operating it
+
+Keep the candidate contract, fixtures, and results as evidence. Remove or disable production dispatch so the rejected branch cannot activate accidentally. Name who can reopen the experiment and what evidence they must supply. A dormant configuration flag with untested code is not safe preservation.
+
+If the candidate created credentials, queues, or remote registrations, retire them. If it produced diagnostic artifacts, retain them under their data policy. Negative results have operational cleanup.
+
+### Review the decision under a changed workload
+
+Imagine the manual corpus grows from two editions to forty equipment families. Baseline traces now exceed context budget in twelve percent of held-out synthetic cases, and failures concentrate in manual retrieval. That is a new baseline defect and a plausible reopening condition.
+
+Do not reuse the earlier candidate result as proof. Freeze the new workload, update the task slice and duplicate identity, and rerun. Parallel workers may now lower elapsed retrieval time, but total tokens, tail latency, rate limiting, missing branches, and conflict aggregation must be measured. Effect authority remains with one owner.
+
+Now imagine the corpus stays small but management wants "an agent team" for a demonstration. No evidence question has changed. Retain the baseline. Organizational preference can fund an experiment, but it cannot substitute for an adoption claim.
+
+### From local handoff to remote boundary
+
+The approved remote-protocol case provides task, message, artifact, status, and cancellation vocabulary. Map those into local records explicitly:
+
+| Remote concept | Local interpretation |
+| --- | --- |
+| Task ID | Correlation only; not local business identity by itself |
+| Working status | Evidence of remote progress, not local ownership transfer |
+| Completed status | Trigger to validate artifacts, not business completion |
+| Artifact | Untrusted input until provenance, permission, schema, and freshness pass |
+| Cancel request | Attempt that needs acknowledgement and local timeout policy |
+| Capability description | Discovery claim that needs verification |
+
+Remote streaming can improve responsiveness while complicating partial-artifact semantics. Notifications can be lost or duplicated. Unknown states must map to quarantine rather than a convenient local success. Local principal, resource scope, effect ledger, and completion predicate remain authoritative.
+
+### Threat-model the handoff boundary
+
+Ask what a compromised or confused target can do with every field it receives. Can it exfiltrate unrelated context, replay delegation, invent citations, exhaust the budget, hold the parent open, submit stale artifacts, impersonate another branch, or trigger an effect indirectly through crafted output?
+
+Controls include minimum context, target-bound credentials, schema validation, trust labels, source allowlists, lease expiry, action budgets, output size limits, duplicate keys, cancellation checks, untrusted-content rendering, and final-owner validation. None makes the target trustworthy. They bound consequence and make failure visible.
+
+Prompt injection inside a manual is a data-boundary problem. The specialist returns passages as evidence with trust status; instructions embedded in content do not become system commands. The parent admits claims, not behavioral directives. If a remote artifact contains a tool request, it remains data unless the local contract explicitly authorizes that message type.
+
+### On-call questions for a multi-agent run
+
+An operator should answer quickly: who owns the run, which branches are live, what state version each observed, what authority each holds, when leases expire, whether cancellation propagated, which artifacts were admitted, which conflicts remain, what effects may have occurred, and what terminal predicate is pending.
+
+If the system only shows a conversation graph, incident response will be guesswork. Build an ownership table keyed by run and branch. Build an effect view keyed by semantic effect identity. Build an artifact view with provenance and admission status. Preserve correlation across framework and remote identifiers without treating those identifiers as authority.
+
+Practice three incidents. First, a branch disappears after consuming budget: expire its lease and apply the timeout disposition. Second, the parent crashes after receiving an artifact but before admission: replay validation idempotently. Third, cancellation and remote completion cross in transit: compare authoritative revisions, record both events, and prevent terminal-state resurrection.
 
 `AR-07 v1.0.0` retains the single-agent topology and no separation. The manual specialist produced no material outcome or control gain on the frozen synthetic workload.
 
@@ -233,9 +576,125 @@ Reviewers must be able to answer what changed, which segment improved, which fai
 
 The FieldOps packet says no material gain. That negative result is useful. It prevents an unevidenced architecture from becoming operational debt while preserving a testable specialist design for future conditions.
 
+## Run the FieldOps topology experiment end to end
+
+The comparison becomes credible when every decision is recorded before results are known. Create an experiment manifest with the exact `AR-07 v0.1.0` baseline, deterministic task-set hash, model-double version, tool fixtures, policy version, assembler version, budgets, graders, clock, and random seed. Create a candidate manifest that differs only by the manual-search handoff. A machine-readable diff should show the new target identity, dispatch and return actions, branch lease, duplicate key, cancellation path, and aggregation rule. If another field changes, stop and explain why before interpreting results.
+
+The seven synthetic cases include direct lookup, ambiguous equipment identity, conflicting manual evidence, stale inventory, approval expiry, ambiguous effect status, and cancellation. Only the manual-evidence segment moves to the specialist. Inventory, proposal construction, approval, effect invocation, verification, and final disposition stay with `fieldops-agent-001`. The specialist receives no effect capability, approval material, inventory credential, unrelated history, or tenant data outside the North manual corpus.
+
+### Stage 1: validate before dispatch
+
+The parent reaches a point at which manual evidence is required. It constructs the handoff from current canonical state, not from a conversational summary. Admission verifies that source and target identities exist, the target is eligible for the slice, the state version matches, the tenant and resource fall within parent scope, the lease expires before parent authority, budgets are bounded, effects equal zero, duplicate identity is stable, cancellation is linked, completion is testable, and one final owner is named.
+
+Return a typed denial for every failed predicate. Do not ask the model to rewrite an invalid handoff automatically because that can hide an authority change. A repair may be deterministic, such as reducing an overlarge context budget to the permitted maximum. A semantic change, such as adding another tenant or capability, requires the owner to issue a new contract and evidence why it is allowed.
+
+Successful admission writes a dispatch record before sending work. The record contains logical handoff identity and attempt number. If transport fails after the write, retry uses the same logical identity. If transport may have succeeded but acknowledgement is missing, consult the dispatch registry and target status rather than creating unrelated work.
+
+### Stage 2: execute inside the narrow slice
+
+The specialist assembles its own bounded context from the task slice and permitted manual artifacts. It searches only through `search_manual`. Every returned passage retains manual ID, edition, equipment revision, passage boundary, trust label, and observation or retrieval metadata. The specialist may organize evidence and identify conflict. It may not settle domain authority, change parent state, approve a proposal, reserve a part, or claim the original request is complete.
+
+Action and context budgets are counters, not suggestions. When the specialist reaches two searches or forty synthetic context units, it stops and returns the best contract-valid result, an explicit no-evidence artifact, or a budget-exhausted error. It cannot borrow from the parent's effect budget or start another worker. This makes the candidate's added cost observable.
+
+At every action boundary, the specialist checks cancellation and lease validity. A local task queue may deliver cancellation late, so the target still validates before each tool call and before return. A cooperative check cannot prevent all in-flight work, but it bounds new work after authoritative cancellation. Since this slice is read-only, late completion cannot create a reservation; it can still waste resources or expose stale evidence, so the parent rejects it.
+
+### Stage 3: validate the returned artifact
+
+The parent treats the result as untrusted input. It verifies handoff ID, attempt, target, state version observed, lease, cancellation revision, capability trace, budget counters, output schema, evidence provenance, manual scope, trust labels, and completion condition. It then rechecks current parent state. Passing target completion is only the beginning of return admission.
+
+Suppose the specialist returns two well-cited passages but the equipment serial changed while it worked. The artifact is valid for the slice it saw and invalid for the current proposal. Preserve it as stale trace evidence, do not aggregate its compatibility claim, and decide whether a new handoff is justified. This distinction avoids blaming the target for a concurrent change while protecting the parent decision.
+
+An explicit no-evidence result is first-class. It states which corpus and editions were searched, query variants, action count, stop condition, limitations, and observed state version. The parent can ask a clarifying question or escalate. A blank response or "nothing found" lacks enough evidence to distinguish absence from failure.
+
+### Stage 4: aggregate without inventing consensus
+
+The candidate has one specialist, but the aggregation rule is still explicit. Admit only cited passages whose metadata and state remain eligible. Deduplicate identical passages by stable source identity. Preserve complementary passages separately. Create a conflict artifact when applicable passages disagree. Never translate two similar recommendations into stronger authority.
+
+The final owner uses admitted evidence to continue the same one-agent proposal path. The model may draft a proposal, but deterministic compatibility, freshness, authority, and effect controls remain unchanged. The handoff did not create a new completion definition or an alternative effect path.
+
+### Stage 5: score paired cases
+
+Run baseline and candidate on the same frozen case in paired order. Reset all fixture state between runs. Record original outcome, evidence coverage, invalid actions, policy denials, effects, final disposition, action count, context units, handoff messages, coordination units, simulated elapsed steps, and trace completeness. Do not combine baseline from an older task set with candidate from a newer one.
+
+The local fixture shows equal expected dispositions and no forbidden effects. Parent context falls by twenty-five synthetic units, but total actions, messages, and coordination increase. Those units are deliberately synthetic. They test accounting and comparison mechanics; they are not provider tokens, seconds, money, or evidence of production economics. The adoption question is not whether any measure improved. It is whether a material baseline defect improved enough to justify the added surface.
+
+### Stage 6: try to falsify the candidate
+
+Replay duplicate dispatch, state advancement, cancellation before return, lease expiry, conflicting passages, missing final owner, target capability widening, and malformed no-evidence. Verify reason codes and terminal dispositions. Then reverse event order for races: result before cancellation and cancellation before result; lease renewal before expiry and after expiry; first attempt completion before replacement and after replacement.
+
+A design that passes only the happy paired cases has not earned adoption. Coordination failure is part of the topology, not an unrelated operational concern. The test report must show both candidate value and new failure handling under the same versioned contract.
+
+### Stage 7: make the negative decision operational
+
+Record `retain` for the single-agent baseline. Disable candidate dispatch in the selected `AR-07 v1.0.0` configuration. Keep the contract and fixtures in the dossier as rejected experimental evidence. Remove any candidate credentials, queue bindings, or service registrations so dormant machinery cannot activate. Set the reopening trigger around measured manual-context failures and independently searchable corpus growth.
+
+This last step matters. Teams often declare an experiment unsuccessful while leaving its routes, permissions, and background workers deployed. The architecture then accumulates operational cost without claimed value. A topology disposition includes cleanup and an owner, not merely a document.
+
+## Design the handoff state machine explicitly
+
+Natural-language coordination hides intermediate states. Use a small state machine for each handoff: `PROPOSED`, `ADMITTED`, `DISPATCHED`, `RUNNING`, `RETURNED`, and one terminal disposition such as `ACCEPTED`, `REJECTED`, `CANCELLED`, `TIMED_OUT`, or `FAILED`. A replacement attempt is a new attempt under the same logical work identity, not a second unrelated handoff.
+
+Transitions carry expected versions. `PROPOSED -> ADMITTED` validates the contract. `ADMITTED -> DISPATCHED` writes dispatch durably. `DISPATCHED -> RUNNING` records target acknowledgement if available. `RUNNING -> RETURNED` stores an immutable artifact and counters. `RETURNED -> ACCEPTED` requires parent admission against current state. Cancellation and timeout can move nonterminal states to terminal dispositions. No callback can move a terminal handoff back to running.
+
+Ownership changes are separate fields, not inferred from status. Before admission, the source owns the decision to dispatch. During a slice, the target owns execution of that slice. Throughout, `fieldops-agent-001` remains accountable for the original run and its final disposition. A reviewer or remote protocol status cannot take that accountability implicitly.
+
+Lease semantics also need an authoritative clock and guarded renewal. A target that finishes after lease expiry returns evidence that may be retained but not automatically admitted. A renewal request before expiry can be approved only if parent state, cancellation, scope, and budgets still permit it. Renewing after expiry is a new admission decision. Do not let heartbeat traffic extend authority indefinitely.
+
+Define timeout consequence per slice. A read-only search may return to the parent no-evidence path. A required compliance review might force escalation. A potentially effectful branch would require reconciliation before replacement, which is why FieldOps delegates no effects here. "Retry on timeout" is not a complete rule.
+
+The state machine enables invariants:
+
+- one logical work key has at most one admitted active lease unless independent roles are explicit;
+- every active handoff has a source, target, slice owner, and final owner;
+- child scope and expiry never exceed parent authority;
+- an accepted result observed a compatible state version;
+- cancellation prevents new work and terminal-state resurrection;
+- total counters include rejected, late, and duplicate attempts;
+- a target completion never directly completes the parent run.
+
+Test invariants from stored records rather than conversation transcripts. If an operator cannot derive the current owner and valid branches from state alone, the design is not recoverable enough for Chapter 10.
+
 ## Learning lab
 
 Compare the frozen baseline with the read-only manual specialist. Score controlled experiment 6, handoff completeness 6, coordination-failure handling 4, and honest disposition 4. Automatic failure occurs if tools, budgets, authority, task data, or completion change; if workers receive effect capability; or if contested multi-agent cost-effectiveness becomes a general fact.
+
+### Exercise 1: repair a message-only handoff
+
+Start with: "Specialist, check the manuals and tell me which part to use." List every missing contract field. Write a valid handoff for equipment `EQ-104`, state version seven, North tenant, two reads, forty context units, zero effects, and a four-minute lease. Include explicit no-evidence, timeout, cancellation, duplicate identity, return validation, and final owner.
+
+Mutate the contract by adding `reserve_part`. Admission must fail because the slice is read-only and authority cannot widen. Mutate the target tenant. Fail. Remove the final owner. Fail. Advance parent state before return and show dependency revalidation.
+
+### Exercise 2: classify topology proposals
+
+For each proposal, state the baseline defect, likely gain, added surface, and minimum experiment:
+
+1. Router for five stable request labels.
+2. Three workers searching independent manual families.
+3. Reviewer model checking citation support.
+4. Remote agent exposing a licensed diagnostic capability.
+5. Specialist with isolated access to sensitive maintenance records.
+
+Some can be rejected without trials when no defect exists or a hard boundary is violated. Others deserve bounded tests. Do not rank them by number of agents.
+
+### Exercise 3: aggregation design
+
+Define schemas for three outcomes: duplicate citations, complementary passages, and conflicting applicable manuals. Specify deterministic deduplication, provenance preservation, missing-branch handling, version checks, and escalation. An answer that asks the parent model to "combine the best" is incomplete.
+
+### Exercise 4: cancellation race
+
+Trace these events: branch dispatch, parent cancel, target read, lease expiry, callback, retry. Assign revisions and expected results. Then reverse cancel and callback. Your design must yield deterministic admission without assuming delivery order.
+
+### Exercise 5: defend the negative result
+
+Present the FieldOps comparison to a review panel. Explain why lower parent context does not establish material gain, why total coordination matters, and why the result does not imply specialists never help. State exact reopening conditions.
+
+Award six points for a controlled experiment, six for handoff completeness, four for coordination failures, and four for an honest disposition. Automatic failure applies if the candidate changes tools, data, authority, budgets, or completion; if workers receive effect capability; if conflicts are voted away; or if [CLM-018] becomes a universal claim.
+
+### Release checklist
+
+Before adopting a topology, verify the frozen baseline reference, hypothesis, changed slice, held-constant manifest, authority diff, handoff schema, branch budgets, cancellation and timeout tests, duplicate keys, aggregation rules, paired results, segment costs, limitations, final owner, and retirement plan.
+
+Ask an independent reviewer to reconstruct one failure from the trace. They should identify owner, state version, delegation, branch lease, artifact, decision, and effect status. If the answer depends on reading natural-language conversation, the coordination record is insufficient.
 
 ## Chapter checkpoint
 

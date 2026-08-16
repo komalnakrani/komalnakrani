@@ -1,5 +1,6 @@
 # Chapter 06 State Record
 
+- Manuscript: 9,014 words; frozen 9,000-11,000 gate passed after hostile depth repair
 - Input dossier: `AR-04 v1.0.0`
 - Output dossier: `companion/dossier/ar-05-v1.0.0.json`
 - Claims: `CLM-011`, `CLM-012`; accepted mapping `AGE-BCLM-011`, `AGE-BCLM-012`

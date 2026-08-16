@@ -5,10 +5,10 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 08 manuscript production under parent `#45`; Chapters 16-18 complete locally under `#61`
+- Current global phase: Phase 08 manuscript production under parent `#45`; all 20 chapters complete locally through `#64`
 - Last updated: 2026-08-16
-- Last completed issue: `#59` — Phase 08 Chapters 13-15, accepted at `a32c9d6`
-- Active issue: `#61` — Phase 08 Chapters 16-18
+- Last completed issue: `#61` — Phase 08 Chapters 16-18, accepted at `877ea8e`
+- Active issue: `#64` — Phase 08 Chapters 19-20 and hostile whole-book defense
 - Role root issue: `#32` — open
 
 ## Locked accepted decisions
@@ -58,9 +58,9 @@ and `#35` are closed with `status:done`.
 - Phase 07 verification: `books/agentic-ai-engineering/blueprints/verification-report.md`
 - Phase 08 handoff: `books/agentic-ai-engineering/blueprints/phase-08-handoff.md`
 - Phase 08 prepared issue body: `issues/phase-08-manuscript.md`
-- manuscripts: Chapters 1-15 accepted through `a32c9d6`; Chapters 16-18 complete locally under `#61`; 118,831 words total through Chapter 18
-- publication records and deterministic companion: complete locally through Chapter 18
-- figure anchors: `F01.1` through `F18.2` specified; root-owned PNG artwork pending; no Chapter 16-18 assets created in this lane
+- manuscripts: all 20 chapters complete locally; 176,447 words; every accepted blueprint depth range passes
+- publication records and deterministic companion: complete locally through Chapter 20; `AR-14 v1.0.0` closes the capstone chain
+- figure anchors: `F01.1` through `F20.2` specified, exactly two per chapter; root owns ImageGen production and visual QA
 - publication/PDF/course/final QA: not started
 
 ## Completed gates
@@ -80,11 +80,13 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 08 Chapters 16-18 are complete locally under active child `#61`: 26,522
-words, `AR-11 v1.0.0`, `AR-12 v1.0.0`, `AR-13 v0.1.0`, one deterministic
-library, nine new tests, records, and six pending PNG anchors. Frozen depth and
-originality gates pass; combined Agentic tests pass 51/51 and the full repository
-check passes.
+Phase 08 Chapters 19-20 and hostile whole-book defense are complete locally under
+active child `#64`. Chapters 19-20 contain 17,265 words and close `AR-13 v1.0.0`
+and `AR-14 v1.0.0`; the complete manuscript contains 176,447 words. All twenty
+frozen depth gates pass after substantive repairs to inherited Chapters 1-9.
+Evidence manifests, claim/source symmetry, continuity, figure/accessibility
+anchors, learning/state/QA records, originality, 60 deterministic tests, and the
+full repository check pass.
 
 ## Unresolved blockers
 
@@ -103,22 +105,22 @@ check passes.
 
 ## Quality debt
 
-- Chapters 19-20 remain unwritten.
-- ImageGen assets and their provenance/visual QA remain pending root production.
+- ImageGen assets beyond the four root-produced Chapter 1-2 figures and their provenance/visual QA remain pending root production.
 - The Agentic publication stays draft and therefore is not listed in the
   built public book index.
 
 ## Exact next action
 
-Parent reviews Chapters 16-18, root produces and visually QA-checks `F16.1`
-through `F18.2`, then Chapter 19 uses `AR-13 v0.1.0` for replayed, bounded
-component/version change without losing local semantics.
+Parent reviews and accepts `#64`, then root produces and visually QA-checks the
+remaining pending ImageGen figures before Phase 08 root acceptance and the next
+factory phase. Publication remains draft until those later gates pass.
 
 ## Resume instructions
 
 Read repository `AGENTS.md`, accepted commits `b59c3f5`, `abed872`,
-`e4e8ec4`, `b48f375`, `d3b86f4`, `2c908cd`, `9fb4001`, and `a32c9d6`, parent `#45`, active child
-`#61`, this file, Chapters 16-18 blueprints/research packs, and Phase 08 handoff. Inspect
-git status because parallel agents share the worktree. Do not edit shared
-factory state or other role directories from this lane. Do not enter Abhyaas
-while the Komal-first decision remains locked.
+`e4e8ec4`, `b48f375`, `d3b86f4`, `2c908cd`, `9fb4001`, `a32c9d6`, and
+`877ea8e`, parent `#45`, active child `#64`, this file, Chapters 19-20
+blueprints/research packs, the hostile whole-book QA report, and Phase 08
+handoff. Inspect git status because parallel agents share the worktree. Do not
+edit shared factory state or other role directories from this lane. Do not enter
+Abhyaas while the Komal-first decision remains locked.

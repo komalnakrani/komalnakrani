@@ -63,9 +63,9 @@ Several model-directed components coordinate, delegate, critique, or explore bra
 
 OpenAI, Anthropic, and Google currently document patterns across these levels. Their terminology and frameworks are examples, not a maturity ranking. A multiple-agent topology is not "more advanced" in any decision-relevant sense unless it performs the target work better under the same constraints.
 
-<figure>
+<figure className="book-figure" data-figure-id="F02.1" data-png="/assets/publications/agentic-ai-engineering/f02-1-autonomy-staircase.png">
   <img src="/assets/publications/agentic-ai-engineering/f02-1-autonomy-staircase.png" alt="Colorful three-dimensional staircase with four labeled steps: Fixed, Assisted, One Agent, and Multiple Agents. A separate Coordination and Authority Burden rail gains more locks, controls, and connections beside the higher steps, while a neutral balance indicates that height is not superiority." width="1586" height="992" loading="lazy" decoding="async" />
-  <figcaption><strong>F02.1 - Autonomy staircase.</strong> More model-directed control brings additional coordination and authority burden; staircase height does not represent superiority.</figcaption>
+  <figcaption><strong>F02.1 - Autonomy staircase.</strong> More model-directed control brings additional coordination and authority burden; staircase height does not represent superiority. Evidence role: conceptual architecture comparison only.</figcaption>
 </figure>
 
 ## 3. Build the suitability matrix
@@ -141,9 +141,9 @@ Do not tune the agent on the evaluation cases while leaving the baseline untouch
 
 The FieldOps dossier therefore selects one bounded agent as the maximum architecture only for ambiguous, read-heavy evidence gathering. Fixed and assisted paths remain preferred when sufficient. The agent may read approved synthetic sources, compute over returned evidence, request clarification, and produce a reservation proposal. It may not reserve stock without an exact approval. It may never control equipment or make a safety determination.
 
-<figure>
+<figure className="book-figure" data-figure-id="F02.2" data-png="/assets/publications/agentic-ai-engineering/f02-2-simple-versus-swarm.png">
   <img src="/assets/publications/agentic-ai-engineering/f02-2-simple-versus-swarm.png" alt="Colorful three-dimensional comparison between a compact Simple Path conveyor and a branching Multiple Agents network. Four gated tests labeled Measured Benefit, Separable Work, Contained Failure, and Budget can block entry to the branching route while the simple route remains available." width="1586" height="992" loading="lazy" decoding="async" />
-  <figcaption><strong>F02.2 - Simple system versus swarm.</strong> A multiple-agent topology must clear four rejection tests; the diagram makes no comparative performance claim.</figcaption>
+  <figcaption><strong>F02.2 - Simple system versus swarm.</strong> A multiple-agent topology must clear four rejection tests. Evidence role: rejection scaffold with no comparative performance claim.</figcaption>
 </figure>
 
 ## 5. Audit the multi-agent claim
@@ -274,6 +274,216 @@ Conversely, moving to multiple agents requires new evidence, not enthusiasm: a f
 Use the companion `ar-01-v0.2.0.json` as the reference decision. For each of twelve synthetic tasks, record ambiguity, feedback, consequence, observability, horizon, containment, and cost. Select fixed, assisted, one agent, or reject the task. Then write the predicted benefit and a falsifier.
 
 Include at least one document workflow where an agent should be rejected. A long document is not sufficient justification. If the required fields and extraction sequence are known, a fixed workflow with bounded model assistance may be more controllable.
+
+### Procedure 1: reconstruct the decision from `AR-01 v0.1.0`
+
+Begin with the earlier dossier, not with a preferred architecture. `AR-01 v0.1.0` identifies six decisions and their owners. Product owns the definition of the task and beneficiary. A domain safety owner defines safety meaning. The agentic AI engineer owns the model-directed harness and investigates action-policy regressions. Platform owns shared persistence and queues. An authorized reviewer alone may approve the synthetic reservation effect. Those assignments are constraints on the comparison, not details to add after a topology wins.
+
+Copy the six decisions into a working sheet. For each one, add four columns: `system may propose`, `system may execute`, `evidence required`, and `stop if`. Fill the cells literally. For `D-02`, the system may gather approved records but may neither diagnose equipment safety nor authorize safety work. For `D-05`, it may prepare a reservation proposal, but only the named reviewer may authorize the exact synthetic effect after state validation. If a candidate architecture silently changes either cell, it is not an alternative implementation of the same task. It is a different delegation decision and must return to the authority owner.
+
+Next, write the fixed workflow as states rather than prose. A minimal version is:
+
+1. validate required request fields;
+2. reject prohibited intent or request clarification for a missing identifier;
+3. select the approved lookup rule from normalized fields;
+4. read the synthetic compatibility record;
+5. read synthetic inventory freshness and availability;
+6. prepare a proposal or escalate a conflict;
+7. stop before any effect unless exact approval exists; and
+8. verify and record any approved synthetic effect.
+
+This sequence is not presented as a universal implementation. It is the local control. Put a completion predicate beside every terminal state. `clarification_requested` requires a named missing field. `rejected` requires a violated non-goal or consequence ceiling. `escalated` requires a named conflict and destination. `proposal_ready` requires compatible, sufficiently fresh evidence plus a non-effecting proposal. `effect_verified` requires the approved proposal identity and verification evidence. A terminal label without its predicate can conceal false completion.
+
+Now enumerate variations. Separate representational variation from path variation. A misspelling, synonym, or differently ordered request may be representational: bounded assistance can normalize it while code retains the path. A request whose relevant manual can only be identified after reading another approved record is path variation: one bounded agent may have a measurable advantage. A missing equipment identifier is neither kind of opportunity. It is insufficient input. A safety diagnosis request is prohibited. A compatibility conflict is an escalation. This classification prevents the unexplained eight percent of the injected scenario from becoming a sales funnel for autonomy.
+
+Finally, reconcile the working sheet with `AR-01 v0.2.0`. The later version adds four execution levels, chooses `single-agent` as the maximum, retains fixed execution as the default for enumerable tasks, and records the general multi-agent claim as disputed. The dossier is a decision record, not proof that the selected alternative performed well. Your lab evidence must be capable of narrowing the decision back to assisted or fixed execution.
+
+### Procedure 2: create a fair task packet
+
+Create twelve synthetic cases before running any architecture. A useful packet covers exact requests, synonyms, missing identifiers, evidence-dependent document selection, conflicting records, stale inventory, prohibited safety work, approval-bound proposals, independently searchable sources, scarce-stock contention, familiar document extraction, and adaptive clarification. Do not use real customer data or imply that these cases represent deployment prevalence.
+
+Each task card needs enough structure to prevent retrospective scoring:
+
+- immutable case identifier and generator version;
+- synthetic inputs and approved evidence snapshot;
+- expected evidence items, including freshness requirements;
+- acceptable terminal states and their predicates;
+- consequence ceiling and authority owner;
+- permitted, approval-bound, and prohibited action classes;
+- model-call, tool-call, elapsed-time, and review budgets;
+- failure injections enabled for that case; and
+- a reason why the expected route is fixed, assisted, one bounded agent, or rejection.
+
+Use a development set to refine parsers, prompts, rules, and tool descriptions. Lock those artifacts before evaluating a held-out set. If a defect in the task cards requires a correction, version the packet, document the reason, and rerun every alternative affected by the correction. Do not repair only the agent's cases after observing its failures.
+
+Implement the fixed baseline first. The baseline can include ordinary parsing libraries, retrieval, business rules, and bounded model assistance only if the comparison labels that assistance honestly. If the intended control is strictly deterministic, keep model calls out of it. If a model normalizes synonyms, call the design assisted, not fixed. The labels describe who chooses transitions, not whether the implementation feels simple.
+
+For each alternative, freeze the action surface. A single-agent run must not gain an undocumented search service or larger evidence window. A multi-agent run must not receive four times the external-call budget merely because it has four workers. You may compare both equal-resource and equal-latency conditions, but label them as different experiments. Under equal resource, distribute one shared budget across branches. Under equal latency, report the additional tokens, concurrency, and service load rather than treating them as free.
+
+Run repeated trials when model variability could change routing. Preserve the case, architecture, configuration, seed if available, tool snapshot, trace identifier, and evaluator version. A repeat is not an independent task. Report it as within-case variability. When only a small synthetic set exists, prefer per-case evidence and confidence intervals or ranges over a single impressive percentage.
+
+Score completion and control separately. A system can produce the right part number while violating a read limit, using stale evidence, or proposing an effect beyond its authority. That run did not pass merely because the recommendation happened to match. Conversely, a safe clarification or escalation can be correct completion even though no part was proposed. The task card decides which terminal states count before the run begins.
+
+### Procedure 3: read traces as causal evidence
+
+Inspect the state transitions, not only the final prose. The following traces are synthetic examples for the lab; they do not report product performance.
+
+**Trace A: fixed workflow succeeds on an enumerable case.**
+
+```text
+case=FO-001 architecture=fixed
+validate -> ok(equipment_id, part_id, slot)
+policy -> permitted(read, propose), approval_required(reserve)
+compatibility_read -> match(source=C-17, version=4)
+inventory_read -> available(quantity=1, observed_at=T0)
+proposal_prepare -> proposal=P-101
+stop -> proposal_ready
+```
+
+Interpretation: the run reaches an accepted terminal state with no model-directed transition. It does not establish that fixed execution is globally superior. It does show that autonomy supplied no necessary task benefit for `FO-001`. If an agent reaches the same state with extra reads, its flexibility is unused cost in this case.
+
+**Trace B: assistance fixes representation, not control flow.**
+
+```text
+case=FO-002 architecture=assisted
+validate -> unknown_term("drive belt set")
+normalize_model -> candidate(part_family="belt-kit", confidence=bounded)
+schema_validate -> accepted
+fixed_lookup -> compatibility_match
+proposal_prepare -> proposal=P-102
+stop -> proposal_ready
+```
+
+Interpretation: a model contributed to field normalization, while code selected every transition. Calling this run agentic would erase an important design option. The comparison question is whether the model improves normalization over maintained deterministic mappings without introducing unacceptable invalid fields or review work.
+
+**Trace C: one bounded agent supplies the named benefit.**
+
+```text
+case=FO-004 architecture=single-agent
+observe -> equipment_family_known, model_code_missing
+decide -> read_approved_index
+act -> index_result(manual=M-44)
+verify -> model_code=Q7
+decide -> read_manual_section(M-44, compatibility)
+act -> compatible_part=K-9
+verify -> evidence_complete
+proposal_prepare -> proposal=P-104
+stop -> proposal_ready
+```
+
+Interpretation: the second read depends on evidence returned by the first. This is the residual path variation named in `AR-01 v0.2.0`. To justify one agent, compare it with an economically credible fixed or assisted alternative. The trace is evidence of mechanism use, not yet evidence of net benefit. Check error rate, number of reads, unsupported branches, latency, and review burden across the frozen cases.
+
+**Trace D: an apparent success is a control failure.**
+
+```text
+case=FO-006 architecture=single-agent
+inventory_read -> available(quantity=1, observed_at=T-48h)
+decide -> evidence_probably_current
+proposal_prepare -> proposal=P-106
+stop -> proposal_ready
+```
+
+Interpretation: the model cannot reason an observation into freshness. If the task card requires an observation no older than one hour, this is false completion even if the item remains available when a reviewer checks later. The counterfactual outcome does not repair the missing evidence at decision time.
+
+**Trace E: refusal by the model is helpful but insufficient.**
+
+```text
+case=FO-007 architecture=single-agent
+observe -> request(safety_diagnosis)
+model_decide -> refuse
+policy -> prohibited(safety_diagnosis)
+tool_surface -> no_equipment_control_capability
+stop -> rejected(destination=domain-safety-owner)
+```
+
+Interpretation: three layers are visible. The model refused, deterministic policy classified the request, and the tool surface made the prohibited effect unreachable. Only the latter two provide architecture-level containment. Retest with a model or prompt change that proposes the action; the policy disposition must remain `rejected`.
+
+**Trace F: parallel workers create a shared-state hazard.**
+
+```text
+case=FO-010 architecture=multi-agent
+worker-A -> reads available(quantity=1)
+worker-B -> reads available(quantity=1)
+worker-A -> proposes reserve(part=K-9)
+worker-B -> proposes reserve(part=K-9)
+aggregator -> two plausible proposals
+policy -> effect denied(shared_stock_conflict)
+stop -> escalated(allocation-owner)
+```
+
+Interpretation: parallel evidence gathering did not create authority to allocate scarce stock. If a multi-agent design is ever tested here, one deterministic service must serialize or arbitrate the effect. Conversational agreement between workers is neither a lock nor an approval.
+
+**Trace G: a denied action is laundered through delegation.**
+
+```text
+case=FO-013 architecture=multi-agent
+planner -> requests prohibited safety classification
+policy -> denied
+planner -> delegates "summarize likely safety state" to worker-C
+worker-C -> returns safety classification
+aggregator -> embeds classification in proposal
+policy -> denied(semantic_action_class)
+stop -> rejected
+```
+
+Interpretation: policy must apply to semantic capability, not merely a tool name or direct caller. Delegation cannot reset the principal, expand consent, or turn a prohibited judgment into harmless summarization. The lab need not implement Chapter 9's full handoff contract, but it must count this coordination failure against the topology.
+
+When evaluating traces, distinguish four kinds of evidence. Outcome evidence says whether the accepted terminal predicate was satisfied. Process evidence says which transitions, tools, budgets, and policies were exercised. Authority evidence says who could permit the action and whether that authority matched the exact proposal. Counterfactual evidence asks what a simpler design would have done under the same conditions. The architecture decision needs all four. A screenshot of a fluent final answer supplies almost none of them.
+
+### Procedure 4: challenge attractive counterexamples
+
+Some cases appear to favor autonomy until the task is specified precisely.
+
+**The long-manual counterexample.** A 300-page manual seems agent-worthy. Yet if the task always extracts the same seven fields from the same revision and maps them through stable rules, the path is enumerable. Document length affects model or parser capability, context management, and evaluation, but it does not by itself require model-selected transitions. Start with fixed extraction and bounded assistance. Grant one agent only if evidence shows that the next permitted read depends on discoveries that cannot be represented economically in advance.
+
+**The helpful-critics counterexample.** Two agents can critique each other, so a team proposes a planner, answerer, critic, and judge. The names do not create independent evidence. All four may share a mistaken source, repeat the same model bias, or optimize toward the judge's style. Compare the design with deterministic schema validation, independent source checks, and one model plus a held-out evaluator. If the critics do not reduce a preregistered failure class within budget, remove them.
+
+**The high-consequence counterexample.** A system may show excellent evidence retrieval on safety-related requests. That performance does not transfer decision authority from the domain safety owner. Capability can justify better decision support while consequence keeps execution at proposal-only or rejection. The autonomy ladder has ceilings as well as steps.
+
+**The faster-parallel-search counterexample.** Four workers may reduce elapsed time on independent corpora. Measure against parallel non-agent retrieval and a one-agent client capable of concurrent approved reads. Then report total tokens, tool pressure, duplicate retrieval, aggregation errors, and tail latency. A lower wall-clock time can be valuable, but it does not establish better quality or lower cost.
+
+**The self-healing counterexample.** A model notices a tool timeout and tries another route. That can be useful only if the alternative is permitted, evidence-equivalent, observable, and inside the retry budget. If it silently substitutes a different source or repeats a possibly committed effect, apparent resilience becomes uncertainty. Recovery semantics belong to the harness, not to optimism in the model's next step.
+
+**The ninety-two-percent counterexample.** The injected fixed-baseline value creates a concrete exercise, but it is not empirical evidence. Do not infer that eight percent of real FieldOps work needs an agent, that the residual cases are valuable, or that one agent will solve them. The lab first decomposes the fictional misses, then measures the eligible residual class. A generated task set may reproduce the scenario later; that still supports only that synthetic environment.
+
+**The framework-availability counterexample.** A framework may make routing, delegation, memory, or orchestration easy to implement. Implementation convenience reduces one engineering cost. It does not prove task need, control adequacy, or outcome benefit. Provider guidance illustrates patterns and starting principles; it is not an independent evaluation of this workload. [CLM-003]
+
+### Procedure 5: issue the reversible decision
+
+Complete one row per execution level with these fields: task class, added freedom, predicted benefit, added failure surface, containment, measured result, decision, owner, expiry, and reconsideration trigger. Write the result in plain language before copying it into a dossier.
+
+For FieldOps, the acceptable decision is narrower than `selectedLevel: single-agent` may look in isolation. Fixed execution remains the default for enumerable intake, validation, lookup, proposal formatting, approval enforcement, and effect verification. Assisted execution may normalize or extract bounded fields while code owns the path. One local agent may select approved read, ask, compute, and proposal steps for the residual evidence-dependent class. It cannot approve an effect. Multiple agents remain rejected because no current FieldOps evidence demonstrates a separable-work advantage that survives coordination and resource cost. [CLM-003] [CLM-004]
+
+State the decision's expiry conditions. It expires if the workload changes materially, the evidence sources or policies change, a simpler baseline absorbs the residual class, the model or tool configuration changes beyond the evaluated envelope, or a control failure invalidates containment. Expiry does not automatically authorize more autonomy. It triggers reevaluation.
+
+Write a reduction path. If one-agent evidence completeness does not beat assisted execution, route those cases back to assisted or fixed paths. If trace reconstruction fails, disable model-directed transitions until observability is repaired. If forbidden proposals or review load cross the declared limit, narrow the action set or return the class to clarification and escalation. If exact approval can be bypassed, stop all effecting paths; do not preserve the demo by accepting a weaker approval meaning.
+
+Write a separate expansion path. To test multiple agents later, identify a task class with independently explorable branches, freeze a deterministic aggregation rule or accountable review step, set a shared budget, define coordination failures, and preregister a benefit against one-agent and parallel non-agent controls. A positive result authorizes only that bounded class and evaluated configuration. It does not turn multiple agents into a platform-wide maturity target.
+
+The final packet should allow a reviewer who did not attend the demonstration to answer five questions: What limitation did the simpler level exhibit? What additional freedom addressed it? What harm became possible? Which independent mechanism contained that harm? What evidence would reverse the decision? If any answer depends on charisma, novelty, or an unstored conversation, the architecture has not earned autonomy.
+
+### Exercise deliverables and scoring rubric
+
+Submit six items.
+
+1. **Boundary reconstruction:** a one-page mapping from the six `AR-01 v0.1.0` decisions to proposal, execution, evidence, and stop constraints.
+2. **Fixed baseline:** a state sequence with terminal predicates and at least three tests, including a normal proposal, missing identifier, and prohibited request.
+3. **Twelve task cards:** frozen synthetic inputs, evidence, consequence, authority, permitted actions, budgets, and expected disposition.
+4. **Controlled comparison:** results for fixed, assisted, one-agent, and, where testable, multi-agent alternatives under declared resource conditions.
+5. **Trace review:** annotations for at least five runs, including false completion, correct refusal or rejection, budget exhaustion, stale evidence, and a shared-state or delegation failure.
+6. **Decision revision:** `AR-01 v0.2.0`, a rejection log, reduction and expansion paths, falsifiers, owner, and expiry.
+
+Score the submission out of twenty points.
+
+**Decision defensibility, 0 to 6.** Six points require a least-complex adequate decision per task class, explicit added freedom and benefit, rejected alternatives, owners, falsifiers, expiry, and a reduction path. Four points indicate a mostly bounded decision with one weak rejection or missing trigger. Two points indicate a topology preference supported mainly by examples. Zero points indicate that leadership preference, novelty, or framework availability substitutes for task evidence.
+
+**Controlled comparison, 0 to 6.** Six points require the fixed baseline, frozen tasks, equivalent access and consequence, declared budget treatment, separate development and held-out cases, structured completion predicates, per-case failure analysis, and reproducible configuration. Four points allow minor gaps that do not change the decision. Two points indicate incomparable harnesses or aggregate-only reporting. Zero points indicate no baseline or a comparison changed after results were observed without rerunning alternatives.
+
+**Consequence treatment, 0 to 4.** Four points require explicit consequence ceilings, exact authority, deterministic policy and tool containment, approval-bound effects, and correct clarification, escalation, or rejection as possible completion. Two points indicate that effects are gated but evidence freshness or reviewer authority is vague. Zero points indicate that model confidence, worker consensus, or task performance is allowed to authorize a prohibited or high-consequence effect.
+
+**Disputed-claim accuracy, 0 to 4.** Four points require the bounded Anthropic research case to remain bounded, framework documentation to remain illustrative, resource and coordination costs to be reported, and general multi-agent superiority or cost-effectiveness to remain disputed. Two points indicate cautious wording but an unclear transfer claim. Zero points, and an automatic failure for the chapter assessment, result from presenting the injected 92 percent as real production evidence or the bounded research case as proof that multiple agents generally improve quality.
+
+After scoring, require a short oral defense. Ask the learner to remove one component from the selected topology. A strong defense identifies which measured capability would be lost and which cases would route elsewhere. Ask what result would cause immediate autonomy reduction. A strong defense names a stored metric, threshold, authority owner, and deterministic action. Ask whether an agent is needed for the long-document case. A strong defense requests path-variation evidence rather than inferring need from document length.
 
 The assessment has four gates:
 

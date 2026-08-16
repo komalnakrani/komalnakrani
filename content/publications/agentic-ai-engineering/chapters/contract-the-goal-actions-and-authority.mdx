@@ -479,6 +479,189 @@ The next chapter may begin state-machine design only when these inputs are stabl
 
 If an input remains governed but variable, represent its type and owner. If it remains genuinely unknown, block the dependent transition. Do not encode uncertainty as an undocumented branch in the model prompt.
 
+## Operate the contract before tools exist
+
+`AR-02` can be tested with proposed actions and synthetic records before any capability is implemented. This is a valuable ordering constraint. If the team cannot decide whether an action is allowed from the contract, adding a tool only converts ambiguity into reachable behavior.
+
+Create a contract evaluator that accepts current task state, a proposed action, trusted identity/authority references, time, and budget snapshot. It returns `ADMIT_PROPOSAL`, `REQUEST_APPROVAL`, `ADMIT_EFFECT`, `DENY`, `STOP`, or `ESCALATE` plus stable reasons. It never calls a service.
+
+```text
+evaluate(contract, state, proposal, authority, now):
+  assert contract.version is admitted
+  assert task/run/principal bindings match
+  assert state is active and not cancelled
+  assert proposal schema and action class are valid
+  assert action is allowed and not prohibited
+  assert preconditions and budgets remain
+  assert uncertainty is below action threshold
+
+  if proposal.effectClass != NONE:
+    assert exact live authority binds proposal
+    return ADMIT_EFFECT
+
+  return ADMIT_PROPOSAL
+```
+
+Each assertion has one reason code and one owner. `DENY_PROHIBITED_ACTION` is different from `STOP_BUDGET_EXHAUSTED` and `ESCALATE_DOMAIN_UNCERTAINTY`. Stable reasons let Chapter 4 map the decision to explicit states instead of asking the model what to do next.
+
+### Separate policy variables from escape clauses
+
+Contract specificity can become brittle if every identifier is hard-coded. Parameterize approved values such as maximum turns, evidence freshness, and allowed synthetic location through versioned policy inputs. Do not add `unless the model believes necessary` or `use judgment in emergencies`. Those phrases transfer authority back to the selector.
+
+Every variable declares type, range, source, authority, default-deny behavior, and version. A product owner can change the allowed task segment through a new contract version. A domain owner can define what evidence is compatible. Neither change occurs through model prose.
+
+### Explain denial without widening authority
+
+The model receives a bounded result: which proposal field or action class failed and which next transitions are permitted. It does not receive credentials, hidden policy, alternative principals, or instructions to seek another approver.
+
+For changed slot after approval, return `DENY_APPROVAL_MISMATCH` and permitted next step `CREATE_NEW_PROPOSAL`. For prohibited safety diagnosis, return `STOP_PROHIBITED_DOMAIN_DECISION` and an escalation owner. For tool budget exhaustion, return `STOP_BUDGET` rather than inviting a compressed additional call.
+
+## Work three consequence classes
+
+The synthetic taxonomy is local and deliberately incomplete.
+
+### Class A: observation
+
+Read one admitted equipment, manual, or inventory record. Preconditions include principal/task/resource scope, data class, and budget. Completion evidence is a validated observation artifact with provenance and freshness. No business effect occurs, but privacy, access, and operational side effects still need later controls.
+
+An observation can still be prohibited. Reading another tenant, retrieving contact details, or searching an unapproved source is denied. Low consequence is not no authority.
+
+### Class B: proposal
+
+Create an immutable reservation proposal from admitted observations. The proposal has exact part, slot, quantity, location, evidence references, consequence, expiry, and canonical hash. It changes workflow state but not the synthetic inventory system.
+
+The proposal is complete when schema, evidence compatibility, freshness-at-creation, and hash checks pass. It is not task completion. Calling a proposal "done" would collapse review and effect.
+
+### Class C: approval-bound synthetic effect
+
+Reserve one synthetic part/slot. Preconditions include the entire Class B artifact plus live task/run, exact authority, unused approval, current evidence, one-effect budget, cancellation check, and admitted capability version. Completion requires authoritative effect verification, not a successful model message or request acknowledgement.
+
+Unknown effect outcome is neither success nor safe failure. It transfers the run to recovery under later chapters. `AR-02` defines the required disposition even before capability reconciliation exists.
+
+### Prohibited class
+
+Equipment control, safety diagnosis, real communication, real-system write, broad browsing, generic shell/SQL, and unbounded resource access are absent from allowed actions and separately listed as prohibited. Redundant prohibition helps reviews and tests. It does not replace an allowlist.
+
+## Full authority-chain walkthrough
+
+A synthetic user requests: "Find the right part and book it."
+
+The product/task owner narrows the goal: gather evidence, propose one compatible synthetic part and slot, and reserve it only under exact approval. The user request supplies intent, not unlimited delegation.
+
+The model reads admitted evidence and proposes part `A17`, slot `B2`, quantity one. Deterministic code canonicalizes it under task `T-31`, run `R-31`, principal `P-31`, North resource, and evidence revisions. The output hash is `H-31`.
+
+A review interface displays action, target, quantity, evidence, consequence, uncertainty, expiry, and alternatives. The reviewer chooses approve. Chapter 6 will verify identity and formal eligibility; Chapter 3 merely requires `approval.authorityBasis` and rejects absence.
+
+Execution receives `H-31`, approval `AP-31`, and current state. If the slot changes to `C9`, quantity changes to two, run changes, capability changes effect semantics, time expires, cancellation arrives, or approval is used, the effect is denied. Apparent compatibility cannot substitute for exact authority.
+
+If all checks pass, later capability code dispatches. Completion waits for effect `EF-31` and authoritative verification that it matches part, slot, quantity, tenant, and semantic intent. The model may summarize after verification; its earlier confidence does not count.
+
+### Authority is not a UI event
+
+The bounded Operator and ChatGPT agent confirmation cases show that providers use confirmation and supervision patterns for selected browser actions. They also document residual mistakes and manipulation risks. FieldOps imports no product-specific assurance. [CLM-006]
+
+The interface presents evidence and captures a choice. Identity systems establish the principal. Organizational policy establishes eligibility. The task contract says which exact effect needs approval. The capability boundary revalidates it. The service enforces resource access. Audit records the chain. No single click performs all jobs.
+
+## Interpret contract evidence correctly
+
+A schema-validation pass proves shape for that instance. It does not prove scope, authority, current evidence, or safe effect. A mutation denial proves one guard rejected one changed proposal. It does not prove no alternate path exists. An approval-match event proves the stored record binds the canonical proposal. It does not prove reviewer understanding or formal legal consent.
+
+A verified synthetic effect proves named fixture state matches the expected effect after execution. It does not prove real inventory, customer benefit, physical safety, or production fitness. Keep these evidence classes explicit in the review packet.
+
+### Conflicting evidence
+
+If the approval record binds `B2` while the proposal view shows `C9`, stop. Do not choose the cryptographic record automatically; the view may reveal that the reviewer saw different content. Preserve both hashes and investigate rendering/canonicalization.
+
+If the model says the task is complete but effect verification is absent, the contract remains incomplete. If the trace says effect success but authoritative ledger says unknown, remain unknown. Evidence sources have declared authority for specific claims.
+
+### Missing evidence
+
+Missing completion evidence produces `ESCALATED_EVIDENCE_GAP` or another explicit disposition. It does not cause the system to invent proof or keep acting indefinitely. A later chapter may recover the evidence, but `AR-02` already says what is required.
+
+## Contract failure walkthroughs
+
+### Vague completion
+
+The goal says "resolve the request" and the model produces a helpful plan. No predicate distinguishes completion from progress. Contract compilation fails before execution with `MISSING_COMPLETION_PREDICATE`. Repair by enumerating evidence and explicit terminal alternatives, not by asking the model to self-assess.
+
+### Category approval
+
+Approval says "allow inventory changes today." It lacks part, slot, quantity, task, run, resource, proposal hash, and one-use state. Reject. Broad approval may exist in some real organization, but it is outside this synthetic contract and needs formal authority design.
+
+### Budget overrun
+
+The model repeatedly reads manual passages after uncertainty stops decreasing. At the turn/tool ceiling, deterministic code stops. The run can return bounded evidence or escalate. It cannot grant itself more budget because another call might help.
+
+### Prohibited diagnosis
+
+Retrieved text asks the model to decide whether equipment is safe to operate. The action is prohibited even if the model is confident and evidence appears relevant. Record the attempted class, stop, and route to the named domain/safety owner. Do not generate a disclaimer-wrapped diagnosis.
+
+### Approval replay
+
+The original effect completed and approval is consumed. A second run presents the same proposal hash. Run/task binding and one-use checks deny. Same business fields do not revive authority.
+
+### Cancellation race
+
+Cancellation becomes effective before dispatch. The effect is denied and the run terminates cancelled. If cancellation arrives after possible dispatch, later chapters reconcile. `AR-02` never claims cancellation reverses a committed effect.
+
+## Contract change and migration
+
+Changing a completion predicate, allowed action, consequence class, budget, approval field, or non-goal changes the system claim. Version the contract and decide how active runs behave.
+
+| Change | Existing observation | Existing proposal | Existing approval | In-flight effect |
+| --- | --- | --- | --- | --- |
+| lower read budget | retain evidence; stop new reads | revalidate | revalidate | unaffected by read budget |
+| add effect field | retain provenance | recreate | invalid; reapprove | reconcile under old contract |
+| shorten expiry | revalidate | revalidate | apply declared effective rule | do not rewrite dispatch history |
+| prohibit action | stop new transition | quarantine | revoke/deny | contain and reconcile |
+| change completion | reevaluate evidence | reevaluate | case-specific | verify under recorded effect contract |
+
+Never migrate approval across changed effect semantics. Preserve old contract versions for evidence/reconciliation while removing them from new task admission.
+
+## Extended mutation exercise
+
+Build three contracts for observation, proposal, and approval-bound effect. Include beneficiary, principal, goal, initial facts/provenance, completion, non-goals, action rules, consequence, budgets, uncertainty, authority, binding, expiry, cancellation, stop, escalation, evidence, and terminal dispositions.
+
+Run at least twelve mutations: part, slot, quantity, tenant, principal, task, run, effect class, capability version, approval expiry, approval replay, budget exhaustion, cancellation, missing completion, and prohibited safety action. Each must name the deterministic assertion and prove no effect dispatch.
+
+Then mutate the validator: remove quantity from proposal hash, make expiry comparison inclusive in the wrong direction, accept any reviewer string, let model output set principal, and treat `UNKNOWN` as failure/retry. The suite must fail these implementations.
+
+### Rubric interpretation
+
+The frozen 20 points remain schema completeness 6, machine checks 6, authority accuracy 4, limitations/escalation 4.
+
+Full schema credit needs every required contract field and provenance. Full machine-check credit needs compilable assertions, mutation sensitivity, stable reasons, and exactly one disposition. Full authority credit needs separation of request, proposal, review, authorization, execution, and verification with exact binding. Full limitations credit needs explicit non-goals, synthetic thresholds, external owners, uncertainty, cancellation, and no real-world claims.
+
+Automatic failure occurs if a semantically changed proposal uses the same approval, the model certifies completion, or confirmation is presented as formal authority.
+
+## Final `AR-02` defense
+
+An independent reviewer starts from the vague brief and traces every added field to a decision or failure. They select the effect rule and find principal, resource, scope, preconditions, exact approval, expiry, one-use state, budget, cancellation, verification, failure disposition, and mutation.
+
+They remove the model and submit proposals directly. Every deterministic denial still holds. They remove the approval interface and insert a forged record. Authority verification fails. They insert a valid-looking approval for a changed slot. Hash binding fails. They declare success with no effect. Completion fails.
+
+Finally, the reviewer names what `AR-02` does not decide: real product goals, domain compatibility, safety thresholds, legal consent, enterprise IAM, reviewer eligibility, cryptographic implementation, privacy policy, or production release. Those owners receive explicit questions rather than implied conclusions.
+
+The accepted packet freezes assertion names and event needs for Chapter 4: contract validation, action admission, approval requirement/match, budget/stop, cancellation, completion evidence, escalation, and terminal disposition. The loop will implement those semantics without widening them.
+
+## Contract acceptance checklist
+
+Before freeze, verify task, principal, beneficiary, initial facts/provenance, goal, completion predicate, non-goals, action classes, prohibited actions, consequence, budgets, uncertainty, approval class, authority basis, exact binding, expiry, revocation, cancellation, stop, escalation, evidence obligations, and terminal alternatives.
+
+For every allowed effect, trace `precondition -> proposal -> authority -> execution -> verification -> disposition`. For every prohibited class, show a direct mutation fixture. For every budget, name counter, unit, increment boundary, ceiling, and breach transition. For every external owner, name the decision rather than inventing approval.
+
+Review the leadership summary against the machine contract. Phrases such as "book a suitable part," "human approved," "safe," or "completed" must resolve to exact fields and evidence. If the summary broadens them, it is a different unreviewed artifact.
+
+Archive the vague-brief autopsy and rejected alternatives. The dossier should show why unrestricted resolution, category approval, model-defined completion, real communication, equipment control, and safety diagnosis were excluded. Negative decisions are part of the autonomy evidence.
+
+The final fixture advances time to every exact boundary, exhausts each budget, cancels before and after possible dispatch, mutates each effect field, and submits final output without evidence. Acceptance requires deterministic, stable reasons and no effect execution. The chapter establishes a local contract language, not a universal consequence taxonomy.
+
+One last reviewer performs a subtraction test. Remove approval and the effect must stop. Remove verification and completion must stop. Remove the principal or resource scope and action admission must stop. Remove a non-goal and show which unsafe ambiguity returns. Remove an escalation owner and show why the run cannot wait indefinitely. This test connects every field to behavior and identifies decorative requirements.
+
+Freeze the successful and rejected records together. `AR-02 v1.0.0` is credible because it shows what FieldOps cannot do as clearly as what it may do. Its most important output is not permission to act, but a machine-checkable boundary that later chapters must fail closed against.
+
+The final signed record keeps synthetic scope, limitations, named external authorities, and reopen triggers beside the accepted contract hash.
+
 ## Chapter checkpoint
 
 `AR-02 v1.0.0` turns FieldOps from a vague agent proposal into a bounded task contract. The agent can gather approved synthetic evidence and form one proposal. The harness owns validation, budgets, stop conditions, and the effect gate. A named authority can approve one exact synthetic reservation. Execution is one-use and independently verified. Equipment control and other adjacent powers remain prohibited.

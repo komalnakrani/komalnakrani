@@ -40,6 +40,45 @@ Do not optimize these synthetic numbers as if they represented production. Their
 
 The one-agent design has one accountable run owner. It does not mean the model owns policy, authority, state, or services. It means one model-directed component proposes the next bounded action while deterministic controls and adjacent owners retain their decisions.
 
+### A control, not a mascot
+
+The phrase "one agent" is easy to misunderstand because product diagrams often draw an agent as a single cheerful box. The baseline is not that box. It is the entire tested arrangement around one model-directed decision maker: contracts, validators, stores, adapters, approval checks, effect boundaries, evidence, and operators. If the model is changed while all of those elements remain, the baseline has changed in one way. If a router, specialist, or reviewer agent is added, the topology has changed. If the inventory fixture, approval policy, or completion predicate changes at the same time, the comparison is no longer about topology.
+
+This distinction turns an architecture preference into a falsifiable engineering question. Suppose a team believes that a manual specialist will improve evidence selection. The hypothesis should name the task segment, expected gain, and possible loss. It might predict fewer incompatible manual citations on long manuals, while accepting extra elapsed steps and a new transfer boundary. The one-agent control supplies the counterfactual: the same tasks, manuals, limits, capability contracts, and scoring rules without the specialist. The team can then decide whether the difference is large enough and safe enough to justify another owner.
+
+Without that control, every favorable result has several possible explanations. The new design may use a better prompt, a newer model, more context, a different retry policy, or easier tasks. It may silently grant the specialist broader search access. It may count handoff preparation as free. It may omit failures that the baseline recorded. None of those differences proves that coordination helped. A frozen control does not eliminate uncertainty, but it makes uncertainty inspectable.
+
+The control must be versioned at the level that could affect a result. Record task fixture hashes, contract versions, tool and schema versions, policy-double version, budget version, evidence schema, and the code revision used to run the harness. Record the logical clock and random seed even when the current double is fully deterministic, because later variants may sample fault order or task construction. Record which fields are deliberately excluded, such as real model tokens, wall-clock latency, or external price. A missing measurement is safer than a synthetic value wearing a production label.
+
+The seven FieldOps cases are deliberately small. They test integration seams, not a representative service business. `complete-request` exercises the entire legal path. `missing-manual` tests refusal to invent evidence. `stale-availability` tests freshness and bounded refresh. `typed-tool-error` tests the local error contract. `ambiguous-effect` tests reconciliation. `cancel-before-effect` tests external cancellation ownership. `context-overflow` tests safe degradation. Together they give the baseline variation in outcome and failure disposition without pretending to cover the real distribution of maintenance work.
+
+For each case, freeze four layers of expectation. The **product expectation** says what useful condition should hold, such as a verified reservation or a clear escalation. The **control expectation** says which actions, scopes, and effects are allowed. The **trajectory expectation** names required or forbidden milestones without prescribing every model thought. The **evidence expectation** names the records needed to support the disposition. A run can meet one layer and fail another. For example, an existing reservation may make the requested slot appear secured, but if the run created a duplicate effect and then hid it, product appearance cannot rescue control failure.
+
+Avoid converting this small fixture into a leaderboard. Seven expected disposition matches out of seven is not a confidence interval for production reliability. It says the deterministic implementation agrees with seven declared examples. Zero duplicate effects says those paths produced none under their injected conditions. Twenty-four action steps describes the fixture, not human productivity. The most useful output is often the first divergent event, because it locates a contract or ownership defect that a final success percentage would conceal.
+
+### Define what remains constant
+
+Write the comparison contract before running the baseline. In FieldOps, the contract has the following invariants:
+
+1. Every case begins from the same synthetic initial state and logical time.
+2. The task contract and observable completion predicate do not change.
+3. Capability schemas, effect classes, and typed errors do not change.
+4. Principal, tenant, delegation, and approval requirements do not change.
+5. Context admission and conflict rules do not change.
+6. Turn, action, effect, and context budgets do not change.
+7. The effect ledger, verification query, and evidence schema do not change.
+8. Expected dispositions and scoring code do not change after results are seen.
+
+Chapter 9 is allowed to change the number and relationships of model-directed components. It is not allowed to buy an apparent topology gain by relaxing these invariants. If a multi-agent design truly requires a contract change, that may be a valid new design, but it becomes a separate experiment. The original comparison should remain available.
+
+The same discipline applies when the one-agent result is disappointing. Do not repair a failed case only in the baseline after inspecting the multi-agent result. Version the task or harness, state the defect, and rerun every compared topology. A baseline is useful because it can lose honestly.
+
+### Know when an early split is legitimate
+
+Measuring one agent first is a design rule, not a universal law. Some systems begin with a boundary that cannot responsibly be collapsed. A payroll investigator and a public-support writer may require incompatible data access. A regulated decision may require an independently controlled review service. A large corpus might not fit inside the same bounded context as sensitive transactional state. Different execution zones may be operated by separate organizations.
+
+In those cases, document the incompatibility rather than invoking complexity as a vibe. Name the privileges that cannot coexist, the data that cannot cross, the independent owner, or the measured context limit. Then define the smallest baseline that respects the boundary. It may contain one agent per security zone while still avoiding a router, debate team, or manager hierarchy. The evidence burden remains because an unavoidable separation does not justify every additional coordination layer. [CLM-015]
+
 <figure className="book-figure book-figure--pending" data-figure-id="F08.1" data-png="/assets/publications/agentic-ai-engineering/f08-1-one-agent-workbench.png">
   <div role="img" aria-label="Pending colorful realistic 3D workbench labeled One Agent with organized stations labeled Tools, State, Policy, and Evidence. Several empty specialist booths remain visibly unused by design. A single run-owner badge connects all stations, while the effect gate remains separate. No relationship depends on color.">ImageGen raster pending: F08.1</div>
   <figcaption><strong>F08.1 - Single-agent workbench.</strong> Essential labels: One Agent, Tools, State, Policy, Evidence. Evidence role: an integration scaffold; unused specialists are intentional, not missing functionality.</figcaption>
@@ -57,6 +96,68 @@ A current provider SDK can simplify loop execution, tools, handoffs, sessions, a
 
 Keep provider code behind the adapter. If an SDK session conflicts with `AR-03`, the local run store wins. If a framework handoff exists, it remains unused until Chapter 9 admits a local contract.
 
+### Draw ownership before drawing calls
+
+An integration diagram should show more than which component invokes which function. It should state who owns each decision. In the FieldOps slice, product code owns the task contract and completion predicate. The run harness owns legal state transitions, budgets, cancellation, and terminal disposition. The context assembler owns admission of records into model input, subject to identity and data-policy checks. The model adapter owns translation between provider-shaped messages and local proposal types. Capability adapters own translation between local calls and synthetic services. The approval gate owns validation of an approval artifact, but the named reviewer owns the approval decision. The effect service owns the reservation operation. The verifier owns the authoritative read that establishes whether the intended reservation exists.
+
+That ownership map prevents a common integration failure: allowing whichever component has the most convenient data to make a decision outside its authority. The model sees a plausible completion, so it closes the run. The tool adapter sees an operator name, so it assumes approval. The framework session contains an old part number, so it becomes current state. The trace says a call succeeded, so it becomes effect truth. Each shortcut works in a demo and fails under disagreement. The architecture must be designed for disagreement.
+
+Give every boundary a compact contract. A component contract needs an input schema, output schema, owner, trust classification, allowed side effects, timeout behavior, error vocabulary, version, and evidence event. A pure component such as context assembly should declare no external effects. An effect adapter should declare its idempotency identity, ambiguous-result behavior, and reconciliation query. A policy gate should distinguish denial from infrastructure failure. These declarations make it possible to replace an implementation without rediscovering semantics through incidents.
+
+The one-agent topology becomes concrete as a sequence of local interfaces:
+
+```text
+TaskIntake.accept(request, principal) -> TaskRef | IntakeError
+RunStore.open(taskRef, contractVersions) -> RunSnapshot
+ContextAssembler.build(runSnapshot, purpose, budget) -> ContextBundle
+ModelAdapter.propose(contextBundle, proposalSchema) -> RawAndTypedProposal
+Validator.admit(runSnapshot, typedProposal) -> AdmissionDecision
+CapabilityAdapter.invoke(admittedCall, resolvedIdentity) -> TypedResult
+RunStore.apply(expectedVersion, event) -> RunSnapshot | VersionConflict
+ApprovalGate.check(effectIntent, approvalRef, now) -> AuthorityDecision
+EffectLedger.reconcile(effectIdentity) -> EffectObservation
+Verifier.evaluate(taskRef, effectObservation) -> CompletionEvidence
+EvidenceReporter.project(runId, audience) -> BaselineCaseReport
+```
+
+This is illustrative provider-neutral notation, not a required programming language or RPC design. The important property is that the model returns a proposal, not an executable command. The validator derives trusted fields and returns an admission decision. The effect adapter receives a resolved identity and an immutable effect intent. The verifier evaluates evidence independently of the model's final prose.
+
+### Keep the run store authoritative
+
+The run store holds the versioned state that coordinates these components. A snapshot includes run ID, task reference, attempt, current state, contract versions, principal and tenant references, counters, cancellation state, current proposal reference, approval reference, effect identity, evidence references, and last event sequence. Updates use an expected version. If another actor has already cancelled or advanced the run, a stale writer receives a conflict and must reread rather than overwriting the newer decision.
+
+Provider sessions can still be useful. They may retain conversation turns, cache input, or make a provider loop convenient. Their records are treated as transport or derived context. They do not decide whether the FieldOps run is `WAITING`, whether approval is live, whether an effect was committed, or whether completion is verified. If a session is lost, the run may require reconstructed context; it must not lose its business disposition. If a session claims a later state than the run store, that difference is evidence of an adapter defect, not permission to advance canonical state.
+
+Store events as causal records rather than an unstructured transcript. A proposal event points to the context bundle and policy version that produced it. An admission event points to the proposal and the rules applied. A capability result points to the admitted call. An approval check points to the canonical effect intent. An effect observation points to the effect identity and service revision. A completion event points to the predicate version and supporting observations. This linkage supports replay and diagnosis without making the trace itself authoritative over external reality.
+
+### Separate proposal parsing from admission
+
+A model adapter has two responsibilities and no more. It preserves the raw provider output for appropriately governed evidence, and it attempts to parse that output into one of the local proposal variants. Parsing success means only that the proposal is structurally legible. Admission is a separate deterministic decision.
+
+For example, a parsed reservation proposal may include a part ID, slot ID, and reason. Validation checks whether a proposal is legal in the current run state; whether the task permits the action; whether action and effect budgets remain; whether identifiers belong to the right tenant and equipment; whether the cited observations are current; whether the capability is allowed; and whether an exact approval is required. It replaces any model-supplied principal, tenant, audience, or credential reference with values derived from trusted run state. A structurally valid proposal can therefore be denied safely.
+
+Preserve denial detail in a form the harness can act on. `WRONG_STATE` is different from `BUDGET_EXHAUSTED`. `STALE_EVIDENCE` may permit one refresh. `AUTHORITY_REQUIRED` leads to a wait checkpoint. `SCOPE_DENIED` normally escalates rather than inviting the model to rephrase the same forbidden intent. The model may receive a safe projection of the reason, but the canonical event retains the exact rule and inputs.
+
+### Make tools narrow in the integrated system
+
+Tool quality is not only a Chapter 5 concern. Integration can accidentally broaden a narrow capability. A single dispatcher that accepts arbitrary tool names and free-form payloads may erase individual schemas. A context wrapper may dump all previous tool results into every call. A retry helper may retry effects that were never declared retryable. A generic credential resolver may grant every adapter the union of scopes used anywhere in the run.
+
+Keep the five FieldOps capabilities separate even if they share transport code. `read_equipment` can observe one equipment record. `search_manual` searches an approved source set and returns passages with provenance. `check_inventory` returns availability plus observation time and revision. `propose_reservation` produces a canonical non-effectful intent. `reserve_part` performs the single synthetic effect under an exact approval. Their names, descriptions, input schemas, returned context, error sets, and scopes are part of the frozen baseline because tool organization can affect selection and use. [CLM-016]
+
+Capability adapters should return local result unions such as `ok`, `not_found`, `stale`, `denied`, `retryable_error`, `terminal_error`, and `ambiguous`. Do not leak a provider's exception hierarchy into run policy. An adapter may map an HTTP timeout to `ambiguous` for an effect but to `retryable_error` for a read. The same transport symptom has different semantics depending on whether an external change may have occurred.
+
+### Treat evidence reporting as a projection
+
+The evidence reporter reads run events, state references, capability results, effect observations, and verification records. It creates audience-specific views. A developer view may include schema-validation paths and fixture IDs. An operator view may emphasize disposition, waiting reason, cancellation, and reconciliation duty. An evaluation view may include action sequence and measure fields. None should include credentials, hidden policy secrets, or unrelated tenant data.
+
+Projection matters because observability and minimization pull in different directions. Capturing everything makes later investigation easy but expands privacy and security risk. Capturing only a final answer makes causal diagnosis impossible. The baseline establishes which safe fields are required for its measurements. Later chapters can extend telemetry through versioned schemas instead of turning full prompts and payloads into the default evidence strategy.
+
+### Bound the SDK example
+
+A provider SDK may expose a convenient agent loop, typed tools, sessions, handoffs, guardrails, and traces. That demonstrates that such an abstraction can simplify implementation while leaving useful controls visible. It does not show that the SDK's state model matches `AR-03`, that its handoff semantics match the next chapter, that its trace is safe to retain, or that it is portable across providers. It also does not prove better task quality. [CLM-016]
+
+Use an anti-corruption adapter: local proposal and result types on the application side, provider objects on the SDK side. Test the adapter against recorded provider-shaped fixtures. Pin the edition or version used. When an SDK adds a new orchestration primitive, treat it as an implementation option until local contracts admit its semantics. FieldOps should be able to replace the deterministic double with a provider adapter without moving authority, effects, or completion into the provider layer.
+
 ## 3. Use a deterministic policy double
 
 The double chooses from predefined actions based on fixture state. It makes no network call and uses no model. That gives exact failure reproduction.
@@ -66,6 +167,51 @@ For the complete path, it requests equipment, searches a manual, checks inventor
 The double is not a substitute for model evaluation. It proves integration mechanics: legal transitions, context admission, typed tool results, authority gates, and terminal dispositions. Later evaluation can replace the proposal source while preserving the harness.
 
 Do not use a live model to establish the first baseline. Nondeterminism, provider change, and prompt iteration make integration defects harder to reproduce. After the deterministic slice passes, a model adapter can be evaluated against the same tasks.
+
+### Specify policy as observable decisions
+
+The policy double should not imitate natural-language cleverness. It should expose the minimum decision surface needed to drive every legal branch. Each fixture supplies a case ID and deterministic observations. The double maps the current state plus those observations to a proposal variant. If it encounters a state or observation combination that the fixture did not define, it proposes `escalate_unhandled_fixture` rather than guessing.
+
+A compact decision table is easier to audit than a conversational script:
+
+| Current condition | Proposed next action | Required guard | Expected result |
+| --- | --- | --- | --- |
+| Equipment not observed | `read_equipment` | Read budget remains | Typed equipment observation |
+| Compatible manual evidence absent | `search_manual` | Approved source set exists | Cited passage or `NOT_FOUND` |
+| Required condition absent | `ask_missing_information` | Question budget remains | Typed user response |
+| Availability absent or refresh permitted | `check_inventory` | Read budget remains | Fresh revision or escalation |
+| Evidence complete, no intent | `propose_reservation` | Contract predicates satisfied | Canonical intent |
+| Intent approved and live | `reserve_part` | Exact authority and effect budget | Committed or ambiguous result |
+| Effect ambiguous | `reconcile_effect` | Original effect identity exists | Authoritative effect observation |
+| Completion evidence sufficient | `suggest_completion` | Predicate inputs present | Harness verifies or denies |
+
+The table is not the state machine. The double proposes; the harness still enforces legal transitions. That deliberate duplication is useful. If a fixture makes the double propose a reservation from `OBSERVING`, validation should deny it even if the double was expected to behave. A test double that cannot make an invalid proposal cannot test the boundary intended to contain a real model.
+
+Create mutation variants for exactly that reason. Change the part ID after approval. Supply an inventory record from another tenant. Propose the effect twice. Suggest completion before verification. Continue after cancellation. Reuse an expired approval. The expected outcome is not that the double magically self-corrects. It is that deterministic controls reject the mutation and produce a diagnosable event. The baseline measures the system around the policy source, not the obedience of a hand-authored script.
+
+### Control time, identity, and service behavior
+
+Determinism requires more than replacing the model. Use a logical clock so approval expiry, freshness, timeouts, and retry schedules are reproducible. Seed every identifier or derive it from fixture identity. Reset the synthetic services before each case. Predeclare which call receives a fault and whether that fault occurs before or after a synthetic commit. Ensure event ordering is stable even if the production implementation would use asynchronous calls.
+
+Identity is fixture data, not a model choice. The run has a principal reference and tenant reference. Delegation specifies audience, scope, task, expiry, and revocation state. Approval fixtures bind a reviewer decision to the canonical reservation intent. The credential resolver returns a scoped synthetic handle only after admission. Tests should fail if any credential-like value enters model context or if a model-supplied tenant survives validation.
+
+Service behavior also needs semantic fixtures. A missing manual is a successful search with no approved result, not a network exception. Stale inventory is a valid result whose observation time violates freshness policy. A typed retryable error is known non-commit failure under the adapter contract. An ambiguous reservation timeout occurs after the synthetic ledger may have committed. These distinctions teach the harness which recovery is safe.
+
+### Use the double to localize defects
+
+When the deterministic complete case fails, the likely defect lies in wiring, schema, policy, or fixture agreement. The engineer can replay the exact run and compare the first divergent event with the expected sequence. A live model would introduce another hypothesis: perhaps it selected an unusual but legal path, interpreted wording differently, or produced malformed output. Removing that variable accelerates integration work.
+
+This does not make the double a quality evaluator. It cannot reveal whether a real model understands a novel equipment description, selects the best passage from a long manual, asks a useful question, or resists persuasive untrusted text. Those are later task-environment and model-evaluation concerns. The double establishes that when a proposal of a declared type arrives, the rest of the system behaves correctly.
+
+Maintain two suites after a live adapter is introduced. The deterministic contract suite runs on every relevant change and protects state, authority, effect, and evidence semantics. A model evaluation suite samples the actual proposal source over representative tasks and repeated trials. A model failure should be inspectable through the same event and measure schema. A harness failure should first be reproduced with a deterministic proposal if possible.
+
+### Freeze policy variables explicitly
+
+Prompts often contain hidden policy. Phrases such as "try again if needed," "use the best source," or "confirm before acting" leave retry bounds, source eligibility, and authority binding underspecified. The baseline moves those decisions into variables or deterministic rules: maximum one inventory refresh, approved manual collection IDs, exact reservation approval required, one effect budget, and stop on unresolved ambiguity.
+
+The double may receive a short instruction describing its proposal vocabulary, but correctness must not depend on persuasive prose. Record the prompt or instruction hash anyway, because Chapter 9 must not quietly improve the wording for specialists. If a later experiment needs different role instructions, report that as a changed variable and rerun a matched one-agent variant.
+
+The policy fixture should end with an explicit terminal suggestion: complete, escalate, cancelled, or safe stop. The harness evaluates it. That preserves the separation between model-directed task progress and deterministic disposition. A policy double can be wrong in exactly the same structural way a model can be wrong; the surrounding system must remain responsible.
 
 ## 4. Walk the FieldOps vertical slice
 
@@ -98,6 +244,48 @@ The harness canonicalizes part, slot, quantity, principal, task, run, scope, and
 `reserve_part` remains the only effect. It receives a trusted credential outside model context and one live exact approval. On committed response, the harness verifies the ledger. On timeout-after-commit, it reconciles by key and then verifies. On cancellation before dispatch, no effect occurs.
 
 Only verified state satisfies completion. The deterministic report carries every event and evidence reference.
+
+### Trace the complete case event by event
+
+Begin with `TaskAccepted`. The event references the validated request, `AR-02@1.0.0`, principal, tenant, completion predicate, and allowed consequence classes. `RunOpened` adds the run ID, attempt, current contract bundle, counters at zero, and logical start time. No model input exists yet. This ordering matters because context must be assembled for an identified, authorized run, not used to infer what run should exist.
+
+The first context bundle contains the bounded task description, current `OBSERVING` state, remaining budgets, allowed proposal variants, and no equipment observation. It excludes credentials, approval tokens, unrelated service history, and cross-run memory. The double proposes `read_equipment` with the task's equipment reference. Parsing succeeds. Validation replaces tenant and principal fields with trusted run values, admits the read, and emits an action record before dispatch.
+
+The synthetic equipment adapter returns equipment family, model, location reference, current service status, and record revision. The result schema rejects unknown or wrongly typed fields according to local compatibility policy. The run store records the observation and advances its version. The next context includes the equipment fields relevant to manual retrieval, not the whole equipment database.
+
+The manual search uses the approved collection and equipment family. Each returned passage carries document ID, edition, section, retrieval query, source classification, and integrity reference. Passage text remains untrusted. A passage can support a maintenance compatibility claim; it cannot redefine the task, enlarge scope, or authorize an effect. The fixture's valid passage supplies the documented compatibility fact needed by the proposal.
+
+The complete task also lacks one operating condition. The double proposes a bounded question. The harness checks that communication is allowed, the question relates to a declared missing predicate, and the question budget remains. The scripted user returns a typed condition. That response is evidence about the equipment situation, not delegation and not approval. The distinction prevents conversational assent from being reused as authority.
+
+Inventory is then checked for the compatible part and a technician slot. The observation includes quantity, slot, location, timestamp, and revision. Freshness policy is evaluated outside the model. The complete fixture is current at the logical time. The run now has enough evidence to form an intent.
+
+`propose_reservation` is deliberately non-effectful. It canonicalizes the selected equipment, part, quantity, slot, tenant, principal, task, run, scope, and supporting evidence references. Canonicalization removes display wording and orders fields consistently so the same intent has a stable identity. Validation checks compatibility and budget again. The effect has not happened.
+
+The run enters `WAITING` with an approval request referencing that immutable intent. The synthetic approval service returns an exact approval artifact from the authorized reviewer fixture. On resume, the gate checks audience, reviewer authority, intent identity, tenant, scope, expiry, revocation, cancellation, current inventory revision, and remaining effect budget. Approval is not a permanent flag attached to the run. It is evidence that must still match the live action.
+
+Only then does the adapter resolve the synthetic effect credential outside model context and invoke `reserve_part` with the effect identity. The service writes one ledger record and returns a committed result. The harness does not finish merely because the adapter said `ok`. It reads the ledger or authoritative reservation view, confirms that exactly the intended synthetic reservation is present, and applies the completion predicate. `RunCompleted` references that verification evidence.
+
+This sequence may appear elaborate for one small synthetic effect. That is the point of the vertical slice: every boundary is present at low scale. Adding more agents cannot repair an authority check that never existed, a completion predicate that depends on narration, or an ambiguous effect with no reconciliation identity.
+
+### Walk each fault as a distinct semantic path
+
+In `missing-manual`, search dispatch and schema validation succeed. The approved collection returns no compatible passage. The run records `NOT_FOUND`, denies proposal formation because a required evidence predicate is absent, and escalates with the missing item named. The model is not invited to rely on general knowledge or an old memory. A correct escalation counts as the expected disposition.
+
+In `stale-availability`, inventory returns a valid record whose timestamp falls outside the freshness window. The validator emits `STALE_EVIDENCE`. Policy permits one refresh, consuming one action budget. If the refreshed record is current, the run may proceed; if the fixture keeps it stale, it escalates. The refresh bound prevents a fast retry loop from exhausting service capacity or run budget.
+
+In `typed-tool-error`, the selected read adapter returns a declared retryable error that guarantees no effect. Policy schedules the one allowed retry at logical time, increments the appropriate counter, and either proceeds on the injected success or records bounded recovery failure. A schema error, denial, or terminal code does not enter the same retry branch merely because all are represented as exceptions in some transport library.
+
+In `ambiguous-effect`, the reservation service commits the ledger record and then injects a timeout before the caller observes the response. The adapter returns `ambiguous`, not `retryable`. The run enters recovery and queries by the original effect identity. It finds the committed reservation, records the observation, and verifies completion. It never dispatches a second reservation with a new identity. If reconciliation found no record and the capability contract permitted retry with the same identity, that would be a separately tested path.
+
+In `cancel-before-effect`, an external cancellation event advances the run before reservation dispatch. A later proposal based on an older snapshot receives a version conflict or `CANCELLED` denial. No approval or model intention overrides cancellation. The report records that the harness won the race and that the ledger contains no effect for the run.
+
+In `context-overflow`, the assembler begins with the priority order defined by `AR-06`: task and completion facts, identity and authority constraints, current state and conflicts, relevant fresh evidence, and optional history. It removes or compacts lower-priority material while recording exclusions. If required facts still exceed the synthetic context budget, the run stops safely. It does not omit cancellation, tenant, approval, or contradictory evidence simply to make a provider request fit.
+
+### Preserve boundaries during implementation
+
+The simplest way to test the slice is to run every service in process, but in-process calls must still honor contracts. Do not pass a mutable run object into all components. Do not let the fixture reach into the run store to set completion. Do not let the effect adapter read the approval fixture directly. Each shortcut removes the seam the test is supposed to exercise.
+
+Conversely, provider neutrality does not require premature distributed infrastructure. Local interfaces and test doubles are enough. A queue, workflow runtime, remote tool protocol, or service mesh may eventually implement a boundary, but the boundary's semantics should exist before that deployment choice. This keeps the first artifact small while preventing a later transport from defining authority or state by accident.
 
 <figure className="book-figure book-figure--pending" data-figure-id="F08.2" data-png="/assets/publications/agentic-ai-engineering/f08-2-vertical-slice-evidence-path.png">
   <div role="img" aria-label="Pending crisp realistic 3D vertical path from Request through Read, Evidence, Proposal, Approval, Effect, Verify, and Disposition. One agent moves a bounded workpiece while separate deterministic gates inspect state, policy, identity, and evidence. No additional agents appear and no relationship depends on color.">ImageGen raster pending: F08.2</div>
@@ -141,6 +329,68 @@ Aggregate only after preserving cases. Seven of seven expected dispositions is a
 Report synthetic resource units with explicit names. `simulatedContextUnits` is not tokens. `simulatedToolUnits` is not money. Chapter 9 can compare the same units under the same fixture but cannot publish them as operational cost.
 
 Keep negative outcomes visible. Missing-manual escalation is correct. Cancellation is correct. A safe stop on context overflow can be correct. Product success and control success are related but distinct dimensions.
+
+### Calculate measures without collapsing meaning
+
+The twelve baseline measure names in `AR-07 v0.1.0` are a schema, not a single score. Keep their denominators and interpretations separate.
+
+`expected-disposition-match` compares the terminal disposition with the fixture's declared expectation. It should be reported per case and as a count over this fixed set. `completion-predicate` reports each required predicate input and its result; for a cancelled or escalated case it should state that completion was not attempted rather than treating absence as a scoring error. `allowed-action-rate` divides admitted actions by all proposed actions only when the proposal fixture intentionally includes mutations; otherwise a perfect rate is uninformative.
+
+`unnecessary-calls` requires a local definition. A call is unnecessary when the same declared evidence and policy state already supported the next legal decision, or when the call cannot affect the disposition. A refresh after a stale observation is necessary under this fixture. Repeating a current inventory read with no state change is unnecessary. This measure can become overprescriptive for live models, so retain the action trace and adjudication rule.
+
+`invalid-arguments` counts schema-valid calls whose values violate local contract, scope, evidence, or relationship constraints separately from syntax failures. A part ID with the right shape but wrong equipment compatibility is invalid. This distinction helps determine whether a future problem belongs to proposal parsing, tool description, context, or deterministic validation.
+
+`state-invariants` evaluates facts such as monotonic event sequence, expected-version updates, legal transitions, terminal immutability, budget monotonicity, and cancellation precedence. `effect-invariants` evaluates no effect without live exact authority, at most one intended synthetic reservation for the effect identity, no changed intent under the same identity, and verification before completion. Passing state invariants cannot compensate for a wrong effect.
+
+`recovery-disposition` records which recovery branch was selected and whether it reached its expected terminal state. It distinguishes retry, refresh, reconciliation, escalation, cancellation, and safe stop. `action-steps` counts admitted model-directed actions using one stable boundary. Internal schema checks and evidence-report queries should not silently become actions in one topology but disappear in another.
+
+`simulated-context-units` and `simulated-tool-units` are fixture weights. Define the table used to assign them, version it, and keep the word `simulated` in field names and reports. They enable a controlled Chapter 9 comparison without claiming tokens, currency, energy, or infrastructure cost. If live telemetry is later available, add new measures rather than relabeling these.
+
+`trace-coverage` checks whether each required causal event type and link exists: task, run, context, proposal, admission, capability, state, approval, effect, verification, and disposition where applicable. It does not grade whether the decision was good. Nor does a complete trace prove that no unobserved side effect occurred. It says the declared integration path emitted its required evidence.
+
+### Find the first divergence
+
+For every failed comparison, compute the earliest event at which actual and expected sequences differ. Later symptoms are often consequences. If the expected `search_manual` call never occurs because the context omitted equipment family, the first divergence is context assembly, not the eventual missing proposal. If reservation verification fails because the adapter generated a new effect identity, the first divergence is intent-to-effect translation, not completion.
+
+First-divergence analysis should compare semantic events rather than byte-for-byte payloads. Timestamps, generated IDs, or ordering of irrelevant fields may vary in future implementations. Normalize those fields while preserving versions, causal references, action types, decisions, and effect identities. Keep the raw records for forensic inspection under the applicable evidence policy.
+
+A useful case report has five short explanations after the machine-readable fields:
+
+- **What the task needed:** the product and completion conditions.
+- **What the agent proposed:** the bounded action sequence.
+- **What deterministic controls decided:** admissions, denials, waits, and state transitions.
+- **What changed externally:** authoritative effect and verification evidence, or explicit none.
+- **Why the disposition is supported:** references to the exact evidence chain and remaining uncertainty.
+
+These explanations prevent a dashboard from making seven very different cases look identical. They also prepare later human review without exposing hidden reasoning or credentials.
+
+### Read the synthetic baseline honestly
+
+The frozen fixture reports seven cases and seven expected disposition matches. It reports zero forbidden effects, zero duplicate effects, and zero unresolved ambiguous effects. It records twenty-four action steps, no handoff messages, 470 simulated context units, and 15 simulated tool units. Each number is injected deterministic output. None is a production observation.
+
+The action count is useful because a topology variant can add coordination steps. The zero handoff count is a structural property of the one-agent baseline and gives Chapter 9 a clear comparison field. The simulated resource totals can reveal that a topology consumes more of the fixture's abstract resources. They cannot answer whether that increase is affordable or whether a quality gain is worth it.
+
+Do not celebrate the zeros without inspecting coverage. Zero forbidden effects across a suite that never proposes one would say little about enforcement. The mutation tests must attempt scope violations, changed approved fields, duplicate dispatch, and post-cancellation action. Likewise, zero unresolved ambiguities is meaningful here because the fixture injects timeout after commit and requires reconciliation.
+
+The report should preserve skipped and not-applicable states. The missing-manual case has no effect invariant opportunity beyond confirming no effect occurred. The context-overflow case may never call a capability. Treating every missing stage as zero can make safe early termination look like incomplete instrumentation.
+
+### Turn measurements into topology hypotheses
+
+The baseline is most valuable when it reveals a bounded pressure. Suppose manual retrieval repeatedly fills the context budget and causes necessary equipment facts to be compacted. The hypothesis is not "multi-agent is smarter." It is "a manual specialist with a constrained evidence-return contract reduces admitted context while preserving citation quality on the long-manual segment." Measure that segment and the transfer overhead.
+
+Suppose the one agent frequently chooses between unrelated capability domains incorrectly. A router may be hypothesized to improve selection. But if deterministic validation catches the error cheaply and the router adds latency and a new failure mode, keeping one agent may still be preferable. Suppose incompatible credentials cannot safely coexist in one execution zone. That supports separation for control reasons even if task quality stays equal.
+
+Record disconfirming outcomes before the experiment. Reject the manual specialist if citation quality does not improve, required context does not fall, or transfer loses conflict evidence. Reject the router if misrouting offsets selection gains. Reject an independent reviewer agent if it merely repeats the same model judgment without new evidence or authority. These rules make the Chapter 9 decision resistant to architecture enthusiasm.
+
+### Version the baseline as an artifact
+
+`AR-07 v0.1.0` points to five inherited contracts, one policy double, five capabilities, seven tasks, four budgets, twelve measure names, six fault controls, three removal proposals, and the complete freeze object. A release note should state that the artifact is fictional, uses no network or provider, performs no real reservation, and has not established external validity.
+
+When a baseline input changes, decide whether to patch or supersede. A spelling correction in prose need not change the executable artifact. A schema rule, expected disposition, fixture observation, budget, tool description, or policy branch does. Preserve the prior version and its report so a later result cannot rewrite the control it claims to beat.
+
+The artifact should be runnable from a clean local state with one documented command, deterministic fixtures, and no secret. It should fail closed if a fixture is missing or a version reference does not resolve. A reproducible baseline is not merely code that once passed on its author's machine; it is a sealed comparison package whose assumptions can be inspected.
+
+Seal the report together with its configuration, not as an isolated summary. A reader should be able to move from any aggregate number to its case records, from a case record to the causal events, and from an event to the versioned contract that defined its meaning. That chain is what makes the baseline reusable when the implementation, model adapter, or topology changes. If the chain breaks, rerun and reissue the artifact instead of manually repairing the reported number.
 
 ### Three removal reviews
 

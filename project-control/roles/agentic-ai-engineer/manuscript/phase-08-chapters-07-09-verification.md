@@ -2,7 +2,7 @@
 
 ## Coverage
 
-- Manuscripts: 3/3, 7,479 words
+- Manuscripts: 3/3, 26,393 words
 - Claims: 6/6 (`AGE-BCLM-013` through `018`)
 - Source assignments: 21 across 17 unique sources
 - Case assignments: 9

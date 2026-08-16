@@ -1,7 +1,7 @@
 # Chapter 02 QA
 
 - Status: PASS
-- Manuscript words (`wc -w`): 5101
+- Manuscript words (`wc -w`): 8102
 - Assigned claims present: 2/2 (`CLM-003`, `CLM-004`)
 - Assigned sources in frontmatter: 6/6
 - Assigned cases bounded: 2/2; 92 percent labeled injected and synthetic
