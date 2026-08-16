@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "MD12-PEFT-SIM-001",
+  "fictional": true,
+  "simulationOnly": true,
+  "trainingExecuted": false,
+  "artifactsCreated": false,
+  "inheritedExperimentStatus": "md12-experiment-specified-blocked-before-training",
+  "compatibilityTuple": {"baseRevision":"rev-synthetic-a1","baseDigest":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","tokenizerRevision":"tok-synthetic-a1","tokenizerDigest":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","template":"template-family-a-required-but-serving-family-b","runtime":"synthetic-runtime@1.0.0-teaching","dependencyLock":"lock-teaching-v1","quantization":"synthetic-4bit","mergeState":"unmerged"},
+  "resourceDefinitions": {"trainingMemory":"illustrative peak allocated units under one fixture","trainingTime":"illustrative elapsed units under one fixture","deltaStorage":"illustrative adapter artifact units excluding base","inferenceOverhead":"illustrative unmerged adapter units"},
+  "adapterCandidates": [
+    {"id":"peft-r8-attn","method":"lora-fixture","targetModules":["q-proj","v-proj"],"rank":8,"scale":16,"dropout":0.05,"trainableParameterUnits":8,"executable":false,"target":0.75,"citationRetention":0.96,"neutralRetention":0.95,"english":0.79,"gujarati":0.63,"gujaratiEnglish":0.66,"abstention":0.95,"untrustedInstruction":0.97,"noExternalEffect":1.0,"resourceUnits":{"trainingMemory":9,"trainingTime":12,"deltaStorage":1,"inferenceOverhead":0.2},"forbiddenRegressions":[],"disposition":"simulated-frontier-candidate"},
+    {"id":"peft-r16-attn-mlp","method":"lora-fixture","targetModules":["q-proj","v-proj","up-proj","down-proj"],"rank":16,"scale":32,"dropout":0.05,"trainableParameterUnits":28,"executable":false,"target":0.81,"citationRetention":0.9,"neutralRetention":0.94,"english":0.86,"gujarati":0.46,"gujaratiEnglish":0.5,"abstention":0.94,"untrustedInstruction":0.96,"noExternalEffect":1.0,"resourceUnits":{"trainingMemory":13,"trainingTime":17,"deltaStorage":3,"inferenceOverhead":0.5},"forbiddenRegressions":["gujarati-citation-pass-to-fail"],"disposition":"reject-forbidden-regression"}
+  ],
+  "wrongBaseFailure": {"adapter":"peft-r8-attn","expectedBaseRevision":"rev-synthetic-a1","presentedBaseRevision":"rev-synthetic-a2","shapesCompatible":true,"decision":"reject-before-load-base-digest-mismatch"},
+  "wrongTokenizerFailure": {"expectedDigest":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","presentedDigest":"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee","decision":"reject-before-load-tokenizer-mismatch"},
+  "mergeTest": {"attempted":false,"reason":"no adapter artifact exists and runtime compatibility remains blocked","equivalenceClaim":false},
+  "comparisonSet": ["no-tune","sft-early","peft-r8-attn","peft-r16-attn-mlp"],
+  "selectionRule": "compatibility-and-hard-gates-then-behavior-resource-frontier",
+  "forwardedCandidate": "peft-r8-attn",
+  "limitations": ["resource and behavior values are deterministic teaching fixtures","reported PEFT studies do not validate Mosaic","base and adapter remain hypothetical","no merge or hotswap executed"],
+  "status": "peft-frontier-simulated-real-run-blocked"
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "MD12-SFT-SIM-001",
+  "fictional": true,
+  "simulationOnly": true,
+  "trainingExecuted": false,
+  "artifactsCreated": false,
+  "inheritedExperimentStatus": "md12-experiment-specified-blocked-before-training",
+  "blocker": "training-template-family-a-does-not-match-serving-template-family-b",
+  "identity": {"base":"synthetic-ow-candidate-01","baseRevision":"rev-synthetic-a1","baseDigest":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","tokenizer":"tokenizer-a","tokenizerRevision":"tok-synthetic-a1","tokenizerDigest":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","trainingTemplate":"template-family-a","servingTemplate":"template-from-family-b","runtime":"synthetic-runtime@1.0.0-teaching","dependencyLock":"lock-teaching-v1"},
+  "maskAudit": {"assistantTargetsOnly":true,"userTokensSupervised":false,"systemTokensSupervised":false,"paddingSupervised":false,"recordsChecked":6},
+  "failureInjection": {"id":"boilerplate-token-dominance","englishBoilerplateSupervisedTokens":720,"gujaratiEvidenceLinkSupervisedTokens":90,"rowCountsEqual":true,"diagnosis":"row-balance-is-not-supervised-token-balance"},
+  "slices": ["target","citation-retention","neutral-retention","english","gujarati","gujarati-english","abstention","untrusted-instruction","no-external-effect"],
+  "candidates": [
+    {"id":"no-tune","kind":"frozen-comparator","simulated":true,"trainLoss":null,"target":0.61,"citationRetention":0.96,"neutralRetention":0.95,"english":0.72,"gujarati":0.52,"gujaratiEnglish":0.57,"abstention":0.96,"untrustedInstruction":0.97,"noExternalEffect":1.0,"resourceUnits":{"trainingMemory":0,"trainingTime":0,"deltaStorage":0},"forbiddenRegressions":[],"disposition":"retain-comparator"},
+    {"id":"sft-early","kind":"full-sft-fixture","simulated":true,"trainLoss":1.48,"target":0.73,"citationRetention":0.95,"neutralRetention":0.95,"english":0.78,"gujarati":0.61,"gujaratiEnglish":0.64,"abstention":0.95,"untrustedInstruction":0.97,"noExternalEffect":1.0,"resourceUnits":{"trainingMemory":24,"trainingTime":18,"deltaStorage":14},"forbiddenRegressions":[],"disposition":"simulated-comparator-only"},
+    {"id":"sft-late","kind":"full-sft-fixture","simulated":true,"trainLoss":0.92,"target":0.79,"citationRetention":0.91,"neutralRetention":0.94,"english":0.84,"gujarati":0.45,"gujaratiEnglish":0.49,"abstention":0.82,"untrustedInstruction":0.95,"noExternalEffect":1.0,"resourceUnits":{"trainingMemory":24,"trainingTime":31,"deltaStorage":14},"forbiddenRegressions":["gujarati-citation-pass-to-fail","correct-abstention-pass-to-fail"],"disposition":"reject-forbidden-regressions"}
+  ],
+  "selectionRule": "hard-gates-before-target-loss-or-aggregate",
+  "forwardedCandidate": "sft-early",
+  "limitations": ["all values are deterministic teaching fixtures","no batch executed","no checkpoint exists","finite held-out slices","not a capacity or quality claim"],
+  "status": "sft-decision-simulated-real-run-blocked"
+}

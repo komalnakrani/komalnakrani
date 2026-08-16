@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "batchId": "V2-10-12",
+  "issue": 68,
+  "parentIssue": 46,
+  "status": "manuscript-complete-assets-pending",
+  "producedAt": "2026-08-16",
+  "mosaicDesk": {"fictional":true,"start":"MD-12-experiment-specified-blocked-before-training","end":"MD-13-preference-method-rejected-in-simulation","completedMilestones":["MD-12-simulated-comparison-only"],"openedMilestones":["MD-13"],"inventedProductionOutcomes":false,"trainingExecuted":false},
+  "chapters": [
+    {"number":10,"slug":"supervise-the-model","wordCount":1213,"claims":["CLM-028","CLM-029","CLM-030"],"caseIds":["LLME-CASE-007","LLME-CASE-008"],"figureIds":["V2-F10.1","V2-F10.2"],"tests":4},
+    {"number":11,"slug":"adapt-efficiently-with-peft","wordCount":1179,"claims":["CLM-031","CLM-032","CLM-033"],"caseIds":["LLME-CASE-009"],"figureIds":["V2-F11.1","V2-F11.2"],"tests":4},
+    {"number":12,"slug":"optimize-preferences-carefully","wordCount":1238,"claims":["CLM-034","CLM-035","CLM-036"],"caseIds":["LLME-CASE-005","LLME-CASE-010"],"figureIds":["V2-F12.1","V2-F12.2"],"tests":4}
+  ],
+  "figures": [
+    {"id":"V2-F10.1","path":"/assets/publications/llm-adaptation-and-runtime/v2-f10-1-sft-learning-path.png","labels":["base","examples","checkpoints","behavior eval","selection"],"assetStatus":"pending-root-imagegen"},
+    {"id":"V2-F10.2","path":"/assets/publications/llm-adaptation-and-runtime/v2-f10-2-overfit-diagnostic.png","labels":["train","held-out","retention","stop"],"assetStatus":"pending-root-imagegen"},
+    {"id":"V2-F11.1","path":"/assets/publications/llm-adaptation-and-runtime/v2-f11-1-low-rank-adapter-cutaway.png","labels":["frozen","adapter","base revision","compatibility"],"assetStatus":"pending-root-imagegen"},
+    {"id":"V2-F11.2","path":"/assets/publications/llm-adaptation-and-runtime/v2-f11-2-peft-tradeoff-rig.png","labels":["target","retention","language","memory","storage","runtime"],"assetStatus":"pending-root-imagegen"},
+    {"id":"V2-F12.1","path":"/assets/publications/llm-adaptation-and-runtime/v2-f12-1-preference-optimization-loop.png","labels":["pairs","policy","reference","objective","candidate","independent eval"],"assetStatus":"pending-root-imagegen"},
+    {"id":"V2-F12.2","path":"/assets/publications/llm-adaptation-and-runtime/v2-f12-2-proxy-shortcut-alarm.png","labels":["proxy","shortcut","unsupported","abstention","regression","reject"],"assetStatus":"pending-root-imagegen"}
+  ],
+  "companion": {"testsAdded":12,"volume2CumulativeTests":48,"seriesCumulativeTests":112,"trainingRuns":0,"providerCalls":0,"modelArtifactsCreated":0,"deterministic":true}
+}

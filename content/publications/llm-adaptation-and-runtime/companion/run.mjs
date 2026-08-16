@@ -8,6 +8,9 @@ import {auditInstructionData} from "./lib/instruction-data.mjs";
 import {auditPreferenceData} from "./lib/preference-data.mjs";
 import {auditRetentionControl} from "./lib/retention-control.mjs";
 import {auditTrainingExperiment} from "./lib/training-experiment.mjs";
+import {auditSftSimulation} from "./lib/sft-supervision.mjs";
+import {auditPeftSimulation} from "./lib/peft-adaptation.mjs";
+import {auditPreferenceSimulation} from "./lib/preference-optimization.mjs";
 async function load(path){return JSON.parse(await readFile(new URL(path,import.meta.url)));}
 const result = {
   baseline:auditFrozenBaseline(await load("./md09/mosaic-frozen-adaptation-baseline.json")),
@@ -18,7 +21,10 @@ const result = {
   instructionData:auditInstructionData(await load("./md11/mosaic-instruction-data.json")),
   preferenceData:auditPreferenceData(await load("./md11/mosaic-preference-data.json")),
   retentionControl:auditRetentionControl(await load("./md11/mosaic-retention-control-suite.json")),
-  trainingExperiment:auditTrainingExperiment(await load("./md12/mosaic-training-experiment.json"))
+  trainingExperiment:auditTrainingExperiment(await load("./md12/mosaic-training-experiment.json")),
+  sftSimulation:auditSftSimulation(await load("./md12/mosaic-sft-checkpoint-simulation.json")),
+  peftSimulation:auditPeftSimulation(await load("./md12/mosaic-peft-candidate-simulation.json")),
+  preferenceSimulation:auditPreferenceSimulation(await load("./md13/mosaic-preference-optimization-simulation.json"))
 };
 console.log(JSON.stringify(result,null,2));
 if (Object.values(result).some((part)=>part.errors.length)) process.exitCode=1;

@@ -1,0 +1,86 @@
+---
+title: "Optimize Preferences Carefully"
+slug: "optimize-preferences-carefully"
+summary: "Treat preference optimization as a bounded proxy experiment whose value must survive independent target, retention, language, control, and bias evaluation."
+minutes: 115
+sourceIds: ["SRC-027", "SRC-028", "SRC-029", "SRC-030", "SRC-033", "SRC-044", "SRC-045"]
+claimIds: ["CLM-034", "CLM-035", "CLM-036"]
+objectiveIds: ["LLME-K06", "LLME-K07", "LLME-K08", "LLME-K10"]
+figureIds: []
+---
+
+## Preference is evidence about a criterion
+
+`MD-12` has not executed training. It carries deterministic no-tune, SFT, and PEFT comparison fixtures into `MD-13`. Chapter 12 asks whether preference optimization would add distinct value to the remaining error categories. It does not assume that a more advanced method deserves a run.
+
+The inherited preference evidence already disclosed a length bias: raters tended to choose longer answers even when the concise answer cited stronger evidence. That is not noise to average away. It is a mechanism by which an optimizer can learn the presentation artifact instead of the intended contract.
+
+In its original formulation, Direct Preference Optimization optimizes a policy relative to reference behavior from preferred and rejected response pairs without separately fitting an explicit reward model. [CLM-034] This removes one component of a particular RLHF pipeline; it does not remove a proxy, reference, data, configuration, or evaluation problem.
+
+For Mosaic, every pair binds task intent, allowed evidence, two response identities, a criterion-specific rubric, randomized order, rater population, disagreement, provenance, and adjudication. The pair cannot simply say “A is better.” Better at evidence linkage, abstention, language adequacy, or concision are different learning signals.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F12.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f12-1-preference-optimization-loop.png">
+  <div role="img" aria-label="Audited preference pairs feed a policy and frozen reference into a preference objective, producing a candidate that must pass an independent evaluation gate.">Pending ImageGen figure V2-F12.1</div>
+  <figcaption><strong>V2-F12.1 - The preference objective remains coupled to data and reference.</strong> Essential labels: pairs, policy, reference, objective, candidate, independent eval. Connector direction and gate shape supplement color. The figure supports `CLM-034` and `CLM-035`; it is method-level, not a training result.</figcaption>
+  <details><summary>Long description</summary><p>A colorful realistic three-dimensional loop shows paired response cards entering a mechanism with policy and frozen-reference chambers. A candidate leaves the objective chamber but meets a separate independent evaluation gate.</p></details>
+</figure>
+
+## Freeze a question the proxy can fail
+
+The experiment question is not “does preference accuracy rise?” It is: does a bounded preference intervention improve evidence-linked concise summaries beyond the best no-tune/SFT/PEFT comparator while preserving citation, Gujarati, abstention, untrusted-instruction, and no-effect behavior?
+
+Preregister:
+
+- exact starting policy and frozen reference identities;
+- tokenizer, template, runtime, precision, and generation tuple;
+- preference-data version, criteria, pair counts, rater and generator coupling;
+- objective variant and configuration, including the reference-strength parameter;
+- optimization envelope, checkpoints, resources, and stop rules;
+- a proxy development measure used only for diagnosis;
+- independent held-out target, retention, language, control, and shortcut suites;
+- blinded order, judge versions, human/domain adjudication, and disagreement handling;
+- what distinct gain would justify the extra method and lifecycle burden.
+
+Preference optimization can overfit biased or shortcut-bearing judgments, so independent behavior and retention evaluation is required. [CLM-035] Hold shortcut cases out of optimization. Include matched concise/verbose answers, swapped positions, style perturbations, confident unsupported details, and cases where abstention is correct. Inspect raw failures instead of presenting only win rate.
+
+The companion simulates `preference-proxy-candidate`. Its shared grader proxy rises above all comparators. Independent evidence-linked correctness does not improve over `peft-r8-attn`; unsupported-detail and abstention failures increase, especially in Gujarati-English cases. The candidate is rejected as `proxy-only-gain`. These numbers are deterministic fixtures and no optimization ran.
+
+## Break the coupling chain
+
+Using the same model family to generate preferences, train, and judge creates coupled evidence that must be disclosed and independently checked. [CLM-036] Independence is graded rather than binary. A different prompt to the same model is not a wholly independent judge. A different model trained on overlapping preferences may share the same bias. Human raters may also share interface or verbosity incentives.
+
+Build an evidence matrix that names the generator, rater, adjudicator, candidate, reference, automated judge, and domain truth source. Mark shared providers, model families, prompts, datasets, annotator pools, and rubric authors. Then add the most independent feasible check for the highest-consequence claims.
+
+Model judges can be useful instruments when calibrated on a versioned sample against qualified human or domain review. Measure position sensitivity, verbosity preference, self/family preference, agreement by criterion and language, and consequential disagreement. A score from an uncalibrated judge is a hypothesis, not approval.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F12.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f12-2-proxy-shortcut-alarm.png">
+  <div role="img" aria-label="A verbose confident response takes a shortcut to a high proxy score while unsupported-detail, abstention, and language-regression alarms block promotion.">Pending ImageGen figure V2-F12.2</div>
+  <figcaption><strong>V2-F12.2 - A proxy can reward the visible style and miss the contract.</strong> Essential labels: proxy, shortcut, unsupported, abstention, regression, reject. Alarm icons and barrier shapes supplement color. The figure supports `CLM-035` and `CLM-036`; the scene is a failure simulation.</figcaption>
+  <details><summary>Long description</summary><p>A crisp three-dimensional arcade-like scene shows a long polished response taking a bright shortcut to a high proxy gauge. Separate evidence, abstention, and multilingual alarms lower a physical rejection barrier.</p></details>
+</figure>
+
+## Compare every candidate through the same slices
+
+The Chapter 12 matrix retains four paths: no-tune, simulated SFT, simulated PEFT, and simulated preference optimization. All use the same held-out target, citation retention, neutral-instruction retention, Gujarati, English, Gujarati-English, abstention, conflict, untrusted-instruction, unauthorized-source, and no-effect cases.
+
+Begin with hard gates. A candidate that fails abstention or unsupported-detail rules is rejected before aggregate comparison. For survivors, compare case-level target improvement beyond uncertainty, language spread, resource envelope, compatibility, rollback, and operational complexity. Proxy score is shown in a separate column and cannot satisfy a behavior gate.
+
+Resource evidence includes illustrative training-memory, time, checkpoint/delta storage, reference-policy overhead, evaluation calls, and human adjudication burden. Preference optimization can cost more than its optimizer run: pair production, audits, frozen-reference storage, judge calibration, and disagreement review belong in the ledger. The fixture reports units rather than hardware promises.
+
+The exact compatibility tuple remains `rev-synthetic-a1` plus `tok-synthetic-a1` plus the pinned teaching runtime. Because template compatibility is blocked, the preference candidate is also non-executable. A preference method cannot bypass a failed preflight inherited from SFT or PEFT.
+
+## Issue run, stop, or reject without borrowing authority
+
+Run only if the remaining error is preference-sensitive, pair evidence is authorized and criterion-specific, the reference is valid, compatibility passes, independent suites exist, coupling is disclosed, and a distinct-value threshold is preregistered. Stop on identity drift, proxy runaway, loss of judge calibration, forbidden regression, budget breach, or authority withdrawal. Reject when the candidate only improves its optimization proxy or duplicates a cheaper candidate within uncertainty.
+
+Product and domain owners define desired behavior and consequence. Language authorities judge linguistic adequacy. Privacy/legal authorities govern permissible pair and feedback use. Safety/security authorities own relevant controls. LLM engineering implements the objective and evidence system, but a grader score cannot grant release authority.
+
+The DPO paper reports outcomes for its evaluated tasks and formulation. The MT-Bench and RewardBench evidence documents bounded judge/reward-model behavior, not universal correctness. Mosaic transfers only the method questions and controls, not their numerical outcomes.
+
+## Complete MD-13 with an explicit rejection
+
+`mosaic-preference-optimization-simulation.json` records the frozen policy/reference tuple, pair audit, coupling map, proxy and independent matrices, resources, hard gates, and an explicit rejection. `trainingExecuted` is false and `artifactsCreated` is false. The remaining error ledger, not the rejected preference score, will guide Chapter 13's method decision.
+
+### Practice
+
+Blind and swap the shortcut pairs, audit the coupling map, compare all four candidates, and issue run, stop, or reject. Pass only if independent target and protected behavior outweigh the proxy increase and the named authorities remain explicit.
