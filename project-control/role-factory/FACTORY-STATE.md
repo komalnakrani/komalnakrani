@@ -22,6 +22,7 @@
 - Finish all Komal publishing foundations and role books before resuming Abhyaas.
 - Komal teaches; Abhyaas independently certifies competence.
 - Roles are processed in user-authorized three-book waves while preserving the approved 32-role catalog order and isolated role state.
+- Current stop boundary (2026-08-16): finish the active Applied AI, Agentic AI, and LLM Engineering publication tracks, then hold. Do not start another role or book until the user resumes the factory.
 
 ## Bootstrap status
 
