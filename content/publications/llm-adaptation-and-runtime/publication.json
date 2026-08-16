@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "llm-adaptation-and-runtime",
+  "roleSlug": "llm-engineer",
+  "series": {"slug":"llm-engineering","title":"LLM Engineering"},
+  "volume": 2,
+  "title": "LLM Adaptation and Runtime",
+  "subtitle": "Data, Post-Training, Inference, and Model Change",
+  "description": "A professional guide to evidence-led model adaptation, data design, post-training, runtime qualification, and reversible change.",
+  "author": "Komal Nakrani",
+  "language": "en",
+  "status": "draft",
+  "cover": "blueprint",
+  "edition": {"version":"1.0.0","label":"First edition draft","publishedAt":null,"copyrightYear":2026,"canonicalUrl":"https://komalnakrani.com/books/llm-adaptation-and-runtime/"},
+  "chapters": [
+    {"order":1,"slug":"start-from-a-frozen-behavior-baseline","title":"Start From a Frozen Behavior Baseline","summary":"Turn a negative adaptation referral into a falsifiable investigation anchored to an exact, replayable behavior baseline.","minutes":95,"sourceFile":"chapters/start-from-a-frozen-behavior-baseline.mdx","objectiveIds":["LLME-K03","LLME-K06","LLME-K08","LLME-K10"]},
+    {"order":2,"slug":"inspect-the-model-and-tokenizer-boundary","title":"Inspect the Model and Tokenizer Boundary","summary":"Inspect model, tokenizer, template, precision, and runtime as separate compatibility surfaces without turning architecture into a quality forecast.","minutes":95,"sourceFile":"chapters/inspect-the-model-and-tokenizer-boundary.mdx","objectiveIds":["LLME-K02","LLME-K03","LLME-K07","LLME-K09"]},
+    {"order":3,"slug":"choose-the-smallest-adaptation-ladder","title":"Choose the Smallest Adaptation Ladder","summary":"Map each residual failure to the smallest plausible intervention, reject mismatched methods, and attach disconfirmation and stop rules before training.","minutes":100,"sourceFile":"chapters/choose-the-smallest-adaptation-ladder.mdx","objectiveIds":["LLME-K03","LLME-K07","LLME-K08","LLME-K09","LLME-K10"]}
+  ],
+  "registries": {"sources":"sources.json","claims":"claims.json","figures":"figures.json","errata":"errata.json"},
+  "pdf": {"enabled":false,"filename":"llm-adaptation-and-runtime-v1.0.0.pdf"}
+}

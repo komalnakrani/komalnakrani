@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "claims": [
+    {"id":"CLM-001","chapterSlug":"start-from-a-frozen-behavior-baseline","statement":"An adaptation claim is interpretable only against a frozen behavior/configuration/evaluation baseline.","sourceIds":["SRC-007","SRC-010","SRC-039"]},
+    {"id":"CLM-002","chapterSlug":"start-from-a-frozen-behavior-baseline","statement":"Target gains, retained capabilities, controls, resource budgets, and rejection criteria should precede training.","sourceIds":["SRC-009","SRC-011","SRC-039"]},
+    {"id":"CLM-003","chapterSlug":"start-from-a-frozen-behavior-baseline","statement":"Upstream defects must be ruled out before attributing a failure to model weights.","sourceIds":["SRC-007","SRC-019","SRC-025"]},
+    {"id":"CLM-004","chapterSlug":"inspect-the-model-and-tokenizer-boundary","statement":"Tokenizer, template, architecture, position/context mechanism, precision, and checkpoint are separate model-system surfaces.","sourceIds":["SRC-001","SRC-002","SRC-015","SRC-051"]},
+    {"id":"CLM-005","chapterSlug":"inspect-the-model-and-tokenizer-boundary","statement":"Token fragmentation can change effective sequence length and multilingual/domain representation.","sourceIds":["SRC-002","SRC-003","SRC-037"]},
+    {"id":"CLM-006","chapterSlug":"inspect-the-model-and-tokenizer-boundary","statement":"Architecture inspection identifies plausible intervention surfaces but cannot predict task improvement without experiments.","sourceIds":["SRC-001","SRC-016","SRC-054"]},
+    {"id":"CLM-007","chapterSlug":"choose-the-smallest-adaptation-ladder","statement":"Prompt/context repair, SFT, PEFT, preference optimization, distillation, continued pretraining, and model replacement target different failure hypotheses.","sourceIds":["SRC-007","SRC-041","SRC-044","SRC-046","SRC-048"]},
+    {"id":"CLM-008","chapterSlug":"choose-the-smallest-adaptation-ladder","statement":"Weight access, data quality, compute, reversibility, runtime, and control requirements constrain available interventions.","sourceIds":["SRC-039","SRC-042","SRC-043"]},
+    {"id":"CLM-009","chapterSlug":"choose-the-smallest-adaptation-ladder","statement":"At least one plausible intervention should be rejected using predicted evidence or boundary constraints before experimentation expands.","sourceIds":["SRC-009","SRC-011"]}
+  ]
+}

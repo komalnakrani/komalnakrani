@@ -1,0 +1,154 @@
+---
+title: "Start From a Frozen Behavior Baseline"
+slug: "start-from-a-frozen-behavior-baseline"
+summary: "Turn a negative adaptation referral into a falsifiable investigation anchored to an exact, replayable behavior baseline."
+minutes: 95
+sourceIds: ["SRC-007", "SRC-009", "SRC-010", "SRC-011", "SRC-019", "SRC-025", "SRC-039"]
+claimIds: ["CLM-001", "CLM-002", "CLM-003"]
+objectiveIds: ["LLME-K03", "LLME-K06", "LLME-K08", "LLME-K10"]
+figureIds: []
+---
+
+## Adaptation begins with a refusal to guess
+
+Volume 1 ended with a useful negative result. Mosaic Desk's current release unit is held for named-authority review. A candidate provider migration is held while the qualified fallback remains available. A revoked-source defect belongs to retrieval authorization, not to model adaptation. Most important, `MD-08` labels the adaptation referral `not-justified`: the observed Gujarati citation regression is neither stable nor shown to be valuable, data-supported, or sensitive to a weight change.
+
+That handoff is not permission to tune. It is the first input to an audit.
+
+The fictional team now receives a second signal: several authorized internal cases contain appliance-domain shorthand mixed with structured Gujarati and English fields. Some outputs repeatedly normalize the shorthand incorrectly. Before anyone proposes training, the team must reconstruct the exact baseline, separate malformed inputs from genuine residual errors, and write a hypothesis that could be disproved.
+
+The companion remains deterministic teaching material. It sends no provider request, trains no model, processes no customer record, and reports no product outcome. Its synthetic errors demonstrate how to preserve evidence boundaries.
+
+## Reconstruct the inherited state exactly
+
+Start by verifying the artifact that crossed the volume boundary. The `MD-09` audit records the path and SHA-256 digest of `mosaic-migration-handoff.json`, plus the accepted Volume 1 verification digest. It copies the four dispositions without improving their language:
+
+- release: `hold-for-authority-review`;
+- migration: `hold-and-keep-current-fallback`;
+- retrieval authorization: separate containment and repair;
+- adaptation: `not-justified`;
+- Volume 2 entry: `audit-required-no-adaptation-approved`.
+
+If the handoff digest does not match, stop. If a referenced baseline dependency is missing, stop. If the case set or evaluator changed without a new identity, stop. An adaptation claim is interpretable only against a frozen behavior/configuration/evaluation baseline. [CLM-001]
+
+The baseline is larger than a checkpoint. Record the task and authority contract, provider-neutral request/response contract, managed model identifier or open-weight checkpoint digest, tokenizer and template identity, decoding controls, retrieval corpus and policy, assembler, schema, case-set version, judge and rubric, runtime, environment, and resource budgets. Preserve raw case transitions and protected-segment outcomes rather than only an aggregate.
+
+Managed and open-weight routes expose different evidence. A managed route may disclose a dated model identifier and API options while hiding tokenizer, weights, kernels, and serving topology. Record that opacity; do not invent hashes. An open-weight route must bind weights, revision, tokenizer files, template, quantization, runtime, dependencies, hardware class, and serving configuration. Platform/SRE owns availability and capacity operation. LLM engineering owns behavior-facing identity and replay evidence. Neither route changes product, domain, privacy, security, or release authority.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F01.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f01-1-frozen-baseline-vault.png">
+  <div role="img" aria-label="A frozen baseline vault separates an identified baseline from a candidate and locks contract, configuration, evaluation, budgets, and controls before comparison.">Pending ImageGen figure V2-F01.1</div>
+  <figcaption><strong>V2-F01.1 - Freeze the comparison unit before adaptation.</strong> Essential labels: frozen, candidate, contract, config, eval, budgets, controls. Shape and lock symbols supplement color. The figure supports `CLM-001`; it does not claim the baseline is production-approved.</figcaption>
+  <details><summary>Long description</summary><p>A colorful realistic three-dimensional evidence vault contains five locked trays labeled contract, config, eval, budgets, and controls. A blue frozen system unit remains inside while an orange candidate waits outside a comparison gate. A digest seal links the vault to the Volume 1 handoff.</p></details>
+</figure>
+
+## Define a residual, not a mood
+
+"The model is weak at domain language" is not a hypothesis. It names no population, mechanism, evidence, or rejection condition. Build a case-level residual ledger instead.
+
+For each failure, record input provenance, authorized language and appliance segment, expected terminal state, actual terminal state, criterion, consequence, reproducibility, layer trace, and candidate explanation. Then test upstream surfaces in order: input validation, language-code mapping, task routing, source eligibility, retrieval, context assembly, message template, schema, evaluator, and runtime. A residual enters adaptation consideration only after identified simpler repairs fail to explain it.
+
+The failure injection is deliberately adversarial to tuning enthusiasm. Half of the apparent multilingual model failures carry malformed upstream language codes. The input says Gujarati-English mixed, but a stale mapper routes it as English-only. Correcting the mapper makes those cases replay correctly without changing model weights. Calling that improvement a fine-tuning opportunity would corrupt the causal record.
+
+The remaining constructed cases share a narrower pattern: authorized appliance shorthand must be expanded into a bounded typed proposal, and the same incorrect mapping recurs under the frozen template, retrieval evidence, decoding, and evaluator. That recurrence is still not evidence that tuning will work. It merely supports writing a testable adaptation hypothesis.
+
+Use this form:
+
+> For the frozen shorthand-and-structured-multilingual segment, the identified baseline repeatedly maps a bounded set of authorized abbreviations to the wrong typed field after input routing, retrieval, template, schema, and evaluator controls pass. A supervised intervention trained on authorized paired examples may reduce that error while retaining citation, abstention, conflict-escalation, schema, and resource gates. Reject the hypothesis if the residual disappears under a simpler repair, the data do not represent the target distinction, the candidate fails the target criterion, or any protected gate regresses.
+
+Every noun points to an artifact. "Repeatedly" points to case/run evidence. "May" refuses to predict a result. The rejection clauses prevent training effort from becoming its own justification.
+
+## Pre-register what success cannot erase
+
+Target gains, retained capabilities, controls, resource budgets, and rejection criteria should precede training. [CLM-002] This ordering matters because post hoc criteria can turn any noisy change into a win.
+
+For Mosaic Desk, the target is a reduction in the specified shorthand-mapping error on a frozen, family-separated target slice. Retention includes English and Gujarati citation behavior, correct abstention when evidence is absent, conflict escalation, typed schema validity, source authorization, and the no-effect boundary. Controls include the unchanged no-adaptation baseline, a corrected-language-code baseline, a prompt/context repair candidate, and an evaluation replay with frozen judges.
+
+Budgets cover authorized data volume, engineering time, compute envelope, artifact storage, evaluation runs, runtime memory, latency tails, and rollback complexity. The numbers in the companion are declared teaching budgets, not capacity estimates. Product and domain owners decide whether the target is valuable. Privacy and legal authorities decide whether data may be used and retained. Security owns threat acceptance. Platform/SRE owns infrastructure limits. Release authority decides deployment. The LLM engineer can make evidence legible but cannot approve another function's gate.
+
+Rejection criteria should include:
+
+1. the target residual is not stable across frozen repeats;
+2. a routing, retrieval, prompt, template, schema, or judge repair removes it;
+3. authorized data cannot express the distinction without leakage;
+4. target evidence does not clear the preregistered criterion;
+5. a protected language, citation, abstention, authorization, or consequence segment regresses;
+6. resource use exceeds the approved experimental envelope;
+7. artifact compatibility or reversibility is not demonstrable;
+8. a required authority withholds approval.
+
+These are stop rules, not suggestions to revisit after a preferred method wins.
+
+## Build a replay matrix that preserves cause
+
+A frozen baseline needs more than one pass/fail column. For every target and retention case, record the input artifact, authorized evidence state, expected proposal or terminal state, actual proposal or terminal state, deterministic validator outcomes, judge identity, repeated-trial distribution where generation varies, and the first layer at which the trace diverges. Resource measurements belong beside the same run identity.
+
+Use paired replay rows:
+
+| Row | What stays frozen | What changes | Permitted conclusion |
+|---|---|---|---|
+| inherited baseline | all identified dependencies | nothing | reference observation only |
+| corrected language map | model through evaluator | one upstream mapping rule | whether the mapping explains those cases |
+| prompt/context repair | all other dependencies | one declared message or evidence surface | whether a no-weight repair is sufficient |
+| adaptation candidate | every non-training dependency | one versioned weight intervention | behavior difference under this experiment |
+| confounded candidate | nothing reliable | checkpoint, corpus, and template | no causal attribution |
+
+If a managed provider cannot freeze an internal revision, the row records the exact exposed version and dated limitation. Repeated replay can reveal drift, but it cannot recover hidden identity. If an open-weight path changes a kernel or quantization while adapting, either restore the frozen runtime or preregister the combined change as a new question. Do not call two non-equivalent units paired.
+
+The matrix also guards against outcome laundering. A candidate may improve the shorthand target while producing more unsupported citations. It may pass a mean duration budget while failing a protected tail. It may output a syntactically valid object that changes the meaning of a warranty field. Target evidence and every retained criterion remain visible; no weighted average is allowed to cancel a hard gate.
+
+## Do not learn the evaluator by accident
+
+Freezing evaluation means preserving case-family boundaries and judgment limitations. Training examples, validation examples, and final evaluation families must not be near-duplicates. Prompt examples and retrieval documents can leak expected strings too. Record every transformation and similarity check, but do not claim that deduplication proves absence of contamination.
+
+Automated RAG or model-based metrics can help locate a failure. They do not confer truth or authority. The accepted evaluation guidance supports datasets, criteria, and regression loops, while the RAG evidence shows that retrieval changes the model system; neither says that weight adaptation is the right repair for Mosaic. The Tülu 3 case offers a documented staged post-training recipe and evaluation practice. It is bounded research evidence from particular models, datasets, infrastructure, and benchmarks, not an operational standard, a guaranteed recipe, or evidence that Mosaic should reproduce it.
+
+`LLME-CASE-008` is therefore used as a method case, not an outcome transplant. Its useful lesson is structural: data construction, supervised training, preference stages, and evaluation can be documented as separable phases with artifacts. Mosaic borrows the demand for traceable stages. It does not borrow dataset fitness, hyperparameters, scores, infrastructure feasibility, or a reason to perform every stage. Even a well-documented public recipe cannot answer whether Mosaic has an adaptation-sensitive residual.
+
+## Keep new evidence distinct from the inherited migration
+
+The shorthand cases arrive after the Volume 1 migration packet. Give them a new population identifier and provenance record. Do not append them to the old migration comparison and then describe the combined set as if it had always been frozen. Do not use the new target cases to excuse the candidate provider's earlier protected regression.
+
+The migration question asks whether a replacement adapter preserves the qualified system contract. The adaptation question asks whether a stable residual in an identified base system is plausibly sensitive to a weight intervention. They can involve the same language segment and still require separate baselines, controls, and decisions.
+
+This separation prevents two common shortcuts. First, a migration failure cannot be rebranded as evidence that the current model needs training. Second, a successful future adapter cannot be rebranded as evidence that the held provider migration was safe. Each claim stays attached to the system unit and experiment that produced it.
+
+## Failure injection: reject the confounded candidate
+
+An impatient experimenter introduces `candidate-confounded-01`. It changes three surfaces at once:
+
+- the open-weight checkpoint;
+- the retrieval corpus revision;
+- the serving chat template.
+
+The candidate appears to improve two shorthand cases. No causal statement survives. The changed corpus may contain the expected phrase, the template may alter parsing, or the checkpoint may behave differently. The audit marks the result `rejected-confounded` and preserves it as a warning, not a baseline replacement.
+
+Upstream defects must be ruled out before attributing a failure to model weights. [CLM-003] That claim does not mean every upstream cause can be exhaustively eliminated. It means the team must test plausible simpler layers and state what remains unknown before spending adaptation evidence.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F01.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f01-2-hypothesis-chain.png">
+  <div role="img" aria-label="A falsifiable chain connects an observed error to a proposed mechanism, intervention, predicted evidence, and explicit rejection gates.">Pending ImageGen figure V2-F01.2</div>
+  <figcaption><strong>V2-F01.2 - A useful hypothesis can lose.</strong> Essential labels: error, mechanism, intervention, predicted evidence, rejection. Broken-link and stop-gate shapes supplement color. The figure supports `CLM-002` and `CLM-003`; it predicts no adaptation outcome.</figcaption>
+  <details><summary>Long description</summary><p>A crisp three-dimensional chain begins with a red error specimen, passes through transparent mechanism and intervention chambers, and reaches a predicted-evidence scale. Multiple side gates labeled rejection can break the chain when an upstream repair, missing data, protected regression, or budget breach appears.</p></details>
+</figure>
+
+## Open MD-09 with an audit, not a run
+
+The outgoing artifact is `mosaic-frozen-adaptation-baseline.json`. It binds the inherited digest, frozen identity, target and retention criteria, controls, budgets, authority decisions, residual ledger, hypothesis, and rejection rules. Its final disposition is intentionally narrow: `eligible-for-method-selection-not-training`.
+
+That status does not reverse `MD-08`. The provider migration remains held. The retrieval authorization defect remains separate. No production release is approved. The new synthetic shorthand residual is a distinct investigation population, not retroactive proof that the migration regression needed adaptation.
+
+## Practice: try to disprove the adaptation story
+
+Using the companion:
+
+1. verify the inherited handoff path and digest;
+2. reconstruct the complete provider-neutral baseline identity;
+3. split malformed-language-code cases from the residual;
+4. write one mechanism-specific hypothesis and predicted evidence;
+5. freeze target, retention, control, budget, and rejection criteria;
+6. reject the three-change candidate as confounded;
+7. name every external authority and unresolved decision;
+8. explain why `eligible-for-method-selection-not-training` is not training approval.
+
+Pass when another reviewer can replay the baseline, locate each residual at a layer, disprove at least one apparent weight failure with an upstream repair, and tell exactly what evidence would stop the investigation. Fail when a checkpoint name substitutes for system identity, aggregate improvement overrides a protected gate, an evaluation case leaks into training, or tuning begins because it is fashionable.
+
+Chapter 2 receives the frozen baseline and the unresolved open-weight candidate identity. It may inspect artifacts and compatibility. It may not train, select a method, or infer quality from architecture.

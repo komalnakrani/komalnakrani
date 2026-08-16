@@ -1,0 +1,167 @@
+---
+title: "Inspect the Model and Tokenizer Boundary"
+slug: "inspect-the-model-and-tokenizer-boundary"
+summary: "Inspect model, tokenizer, template, precision, and runtime as separate compatibility surfaces without turning architecture into a quality forecast."
+minutes: 95
+sourceIds: ["SRC-001", "SRC-002", "SRC-003", "SRC-015", "SRC-016", "SRC-037", "SRC-051", "SRC-054"]
+claimIds: ["CLM-004", "CLM-005", "CLM-006"]
+objectiveIds: ["LLME-K02", "LLME-K03", "LLME-K07", "LLME-K09"]
+figureIds: []
+---
+
+## The artifact boundary is part of behavior
+
+Chapter 1 froze a baseline and permitted method selection to be investigated, not training. The next temptation is to read a model card, count parameters, glance at an architecture diagram, and announce what should be tuned. Mosaic Desk instead performs an artifact compatibility inspection.
+
+The fictional open-weight candidate is represented by synthetic identifiers. No named model is endorsed, and no generated digest corresponds to a real checkpoint. The exercise asks a narrower question: can the team identify the exact weights, tokenizer, template, generation defaults, precision path, runtime, and hardware assumptions that would make a later experiment interpretable and reversible?
+
+Tokenizer, template, architecture, position/context mechanism, precision, and checkpoint are separate model-system surfaces. [CLM-004] They often arrive in one repository or service bundle, but they do not become one variable. A mismatch can change token boundaries, role markers, attention masks, padding, numerical behavior, memory use, or generated sequence shape without any intentional adaptation.
+
+## Draw the compatibility tuple
+
+For an open-weight route, bind at least:
+
+- weights artifact digest and upstream revision;
+- configuration digest and architecture family;
+- tokenizer vocabulary, merge/model files, normalization, added tokens, and special-token map;
+- serving chat template and role-marker contract;
+- context/position mechanism and configured maximums;
+- dtype, quantization format, calibration artifact where relevant, and accumulation policy;
+- generation defaults and explicit overrides;
+- framework, runtime, attention implementation, kernels, and dependency lock;
+- hardware class, device topology, memory envelope, and serving scheduler assumptions.
+
+The tuple is an equality requirement for replay, not a claim that the parts are good. `same weights + different tokenizer` is a different system. `same repository revision + different chat template` is a different system. `same checkpoint + different quantization` is a different numerical and resource path. The exact consequences require tests.
+
+Give the tuple one immutable manifest digest and make every later dataset, adapter, optimizer, evaluation, export, and serving record point to it. Never allow a human-friendly model name to resolve dynamically during an experiment. If a registry tag is mutable, resolve it once to an immutable revision, record the resolution time and source, and retain the allowed artifact under the applicable license and security policy.
+
+Artifact provenance matters alongside bytes. Record publisher, source repository, license version, download route, signature or checksum where provided, local verification, modifications, and access restrictions. These records help security and legal reviewers; they do not make the LLM engineer the authority for supply-chain acceptance or usage rights.
+
+Managed access exposes a smaller tuple: provider, endpoint, dated model identifier or immutable version where available, API contract, region or processing posture, tool/schema options, explicit generation settings, and the provider's declared lifecycle. Hidden tokenizer or runtime details become limitations. A managed comparator can still be replayed at the semantic boundary, but the team must not pretend it offers open-weight inspection.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F02.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f02-1-model-tokenizer-cutaway.png">
+  <div role="img" aria-label="A cutaway model system shows tokens entering embeddings and transformer blocks before a prediction head, with precision recorded as a separate runtime surface.">Pending ImageGen figure V2-F02.1</div>
+  <figcaption><strong>V2-F02.1 - Inspect separate surfaces inside one model bundle.</strong> Essential labels: tokens, embed, blocks, head, precision. Texture and component shape supplement color. The figure supports `CLM-004`; it is not a performance ranking.</figcaption>
+  <details><summary>Long description</summary><p>A colorful realistic three-dimensional cutaway shows token tiles entering an embedding deck, stacked transformer blocks, and an output head. A separate precision dial and artifact seals make clear that weights, tokenizer, and runtime configuration are related but separately identified.</p></details>
+</figure>
+
+## Inspect tokens before discussing examples
+
+Tokenization converts text into model input identifiers. Subword algorithms can represent open vocabularies, but the segmentation and length of a word or sentence depend on the learned vocabulary and normalization rules. A domain abbreviation may be one token under one tokenizer and several pieces under another. Gujarati text, Latin transliteration, punctuation, combining marks, or code-switched strings can expand differently.
+
+Token fragmentation can change effective sequence length and multilingual/domain representation. [CLM-005] It does not by itself prove lower semantic quality. Sequence length changes context and compute pressure; unusual fragments may indicate that examples deserve testing. The correct conclusion is to measure the target text with the exact tokenizer and then evaluate behavior.
+
+Mosaic's tokenizer trace uses short fabricated strings rather than customer text. For each string it records Unicode form, language tag supplied by the test fixture, token pieces, token IDs, total length, special tokens, and round-trip decode. It compares tokenizer A with tokenizer B only to expose boundary differences. The counts are pedagogical fixtures, not measurements of a real model.
+
+Check these failure surfaces:
+
+1. normalization changes a meaningful code or combining mark;
+2. added tokens exist in the tokenizer but not in the resized embedding matrix;
+3. beginning/end, padding, or unknown token IDs differ from the model configuration;
+4. padding direction conflicts with the generation path;
+5. truncation removes an evidence or schema boundary;
+6. chat-template role tokens are duplicated or omitted;
+7. tokenizer revision and weights revision drift independently;
+8. encode/decode round trips alter a field that must remain exact.
+
+The injected fixture sets `pad_token_id` equal to `eos_token_id` while the proposed batching path treats padding as a normal masked region. That setting is not universally wrong, but it is incompatible with the declared serving assumption and therefore blocks the candidate until explicitly tested or corrected. The validator reports the relationship; it does not claim a quality loss.
+
+### Test special tokens as a state machine
+
+Do not inspect special-token IDs only as a list. Exercise the paths that use them:
+
+- a single unpadded request;
+- left- and right-padded batches where supported;
+- an empty or minimum-length request;
+- a sequence that reaches the declared limit;
+- assistant generation with and without an existing assistant prefix;
+- tool or structured-response roles if the contract allows them;
+- encode, serialize, generation-boundary, and decode transitions.
+
+Record attention masks and the exact prompt tokens for these fixtures. A padding token equal to an end token can be valid under some implementations, but the mask, loss, stopping rule, and batching path must agree. The inspection blocks only because Mosaic's declared synthetic batcher requires distinct semantics. It is a local compatibility result, not a universal tokenizer rule.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F02.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f02-2-tokenizer-contrast.png">
+  <div role="img" aria-label="The same Gujarati-English shorthand string is divided differently by tokenizer A and tokenizer B, producing visibly different sequence lengths without asserting which is better.">Pending ImageGen figure V2-F02.2</div>
+  <figcaption><strong>V2-F02.2 - Token boundaries change the experiment surface.</strong> Essential labels: tokenizer A, tokenizer B, length. Brackets and count blocks supplement color. The figure supports `CLM-005`; it makes no multilingual quality claim.</figcaption>
+  <details><summary>Long description</summary><p>One colorful text strip enters two realistic tokenizer machines. Tokenizer A emits a few large pieces and tokenizer B emits more small pieces; length counters differ. Both paths end at question marks rather than winner badges.</p></details>
+</figure>
+
+## Treat the chat template as an executable interface
+
+Instruction-tuned chat models are generally trained around particular role and control-token formats. A serving template serializes system, user, assistant, and tool content into tokens. Using the wrong template can omit expected markers, duplicate generation prompts, or make trusted and untrusted fields ambiguous.
+
+The failure injection pairs the frozen synthetic checkpoint with a template from another artifact family. The messages look reasonable before serialization, yet the emitted control-token sequence differs from the recorded training-facing contract. The inspection returns `template-incompatible`; it does not run an output and then rationalize the mismatch.
+
+Record template source, digest, allowed roles, special tokens, generation-prompt behavior, tool/schema serialization, whitespace controls, and a golden serialized fixture. Validate the golden bytes or token IDs under the exact tokenizer. If a managed service owns serialization internally, test the public message behavior and declare the hidden boundary.
+
+Templates also carry the Volume 1 trust rule: trusted system control and untrusted user or retrieved data remain structurally distinct. A model template cannot grant authorization, and special tokens do not make hostile text safe. External deterministic controls still authorize retrieval, validate proposals, and guard effects.
+
+Create two golden fixtures for every allowed conversation shape. One stores the readable structured messages. The other stores the serialized text or token IDs produced by the exact template and tokenizer. Review changes at both layers. A whitespace, role, tool-call, or generation-prompt change that looks harmless in structured JSON may move token boundaries or control markers.
+
+For adaptation, preserve the same serialization when constructing examples and serving the resulting artifact unless an isolated experiment explicitly tests the difference. Training with one role format and evaluating with another makes a poor result uninterpretable. A seemingly good result can be equally misleading if the new template embeds answers or case-specific hints.
+
+## Inspect architecture without fortune-telling
+
+The Transformer paper establishes attention-based sequence modeling as a foundational mechanism, with results bounded to its historical tasks and configuration. `LLME-CASE-001` uses it to explain tokens, embeddings, blocks, and next-token computation. It does not establish modern chat behavior, adaptation suitability, or Mosaic quality.
+
+Architecture inspection identifies plausible intervention surfaces but cannot predict task improvement without experiments. [CLM-006] The number of layers, hidden size, attention pattern, position mechanism, normalization, activation, tied embeddings, and output head affect compatibility and possible trainable modules. They do not tell you that LoRA rank eight will work, that a longer context will use evidence well, or that a particular language will improve.
+
+Long-context studies show position-sensitive behavior in tested settings, not a universal rule for all current models. FlashAttention demonstrates an exact, IO-aware attention implementation with reported speed and memory results on studied hardware and workloads; it is not a quality improvement guarantee or a Mosaic capacity measurement. Record attention implementation as runtime identity because it can alter resource feasibility and numerical paths. Do not cite it as proof of task fitness.
+
+## Make precision and runtime observable
+
+Precision is not a single label. Record storage dtype, compute dtype, accumulation behavior, quantization scheme, scale and zero-point metadata, calibration inputs where used, kernel, and device support. Mixed-precision documentation describes available mechanisms and APIs, not a universally safe configuration. Quantization may reduce memory while changing numerical behavior. Only target evaluation can bound the effect.
+
+Run deterministic compatibility checks before any expensive evaluation:
+
+- referenced files exist and match recorded digests;
+- configuration dimensions agree with weight tensors;
+- tokenizer size and embedding/output dimensions agree;
+- special-token IDs resolve and satisfy declared batching behavior;
+- template tokens exist and golden serialization matches;
+- context and position settings are internally consistent;
+- requested dtype/quantization is supported by the runtime and hardware plan;
+- dependency and kernel versions are locked;
+- adapter targets, if later proposed, name modules that actually exist.
+
+These checks can prove internal consistency of a fixture. They cannot prove output quality, safety, fairness, capacity, legal permission, or release readiness.
+
+## Produce an inspection packet another engineer can challenge
+
+The output should contain both facts and unresolved questions:
+
+| Surface | Evidence | Blocking question |
+|---|---|---|
+| weights/config | immutable revisions, digests, tensor/config agreement | are modifications and provenance accepted? |
+| tokenizer | file digests, vocabulary size, special-token map, traces | do padding and embedding assumptions agree? |
+| template | digest, allowed roles, golden serialization | does it match the intended artifact family? |
+| context/position | mechanism, configured limits, test lengths | are limits supported by target evidence? |
+| precision | storage, compute, accumulation, calibration | is the numerical path within the experiment scope? |
+| runtime | framework, dependencies, kernels, hardware class | can the tuple be reproduced and rolled back? |
+
+For each row, name an evidence owner and a decision owner. The LLM engineer may verify a digest and demonstrate a mismatch. Security decides whether provenance is acceptable. Platform/SRE decides whether the runtime is supportable. Privacy and legal authorities decide whether local artifact or example handling is permitted. The inspection packet should make these handoffs easy rather than merging them into a generic `approved` flag.
+
+The packet also contains a managed comparator ledger. It lists which semantic request settings and output states can be replayed and which internal surfaces are undisclosed. A future comparison may still be useful, but causal claims must stay at the observable system boundary. Do not infer a tokenizer change from output length or a quantization change from a different answer.
+
+## Separate inspection from ownership
+
+Data owners decide whether examples may be inspected or adapted. Privacy and legal authorities decide retention and rights. Security reviews serialization and artifact supply-chain risks. Platform/SRE owns deployment infrastructure, capacity, and operational recovery. Model publishers own their licenses and disclosures. LLM engineering records compatibility and behavior evidence and raises gaps.
+
+The synthetic artifact is marked `inspection-blocked` because its template is mismatched and pad/EOS assumption is unresolved. That is a successful inspection result. It prevents a later training run from producing evidence about an accidental system.
+
+## Practice: prove identity before asking about quality
+
+Using `mosaic-model-tokenizer-inspection.json`:
+
+1. verify every artifact and configuration digest;
+2. compare tokenizer A and B traces without declaring a winner;
+3. inspect special-token and padding assumptions;
+4. reproduce the golden template serialization;
+5. name architecture surfaces that could accept an intervention;
+6. record precision, runtime, dependency, and hardware constraints;
+7. contrast the managed comparator's exposed and hidden fields;
+8. explain why the result blocks training but predicts no task outcome.
+
+Pass when another engineer can assemble the exact intended compatibility tuple, detect both injected mismatches before evaluation, and state which surfaces remain opaque. Fail when a repository name substitutes for digests, a tokenizer count becomes a language-quality score, architecture becomes a method recommendation, or a hidden managed surface is fabricated.
+
+Chapter 3 receives the frozen hypothesis plus an inspection with explicit blockers. It may compare intervention classes and reject alternatives. It still may not train while compatibility blockers or authority decisions remain.

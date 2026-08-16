@@ -1,0 +1,175 @@
+---
+title: "Choose the Smallest Adaptation Ladder"
+slug: "choose-the-smallest-adaptation-ladder"
+summary: "Map each residual failure to the smallest plausible intervention, reject mismatched methods, and attach disconfirmation and stop rules before training."
+minutes: 100
+sourceIds: ["SRC-007", "SRC-009", "SRC-011", "SRC-039", "SRC-041", "SRC-042", "SRC-043", "SRC-044", "SRC-046", "SRC-048"]
+claimIds: ["CLM-007", "CLM-008", "CLM-009"]
+objectiveIds: ["LLME-K03", "LLME-K07", "LLME-K08", "LLME-K09", "LLME-K10"]
+figureIds: []
+---
+
+## Choose a mechanism, not a trend
+
+The first `MD-09` artifact froze a falsifiable shorthand-mapping hypothesis. The second found that the synthetic open-weight candidate is not yet compatible: its serving template is mismatched and its padding assumption is unresolved. Chapter 3 therefore cannot approve training. It can do something more valuable first: map each residual to the smallest intervention that could plausibly change its mechanism, then reject alternatives whose evidence, access, cost, reversibility, or authority boundaries do not fit.
+
+An adaptation ladder is not a universal ranking from cheap to impressive. It is a sequence of questions. At every rung, ask:
+
+- what observed mechanism would this intervention change?
+- what evidence would distinguish success from noise?
+- what new data, access, compute, runtime, and control obligations appear?
+- what retained behavior could regress?
+- what result or boundary makes us stop?
+
+No rung is earned by industry fashion. A later rung is not more mature. The best decision can be repair, replacement, or no change.
+
+## Classify the three Mosaic failures
+
+The MD-09 ledger contains three constructed classes.
+
+**Malformed upstream language codes.** These failures disappear when the stale mapper is repaired. Their mechanism sits before the model. The selected action is input-routing repair plus regression tests. They must not enter an adaptation dataset as examples of model weakness.
+
+**Stale policy knowledge.** The desired answer changes when the authorized service-policy document changes. Encoding the current policy into weights would create a freshness and provenance problem. The selected action is retrieval/index/assembly repair with source-state and absence behavior, not tuning.
+
+**Stable appliance shorthand to typed fields.** After routing, authorized retrieval, template, schema, and evaluator controls pass, a bounded mapping error repeats on frozen family-separated cases. This is the only current adaptation-sensitive candidate. Even here, the conclusion is merely to investigate the smallest supervised weight-changing pilot after the Chapter 2 compatibility blockers clear.
+
+Prompt/context repair, SFT, PEFT, preference optimization, distillation, continued pretraining, and model replacement target different failure hypotheses. [CLM-007] The categories overlap in implementation, and research results depend on model, data, objective, and evaluation. The ladder is a diagnostic map, not a promise that one method fixes its named failure.
+
+## Rung zero: keep the frozen baseline
+
+Every ladder begins with `no change`. The qualified behavior baseline remains the comparator and fallback. A proposal must beat it on the target criterion without failing retention or control gates. If the target is not valuable enough, evidence is too weak, rights are unresolved, or no feasible intervention is reversible, stop at the baseline.
+
+No-change also preserves learning. A failed candidate should not silently mutate the reference. Record the candidate as rejected, retain raw transitions, and keep the baseline artifact addressable.
+
+A baseline may be imperfect and still be the correct current decision. If no intervention clears its evidence and authority gates, retain the baseline within its already-qualified scope, preserve abstention and fallback, and narrow exposure where required. "Do nothing" never means ignore an incident; it means do not change this model surface while repairs, containment, or evidence collection occur elsewhere.
+
+## Rung one: repair task, input, prompt, context, or retrieval
+
+These are system changes, but not weight adaptation. Clarify an ambiguous task contract; fix the language mapper; normalize an input field; correct role serialization; remove an irrelevant example; change an authorized query; repair source filtering; improve context assembly; or tighten schema validation. Each change still needs isolated evaluation.
+
+This rung fits Mosaic's language-code and stale-policy classes. It also serves as the control for the shorthand residual: if a small prompt or context change reliably removes the error without protected regressions, the weight-change hypothesis is disconfirmed.
+
+Retrieval is not a harmless fallback. Corpus permission, provenance, freshness, ranking, context injection, citation, privacy, and latency controls remain. Chapter 1's revoked-source incident is still separate and contained; the ladder cannot hide it inside model work.
+
+## Rung two: supervised full or parameter-efficient adaptation
+
+Supervised fine-tuning changes behavior using input-output examples under a training objective. It is plausible when the desired transformation is stable, examples demonstrate it directly, and inference-time evidence alone is insufficient. Full-parameter SFT offers broad weight access but raises compute, storage, rollback, retention, and catastrophic-regression obligations.
+
+Parameter-efficient fine-tuning updates or adds a smaller set of parameters. LoRA introduces low-rank trainable matrices around selected weights; PEFT libraries expose multiple adapter methods; QLoRA combines low-rank adapters with a quantized frozen base in its studied setting. `LLME-CASE-009` bounds this option: the papers report reduced trainable or memory envelopes and particular experimental results, not universal equivalence to full tuning, not a guaranteed resource plan, and not evidence that Mosaic will improve.
+
+For the shorthand candidate, a supervised PEFT pilot is smaller and more reversible than full-parameter SFT if, and only if, the target modules exist, the base/tokenizer/template/runtime tuple is fixed, the data are authorized and representative, adapters can be versioned independently, and evaluation can detect target and protected changes. The selected status is `pilot-investigation-proposed`, not `training-approved`.
+
+Small parameter count does not automatically mean small operational risk. An adapter can be applied to the wrong base, composed in the wrong order, merged irreversibly, served with an incompatible template, or loaded without the intended authorization boundary. Record base digest, adapter digest, target modules, rank and scaling configuration, training-data recipe, optimizer and seed, checkpoint policy, merge state, load order, runtime support, and rollback procedure. Later chapters will deepen these records; method selection only proves they are required.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F03.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f03-1-adaptation-ladder.png">
+  <div role="img" aria-label="A gated intervention ladder moves from repair through supervised and parameter-efficient tuning, preference optimization, distillation, continued pretraining, and replacement, with a stop gate at every rung.">Pending ImageGen figure V2-F03.1</div>
+  <figcaption><strong>V2-F03.1 - Climb only when the failure mechanism demands it.</strong> Essential labels: repair, SFT, PEFT, preference, distill, continue, replace. Stop signs and distinct platform shapes supplement color. The figure supports `CLM-007` and `CLM-009`; height does not mean quality or maturity.</figcaption>
+  <details><summary>Long description</summary><p>A colorful realistic three-dimensional staircase begins with a repair workbench and rises through platforms labeled SFT, PEFT, preference, distill, continue, and replace. Each platform has an evidence gate and a side exit back to the frozen baseline.</p></details>
+</figure>
+
+## Rung three: preference optimization
+
+Preference optimization fits cases where the training signal is a comparison between acceptable behaviors rather than a single correct target. Direct Preference Optimization provides one studied objective that avoids an explicit reward-model-and-RL loop. `LLME-CASE-010` demonstrates a bounded method and benchmark evidence. It does not establish universal human values, annotator representativeness, safety, domain correctness, or product authority.
+
+Mosaic's current shorthand mapping has a typed expected field. Pairwise preference labels would add ambiguity without matching the mechanism. Reject preference optimization for this hypothesis. It might become relevant to a future bounded style or trade-off question, but only with a defined preference population, disagreement policy, consequence analysis, retention set, and authority.
+
+## Rung four: distillation
+
+Distillation trains a student from a teacher's targets or distributions. It may fit a deployment problem where a qualified larger behavior must be approximated under a smaller runtime envelope. The original distillation evidence supports the general method in studied settings, not faithful transfer of every capability or control.
+
+Mosaic has no qualified teacher demonstrating the desired shorthand behavior and no accepted compression objective. Distillation would copy unknown teacher errors and add another evaluator dependency. Reject it for the present residual.
+
+## Rung five: continued pretraining
+
+Continued pretraining changes a model through additional unlabeled or self-supervised text, often to expose domain or task distributions. Domain- and task-adaptive pretraining research reports gains in studied settings. It does not guarantee that more domain text will teach a precise typed mapping, preserve instruction following, or satisfy rights and privacy constraints.
+
+Mosaic's bounded shorthand transformation has paired expected outputs. Continued pretraining is less targeted, harder to attribute, and more demanding in data and compute than the current hypothesis requires. Reject it. It could be considered only for a broad, stable representation gap supported by authorized corpora and experiments that distinguish it from supervised alternatives.
+
+## Rung six: replace the model
+
+Replacement can be smaller than adaptation when weights are inaccessible, a candidate already satisfies the contract, or the current artifact cannot meet a hard constraint. It also changes lifecycle, opacity, compatibility, behavior, resource, privacy, and rollback evidence. A managed replacement must replay the same semantic task dossier. An open-weight replacement needs a new full artifact tuple.
+
+The inherited provider migration remains held because protected Gujarati citation and synthetic tail gates regressed. That failure is not permission to replace again by benchmark rank. Replacement remains a future comparator only after its own qualification.
+
+## Failure injection: fashion proposes tuning twice
+
+The first injected proposal sends all four multilingual failures to PEFT. The frozen baseline audit disproves half of its premise: two cases are upstream language-code defects. The ladder rejects those training rows and routes them to application repair.
+
+The second proposal sends stale policy knowledge to continued pretraining because "the model needs to know the domain." That mechanism would bury volatile facts in weights, weaken source attribution, and make refresh expensive. The ladder rejects it in favor of authorized retrieval repair. This does not prove retrieval will meet the task; it preserves the right experiment and explicit no-evidence behavior.
+
+Only the recurring shorthand-to-field residual remains. Even that proposal cannot advance while Chapter 2's template and padding blockers stand. The failure injection therefore demonstrates three useful outcomes at once: repair upstream, repair retrieval, and pause a plausible adaptation until compatibility clears.
+
+## Let access and resources eliminate methods
+
+Weight access, data quality, compute, reversibility, runtime, and control requirements constrain available interventions. [CLM-008] Add privacy, legal rights, security, and authority as independent gates rather than pretending engineering feasibility answers them.
+
+For a managed model without adaptation access, SFT or PEFT may be unavailable even if conceptually plausible. A provider-hosted adaptation endpoint may expose training inputs and version IDs but hide optimizer, weights, or runtime. Record that evidence asymmetry. For open weights, technical access expands responsibility: artifact licenses and provenance, dataset rights, training infrastructure, optimizer state, checkpoints, adapter composition, evaluation, serving compatibility, and rollback all need owners.
+
+Use an access-resource map:
+
+| Intervention | Required access | Data signal | Resource/control burden | Reversibility |
+|---|---|---|---|---|
+| repair | application/config | cases and traces | bounded but layer-specific | usually high |
+| SFT | training or provider endpoint | authorized demonstrations | training, storage, full regression | model/version rollback |
+| PEFT | compatible base and target modules | authorized demonstrations | adapter training/composition/serving | high only if base stays fixed |
+| preference | preference objective access | calibrated comparisons | label governance and full regression | model/version rollback |
+| distill | student training plus teacher access | teacher targets/distributions | teacher cost and fidelity tests | student replacement |
+| continue | base training access | authorized corpus | high compute/data governance | checkpoint rollback |
+| replace | alternate model/service | frozen evaluation evidence | full requalification | fallback if retained |
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F03.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f03-2-access-resource-map.png">
+  <div role="img" aria-label="Intervention candidates are filtered through access, data, compute, control, and reversibility gates before one bounded pilot investigation remains.">Pending ImageGen figure V2-F03.2</div>
+  <figcaption><strong>V2-F03.2 - Feasibility is a set of gates, not a price tag.</strong> Essential labels: access, data, compute, control, reversibility. Icons and narrowing rails supplement color. The figure supports `CLM-008`; it reports no actual budget or approval.</figcaption>
+  <details><summary>Long description</summary><p>Several colorful three-dimensional intervention tokens enter five consecutive gates labeled access, data, compute, control, and reversibility. Most tokens move to named rejection trays; one PEFT pilot token reaches a review desk, not a training machine.</p></details>
+</figure>
+
+## Attach predicted evidence and stop rules
+
+At least one plausible intervention should be rejected using predicted evidence or boundary constraints before experimentation expands. [CLM-009] Mosaic rejects more than one: preference optimization mismatches the typed target, distillation lacks a qualified teacher, continued pretraining is too indirect, full SFT exceeds the smallest justified change, and replacement has unresolved protected regressions.
+
+The proposed supervised PEFT pilot remains conditional on these stop rules:
+
+1. stop if the template/padding compatibility blockers remain;
+2. stop if data provenance, rights, privacy, family separation, or target coverage fails review;
+3. stop if prompt/context repair clears the target criterion;
+4. stop if the adapter cannot be bound to an exact base and runtime;
+5. stop if the preregistered target gain is absent across repeats;
+6. stop immediately on citation, authorization, abstention, conflict-escalation, schema, or protected-language regression;
+7. stop if compute, memory, duration, or storage exceeds the experimental envelope;
+8. stop if rollback cannot restore the frozen tuple;
+9. stop if a named authority withholds its decision.
+
+An experiment that stops still produces evidence. Do not lower a threshold, change the case set, switch judges, or add training examples mid-run without opening a new versioned experiment.
+
+## Complete the MD-09 decision without training
+
+`mosaic-adaptation-ladder.json` records every candidate intervention, its mechanism fit, access, data, resource and control burden, predicted evidence, rejection reason, and disposition. It preserves three separate outcomes:
+
+- malformed language codes: `repair-upstream`;
+- stale policy knowledge: `repair-retrieval`;
+- stable shorthand mapping: `conditional-peft-pilot-investigation`.
+
+The overall status is `method-selection-complete-training-not-approved`. Compatibility, data, privacy/legal, resource, security, domain/product value, and experimental authority gates remain unresolved. The frozen Volume 1 baseline remains the comparator and fallback.
+
+### Preserve provider neutrality without erasing asymmetry
+
+On a managed path, the smallest available weight-changing intervention may be a provider adaptation job with limited controls. The record must name the exposed base version, uploaded data identity, provider job configuration, returned model identifier, retention and processing terms, evaluation evidence, lifecycle, and rollback. Hidden optimizer or artifact internals remain limitations.
+
+On an open-weight path, PEFT may expose much more experimental control but also more responsibility for data pipelines, compute, checkpoints, adapter/base compatibility, serving, and recovery. The application-level target, terminal states, protected cases, authorization, and evaluation contract remain shared across both routes. Do not score one route as inherently superior; eliminate or retain it using the frozen requirements.
+
+## Practice: defend every rejection
+
+Use the three MD-09 companion artifacts to:
+
+1. trace each failure class to its most plausible layer;
+2. run the no-tune controls before a weight-changing proposal;
+3. compare all seven intervention classes plus no change;
+4. reject at least one technically feasible method because its mechanism does not fit;
+5. reject at least one method because access, data, resource, or reversibility constraints do not clear;
+6. write predicted evidence and disconfirmation for the proposed pilot;
+7. preserve target, retention, abstention, authorization, and authority gates;
+8. show that no adapter or training run was created.
+
+Pass when another reviewer can tell why each class received a different action, reproduce every elimination, and stop the pilot before training when any prerequisite fails. Fail when cost alone selects a method, PEFT is treated as universally equivalent, preferences become values by assertion, stale knowledge enters weights by default, or `pilot` is used as a euphemism for unapproved training.
+
+`MD-09` is now complete as a decision dossier. The next chapter may specify a data recipe for the conditional supervised candidate. It must inherit the frozen split, rights and retention unknowns, protected cases, compatibility blockers, and no-training status. A data plan can reject the candidate; it cannot retroactively make the method inevitable.
