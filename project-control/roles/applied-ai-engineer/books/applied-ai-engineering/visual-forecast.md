@@ -101,7 +101,7 @@ Every final figure must:
 Each final figure record must include:
 
 - figure ID, semantic version, title, chapter, and insertion anchor;
-- diagram form, dimensions/viewBox, canonical editable source, and generation method;
+- diagram form, pixel dimensions, canonical ImageGen PNG, prompt-log record, and generation/edit method;
 - web/print/publication paths and cryptographic hashes;
 - caption, short alternative, and long-description disposition/content;
 - supported claim IDs, competency domains, and `PF-*` artifacts;

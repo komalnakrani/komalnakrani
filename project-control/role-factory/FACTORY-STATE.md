@@ -21,7 +21,7 @@
 - Every Komal publication is researched and written fresh.
 - Finish all Komal publishing foundations and role books before resuming Abhyaas.
 - Komal teaches; Abhyaas independently certifies competence.
-- Roles are processed sequentially in the approved 32-role catalog.
+- Roles are processed in user-authorized three-book waves while preserving the approved 32-role catalog order and isolated role state.
 
 ## Bootstrap status
 
@@ -51,22 +51,40 @@
 - Forward Deployed Engineer: [#3 — complete Komal learning ecosystem](https://github.com/alpeshznakrani/komalnakrani/issues/3), hostile final QA `PASS` at commit `5061fe8`.
 - Forward Deployed Engineer: Phases 01, 04-11, 13, and 19, including all nineteen manuscripts, 38 final figures, complete web/PDF edition, 64-test provider-neutral companion, six-module/12-test guided lab course, and hostile final QA `PASS`.
 
-## Active role
+## Active three-book wave
 
-- Role: Applied AI Engineer
+### Applied AI Engineer
+
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Phase parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27), ready while bounded children execute sequentially
-- Last completed child: [#29 - Write Applied AI Engineering chapters 04-06](https://github.com/alpeshznakrani/komalnakrani/issues/29), accepted through commit `11002c2`
-- Active child: [#30 - Write Applied AI Engineering chapters 07-09](https://github.com/alpeshznakrani/komalnakrani/issues/30)
+- Phase parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27)
+- Last completed child: [#30 - Write Applied AI Engineering chapters 07-09](https://github.com/alpeshznakrani/komalnakrani/issues/30), accepted at commit `e55eaa4`
+- Active child: [#31 - Write Applied AI Engineering chapters 10-12](https://github.com/alpeshznakrani/komalnakrani/issues/31)
+- Visual state: Chapters 01-09 use 18 final ImageGen PNG teaching figures; all earlier SVG placeholders were removed.
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
+
+### Agentic AI Engineer
+
+- Root issue: [#32](https://github.com/alpeshznakrani/komalnakrani/issues/32)
+- Phases 01, 04, and 05: accepted at commit `b59c3f5`; canonical decision is one 20-chapter book.
+- Active phase: [#40 - Research Agentic AI Engineering sources and cases](https://github.com/alpeshznakrani/komalnakrani/issues/40)
+- State: `project-control/roles/agentic-ai-engineer/ROLE-STATE.md`
+
+### LLM Engineer
+
+- Root issue: [#36](https://github.com/alpeshznakrani/komalnakrani/issues/36)
+- Phases 01, 04, and 05: accepted at commit `18332c3`; canonical decision is a 33-chapter two-volume series.
+- Active phase: [#41 - Research LLM Engineering sources and cases](https://github.com/alpeshznakrani/komalnakrani/issues/41)
+- State: `project-control/roles/llm-engineer/ROLE-STATE.md` (created during active Phase 06)
 
 ## Exact next action
 
-Write, validate, commit, and close Applied AI Engineer Phase 08 child #30 for
-Chapters 07-09, then open only the next manuscript batch. Do not enter deferred
-Abhyaas work.
+Advance the three isolated Komal lanes in parallel: Applied AI Chapters 10-12
+under #31, Agentic AI source research under #40, and LLM Engineering source
+research under #41. Keep shared publication/factory integration root-owned.
+Do not enter deferred Abhyaas work.
 
 ## Resume instructions
 
-Read this file and the active GitHub issue, inspect `git status`, and resume the
-active Komal issue. Do not resume Abhyaas until Komal is complete.
+Read this file and the applicable active GitHub issue, inspect `git status`, and
+resume one of the three isolated Komal lanes without editing another lane's
+state. Do not resume Abhyaas until Komal is complete.
