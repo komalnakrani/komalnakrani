@@ -2,43 +2,41 @@
 
 Parent: #36
 
-Depends on: #41 accepted and closed
+Depends on: #41 accepted at `717367e`
 
 ## Purpose
 
-Convert the accepted two-volume architecture and Phase 06 evidence system into an executable blueprint for every frozen chapter: 16 in Volume 1 and 17 in Volume 2. This phase produces blueprints, not manuscript prose, code, or image assets.
-
-## Required inputs
-
-- `books/llm-engineering/architecture.md`
-- `books/llm-engineering/project-map.md`
-- `books/llm-engineering/visual-forecast.md`
-- `books/llm-engineering/sources/source-register.json`
-- `books/llm-engineering/sources/claim-register.json`
-- `books/llm-engineering/case-studies/case-study-register.json`
-- all 33 chapter research packs under `books/llm-engineering/sources/`
-- `books/llm-engineering/sources/verification-report.md`
-- `books/llm-engineering/phase-07-handoff.md`
+Convert the accepted two-volume architecture and Phase 06 evidence system into an executable production blueprint for every frozen chapter. This phase creates planning artifacts only—not manuscript prose, code, or image assets.
 
 ## Deliverables
 
-- [ ] 33/33 chapter blueprints in frozen architecture order
-- [ ] exact three-claim ledger per chapter with resolved sources and bounded case use
-- [ ] measurable objectives, concept sequence, skill procedure, failure injection, exercises, and assessment evidence
-- [ ] explicit incoming/outgoing Mosaic Desk state for MD-01 through MD-16
-- [ ] provider-neutral managed/open-weight treatment and adjacent-role authority limits
-- [ ] all 66 forecast figure IDs allocated with intent, essential labels, composition, accessibility description, and evidence role
-- [ ] durable-versus-volatile notes, prohibited claims, re-verification triggers, and Phase 08 handoff
+- [x] 33/33 chapter blueprints in frozen order: Volume 1 Chapters 1–16, then Volume 2 Chapters 1–17.
+- [x] Exactly three accepted claims per chapter; 99/99 claim IDs used exactly once with resolving sources.
+- [x] All 66 canonical sources and 14 bounded cases represented and resolved.
+- [x] Measurable objectives, prerequisite/forward dependency, concept sequence, and repeatable skill procedure in every chapter.
+- [x] Continuous incoming/failure/outgoing Mosaic Desk state through `MD-01..MD-16`.
+- [x] Provider-neutral managed/open-weight treatment plus explicit authority and adjacent-role non-scope in every chapter.
+- [x] Exercise, assessment pass evidence, durable/volatile split, prohibited claims, and re-verification triggers in every chapter.
+- [x] All 66 accepted figure IDs allocated exactly once with intent, composition, essential labels, alt/accessibility description, and evidence role.
+- [x] Explicit per-chapter and series-level Phase 08 manuscript handoff.
+- [x] Phase 07 verification report and role state update.
 
-## Visual constraints
+## Acceptance verification
 
-Do not generate assets in Phase 07. Future artwork is ImageGen-only raster: colorful, crisp, artistic 3D/realistic, with short essential labels where useful; no SVG or WebP. Use a Komal mascot only when pedagogically necessary and only from authorized original-photo identity references.
+- [x] 33 files and frozen titles/order match.
+- [x] Claim multiset equals 99 registered IDs; exactly three per blueprint.
+- [x] Source references resolve and cover 66/66 canonical sources.
+- [x] Case references resolve and cover 14/14 registered cases.
+- [x] Figure multiset equals 66/66 forecast IDs (32 Volume 1, 34 Volume 2).
+- [x] Required section/transition/procedure/exercise/assessment/boundary fields appear in 33/33 files.
+- [x] Visual specifications include labels/accessibility/evidence role in 66/66 records; no assets generated.
+- [x] No manuscript, companion/code, publication mutation, SVG/WebP/image asset, Abhyaas, shared registry, package, or factory-state change.
+- [x] Role-local diff and whitespace checks pass.
 
-## Acceptance criteria
+## Visual rule preserved
 
-- all 99 chapter claims are used exactly once in their assigned chapter and all sources resolve
-- every chapter advances the same Mosaic Desk system without disconnected demos
-- all 66 forecast figures retain their accepted IDs and learning purpose
-- the two-volume boundary and managed/open-weight responsibility split remain explicit
-- disputed or volatile claims keep their limitations and recheck instructions
-- no manuscript, companion implementation, image asset, publication file, Abhyaas work, or global registry mutation occurs
+Future production is ImageGen-only colorful, crisp, artistic 3D/realistic raster; no SVG. Labels remain short and essential. Komal is optional only when pedagogically useful and must preserve identity from authorized original-photo references. Phase 07 generated no image.
+
+## Exit
+
+Root reviews, commits/pushes, and closes #44 only if accepted, then opens Phase 08. Manuscript work proceeds in eight continuity-gated batches from Volume 1 to Volume 2 using `books/llm-engineering/blueprints/phase-08-handoff.md`. No later batch may assume an unaccepted Mosaic dossier state.

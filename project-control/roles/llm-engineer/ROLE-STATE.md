@@ -5,7 +5,7 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 07 chapter blueprints in progress under issue `#44`
+- Current global phase: Phase 07 chapter blueprints prepared under issue `#44`; root review pending
 - Last updated: 2026-08-16
 - Last completed issue: `#41` — Phase 06 source research
 - Active issue: `#44` — Phase 07 chapter blueprints
@@ -26,7 +26,7 @@
 - authorship: all Komal publications will be original and written fresh
 - competency/certification work: deferred to Abhyaas under the Komal-first lock
 
-Phases 01, 04, and 05 were accepted in commit `18332c3`; issues `#37`, `#38`, and `#39` are closed.
+Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted in `717367e`; issues `#37`, `#38`, `#39`, and `#41` are closed.
 
 ## Canonical files
 
@@ -44,8 +44,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; issues `#37`, `#38`, an
 - chapter research: 33 packs in `books/llm-engineering/sources/`
 - Phase 06 verification: `books/llm-engineering/sources/verification-report.md`
 - Phase 07 handoff: `books/llm-engineering/phase-07-handoff.md`
-- issue bodies: `issues/root.md`, Phase 01/04/05 bodies, and `issues/phase-06-source-research.md`
-- chapter blueprints, manuscript, companion implementation, generated visuals, publication, PDF, course, and final QA: not started
+- chapter blueprints: 33 files in `books/llm-engineering/blueprints/`
+- Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
+- Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
+- issue bodies: `issues/root.md`, Phase 01/04/05/06 bodies, and `issues/phase-07-chapter-blueprints.md`
+- manuscript, companion implementation, generated visuals, publication, PDF, course, and final QA: not started
 
 ## Completed gates
 
@@ -55,7 +58,7 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; issues `#37`, `#38`, an
 - [x] 04 accepted/committed/closed (`#38`, `18332c3`)
 - [x] 05 accepted/committed/closed (`#39`, `18332c3`)
 - [x] 06 accepted/committed/closed (`#41`, `717367e`)
-- [ ] 07 chapter blueprints
+- [ ] 07 artifacts prepared; coordinator acceptance/commit/closure pending
 - [ ] 08 manuscript
 - [ ] 09 book QA
 - [ ] 10 visuals
@@ -67,11 +70,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; issues `#37`, `#38`, an
 
 ## Current work
 
-Phase 06 is accepted at `717367e`: 66 primary/authoritative sources, 22 series claims, 99 limitation-aware chapter claims, 14 bounded case records, and 33/33 research packs. Phase 07 issue #44 is active to create 33 production blueprints in frozen volume order while preserving Mosaic Desk continuity and allocating all 66 forecast figures.
+Phase 06 is accepted at `717367e`. Phase 07 artifacts are locally complete for #44: 33/33 production blueprints in frozen order, all 99 claims exactly once, all 66 canonical sources and 14 cases resolved, and all 66 forecast figures exactly once. Every chapter has objectives, procedure, Mosaic incoming/failure/outgoing state, managed/open-weight treatment, exercise/pass evidence, authority/non-scope, durable/volatile notes, prohibitions, and Phase 08 handoff. Root owns review, commit/push, issue closure, shared state, and Phase 08 dispatch.
 
 ## Unresolved blockers
 
-None for Phase 06 research. Coordinator acceptance is a workflow gate, not a research blocker. Abhyaas remains intentionally deferred.
+None. Coordinator acceptance is a workflow gate, not a content blocker. Abhyaas remains intentionally deferred.
 
 ## Research gaps and volatile evidence
 
@@ -79,18 +82,19 @@ None for Phase 06 research. Coordinator acceptance is a workflow gate, not a res
 - Research/benchmark outcomes remain configuration-bound and must retain adjacent limitations.
 - Product acceptance thresholds, domain truth, legal/license decisions, privacy authorization, and security/safety decisions require their competent owners.
 - Current model names, prices, context limits, hardware results, and library APIs must remain replaceable examples.
-- Phase 07 must not convert research-note wording into manuscript prose.
+- Phase 08 must recheck every maintained URL used in a manuscript batch and preserve adjacent limitations.
+- Phase 08 must write fresh explanatory prose rather than converting research or blueprint wording into manuscript copy.
 
 ## Quality debt
 
-- No blueprints, manuscript, companion, image prompts, final raster figures, publication, or PDF exists yet.
-- The accepted visual forecast remains specification only; Phase 06 created zero image/vector assets.
-- Phase 07 must allocate all 66 forecast figures and preserve their evidence function before visual production.
+- No manuscript, companion, image prompts, final raster figures, publication, or PDF exists yet.
+- The accepted visual forecast and 66 blueprint figure records are semantic specifications only; no image/vector asset exists.
+- Phase 08 must add manuscript anchors/captions/accessibility text without generating art; later visual production remains ImageGen-only raster.
 
 ## Exact next action
 
-Create and QA all 33 chapter blueprints under #44 using `books/llm-engineering/phase-07-handoff.md`. Proceed in architecture order and create no manuscript, companion code, publication files, or images.
+Root reviews the 33 blueprints and Phase 07 verification, commits/pushes, and closes #44 only if accepted, then opens Phase 08. Manuscript production starts with Volume 1 Chapters 1–4 using `books/llm-engineering/blueprints/phase-08-handoff.md`; no later batch starts against an unaccepted Mosaic dossier state.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits `18332c3` and `717367e`, issue #44, this state, architecture, project map, visual forecast, all Phase 06 registers, verification report, and Phase 07 handoff. Inspect git status because parallel agents share the worktree. Work only in `project-control/roles/llm-engineer/`; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits `18332c3` and `717367e`, issue #44, this state, architecture, project map, visual forecast, all Phase 06 registers/research packs, all Phase 07 blueprints, verification report, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in `project-control/roles/llm-engineer/`; do not edit shared factory state, another role, git state, or Abhyaas.
