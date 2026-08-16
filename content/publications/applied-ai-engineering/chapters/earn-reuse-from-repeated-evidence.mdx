@@ -1,0 +1,1016 @@
+---
+title: "Earn Reuse From Repeated Evidence"
+slug: "earn-reuse-from-repeated-evidence"
+summary: "Separate reusable mechanisms from local evidence and authority, validate stable seams across consumers, and reject abstractions that have not earned their blast radius."
+minutes: 80
+sourceIds: ["SRC-006", "SRC-007", "SRC-011", "SRC-012", "SRC-022", "SRC-048", "SRC-052", "SRC-053", "SRC-055"]
+claimIds: ["CLM-107", "CLM-108", "CLM-109", "CLM-110", "CLM-111", "CLM-112"]
+objectiveIds: ["AAE-K03", "AAE-K06", "AAE-K08", "AAE-K10"]
+figureIds: ["FIG-039", "FIG-040"]
+---
+
+## Repetition is evidence, not permission
+
+Patchwork now has a result envelope, an evaluation runner, a redaction utility, a compatibility policy, release thresholds, a local dataset, readiness questions, a failure-state vocabulary, and several adapters. The collection looks like a platform starter kit.
+
+That appearance is dangerous. Some assets encode mechanisms. Some encode evidence. Some encode Patchwork's product decisions, data permissions, consequence tolerance, and authority. Centralizing all of them would make local assumptions harder to see and shared failure harder to contain.
+
+This chapter advances `PF-12` to v0.2 with a ten-asset reuse ledger. It identifies three shared mechanisms, validates selected seams in constructed satellite cases, keeps product policy and data local, copies forms without copying answers, and rejects a tempting canonical ranker service. The case is entirely fictional. It proves a method for earning reuse, not a mandate to build a platform.
+
+The central rule is simple: reuse is not earned by resemblance, code duplication, or executive enthusiasm. It is earned when repeated independent evidence reveals a stable seam, named consumers can state their local obligations, an owner can maintain the shared part, failures remain isolatable, migration and fallback are credible, and a disconfirmation plan could still stop the proposal.
+
+## Start with the local success in context
+
+Before asking what can be shared, describe what succeeded locally:
+
+- the task and product behavior;
+- the user and consequence boundary;
+- data sources, permissions, and freshness;
+- cases, segments, metrics, and thresholds;
+- controls, fallbacks, and prohibited effects;
+- operating envelope and incident history;
+- owners and decision authority;
+- version and evidence identity;
+- known failures, exclusions, and unknowns.
+
+Patchwork recommends compatible repair parts from seller-authored records. Its success depends on revision-specific compatibility, calibrated abstention, permission and freshness checks, deterministic fallback, and a release authority that can stop exposure. A second catalog application may use the same result envelope without sharing Patchwork's compatibility definition. A drafting assistant may reuse redaction mechanics without sharing its retention or action policy.
+
+If the local context is omitted, an asset looks more general than it is. The abstraction then inherits invisible assumptions while losing the local reviewers who understood them.
+
+## Distinguish four things that teams call reusable
+
+### Mechanism
+
+A mechanism performs a bounded technical function: validate a schema, run cases, redact fields, route an adapter, or produce a state transition. Its contract can usually be tested without accepting a product decision.
+
+### Evidence mechanism
+
+An evidence mechanism helps create, preserve, or compare evidence. An evaluation runner can load cases and compute declared metrics. It does not choose the right cases, thresholds, segments, or release disposition.
+
+### Evidence form
+
+A form standardizes questions or fields: readiness checklist, change dossier, incident timeline, failure-state vocabulary. It can improve review completeness. Its answers remain local. Copying a form does not transfer evidence.
+
+### Product decision
+
+A product decision defines acceptable behavior, consequence, population, threshold, fallback, or authority. It cannot be made universal merely because several services have similar code.
+
+The PF-12 ledger uses these distinctions. The result schema is a configurable mechanism. The evaluation runner is an evidence mechanism. Readiness questions are a form. Compatibility policy and release thresholds remain Patchwork decisions.
+
+## Use a reuse ladder
+
+Move one rung at a time:
+
+1. local fix;
+2. repeated local pattern;
+3. configurable component;
+4. shared service;
+5. platform candidate.
+
+Each rung adds obligations. A local utility needs tests and an owner. A configurable component needs explicit seams, versioning, consumer validation, and fallback. A shared service adds availability, isolation, operational support, migration, and blast-radius duties. A platform candidate adds product strategy, governance, economics, adoption, and long-term compatibility.
+
+Do not jump from duplicated files to shared service. Duplication can be cheaper than coordination when consumers are few, semantics differ, or the common boundary is unstable. Shared infrastructure can also centralize technical debt and organizational entanglement. [CLM-107]
+
+<figure>
+  <img src="/assets/publications/applied-ai-engineering/f20-1-reuse-ladder.png" alt="Colorful three-dimensional ladder from local fix through repeated pattern, configurable component, shared service, and platform candidate, with short evidence-gate labels for independent cases, stable seam, owner, fallback, economics, and disconfirmation." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption>F20.1 - Each rise in reuse increases the evidence, ownership, isolation, migration, and economic burden; resemblance alone cannot skip a rung.</figcaption>
+</figure>
+
+Patchwork currently supports configurable components and adaptable forms. It does not support a universal ranking platform.
+
+## Require independent cases
+
+Repeated calls inside one feature are not independent evidence. They may repeat the same assumptions, data, team, release cadence, and failure modes.
+
+Seek cases that differ on at least some meaningful axes:
+
+- consumer team;
+- product task;
+- data ownership;
+- consequence;
+- runtime or provider;
+- release cadence;
+- authority;
+- failure recovery;
+- privacy purpose;
+- operating scale.
+
+Independence is not binary. Record where cases differ and where they remain coupled. Two services owned by the same team and backed by the same index provide less portability evidence than their count suggests.
+
+PF-12 uses `Satellite-Catalog` to test the result schema and evaluation runner, and `Satellite-Assistant` to test redaction and state vocabulary. These are constructed learning cases. They demonstrate how a seam can be tested; they do not establish real adoption.
+
+## Write the seam as a consumer contract
+
+A reusable component should say what it does and what every consumer must supply.
+
+PF-12's shared proposal supplies:
+
+- a base candidate result envelope;
+- a deterministic evaluation runner;
+- a trace redaction utility;
+- mapped readiness and failure-state forms.
+
+Every consumer supplies:
+
+- its task and behavior contract;
+- data permission and provenance;
+- cases and expected states;
+- metrics, segments, and thresholds;
+- controls and prohibited effects;
+- fallback and recovery;
+- owners and authority;
+- release and monitoring decisions.
+
+This contract prevents a common category error: treating tooling that processes evidence as evidence for a product decision.
+
+## Keep thresholds and authority local
+
+Thresholds encode consequence and tradeoffs. A threshold that balances coverage and abstention for repair-part compatibility may be unacceptable for a high-consequence classifier. Even the same numeric threshold can have different meaning across score distributions and versions.
+
+Authority is also contextual. A shared-service owner can approve a library release. They cannot accept every consumer's residual product, safety, privacy, security, or domain risk.
+
+Therefore:
+
+- the component owner maintains the mechanism;
+- the consumer owner validates integration;
+- domain reviewers judge task-specific evidence;
+- product and release authorities decide exposure;
+- specialist authorities decide within their formal remit.
+
+No central template should collapse those roles.
+
+## Treat documentation as portability support
+
+Documentation, model cards, factsheets, and reporting templates can expose intended use, assumptions, limitations, versions, tests, and owners. They improve portability review and reduce rediscovery. They do not make behavior portable. [CLM-110]
+
+For each candidate asset, record:
+
+- asset identity and version;
+- kind: mechanism, evidence mechanism, form, local evidence, product decision, or service;
+- cases supporting reuse;
+- stable inputs and outputs;
+- consumer-supplied obligations;
+- known local assumptions;
+- owner and support boundary;
+- version and deprecation policy;
+- fallback and migration;
+- isolation and access;
+- service objective if networked;
+- cost and maintenance evidence;
+- disconfirming observations;
+- current disposition.
+
+Registries preserve identity and lifecycle. Versioned contracts preserve structural change. Neither establishes semantic suitability for a new consumer. [CLM-111]
+
+## Classify all ten Patchwork assets
+
+### A01: candidate result schema
+
+Disposition: `reuse-configurably`.
+
+The base envelope carries candidate identity, state, evidence reference, and limitations. Satellite-Catalog accepts it with a local extension. The seam is structural; domain fields remain consumer-owned. Fallback is a local schema adapter.
+
+### A02: evaluation runner
+
+Disposition: `reuse-configurably`.
+
+It can load declared cases, execute deterministic logic, and report metrics by segment. It does not choose the right test population or operating point. Readiness checks and monitoring logic can be reused when assumptions remain explicit and consumers own the resulting decision. [CLM-108]
+
+### A03: provider adapter envelope
+
+Disposition: `test-again`.
+
+Patchwork has only one supported provider-change case. The adapter preserves fields but can mask behavioral differences. A second independent provider and task are needed before promoting it.
+
+### A04: trace redaction utility
+
+Disposition: `reuse-configurably`.
+
+It applies an allowlist and removes raw content in two constructed cases. Purpose, retention, access, regional constraints, and escalation remain local. Fallback is a consumer-owned allowlist.
+
+### A05: compatibility policy
+
+Disposition: `keep-local`.
+
+Revision unit, evidence requirements, ambiguity treatment, and domain review are Patchwork-specific. A shared name may help communication, but the policy cannot be exported as universal truth.
+
+### A06: release thresholds
+
+Disposition: `keep-local`.
+
+Thresholds depend on consequence, segments, calibration, fallback, and authority. Centralizing them would create false comparability.
+
+### A07: dataset and index
+
+Disposition: `keep-local`.
+
+Permission, source, population, freshness, and deletion are local. Sharing the data to make tooling convenient would broaden purpose without evidence or authority.
+
+### A08: readiness questions
+
+Disposition: `copy-and-adapt`.
+
+The questions help consumers ask about contract, evidence, controls, operations, release, and rollback. Answers and disposition remain local.
+
+### A09: canonical ranker service
+
+Disposition: `reject-abstraction`.
+
+One ranking feature does not establish compatible objectives, data, controls, consumers, or release cadence. Shared rankers can reduce maintenance in appropriate settings, but also create a large quality and operational blast radius. [CLM-109]
+
+### A10: failure-state vocabulary
+
+Disposition: `standardize-names-only`.
+
+Teams can map terms such as `unknown`, `abstain`, `fallback`, `stopped`, and `rolled back`. Entry criteria, consequences, owners, and authority remain contextual.
+
+The ledger deliberately contains more than yes/no. `Test again`, `keep local`, `copy and adapt`, `standardize names only`, and `reject` are legitimate engineering outcomes.
+
+## Validate the seam with a satellite
+
+Satellite validation is a consumer test, not a demo. The consumer begins with its own task and tries to use the proposed interface without surrendering local meaning.
+
+For Satellite-Catalog:
+
+1. define the satellite's task and result states;
+2. map base schema fields;
+3. add a local extension rather than polluting the base;
+4. run satellite-owned cases;
+5. compute satellite-owned metrics and thresholds;
+6. record where the common runner is neutral;
+7. retain a local runner fallback;
+8. document rejected portability.
+
+The base envelope passes. The runner executes structural replay. Compatibility policy and release threshold do not transfer.
+
+That mixed outcome is useful. It narrows the reusable seam.
+
+## Extract mechanism, not policy
+
+The selected shared mechanism consists of three parts:
+
+- result envelope for candidate state and evidence references;
+- runner interface for loading cases and emitting declared measurements;
+- redaction interface for retaining allowlisted trace fields.
+
+It explicitly excludes:
+
+- task ontology;
+- ground truth;
+- permission policy;
+- model or provider choice;
+- score semantics;
+- threshold;
+- release decision;
+- risk acceptance;
+- user-facing language;
+- retention duration.
+
+The exclusions are part of the design, not missing ambition.
+
+## Design versioning around consumer replay
+
+Structural compatibility alone is insufficient for evidence tooling. A nonbreaking code change can alter ordering, floating-point behavior, missing-value handling, sampling, aggregation, or redaction.
+
+Use a version policy with:
+
+- major increment for breaking structure;
+- explicit behavioral-change note for semantic change;
+- deterministic fixtures and golden outputs;
+- consumer replay for every behavioral change;
+- deprecation window and migration guide;
+- old-version fallback until consumer validation;
+- provenance for configuration and output.
+
+Do not promise universal semantic versioning for learned behavior. State what the version covers.
+
+## Isolate consumers
+
+A shared component must not make one consumer's data, configuration, quota, or failure another consumer's surprise.
+
+For an in-process library:
+
+- accept explicit configuration;
+- avoid hidden global state;
+- avoid remote telemetry by default;
+- make deterministic paths testable;
+- scope caches;
+- make errors consumer-local.
+
+For a shared service:
+
+- isolate storage, keys, queues, and quotas;
+- declare tenancy and processing purpose;
+- prevent cross-consumer retrieval;
+- set per-consumer limits and circuit behavior;
+- support regional and deletion obligations;
+- expose attributable versions;
+- rehearse partial and total failure.
+
+PF-12 remains local deterministic library evidence. It makes no service-level claim.
+
+<figure>
+  <img src="/assets/publications/applied-ai-engineering/f20-2-portability-seam-map.png" alt="Colorful three-dimensional seam map separating a shared result schema, evaluation runner, and redaction mechanism from consumer-local task contract, data permission, metrics, thresholds, controls, fallback, owners, and authority, with short labels for validate, isolate, version, and disconfirm." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption>F20.2 - Portability lives at a narrow tested seam; product meaning, evidence, thresholds, data, controls, and authority stay with each consumer.</figcaption>
+</figure>
+
+## Price maintenance and coordination honestly
+
+Reuse has two economic sides.
+
+Potential gains:
+
+- fewer implementations;
+- consistent defect fixes;
+- concentrated expertise;
+- standard evidence identity;
+- easier onboarding;
+- common operational tooling.
+
+Potential costs:
+
+- coordination and governance;
+- slower consumer change;
+- compatibility burden;
+- shared incidents;
+- migration work;
+- support and documentation;
+- overgeneralized interfaces;
+- centralized privacy/security exposure;
+- loss of local expertise.
+
+Compare shared maintenance against duplicated local maintenance across named consumers. Include expected failure cost and migration, not only lines of code. If the economic case depends on hypothetical future consumers, label it speculative.
+
+## Keep ownership executable
+
+A reusable asset without an owner becomes dependency archaeology.
+
+Name responsibility for:
+
+- roadmap and compatibility;
+- defects and security updates;
+- evidence fixtures;
+- releases and deprecation;
+- consumer support;
+- incident response;
+- documentation;
+- service objectives, if any;
+- privacy and access implementation;
+- sunset.
+
+Also name what the owner cannot decide. The shared evaluation-tooling owner cannot certify a consumer's launch. The privacy utility owner cannot select a lawful purpose. The platform team cannot absorb domain authority by writing the interface.
+
+## Build fallback before adoption
+
+Every consumer should be able to leave or survive failure.
+
+Fallback can be:
+
+- prior supported library version;
+- local adapter;
+- local runner;
+- local allowlist;
+- deterministic route;
+- feature stop.
+
+Test fallback during adoption. A diagram that contains a fallback arrow is not recovery evidence.
+
+Migration should be opt-in:
+
+1. map the consumer contract;
+2. run existing local fixtures;
+3. integrate behind a local adapter;
+4. compare shared and local outputs;
+5. review differences;
+6. retain the old path;
+7. authorize bounded use;
+8. retire only after replay and operational evidence.
+
+## Preserve negative evidence
+
+The reuse ledger must show where proposals fail.
+
+PF-12 keeps five disconfirmation conditions:
+
+- a second consumer rejects the base result states;
+- the shared runner forces a common threshold;
+- redaction cannot express local purpose;
+- an adapter masks a behavior regression;
+- shared ownership costs exceed duplicated local maintenance.
+
+Each condition has an observation and a possible response. If a condition occurs, the team can narrow, redesign, fork, return local, or stop.
+
+Do not erase a failed satellite from the case count. Negative evidence often defines the seam better than a successful demo.
+
+## Reject the canonical ranker
+
+The tempting proposal says: every product ranks candidates, therefore one canonical ranker should serve them all.
+
+Patchwork's evidence does not support it. Products may rank for relevance, safety, novelty, fairness, revenue, compatibility, or review priority. Their candidates, labels, feedback, constraints, and consequences differ. Their failure budgets and release cadence differ too.
+
+Language-model-derived signals can complement established retrieval or ranking signals in some systems; that does not imply replacement of product-specific relevance or a universal ranker. [CLM-112]
+
+To reconsider A09, require at least two independent consumers with:
+
+- compatible objective seam;
+- comparable candidate and feedback semantics;
+- shared constraints that do not erase local controls;
+- paired quality evidence;
+- explicit blast-radius acceptance;
+- maintenance evidence better than local alternatives;
+- consumer fallback;
+- owners and authority.
+
+Until then, local rankers remain the honest design.
+
+## Run a reuse review
+
+Use this agenda:
+
+1. state the local problem and evidence;
+2. inventory candidate assets;
+3. classify mechanism, evidence, form, data, policy, and decision;
+4. identify independent cases;
+5. write the narrow seam;
+6. list consumer obligations;
+7. test a satellite;
+8. expose negative evidence;
+9. assess ownership, isolation, versioning, migration, fallback, and economics;
+10. choose local, adapt, test again, share, or reject;
+11. set expiry and next gate.
+
+The review is not a pitch. It is an evidence disposition.
+
+## Anti-patterns
+
+### Platform by vocabulary
+
+Renaming utilities `platform` does not create consumers, service objectives, or governance.
+
+### DRY as product strategy
+
+Removing duplicate code can increase semantic coupling. Prefer duplication until the seam stabilizes.
+
+### Shared threshold
+
+A common number creates false consistency across different score meanings and consequences.
+
+### Template certification
+
+Completing the same checklist does not make two systems equally safe or ready.
+
+### Central data lake for convenience
+
+Combining evidence can violate permission, purpose, deletion, and isolation.
+
+### Universal adapter
+
+An interface envelope can hide behavior drift. Consumer replay remains mandatory.
+
+### Success-only portfolio
+
+Removing rejected abstractions trains the organization to overstate portability.
+
+## A compact decision record
+
+For every proposed shared asset, write:
+
+```text
+Asset:
+Kind:
+Local success:
+Independent cases:
+Stable seam:
+Consumer obligations:
+Negative evidence:
+Owner:
+Version and deprecation:
+Isolation:
+Fallback and migration:
+Economics:
+Authority:
+Disposition:
+Next gate and expiry:
+```
+
+If the record cannot name a consumer, stable seam, owner, fallback, and disconfirmation condition, keep the asset local.
+
+## What the companion proves
+
+## Inspect the result-schema seam
+
+The candidate result schema is reusable only if its base fields have stable meaning across consumers.
+
+A minimal envelope might contain:
+
+```text
+candidateId
+state
+evidenceRefs
+scoreFields
+limitations
+componentVersion
+producedAt
+traceRef
+```
+
+The field name `scoreFields` deliberately avoids one universal confidence number. Each consumer declares the score name, range, interpretation, calibration evidence, and version. `state` uses a mapped vocabulary, while the consumer defines entry criteria.
+
+Satellite-Catalog adds catalog-specific availability and source fields through an extension. It does not force those fields into the base schema. Patchwork retains revision compatibility as a local extension.
+
+Validate:
+
+- required and optional fields;
+- unknown-field handling;
+- extension namespace;
+- missing evidence;
+- multiple scores;
+- version identity;
+- deterministic serialization;
+- privacy-safe references;
+- forward/backward compatibility;
+- consumer-local validation.
+
+If two consumers use `state=accepted` with incompatible meaning, the seam is syntactic only. Either narrow the vocabulary, require a mapping, or keep separate schemas.
+
+## Inspect the evaluation-runner seam
+
+The runner should be neutral about consumer decisions. It may provide interfaces for:
+
+- loading cases;
+- selecting a declared system version;
+- executing deterministic or adapter-backed paths;
+- capturing raw outcome references;
+- applying consumer-provided evaluators;
+- aggregating declared metrics;
+- slicing declared segments;
+- comparing paired versions;
+- emitting provenance and limitations.
+
+It should not hard-code:
+
+- one task ontology;
+- one ground-truth source;
+- one threshold;
+- one severity scale;
+- one release rule;
+- one definition of critical;
+- one authority.
+
+PF-12 tests that Satellite-Catalog can own its thresholds while using the structural runner. If the shared runner requires the Patchwork threshold, the reuse proposal is disconfirmed.
+
+The runner should expose deterministic fixtures and ordering. Hidden sampling seeds, remote calls, or mutable defaults weaken both reuse and evidence traceability.
+
+## Inspect the redaction seam
+
+A reusable redaction utility can offer mechanics:
+
+- field allowlist;
+- structured removal;
+- hashing or tokenization where approved;
+- length and type bounds;
+- deterministic audit of kept/removed fields;
+- fail-closed behavior for unknown fields;
+- policy/configuration version;
+- local tests.
+
+It cannot choose:
+
+- processing purpose;
+- lawful basis;
+- retention duration;
+- access roles;
+- region;
+- incident disclosure;
+- reidentification acceptability;
+- whether a field is necessary for a domain review.
+
+Satellite-Assistant proves only that the utility can express a separate allowlist. If it required Patchwork's field purposes or retained content centrally, the seam would fail.
+
+Treat redaction as minimization support, not anonymization proof. Hashes can remain identifying or linkable. Local privacy/security review remains necessary.
+
+## Separate name standardization from state standardization
+
+A shared failure vocabulary helps cross-team communication:
+
+- unknown;
+- unsupported;
+- abstain;
+- deny;
+- fallback;
+- review;
+- stopped;
+- rolled back.
+
+But the same name can conceal different consequences. An `abstain` in a drafting assistant may mean “ask a clarifying question.” In a high-consequence classifier it may mean “route to qualified review.”
+
+Standardize the mapping record:
+
+```text
+Shared name:
+Local name:
+Entry criteria:
+User-visible behavior:
+Operational consequence:
+Recovery:
+Owner:
+Authority:
+```
+
+This enables portfolio summaries without pretending semantic identity.
+
+## Test consumer onboarding
+
+Run onboarding as an evidence exercise, not documentation theater.
+
+The consumer should be able to:
+
+1. state its task without copying Patchwork;
+2. identify local data and authority;
+3. map the base interface;
+4. reject irrelevant fields;
+5. add a local extension;
+6. run existing local fixtures before adoption;
+7. compare shared and previous paths;
+8. trigger errors and fallback;
+9. identify the shared owner;
+10. exit without data or state loss.
+
+Observe where the consumer asks for exceptions. A stream of domain-specific flags can mean the seam is wrong. Do not celebrate adoption count while each consumer forks behavior through undocumented configuration.
+
+Record time-to-first-valid-evidence, support burden, defects, local adapters, and rejected assumptions. These are maintenance evidence, not vanity metrics.
+
+## Define ownership across the lifecycle
+
+A shared asset changes state:
+
+`proposal -> experimental -> supported -> deprecated -> retired`
+
+Each transition needs criteria.
+
+### Proposal
+
+Named problem, candidate consumers, local evidence, and rejected alternatives.
+
+### Experimental
+
+Narrow seam, owner, version, fixtures, satellite validation, fallback, and explicit non-guarantees.
+
+### Supported
+
+Named consumers, compatibility policy, operational obligation, security/privacy process, migration support, and sustainable maintenance evidence.
+
+### Deprecated
+
+Reason, replacement or exit, consumer inventory, deadline, migration evidence, and retained fallback.
+
+### Retired
+
+No active consumers, credentials/routes removed, evidence preserved, and residual state reconciled.
+
+The PF-12 mechanisms remain synthetic/local. They are not a production supported service.
+
+## Write a consumer inventory
+
+For each actual consumer, track:
+
+- owner and contact;
+- task and consequence;
+- component and config version;
+- extension fields;
+- data isolation boundary;
+- local evidence suite;
+- fallback;
+- service dependency;
+- last replay;
+- open exceptions;
+- deprecation readiness;
+- authority.
+
+Without inventory, breaking changes cannot be bounded and retirement cannot be proved. Do not infer consumers from download counts or repository imports alone; distinguish experiments, tests, and production use.
+
+## Manage exceptions as seam evidence
+
+An exception is a signal.
+
+Classify it:
+
+- legitimate local extension;
+- missing general capability;
+- incompatible semantic assumption;
+- operational constraint;
+- temporary migration bridge;
+- privacy/security prohibition;
+- unsupported request.
+
+Time-bound temporary exceptions. If several consumers need the same extension, investigate a general seam. If each needs a different override, resist expanding the shared core.
+
+An exception count is not automatically bad. Hidden exceptions are bad. Visible exceptions help decide whether to share, fork, or remain local.
+
+## Use contract tests and evidence tests
+
+Contract tests verify structure and deterministic behavior:
+
+- schema acceptance/rejection;
+- version negotiation;
+- configuration parsing;
+- deterministic aggregation;
+- redaction allowlist;
+- error and fallback;
+- isolation.
+
+Evidence tests verify that consumers retained local meaning:
+
+- local cases still execute;
+- local metrics and thresholds are unchanged unless approved;
+- segment definitions remain identifiable;
+- negative cases remain present;
+- decision/authority fields are not defaulted;
+- output provenance links to the shared version;
+- fallback restores the local contract.
+
+A shared component can pass its own unit tests while a consumer silently loses a segment or threshold. Consumer replay closes that gap.
+
+## Set service objectives only when a service exists
+
+If mechanisms become a networked shared service, define objectives for the service's responsibility:
+
+- availability;
+- latency distribution;
+- throughput and quota;
+- durability where applicable;
+- version propagation;
+- isolation;
+- incident detection and response;
+- support window;
+- recovery;
+- deprecation.
+
+Do not promise consumer outcome quality as a platform SLO unless the platform truly controls and measures the relevant task, data, and policy.
+
+Also define dependency behavior. If the service fails, does the consumer use local fallback, abstain, queue, or stop? Test it.
+
+## Assess blast radius explicitly
+
+Shared mechanisms concentrate both fixes and failures.
+
+Map blast radius across:
+
+- consumers;
+- users and populations;
+- regions;
+- data boundaries;
+- release windows;
+- control paths;
+- observability;
+- fallback capacity;
+- ownership and support.
+
+For each shared change, ask:
+
+- Can one consumer validate before others?
+- Can versions coexist?
+- Can one tenant be isolated?
+- Can rollout stop per consumer?
+- Can configuration errors be detected locally?
+- Can fallback handle simultaneous failure?
+- Can the owner contact all affected authorities?
+
+The rejected canonical ranker would centralize product-quality regression across consumers. Without compatible objectives and isolated release, the blast radius is not earned.
+
+## Compare shared and duplicated economics with a scenario
+
+Suppose three teams each maintain a 300-line deterministic runner. A shared runner could remove duplicate defect fixes. But it adds:
+
+- interface design;
+- multi-consumer testing;
+- version compatibility;
+- documentation;
+- support;
+- release coordination;
+- migration;
+- incident response;
+- governance.
+
+Estimate over a time horizon:
+
+```text
+local cost = implementations + repeated fixes + local operations
+shared cost = core build + owner + support + compatibility + migration
+expected failure cost = probability x consequence x affected consumers
+option value = faster validated adoption, if evidenced
+```
+
+Use ranges and assumptions. Include the possibility that consumer count remains two. If shared ownership is unfunded, do not price it at zero.
+
+Economics can support `not yet` even when a seam is technically valid.
+
+## Design the disconfirmation review
+
+At a scheduled checkpoint, ask:
+
+- Did a consumer reject a base state?
+- Did local thresholds leak into the core?
+- Did purpose-specific redaction become impossible?
+- Did an adapter hide behavior regression?
+- Did support/maintenance exceed local alternatives?
+- Did a shared incident affect multiple consumers?
+- Did consumers fork the same code anyway?
+- Did adoption require authority centralization?
+
+For each `yes`, choose:
+
+- narrow the seam;
+- split interface and implementation;
+- make configuration explicit;
+- isolate versions or tenants;
+- return one consumer to local;
+- deprecate the shared asset;
+- reject further promotion.
+
+The proposal must be allowed to lose. Otherwise the review is advocacy.
+
+## Reuse during incident response
+
+Shared components change incident coordination. An incident can be:
+
+- shared-core defect;
+- consumer misuse;
+- incompatible local configuration;
+- data boundary failure;
+- dependency failure;
+- evidence/observability gap;
+- interaction across layers.
+
+The shared owner contains core impact and provides evidence. Each consumer owner contains local consequence and engages local authority. Avoid declaring all consumers recovered because the core service is green.
+
+Afterward, update:
+
+- core fixtures;
+- consumer regression suites;
+- compatibility policy;
+- runbooks;
+- owner/escalation paths;
+- fallback evidence;
+- reuse ledger and limitations.
+
+If an incident reveals that a supposedly local decision was embedded centrally, redesign the seam.
+
+## Prevent platform capture of authority
+
+Central tooling often gains de facto authority through defaults. A default threshold, retention period, model, retry policy, or release switch can become a product decision without review.
+
+For every default:
+
+- state what decision it encodes;
+- decide whether the shared owner has authority;
+- require consumer override where local;
+- fail closed if a required local choice is missing;
+- surface the effective configuration in evidence;
+- version changes;
+- notify affected owners;
+- require replay when behavior changes.
+
+PF-12 avoids universal defaults for thresholds, segments, data, and release.
+
+## Use a promotion gate
+
+Before moving from configurable component to shared service, require:
+
+```text
+Named independent consumers:
+Stable seam and exclusions:
+Consumer contract:
+Satellite and failure evidence:
+Owner and funding:
+Version/deprecation policy:
+Isolation and access:
+Service objectives:
+Fallback and migration:
+Blast-radius review:
+Economic comparison:
+Negative evidence:
+Formal authorities:
+Disposition and expiry:
+```
+
+A missing consumer or owner stops promotion. A missing authority narrows what the platform can decide. A failed economic comparison can keep a good library local.
+
+## Apply the gate to A09
+
+The canonical ranker proposal fails:
+
+- only Patchwork supplies real local ranking evidence in the fixture;
+- objective compatibility is absent;
+- candidate/data semantics are not shared;
+- thresholds and release cadence differ;
+- blast radius is large;
+- no shared owner exists;
+- economics are speculative;
+- fallback is only local rankers;
+- authority remains consumer-specific.
+
+The correct ledger state is `reject-abstraction`, not `backlog`. Rejection is reversible if evidence changes, but current architecture should not reserve a central dependency in anticipation.
+
+## Apply the gate to A01, A02, and A04
+
+The three selected mechanisms pass only a lower rung:
+
+- two constructed cases expose a stable narrow seam;
+- consumer obligations are explicit;
+- local fallback exists;
+- deterministic tests exist;
+- local data/configuration do not cross by default;
+- behavioral change requires consumer replay;
+- owners are named by role;
+- limitations reject service/adoption claims.
+
+They remain `reuse-configurably`, not `shared production platform`. The wording matters because it tells a consumer what evidence is still required.
+
+## Keep the ledger alive
+
+Update the ledger when:
+
+- a consumer starts or exits;
+- a seam changes;
+- an exception repeats;
+- a shared defect occurs;
+- economics change;
+- an owner changes;
+- a version deprecates;
+- a data/control/authority assumption changes;
+- disconfirming evidence arrives.
+
+Preserve prior dispositions. A promoted asset can return to experimental, fork, or retire. Maturity is not a one-way staircase.
+
+## A complete Patchwork reuse decision
+
+The v0.2 decision is:
+
+```text
+Reuse configurably: A01 result schema, A02 evaluation runner, A04 redaction utility.
+Copy/adapt or standardize names: A08 readiness questions, A10 failure vocabulary.
+Test again: A03 provider adapter envelope.
+Keep local: A05 compatibility policy, A06 thresholds, A07 data/index.
+Reject: A09 canonical ranker service.
+Claim scope: constructed local mechanisms with satellite validation.
+Production/platform claim: none.
+Next gate: real independent consumers, maintenance evidence, and disconfirmation review.
+```
+
+This outcome earns modest reuse while preserving local meaning and the ability to stop.
+
+## Validate the ledger with adversarial questions
+
+Ask a reviewer to challenge every promotion:
+
+- Could the same code hide different product meaning?
+- Which consumer supplied independent evidence?
+- What does the shared owner actually guarantee?
+- Which default would silently become policy?
+- Can one consumer fail without affecting another?
+- Can a consumer leave without losing evidence or behavior?
+- What happens when the owner, provider, or schema changes?
+- Which observed result would return the asset to local?
+
+Then challenge every rejection too. A rejected abstraction should record what future evidence could reopen it. This prevents caution from becoming doctrine. For A09, two independent consumers with a compatible objective seam, paired maintenance and quality evidence, isolated rollout, fallback, funded ownership, and formal authority could justify reconsideration.
+
+The ledger is valuable because it makes both promotion and rejection falsifiable.
+
+## Teach reuse through contrast
+
+Give learners three scenarios:
+
+1. identical schemas but different thresholds and consequences;
+2. different domain fields but one stable evidence-runner interface;
+3. the same redaction library under different purposes and retention rules.
+
+Ask them to mark mechanism, evidence, policy, data, owner, authority, fallback, and disconfirmation. A correct answer shares less than surface similarity suggests, but more than a blanket “everything is local.” The skill is finding the narrow seam and defending its exclusions.
+
+Patchwork's final reusable unit is intentionally modest. Modesty here is architectural precision: the shared part is large enough to remove repeated mechanical work and small enough that every consumer keeps responsibility for meaning and consequence.
+
+## Retire reuse that no longer earns itself
+
+A shared asset should not survive only because migration away feels awkward. Trigger retirement review when consumers disappear, exceptions dominate, ownership fails, security or privacy obligations cannot be met, local alternatives become cheaper, or the seam repeatedly hides behavior differences.
+
+Retirement needs a consumer inventory, dated notice, replacement or exit path, preserved evidence, tested local fallback, removal of routes and credentials, and a final ownership statement. Consumers decide their replacement behavior under local authority. The shared owner coordinates mechanism retirement but does not choose consumer product tradeoffs.
+
+After retirement, keep the negative evidence and economic record. Future teams should know whether the asset ended because its implementation was poor, its seam was false, its demand disappeared, or its obligations exceeded its value. Those are different lessons.
+
+The same standard applies to a component that stays local. Local ownership, tests, fallback, and limitations still matter. Rejecting shared infrastructure is not permission to neglect the implementation; it is a decision to keep coordination and consequence within the team that has the evidence and authority to maintain it.
+
+Run:
+
+```sh
+node --test content/publications/applied-ai-engineering/companion/tests/chapter-20.test.mjs
+```
+
+The tests prove the constructed ledger contains exactly ten assets, selects the expected reusable/configurable mechanisms, keeps local policy/data/thresholds local, rejects the canonical ranker, validates selected seams in a satellite, and preserves a disconfirmation plan.
+
+They do not prove real consumer demand, real platform economics, organizational ownership, service reliability, regulatory acceptability, or launch authority.
+
+## From earned reuse to leadership
+
+Reuse decisions expose a leadership problem. Engineers must compare systems with different consequences and evidence gaps without flattening them into one score. They must direct attention, delegate bounded work, preserve formal authority, and make negative evidence durable.
+
+Chapter 21 completes PF-12 with a three-system portfolio, an evidence standard, an escalation brief, communication altitudes, an operating cadence, a growth plan, and a verifier for the full synthetic learning dossier.

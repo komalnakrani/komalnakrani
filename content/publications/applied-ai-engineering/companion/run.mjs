@@ -17,6 +17,9 @@ import { diagnosticView, redactTrace } from "./lib/observability.mjs";
 import { approvalDisposition, quarantineSellerContent } from "./lib/controls.mjs";
 import { cohortRoute, readinessDisposition, stopGate } from "./lib/release.mjs";
 import { durableLearning, hypothesisReport } from "./lib/incidents.mjs";
+import { compareVersions, migrationDisposition } from "./lib/migration.mjs";
+import { crossCaseValidation } from "./lib/reuse.mjs";
+import { portfolioOrder, verifyFinalDossier } from "./lib/leadership.mjs";
 
 const url = new URL("./contracts/patchwork-behavior-contract.json", import.meta.url);
 const contract = JSON.parse(await readFile(url, "utf8"));
@@ -80,4 +83,15 @@ if (dataReport.structuralErrors.length || dataReport.cleanLeakage.length) {
   console.log(`PASS PF-10 v${controlPacket.version}: controls=${controlPacket.controls.length}, seller-text-used=${manipulation.sellerTextUsed}, engineer-disposition=${approval.value}`);
   console.log(`PASS PF-11 v${readinessPacket.version}: disposition=${readinessDisposition(readinessPacket,{authorityPresent:true})}, sample-route=${route.route}, stop=${stop.stop}`);
   console.log(`PASS PF-11 v${incidentPacket.version}: false-leads=${hypotheses.filter((row)=>row.status==="disconfirmed-false-lead").length}, contributing=${hypotheses.filter((row)=>row.claim==="contributing-condition").length}, durable-learning=${learning.complete}`);
+  const changePacket = JSON.parse(await readJsonFile(new URL("./change/pf-12-change-dossier.json", import.meta.url), "utf8"));
+  const reusePacket = JSON.parse(await readJsonFile(new URL("./change/pf-12-reuse-ledger.json", import.meta.url), "utf8"));
+  const leadershipPacket = JSON.parse(await readJsonFile(new URL("./change/pf-12-leadership.json", import.meta.url), "utf8"));
+  const comparison = compareVersions(changePacket);
+  const migration = migrationDisposition(changePacket);
+  const reuse = crossCaseValidation(reusePacket);
+  const portfolio = portfolioOrder(leadershipPacket);
+  const dossier = verifyFinalDossier(leadershipPacket,["PF-02","PF-07","PF-08","PF-09","PF-10","PF-11","PF-12"].map((artifactId)=>({artifactId,productionClaim:false,releaseClaim:false})));
+  console.log(`PASS PF-12 v${changePacket.version}: candidate-mean=${comparison.candidate.meanScore.toFixed(3)}, critical-regressions=${comparison.criticalRegressions.length}, disposition=${migration.value}`);
+  console.log(`PASS PF-12 v${reusePacket.version}: reusable=${reuse.eligible.join(",")}, local=${reuse.keptLocal.join(",")}, rejected=${reuse.rejected.join(",")}`);
+  console.log(`PASS PF-12 v${leadershipPacket.version}: first-attention=${portfolio[0].system}, final-dossier=${dossier.pass}, production-claim=false`);
 }

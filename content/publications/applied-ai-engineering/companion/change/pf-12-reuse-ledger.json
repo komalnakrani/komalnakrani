@@ -1,0 +1,24 @@
+{
+  "artifactId":"PF-12",
+  "version":"0.2.0",
+  "status":"synthetic-local",
+  "caseStatus":"fictional-synthetic",
+  "evidenceThreshold":{"minimumIndependentCases":2,"requiresStableSeam":true,"requiresOwner":true,"requiresFallback":true,"requiresDisconfirmation":true,"limitation":"fictional teaching threshold, not universal platform policy"},
+  "assets":[
+    {"id":"A01","name":"candidate result schema","kind":"mechanism","decision":"reuse-configurably","evidenceCases":["Patchwork","Satellite-Catalog"],"localAssumptions":["domain fields extend base envelope"],"owner":"shared interface owner","fallback":"consumer-local schema adapter"},
+    {"id":"A02","name":"evaluation runner","kind":"evidence-mechanism","decision":"reuse-configurably","evidenceCases":["Patchwork","Satellite-Catalog"],"localAssumptions":["cases, metrics, thresholds, segments, authority remain local"],"owner":"evaluation tooling owner","fallback":"local runner"},
+    {"id":"A03","name":"provider adapter envelope","kind":"mechanism","decision":"test-again","evidenceCases":["Patchwork"],"localAssumptions":["same schema does not establish behavior portability"],"owner":"integration owner","fallback":"local deterministic path"},
+    {"id":"A04","name":"trace redaction utility","kind":"mechanism","decision":"reuse-configurably","evidenceCases":["Patchwork","Satellite-Assistant"],"localAssumptions":["allowlist, purpose, retention, access remain local"],"owner":"privacy engineering owner","fallback":"local allowlist"},
+    {"id":"A05","name":"compatibility policy","kind":"product-decision","decision":"keep-local","evidenceCases":["Patchwork"],"localAssumptions":["revision, unit, evidence, and domain authority are Patchwork-specific"],"owner":"Patchwork domain owner","fallback":"abstain"},
+    {"id":"A06","name":"release thresholds","kind":"product-decision","decision":"keep-local","evidenceCases":["Patchwork"],"localAssumptions":["consequence and population differ"],"owner":"Patchwork release authority","fallback":"current authorized state"},
+    {"id":"A07","name":"Patchwork dataset/index","kind":"local-evidence","decision":"keep-local","evidenceCases":["Patchwork"],"localAssumptions":["permission, source, population, and freshness"],"owner":"Patchwork data owner","fallback":"deterministic search"},
+    {"id":"A08","name":"readiness questions","kind":"evidence-form","decision":"copy-and-adapt","evidenceCases":["Patchwork","Satellite-Assistant"],"localAssumptions":["answers and disposition remain local"],"owner":"practice owner","fallback":"consumer review template"},
+    {"id":"A09","name":"canonical ranker service","kind":"shared-service","decision":"reject-abstraction","evidenceCases":["Patchwork"],"localAssumptions":["one feature cannot establish compatible objectives or blast radius"],"owner":"none until evidence","fallback":"local ranker"},
+    {"id":"A10","name":"failure-state vocabulary","kind":"evidence-form","decision":"standardize-names-only","evidenceCases":["Patchwork","Satellite-Assistant"],"localAssumptions":["entry criteria, consequence, owner, and authority remain local"],"owner":"practice owner","fallback":"mapped local terms"}
+  ],
+  "proposal":{"sharedMechanisms":["candidate result schema","evaluation runner","trace redaction utility"],"consumerContract":"consumer supplies local task contract, data permission, cases, metrics, thresholds, segments, controls, owners, and authority","versionPolicy":"breaking structural change increments major; behavioral change always triggers consumer replay","serviceLevel":"local deterministic library examples only","isolation":"consumer data and configuration never cross by default","migration":"opt-in adapter, paired validation, fallback retained","economics":"adopt only when maintenance burden is lower across named consumers"},
+  "satelliteValidation":{"case":"Satellite-Catalog","resultSchema":"pass base envelope with local extension","evaluationRunner":"pass structural replay with satellite-owned thresholds","redaction":"pass local allowlist","compatibilityPolicy":"not portable","releaseThreshold":"not portable"},
+  "rejectedAbstraction":{"name":"canonical ranker service","reason":"one Patchwork success does not establish compatible objectives, data assumptions, controls, consumers, or common release cadence","disconfirmingEvidenceNeeded":"two independent consumers with compatible objective seam and paired maintenance/quality evidence"},
+  "disconfirmationPlan":["a second consumer rejects base result states","shared runner forces a common threshold","redaction utility cannot express local purpose","adapter masks behavior regression","shared ownership costs exceed duplicated local maintenance"],
+  "limitations":["Constructed satellite cases","No organizational platform mandate","No real adoption, SLO, or economic evidence"]
+}

@@ -1,0 +1,1097 @@
+---
+title: "Change Models Without Losing the Product"
+slug: "change-models-without-losing-the-product"
+summary: "Inventory, replay, compare, release, and roll back model or provider change against an unchanged product behavior contract."
+minutes: 90
+sourceIds: ["SRC-012", "SRC-024", "SRC-026", "SRC-028", "SRC-032", "SRC-036", "SRC-046", "SRC-047", "SRC-048", "SRC-049", "SRC-052", "SRC-055"]
+claimIds: ["CLM-101", "CLM-102", "CLM-103", "CLM-104", "CLM-105", "CLM-106"]
+objectiveIds: ["AAE-K03", "AAE-K06", "AAE-K07", "AAE-K10"]
+figureIds: ["FIG-037", "FIG-038"]
+---
+
+## The API still works and the product regresses
+
+Patchwork receives a fictional notice: its current provider version will retire in four weeks. The candidate accepts the same request schema and returns the same response envelope. Integration tests pass.
+
+Average relevance score improves.
+
+Two long-tail cases that correctly abstained under the current version now receive answers. One is ambiguous. One is incompatible. Candidate tail latency and synthetic cost also rise beyond the bounded envelope.
+
+Same API is not same product. An adapter can preserve field names while learned behavior, calibration, abstention, latency, cost, privacy processing, control interaction, and failure modes change.
+
+The migration cannot solve this by lowering the abstention requirement or deleting the incompatible case. The behavior contract is the comparison target, not a document rewritten to accommodate a deadline.
+
+This chapter creates `PF-12` v0.1, a fully synthetic change dossier. It contains the trigger, current and candidate identities, dependency inventory, six paired cases, a compatibility matrix with unchanged, improved, regressed, unknown, and untestable states, operational deltas, migration states, fallback, rollback, new limitations, and a `delay-and-reduce-scope` disposition.
+
+## Change starts before model selection
+
+A model or provider change can originate from:
+
+- forced deprecation;
+- price, quota, region, or latency change;
+- security or privacy requirement;
+- capability or quality opportunity;
+- incident or control failure;
+- contract or policy change;
+- data or index evolution;
+- provider silent behavior change;
+- evaluator or threshold revision;
+- supply-chain concern.
+
+Provider deprecation creates time pressure independent of product readiness. Current dates, model names, replacements, and migration instructions are volatile and must be checked in a dated adapter, not embedded as timeless architecture. [CLM-101]
+
+Open a change dossier when the trigger becomes material. Record source, observed date, deadline, confidence, owner, and decision consequence. A rumor and an official retirement notice produce different urgency, but neither proves candidate fitness.
+
+Patchwork's four-week notice is fictional. It teaches forced-change method without making a current vendor claim.
+
+## Inventory the behavior-bearing system
+
+Changing one provider can affect:
+
+- request and response interface;
+- tokenization or input transformation;
+- output distribution and refusal;
+- confidence or score meaning;
+- structured-output conformance;
+- tool proposals;
+- latency, streaming, and timeout;
+- price, quota, and region;
+- content processing and retention;
+- monitoring and trace attributes;
+- evaluator behavior;
+- fallback and circuit configuration;
+- caches and stored outputs;
+- user interface and support;
+- controls and threat surface.
+
+Inventory current and candidate:
+
+| Surface | Current identity | Candidate identity | Comparison evidence | Owner |
+|---|---|---|---|---|
+| adapter/API | version and schema | version and schema | contract tests | integration owner |
+| behavior | behavior contract | same contract | paired evaluation | behavior owner |
+| data/context | snapshot/index | compatible snapshot/index | provenance and replay | data owner |
+| operations | timeout/cost/capacity | candidate envelope | load and tail | operations owner |
+| controls | PF-10 version | same or revised | adversarial replay | control owners |
+| observability | trace schema | mapped schema | correlation test | observability owner |
+| release | current route | candidate cohort | PF-11 packet | release authority |
+
+If a surface is unknown, mark it unknown. Do not assume the adapter covers it.
+
+## Interface compatibility is necessary and insufficient
+
+Semantic versioning helps communicate intended interface changes. A registry can identify artifacts and lifecycle state. Neither specifies the probabilistic behavior a product depends on. [CLM-102]
+
+Interface tests ask:
+
+- Can the client connect and authenticate?
+- Are required fields accepted?
+- Does the response conform to schema?
+- Are error and timeout forms handled?
+- Are tool arguments structurally valid?
+
+Behavior tests ask:
+
+- Does the same task state produce the required response, clarification, abstention, review, or stop?
+- Are critical errors unchanged?
+- Do segments retain operating points?
+- Is evidence used faithfully?
+- Do prohibited claims remain blocked?
+- Does uncertainty become inflated certainty?
+
+Operational tests ask:
+
+- Do end-to-end tails, capacity, retry load, cost, and fallback remain inside envelope?
+- Are observability and rollback still available?
+
+A change is ready only for the scope supported across these surfaces.
+
+## Registry records organize identity, not fitness
+
+Model cards, registry entries, and factsheets can record intended use, versions, limitations, dependencies, and claims. They improve traceability and review but cannot prove Patchwork behavior. [CLM-103]
+
+For hosted components, record:
+
+- provider and model identifier;
+- access date and endpoint/configuration;
+- documented version or alias;
+- request options;
+- observed output and eval hashes;
+- unpinnable behavior;
+- deprecation and change channel;
+- local adapter and control versions;
+- data processing assumptions;
+- known limitations.
+
+If the provider uses a moving alias, replay continuously and narrow the guarantee. Do not say the system is versioned merely because the local adapter is.
+
+## Freeze the product contract before replay
+
+Copy the current behavior contract into the change packet by identifier and hash. Mark contract changes separately.
+
+Do not:
+
+- lower a threshold after seeing candidate results;
+- relabel an incompatible case ambiguous;
+- remove a segment that regressed;
+- treat fewer abstentions as quality without consequence review;
+- substitute provider benchmarks for product cases;
+- rewrite user-visible limitations to hide regression.
+
+A legitimate product-contract change can happen, but it needs its own evidence, reviewers, authority, and release decision. It cannot be smuggled into migration.
+
+Patchwork current and candidate both target `PF-02-0.1.0`. The disposition explicitly records `contractChange=none`.
+
+## Build the compatibility matrix
+
+Use five states:
+
+- **unchanged:** evidence shows equivalent outcome within the declared criterion;
+- **improved:** candidate improves the clause without violating guardrails;
+- **regressed:** candidate violates or worsens a criterion;
+- **unknown:** relevant but evidence is absent or inconclusive;
+- **untestable:** the current environment cannot exercise the claim.
+
+<figure>
+  <img src="/assets/publications/applied-ai-engineering/f19-1-compatibility-matrix.png" alt="Colorful three-dimensional compatibility matrix comparing current and candidate across ordinary relevance, permission, freshness, calibrated abstention, long-tail compatibility, tail latency, cost, user comprehension, and tool effects, with essential labels for unchanged, improved, regressed, unknown, and untestable." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption>F19.1 - A candidate can improve aggregate relevance while regressing the behavior and operational clauses that keep the product bounded.</figcaption>
+</figure>
+
+Patchwork's matrix says:
+
+- ordinary relevance: improved;
+- permission denial: unchanged;
+- freshness denial: unchanged;
+- calibrated abstention: regressed;
+- long-tail compatibility: regressed;
+- tail cost/latency: regressed;
+- real-user comprehension: unknown;
+- external tool effects: untestable because the companion permits none.
+
+Unknown is not pass. Untestable is not irrelevant. Both need treatment.
+
+## Replay paired cases and preserve distributions
+
+Run current and candidate on the same frozen cases with matched data, context, thresholds, controls, and evaluator. Record raw paired outcomes before summary.
+
+Patchwork has six constructed cases. Candidate mean score is higher, but `M03` and `M04` cross the response threshold. The current path abstains. The candidate answers an ambiguous and an incompatible case.
+
+Multi-metric, segment, calibration, and task-specific evidence can expose regressions hidden by aggregate gain. [CLM-105]
+
+Compare:
+
+- paired response state;
+- error taxonomy and severity;
+- coverage and abstention;
+- score reliability where meaningful;
+- critical segments and intersections;
+- evidence and explanation fidelity;
+- control decisions;
+- latency and cost distributions;
+- request failures and retry;
+- evaluator disagreement.
+
+Do not average a zero-tolerance critical error into higher ordinary relevance.
+
+## Recalibrate only with legitimate evidence
+
+Scores from different providers may not share meaning. A threshold copied from the current version can produce a new operating point.
+
+First measure the candidate under the frozen threshold to expose behavior change. Then, if calibration evidence supports it, evaluate candidate-specific thresholds against the same consequence and segment rules.
+
+Do not tune on release cases and claim unbiased evaluation. Separate development, calibration, and release evidence. Preserve the original failure.
+
+A candidate threshold that restores abstention but destroys useful coverage creates a tradeoff for product/domain authority. The migration engineer reports it; they do not silently choose.
+
+## Compare operational and control behavior
+
+Migration evidence includes:
+
+- p50/p95/p99 end-to-end and component latency;
+- concurrency, quota, and saturation;
+- cost distribution and retry amplification;
+- cold/warm path;
+- output length and validation load;
+- cache effects;
+- circuit and fallback behavior;
+- trace completeness;
+- privacy/security processing;
+- adversarial and excessive-agency controls;
+- rollback capacity.
+
+Patchwork candidate long-tail latency reaches 1,240 synthetic milliseconds versus 810 current, and cost reaches 20 units versus 13. These values are fictional teaching evidence, not provider performance.
+
+Controls must replay. A provider with stronger built-in filters can still change refusal, error shapes, logging, or tool behavior. Local application controls remain authoritative for their scope.
+
+## Use shadow and canary as change evidence
+
+Production changes need bounded comparison, attributable versions, control, signals, and rollback. Trace correlation helps connect behavior to the actual candidate. [CLM-104]
+
+Sequence:
+
+1. interface and local replay;
+2. adversarial/control replay;
+3. load/cost simulation;
+4. shadow with no visible output/effect;
+5. internal review;
+6. bounded eligible cohort;
+7. staged migration under authority;
+8. retirement only after recovery evidence.
+
+A forced deadline does not justify skipping critical gates. It can justify investing in a deterministic fallback or reduced scope.
+
+Model updates can create harmful behavior that existing evaluations miss. Preserve qualitative reports, taxonomy gaps, and new cases. [CLM-106]
+
+## Design migration as a state machine
+
+States are:
+
+`inventory -> replay -> review -> shadow -> bounded cohort -> migrated -> retired`
+
+Stop states are:
+
+`delayed`, `reduced scope`, `fallback`, `stopped`, and `rolled back`.
+
+<figure>
+  <img src="/assets/publications/applied-ai-engineering/f19-2-migration-state-machine.png" alt="Colorful three-dimensional migration state machine moving from inventory through replay, review, shadow, bounded cohort, migrated, and retired, with stop branches for delay, reduced scope, deterministic fallback, stop, and rollback, plus short labels for authority and evidence." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption>F19.2 - Model change is a controlled release with explicit evidence, stop states, fallback, rollback, and retirement proof.</figcaption>
+</figure>
+
+Each transition requires evidence and authority. A critical regression in replay returns delay/reduce, not shadow. A critical cohort signal rolls back. Retirement requires old-path dependency removal, retained rollback evidence, and updated runbooks.
+
+## Preserve a deterministic fallback
+
+Patchwork can keep the current provider until fictional retirement. After retirement, its fallback is deterministic search with reduced capability. It does not use the regressed candidate to preserve conversational appearance.
+
+The fallback needs:
+
+- supported behavior and limitations;
+- capacity under migrated load;
+- current data/index compatibility;
+- user-visible transition;
+- controls and observability;
+- owner and release authority;
+- expiry and improvement plan.
+
+Reduced value can be acceptable when the alternative violates critical behavior. Do not call fallback equivalent.
+
+## Bound dual-running
+
+Running both versions supports paired evidence and rollback. Permanent dual-run doubles or increases cost, processing, privacy exposure, operational complexity, and inconsistent outputs.
+
+Define:
+
+- purpose;
+- eligible traffic;
+- content-processing authority;
+- maximum calls/cost;
+- duration and stop;
+- output visibility;
+- result comparison;
+- deletion;
+- owner;
+- retirement condition.
+
+Patchwork permits bounded replay and shadow only. Dual-running is not a permanent architecture.
+
+## Roll back behavior and state
+
+Rollback disables candidate routing and returns to current or deterministic fallback. It also reconciles:
+
+- candidate outputs users saw;
+- caches and stored features;
+- in-flight traces;
+- evaluator or feedback labels;
+- config propagation;
+- tool effects, if any;
+- support and communication.
+
+The companion sets `reconcileRequired=true` if candidate output was visible even with no effects. A response cannot be unseen.
+
+If the old provider is already retired, rollback may mean deterministic reduced capability. Invest before the deadline.
+
+## Choose among five migration dispositions
+
+**Migrate:** candidate supports the declared scope with evidence and authority.
+
+**Delay:** time remains and critical gaps can be corrected.
+
+**Reduce scope:** migrate only segments and behaviors that pass, with control elsewhere.
+
+**Fallback:** preserve product safety/value through a simpler mechanism.
+
+**Stop:** no supported path remains for the behavior.
+
+Patchwork chooses delay and reduce scope. Average gain cannot override two critical regressions.
+
+## What the companion proves
+
+## Build the change dossier as an evidence chain
+
+A deadline turns loosely connected facts into a consequential decision. Keep them linked:
+
+```text
+trigger -> inventory -> frozen contract -> paired evidence
+        -> compatibility disposition -> operational/control evidence
+        -> migration state -> authority -> verification -> retirement
+```
+
+Every arrow needs identity. Record the trigger source and observation date; current and candidate identifiers; adapter, configuration, data, index, evaluator, threshold, control, and trace versions; case-set hash; result bundle; reviewer; decision; and expiry.
+
+The chain prevents two common substitutions. First, a provider announcement cannot stand in for migration evidence. Second, a successful deployment event cannot stand in for verified product behavior.
+
+Use a dossier header such as:
+
+```text
+Change ID:
+Trigger and deadline:
+Current artifact:
+Candidate artifact:
+Product contract ID/hash:
+Data/index snapshot:
+Case/evaluator/threshold IDs:
+Control and observability IDs:
+Migration owner:
+Product/domain/release authorities:
+Current state:
+Disposition:
+Expiry and next gate:
+```
+
+If an identifier cannot be pinned, say how it can move and how frequently replay detects movement.
+
+## Separate four kinds of compatibility
+
+Teams often ask whether the new model is compatible as if compatibility were one property. Split it.
+
+### Structural compatibility
+
+Requests and responses conform to the adapter contract. Required fields exist. Types and error forms are handled. Structured outputs parse. This is usually deterministic and necessary.
+
+### Behavioral compatibility
+
+For the product's declared tasks and segments, the new component preserves acceptable answer, abstention, clarification, denial, review, and failure states. This is probabilistic and evidence-bounded.
+
+### Operational compatibility
+
+Latency, cost, throughput, quota, retry, capacity, observability, and recovery remain within product envelopes under relevant load.
+
+### Governance compatibility
+
+Data processing, retention, access, region, control ownership, provider terms, documentation, review, and authority remain acceptable for the intended scope.
+
+A candidate can pass one and fail another. Patchwork passes structural compatibility, improves part of behavioral performance, fails critical behavior and operational criteria, and leaves real governance conditions outside the synthetic case.
+
+Do not compress these results into `compatible=true`.
+
+## Inventory indirect dependencies
+
+Direct calls are easy to find. Indirect behavior-bearing dependencies are not.
+
+Search for:
+
+- prompt and template repositories;
+- parser assumptions;
+- score-to-threshold maps;
+- caches keyed by model output;
+- feature stores populated by candidate output;
+- offline labels produced with model assistance;
+- dashboards and alerts tied to old fields;
+- support scripts and runbooks;
+- moderation and redaction hooks;
+- fallback routes;
+- batch jobs and backfills;
+- experiments and cohorts;
+- user-visible explanations;
+- contract tests that assert only shape;
+- stored decisions that may outlive the model.
+
+For each dependency, ask whether it consumes syntax, semantics, timing, cost, or side effects. A parser may survive while a threshold map breaks. A cache may return old-provider behavior after routing changes. A stored feature can keep the candidate active even after rollback.
+
+Tag dependencies as `must migrate`, `must replay`, `must invalidate`, `must reconcile`, `can remain`, or `unknown`. Unknown dependencies block retirement proof.
+
+## Define the comparison population
+
+The frozen case set should represent the product contract, not whatever data is easiest to replay.
+
+Include:
+
+- frequent ordinary tasks;
+- important long-tail tasks;
+- critical segments and intersections;
+- explicit ambiguity;
+- incompatibility and out-of-scope requests;
+- stale or unauthorized evidence;
+- malformed and adversarial content;
+- fallback and dependency failure;
+- known incidents and near misses;
+- user correction and appeal states;
+- operational tails.
+
+Label case provenance and inclusion purpose. Separate development, calibration, regression, adversarial, release, and monitoring evidence. Avoid evaluating on examples used to select prompts or thresholds.
+
+Patchwork's six-case fixture is intentionally small and constructed. It is sufficient to prove the deterministic migration logic, not enough to claim representative quality. The dossier therefore reports exact limitations instead of inflating the case count.
+
+## Write outcome criteria before running the candidate
+
+Predeclare criteria so results cannot quietly redefine success.
+
+For each contract clause:
+
+```text
+Clause:
+Population/segment:
+Current operating point:
+Candidate criterion:
+Critical errors:
+Allowed statistical or practical tolerance:
+Required evidence:
+Decision if improved:
+Decision if regressed:
+Treatment of unknown/untestable:
+Reviewer and authority:
+```
+
+Some criteria are zero-tolerance in the evaluation fixture, such as an unauthorized effect. Others need intervals and a practical margin. Tail latency may have an absolute budget. Cost may be constrained by both per-request tail and projected total. User comprehension may require qualitative study rather than log inference.
+
+Predeclared criteria do not remove judgment. They expose where judgment enters.
+
+## Use paired evidence correctly
+
+Paired replay reduces noise by comparing versions on the same cases and system state. It does not make a small or biased set representative.
+
+Retain:
+
+- case identity;
+- input and allowed context identity;
+- current output state;
+- candidate output state;
+- evaluator state;
+- disagreement;
+- latency and cost;
+- control decisions;
+- raw evidence reference;
+- reviewer disposition.
+
+Compare transitions, not only scores:
+
+| Current | Candidate | Interpretation |
+|---|---|---|
+| correct answer | correct answer | potentially unchanged |
+| abstain | answer | coverage gain or unsafe certainty |
+| answer | abstain | safety improvement or lost value |
+| deny | answer | possible permission regression |
+| fallback | error | recovery regression |
+| review | auto-effect | authority regression |
+
+The meaning depends on the contract and consequence. Patchwork's abstain-to-answer transitions are regressions because the cases are ambiguous and incompatible under frozen evidence.
+
+## Examine aggregates without being ruled by them
+
+An overall average answers a narrow question about the weighted evaluation sample. It may conceal:
+
+- a small critical segment;
+- asymmetric severity;
+- calibration shift;
+- coverage change;
+- increased variance;
+- tail latency;
+- retry amplification;
+- control rejection;
+- evaluator disagreement;
+- unknown population effects.
+
+Report the aggregate, then decompose by behavior state, severity, segment, source, and operating condition. Show denominators. State whether the sample was fixed or sampled.
+
+Patchwork reports the higher candidate mean because suppressing favorable evidence would also be misleading. It then shows the two critical transitions and operational tails that determine disposition.
+
+## Compare calibration, not just ranking
+
+A model can rank candidates better while assigning scores that are less useful for action. Calibration asks whether a reported confidence or score maps consistently to relevant outcomes under the declared population.
+
+For a migration:
+
+1. replay the frozen threshold;
+2. examine score distributions by outcome and segment;
+3. measure operating-point changes;
+4. isolate a calibration set;
+5. propose candidate-specific mapping if justified;
+6. retest release cases without retuning;
+7. review coverage/consequence tradeoffs;
+8. version the mapping;
+9. monitor drift.
+
+Do not use a familiar numeric range as evidence that score meaning is preserved. A `0.7` from one component is not inherently equivalent to a `0.7` from another.
+
+Calibration changes can also affect user experience. More abstention may increase review load. Less abstention may increase unsupported certainty. The product decision must consider both.
+
+## Test evaluators during migration
+
+The evaluator may be coupled to the current model's style, vocabulary, length, or failure patterns. A candidate can look worse because the evaluator rejects a benign format, or better because it optimizes the evaluator's shortcut.
+
+Audit:
+
+- deterministic checks against both versions;
+- blinded human review where appropriate;
+- evaluator-model independence;
+- instruction and ordering sensitivity;
+- segment agreement;
+- ambiguous-case handling;
+- missing evidence;
+- severity assignments;
+- changed output length or structure.
+
+Record evaluator disagreement as evidence. Do not resolve it by choosing the result that helps the migration.
+
+If an evaluator changes, fork the analysis: compare versions under the old evaluator, validate the new evaluator, and avoid attributing the combined difference solely to the model.
+
+## Exercise controls as behavior
+
+Controls participate in product behavior. Migration tests should include:
+
+- permission denial;
+- freshness and source checks;
+- input quarantine;
+- output validation;
+- evidence-grounding rules;
+- tool permission and confirmation;
+- rate, budget, and circuit controls;
+- redaction and trace minimization;
+- human review routing;
+- stop and rollback.
+
+Test normal acceptance, correct rejection, false rejection, bypass attempts, dependency failure, and recovery. Preserve the control decision and version in traces.
+
+A candidate can increase output length until validators time out. It can change refusal format until the application interprets denial as success. It can emit novel tool arguments that pass schema but violate policy. These are migration failures even when the model-level response seems reasonable.
+
+## Model operational effects end to end
+
+Provider latency is only one component. End-to-end time can include retrieval, prompt assembly, queueing, inference, validation, retries, tool calls, postprocessing, storage, and interface delivery.
+
+Measure:
+
+- distributions, not just means;
+- warm and cold conditions;
+- ordinary and long outputs;
+- concurrency and quota edges;
+- retry storms;
+- fallback capacity;
+- trace overhead;
+- validation cost;
+- regional routing;
+- failure recovery.
+
+Cost should include request, token or compute, retry, validation, storage, observability, review, incident, dual-run, and migration labor where material. A cheaper unit price can produce higher total cost through longer output or more retries.
+
+The synthetic Patchwork values are deliberately labeled as teaching units. They show how a worse tail can override an improved average, not what any vendor will cost.
+
+## Decide what shadow evidence can answer
+
+Shadow mode sends eligible production-like inputs to the candidate while withholding candidate output and effects from the user. It can answer:
+
+- interface stability;
+- output conformance;
+- latency/cost distribution;
+- trace completeness;
+- paired behavior under real input mix;
+- control rejection patterns;
+- capacity and quota behavior.
+
+It cannot fully answer:
+
+- user comprehension;
+- behavioral adaptation;
+- downstream consequences;
+- action reconciliation;
+- support burden;
+- value under visible use.
+
+Shadow also processes data. Confirm purpose, access, retention, and provider route before duplicating calls. Limit cohort, time, budget, and stored evidence. `No visible output` does not mean `no privacy or security consequence`.
+
+Patchwork never reaches shadow because critical replay regressions block the transition.
+
+## Design bounded cohorts for attribution
+
+If replay, control, operations, and authority gates pass, a cohort needs:
+
+- eligibility rule;
+- exclusions;
+- stable assignment;
+- current/candidate/control versions;
+- sample and duration rationale;
+- behavior, control, operations, and user signals;
+- stop thresholds;
+- decision cadence;
+- fallback and rollback;
+- owner and authority;
+- expiry.
+
+Keep effects bounded. A model migration is not an excuse to bundle interface changes, new data, new thresholds, and new controls into one release. Too many simultaneous changes destroy attribution and rollback clarity.
+
+When bundling is unavoidable, say what cannot be separated and reduce claim scope.
+
+## Rehearse rollback before exposure
+
+Rollback rehearsal should prove more than a configuration toggle.
+
+Test:
+
+1. stop candidate routing;
+2. drain or cancel in-flight work;
+3. restore current or deterministic fallback;
+4. invalidate candidate caches/features;
+5. reconcile visible outputs or effects;
+6. restore dashboards and alerts;
+7. preserve evidence;
+8. notify responsible owners;
+9. verify contract behavior;
+10. reopen only under authority.
+
+Measure rollback time under load. Identify irreversible states. If effects cannot be reversed, require confirmation and a reconciliation path before enabling them.
+
+The old provider may not remain available after retirement. Rehearse the deterministic fallback as a true rollback target, including capacity and user-visible limitations.
+
+## Manage the four-week clock
+
+Use a dated plan without turning dates into evidence:
+
+### Week one: inventory and replay
+
+Freeze contract, map dependencies, obtain candidate access, run paired cases, test controls, and identify gaps.
+
+### Week two: correct and verify
+
+Address critical regressions, validate calibration, exercise operational envelope and fallback, and obtain specialist review.
+
+### Week three: bounded evidence
+
+Only if gates pass, run shadow and an authorized cohort. Rehearse rollback and update support/runbooks.
+
+### Week four: disposition
+
+Migrate supported scope, activate deterministic fallback, delay through an authorized extension, or stop unsupported behavior. Retire only after dependency and recovery proof.
+
+At each checkpoint, publish what remains possible. If the critical gap is not closing, invest earlier in fallback rather than betting the final day on a full migration.
+
+Patchwork's fictional disposition after replay is delay and reduce scope. The plan does not pretend the clock stopped; it reallocates work toward correction and fallback.
+
+## Handle an unavoidable retirement
+
+Sometimes the current provider disappears before a fully equivalent candidate exists. The available product decisions may be:
+
+- narrower eligible population;
+- lower automation;
+- higher review;
+- deterministic results;
+- delayed responses;
+- explicit unknown state;
+- feature pause;
+- permanent stop.
+
+Describe lost value and protected consequence. Do not label a degraded fallback equivalent merely to simplify communication.
+
+If leadership chooses a higher-residual path, record the recommendation, contrary decision, accountable authority, duration, controls, monitoring, fallback, and expiry. Engineering implements the authorized state and continues to surface evidence; it does not retroactively certify the candidate.
+
+## Prove retirement
+
+Retirement requires evidence that the old path is no longer behavior-bearing.
+
+Check:
+
+- no production or batch routing;
+- no fallback dependency;
+- no aliases resolving to the old version;
+- no current caches or features derived from it without declaration;
+- no old credentials or quotas;
+- no dashboards assuming old fields;
+- no open cohorts;
+- no runbooks pointing to it;
+- stored outputs reconciled or retained under policy;
+- audit and evidence records preserved;
+- support communication updated;
+- recovery target validated.
+
+Retirement is a system transition, not deleting an SDK constant.
+
+## Maintain a change evidence journal
+
+As migration proceeds, append dated observations:
+
+```text
+Observed at:
+State/version:
+Evidence delta:
+Supports:
+Contradicts:
+Unknown:
+Decision consequence:
+Owner:
+Next action/gate:
+```
+
+Do not overwrite earlier results when the candidate improves. The failed state explains why controls or thresholds changed and prevents recurrence.
+
+The journal also distinguishes provider movement from local movement. If an alias changes while the adapter does not, the behavior version still changed for evidence purposes.
+
+## Review the migration with the right authorities
+
+A migration review needs several distinct judgments:
+
+- integration owner: structural compatibility;
+- behavior/evaluation owner: paired evidence validity;
+- domain reviewer: case and consequence meaning;
+- operations owner: budgets, capacity, observability, recovery;
+- control owners: permission, safety, privacy, security, tool boundary;
+- product authority: user scope and value tradeoff;
+- release authority: exposure state;
+- migration owner: execution and evidence coordination.
+
+One person may hold multiple roles, but the record should name which role is acting. A technical lead cannot acquire domain or formal risk authority by convening the meeting.
+
+## Migration anti-patterns
+
+### SDK upgrade as migration
+
+The client compiles, so the change is declared complete. Behavior, operations, controls, and stored state remain untested.
+
+### Benchmark substitution
+
+Provider results replace product cases. General capability does not establish local fitness.
+
+### Contract erosion
+
+Thresholds or critical cases are softened after the candidate fails. Run a separate product-decision process if the contract truly changes.
+
+### Average victory
+
+Aggregate relevance hides long-tail harm, coverage shift, and tail cost.
+
+### Permanent shadow
+
+Dual processing continues without purpose, expiry, cost, or deletion controls.
+
+### Rollback fantasy
+
+A routing flag exists, but caches, features, visible outputs, and effects are not reconciled.
+
+### Deadline authority
+
+An external retirement date is treated as approval to accept product risk. It is a constraint, not authority.
+
+### Silent unknowns
+
+Untestable tool effects or user comprehension are omitted from the matrix. Keep the state visible.
+
+## Use a migration readiness review
+
+Before any state transition, ask:
+
+### Contract and evidence
+
+- Is the behavior contract unchanged or separately approved?
+- Are current and candidate versions attributable?
+- Are cases frozen, representative for claim scope, and separated from tuning?
+- Are critical segments, failures, and negative evidence visible?
+
+### Controls and operations
+
+- Do controls pass against the candidate?
+- Are tails, capacity, quota, cost, and retry bounded?
+- Are traces complete and privacy-conscious?
+- Is fallback capacity verified?
+
+### Release and recovery
+
+- Is cohort eligibility bounded?
+- Are stop signals and owners named?
+- Has rollback been rehearsed?
+- Are visible outputs and effects reconcilable?
+
+### Authority and change
+
+- Who recommends, decides, implements, and verifies?
+- What remains unknown or untestable?
+- What invalidates the decision?
+- What is the expiry and next gate?
+
+If a critical answer is missing, do not advance the state.
+
+## Interpret the Patchwork disposition
+
+`delay-and-reduce-scope` is not indecision. It carries executable consequences:
+
+- no candidate-visible route;
+- frozen contract remains authoritative;
+- candidate correction focuses on M03/M04 abstention and tail envelope;
+- deterministic fallback is capacity-tested;
+- compatible ordinary cases may support offline analysis only;
+- real user comprehension remains unknown;
+- external tool effect remains untestable and disabled;
+- the next decision requires paired correction evidence or fallback readiness;
+- retirement cannot be claimed.
+
+The disposition preserves time for learning without exposing the unsupported behavior.
+
+## Turn migration evidence into architectural evidence
+
+Change tests reveal which seams are stable:
+
+- the result envelope survived provider substitution;
+- the evaluation runner compared both paths;
+- trace redaction remained useful;
+- the compatibility policy, thresholds, data, and authority stayed local;
+- the adapter did not prove behavioral portability.
+
+Those observations feed the reuse ledger in Chapter 20. They do not automatically create a shared service. Reuse needs independent cases, ownership, isolation, fallback, economics, and a disconfirmation plan.
+
+## Work through the six paired cases
+
+The small fixture is useful because every transition can be inspected.
+
+### M01: ordinary supported request
+
+Both versions return a supported compatible candidate. The candidate ranks the best option more strongly. This supports an `improved` relevance entry for the bounded case. It does not prove every ordinary request improves.
+
+### M02: permission-denied evidence
+
+Both versions preserve denial because the application removes unauthorized evidence before the learned component can use it. This is an `unchanged` system result. Credit belongs to the end-to-end design, not only the model.
+
+### M03: ambiguous request
+
+The current version abstains. The candidate returns a specific recommendation under the frozen threshold. The evaluator and domain fixture classify the evidence as insufficient. This is a critical calibrated-abstention regression.
+
+The correct next action is not to celebrate higher coverage. Inspect the candidate distribution, attempt legitimate calibration on separate data, and preserve abstention until evidence closes.
+
+### M04: incompatible revision
+
+The current version abstains. The candidate recommends a visually similar but incompatible part. This is a critical compatibility regression. It remains critical even if the candidate's textual explanation is fluent.
+
+### M05: freshness denial
+
+Both paths deny because the source snapshot is outside the declared freshness condition. The unchanged result tests a product control that should not depend on model persuasiveness.
+
+### M06: ordinary tail case
+
+The candidate answer is useful, but latency and synthetic cost enter the prohibited tail envelope. This contributes favorable behavior evidence and unfavorable operational evidence at the same time.
+
+The case-level view prevents a single label from erasing mixed evidence.
+
+## Investigate M03 without weakening the contract
+
+Use a bounded calibration investigation:
+
+1. preserve the frozen result;
+2. inspect available evidence and label validity;
+3. compare current and candidate score distributions;
+4. test whether the candidate recognizes missing revision information;
+5. add development cases with nearby ambiguity;
+6. tune only on the development/calibration split;
+7. replay untouched release cases;
+8. measure abstention, coverage, and review load by segment;
+9. request domain review;
+10. version any new mapping.
+
+Possible outcomes include:
+
+- a candidate threshold restores safe abstention with acceptable coverage;
+- a prompt or adapter exposes missing evidence more reliably;
+- an explicit deterministic completeness check should precede ranking;
+- the candidate remains unsuitable for ambiguous cases;
+- the product narrows candidate eligibility;
+- the feature routes ambiguous cases to deterministic fallback.
+
+Only the last evidence-backed state should enter the migration decision. The original failure remains in the dossier.
+
+## Investigate M04 at the system boundary
+
+An incompatible recommendation can originate in several layers:
+
+- wrong or incomplete seller data;
+- missing revision field;
+- retrieval included incompatible candidates;
+- ranker overvalued surface similarity;
+- compatibility validator failed;
+- threshold allowed unsupported certainty;
+- evaluator misunderstood the domain rule;
+- UI hid the compatibility limitation.
+
+Test each layer rather than tuning the model reflexively. A deterministic compatibility validator may offer a stronger boundary than more prompting. If no reliable evidence exists, abstention is the product behavior.
+
+Record disconfirmation. If the candidate fails only when retrieval includes revision-unknown records, the migration may be safe for an explicitly restricted segment with those records excluded. That is reduced scope, not full compatibility.
+
+## Create an operational capacity scenario
+
+Suppose the current path supports the bounded eligible load with enough fallback capacity. The candidate produces longer outputs and more retries. Estimate:
+
+- eligible requests per interval;
+- candidate latency distribution;
+- concurrency required at p95/p99;
+- quota and rate limits;
+- validation CPU/time;
+- retry probability and amplification;
+- trace and storage growth;
+- review volume from changed abstention;
+- fallback load during partial failure;
+- cost per successful bounded task.
+
+Stress the fallback at candidate-failure load. A fallback sized only for ordinary background traffic is not a migration control.
+
+Do not infer capacity from a serial replay. Run concurrency with representative context and output lengths. Keep synthetic projections labeled until production-like evidence exists.
+
+## Define stop signals by layer
+
+For a future authorized cohort, candidate stop signals could include:
+
+### Behavior
+
+- any confirmed critical incompatible recommendation;
+- abstention below the approved segment floor;
+- permission or freshness denial failure;
+- unexplained evaluator disagreement beyond review capacity.
+
+### Operations
+
+- tail latency beyond the end-to-end budget;
+- retry amplification beyond capacity;
+- quota exhaustion that compromises fallback;
+- cost tail beyond the bounded envelope.
+
+### Controls
+
+- validator bypass;
+- missing permission or redaction decision;
+- unexpected tool proposal;
+- trace fields outside the allowlist.
+
+### Recovery
+
+- routing cannot be restored;
+- caches or features cannot be invalidated;
+- visible output cannot be identified for reconciliation;
+- fallback capacity fails.
+
+Each signal needs measurement, owner, authority, and automated/manual action. A dashboard color alone is not a stop plan.
+
+## Communicate migration honestly to users and operators
+
+User-facing communication depends on the visible change. It may need to explain:
+
+- narrower supported scope;
+- temporary deterministic results;
+- increased abstention or review;
+- changed response timing;
+- known limitation;
+- how to report a wrong result;
+- whether a previous result may be affected.
+
+Do not expose provider internals that add no user value, but do not conceal a material capability reduction.
+
+Operators need:
+
+- active version and route;
+- stop and fallback controls;
+- expected signals;
+- incident escalation;
+- capacity conditions;
+- reconciliation steps;
+- retirement plan.
+
+Support feedback should enter evaluation with provenance and privacy controls, not disappear into an unstructured chat channel.
+
+## Deal with provider documentation changes
+
+Provider documentation can change during the four-week window. Snapshot or reference the dated page, record access date, and distinguish:
+
+- documented interface change;
+- documented behavior or limitation;
+- observed local behavior;
+- inferred effect;
+- unresolved discrepancy.
+
+Documentation informs inventory and test design. Local evidence decides Patchwork fitness. If documentation conflicts with observation, preserve both and escalate through the provider channel while keeping the product bounded.
+
+Do not quote a general provider assurance as proof of local privacy, security, or behavior compliance. Map it to a concrete obligation and verify what can be verified.
+
+## Decide when evidence is stale
+
+Migration evidence expires when relevant conditions change:
+
+- provider/model identifier or moving alias;
+- adapter or configuration;
+- prompt/template;
+- data/index snapshot;
+- evaluator or threshold;
+- product contract;
+- control implementation;
+- user population;
+- runtime/region/quota;
+- fallback;
+- material documentation or processing condition.
+
+Assign expiry by volatility and consequence. A moving hosted alias may need continuous sentinels. A pinned deterministic validator can use event-triggered replay plus scheduled regression.
+
+Stale evidence remains history. It no longer supports the current decision without replay.
+
+## Practice a tabletop retirement failure
+
+Imagine retirement occurs overnight while the candidate remains blocked.
+
+At the tabletop:
+
+1. the current endpoint returns a permanent retirement error;
+2. circuit logic stops retry amplification;
+3. deterministic fallback takes eligible requests;
+4. interface shows reduced capability;
+5. unsupported segments abstain;
+6. operators verify capacity and trace correlation;
+7. support receives the limitation message;
+8. the migration owner preserves evidence;
+9. authorities decide whether any reduced segment can reopen;
+10. the team continues candidate correction without emergency exposure.
+
+Inject a second failure: the fallback index is stale. The correct behavior may be further reduction or full stop. The exercise should reward honest failure states, not uninterrupted appearance.
+
+## Record a decision packet
+
+Patchwork's v0.1 packet can be summarized as:
+
+```text
+Decision: migrate candidate before forced fictional retirement?
+Recommendation: no full migration; delay and reduce scope.
+Supports candidate: higher mean relevance; structural conformance.
+Contradicts: M03/M04 critical behavior; tail latency/cost.
+Unknown: real-user comprehension.
+Untestable: external tool effects, because disabled.
+Contract change: none.
+Fallback: deterministic search with declared reduced capability.
+Authority: product/domain/release roles, not the migration engineer alone.
+Next gate: corrected paired replay or verified fallback readiness.
+```
+
+This is a decision-ready artifact because it contains favorable, unfavorable, unknown, and untestable evidence; a recommendation; an alternative; and explicit authority.
+
+## Preserve a narrow claim after success
+
+Even if a corrected candidate later passes, the supported claim should name the tested task, population, contract, data snapshot, controls, configuration, operating envelope, release state, and observation period. It should not become “the provider is compatible.” Future model, alias, prompt, data, evaluator, threshold, control, or population change reopens evidence.
+
+After migration, continue paired sentinels where processing authority permits, monitor behavior states and tails, collect correction signals with provenance, and retain the deterministic fallback until retirement criteria pass. Watch for support reports that do not fit the existing taxonomy. A stable average does not prove the long tail remains stable.
+
+The migration dossier closes only the declared change. It stays available as baseline evidence for incidents, audits, future replacements, and reuse review. That durability is part of the product: when the next forced change arrives, the team can compare behavior without reconstructing why earlier thresholds, controls, and fallbacks exist.
+
+Archive the retired artifact's configuration and evidence references under the applicable retention and access rules, not its unrestricted raw inputs. Keep enough identity to reproduce the decision where possible. Record anything that cannot be reproduced, including hosted behavior that was never pinnable. A future reviewer should be able to distinguish verified history from an inference. This final discipline keeps migration knowledge useful without turning the archive into an unbounded copy of user or provider data.
+
+Run:
+
+```sh
+node --test content/publications/applied-ai-engineering/companion/tests/chapter-19.test.mjs
+```
+
+The tests prove the synthetic dossier preserves the contract, includes all five compatibility states, reproduces average improvement plus two critical regressions, delays migration, advances through explicit states, stops or rolls back, and restores contract identity.
+
+They do not prove provider equivalence, real retirement timing, production latency/cost, future behavior, user comprehension, or migration authority.
+
+## From change evidence to earned reuse
+
+Migration exposes stable seams and local assumptions. Patchwork's result schema, evaluation runner, and redaction utility may work across more than one case. Compatibility policy, thresholds, data, and authority remain local.
+
+The existence of an adapter is not portability. The success of one feature is not a platform. Chapter 20 asks which mechanisms have repeated evidence, named consumers, ownership, fallback, economics, and a disconfirmation plan strong enough to earn reuse.
