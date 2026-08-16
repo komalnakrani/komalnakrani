@@ -5,10 +5,10 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 08 manuscript production under parent `#45`; Chapters 1-3 active under `#47`
+- Current global phase: Phase 08 manuscript production under parent `#45`; Chapters 4-6 active under `#50`
 - Last updated: 2026-08-16
-- Last completed issue: `#43` — Phase 07 chapter blueprints
-- Active issue: `#47` — Phase 08 Chapters 1-3
+- Last completed issue: `#47` — Phase 08 Chapters 1-3
+- Active issue: `#50` — Phase 08 Chapters 4-6
 - Role root issue: `#32` — open
 
 ## Locked accepted decisions
@@ -58,7 +58,7 @@ and `#35` are closed with `status:done`.
 - Phase 07 verification: `books/agentic-ai-engineering/blueprints/verification-report.md`
 - Phase 08 handoff: `books/agentic-ai-engineering/blueprints/phase-08-handoff.md`
 - Phase 08 prepared issue body: `issues/phase-08-manuscript.md`
-- manuscripts: Chapters 1-3 complete locally under `#47`; 16,234 words total
+- manuscripts: Chapters 1-3 accepted at `b48f375`; 16,234 words total
 - publication records and deterministic companion: created for Chapters 1-3
 - figure anchors: `F01.1` through `F03.2` complete; root-owned PNG artwork pending; no image or SVG assets created
 - publication/PDF/course/final QA: not started
@@ -80,7 +80,7 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 08 Chapters 1-3 are complete locally under active child `#47`: three
+Phase 08 Chapters 1-3 are accepted at `b48f375` under closed child `#47`: three
 manuscripts, `AR-01 v0.1.0`, `AR-01 v0.2.0`, `AR-02 v1.0.0`, deterministic
 contracts/tests, learning/state/QA records, and six pending PNG anchors. All
 scoped publication, companion, build, site-reference, format, and diff checks
@@ -111,14 +111,14 @@ closure remain outside this lane.
 
 ## Exact next action
 
-Parent reviews Chapter 1-3 deliverables, root produces and QA-checks six PNG
-figures through ImageGen, then the next Phase 08 child advances Chapter 4 from
-`AR-02 v1.0.0` without widening the approved autonomy or effect boundary.
+Write and immediately QA Chapters 4-6 under #50, advancing from `AR-02 v1.0.0`
+without widening the approved autonomy or effect boundary. Root separately owns
+ImageGen production for all accepted PNG anchors.
 
 ## Resume instructions
 
 Read repository `AGENTS.md`, accepted commits `b59c3f5`, `abed872`, and
-`e4e8ec4`, parent `#45`, active child `#47`, this file, the first three
+`e4e8ec4` and `b48f375`, parent `#45`, active child `#50`, this file, Chapters 4-6
 blueprints/research packs, and Phase 08 handoff. Inspect
 git status because parallel agents share the worktree. Do not edit shared
 factory state or other role directories from this lane. Do not enter Abhyaas
