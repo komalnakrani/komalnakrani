@@ -69,8 +69,9 @@
 - Phases 01, 04, and 05: accepted at commit `b59c3f5`; canonical decision is one 20-chapter book.
 - Phase 07: accepted at commit `e4e8ec4` with 20 complete production blueprints and all 38 forecast figures allocated.
 - Phase 08 parent: [#45 - Write the complete Agentic AI Engineering manuscript](https://github.com/alpeshznakrani/komalnakrani/issues/45)
-- Last completed child: [#50 - Write Agentic AI Engineering chapters 4-6](https://github.com/alpeshznakrani/komalnakrani/issues/50), accepted at `d3b86f4`
-- Active child: [#53 - Write Agentic AI Engineering chapters 7-9](https://github.com/alpeshznakrani/komalnakrani/issues/53)
+- Last completed child: [#56 - Write Agentic AI Engineering chapters 10-12](https://github.com/alpeshznakrani/komalnakrani/issues/56), accepted at `9fb4001`
+- Manuscript state: 12 chapters and 64,307 words accepted; 33/33 cumulative companion tests pass; first two final ImageGen PNG figures are integrated.
+- Active child: [#59 - Write Agentic AI Engineering chapters 13-15](https://github.com/alpeshznakrani/komalnakrani/issues/59)
 - State: `project-control/roles/agentic-ai-engineer/ROLE-STATE.md`
 
 ### LLM Engineer
@@ -79,16 +80,17 @@
 - Phases 01, 04, and 05: accepted at commit `18332c3`; canonical decision is a 33-chapter two-volume series.
 - Phase 07: accepted at commit `9d9e1c3` with 33 complete production blueprints and all 66 forecast figures allocated.
 - Phase 08 parent: [#46 - Write the complete LLM Engineering two-volume manuscript](https://github.com/alpeshznakrani/komalnakrani/issues/46)
-- Last completed child: [#51 - Write LLM Engineering Volume 1 chapters 4-6](https://github.com/alpeshznakrani/komalnakrani/issues/51), accepted at `f53b7bd`
-- Active child: [#54 - Write LLM Engineering Volume 1 chapters 7-9](https://github.com/alpeshznakrani/komalnakrani/issues/54)
+- Last completed child: [#57 - Write LLM Engineering Volume 1 chapters 10-12](https://github.com/alpeshznakrani/komalnakrani/issues/57), accepted at `e19d530`
+- Manuscript state: Volume 1 Chapters 1-12 and 48/48 cumulative companion tests accepted.
+- Active child: [#58 - Write LLM Engineering Volume 1 chapters 13-15](https://github.com/alpeshznakrani/komalnakrani/issues/58)
 - State: `project-control/roles/llm-engineer/ROLE-STATE.md` (created during active Phase 06)
 
 ## Exact next action
 
 Advance the three isolated Komal lanes in parallel: hostile full-book Applied AI
-QA under #55, Agentic AI Chapters 7-9 under #53, and LLM Engineering Volume 1
-Chapters 7-9 under #54. Keep shared publication/factory integration root-owned.
-Do not enter deferred Abhyaas work.
+QA under #55, Agentic AI Chapters 13-15 under #59, and LLM Engineering Volume 1
+Chapters 13-15 under #58. Continue root-owned ImageGen production and shared
+publication/factory integration without entering deferred Abhyaas work.
 
 ## Resume instructions
 
