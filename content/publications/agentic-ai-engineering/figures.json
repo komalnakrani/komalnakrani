@@ -1,1 +1,25 @@
-{"schemaVersion":1,"figures":[]}
+{
+  "schemaVersion": 1,
+  "figures": [
+    {
+      "id": "FIG-001",
+      "file": "assets/f01-1-responsibility-workshop.png",
+      "alt": "Colorful three-dimensional responsibility workshop with six labeled zones: User, Agent, Model, Tools, Platform, and Authority. A request enters through User, the Agent controls transitions while consulting the Model and selecting Tools, Tools operate through Platform, and an external-effect parcel crosses an Authority gate.",
+      "caption": "F01.1 - The six zones separate system responsibilities and show the authority gate for external effects; the map is conceptual evidence, not proof that an implementation is correct.",
+      "chapterSlug": "the-profession-behind-the-agent",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-002",
+      "file": "assets/f01-2-boundary-classification.png",
+      "alt": "Colorful three-dimensional decision conveyor divided into Owned, Partnered, and Escalated lanes. Decision cards carrying both Primary Owner and Evidence tags proceed through checkpoints, while incomplete cards are stopped and routed for escalation.",
+      "caption": "F01.2 - Ownership and evidence tags make a decision reviewable; the lanes are a memory aid, not an organizational or legal determination.",
+      "chapterSlug": "the-profession-behind-the-agent",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    }
+  ]
+}
