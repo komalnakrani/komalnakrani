@@ -1,0 +1,115 @@
+---
+title: "Build Preference and Feedback Data"
+slug: "build-preference-and-feedback-data"
+summary: "Turn comparative judgments into criterion-specific, randomized, bias-audited evidence without treating preference as truth."
+minutes: 105
+sourceIds: ["SRC-006", "SRC-008", "SRC-009", "SRC-028", "SRC-030"]
+claimIds: ["CLM-019", "CLM-020", "CLM-021"]
+objectiveIds: ["LLME-K06", "LLME-K07", "LLME-K08", "LLME-K10"]
+figureIds: []
+---
+
+## Preference begins with a criterion
+
+`MD-11` already contains evidence-linked positive, negative, abstention, and escalation demonstrations. Preference data are not automatically the next stage. Mosaic Desk considers them only where two admissible proposals express a genuine tradeoff that a typed target cannot settle alone.
+
+"Which answer is better?" hides the task. A useful pair names one criterion, holds other relevant conditions as stable as possible, blinds presentation, records rater identity and rationale, and preserves disagreement. Preference data encodes a rubric, rater population, presentation order, and collection process rather than objective truth. [CLM-019]
+
+For Mosaic, factual support, authorization, schema validity, and prohibited effects stay deterministic gates. A rater cannot prefer an unsupported or unauthorized answer into acceptability. Comparative evidence is considered only after both candidates clear those gates.
+
+The companion is synthetic. Its raters and outputs are fixtures designed to expose bias mechanics; they report no human population, user outcome, or model quality.
+
+## Build comparable pairs
+
+Start from a diagnosed clause and one comparison question: citation usefulness, bounded actionability, appropriate abstention, or tone within an already correct proposal. Do not ask one pair to decide all four.
+
+Each pair records:
+
+- pair, recipe, curation, and source-family IDs;
+- criterion and rubric version;
+- candidate A/B provenance and deterministic gate results;
+- randomized display order and blinding state;
+- language, domain, consequence, and evidence slices;
+- rater population, qualification, identity, and independence;
+- choice, confidence, criterion-specific reason codes, and free rationale where approved;
+- swap-test result and repeated judgment identity;
+- model-grader identity/configuration where used;
+- disagreement, adjudication, retention, and allowed-purpose states.
+
+Pair candidates should differ along the intended criterion. If one is longer, cites more sources, uses a different language, and changes terminal state, a choice cannot identify the cause. Preserve contested pairs; they are often more informative than forced consensus.
+
+## Write an annotation guide that permits abstention
+
+For every criterion, define its question, prerequisites, observable evidence, reason codes, counterexamples, and `cannot-judge` conditions. Citation support, for example, asks which admissible output makes claims better supported by the authorized spans. It does not ask which answer sounds more confident or includes more citations.
+
+Raters must be able to choose A, B, tie, both-fail, or cannot-judge. `Both-fail` routes the pair back to deterministic or domain review; it does not create a relative winner. `Cannot-judge` can identify missing context, ambiguous criteria, or rater-scope limits. Measure these outcomes instead of discarding them.
+
+The guide also names prohibited shortcuts: word count as actionability, citation count as support, refusal language as safe behavior, majority as domain truth, and grader confidence as authority. Version guide changes because they change the label-generating process.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F07.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f07-1-blinded-pair-bench.png">
+  <div role="img" aria-label="Two admissible outputs labeled A and B sit on a blinded comparison bench beside one rubric and a visible disagreement marker.">Pending ImageGen figure V2-F07.1</div>
+  <figcaption><strong>V2-F07.1 - A preference is evidence about one rubric.</strong> Essential labels: A, B, rubric, disagree. Shape and order markers supplement color. The figure supports `CLM-019`; it does not turn preference into truth.</figcaption>
+  <details><summary>Long description</summary><p>A colorful realistic three-dimensional bench holds two masked response cards labeled A and B. One criterion card sits between them. Separate rater tokens point in different directions, and a disagreement flag remains attached rather than being erased.</p></details>
+</figure>
+
+## Randomize, swap, and retain reasons
+
+Generate an assignment independent of candidate quality. Store canonical candidate IDs separately from displayed A/B labels. Balance order across the dataset and, for calibration pairs, show the same pair in reversed order without telling the rater.
+
+Position, verbosity, style, and self-preference biases can affect pairwise judgments. [CLM-020] `LLME-CASE-005` and judge research document setup-specific biases; their magnitudes do not transfer to Mosaic. The fixture deliberately presents the longer, weaker-citation answer first. A naive rater selects it. On swap, the same rater again selects the first response, exposing position rather than stable criterion use.
+
+Audit at least:
+
+- position: does preference flip with order?
+- verbosity: does length win after support is controlled?
+- style: does polished formatting dominate the named criterion?
+- familiarity: do expected phrases substitute for evidence?
+- self/coupling: does a grader favor outputs resembling its own style or generator?
+
+Require rubric-level reasons such as `stronger-supported-citation`, `correct-abstention`, or `clearer-bounded-action`. A choice without a reason may remain raw feedback but cannot enter the accepted comparative dataset.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F07.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f07-2-preference-bias-magnets.png">
+  <div role="img" aria-label="Length, position, style, familiarity, and coupling magnets pull a preference marker away from the intended rubric target.">Pending ImageGen figure V2-F07.2</div>
+  <figcaption><strong>V2-F07.2 - Bias can move the label without improving the criterion.</strong> Essential labels: length, position, style, familiarity, coupling. Distinct magnet shapes supplement color. The figure supports `CLM-020` and `CLM-021`; it reports no prevalence.</figcaption>
+  <details><summary>Long description</summary><p>Five colorful three-dimensional magnets surround a criterion compass. A preference token bends toward a long first polished response while an evidence arrow points elsewhere. The layout makes multiple possible distortions visible without ranking their strength.</p></details>
+</figure>
+
+## Calibrate humans and model graders separately
+
+Build a calibration set with clear criterion anchors, known order swaps, equal-support length variants, and difficult disagreements. Humans, domain reviewers, and model graders receive the same criterion but retain separate identities and outputs.
+
+Agreement is not correctness. Two coupled graders can agree on the same error. Human majority can reflect shared presentation bias. A domain reviewer may override a style preference on a consequential factual criterion, but the record keeps the original labels and authority basis.
+
+Report pairwise agreement, rubric-level disagreement, swap stability, rater concentration, and adjudication rates by criterion and slice. Do not collapse them into one reliability score. A high agreement rate on easy English style pairs says little about Gujarati evidence conflicts.
+
+Adjudication is a new evidence event. The adjudicator receives the criterion, candidates, authorized evidence, original rationales, and known bias flags, but not a prompt to manufacture consensus. The outcome can accept one label, mark tie, reject the pair, narrow the criterion, or escalate to domain authority. All original judgments remain immutable.
+
+Model graders require additional records: provider/model/version, messages, decoding, rubric, candidate-order mapping, retries, and any shared generator ancestry. Run order swaps and paraphrase controls. If a grader generated one candidate or examples used to construct the rubric, flag coupling. Never allow its output to grant source authorization or domain approval.
+
+`LLME-CASE-010` shows one bounded preference-optimization path and evaluation context. It does not define Mosaic's values, justify DPO, or establish safety. The output of this chapter is comparative evidence that Chapter 12 may reject or use; no optimization method is selected here.
+
+## Treat production feedback as observational evidence
+
+Implicit production feedback is confounded by exposure, interface, incentives, and user selection unless designed as credible evidence. [CLM-021] Clicks, edits, dwell time, escalation, acceptance, and complaints arise from who saw which output, interface defaults, workload, consequence, and whether users could meaningfully decline.
+
+Mosaic has no production feedback. A future design would require purpose, minimization, exposure logging, denominators, selection analysis, retention approval, and a defined decision. Raw customer text is not collected by default. Product and privacy authorities own those decisions; engineering cannot relabel passive telemetry as preference truth.
+
+Explicit solicited feedback also has selection effects. Users who respond may differ from those who do not; one interface may reveal more evidence; a default button may shape labels; a high-workload reviewer may accept the first adequate proposal. Record the interface version, assignment, opportunity to respond, and missingness. Without a credible design, use feedback to generate investigation cases, not causal claims.
+
+Training data must not contain final holdout pairs or their transformed families. Calibration pairs used repeatedly to tune the rubric belong to development, not final evaluation. Preference authors may see accepted training candidates and authorized evidence only. The five-vault firewall from MD-10 remains in force.
+
+Privacy/legal authorities decide whether feedback can be collected, linked, retained, or used for adaptation. Product/domain authorities define the valued criterion and consequence. Security owns feedback-channel threats. The engineer builds collection, randomization, audit, and versioning; they do not own user consent or organizational values.
+
+## Complete the preference portion of MD-11
+
+`mosaic-preference-data.json` contains criterion-isolated pairs, randomized orders, swap checks, human/model-fixture labels, reason codes, disagreements, and an adjudication queue. The long-first weaker-citation pair is rejected from accepted preference data because its labels fail bias stability.
+
+The status is `preference-evidence-bounded-not-optimization-approved`. Preference examples remain separated from evaluation, retention, and control vaults. Product/domain authorities define valued criteria; engineers operationalize and audit them. No moral authority, correctness, training, or outcome follows.
+
+The accepted dataset card states its rater population is synthetic, the one accepted pair is a mechanics fixture, the rejected long-first pair exposes a known bias, and production feedback is unavailable. These limits are not embarrassing footnotes. They prevent Chapter 12 from treating a tiny calibration artifact as representative preference evidence.
+
+## Practice
+
+Create and audit a pair set: isolate one criterion, verify both candidates pass hard gates, randomize order, collect reasons, swap calibration pairs, compare raters/graders, retain disagreements, reject the biased fixture, and state what the feedback cannot establish.
+
+Pass when pair lineage, rubric, order, labels, reasons, calibration, disagreement, adjudication, and holdout separation reproduce. Fail when popularity becomes correctness, a model grades its own style as truth, dissent disappears, or feedback enters training without authority.

@@ -18,6 +18,15 @@
     {"id":"CLM-015","chapterSlug":"curate-deduplicate-and-separate","statement":"Filtering and normalization choices alter the learned distribution and must be recorded as data decisions.","sourceIds":["SRC-034","SRC-039"]},
     {"id":"CLM-016","chapterSlug":"build-instruction-and-demonstration-data","statement":"Instruction examples must map to target behavior clauses, errors, and segments rather than convenience prompts.","sourceIds":["SRC-006","SRC-037","SRC-039"]},
     {"id":"CLM-017","chapterSlug":"build-instruction-and-demonstration-data","statement":"Chat template and loss masking determine which tokens contribute to SFT learning.","sourceIds":["SRC-015","SRC-040"]},
-    {"id":"CLM-018","chapterSlug":"build-instruction-and-demonstration-data","statement":"Negative, abstention, and boundary cases are needed when the contract requires non-answer behavior.","sourceIds":["SRC-008","SRC-039"]}
+    {"id":"CLM-018","chapterSlug":"build-instruction-and-demonstration-data","statement":"Negative, abstention, and boundary cases are needed when the contract requires non-answer behavior.","sourceIds":["SRC-008","SRC-039"]},
+    {"id":"CLM-019","chapterSlug":"build-preference-and-feedback-data","statement":"Preference data encodes a rubric, rater population, presentation order, and collection process rather than objective truth.","sourceIds":["SRC-006","SRC-028","SRC-030"]},
+    {"id":"CLM-020","chapterSlug":"build-preference-and-feedback-data","statement":"Position, verbosity, style, and self-preference biases can affect pairwise judgments.","sourceIds":["SRC-028","SRC-030"]},
+    {"id":"CLM-021","chapterSlug":"build-preference-and-feedback-data","statement":"Implicit production feedback is confounded by exposure, interface, incentives, and user selection unless designed as credible evidence.","sourceIds":["SRC-009","SRC-008"]},
+    {"id":"CLM-022","chapterSlug":"preserve-retention-and-control-cases","statement":"Adaptation promotion requires target improvement plus retention, segment, and control regression evidence.","sourceIds":["SRC-039","SRC-009","SRC-030"]},
+    {"id":"CLM-023","chapterSlug":"preserve-retention-and-control-cases","statement":"Language/domain gains can coexist with regressions outside the target mixture.","sourceIds":["SRC-037","SRC-048"]},
+    {"id":"CLM-024","chapterSlug":"preserve-retention-and-control-cases","statement":"Safety/control cases and accountable owners must be preserved through adaptation rather than assumed from the base model.","sourceIds":["SRC-008","SRC-018","SRC-065"]},
+    {"id":"CLM-025","chapterSlug":"establish-the-training-experiment","statement":"A training run manifest needs base/tokenizer, data/splits, objective, optimizer/schedule, batch/sequence, precision, seeds, code, hardware class, checkpoints, and evaluators.","sourceIds":["SRC-039","SRC-040","SRC-049","SRC-050","SRC-051"]},
+    {"id":"CLM-026","chapterSlug":"establish-the-training-experiment","statement":"Mixed precision and sharding change memory/communication behavior and checkpoint procedures.","sourceIds":["SRC-050","SRC-051"]},
+    {"id":"CLM-027","chapterSlug":"establish-the-training-experiment","statement":"Training loss and resource completion do not establish target behavior improvement.","sourceIds":["SRC-006","SRC-009","SRC-039"]}
   ]
 }
