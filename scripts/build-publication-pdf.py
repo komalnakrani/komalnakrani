@@ -323,7 +323,12 @@ def build(publication_dir: Path, output_dir: Path) -> dict:
     part_file = publication_dir / "front-matter/part-introductions.md"
     appendix_files = sorted((publication_dir / "appendices").glob("*.md"))
     part_introductions = split_part_introductions(part_file.read_text(encoding="utf-8"))
-    part_starts = {1: 0, 6: 1, 11: 2, 15: 3, 18: 4}
+    part_start_orders = manifest.get("partStarts", [1, 6, 11, 15, 18])
+    if len(part_start_orders) != len(part_introductions):
+        raise ValueError(
+            f"Part start count {len(part_start_orders)} does not match introduction count {len(part_introductions)}"
+        )
+    part_starts = {order: index for index, order in enumerate(part_start_orders)}
     output_dir.mkdir(parents=True, exist_ok=True)
     output_file = output_dir / manifest["pdf"]["filename"]
     styles = styles_for_book()
@@ -376,7 +381,11 @@ def build(publication_dir: Path, output_dir: Path) -> dict:
 
     appendices_heading = Paragraph("Appendices", styles["PartTitle"])
     appendices_heading._bookmarkName = "appendices"
-    story.extend([appendices_heading, Paragraph("Reusable structures, review gates, companion use, terminology, and the completed fictional dossier index.", styles["KomalQuote"]), PageBreak()])
+    appendices_summary = manifest.get(
+        "appendicesSummary",
+        "Reusable structures, review gates, companion use, terminology, and the completed fictional dossier index.",
+    )
+    story.extend([appendices_heading, Paragraph(html.escape(appendices_summary), styles["KomalQuote"]), PageBreak()])
     for appendix_index, appendix_file in enumerate(appendix_files):
         raw = appendix_file.read_text(encoding="utf-8")
         title_match = re.search(r"^# (.+)$", raw, flags=re.MULTILINE)
@@ -389,7 +398,11 @@ def build(publication_dir: Path, output_dir: Path) -> dict:
 
     figure_heading = Paragraph("Figure registry", styles["BackMatterTitle"])
     figure_heading._bookmarkName = "figures"
-    story.extend([figure_heading, Paragraph("All figures are original Komal synthesis. Orchid and satellite contexts are fictional/synthetic.", styles["KomalQuote"]), Spacer(1, 4 * mm)])
+    figure_registry_note = manifest.get(
+        "figureRegistryNote",
+        "All figures are original Komal synthesis. Orchid and satellite contexts are fictional/synthetic.",
+    )
+    story.extend([figure_heading, Paragraph(html.escape(figure_registry_note), styles["KomalQuote"]), Spacer(1, 4 * mm)])
     for figure in figures:
         story.append(Paragraph(f'<b>{html.escape(figure["id"])}</b> - {inline_markup(figure["caption"])}', styles["BodyText"]))
         production = production_by_registry.get(figure["id"], {})
