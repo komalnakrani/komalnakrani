@@ -1,0 +1,347 @@
+---
+title: "The Profession Behind the Agent"
+slug: "the-profession-behind-the-agent"
+summary: "Define Agentic AI Engineering by responsibility for bounded action and separate model, harness, product, platform, domain, and authority decisions."
+minutes: 65
+sourceIds: ["SRC-001", "SRC-002", "SRC-036"]
+claimIds: ["CLM-001", "CLM-002"]
+objectiveIds: ["AGE-K01-01", "AGE-K12-01"]
+---
+
+# The Profession Behind the Agent
+
+FieldOps Relay begins with a sentence that sounds like a plan: "Build an agent that reads a maintenance request, finds a suitable replacement part, and reserves it." The product lead expects the engineer to own the result. The platform team expects the engineer to use its approved runtime. Operations expects the proposed part to be correct. Security expects every effect to be authorized. Nobody has said who owns the decision to reserve, who can grant that authority, or what should happen when the source document is hostile and the inventory service is unhealthy.
+
+Now inject a failure. A vendor manual contains an instruction that tries to redirect the system. At the same time, the inventory service returns stale availability. The system proposes the wrong part and a reservation is made. "The AI failed" is not a diagnosis. It does not distinguish untrusted content, model behavior, harness enforcement, product policy, platform health, domain judgment, or the human authority that permitted an external effect. A team cannot repair a boundary it has never drawn.
+
+That is the first responsibility of an agentic AI engineer: make model-directed action bounded, observable, and accountable. The role is defined by operational decisions, not by a fashionable title. Current role catalogs and architecture guidance support a bounded profession centered on agent behavior, orchestration, tool use, evaluation, reliability, and governance, but titles and organizational partitions are not universal. [CLM-001] The durable test is simpler: who owns the mechanism that lets a model select the next action, and who can prove that its effects remain inside delegated authority?
+
+This chapter creates `AR-01 v0.1.0`, the FieldOps responsibility charter. It grants no autonomy. It records what the proposed system is, which decisions exist, who owns each decision, what evidence that owner must produce, and which authority the engineering team does not possess.
+
+## 1. A failure with no owner
+
+Start with a decision inventory, not a team chart. A team chart says where people report. A decision inventory says what can change the world and where the decision is made.
+
+For the FieldOps request, trace the path from input to effect:
+
+1. A user submits a maintenance request.
+2. The system reads manuals and inventory records.
+3. Some component interprets the request and chooses a candidate part.
+4. Some component checks compatibility and availability.
+5. Some component proposes or performs a reservation.
+6. The inventory service records the effect.
+7. A user receives evidence of completion or an escalation.
+
+Each transition hides a question. Who decides which documents are trustworthy? Who defines compatibility? Who decides that the evidence is sufficient? Who is permitted to reserve stock? Who owns degraded-service behavior? Who can stop the run?
+
+Use six fields for every decision:
+
+- **Decision:** the choice being made, stated as a verb and object.
+- **Enforcement point:** the component that can allow or prevent it.
+- **Primary owner:** exactly one accountable owner for the rule or mechanism.
+- **Collaborators:** people who provide requirements, controls, or evidence.
+- **Evidence:** the artifact or observation that makes the decision auditable.
+- **Escalation:** the condition and named destination when the owner cannot decide.
+
+This is not a declaration of legal liability. It is an engineering responsibility map. Formal legal, safety, privacy, and domain-risk decisions remain with their designated authorities. NIST's AI Risk Management Framework is useful here because it treats governance as a cross-cutting function and connects responsibility to mapping, measurement, and management activities. It does not appoint your organization's owners for you. [CLM-001]
+
+In the injected failure, content trust belongs to the ingestion and security control boundary; part compatibility belongs to the domain-rule boundary; stale inventory belongs to the platform or service boundary; the decision to permit a reservation belongs to the authority boundary; and enforcing the approved action belongs to the harness and tool boundary. One incident can cross all six. That makes collaboration necessary, not ownership optional.
+
+## 2. Workflow, agent, and harness
+
+The word *agent* is too often applied to anything that calls a language model. For engineering purposes, inspect control flow.
+
+A **workflow** follows a path substantially predetermined in code or configuration. A model may classify, summarize, or fill a field, but the surrounding program chooses the next step. An **agent** lets a model direct some part of the execution path within a harness: selecting an action, choosing a tool, deciding whether more evidence is needed, or determining when to stop. OpenAI and Anthropic describe this distinction in their current guidance with somewhat different terminology, so treat the labels as dated references rather than universal definitions. [CLM-002]
+
+The operational question is: **which component selects the next transition?**
+
+Consider three implementations of the FieldOps request:
+
+- A fixed parser extracts a part number, runs one compatibility rule, and displays availability. The program owns the sequence. This is a workflow.
+- A model drafts a candidate part, but a fixed program validates required fields and presents a proposal. The model assists; the program still owns the sequence.
+- A model decides which manuals to inspect, whether to query inventory, whether to request clarification, and when to submit a reservation proposal. That bounded region is agentic, even if the final effect remains approval-gated.
+
+An agent is therefore not the model alone. The **harness** is the engineered control system around it: state, tools, policies, budgets, validation, approval checks, logging, recovery, and stop conditions. The model may propose a transition. The harness decides whether that proposal is well formed, permitted, affordable, authorized, and still valid. A model cannot be its own independent control boundary because its instruction-following behavior is part of the behavior being controlled.
+
+Brand language does not answer these questions. A product called an "agent" may be a fixed workflow. A plain service may contain model-directed control flow. Inspect traces, transition code, tool adapters, policy checks, and effect gates. Ownership follows the actual decision and enforcement point.
+
+That distinction also prevents a common category error: assigning moral or organizational responsibility to the model. A model is a component whose outputs must be characterized. It is not the accountable owner of a deployment decision, a tool permission, or an external effect. The engineering system, its operators, and the relevant authorities carry those responsibilities.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F01.1" data-png="/assets/publications/agentic-ai-engineering/f01-1-responsibility-workshop.png">
+  <div role="img" aria-label="Pending colorful realistic 3D workshop image with six distinct zones labeled User, Agent, Model, Tools, Platform, and Authority. Arrows show requests entering through the user zone, model-directed proposals moving through the agent and tools zones, and external effects crossing an authority gate. No relationship depends on color.">ImageGen raster pending: F01.1</div>
+  <figcaption><strong>F01.1 - Responsibility workshop.</strong> Essential labels: User, Agent, Model, Tools, Platform, Authority. Evidence role: a conceptual map of responsibility separation, not proof that a system is correct.</figcaption>
+</figure>
+
+## 3. Six responsibility layers
+
+The FieldOps charter separates six layers because each answers a different kind of question.
+
+### Model layer
+
+The model layer produces candidate interpretations, plans, arguments, and tool-call structures. Evidence includes model and configuration identifiers, evaluation results, sampled traces, and known limitations. An LLM or ML specialist may own model selection, fine-tuning, or serving. The agentic AI engineer owns how uncertain model outputs are admitted into the harness, not the truth of every generated statement.
+
+When behavior changes after a model update, the model owner supplies capability evidence. The harness owner shows whether contract checks, tool schemas, or stop conditions contained the change. Neither can substitute for the other.
+
+### Agent harness layer
+
+The harness maintains run state, exposes tools, validates proposed actions, enforces budgets, routes approvals, records events, and determines permitted transitions. This is the central ownership layer for agentic AI engineering. Its evidence is executable: state-machine assertions, policy decisions, action records, approval bindings, evaluation suites, and recovery tests.
+
+The harness does not invent business authority. It enforces authority expressed by other owners. If it accepts a reservation without a matching approval, that is a harness failure even if the model asked politely and the reservation happened to be useful.
+
+### Product layer
+
+The product layer defines whose problem is being solved, what outcome is valuable, and what experience users receive. It owns requirements such as whether users need a recommendation or a completed reservation, which delays are acceptable, and what a clear escalation looks like. Product evidence includes acceptance criteria, journey decisions, outcome measures, and release decisions.
+
+Agentic engineering can challenge an unobservable goal or an impossible constraint. It cannot declare business value on behalf of the product owner.
+
+### Platform layer
+
+The platform layer provides identity, compute, storage, networking, secrets, queues, observability substrates, and service reliability. It owns service-level behavior and infrastructure controls. The agentic AI engineer consumes these guarantees and designs for their failure modes.
+
+If inventory is stale because a platform cache violated its contract, the platform owner investigates the service. If the harness ignored a freshness field that was available, the harness owner investigates the decision. The same symptom can have two enforcement points, so evidence must locate the failed one.
+
+### Domain layer
+
+The domain layer defines what counts as a compatible part, a valid maintenance procedure, and an unacceptable operational risk. A model-generated explanation is not domain authority. Domain owners supply rules, review thresholds, data provenance expectations, and escalation destinations.
+
+The agentic AI engineer turns those requirements into enforceable predicates and evidence flows. The role does not silently absorb engineering, medical, financial, legal, or safety judgment.
+
+### Human-authority layer
+
+The authority layer determines who may delegate an effect and under what scope. A user request is evidence of intent, but it is not automatically proof of authority for every downstream action. Authority may depend on identity, role, asset, quantity, time, policy, and consequence.
+
+This layer owns the delegation rule. The harness owns checking it at the effect boundary. Confirmation screens, approval messages, and signed grants are mechanisms; their mere existence does not prove that the confirmer had authority.
+
+## 4. Owned, partnered, or escalated
+
+For each decision, choose one classification.
+
+**Owned** means the agentic AI engineer is the primary owner of the mechanism or decision. Examples include the run state machine, allowed tool interface, proposal validation, effect gate, action trace, or stop behavior.
+
+**Partnered** means the agentic AI engineer implements or evaluates a boundary with another primary owner. Compatibility is partnered with the domain owner. Identity enforcement is partnered with security and platform. User-facing escalation is partnered with product. Collaboration is named, but the primary owner remains singular.
+
+**Escalated** means the role lacks authority to make the decision. Accepting a legal risk, changing a safety threshold, granting enterprise access, or redefining the product outcome must go to the designated authority. An escalation is complete only when it names a destination, carries relevant evidence, and defines what the system does while waiting.
+
+The one-primary-owner rule prevents two failures. With no owner, defects circulate between teams. With several "joint" owners, each can reasonably believe another person will make the decision. A primary owner does not perform every task; the owner ensures the decision has a rule, evidence, review, and disposition.
+
+Apply the rule at decision granularity. "Own the agent" is too broad. A useful charter might say:
+
+- Agentic AI engineering owns `validate proposed action against task contract`.
+- Platform owns `report inventory record freshness`.
+- Operations domain owns `define part compatibility evidence`.
+- Security owns `define eligible approver identity policy`.
+- Product owns `define user-visible completion and escalation experience`.
+- A named operational authority owns `authorize one stock reservation`.
+
+This division increases coordination. It also makes it possible to test the right thing. When a reservation fails, the team can ask whether the proposal was wrong, the compatibility rule was wrong, availability was stale, approval did not match, execution failed, or verification failed.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F01.2" data-png="/assets/publications/agentic-ai-engineering/f01-2-boundary-classification.png">
+  <div role="img" aria-label="Pending crisp 3D boundary ribbon divided into Owned, Partnered, and Escalated sections. Decision cards cross the ribbon only when a primary owner, evidence artifact, and escalation destination are attached. The image includes no mascot and does not rely on color.">ImageGen raster pending: F01.2</div>
+  <figcaption><strong>F01.2 - Decision boundary classification.</strong> Essential labels: Owned, Partnered, Escalated, Primary Owner, Evidence. Evidence role: a memory aid for classifying decisions, not an organizational or legal determination.</figcaption>
+</figure>
+
+## 5. FieldOps charter lab
+
+The companion dossier contains `ar-01-v0.1.0.json`. Read it as a reviewable claim about responsibility, not as a source of authority. Its six decision records cover the core FieldOps boundary:
+
+1. interpret the maintenance request;
+2. validate part compatibility;
+3. report inventory freshness;
+4. validate the reservation proposal;
+5. authorize the reservation effect; and
+6. accept formal domain or safety risk.
+
+For each record, challenge the fields in order.
+
+First, is the decision narrow enough to have one enforcement point? "Ensure reliability" is not. "Reject inventory evidence older than the configured freshness threshold" is.
+
+Second, can the named owner actually change the rule or mechanism? A reviewer who receives a report but cannot change the gate is not the primary owner of the gate.
+
+Third, does the evidence demonstrate the decision? A meeting note may show agreement, but it does not show that a runtime check executed. Prefer typed contracts, policy decisions, traces, test results, signed approvals, and service health observations.
+
+Fourth, is collaboration explicit? A harness engineer cannot define compatibility alone, while a domain owner should not have to implement tool-call validation. Record both roles without making ownership ambiguous.
+
+Fifth, does escalation have a safe waiting state? "Ask operations" is incomplete. Say who in operations, what evidence they receive, whether the run pauses or terminates, and how expiry is handled.
+
+Now apply six failure probes.
+
+### Probe A: model regression
+
+The model begins producing lower-quality part candidates. The model owner investigates the change and supplies comparative evidence. The harness owner verifies that low-confidence or malformed proposals are rejected and that no new action class became reachable. The product owner decides whether degraded assistance is still useful. No single team can close the incident with the phrase "model issue."
+
+### Probe B: tool outage
+
+Inventory queries time out. Platform owns service diagnosis. Harness owns retry budgets, idempotency expectations, and the terminal transition after the budget is spent. Product owns the message users see. An outage cannot silently turn a verified reservation into an assumed one.
+
+### Probe C: wrong product goal
+
+The system accurately reserves parts, but users only wanted recommendations. The harness may have behaved exactly as specified. Product owns the mistaken effect requirement. Agentic engineering should have exposed the consequence during contract review, but it does not retroactively own the business choice.
+
+### Probe D: prompt injection
+
+An untrusted manual asks the system to ignore its task and reserve a different part. Security owns the threat-control requirements. Harness owns separating untrusted content from control instructions, limiting tools, and enforcing the task contract. Domain owners determine whether the candidate evidence remains valid.
+
+### Probe E: unsafe domain advice
+
+The system proposes a part whose compatibility is uncertain. The harness must stop and escalate under the configured rule. A domain authority decides acceptability. The model's confidence and the user's urgency do not create domain authority.
+
+### Probe F: platform failure
+
+An effect succeeds but the response is lost. Platform owns the transport or service failure. Harness owns reconciliation before retry, because a blind retry can duplicate the effect. Verification evidence, not a plausible response, determines completion.
+
+The exercise is passed only when every decision has one primary owner, collaborators, authority, evidence, escalation, and an explicit non-scope. Duplicate primary owners and unowned effects are automatic failures. A narrow charter is better than a broad charter that grants imaginary authority.
+
+### Work the twelve-decision review
+
+The six probes test failures. A production charter must also survive ordinary change. Walk twelve decisions from request to effect and say the answer aloud in the form: "The primary owner is X because X controls Y. The evidence is Z. This role partners with A and escalates B to C."
+
+**Decision 1: change the request schema.** Product is primary when the change alters user intent or required business information. The harness team partners because parsing and validation must change. Evidence is a versioned request contract plus compatibility tests. If the proposed field encodes a formal domain judgment, escalate its definition to the domain owner.
+
+**Decision 2: change the system instruction.** The harness owner is primary for the deployed instruction and its evaluation. Model specialists may advise on behavior, while product and domain owners review requirements expressed through it. Evidence includes the version, review record, regression suite, and trace comparison. An instruction cannot expand tool authority; that request escalates to the authority owner.
+
+**Decision 3: adopt a new model.** The model-serving owner may be primary for qualification and availability, while the harness owner is primary for admitting the model into this agent. That apparent overlap disappears when the decisions are phrased precisely. "Make model M available" and "permit model M to direct FieldOps transitions" are separate decisions with separate gates and evidence.
+
+**Decision 4: add a manual source.** The content or domain owner is primary for source eligibility and provenance. Security partners on untrusted-content controls. The harness owner is primary for enforcing the resulting allowlist and separating retrieved content from control instructions. Evidence includes source identity, provenance, ingestion policy, and injection tests.
+
+**Decision 5: change the compatibility rule.** The domain owner is primary for the rule's meaning. The harness owner implements the predicate and demonstrates conformance. Model output may suggest candidates, but it cannot define compatibility. When evidence conflicts, the run escalates rather than averaging opinions.
+
+**Decision 6: change the freshness threshold.** The domain or operations owner defines how stale inventory may be for the decision; the platform owner exposes trustworthy timestamps and freshness behavior; the harness owner rejects evidence outside the configured threshold. Record each as a distinct decision. Do not assign "freshness" jointly and stop thinking.
+
+**Decision 7: add a reservation tool.** The harness owner controls exposure and validation. The inventory service owner controls effect semantics and idempotency. Security and authority owners define eligible principals and scope. Evidence includes the narrow tool schema, policy tests, approval-binding tests, and reconciliation behavior. This change cannot be approved by a prompt review alone.
+
+**Decision 8: increase the effect budget.** The authority or risk owner is primary for permitting greater consequence; product may justify the need; harness implements the bound. If the engineering team silently changes one reservation to ten because the loop supports it, the team has converted an implementation setting into an unauthorized policy decision.
+
+**Decision 9: change retry behavior.** Harness owns the state transition; the service owner supplies idempotency and error semantics. Evidence distinguishes failures known to be pre-effect, outcomes known to have succeeded, and ambiguous outcomes requiring reconciliation. A generic retry library is not sufficient evidence for a consequential call.
+
+**Decision 10: change the user-visible completion message.** Product owns the experience and claims made to the user. Harness supplies the structured terminal state and evidence. A message saying "reserved" may only be rendered for verified completion, never for proposal submission or an unverified timeout.
+
+**Decision 11: accept a safety exception.** This is escalated. Agentic AI engineering packages the run evidence and enforces the outcome supplied by the designated safety or domain authority. It does not decide that urgency makes the exception acceptable.
+
+**Decision 12: release the system.** Release ownership depends on the organization's governance, but the engineering evidence remains decomposable. Product accepts product readiness, platform accepts operational readiness, domain and formal authorities accept their defined risks, and the harness owner attests that agentic controls passed. If one person is the final release owner, collaborators still retain ownership of their underlying assertions.
+
+These examples reveal a useful technique: when two people both appear primary, split the sentence until each decision has one changeable enforcement point. "Own freshness" becomes "define acceptable age," "emit source timestamp," and "reject evidence older than the threshold." Precision turns political ambiguity into testable interfaces.
+
+### Write evidence that can fail
+
+Weak evidence merely records confidence: "The team reviewed the prompt," "The agent appeared reliable," or "Operations is comfortable." Strong evidence is connected to an assertion and can reveal a failure.
+
+For model behavior, record a frozen evaluation slice, expected properties, configuration, run identifiers, and failure categories. For harness behavior, record state transitions, policy results, action arguments, budgets, and terminal dispositions. For platform behavior, record service health, latency, freshness, identity, and idempotency signals. For domain behavior, record rule versions and provenance. For authority, record the principal, delegation scope, exact proposal, expiry, and use status.
+
+Evidence must also be proportionate. A read-only synthetic lookup does not require the same review as a physical effect. But low consequence does not mean no evidence. The team still needs enough detail to reproduce why the next transition was permitted.
+
+Ask three questions about every artifact:
+
+1. Which decision does this evidence support?
+2. What observation would make the assertion fail?
+3. Who is obligated to act when it fails?
+
+If the artifact cannot answer those questions, it may be documentation, context, or communication, but it is not yet decision evidence.
+
+### Run the boundary meeting
+
+A charter becomes useful when owners challenge it together. Conduct the meeting from effects backward.
+
+Begin with the external mutation: one inventory reservation. Ask who has authority, which service executes it, which harness gate permits dispatch, and which verification proves the result. Then move backward to the proposal, compatibility evidence, inventory evidence, retrieved content, and user request. Backward review prevents the group from spending an hour on model prompts while leaving the effect implicit.
+
+For each row, the proposed primary owner must answer four questions. Can I change the rule? Can I observe whether the rule executed? Can I stop or escalate when it fails? Can I name what I do not own? If any answer is no, either the owner is wrong or the enforcement point is missing.
+
+Collaborators then challenge interfaces. The platform owner may say that record age is available but not guaranteed. The domain owner may say compatibility depends on a condition absent from the request. The authority owner may say a user role cannot reserve from every slot. These are not meeting failures. They are exactly the uncertainties the charter is supposed to expose before autonomy magnifies them.
+
+End every unresolved row with a disposition. `blocked` means no run may cross the decision. `proposal_only` means the system can prepare evidence but cannot act. `escalate` names a recipient and expiry. `remove_from_scope` deletes the transition. "We will decide later" is not a state.
+
+### Review the charter as an incident tool
+
+Imagine the wrong reservation has already happened. The incident lead should be able to use `AR-01` to divide investigation without dividing accountability.
+
+The content-trust stream asks which source influenced the proposal and whether untrusted instructions crossed into control. The model stream compares expected and observed proposal behavior. The harness stream reconstructs transitions, validation, approval, dispatch, and verification. The platform stream checks inventory freshness and service semantics. The domain stream reevaluates compatibility evidence. The authority stream checks whether the principal and exact effect were permitted.
+
+Each stream returns evidence to the primary owner of the failed decision. The incident does not close merely because several contributing conditions are found. The team must identify which controls failed, which worked, and which missing control allowed the consequence. A correct escalation that prevented an effect is a successful control outcome even if the user did not get an immediate answer.
+
+This incident view also limits retrospective scope inflation. The harness engineer should not be named owner of a false domain rule because the harness executed it. The platform team should not be named owner of an unauthorized retry because its service processed it. Ownership remains tied to the decision and enforcement point recorded before the incident.
+
+### Reader practice: classify before solving
+
+For each prompt below, resist proposing a technical fix until you classify the decision.
+
+- "The model chose a discontinued part." Determine whether the eligible catalog, retrieval evidence, compatibility rule, or model ranking failed.
+- "The tool returned success, but stock did not change." Separate service semantics, transport ambiguity, verification, and user messaging.
+- "A technician asked the agent to bypass review." Separate user intent from authority and identify the effect gate.
+- "A new model follows manuals better." Separate model qualification from permission to change the deployed model.
+- "The business wants the agent to make more decisions." Require named decisions, consequences, owners, and evidence instead of expanding an abstract autonomy level.
+- "Two teams own safety." Split safety requirements, formal acceptance, runtime enforcement, monitoring, and incident response into distinct decisions.
+
+A good answer does not always name agentic AI engineering as primary. The role demonstrates maturity by locating the real owner and engineering a clean boundary, not by accumulating territory.
+
+## 6. Boundary review
+
+`AR-01 v0.1.0` closes the first chapter with ownership, not permission. It records that the agentic AI engineer owns the harness boundary and partners on product, platform, security, and domain requirements. It escalates formal authority, legal acceptability, and safety acceptance. It does not claim that the system should be agentic.
+
+Before handing the dossier to Chapter 2, perform this review:
+
+- Can every model-directed transition be named?
+- Does each external effect have a separate authority owner and enforcement owner?
+- Are product outcome, domain truth, platform reliability, and harness behavior distinguished?
+- Does every decision have exactly one primary owner?
+- Is the evidence operational rather than merely organizational?
+- Does each escalation specify a safe waiting or terminal state?
+- Are job titles treated as local labels rather than universal scope?
+
+The unresolved questions are deliberate. FieldOps still does not know whether a fixed workflow is sufficient, whether ambiguity justifies model-directed control, or whether multiple agents add measurable value. Those are architecture questions. Chapter 2 will compare four execution levels against the same task and consequence evidence.
+
+The profession behind the agent is therefore not "the person who writes the prompt." It is the discipline of turning uncertain model-directed behavior into a bounded system whose decisions, effects, evidence, and authority remain attributable. That discipline begins by refusing to own what belongs to another authority and by refusing to leave an effect ownerless.
+
+## A complete charter review packet
+
+Before signing off `AR-01 v0.1.0`, assemble a packet that another engineer can audit without attending the original meeting.
+
+The first page is the **boundary memo**. It names the user-facing request, the first trusted input, the model-directed region, every available tool, the first external effect, and the terminal evidence. It also names excluded systems. For FieldOps, real equipment, real people, real inventory, legal judgment, and safety acceptance remain outside the synthetic chapter environment.
+
+The second page is the **decision register**. Each row has a stable identifier and the six required fields. Include decision type: requirement, implementation, authority, change, release, or incident disposition. Include status: proposed, accepted, blocked, or escalated. Include version and review date because owners and systems change.
+
+The third page is the **effect inventory**. A proposal is not an effect, while communication can be an effect even when no database changes. List every operation that changes external state or causes another actor to do so. For each, identify the tool surface, service boundary, principal, consequence, reversibility, verification source, and failure disposition. At this stage FieldOps records reservation as proposed scope but grants no permission.
+
+The fourth page is the **evidence index**. Link each decision to a schema, test, trace, policy, service contract, evaluation, approval record, or domain rule. Mark evidence that does not yet exist. Missing evidence is a visible readiness condition, not an invitation to rely on confidence.
+
+The fifth page is the **escalation directory**. Name roles and destinations rather than individual contact details that will quickly rot. State the evidence packet, response deadline, expiry behavior, and safe current state. A critical escalation that has no reachable destination is a release blocker.
+
+The final page is the **assumption and uncertainty log**. FieldOps assumes synthetic records, a single inventory effect, and a human authority that can be represented later. It has not yet shown that agentic control improves the task, that a compatibility predicate is complete, or that a service can reconcile ambiguous effects. These become explicit inputs to later chapters.
+
+### Review questions by adjacent owner
+
+Ask the product owner: Does the boundary produce the outcome users actually need? Which terminal dispositions are acceptable? Is a proposal distinct from completion in the interface? The product owner does not approve the model or implement the gate.
+
+Ask the model or LLM owner: What behavior is characterized, under which configuration, and with which limitations? What changes require reevaluation? The model owner does not grant tool authority.
+
+Ask the platform owner: Which service guarantees, freshness signals, identity attributes, idempotency mechanisms, and observability primitives exist? Which failures are ambiguous? The platform owner does not define the product goal.
+
+Ask the domain owner: Which evidence establishes compatibility, which conflicts require judgment, and what must never be inferred? The domain owner does not implement every runtime assertion.
+
+Ask security and identity owners: Which sources are untrusted, which principals are eligible, how is delegation represented, and which tools or scopes are prohibited? They set formal requirements; the harness team demonstrates enforcement in its boundary.
+
+Ask the formal authority: Which exact effects may be delegated, at what consequence and duration, and what information must be shown before authorization? The authority cannot make an unsafe harness correct merely by approving a broad category.
+
+Ask the agentic AI engineer: Can every model-directed path be reconstructed? Can unknown actions fail closed? Are budgets and stop states independent of the model? Does every external effect cross an enforceable authority boundary? This is the role's central accountability.
+
+### Red-team the ownership map
+
+Run four organizational attacks against the charter.
+
+In the **title attack**, rename the project role "AI owner" and ask whether its authority changed. It did not. Titles cannot transfer product, domain, legal, safety, privacy, platform, or security decisions.
+
+In the **vendor attack**, replace one model or framework with another. The terminology and implementation may change, but decision ownership should remain attached to the same enforcement points. If the entire charter collapses because a library renamed "agent" to "workflow," it was a framework diagram, not a responsibility map.
+
+In the **success attack**, assume the first hundred synthetic runs succeed. Ask whether missing owners can now be ignored. They cannot. Absence of observed failure does not create authority or prove coverage.
+
+In the **urgency attack**, imagine a critical maintenance request. Ask which boundaries can be skipped. Urgency may activate a separately governed emergency procedure, but the agent cannot invent that procedure or its authority. Without one, it stops and escalates.
+
+### Acceptance decision
+
+The chapter's 20-point rubric is deliberately strict. Layer accuracy earns five points only when all six layers are used to locate decisions rather than decorate a diagram. One-owner discipline earns five only when every row has one primary owner and any apparent overlap is decomposed. Evidence and escalation earn five only when artifacts can reveal failure and escalation has a safe disposition. Explicit exclusions earn five only when adjacent authorities are named and respected.
+
+A score can guide revision, but two defects override the total: an unowned external effect and a decision with no accountable owner. Either defect means `AR-01 v0.1.0` is not acceptable. The team must narrow scope, add the missing owner, or block the transition.
+
+Passing the review still grants no autonomy and approves no effect. It means the organization can now have a disciplined architecture conversation. Chapter 2 can compare execution levels without confusing model capability, product value, platform readiness, domain truth, and formal authority.
+
+## Chapter checkpoint
+
+You should now be able to distinguish model, harness, product, platform, domain, and authority layers; decide whether control flow is predetermined or model-directed; assign one primary owner to each decision; and issue a boundary charter without claiming legal completeness. The companion `AR-01 v0.1.0` is the auditable output. The next chapter tests whether FieldOps has earned the right to use any autonomy at all.

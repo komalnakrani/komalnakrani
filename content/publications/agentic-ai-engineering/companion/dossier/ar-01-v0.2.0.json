@@ -1,0 +1,21 @@
+{
+  "id":"AR-01","version":"0.2.0","case":"FieldOps Relay","fictional":true,
+  "decisions":[
+    {"id":"D-01","decision":"Define the service-request task and beneficiary","primaryOwner":"product-owner","classification":"partnered","evidence":["synthetic workflow brief"],"authority":"product-owner","escalation":"stop if beneficiary or consequence is undefined"},
+    {"id":"D-02","decision":"Define equipment safety meaning","primaryOwner":"domain-safety-owner","classification":"escalated","evidence":["approved domain procedure"],"authority":"domain-safety-owner","escalation":"agent must not diagnose or authorize safety work"},
+    {"id":"D-03","decision":"Design the model-directed action harness","primaryOwner":"agentic-ai-engineer","classification":"owned","evidence":["run and transition tests"],"authority":"engineering-owner","escalation":"disable model-directed action if deterministic enforcement is absent"},
+    {"id":"D-04","decision":"Operate shared persistence and queues","primaryOwner":"platform-owner","classification":"partnered","evidence":["service contract and SLO"],"authority":"platform-owner","escalation":"degrade or stop on unavailable persistence"},
+    {"id":"D-05","decision":"Approve a synthetic reservation effect","primaryOwner":"authorized-reviewer","classification":"escalated","evidence":["exact proposal and validated state"],"authority":"authorized-reviewer","escalation":"no effect when authority is missing or expired"},
+    {"id":"D-06","decision":"Investigate an action-policy regression","primaryOwner":"agentic-ai-engineer","classification":"owned","evidence":["versioned trajectory and task replay"],"authority":"engineering-owner","escalation":"reduce autonomy pending evidence"}
+  ],
+  "executionLevels":[
+    {"id":"fixed","modelDirected":false,"effects":false,"hypothesis":"handles enumerable intake and lookup paths","status":"baseline"},
+    {"id":"assisted","modelDirected":false,"effects":false,"hypothesis":"summarizes evidence while code retains control","status":"retained-fallback"},
+    {"id":"single-agent","modelDirected":true,"effects":"approval-gated-synthetic-only","hypothesis":"handles bounded ambiguous evidence gathering and proposal sequencing","status":"selected-maximum"},
+    {"id":"multi-agent","modelDirected":true,"effects":"approval-gated-synthetic-only","hypothesis":"might parallelize independent research","status":"rejected-no-fieldops-evidence"}
+  ],
+  "selectedLevel":"single-agent",
+  "selectionLimit":"One local agent may select read, ask, compute, and proposal steps. It cannot authorize an effect. Fixed execution remains the default for enumerable tasks.",
+  "disputedClaims":[{"id":"AGE-BCLM-004","statement":"Adding multiple agents generally improves task quality.","status":"disputed","reason":"A bounded research case and framework patterns do not establish FieldOps benefit or cost-effectiveness."}],
+  "handoff":{"to":"Chapter 03","requiredContractFields":["goal","completion","actions","consequence","budgets","approval","stop","escalation","non-goals","evidence"]}
+}

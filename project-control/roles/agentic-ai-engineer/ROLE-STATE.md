@@ -58,8 +58,9 @@ and `#35` are closed with `status:done`.
 - Phase 07 verification: `books/agentic-ai-engineering/blueprints/verification-report.md`
 - Phase 08 handoff: `books/agentic-ai-engineering/blueprints/phase-08-handoff.md`
 - Phase 08 prepared issue body: `issues/phase-08-manuscript.md`
-- manuscripts: not started
-- figure manifest/assets: not started; no image or SVG assets created
+- manuscripts: Chapters 1-3 complete locally under `#47`; 16,234 words total
+- publication records and deterministic companion: created for Chapters 1-3
+- figure anchors: `F01.1` through `F03.2` complete; root-owned PNG artwork pending; no image or SVG assets created
 - publication/PDF/course/final QA: not started
 
 ## Completed gates
@@ -79,10 +80,12 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 07 is accepted at `e4e8ec4`: 20/20 blueprints map all 40 claims, 44
-sources, 12 cases, 38 accepted chapter figures, and the continuous `AR-01`
-through `AR-14` FieldOps dossier. Phase 08 parent `#45` is open and child `#47`
-is active for Chapters 1-3.
+Phase 08 Chapters 1-3 are complete locally under active child `#47`: three
+manuscripts, `AR-01 v0.1.0`, `AR-01 v0.2.0`, `AR-02 v1.0.0`, deterministic
+contracts/tests, learning/state/QA records, and six pending PNG anchors. All
+scoped publication, companion, build, site-reference, format, and diff checks
+pass. Parent acceptance, root-owned ImageGen artwork, commit/push, and issue
+closure remain outside this lane.
 
 ## Unresolved blockers
 
@@ -101,16 +104,16 @@ is active for Chapters 1-3.
 
 ## Quality debt
 
-- No companion implementation, manuscripts, generated visuals, or publication
-  exists yet.
-- The visual forecast is a production specification only; ImageGen assets and
-  their provenance/QA remain future work.
+- Chapters 4-20 remain unwritten.
+- ImageGen assets and their provenance/visual QA remain pending root production.
+- The Chapter 1-3 publication stays draft and therefore is not listed in the
+  built public book index.
 
 ## Exact next action
 
-Write and immediately QA Chapters 1-3 under `#47`, advancing FieldOps through
-`AR-01 v0.2.0` and `AR-02 v1.0.0`. Create PNG figure anchors only; root owns
-later ImageGen production.
+Parent reviews Chapter 1-3 deliverables, root produces and QA-checks six PNG
+figures through ImageGen, then the next Phase 08 child advances Chapter 4 from
+`AR-02 v1.0.0` without widening the approved autonomy or effect boundary.
 
 ## Resume instructions
 

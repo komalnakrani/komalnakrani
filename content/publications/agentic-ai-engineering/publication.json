@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "agentic-ai-engineering",
+  "roleSlug": "agentic-ai-engineer",
+  "series": {"slug":"agentic-ai-engineering","title":"Agentic AI Engineering"},
+  "volume": 1,
+  "title": "Agentic AI Engineering",
+  "subtitle": "Designing, Evaluating, and Operating Systems That Act",
+  "description": "A professional field book for converting justified model-directed autonomy into bounded, inspectable, evaluable, recoverable action across tools, state, people, and production systems.",
+  "author": "Komal Nakrani",
+  "language": "en",
+  "status": "draft",
+  "cover": "blueprint",
+  "edition": {"version":"1.0.0","label":"First edition draft","publishedAt":null,"copyrightYear":2026,"canonicalUrl":"https://komalnakrani.com/books/agentic-ai-engineering/"},
+  "chapters": [
+    {"order":1,"slug":"the-profession-behind-the-agent","title":"The Profession Behind the Agent","summary":"Define Agentic AI Engineering by responsibility for bounded action and separate model, harness, product, platform, domain, and authority decisions.","minutes":65,"sourceFile":"chapters/the-profession-behind-the-agent.mdx","objectiveIds":["AGE-K01-01","AGE-K12-01"]},
+    {"order":2,"slug":"earn-the-right-to-use-autonomy","title":"Earn the Right to Use Autonomy","summary":"Compare fixed, assisted, single-agent, and multi-agent execution against one task and choose the least complex adequate level.","minutes":70,"sourceFile":"chapters/earn-the-right-to-use-autonomy.mdx","objectiveIds":["AGE-K01-01","AGE-K06-01","AGE-K12-01"]},
+    {"order":3,"slug":"contract-the-goal-actions-and-authority","title":"Contract the Goal, Actions, and Authority","summary":"Turn a vague delegated request into a machine-checkable contract for completion, actions, effects, budgets, approval, stop, escalation, and evidence.","minutes":80,"sourceFile":"chapters/contract-the-goal-actions-and-authority.mdx","objectiveIds":["AGE-K01-01","AGE-K05-01","AGE-K09-01"]}
+  ],
+  "registries": {"sources":"sources.json","claims":"claims.json","figures":"figures.json","errata":"errata.json"},
+  "pdf": {"enabled":false,"filename":"agentic-ai-engineering-v1.0.0.pdf"}
+}

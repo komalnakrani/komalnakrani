@@ -1,0 +1,375 @@
+---
+title: "Earn the Right to Use Autonomy"
+slug: "earn-the-right-to-use-autonomy"
+summary: "Compare fixed, assisted, single-agent, and multi-agent execution against one task and choose the least complex adequate level."
+minutes: 70
+sourceIds: ["SRC-001", "SRC-002", "SRC-013", "SRC-023", "SRC-036", "SRC-042"]
+claimIds: ["CLM-003", "CLM-004"]
+objectiveIds: ["AGE-K01-01", "AGE-K06-01", "AGE-K12-01"]
+---
+
+# Earn the Right to Use Autonomy
+
+`AR-01 v0.1.0` tells FieldOps who owns each decision. It does not tell the team to build an agent. That distinction matters because autonomy is not a badge of technical maturity. It is permission for a system to choose among actions under uncertainty. Every additional choice creates another place to be wrong, another behavior to observe, and another control to enforce.
+
+Leadership nevertheless asks for a "swarm." The request contains no task result that a swarm must improve, no comparison against a simpler design, and no statement of acceptable consequence. The word describes a topology, not a need.
+
+The engineering response is an evidence ladder. Hold the task set, tools, policy, and budget constant. Start with a fixed baseline. Add model assistance only when it resolves a measured limitation. Add model-directed control only when its benefit is observable and its failure is containable. Add multiple agents only when a separable structure supplies a falsifiable advantage. The least complex adequate design is not the timid design. It is the design with the smallest unsupported failure surface. [CLM-003]
+
+This chapter revises the dossier to `AR-01 v0.2.0`. The revision records four alternatives, selects a maximum permitted level for the current FieldOps slice, rejects higher complexity, and states exactly what future evidence could reverse the decision.
+
+## 1. Autonomy is a design liability
+
+In ordinary software, deterministic does not mean infallible, but it makes behavior easier to enumerate. In an agentic system, a model can choose the next transition from a permitted set. That can make an open-ended task tractable, yet it also expands uncertainty across planning, tool selection, stopping, and recovery.
+
+Treat each increment of autonomy as a liability that must be serviced:
+
+- **Behavioral liability:** more possible paths must be evaluated.
+- **Authority liability:** more proposed actions must be checked against delegation.
+- **Observability liability:** traces must explain which transition occurred and why.
+- **Recovery liability:** interrupted, duplicated, or partial effects require reconciliation.
+- **Cost liability:** variable turns, tools, tokens, and coordination can exceed budgets.
+- **Security liability:** excessive agency increases the harm available from manipulated input or faulty reasoning.
+
+OWASP's excessive-agency category is a useful warning: damaging behavior can arise when a system has excessive functionality, permissions, or autonomy. It does not imply that all agents are unsafe or assign an acceptable threshold for FieldOps. The design obligation is to minimize available powers and require independent enforcement at consequential boundaries. NIST's AI RMF similarly supports risk-aware governance but does not select an architecture for a specific product. [CLM-003]
+
+The control question is not "Can a model do this?" It is "What task variation requires model-directed choice, what measurable benefit should result, and what mechanism contains a wrong choice?"
+
+## 2. Four execution levels
+
+FieldOps evaluates four levels against one bounded task: interpret a synthetic maintenance request, gather evidence from synthetic manuals and inventory, propose a compatible available part, and prepare at most one reservation for approval.
+
+### Level 1: Fixed workflow
+
+Code or configuration determines the sequence. A parser extracts known fields, rules map a known symptom to candidate parts, a service checks availability, and a fixed template reports the result. The baseline is predictable, cheap to replay, and easy to inspect. It struggles when requests omit fields, use unfamiliar language, or require evidence gathering that cannot be economically enumerated.
+
+The fixed workflow is the control. Without it, the team cannot show that model-directed behavior contributes value.
+
+### Level 2: Assisted workflow
+
+A model performs bounded transformations inside a predetermined path: extracting fields, normalizing a description, ranking already eligible candidates, or drafting an explanation. Code still selects the next step and enforces every action. This level can absorb language variation without granting the model control over tools or stopping.
+
+Assistance is often enough. If the only uncertainty is how a user phrased the request, there may be no reason for a model to decide which service to call.
+
+### Level 3: One bounded agent
+
+A model may select among a limited set of read, compute, and propose actions. It can decide which approved manual section to inspect, whether it needs another inventory query, or whether missing evidence requires clarification. The harness owns state, tools, budgets, policy, and effect gates. Consequential effects remain separately authorized.
+
+This level is useful when the path depends on evidence discovered during the run and pre-enumerating every branch is disproportionately expensive. Its value must be tested, not assumed.
+
+### Level 4: Multiple agents
+
+Several model-directed components coordinate, delegate, critique, or explore branches. This can help when subtasks are genuinely separable and parallel exploration changes a measured outcome. It also introduces handoff ambiguity, duplicated work, shared-state conflicts, coordination cost, and a larger evaluation surface.
+
+OpenAI, Anthropic, and Google currently document patterns across these levels. Their terminology and frameworks are examples, not a maturity ranking. A multiple-agent topology is not "more advanced" in any decision-relevant sense unless it performs the target work better under the same constraints.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F02.1" data-png="/assets/publications/agentic-ai-engineering/f02-1-autonomy-staircase.png">
+  <div role="img" aria-label="Pending colorful realistic 3D staircase with four steps labeled Fixed, Assisted, One Agent, and Multiple Agents. A separate rising rail labeled Coordination and Authority Burden shows that higher steps require more control and are not automatically better. No relationship depends on color.">ImageGen raster pending: F02.1</div>
+  <figcaption><strong>F02.1 - Autonomy staircase.</strong> Essential labels: Fixed, Assisted, One Agent, Multiple Agents, Coordination and Authority Burden. Evidence role: a conceptual comparison; height does not represent superiority.</figcaption>
+</figure>
+
+## 3. Build the suitability matrix
+
+Score the task before choosing the topology. Use ordinal scores to structure judgment, not to manufacture precision. Record evidence and uncertainty beside every score.
+
+### Ambiguity
+
+How much task-relevant variation cannot be economically encoded in advance? Low ambiguity favors fixed control. High linguistic variation may justify assistance. High path ambiguity may justify one bounded agent, but only if the system can recognize completion and failure.
+
+Do not confuse incomplete requirements with legitimate ambiguity. If nobody can say what a correct part is, an agent cannot repair the missing domain contract.
+
+### Feedback quality
+
+How quickly and reliably can the system learn whether an action was useful? A read-only search can often be checked immediately. A maintenance recommendation may require domain review. A physical effect may reveal failure too late.
+
+Weak feedback argues for less autonomy because the system cannot correct its path safely. If a run can take ten actions before learning that the first was wrong, the harness needs tighter budgets and earlier checkpoints.
+
+### Consequence
+
+What happens when the action is wrong? Distinguish reversible information gathering, a proposal awaiting review, a communication to another person, a reversible system effect, and an irreversible or safety-relevant effect.
+
+Consequence sets the ceiling. A task can be ambiguous and still be unsuitable for autonomous execution. FieldOps may allow model-directed evidence gathering while requiring exact approval for a stock reservation and prohibiting equipment control entirely.
+
+### Observability
+
+Can the team reconstruct inputs, state, proposed actions, policy decisions, approvals, tool results, and completion evidence? If not, complexity outruns diagnosis. A plausible final answer is not an adequate trace.
+
+Observability includes semantic identifiers. "Tool 3 succeeded" is not enough. The record must say which part, slot, quantity, principal, proposal, and policy decision were involved.
+
+### Time horizon
+
+How many transitions and how much elapsed time separate request from completion? Longer horizons increase exposure to stale data, expired authority, service changes, and accumulated reasoning error. A long-running task needs durable state, revalidation, and explicit leases; it should not inherit trust from its first step forever.
+
+### Containment
+
+Can the harness prevent prohibited actions even when a proposal is malformed, manipulated, or surprising? Containment is stronger when tools expose narrow operations, policies are deterministic, effects are approval-bound, and state transitions are explicit.
+
+If the only guardrail is an instruction telling the model not to do something, containment is weak.
+
+### Cost and controllability
+
+Estimate model calls, tool calls, tokens, latency, concurrency, reviews, and operational overhead. Include the cost of evaluation and incident response. Then ask whether these quantities can be capped and attributed.
+
+A cheaper model call is not automatically a cheaper system. Multiple components may repeat searches, exchange context, and create more review work. Cost-effectiveness is an empirical property of one workload and configuration.
+
+For each level, write a prediction in advance: "Compared with the fixed workflow on the frozen task set, assisted extraction should reduce missing-field errors without increasing tool calls," or "One bounded agent should improve evidence completeness on requests whose needed documents cannot be identified from initial fields, while staying inside three read calls." A prediction that cannot fail is not evidence.
+
+## 4. FieldOps fixed baseline
+
+The accepted blueprint injects a fictional result: a task generator produces a synthetic set in which the fixed workflow handles 92 percent of tasks. This number is not a real deployment measurement, not a vendor result, and not a claim about maintenance work. It is a scenario value supplied to make the decision exercise concrete.
+
+The remaining 8 percent is not automatically the agent opportunity. First inspect the misses.
+
+- Some requests lack required domain information. The right behavior is clarification, which a fixed workflow can trigger.
+- Some use synonyms that a bounded extraction model can normalize. Assistance may be enough.
+- Some require choosing among several documents based on evidence found during the search. This is a plausible one-agent need.
+- Some ask for equipment control or safety diagnosis. These are prohibited, not autonomy opportunities.
+- Some contain conflicts that require a domain authority. Escalation is the correct result.
+
+This decomposition changes the decision. If a fixed workflow plus assisted extraction covers most legitimate variation and rejects the rest safely, an agent has not earned a place. If a residual class requires iterative evidence gathering and has clear completion, bounded consequences, and reliable containment, one agent may be justified for that class alone.
+
+Run a controlled comparison:
+
+1. Freeze the synthetic task set and expected evidence.
+2. Freeze tool data, compatibility rules, and policy.
+3. Give every level the same information and consequence boundary.
+4. Record completion, evidence quality, false completion, forbidden proposals, latency, tool calls, and review load.
+5. Compare failure categories, not only average success.
+6. Keep effects disabled or approval-gated during evaluation.
+
+Do not tune the agent on the evaluation cases while leaving the baseline untouched. Do not let one design access a better retrieval index. Do not change the definition of completion after seeing results. A fair comparison isolates the additional control freedom.
+
+The FieldOps dossier therefore selects one bounded agent as the maximum architecture only for ambiguous, read-heavy evidence gathering. Fixed and assisted paths remain preferred when sufficient. The agent may read approved synthetic sources, compute over returned evidence, request clarification, and produce a reservation proposal. It may not reserve stock without an exact approval. It may never control equipment or make a safety determination.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F02.2" data-png="/assets/publications/agentic-ai-engineering/f02-2-simple-versus-swarm.png">
+  <div role="img" aria-label="Pending crisp 3D comparison between a simple conveyor labeled Fixed or One Bounded Agent and a branching group labeled Multiple Agents. Checkpoints ask Measured Benefit, Separable Work, Contained Failure, and Budget. The multiple-agent route is blocked when any checkpoint fails. No performance number appears in the image.">ImageGen raster pending: F02.2</div>
+  <figcaption><strong>F02.2 - Simple system versus swarm.</strong> Essential labels: Measured Benefit, Separable Work, Contained Failure, Budget. Evidence role: a rejection-test scaffold; it makes no performance claim.</figcaption>
+</figure>
+
+## 5. Audit the multi-agent claim
+
+One accepted source describes an Anthropic multi-agent research system that reported improved performance for a specific breadth-first research task, alongside substantial token use. That is useful case evidence. It does not establish that multiple agents are generally superior, more reliable, or more cost-effective. Transfer depends on whether work can be separated, parallel exploration is valuable, coordination errors are manageable, and the measurement matches the target workload. [CLM-004]
+
+Google's current agent-development documentation also presents multi-agent patterns. Documentation that a pattern exists is not comparative outcome evidence. It can help implement a chosen topology; it cannot prove that the topology should be chosen.
+
+For FieldOps, test four propositions separately:
+
+1. **Independent branches:** Can evidence searches proceed without shared mutable assumptions?
+2. **Aggregation:** Can results be combined with a deterministic rule or accountable reviewer?
+3. **Contention:** Do branches compete for the same stock, budget, or approval?
+4. **Measured advantage:** Does parallelism improve an outcome enough to offset tokens, latency, coordination, and review?
+
+FieldOps fails the current test. A reservation concerns shared scarce stock. Compatibility evidence must converge on one proposal. The synthetic task set has not shown a search-breadth bottleneck. No controlled result demonstrates a multiple-agent benefit. The claim of general superiority remains disputed and unsupported. [CLM-004]
+
+This conclusion is reversible. A future workload may contain many independent manuals or jurisdictions whose searches can be parallelized, with a fixed aggregator and no effect during exploration. If a preregistered comparison shows better evidence coverage within budget and without worse authority or failure behavior, a multiple-agent topology can be reconsidered. Until then, "swarm" remains a rejected alternative, not a roadmap stage.
+
+### Route the twelve FieldOps tasks
+
+A single architecture label hides task diversity. Route each synthetic task independently before deciding which components to share.
+
+**Task 1: exact part number and known slot.** The request contains a valid part identifier, one approved inventory source, and no ambiguity. A fixed workflow validates format, reads availability, and prepares a proposal. Model assistance adds no named benefit. If the request asks for an effect, the same approval gate still applies.
+
+**Task 2: common synonym in an otherwise complete request.** A bounded extraction model can normalize the term, while code controls the rest of the path. Choose assisted execution. The prediction is fewer missing-field escalations with no increase in tool choice. The falsifier is no improvement over a maintained synonym table.
+
+**Task 3: missing equipment identifier.** The task is not ready for an agent. A fixed validation rule requests clarification. Model-directed search would create the appearance of progress while lacking the identifier required for compatibility evidence.
+
+**Task 4: several manuals, chosen by a discovered model code.** One bounded agent may first read the request, then select the relevant approved manual after discovering the code. The named benefit is avoiding an economically large predetermined branch table. The harness caps reads and requires cited evidence.
+
+**Task 5: conflicting compatibility records.** More autonomy does not resolve authority. The system can gather both records, but it must escalate to the domain owner. The correct terminal state is `escalated`, not a confident majority vote.
+
+**Task 6: stale inventory.** A fixed rule rejects the stale observation and allows a bounded re-read. If freshness remains outside threshold, stop. The agent cannot reason stale data into freshness.
+
+**Task 7: a request to diagnose a safety fault.** Reject the task. It is outside FieldOps non-goals and designated authority. A richer model or more agents does not change the scope decision.
+
+**Task 8: a request for one reservation after a valid proposal.** The effect path is deterministic: validate the exact proposal, obtain matching authority, execute once, and verify. The model has no useful choice inside the airlock.
+
+**Task 9: hundreds of independent approved manuals.** This is a candidate for parallel exploration, but candidacy is not approval. First test retrieval or deterministic partitioning. If multiple model-directed branches are proposed, preregister the expected evidence-coverage or elapsed-time benefit and include coordination cost.
+
+**Task 10: several requests competing for one scarce part.** Avoid independent agents racing on shared state. Centralize allocation and effect ordering in a deterministic service or policy. Model-directed components can prepare proposals but cannot resolve stock contention by arriving first.
+
+**Task 11: a familiar document extraction form.** Use a fixed workflow with bounded extraction. A long or visually complex document can require capable models without requiring model-directed control flow.
+
+**Task 12: an unfamiliar request whose next question depends on each answer.** One bounded agent may be appropriate if each question is from an approved set, completion is observable, the turn budget is capped, and no effect occurs during clarification. Compare it with a decision tree before selecting it.
+
+This routing exercise makes the maximum-autonomy decision concrete. `single-agent` is a ceiling for a residual class, not the identity of the whole product. One run may combine fixed validation, assisted extraction, a bounded agentic evidence loop, and a deterministic effect airlock.
+
+### Design the comparison before running it
+
+An autonomy experiment can be biased without anyone fabricating a number. Prevent common distortions with a comparison protocol.
+
+**Freeze the unit of analysis.** Decide whether a case is one request, one evidence path, or one effect proposal. Do not count every agent turn as progress while counting the workflow only at completion.
+
+**Freeze completion.** The same evidence predicate applies to every level. If the agent is credited for a plausible recommendation while the workflow must prove compatibility and freshness, the comparison is meaningless.
+
+**Freeze access.** Give each level the same approved documents, data snapshot, compatibility rules, and service semantics. If a topology needs a different index, report that as part of the architecture and cost.
+
+**Freeze consequence.** Keep effects disabled or behind the same exact approval. Do not demonstrate agent flexibility by allowing it permissions denied to the baseline.
+
+**Separate development and evaluation.** Use one synthetic set to refine prompts, rules, and tools, then a held-out set for comparison. Record every post-evaluation change and rerun all levels when it affects fairness.
+
+**Measure distributions and failure classes.** Report median and tail latency, tool-call distribution, budget exhaustion, false completion, missing evidence, forbidden proposals, clarification, escalation, review minutes, and effect-gate results. An average success value can hide a rare unacceptable failure.
+
+**Define equivalence.** Two outputs can differ in wording while carrying equivalent evidence. Conversely, identical prose can rest on different or stale sources. Compare the structured completion record rather than surface similarity.
+
+**Record uncertainty.** A small task set may not distinguish levels. "No demonstrated benefit" is a legitimate result. It is not evidence that the more complex system would never help; it is sufficient reason not to adopt it now.
+
+The experiment record should include a decision timestamp and expiry. Model capability, token prices, frameworks, and workloads change. A reversible architecture decision names when or why it will be reexamined.
+
+### Price the control burden
+
+Teams often price only inference. Architecture cost also includes engineering and operational controls.
+
+For a fixed workflow, count rule maintenance, deterministic tests, and service operations. For assisted execution, add model evaluation, output validation, and fallback behavior. For one agent, add state traces, tool policy, turn budgets, stop logic, adversarial evaluation, recovery, and approval integration. For multiple agents, add delegation contracts, handoff validation, shared-state coordination, branch budgets, attribution, aggregation, and a much larger interaction test space.
+
+The exact quantities depend on the implementation. The ordering is not guaranteed: a badly engineered fixed workflow can cost more than a small agent. The point is to expose the categories. A topology that reduces prompt tokens but doubles human review may be worse for the product. A topology that improves elapsed time through parallelism may still consume far more compute and complicate incident reconstruction.
+
+Use a budget sheet with at least these columns: model calls, tool calls, tokens, elapsed time, concurrency, external effects, review minutes, evaluation cases, on-call procedures, and unresolved failure modes. For every claimed saving, name the displaced work. "The agents collaborate automatically" is not a cost model.
+
+### Test containment before capability
+
+A spectacular successful trace is weak evidence because it exercises the happy path once. Before optimizing capability, try to force the system outside its contract.
+
+Give it a manual containing control-like instructions. Remove a required field. Return contradictory compatibility records. Make the inventory result stale. Cause a timeout after the effect service has committed. Exhaust the read budget. Cancel the run between proposal and approval. Change the proposal after approval. Request a prohibited action using persuasive language.
+
+At each level, ask whether the architecture makes the expected disposition easy to enforce. A fixed workflow may reject malformed input cleanly. An assisted workflow must validate model output before it enters fixed state. One agent must be unable to reveal a prohibited tool or bypass a budget. Multiple agents must not launder a denied action through delegation or lose the principal across a handoff.
+
+Containment is evaluated independently of whether the model recognizes the trap. A model that refuses a prohibited request is helpful. The system passes only when the effect remains unreachable even if the model proposes it.
+
+### Write a useful rejection log
+
+A rejection log is not a graveyard of ideas. It preserves the conditions under which the architecture decision was made.
+
+For each alternative, record the task evidence considered, predicted benefit, added failure surface, missing evidence, decision, owner, and reconsideration trigger. Avoid subjective entries such as "too complicated" or "not ready." Write: "Multiple agents rejected because the frozen workload has no independently explorable branch whose parallel execution improves the accepted completion measure; reconsider if branchable cases exceed the routing threshold and a controlled comparison shows benefit within the coordination budget."
+
+Also record why simpler levels were not universally selected. This prevents a future reader from assuming that one agent was chosen by preference. The accepted residual class should be identifiable from routing evidence.
+
+The log protects against architecture drift. When a new framework makes delegation easy, the team can see that implementation convenience was never the missing evidence. When a new workload contains independent search branches, the team can reopen the exact proposition that changed.
+
+## 6. Decision, rejection log, and falsifiers
+
+`AR-01 v0.2.0` records four levels and selects **single-agent** as the maximum allowed topology for the bounded slice. "Maximum" is important. It does not require every task to use the agent. Routing should still choose fixed or assisted execution whenever those are adequate.
+
+The selected level has one named benefit: flexible evidence gathering when the next approved read depends on evidence discovered during the run. Its controls are also named: read-only and compute actions are bounded; proposals are validated; effects remain approval-gated; prohibited actions are absent from the tool surface; budgets and stop conditions are deterministic.
+
+The rejection log says:
+
+- Fixed-only is rejected as the universal design because it cannot economically represent the accepted residual evidence paths.
+- Assisted-only is rejected for the residual class because a predetermined sequence cannot select the next document from newly discovered evidence.
+- Multiple agents are rejected because FieldOps has no demonstrated separable-work benefit and would add coordination and shared-state risk.
+
+The decision is invalidated or narrowed if any of these falsifiers occurs:
+
+- the residual task class can be handled by a simpler deterministic design;
+- evidence completeness does not improve over assisted execution;
+- forbidden or out-of-contract proposals exceed the accepted threshold;
+- review burden, cost, or latency exceeds the fixed budget;
+- the harness cannot reconstruct a decision from its trace;
+- effect approval can be bypassed, replayed, or applied to a changed proposal;
+- domain owners cannot define reliable completion evidence.
+
+Conversely, moving to multiple agents requires new evidence, not enthusiasm: a frozen workload with independently explorable branches, a preregistered benefit, held-constant tools and budgets, containment for coordination failures, and a result that justifies the added operational cost.
+
+## FieldOps lab
+
+Use the companion `ar-01-v0.2.0.json` as the reference decision. For each of twelve synthetic tasks, record ambiguity, feedback, consequence, observability, horizon, containment, and cost. Select fixed, assisted, one agent, or reject the task. Then write the predicted benefit and a falsifier.
+
+Include at least one document workflow where an agent should be rejected. A long document is not sufficient justification. If the required fields and extraction sequence are known, a fixed workflow with bounded model assistance may be more controllable.
+
+The assessment has four gates:
+
+- the fixed baseline exists and is compared fairly;
+- the chosen level has a measurable task-specific benefit;
+- consequence and authority constrain the ceiling;
+- the multiple-agent claim remains explicitly disputed.
+
+Presenting the bounded research case as proof of general multi-agent superiority is an automatic failure. So is using the injected 92 percent as real-world evidence.
+
+## Autonomy review packet
+
+The architecture decision should be reproducible from a compact packet rather than from a demo.
+
+### Task-set card
+
+State that the workload is synthetic. Record generator version, case count, task categories, exclusions, and held-out split. Identify the injected 92 percent fixed-baseline value as a scenario premise until a companion generator reproduces it. Do not place the value in marketing, artwork, or a factual summary.
+
+For each case, provide required inputs, acceptable evidence, completion predicate, consequence ceiling, permitted actions, expected clarification or escalation, and prohibited outcomes. A case whose expected result is "reject" is as important as a successful proposal case.
+
+### Baseline card
+
+Describe the fixed state sequence, rules, bounded model calls if any, tool access, budgets, and fallback. Record which variations it cannot represent and why. "The workflow is brittle" is not sufficient. Name the branch explosion, maintenance cost, or evidence dependency that creates the limitation.
+
+The baseline remains a production option after an agent is selected. Preserve its tests and routing conditions. It may be the safest fallback during a model incident or for high-volume familiar cases.
+
+### Alternative cards
+
+For assisted, one-agent, and multiple-agent alternatives, record the additional freedom introduced. Assistance introduces uncertain transformations but not model-selected transitions. One agent introduces model-selected action and stopping within the harness. Multiple agents introduce delegation, coordination, aggregation, and shared-state questions.
+
+Beside each freedom, record the predicted benefit, new observable, containment mechanism, failure injection, and cost category. If an added freedom has no predicted benefit, remove it before evaluation.
+
+### Comparison card
+
+List controlled variables and deliberate differences. Record run configuration, model identifiers, tool and data versions, randomization or repeat policy, budget, and evaluation time. Predeclare how ties, refusals, timeouts, and incomplete evidence count.
+
+Report per-task results alongside aggregates. A topology may improve broad search while worsening exact effect proposals. That trade cannot be judged from one blended score. Consequence-weighted failures deserve separate review, but do not disguise subjective weights as natural constants.
+
+### Decision card
+
+Name the selected default per task class and the maximum permitted autonomy. For FieldOps, fixed and assisted paths remain valid defaults; one bounded agent is the ceiling for the residual evidence-gathering class; multiple agents are rejected.
+
+Record decision owner, consulted authorities, date, evidence, deployment restrictions, rollback path, and reconsideration triggers. State which uncertainties remain. A decision is more trustworthy when it admits what the experiment did not establish.
+
+## Failure-injection review
+
+Run a tabletop before implementation.
+
+**Missing feedback:** The system proposes a part, but the domain predicate cannot verify compatibility. Higher autonomy is denied. The task becomes clarification or escalation.
+
+**Fully enumerable task:** The request maps through stable known rules. The fixed workflow wins unless a measured operational benefit justifies assistance. Novelty is not a benefit.
+
+**Parallel information search:** The task contains ten independent approved sources and a deterministic aggregation rule. Multiple agents become a testable hypothesis, not an automatic choice. Compare against parallel non-agent retrieval and one-agent tool concurrency.
+
+**Irreversible high-consequence effect:** Even excellent task performance does not justify autonomous execution. The consequence ceiling routes the system to proposal-only or rejection.
+
+**Shared scarce stock:** Several branches find the same available item. A deterministic reservation service must serialize or arbitrate allocation. Agents cannot coordinate by conversational agreement as a substitute for concurrency control.
+
+**Hidden budget growth:** The one-agent path repeatedly reads similar evidence. The harness stops at the cap and records `budget_exhausted`. It does not let the model authorize more calls because the answer seems close.
+
+**Partial platform outage:** One source is unavailable. The completion predicate determines whether remaining evidence is sufficient. The architecture does not reward an agent for inventing a substitute source.
+
+**Prompt-injected source:** A document asks the system to spawn helpers or use a prohibited tool. The instruction remains untrusted content. A multiple-agent implementation must not make delegation a route around the same policy.
+
+These injections test architecture properties rather than model personality. Repeat them across model updates. The expected policy disposition should remain stable even if the generated explanation changes.
+
+## How to reconsider the disputed claim
+
+The multi-agent claim stays disputed until a bounded proposition is supported. Form the proposition with six fields:
+
+1. workload and branch structure;
+2. baseline topology;
+3. multiple-agent topology;
+4. held-constant tools, data, policy, and budget treatment;
+5. preregistered benefit and failure measures; and
+6. transfer limits.
+
+For example: "On synthetic research cases containing at least eight independently searchable approved corpora, four bounded search workers plus a deterministic aggregator will improve evidence recall at the same elapsed-time ceiling, while forbidden-action and unsupported-citation rates do not worsen." This can be tested and falsified. "Swarms reason better" cannot.
+
+If the result is positive, report coordination cost, token use, tail behavior, aggregation errors, and cases that did not transfer. Do not generalize from research search to inventory mutation, from one provider stack to all stacks, or from a benchmark to production economics. [CLM-004]
+
+If the result is negative or inconclusive, retain the simpler architecture. A reversible rejection is not technological conservatism. It is control over evidence debt.
+
+## Reader decision drill
+
+For each proposal, state the missing evidence before selecting a level.
+
+- "Use an agent because requests are natural language." Missing: whether bounded extraction inside a fixed path is inadequate.
+- "Use multiple agents so they can check one another." Missing: a defined independent error mechanism, aggregation rule, and comparison against deterministic validation.
+- "Keep it deterministic because effects are risky." Missing: whether model-directed read-only evidence gathering can be separated from the deterministic effect gate.
+- "Use the most capable model and let it decide." Missing: completion, action bounds, authority, containment, budget, and evaluation.
+- "The demo solved every example." Missing: held-out tasks, failure injections, consequence-weighted behavior, and reproducibility.
+- "Parallel agents are faster." Missing: fixed workload, elapsed-time result, resource cost, coordination failures, and a parallel non-agent baseline.
+
+The correct answer may be "insufficient evidence." Architecture review should reward that answer when the alternative is invented certainty.
+
+## Chapter checkpoint
+
+FieldOps has now earned a limited right to use model-directed control. `AR-01 v0.2.0` permits one bounded agent for ambiguous evidence gathering, prefers simpler paths where adequate, retains exact approval for effects, and rejects multiple agents pending evidence. The next chapter must turn that ceiling into a contract. It needs a principal, beneficiary, completion predicate, action classes, budgets, approval fields, prohibited actions, stop conditions, escalation destinations, and verification evidence. Without those fields, "one bounded agent" is still only an architectural intention.

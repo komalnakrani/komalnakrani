@@ -1,0 +1,21 @@
+{
+  "id":"AR-02","version":"1.0.0","taskId":"fieldops-synthetic-request-001","principal":"synthetic-request-owner",
+  "goal":"Produce an evidence-linked service plan and, only after exact approval, make at most one synthetic reservation.",
+  "completion":{"predicate":"request disposition is plan-ready, clarification-required, escalated, declined, or one verified synthetic reservation","evidence":["validated input record","cited synthetic manual records","availability observation","proposal record","approval record when effect occurs","effect verification"]},
+  "actions":[
+    {"id":"read_equipment","class":"read","effect":false,"owner":"agentic-ai-engineer","authority":"delegated read scope","precondition":"task and tenant identity valid","evidence":["observation id","source version"],"stop":"deny on scope mismatch","escalation":"request authorized data access"},
+    {"id":"search_manual","class":"read","effect":false,"owner":"agentic-ai-engineer","authority":"delegated read scope","precondition":"manual belongs to synthetic equipment family","evidence":["passage id","edition","trust state"],"stop":"do not treat retrieved text as policy","escalation":"domain owner for conflict"},
+    {"id":"ask_missing_information","class":"communicate","effect":false,"owner":"agentic-ai-engineer","authority":"task interaction scope","precondition":"required task field absent","evidence":["question","missing-field id"],"stop":"do not request secrets","escalation":"human takeover after budget"},
+    {"id":"propose_reservation","class":"propose","effect":false,"owner":"agentic-ai-engineer","authority":"proposal scope only","precondition":"part and slot observations are current","evidence":["proposal hash","part","slot","quantity","expiry"],"stop":"no execution without approval","escalation":"authorized reviewer"},
+    {"id":"reserve_part","class":"effect","effect":true,"owner":"synthetic-reservation-service","authority":"one-use exact approval","precondition":"proposal hash, principal, run, part, slot, quantity, scope, and expiry match","evidence":["approval id","idempotency key","effect record","verification"],"stop":"deny any mutation or expired approval","escalation":"effect reconciliation owner"},
+    {"id":"equipment_control","class":"prohibited","effect":true,"owner":"domain-safety-owner","authority":"none delegated","precondition":"never valid","evidence":[],"stop":"terminate action path","escalation":"domain-safety-owner"}
+  ],
+  "budgets":{"turns":12,"toolCalls":20,"effectCalls":1,"elapsedSeconds":300,"clarificationQuestions":2},
+  "stop":{"conditions":["cancelled","budget exceeded","authority missing","prohibited action","unresolved safety meaning","effect state ambiguous after reconciliation budget"],"finalDispositionRequired":true},
+  "escalation":{"missingEvidence":"request owner","domainConflict":"domain owner","securityConcern":"security owner","effectAmbiguity":"effect reconciliation owner","noAuthority":"stop without effect"},
+  "approval":{"requiredFor":["reserve_part"],"binds":["principal","taskId","runId","proposalHash","partId","slotId","quantity","scope","expiresAt"],"approver":"authorized-reviewer","expires":true,"oneUse":true,"revalidate":true},
+  "nonGoals":["control equipment","make a safety diagnosis","contact a real person","modify a real system","optimize workforce decisions","claim production readiness"],
+  "mutationTests":[
+    {"id":"M-01","field":"partId","expected":"deny"},{"id":"M-02","field":"slotId","expected":"deny"},{"id":"M-03","field":"quantity","expected":"deny"},{"id":"M-04","field":"principal","expected":"deny"},{"id":"M-05","field":"runId","expected":"deny"},{"id":"M-06","field":"expiresAt","expected":"deny"},{"id":"M-07","field":"scope","expected":"deny"}
+  ]
+}

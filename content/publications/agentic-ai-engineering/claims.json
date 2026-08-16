@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "claims": [
+    {"id":"CLM-001","chapterSlug":"the-profession-behind-the-agent","statement":"Agentic AI engineering owns the deterministic action loop and its evidence, while product, platform, domain, safety, and security authorities retain their own decisions.","sourceIds":["SRC-001","SRC-002","SRC-036"]},
+    {"id":"CLM-002","chapterSlug":"the-profession-behind-the-agent","statement":"A useful engineering distinction is that workflows follow predefined control flow while agents let a model materially direct tool use and execution toward a goal.","sourceIds":["SRC-001","SRC-002"]},
+    {"id":"CLM-003","chapterSlug":"earn-the-right-to-use-autonomy","statement":"The least autonomous architecture that meets task and control requirements should be the baseline against which an agent is justified.","sourceIds":["SRC-001","SRC-002","SRC-023","SRC-036"]},
+    {"id":"CLM-004","chapterSlug":"earn-the-right-to-use-autonomy","statement":"The general claim that adding multiple agents improves task quality is unsupported; any benefit is task-specific and must be measured against coordination and resource cost.","sourceIds":["SRC-013","SRC-042"]},
+    {"id":"CLM-005","chapterSlug":"contract-the-goal-actions-and-authority","statement":"A delegated task needs an observable completion predicate, bounded allowed actions, consequence classes, budgets, stop and escalation rules, and named authority before effectful execution.","sourceIds":["SRC-001","SRC-023","SRC-036","SRC-037"]},
+    {"id":"CLM-006","chapterSlug":"contract-the-goal-actions-and-authority","statement":"Confirmation and oversight are risk controls for consequential actions but do not transfer formal authority or guarantee correct action.","sourceIds":["SRC-023","SRC-030","SRC-043"]}
+  ]
+}

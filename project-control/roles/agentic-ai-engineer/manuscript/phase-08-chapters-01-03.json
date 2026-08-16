@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "role": "agentic-ai-engineer",
+  "publication": "agentic-ai-engineering",
+  "phase": "08",
+  "issue": 47,
+  "status": "complete-pending-parent-acceptance",
+  "chapters": [
+    {
+      "number": 1,
+      "slug": "the-profession-behind-the-agent",
+      "manuscript": "content/publications/agentic-ai-engineering/chapters/the-profession-behind-the-agent.mdx",
+      "words": 5357,
+      "acceptedClaims": ["AGE-BCLM-001", "AGE-BCLM-002"],
+      "productionClaims": ["CLM-001", "CLM-002"],
+      "acceptedSources": ["AGE-BSRC-001", "AGE-BSRC-002", "AGE-BSRC-036"],
+      "productionSources": ["SRC-001", "SRC-002", "SRC-036"],
+      "cases": ["AGE-CASE-012"],
+      "dossierIn": null,
+      "dossierOut": "AR-01 v0.1.0",
+      "figures": [
+        {"id": "F01.1", "path": "/assets/publications/agentic-ai-engineering/f01-1-responsibility-workshop.png", "labels": ["User", "Agent", "Model", "Tools", "Platform", "Authority"], "accessibility": "Alt text enumerates all six zones and the authority boundary without color dependence.", "evidenceRole": "Conceptual responsibility separation only.", "status": "pending-root-imagegen"},
+        {"id": "F01.2", "path": "/assets/publications/agentic-ai-engineering/f01-2-boundary-classification.png", "labels": ["Owned", "Partnered", "Escalated", "Primary Owner", "Evidence"], "accessibility": "Alt text describes decision cards crossing a labeled boundary with required records.", "evidenceRole": "Classification memory aid only.", "status": "pending-root-imagegen"}
+      ],
+      "learning": "content/publications/agentic-ai-engineering/learning/chapter-01.md",
+      "state": "content/publications/agentic-ai-engineering/chapters/state/chapter-01-state.md",
+      "qa": "content/publications/agentic-ai-engineering/chapters/qa/chapter-01-qa.md"
+    },
+    {
+      "number": 2,
+      "slug": "earn-the-right-to-use-autonomy",
+      "manuscript": "content/publications/agentic-ai-engineering/chapters/earn-the-right-to-use-autonomy.mdx",
+      "words": 5101,
+      "acceptedClaims": ["AGE-BCLM-003", "AGE-BCLM-004"],
+      "productionClaims": ["CLM-003", "CLM-004"],
+      "acceptedSources": ["AGE-BSRC-001", "AGE-BSRC-002", "AGE-BSRC-013", "AGE-BSRC-023", "AGE-BSRC-036", "AGE-BSRC-042"],
+      "productionSources": ["SRC-001", "SRC-002", "SRC-013", "SRC-023", "SRC-036", "SRC-042"],
+      "cases": ["AGE-CASE-001", "AGE-CASE-012"],
+      "dossierIn": "AR-01 v0.1.0",
+      "dossierOut": "AR-01 v0.2.0",
+      "figures": [
+        {"id": "F02.1", "path": "/assets/publications/agentic-ai-engineering/f02-1-autonomy-staircase.png", "labels": ["Fixed", "Assisted", "One Agent", "Multiple Agents", "Coordination and Authority Burden"], "accessibility": "Alt text states explicitly that higher is not automatically better.", "evidenceRole": "Conceptual architecture comparison only.", "status": "pending-root-imagegen"},
+        {"id": "F02.2", "path": "/assets/publications/agentic-ai-engineering/f02-2-simple-versus-swarm.png", "labels": ["Measured Benefit", "Separable Work", "Contained Failure", "Budget"], "accessibility": "Alt text describes each rejection checkpoint and contains no performance number.", "evidenceRole": "Rejection-test scaffold only.", "status": "pending-root-imagegen"}
+      ],
+      "learning": "content/publications/agentic-ai-engineering/learning/chapter-02.md",
+      "state": "content/publications/agentic-ai-engineering/chapters/state/chapter-02-state.md",
+      "qa": "content/publications/agentic-ai-engineering/chapters/qa/chapter-02-qa.md"
+    },
+    {
+      "number": 3,
+      "slug": "contract-the-goal-actions-and-authority",
+      "manuscript": "content/publications/agentic-ai-engineering/chapters/contract-the-goal-actions-and-authority.mdx",
+      "words": 5776,
+      "acceptedClaims": ["AGE-BCLM-005", "AGE-BCLM-006"],
+      "productionClaims": ["CLM-005", "CLM-006"],
+      "acceptedSources": ["AGE-BSRC-001", "AGE-BSRC-023", "AGE-BSRC-030", "AGE-BSRC-036", "AGE-BSRC-037", "AGE-BSRC-043"],
+      "productionSources": ["SRC-001", "SRC-023", "SRC-030", "SRC-036", "SRC-037", "SRC-043"],
+      "cases": ["AGE-CASE-004", "AGE-CASE-012"],
+      "dossierIn": "AR-01 v0.2.0",
+      "dossierOut": "AR-02 v1.0.0",
+      "figures": [
+        {"id": "F03.1", "path": "/assets/publications/agentic-ai-engineering/f03-1-action-authority-contract.png", "labels": ["Goal", "Actions", "Limits", "Approval", "Stop", "Complete"], "accessibility": "Alt text maps each visible object to its contract field.", "evidenceRole": "Conceptual schema relationship only.", "status": "pending-root-imagegen"},
+        {"id": "F03.2", "path": "/assets/publications/agentic-ai-engineering/f03-2-authority-airlock.png", "labels": ["Propose", "Review", "Authorize", "Execute", "Verify"], "accessibility": "Alt text describes stage owners and the blocked bypass without color dependence.", "evidenceRole": "Causal control scaffold only.", "status": "pending-root-imagegen"}
+      ],
+      "learning": "content/publications/agentic-ai-engineering/learning/chapter-03.md",
+      "state": "content/publications/agentic-ai-engineering/chapters/state/chapter-03-state.md",
+      "qa": "content/publications/agentic-ai-engineering/chapters/qa/chapter-03-qa.md"
+    }
+  ],
+  "companion": {
+    "readme": "content/publications/agentic-ai-engineering/companion/README.md",
+    "contracts": ["responsibility-charter.schema.json", "goal-action-authority.schema.json"],
+    "dossier": ["ar-01-v0.1.0.json", "ar-01-v0.2.0.json", "ar-02-v1.0.0.json"],
+    "library": "content/publications/agentic-ai-engineering/companion/lib/contracts.mjs",
+    "tests": "content/publications/agentic-ai-engineering/companion/tests/chapters-01-03.test.mjs",
+    "testCount": 5
+  }
+}
