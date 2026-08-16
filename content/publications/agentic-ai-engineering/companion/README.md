@@ -31,6 +31,12 @@ synthetic tasks and grouped splits. A deterministic library and nine tests
 enforce semantic deduplication, reconciliation, rejection/expiry/takeover, and
 bounded environment claims. They do not assert exactly-once effects.
 
+For Chapters 13-15 it adds `AR-09 v1.0.0` layered evaluation, `AR-10 v1.0.0`
+safe synthetic control attacks, and `AR-11 v0.1.0` privacy-minimal causal
+tracing. One deterministic library and nine tests preserve critical gates,
+independent containment, allowlist redaction, explicit causal gaps, and
+tenant/role/purpose access. They prove fixture mechanics only.
+
 Run:
 
 ```sh
@@ -38,6 +44,7 @@ node --test content/publications/agentic-ai-engineering/companion/tests/chapters
 node --test content/publications/agentic-ai-engineering/companion/tests/chapters-04-06.test.mjs
 node --test content/publications/agentic-ai-engineering/companion/tests/chapters-07-09.test.mjs
 node --test content/publications/agentic-ai-engineering/companion/tests/chapters-10-12.test.mjs
+node --test content/publications/agentic-ai-engineering/companion/tests/chapters-13-15.test.mjs
 ```
 
 The tests prove the declared local fixture mechanics only. They do not prove

@@ -1,0 +1,737 @@
+---
+title: "Trace Runs Without Turning Logs Into Surveillance"
+slug: "trace-runs-without-turning-logs-into-surveillance"
+summary: "Correlate model, tool, state, approval, control, and effect transitions through minimal causal records, sealed evidence, bounded access, and deletion-aware retention."
+minutes: 100
+sourceIds: ["SRC-025", "SRC-026", "SRC-027", "SRC-029", "SRC-040"]
+claimIds: ["CLM-029", "CLM-030"]
+objectiveIds: ["AGE-K02-01", "AGE-K04-01", "AGE-K09-01", "AGE-K10-01"]
+---
+
+# Trace Runs Without Turning Logs Into Surveillance
+
+`AR-10 v1.0.0` produces control events: untrusted source rejected, proposal invalid, scope denied, approval replayed, session mismatched, egress blocked, effect ambiguous, capability revoked, owner transferred. Operators need to connect a symptom to the responsible transition. Collecting every prompt, response, tool payload, and user record would make diagnosis easy in some cases by creating a larger security and privacy problem.
+
+Current agent trace schemas and implementations can correlate runs, models, tools, guardrails, and related operations, but their conventions evolve and sensitive-data behavior requires explicit review. [CLM-029] The durable diagnostic requirement is causal structure and controlled evidence references, not full payload retention. [CLM-030]
+
+`AR-11 v0.1.0` starts with a minimal event graph, redaction and access policy, retention/deletion behavior, and a FieldOps run explorer. It cannot prove that every cause is observable. It must surface missing links and uncertainty rather than fabricate a story.
+
+## State the diagnostic question first
+
+Telemetry without a question becomes accumulation. Begin with an operational symptom and the decision it should support. "Why did this run reserve the wrong slot?" needs effect, capability invocation, approval, proposal, state snapshot, evidence, and identity links. "Is the model slow?" needs model latency but may not need user text. "Why did cross-tenant access alert?" needs identity, scope, capability, policy result, and source reference, not the retrieved record content.
+
+Write signal purpose, owner, first action, required fields, sensitivity, retention, access, blind spots, and removal condition. If no one will act, do not collect by default. Symptom-oriented monitoring should lead to a response; cause detail is retrieved during investigation under control.
+
+### Symptom is not cause
+
+A user sees "reservation failed." Possible causes include missing information, policy denial, approval expiry, tool timeout, committed-but-unknown effect, lease loss, budget exhaustion, or rendering error after success. Model latency alone cannot distinguish them.
+
+Record observable transitions across layers so investigation can move backward. Do not label the first error span as root cause. A timeout may be a symptom of dependency saturation, while duplicate reservation may result from retry ownership. Preserve observations and inference separately.
+
+### Define the decision
+
+An alert might ask an operator to reconcile an effect, revoke a capability, restore a dependency, transfer ownership, or contact a user. The trace must provide enough identifiers and state for that action without exposing unrelated content.
+
+For post-incident learning, retain an allowlisted evidence projection long enough to reconstruct sequence and control behavior. Longer retention needs purpose and authority. "Maybe useful later" is not sufficient.
+
+## Build a causal event graph
+
+A trace is a graph of typed events and relationships, not a transcript. One run can have attempts, model operations, capability calls, policy checks, human checkpoints, state transitions, external effects, reconciliation, control events, and terminal disposition. Parent/child describes execution nesting; causal links describe decisions and effects that may cross spans and time.
+
+### Stable identities
+
+Use trace ID for one diagnostic graph, run ID for one accountable task execution, attempt ID for recovery attempt, event ID for immutable record, and span ID for timed operation. Add parent span where meaningful and explicit links for asynchronous callbacks, approvals, effects, and retries.
+
+Task, proposal, approval, capability, effect, checkpoint, and artifact references are first-class. A tool span without effect reference cannot prove which reservation it changed. An approval event without proposal hash cannot establish what was approved.
+
+Tenant is a pseudonymous or controlled reference, not free text. Principal is a verified reference. Component and contract versions allow diagnosis across deployments. Event sequence and state version preserve ordering without relying only on wall clock.
+
+### Minimal event envelope
+
+Each event records:
+
+- trace, run, attempt, event, span, parent/link identifiers;
+- event type, component, version, and time;
+- pseudonymous tenant and principal references where required;
+- task, action, capability, state, proposal, approval, effect, and artifact references;
+- state transition from/to and expected version;
+- validation, policy, authority, and control result classes;
+- latency and bounded counters;
+- error class, recovery decision, disposition, and uncertainty;
+- redaction marker, evidence reference, retention class, and schema version.
+
+Prompts, responses, credentials, tool arguments/results, user records, and documents are absent by default. Typed safe projections may include argument names, hashes, counts, or classifications when required. Full evidence lives in a separate controlled store, if retained at all.
+
+### Event immutability and correction
+
+Append events. If a field was wrong, add a correction event linked to the original and authority for correction. Do not edit history in place. State views can materialize the latest interpretation while preserving evidence.
+
+A model-generated summary is an artifact with provenance, not the trace itself. Operators can use summaries for navigation but verify conclusions against typed events and authoritative state/effect systems.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F15.1" data-png="/assets/publications/agentic-ai-engineering/f15-1-privacy-minimal-transit-map.png">
+  <div role="img" aria-label="Pending colorful realistic 3D transit map with connected stations labeled Model, Tool, State, Approval, and Effect. Payload boxes are sealed while causal identifiers travel between stations, and no relationship depends on color.">ImageGen raster pending: F15.1</div>
+  <figcaption><strong>F15.1 - Privacy-minimal run transit map.</strong> Essential labels: Model, Tool, State, Approval, Effect. Evidence role: a causal-correlation scaffold, not a claim that every cause is observable.</figcaption>
+</figure>
+
+## Minimize data by design
+
+Minimization begins before instrumentation. For each proposed field ask which diagnostic decision requires it, whether a less sensitive derivation works, who may access it, how long it is needed, and what breaks if omitted.
+
+### Safe structural fields
+
+Identifiers, component versions, typed event classes, state transition names, policy result codes, latency, counters, and disposition are often sufficient for first-line diagnosis. They can still be sensitive through linkage, so access and retention remain required.
+
+Hashing is not automatic anonymization. Low-entropy values can be guessed; stable hashes can enable tracking. Use keyed or scoped pseudonyms under privacy/security design, rotate where appropriate, and avoid cross-purpose linkage.
+
+### Sealed evidence references
+
+When diagnosis may need a manual excerpt, tool payload, approval evidence, or user message, the trace stores a sealed reference plus content class, sensitivity, owner, access policy, retention, and integrity hash. Retrieval is a separate authorized event.
+
+The evidence store can apply stronger encryption, tenant separation, access logging, and shorter retention. A reference may survive after content deletion as a tombstone stating unavailable, never as a backdoor copy.
+
+### Redaction before export
+
+Redact at the source or trusted collector before telemetry leaves the boundary. Do not rely on a dashboard filter while raw credentials already entered the pipeline. Use allowlisted fields, not an endless denylist of secret patterns.
+
+Test direct credentials, tokens inside URLs, user text in error messages, tool payload serialization, stack traces, document excerpts, and model provider attributes. A redaction marker says which policy ran and whether content was dropped, transformed, or referenced.
+
+### No chain-of-thought requirement
+
+Causal diagnosis uses observable inputs, outputs, actions, state, policy, approvals, and effects. It does not require hidden chain-of-thought. Retaining internal reasoning can add sensitive content and still fail to explain actual system behavior. Persist decision artifacts and evidence references instead.
+
+### Purpose-limited access
+
+Define roles such as on-call operator, service owner, security investigator, privacy reviewer, and auditor. Each receives the minimum event fields and evidence references required. Cross-tenant search is denied by default. Break-glass access needs reason, time bound, approval, and review.
+
+The Agentic AI Engineer does not grant themselves universal trace access. Platform operates telemetry; privacy, security, legal, and organizational owners define policy and monitoring authority.
+
+## Retention and deletion
+
+Retention follows event class and purpose. High-volume model timing may be aggregated quickly. Active-run events remain through recovery. Effect and authority audit projections may need longer bounded retention. Sealed payloads, if retained, should usually expire sooner than structural records.
+
+Define deletion propagation. When a source record is deleted, remove content from evidence store, invalidate derivatives and caches, and retain only permitted tombstones. Trace references resolve to unavailable with deletion reason, not stale content.
+
+### Retention tests
+
+Advance the synthetic clock past each class deadline. Verify content deletion, index removal, cache invalidation, tombstone creation, and denied retrieval. Test that aggregate metrics cannot be reverse-linked beyond their purpose. Test legal hold or required audit only through explicit fixture authority, not default forever retention.
+
+### Employee and user monitoring boundary
+
+Agent traces can reveal user requests, reviewer behavior, work patterns, and operator decisions. Technical usefulness does not authorize surveillance. Privacy, legal, labor, and organizational authorities decide notice, consent, purpose, access, and retention. This chapter supplies minimization mechanics and limitations, not policy approval.
+
+## Map current implementations carefully
+
+OpenTelemetry generative-AI semantic conventions provide evolving attribute names for operations, models, tokens, tools, and agents. Stability can differ by convention or attribute. Pin the convention version and record any experimental fields. Do not treat an available attribute as permission to collect its value. [CLM-029]
+
+One Agents SDK trace model represents runs and spans for agent, model, tool, guardrail, and handoff operations and provides sensitive-data controls. It is a useful adapter example, not a correctness oracle. Provider tracing may omit local state, authority, external effect, or privacy requirements.
+
+AWS AgentCore observability is one OTel-compatible product implementation. Its existence demonstrates deployable trace infrastructure, not adequate FieldOps causality or minimization. Platform choice remains outside the canonical schema.
+
+Map any implementation to `AR-11`: which local IDs fit native fields, which require links, which attributes are unstable, which payloads default on, which sampling loses critical events, and how tenant/access/retention are enforced. Gaps stay visible.
+
+## Investigate the wrong reservation
+
+The user reports that FieldOps reserved slot `S-22` instead of approved `S-19`. Start with effect reference, not model transcript.
+
+### Step 1: verify symptom
+
+Read the authoritative synthetic effect record under tenant scope. Confirm effect ID, slot, part, incident, quantity, time, and semantic key. If no matching effect exists, the symptom may be display or stale-read error. Preserve uncertainty.
+
+### Step 2: follow effect to invocation
+
+Use effect link to capability invocation. Inspect capability version, verified principal, tenant, proposal hash, idempotency key, response class, and reconciliation. Do not retrieve full arguments unless the safe projection cannot distinguish targets and access is authorized.
+
+### Step 3: follow invocation to approval
+
+Compare approval reference, proposal hash, reviewer, authority, issue/expiry, and one-use state. If approval bound `S-19` while effect used `S-22`, the effect adapter or proposal mapping failed. If approval also bound `S-22`, continue backward.
+
+### Step 4: follow proposal to state and evidence
+
+Inspect state snapshot IDs, inventory observations, manual references, availability version, and validation results. A stale state substitution may have changed slot before approval. Retrieve sealed evidence only if identifiers and hashes cannot resolve the discrepancy.
+
+### Step 5: follow to model decision
+
+Inspect model operation version, admitted context IDs, structured proposal output hash, validation result, and any control events. The trace may show the model proposed `S-19` and a serializer changed it, or proposed `S-22` from stale evidence. Do not infer from latency or token count.
+
+### Step 6: conclude with uncertainty
+
+Record confirmed cause, contributing conditions, disconfirmed hypotheses, missing evidence, consequence, containment, and owner. If a parent link or effect ID is missing, say causal chain is incomplete. Add the minimum field needed for future diagnosis rather than enabling full payload logging.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F15.2" data-png="/assets/publications/agentic-ai-engineering/f15-2-backward-causal-path.png">
+  <div role="img" aria-label="Pending crisp realistic 3D backward investigation path labeled Symptom, Effect, Action, State, and Decision. Investigators follow identifiers between sealed evidence lockers, and a broken link is marked Unknown rather than guessed. No relationship depends on color.">ImageGen raster pending: F15.2</div>
+  <figcaption><strong>F15.2 - Backward causal investigation.</strong> Essential labels: Symptom, Effect, Action, State, Decision. Evidence role: an investigation scaffold, not proof that a trace establishes root cause.</figcaption>
+</figure>
+
+## Trace failure injections
+
+### Missing effect ID
+
+Remove the effect link from a capability span. The explorer can find calls by run and time but cannot prove which caused the reservation. It marks a causal gap. The proposed fix is mandatory effect reference at adapter commit, not full tool payload capture.
+
+### Broken parent link
+
+Deliver an asynchronous callback with trace ID but no link to the dispatch span. The explorer shows an orphan event. A temporal guess is insufficient. Add stable action/effect identity and explicit span link.
+
+### Full prompt collection
+
+Enable a test-only collector that captures prompts. The redaction/minimization test fails before export. The result demonstrates the policy guard, not that every future SDK field is safe. Configuration tests pin defaults and fail on unknown content attributes.
+
+### Leaked credential
+
+Insert inert fixture secret into tool error and URL. Allowlist drops both values and records `sensitive_content_removed`. No fixture value appears in trace, log, error, or snapshot. Security owns real secret response.
+
+### Cross-tenant query
+
+An operator with North scope requests South trace. Query authorization denies before search and records the access event without revealing existence or fields. Pseudonymous IDs remain tenant-scoped.
+
+### Misleading trace
+
+A model span ends successfully, but policy later denies the action. A dashboard showing green model status is not run success. The explorer computes no universal status from one span; it shows layer events and terminal disposition.
+
+## Design the run explorer
+
+The default view presents run identity, goal class, tenant reference, owner, state, cancellation, consequence, terminal disposition, unresolved effects, and control events. A timeline shows typed transitions without payload. Filters select model, tool, policy, approval, state, effect, recovery, and access events.
+
+Selecting an event reveals safe fields, links, versions, validation/policy results, counters, redaction, and evidence references. Opening sealed evidence is a separate authorized action with purpose and audit. The UI never expands all payloads for convenience.
+
+### Backward and forward navigation
+
+Backward navigation asks what evidence and decision caused this action or effect. Forward navigation asks what state, response, or consequence followed an event. Both rely on explicit links. Where a link is absent, the explorer displays a gap and candidate records separately from confirmed causality.
+
+Time proximity supports search, not proof. Two capability calls at similar times may belong to different attempts. Use run, action, proposal, and effect identities.
+
+### Compare attempts
+
+Recovery creates attempts under one run. The explorer aligns checkpoint version, lease epoch, unresolved effect, and retry budget. It shows whether the new owner reconciled before dispatch and whether late events came from an old epoch.
+
+A duplicate-safe replay should appear as one semantic effect with multiple attempts, not multiple successes. A changed-intent call should appear as a conflict. This view connects observability to durability.
+
+### Control-event view
+
+Group `AR-10` events by objective: provenance, validation, scope, identity, approval, isolation, effect, monitor, revoke. Show enforcement component and response. A denial is not necessarily system failure; it may be successful containment.
+
+Do not display malicious content. Reference source and fixture class. Operators can see that indirect injection was contained at tenant authorization without reading the injected sentence.
+
+### Evidence-quality markers
+
+Mark events confirmed from authoritative system, observed from component, inferred from links, disputed, missing, or redacted. A trace is not uniformly trustworthy. Component clocks can differ; instrumentation can fail; malicious code can emit misleading spans.
+
+The conclusion record cites which events support it and names uncertainty. If state/effect truth conflicts with spans, authoritative systems govern their claims and the telemetry inconsistency becomes a finding.
+
+## Query for diagnosis, not curiosity
+
+Provide allowlisted query templates tied to operational questions. "Show unresolved effects past reconciliation deadline for my tenant" is actionable. "Search every prompt containing a person's name" is not a default diagnostic operation.
+
+Templates include failed approval resume, repeated permission denial, duplicate semantic effect, orphan callback, lease conflict, incompatible checkpoint, redaction failure, and missing terminal disposition. Each returns minimal fields and next action.
+
+Ad hoc queries require role and purpose. Query results inherit tenant and sensitivity policy. Export is more restrictive than view because copies escape central deletion and access controls.
+
+### Sampling
+
+High-volume low-consequence events may be sampled or aggregated, but never sample away events required for effect, authority, control, or incident evidence. Define head/tail sampling behavior and how links survive. A missing span due to sampling should be distinguishable from instrumentation failure where possible.
+
+Critical event classes can be retained at full structural fidelity with no payload. Model token timing may be summarized. Sampling policy is versioned and part of claim interpretation.
+
+## Gap audit
+
+Audit trace completeness against diagnostic questions, not maximum fields. For wrong reservation, require links across effect, invocation, approval, proposal, state, and decision. For injection containment, require source reference, validation/scope/approval/effect control events. For retry storm, require intent, attempt, owner, dependency, and effect.
+
+### Missing IDs
+
+Count orphan events, missing parents/links, unresolved effect references, approval without proposal, and state transition without expected version. Report by component/version and consequence. A high-level trace coverage percentage can hide one missing effect link; preserve critical categories.
+
+### Overcollection
+
+Scan schemas and sample records for undeclared content fields, prompts, responses, tool payloads, URLs, headers, tokens, user text, document excerpts, and stable cross-purpose identifiers. Fail unknown fields. Compare actual retention with policy.
+
+### Access violations
+
+Test wrong tenant, wrong role, expired access, missing purpose, bulk export, sealed evidence retrieval, and break-glass expiry. Record denied attempts with minimal references. Do not create a monitor that reveals the data it protects.
+
+### Misleading instrumentation
+
+Compare trace state against authoritative checkpoint and effect systems for selected runs. Detect spans that report success while state failed, missing error events, reordered clocks, and duplicated telemetry. Tracing is an observation system subject to bugs.
+
+### Retention drift
+
+Advance time and verify deletion by class. Check secondary indexes, caches, backups under declared policy, exports, and derived summaries. A dashboard hiding a record is not deletion.
+
+## Construct `AR-11 v0.1.0`
+
+The dossier contains trace schema, event taxonomy, link rules, safe-field allowlist, sealed-evidence contract, redaction tests, access matrix, retention/deletion schedule, run explorer queries, diagnostic fixtures, gap report, and signal catalog for Chapter 16.
+
+### Event taxonomy
+
+Include run created, attempt acquired, model operation, capability proposed, validation, policy decision, human checkpoint issued/responded, state transition, effect prepared/dispatched/reconciled/verified, cancellation, control event, takeover, error, and terminal disposition.
+
+Every event has an accountable emitting component and schema version. Unknown events remain visible but cannot silently influence derived state.
+
+### Signal catalog
+
+For each signal record purpose, symptom, fields, computation, segment, threshold or review rule, owner, first action, sensitivity, access, retention, blind spot, and validation test. Signals include unresolved effect, approval backlog/expiry, repeated scope denial, lease conflict, recovery latency, redaction failure, orphan link, and terminal-state gap.
+
+Signals are inputs to action, not truth. Chapter 16 will decide budgets and operating thresholds with consequence and capacity.
+
+### Deterministic companion
+
+The companion builds redacted event graphs, rejects prohibited fields, enforces tenant/role access, follows explicit links, marks missing causality, expires evidence, and reconstructs a wrong-reservation path. It contains fixture references, no credentials or user payload.
+
+Tests prove schema and policy mechanics only. They do not prove privacy compliance, employee-monitoring authorization, telemetry service security, or production diagnostic completeness.
+
+## Investigation workshop
+
+Diagnose three symptoms from redacted events and propose the minimum additional field for each unresolved chain. Twenty points: causal chain 6, minimization 5, access/retention 5, uncertainty 4.
+
+### Symptom A: wrong reservation
+
+Events include effect, invocation, approval, and state links but omit proposal hash on approval. The learner can show that effect used `S-22` but cannot prove what reviewer approved. The minimum field is proposal reference/hash on approval and effect, not full approval text.
+
+### Symptom B: repeated reservation
+
+Two invocation spans appear, one effect reference is missing, and both share semantic key. The ledger shows one effect. The learner concludes two attempts with one confirmed effect while noting missing invocation-effect link. Add effect reference to callback.
+
+### Symptom C: cross-tenant alert
+
+Trace shows verified North principal, South target hash, scope denial, no tool dispatch, and no effect. The learner confirms containment without retrieving South data. Additional payload is unnecessary. Retain control event under bounded security policy.
+
+### Rubric
+
+Causal-chain credit requires explicit links and separation of fact from inference. Minimization requires safe fields and rejection of log-everything. Access/retention requires tenant/role/purpose, sealed evidence, expiry, and deletion. Uncertainty requires missing-link disclosure, alternative hypotheses, and next owner.
+
+Automatic failure follows real credentials/private traces, full-payload-by-default design, cross-tenant query, chain-of-thought requirement, permanent retention, or a root-cause conclusion from time proximity alone.
+
+### Extension: remove one field
+
+Choose a current field and remove it from fixtures. Determine which diagnostic question becomes impossible. If none, remove the field from default schema or justify another purpose. Repeat for tenant, proposal, effect, state version, component version, and redaction marker.
+
+This exercise treats minimization as active engineering. Telemetry schemas tend to grow; every field should periodically re-earn retention.
+
+### Extension: sealed evidence retrieval
+
+Create a fixture where structural events cannot distinguish serializer defect from model proposal. A qualified investigator requests the sealed structured proposal under purpose and time-bound access. The system records access, returns only the relevant artifact, and expires permission. Other roles remain denied.
+
+The exercise demonstrates selective detail without default surveillance. It also shows that some investigations remain unresolved when evidence was never lawfully retained.
+
+## Counterexamples
+
+**Log everything now, govern later:** sensitive data has already spread through collectors, indexes, exports, and backups.
+
+**Hash equals anonymous:** stable or low-entropy hashes enable linkage and guessing.
+
+**Trace equals truth:** instrumentation can be missing, wrong, sampled, or malicious. Verify authoritative state/effects.
+
+**Green model span equals success:** later policy, state, or effect can fail.
+
+**Prompt needed for diagnosis:** typed proposal, action, state, and effect links often answer the question with lower risk.
+
+**Permanent audit:** retention needs purpose and authority; audit projections can be minimized.
+
+**Dashboard access equals authorization:** tenant, role, purpose, and evidence class still apply.
+
+**Time order proves cause:** use explicit causal links and state versions.
+
+**Vendor tracing covers agents:** implementation fields may omit local authority/effect and change stability.
+
+**Minimization means no evidence:** preserve safe structure and controlled references; state gaps honestly.
+
+## Durable and volatile knowledge
+
+Durable principles are diagnostic-question-first design, stable causal IDs, typed transitions, state/approval/effect links, payload minimization, source redaction, sealed evidence, purpose access, bounded retention, deletion propagation, and uncertainty for broken causality.
+
+Volatile elements include OTel GenAI conventions, SDK spans, product dashboards, sampling defaults, and vendor fields. Pin version and sensitivity. Availability of telemetry is not permission to collect it.
+
+Privacy, security, legal, labor, and organizational authorities define monitoring policy and access. Platform owns telemetry reliability. The Agentic AI Engineer owns FieldOps causal semantics and minimization tests.
+
+## Handoff to Chapter 16
+
+`AR-11 v0.1.0` provides trustworthy-enough structural signals and explicit gaps. Chapter 16 receives unresolved-effect counts, approval wait/expiry, scope denial, retry attempts, recovery latency, model/tool latency, redaction failures, and missing-link rates, all segmented by consequence without payload.
+
+It also receives blind spots: sampling, missing instrumentation, unavailable evidence, synthetic timing, and no real workload. Budgets and thresholds must account for those limitations.
+
+## Chapter checkpoint
+
+FieldOps can now trace a run from symptom through effect, action, approval, state, and decision without copying the entire conversation into operations. The trace supports diagnosis because identities and causal links are explicit. It protects people and systems because payload collection is exceptional, authorized, and expiring.
+
+When a link is missing, the explorer says unknown. When detail is necessary, a qualified person retrieves one sealed artifact under purpose. When retention ends, content is deleted and references become tombstones. Observability becomes an engineered evidence boundary, not a reason to watch everything.
+
+## Specify every event family
+
+A generic `log(message)` cannot support causal investigation or minimization. Define event families with required safe fields and prohibited payloads. The schema should make the important facts easy to record and unsafe content difficult to add.
+
+### Run and attempt events
+
+`run.created` records run, task, tenant reference, verified principal reference, goal contract, consequence, system/environment versions, and budgets. It does not record the raw request. A sealed request reference may exist under purpose.
+
+`attempt.acquired` records attempt, checkpoint version, lease epoch, owner component, deadline, and previous attempt link. `attempt.released` records reason and unresolved effect count. These events explain ownership across crashes without worker memory dumps.
+
+### Model operation events
+
+Record operation class, provider/model configuration reference, input artifact IDs, output artifact ID/hash, start/end, token counters where permitted, result class, and error class. Raw prompt and output default off. The artifact store applies separate policy.
+
+Model success means the operation returned a valid envelope, not that the run succeeded. A derived dashboard must keep this distinction.
+
+### Capability events
+
+`capability.proposed` records action ID, capability/version, typed argument shape/hash, proposal reference, consequence, and validation state. `capability.invoked` adds verified principal/tenant references, authority and approval references, semantic key where effectful, and adapter version. `capability.result` records result artifact reference, result class, admission/verification, and effect link.
+
+Argument values stay sealed or projected only when necessary. Names and classifications can reveal capability use without copying sensitive records.
+
+### Policy and authority events
+
+Record policy version, decision ID, input reference, decision class, reason code, authority basis reference, and expiry. Avoid embedding policy input data. Approval events include checkpoint, proposal hash, reviewer reference, action, issue/response time, expiry, and one-use result.
+
+An access denial should not expose existence of another tenant's record. Use reason classes carefully.
+
+### State events
+
+Record checkpoint ID, from/to state, expected/actual version, lease epoch, cancellation, and artifact/effect references. State snapshot content remains in authoritative store. A safe diff classification can say `inventory_changed` or `protected_state_unchanged` with hash.
+
+State transition events are essential because span completion order may not equal run order. Version establishes causal mutation.
+
+### Effect events
+
+Record effect ID, semantic key hash/reference, intent hash, effect type, target class, proposal/approval/action links, dispatch observation, remote reference, reconciliation, verification, compensation link, and knowledge state. Do not record sensitive target values unless the diagnostic purpose requires a controlled projection.
+
+Effect events must survive sampling and have longer bounded audit where policy requires. They are not inferred from model or tool success spans.
+
+### Control and access events
+
+Record objective, mechanism, enforcement component, decision, source/evidence reference, response, and residual class. Access events record requester role/reference, purpose, object class, decision, and expiry. Never log requested sealed content.
+
+### Terminal events
+
+Record run disposition, task predicate, unresolved effect count/references, cancellation, owner, communication artifact, and limitation. A terminal model answer without terminal run event is incomplete telemetry.
+
+## Correlation across asynchronous boundaries
+
+Queues, callbacks, human waits, and external services break parent-child span trees. Use explicit links. A callback links to dispatch action and semantic effect. Human response links to checkpoint and proposal. Recovery attempt links to previous checkpoint and unresolved effects. Notification links to run disposition, not merely last model span.
+
+### Correlation carrier
+
+Carry only non-secret identifiers needed by the receiving component, protected against substitution according to platform design. Do not place tokens or raw tenant data in trace baggage. Validate carrier at boundary and map to local references.
+
+If an external service cannot return local trace IDs, bind its stable request/effect reference in the adapter. Do not depend on timestamps alone. The adapter event bridges local action to remote reference.
+
+### Clock and order
+
+Wall-clock timestamps help operations but can skew. Use state versions, event sequences, lease epochs, and causal links for order. Record clock source/version where timing claims matter. A negative duration or reordered timestamp becomes instrumentation finding.
+
+### Fan-out and topology
+
+The selected FieldOps topology remains one agent, but tools and future read-only specialists can create branches. Each branch receives task/work ID, state version, scope, lease, cancellation, and parent link. Aggregation event records which artifacts were admitted and why.
+
+Multiple spans do not imply multiple agents. Keep topology concepts out of generic telemetry labels unless contract says so.
+
+## Design redaction as executable policy
+
+List allowed fields per event. Unknown fields fail schema or remain local until review. Classify artifacts and evidence references. Apply transformations before export. Test serializers, exceptions, retries, and vendor auto-instrumentation.
+
+### Fixture secret testing
+
+Use distinctive inert strings representing API key, bearer token, email, user note, manual excerpt, URL query, and tool payload. Place them at every ingress. Run instrumentation. Search trace, logs, metrics labels, snapshots, errors, exports, and caches. Expected count is zero outside sealed fixture store.
+
+Record only which class was removed and policy version. Do not put the fixture value into the redaction alert.
+
+### Structured minimization
+
+Instead of full arguments, record argument schema version, permitted field names, target class, value hashes where justified, count, and validation result. Instead of response, record artifact ID, schema, record count, freshness class, tenant match, and admission.
+
+Avoid hashes for values that can be guessed or linked. A scoped keyed digest may support equality within one run, while different run/tenant purposes use different keys. Privacy/security owners choose.
+
+### Error minimization
+
+Libraries may include request bodies or URLs in errors. Wrap and classify at boundary. Preserve provider request reference, status class, retryability, and timing without headers/body. Store detailed service evidence only where necessary and controlled.
+
+Stack traces can reveal file paths and code but may be needed for engineering. Keep them in a restricted service diagnostic system with separate policy, not general agent trace by default.
+
+### Model and SDK defaults
+
+Auto-instrumentation may capture prompts, completions, tool arguments, or content under convenient settings. Pin configuration and test it. An SDK upgrade introducing a new content attribute should fail allowlist validation, not silently export.
+
+The implementation adapter records which convention attributes are used and their stability. Experimental semantics require compatibility review.
+
+## Access-control walkthrough
+
+Define an on-call operator who can view structural events for North runs, a service owner who can view adapter errors without user artifacts, a security investigator with approved cross-component control-event access, and a privacy reviewer who can audit policy. None gets unrestricted everything.
+
+### Ordinary diagnosis
+
+Operator opens a North unresolved-effect alert. They see run/effect IDs, intent hash, dispatch/reconciliation state, service reference, deadline, and next action. They do not see user text or manual. This is enough to run authoritative reconciliation.
+
+### Sealed evidence request
+
+Wrong-reservation diagnosis cannot distinguish whether model proposal or serializer changed slot. Operator requests structured proposal artifact under incident purpose. Policy checks role, tenant, object class, time, and necessity. Access event records decision. Artifact view expires.
+
+### Security investigation
+
+Cross-tenant attempt spans North and a blocked South target. A designated investigator may view control events across the incident under separate authority, while tenant data stays sealed. The Agentic AI Engineer supplies references and reproduction fixture.
+
+### Denied curiosity query
+
+A user searches all runs by free-text phrase without incident purpose. Query is absent or denied. The system does not reveal match counts. This protects against telemetry becoming employee/user search.
+
+### Break glass
+
+If allowed by policy, break-glass access is time-bound, reasoned, separately approved, narrowly scoped, alerted, and reviewed. It does not become routine because the dashboard is difficult to use.
+
+## Retention as a state machine
+
+Records move from active to operational, audit projection, expired, and deleted/tombstoned states according to class. Sealed evidence can expire before structural effect reference. Access permission can expire independently.
+
+### Active run
+
+Keep structural events and required evidence through recovery. Cancellation or terminal state triggers class-specific clocks. Unresolved effects may extend the operational need under policy; extension is explicit and owned.
+
+### Operational window
+
+On-call diagnosis uses detailed structural fields and limited evidence references. Aggregate signals may derive from them. Raw artifacts that are no longer needed expire.
+
+### Audit projection
+
+Retain minimal authority/effect facts if required: who/what references, contract versions, decisions, stable effect, disposition, and integrity. Do not retain full prompt merely because an effect occurred.
+
+### Deletion
+
+Delete content, indexes, caches, exports under control, and derived retrievable artifacts. Preserve an allowed tombstone with identifier, deletion time/class, and authority. Queries cannot resurrect content from summary or backup outside policy.
+
+### Test restoration
+
+Backup and restore procedures must preserve deletion semantics. A restored telemetry store should reapply tombstones and access policy. Platform/privacy teams own implementation; the companion can test state transitions only.
+
+## Three complete investigations
+
+The exercise cases become operational runbooks when every conclusion cites a link and every missing link remains explicit.
+
+### Investigation 1: wrong reservation after approval
+
+Symptom arrives from user-facing support with run reference and reported slot. The operator verifies the authoritative effect. One reservation exists for `S-22`. The effect event links action `A-77`, proposal `P-31`, and approval `H-31`.
+
+Approval event binds hash `h19`; effect event references hash `h22`. The invocation event shows adapter `reserve@2.4` received proposal artifact `P-31`, but trace lacks safe target projection. The operator retrieves sealed structured proposal under incident access. It contains `S-19` and hash `h19`. The model output artifact also contains `S-19`. The serializer event between proposal and adapter is missing.
+
+Confirmed facts: reviewer approved `S-19`; authoritative effect is `S-22`; model proposal is `S-19`; adapter event links mismatched hash. Strong inference points to proposal-to-adapter mapping, but missing serializer event prevents exact code-path attribution. The operator stops new uses of adapter `2.4`, transfers to service owner, and retains only the structured artifact under incident window.
+
+The minimum new field is mapping artifact/hash and serializer version, not full prompt. A new instrumentation test mutates slot and confirms end-to-end hash equality.
+
+### Investigation 2: apparent duplicate
+
+Monitoring reports two capability invocations for one run. Effect ledger shows one semantic key and one confirmed reservation. Attempt events show original worker timed out, new lease acquired, and second invocation event actually records reconciliation read mislabeled as reservation due adapter span name.
+
+No duplicate business effect occurred. The symptom is misleading telemetry. Correct the event type and adapter version. Preserve that two network operations occurred but classify one read. A dashboard counting tool names would have declared duplication falsely.
+
+If effect reference were missing, the operator could not disambiguate. The runbook would say effect count confirmed by authoritative ledger, invocation semantics uncertain. Trace truth and business truth remain separate.
+
+### Investigation 3: repeated scope denials
+
+Alert shows five South-scope denials from a North run. Each links to the same poisoned manual source reference and model proposal version. No protected tool dispatch or effect occurred. Capability broker and service events confirm containment. Egress and redaction controls pass.
+
+The operator cancels the run to stop repeated attempts, quarantines source by hash/reference, invalidates derived context, and transfers the attack fixture to security review. They do not open the payload. The repeated count reveals loop/budget weakness even though tenant control held.
+
+Conclusion separates containment from robustness: cross-tenant consequence blocked; proposal loop consumed budget and attention. Engineering adds duplicate-denial stop. Security owns attack analysis.
+
+## Diagnose missing evidence without overcollection
+
+When a chain breaks, propose the smallest structural repair.
+
+Missing effect-to-action link needs effect reference at commit, not payload. Missing approval binding needs proposal hash, not reviewer message. Missing state provenance needs snapshot/version reference, not database dump. Unknown context source needs artifact IDs and admission decisions, not full prompt. Unknown retry ownership needs attempt/lease epoch, not worker debug log.
+
+Sometimes content is genuinely necessary: a serializer may transform a value, or a human review may depend on exact displayed evidence. Use sealed, typed artifacts with narrow access and retention. Do not change global logging for one incident without privacy/security review.
+
+### The irreducible unknown
+
+If evidence was never captured and authoritative state no longer distinguishes causes, say unknown. Instrument future runs. Do not reconstruct from model explanation, operator memory, or temporal coincidence.
+
+Unknown can still support action. If adapter version is implicated but exact defect unknown, pause it under operational authority. If effect remains ambiguous, reconcile or escalate. Evidence humility does not mean inaction.
+
+## Privacy and security review questions
+
+What people or organizations can be inferred from trace fields? Which identifiers enable linkage? Which purposes justify collection? Could a field be aggregated, scoped, or removed? Who can query, export, and retrieve sealed evidence? How is access reviewed? What notice or consent is required? What retention and deletion apply? What laws, labor rules, contracts, or organizational policies govern monitoring?
+
+The book does not answer those domain questions universally. It requires the technical design to expose them. A telemetry system can be secure against outsiders and still create inappropriate internal surveillance.
+
+### Data-flow review
+
+Map event from emitter to collector, processor, storage, index, dashboard, alert, export, backup, and deletion. Apply region, tenant, encryption, access, and retention at each. Vendor defaults and subprocessors are part of review.
+
+Unknown auto-instrumentation fields stop deployment until classified. Debug mode cannot silently change privacy posture. Development fixtures should use synthetic content.
+
+### Linkability review
+
+A stable principal pseudonym across all tasks can reveal work patterns. Decide whether diagnosis needs cross-run linkage. Use run-scoped or tenant-scoped pseudonyms where possible. Aggregate metrics should avoid small cohorts that reidentify individuals.
+
+### Access review
+
+Review roles periodically and after incidents. Remove dormant access. Audit bulk queries and sealed retrieval. Avoid giving model agents direct access to observability stores; diagnostic tools should expose bounded queries with the same tenant/purpose controls.
+
+## Evaluate the tracing system
+
+Tracing needs tests beyond schema validation.
+
+### Completeness tests
+
+For each diagnostic fixture, assert required event families and links. Wrong reservation requires effect, action, approval, proposal, state, and decision chain. Ambiguous effect requires dispatch/reconciliation/verification. Takeover requires owner transfer and blocked stale events.
+
+### Correctness tests
+
+Compare trace event references with authoritative state/effect fixtures. Mutate IDs, versions, event type, and result class. Explorer must show conflict rather than accept span success.
+
+### Minimization tests
+
+Inject fixture secrets/content at all boundaries and scan all outputs. Unknown field fails. Test vendor upgrade fixture introducing prompt attribute. Assert no chain-of-thought field exists.
+
+### Access tests
+
+Matrix tenant, role, purpose, time, evidence class, export, and break glass. Test denial does not leak existence. Test access event itself is minimal.
+
+### Retention tests
+
+Advance clock and verify content, index, cache, derived artifact, and permission expiration. Restore backup fixture and reapply tombstone. Record limitations for systems not simulated.
+
+### Diagnostic utility tests
+
+Give redacted event sets to independent operators. Measure whether they reach supported conclusion, identify gaps, and propose minimum field. A technically valid schema that no one can use needs redesign.
+
+## Operational trade-offs
+
+More detail can shorten diagnosis while increasing collection, breach impact, access burden, and chilling effects. Less detail reduces risk but can leave causes unknown. Make the trade at field/purpose level with accountable authorities.
+
+Sampling reduces cost but can break chains. Longer retention supports rare investigation but expands risk. Stable pseudonyms support trend diagnosis but increase surveillance potential. Centralized traces simplify correlation but concentrate sensitive metadata.
+
+There is no universal optimum. Preserve high-consequence causal structure, minimize payload, provide controlled evidence retrieval, and state blind spots. Revisit after incidents and usage changes.
+
+## Final `AR-11` review
+
+An independent reviewer selects each Chapter 14 control event and traces it to run, state, authority, and effect. They verify that content is absent, evidence references enforce access, tenant query is scoped, and retention classes expire. They inject missing IDs and confirm explorer displays gaps.
+
+A privacy reviewer inspects field purpose and linkage. A security reviewer inspects secret and access tests. A platform reviewer inspects delivery, sampling, and storage guarantees. An operator runs the three investigations. The Agentic AI Engineer coordinates schema semantics without taking their authorities.
+
+The packet passes when structural events answer declared questions, prohibited content is absent, exceptional retrieval is controlled, deletion works under fixture, and unknown causality remains visible. It does not pass privacy law, labor policy, or production assurance automatically.
+
+## Additional assessment prompts
+
+Explain why one effect can have multiple attempts and spans. Explain why a successful model span can coexist with failed run. Design a query for expired approval backlog without user text. Remove tenant reference and show which control investigation fails. Replace full arguments with typed hash/reference and compare utility.
+
+Given a trace with two plausible causes, write a conclusion that separates confirmed, inferred, disconfirmed, and unknown. Name the next smallest evidence request. Reject any answer that opens every payload or attributes cause to the model by default.
+
+The strongest learner output is a leaner trace after the exercise: unnecessary field removed, critical link added, access narrowed, and blind spot documented.
+
+## Design signals from minimal traces
+
+Chapter 16 will operate budgets and thresholds, but Chapter 15 must ensure signals can be computed without payload. Build each signal from structural event classes and authoritative references.
+
+### Unresolved effect
+
+Count effects in `SENT_UNKNOWN` beyond a consequence-specific observation deadline. Fields: effect reference, run, tenant scope, service, intent class, first unknown time, reconciliation attempts, owner, and cancellation. First action: reconcile or escalate. No tool payload is required.
+
+### Approval wait and expiry
+
+Count checkpoints waiting, approaching expiry, expired, rejected, or lacking routed reviewer. Segment by checkpoint type and consequence. First action may reroute, cancel, or take over. Do not expose proposal content in aggregate.
+
+### Scope denial
+
+Count repeated denial classes by run, capability, component, and source reference. First action differs: one denial may be successful enforcement; repeated denials may show poisoned context or loop. Tenant-safe aggregation avoids revealing target.
+
+### Lease conflict
+
+Detect conditional-write failures and stale-owner events by run/epoch/component. First action is ownership/recovery inspection. A worker identifier can be ephemeral rather than employee-linked.
+
+### Recovery latency
+
+Measure from failure observation to verified disposition with components for detection, lease, reconciliation, wait, and verification. Preserve unresolved count. Do not optimize by declaring false failure.
+
+### Redaction failure
+
+Any prohibited field or fixture marker before export is critical for telemetry pipeline. Record field class, emitter, schema/convention version, policy, and block result, not value. First action stops exporter/configuration.
+
+### Missing causal link
+
+Count orphan effect, approval, callback, and terminal events. Segment by consequence and component/version. First action repairs instrumentation. A low average orphan rate cannot excuse one missing high-consequence effect link.
+
+Every signal record states blind spot. Sampling may undercount. A service may fail to emit. Event classification may be wrong. Tenant-scoped aggregation may hide cross-tenant incidents until security authority queries them.
+
+## Adapter versioning and semantic drift
+
+Map local event taxonomy to OTel/vendor attributes through versioned adapters. Store semantic-convention version and stability. If an attribute changes name or meaning, migrate mapping and compare fixtures. Do not reinterpret historical events silently.
+
+### Unknown attribute policy
+
+New auto-instrumented attributes are denied export until classified. This can reduce immediate telemetry after upgrade, which is preferable to silent content collection. Platform owners stage and validate adapters.
+
+### Missing native concept
+
+If vendor trace lacks approval hash, state version, or effect identity, add local event/link rather than overloading unrelated attribute. Document that vendor dashboard alone cannot answer the question.
+
+### Sampling adapter
+
+Declare which critical local events bypass sampling and how their links persist. Test a high-volume fixture. If vendor pipeline cannot guarantee required retention/delivery, maintain a minimal local audit path under governance or narrow diagnostic claim.
+
+### Export boundary
+
+Before sending telemetry to another service, review region, tenant separation, subprocessors, access, retention, and content defaults. A standard protocol ensures interoperability, not policy compliance.
+
+## Trace-review tabletop
+
+Give participants a user symptom, one misleading dashboard, authoritative effect/state records, and redacted event graph. The dashboard says model success and low latency. Effect state says unknown. Approval expired. A callback lacks parent link.
+
+The team should reject dashboard success as run truth, freeze redispatch, validate approval/cancellation, follow effect identity, and name causal gap. They request no prompt. If sealed artifact cannot resolve effect, they escalate with uncertainty.
+
+Then reveal that a collector sampled the reconciliation span. The team distinguishes missing telemetry from missing action by querying authoritative ledger. Instrumentation repair is separate from effect recovery.
+
+### Tabletop roles
+
+On-call owns initial triage and safe action. Service owner interprets adapter/reference. Platform owns trace delivery. Privacy/security authorizes exceptional evidence. Domain owner handles effect consequence. The Agentic AI Engineer explains run contracts. No one role receives permanent universal access.
+
+### Tabletop output
+
+Produce confirmed facts, inferred links, disconfirmed hypotheses, unknowns, action taken, evidence accessed, retention change if any, and next owner. Add minimum schema/signal correction. Avoid speculative root-cause label.
+
+## Completion checklist
+
+Verify trace/run/attempt/event/span/effect identifiers are stable and scoped. Verify asynchronous links. Verify state versions, approval hashes, semantic effects, cancellation, recovery, and terminal disposition. Verify prompts, responses, credentials, tool payloads, and user records default off.
+
+Verify source redaction, unknown-field failure, fixture secret scan, evidence reference access, cross-tenant denial, break-glass expiry, retention/deletion, tombstones, and restore behavior. Verify diagnostic fixtures reach supported conclusions and reveal missing links.
+
+Verify every signal has owner, first action, sensitivity, access, retention, segment, and blind spot. Verify OTel/vendor mapping is versioned and current examples remain implementation cases. Verify no trace claim becomes correctness, privacy compliance, or surveillance authority.
+
+The chapter's success criterion is not maximum observability. It is sufficient, bounded evidence for declared operational questions with less unnecessary content and honest gaps.
+
+## Final handoff record
+
+`AR-11 v0.1.0` records the wrong-reservation investigation, duplicate-attempt correction, cross-tenant containment trace, redaction tests, access denials, retention transitions, and missing-link findings. Chapter 16 receives signals rather than raw histories.
+
+If Chapter 16 asks for a new threshold that requires content collection, reopen this privacy/minimization review. Prefer structural derivation. If a new diagnostic question genuinely requires evidence, add a sealed artifact class and narrow policy rather than enabling global payload capture.
+
+Observability evolves with the system. New capability, effect, protocol, topology, or human workflow creates new causal links and sensitivity. Re-run schema, access, redaction, retention, and utility tests. Retire fields that no longer earn purpose.
+
+## Closing evidence drill
+
+Take five event records from different layers and ask what each proves. A model-operation success proves a returned operation under recorded configuration, not correct task. A policy denial proves the policy component denied the referenced request, not that no other path executed. An effect verification proves the referenced synthetic effect matched expected state, not that every related consequence was reversed. A redaction marker proves a policy ran, not that every sensitive value was recognized. An access denial proves one query was blocked, not that the store has no broader role.
+
+Now link them. A confirmed effect links to invocation; invocation links to approval; approval links to proposal; proposal links to state/evidence; model operation links to artifact. The chain supports a bounded explanation only if identities and versions align. One missing link changes the conclusion from confirmed to inferred or unknown.
+
+### Diagnose without payload
+
+Give the learner run, proposal hash, approval hash, effect intent hash, state versions, and adapter versions. They can detect mismatch without seeing slot value. If operational correction needs the exact slot, a qualified operator retrieves the structured effect or proposal from authoritative/sealed store. The trace remains minimal.
+
+### Diagnose a privacy failure
+
+Fixture scan finds a token marker in an exporter buffer before remote send. The pipeline blocks export and emits a redaction-failure event with emitter and field class. Security/platform rotates fixture configuration, reviews other buffered records, and reruns. The event must not include the token marker.
+
+### Diagnose surveillance drift
+
+A team adds persistent reviewer pseudonym to analyze approval speed. Ask whether purpose requires individual linkage, which authority approved monitoring, whether tenant/cohort aggregation suffices, who accesses it, and when it expires. Without answers, reject the field even if technically useful.
+
+### Defend an unknown conclusion
+
+An orphan callback and missing effect link prevent attribution. The learner writes: authoritative state shows one reservation; two runs are candidates; trace cannot identify which caused it; redispatch is blocked; service owner must reconcile references. This is better than guessing from nearest timestamp.
+
+The drill passes when every claim uses the smallest sufficient evidence, distinguishes observation from inference, follows access purpose, and stops at the boundary of the graph.
+
+Archive schema, adapter mappings, policy, fixtures, access matrix, retention tests, diagnostic conclusions, and known gaps with versions and hashes. Future upgrades compare behavior rather than assuming compatibility. Preserve failed redaction and missing-link cases as regressions without retaining their sensitive fixture values.
+
+A reader finishing this chapter should be able to resist two equal temptations: collecting everything because an incident might happen, and collecting nothing because telemetry carries risk. The engineered middle is purpose-bound causal structure, authoritative references, exceptional sealed detail, strict access, bounded retention, tested deletion, and explicit uncertainty.
+
+That balance keeps FieldOps operable while respecting that users, reviewers, and operators are people, not raw material for an observability product.
+
+The final trace contract is intentionally incomplete where authority is external. It cannot authorize employee monitoring, define legal retention, guarantee collector security, or make missing evidence appear. It gives those owners a smaller, testable data surface and gives engineers a causal language for asking the next responsible question.
+
+Minimal evidence remains useful only while its limitations stay visible.
