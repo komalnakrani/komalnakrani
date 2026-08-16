@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "batchId": "V1-10-12",
+  "issue": 57,
+  "parentIssue": 46,
+  "status": "manuscript-complete-assets-pending",
+  "producedAt": "2026-08-16",
+  "mosaicDesk": {"fictional":true,"start":"MD-05-retrieval-problem-opened","end":"MD-06-first-joint-evaluation-evidence","inventedProductionOutcomes":false},
+  "chapters": [
+    {"number":10,"slug":"build-the-retrieval-and-reranking-path","title":"Build the Retrieval and Reranking Path","wordCount":2585,"claims":[{"productionId":"CLM-028","acceptedId":"V1-C10-CL01"},{"productionId":"CLM-029","acceptedId":"V1-C10-CL02"},{"productionId":"CLM-030","acceptedId":"V1-C10-CL03"}],"caseIds":["LLME-CASE-004"],"figureIds":["V1-F10.1","V1-F10.2"],"companionTestsAdded":4,"qaStatus":"pass"},
+    {"number":11,"slug":"assemble-context-with-provenance","title":"Assemble Context With Provenance","wordCount":2532,"claims":[{"productionId":"CLM-031","acceptedId":"V1-C11-CL01"},{"productionId":"CLM-032","acceptedId":"V1-C11-CL02"},{"productionId":"CLM-033","acceptedId":"V1-C11-CL03"}],"caseIds":["LLME-CASE-002"],"figureIds":["V1-F11.1","V1-F11.2"],"companionTestsAdded":4,"qaStatus":"pass"},
+    {"number":12,"slug":"evaluate-retrieval-and-generation-together","title":"Evaluate Retrieval and Generation Together","wordCount":2667,"claims":[{"productionId":"CLM-034","acceptedId":"V1-C12-CL01"},{"productionId":"CLM-035","acceptedId":"V1-C12-CL02"},{"productionId":"CLM-036","acceptedId":"V1-C12-CL03"}],"caseIds":["LLME-CASE-003","LLME-CASE-004"],"figureIds":["V1-F12.1","V1-F12.2"],"companionTestsAdded":4,"qaStatus":"pass"}
+  ],
+  "figures": [
+    {"id":"V1-F10.1","chapter":10,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f10-1-retrieval-pipeline.png","labels":["ingest","chunks","candidates","filters","rerank","evidence"],"alt":"Authorized sources move through traceable retrieval stages while retaining identity.","evidenceRole":"Localizes retrieval failure without reporting measured quality.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F10.2","chapter":10,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f10-2-candidate-comparison.png","labels":["lexical","vector","hybrid","useful","noisy"],"alt":"Three retrieval signals produce overlapping but different useful and noisy candidates.","evidenceRole":"Explains complementarity without declaring a best method.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F11.1","chapter":11,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f11-1-provenance-aware-assembly.png","labels":["source","fresh","allowed","span","revision"],"alt":"Selected evidence retains source and permission identity inside bounded context.","evidenceRole":"Explains provenance transport without proving source truth.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F11.2","chapter":11,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f11-2-evidence-state-junction.png","labels":["support","conflict","stale","missing","unauthorized","answer","abstain","escalate"],"alt":"Distinct evidence conditions route to separate bounded outcomes.","evidenceRole":"Defines assembly behavior without adjudicating authority.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F12.1","chapter":12,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f12-1-two-stage-evaluation.png","labels":["retrieve","generate","joint","abstain"],"alt":"Retrieval and generation receive separate judgments before a joint result.","evidenceRole":"Preserves component evidence without reporting performance.","assetStatus":"pending-root-imagegen"},
+    {"id":"V1-F12.2","chapter":12,"plannedPath":"/assets/publications/llm-behavior-engineering/v1-f12-2-causal-failure-tree.png","labels":["corpus","query","candidates","rank","context","model","citation","evaluator"],"alt":"A failed proposal branches backward through eight possible evidence layers.","evidenceRole":"Supports causal diagnosis without implying automated certainty.","assetStatus":"pending-root-imagegen"}
+  ],
+  "companion": {"runner":"companion/run.mjs","testPattern":"companion/tests/*.test.mjs","testsAdded":12,"cumulativeTests":48,"expectedPassing":48,"providerCalls":0,"deterministic":true},
+  "limitations": [
+    "Mosaic Desk, corpus units, candidate paths, contexts, outputs, metrics, and diagnoses are fictional and synthetic.",
+    "The retrieval fixture uses declared candidate lists and proves no embedding, index, reranker, latency, or quality result.",
+    "The assembly fixture uses synthetic teaching units and does not prove token-position behavior, citation entailment, source truth, or security sufficiency.",
+    "The joint-evaluation fixture proves branching mechanics only; its classifications are not representative measurements or causal certainty.",
+    "Figure records are semantic anchors only; root owns ImageGen production."
+  ]
+}

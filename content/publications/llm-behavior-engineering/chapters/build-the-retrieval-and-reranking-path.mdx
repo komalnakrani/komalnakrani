@@ -1,0 +1,221 @@
+---
+title: "Build the Retrieval and Reranking Path"
+slug: "build-the-retrieval-and-reranking-path"
+summary: "Turn an authorized evidence corpus into a measurable retrieval funnel whose ingestion, chunking, filtering, ranking, and reranking decisions remain separately traceable."
+minutes: 95
+sourceIds: ["SRC-019", "SRC-020", "SRC-021", "SRC-022", "SRC-023", "SRC-024"]
+claimIds: ["CLM-028", "CLM-029", "CLM-030"]
+objectiveIds: ["LLME-K05", "LLME-K06", "LLME-K09"]
+figureIds: []
+---
+
+## A similarity score is not a retrieval explanation
+
+Chapter 9 opened `MD-05` by freezing the evidence question before selecting technology. Mosaic Desk now has a fictional, synthetic corpus; authorized source families; tenant and purpose rules; evidence-unit boundaries; answerability states; and a requirement that eligibility precede relevance. The system still has no index, embedding model, chunking policy, or reranker.
+
+This chapter earns those choices with stage-level evidence.
+
+Suppose a reviewer asks about washer model `W17` and latch error `E17`. A lexical path retrieves an obsolete bulletin because its title repeats both codes. A dense path retrieves a current passage for a semantically similar dryer family. Both results look reasonable when inspected only as ranked text. Neither is acceptable evidence for the request.
+
+The engineering question is not, "Which search result sounds closest?" It is:
+
+> At which declared stage did an eligible supporting evidence unit enter, move, disappear, or become ineligible?
+
+That question turns retrieval from an opaque feature into a falsifiable pipeline.
+
+## Freeze the corpus before comparing retrieval
+
+A retriever experiment is uninterpretable when the corpus changes underneath it. Start with a corpus card and an immutable ingestion identity.
+
+For Mosaic's teaching fixture, the corpus card records:
+
+- corpus version and content digest;
+- source families and named owners;
+- snapshot time and effective-time policy;
+- tenant and purpose scopes represented;
+- included, excluded, revoked, and quarantined record counts;
+- document parser and normalization versions;
+- evidence-unit policy and chunking configuration;
+- permission and supersession fields copied into every unit;
+- known coverage gaps and languages;
+- deletion, revocation, and reindex triggers;
+- label-set version used for the bake-off.
+
+Ingestion must never erase a source's identity. Every derived unit receives a stable `unitId`, its `parentSourceId`, source revision, byte or structural span, content digest, tenant, allowed purposes, authority class, effective interval, supersession relation, and parser/chunker version. If a table row depends on its header, or a policy clause depends on an exception immediately below it, the unit contract must preserve that relationship.
+
+A changed parser can change extracted text. A changed chunk overlap can duplicate a clause. A changed source snapshot can replace a current record. These are behavior-facing changes even when the retriever code is unchanged. Bind them into the retrieval run identity.
+
+## Chunk for evidence, not convenience
+
+Fixed token windows are easy to implement, but an easy boundary is not necessarily an honest evidence boundary.
+
+Test at least three unit policies on the same source snapshot:
+
+1. **Structural units.** Preserve headings, list conditions, table headers, and parent-child relations.
+2. **Bounded windows.** Use declared size and overlap while retaining the parent span.
+3. **Domain units.** Represent a bulletin instruction, warranty clause, or parts relation as one typed object.
+
+Inspect the failures, not only aggregate recall. A window may separate a prohibition from its exception. Overlap may create near-duplicates that crowd out other evidence. A large structural unit may preserve meaning but consume too much of the `MD-04` context budget. A compact domain unit may require a reliable parser and migration policy.
+
+The selection is a corpus-specific tradeoff. Record a hypothesis such as, "Structural bulletin sections should preserve preconditions better than fixed windows without exceeding the selected-evidence budget." Then define the cases that could disconfirm it.
+
+## Make each retrieval stage an interface
+
+The pipeline needs six independently inspectable stages.
+
+### Stage 1: query representation
+
+Preserve the Chapter 9 request object as the canonical query. An adapter may create lexical terms, a dense representation, language variants, or a hypothetical document, but it cannot expand tenant, purpose, source-family, appliance, or claim-type scope. Record the original query, transformation version, output, and any identifiers or negations lost.
+
+### Stage 2: candidate generation
+
+Run candidate paths independently before combining them.
+
+- A sparse path can reward exact model numbers, error codes, rare part identifiers, and policy phrases.
+- A dense path can surface paraphrases and related language without exact token overlap.
+- A late-interaction path can retain token-level matching signals while using learned representations.
+- A hybrid path can combine declared channel scores or ranks.
+
+Sparse, dense, and late-interaction retrieval expose different effectiveness and resource tradeoffs. The cited dense, sentence-embedding, late-interaction, and heterogeneous-benchmark studies establish useful method families and reported results in their evaluated settings. They do not establish a winner for Mosaic's corpus, languages, permissions, hardware, or latency budget. [CLM-028]
+
+### Stage 3: eligibility filters
+
+Apply permission, tenant, purpose, source-family, currency, applicability, and revocation rules before a record can influence relevance selection. When the underlying index cannot enforce a predicate before approximate search, the application must bound exposure and verify that unauthorized content never enters the generator-facing candidate trace. This is a security/privacy and platform design handoff as well as an LLM behavior requirement.
+
+### Stage 4: fusion
+
+Combine channels only to test a stated hypothesis. Reciprocal-rank or weighted-score fusion can broaden candidate coverage, but the rule, inputs, missing-channel behavior, and tie-breaker must be versioned. Normalized scores from different systems are not automatically comparable.
+
+### Stage 5: reranking
+
+A reranker receives a bounded eligible candidate set and returns an ordered set with its own identity and latency. It may use a cross-encoder, late interaction, deterministic rules, or no second stage. Preserve the pre-rerank order so a gain or regression can be attributed.
+
+### Stage 6: selected evidence
+
+The final interface does not emit anonymous strings. It emits evidence-unit envelopes with parent provenance, eligibility evidence, channel ranks, rerank position, qualifying span, and selection reason. Chapter 11 will decide how to assemble those envelopes into context.
+
+Chunking, metadata filters, candidate retrieval, and reranking are separately diagnosable stages. Research on foundational RAG, late interaction, and retrieval benchmarks motivates this separation, while the exact unit policy and behavior remain corpus and configuration specific. A high final rank cannot reveal which upstream stage created or hid the candidate unless the trace retains every transition. [CLM-029]
+
+<figure class="book-figure book-figure--pending" data-figure-id="V1-F10.1" data-image="/assets/publications/llm-behavior-engineering/v1-f10-1-retrieval-pipeline.png">
+  <div role="img" aria-label="Authorized sources move through ingestion, chunks, candidate lanes, filters, reranking, and selected evidence while retaining a trace at every stage.">Pending ImageGen figure V1-F10.1</div>
+  <figcaption><strong>V1-F10.1 - Retrieval is a sequence of inspectable decisions.</strong> Essential labels: ingest, chunks, candidates, filters, rerank, evidence. Identity tags remain attached throughout. The figure localizes failures for `CLM-028` and `CLM-029`; it reports no measured quality result.</figcaption>
+  <details><summary>Long description</summary><p>A colorful three-dimensional workshop begins with locked source cabinets. Documents pass through an ingestion scanner into labeled chunk capsules. Separate lexical, vector, and late-interaction lanes produce candidate trays. A permission and freshness gate blocks ineligible items before a reranking station orders the remaining candidates. Every accepted evidence capsule keeps a visible source-and-revision tag.</p></details>
+</figure>
+
+## Compare paths with the same cases
+
+Mosaic's synthetic bake-off contains deliberately different query families:
+
+- exact model, part, and error identifiers;
+- semantic paraphrases of bulletin language;
+- multilingual and code-switched descriptions;
+- negated or conditional instructions;
+- near-duplicate current and superseded revisions;
+- irrelevant records with high surface overlap;
+- same-topic records from another tenant;
+- cases with no eligible supporting unit.
+
+Each case declares expected eligible unit IDs, forbidden unit IDs, and answerability state. Candidate recall at a chosen depth asks whether an eligible supporting unit appeared. Ranking measures ask where labeled units appeared. Authorization-violation count asks whether any forbidden unit crossed the filter. Latency is recorded per stage rather than only end to end. The labels and depth are part of the evaluation contract, not universal targets.
+
+Use side-by-side traces. A lexical miss on a paraphrase and a dense miss on a rare code support a hybrid hypothesis. A hybrid path that adds duplicates without recovering any labeled unit does not earn its complexity. A reranker that improves average position but pushes a safety-relevant condition below the packing cutoff creates negative evidence that must remain visible.
+
+## Read a stage trace as evidence
+
+One trace row should be enough to reconstruct a candidate's journey without rerunning the system. For each query-candidate pair, record:
+
+- run, corpus, query, and unit identities;
+- eligibility result and non-content reason code;
+- lexical rank and score when that channel ran;
+- dense rank and score when that channel ran;
+- late-interaction or other channel evidence when configured;
+- fusion inputs, rule, and fused position;
+- reranker identity, input position, output position, and bounded score;
+- selection or exclusion disposition;
+- per-stage duration or deterministic teaching operation count;
+- evidence span and parent source carried forward.
+
+Scores stay namespaced by stage. A dense similarity value and a cross-encoder value do not share a scale merely because both are decimals. A missing score means the channel did not produce the candidate, not zero relevance. Preserve ties and deterministic tie-breakers.
+
+Now inspect a miss backward. If the relevant source never entered the corpus, stop at ingestion. If the unit boundary removed its condition, inspect chunking. If the canonical query lost `E17`, inspect transformation. If the unit appeared at candidate depth 20 but the assembler accepts only five, inspect ranking and budget together. If it ranked first but failed permission, the correct conclusion is not poor retrieval; the source was ineligible for this request.
+
+The trace also supports cost and latency reasoning without false precision. Measure the target environment later, but keep stage boundaries now: representation, each candidate channel, filter, fusion, rerank, and serialization. A faster aggregate can still hide an expensive tail or a filter that runs after forbidden content has been fetched. The production owner decides operational feasibility from real workload evidence; the manuscript fixture only proves the accounting interface.
+
+## Separate labels from the system under test
+
+Relevance labels must identify eligible evidence for a declared claim, not reward whatever the current retriever returns. Build labels from the frozen source snapshot with independent review where consequences require it. Keep `supporting`, `partially supporting`, `conflicting`, `background`, and `not applicable` distinct when the chosen metric can use graded judgment.
+
+Record annotator role, instructions, disagreement, and adjudication. A domain owner may decide that a bulletin is authoritative; an LLM engineer can then measure whether the pipeline retrieves it. The engineer must not manufacture source authority to complete an evaluation label.
+
+When a query has multiple acceptable units, record the set. When only a combination supports the claim, record the group requirement rather than declaring either fragment sufficient. When no eligible unit exists, label the case `no-evidence`; do not force a positive document into the set for metric convenience.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V1-F10.2" data-image="/assets/publications/llm-behavior-engineering/v1-f10-2-candidate-comparison.png">
+  <div role="img" aria-label="Lexical, vector, and hybrid trays contain overlapping but different useful and noisy candidates for the same authorized query set.">Pending ImageGen figure V1-F10.2</div>
+  <figcaption><strong>V1-F10.2 - Retrieval signals can complement and contradict one another.</strong> Essential labels: lexical, vector, hybrid, useful, noisy. Shape and document-ID cues supplement color. The figure explains candidate diversity without declaring a best method.</figcaption>
+  <details><summary>Long description</summary><p>Three bright evidence trays sit on a laboratory bench. The lexical tray contains an exact code match and an obsolete look-alike. The vector tray contains a paraphrase and a wrong appliance-family document. The hybrid tray overlaps both but still passes through a separate eligibility gate. Matching document IDs make overlaps visible, while warning badges mark noise.</p></details>
+</figure>
+
+## Treat generated query documents as experiments
+
+One optional path creates a hypothetical document from the query and embeds that synthetic text for dense retrieval. This can bridge vocabulary gaps in some zero-shot settings. It also imports generator assumptions, adds latency and cost, and can amplify a mistaken appliance, condition, or authority assumption.
+
+Synthetic hypothetical-document retrieval is an experimental option, not a truth or grounding guarantee. The cited HyDE study reports results for its method and evaluated benchmarks; it does not make the generated hypothetical document evidence, authorize its contents, or prove transfer to Mosaic. Preserve it as query-transformation data, never as a citeable source. [CLM-030]
+
+Test the original query and hypothetical-document path on identical labels. Log the generated query artifact, model/runtime identity, transformation prompt, and failures. Reject the path if it drops exact identifiers, changes negation, expands source scope, destabilizes replay, or cannot justify its resource cost.
+
+## Preserve managed and open-weight responsibility differences
+
+The retrieval contract is independent of generator access posture, but implementation responsibilities differ.
+
+In a managed retrieval service, the team records index/service version, embedding and reranking identifiers when exposed, region and data-use terms, filter semantics, refresh behavior, quotas, and unavailable internals. Service-managed does not mean behavior-unowned; replay fixtures and exported stage evidence are still required.
+
+In an open-weight or self-hosted path, the team additionally owns artifact digests, tokenizer and embedding preprocessing, index build, runtime, hardware, quantization where applicable, capacity, deployment, monitoring, and rebuild procedures. Search/data/platform owners may operate the production index. The LLM engineer owns the task-facing contract, behavior evidence, and generator handoff, not the platform's entire operational estate.
+
+Both paths must emit the same provider-neutral trace fields and satisfy the same authorization and evidence-unit invariants.
+
+## Failure injection: exact, current, and still wrong
+
+Run the Chapter 10 fixture for `CASE-W17`.
+
+1. The lexical lane ranks revoked `UNIT-A2-OLD` first because it contains `W17`, `E17`, and `latch` exactly.
+2. The dense lane ranks `UNIT-DRYER-9` highly because it describes a similar latch symptom but applies to a dryer family.
+3. Eligibility rejects the revoked unit before selection.
+4. Applicability rejects the wrong appliance family.
+5. Current authorized `UNIT-A7` survives with a weaker lexical score and a qualifying span.
+6. The trace records both excluded candidates without exposing forbidden content to generation.
+7. If `UNIT-A7` is removed, the result becomes `no-evidence`; no other-tenant or revoked unit replaces it.
+
+This is a synthetic containment test, not a production precision, latency, security, or quality outcome. `LLME-CASE-004` contributes the bounded lesson that candidate generation and reranking are separable experiment variables. Its cited papers report benchmark-specific results, not a best Mosaic stack.
+
+## Practice: run a paper bake-off
+
+Create twelve synthetic cases across the query families above. For each path:
+
+1. freeze the corpus, unit, query, label, and configuration identities;
+2. list candidates at each stage;
+3. show eligibility exclusions and reasons without leaking content;
+4. compute candidate recall and a rank-oriented measure from declared labels;
+5. record per-stage teaching latency or operation count as synthetic evidence;
+6. inspect at least one recovered case and one regression;
+7. state whether hybrid or reranking complexity earned continuation;
+8. preserve empty, conflicting, stale, and unauthorized states;
+9. name the platform, domain, privacy/security, and release owners;
+10. emit no generated answer and no external effect.
+
+Pass when a reviewer can attribute every selected or missing unit to corpus, chunk, query, eligibility, candidate, fusion, or reranking behavior. Fail if the decision rests on one aggregate score, a public leaderboard, or fluent downstream prose.
+
+## The MD-05 retrieval pipeline dossier
+
+Mosaic exits Chapter 10 with:
+
+- an immutable synthetic corpus card and ingestion digest;
+- stable source, revision, unit, span, and chunk identities;
+- a frozen query and relevance-label set;
+- sparse, dense, hybrid, and optional reranking interfaces;
+- pre-relevance authorization and freshness filters;
+- stage-level candidates, exclusions, ranks, and latency evidence;
+- a bounded comparison decision with negative findings;
+- explicit no-evidence behavior and no effects;
+- managed/open-weight responsibility records;
+- a selected-evidence envelope for Chapter 11.
+
+It does not have an answer-quality result. Chapter 11 must preserve each selected unit's identity while packing evidence under the `MD-04` budget. Chapter 12 will then test whether retrieval success and generated behavior succeed together without collapsing their causes.

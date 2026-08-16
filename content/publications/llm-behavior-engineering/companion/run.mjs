@@ -8,6 +8,9 @@ import { messageIdentity, renderSemanticBundle, validateMessageBoundary } from "
 import { validateProposal } from "./lib/proposal-validator.mjs";
 import { packContext } from "./lib/context-packer.mjs";
 import { eligibleUnits, validateRetrievalQuestion } from "./lib/retrieval-question.mjs";
+import { runRetrievalPipeline, validateRetrievalPipeline } from "./lib/retrieval-pipeline.mjs";
+import { assembleProvenance, validateProvenanceFixture } from "./lib/provenance-assembler.mjs";
+import { evaluateJointFixture, validateJointFixture } from "./lib/joint-evaluation.mjs";
 
 const load = async (relative) => JSON.parse(await readFile(new URL(relative, import.meta.url), "utf8"));
 const charter = await load("./contracts/mosaic-responsibility-charter.json");
@@ -22,6 +25,9 @@ const proposalSchema = await load("./output/mosaic-proposal-schema.json");
 const outputFixtures = await load("./output/mosaic-output-fixtures.json");
 const contextLedger = await load("./context/mosaic-context-ledger.json");
 const retrievalQuestion = await load("./retrieval/mosaic-retrieval-question.json");
+const retrievalPipeline = await load("./retrieval/mosaic-retrieval-pipeline.json");
+const provenanceAssembly = await load("./context/mosaic-provenance-assembly.json");
+const jointEvaluation = await load("./evaluation/mosaic-joint-evaluation.json");
 
 console.log(JSON.stringify({
   charterErrors: validateCharter(charter),
@@ -45,5 +51,11 @@ console.log(JSON.stringify({
   },
   output: outputFixtures.fixtures.map((fixture) => ({id:fixture.id,...validateProposal(fixture.raw,proposalSchema,outputFixtures,fixture.repairAttempts??0)})),
   context: packContext(contextLedger),
-  retrieval: {errors:validateRetrievalQuestion(retrievalQuestion),eligibleUnitIds:eligibleUnits(retrievalQuestion).map((unit)=>unit.id)}
+  retrieval: {errors:validateRetrievalQuestion(retrievalQuestion),eligibleUnitIds:eligibleUnits(retrievalQuestion).map((unit)=>unit.id)},
+  retrievalPipeline: { errors: validateRetrievalPipeline(retrievalPipeline), result: runRetrievalPipeline(retrievalPipeline) },
+  provenanceAssembly: {
+    errors: validateProvenanceFixture(provenanceAssembly),
+    scenarios: provenanceAssembly.scenarios.map((scenario) => assembleProvenance(provenanceAssembly, scenario.id))
+  },
+  jointEvaluation: { errors: validateJointFixture(jointEvaluation), cases: evaluateJointFixture(jointEvaluation) }
 }, null, 2));

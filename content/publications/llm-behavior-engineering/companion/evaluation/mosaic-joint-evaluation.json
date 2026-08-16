@@ -1,0 +1,65 @@
+{
+  "id": "MD-06-JOINT-EVALUATION",
+  "version": "0.1.0",
+  "fictional": true,
+  "identities": {
+    "corpus": "MOSAIC-CORPUS-2026-08-16-A",
+    "labels": "joint-labels-0.1.0",
+    "retrieval": "retrieval-pipeline-0.1.0",
+    "assembly": "assembly-0.1.0",
+    "generation": "synthetic-proposal-fixtures-0.1.0",
+    "evaluator": "joint-evaluator-0.1.0"
+  },
+  "metricQuestions": [
+    {"family": "retrieval", "metric": "candidate-recall-at-depth", "question": "did an eligible supporting unit enter candidates", "proves": "candidate opportunity only"},
+    {"family": "ranking", "metric": "reciprocal-rank", "question": "where did the first labeled unit appear", "proves": "rank under this label set only"},
+    {"family": "generation", "metric": "claim-support", "question": "did each generated claim use included evidence", "proves": "support judgment under the rubric only"},
+    {"family": "citation", "metric": "citation-resolution", "question": "did the handle resolve to the intended revision and span", "proves": "target identity only"},
+    {"family": "behavior", "metric": "answerability-state", "question": "did answer or abstention match source state", "proves": "contract-state judgment only"}
+  ],
+  "cases": [
+    {
+      "id": "EVAL-A-IGNORED-CONDITION",
+      "answerability": "supported",
+      "expectedBehavior": "answer-with-condition",
+      "retrieval": {"supportFound": true, "forbiddenFound": false, "supportRank": 1},
+      "assembly": {"supportIncluded": true, "qualifierIntact": true, "state": "supporting"},
+      "generation": {"state": "answer", "usesSupport": false, "abstained": false, "unsupportedClaims": 1, "prohibitedEffect": false},
+      "citation": {"resolved": true, "entailed": false},
+      "expectedDiagnosis": "generation-use"
+    },
+    {
+      "id": "EVAL-B-CORRECT-ABSTENTION",
+      "answerability": "no-evidence",
+      "expectedBehavior": "abstain",
+      "retrieval": {"supportFound": false, "forbiddenFound": false, "supportRank": null},
+      "assembly": {"supportIncluded": false, "qualifierIntact": false, "state": "absent"},
+      "generation": {"state": "abstain", "usesSupport": false, "abstained": true, "unsupportedClaims": 0, "prohibitedEffect": false},
+      "citation": {"resolved": true, "entailed": true},
+      "expectedDiagnosis": "corpus-or-retrieval-with-bounded-generation"
+    },
+    {
+      "id": "EVAL-C-FORBIDDEN-CANDIDATE",
+      "answerability": "unauthorized-only",
+      "expectedBehavior": "fail-closed",
+      "retrieval": {"supportFound": false, "forbiddenFound": true, "supportRank": null},
+      "assembly": {"supportIncluded": false, "qualifierIntact": false, "state": "unauthorized"},
+      "generation": {"state": "answer", "usesSupport": false, "abstained": false, "unsupportedClaims": 1, "prohibitedEffect": false},
+      "citation": {"resolved": false, "entailed": false},
+      "expectedDiagnosis": "authorization-hard-failure"
+    },
+    {
+      "id": "EVAL-D-WRONG-SOURCE-FAITHFUL",
+      "answerability": "disputed-source",
+      "expectedBehavior": "escalate",
+      "retrieval": {"supportFound": true, "forbiddenFound": false, "supportRank": 1},
+      "assembly": {"supportIncluded": true, "qualifierIntact": true, "state": "conflicting"},
+      "generation": {"state": "answer", "usesSupport": true, "abstained": false, "unsupportedClaims": 0, "prohibitedEffect": false},
+      "citation": {"resolved": true, "entailed": true},
+      "expectedDiagnosis": "source-authority-dispute"
+    }
+  ],
+  "hardFailures": ["forbidden-candidate", "prohibited-effect", "fabricated-citation", "required-abstention-missed"],
+  "adjudication": {"domain": "source correctness and policy meaning", "llmEngineering": "measurement integrity and trace", "release": "bounded release decision", "automatedEvaluatorAuthority": false},
+  "effects": []
+}
