@@ -1,0 +1,37 @@
+{
+  "artifactId": "PF-09",
+  "version": "0.2.0",
+  "status": "synthetic-local",
+  "caseStatus": "fictional-synthetic",
+  "owner": "Patchwork performance owner",
+  "authority": "Named product and release authorities",
+  "budgets": {"p95Ms": 950, "p99Ms": 1300, "peakConcurrency": 6, "costUnitsPerRequestP95": 16, "criticalSegmentRecallMin": 0.8},
+  "components": [
+    {"id":"input","budgetMs":70,"criticalPath":true},
+    {"id":"retrieval","budgetMs":240,"criticalPath":true},
+    {"id":"ranking","budgetMs":120,"criticalPath":true},
+    {"id":"explanation","budgetMs":360,"criticalPath":false},
+    {"id":"validation","budgetMs":90,"criticalPath":true},
+    {"id":"interface-network","budgetMs":170,"criticalPath":true}
+  ],
+  "configurations": [
+    {"id":"evidence-first","cache":"permission-and-freshness-keyed","batch":1,"maxAttempts":1,"quality":0.88,"p95Ms":910,"capacityRps":22,"costUnits":14,"criticalSegmentRecall":0.86,"risk":"cold image-heavy mobile tail"},
+    {"id":"fast-aggregate","cache":"broad-shared","batch":4,"maxAttempts":2,"quality":0.82,"p95Ms":690,"capacityRps":39,"costUnits":11,"criticalSegmentRecall":0.69,"risk":"permission, freshness, and critical-segment evidence"},
+    {"id":"high-recall","cache":"permission-and-freshness-keyed","batch":2,"maxAttempts":2,"quality":0.91,"p95Ms":1240,"capacityRps":14,"costUnits":21,"criticalSegmentRecall":0.9,"risk":"tail, saturation, and retry amplification"}
+  ],
+  "requests": [
+    {"id":"R01","segment":"text-warm","latencyMs":410,"costUnits":7,"concurrency":2,"qualityPass":true},
+    {"id":"R02","segment":"text-warm","latencyMs":460,"costUnits":8,"concurrency":2,"qualityPass":true},
+    {"id":"R03","segment":"text-cold","latencyMs":720,"costUnits":11,"concurrency":3,"qualityPass":true},
+    {"id":"R04","segment":"text-cold","latencyMs":780,"costUnits":12,"concurrency":4,"qualityPass":true},
+    {"id":"R05","segment":"image-mobile","latencyMs":890,"costUnits":14,"concurrency":4,"qualityPass":true},
+    {"id":"R06","segment":"image-mobile","latencyMs":940,"costUnits":15,"concurrency":5,"qualityPass":true},
+    {"id":"R07","segment":"image-mobile","latencyMs":1180,"costUnits":16,"concurrency":6,"qualityPass":false},
+    {"id":"R08","segment":"image-mobile","latencyMs":1360,"costUnits":18,"concurrency":6,"qualityPass":false},
+    {"id":"R09","segment":"denied-permission","latencyMs":180,"costUnits":3,"concurrency":2,"qualityPass":true},
+    {"id":"R10","segment":"stale-source","latencyMs":210,"costUnits":4,"concurrency":2,"qualityPass":true}
+  ],
+  "selectedConfiguration": "evidence-first",
+  "selectionReason": "Only the selected bounded configuration satisfies quality, critical-segment, tail, capacity, and cost policy together; denial and stale-source states stop rather than use an ungrounded fast fallback.",
+  "limitations": ["Synthetic cost units are not currency", "No provider prices or quotas", "Small constructed load fixture"]
+}

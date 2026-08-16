@@ -1,0 +1,630 @@
+---
+title: "Design for Probabilistic Failure"
+slug: "design-for-probabilistic-failure"
+summary: "Model failure by layer, consequence, propagation, and state, then contain it with bounded retries, idempotency, circuits, degradation, reconciliation, and explicit recovery evidence."
+minutes: 85
+sourceIds: ["SRC-006", "SRC-007", "SRC-033", "SRC-034", "SRC-035", "SRC-039", "SRC-040", "SRC-041", "SRC-042", "SRC-043", "SRC-044"]
+claimIds: ["CLM-065", "CLM-066", "CLM-067", "CLM-068", "CLM-069", "CLM-070"]
+objectiveIds: ["AAE-K02", "AAE-K05", "AAE-K07", "AAE-K08"]
+figureIds: ["FIG-025", "FIG-026"]
+---
+
+## Reliability begins when success is no longer the only path
+
+Patchwork Find receives a request for a replacement part. Retrieval returns three candidates. The ranker produces valid structured output. The interface renders a confident answer. Every component appears successful.
+
+The source snapshot is stale. The recommended part no longer fits the current product revision.
+
+Calling this a model hallucination would be convenient and wrong. The visible symptom arrived at the answer, but the initiating failure was context freshness. A larger model could make the same stale evidence more persuasive. Retrying could repeat the same mistake and add cost. A generic apology after the fact would not restore the user's time or repair a purchase.
+
+Applied AI reliability starts by treating failure as a combined-system state. Learned behavior, data, context, tools, orchestration, interface, dependencies, and user state can each initiate or propagate failure. Mature production practice therefore tests beyond model quality and records dependencies that create hidden operational debt. [CLM-065]
+
+The goal is not to make uncertainty disappear. It is to keep uncertainty from becoming an unbounded consequence. A reliable design can answer seven questions:
+
+1. Where did the failure begin?
+2. What user-visible symptom appeared?
+3. How far could it propagate?
+4. Which signal can detect it before or after consequence?
+5. Which control contains it?
+6. What state must be reconciled?
+7. What evidence proves recovery?
+
+This chapter advances Patchwork artifact `PF-09` to v0.1. It adds a cross-layer failure register, five deterministic injection paths, a bounded retry policy, an effect-aware idempotency rule, a circuit state model, and a fallback and recovery ladder. All companion evidence is local, fictional, and synthetic. Passing it proves only the declared mechanics.
+
+## Separate the initiating layer from the visible symptom
+
+A symptom is what an observer sees. A failure layer is where the condition that needs correction began. The distinction changes the intervention.
+
+Suppose the interface shows no result. Plausible initiating conditions include:
+
+- the user omitted a required unit;
+- an authorization check denied the relevant source;
+- retrieval timed out;
+- the index excluded a current record;
+- the ranker filtered every compatible candidate;
+- a provider returned malformed structured output;
+- validation correctly rejected unsafe output;
+- the interface lost a valid response;
+- a circuit opened after repeated dependency failure.
+
+One symptom, nine possible causes. Re-prompting the model is relevant to only one or two.
+
+The reverse also holds. One initiating failure can produce multiple symptoms. A stale source can create a wrong candidate, an unsupported explanation, an unnecessary tool proposal, a misleading success metric, and later corrective work. That chain is propagation.
+
+For each failure, record:
+
+| Field | Question |
+|---|---|
+| layer | Where did the initiating condition occur? |
+| symptom | What can a user or operator observe? |
+| consequence | What can happen to the user, affected group, or system? |
+| propagation | Which downstream decisions or states can inherit it? |
+| detectability | Which direct or indirect signal can reveal it? |
+| containment | Which boundary prevents wider effect? |
+| correction | What changes the defective mechanism or evidence? |
+| recovery | How is good state restored and demonstrated? |
+| retry safety | Can repetition duplicate cost, exposure, or effect? |
+| state consistency | Which source is authoritative after ambiguity? |
+| owner | Who is responsible for investigation and correction? |
+| authority | Who may accept residual risk or restore service? |
+| evidence | Which fixture, trace, result, or review supports disposition? |
+| residual | What remains unknown after the control works? |
+
+This record prevents a failure label from becoming a vague bucket. It also prevents reliability work from ending at detection. An alert without containment and recovery is notification, not control.
+
+<figure>
+  <img src="/assets/publications/applied-ai-engineering/f13-1-layered-failure-matrix.png" alt="Colorful three-dimensional layered failure matrix connecting user state, interface, orchestration, tools, learned behavior, context, data, and dependencies to symptom, propagation, containment, owner, and recovery, with short labels for cause and symptom." width="1565" height="1005" loading="lazy" decoding="async" />
+  <figcaption>F13.1 - Diagnose the initiating layer before correcting the downstream symptom.</figcaption>
+</figure>
+
+## Build the failure topology before choosing controls
+
+A flat risk list says timeout, bad output, stale data, and duplicate request. A topology adds direction and state. It shows that a context timeout may leave no evidence, a tool timeout may leave an unknown effect, and an interface timeout may hide a completed action from the user. The same word does not imply the same recovery.
+
+Use four relationships.
+
+**Initiates** means a layer creates the first defective or ambiguous state. **Propagates** means another layer accepts that state without stopping it. **Masks** means a downstream component makes the problem harder to see, often by producing plausible output. **Amplifies** means repetition, fan-out, caching, or automation increases reach or consequence.
+
+For Patchwork, a partial retrieval response initiates at the context boundary. Ranking can mask it by returning a polished top candidate. Explanation generation can amplify confidence. The interface can propagate the result if it does not display evidence coverage. The containment point is not necessarily the initiating point: an evidence-minimum validator can stop the chain even while retrieval remains impaired.
+
+Failure topology also distinguishes defect from correct control behavior. Abstaining when permission is denied is not a product error merely because the user did not get a recommendation. It may be the correct behavior contract state. An operator dashboard that counts every abstention as failure will pressure the team to remove a necessary control.
+
+Define these states explicitly:
+
+- **healthy response:** required evidence and controls passed;
+- **correct abstention:** the system withheld an unsupported or unauthorized result;
+- **degraded response:** a narrower capability remains supported and its limitation is visible;
+- **review pending:** a named reviewer can resolve an allowed ambiguity;
+- **stopped:** no safe continuation exists under current authority and evidence;
+- **unknown effect:** a request may have changed external or durable state, but confirmation is missing;
+- **recovered:** authoritative state was restored and the relevant failure path was replayed;
+- **unresolved:** containment worked, but cause or residual consequence remains open.
+
+This vocabulary matters because a green HTTP status can carry semantic failure, while a rejected response can represent successful containment.
+
+## Timeouts are decisions about abandoned uncertainty
+
+A timeout is not just a number. It decides how long one component may hold user time, capacity, and downstream uncertainty. It also decides what happens when the deadline expires.
+
+Define timeouts from the caller's remaining budget and consequence, not from a dependency's default. A retrieval call with 300 milliseconds left in the user budget cannot safely inherit a 30-second client timeout. A tool effect with an ambiguous outcome needs a different policy from a read-only similarity query.
+
+For each call, specify:
+
+- connection and total deadline;
+- whether cancellation reaches the dependency;
+- what partial result means;
+- whether work may continue after the caller stops waiting;
+- whether the call is read-only or effectful;
+- the authoritative state source after timeout;
+- permitted retry count and budget;
+- fallback, stop, and recovery behavior.
+
+A timeout may produce one of three broad states. **Known not completed** permits a carefully bounded retry. **Known completed** should return or reconcile the result, not repeat the effect. **Unknown outcome** requires an authoritative read or ledger reconciliation before another attempt.
+
+This is where ordinary exception handling fails. Catching a timeout and returning an apology leaves the state question unanswered. If the system submitted a seller message, the user needs to know whether it was sent. If the operation was only retrieval, the system can safely reduce capability or abstain without external reconciliation.
+
+## Retries consume a shared failure budget
+
+Retries can recover transient faults. They can also multiply load during the exact period when capacity is least available. Layered retries are especially dangerous: two attempts in the client, two in orchestration, and three in a provider adapter can turn one user action into twelve calls. Backoff and jitter reduce synchronization, but they do not make repetition semantically safe. [CLM-066]
+
+A retry policy needs five gates:
+
+1. **Classification:** Is the condition plausibly transient and retryable?
+2. **Deadline:** Is enough end-to-end time left for another attempt?
+3. **Capacity:** Will more work worsen overload or an open circuit?
+4. **Semantics:** Can repetition duplicate cost, disclosure, or effect?
+5. **Evidence:** Can the new attempt use changed state, or will it repeat the same stale condition?
+
+Patchwork permits at most two attempts for a synthetic timeout or partial read-only retrieval. The second attempt receives deterministic exponential backoff plus jitter in the fixture. Stale context is not retryable because time alone does not refresh the source. Invalid output receives at most one bounded repair attempt and then quarantines the component version. A duplicate effect request cannot retry without an idempotency key. Confirmation loss always reconciles first.
+
+Bounded means more than `maxAttempts = 2`. It includes a maximum elapsed budget, a single owning layer, a reason code, a capacity gate, and a terminal state. A retry that simply moves to another hidden loop is not bounded.
+
+Backoff without jitter can synchronize clients into waves. Jitter without a deadline can make failure slower without reducing consequence. Neither solves unsafe effects. The control set must match the failure state.
+
+## Idempotency is about effects, not identical requests
+
+An idempotency key lets the effect owner recognize that two attempts represent one intended operation. It does not guarantee every downstream service behaves idempotently, and it does not erase duplicated compute or disclosure.
+
+An effect-safe record binds:
+
+- a stable operation key;
+- authenticated actor and authority;
+- intended effect and normalized parameters;
+- request and interface version;
+- first-seen timestamp;
+- current effect state;
+- authoritative result or error;
+- expiry and reconciliation policy.
+
+The key must be scoped. Reusing `send-message` for all messages would collapse distinct intentions. Generating a fresh key on every retry would defeat deduplication. A good key represents the user's confirmed intent under a stable operation boundary.
+
+Even a read-only model or retrieval call can have non-idempotent consequences in a wider sense. It consumes quota and money. It may create provider logs. It may change cache state. It can present inconsistent output to a user. This is why the failure register records **retry safety**, not a simplistic yes or no idempotency flag.
+
+When effect confirmation is lost, do not infer failure from silence. Query the authoritative ledger with the same operation key. If state is completed, return the recorded result. If state is known not started, a retry may be allowed. If state remains unknown, stop and route to a named owner. Repetition is not reconciliation.
+
+## Circuit breakers protect dependencies and callers
+
+A circuit breaker stops calls after a threshold of relevant failures. In the closed state, calls proceed. In the open state, calls fail fast or take a safe alternate path. After a defined interval, a limited half-open probe tests recovery.
+
+The breaker needs a semantic scope. One global circuit for every request can turn a narrow image-processing fault into a total outage. A circuit per individual user can be too fragmented to protect capacity. Useful keys may include dependency, operation, region, model version, or request class. Choose the smallest scope that contains the failure without hiding shared saturation.
+
+The failure counter should not treat all negative outcomes alike. Correct authorization denial is not dependency failure. User cancellation is not model invalidity. A schema rejection may implicate one version and operation. Classification determines which circuit opens and which owner receives evidence.
+
+Half-open behavior must also be bounded. One probe is not proof of full recovery under load. It only permits the next state transition defined by policy. Reopening after a failed probe is evidence, not an inconvenience to bypass.
+
+Circuit behavior and fallback interact. Failing fast is useful only if the fallback is safer than the unavailable path. A circuit that routes every request to a lower-quality but equally effectful provider can transfer the risk rather than contain it.
+
+## Build a consequence-aware fallback ladder
+
+A fallback is a product behavior with its own contract, evidence, and risks. It is not whatever code runs in an exception block.
+
+Patchwork's ladder is:
+
+1. use an alternate evidenced path when permission, freshness, and minimum evidence still hold;
+2. reduce capability, such as returning filtered candidates without generated explanation;
+3. abstain with a specific reason and a recoverable next step;
+4. route to named human review while preserving authority boundaries;
+5. stop and preserve state when consequence is critical or an effect is unknown.
+
+The order is not universal. High-consequence tasks may move directly from primary path to abstention or stop. A human review path is valid only if a qualified person is available, receives adequate evidence, can act within time, and has the relevant decision right. A queue with no service commitment is deferred failure.
+
+Do not use a larger model as the default fallback. It can share the same stale context, permission gap, interface defect, or provider dependency. It may increase latency and cost while making unsupported output more fluent. The right question is which supported behavior remains under the current state and consequence.
+
+<figure>
+  <img src="/assets/publications/applied-ai-engineering/f13-2-fallback-ladder.png" alt="Colorful three-dimensional fallback ladder moving from alternate evidenced path to reduced capability, abstain, human review, and stop, with short labels for consequence, evidence, authority, unknown effect, and recovery." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption>F13.2 - Degrade by consequence and state, not by model size or apology quality.</figcaption>
+</figure>
+
+Every rung needs entry criteria, exit criteria, visible user behavior, state preservation, owner, and test evidence. If the system returns text that looks like a normal answer while internally degraded, users cannot calibrate reliance. If it says only "something went wrong," they cannot distinguish a retryable delay from missing permission or unsupported evidence.
+
+Useful degraded communication names what remains available and what does not. For example: "I can show current candidates that passed compatibility filters, but I cannot generate an explanation while the evidence service is unavailable." This is more actionable than an apology and less likely to imply unsupported certainty.
+
+## Structured success is not semantic or effect success
+
+Schema-constrained output removes a valuable class of integration failure. Required keys, enumerated states, and typed values let the application reject malformed envelopes. But a syntactically valid object can still contain an incompatible candidate, stale evidence, an unauthorized tool proposal, or arguments that produce the wrong external effect. Provider structured-output and function-call mechanics strengthen interfaces without establishing semantic correctness or authority. [CLM-069]
+
+Validate in layers:
+
+- parse and schema validity;
+- referential integrity and known identifiers;
+- permission and freshness;
+- domain invariants and compatibility;
+- behavior-contract state;
+- user confirmation where required;
+- effect authorization and idempotency;
+- post-effect reconciliation.
+
+Each rejection should preserve the failing layer. Collapsing them into `invalid output` prevents correction. A schema error may require adapter repair. A compatibility violation may require data, ranker, or rule correction. An unauthorized effect proposal may require policy enforcement and security review.
+
+Threat-informed failure design includes adversarial inputs, poisoned or manipulated data, model behavior, insecure output handling, excessive agency, dependency compromise, and supply-chain conditions. Threat taxonomies provide vocabulary, not a complete application threat model or a guarantee of mitigation. [CLM-070]
+
+## Detect symptoms first, then investigate causes
+
+Users experience symptoms: slow response, wrong candidate, unexplained abstention, duplicate effect, lost state. Operators also need cause signals: saturation, stale index, schema rejection, circuit state, permission mismatch. Monitoring guidance distinguishes black-box symptoms from white-box causes and emphasizes signals tied to action. [CLM-068]
+
+Start paging from consequential symptoms and safe thresholds. Cause telemetry supports diagnosis, but every internal anomaly should not wake an operator. A high embedding-distance shift can be interesting without being harmful. A zero-error service can still return stale recommendations. Connect alert to a decision:
+
+- page and degrade now;
+- open a circuit;
+- stop one version;
+- reconcile unknown effects;
+- create an evaluation case;
+- investigate during business hours;
+- record only, because no action threshold exists.
+
+An alert without owner, authority, or response is a dashboard ornament. An alert that fires on expected abstention can incentivize unsafe suppression. The failure register supplies the semantic context monitoring needs.
+
+## Tail behavior links reliability to resource budgets
+
+Distributed request paths amplify slow outliers. If an answer waits for multiple parallel components, the chance that at least one is slow grows with fan-out. Median component latency cannot describe the user's tail. [CLM-067]
+
+This matters in failure design because timeouts, hedging, retries, and fallbacks consume capacity. A retry that improves one request can worsen the shared tail. A fallback call can double provider cost. A validation step can save consequence while extending latency. Reliability decisions therefore carry resource evidence into Chapter 14.
+
+Record for every failure control:
+
+- added calls in normal and failure paths;
+- worst bounded attempts;
+- additional user time;
+- concurrency and quota effect;
+- state storage and reconciliation cost;
+- quality gained or lost;
+- segment-specific impact;
+- privacy or permission assumptions.
+
+There is no free reliability mechanism. The purpose of budgets is not to remove controls but to expose their tradeoffs.
+
+## Inject five failures across the Patchwork slice
+
+The companion's `PF-09` v0.1 fixture creates five paths. They are deliberately small enough to inspect.
+
+### Partial retrieval
+
+The context service returns fewer candidates than the evidence-minimum contract requires. The visible symptom could be a plausible but narrow recommendation. The signal is low retrieval coverage. One bounded read-only retry is allowed. If evidence remains thin, Patchwork reduces capability or abstains. Recovery refreshes or repairs the index, then replays the frozen case.
+
+The test passes when the system never generates substitute compatibility claims from missing evidence.
+
+### Stale context
+
+The source carries an expired freshness marker. The call itself succeeds. Retrying the same snapshot is not helpful. Patchwork abstains for a high-consequence compatibility answer, identifies freshness as the reason, and routes source refresh to the catalog owner.
+
+The test passes when the downstream model cannot mask expiry with fluent text.
+
+### Invalid structured output
+
+The learned component returns an envelope that violates schema. The application may make one bounded, read-only repair attempt if time and capacity allow. A second invalid response stops the path and quarantines the component version. No candidate or tool proposal reaches the product boundary.
+
+The test passes when schema failure stays distinct from semantic failure and produces no effect.
+
+### Duplicate request
+
+The orchestration layer receives the same confirmed operation twice. Without a valid idempotency key, the effect path stops. With a key, the authoritative ledger returns the existing state rather than repeating the effect.
+
+The test passes when repeated delivery cannot create a second user-visible change.
+
+### Confirmation loss
+
+The effect request times out after submission, leaving outcome unknown. Patchwork queries the ledger before any repeat. A confirmed completed operation returns its recorded result. A known unstarted operation may retry under policy. An unresolved operation stops and routes to review.
+
+The test passes when silence is never interpreted as permission to repeat.
+
+Together, these paths demonstrate model, context, interface, orchestration, tool, and user-state reliability. Five passing fixtures are not a production availability claim. They are executable design evidence.
+
+## Recovery must restore state and confidence separately
+
+Correction changes the faulty mechanism. Recovery restores an acceptable operating state. Verification establishes bounded evidence that the recovery worked. These are different activities.
+
+Refreshing an index is correction. Replaying affected cases and checking freshness, permission, coverage, and behavior states supports recovery verification. Reopening traffic is a release decision. Communicating with affected users may be a separate obligation.
+
+Use a recovery packet:
+
+- incident or injection identifier;
+- affected time, versions, segments, and operations;
+- initiating layer and propagation path;
+- containment applied;
+- authoritative state reconciliation;
+- correction and owner;
+- frozen replay suite and result;
+- remaining negative evidence;
+- rollback or reopen authority;
+- monitoring period and stop condition;
+- user repair or communication decision.
+
+Do not delete failure fixtures after repair. They become regression evidence. Version them when the contract or architecture changes. A passing old fixture may no longer cover a moved boundary.
+
+Recovery confidence must match evidence. One successful probe supports limited circuit transition, not proof of peak-load stability. A replay supports the frozen cases, not all user inputs. An operator's belief can guide investigation, but it cannot replace state reconciliation.
+
+## Reliability ownership follows control and authority
+
+The engineer who notices a failure may not own its correction. The retrieval owner can repair index coverage. The catalog owner decides source freshness policy. The tool owner maintains effect idempotency. The product owner decides supported degradation. Privacy and security authorities govern certain data and threat decisions. Release authority restores exposure.
+
+Assign three roles per material failure:
+
+- **control owner:** maintains the detection and containment mechanism;
+- **correction owner:** changes the initiating source or component;
+- **decision authority:** accepts residual risk, changes scope, or restores use.
+
+One person may occupy multiple roles in a small team, but the decision rights remain explicit. Implementation ownership does not silently grant authority.
+
+Escalation must carry evidence, not only urgency. Include trace ID, operation key where permitted, component versions, failure classification, affected segment, current state, containment, and next decision. Avoid attaching raw user content by default. Chapter 15 develops this privacy-conscious evidence path.
+
+## Failure reviews should change artifacts
+
+A useful review produces concrete updates. At least one of these should change:
+
+- behavior-contract clause;
+- failure register;
+- interface invariant;
+- evaluation case;
+- retry or timeout policy;
+- idempotency boundary;
+- circuit scope;
+- fallback entry criterion;
+- ownership or authority map;
+- recovery runbook;
+- signal catalog;
+- resource budget;
+- source or component version restriction.
+
+A review that ends with "be more careful" has not altered the system. A review that blames probabilistic behavior without tracing propagation has not identified a control.
+
+Preserve disagreements. One owner may view a partial result as useful degraded behavior; another may view it as misleading. Resolve the dispute against consequence, contract, and evidence. If unresolved, narrow the supported state rather than silently choose the optimistic interpretation.
+
+## A practical failure-design procedure
+
+### Step 1: choose a user-visible consequence
+
+Begin with an outcome that matters: incompatible recommendation, unauthorized exposure, duplicate seller message, missing correction, or unsupported certainty. Avoid starting from a generic component exception.
+
+### Step 2: trace backward to initiating conditions
+
+List all plausible layers. Separate evidence from hypothesis. A downstream symptom may have more than one cause, and one cause may propagate through several components.
+
+### Step 3: identify the earliest safe containment point
+
+Containment need not wait for perfect diagnosis. A permission check, evidence minimum, output validator, effect confirmation gate, or circuit can stop consequence while investigation continues.
+
+### Step 4: classify retry and state
+
+Decide read-only versus effectful, known versus unknown outcome, transient versus persistent, idempotency scope, deadline, capacity, and terminal state.
+
+### Step 5: select the lowest-risk supported fallback
+
+Evaluate evidence, permission, freshness, consequence, reversibility, and available authority. A narrower honest behavior is often safer than a fluent alternate.
+
+### Step 6: define correction and recovery evidence
+
+Name authoritative state, owner, replay cases, negative evidence, monitor window, and reopen authority. "Service restarted" is not sufficient.
+
+### Step 7: inject deterministically
+
+Make the path reproducible. Freeze versions and expected state transitions. Assert both what happens and what must never happen.
+
+### Step 8: preserve the fixture
+
+Add the failure to regression evidence. Link it to claims, contract clauses, interfaces, and the runbook.
+
+## Deep-dive workshop: reason from state, not exception name
+
+The following workshop expands the five injections into design decisions. Use it to rehearse the reasoning before changing code.
+
+### Partial retrieval under a healthy status
+
+Assume the retrieval dependency responds `200 OK` with two candidates instead of the expected evidence set. Transport succeeded. Schema succeeded. The returned candidates are real and permitted. The failure is completeness relative to Patchwork's behavior contract.
+
+The first design mistake is to treat nonempty output as success. The second is to infer that a retry is safe because the operation is read-only. Repetition still uses capacity and may return the same partial shard. The application needs evidence metadata: expected partitions, completed partitions, coverage proxy, index version, and deadline state. It can then classify full, partial, or unknown retrieval.
+
+Containment occurs at the evidence-minimum validator. Ranking may inspect partial candidates for diagnosis, but no normal recommendation may cross the product boundary. If the remaining evidence supports a narrower response, Patchwork enters reduced capability and names the limitation. Otherwise it abstains.
+
+The retry decision uses remaining end-to-end deadline, circuit state, attempt count, and whether the next attempt can reach different state. A second call to the same known-failed shard is repetition without a recovery theory. A routed call after a transient replica failure may be reasonable.
+
+Recovery evidence includes the repaired partition, frozen query set, full-partition markers, candidate coverage, critical compatibility cases, and absence of generated substitutes. The owner should also inspect why partial status was not detected earlier.
+
+### Stale context with fluent downstream behavior
+
+Suppose catalog snapshot `CAT-41` expired six hours ago. Every downstream component works. The ranker chooses a candidate supported by that snapshot, and the explanation accurately cites it. The model is faithful to bad current-state evidence.
+
+The failure register should resist the temptation to label the explanation hallucinated. The root condition is freshness. The downstream behavior is unsupported for the current-time claim even though it may be internally consistent.
+
+Contain at source eligibility or evidence validation. Attach freshness state to the candidate so it cannot disappear when features are materialized. Cache keys and index versions must preserve the source timestamp or equivalent validity marker. If freshness is lost during transformation, later validators cannot reconstruct it reliably.
+
+Retrying the model cannot help. Retrying retrieval against the same snapshot cannot help. A repair requires a current source or a deliberate decision that the stale window remains acceptable for a narrower claim. That decision belongs to the domain and product authorities, not an adapter.
+
+The user-facing behavior should distinguish unavailable current evidence from general system failure. An actionable response might allow the user to continue with non-compatibility browsing while withholding the time-sensitive claim.
+
+Recovery replays both the original case and neighboring freshness boundaries. A single refreshed item does not show that the update pipeline, index, and cache invalidation agree.
+
+### Valid envelope, invalid meaning
+
+Now suppose the provider returns a JSON object that conforms perfectly:
+
+```json
+{"state":"respond","candidateId":"PW-77","evidenceIds":["E-19"],"toolProposal":null}
+```
+
+`PW-77` exists. `E-19` exists. Yet `E-19` describes a different product revision. Syntax and references pass; semantic compatibility fails.
+
+The application needs an invariant that joins candidate revision, requested revision, and evidence scope. This can be a deterministic rule, a reviewed domain function, or a bounded evaluator depending on the claim. It cannot be delegated to schema validation.
+
+Record the failure as `compatibility-invariant`, not `provider-invalid`. That attribution matters for correction. Re-prompting may occasionally change the candidate, but it does not repair the missing invariant. The safe containment rejects the result and chooses a supported behavior state.
+
+If the same output proposes a tool effect, validation order matters. Semantic and authority checks must occur before user confirmation can be requested. A confirmation dialog must not launder an invalid proposal into an authorized action.
+
+### Duplicate delivery before and after confirmation
+
+Distributed delivery can duplicate a request before confirmation, after confirmation, during tool execution, or after completion. Each point carries different state.
+
+Before confirmation, duplicate drafts may be deduplicated by intent and interface state. After confirmation, the operation key must bind the exact approved effect. During execution, the effect ledger should expose pending state. After completion, the same key should return the recorded result.
+
+Consider a message tool. The key includes actor, destination, normalized message hash, confirmed intent version, and operation boundary. If content changes, the key changes and confirmation must occur again. If only network delivery repeats, the same key persists.
+
+The ledger states can be `reserved`, `confirmed`, `submitted`, `completed`, `failed-known`, and `unknown`. A retry policy cannot collapse `failed-known` and `unknown`. The first may allow another attempt; the second requires reconciliation.
+
+Idempotency has expiry risk. If a key expires before delayed delivery arrives, duplicate effect can return. Expiry must exceed the credible duplicate window or the durable system must retain a compact tombstone. This is a product and storage tradeoff, not a random client setting.
+
+### Confirmation loss and user repair
+
+An unknown outcome is both technical and interaction state. The user may see a spinner, close the page, repeat the action, or assume success. Interface design can either contain or amplify ambiguity.
+
+Show a stable pending state tied to the operation key. Disable blind repetition while reconciliation runs. Offer refresh or support routes that query authoritative state. If the user starts a materially different action, treat it as new intent instead of silently attaching it to the old operation.
+
+When reconciliation later proves completion, update the interface and any local state. When it proves no effect, allow a new confirmed attempt. When it remains unknown beyond the allowed window, stop automation and route evidence to a named owner.
+
+Recovery includes user repair. A technically consistent ledger is not enough if the interface still shows failure or the user already repeated work through another channel. Record whether notification, reversal, credit, or other remediation belongs to the incident process.
+
+## Failure controls can conflict
+
+Controls do not stack without tradeoffs. Examine common conflicts explicitly.
+
+### Retry versus circuit
+
+A local retry may recover one request, while a circuit tries to reduce shared load. The circuit state should gate new attempts. Otherwise retry loops continue attacking an open dependency. When the circuit is half-open, only the declared probes should pass.
+
+### Timeout versus correctness
+
+A shorter deadline reduces waiting but can increase abstention or unknown effects. A longer deadline may improve completion while exhausting concurrency. The correct value follows end-to-end budget, consequence, and capacity evidence, not a desire for fewer timeout errors.
+
+### Fallback versus consistency
+
+An alternate provider or index may use different data, policy, or semantics. Faster recovery can create inconsistent user results. Fallback compatibility needs replay evidence and version identity. If it cannot preserve required controls, reduced capability or abstention is safer.
+
+### Cache versus recovery
+
+After correction, stale cache entries can keep the old failure alive. Recovery plans must include invalidation or versioned cache keys. Conversely, flushing everything can create a cold-start surge and new capacity failure. Stage and observe recovery.
+
+### Observability versus privacy
+
+More content can help reproduce rare failures while increasing exposure and retention burden. Prefer structured failure states, evidence IDs, and synthetic replay. Escalate content access only under purpose, authority, sampling, and deletion controls.
+
+### Human review versus queue capacity
+
+A fallback to review can transfer system overload to people. Record reviewer capacity, response time, qualifications, and escalation. If review cannot complete inside the consequence window, it is not an available fallback.
+
+## Design assertions around forbidden transitions
+
+Positive tests show desired outcomes. Reliability needs negative assertions that prevent unsafe transitions.
+
+For partial retrieval:
+
+- no normal response when evidence minimum fails;
+- no generated replacement evidence;
+- no silent conversion of partial to complete;
+- no retry after deadline or open circuit.
+
+For stale context:
+
+- no current claim from expired evidence;
+- no cache hit that erases freshness state;
+- no model retry presented as refresh;
+- no release of a repaired version without replay.
+
+For invalid output:
+
+- no candidate reaches interface before semantic validation;
+- no tool confirmation request from an invalid proposal;
+- no unlimited repair loop;
+- no error log containing raw content by default.
+
+For duplicate effects:
+
+- no second effect for the same operation key;
+- no new key invented by transport retry;
+- no completion assumed from timeout;
+- no unresolved state hidden as generic failure.
+
+For recovery:
+
+- no circuit closes from elapsed time alone;
+- no traffic restoration without named authority;
+- no deletion of the failing fixture;
+- no claim wider than replayed cases and conditions.
+
+Forbidden-transition tests are durable because they encode system invariants. The adapter that implements a retry API can change while "unknown effect never repeats before reconciliation" remains stable.
+
+## Evaluate a fallback as its own mechanism
+
+Teams often evaluate the primary path thoroughly and exercise fallback only during incidents. Reverse that pattern before launch.
+
+Create a fallback evaluation sheet with:
+
+| Dimension | Question |
+|---|---|
+| trigger precision | Does the path enter fallback for the intended state? |
+| evidence | Which sources and controls remain? |
+| quality | Which capabilities decline and by how much? |
+| consequence | Can the fallback create the same or greater harm? |
+| latency and cost | Does it fit the remaining budget? |
+| user comprehension | Is limitation visible and actionable? |
+| state | Are pending, unknown, and completed effects preserved? |
+| recovery | How does the path return to primary behavior? |
+| authority | Who approves fallback scope and activation? |
+| expiry | When must fallback evidence be renewed? |
+
+Test at least one failure where the fallback itself fails. The ladder must continue to abstain, review, or stop. A two-provider design with no terminal state is still unbounded.
+
+Also test correlated failure. Primary and fallback may share network, identity, data, SDK, region, or policy. Independence must be evidenced, not inferred from different model names.
+
+## Conduct a bounded failure-game session
+
+A useful session fits inside controlled scope. Choose one frozen version and one synthetic or authorized fixture. Name the observer, control owner, correction owner, and stop authority. Define maximum time, calls, cost, and state changes. Confirm that no external effect can occur unless the exercise specifically tests a sandboxed ledger.
+
+For each injection:
+
+1. predict the initiating state and observable signals;
+2. run the injection once;
+3. compare actual propagation to the topology;
+4. verify containment and forbidden transitions;
+5. exercise fallback and terminal state;
+6. correct or reset the fixture;
+7. replay recovery evidence;
+8. preserve differences between prediction and observation.
+
+Stop if instrumentation cannot distinguish real from injected failure, if a supposedly synthetic path reaches production, if state cannot be reconciled, or if the cost and time envelope is exceeded.
+
+The most valuable result may be a wrong prediction. If engineers expected a retrieval signal but saw only interface timeout, the observability design has a gap. If a circuit opened but retry traffic continued, ownership is fragmented. Turn each result into an artifact change.
+
+## Keep failure evidence proportional to the claim
+
+A reliability packet can become persuasive beyond its scope. Counter that pressure by writing the claim beside the evidence.
+
+The five Patchwork injections support: under the frozen local implementation, each declared input reaches the expected containment and recovery state. They do not support a frequency estimate, an availability percentage, a mean time to recovery, or completeness of the failure taxonomy.
+
+To support a production frequency claim, the team would need trustworthy instrumentation, a defined population and window, stable taxonomy, known missingness, and privacy authority. To support availability, it would need an objective, measurement boundary, exclusions, and sustained observation. To support recovery time, it would need incident definitions and representative conditions. To support threat coverage, it would need an application threat model and adversarial review.
+
+Keep negative and inconclusive outcomes. If an injected confirmation-loss path cannot reconcile within the exercise, record it as unresolved and stop. Do not change the expected result after seeing failure. Revise the control, version the fixture, and rerun while preserving the earlier packet.
+
+Evidence also expires. Dependency behavior changes, interfaces move, and fallback compatibility drifts. Give the packet a version and review trigger. Recovery evidence from one architecture cannot authorize a later architecture merely because the test name still passes.
+
+Before closing the packet, reconcile user state as carefully as service state. Identify requests that may have received partial, stale, duplicate, or ambiguous behavior. Decide whether each needs no action, corrected display, notification, reversal, support, or specialist review. This decision needs its own owner and evidence; it should not be inferred from a restored dashboard.
+
+Then test the recovery path under a small recurrence. A repaired system that collapses on the next single timeout has not regained useful resilience. Exercise the circuit, fallback, and reconciliation together, verify that resource budgets remain bounded, and ensure the user sees the correct state transition. Record the recurrence as a new result linked to the original failure, rather than overwriting it.
+
+Finally, state who may declare recovery complete. The control owner can verify mechanism operation, the correction owner can verify the repair, and release authority can restore exposure. Affected-user remediation may require another authority. Keeping these conclusions separate prevents a passing technical replay from erasing unresolved consequence.
+
+## What the companion proves
+
+Run:
+
+```sh
+node --test content/publications/applied-ai-engineering/companion/tests/chapter-13.test.mjs
+```
+
+The tests verify that:
+
+- all five failure records name consequence, signal, owner, retry safety, fallback, stop, and recovery;
+- retries are bounded and deterministic;
+- an effect cannot retry without an idempotency key;
+- an unknown effect reconciles or stops;
+- a circuit opens after the declared threshold;
+- a limited successful probe closes the synthetic circuit;
+- the fallback chooses review or stop for ambiguous effects.
+
+They do not prove production availability, real provider behavior, external tool idempotency, recovery under real load, threat coverage, or permission to release.
+
+## Reliability questions for design review
+
+Before accepting a path, ask:
+
+- Is the named failure a cause, symptom, or both?
+- Can a valid schema still carry semantic or effect failure?
+- Can a retry repeat cost, disclosure, or state change?
+- Which layer owns the only retry loop?
+- What deadline remains after backoff?
+- Does a circuit isolate the correct operation and version?
+- Is fallback independently evidenced?
+- Is degradation visible to the user?
+- Can review complete within the consequence window?
+- Which source establishes authoritative state?
+- Does recovery replay the affected segment and boundary?
+- Is negative evidence preserved?
+- Who can reopen exposure?
+- Which residual uncertainty remains?
+
+If the answers are vague, the system has exception handling, not failure design.
+
+## From containment to explicit budgets
+
+Probabilistic components do not excuse probabilistic ownership. A useful applied AI system can fail while keeping consequence bounded, state inspectable, and recovery testable.
+
+The core move is to design more than a happy path. Distinguish initiating layer from symptom. Treat timeout as abandoned uncertainty. Retry only under deadline, capacity, semantic, and idempotency gates. Open circuits at an intentional scope. Degrade by consequence and evidence. Reconcile effects before repetition. Restore authoritative state and replay the failure before claiming recovery.
+
+These controls spend time, capacity, and money. Their costs become most visible in tails and critical segments. Chapter 14 converts that resource behavior into an end-to-end quality, latency, capacity, and cost envelope.

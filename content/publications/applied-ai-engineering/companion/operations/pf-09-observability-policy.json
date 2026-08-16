@@ -1,0 +1,22 @@
+{
+  "artifactId": "PF-09",
+  "version": "0.3.0",
+  "status": "synthetic-local",
+  "caseStatus": "fictional-synthetic",
+  "owner": "Patchwork observability owner",
+  "authority": "Named privacy, security, product, and operations authorities",
+  "defaultRawContentCollection": false,
+  "allowedTraceFields": ["traceId","timestamp","taskCode","segmentCode","behaviorState","failureLayer","evidenceIds","componentVersions","latencyMs","costUnits","effectState","policyFlags"],
+  "forbiddenTraceFields": ["rawPrompt","rawOutput","rawImage","userName","email","fullIpAddress"],
+  "signalCatalog": [
+    {"id":"SIG-01","layer":"user-outcome","purpose":"detect unsuccessful task completion","sensitivity":"low-aggregated","owner":"product owner","decision":"investigate or narrow behavior","retentionDays":30,"threshold":"completion below 0.80","blindSpot":"completion does not prove usefulness"},
+    {"id":"SIG-02","layer":"behavior","purpose":"track abstention and consequential errors","sensitivity":"low-taxonomy","owner":"behavior owner","decision":"replay evaluation and gate change","retentionDays":45,"threshold":"critical error above zero","blindSpot":"taxonomy can miss new failure"},
+    {"id":"SIG-03","layer":"context","purpose":"detect missing, stale, or denied evidence","sensitivity":"moderate-metadata","owner":"retrieval owner","decision":"refresh, restrict, or stop source","retentionDays":21,"threshold":"freshness or permission flag","blindSpot":"valid metadata does not prove relevance"},
+    {"id":"SIG-04","layer":"service","purpose":"detect latency, error, and saturation symptoms","sensitivity":"low-operational","owner":"operations owner","decision":"degrade or page operator","retentionDays":14,"threshold":"p95 above budget or saturation above 0.85","blindSpot":"green service can serve bad behavior"},
+    {"id":"SIG-05","layer":"feedback","purpose":"route selected correction reports","sensitivity":"moderate-selected","owner":"research owner","decision":"sample, adjudicate, and add case","retentionDays":30,"threshold":"novel critical report","blindSpot":"reporters are not representative"},
+    {"id":"SIG-06","layer":"cost-capacity","purpose":"detect retry and spend amplification","sensitivity":"low-operational","owner":"performance owner","decision":"open circuit or reduce capability","retentionDays":14,"threshold":"cost p95 above 16 units","blindSpot":"units exclude human and maintenance cost"}
+  ],
+  "deletion": {"method":"delete-expired-traces-by-timestamp","proof":"count and retained trace identifiers","legalHold":"requires separate named authority"},
+  "access": {"roles":["on-call-operator","behavior-investigator"],"breakGlassLogged":true,"exportDisabledByDefault":true},
+  "limitations": ["Fictional privacy policy, not legal advice", "Retention periods are example values, not universal law", "Synthetic traces only"]
+}

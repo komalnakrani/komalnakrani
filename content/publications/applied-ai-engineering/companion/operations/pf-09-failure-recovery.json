@@ -1,0 +1,25 @@
+{
+  "artifactId": "PF-09",
+  "version": "0.1.0",
+  "status": "synthetic-local",
+  "caseStatus": "fictional-synthetic",
+  "owner": "Patchwork reliability owner",
+  "authority": "Named product and release authorities",
+  "retryPolicy": {"maxAttempts": 2, "baseBackoffMs": 40, "jitterSeed": 17, "retryable": ["timeout", "partial-retrieval"], "effectRetryRequiresIdempotency": true},
+  "circuitPolicy": {"failureThreshold": 2, "openForMs": 30000, "halfOpenProbes": 1},
+  "fallbackLadder": [
+    {"order": 1, "state": "alternate-evidenced-path", "maximumConsequence": "low", "requires": ["permission-current", "evidence-sufficient"]},
+    {"order": 2, "state": "reduced-capability", "maximumConsequence": "moderate", "requires": ["limitations-visible", "no-effect"]},
+    {"order": 3, "state": "abstain", "maximumConsequence": "high", "requires": ["reason-visible", "recovery-route"]},
+    {"order": 4, "state": "human-review", "maximumConsequence": "high", "requires": ["named-owner", "authority-intact"]},
+    {"order": 5, "state": "stop", "maximumConsequence": "critical", "requires": ["state-preserved", "operator-signal"]}
+  ],
+  "failureMatrix": [
+    {"id":"FM-01","injection":"partial-retrieval","layer":"context","symptom":"thin-candidate-set","userConsequence":"missed-compatible-item","signal":"retrieval.coverage.low","owner":"retrieval owner","retrySafety":"read-only-bounded","fallback":"reduced-capability","stopCondition":"evidence-below-minimum","recovery":"reindex-and-replay"},
+    {"id":"FM-02","injection":"stale-context","layer":"data-context","symptom":"plausible-stale-result","userConsequence":"outdated-guidance","signal":"context.freshness.expired","owner":"catalog owner","retrySafety":"not-helpful","fallback":"abstain","stopCondition":"fresh-source-unavailable","recovery":"refresh-source-and-replay"},
+    {"id":"FM-03","injection":"invalid-output","layer":"learned-interface","symptom":"schema-rejection","userConsequence":"no-result","signal":"output.schema.invalid","owner":"application owner","retrySafety":"one-bounded-read-only-repair","fallback":"reduced-capability","stopCondition":"second-invalid-output","recovery":"quarantine-version"},
+    {"id":"FM-04","injection":"duplicate-request","layer":"tool-effect","symptom":"repeated-effect-attempt","userConsequence":"duplicate-state-change","signal":"effect.idempotency.replay","owner":"tool owner","retrySafety":"idempotency-key-required","fallback":"stop","stopCondition":"key-missing-or-conflict","recovery":"reconcile-effect-ledger"},
+    {"id":"FM-05","injection":"confirmation-loss","layer":"orchestration-user-state","symptom":"unknown-effect-outcome","userConsequence":"ambiguous-state","signal":"effect.confirmation.missing","owner":"workflow owner","retrySafety":"reconcile-before-retry","fallback":"human-review","stopCondition":"authoritative-state-unknown","recovery":"query-ledger-then-confirm"}
+  ],
+  "limitations": ["Synthetic timings and failures only", "No production availability claim", "No provider compatibility claim"]
+}

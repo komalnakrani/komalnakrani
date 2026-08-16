@@ -11,6 +11,9 @@ import { generateDecisionFixtures, generateJudgmentFixtures } from "./evaluation
 import { regressionGate } from "./lib/metrics.mjs";
 import { blindCalibration } from "./lib/judgment.mjs";
 import { runExperiment } from "./lib/experiment.mjs";
+import { runFailureMatrix } from "./lib/reliability.mjs";
+import { budgetReport, selectParetoConfiguration } from "./lib/budgets.mjs";
+import { diagnosticView, redactTrace } from "./lib/observability.mjs";
 
 const url = new URL("./contracts/patchwork-behavior-contract.json", import.meta.url);
 const contract = JSON.parse(await readFile(url, "utf8"));
@@ -46,4 +49,20 @@ if (dataReport.structuralErrors.length || dataReport.cleanLeakage.length) {
   console.log(`PASS PF-07 v${errorPolicy.version}: critical gate=${gate.pass}, reasons=${gate.reasons.join(",")}`);
   console.log(`PASS PF-07 evaluator calibration: n=${calibration.sampleSize}, agreement=${calibration.agreement}, bounded synthetic evidence only`);
   console.log(`PASS PF-08 v${experiment.version}: disposition=${experiment.disposition}, plan=${experiment.planHash}, result=${experiment.resultHash}`);
+  const failurePolicy = JSON.parse(await readJsonFile(new URL("./operations/pf-09-failure-recovery.json", import.meta.url), "utf8"));
+  const budgetPolicy = JSON.parse(await readJsonFile(new URL("./operations/pf-09-resource-budget.json", import.meta.url), "utf8"));
+  const observabilityPolicy = JSON.parse(await readJsonFile(new URL("./operations/pf-09-observability-policy.json", import.meta.url), "utf8"));
+  const failures = runFailureMatrix(failurePolicy);
+  const budget = budgetReport(budgetPolicy);
+  const choice = selectParetoConfiguration(budgetPolicy);
+  const diagnosticRows = [
+    {segment:"text-warm",behaviorState:"respond",failureLayer:null,latencyMs:420,costUnits:7,evidenceIds:["PF09-E1"]},
+    {segment:"image-mobile",behaviorState:"abstain",failureLayer:"context",latencyMs:740,costUnits:13,evidenceIds:["PF09-E2"]},
+    {segment:"image-mobile",behaviorState:"degraded",failureLayer:"context",latencyMs:760,costUnits:12,evidenceIds:[]}
+  ];
+  const sampleTraces = diagnosticRows.map((row, index)=>redactTrace({traceId:`PF09-T${index+1}`,timestamp:`2026-08-15T10:${String(index).padStart(2,"0")}:00Z`,taskCode:"discover",segmentCode:row.segment,behaviorState:row.behaviorState,failureLayer:row.failureLayer,evidenceIds:row.evidenceIds,componentVersions:{policy:"0.3.0"},latencyMs:row.latencyMs,costUnits:row.costUnits,effectState:"none",policyFlags:[],rawPrompt:"discarded synthetic content"},observabilityPolicy).trace);
+  const diagnostics = diagnosticView(sampleTraces);
+  console.log(`PASS PF-09 v${failurePolicy.version}: injected=${failures.length}, contained=${failures.filter((row)=>row.contained).length}, deterministic synthetic recovery only`);
+  console.log(`PASS PF-09 v${budgetPolicy.version}: aggregate-p95=${budget.aggregate.p95Ms}ms, selected=${choice.selected.id}, pass=${choice.selected.pass}`);
+  console.log(`PASS PF-09 v${observabilityPolicy.version}: raw-content-default=${observabilityPolicy.defaultRawContentCollection}, service-green=${diagnostics.serviceGreen}, critical-segments=${diagnostics.critical.length}`);
 }
