@@ -25,12 +25,19 @@ the frozen `AR-07 v0.1.0` single-agent baseline, the `AR-07 v1.0.0` topology
 experiment and handoff contract, three schemas, one deterministic library, and
 ten tests. All comparison measurements are synthetic fixture mechanics.
 
+For Chapters 10-12 it adds `AR-08 v0.1.0` durable checkpoint/effect recovery,
+`AR-08 v1.0.0` executable human checkpoints, and `AR-09 v0.1.0` with 30
+synthetic tasks and grouped splits. A deterministic library and nine tests
+enforce semantic deduplication, reconciliation, rejection/expiry/takeover, and
+bounded environment claims. They do not assert exactly-once effects.
+
 Run:
 
 ```sh
 node --test content/publications/agentic-ai-engineering/companion/tests/chapters-01-03.test.mjs
 node --test content/publications/agentic-ai-engineering/companion/tests/chapters-04-06.test.mjs
 node --test content/publications/agentic-ai-engineering/companion/tests/chapters-07-09.test.mjs
+node --test content/publications/agentic-ai-engineering/companion/tests/chapters-10-12.test.mjs
 ```
 
 The tests prove the declared local fixture mechanics only. They do not prove
