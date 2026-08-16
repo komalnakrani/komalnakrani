@@ -5,12 +5,12 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 09 whole-book verification PASS under #55; root acceptance pending
+- Current global phase: Komal Phase 10 visual certification PASS under #63; Phase 11 publication next
 - Last updated: 2026-08-16
-- Last completed issue: Phase 08 child #52 and parent #27, complete 21-chapter manuscript and companion
+- Last completed issue: Phase 10 #63, visual certification PASS
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27), closed
-- Active issue: [#55](https://github.com/alpeshznakrani/komalnakrani/issues/55)
+- Active issue: none; Phase 11 issue pending creation
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -62,7 +62,7 @@
 - [x] 07 chapter blueprints
 - [x] 08 manuscript
 - [x] 09 book QA
-- [ ] 10 visuals
+- [x] 10 visuals
 - [ ] 11 publication
 - [ ] 12 preparation library (deferred)
 - [ ] 13 course decision
@@ -75,7 +75,7 @@
 
 ## Current work
 
-Phase 09 hostile whole-book verification is `PASS` under #55. The content-locked draft has 21 fresh chapters totaling 133,981 words, 21 learning/state/QA sets, 118 traced claims, 55 sources, 42 final ImageGen PNG teaching figures, and a provider-neutral Patchwork companion with 109 passing tests. The durable report is `project-control/roles/applied-ai-engineer/qa/phase-09-verification.md`; root acceptance and issue closure are pending.
+Phases 09 and 10 are accepted `PASS`. The content-locked draft has 21 fresh chapters totaling 133,981 words, 21 learning/state/QA sets, 118 traced claims, 55 sources, 42 certified ImageGen PNG teaching figures, and a provider-neutral Patchwork companion with 109 passing tests. Visual evidence is durable in `project-control/roles/applied-ai-engineer/qa/phase-10-visual-verification.md`. Phase 11 publication assembly is next.
 
 ## Unresolved blockers
 
@@ -92,12 +92,12 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 ## Quality debt
 
-No blocking Phase 09 debt. All 21 chapters and the completed companion pass canonical `npm run check`, Astro build, built-site reference checks, and 109 companion tests. Claims/sources, learning/state/QA, deterministic output, and all 42 PNG figures reconcile. Seven source URLs remain explicitly access-restricted to automation. The planned six appendices, front/back matter, PDF, and final publication rendering remain later-phase assembly work rather than hidden current artifacts.
+No blocking Phase 09/10 debt. All 21 chapters and the completed companion pass canonical checks, and all 42 certified PNG figures reconcile across registry, provenance, accessibility metadata, MIME, dimensions, and byte-identical public mirrors. Seven source URLs remain explicitly access-restricted to automation. The planned six appendices, front/back matter, PDF, and final publication rendering remain Phase 11 work rather than hidden current artifacts.
 
 ## Exact next action
 
-Root-review and accept the Phase 09 `PASS` under #55. Do not enter Phase 10/11 from this task; begin the next phase only after root acceptance and state transition.
+Open Phase 11 and assemble the complete web/PDF publication, including planned appendices and front/back matter, deterministic PDF evidence, rendering/accessibility checks, and publication-state transition without changing the content lock silently.
 
 ## Resume instructions
 
-Read this file, active issue #55, and `project-control/roles/applied-ai-engineer/qa/phase-09-verification.md`. Reopen Phase 09 only for a demonstrated defect; otherwise await root acceptance before changing phase.
+Read this file and the Phase 09/10 verification reports. Reopen content or visual gates only for a demonstrated defect; otherwise begin Phase 11 publication assembly without entering Abhyaas.
