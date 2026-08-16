@@ -9,9 +9,9 @@
   "description": "A practical field book for turning uncertain model capability into useful, measurable, reliable, and governable product behavior through a continuous evidence loop.",
   "author": "Komal Nakrani",
   "language": "en",
-  "status": "draft",
+  "status": "review",
   "cover": "ink",
-  "edition": {"version":"1.0.0","label":"First edition draft","publishedAt":null,"copyrightYear":2026,"canonicalUrl":"https://komalnakrani.com/books/applied-ai-engineering/"},
+  "edition": {"version":"1.0.0","label":"First edition release candidate","publishedAt":null,"copyrightYear":2026,"canonicalUrl":"https://komalnakrani.com/books/applied-ai-engineering/"},
   "chapters": [
     {"order":1,"slug":"behavior-not-magic","title":"Behavior, Not Magic","summary":"Establish product behavior as the unit of accountability and build a responsibility charter around a recursive evidence loop.","minutes":45,"sourceFile":"chapters/behavior-not-magic.mdx","objectiveIds":["AAE-K01","AAE-K02","AAE-K11"]},
     {"order":2,"slug":"start-with-the-user-task","title":"Start With the User Task","summary":"Turn a request for AI into a falsifiable task, consequence, baseline, value hypothesis, evidence log, and valid stop path.","minutes":55,"sourceFile":"chapters/start-with-the-user-task.mdx","objectiveIds":["AAE-K01","AAE-K02","AAE-K08","AAE-K11"]},
