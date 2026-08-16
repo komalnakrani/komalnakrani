@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "MD10-CURATION-001",
+  "fictional": true,
+  "recipeId": "MD10-RECIPE-001",
+  "pipelineId": "mosaic-curation-pipeline-v1",
+  "trainingAuthorized": false,
+  "records": [
+    {"id":"REC-001","family":"FAM-A","source":"SRC-SYN-HAND-01","rawDigest":"1111111111111111111111111111111111111111111111111111111111111111","normalizedDigest":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","signature":"shared-signature","purpose":"train","decision":"accept"},
+    {"id":"REC-002","family":"FAM-B","source":"SRC-SYN-HAND-01","rawDigest":"2222222222222222222222222222222222222222222222222222222222222222","normalizedDigest":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","signature":"shared-signature","purpose":"train","decision":"accept"},
+    {"id":"REC-003","family":"FAM-C","source":"SRC-SYN-GEN-01","rawDigest":"3333333333333333333333333333333333333333333333333333333333333333","normalizedDigest":"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc","signature":"unique","purpose":"development","decision":"accept"},
+    {"id":"REC-004","family":"FAM-HOLDOUT-1","source":"SRC-SYN-HAND-01","rawDigest":"4444444444444444444444444444444444444444444444444444444444444444","normalizedDigest":"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd","signature":"unique","purpose":"evaluation","decision":"accept"},
+    {"id":"REC-005","family":"FAM-RET-1","source":"SRC-SYN-HAND-01","rawDigest":"5555555555555555555555555555555555555555555555555555555555555555","normalizedDigest":"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee","signature":"unique","purpose":"retention","decision":"accept"},
+    {"id":"REC-006","family":"FAM-CTRL-1","source":"SRC-SYN-POLICY-01","rawDigest":"6666666666666666666666666666666666666666666666666666666666666666","normalizedDigest":"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff","signature":"unique","purpose":"control","decision":"accept"},
+    {"id":"REC-007","family":"FAM-HOLDOUT-1","source":"SRC-SYN-GEN-01","rawDigest":"7777777777777777777777777777777777777777777777777777777777777777","normalizedDigest":"ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd7","signature":"unique","purpose":"train-candidate","decision":"reject","reason":"holdout-family-overlap"},
+    {"id":"REC-008","family":"FAM-D","source":"production-export-convenient.csv","rawDigest":"8888888888888888888888888888888888888888888888888888888888888888","normalizedDigest":null,"signature":null,"purpose":"train-candidate","decision":"reject","reason":"unauthorized-purpose"}
+  ],
+  "duplicateAudit": {
+    "exactDuplicateGroups": [],
+    "signatureFalsePositive": {"records":["REC-001","REC-002"],"naiveDecision":"duplicate","repairedDecision":"distinct-task-bearing-content","originalsPreservedUnderRetention":true},
+    "indirectLeakage": {"records":["REC-004","REC-007"],"exactDigestMatch":false,"familyMatch":true,"approximateMatch":true,"repairedDecision":"reject-REC-007"},
+    "limitations": ["synthetic thresholds", "semantic overlap is not binary", "unknown base-model historical overlap"]
+  },
+  "vaults": {
+    "train":{"manifestDigest":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1","recordIds":["REC-001","REC-002"]},
+    "development":{"manifestDigest":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb2","recordIds":["REC-003"]},
+    "evaluation":{"manifestDigest":"ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc3","recordIds":["REC-004"]},
+    "retention":{"manifestDigest":"ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4","recordIds":["REC-005"]},
+    "control":{"manifestDigest":"eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee5","recordIds":["REC-006"]}
+  },
+  "rejectionLedger": [
+    {"recordId":"REC-007","reason":"holdout-family-overlap","contentRetained":false,"auditMetadataRetained":true},
+    {"recordId":"REC-008","reason":"unauthorized-purpose","contentRetained":false,"auditMetadataRetained":true}
+  ],
+  "crossVaultAudit": {"knownFamilyCrossings":0,"knownExactCrossings":0,"repairedCrossings":1,"residualUnknown":"base-pretraining-overlap-unknowable"},
+  "status": "md10-data-gate-complete-synthetic-only"
+}

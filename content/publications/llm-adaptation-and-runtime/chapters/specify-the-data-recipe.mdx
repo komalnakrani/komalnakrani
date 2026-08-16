@@ -1,0 +1,193 @@
+---
+title: "Specify the Data Recipe"
+slug: "specify-the-data-recipe"
+summary: "Turn a conditional adaptation hypothesis into a reproducible, authority-aware data recipe before collecting or transforming examples."
+minutes: 100
+sourceIds: ["SRC-002", "SRC-008", "SRC-034", "SRC-036", "SRC-037", "SRC-038", "SRC-039"]
+claimIds: ["CLM-010", "CLM-011", "CLM-012"]
+objectiveIds: ["LLME-K07", "LLME-K10"]
+figureIds: []
+---
+
+## A folder of examples is not a dataset decision
+
+`MD-09` ended with a conditional proposal, not a training authorization. Mosaic Desk has one recurring synthetic failure class: an identified open-weight baseline maps a bounded set of appliance shorthand incorrectly into typed fields after simpler routing, retrieval, template, schema, and evaluator repairs. The proposed next investigation is a small supervised PEFT pilot. Its template and padding compatibility blockers, data rights and retention, resource envelope, product/domain value, security review, and experimental authority remain unresolved.
+
+Chapter 4 asks whether data capable of testing that hypothesis can be specified without borrowing customer records, contaminating evaluation, or erasing protected behavior. The answer begins with a recipe: a versioned plan that says what each example means, where it may come from, which transformations are allowed, how mixture choices connect to the behavior contract, what must be excluded, and who can authorize each decision.
+
+The companion uses fabricated records and declarations. It reads no production export, contacts no provider, and starts no training. `authorized` is a fixture field used to exercise the gate, not a legal conclusion.
+
+## Write the behavior claim at the top of the card
+
+A data recipe starts from the falsifiable hypothesis, target cases, and forbidden regressions. Mosaic's target is not general domain fluency. It is the shorthand-to-typed-field mapping for an authorized, bounded appliance vocabulary within structured Gujarati-English service messages. The expected output remains a proposal. Warranty decisions, customer contact, ordering, scheduling, and record mutation remain prohibited.
+
+Protected clauses include correct citation, source authorization, abstention when evidence is absent, escalation on conflict, schema validity, protected-language behavior, and no external effect. Every proposed record must map to either the target or a named protected clause. An example that is merely interesting has no place in the recipe.
+
+A data recipe identifies sources, rights/permissions, example schema, inclusion/exclusion, quality, mixture, transformations, reviewers, versions, and limitations. [CLM-010] The field list is an engineering synthesis from dataset documentation and post-training practice. Filling it out improves auditability; it does not prove lawful use, consent, representativeness, safety, or fitness.
+
+Give the recipe an immutable identity derived from its canonical fields. Bind it to:
+
+- the exact `MD-09` baseline and hypothesis identifiers;
+- the open-weight model/tokenizer/template/runtime tuple, even while compatibility is blocked;
+- behavior-contract and error-taxonomy versions;
+- permitted source inventory and authority decisions;
+- record schema and transformation graph;
+- target mixture and sampling rationale;
+- exclusions, quarantine rules, and retention/deletion states;
+- split and contamination policy;
+- author, reviewer, domain, privacy/legal, security, and data-owner gates;
+- known gaps and stop conditions.
+
+A recipe change creates a new identity. Do not overwrite version 1 after seeing a candidate result.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F04.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f04-1-data-recipe-workbench.png">
+  <div role="img" aria-label="Authorized source trays pass through a versioned recipe workbench into example records that retain source and transformation provenance tabs.">Pending ImageGen figure V2-F04.1</div>
+  <figcaption><strong>V2-F04.1 - A recipe turns sources into traceable examples.</strong> Essential labels: source, recipe, example, provenance. Shape and tab patterns supplement color. The figure supports `CLM-010`; documentation does not grant data rights.</figcaption>
+  <details><summary>Long description</summary><p>A colorful realistic three-dimensional workbench receives sealed source trays. Named transformation tools operate only after an authority gate. Finished example cards retain bright tabs pointing back to source and recipe versions, while a rejected tray remains outside the workbench.</p></details>
+</figure>
+
+## Define one example unit before counting examples
+
+Mosaic's unit is a task episode, not an isolated answer string. Each raw candidate record needs:
+
+- stable record and source-family IDs;
+- source type, owner, origin, creation route, and authorization state;
+- allowed purpose, access scope, retention state, and deletion trigger;
+- language, script, domain, appliance class, consequence, and error slice;
+- trusted task/control fields separated from untrusted message or evidence data;
+- authorized context references and source revisions;
+- target terminal state and typed field expectation;
+- target/protected behavior clause;
+- synthetic/human/transformed origin and generator configuration where applicable;
+- transformation history and parent IDs;
+- author, reviewer, and domain-review states;
+- split eligibility, family/group key, and prohibited destinations.
+
+Do not put the final training serialization into the raw unit. Preserve structured fields so Chapter 6 can render the exact approved chat template and loss region. This makes a later template correction reproducible without pretending the underlying example changed.
+
+One email thread can yield multiple related records, but they share a family key. A translated, paraphrased, redacted, or synthetically expanded child retains its parent. These relationships will protect the split firewall in Chapter 5.
+
+## Inventory sources by authority, not convenience
+
+The recipe considers only three fictional source classes.
+
+**Hand-authored synthetic scenarios.** Domain-shaped but fabricated messages written from the approved vocabulary and contract. They contain no real person or customer event. A domain reviewer must still confirm the typed target and evidence relation.
+
+**Authorized policy snippets.** Fabricated, versioned source passages designed solely to test citations, absence, conflict, and stale-state behavior. They remain external evidence, not facts to memorize in weights.
+
+**Generated synthetic candidates.** A managed or open-weight generator may propose variants if its use, input, output handling, and retention are approved and fully disclosed. The generator's output is untrusted candidate data until independent rules and reviewers accept it.
+
+The failure injection offers a fourth source: `production-export-convenient.csv`. Its declaration lacks an approving owner, purpose authorization, and deletion state; sampled rows contain personal data; its source families overlap frozen evaluation cases. The gate returns `reject-unauthorized-overlapping-personal-data`. Redaction after ingestion cannot retroactively authorize collection or repair evaluation contamination.
+
+Legal/privacy/data/domain authorities approve sources and intended uses within their mandates. Security reviews handling and access controls. The LLM engineer records and enforces decisions in the data system but cannot create consent, rights, or domain truth by adding metadata.
+
+## Treat synthetic generation as a fallible source
+
+Synthetic instruction data can scale examples but may reproduce generator errors and biases. [CLM-011] `LLME-CASE-007` and the Self-Instruct evidence show bounded multilingual and synthetic-data methods under their studied generators, filtering, languages, and evaluations. They do not make synthetic output independent truth or establish Mosaic quality.
+
+For every generation batch, record:
+
+- generator/provider and exposed model identity;
+- prompt/template and sampling configuration;
+- seed where meaningful and request/batch identity;
+- source material supplied to the generator;
+- prohibited fields and pre-generation filters;
+- raw candidate count, acceptance count, and rejection reasons;
+- exact automated checks and their limitations;
+- independent author/reviewer identities;
+- language and slice distributions before and after review;
+- retention and deletion status for raw generations.
+
+Do not allow a generator to grade its own correctness without an independent criterion. Agreement with its own phrasing is coupling, not corroboration. A polished synthetic target can still invent an appliance property absent from authorized context. Chapter 6 will quarantine exactly that failure.
+
+`LLME-CASE-008` provides a staged post-training documentation pattern. Its public data mixtures and reported outcomes are specific to its model family, sources, infrastructure, and evaluations. Mosaic copies only the discipline of versioned stages and artifacts.
+
+## Specify transformations as named functions
+
+Write transformations before processing records. Each step has an input schema, output schema, version, allowed fields, reject states, and audit fields.
+
+Mosaic's proposed graph is:
+
+1. validate source authorization and allowed purpose;
+2. reject or quarantine prohibited personal or secret fields;
+3. preserve the immutable raw digest under approved retention;
+4. normalize Unicode and structural whitespace without changing appliance codes;
+5. segment thread turns while retaining boundaries and parent identity;
+6. validate language/script labels rather than trusting upstream codes;
+7. map approved shorthand vocabulary to a target annotation candidate;
+8. attach evidence and behavior-clause references;
+9. run exact and approximate family/holdout overlap checks;
+10. route to author and domain review;
+11. declare split eligibility, never final split assignment;
+12. publish the transformed digest and decision ledger.
+
+Normalization must have invariants. Original text remains addressable where retention permits. Structured codes round-trip exactly. Unicode normalization is recorded. Removed headers, signatures, and quoted history are represented in the transform log. A filter may reject a row; it may not silently make it disappear.
+
+## Plan the mixture as a hypothesis
+
+The target population is not directly observed in this fictional project. A mixture is therefore a stated experimental allocation, not a frequency estimate. Mosaic plans explicit trays for:
+
+- Gujarati, English, and Gujarati-English structured messages;
+- each approved appliance and shorthand family;
+- direct positive mappings and near-miss negative mappings;
+- missing, stale, conflicting, and unauthorized evidence;
+- success, correct abstention, and escalation states;
+- short and long structured inputs within the approved context budget;
+- target shorthand failures and every protected retention clause.
+
+Multilingual mixtures need explicit language/task balance and separate evaluation. [CLM-012] SentencePiece and Aya evidence establish that tokenization and multilingual coverage are material design dimensions in studied systems. They do not define an optimal Mosaic mixture or prove equal quality across languages.
+
+Measure every proposed slice using the exact tokenizer from Chapter 2. Record token lengths, truncation risk, and fragmentation distributions without turning them into quality scores. If Gujarati examples consume more tokens, the remedy is not automatically to downsample them. Revisit the context, template, batching, and resource hypothesis while protecting the behavior requirement.
+
+### Make allocation rules executable
+
+For each tray, state an allocation rule and a shortfall behavior. A rule can request a minimum number of distinct source families, not merely rows. It can cap children from one generator prompt, require independent review for every high-consequence target, and reserve explicit proportions for non-answer states. If eligible families cannot satisfy the rule, the recipe reports a gap; it does not copy, translate, or paraphrase records until the counter turns green.
+
+Record the denominator behind every mixture view. `40% Gujarati` could mean rows, unique families, input tokens, target tokens, or reviewed cases. These have different implications. Report at least records and unique families, then use token counts for resource planning. Never describe the synthetic allocation as a user-population prevalence.
+
+Mixture changes are experimental variables. If the team later increases abstention examples, it creates a new recipe and a new hypothesis about behavior. It must not compare the resulting candidate with the old baseline as though only adapter configuration changed.
+
+<figure class="book-figure book-figure--pending" data-figure-id="V2-F04.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f04-2-population-balance-trays.png">
+  <div role="img" aria-label="A target-population outline is compared with separate language, domain, error, and abstention trays, leaving convenience-sampling gaps visibly empty.">Pending ImageGen figure V2-F04.2</div>
+  <figcaption><strong>V2-F04.2 - Planned balance makes convenience gaps visible.</strong> Essential labels: language, domain, error, abstention, gap. Patterns and empty tray outlines supplement color. The figure supports `CLM-011` and `CLM-012`; it reports no real population frequencies.</figcaption>
+  <details><summary>Long description</summary><p>A crisp three-dimensional target silhouette stands beside colorful trays for language, domain, error, and abstention examples. Several slots remain transparently empty and labeled gap. A convenience-export box overfills one easy English slot but is blocked by a red authority gate.</p></details>
+</figure>
+
+## Freeze exclusions and known gaps
+
+Exclude frozen evaluation, retention, and control cases plus every derivative family. Exclude sources without explicit purpose authorization. Exclude unresolved personal data, secrets, unsafe handling, unverifiable targets, incompatible template records, unknown parentage, unsupported languages, and examples whose desired output would cross Mosaic's authority boundary.
+
+Quarantine differs from rejection. Quarantine retains a bounded record for an approved reviewer to resolve an ambiguity. Rejection states that the row cannot enter the recipe version. Deletion follows the governing authority's retention rule; it is not an engineer's informal cleanup.
+
+Retention validity must be evaluated at use time, not only source-registration time. An approval can expire, a purpose can change, a deletion request can arrive, or an upstream source can be revoked. The recipe records how a source owner notifies the pipeline, which derived records and manifests are affected, whether deletion is required, and what happens to any trained artifact. This chapter creates no trained artifact, so the last branch remains an unresolved future control rather than a fictional unlearning promise.
+
+Keep raw, transformed, rejected, and aggregate audit retention separate. A short-lived generated candidate may be deleted after review while a non-content reason code and batch count remain. Conversely, a reproducibility need cannot override an authority's deletion instruction. Where reproducibility and deletion conflict, record the limitation and stop the experiment if necessary.
+
+Known gaps remain first-class: the recipe has no real target-population prevalence, no authorization for customer content, no evidence that synthetic language reflects regional use, no approved data-retention period, and unresolved model/template compatibility. A complete data card can still end with `recipe-specified-data-gate-pending`.
+
+## Complete the first half of MD-10
+
+`mosaic-data-recipe.json` records the hypothesis, example schema, source registry, authority matrix, transformations, mixture plan, exclusions, split firewall, gaps, and stop conditions. The convenient export is rejected. No raw customer data is copied, and no record enters training.
+
+The recipe advances only to `recipe-specified-data-gate-pending`. Chapter 5 must execute it against synthetic fixtures, preserve rejected rows, test false duplicate removal and holdout leakage, and decide whether clean separated partitions can be frozen. If they cannot, the conditional adaptation project stops.
+
+### Managed generation does not become a second truth source
+
+A managed model may help propose synthetic variants while the open-weight candidate is the intended training target. Keep the routes distinct. Record what data leave the application boundary, the provider's exposed model/version, processing and retention terms approved by competent authorities, prompt/template identity, and every returned candidate. The managed service cannot see frozen evaluation targets and cannot approve its own outputs.
+
+If those constraints cannot be met, omit managed generation. Hand-authored synthetic fixtures or a smaller dataset may preserve a more interpretable experiment. The purpose of the recipe is to make that tradeoff visible, not to maximize row count.
+
+## Practice: reject the easy dataset
+
+Using the Chapter 4 companion:
+
+1. trace the recipe to the MD-09 hypothesis and protected criteria;
+2. reproduce the example schema and transformation graph;
+3. evaluate every source's purpose, authority, retention, and split eligibility;
+4. reject the convenient production export with all reasons intact;
+5. map each mixture tray to a behavior clause and separate evaluation;
+6. label synthetic origin and generator limitations;
+7. list known gaps and unresolved authority decisions;
+8. explain why a documented recipe is not a training approval.
+
+Pass when another engineer can reproduce the planned record shape, sources, transformations, mixture, exclusions, review states, and recipe identity without seeing a hidden folder. Fail when documentation is treated as rights, synthetic output as truth, language balance as one aggregate, holdouts as useful training examples, or redaction as retroactive authorization.

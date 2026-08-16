@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 2 Chapters 1-3 locally complete under `#62`
+- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 2 Chapters 4-6 locally complete under `#65`
 - Last updated: 2026-08-16
-- Last completed issue: `#60` — Phase 08 Volume 1 Chapter 16 and whole-volume verification, accepted at `fce705f`
-- Active issue: `#62` — Phase 08 Volume 2 Chapters 1-3, locally complete pending coordinator acceptance
+- Last completed issue: `#62` — Phase 08 Volume 2 Chapters 1-3, accepted at `f47fb54`
+- Active issue: `#65` — Phase 08 Volume 2 Chapters 4-6, locally complete pending coordinator acceptance
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -47,10 +47,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - chapter blueprints: 33 files in `books/llm-engineering/blueprints/`
 - Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
 - Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
-- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, Volume 1 child bodies, and `issues/phase-08-v2-chapters-01-03.md`
+- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, Volume 1 child bodies, and Volume 2 child bodies through Chapters 4-6
 - Volume 1 Chapters 1-16, all records, full deterministic companion, and hostile whole-volume verification: accepted at `fce705f`
-- Volume 2 Chapters 1-3, learning/state/QA, production records, and MD-09 deterministic companion: locally complete under `#62`
-- generated visuals, Volume 2 Chapters 4-17, final publication, PDF, course, and final QA: not started
+- Volume 2 Chapters 1-3, learning/state/QA, production records, and MD-09 deterministic companion: accepted at `f47fb54`
+- Volume 2 Chapters 4-6, learning/state/QA, production records, MD-10 recipe/curation, and MD-11 instruction-data companion: locally complete under `#65`
+- generated visuals, Volume 2 Chapters 7-17, final publication, PDF, course, and final QA: not started
 
 ## Completed gates
 
@@ -72,11 +73,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 
 ## Current work
 
-Phase 07 is accepted at `9d9e1c3`, and Volume 1 is accepted at `fce705f`: 44,485 words, 48 exact claims, 32 accessible anchors, sixteen learning/state/QA sets, 64/64 companion tests, and continuous `MD-01..MD-08`. Volume 2 Chapters 1-3 add 7,060 words, nine exact claims, six pending accessible anchors, three learning/state/QA sets, and 12/12 deterministic tests. `MD-09` is complete. The accepted negative adaptation handoff remains intact; half the new apparent failures resolve upstream; model/tokenizer compatibility is blocked; malformed-language and stale-knowledge classes route to repairs; and the bounded shorthand residual reaches only a conditional PEFT pilot investigation with training not approved. Series manuscript total is 51,545 words with 57 exact claims, 38 pending anchors, and 76/76 companion tests.
+Phase 07 is accepted at `9d9e1c3`, Volume 1 at `fce705f`, and Volume 2 Chapters 1-3 at `f47fb54`. Volume 2 Chapters 4-6 add 6,766 words, nine exact claims, six pending accessible anchors, three learning/state/QA sets, and 12 deterministic tests. `MD-10` is complete as a synthetic-only data gate; `MD-11` is open with four evidence-linked instruction signals. The unsafe export and paraphrased holdout relative are rejected, a signature false duplicate is repaired, five purpose vaults remain separate, an unsupported synthetic target is rejected, and the inherited template mismatch still blocks readiness. No training is approved. Series manuscript total is 58,311 words with 66 exact claims, 44 pending anchors, and 88/88 companion tests.
 
 ## Unresolved blockers
 
-No manuscript blocker. Thirty-eight cumulative raster figure assets remain intentionally pending root ImageGen production. Volume 2 Chapter 4 must not start until root accepts `#62`. Abhyaas remains intentionally deferred.
+No manuscript blocker. Forty-four cumulative raster figure assets remain intentionally pending root ImageGen production. Volume 2 Chapter 7 must not start until root accepts `#65`. Abhyaas remains intentionally deferred.
 
 ## Research gaps and volatile evidence
 
@@ -89,14 +90,14 @@ No manuscript blocker. Thirty-eight cumulative raster figure assets remain inten
 
 ## Quality debt
 
-- Volume 1 has all sixteen manuscripts and a hostile whole-volume verification; Volume 2 Chapters 1-3 are drafted and Chapters 4-17 remain unwritten.
-- All thirty-eight current manuscript anchors and production figure specifications exist, but no image/vector asset exists; visual production remains ImageGen-only raster.
+- Volume 1 has all sixteen manuscripts and a hostile whole-volume verification; Volume 2 Chapters 1-6 are drafted and Chapters 7-17 remain unwritten.
+- All forty-four current manuscript anchors and production figure specifications exist, but no image/vector asset exists; visual production remains ImageGen-only raster.
 - The publication stays draft and is not registered as a launched Komal title; final PDF and publication QA remain future gates.
 
 ## Exact next action
 
-Wait for coordinator acceptance of `#62`; do not start Volume 2 Chapter 4 beforehand. After explicit activation, Chapter 4 must specify the data recipe for the conditional shorthand candidate while preserving exact artifact compatibility, family separation, protected retention/control cases, unresolved data rights/retention, and `method-selection-complete-training-not-approved`.
+Wait for coordinator acceptance of `#65`; do not start Volume 2 Chapter 7 beforehand. After explicit activation, Chapter 7 must decide whether preference data are justified while inheriting synthetic-only authority, five-vault separation, evidence-linked targets, visible coverage gaps, the training/serving template blocker, and `training-not-approved`.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits through `fce705f`, parent #46, child #62, this state, the Volume 1 verification and frozen `MD-08` handoff, Volume 2 Chapters 1-3 records, and all three MD-09 companion artifacts. Inspect git status because parallel agents share the worktree. Do not start Chapter 4 without root acceptance. Work only in LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits through `f47fb54`, parent #46, child #65, this state, Volume 2 Chapters 1-6 records, the MD-09 handoff, MD-10 recipe/curation artifacts, and MD-11 instruction artifact. Inspect git status because parallel agents share the worktree. Do not start Chapter 7 without root acceptance. Work only in LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.
