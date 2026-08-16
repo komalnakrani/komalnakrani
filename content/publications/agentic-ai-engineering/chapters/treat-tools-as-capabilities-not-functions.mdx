@@ -1,0 +1,356 @@
+---
+title: "Treat Tools as Capabilities, Not Functions"
+slug: "treat-tools-as-capabilities-not-functions"
+summary: "Design narrow typed capabilities with legible intent, effect classes, deterministic validation, explicit errors, idempotency, reconciliation, and test doubles."
+minutes: 85
+sourceIds: ["SRC-004", "SRC-005", "SRC-014", "SRC-024", "SRC-034"]
+claimIds: ["CLM-009", "CLM-010"]
+objectiveIds: ["AGE-K02-01", "AGE-K03-01", "AGE-K05-01", "AGE-K07-01", "AGE-K09-01"]
+---
+
+# Treat Tools as Capabilities, Not Functions
+
+`AR-03 v1.0.0` makes the FieldOps loop inspectable. Its model can propose an action, but the proposed action still needs a safe boundary to the synthetic world. A function signature is not enough.
+
+Consider `callApi(url, method, body)`. It is callable. It is also a master key. Its name does not reveal intent. Its schema cannot express which resource is permitted, what consequence the request carries, whether a timeout is safe to retry, or how to verify a committed effect. The model sees flexibility; the harness sees an unbounded authority surface.
+
+A **capability** is a governed promise: one narrow intent, one admitted effect class, typed inputs and outputs, preconditions, principal and scope, time and freshness semantics, deterministic validation, an error taxonomy, retry and reconciliation rules, audit evidence, and a test double. Tool names, descriptions, schemas, and returned context affect how a model selects and uses tools, but the size of that effect depends on the workload and model. Descriptions improve legibility; they do not enforce security. [CLM-009]
+
+This chapter creates `AR-04 v1.0.0`, a five-capability catalog for FieldOps. It rejects generic SQL, shell, and arbitrary API access. Its only effectful capability remains one exact synthetic reservation.
+
+## 1. From function to capability contract
+
+A function says how to call code. A capability contract answers five broader questions.
+
+**What may be attempted?** The intent must be narrow enough that a reviewer can predict consequence from the identifier. `check_inventory` reads availability for one part and permitted location. It does not update stock.
+
+**Who and what is the call for?** The invocation carries principal, task, run, resource, and scope references. Chapter 6 will make those bindings explicit. The capability never accepts "the model asked" as authority.
+
+**How is the result interpreted?** Structured output has a schema, provenance, freshness, and semantic status. A natural-language string saying "available" cannot support a reservation.
+
+**What does failure mean?** `DENIED`, `INVALID_ARGUMENT`, `NOT_FOUND`, `STALE`, `CONFLICT`, `TIMEOUT_AMBIGUOUS`, and `MALFORMED_RESULT` lead to different transitions. A generic exception invites generic retry.
+
+**How is an effect recovered?** The contract defines an idempotency identity, effect ledger, reconciliation read, verification, and any separately authorized compensation. It does not pretend a timeout means no effect.
+
+Use a stable capability ID and semantic version. The model-facing name can be adapted for a provider, but the local ID anchors policy, evaluation, audit, and migration. A breaking change to effect semantics requires a new admitted version and regression evidence.
+
+The catalog owner is not automatically the service owner. The inventory team owns its service semantics. Agentic AI engineering owns the adapter contract exposed to the run and the evidence that the harness enforces it. Security owns formal threat review. Domain owners define compatibility and consequence.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F05.1" data-png="/assets/publications/agentic-ai-engineering/f05-1-capability-cabinet.png">
+  <div role="img" aria-label="Pending colorful realistic 3D cabinet with narrow drawers labeled Read, Compute, Propose, and Effect. Each drawer has visible cards for Intent, Schema, Scope, Errors, Evidence, and Recovery. A large master-key drawer is blocked. No relationship depends on color.">ImageGen raster pending: F05.1</div>
+  <figcaption><strong>F05.1 - Capability cabinet.</strong> Essential labels: Read, Compute, Propose, Effect, Intent, Schema, Scope, Errors, Evidence, Recovery. Evidence role: a classification and contract scaffold, not security assurance.</figcaption>
+</figure>
+
+## 2. Make capabilities legible
+
+The model selects from names, descriptions, schemas, and context. Ambiguous surfaces create selection errors before any backend bug appears.
+
+Compare `lookup` with `check_inventory`. The second name indicates a read and its domain. Compare "Gets inventory" with: "Read current synthetic availability for one part at one delegated location. Returns slots, observation time, and revision. Never reserves or mutates stock." The latter states intent, boundary, and returned evidence without pretending to be a security control.
+
+The input schema should make illegal ambiguity unrepresentable where possible. `check_inventory` requires `partId` and `locationId`; it does not accept an arbitrary query string. `reserve_part` requires principal, task, run, proposal hash, part, slot, quantity, and idempotency key. Unknown fields are rejected when they could hide effect-relevant intent.
+
+Output schemas matter equally. The adapter validates service output before the harness consumes it. A missing `observedAt` makes freshness unknowable. A malformed slot record cannot be turned into a proposal. A reservation response without effect ID, key, status, and commit time is ambiguous even if its text sounds successful.
+
+Returned context should be sufficient but bounded. Give the model relevant slot identifiers and observed time, not the entire inventory table. Give manual passages with source, edition, trust state, and passage IDs, not a raw data lake. Rich context can improve selection while increasing token cost and disclosure risk.
+
+Current MCP tool specifications define discovery, JSON Schema inputs and outputs, structured content, errors, and annotations. They also warn that tool annotations are untrusted unless the server itself is trusted. A `readOnlyHint` is useful metadata, not an enforcement fact. The adapter and policy must classify the capability from local evidence. [CLM-009]
+
+Provider engineering reports also describe task-based iteration on tool naming, namespacing, and context efficiency. Those findings are useful design prompts, not universal effect sizes. FieldOps evaluates its own frozen tasks and model adapters.
+
+### Legibility evaluation
+
+Create task cases that require each capability, cases that require no call, and adversarial near-matches. Measure correct selection, unnecessary calls, invalid arguments, omitted evidence, returned-context burden, and prohibited proposals.
+
+Hold backend behavior constant when comparing descriptions. Otherwise a better service can be mistaken for a better name. Test multiple phrasings on held-out tasks. Record model and adapter versions. A tool contract is an evaluated interface, not finished copywriting.
+
+## 3. Classify effect and authority
+
+FieldOps uses the Chapter 3 action classes, but the catalog exposes five capabilities:
+
+- `read_equipment`: read one synthetic equipment record;
+- `search_manual`: read evidence from approved synthetic manuals;
+- `check_inventory`: read current availability for one part and location;
+- `propose_reservation`: create an immutable proposal without external effect;
+- `reserve_part`: perform one approval-bound synthetic effect.
+
+No compute capability is separately exposed because local canonicalization can remain inside the harness. The figure's `Compute` class remains a valid category, not a requirement to publish a tool.
+
+Each capability names principal, scope, authority, evidence, stop, and escalation. Reads require resource-bound delegation. Proposals require compatible and fresh evidence. The effect requires an exact live unused approval, one remaining effect, and immediate revalidation.
+
+Do not mix read and effect semantics. A function named `get_or_create_reservation` cannot be safely treated as read-only. A search endpoint that updates analytics, sends mail, or acquires a lease has side effects that need classification. Consequence follows actual service behavior, not the HTTP verb or friendly name.
+
+Reject broad tools even when they simplify implementation. `run_sql` can read unrelated records or mutate data. `execute_shell` can reach capabilities beyond the catalog. `call_arbitrary_api` moves authority into model-generated URLs and payloads. If the task needs a new intent, design and review a new narrow capability.
+
+Security guidance supports minimum scopes, audience validation, sandboxing where relevant, and audit. It does not replace the application's effect map or a domain owner's consequence decision. [CLM-010]
+
+## 4. Type errors before deciding retries
+
+An error taxonomy is a control surface.
+
+`INVALID_ARGUMENT` means the proposal failed deterministic validation. A bounded revision may be useful. `DENIED` means authority or policy rejected the call; retrying unchanged is not useful and may become approval shopping. `NOT_FOUND` can be a valid observation. `STALE` requires a fresh read or escalation. `CONFLICT` signals changed external state. `MALFORMED_RESULT` means the adapter cannot safely interpret the service response. `TIMEOUT` can mean no effect for a read, but `TIMEOUT_AMBIGUOUS` means an effect may have committed.
+
+Retry policy belongs to each error and capability. Reads may allow one bounded retry for a transient timeout. Effects require more care. Network failure divides into three classes:
+
+1. definitely before dispatch;
+2. definitely committed or rejected;
+3. ambiguous after dispatch.
+
+Only the service and adapter semantics can establish the class. The model cannot infer it from elapsed time.
+
+### Idempotency is semantic identity
+
+An idempotency key identifies one intended effect, not merely one HTTP request. FieldOps binds the key to principal, task, run, proposal hash, part, slot, and quantity. Reusing the key with identical intent returns or reconciles the original effect. Reusing it with quantity two is `SAME_KEY_DIFFERENT_INTENT` and is denied.
+
+Idempotency does not mean exactly once. A request can be delivered more than once while the service suppresses duplicate effects. A response can be lost. Records can expire. Two different keys can still describe duplicate business intent. Service support and semantic design determine the guarantee. [CLM-010]
+
+The AWS Builders Library describes request identifiers, semantic equivalence, late arrivals, and ambiguous success in a provider engineering context. FieldOps adopts the general lesson but defines its own local intent fields and ledger.
+
+### Reconcile before retry
+
+Inject the central failure. `reserve_part` commits, but the response is lost. The harness records `effect.ambiguous` and enters `RECOVERING`. It queries the authoritative effect ledger by idempotency key.
+
+If the ledger finds the matching effect, the harness records it once and proceeds to verification. If it proves absence and the approval, stock, budget, and delegation are still valid, policy may allow a redispatch with the same key. If the outcome remains unknown, the run escalates. It never blind-retries an effect.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F05.2" data-png="/assets/publications/agentic-ai-engineering/f05-2-ambiguous-effect-ledger.png">
+  <div role="img" aria-label="Pending crisp 3D scene where an effect marked Committed crosses a service boundary but its response ends at Timeout. A Retry route is blocked until a Ledger lookup checks the same idempotency key and intent. A different-intent duplicate is denied. No relationship depends on color.">ImageGen raster pending: F05.2</div>
+  <figcaption><strong>F05.2 - Ambiguous effect reconciliation.</strong> Essential labels: Committed, Timeout, Retry, Ledger. Evidence role: a causal duplicate-prevention scaffold; it does not claim exactly-once execution.</figcaption>
+</figure>
+
+### Compensation is another effect
+
+Releasing a reservation can compensate for an unwanted reservation. It does not erase the original event, restore elapsed time, or guarantee the same external state. It needs its own capability contract, authority, idempotency, audit, failure semantics, and verification.
+
+Some effects are irreversible or have no meaningful compensation. `AR-04` records this limit instead of using "rollback" as comfort language. FieldOps does not expose a release capability in this chapter; it says a future one must be separately authorized.
+
+## 5. Review the five FieldOps contracts
+
+### `read_equipment`
+
+Intent: read one synthetic equipment record by identifier. Input requires `equipmentId`. Output requires family, revision, and observation time. Scope limits permitted resources. The adapter omits unrelated owner contact. `NOT_FOUND` is an observation; `DENIED` is terminal for the call; one timeout retry is allowed.
+
+### `search_manual`
+
+Intent: search approved manuals for evidence. Output includes passage IDs, edition, and trust state. Retrieved text is data, never policy. Embedded credentials are stripped. An untrusted-source result stops evidence use and escalates to domain or security review.
+
+### `check_inventory`
+
+Intent: read availability for one part and location. Output includes slots, revision, and `observedAt`. The task contract checks freshness. Unrelated stock is not returned. `STALE` can trigger one fresh read; persistent staleness escalates.
+
+### `propose_reservation`
+
+Intent: canonicalize one proposal. It has no external effect. Input binds principal, task, run, part, slot, quantity, and evidence references. Output includes canonical content, proposal hash, and expiry. The operation rejects stale evidence and never exposes a reservation side channel.
+
+### `reserve_part`
+
+Intent: reserve exactly one approved synthetic part in one approved slot. It is the only effect capability. It requires exact live authority, fresh stock, and one remaining effect. It has no blind retry. A timeout enters reconciliation. Output is validated and then independently verified.
+
+Every contract also carries version, timeout, audit fields, redaction, a deterministic double, injected failures, and deprecation policy. Chapter 6 will replace placeholder principal and scope descriptions with an explicit delegation envelope.
+
+## 6. Contract evaluation
+
+Test capabilities without a live model first. Validate good and malformed inputs, denied scope, stale data, each typed error, output corruption, timeout, duplicate key, changed intent, ledger reconciliation, and unavailable compensation. These tests establish adapter behavior, not whether a model selects well.
+
+Then evaluate selection using frozen tasks. Ask whether the model chooses the correct capability, supplies valid arguments, avoids unnecessary calls, respects returned-context boundaries, and recovers from typed errors within budget. Test tool descriptions and schemas as versioned prompt surface.
+
+The accepted internal data-agent case is a bounded example of curated context, tools, permissions, evaluation, and feedback. Its organization-specific outcomes do not prove the FieldOps catalog or transfer to another environment.
+
+Use four review gates:
+
+- **Intent and schema:** can a reviewer predict the operation and validate both directions?
+- **Authority and effect:** are principal, scope, consequence, and effect evidence explicit?
+- **Failure semantics:** are retryability, ambiguity, idempotency, reconciliation, and compensation limits truthful?
+- **Tests and limits:** do doubles reproduce success, denial, malformed result, staleness, timeout, duplicate, and recovery?
+
+Automatic failure occurs if timeout-after-effect leads directly to retry, if the same key accepts changed intent, or if compensation is described as erasing an effect.
+
+## Write the contract field by field
+
+The catalog schema is long because every field closes a different ambiguity.
+
+**Stable ID and version** connect the model-facing surface to policy, events, evaluation, and migration. Names can be aliased, but the admitted semantic version is explicit.
+
+**Intent** is one sentence describing the bounded outcome. It says what the capability does and what it never does. If the sentence requires "and possibly," split the capability.
+
+**Effect class** is derived from real behavior. Read, compute, propose, communicate, and effect determine authority, retry, and verification. A local annotation cannot override service evidence.
+
+**Input and output schemas** define machine shape. Include required fields, types, ranges, enums, unknown-field behavior, canonicalization, and sensitive-field treatment. Validate at both the model adapter and capability adapter; never assume generation-time schemas make runtime validation unnecessary.
+
+**Preconditions** reference current run, evidence, policy, and resource state. They are rechecked at dispatch. A condition written only in the tool description is documentation, not enforcement.
+
+**Principal, scope, audience, and resource** bind invocation to delegated authority. Chapter 6 supplies exact values. The capability declares what it expects and denies absence or mismatch.
+
+**Freshness** defines which timestamp or revision matters, who supplies it, and how age is calculated. Data can be structurally valid and semantically stale.
+
+**Timeout** has a unit, owner, and semantic result. For effects, a client timeout is not proof of absence. Server deadlines and client patience may differ.
+
+**Error taxonomy** maps service and adapter failures into stable local codes. Preserve raw diagnostics separately while preventing provider-specific strings from controlling transitions.
+
+**Retryability** is stated per code, with maximum attempts, delay policy, deadline interaction, and whether state must be refreshed. `retryable: true` without a budget is an invitation to loop.
+
+**Idempotency** states whether a key is required, which fields define semantic intent, how long records are retained, and what happens on same-key different-intent use.
+
+**Reconciliation** names the authoritative read and outcomes: found matching, found conflicting, proven absent, or still unknown. Each maps to a state transition.
+
+**Compensation** says whether a separate effect exists, who can authorize it, what it can restore, and what remains irreversible. "Rollback supported" is too vague.
+
+**Audit and effect record** identify what is recorded before and after dispatch. Audit evidence should link run, proposal, policy, approval, key, result, and verification without exposing credentials.
+
+**Redaction** identifies fields excluded, transformed, or access-controlled in model context and traces. Redaction is tested, not assumed from a logging library.
+
+**Deterministic double and failure fixtures** make the semantics executable without a provider or real resource. The double must reproduce denial, malformed output, timeout, ambiguous commit, conflict, and ledger lookup.
+
+**Deprecation** defines notice, replacement, compatibility, evaluation, and removal. An old effect capability cannot remain callable merely because a model remembers its name.
+
+## Build the ambiguous-effect decision table
+
+The reservation adapter needs more than `try/catch`.
+
+**Validation fails before dispatch.** Record denial. Do not consume approval or effect budget. A bounded proposal correction may occur.
+
+**Cancellation exists before dispatch.** Do not call the resource. Enter `CANCELLED` and preserve approval history as unused or explicitly invalidated by policy.
+
+**Transport rejects before request transmission is possible.** Policy may permit redispatch with the same key after revalidation, but only when the adapter can establish pre-dispatch failure.
+
+**Service rejects with a typed policy or conflict response.** Record the rejection. Do not retry unchanged. Refresh evidence or escalate according to the code.
+
+**Service returns committed effect record.** Validate the response, store the effect reference, consume the approval under the real concurrency design, then verify authoritative state.
+
+**Client times out after possible dispatch.** Enter `RECOVERING`. Query the effect ledger with the same key. Do not assume failure.
+
+**Ledger finds matching intent and effect.** Record the original effect exactly once in the run semantics and proceed to verification. A repeated delivery is not a second business effect.
+
+**Ledger finds same key with different intent.** Stop and escalate as integrity failure. Never overwrite the ledger or reinterpret the key.
+
+**Ledger proves absence.** Revalidate cancellation, authority, approval, freshness, budget, and deadline. Policy may redispatch the same intended operation with the same key.
+
+**Ledger remains unavailable.** Preserve ambiguity and escalate. User urgency does not justify a second key.
+
+**Verification finds a mismatch.** Stop further effects, retain both intended and observed records, and escalate. Do not call compensation automatically unless a separately authorized policy exists.
+
+This table distinguishes transport delivery, service execution, business effect, and task completion. Conflating them is how duplicate effects enter otherwise well-tested code.
+
+## Validate model-facing and enforcement contracts together
+
+A capability has two audiences. The model-facing contract helps a nondeterministic selector choose and populate it. The enforcement contract tells deterministic software what can pass. They must describe the same operation.
+
+Create a parity checklist. Every required enforcement field must be either supplied by the model, derived from trusted run state, or resolved by the adapter. The model should not supply principal, raw credential, policy version, or remaining effect budget when the harness already owns them. Conversely, a description should not invite a free-form `location` if enforcement requires a delegated location identifier.
+
+Test description drift. If a capability version stops supporting a field but the model prompt still advertises it, invalid calls rise. If enforcement adds a consequence without updating description and review, the model and user cannot make an informed selection.
+
+Test returned-context drift. A backend may add new fields that the model should never see. Output validation should reject unknown fields or project them through a versioned safe view. Service evolution is not automatic permission to expand model context.
+
+## Capability incident drills
+
+### Malformed structured result
+
+`check_inventory` omits `observedAt`. The adapter returns `MALFORMED_RESULT`; the harness never constructs a proposal. Investigate service contract or adapter version before model reasoning.
+
+### Stale read
+
+The result is valid but older than the task threshold. The harness records `STALE`, allows at most one fresh read, and escalates if freshness remains unavailable. The model cannot quote the stale quantity as current evidence.
+
+### Denied scope
+
+The principal is delegated for location A but requests location B. The adapter denies before service data is returned. Rephrasing the request or choosing another capability does not expand scope.
+
+### Description injection
+
+An untrusted server advertises a capability as read-only. Local trust and effect classification say unknown. The catalog refuses admission. MCP annotations and model-friendly descriptions are not trusted controls.
+
+### Duplicate keys across intent
+
+Two proposals accidentally share a generated key. The ledger compares semantic fields and rejects the second. A random UUID reduces collision probability but does not replace the same-key intent check.
+
+### Failed compensation
+
+A separately authorized release action times out. This creates another ambiguous effect requiring reconciliation. The original reservation remains in history. The run cannot report the world restored until verification proves it.
+
+### Catalog overload
+
+Adding dozens of nearly identical search tools reduces correct selection and increases context. Namespacing, routing, or a narrower task-specific catalog may help, but any change is evaluated against held-out tasks. Narrow tools improve enforcement while catalog size creates a real selection trade-off.
+
+## Production review packet
+
+For each capability, ship the schema, local adapter, service contract reference, effect classification, threat and fault notes, test-double fixtures, evaluation results, owner, and deprecation plan. Link it to the `AR-03` states in which it may be proposed and executed.
+
+Require separate sign-off for model legibility and enforcement readiness. A tool can be easy for the model and unsafe to expose. It can also be safe but unusable because descriptions, schemas, or returned context are confusing. Both properties matter.
+
+Reviewers should answer:
+
+- Does the ID imply the correct narrow intent?
+- Can input or output ambiguity change consequence?
+- Is every service behavior reflected in the effect class?
+- Can a denial be distinguished from an outage?
+- Can an ambiguous effect be reconciled without model judgment?
+- Is any retry safe only under conditions not encoded?
+- Does compensation have independent authority and failure semantics?
+- Can a new service version expand data or effect without catalog review?
+- Do tests cover the same-key different-intent case?
+
+No capability passes because its happy-path demo is impressive. It passes when its intended and unintended behaviors have deterministic dispositions.
+
+## Review `AR-04 v1.0.0`
+
+The dossier contains five contracts and rejects three master keys. Each capability is legible to a model and enforceable by the harness. The effect surface is still one synthetic reservation. The ambiguous-effect policy says reconcile before redispatch and explicitly sets `exactlyOnceClaim` to false.
+
+Schemas cannot encode all business meaning. Idempotency depends on service support. Compensation may fail. Specialist security and domain review remain required for any real capability. Those limitations are fields in the catalog, not footnotes discovered during an incident.
+
+## Common capability mistakes and trade-offs
+
+**Description as policy.** Writing "only call after approval" helps selection but does not enforce approval. The adapter must verify the exact record.
+
+**Broad tool hidden behind a narrow name.** Renaming `call_api` to `inventory_helper` does not narrow URLs, methods, fields, or effects. Review actual reachable service operations.
+
+**Schema confidence.** JSON Schema validates structure, not compatibility, freshness, authorization, or semantic duplicate intent. Attach those assertions separately.
+
+**Retry every error.** Denial, invalid input, conflict, and ambiguous effects require different behavior. Retry is one explicit disposition, never the generic one.
+
+**Trust annotations.** Server-provided hints can improve UX only after server trust and local classification. An attacker can label an effect as read-only.
+
+**Mix read and mutation.** Convenience endpoints that conditionally create or update make consequence dependent on hidden state. Split operations or classify for the highest possible effect.
+
+**Treat compensation as rollback.** Compensation is another fallible effect. Record the original, the compensating intent, its authority, outcome, and residual consequence.
+
+**Leak context for convenience.** Returning full service records may improve one answer while exposing unrelated data and consuming context. Design a minimal typed view.
+
+Narrow capabilities increase catalog size and adapter work. Broad capabilities reduce catalog size and increase model discretion, policy complexity, and blast radius. The right decomposition is task-specific. Use routing or task-specific catalogs when a global list becomes hard to select, but do not hide a master key behind routing.
+
+Richer schemas improve validation while raising evolution cost. Version the semantic contract, separate optional safe extensions from breaking effect changes, and test old and new model adapters. Backward-compatible JSON is not necessarily backward-compatible authority.
+
+Longer deduplication windows reduce late duplicate risk and increase ledger retention. Choose the window from realistic retry, queue, and recovery horizons, consequence, and storage policy. Record what happens after expiry instead of implying permanent exactly-once behavior.
+
+## Reader contract drill
+
+For each proposed capability, decide whether to admit, split, narrow, or reject it.
+
+`find_and_reserve_part(query)` mixes search, domain choice, inventory read, proposal, authority, and effect. Split it. Let the harness compose bounded reads, one proposal, and one approval-gated effect.
+
+`run_sql(statement)` is rejected. If a bounded read is necessary, expose a typed domain query with fixed resource and returned view. SQL syntax is not the task contract.
+
+`send_update(recipient, message)` is a communication effect. It needs recipient scope, content policy, disclosure review, idempotency or duplicate handling, and verification. FieldOps excludes real communication.
+
+`check_inventory(partId, locationId)` is admissible when audience, scope, output projection, freshness, timeout, errors, and audit are defined. The name alone does not make it ready.
+
+`reserve_part(...)` is admissible only with exact proposal and approval binding, semantic idempotency, reconciliation, one effect budget, and postcondition verification.
+
+`release_reservation(effectId)` is not automatically safe because it sounds compensating. Define who may release, whether another task depends on the stock, how release is verified, and what happens if it fails.
+
+`browser(action)` is too broad for this FieldOps scope. If a browser interaction were required, design a task-specific capability or place it behind a separately reviewed computer-use boundary with appropriate consequence and supervision.
+
+## Phase 6 handoff fields
+
+`AR-04` makes identity needs explicit. Every invocation expects principal, task, run, resource, scope, and authority evidence. Every capability specifies where credential resolution occurs and which audit fields are required. The effect binds approval and idempotency to semantic intent.
+
+Chapter 6 must ensure those values come from trusted boundaries. The model cannot choose the principal, paste a token, expand scopes, switch the audience, or reuse approval across a run. The catalog supplies the enforcement questions; the delegation envelope supplies verified answers.
+
+On resume, capability availability is re-evaluated. A version may be deprecated, a resource removed, or delegation revoked. Serialized tool lists are not lasting permission.
+
+## Learning lab
+
+Author the five contracts from an empty template. For each, define stable identity, intent, effect, schemas, preconditions, scope, freshness, timeout, errors, retry, idempotency, reconciliation, compensation, audit, redaction, double, failure fixtures, and deprecation.
+
+Score 20 points: intent/schema 5, authority/effect 5, failure semantics 6, tests/limits 4. The timeout-after-commit fixture must reconcile successfully, while the same key with different intent must fail.
+
+## Chapter checkpoint
+
+FieldOps now has an inspectable loop and a bounded capability surface. It still needs proof that each invocation belongs to the correct human principal, agent instance, task, run, resource, scope, and validity window. `AR-04 v1.0.0` hands Chapter 6 explicit principal, scope, authority, credential-reference, approval, and audit fields for that binding.

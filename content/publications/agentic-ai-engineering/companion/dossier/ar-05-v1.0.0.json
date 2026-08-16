@@ -1,0 +1,20 @@
+{
+  "id":"AR-05","version":"1.0.0","fictional":true,"sourceCapabilities":"AR-04 v1.0.0",
+  "identities":{"humanPrincipal":"human:fieldops-reviewer-07","servicePrincipal":"service:fieldops-harness","agentInstance":"agent:fieldops-reader-001","task":"task:fieldops-104","run":"run:fieldops-001","resource":"https://synthetic.inventory.fieldops.example"},
+  "delegation":{"principal":"human:fieldops-reviewer-07","taskId":"task:fieldops-104","runId":"run:fieldops-001","agentId":"agent:fieldops-reader-001","audience":"https://synthetic.inventory.fieldops.example","scopes":["equipment:read","manual:read","inventory:read","reservation:propose","reservation:effect:one"],"resources":["location:lab-a","part:part-A17","slot:slot-B2"],"issuedAt":"2026-08-16T09:00:00Z","expiresAt":"2026-08-16T09:20:00Z","consequenceCeiling":"one synthetic reservation","revoked":false},
+  "credentialHandling":{"modelContext":"credential reference only; no token or secret","resolutionPoint":"trusted capability adapter","passthrough":false,"resourceMetadata":"validated through configured trusted endpoints","pkce":"required for applicable authorization-code flow"},
+  "approval":{"principal":"human:fieldops-reviewer-07","authorityBasis":"synthetic policy role inventory-reservation-reviewer","taskId":"task:fieldops-104","runId":"run:fieldops-001","proposalHash":"sha256:fieldops-proposal-001","resource":"https://synthetic.inventory.fieldops.example","partId":"part-A17","slotId":"slot-B2","quantity":1,"scope":"reservation:effect:one","evidenceView":"proposal-view-v1","issuedAt":"2026-08-16T09:05:00Z","expiresAt":"2026-08-16T09:10:00Z","oneUse":true,"used":false,"revoked":false},
+  "revocation":{"checkedBeforeEveryInvocation":true,"checkedBeforeEffect":true,"auditReasonRequired":true,"resumeRule":"revalidate principal, delegation, token audience/scope, approval, proposal, expiry, and run before transition"},
+  "attackFixtures":[
+    {"id":"changed-slot","mutation":{"slotId":"slot-C9"},"expected":"deny"},
+    {"id":"changed-part","mutation":{"partId":"part-Z1"},"expected":"deny"},
+    {"id":"other-run","mutation":{"runId":"run:fieldops-999"},"expected":"deny"},
+    {"id":"expired-approval","mutation":{"now":"2026-08-16T09:10:00Z"},"expected":"deny"},
+    {"id":"revoked-delegation","mutation":{"delegationRevoked":true},"expected":"deny"},
+    {"id":"cross-audience","mutation":{"tokenAudience":"https://synthetic.manuals.fieldops.example"},"expected":"deny"},
+    {"id":"credential-in-prompt","mutation":{"credentialExposedToModel":true},"expected":"deny"},
+    {"id":"session-only","mutation":{"principal":null,"sessionId":"session-123"},"expected":"deny"}
+  ],
+  "auditFields":["principal","servicePrincipal","agentId","taskId","runId","resource","audience","scope","proposalHash","approvalId","effectId","decision","reason","timestamp"],
+  "limitations":["This synthetic envelope is not enterprise IAM, legal consent, or regulated authorization.","OAuth token validity is necessary but not sufficient for business authority.","NIST agent identity material cited by the chapter is a concept paper, not a standard."]
+}

@@ -1,0 +1,380 @@
+---
+title: "Bind Identity, Delegation, and Consent"
+slug: "bind-identity-delegation-and-consent"
+summary: "Keep human, service, agent, task, resource, delegation, approval, and effect identities distinct while enforcing audience, scope, expiry, revocation, and audit."
+minutes: 85
+sourceIds: ["SRC-006", "SRC-007", "SRC-008", "SRC-009", "SRC-017", "SRC-024", "SRC-038", "SRC-044"]
+claimIds: ["CLM-011", "CLM-012"]
+objectiveIds: ["AGE-K01-01", "AGE-K03-01", "AGE-K05-01", "AGE-K09-01", "AGE-K11-01"]
+---
+
+# Bind Identity, Delegation, and Consent
+
+`AR-04 v1.0.0` defines five capabilities. Each contract contains a principal and scope field, but placeholder text is not authorization. If FieldOps copies a user's broad access token into model context, every prompt, tool argument, trace, and retrieved instruction becomes a possible credential boundary. If it treats the browser session as the user, a resumed run can inherit authority that was never revalidated. If an approval says only "allow reservation," a changed part or slot can pass under yesterday's consent.
+
+Identity must be separated before it can be bound.
+
+FieldOps distinguishes the human principal, service principal, agent instance, task, run, protected resource, delegation envelope, access token, proposal, approval, and effect record. Each has a different job. An access token proves something to a resource server under a protocol and policy. It does not by itself say that the business permits this reservation. A user interaction records a choice. It does not prove the person had formal authority.
+
+Current OAuth security guidance supports audience-restricted and least-privileged tokens, resource indicators, contemporary authorization-code protections such as PKCE, and avoidance of token passthrough. These controls are necessary for the applicable flows, but they are not sufficient for task delegation or effect approval. [CLM-011]
+
+This chapter creates `AR-05 v1.0.0`, a synthetic identity and delegation envelope that binds one FieldOps proposal to one principal, task, run, resource, scope, and time window. It is a teaching fixture, not enterprise IAM, legal consent, or regulated authorization.
+
+## 1. Separate the identity layers
+
+### Human principal
+
+The human principal is the person represented by a verified application identity. FieldOps uses `human:fieldops-reviewer-07`. The identifier is synthetic and says nothing about assurance level. A real system would carry issuer, authentication context, organizational status, and applicable policy references supplied by identity specialists.
+
+The human can request a task without being authorized for every effect. Request, benefit, review, and authorization are separate relationships.
+
+### Service principal
+
+The harness has its own workload identity: `service:fieldops-harness`. It authenticates to infrastructure and capability adapters. It is not the human and must not turn its broad service access into user authority. The adapter evaluates both service trust and delegated user/task scope.
+
+### Agent instance
+
+The agent instance identifies the bounded model-directed component participating in the run. `agent:fieldops-reader-001` is useful for policy, audit, and incident attribution. It is not a legal person and does not create independent authority. A new instance must not inherit a previous instance's delegation without an explicit rule.
+
+### Task and run
+
+`task:fieldops-104` identifies the governed objective; `run:fieldops-001` identifies one execution. Binding both prevents a token or approval created for one task from drifting into another and prevents replay across runs.
+
+### Resource
+
+The protected resource is the intended service audience, here `https://synthetic.inventory.fieldops.example`. Resource identity keeps a token intended for manuals from being presented to inventory. A resource can still be malicious or misconfigured; metadata and audience matching do not prove trust.
+
+### Proposal, approval, and effect
+
+The proposal is immutable intended effect content. The approval is one principal's scoped authorization for that exact proposal. The effect record is the service's authoritative account of what happened. None can substitute for another.
+
+This layered map reflects an emerging problem space discussed in a 2026 NIST NCCoE concept paper. That document is a concept paper, not a standard, control set, or completed reference architecture. FieldOps uses it only to frame identity and delegation questions. [CLM-012]
+
+<figure className="book-figure book-figure--pending" data-figure-id="F06.1" data-png="/assets/publications/agentic-ai-engineering/f06-1-narrowing-identity-gates.png">
+  <div role="img" aria-label="Pending colorful realistic 3D sequence of narrowing gates labeled User, Task, Agent, Tool, and Effect. A delegation parcel loses unrelated scopes at each gate, and the effect gate permits only one exact synthetic reservation. No relationship depends on color.">ImageGen raster pending: F06.1</div>
+  <figcaption><strong>F06.1 - Narrowing identity gates.</strong> Essential labels: User, Task, Agent, Tool, Effect. Evidence role: a least-privilege mental model, not identity or authorization proof.</figcaption>
+</figure>
+
+## 2. Respect the OAuth resource boundary
+
+OAuth answers a bounded protocol question: how a client obtains and presents access delegated under an authorization server's rules to a protected resource. An agent application still needs local task and effect semantics.
+
+### Audience restriction
+
+An access token should be usable only by its intended resource. RFC 8707 defines resource indicators for authorization requests, and current OAuth security practice supports audience restriction. RFC 9728 defines protected-resource metadata that can describe the resource's authorization-server relationship. Current MCP authorization uses these mechanisms for HTTP transports.
+
+FieldOps requests a token for the synthetic inventory audience. The inventory adapter rejects a token whose audience is the manuals service, even if the same user owns both. Cross-audience rejection prevents a compromised or confused component from turning one grant into a general credential.
+
+Metadata discovery must be constrained. The client validates configured origins, TLS, issuer relationships, and applicable security policy. A URL returned by untrusted content cannot redirect credential discovery. Metadata identifies protocol endpoints; it does not establish business trust.
+
+### Least privilege
+
+The delegation enumerates `equipment:read`, `manual:read`, `inventory:read`, `reservation:propose`, and `reservation:effect:one`. The resource server enforces scopes relevant to itself. A broad `inventory:admin` token would collapse the capability boundary even if the model usually calls only `reserve_part`.
+
+Scopes are necessary but coarse. `reservation:effect:one` still needs resource, part, slot, quantity, task, run, and approval checks. OAuth scope does not encode the whole action contract.
+
+### Authorization-code protection
+
+For applicable public-client authorization-code flows, current best practice includes PKCE and contemporary protections against code interception, mix-up, replay, and redirect abuse. FieldOps records `pkce: required` in the synthetic packet without teaching a full OAuth implementation. Identity specialists and the chosen authorization server own correct deployment.
+
+Use normative words carefully. RFC requirements apply within their stated protocol and threat-model context. They do not become universal claims about every local tool call.
+
+### No token passthrough
+
+The harness must not accept a token from a user or upstream client and blindly forward it to another resource as if it were intended for that service. Current MCP security guidance prohibits token passthrough in its context and emphasizes audience validation. FieldOps obtains or resolves a resource-appropriate credential through a trusted boundary. [CLM-011]
+
+Never place the token in model context. The run stores a credential reference. At invocation, a trusted adapter resolves the reference, validates delegation and resource, and attaches the token outside model-visible arguments. Logs record token metadata needed for audit, not the secret.
+
+## 3. Issue a delegation envelope
+
+A delegation envelope narrows human authority into task-specific permission. `AR-05` contains:
+
+- verified principal reference;
+- service and agent identities;
+- task and run IDs;
+- intended audience and resources;
+- enumerated scopes;
+- issue and expiry times;
+- consequence ceiling;
+- revocation state;
+- credential reference and resolution rule;
+- audit and policy versions.
+
+The consequence ceiling is "one synthetic reservation." It is not inferred from scopes. Product and formal authorities define whether such delegation is permitted. The agentic AI engineer makes the local representation enforceable.
+
+At every capability invocation, verify the principal, task, run, agent, audience, resource, scope, expiry, revocation, and current run state. Reads need no effect approval but still need delegation. Proposals need proposal scope. Effects need both delegation and an exact approval.
+
+Short lifetimes reduce blast radius but create refresh and waiting complexity. If FieldOps waits for human review until the delegation expires, resume cannot simply refresh in the background and continue. It must reestablish applicable identity and policy, then determine whether the old proposal and approval remain valid.
+
+Credential resolution occurs at the tool boundary. The model sees `credentialRef: inventory-for-run`, not a token. The adapter maps that reference to current credentials under platform and security controls. A retrieved manual asking for the token has no path to it.
+
+The envelope is not a portable universal standard. It is a local application contract that can be mapped to enterprise IAM. Cryptographic token format, workload identity, key management, federation, and authentication assurance remain specialist-owned.
+
+## 4. Bind approval to the exact effect
+
+Chapter 3 established exact approval fields. Chapter 6 adds verified identity, authority basis, audience, revocation, and resume behavior.
+
+The approval binds:
+
+- principal and authority basis;
+- task, run, and proposal hash;
+- protected resource;
+- part, slot, quantity, and scope;
+- evidence view shown during review;
+- issue and expiry times;
+- one-use, consumed, and revoked state.
+
+An approval interface can serialize a run, show a proposal, receive approve or reject, and resume later. Current SDK documentation demonstrates such mechanics. It does not establish whether the reviewer was authorized or whether the resumed proposal still matches. The local harness must enforce those properties. [CLM-012]
+
+Current MCP elicitation provides structured and URL interaction modes plus accept, decline, and cancel responses. It warns about sensitive data and session-only state binding. Elicitation is an interaction primitive, not authority proof. Never request passwords, tokens, or private credentials through a model-visible form.
+
+### Consent is contextual
+
+Use "consent" precisely. In this chapter it means an informed application interaction in which a verified principal accepts one described synthetic effect. It does not claim legal consent, clinical consent, privacy consent, or sector-specific authorization. Those meanings belong to their named authorities.
+
+The reviewer must see effect-relevant fields and consequence. A friendly summary can accompany them, but the displayed object and executed canonical proposal must be the same. If the proposal changes, the previous approval no longer matches.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F06.2" data-png="/assets/publications/agentic-ai-engineering/f06-2-bound-approval-parcel.png">
+  <div role="img" aria-label="Pending crisp realistic 3D sealed parcel labeled Proposal passing through a ring labeled Approval with a visible Expiry tab. A second parcel with an altered slot cannot fit the approval ring, and a replay marker is blocked after one use. No relationship depends on color.">ImageGen raster pending: F06.2</div>
+  <figcaption><strong>F06.2 - Bound approval parcel.</strong> Essential labels: Proposal, Approval, Expiry. Evidence role: a matching and replay scaffold; the depicted seal does not prove cryptographic or legal authority.</figcaption>
+</figure>
+
+## 5. Revalidate expiry, revocation, and resume
+
+Authority can change while a run waits.
+
+Before every invocation, FieldOps checks delegation expiry and revocation. Immediately before an effect, it repeats those checks and validates the approval. Revocation wins over cached eligibility. Expiry at the exact boundary is treated as expired in the fixture.
+
+Approval can be revoked independently of the access token. A user can retain permission to read inventory while withdrawing approval for this reservation. A token can be revoked while an approval record remains historically valid. Both must pass at dispatch.
+
+A consumed approval cannot be replayed. Consumption requires concurrency-safe enforcement in a real authority/effect boundary; the local fixture demonstrates only the semantic rule. If two workers race, storage and transaction design must ensure at most one permitted dispatch under the application's guarantee.
+
+Resume is a new decision point. Revalidate:
+
+1. principal status and authentication context;
+2. service and agent eligibility;
+3. task and run still active;
+4. token audience and scopes;
+5. resource still admitted;
+6. delegation not expired or revoked;
+7. proposal hash and effect fields unchanged;
+8. approval live, unused, and unrevoked;
+9. inventory and domain evidence still fresh;
+10. budgets and cancellation state.
+
+A serialized framework state can help resume control flow. It cannot carry stale authority across time.
+
+Audit every decision with principal, service principal, agent, task, run, resource, audience, scope, proposal hash, approval and effect identifiers, result, reason, and timestamp. Redact credentials. Preserve enough to distinguish authentication failure, audience mismatch, missing scope, proposal mutation, expiry, revocation, replay, and service failure.
+
+## 6. FieldOps attack lab
+
+Begin with one valid synthetic invocation. It carries the exact `AR-05` delegation, inventory audience, proposal, and live unused approval. The deterministic check passes.
+
+### Changed slot
+
+Replace `slot-B2` with `slot-C9`. Deny with `approval_slotId`. Compatibility does not matter; the effect is different.
+
+### Changed part
+
+Replace `part-A17` with another part. Deny with `approval_partId`. A category approval cannot cover substitution.
+
+### Another run
+
+Copy the approval into `run:fieldops-999`. Deny. Stable task and run binding prevents context replay.
+
+### Expired approval
+
+Evaluate at `expiresAt`. Deny. The time comparison is deterministic and does not ask the model whether the approval remains reasonable.
+
+### Revoked delegation
+
+Set delegation revocation before dispatch. Deny even though the token and approval have not yet expired. Record the revocation reason without exposing credential material.
+
+### Cross-resource audience
+
+Present a manuals-audience token to inventory. Deny. The presence of a valid signature or user identity does not make the token suitable for this resource.
+
+### Credential in prompt
+
+Attempt to pass a token through model-visible arguments. Deny and raise a security audit reason. The correct path is credential reference resolution inside the trusted adapter.
+
+### Session hijack
+
+Supply only `session-123` with no verified principal. Deny. A session locator can retrieve state; it is not a principal or authorization grant.
+
+Every attack ends with a typed decision and one terminal or recovery disposition. A denial does not ask the model to repair identity. It returns to a governed authorization flow or stops.
+
+## Follow the authorization path
+
+Walk one valid effect from login to verification without collapsing the identities.
+
+The user authenticates to the FieldOps application. The application receives a verified principal reference under its identity policy. This creates an application session, not a blanket grant to inventory.
+
+The user starts `task:fieldops-104`. Product policy permits a synthetic recommendation workflow. The task contract sets a maximum consequence of one approval-bound reservation. The harness creates `run:fieldops-001` and agent instance `agent:fieldops-reader-001`.
+
+For equipment and manual reads, the trusted credential component obtains or resolves resource-appropriate access. The model sees capability schemas and credential references only. Each adapter verifies audience, scopes, task, run, agent, resource, expiry, revocation, and policy before invoking the service.
+
+The agent gathers evidence and constructs a proposal. The harness canonicalizes it as part `part-A17`, slot `slot-B2`, quantity one, with task, run, resource, principal, and evidence references. The hash identifies exactly that representation.
+
+The approval interface displays the canonical effect fields and consequence to a reviewer. The authority service verifies the reviewer against a synthetic `inventory-reservation-reviewer` policy and issues an approval record. The UI did not create authority; it conveyed a proposal and collected a decision from an identity whose eligibility was checked elsewhere.
+
+The run may wait. At resume, the harness checks that the task and run remain live, that no cancellation occurred, and that the proposal has not changed. At dispatch, the capability adapter resolves a current inventory-audience credential, validates delegation and approval, checks expiry and revocation, and calls the narrow effect.
+
+The service authenticates the calling service, validates the resource token, and applies its own authorization. The local approval check remains necessary because a scope such as `reservation:effect:one` does not identify which exact proposal was accepted.
+
+After execution, the harness records and verifies the effect. Audit connects principal, service, agent, task, run, token metadata, proposal, approval, policy decision, key, effect, and completion. Each identity retains its own meaning.
+
+This path has several enforcement points. A valid user session can coexist with an invalid resource token. A valid token can coexist with a revoked task delegation. A valid delegation can coexist with an expired approval. A valid approval can coexist with stale inventory. Execution requires all applicable predicates.
+
+## Distinguish authentication, authorization, delegation, and consent
+
+**Authentication** establishes confidence that an actor or workload corresponds to an identity under a mechanism and policy. It does not answer what the identity may do in this task.
+
+**Authorization** is a decision that a principal may perform an operation on a resource under policy. OAuth access and resource-server policy are part of this layer. Authorization can be necessary without encoding the product's exact effect contract.
+
+**Delegation** narrows one principal's authority into a task, agent, resource, scope, consequence, and duration. It explains why this agent instance may invoke a capability for this run.
+
+**Consent or approval interaction** records an informed choice about a described proposal. Formal meanings vary by domain and law. FieldOps uses a deliberately narrow synthetic application meaning.
+
+These can fail independently. A principal may authenticate successfully but lack effect scope. A token may be valid for inventory while the task delegation is expired. A reviewer may click approve but lack the authority basis. An eligible reviewer may approve a proposal that later changes. The harness needs reason codes precise enough to identify the failed layer.
+
+Avoid messages that leak security detail to an untrusted caller. The audit can record `audience_mismatch` while the model receives a bounded `DENIED` disposition and allowed next step. Security owners determine disclosure policy.
+
+## Design revocation as a first-class event
+
+Revocation is not merely token expiry ahead of schedule. Different objects can be revoked:
+
+- user or service identity eligibility;
+- task delegation;
+- access token or credential reference;
+- agent instance admission;
+- approval for one proposal;
+- resource or capability version;
+- the run itself through cancellation.
+
+Each revocation event names object, issuer, authority basis, effective time, reason, affected scope, and audit reference. The harness checks the relevant revocation sources at invocation and immediately before effect.
+
+Caching creates a trade-off. A long cache improves latency and weakens revocation responsiveness. Set maximum staleness according to consequence and infrastructure guarantees. An effect gate may require an online check even when reads accept a short-lived cached decision.
+
+If revocation arrives during an in-flight effect, record the ordering that the local system can establish. Prevent future calls and reconcile the possible outcome. Do not claim revocation can undo a committed reservation.
+
+Approval revocation should invalidate waits and resumes. A later approval for the same effect is a new record with its own time and authority evidence, not removal of the revocation history.
+
+## Bind audit to decisions
+
+An authorization audit should answer:
+
+1. Which principal initiated and which principal approved?
+2. Which service and agent instance acted?
+3. Which task and run governed the call?
+4. Which resource and audience received it?
+5. Which scopes and resource constraints were evaluated?
+6. Which proposal and effect fields were bound?
+7. Which policy, delegation, credential metadata, and approval versions applied?
+8. Were expiry, revocation, and one-use checks current?
+9. What decision and reason resulted?
+10. Which effect and verification records followed?
+
+Audit fields need provenance. A model-generated `principalId` is untrusted input. The trusted boundary supplies or verifies identity references. Event schemas should say which actor asserted each field.
+
+Protect the audit itself. Apply access control, integrity mechanisms, retention, redaction, and deletion policy. A log containing tokens or personal content can become a new breach surface. Credential value is never required to prove that a token reference, issuer, audience, scope, and expiry were checked.
+
+Audit is evidence, not automatic accountability. Owners must review denials, revocations, replay attempts, and anomalous scope. Product and governance teams decide which events require user notice or incident response.
+
+## Identity and delegation design review
+
+Create four linked maps.
+
+The **identity map** lists humans, workloads, agents, tasks, runs, and resources, along with issuer and assurance references. The **authority map** lists who can request, delegate, approve, execute, revoke, and verify each effect. The **credential map** lists audience, scopes, storage boundary, resolution point, rotation, expiry, and revocation. The **audit map** links every decision to evidence and owner.
+
+Review for confused-deputy risk. Can the harness use its service credential on behalf of an unauthorized task? Can one resource trick it into presenting a token to another? Can untrusted content choose an authorization endpoint? Can one tenant or user supply an identifier for another resource? Audience, task binding, resource validation, and trusted configuration address different parts of this problem.
+
+Review for authority laundering. Can a model turn a read scope into an effect through a broad capability? Can one approver's category confirmation be attached to a changed proposal? Can a handoff or resumed session lose the original principal? Exact contract and proposal binding prevents the authority chain from becoming narrative.
+
+Review for credential leakage. Search model inputs, tool arguments, traces, errors, event payloads, analytics, and support exports. Use synthetic canary values in tests. The correct design exposes credential references only to the model-facing region and resolves secrets in the trusted adapter.
+
+Review for lifecycle gaps. What happens when employment status changes, a task is cancelled, an agent version is withdrawn, a token expires, an approval is revoked, a resource changes issuer, or a run resumes after deployment? Each event needs a revalidation or terminal rule.
+
+## Negative-test matrix
+
+Mutation tests should isolate one binding at a time.
+
+Change the **principal** while preserving the token and proposal: deny. Change the **service principal** to an unadmitted workload: deny. Change the **agent instance**: deny unless policy explicitly reissues delegation. Change the **task** or **run**: deny. Change the **resource** or **audience**: deny. Remove a required **scope**: deny. Add a broader scope to the request without authority: deny.
+
+Move time to the exact **delegation expiry**: deny. Revoke the delegation one instant before effect: deny. Keep delegation live but revoke the **approval**: deny. Mark approval used: deny replay. Change the proposal hash, part, slot, quantity, or scope: deny. Change only a non-effect display field: canonicalization rules determine whether the proposal hash changes; the rule must be stable and reviewed.
+
+Expose a credential to the model: deny and audit. Supply a session with no principal: deny. Present a token from a different issuer or unsupported authentication context: deny under enterprise policy. Attempt to use an inventory token at manuals: deny at the manuals resource too.
+
+For each test, assert the reason, absence of capability dispatch, stable run identity, and one final disposition. A 401 or 403 response alone is not enough if the harness then asks the model to try another token.
+
+## Review `AR-05 v1.0.0`
+
+The dossier now names six identity objects, one task-specific delegation, a no-passthrough credential rule, one exact approval, two revocation checkpoints, eight attack fixtures, and a minimum audit field set.
+
+The controls narrow capability but do not prove formal authority, legal consent, or enterprise assurance. OAuth validity is necessary for the resource interaction and insufficient for the business effect. The NIST source is problem framing only. Provider approval and elicitation mechanisms are examples, not universal protocols for authority.
+
+The trade-off is visible. Narrow audience, scope, and time create more authorization round trips. Revalidation adds latency. Exact approvals can become stale. Those costs purchase a smaller blast radius and a traceable connection between principal and effect. Product and authority owners decide acceptable interaction; the harness prevents convenience from silently broadening permission.
+
+## Common identity mistakes and trade-offs
+
+**Token equals authority.** A valid token represents protocol authorization for its resource and scopes. It does not automatically authorize a particular business effect.
+
+**Session equals principal.** A session is a state locator and interaction mechanism. Bind it to a verified principal through trusted application controls and revalidate on resume.
+
+**User equals service.** The harness uses workload credentials to reach infrastructure. Preserve the human delegation instead of attributing every call to the service or forwarding a broad user credential.
+
+**Approval by category.** "Allow inventory action" cannot authorize an exact reservation. Bind part, slot, quantity, resource, task, run, proposal hash, and time.
+
+**Long reusable delegation.** Broad scopes and long lifetimes reduce prompts while increasing blast radius. Narrow by task, resource, consequence, and duration, then design an explicit refresh path.
+
+**Credential in prompt or tool arguments.** The model does not need the secret. Resolve a reference inside a trusted adapter and keep credential values out of context, traces, and errors.
+
+**Revocation checked only at login.** A run can wait longer than the authority remains valid. Check at invocation, resume, and immediately before effect.
+
+**OAuth as a complete consent system.** OAuth solves defined authorization delegation problems. Business authority, legal consent, and domain-specific approval need additional policies and owners.
+
+**Agent identity as personhood.** Agent instance identity supports policy and attribution. It does not make the software an independent legal or moral principal.
+
+Narrow delegation increases authorization traffic and can frustrate users. Reduce unnecessary friction by separating low-consequence reads from effects, caching only within governed staleness, presenting clear exact proposals, and preserving resumable state. Do not reduce friction by making approval vague or tokens broad.
+
+Audience-specific credentials increase token-management complexity. They also limit cross-resource misuse. Platform and identity teams may provide token exchange, workload identity, or brokered resolution; the agentic layer still maintains task and effect bindings.
+
+Exact proposal hashes can become brittle if canonicalization includes irrelevant display fields. Define the canonical effect representation carefully. Include every field that changes consequence or execution; exclude presentation-only data through a versioned reviewed rule. Preserve the evidence view shown to the approver.
+
+## Reader authority drill
+
+For each statement, identify what is proven and what remains missing.
+
+"The user is logged in." Authentication may be current. Effect scope, task delegation, approval, and resource audience remain to be checked.
+
+"The access token contains `reservation:effect:one`." The resource scope may be present. Exact proposal authority, task/run binding, expiry, revocation, and effect budget remain.
+
+"The user clicked approve." An interaction occurred. Verify principal identity, authority basis, displayed proposal, exact binding, time, and one-use state.
+
+"The run was serialized after approval." State exists. On resume, revalidate every live condition; serialization is not an authority vault.
+
+"The token signature is valid." Cryptographic verification may pass. Issuer, audience, expiry, scopes, resource policy, and application delegation can still fail.
+
+"The NIST paper recommends agent identity." The cited document frames current challenges as a concept paper. It is not a finalized standard or assurance claim.
+
+"The same person approved yesterday." Identity continuity does not preserve approval. This proposal, run, resource, policy, and validity window need a current matching record.
+
+"The service account can reserve stock." Technical access held by a service is not proof that this task has delegated human or organizational authority.
+
+## Phase 7 handoff fields
+
+Chapter 7 will classify workflow truth, model context, scratch state, durable artifacts, and memory. `AR-05` supplies the permission metadata every class needs: principal, service, agent, task, run, resource, audience, scope, issue and expiry times, revocation state, proposal and approval references, effect ID, and audit reason.
+
+State objects must not outlive their authority silently. A memory derived under one principal or resource scope cannot be retrieved by another merely because it is relevant. A resumed artifact must retain provenance and permission references. A model-context summary cannot contain credentials or become authority.
+
+Deletion and retention decisions remain with privacy, legal, product, platform, and domain owners. The agentic engineer ensures that state carries enough identity and provenance to enforce those decisions and to explain when evidence is unavailable.
+
+## Learning lab
+
+Build an identity map and delegation packet for the five FieldOps capabilities. Keep human, service, agent, task, run, resource, token, proposal, approval, and effect separate. Run changed-part, changed-slot, other-run, expiry, revocation, cross-audience, credential-exposure, and session-only tests.
+
+Score 20 points: identity separation 5, audience/scope 5, approval binding 6, revocation/audit 4. Automatic failure occurs if a token is placed in model context, a session is treated as authority, a changed effect passes, or resume skips revalidation.
+
+## Chapter checkpoint
+
+FieldOps now has an explicit loop, five typed capabilities, and application-level identity and delegation. `AR-05 v1.0.0` hands Chapter 7 principal, agent, task, run, resource, audience, scope, expiry, revocation, proposal, approval, and effect fields. The next chapter can apply ownership, provenance, permissions, retention, and deletion to every state object without collapsing context into authority.

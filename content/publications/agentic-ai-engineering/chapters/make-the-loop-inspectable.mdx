@@ -1,0 +1,328 @@
+---
+title: "Make the Loop Inspectable"
+slug: "make-the-loop-inspectable"
+summary: "Translate the task contract into explicit run states, events, deterministic gates, cancellation, replay, and externally verified completion."
+minutes: 85
+sourceIds: ["SRC-003", "SRC-019", "SRC-020", "SRC-040"]
+claimIds: ["CLM-007", "CLM-008"]
+objectiveIds: ["AGE-K01-01", "AGE-K02-01", "AGE-K10-01"]
+---
+
+# Make the Loop Inspectable
+
+`AR-02 v1.0.0` says what FieldOps may do. It names the goal, action classes, effect boundary, exact approval, budgets, stop rules, and completion evidence. Yet a contract cannot advance itself. Between request and disposition, something must observe state, ask a model for a proposal, validate that proposal, perform an allowed action, inspect the result, and decide what happens next.
+
+If that "something" is hidden inside a framework call, the team can watch text appear without knowing which rule advanced the run. If chat history is treated as state, a summary may silently erase a cancellation or consumed approval. If the model can declare success, the system may congratulate itself before an effect exists.
+
+FieldOps therefore turns the run into an engineered object. Its identity is stable. Its states and transitions are enumerated. Model output is a proposal. Deterministic software admits or rejects every transition. Events carry evidence references. Completion is checked outside the model. A run loop can branch on final output, tool calls, or handoffs and can be bounded in software, although any particular SDK is only one implementation of that pattern. [CLM-007]
+
+The result is `AR-03 v1.0.0`: a provider-neutral state and event contract that can be replayed with a deterministic policy double before real capabilities are exposed.
+
+## 1. Treat the run as an engineered object
+
+A run is not a conversation. It is one governed attempt to complete one versioned task contract.
+
+The minimum identity packet contains:
+
+- `runId`: stable across waits, retries, and recovery;
+- `attempt`: distinguishes a recovery attempt without inventing a new task;
+- `taskId`: links the run to its delegated goal;
+- `contractVersion`: identifies `AR-02` semantics;
+- `policyVersion`: identifies deterministic enforcement;
+- `modelAdapterVersion`: identifies how provider output was normalized;
+- `createdAt`, deadline, and current disposition;
+- budget limits and monotonic counters;
+- principal and authority references, never raw credentials;
+- evidence and event-stream references.
+
+The run ID does not change because the model is called again. It does not change when the process restarts. A new attempt may resume the same run after a technical failure, but the attempt number increases. A materially new goal, principal, or proposal creates a new governed object rather than borrowing the old history.
+
+Keep configuration separate from accumulated state. Limits belong to the accepted run contract. Counters belong to the current run. Provider messages are observations attached to events; they are not the canonical task, budget, approval, or effect ledger.
+
+This separation prevents a subtle failure. Suppose the conversation is summarized while FieldOps waits for approval. The summary says "the reservation was approved" because it paraphrases a user message. Canonical state still says `WAITING_HUMAN`, and the authority store has no matching approval record. The summary cannot advance the run.
+
+The run also has exactly one terminal disposition. `COMPLETED`, `FAILED`, `CANCELLED`, and `ESCALATED` are mutually exclusive in `AR-03`. Later designs may add more terminal kinds, but they must preserve the invariant: once terminal, no ordinary proposal can reopen the run.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F04.2" data-png="/assets/publications/agentic-ai-engineering/f04-2-transparent-run-capsule.png">
+  <div role="img" aria-label="Pending colorful realistic 3D transparent capsule with compartments labeled Run, Events, Budgets, Cancel, and Disposition. A stable run identity surrounds ordered events, monotonic budget counters, a cancellation latch, and one terminal disposition. No relationship depends on color.">ImageGen raster pending: F04.2</div>
+  <figcaption><strong>F04.2 - Inspectable run capsule.</strong> Essential labels: Run, Events, Budgets, Cancel, Disposition. Evidence role: a mental model of run identity and controls, not runtime proof.</figcaption>
+</figure>
+
+## 2. Build an explicit state machine
+
+`AR-03` uses thirteen states.
+
+`CREATED` means identity and immutable configuration exist but execution has not begun. `OBSERVING` collects trusted structured observations. `DECIDING` is the only region where a model selects a next proposal. `VALIDATING` applies deterministic schema, contract, state, authority, and budget checks. `EXECUTING` calls a capability that passed those gates. `VERIFYING` checks claimed completion or effect evidence. `WAITING_HUMAN` and `WAITING_EXTERNAL` suspend progress without losing state. `RECOVERING` reconciles an ambiguous outcome. Four terminal states close the run.
+
+The normal read loop is:
+
+1. `CREATED` receives `run.started` and enters `OBSERVING`.
+2. `OBSERVING` records an observation and enters `DECIDING`.
+3. `DECIDING` accepts a model proposal and enters `VALIDATING`.
+4. `VALIDATING` either denies, waits, or admits the action.
+5. `EXECUTING` records a read result and returns to `OBSERVING`.
+
+An effect follows a stricter path. Validation can enter `WAITING_HUMAN`. A matching approval returns to `VALIDATING`, not directly to execution, because expiry, cancellation, inventory, policy, and budget must be checked again. Execution then enters `VERIFYING` when an effect record exists, or `RECOVERING` when the response is ambiguous. Only `completion.verified` can enter `COMPLETED`.
+
+Each transition has a single accepted event type. The harness rejects `completion.verified` from `DECIDING`; it cannot be used as a shortcut. It rejects tool results while `WAITING_HUMAN`. It rejects every action from a terminal state.
+
+Global cancellation is deliberately asymmetric. Any nonterminal state can receive `run.cancelled` and become `CANCELLED`. The model does not vote on cancellation. If a capability is already in flight, the harness signals cancellation where possible, prevents subsequent transitions, and records whether an external effect still requires reconciliation. Cancellation stops future work; it does not erase a committed effect.
+
+Transitions should be total over expected events. For every state, define what happens on valid input, invalid input, timeout, cancellation, and internal failure. "Framework handles it" is not a transition. If an event is impossible by design, reject it and record the reason.
+
+### Transition invariants
+
+Several assertions apply to every move:
+
+- `run.identity.stable`: `runId` and `taskId` do not change.
+- `event.sequence.next`: sequence increases by one.
+- `state.transition.declared`: the state-event-state edge exists.
+- `terminal.unique`: a terminal state cannot transition again.
+- `budget.counter.monotonic`: counters never decrease.
+- `contract.version.fixed`: accepted semantics do not drift mid-run.
+- `proposal.not_authority`: model output cannot satisfy authorization.
+- `effect.evidence.required`: effect progress references the ledger.
+
+These are code assertions, not prompt instructions.
+
+## 3. Draw the model/code boundary
+
+At `DECIDING`, the model receives a bounded view: task objective, current observations, permitted proposal schemas, remaining non-sensitive budget hints, and relevant failure reasons. It can emit one of a finite set of proposals: request an approved observation, form a reservation proposal, ask for clarification, escalate, or suggest completion.
+
+The adapter parses provider-specific output into a local proposal. Raw output is preserved as evidence by version, but the rest of the system consumes only the local type.
+
+Validation then proceeds in a fixed order:
+
+1. Is the run nonterminal and not cancelled?
+2. Is the proposal syntactically valid?
+3. Is the action enumerated in `AR-02`?
+4. Is the transition legal from the current state?
+5. Do task preconditions and evidence exist?
+6. Are budgets available?
+7. Is principal, scope, audience, and authority valid?
+8. Is the capability version admitted?
+9. Does the proposal require a wait, escalation, denial, or execution?
+
+Order matters. Reject malformed arguments before expensive policy queries. Check cancellation again before effect dispatch. Never let a helpful model explanation override a denial reason.
+
+The model may propose `complete`. The harness translates this into a verification request, not a terminal transition. It checks the completion predicate defined in `AR-02`. For the reservation outcome, FieldOps requires compatibility evidence, fresh inventory evidence, exact approval, an effect record, and a verification record. "Done" in model output is one observation and nothing more.
+
+A model's success declaration is evidence, not the completion predicate. Deterministic assertions should verify structured state and effects where possible. Qualitative tasks may require a calibrated human or model grader, but that grader must be identified, evaluated, and kept distinct from the acting model. [CLM-008]
+
+This limitation matters. Some writing or research tasks have no purely mechanical quality predicate. Independent grading can support completion, yet it introduces its own uncertainty. FieldOps avoids claiming that all agent tasks can be completed through deterministic assertions; it claims that reservation state and contract invariants can.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F04.1" data-png="/assets/publications/agentic-ai-engineering/f04-1-loop-track.png">
+  <div role="img" aria-label="Pending crisp realistic 3D loop track labeled Observe, Decide, Validate, Act, Verify, and Stop. Decide is marked as the model proposal point; Validate, budgets, cancellation, authority, and Verify are marked as deterministic gates. An invalid branch reaches Stop. No relationship depends on color.">ImageGen raster pending: F04.1</div>
+  <figcaption><strong>F04.1 - Inspectable action loop.</strong> Essential labels: Observe, Decide, Validate, Act, Verify, Stop. Evidence role: a causal control scaffold, not proof that any implementation enforces the gates.</figcaption>
+</figure>
+
+## 4. Make events replayable
+
+State tells where the run is. Events explain how it arrived there.
+
+Every `AR-03` event carries an event ID, sequence, run ID, attempt, actor, type, timestamp, previous and next state, contract and policy versions, budget snapshot, reason, and nullable references to observation, proposal, validation, and effect evidence. The event record stores identifiers and decisions. Larger or sensitive payloads live in governed stores and are referenced.
+
+Events are append-only facts about what the harness observed and decided. They are not always facts about the external world. `effect.dispatch.returned` can record a response, but only the effect ledger or authoritative service establishes whether the reservation committed. A trace is an evidence index, not the source of truth for the effect.
+
+Provider tracing documentation offers useful vocabulary for runs, agents, models, functions, guardrails, and handoffs. That vocabulary is one current implementation. FieldOps preserves its own stable event contract and maps provider spans into it. [CLM-007]
+
+Replay folds ordered events over an initial run record. It must reproduce state, counters, waits, and terminal disposition without calling a model or tool. If replay needs a provider API, the local event contract is incomplete.
+
+Replay has three uses. During diagnosis, it reveals the first invalid transition. During evaluation, it verifies invariants across many trajectories. During migration, it tests whether a new harness version interprets old events compatibly. It does not recreate unrecorded external reality and cannot prove that a trace was truthful.
+
+Store raw provider evidence separately when useful. A local proposal references the raw output, adapter version, and parse result. If the adapter changes, engineers can explain why the same provider output would map differently without mutating the original event.
+
+### Privacy and evidence minimization
+
+Inspectability does not mean copying every prompt, token, credential, and record into one trace. For each field, decide whether to retain raw content, a redacted view, a hash, a typed summary, or only an external reference. Security and privacy owners define formal policy. The harness owns faithful enforcement and clear gaps.
+
+Never place access tokens, secrets, or approval credentials in model context or trace payloads. Preserve enough semantic information to reconstruct the decision: resource identifier, scope, policy decision, proposal hash, effect ID, and reason code.
+
+## 5. Enforce limits and cancellation
+
+`AR-03` starts with four budgets: turns, actions, elapsed milliseconds, and effects. Real systems may add tokens, money, reads per source, approval attempts, queue time, or retrieved bytes. Each counter is monotonic and checked before the governed action.
+
+A single global timeout is inadequate. It cannot explain whether a run exhausted reasoning turns, tool calls, an external wait, or effect attempts. Separate budgets produce precise dispositions and safer recovery.
+
+When a read action reaches its limit, the harness denies it and moves to failure or escalation according to policy. The model cannot negotiate extra budget. A principal or operator can create a new governed decision if policy allows, with an event explaining the change.
+
+Cancellation requires three checks: on receipt, before every new proposal or tool dispatch, and immediately before an effect. A model that ignores a cancellation message is irrelevant because the harness state is authoritative. A capability that cannot be interrupted may still finish; the run records its late result without allowing a new action and reconciles any possible effect.
+
+Waiting states need leases. `WAITING_HUMAN` records what exact approval is required and when it expires. `WAITING_EXTERNAL` records the external condition, next check, and deadline. Resume revalidates contract, principal, authority, resources, budgets, and cancellation. A process wakeup is not permission to continue.
+
+## 6. Deterministic FieldOps fault lab
+
+The companion uses a policy double instead of a live model. The double emits predefined proposals so every fault is reproducible.
+
+### Fault 1: unavailable-tool loop
+
+The double repeatedly asks for a tool that is not in the admitted catalog. Validation denies the proposal. Repetition consumes the configured action or turn budget. The run ends `FAILED` with `action_budget_exhausted`; it never invents the tool or spin forever.
+
+### Fault 2: early success
+
+After reading a manual, the double emits `complete`. Verification finds no fresh inventory, approval, effect, or verification record. The run remains non-complete and ends with missing-evidence reasons. The final prose is not graded as a reservation.
+
+### Fault 3: invalid arguments
+
+The double proposes inventory lookup without `partId`. Schema validation denies dispatch. The invalid call never reaches a capability adapter. One bounded revision may be allowed; repeated invalidity reaches a terminal disposition.
+
+### Fault 4: ignored cancellation
+
+Cancellation enters while the double is deciding. The double still emits a proposal. The harness sees terminal `CANCELLED` and rejects it. Stable run identity and sequence show which event won.
+
+### Fault 5: repeated effect
+
+After one reservation effect, the double proposes it again. The effect counter is already one. The harness rejects the second dispatch even if the proposal and approval look valid. Chapter 5 will add idempotency and reconciliation inside the capability boundary.
+
+### Fault 6: illegal transition
+
+The double emits a tool result while the run waits for approval. No declared transition matches. The harness records `illegal_transition`, preserves the waiting state or moves to the specified failure disposition, and alerts the owner.
+
+Diagnose each fault in order: event validity, legal transition, contract assertion, budget, effect evidence, terminal disposition. Starting with model reasoning can waste time because invalid state may fully explain the behavior.
+
+## Walk a FieldOps run event by event
+
+Start with `run-fieldops-001` in `CREATED`. The immutable record points to `AR-02@1.0.0`, `fieldops-policy@1`, and `deterministic-double@1`. Counters are zero. No model message exists yet.
+
+`run.started` moves the run to `OBSERVING`. The observer reads the synthetic request through a governed adapter and emits `observation.recorded`. Its event refers to the request record, source revision, and redacted content view. The next state is `DECIDING`.
+
+The policy double emits `read_equipment` with one equipment identifier. The adapter creates a local proposal record. `proposal.emitted` moves to `VALIDATING`; it does not dispatch anything. Validation checks the schema, action catalog, read scope placeholder, resource, action budget, and current state. `proposal.allowed` enters `EXECUTING`.
+
+The capability double returns a typed equipment observation. The harness validates output before recording it. `observation.received` returns to `OBSERVING`, then `observation.recorded` returns to `DECIDING`. The action counter is one and cannot decrease.
+
+The same sequence gathers a manual passage and inventory record. Each loop produces distinct proposal, validation, dispatch, observation, and state events. A trace viewer may group them visually, but the event contract retains the causal order.
+
+The double next proposes a reservation. `propose_reservation` is not an effect, so validation can execute canonicalization after checking evidence. The output includes a proposal hash. When the model proposes `reserve_part`, validation sees that an exact approval is required and emits `approval.required`, entering `WAITING_HUMAN`.
+
+The process can stop. The event stream and run record persist. The model does not remain "alive" in a conversation. On approval receipt, a trusted input records the approval reference. The transition returns to `VALIDATING`, because every live precondition must be checked again.
+
+Assume validation passes and `reserve_part` executes. The synthetic service returns an effect record. The harness enters `VERIFYING`, reads the authoritative result, and evaluates the completion predicate. `completion.verified` enters `COMPLETED`. The terminal event records every evidence reference and a final budget snapshot.
+
+Now alter one fact. If the service commits but the response times out, `effect.ambiguous` enters `RECOVERING`. Chapter 5 defines the ledger lookup, but the state contract already prevents a blind transition back to execution. If cancellation arrives during recovery, `CANCELLED` becomes the disposition while reconciliation work is recorded as an operational obligation. Cancellation does not rewrite the effect history.
+
+This walkthrough shows why one undifferentiated `RUNNING` state is inadequate. It cannot say whether the system is thinking, validating, awaiting authority, executing an effect, or verifying an outcome. Those distinctions determine what may happen next.
+
+## Design the event vocabulary
+
+Event names should describe observed facts or harness decisions, not aspirations. `proposal.emitted` means an adapter produced a parseable local proposal. It does not mean the proposal is allowed. `proposal.allowed` records a deterministic validation outcome. `effect.recorded` means a referenced effect record exists. `completion.verified` means the named predicate passed.
+
+Avoid names such as `agent.finished`, `tool.success`, or `task.done` unless their exact semantics are defined. They mix actor opinion, transport response, and product outcome.
+
+Use a three-part event pattern when helpful: subject, change, qualifier. Examples include `observation.recorded`, `proposal.denied`, `approval.expired`, `effect.ambiguous`, and `completion.rejected`. Stable reason codes carry detail without creating a new event type for every message.
+
+Actors are typed. `model` can emit a proposal. `harness` can decide a transition. `human-principal` can supply an approval reference. `capability-adapter` can record a validated result. `resource-service` can be the source of an effect record. Attribution does not confer authority; it makes the chain inspectable.
+
+Event timestamps help order and diagnose, but sequence is assigned by the run's authoritative writer. Wall clocks can skew. A real distributed design must define concurrency and ordering; Chapter 10 will address durable execution. `AR-03` assumes a single local semantic transition writer.
+
+### Evidence references and integrity
+
+An event reference should resolve to immutable or versioned evidence. Store the identifier, type, content hash where appropriate, retention class, and access rule. If evidence is later deleted under policy, retain a tombstone explaining what type existed and why it is unavailable, subject to privacy and legal requirements.
+
+Do not calculate correctness from the trace alone. A malicious or faulty adapter could emit a well-shaped event without performing the effect. Verification queries the authoritative resource. Trace integrity, service truth, and policy correctness are separate assertions.
+
+## Specify the provider adapter
+
+Provider APIs represent messages, tool calls, handoffs, and final output differently. The adapter has four jobs.
+
+First, it builds the bounded model input from canonical state. It never lets chat history overwrite contract or authority. Second, it preserves raw provider output with provider and model version. Third, it parses that output into one local proposal type or a typed parse failure. Fourth, it emits metrics about context size, latency, and parse behavior without granting the provider response direct access to capabilities.
+
+The local proposal union might contain `ObserveAction`, `ProposeEffect`, `RequestClarification`, `RequestEscalation`, and `SuggestCompletion`. Unknown provider output becomes `INVALID_PROPOSAL`. A provider-specific handoff is not accepted unless the local architecture has an admitted handoff type; FieldOps has none in this chapter.
+
+Adapters must be tested against recorded raw outputs. A model upgrade and an adapter upgrade are separate changes. Replaying old raw evidence through a new adapter can reveal mapping drift, but production history retains the mapping originally used.
+
+Framework convenience is welcome behind this seam. A framework may implement tool dispatch, traces, or resumable state. The team still owns the local transition contract. If the framework can call a tool without producing the required validation event, wrap or reject that path.
+
+## Make completion a proof obligation
+
+Completion has three layers.
+
+**Structural completion** says the run is in a legal terminal state with required event and evidence references. **Task completion** says the `AR-02` predicate is satisfied. **Outcome quality** says the result meets the product or domain standard, which may require evaluation or human judgment.
+
+FieldOps reservation completion is largely structural and task-verifiable. It needs the exact effect and authoritative verification. The claim does not extend unchanged to a research report, design, or conversation. Those outputs may need rubric-based graders, expert review, or later real-world evidence. [CLM-008]
+
+Never use the acting model as the only grader of its own success. An independent model grader can still share correlated errors. Calibrate it against human judgments, version it, record uncertainty, and reserve human escalation for consequential or ambiguous cases. Evaluation guidance supports inspecting trajectories and outcomes rather than accepting a final answer, but local grader validity must be demonstrated.
+
+For every completion assertion, record:
+
+- predicate ID and version;
+- required evidence types;
+- evaluator and its authority;
+- evaluation time and input references;
+- pass, fail, or indeterminate result;
+- uncertainty or disagreement;
+- terminal transition allowed by each result.
+
+`indeterminate` should not become success. It may trigger additional evidence, human review, escalation, or failure according to consequence.
+
+## Operational review packet
+
+Ship `AR-03` with six review views.
+
+The **state table** lists purpose, legal inputs, legal outputs, timeouts, cancellation, and owner for every state. The **transition table** maps state and event to next state, guard assertions, counter deltas, evidence, and failure disposition. The **event dictionary** defines every type and field. The **budget sheet** defines units, limits, owners, and exhaustion behavior. The **completion sheet** maps predicates to authoritative evidence. The **fault suite** supplies deterministic traces and expected dispositions.
+
+Review the packet with product, platform, model, security, domain, and authority owners. Product checks dispositions and completion meaning. Platform checks scheduler and store assumptions. Model specialists check adapter evidence. Security checks sensitive fields and denial paths. Domain owners check predicates. Formal authority owners check waits and effect gates.
+
+The agentic AI engineer remains primary for local run semantics. The role does not claim ownership of the generic scheduler, event store, model quality, domain truth, or formal authority.
+
+## Review `AR-03 v1.0.0`
+
+The dossier now contains thirteen states, sixteen local transitions, two global terminal transitions, four budgets, a required event field set, an external completion predicate, and six fault fixtures. The deterministic library demonstrates legal replay, illegal-transition rejection, cancellation precedence, stable run identity, monotonic counters, and independent completion.
+
+The architecture adds explicit code. That is intentional. Hidden loops are concise until a failure must be explained, resumed, evaluated, or migrated. Explicit state creates a controlled seam for those later obligations.
+
+It does not eliminate nondeterminism, prove model correctness, provide a distributed transaction, or replace a platform event store. Chapter 10 owns durable execution across crashes. Chapter 15 owns production telemetry. Here the agentic AI engineer owns the local semantic contract they must preserve.
+
+## Common loop failures and design trade-offs
+
+**Chat history as state.** A conversation can omit, reorder, summarize, or reinterpret control facts. Keep it as model context derived from canonical state. Never calculate remaining effect budget or authority from prose.
+
+**One opaque framework loop.** A framework may be reliable, but the application still needs to know which transition and assertion each callback represents. Adapt framework events into local semantics and reject routes that bypass them.
+
+**Model self-certification.** Asking "Are you done?" can help elicit a proposal. It cannot establish completion. Verify task predicates and authoritative effects independently.
+
+**One global timeout.** A global deadline prevents infinite runtime but provides weak diagnosis. Add turn, action, effect, and wait budgets with clear exhaustion dispositions.
+
+**Trace as source of truth.** A trace shows what instrumentation recorded. It may be incomplete or wrong about an external service. Link to authoritative observations and verification.
+
+**Cancellation as a prompt message.** A model may overlook or resist a message. Cancellation is a harness state checked before dispatch and enforced outside the model.
+
+**Recovery by replaying the last call.** An interrupted effect can already have committed. Enter reconciliation with the original idempotency identity rather than repeating output from chat history.
+
+Explicit states create more code and schema evolution. They also create places to attach tests, migration, operational ownership, and evidence. Do not create a state for every internal line of code. Create one when the legal actions, authority, waiting behavior, evidence obligations, or recovery differ.
+
+Event detail has a similar trade-off. Too little detail makes replay meaningless. Too much copies sensitive payloads and binds storage to provider formats. Preserve stable semantic fields and governed references, then retain raw evidence only where justified.
+
+Deterministic enforcement can become rigid. Expose policy variables such as limits and allowed capability versions, but keep their types, owners, ranges, and versions explicit. Flexibility is governed configuration, not a model escape clause.
+
+## Reader review drill
+
+Diagnose each statement by naming the missing state or assertion.
+
+- "The tool returned, so ask the model what to do next." Output validation and observation recording must occur before `DECIDING`.
+- "Approval arrived, so execute." Resume enters `VALIDATING`; it must recheck cancellation, expiry, proposal equality, freshness, and budget.
+- "The model says it finished the reservation." Enter `VERIFYING`; require effect and postcondition evidence.
+- "The worker restarted, so this is a new run." Preserve `runId`; increment attempt and replay authoritative events.
+- "The trace has two effect spans." Query the effect ledger; spans do not establish two effects.
+- "Cancel was clicked, but the model already generated a call." The harness cancellation state wins before dispatch.
+- "We can reset the action counter after a summary." Counters are canonical and monotonic for the governed run.
+- "A new SDK supports handoffs." FieldOps still has no admitted handoff transition; Chapter 9 owns that contract.
+
+For every answer, state the event, legal previous state, deterministic gate, evidence, and disposition. This is the operational skill the chapter assesses.
+
+## Phase 5 handoff fields
+
+Chapter 5 needs more than the names of actions. `AR-03` hands it the states in which a capability may run, proposal and validation event types, action/effect counters, cancellation checks, observation-result requirements, ambiguous-effect recovery state, and effect-evidence references.
+
+A capability contract must declare which event it can produce. Reads produce validated observations. Proposals produce canonical proposal evidence. Effects can produce committed, rejected, or ambiguous outcomes. Unknown results cannot be converted into a normal observation.
+
+The capability adapter must preserve the run identity and cannot select the next state. It returns a typed result; the harness applies the transition table. This prevents a service response or provider decorator from becoming an implicit control-flow owner.
+
+## Learning lab
+
+Complete a transition table for every state. Add events for validation denial, approval decline, cancellation during execution, ambiguous effect, verification mismatch, and external-wait expiry. For each row, name the deterministic assertion, evidence reference, counter change, and disposition.
+
+Then replay six fixture traces. The assessment allocates five points to legal transitions, five to deterministic enforcement, four to completion, three to cancellation, and three to replay evidence. Automatic failure occurs if a terminal run advances, the run ID changes, a counter decreases, or a model declaration enters `COMPLETED` without required evidence.
+
+## Chapter checkpoint
+
+FieldOps now has an inspectable loop but no implementation-grade capability surface. `AR-03 v1.0.0` hands Chapter 5 stable action proposal types, legal state transitions, budget and cancellation assertions, event fields, and effect-evidence references. The next task is to decide which tools are narrow, legible, authorized, and recoverable enough to expose.
