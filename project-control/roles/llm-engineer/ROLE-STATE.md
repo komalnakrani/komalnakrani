@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 07 chapter blueprints prepared under issue `#44`; root review pending
+- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapters 1-3 active under `#48`
 - Last updated: 2026-08-16
-- Last completed issue: `#41` — Phase 06 source research
-- Active issue: `#44` — Phase 07 chapter blueprints
+- Last completed issue: `#44` — Phase 07 chapter blueprints
+- Active issue: `#48` — Phase 08 Volume 1 Chapters 1-3
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -47,7 +47,7 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - chapter blueprints: 33 files in `books/llm-engineering/blueprints/`
 - Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
 - Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
-- issue bodies: `issues/root.md`, Phase 01/04/05/06 bodies, and `issues/phase-07-chapter-blueprints.md`
+- issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, and `issues/phase-08-v1-chapters-01-03.md`
 - manuscript, companion implementation, generated visuals, publication, PDF, course, and final QA: not started
 
 ## Completed gates
@@ -58,7 +58,7 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - [x] 04 accepted/committed/closed (`#38`, `18332c3`)
 - [x] 05 accepted/committed/closed (`#39`, `18332c3`)
 - [x] 06 accepted/committed/closed (`#41`, `717367e`)
-- [ ] 07 artifacts prepared; coordinator acceptance/commit/closure pending
+- [x] 07 accepted/committed/closed (`#44`, `9d9e1c3`)
 - [ ] 08 manuscript
 - [ ] 09 book QA
 - [ ] 10 visuals
@@ -70,7 +70,7 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 
 ## Current work
 
-Phase 06 is accepted at `717367e`. Phase 07 artifacts are locally complete for #44: 33/33 production blueprints in frozen order, all 99 claims exactly once, all 66 canonical sources and 14 cases resolved, and all 66 forecast figures exactly once. Every chapter has objectives, procedure, Mosaic incoming/failure/outgoing state, managed/open-weight treatment, exercise/pass evidence, authority/non-scope, durable/volatile notes, prohibitions, and Phase 08 handoff. Root owns review, commit/push, issue closure, shared state, and Phase 08 dispatch.
+Phase 07 is accepted at `9d9e1c3`: 33/33 production blueprints map all 99 claims, 66 sources, 14 cases, 66 figure records, and continuous MD-01 through MD-16 transitions. Phase 08 parent #46 is open and child #48 is active for Volume 1 Chapters 1-3.
 
 ## Unresolved blockers
 
@@ -93,8 +93,8 @@ None. Coordinator acceptance is a workflow gate, not a content blocker. Abhyaas 
 
 ## Exact next action
 
-Root reviews the 33 blueprints and Phase 07 verification, commits/pushes, and closes #44 only if accepted, then opens Phase 08. Manuscript production starts with Volume 1 Chapters 1–4 using `books/llm-engineering/blueprints/phase-08-handoff.md`; no later batch starts against an unaccepted Mosaic dossier state.
+Write and immediately QA Volume 1 Chapters 1-3 under #48, advancing Mosaic Desk through MD-01 and into MD-02. Create PNG figure anchors only; root owns later ImageGen production.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits `18332c3` and `717367e`, issue #44, this state, architecture, project map, visual forecast, all Phase 06 registers/research packs, all Phase 07 blueprints, verification report, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in `project-control/roles/llm-engineer/`; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, and `9d9e1c3`, parent #46, active child #48, this state, the first three Volume 1 blueprints/research packs, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in `project-control/roles/llm-engineer/`; do not edit shared factory state, another role, git state, or Abhyaas.

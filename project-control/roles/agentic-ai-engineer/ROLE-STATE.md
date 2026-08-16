@@ -5,10 +5,10 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 07 chapter blueprints in progress under issue `#43`
+- Current global phase: Phase 08 manuscript production under parent `#45`; Chapters 1-3 active under `#47`
 - Last updated: 2026-08-16
-- Last completed issue: `#40` — Phase 06 source research
-- Active issue: `#43` — Phase 07 chapter blueprints
+- Last completed issue: `#43` — Phase 07 chapter blueprints
+- Active issue: `#47` — Phase 08 Chapters 1-3
 - Role root issue: `#32` — open
 
 ## Locked accepted decisions
@@ -68,7 +68,7 @@ and `#35` are closed with `status:done`.
 - [x] 04 accepted/committed/closed (`#34`, `b59c3f5`)
 - [x] 05 accepted/committed/closed (`#35`, `b59c3f5`)
 - [x] 06 accepted/committed/closed (`#40`, `abed872`)
-- [ ] 07
+- [x] 07 accepted/committed/closed (`#43`, `e4e8ec4`)
 - [ ] 08
 - [ ] 09
 - [ ] 10
@@ -79,10 +79,10 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 07 production artifacts are locally complete under issue `#43`: 20/20
-blueprints, all 40 claims, 44 sources, 12 cases, 38 accepted chapter figures,
-and one continuous `AR-01` through `AR-14` FieldOps dossier are mapped. Phase 08
-handoff and issue granularity are prepared. Root review/acceptance remains.
+Phase 07 is accepted at `e4e8ec4`: 20/20 blueprints map all 40 claims, 44
+sources, 12 cases, 38 accepted chapter figures, and the continuous `AR-01`
+through `AR-14` FieldOps dossier. Phase 08 parent `#45` is open and child `#47`
+is active for Chapters 1-3.
 
 ## Unresolved blockers
 
@@ -108,14 +108,15 @@ handoff and issue granularity are prepared. Root review/acceptance remains.
 
 ## Exact next action
 
-Root should review the Phase 07 verification report, commit/push and close issue
-`#43` only if accepted, then open the Phase 08 root plus seven manuscript child
-issues from `blueprints/phase-08-handoff.md` and `issues/phase-08-manuscript.md`.
+Write and immediately QA Chapters 1-3 under `#47`, advancing FieldOps through
+`AR-01 v0.2.0` and `AR-02 v1.0.0`. Create PNG figure anchors only; root owns
+later ImageGen production.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits `b59c3f5` and `abed872`, active
-issue `#43`, this file, all Phase 06 registers, verification report, and Phase 07 handoff. Inspect
+Read repository `AGENTS.md`, accepted commits `b59c3f5`, `abed872`, and
+`e4e8ec4`, parent `#45`, active child `#47`, this file, the first three
+blueprints/research packs, and Phase 08 handoff. Inspect
 git status because parallel agents share the worktree. Do not edit shared
 factory state or other role directories from this lane. Do not enter Abhyaas
 while the Komal-first decision remains locked.

@@ -66,23 +66,25 @@
 
 - Root issue: [#32](https://github.com/alpeshznakrani/komalnakrani/issues/32)
 - Phases 01, 04, and 05: accepted at commit `b59c3f5`; canonical decision is one 20-chapter book.
-- Phase 06: accepted at commit `abed872` with 44 sources, 40 claims, 12 cases, and 20 research packs.
-- Active phase: [#43 - Blueprint all Agentic AI Engineering chapters](https://github.com/alpeshznakrani/komalnakrani/issues/43)
+- Phase 07: accepted at commit `e4e8ec4` with 20 complete production blueprints and all 38 forecast figures allocated.
+- Phase 08 parent: [#45 - Write the complete Agentic AI Engineering manuscript](https://github.com/alpeshznakrani/komalnakrani/issues/45)
+- Active child: [#47 - Write Agentic AI Engineering chapters 1-3](https://github.com/alpeshznakrani/komalnakrani/issues/47)
 - State: `project-control/roles/agentic-ai-engineer/ROLE-STATE.md`
 
 ### LLM Engineer
 
 - Root issue: [#36](https://github.com/alpeshznakrani/komalnakrani/issues/36)
 - Phases 01, 04, and 05: accepted at commit `18332c3`; canonical decision is a 33-chapter two-volume series.
-- Phase 06: accepted at commit `717367e` with 66 sources, 99 chapter claims, 14 cases, and 33 research packs.
-- Active phase: [#44 - Blueprint all LLM Engineering chapters](https://github.com/alpeshznakrani/komalnakrani/issues/44)
+- Phase 07: accepted at commit `9d9e1c3` with 33 complete production blueprints and all 66 forecast figures allocated.
+- Phase 08 parent: [#46 - Write the complete LLM Engineering two-volume manuscript](https://github.com/alpeshznakrani/komalnakrani/issues/46)
+- Active child: [#48 - Write LLM Engineering Volume 1 chapters 1-3](https://github.com/alpeshznakrani/komalnakrani/issues/48)
 - State: `project-control/roles/llm-engineer/ROLE-STATE.md` (created during active Phase 06)
 
 ## Exact next action
 
 Advance the three isolated Komal lanes in parallel: Applied AI Chapters 13-15
-under #42, all Agentic AI chapter blueprints under #43, and all LLM Engineering
-chapter blueprints under #44. Keep shared publication/factory integration root-owned.
+under #42, Agentic AI Chapters 1-3 under #47, and LLM Engineering Volume 1
+Chapters 1-3 under #48. Keep shared publication/factory integration root-owned.
 Do not enter deferred Abhyaas work.
 
 ## Resume instructions
