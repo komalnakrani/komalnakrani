@@ -1,0 +1,661 @@
+---
+title: "Budget Quality, Time, Cost, and Capacity"
+slug: "budget-quality-time-cost-and-capacity"
+summary: "Operate agent workloads inside consequence-aware joint envelopes for quality, latency, actions, cost, queues, concurrency, and dependency capacity."
+minutes: 100
+sourceIds: ["SRC-013", "SRC-015", "SRC-025", "SRC-027", "SRC-028"]
+claimIds: ["CLM-031", "CLM-032"]
+objectiveIds: ["AGE-K06-01", "AGE-K07-01", "AGE-K08-01", "AGE-K10-01"]
+---
+
+# Budget Quality, Time, Cost, and Capacity
+
+`AR-11 v0.1.0` can connect a FieldOps symptom to model, tool, state, approval, and effect events without retaining every payload. That trace is useful only if operators turn events into decisions. A run that eventually completes can still be operationally unacceptable: it may occupy a scarce reviewer for forty minutes, retry an inventory service until urgent work starves, exceed an effect budget, or complete after the field incident is over.
+
+Distributed systems are commonly operated through traffic, errors, latency, saturation, and distribution-aware signals rather than averages alone. [CLM-031] An agent adds workload-specific dimensions: outcome quality, policy conformance, turns, model input and output, tool calls, approval waits, semantic effects, and recovery state. The resulting budget is a joint system constraint, not a token allowance with a latency chart attached. [CLM-032]
+
+This chapter completes `AR-11 v1.0.0`, the FieldOps operational envelope. It does not choose company service objectives, negotiate provider contracts, grant more capability, or replace SRE, platform, FinOps, security, privacy, and domain owners. It makes the agent-specific demand and failure behavior explicit enough for those owners to govern.
+
+## A budget is an executable boundary
+
+The word budget is often mistaken for a spending target. Here it means a set of conditions under which a task class is supported. It includes floors that must be met, ceilings that may not be crossed, warning thresholds that trigger degradation, and measurements that reveal whether shared capacity can carry the work.
+
+A FieldOps budget record needs at least:
+
+- task segment and consequence class;
+- quality, policy, recovery, and evidence floors;
+- elapsed-time distribution and deadline;
+- turn, tool-call, retrieval, and external-call limits;
+- model input/output accounting and parameterized price inputs;
+- queue delay, queue depth, concurrency, and reviewer-wait limits;
+- dependency quotas, timeout, retry, and circuit state;
+- semantic-effect count and effect-class restrictions;
+- cancellation and stop latency;
+- degraded modes, routing decisions, and terminal stop behavior;
+- measurement window, workload version, owner, and expiry.
+
+The record is executable when admission, runtime monitors, and release gates consume it. A spreadsheet that no runtime component can enforce is an estimate. A hard timeout with no terminal-state rule is an interruption, not a safe boundary.
+
+### Floors and ceilings belong together
+
+Suppose a dispatch task has a ten-minute ceiling. Ending at ten minutes is not success if the system silently omits the safety manual, loses the approval rejection, or abandons an ambiguous reservation. Quality and recovery floors constrain which shortcuts are allowed.
+
+The first FieldOps segment, `advisory_lookup`, has no effect permission. Its floor is a cited, current, tenant-authorized answer or an explicit insufficiency. It may drop optional retrieval when saturated, but it may not invent an answer. The second, `reservation_proposal`, must produce a schema-valid proposal bound to current incident and inventory state. It may degrade to a partial proposal, never to an automatic reservation. The third, `approved_reservation`, permits one exact approved effect. It must reconcile ambiguity and preserve an accountable owner even when the deadline expires.
+
+Each ceiling therefore has a paired response. `turns <= 8` means the ninth transition is a controlled budget event, not permission to truncate arbitrary state. `external_calls <= 12` means optional discovery stops before mandatory reconciliation. `effect_count <= 1` is absolute for the approved semantic key; a retry cannot purchase another effect.
+
+### Consequence changes the envelope
+
+Uniform limits appear simple but shift risk invisibly. A low-consequence manual explanation can wait longer and explore more references. An urgent incident proposal needs a shorter tail, a smaller branching factor, and a fast handoff when evidence is incomplete. An effectful reservation may tolerate extra reconciliation calls after a timeout because stopping without learning the effect state is unsafe.
+
+Define consequence independently from user urgency. A user marking every request urgent must not acquire broader permissions or priority. FieldOps derives consequence from task type, affected inventory class, incident severity supplied by an authoritative system, and possible effect. Domain policy owns the classification; the agent consumes it.
+
+An illustrative envelope can use classes `C0` through `C3`:
+
+| Class | Example | Quality/evidence floor | Primary ceiling | Degraded behavior |
+| --- | --- | --- | --- | --- |
+| C0 | explanation | source-linked answer or abstention | bounded turns and elapsed time | omit optional synthesis |
+| C1 | inventory comparison | current authorized observations | dependency calls and queue age | return verified subset |
+| C2 | reservation proposal | schema-valid, current proposal | approval wait and state age | proposal only, no effect |
+| C3 | approved reservation | exact approval binding and reconciliation | one semantic effect | stop new dispatch, reconcile |
+
+The labels are local. They are not a universal safety scale. Changing an effect class requires domain and risk authority, a versioned contract, new evaluation, and a bounded release. It cannot be inferred from model confidence.
+
+### A joint constraint is not one score
+
+Teams are tempted to combine quality, latency, and cost into a weighted score. That can help compare options after non-negotiable floors are satisfied, but it must not average away violations. A run with excellent answer quality and an unauthorized effect fails. A low-cost run that leaves an unknown committed reservation fails recovery. A fast run that cites stale cross-tenant inventory fails evidence and isolation.
+
+Use a vector first:
+
+```text
+E = {
+  completion, policy, evidence, recovery,
+  elapsed, turns, model_units, tool_calls,
+  external_cost_units, queue_delay, concurrency,
+  dependency_pressure, approval_wait, semantic_effects
+}
+```
+
+Admission requires every hard precondition. Runtime continues while hard ceilings and state invariants hold. Promotion requires the segment's quality floors plus acceptable distributions. A scalar optimization may operate only within that feasible region.
+
+## See the distribution, not the comfortable average
+
+Imagine one hundred proposal runs. Ninety-six finish in forty seconds. Three take five minutes. One loops for thirty minutes while repeatedly checking an unhealthy inventory dependency. The mean can look reasonable, especially when the rare loop is diluted by many short runs. The user in the long run experiences a different service, and the loop occupies concurrency that other users cannot access.
+
+Percentiles describe positions in an observed distribution. The median, or p50, tells where half of observations lie. p95 and p99 reveal slower tails, subject to sample size and measurement method. They do not identify cause and they are unstable with small samples. Report counts, window, segment, and uncertainty beside them.
+
+### Partition before aggregating
+
+An aggregate that combines read-only lookups, approval waits, effect reconciliation, and simulated exercises is not an operational distribution. Partition by task segment, consequence, effect class, workload version, degraded mode, dependency state, and relevant tenant or region boundary. Preserve privacy and minimum cohort rules while doing so.
+
+For FieldOps, separate at least:
+
+- successful completion, controlled abstention, policy denial, user rejection, expiry, and system failure;
+- no-effect runs, proposal-only runs, and effectful runs;
+- normal dependency, slow dependency, rate limit, and unavailable dependency;
+- first attempt, safe retry, reconciliation, and takeover;
+- immediate review, queued review, expired review, and rejected review;
+- baseline, candidate, canary, and degraded configuration.
+
+A p95 calculated only from successful runs is survivor-biased. A latency chart that drops cancelled runs can reward a system that abandons hard work. A cost chart that excludes reconciliation moves cost out of sight rather than removing it.
+
+### Connect tails to consequence
+
+Not every slow run matters equally. A long manual explanation may inconvenience a learner; a long incident reservation can delay field repair. Segment the distribution, then attach an operational consequence: missed response window, approval expired, stale inventory, urgent work blocked, reviewer queue overflow, provider quota exhausted, or effect owner unavailable.
+
+Record the consequence threshold before viewing candidate results. Otherwise a team can select a percentile or window that makes a release look good. The threshold belongs to the service and domain owners; the Agentic AI Engineer shows how agent behavior consumes it.
+
+### Read histograms and survival curves
+
+A percentile table compresses shape. A histogram can reveal two modes, such as cache hits and live retrieval, or a spike at the timeout. A survival curve answers what fraction of runs remain active after each elapsed interval. That is useful for detecting long-lived loops and estimating occupied concurrency.
+
+Never draw exact empirical numbers into decorative art. Generate charts from versioned companion fixtures and expose the values accessibly. The figures below are conceptual scaffolds; the dossier retains actual synthetic observations.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F16.1" data-png="/assets/publications/agentic-ai-engineering/f16-1-joint-operational-envelope.png">
+  <div role="img" aria-label="Pending colorful realistic 3D control console with linked gauges labeled Quality, Time, Actions, Cost, Queue, and Capacity. A run remains supported only while every required floor and ceiling is respected, and no relationship depends on color.">ImageGen raster pending: F16.1</div>
+  <figcaption><strong>F16.1 - A joint operational envelope.</strong> Essential labels: Quality, Time, Actions, Cost, Queue, Capacity. Evidence role: a conceptual constraint scaffold, not empirical proof or a universal budget.</figcaption>
+</figure>
+
+### Treat rare loops as a class
+
+A rare loop is not merely a large latency value. It is a recognizable trajectory: repeated model deliberation, duplicated retrieval, cycling between missing fields, tool retries, or repeated approval solicitation. Tag trajectory classes from observable events, not hidden reasoning. Count turns, repeated capability/action identities, unchanged state versions, repeated evidence, and progress markers.
+
+Define progress for each task. In a proposal run, progress may mean resolving a required field, narrowing candidates, validating schema, or reaching a human checkpoint. Three calls with no new state or evidence can trigger loop suspicion. The runtime may stop optional exploration, ask a bounded clarification, or terminate with insufficiency. It may not silently expand turn limits because the model says it is close.
+
+### Use paired control comparisons
+
+When evaluating a candidate budget or degradation policy, compare it with a frozen baseline on the same representative task set and failure schedule. Compare distributions within segments, not a single global mean. Record both improvements and regressions.
+
+A candidate that reduces p99 by terminating every difficult task may look faster while completion and recovery collapse. A policy that saves model units by calling tools aggressively may overload dependencies. The joint envelope catches these transfers.
+
+## Model queues as part of the agent
+
+An agent does not begin when a model request starts. It begins when a task is accepted and becomes the system's responsibility. Queue delay, reviewer wait, dependency admission, and ownership handoff count toward elapsed time and consequence.
+
+### Little queues become large incidents
+
+If work arrives faster than it completes for long enough, a queue grows. Agent workloads amplify service time through branches, retries, and human pauses. Average utilization near capacity leaves little room for burst or variance. Exact queue models require assumptions that may not hold, so use measurement and load tests rather than treating a formula as prophecy.
+
+Track arrival rate, completion rate, active concurrency, queue depth, oldest age, abandonment, priority class, service-time distribution, and dependency occupancy. Tie each signal to an action. A queue-depth graph without an admission or degradation decision is decoration.
+
+### Priority needs protected capacity
+
+A priority label alone cannot rescue urgent work if all workers and dependency slots are occupied by long low-priority loops. Reserve or rapidly reclaim capacity for consequence classes. Use fair scheduling within classes, age limits, and bounded preemption semantics.
+
+Preemption is not arbitrary cancellation. A no-effect lookup can stop at a safe checkpoint. An effectful run with an unresolved outcome must transfer to reconciliation ownership before compute is reclaimed. Approval waiting should not hold a model or tool slot, but it does retain durable state and a deadline.
+
+The FieldOps lab creates ninety normal manual lookups, nine proposal runs, and one urgent approved reservation. Without protected capacity, two rare lookup loops and an approval backlog delay the urgent effect. With per-class admission, loop detection, and separate reviewer accounting, the urgent run starts promptly while lower classes degrade to a verified subset.
+
+### Backpressure starts at admission
+
+When saturation rises, the safest action may be to accept less work. Admission can reject, defer, route, or narrow a request before expensive execution. The response must be truthful: queued, unavailable, proposal-only, or incomplete. Do not accept a task and leave it indefinitely `running`.
+
+Admission uses current capacity and the worst credible demand inside the segment envelope, not the global average. A C3 reservation needs space for mandatory reconciliation even if the happy path is short. Reserve that recovery headroom.
+
+### Human review is a queue
+
+Approval capacity is not infinite and cannot be represented as model latency. Track eligible reviewers, queue age, review duration, rejection rate, expiry, takeover, and coverage. Never optimize review time by widening reviewer authority or hiding evidence.
+
+If approval backlog crosses the C2 threshold, FieldOps stops creating proposals that will expire before review. It can continue C0 explanations and bounded C1 comparisons if dependencies permit. Existing approvals retain rejection, expiry, and owner transitions from Chapter 11.
+
+### Dependency quotas are shared promises
+
+Inventory, manuals, identity, policy, effect, and telemetry services each have their own capacity and ownership. A local agent concurrency limit does not protect a dependency if each run fans out into twenty calls. Budget fan-out per capability and globally.
+
+Record current quotas as configuration with source and expiry, never as book facts. The platform owner may change them. The agent contract specifies behavior when remaining capacity falls: cached authorized evidence where freshness permits, optional retrieval off, narrower candidate set, proposal-only mode, or stop.
+
+## Retries spend several budgets at once
+
+Retries can improve recovery from transient failures, but each attempt consumes time, tool capacity, model context, money, queue space, and sometimes human attention. Layered retries multiply. A model retries an adapter three times; the adapter retries a client three times; the client library retries transport three times. One logical action can cause twenty-seven requests before any outer accounting notices.
+
+Authoritative reliability guidance recommends bounded retries, backoff, jitter, retryable-error classification, and coordination so retries occur at an appropriate layer. [CLM-031] Those mechanics are necessary but do not solve semantic effects.
+
+### Appoint a retry owner
+
+For each capability call, state which layer owns retry. Other layers expose a typed failure and attempt metadata. The retry owner receives a maximum attempts count, maximum elapsed window, retryable error classes, backoff schedule, jitter policy, dependency token budget, and cancellation signal.
+
+For effectful calls, it also receives semantic key, external request ID, and reconciliation procedure. A timeout after dispatch is `unknown`, not retryable by default. The owner queries effect state before deciding whether another attempt is safe.
+
+### A retry budget is not just attempts
+
+Define retry demand as a share of healthy traffic or a fixed segment allocation. When dependency health declines, retries should not consume all remaining capacity. Reserve fresh request and recovery capacity. Stop retrying when the result cannot arrive before its useful deadline.
+
+FieldOps assigns the synthetic inventory read three total attempts within four seconds only for explicit transient classes. A permanent validation error receives none. A rate limit obeys a bounded retry hint only if the proposal freshness window remains valid. An approved reservation timeout enters reconciliation, which has a separate protected budget.
+
+### Add jitter without losing deadlines
+
+Exponential backoff spaces attempts; jitter prevents clients from synchronizing. But a random wait that extends past approval expiry or incident need is not useful. Clamp schedules to the remaining deadline and terminal state. Record chosen waits for replay.
+
+In deterministic tests, inject a seeded schedule rather than sleeping. Assert that the number and timing of attempts remain within the envelope and that cancellation prevents future dispatch.
+
+### Circuit state narrows capability
+
+When a dependency fails repeatedly, a circuit can stop new calls briefly and probe recovery. Circuit state is a local operational mechanism, not proof that a dependency is broken. Expose open, half-open, and closed decisions with owner and expiry.
+
+If inventory is open, C0 may use a clearly dated cached manual when allowed; C1 reports current inventory unavailable; C2 cannot produce a current proposal; C3 continues only effect reconciliation through its separate authoritative endpoint. Degradation respects evidence floors.
+
+### Worked retry amplification trace
+
+At 09:00, forty proposal runs enter. Each performs two inventory reads. The inventory service begins returning transient timeouts. The model layer repeats its entire turn twice, the adapter retries twice, and the HTTP client retries three times. A nominal eighty reads becomes hundreds of transport attempts. Queue age rises; responses arrive after proposal freshness expires; models use those stale results and call again.
+
+Containment proceeds:
+
+1. Trace sampling shows inventory attempt count and unchanged state version rising, not just latency.
+2. Admission pauses new C2 proposals and preserves C3 reconciliation capacity.
+3. The adapter becomes sole retry owner with two attempts inside the freshness deadline.
+4. Model retries are disabled for the typed dependency error.
+5. Optional retrieval turns off and C0/C1 return bounded insufficiency.
+6. Existing effectful runs reconcile or transfer to an owner.
+7. Recovery probes use a small separate allowance.
+8. Reopening occurs only after a time-bounded healthy observation and replay.
+
+The fix is not "increase the timeout." A larger timeout without retry coordination holds scarce capacity longer and may worsen the incident.
+
+## Count cost without pretending price is durable
+
+Agent cost includes model input/output, cached input treatment, tool and search calls, external APIs, data transfer, storage, telemetry, sandbox compute, reviewer time, incident response, and the opportunity cost of occupied capacity. Token count is a useful measurement dimension, not a complete cost or quality proxy. [CLM-032]
+
+### Separate units from rates
+
+The durable run record contains provider-neutral units:
+
+```text
+model_input_units
+model_output_units
+model_cached_input_units
+tool_calls_by_capability
+external_units_by_service
+sandbox_milliseconds
+artifact_bytes
+trace_events
+reviewer_seconds
+recovery_attempts
+```
+
+A dated rate card maps units to currency for a provider, region, model, contract, and effective interval. Store the rate-card ID and calculation time. Recompute scenarios when prices change. Never state a live price as if it were a property of agent architecture.
+
+### Allocate shared and tail cost
+
+Per-run direct cost misses shared evaluators, canary duplication, baseline control traffic, queue infrastructure, and incident recovery. Attribute them transparently at the cohort or period level. Keep observed and estimated values distinct.
+
+Report distribution, not only average spend. The rare loop that uses fifty times the normal model units can dominate marginal capacity and expose a control failure even if monthly mean is acceptable. Segment rejected, cancelled, expired, recovered, and successful work. Failure is not free.
+
+### Value is not completion count
+
+A cheaper system that completes more low-value lookups while starving urgent incidents is worse. Product and domain owners define value and service goals. The Agentic AI Engineer provides outcome, consequence, and resource evidence without converting human or safety consequences into a convenient monetary score.
+
+Use cost-effectiveness only for comparable task segments after policy and evidence floors. Show numerator, denominator, uncertainty, and excluded costs. "Cost per completed run" is misleading if completion includes wrong or unreconciled effects.
+
+## Bound the multi-agent economics claim
+
+A published vendor engineering report describes a multi-agent research system that improved performance on its particular research workload while using substantially more tokens than chat and single-agent patterns. That is a valuable case about orchestration and tradeoffs, not a universal cost ratio or proof of multi-agent superiority. [CLM-032]
+
+FieldOps already established a one-agent baseline in Chapter 8 and rejected a general multi-agent value claim in Chapter 9. Chapter 16 does not reopen that decision through vendor arithmetic. It parameterizes topology scenarios.
+
+### Build a scenario table
+
+For each candidate topology record:
+
+- task segment and reason separation may help;
+- coordinator, specialist, aggregation, and verification calls;
+- parallel and serial paths;
+- model/tool units by role;
+- context duplication and compression;
+- latency distribution and queue occupancy;
+- quality, policy, recovery, and effect outcomes;
+- failure modes such as fan-out, conflicting outputs, orphan tasks, and cancellation;
+- reviewer and operational load;
+- rate-card scenario and sensitivity range.
+
+Compare single agent, one agent plus deterministic tools, routed specialists, and parallel specialists on the same representative tasks. Do not assume every branch runs; report routing frequency. Do not charge parallel time as serial latency, but do count all occupied capacity and external cost.
+
+### Example with simulated units
+
+On one hard manual-synthesis segment, the single-agent baseline uses 12 model units, 5 tool calls, and 42 simulated seconds. A three-specialist scenario uses 31 model units, 14 tool calls, and 28 elapsed seconds because research overlaps. It resolves two more fixtures correctly but creates one conflicting recommendation that the aggregator fails to flag.
+
+No single winner follows. If the segment is time-sensitive and the conflict control is repaired, extra units might be justified. If dependency capacity is saturated, fan-out may be unacceptable. For effectful tasks, specialists receive no independent effect authority; topology cannot multiply permission.
+
+Vary model-unit rate, tool-unit rate, concurrency cap, routing percentage, and quality value assumption. Report the breakpoints. A conclusion valid only at one provider's current price is volatile and must expire with the rate card.
+
+### Coordination has operational cost
+
+Multi-agent systems need task ownership, delegation envelopes, context partitioning, result aggregation, cancellation propagation, trace links, and orphan cleanup. These are not free simply because framework primitives exist. Include them in engineering and incident budgets.
+
+If a remote or local specialist times out, the coordinator must know whether work continues, what artifacts may arrive late, and whether any effects were possible. FieldOps specialists remain read-only. The coordinator cannot treat a specialist's confident completion message as authoritative inventory state.
+
+## Design degradation before saturation
+
+Degradation narrows the service while preserving declared floors. It is not an emergency improvisation and never widens authority. Define triggers, mode, allowed capabilities, disabled capabilities, user-visible semantics, owner, exit conditions, and tests in advance.
+
+### A degradation ladder
+
+FieldOps uses these locally ordered modes:
+
+1. `normal`: supported capabilities inside the segment envelope.
+2. `optional_retrieval_off`: skip nonessential background sources; retain mandatory current evidence.
+3. `reduced_concurrency`: admit fewer runs and protect urgent/recovery capacity.
+4. `proposal_only`: no new effects; produce exact proposals for authorized review when evidence is current.
+5. `read_only`: explanations and verified observations only.
+6. `recovery_only`: no new task admission; reconcile and transfer existing effects.
+7. `stopped`: reject new work and preserve durable terminal state.
+
+Transitions can skip levels. A cross-tenant authorization fault should stop affected capability immediately, not first save tokens. A provider slowdown may begin with reduced concurrency. An approval backlog may set proposal-only or stop creating expiring proposals.
+
+### Define triggers jointly
+
+Useful triggers include p95 or p99 elapsed time by segment, queue oldest age, dependency saturation, retry share, approval expiry rate, loop rate, unresolved effects, cancellation latency, policy-control failure, and quality-floor regression. Require window and minimum sample where appropriate, but allow absolute events such as unauthorized effect to stop immediately.
+
+Avoid a trigger that uses the same broken telemetry as the action it controls. Critical effect and authority events need independent observation where practical. If telemetry is unavailable, fail to the predefined narrower mode rather than assuming health.
+
+### Preserve mandatory work
+
+Optional retrieval can stop before current inventory validation. New effects can stop before reconciliation. Model explanation can stop before durable checkpoint. User-facing polish can stop before rejection handling. Classify work as admission, mandatory safety/recovery, outcome, or optional enrichment.
+
+A naive cost limiter may kill the run at exactly 100 model units while it owns an ambiguous effect. The correct boundary prevents new discretionary model work but preserves a small protected recovery path or transfers to a human owner with evidence. The effect budget remains one even if recovery costs more.
+
+### Communicate truthfully
+
+In degraded mode, users and operators see what is unavailable, what remains verified, whether work is queued, whether an effect occurred, who owns recovery, and when the status expires. Do not present a cached manual as current inventory or a proposal as a reservation.
+
+The message must itself be generated safely when the model provider is impaired. Use deterministic templates for critical state and effect status. Localization and product wording are owned with the appropriate team, but semantic distinctions are non-negotiable.
+
+### Exit slowly enough to observe
+
+Recovery from saturation can create another spike. Reopen capacity in bounded steps, keep retry limits, and watch the same joint signals used for entry. Clear backlogs by consequence and age while preserving expiry and freshness. Do not replay every failed request automatically; user intent or approvals may have expired.
+
+## FieldOps load laboratory
+
+The representative environment from Chapter 12 gains a deterministic load schedule. It is not a forecast of production. It is a controlled way to expose amplification, starvation, and unsafe degradation before release.
+
+### Fixture and hypothesis
+
+The lab has four task segments, two worker pools, an inventory dependency, a manual store, an approval queue, and a reservation effect service. Work arrives in seeded waves. Most runs are short. A small fixture class repeats a lookup without state progress. Inventory slows during the second wave, then rate-limits. Reviewers pause during the third wave.
+
+Hypotheses:
+
+- p50 can remain healthy while p99 and oldest queue age violate the C2/C3 envelope;
+- layered retries amplify dependency demand;
+- unprotected concurrency permits low-consequence loops to starve urgent work;
+- proposal-only and optional-retrieval-off modes reduce pressure without weakening evidence or authority;
+- stopping new effects while preserving reconciliation contains consequence.
+
+The result supports only this fixture version, load pattern, component set, and budget policy. It cannot predict a provider quota, real reviewer behavior, or production traffic.
+
+### Establish the baseline
+
+Run the schedule with one global FIFO queue, fixed concurrency twenty, three retry layers, and no loop detector. Capture completion class, policy/evidence floors, elapsed distribution, turns, calls, units, queue age, dependency concurrency, reviewer wait, effects, and recovery.
+
+The intended baseline failure is not a dramatic crash. Average latency remains plausible. The oldest urgent task waits behind rare loops. Inventory attempts spike during slowdown. Several proposals expire in the approval queue. One reservation response times out after commit and waits because reconciliation has no protected capacity.
+
+Record this as disconfirming evidence for average-only operation. Do not tune the fixture after seeing results to exaggerate contrast.
+
+### Inject the rare loop
+
+The loop fixture repeatedly asks for another manual passage while state version and unresolved fields remain unchanged. After three non-progress transitions, emit `loop_suspected`. The policy stops optional retrieval, permits one structured attempt to state missing evidence, then ends `insufficient_evidence` if no progress occurs.
+
+Compare false positives. A legitimate multi-step investigation may make progress through new evidence even when the final proposal is unchanged. Therefore the detector uses state/evidence change and capability sequence, not turn count alone. If it wrongly stops a valid hard case, record the quality regression and route that segment rather than silently raising every limit.
+
+### Slow inventory
+
+Increase synthetic inventory response from 100 milliseconds to three seconds, then emit a rate-limit class. The coordinated retry owner makes at most two attempts within proposal freshness. Queue admission pauses new C2 work when projected completion exceeds freshness. C1 returns a dated verified subset only where policy allows. C3 reconciliation uses a protected endpoint allocation.
+
+Observe dependency traffic and queue age. The mode succeeds only if it reduces load, preserves truthful statuses, and does not use stale inventory for proposals. A lower call count alone is not success.
+
+### Create urgent starvation
+
+Fill the normal worker pool with C0 loops, then admit a C3 approved reservation. In the flawed scheduler, the task waits. In the candidate, protected C3/recovery capacity admits it. If no protected slot exists, a safely checkpointed C0 run is preempted. An effectful run is never discarded to make room.
+
+Measure time to admission and time to terminal/recovery ownership. Also measure the cost: protected capacity may sit unused during normal periods. That is an explicit tradeoff owned against consequence, not inefficiency to hide.
+
+### Back up approval
+
+Pause reviewers until proposals approach expiry. The candidate stops admitting proposal work that cannot be reviewed within its freshness window, exposes queue status, and leaves current requests proposal-only. It never self-approves to clear backlog. Rejected proposals terminate and free capacity; no-response expires with no effect.
+
+When reviewers return, do not resume expired proposals. Revalidate state, authority, and evidence before issuing a new proposal. Old approvals remain one-use and cannot bind a changed candidate.
+
+### Trigger rate limit and retry amplification
+
+Enable client-library retries beneath adapter retries. The test must detect total attempts exceeding the declared logical retry budget and fail. The repaired configuration disables hidden client retries or exposes them to the owner. Seeded jitter spreads probes; the deterministic clock verifies deadlines.
+
+The lab asserts that a typed rate limit never causes the model to reformulate and redispatch the same capability outside accounting. Every attempt shares logical action ID and appears in the trace.
+
+### Exercise an ambiguous effect
+
+Commit reservation `R-77`, drop the response, and saturate normal capacity. The run enters `effect_unknown`. The system denies a blind retry, uses protected reconciliation, discovers the committed effect, and ends `completed_after_reconciliation`. If reconciliation is unavailable, it transfers to an accountable owner with deadline and evidence.
+
+Degraded or stopped mode cannot erase this obligation. The stop boundary prevents new dispatch but continues or transfers recovery. This is why effect count, recovery capacity, and cancellation latency live in the joint envelope.
+
+### Compare candidate against control
+
+The segment report includes count, terminal classes, quality/evidence/policy results, p50/p95/p99 with method, queue oldest age, dependency peak, retry share, reviewer wait, loop rate, model/tool/external units, semantic effects, unresolved effects, and cancellation/stop latency.
+
+For each difference, state whether it supports the hypothesis, contradicts it, or remains inconclusive. A candidate may improve tails while lowering hard-case completion. That can justify routing hard cases to a different path, not declaring universal improvement.
+
+<figure className="book-figure book-figure--pending" data-figure-id="F16.2" data-png="/assets/publications/agentic-ai-engineering/f16-2-short-paths-and-rare-loop.png">
+  <div role="img" aria-label="Pending crisp realistic 3D route map in which many Short Paths leave capacity for urgent work while one Rare Loop circles through repeated actions and fills a queue. A stop gate contains the loop, and no meaning depends on color.">ImageGen raster pending: F16.2</div>
+  <figcaption><strong>F16.2 - Short paths and a rare loop.</strong> Essential labels: Short Paths, Rare Loop, Queue, Stop. Evidence role: a causal tail-risk scaffold; exact distributions belong to accessible companion-generated charts.</figcaption>
+</figure>
+
+## Work a capacity decision end to end
+
+Consider a proposed FieldOps release window from 09:00 to 11:00. Product expects a burst of equipment incidents after a planned maintenance event. Historical production data does not exist for this agent, so the team has an operational forecast with wide uncertainty, a synthetic load study, and current service quotas. The responsible choice is not to manufacture precision. It is to write assumptions, reserve consequence-aware headroom, and define a quick stop.
+
+### Step 1: inventory arrivals and service demand
+
+The planning fixture assumes sixty C0 explanations, twenty-four C1 comparisons, twelve C2 proposals, and four C3 approved reservations during the busiest hour. Those are scenario inputs, not promises. For each segment the team records low, central, and high arrival estimates.
+
+Synthetic service observations show C0 usually completes with one model turn and two manual reads; C1 uses two turns and three inventory calls; C2 adds validation and review; C3 uses one effect call and may require reconciliation. Tail fixtures are represented separately. The team never multiplies central arrival by mean service demand and calls the answer capacity. It runs the high-arrival scenario with the observed service-time distribution, rare-loop frequency range, dependency slowdown, and reviewer pause.
+
+### Step 2: identify shared bottlenecks
+
+Model concurrency is only one constraint. The manual store accepts many reads but has a low sustained search quota. Inventory permits fewer concurrent queries. The reservation service has a strict effect rate. Reviewers can inspect only a few proposals at once. Telemetry export has its own queue. The capacity worksheet lists each resource, owner, current verified limit, measurement source, expiry, reserved recovery share, and behavior when exhausted.
+
+The worksheet exposes an important mismatch: model workers can begin thirty C1/C2 runs, but inventory safely supports only eight concurrent query sequences. Raising agent concurrency to thirty moves the queue into the dependency and makes cancellation harder. Admission therefore uses the tightest relevant resource after accounting for fan-out.
+
+### Step 3: reserve recovery and urgent work
+
+The team reserves one inventory/reconciliation slot and one execution owner for C3 recovery. That reservation lowers ordinary throughput. It is justified by the consequence of an unknown committed effect. A separate small lane admits urgent C2/C3 work. C0 and C1 share the remaining pool with fair scheduling and maximum queue age.
+
+Reserved capacity is monitored. If it is borrowed during calm periods, the borrower must be immediately preemptible at a safe checkpoint. It cannot own an external effect. A configuration that permanently consumes the recovery lane fails readiness.
+
+### Step 4: choose thresholds
+
+Thresholds connect observations to actions:
+
+| Observation | Warning | Hard response | Why |
+| --- | --- | --- | --- |
+| C2 oldest queue age | projected review before freshness becomes doubtful | stop new proposals that cannot be reviewed | stale proposals waste review and invite incorrect effects |
+| inventory dependency occupancy | sustained near verified allowance | reduce concurrency and optional calls | keep headroom for urgent and recovery reads |
+| retry share | rises beyond fixture-supported band | one owner, open circuit for new work | prevent amplification during failure |
+| rare-loop signal | repeated no-progress transitions | stop optional work, then insufficiency | reclaim capacity without inventing an answer |
+| unresolved C3 effect | any past reconciliation deadline | recovery-only for affected capability and page owner | an unknown effect is a consequence event |
+| critical trace gap | missing action-to-effect correlation | disable new effects | effect operation is not supportable without evidence |
+
+Exact numeric values live in the versioned configuration because they will change. The semantic relationships are durable: protect recovery before optional work, stop creating work that cannot meet freshness, and never interpret missing visibility as health.
+
+### Step 5: simulate the high case
+
+The high scenario doubles C1 arrivals, clusters C2 proposals within ten minutes, slows inventory, and delays review. The original policy admits every request. C2 queue age crosses freshness; C0 loops occupy five workers; the effect timeout has no reconciliation lane. The candidate applies admission earlier, protects C3, ends three loops as insufficient, and returns a verified subset for six C1 requests.
+
+The candidate completes fewer requests in the two-hour window. That is not automatically a regression. It preserves every hard quality and authority floor, completes the urgent effect after reconciliation, and states six partial results truthfully. The control reports more completions but includes stale proposals and one unknown effect. Outcome semantics matter more than the count.
+
+### Step 6: test sensitivity
+
+Vary one assumption at a time: arrival burst, rare-loop frequency, reviewer duration, inventory timeout, reconciliation success, and model-unit rate. Then test combinations, because real incidents correlate. A provider slowdown can make model turns long while reviewers are simultaneously responding to the same event.
+
+The supported envelope is the region where hard floors hold in tested scenarios. If a small change breaks it, the release stage must be smaller or the degraded mode earlier. Do not interpolate beyond evidence merely because a curve looks smooth.
+
+### Step 7: obtain ownership decisions
+
+The Agentic AI Engineer presents demand and candidate controls. The inventory owner confirms or corrects quota assumptions. SRE reviews queue and alert actions. Domain and product owners confirm freshness and consequence. Privacy reviews telemetry fields. FinOps applies dated rates. The release owner accepts residual uncertainty and names reachable stop authority.
+
+An unsigned worksheet is not authorization to deploy. Nor does every stakeholder need to edit agent code. Each decision is recorded with its authority, scope, version, and expiry so Chapter 17 can verify readiness.
+
+## Interpret evidence without overclaiming
+
+Operational charts invite narratives. A disciplined review separates observation, mechanism hypothesis, intervention, and verified result.
+
+### Observation versus explanation
+
+"C2 p99 increased from fixture A to fixture B" is an observation if calculation and cohorts are valid. "The model became indecisive" is a hypothesis. Trace evidence might instead show approval wait, a slower inventory dependency, a changed routing mix, or an instrumentation clock fault.
+
+For each anomaly, follow causal IDs from queue admission through attempts, state, approval, and effect. Compare workload and component versions. If evidence does not isolate cause, record candidates and the next discriminating test. Do not turn a dashboard correlation into root cause.
+
+### Statistical and operational significance
+
+A small percentile change may be noise or irrelevant to consequence. A single unauthorized or duplicated effect can matter without statistical power. Define which claims need distributions and which are event-class invariants.
+
+Use confidence intervals or resampling where appropriate, but do not let statistical language obscure fixture omissions. A narrow interval around a synthetic mean says little about unmodeled production behavior. Conversely, a low-frequency safety event is not dismissible because a p-value is unavailable.
+
+### Selection effects
+
+Admission and degradation change which tasks run. If the candidate rejects hard requests earlier, its completion latency may improve. Report admitted, deferred, rejected, expired, and routed populations. Compare intention-to-serve where useful, not only completed runs.
+
+Reviewer availability can also select proposals. Easy proposals may receive quick decisions while complex ones expire. Segment review distributions and evaluate whether routing preserves fairness and domain priorities. The agent team does not define those priorities alone.
+
+### Instrumentation saturation
+
+Telemetry can fail under the same load being measured. Dropped spans may make expensive runs appear cheap. Track collector queue, export failures, sampled event classes, and expected-versus-observed critical links. Preserve structural effect/authority events even when high-volume model timing is reduced.
+
+If critical measurement becomes incomplete, mark the envelope unsupported for affected claims. A release gate should not pass because the failing monitor reported fewer errors.
+
+## Failure walkthrough: the healthy dashboard that lies
+
+At 10:12 the aggregate dashboard shows average latency thirty-one seconds, error rate two percent, and model-unit spend below plan. A supervisor reports that an urgent compressor reservation has not completed.
+
+The operator partitions by consequence. C3 oldest age is eleven minutes while C0 p50 remains twelve seconds. The global average hid priority inversion. Active-run traces show four C0 tasks repeating the same manual searches. Inventory occupancy is at its cap, and the client library has retried rate limits beneath the adapter. The nominal two percent error rate counted only final failures, not transport attempts.
+
+The operator invokes the declared response:
+
+1. disable optional manual enrichment;
+2. stop no-progress C0 loops at checkpoint;
+3. pause new C1/C2 admission;
+4. make the adapter sole inventory retry owner;
+5. reserve the recovery lane;
+6. inspect the C3 effect state.
+
+The reservation request was committed, but its response timed out. Reconciliation confirms the effect and completes the run without redispatch. The operator does not "roll back" a physical reservation automatically. The incident owner later decides whether compensation is required.
+
+The review updates four things: the dashboard adds oldest age by consequence; attempt rate becomes distinct from final error rate; hidden client retries are forbidden by compatibility test; and loop containment moves earlier. The team reruns the exact fixture and a new correlated slowdown fixture. Only then can the correction support a release decision.
+
+The lesson is not that averages are useless. They are insufficient for a heterogeneous, stateful, effectful workload. [CLM-031]
+
+## Failure walkthrough: cost protection causes harm
+
+A daily currency limit is reached at 16:00. A generic middleware rejects every subsequent model and tool request. Two C0 tasks end cleanly. A C2 proposal is waiting for review and can expire. A C3 run is `effect_unknown` after dispatch.
+
+The middleware treats all remaining work equally and blocks reconciliation. The currency ceiling therefore increases operational risk. A correct design has separate categories: discretionary new work stops; proposal work expires safely; mandatory effect reconciliation uses protected units or transfers immediately to an authorized owner. The cost governor never grants new action authority, but it recognizes existing recovery obligation.
+
+The incident reveals another accounting problem: reviewer time and external effect calls were absent from the cost report, so the currency cap optimized a partial measure. The revised joint budget retains provider-neutral units, rate-card version, recovery reserve, and explicit terminal behavior. [CLM-032]
+
+## Review questions for production readiness
+
+Before Chapter 17 accepts `AR-11`, reviewers ask:
+
+- Are task and consequence segments resolved from authoritative inputs?
+- Are quality, policy, evidence, and recovery floors non-negotiable?
+- Does every ceiling have deterministic runtime and terminal behavior?
+- Do latency and cost distributions include failures, cancellations, waits, and recovery?
+- Are queues measured from acceptance rather than model start?
+- Is protected urgent and recovery capacity real and tested?
+- Is one layer accountable for each retry sequence?
+- Are effect ambiguity and idempotency handled separately from transport retry?
+- Can degradation narrow capability without widening identity or authority?
+- Are user-visible statuses truthful about proposal, effect, queue, and uncertainty?
+- Are price, quota, context, and provider limits dated configuration?
+- Does the load lab include correlated faults and omitted-world limitations?
+- Does every signal name an owner and response?
+- Can the stop owner reach the system inside the required latency?
+
+Any answer of "the model will decide" is a gap for hard limits, permission, effect, and recovery. Model output may propose or classify inside a bounded procedure; it cannot authorize its own resource or consequence exception.
+
+## Operational runbook
+
+An envelope becomes useful when an on-call owner can act without inventing policy during an incident.
+
+### Before admission
+
+1. Resolve task segment, consequence, tenant, effect class, and deadline from authoritative inputs.
+2. Verify the budget version applies to the workload/component versions.
+3. Check queue, protected capacity, dependency, approval, and recovery headroom.
+4. Select normal or declared degraded mode.
+5. Reject or defer truthfully if mandatory floors cannot be supported.
+6. Persist owner, envelope ID, mode, and admission reason.
+
+### During execution
+
+1. Account for turns, model units, tool calls, time, and external attempts against the logical run.
+2. Detect progress, loop, retry amplification, stale evidence, approval expiry, and effect ambiguity.
+3. Preserve hard policy/effect floors before optional work.
+4. On warning threshold, enter the predefined narrower mode and emit a control event.
+5. On hard violation, stop new actions, checkpoint, reconcile or transfer effects, and assign terminal disposition.
+6. Never extend a hard boundary through model self-assessment.
+
+### During saturation
+
+1. Confirm whether the signal is traffic, error, latency, saturation, quality, or instrumentation failure.
+2. Partition by segment and consequence.
+3. Protect recovery and urgent capacity.
+4. Coordinate retry at one layer and reduce fan-out.
+5. Disable optional retrieval, lower concurrency, or become proposal/read-only as declared.
+6. Preserve approval rejection, expiry, cancellation, and effect reconciliation.
+7. Communicate degraded semantics.
+8. Escalate shared dependency or service capacity to its owner.
+
+### During recovery
+
+1. Probe with bounded traffic.
+2. Reconcile unfinished and ambiguous effects before replay.
+3. Expire stale tasks and approvals.
+4. Restore capacity in steps and watch distributions.
+5. Compare outcome and resource floors to control.
+6. Record correction, verification, residual limit, and owner.
+7. Update envelope only through review; do not normalize an incident workaround.
+
+## Counterexamples that catch shallow budgeting
+
+### Fast and wrong
+
+A candidate halves p95 by returning the first inventory match. Proposal accuracy and current-evidence coverage fall. It violates the quality floor and is outside the envelope regardless of latency.
+
+### Cheap and unauthorized
+
+A smaller model uses fewer units but occasionally invokes a broad capability without an exact approval binding. Cost cannot compensate for authority failure. Remove effect permission or reject the candidate.
+
+### Successful and unrecovered
+
+A reservation commits, the response is lost, and the user later sees the right slot. The run reports success but never reconciles its unknown state. That is not an acceptable recovery outcome; the external coincidence does not repair the protocol.
+
+### Stable average, starving tail
+
+Thousands of fast explanations keep mean latency low while five urgent tasks wait behind loops. Segment and oldest-age signals expose the failure. Adding workers may defer it without fixing priority or loop behavior.
+
+### Lower token count, higher external load
+
+A compact prompt delegates aggressively to search and inventory. Model units fall while tool traffic, rate-limit responses, and external cost rise. Joint accounting prevents the false saving.
+
+### Degradation that widens authority
+
+When reviewers back up, a team proposes automatic approval for low-value reservations. That is not degradation; it is an authority expansion. The safe degraded path is proposal-only, read-only, or stopped until an authorized policy change is evaluated.
+
+### A limit with no terminal semantics
+
+The runtime kills every run after ten minutes. Some remain displayed as `running`; one has an unknown effect. A process timeout without durable disposition, reconciliation, and ownership is not an operational budget.
+
+### Price copied into architecture
+
+A design document says multi-agent costs exactly five times more using one dated provider case or rate card. It becomes false when routing, workload, caching, models, or rates change. Keep measured units and dated scenario parameters.
+
+## Exercises
+
+### Exercise 1: construct four envelopes
+
+Given a manual explanation, current inventory comparison, reservation proposal, and approved reservation, specify quality/evidence/recovery floors; time, action, cost, queue, and capacity ceilings; degradation; stop behavior; and owner. Explain every difference by consequence rather than convenience.
+
+Score five points for dimensional completeness, five for consequence/tail reasoning, five for shared-capacity interaction, and five for safe degradation. Any widened authority or missing effect recovery caps the result at ten.
+
+### Exercise 2: diagnose a percentile table
+
+A report shows overall p50 18 seconds, p95 42 seconds, and mean 24 seconds. It excludes cancellations and combines lookup with approval. List the decisions the table cannot support. Design partitions, terminal classes, sample metadata, and two charts that would reveal the rare loop and reviewer wait.
+
+A strong answer refuses to infer health, includes queue age and survival, keeps rejected/expired runs, and connects thresholds to consequence.
+
+### Exercise 3: unwind retry multiplication
+
+The orchestrator retries two times, adapter three, and HTTP client four. Draw the maximum transport attempts and identify one retry owner. Define error classes, time window, backoff/jitter, semantic-effect handling, and a deterministic test. Include behavior when the useful deadline is shorter than the schedule.
+
+Do not award full credit to an answer that merely lowers attempt counts. It must distinguish pre-dispatch failure from unknown post-dispatch effect.
+
+### Exercise 4: choose degradation
+
+Four traces arrive: manual-store slowdown, inventory rate limit, approval backlog, and telemetry link loss during an effectful run. Choose mode, mandatory work, user status, exit criteria, and escalation owner. Justify why each disabled capability can stop and why each retained path must continue.
+
+The telemetry case should narrow authority because critical observation is impaired. It must preserve effect-system reconciliation through an independently controlled path.
+
+### Exercise 5: analyze topology economics
+
+Use provider-neutral units to compare a single agent and routed specialists across easy lookup, hard synthesis, and effectful proposal. Include routing frequency, parallel capacity, reviewer time, failures, and quality/evidence outcomes. Apply two dated rate-card scenarios and identify where the decision changes.
+
+The conclusion must remain segment-specific. Multi-agent value is not established by one case or a single blended average.
+
+### Exercise 6: challenge the envelope
+
+Act as an adversarial reviewer. Find a workload omitted by the representative environment, a metric that can be gamed, a recovery path without protected capacity, a volatile configuration treated as stable, and a stakeholder whose authority is missing. Propose the smallest additional test for each.
+
+## Complete `AR-11 v1.0.0`
+
+The dossier now contains a versioned operational envelope for each FieldOps segment, a provider-neutral unit schema, a dated rate-card interface, distribution definitions, a load fixture, retry ownership, priority and recovery allocations, degradation states, triggers, exit rules, and accountable owners.
+
+Its release signals include quality/evidence/policy floors; p50/p95/p99 and oldest queue age by consequence; turn/tool/model/external units; dependency saturation and retry share; reviewer wait/expiry; effect and unresolved-effect counts; loop rate; and cancellation/stop latency. Every signal names a decision. Prices, quotas, context ceilings, provider dashboards, and reviewer availability are configuration with verification dates.
+
+The dossier makes bounded claims. It shows that the candidate policy contained the seeded rare loop, slowdown, rate limit, starvation, backlog, and ambiguous effect in the representative environment. It does not claim future production capacity. It lists omitted traffic shapes, external provider behavior, human variability, and cross-region failures.
+
+`AR-11 v1.0.0` supplies Chapter 17 with explicit release gates and stop signals. The next task is not to deploy broadly because the numbers look acceptable. It is to expose the smallest real cohort that can answer a named uncertainty while keeping effect permission, minimum exposure, and reachable stop authority intact.
+
+## Evidence boundary
+
+Claims in this chapter are intentionally narrow. `CLM-031` is supported by authoritative reliability guidance on distributions, monitoring signals, canary comparisons, and retries; the consequence segmentation and agent-specific fields are local synthesis. `CLM-032` is a normative synthesis informed by agent telemetry, reliability guidance, and a bounded vendor multi-agent report. No cited source establishes a universal budget, price, topology, or service objective.
+
+The FieldOps case is synthetic. Its values demonstrate procedures and failure mechanisms, not production forecasts. The Agentic AI Engineer owns agent-specific contracts, instrumentation requirements, fixtures, and evidence interpretation. Product/domain owners define service and consequence goals. SRE/platform own shared capacity and operational infrastructure. FinOps/procurement own financial governance. Security/privacy/legal own their control and data boundaries. Humans retain rejection, stop, takeover, and incident authority.
+
+That division is itself part of the envelope. A system is not within budget when it meets a latency percentile by spending authority it never had.

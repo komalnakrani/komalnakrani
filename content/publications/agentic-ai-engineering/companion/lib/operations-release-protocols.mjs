@@ -1,0 +1,5 @@
+export function evaluateEnvelope(run,envelope){const hard=envelope.floors.every(f=>run[f.key]>=f.min)&&envelope.ceilings.every(c=>run[c.key]<=c.max);return {supported:hard,mode:hard?'normal':envelope.degradedMode,authorityExpanded:false}}
+export function retryDecision({attempts,maxAttempts,effectState,deadlineLive}){if(effectState==='unknown')return 'reconcile';if(!deadlineLive||attempts>=maxAttempts)return 'stop';return 'retry'}
+export function releaseDecision(stage){const ready=Boolean(stage.question&&stage.control&&stage.stopOwnerReachable&&stage.exitGate&&stage.effectCeiling!==undefined);return ready?'bounded-exposure':'hold'}
+export function localCompletion(remote,artifact,policy){return remote.terminal===true&&artifact.schema===policy.schema&&artifact.tenant===policy.tenant&&artifact.fresh===true&&artifact.effect==='none'}
+export function compatibility(expected,advertised){if(expected.identity!==advertised.identity)return 'incompatible';if(expected.schema!==advertised.schema||expected.effect!==advertised.effect)return 'quarantined-pending-review';return 'verified-compatible'}

@@ -50,3 +50,6 @@ node --test content/publications/agentic-ai-engineering/companion/tests/chapters
 The tests prove the declared local fixture mechanics only. They do not prove
 production fitness, safety, legal authority, domain correctness, business value,
 or the superiority of any model, provider, or multi-agent topology.
+## Chapters 16-18
+
+`operations-release-protocols.mjs` and `chapters-16-18.test.mjs` provide deterministic examples for joint envelopes, unknown-effect reconciliation, bounded release gates, local completion, and protocol compatibility. Dossiers progress through `AR-11 v1.0.0`, `AR-12 v1.0.0`, and `AR-13 v0.1.0`. They are synthetic teaching artifacts, not production assurance or authority.
