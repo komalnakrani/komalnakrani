@@ -1,0 +1,35 @@
+{
+  "artifactId":"PF-11",
+  "version":"0.2.0",
+  "status":"synthetic-local",
+  "caseStatus":"fictional-synthetic",
+  "incidentId":"INC-PW-001",
+  "detectedBy":"adjudicated compatibility reports while aggregate engagement increased",
+  "affectedBehavior":"seller manipulation raises attractive ranking and unsupported compatibility presentation",
+  "affectedSegment":"text-long-tail seller-authored records",
+  "versions":{"feature":"patchwork-find","config":"0.1.0","modelAdapter":"local-deterministic","data":"synthetic-0.1.1-corrupted","controls":"PF-10-0.1.0"},
+  "timeline":[
+    {"at":"2026-08-16T11:00:00Z","event":"bounded cohort enabled","evidenceId":"EV-01"},
+    {"at":"2026-08-16T11:08:00Z","event":"engagement proxy rises","evidenceId":"EV-02"},
+    {"at":"2026-08-16T11:12:00Z","event":"first adjudicated compatibility report","evidenceId":"EV-03"},
+    {"at":"2026-08-16T11:14:00Z","event":"incident declared and cohort stopped","evidenceId":"EV-04"},
+    {"at":"2026-08-16T11:18:00Z","event":"seller-content quarantine enabled","evidenceId":"EV-05"},
+    {"at":"2026-08-16T11:25:00Z","event":"rollback replay passes frozen cases","evidenceId":"EV-06"}
+  ],
+  "traceBundle":[
+    {"traceId":"INC-T1","segment":"text-long-tail","behaviorState":"respond","failureLayer":"data-context","evidenceIds":["SELLER-77"],"policyFlags":["seller-instruction-token"],"latencyMs":430,"rawSellerText":"must-not-retain"},
+    {"traceId":"INC-T2","segment":"text-common","behaviorState":"respond","failureLayer":null,"evidenceIds":["CAT-12"],"policyFlags":[],"latencyMs":440,"rawQuery":"must-not-retain"}
+  ],
+  "hypotheses":[
+    {"id":"H1","layer":"model","statement":"model adapter version caused regression","evidenceFor":["behavior changed during cohort"],"evidenceAgainst":["model adapter unchanged","paired replay fails only with corrupted seller data"],"status":"disconfirmed-false-lead"},
+    {"id":"H2","layer":"data-context","statement":"seller instruction-like content escaped inert-data quarantine","evidenceFor":["failure tied to SELLER-77","quarantine flag reproduces","cleaned data passes replay"],"evidenceAgainst":[],"status":"supported-contributing-condition"},
+    {"id":"H3","layer":"product-metric","statement":"engagement proxy rewarded attractive unsupported results","evidenceFor":["engagement rose while adjudicated compatibility reports rose"],"evidenceAgainst":["small synthetic cohort"],"status":"supported-contributing-condition"},
+    {"id":"H4","layer":"control","statement":"known-token pattern control had incomplete coverage","evidenceFor":["novel seller phrasing bypassed CTL-01"],"evidenceAgainst":["permission and tool controls held"],"status":"supported-contributing-condition"}
+  ],
+  "containment":{"action":"stop bounded cohort, restore deterministic search, quarantine affected seller records","at":"2026-08-16T11:14:00Z","owner":"release operator","authority":"named incident and release authority","userRepair":"identify affected outputs and route adjudicated correction"},
+  "correction":{"data":"remove/quarantine instruction-like seller field from ranking input","control":"replace token-only check with structured allowed-field isolation plus adversarial fixture","code":"enforce inert seller-content boundary before feature extraction"},
+  "artifactChanges":["add seller-manipulation release case","revise CTL-01 implementation and monitor","add feedback disagreement panel","update incident runbook false-lead step","record data-owner correction responsibility"],
+  "verification":{"replay":"frozen ordinary, long-tail, seller-manipulation, permission, and tool cases pass","negativeEvidence":"small synthetic suite; novel manipulation remains possible","monitorWindow":"fictional bounded replay only","authority":"named release authority decides any renewed exposure"},
+  "residuals":["No prevalence estimate","No claim of complete manipulation detection","Affected-user reconstruction remains synthetic"],
+  "limitations":["Entire incident is fictional","Timestamps and metrics are teaching fixtures","No raw user or seller content may be published"]
+}

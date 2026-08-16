@@ -1,0 +1,27 @@
+{
+  "artifactId":"PF-10",
+  "version":"0.1.0",
+  "status":"synthetic-local",
+  "caseStatus":"fictional-synthetic",
+  "policyStatement":"Patchwork may suggest supported candidates and draft seller questions; it may not contact, purchase, or claim compatibility without implemented controls and named authority.",
+  "threatHarms":[
+    {"id":"TH-01","threat":"seller instruction injection","affectedParty":"shopper","harm":"ranking or explanation follows untrusted seller instructions"},
+    {"id":"TH-02","threat":"permission boundary failure","affectedParty":"catalog subject and shopper","harm":"unauthorized evidence exposure"},
+    {"id":"TH-03","threat":"unsupported compatibility claim","affectedParty":"shopper","harm":"wrong purchase or unsafe reliance"},
+    {"id":"TH-04","threat":"excessive agency","affectedParty":"shopper and seller","harm":"contact or purchase without confirmed authority"},
+    {"id":"TH-05","threat":"sensitive audit payload","affectedParty":"shopper","harm":"unnecessary content retention or disclosure"},
+    {"id":"TH-06","threat":"supply-chain or version drift","affectedParty":"all users","harm":"control behavior changes without evidence renewal"}
+  ],
+  "controls":[
+    {"id":"CTL-01","objective":"treat seller content as inert data","implementation":"structured field extraction plus instruction-token quarantine","version":"0.1.0","test":"seller-manipulation fixture cannot change policy or tool state","monitor":"seller-injection-rejection-count","owner":"application security owner","residual":"novel manipulation can evade known token patterns","reviewer":"security reviewer","authority":"security and product authorities"},
+    {"id":"CTL-02","objective":"enforce source permission before evidence use","implementation":"deny-by-default permission validator","version":"0.1.0","test":"denied evidence never reaches candidate or trace payload","monitor":"permission-denial-and-bypass-count","owner":"data access owner","residual":"upstream permission metadata can be wrong","reviewer":"privacy and security reviewers","authority":"data governance authority"},
+    {"id":"CTL-03","objective":"prevent unsupported compatibility claims","implementation":"deterministic revision and unit invariant plus evidence minimum","version":"0.1.0","test":"schema-valid incompatible candidate is rejected","monitor":"compatibility-invariant-rejection-count","owner":"catalog domain owner","residual":"rules do not cover ambiguous legacy variants","reviewer":"domain specialist","authority":"product and domain authorities"},
+    {"id":"CTL-04","objective":"separate typed provider output from trusted semantics","implementation":"schema, referential, permission, compatibility, and behavior-state validation","version":"0.1.0","test":"valid schema with invalid evidence is rejected","monitor":"validation-reason-count","owner":"application owner","residual":"semantic validators remain bounded by their encoded invariants","reviewer":"application reviewer","authority":"release authority"},
+    {"id":"CTL-05","objective":"block excessive agency","implementation":"draft-only tool proposal followed by permission, validation, explicit confirmation, idempotency, effect ledger, and recovery","version":"0.1.0","test":"unconfirmed draft produces no effect and unknown outcome reconciles before retry","monitor":"tool-state-and-unknown-effect-count","owner":"tool owner","residual":"external confirmation can remain ambiguous","reviewer":"product and security reviewers","authority":"user confirmation plus named tool authority"},
+    {"id":"CTL-06","objective":"preserve minimal auditable control evidence","implementation":"allowlisted audit event with version, decision, state, and evidence identifiers","version":"0.1.0","test":"raw prompt, output, image, and identity fields are removed","monitor":"audit-schema-rejection-and-loss-count","owner":"observability owner","residual":"structured identifiers can still enable linkage","reviewer":"privacy reviewer","authority":"privacy and security authorities"}
+  ],
+  "dataHandling":{"purpose":"local synthetic control verification","rawContentDefault":false,"allowedFields":["eventId","traceId","controlId","decision","componentVersion","evidenceIds","effectState","timestamp"],"retention":"fictional test runtime only","access":"local test process","prohibitedReuse":"training, profiling, external action"},
+  "humanReview":{"trigger":"ambiguous legacy variant or unresolved effect","evidence":"redacted trace, evidence IDs, versions, failed invariants","reviewer":"named qualified reviewer","decisionRights":"recommend correction or scope; cannot self-authorize release","escalation":"product, domain, privacy, security, or release authority as applicable","timeout":"fictional bounded exercise value only"},
+  "residualDecision":{"id":"RES-01","issue":"ambiguous legacy variants remain outside deterministic compatibility coverage","status":"blocks-release-for-affected-scope","owner":"catalog domain authority","allowedEngineerDisposition":"reduce scope or request authority decision","prohibitedEngineerDisposition":"accept residual risk"},
+  "limitations":["Synthetic controls do not establish security, privacy, safety, compliance, or legal sufficiency","Pattern checks are deliberately incomplete","No external tool effect"]
+}
