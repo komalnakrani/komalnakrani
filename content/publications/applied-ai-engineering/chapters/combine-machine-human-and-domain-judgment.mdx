@@ -1,0 +1,1078 @@
+---
+title: "Combine Machine, Human, and Domain Judgment"
+slug: "combine-machine-human-and-domain-judgment"
+summary: "Assign each system claim to deterministic checks, references, calibrated graders, trained raters, specialists, or accountable authorities without laundering agreement into truth."
+minutes: 80
+sourceIds: ["SRC-003", "SRC-024", "SRC-026", "SRC-027", "SRC-029", "SRC-030", "SRC-049", "SRC-050", "SRC-051"]
+claimIds: ["CLM-054", "CLM-055", "CLM-056", "CLM-057", "CLM-058"]
+objectiveIds: ["AAE-K02", "AAE-K06", "AAE-K08"]
+figureIds: ["FIG-021", "FIG-022"]
+---
+
+## Every evaluator has a boundary
+
+Patchwork asks whether a response preserves evidence. A JSON validator says the object has the required fields. A deterministic policy says the candidate is currently eligible. A seeded model grader prefers the longer, more confident explanation. A trained rater rejects that explanation because it guarantees fit. A catalog specialist says the underlying attribute evidence conflicts. The release owner asks whether any allowed product state can proceed.
+
+Which evaluator is correct?
+
+The question is malformed. Each evaluator can support a different claim.
+
+The schema validator can support **shape conforms to schema v1**. It cannot support relevance. The policy engine can support **no known deterministic exclusion fired under rule version 0.1**. It cannot resolve a disputed source fact. The model grader may support a bounded wording criterion after calibration. It cannot authorize compatibility. The specialist can interpret domain evidence under their competence. They may still be uncertain. The release owner can issue a disposition; they do not manufacture missing evidence.
+
+Applied AI evaluation is a judgment system. Its architecture assigns claims to credible evidence sources, measures evaluator limitations, preserves disagreement, and keeps decision authority explicit.
+
+## Begin with the claim, not the evaluator
+
+Teams often start with what is available: a judge model, labeling vendor, product analytics, or expert meeting. Reverse the order.
+
+Write the claim precisely:
+
+- output conforms to schema;
+- candidate belongs to current eligible set;
+- known incompatibility is absent under policy version;
+- explanation preserves matched, unresolved, and conflicting evidence;
+- clarification is understandable to the intended user;
+- an attribute is substantively correct;
+- residual risk is accepted for a bounded release.
+
+Then ask what evidence can establish, challenge, or leave each claim unresolved.
+
+A claim has scope: task, population, component versions, criterion, time, and authority. **The explanation is good** is not evaluable. **Under rubric 0.1, the explanation preserves the structured evidence state without adding certainty for the selected synthetic cases** is.
+
+## The judgment stack
+
+Use the lowest-cost evaluator that can credibly answer the claim, then escalate when the claim exceeds its authority or evidence.
+
+### Deterministic invariant
+
+Use code for schema, type, membership, permission, known policy, version, transition, effect count, and exact reference checks. Deterministic does not mean infallible; the rule and implementation still need review. It means repeated inputs under a version produce an inspectable result.
+
+### Reference comparison
+
+Use an approved reference where the target is exact or bounded: expected behavior state, known candidate membership, canonical unit conversion, or frozen policy outcome. Reference quality and provenance remain part of evidence.
+
+### Calibrated model grader
+
+Use a model for scalable, fuzzy judgments only when a study shows useful agreement/error for the specific rubric, case distribution, and version. Isolate position, verbosity, style, self-preference, and leakage risks. Treat it as a noisy instrument.
+
+### Trained rater
+
+Use raters for defined product criteria such as evidence preservation or clarity. Supply training, examples, blind cases, stop conditions, and disagreement process. A person without a rubric is not a calibrated evaluator.
+
+### Task user
+
+Use intended users for comprehension, workflow fit, correction, and outcome evidence. Preference is not permission or long-term value. User studies need ethical, privacy, and product-research authority.
+
+### Domain specialist
+
+Use specialists for substantive facts and consequence interpretations within competence. Record evidence, uncertainty, disagreement, and source. Expertise does not create infallibility or organizational authorization.
+
+### Accountable authority
+
+Use named authority for approval, risk acceptance, policy, and release disposition. Authority consumes evidence; it is not an evaluator score.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f11-1-judgment-stack.png" alt="Colorful three-dimensional judgment stack routing claim evidence through deterministic check, reference comparison, model grader, trained rater, specialist, and a separate authority gate, with disagreement and limitation stops." width="1586" height="992" loading="lazy" decoding="async" />
+  <figcaption><strong>F11.1 - Use the cheapest credible evidence for each claim.</strong> Higher cost does not automatically mean greater correctness, and authority remains separate from evaluation.</figcaption>
+</figure>
+
+## Assign claims explicitly
+
+`PF-07` v0.3 includes an evaluator-selection matrix.
+
+| Claim | Primary evaluator | Check | Authority |
+| --- | --- | --- | --- |
+| JSON shape conforms | schema validator | valid/invalid fixture | application owner |
+| Candidate is currently eligible | deterministic membership/policy | trace and reference set | application/catalog owners |
+| Known incompatibility absent | versioned domain rule | control test | catalog-domain owner |
+| Explanation preserves evidence | trained rater plus bounded grader | rubric/calibration | product/trust reviewers |
+| Clarification understandable | intended task users | interaction study | product owner |
+| Disputed attribute correct | specialist evidence review | source comparison | catalog-domain owner |
+| Residual risk accepted | evidence packet | release disposition | named release authority |
+
+The matrix prevents one evaluator from expanding because it is convenient.
+
+Transparent benchmark frameworks strengthen evaluation by preserving scenarios, metrics, and raw artifacts, but their evidence still does not become Patchwork product acceptance or domain authority. [CLM-056]
+
+## Deterministic graders first
+
+Before asking a model or person, execute invariants.
+
+Patchwork's deterministic grader checks:
+
+- schema validity;
+- candidate eligibility;
+- policy state presence;
+- zero effects.
+
+If candidate eligibility fails, stop. A model grader's high quality score cannot override it. If the effect count is nonzero under v0.1, the evaluation is a control failure.
+
+Deterministic checks reduce cost and disagreement. They also protect raters from seeing content that should never have crossed permission.
+
+Schema-constrained output supports only a schema claim. Provider documentation and the system boundary both preserve that limitation.
+
+## References have provenance
+
+A reference label is a claim made through a process.
+
+Record:
+
+- source and version;
+- author or labeling role;
+- instructions and criteria;
+- competence;
+- evidence shown;
+- ambiguity;
+- disagreement/adjudication;
+- date and change triggers;
+- intended use and prohibited inference.
+
+Dataset documentation in specialized domains illustrates that expert participation and label construction need provenance. It does not mean any expert label is universal truth. [CLM-057]
+
+Patchwork's constructed references are authored for teaching mechanics. They cannot establish real compatibility.
+
+## Model graders are instruments, not judges in robes
+
+Model-based evaluation can scale comparisons and classify open-ended output. Studies report systematic position, verbosity, and self-enhancement biases in some judge settings. [CLM-055] Vendor grader APIs provide current mechanics, not proof of validity for your criterion.
+
+Test at least:
+
+- position swap;
+- verbosity without added evidence;
+- style/formality;
+- answer order;
+- model/provider self-preference;
+- reference leakage;
+- instruction injection inside evaluated content;
+- refusal and malformed output;
+- segment/category differences;
+- version drift;
+- repeated-run variance.
+
+The companion's seeded biased grader is intentionally bad. It usually prefers the first response and can prefer a much longer answer. On a three-case blind sample, agreement with constructed references is one third. That number is not a benchmark. It proves the calibration report can expose failure.
+
+Do not tune the grader repeatedly on release cases until it agrees. That converts the release set into evaluator development.
+
+## Write a rater rubric
+
+`PF-07` v0.3 uses three criteria.
+
+### Evidence preservation
+
+Does the response keep matched, unresolved, and conflicting evidence distinct without invention?
+
+- 0: adds or hides a consequential fact;
+- 1: mostly preserves evidence but has a material ambiguity;
+- 2: preserves all required states and limitations.
+
+### Certainty discipline
+
+Does the response stay within the structured behavior state?
+
+- 0: guarantee or unsupported probability;
+- 1: ambiguous confidence language;
+- 2: certainty matches evidence and contract.
+
+### Permitted next action
+
+Is the next action understandable, allowed, and reversible?
+
+- 0: unauthorized or misleading action;
+- 1: allowed but unclear or incomplete;
+- 2: clear allowed correction/fallback/review.
+
+Stop conditions include permission violation, known incompatibility, invented source fact, and unauthorized effect. A stop condition blocks aggregate rubric averaging.
+
+Rubric text needs examples and counterexamples. Keep examples in evaluator-development, not the clean release set.
+
+## Train raters for the actual task
+
+Training covers:
+
+- task and behavior contract;
+- taxonomy and criterion meanings;
+- distinction between relevance and compatibility;
+- matched/unresolved/conflicting evidence;
+- allowed behavior states;
+- stop conditions;
+- use of source packets;
+- uncertainty and `cannot judge`;
+- escalation;
+- privacy/security handling;
+- blind workflow.
+
+Require raters to explain difficult decisions during calibration. The explanation reveals mismatched criterion interpretation. Do not require rationales on every production item if it changes cost, privacy, or bias without benefit.
+
+Rater identity and performance are sensitive operational data. Limit access and avoid punitive use of disagreement.
+
+## Blind the sample where it matters
+
+Blind evaluators to system identity, provider, preferred hypothesis, and other cues not required for the criterion. Randomize answer position. Normalize irrelevant formatting only if formatting itself is not evaluated.
+
+Blinding cannot remove every signal. A provider may have a recognizable style. Record residual cues. Keep case IDs and expected references hidden where feasible.
+
+Use a seeded blind sample so order is reproducible. Store the seed and assignment. A blind sample exposed during rater training becomes calibration evidence, not clean evaluation.
+
+## Calibrate before scaling
+
+Calibration asks whether the evaluator behaves credibly on a bounded reference set.
+
+Process:
+
+1. freeze rubric and examples;
+2. select a blind sample across criteria and segments;
+3. include known traps such as verbosity and swapped position;
+4. collect independent decisions;
+5. compare with references and each other;
+6. analyze errors by criterion/segment;
+7. revise rubric or reject evaluator;
+8. rerun on a fresh sample;
+9. define allowed use and monitoring.
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f11-2-calibration-flow.png" alt="Bright three-dimensional calibration flow from a calibration set through blind sample, human judgment, model judgment, disagreement, adjudication, and limitation, with position bias, verbosity bias, and unresolved states visible." width="1586" height="992" loading="lazy" decoding="async" />
+  <figcaption><strong>F11.2 - A scalable evaluator earns only limited, local trust.</strong> Failed calibration narrows or rejects its use; disagreement remains evidence.</figcaption>
+</figure>
+
+Calibration agreement does not prove correctness. A group can agree on a wrong or underspecified criterion. [CLM-058]
+
+## Measure agreement carefully
+
+Raw percent agreement is easy to understand and sensitive to class imbalance. Chance-adjusted coefficients can help under their assumptions. Neither settles substantive truth.
+
+Report:
+
+- sample and category composition;
+- rubric/evaluator versions;
+- raw agreement;
+- per-criterion confusion;
+- segment outcomes;
+- position/verbosity probes;
+- `cannot judge` rate;
+- disagreements and adjudication;
+- uncertainty;
+- allowed evaluator use.
+
+Do not publish one inter-rater number without showing which errors matter. High agreement on easy cases and disagreement on critical cases is weak evidence.
+
+## Preserve disagreement
+
+Disagreement can mean:
+
+- ambiguous criterion;
+- incomplete evidence;
+- rater training gap;
+- legitimate domain dispute;
+- evaluator bias;
+- data error;
+- normative conflict;
+- different authority.
+
+Classify before adjudication. Do not automatically use majority vote.
+
+The companion includes `J-003`: two permitted sources conflict. One response abstains and requests catalog review; another shows both and asks the buyer. There is no constructed reference. The report leaves it unresolved and routes it to catalog-domain authority.
+
+The unresolved case is a success of the evaluation system. It stops false certainty.
+
+## Adjudication is a new evidence event
+
+An adjudicator needs:
+
+- exact dispute;
+- independent judgments;
+- source evidence;
+- rubric version;
+- competence and authority;
+- permitted dispositions;
+- conflict-of-interest handling;
+- recorded rationale;
+- change triggers.
+
+Adjudication can correct labels or identify a missing behavior clause. It should not silently rewrite references. Version the artifact and show affected prior results.
+
+If the dispute is normative, the adjudicator may be a product/domain authority rather than an evaluator. If evidence is insufficient, leave unresolved.
+
+## Evaluate human-AI interaction
+
+Model output alone misses whether users understand, correct, and recover. Human-AI interaction guidance and integration testing research support evaluating observable use over time. [CLM-054]
+
+Patchwork needs scenarios for:
+
+- capability expectation before use;
+- interpretation of matched/unresolved fields;
+- correction after missing unit;
+- response to abstention;
+- recognition of ordinary-search fallback;
+- behavior after conflicting evidence;
+- edit/cancel of seller-question draft;
+- recovery from timeout;
+- change after repeated use.
+
+Measure comprehension and behavior, not only stated preference. A user can prefer confident wording and misunderstand it.
+
+## Users do not authorize every behavior
+
+User preference can support design choices. It cannot authorize permission exposure, unsupported claims, or prohibited actions. Short-term acceptance can conflict with long-term consequence.
+
+If users repeatedly ask for guaranteed compatibility, the product can improve explanation or evidence collection. It cannot manufacture a guarantee. Route policy changes through domain/product authority.
+
+Affected parties may include people other than the direct user. Evaluation must consider them when the consequence crosses roles.
+
+## Domain specialists have limits
+
+A specialist's judgment depends on:
+
+- relevant training and current competence;
+- evidence quality;
+- task scope;
+- conflicts and incentives;
+- time;
+- independence;
+- ability to express uncertainty;
+- organizational decision rights.
+
+Specialists can disagree. Ask what evidence would resolve the dispute. Preserve minority rationale when consequential.
+
+Do not overload specialists with schema or routine cases deterministic checks can handle. Use their time for substantive ambiguity.
+
+## Authority consumes evidence
+
+Formal authority decides release, risk acceptance, policy, or domain rules. It must receive an evidence packet with:
+
+- decision and scope;
+- behavior contract;
+- taxonomy and criteria;
+- evaluator design/calibration;
+- results and critical errors;
+- unresolved disputes;
+- segment/gap report;
+- operational limits;
+- rollback/monitoring;
+- recommendation and alternatives.
+
+An authority may decide against the engineering recommendation. Record the decision, rationale, conditions, and owner. Do not represent the evaluator score as approval.
+
+## Combine judgments without flattening them
+
+A sound pipeline is ordered:
+
+1. deterministic stop conditions;
+2. exact/reference comparisons;
+3. bounded scalable grader;
+4. trained rater on sampled or unresolved items;
+5. specialist for substantive disputes;
+6. named authority for decision.
+
+Do not average permission validity, relevance, clarity, and domain correctness into one score. Keep dimensions and stop conditions.
+
+A model grader can triage likely rubric failures. It cannot hide its disagreement rate. A rater can review a sample. Sampling limits remain. A specialist can resolve facts. Authority remains named.
+
+## Monitor evaluator drift
+
+An evaluator can drift when:
+
+- model/provider version changes;
+- prompt/rubric changes;
+- case distribution changes;
+- raters turn over;
+- training examples change;
+- domain semantics change;
+- repeated exposure creates shortcuts;
+- product output adapts to the evaluator.
+
+Replay calibration probes. Track disagreement and stop-condition misses by segment. Version every evaluator component. Suspend automated acceptance when performance crosses limits.
+
+Evaluator monitoring is not self-validation. Periodically use independent human/specialist review.
+
+## Avoid evaluator gaming
+
+Once a score becomes a target, systems and teams can optimize style instead of behavior. Longer explanations may impress a judge while obscuring evidence. Models may learn reference phrasing. Engineers may tune prompts to a grader's preferences.
+
+Controls include:
+
+- rotate fresh held-out cases;
+- keep deterministic invariants outside the grader;
+- use multiple evidence sources;
+- hide irrelevant system identity;
+- inspect qualitative failures;
+- compare judge and human errors;
+- preserve production feedback;
+- reward calibrated abstention;
+- change evaluators deliberately.
+
+Do not repeatedly change the rubric until the preferred system wins.
+
+## Cost and latency matter
+
+Judgment design balances:
+
+- claim consequence;
+- case volume;
+- evaluator cost;
+- latency;
+- expertise scarcity;
+- consistency;
+- privacy/access;
+- independence;
+- auditability;
+- uncertainty.
+
+Use deterministic checks broadly. Use graders for bounded scalable screening. Sample trained rater review. Escalate critical uncertainty. Keep user studies focused on interaction. Reserve authority for decisions, not row labeling.
+
+The cheapest credible evaluator is not the cheapest available evaluator.
+
+## Turn twelve claims into an evaluator plan
+
+Use one Patchwork response and enumerate the claims hidden inside it.
+
+### Claim 1: request is well formed
+
+Use deterministic schema and semantic input validation. The result establishes only that required fields, types, bounds, and explicit unit rules passed.
+
+### Claim 2: actor may use assisted discovery
+
+Use identity and permission policy under the current environment. A grader cannot decide. Formal identity/platform owners define the mechanism.
+
+### Claim 3: source evidence is permitted and current
+
+Use source permission/freshness metadata and policy. Unknown remains excluded. A specialist may correct metadata but cannot bypass the runtime control ad hoc.
+
+### Claim 4: candidate belongs to the current eligible set
+
+Use deterministic membership against the exact request trace. Global catalog existence is insufficient.
+
+### Claim 5: known incompatibility is absent
+
+Use versioned domain rules and source evidence. Domain owner approves semantics. Model judgment can propose a suspected conflict but cannot clear it.
+
+### Claim 6: candidate is relevant to the user's task
+
+Use reference comparisons, trained raters, and eventually task-user outcomes under a defined criterion. Segment results and uncertainty remain visible.
+
+### Claim 7: evidence packet is sufficient for the stated behavior
+
+Use deterministic required-field checks plus specialist review for semantic sufficiency. This is not the same as relevance.
+
+### Claim 8: explanation preserves evidence
+
+Use invariant checks for candidate IDs and prohibited wording, then calibrated model/rater rubric for meaning. Stop on invention or certainty inflation.
+
+### Claim 9: clarification is understandable
+
+Use intended users in interaction, measuring correction and interpretation. A model grader can screen wording but cannot replace the use study.
+
+### Claim 10: fallback supports the next step
+
+Use interaction evidence: can users distinguish ordinary search, correct inputs, or request review? Preference alone is weak.
+
+### Claim 11: operational behavior meets the task budget
+
+Use traces, load/latency/cost measurements, and failure injection. Human ratings do not measure tail latency.
+
+### Claim 12: bounded release is acceptable
+
+Use the complete evidence packet and named authority. No row-level evaluator owns this decision.
+
+The plan exposes gaps. If user interaction evidence is absent, the system cannot claim clarity merely because automated rubric scores pass.
+
+## Construct a blind calibration sample
+
+A calibration sample should be small enough to inspect and varied enough to challenge the evaluator's intended use.
+
+Stratify by:
+
+- rubric criterion;
+- behavior state;
+- ordinary and critical segments;
+- short and long response;
+- first/second answer position;
+- clear pass, clear fail, and ambiguous case;
+- source/evidence complexity;
+- known injection or style trap;
+- system/provider where identity can be blinded.
+
+Keep one or more unresolved cases. A sample with only obvious references can produce high agreement and no evidence about ambiguity.
+
+For every pair, create a position-swapped twin in evaluator development. If the judge changes preference merely because answers swap, quantify it. Do not put both twins across clean partitions without grouping.
+
+## Work through the seeded biased grader
+
+The companion uses four fictional judgment fixtures.
+
+`J-001` compares concise evidence-bounded wording in position A with a verbose confident guarantee in position B. A verbosity-preferring grader may select B despite the reference A.
+
+`J-002` places a detailed but unsupported answer in A and a precise missing-unit clarification in B. A position-preferring grader may select A.
+
+`J-003` presents a substantive conflict with no reference. One answer abstains and requests catalog review; the other shows both sources and asks the buyer. The correct evaluation outcome is unresolved under the current evidence.
+
+`J-004` compares a useful abstention plus correction/fallback with a terse abstention. The reference favors the actionable answer, but the criterion must distinguish useful detail from verbosity for its own sake.
+
+The seeded grader is deterministic so readers can reproduce its bias. It is not intended to mimic any specific provider or estimate real judge performance.
+
+## Decide whether a grader is usable
+
+Create an allowed-use statement, not a binary trusted/untrusted label.
+
+Example:
+
+> Grader G v0.4 may triage likely evidence-preservation failures for ordinary English responses under rubric R v0.2. It cannot clear stop conditions, judge compatibility, evaluate denied content, decide release, or operate without sampled human review. Suspend use if critical stop-condition miss exceeds zero in calibration or segment disagreement exceeds the declared bound.
+
+Define:
+
+- supported criteria and languages;
+- case/output types;
+- model/provider/version/prompt;
+- calibration sample and date;
+- agreement/error by criterion/segment;
+- critical miss limit;
+- sampling for oversight;
+- drift triggers;
+- data/permission boundary;
+- escalation;
+- owner.
+
+If the grader fails, use deterministic checks and trained raters, narrow the criterion, or redesign the rubric. Do not accept it because manual review is expensive.
+
+## Calibrate model and human evaluators separately
+
+A grader and rater can disagree for different reasons.
+
+For model graders inspect:
+
+- position, verbosity, style, provider, and self-preference;
+- prompt injection from evaluated text;
+- nondeterminism;
+- context length/truncation;
+- reference use;
+- model/version drift;
+- cost/latency;
+- sensitive data exposure.
+
+For human raters inspect:
+
+- criterion comprehension;
+- training/example effects;
+- fatigue;
+- order/context effects;
+- language/domain competence;
+- workload/time pressure;
+- incentives;
+- access/privacy;
+- disagreement and `cannot judge` use.
+
+Combining them does not cancel bias automatically. Compare error patterns and route claims accordingly.
+
+## Use model graders behind hard gates
+
+A safe evaluation order for one explanation:
+
+1. validate result schema;
+2. verify candidate membership and permission;
+3. enforce known policy/incompatibility;
+4. compare factual references deterministically where possible;
+5. run the model grader on allowed wording criteria;
+6. sample or route uncertain/critical cases to trained raters;
+7. escalate substantive fact disputes to specialists;
+8. preserve authority for disposition.
+
+If steps 1-3 fail, do not pass the output to a model grader and average scores. The failure is already decisive.
+
+This architecture also reduces data sent to a provider. The grader receives the minimal authorized packet needed for the criterion.
+
+## Design rater instructions that resist drift
+
+Instructions include:
+
+- purpose and non-purpose;
+- exact unit of judgment;
+- rubric definitions;
+- examples/counterexamples;
+- evidence fields visible;
+- stop conditions;
+- `cannot judge` and escalation;
+- treatment of style/length;
+- independence/blinding;
+- prohibited external lookup;
+- privacy/security handling;
+- timing and breaks;
+- version/change log.
+
+Pilot with think-aloud explanation to find ambiguous terms. After freeze, do not clarify one rater privately; update the instruction version for everyone and classify affected judgments.
+
+Rater guides should not contain live release answers. Group examples to prevent leakage into evaluation.
+
+## Sample human review deliberately
+
+Review every critical stop-condition case. For the rest, combine:
+
+- random sample for overall error estimation;
+- stratified sample for important segments;
+- uncertainty/disagreement sample;
+- change-focused sample;
+- adversarial/challenge sample.
+
+Keep selection rules before results. Reviewing only grader-flagged cases cannot estimate grader false negatives. Include unflagged cases.
+
+If the case volume is small or consequence high, full review may be justified. Cost is not a reason to pretend an unreviewed score is credible.
+
+## Treat `cannot judge` as evidence
+
+Raters and specialists need an allowed uncertainty state. High `cannot judge` can reveal:
+
+- missing evidence;
+- ambiguous rubric;
+- wrong evaluator competence;
+- conflicting sources;
+- outside-scope case;
+- poor interface packet;
+- unknown domain semantics.
+
+Do not force a binary label to simplify metrics. Route uncertainty according to the behavior contract. A product that must act despite missing evidence has a system-design problem, not a labeling inconvenience.
+
+## Distinguish agreement from accuracy
+
+Two raters can agree with each other and disagree with a stronger reference. A model and human can share the same stylistic bias. A specialist majority can operate under the same missing evidence.
+
+Where credible references exist, report agreement with reference and between evaluators separately. Where references do not exist, report consistency and disagreement without calling it accuracy.
+
+Calibration research concerns predicted probabilities and observed outcomes under defined conditions. It does not convert evaluator agreement into semantic correctness. [CLM-058]
+
+## Handle domain disagreement without voting it away
+
+Suppose two catalog specialists disagree about whether a source description establishes a critical dimension.
+
+Ask:
+
+1. Do they use the same criterion and source version?
+2. Is the disagreement factual, semantic, or normative?
+3. Is one source authoritative under an approved hierarchy?
+4. What additional evidence could resolve it?
+5. Can the product safely clarify, abstain, or show conflict?
+6. Who owns the domain rule and who authorizes the product state?
+
+If evidence remains insufficient, the case stays unresolved. Patchwork abstains from compatibility language. Record the competing rationale and change trigger.
+
+Majority vote is inappropriate when the issue is missing evidence or authority.
+
+## Evaluate correction and recovery sequences
+
+Human-AI behavior changes after feedback. Static grading misses whether the system:
+
+- accepts user correction;
+- discards stale prior output;
+- explains why correction mattered;
+- recomputes the right fields;
+- preserves user agency;
+- recovers from timeout;
+- distinguishes ordinary fallback;
+- avoids repeated failed loops.
+
+Design a sequence rubric with state transitions. Measure whether the user reaches the task outcome, not only whether each message sounds good.
+
+Integration testing research reinforces the need to test the combined human-AI feature rather than isolated output. [CLM-054]
+
+## Use task users without turning preference into truth
+
+User studies can answer:
+
+- Do users understand capability and limits?
+- Can they identify matched/unresolved evidence?
+- Do they provide the right correction?
+- Do they distinguish discovery from compatibility?
+- Can they recover after failure?
+- Does the path reduce task effort?
+
+They cannot alone answer:
+
+- Is the candidate technically compatible?
+- Is permission valid?
+- Is a risk formally accepted?
+- Is long-term outcome beneficial?
+- Are non-user affected parties protected?
+
+Combine observed behavior, comprehension questions, task outcomes, and qualitative explanation. Preference is one signal.
+
+## Evaluate specialist workload as system behavior
+
+A review queue can fail through overload, delay, or inconsistent evidence packets.
+
+Measure:
+
+- eligible cases sent to review;
+- evidence completeness;
+- time to decision;
+- disagreement;
+- escalation;
+- abandoned/expired cases;
+- segment distribution;
+- reviewer capacity;
+- correction feedback into policy/data.
+
+If review cannot occur inside the useful task window, runtime must abstain or use another allowed path. Do not present a claim and promise later review.
+
+## Protect evaluator independence and data
+
+Evaluation infrastructure handles potentially sensitive inputs, outputs, labels, reviewer identities, and vulnerabilities.
+
+Define:
+
+- who can see release cases/references;
+- what graders/providers receive;
+- retention and deletion;
+- redaction;
+- rater access;
+- export restrictions;
+- prompt injection isolation;
+- incident handling;
+- audit evidence.
+
+An evaluated response can contain instructions aimed at the grader. Treat it as data. Delimit and validate. Do not grant tools.
+
+## Audit an evaluator change
+
+When changing model, prompt, rubric, rater pool, or specialist process:
+
+1. state the reason;
+2. increment version;
+3. identify affected criteria/segments;
+4. rerun blind calibration on fresh cases;
+5. compare errors, not only agreement;
+6. inspect critical stop conditions;
+7. update allowed-use statement;
+8. preserve old/new results;
+9. obtain authority for expanded use.
+
+An evaluator upgrade can change which product wins. Treat it like a measurement-system change, not maintenance trivia.
+
+## Build an evaluator disagreement table
+
+| Case | Deterministic | Model grader | Rater | Specialist/reference | Disposition |
+| --- | --- | --- | --- | --- | --- |
+| Valid concise evidence | pass | may pass | pass | reference pass | retain |
+| Verbose guaranteed fit | stop-condition fail | biased pass | fail | reference fail | reject wording |
+| Missing-unit clarification | pass | position-biased fail | pass | reference pass | reject grader use |
+| Conflicting sources | invariant passes conflict state | preference only | disagreement | unresolved | domain handoff/abstain |
+
+This makes disagreement diagnostic. It also shows why a model score cannot be averaged with permission or domain truth.
+
+## Create an authority handoff packet
+
+For unresolved or release decisions, include:
+
+- exact claim/dispute;
+- behavior consequence;
+- source and trace evidence;
+- criterion/rubric;
+- independent judgments;
+- calibration limitations;
+- affected segments;
+- safe runtime state;
+- alternatives;
+- requested decision;
+- decision owner and deadline.
+
+Do not send a dashboard and ask authority to infer the dispute. If no timely decision is possible, preserve abstention/narrow scope.
+
+## Decide when automation is not worth it
+
+A model grader may cost more to validate and monitor than the judgment it replaces. Keep human or deterministic evaluation when:
+
+- volume is small;
+- criterion is critical and nuanced;
+- labels are unstable;
+- data cannot leave a protected boundary;
+- model bias is hard to bound;
+- evaluator changes too often;
+- human review is already required for authority;
+- output is easy to check exactly.
+
+Automation should reduce cost without reducing credibility below the decision need.
+
+## Run the calibration session
+
+Start with a sealed rubric and blind assignment. Each evaluator works independently. Capture decision, criterion scores, `cannot judge`, stop condition, and a short rationale for calibration cases.
+
+After the first pass:
+
+1. reveal references only for cases with credible references;
+2. compute agreement by criterion and segment;
+3. inspect every critical miss;
+4. run position-swapped and verbosity probes;
+5. classify disagreements;
+6. discuss rubric interpretation without changing recorded decisions;
+7. decide whether the evaluator is accepted, narrowed, retrained, or rejected;
+8. revise rubric if needed and create a fresh sample;
+9. freeze the allowed-use statement.
+
+Do not report only the final improved calibration after several iterations. Preserve the learning curve and cases used for development. Later release evaluation must use unseen groups.
+
+For the companion's intentionally biased grader, the correct disposition is reject for acceptance decisions. It can remain a teaching fixture that demonstrates the pipeline.
+
+## Build a disagreement taxonomy
+
+Classify disagreement so it leads somewhere.
+
+### Criterion ambiguity
+
+Raters interpret **preserves evidence** differently. Correction: refine rubric/examples, version it, and re-evaluate affected cases.
+
+### Evidence insufficiency
+
+The source packet cannot support the claim. Correction: acquire evidence or abstain; do not adjudicate by preference.
+
+### Evaluator competence
+
+The case requires domain knowledge the rater lacks. Correction: route to specialist or narrow rater scope.
+
+### Evaluator bias
+
+Position, verbosity, style, provider identity, fatigue, or incentives drive the result. Correction: blind/randomize/retrain/reject and quantify residual error.
+
+### Legitimate alternative behavior
+
+Two outputs both satisfy the contract. Correction: allow variants; do not force one golden response.
+
+### Normative dispute
+
+The parties disagree about acceptable consequence or policy. Correction: route to named authority with affected-party evidence.
+
+### Reference error
+
+The supposed answer is wrong, stale, or contaminated. Correction: invalidate affected evidence, change reference version, and rebuild holdout.
+
+This taxonomy makes disagreement an input to system improvement rather than a nuisance score.
+
+## Quantify critical evaluator errors
+
+An evaluator confusion matrix can distinguish:
+
+- accepts a bad output;
+- rejects a good output;
+- correctly accepts;
+- correctly rejects;
+- abstains/cannot judge.
+
+Split bad outputs by taxonomy. Missing a permission violation is not equivalent to rejecting concise wording. Set zero or strict bounds for critical misses.
+
+Measure coverage: how often the evaluator issues a judgment. An evaluator that says `cannot judge` on difficult cases may be honest but not scalable. One that judges everything may be dangerously confident.
+
+Where sample size is small, report counts and uncertainty rather than a precise rate.
+
+## Use double review where consequence warrants it
+
+Independent double review can expose ambiguity and error. Use it for:
+
+- critical cases;
+- new rubric categories;
+- evaluator drift sample;
+- specialist disputes;
+- release holdout sample;
+- incidents and control changes.
+
+Do not have the second reviewer see the first decision before responding. Adjudication comes after independence. Record whether reviewers share training/source assumptions.
+
+Double review is not automatically enough. Two reviewers can share bias. Add reference, specialist, or affected-party evidence as the claim requires.
+
+## Route by uncertainty and consequence
+
+An evaluator router can reduce cost:
+
+1. deterministic stop conditions;
+2. high-confidence exact/reference pass;
+3. bounded model-grader triage;
+4. random oversight sample plus all uncertain/critical cases;
+5. specialist escalation;
+6. authority decision.
+
+The router itself needs evaluation. Check whether it sends critical segments to weaker evaluators, whether uncertainty estimates are calibrated, and whether queue load changes behavior.
+
+If specialist capacity is exceeded, do not lower routing thresholds silently. Degrade or abstain under policy.
+
+## Evaluate rater drift over time
+
+Use recurring hidden calibration items under appropriate ethics and workforce policy. Monitor:
+
+- criterion-specific agreement;
+- stop-condition misses;
+- `cannot judge`;
+- time per item;
+- segment distribution;
+- training/version cohort;
+- workload/fatigue;
+- escalation.
+
+Avoid using hidden checks as punitive traps. The objective is measurement quality and support. Share rubric changes and provide retraining.
+
+When drift appears, pause affected evaluator use, inspect causes, retrain or revise, and rerun fresh calibration. Preserve which production judgments may be affected.
+
+## Handle multilingual and accessibility criteria
+
+Clarity evaluation does not transfer automatically across language, literacy, disability, device, or assistive technology.
+
+Use competent raters and intended users for the supported context. Check whether translated terms preserve uncertainty and whether screen readers convey evidence states/order. A model grader calibrated in English cannot clear another language by default.
+
+Record unsupported segments and fallback. Do not call absence of evaluation a pass.
+
+## Keep user research and labeling distinct
+
+User research explores comprehension, workflow, trust, correction, and outcome. Labeling applies a defined criterion to cases. The same participant session can contain both, but methods and claims differ.
+
+Avoid asking users to certify domain facts outside competence. Avoid turning satisfaction into a relevance label without validating the relation. Preserve qualitative findings that reveal missing categories even when they do not fit the scoring rubric.
+
+## Apply the judgment stack to care routing
+
+For the fictional care-operations router:
+
+- schema/identity/queue permission: deterministic;
+- known emergency indicator: approved deterministic control;
+- administrative category: reference plus trained operations raters;
+- ambiguous substantive meaning: qualified professional review;
+- clinical interpretation: outside system claim;
+- release: named operational/privacy/safety authority.
+
+Users and raters cannot authorize a clinical claim by agreement. Review time and competence are part of the system. If the qualified path is unavailable, the behavior escalates or abstains according to policy.
+
+## Apply the judgment stack to forecasting
+
+For replenishment forecasting:
+
+- output shape/horizon/non-finite values: deterministic;
+- forecast error: observed reference after outcome window;
+- interval calibration: statistical evaluation under defined population;
+- planner usefulness: workflow/user study;
+- item-specific consequence: domain/operations specialists;
+- automated order policy: accountable business/risk authority.
+
+No model grader is necessary. The stack is claim-oriented, not LLM-oriented.
+
+## Preserve evaluator artifacts for replay
+
+Store:
+
+- evaluator/rubric/prompt/model versions;
+- allowed-use statement;
+- training/examples and their partition;
+- blind assignment/seed;
+- calibration cases and decisions;
+- disagreement/adjudication log;
+- segment report;
+- drift review;
+- authority decisions;
+- hashes and source revision;
+- access/retention rules.
+
+When a system/provider changes, replay with the same evaluator only if it remains within scope. When the evaluator changes, run old and new on a bridge set and preserve differences.
+
+## The Chapter 11 acceptance packet
+
+The completed packet includes the twelve-claim matrix, judgment stack, deterministic gates, reference provenance, model-grader probes, rater rubric/guide, blind sample, calibration report, disagreement taxonomy/log, unresolved case, allowed-use statement, drift plan, and authority handoff.
+
+It passes when a reviewer can say exactly which claims are automated, sampled, specialist-reviewed, unresolved, or formally decided. It fails if one judge score appears as objective quality.
+
+## Test the evaluator on the error taxonomy
+
+Calibration must include every error category the evaluator is allowed to judge, especially near borders.
+
+For explanation review, include:
+
+- irrelevant but cautious candidate wording;
+- relevant candidate with unsupported fit implication;
+- stale evidence described as current;
+- permission-safe response that leaks a denied title in rationale;
+- correct abstention written concisely;
+- unnecessary abstention written persuasively;
+- verbose answer with invented certainty;
+- concise answer preserving conflict;
+- permitted next action and unauthorized effect.
+
+Report misses by error category. An evaluator may agree overall and consistently miss overconfidence. Limit its use accordingly.
+
+## Keep rationale from becoming a new authority
+
+Evaluator rationales can help diagnose criteria and can also hallucinate facts, reveal references, bias adjudicators, or expose sensitive content. Treat rationales as untrusted evaluation artifacts.
+
+Do not show a model rationale to the rater before independent judgment. Do not use fluent rationale as evidence that the selection is correct. Validate/redact before storage, set retention, and keep it out of product traces unless specifically authorized.
+
+For deterministic checks, emit reason codes and evidence references rather than generated explanations.
+
+## Plan fallback when evaluation is unavailable
+
+An evaluator can time out, refuse, lose permission, or drift below threshold. Define fallback:
+
+- stop automated acceptance;
+- retain deterministic gates;
+- queue permitted cases for trained review;
+- reduce evaluation scope;
+- preserve unjudged status;
+- delay decision.
+
+Never treat evaluator failure as product pass. Evaluation infrastructure has failure semantics just like the product.
+
+## Communicate bounded conclusions
+
+Prefer:
+
+> Under rubric 0.1 and three blind synthetic reference cases, the seeded grader agreed once and showed position/verbosity failure. It is rejected for acceptance decisions.
+
+Avoid:
+
+> AI judges are 33 percent accurate.
+
+The first statement names evaluator, sample, criterion context, observed evidence, and disposition. The second overgeneralizes a teaching fixture. Every evaluator report should carry the same scope discipline.
+
+## Completion test
+
+Give a reviewer one output and its evidence packet. They should route schema, permission, relevance, evidence fidelity, domain truth, and release to different credible evaluators without using **human in the loop** as an answer. They should identify which failures stop early, which judgments are sampled, which dispute remains unresolved, and who owns the decision.
+
+If a model score, rater majority, or specialist title silently settles every claim, the judgment architecture fails. Narrow the evaluator and preserve uncertainty.
+
+Archive the calibration sample, assignments, decisions, rubric, allowed-use statement, disagreements, and authority handoff under their access policy. Future evaluator changes should replay a bridge set and show exactly which conclusions moved. Measurement history is part of product evidence.
+
+The chapter is complete only when evaluator failure has a safe fallback and unresolved judgment cannot be mistaken for approval. Credibility comes from bounded claims, visible error, and correct routing, not from evaluator sophistication.
+
+Keep the least costly credible path, retire evaluators that do not earn trust, and preserve the human or domain uncertainty the system cannot resolve.
+
+That is disciplined judgment under uncertainty.
+
+Preserve it.
+
+## PF-07 v0.3
+
+The artifact adds:
+
+- evaluator-selection matrix;
+- three-criterion rater rubric;
+- stop conditions;
+- blind sample seed;
+- seeded biased grader fixture;
+- calibration report;
+- disagreement report;
+- unresolved domain case;
+- authority handoff;
+- limitations.
+
+The synthetic grader agrees with one of three constructed references and exhibits position/verbosity behavior. That failure is intentional. It demonstrates why a grader cannot be accepted from convenience.
+
+## Practice: assign twelve claims
+
+List twelve claims from your system. Include schema, eligibility, policy, relevance, evidence fidelity, clarity, domain truth, user correction, recovery, privacy/security control, operational quality, and release.
+
+For each record:
+
+- claim and scope;
+- cheapest credible evaluator;
+- calibration/reference evidence;
+- sampling;
+- bias/failure modes;
+- unresolved path;
+- authority.
+
+Run a blind calibration with position and verbosity probes. Report agreement and per-criterion failures. Leave at least one dispute unresolved and route it to a named authority.
+
+Pass only when deterministic failures block before fuzzy judgment, model graders remain bounded, human majority does not become truth, domain expertise retains uncertainty, and release authority is explicit.
+
+## Handoff to experiments
+
+Chapter 10 supplied criteria and error policy. This chapter supplied credible evaluators and their measured limits. Chapter 12 can now preregister an experiment without choosing metrics or judges after results.
+
+The next step is to compare a baseline and one controlled change on paired cases, preserve critical segments and negative evidence, reproduce the packet, and allow the preferred mechanism to lose.

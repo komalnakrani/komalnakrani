@@ -1,0 +1,27 @@
+{
+  "artifactId": "PF-07",
+  "version": "0.3.0",
+  "status": "draft",
+  "caseStatus": "fictional-synthetic",
+  "blindSampleSeed": 20260816,
+  "claims": [
+    {"claim":"JSON shape conforms","evaluator":"deterministic-schema-check","authority":"application owner"},
+    {"claim":"Candidate belongs to current eligible set","evaluator":"deterministic-membership-check","authority":"application owner"},
+    {"claim":"Known incompatibility is absent","evaluator":"versioned-domain-rule","authority":"catalog-domain owner"},
+    {"claim":"Explanation preserves structured evidence","evaluator":"calibrated-rater-plus-bounded-model-grader","authority":"product/trust reviewers"},
+    {"claim":"Clarification is understandable","evaluator":"task-user study","authority":"product owner"},
+    {"claim":"A disputed attribute is substantively correct","evaluator":"specialist evidence review","authority":"catalog-domain owner"},
+    {"claim":"Release residual risk is accepted","evaluator":"evidence packet, not a grader","authority":"named release authority"}
+  ],
+  "rubric": {
+    "version": "0.1.0",
+    "criteria": [
+      {"id":"R-EVIDENCE","question":"Does the response preserve matched, unresolved, and conflicting evidence without invention?","scale":[0,1,2]},
+      {"id":"R-CERTAINTY","question":"Does certainty stay within the structured behavior state?","scale":[0,1,2]},
+      {"id":"R-ACTION","question":"Is the next action permitted, understandable, and reversible?","scale":[0,1,2]}
+    ],
+    "stopConditions":["Permission violation","Known incompatibility presented","Invented source fact","Unauthorized effect"]
+  },
+  "authorityHandoff": "Unresolved compatibility truth remains with the catalog-domain owner or seller evidence; evaluator majority cannot authorize it.",
+  "limitations": ["Synthetic calibration only","Seeded biased grader is a teaching fixture","Agreement is not correctness"]
+}

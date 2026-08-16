@@ -1,0 +1,1111 @@
+---
+title: "Run Experiments That Change Decisions"
+slug: "run-experiments-that-change-decisions"
+summary: "Preregister reproducible comparisons that isolate a change, preserve paired cases, segments, guardrails, confounds, and negative evidence, and end in an explicit disposition."
+minutes: 85
+sourceIds: ["SRC-016", "SRC-017", "SRC-020", "SRC-022", "SRC-023", "SRC-026", "SRC-028", "SRC-031", "SRC-032", "SRC-046"]
+claimIds: ["CLM-059", "CLM-060", "CLM-061", "CLM-062", "CLM-063", "CLM-064"]
+objectiveIds: ["AAE-K03", "AAE-K06", "AAE-K09"]
+figureIds: ["FIG-023", "FIG-024"]
+---
+
+## An experiment is a decision with a comparison
+
+Patchwork's challenger ranker retrieves more ordinary relevant cases. The team that built it prefers it. The dashboard makes the improvement obvious.
+
+The preregistered plan asks a harder question:
+
+> Does the challenger improve aggregate recall without presenting an incompatible, stale, or unauthorized candidate in any critical segment?
+
+The result is no. The challenger improves recall and violates two zero-tolerance controls. The experiment rejects it.
+
+That outcome is valuable. The experiment changed a decision before production exposure. It preserved the mechanism's positive evidence and prevented it from becoming a launch story.
+
+An applied AI experiment defines the decision, baseline, controlled change, population/cases, metrics, guardrails, evaluator, stopping rule, confounds, versions, and possible dispositions before results. It compares paired evidence, preserves segments and uncertainty, and makes negative results actionable.
+
+## Start with the decision
+
+Weak experiment question: **Is model B better?**
+
+Stronger question: **For Patchwork's frozen synthetic case suite under contract v0.1, should the team retain baseline ranking, adopt challenger weights, revise, reduce scope, or reject because of recall, critical errors, and segment evidence at threshold 0.70?**
+
+The decision determines what must be measured. If no possible result changes a choice, the work is monitoring or exploration, not a decision experiment.
+
+List dispositions before execution:
+
+- retain baseline;
+- adopt challenger;
+- revise challenger and rerun;
+- reduce supported scope;
+- reject mechanism;
+- acquire evidence because comparison is unresolved.
+
+## Write a falsifiable hypothesis
+
+The hypothesis names change and acceptable consequence:
+
+> Challenger ranking weights improve recall while preserving zero incompatible and permission-exposure errors and critical-segment recall of at least 0.80.
+
+This can fail. **The new model improves experience** cannot.
+
+Include expected mechanism. The challenger raises weights for hybrid evidence. The team expects better ordinary candidate inclusion. It risks overvaluing similarity in sparse long-tail cases. That mechanism tells us which ablation and segments matter.
+
+## Use a real baseline
+
+A baseline is the current best allowed alternative under the task, not a deliberately weak straw person.
+
+Patchwork baselines can include:
+
+- ordinary catalog search;
+- deterministic structured filters;
+- current lexical/vector-like hybrid ranker;
+- previous production/provider version;
+- human workflow where permitted.
+
+Record baseline version, configuration, data/context, threshold, policy, latency/cost assumptions, and limitations. If baseline changes during the experiment, the comparison no longer means what the plan says.
+
+## Change one thing when possible
+
+The `PF-08` plan compares baseline score weights with challenger ranking weights. Data, cases, threshold, policy, and evaluator stay fixed.
+
+Applied AI changes often bundle model, prompt, retrieval, context, policy, and UI. That may be necessary for a product candidate, but it weakens cause attribution. Use a sequence:
+
+1. component ablations;
+2. paired end-to-end comparison;
+3. operational comparison;
+4. bounded user/release experiment where authorized.
+
+If several components change, name the bundle and avoid claiming which component caused the result.
+
+## Preregister the plan
+
+The experiment packet records:
+
+- artifact/version/status and creation time;
+- decision and hypothesis;
+- baseline and controlled change;
+- suite ID/version/seed;
+- population, segments, and pairing;
+- primary metric and guardrails;
+- threshold and evaluator versions;
+- sample/stopping rationale;
+- ablations;
+- known confounds;
+- authority;
+- prohibited inferences.
+
+Hash the canonical plan before results. The hash proves which bytes represent the declared plan. It does not prove the plan was wise or independent.
+
+The companion rejects a result timestamp earlier than the plan.
+
+## Choose metrics and guardrails before results
+
+Primary metric: recall among constructed relevant cases.
+
+Guardrails:
+
+- zero critical errors;
+- zero permission exposure;
+- critical-segment recall at least 0.80.
+
+Secondary evidence includes precision, coverage, abstention, false-match rate, and segment report.
+
+Metric libraries define calculations; task consequence selects them. [CLM-060]
+
+Do not add a flattering metric after seeing results without labeling it exploratory. Do not delete a guardrail because it failed. Revise the plan and use fresh release evidence if the criterion itself was wrong.
+
+## Pair cases
+
+Run baseline and challenger on the same case/context when possible. Pairing controls case composition and lets the team see exact transitions:
+
+- both respond correctly;
+- baseline abstains, challenger responds correctly;
+- baseline responds, challenger abstains;
+- challenger introduces a critical error;
+- both fail.
+
+Store case ID, segment, versions, both outputs/states, error category, evaluator results, and difference.
+
+Pairing does not remove nondeterminism or time effects. Randomize order where execution order matters. Repeat provider calls if the decision requires distributional evidence. Record seed/settings.
+
+## Use multi-scenario evidence
+
+AI behavior is heterogeneous. Multi-scenario and multi-metric evaluation makes variation visible but remains bounded by the cases and protocol. [CLM-059]
+
+Patchwork includes ordinary, long-tail, denied-permission, missing-unit, and stale-source cases. One global average cannot support the hypothesis because the guardrails are segment/control-specific.
+
+Report raw case outcomes beside aggregates. A single permission violation must remain visible.
+
+## Ablate to test mechanism
+
+An ablation removes or replaces one component.
+
+Patchwork runs:
+
+- **without challenger weights**: restores baseline scores;
+- **without generated explanation**: tests whether structured evidence preserves behavior/usefulness without prose.
+
+Other useful ablations:
+
+- lexical only versus hybrid retrieval;
+- no reranking;
+- no query rewrite;
+- no optional memory;
+- deterministic explanation template versus generation;
+- smaller context packet;
+- old versus new representation.
+
+Never ablate mandatory permission or safety controls to expose users. A controlled offline test may verify that the regression gate catches their absence using synthetic fixtures, but the control stays enabled in allowed paths.
+
+## Component and end-to-end evidence differ
+
+Retrieval and ranking research provides mechanism comparisons under specific benchmark setups. First-party multimodal/search cases provide product engineering evidence under their contexts. [CLM-064] These sources can motivate a Patchwork experiment. They do not predict its outcome.
+
+Component evidence asks whether candidate recall or ranking changes. End-to-end evidence asks whether the product enters the right behavior state, preserves evidence, meets latency/cost, and supports the user task.
+
+A component improvement can harm interface behavior or controls. Keep both levels.
+
+## Draw the experiment graph
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f12-1-experiment-graph.png" alt="Colorful three-dimensional experiment graph connecting preregistration and a versioned baseline to paired-change and ablation paths, routing a confounded path to quarantine before segment results and decision." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption><strong>F12.1 - An experiment graph exposes what changed and what must remain comparable.</strong> Confounds and segments are part of the design, not footnotes after a result.</figcaption>
+</figure>
+
+Edges represent assumptions. Same suite assumes cases did not change. Same threshold assumes score semantics are comparable. Same evaluator assumes no drift. Same environment assumes operational differences are controlled. Challenge each edge.
+
+## Preserve confounds
+
+Potential confounds include:
+
+- case or data version changed;
+- index rebuilt from different sources;
+- policy/threshold changed;
+- provider silently updated;
+- evaluator prompt/model changed;
+- response position or UI changed;
+- cache warmed for one arm;
+- latency caused different abandonment;
+- logging/instrumentation differs;
+- time, novelty, or season affects online behavior;
+- interference between users/items;
+- training or evaluator leakage;
+- repeated peeking changed stopping.
+
+Record confounds even if not resolved. A result can be useful with limitations when the decision is bounded. Do not claim causality the design cannot support.
+
+## Reproduce before interpreting
+
+The companion creates:
+
+- plan hash;
+- fixture hash;
+- result hash;
+- baseline/challenger versions;
+- paired case outcomes;
+- segment reports;
+- gate results;
+- negative evidence;
+- disposition.
+
+Running twice under the same versions produces the same packet. Deterministic reproduction proves the fixture mechanics. A real provider may require repeated runs and a version/temperature/seed record. If precise version is unavailable, mark it.
+
+Reproduction is not replication across populations. It says the same procedure yields the same artifact under the recorded environment.
+
+## Negative evidence is a result
+
+Store failures prominently:
+
+- hypothesis rejected;
+- critical error cases;
+- segment regression;
+- null or inconclusive difference;
+- evaluator disagreement;
+- instrumentation failure;
+- unresolved confound;
+- inability to reproduce;
+- increased latency/cost;
+- degraded user comprehension.
+
+Do not bury them in logs while publishing aggregate gain. Negative evidence can stop investment, narrow scope, or identify the next discriminating experiment.
+
+## Statistical significance is not importance
+
+A p-value under a valid design addresses a probability statement under a null model. It does not measure effect importance, safety, product value, or release authority.
+
+Report effect sizes and uncertainty tied to the decision. Predeclare practical thresholds. Consider multiple comparisons and repeated looks. Avoid stopping when a preferred metric crosses a threshold unless the sequential design allows it.
+
+The companion's sixteen synthetic cases do not support significance claims. It reports exact constructed outcomes.
+
+## Sample size follows the decision
+
+For rate estimation or online experiments, sample size depends on baseline rate, minimum important effect, variability, assignment, power, alpha/error control, segments, and feasible exposure. Appendix A provides measurement refreshers.
+
+For zero-tolerance deterministic controls, targeted cases can establish that specific fixtures pass, not a population failure rate. Combine control tests with representative monitoring evidence.
+
+If a critical segment lacks enough data, do not pool it away. Reduce scope, acquire evidence, or preserve uncertainty.
+
+## Offline experiments are necessary and limited
+
+Offline evaluation supports fast, safe replay, ablation, and diagnosis. It can miss:
+
+- user interpretation;
+- behavior adaptation;
+- feedback loops;
+- latency perception;
+- distribution shift;
+- operational failure;
+- downstream consequence;
+- affected parties absent from data.
+
+Use offline evidence to reject weak systems and select candidates. Do not assume an offline winner will improve real task outcomes.
+
+## Online experiments require authority
+
+Controlled online experiments need trustworthy assignment, instrumentation, guardrails, exposure, interpretation, and organizational authority. Large-scale experimentation research offers durable discipline and context-specific experience. [CLM-061]
+
+Before exposure:
+
+- justify user/affected-party risk;
+- confirm legal/privacy/ethics/product authority;
+- bound population and duration;
+- implement stop/rollback;
+- verify instrumentation and sample-ratio checks;
+- define metrics/guardrails;
+- exclude high-consequence behavior if uncertainty is unjustified;
+- plan incident response;
+- preserve opt-out/communication where appropriate.
+
+Online testing is not a shortcut around weak offline evidence.
+
+## Canary is a release experiment
+
+A canary exposes a small bounded cohort or traffic share to a change while comparing signals and preserving rollback. It requires attributable signals, representative-enough exposure for its claim, and authority. [CLM-062]
+
+A canary can test production integration, latency, errors, and selected behavior. It does not automatically test rare failures or long-term outcomes. A tiny canary with no critical cases cannot clear the critical segment.
+
+Chapter 17 will design rollout. Here, treat canary as one experiment type, not a release checkbox.
+
+## Offline and online positives can miss behavior
+
+An incident report can show a change received positive qualitative, offline, and A/B signals while an important behavior category was missed. That evidence is specific to its system but supports a durable lesson: measured success cannot overrule an unmeasured consequential failure. [CLM-063]
+
+Patchwork prevents this by keeping taxonomy/gaps beside results. A new qualitative warning becomes a case and can block adoption even after an aggregate win.
+
+Do not dismiss user reports because a dashboard is green. Investigate whether the report names a missing criterion or segment.
+
+## Guard against metric changes after results
+
+If the primary metric fails and a secondary metric wins, report both. A new hypothesis requires a new plan.
+
+Maintain a change log:
+
+- original criterion;
+- observed issue;
+- proposed change;
+- authority;
+- whether old evidence remains valid;
+- new suite/evaluator/plan version;
+- fresh holdout requirement.
+
+Exploratory analysis is valuable when labeled. The problem is retroactive certainty.
+
+## Instrumentation is part of the experiment
+
+Verify:
+
+- assignment/pairing identity;
+- case inclusion/exclusion;
+- version capture;
+- missing events;
+- duplicate events;
+- clock/order;
+- effect denominators;
+- privacy/redaction;
+- consistent metric implementation;
+- trace-to-result linkage.
+
+Run an implementation check before interpreting behavior. If one arm logs abstention differently, the comparison is invalid.
+
+## Multiple tests and repeated tuning
+
+Trying many models, prompts, thresholds, segments, and graders increases the chance of a flattering result. Preserve the search process.
+
+Use:
+
+- clear primary decision;
+- predeclared comparison family;
+- correction or hierarchical reasoning where applicable;
+- evaluator-development versus release separation;
+- fresh confirmation after extensive tuning;
+- raw negative results;
+- stop conditions.
+
+Do not tune the grader and system together on the same release set. That optimizes the measurement instrument toward the preferred output.
+
+## The evidence-to-disposition flow
+
+<figure class="book-figure">
+  <img src="/assets/publications/applied-ai-engineering/f12-2-evidence-to-disposition.png" alt="Bright three-dimensional decision flow carrying versioned result packets through result, uncertainty, segments, guardrails, confounds, and negative evidence to an authority gate and five explicit dispositions." width="1568" height="1003" loading="lazy" decoding="async" />
+  <figcaption><strong>F12.2 - Results are unfinished until they change an explicit decision.</strong> A guardrail failure routes to reject or revise even when the primary metric improves.</figcaption>
+</figure>
+
+The flow asks:
+
+1. Did the run match the plan and versions?
+2. Did implementation/instrumentation checks pass?
+3. What changed in paired cases?
+4. Did any stop condition or guardrail fail?
+5. What do critical segments show?
+6. What uncertainty/confounds remain?
+7. Can the run reproduce?
+8. Which disposition follows?
+9. Which authority approves the next step?
+
+## The Patchwork result packet
+
+Baseline and challenger run over sixteen constructed paired cases at threshold 0.70.
+
+The challenger improves aggregate recall by responding to more ordinary relevant cases. It also:
+
+- presents an incompatible long-tail case;
+- presents a denied-permission case;
+- misses relevant long-tail cases;
+- fails the critical gate.
+
+Disposition: `reject-challenger`.
+
+Negative evidence includes permission exposure and incompatible presentation. Plan and result hashes reproduce. The result cannot be generalized to real users or compatibility.
+
+## Revise after rejection
+
+Rejection does not require abandoning every idea. Diagnose:
+
+- Did weights overvalue vector similarity?
+- Did policy fail before scoring?
+- Did permission state enter as a soft feature instead of a gate?
+- Did long-tail representation lack evidence?
+- Did score semantics change across segments?
+
+Permission and incompatibility must become hard eligibility controls. Long-tail may remain excluded until evidence exists. Ordinary ranking weights can be tested again inside the allowed set.
+
+The revised system receives a new version, cases, plan, and fresh release evidence. Do not patch the result packet.
+
+## Compare generated explanation separately
+
+The plan asks whether generated explanations improve comprehension without reducing evidence fidelity, latency, cost, or critical-segment quality.
+
+Separate:
+
+- candidate selection (frozen);
+- structured evidence (frozen);
+- template explanation baseline;
+- generated explanation challenger;
+- fidelity stop conditions;
+- rater/user comprehension;
+- timeout fallback;
+- operational budgets.
+
+If users prefer generation but raters find certainty inflation, reject or revise. If comprehension is unchanged and latency/cost increase, retain the template. Generation must earn its burden.
+
+## Provider versions and reproducibility
+
+Hosted providers may expose model identifiers without immutable behavior. Record:
+
+- provider and model name/version;
+- access date;
+- adapter and prompt version;
+- settings;
+- request/response schema;
+- observed provider metadata;
+- replay cases;
+- inability to pin.
+
+When behavior cannot be reproduced exactly, use repeated evidence, shadow comparisons, and change monitoring. Do not claim an immutable experiment.
+
+## Write the immutable plan in full
+
+The plan is a decision contract.
+
+### Identity
+
+Record artifact ID, semantic version, status `preregistered`, author/owner, creation time, source revision, plan hash, and authority. A draft can change. Once preregistered, amendments require a new version or explicit addendum.
+
+### Decision and dispositions
+
+Name the decision owner and every allowed disposition. Include retain baseline and stop; otherwise the plan assumes change.
+
+### Hypothesis and mechanism
+
+State direction, magnitude or practical threshold, guardrails, and why the controlled change should affect them. Separate confirmatory and exploratory questions.
+
+### System identities
+
+Record baseline/change model, provider, adapter, prompt, data, index, retrieval, policy, interface, configuration, environment, and code versions. **Model B** is insufficient.
+
+### Cases or population
+
+Record suite, split hash, inclusion/exclusion, segments, grouping, assignment/pairing, seed, and exposure. For online work, define unit of randomization and analysis.
+
+### Measurement
+
+Record metric implementation/version, criterion, evaluator/rubric/calibration, denominators, guardrails, and missing-data handling.
+
+### Sample and stopping
+
+State sample-size rationale, duration, peeking/sequential rule, early stop for harm, and what happens when data is insufficient.
+
+### Analysis
+
+Predeclare effect estimates, uncertainty, segments, multiplicity handling, outlier/missing-event treatment, and implementation checks.
+
+### Confounds and limitations
+
+List known threats and prohibited inferences. Do not hide them in a result appendix.
+
+### Operational and authority controls
+
+For online/canary work, include eligibility, consent/notice where applicable, privacy/security review, flags, rollback, incident path, and named go/no-go authority.
+
+## Choose the experiment type deliberately
+
+### Offline replay
+
+Run old/new versions on frozen cases. Best for fast regression, critical controls, and paired output analysis. Limited by case representativeness and simulated context.
+
+### Component benchmark
+
+Compare retrieval, ranker, classifier, or generator under a component criterion. Useful for mechanism diagnosis. It cannot establish complete product behavior.
+
+### Ablation
+
+Remove or replace a component to test whether it contributes. Useful for complexity decisions. Interactions can make effects non-additive.
+
+### Shadow comparison
+
+Run a challenger on authorized live-like inputs without affecting users. Useful for distribution and operational evidence. Still requires data authority, cost, and secure output handling.
+
+### Paired human evaluation
+
+Show blinded old/new outputs for the same case under a calibrated rubric. Useful for fuzzy criteria. Vulnerable to order/style/evaluator bias.
+
+### Controlled online experiment
+
+Assign eligible units to variants and measure downstream outcomes. Stronger for causal product effects under valid design. Requires authority and can expose users.
+
+### Canary
+
+Bound traffic/cohort exposure with rollback. Useful for integration and operation. Often underpowered for rare/segment failures.
+
+Choose the least risky design that can change the decision.
+
+## Define assignment and analysis units
+
+For online work, user, session, request, item, seller, or region assignment creates different interference and carryover.
+
+If one user sees both explanations, learning can contaminate later responses. If sellers change listings based on treatment, control inventory is affected. If caching shares results, assignment leaks.
+
+Record:
+
+- randomization unit;
+- analysis unit;
+- persistence/stickiness;
+- stratification;
+- exclusion;
+- interference assumptions;
+- sample-ratio check;
+- identity/consent boundary.
+
+Cluster-aware analysis may be needed. Do not analyze requests as independent if assignment is by user.
+
+The synthetic companion avoids causal claims and uses paired case comparison.
+
+## Conduct an implementation check
+
+Before reading outcome metrics, verify:
+
+- intended versions served;
+- assignment/pairing correct;
+- case counts match manifest;
+- no sample-ratio mismatch;
+- policy/guardrails identical where planned;
+- logging/trace completeness;
+- latency/cost captured consistently;
+- evaluator/rubric version correct;
+- no release-case exposure or leakage;
+- no unauthorized effect.
+
+If implementation fails, disposition is invalidate/re-run. Do not interpret a broken experiment.
+
+## Report paired transitions
+
+Aggregate metrics tell magnitude; transitions tell cause.
+
+Create a matrix:
+
+- abstain -> correct respond;
+- wrong respond -> correct abstain;
+- correct respond -> wrong abstain;
+- correct respond -> critical error;
+- both correct;
+- both incorrect same category;
+- error category changed;
+- unable to compare.
+
+List case IDs and segments for critical transitions. Inspect traces to locate the layer. A challenger can gain ten ordinary responses and introduce one permission violation; both facts must remain visible.
+
+## Interpret an ablation carefully
+
+Suppose removing generated explanation changes no candidate state and users understand structured evidence equally well. The explanation has not earned its latency, cost, evaluator, and failure burden under that evidence.
+
+Suppose removing reranking reduces long-tail relevance but improves latency. The team needs a segment/budget decision, not a universal conclusion.
+
+Suppose removing query rewriting improves critical cases. Diagnose whether rewrite invented category semantics. Do not conclude rewriting is always bad.
+
+An ablation result is conditional on the full remaining system. Interaction effects mean two individually useful components can conflict.
+
+## Design the explanation experiment
+
+Decision: should Patchwork add generated explanations to frozen candidate evidence?
+
+Baseline: deterministic template showing matched, unresolved, source, and limitation.
+
+Challenger: generated prose from the exact packet, with no candidate/policy authority.
+
+Primary criterion: intended users correctly identify why a candidate appeared and what remains unresolved.
+
+Guardrails:
+
+- zero invented facts;
+- zero certainty inflation;
+- zero hidden conflict;
+- candidate/state unchanged;
+- timeout degrades to template;
+- latency/cost within budget;
+- no permission expansion.
+
+Evaluation stack:
+
+- deterministic packet/reference checks;
+- calibrated evidence-fidelity rubric;
+- blinded user interaction/comprehension study;
+- operational measurement;
+- named product/trust/release authority.
+
+Possible outcomes:
+
+- comprehension improves and guardrails pass: conditional next step;
+- preference improves but comprehension/fidelity fails: reject/revise;
+- no material gain and cost rises: retain template;
+- critical segment worsens: reduce scope/reject;
+- evidence unresolved: acquire more data.
+
+## Connect offline to online evidence
+
+Build an evidence ladder:
+
+1. deterministic contract/control tests;
+2. frozen offline cases;
+3. calibrated rubric/human comparison;
+4. operational load/failure tests;
+5. authorized shadow comparison;
+6. internal/cohort/canary exposure;
+7. controlled online outcome study;
+8. broader release with monitoring.
+
+Each step answers a different uncertainty. Later evidence does not erase an earlier control failure. Skip steps only with documented reasoning and authority, not urgency.
+
+High-consequence behavior may never be appropriate for randomized exposure. Use simulation, shadow, specialist review, or narrower scope.
+
+## Handle missing and censored outcomes
+
+Online outcomes may arrive late or selectively.
+
+- Users who do not click may still succeed elsewhere.
+- Purchases do not prove compatibility.
+- Support reports capture only some failures.
+- Returns have delayed, incomplete reasons.
+- Abstained users may leave, hiding unmet need.
+- Labels may exist only for cases a specialist reviewed.
+
+Predeclare outcome windows and missingness assumptions. Report follow-up rates by arm/segment. Do not treat missing as success or failure by convenience.
+
+If the outcome cannot credibly represent the task, keep it a proxy and pair with other evidence.
+
+## Treat novelty and learning effects
+
+New AI behavior can increase engagement because it is novel. Users can also learn how to phrase requests, changing outcomes over time. Raters can become faster through practice.
+
+For online studies, inspect time trends and choose duration based on the task cycle. Avoid interpreting the first day as steady state. For within-subject studies, counterbalance order and consider washout/carryover.
+
+Record whether the experiment tests immediate comprehension or durable workflow value.
+
+## Protect against interference and feedback loops
+
+Ranking changes can affect seller exposure, listings, and future training data. One user's treatment can alter inventory another sees. A model response can influence subsequent input.
+
+Identify:
+
+- shared resources;
+- marketplace/exposure effects;
+- feedback into labels/training;
+- social or organizational communication;
+- cache/state sharing;
+- tool effects.
+
+When interference is material, individual randomization assumptions fail. Use cluster designs, staged release, modeling, or qualitative evidence as appropriate. Preserve affected-party authority.
+
+Patchwork's current synthetic experiment has no feedback loop and cannot estimate marketplace effects.
+
+## Use stopping rules for learning and harm
+
+Two kinds of stopping coexist.
+
+### Evidence stopping
+
+Stop after the preregistered sample/duration or under a valid sequential method. Do not peek until significance appears.
+
+### Safety/control stopping
+
+Stop immediately on permission exposure, known incompatible effect, security incident, corrupted assignment, or other declared critical condition. This is not statistical peeking; it is a guardrail.
+
+Record who can stop, how flags/rollback work, and what evidence is preserved. Restart requires correction and authority.
+
+## Preserve every analysis choice
+
+Result packets should include:
+
+- planned analysis;
+- every executed analysis;
+- exclusions and reasons;
+- exploratory additions;
+- transformations/weighting;
+- evaluator changes;
+- missing data handling;
+- segment definitions;
+- code revision;
+- raw or protected artifact references.
+
+Avoid spreadsheet-only analysis with no versioned logic. Re-run from a manifest. The companion's deterministic functions make this explicit.
+
+## Separate decision threshold from statistical threshold
+
+A statistical threshold controls a procedure's error property under assumptions. A decision threshold defines what product effect is large or safe enough.
+
+An effect can be statistically detectable and too small to matter. A critical control failure can be decisive without statistical significance. A result can be practically important and uncertain, leading to more evidence rather than launch.
+
+Write both thresholds and who owns them.
+
+## Interpret heterogeneous effects
+
+Predeclared segment differences can change scope. Report effect/uncertainty for critical groups. Avoid claiming subgroup effects from tiny exploratory slices.
+
+If challenger helps ordinary cases and harms long-tail, options include:
+
+- reject globally;
+- fix mechanism;
+- retain baseline for long-tail;
+- exclude long-tail strong behavior;
+- acquire better evidence;
+- create segment-specific policy only if identity/measurement and operation are valid.
+
+Segment-specific routing adds complexity and must be tested. Do not create it from noisy estimates.
+
+## Treat cost and latency as experimental outcomes
+
+AI configurations can shift:
+
+- median and tail latency;
+- timeout/fallback rate;
+- tokens/compute/request;
+- provider spend;
+- index/storage cost;
+- reviewer workload;
+- cache hit rate;
+- capacity;
+- engineering/incident cost.
+
+Measure end-to-end under comparable load. A quality gain that violates the task's response window may not be useful. Chapter 14 deepens budgets.
+
+Cost can be a guardrail or optimization objective. Do not hide it because an offline suite is cheap.
+
+## Audit negative results for salvageable learning
+
+After rejection, ask:
+
+- Which cases improved and why?
+- Which guardrails failed and at what layer?
+- Did the hypothesis mechanism operate?
+- Is the scope too broad?
+- Was the evaluator credible?
+- Did implementation match the plan?
+- What change would discriminate between explanations?
+- Is stopping the capability a valid decision?
+
+Publish the negative result inside the dossier. Repeating failed ideas is expensive; preserving evidence compounds learning.
+
+## Build the decision memo
+
+A decision memo contains:
+
+- decision and disposition;
+- plan/result IDs and hashes;
+- compared systems/versions;
+- primary/guardrail outcomes;
+- critical cases and segments;
+- uncertainty/confounds;
+- negative evidence;
+- operational evidence;
+- unresolved authority;
+- recommended next action;
+- rejected alternatives;
+- owner/date.
+
+The memo should be understandable without rerunning analysis, while links preserve reproducibility.
+
+For the current packet: reject challenger, retain baseline, harden pre-score controls, exclude unsupported long-tail strong behavior, construct fresh cases, and rerun.
+
+## Review an experiment adversarially
+
+Ask a reviewer to argue that the preferred conclusion is wrong.
+
+- Was baseline weaker than current practice?
+- Did more than one thing change?
+- Were cases representative of the claim?
+- Did selection or leakage favor the challenger?
+- Were metrics/guardrails frozen?
+- Could evaluator bias explain the result?
+- Did an aggregate hide a segment?
+- Was a negative case excluded?
+- Did implementation differ by arm?
+- Can the packet reproduce?
+- Does the disposition exceed authority?
+
+Record answers and residual disputes. A hostile review is most valuable before exposure.
+
+## Execute the Patchwork plan step by step
+
+### Freeze identity
+
+Load plan `PF-08` v0.1.0, error policy `PF-07` v0.2.0, fixture seed `20260816`, threshold `0.70`, baseline score field, challenger score field, and code revision. Compute the plan and fixture hashes before metrics.
+
+### Validate cases
+
+Require sixteen fictional/synthetic rows with unique IDs, declared segment, relevance reference, baseline/challenger score, and error label. Reject missing or non-finite scores. Confirm no construction-group or evaluator exposure changed after preregistration.
+
+### Run paired inference
+
+For each row, set `respond` when the arm's score meets threshold. Preserve both booleans, label, and segment. Do not let one arm change the candidate population.
+
+### Compute aggregate evidence
+
+Calculate counts, precision, recall, coverage, false-match rate, and abstention. Keep exact denominators. The challenger gains ordinary relevant responses.
+
+### Compute segment evidence
+
+Report ordinary, long-tail, denied-permission, missing-unit, and stale-source separately. Preserve undefined metrics. The challenger misses relevant long-tail cases.
+
+### Run the critical gate
+
+Classify responded incompatible, permission, and stale labels. Compare critical-segment recall with floor. Challenger fails incompatible, permission, and recall conditions.
+
+### Preserve negative evidence
+
+Write failing case IDs/reasons into result packet. Do not delete them from aggregate calculation or relabel them after outcome.
+
+### Issue disposition
+
+Because the gate fails, select `reject-challenger` even though recall improves. Store authority required and limitations. Compute result hash.
+
+### Reproduce
+
+Run again with identical inputs and compare the entire packet. Matching hashes close the local reproducibility check.
+
+This sequence prevents analysis code from jumping directly to the preferred metric.
+
+## Diagnose the rejected challenger
+
+Use paired transitions and traces.
+
+`D-008` is long-tail, nonrelevant, labeled incompatible, baseline below threshold, challenger above threshold. The controlled weight change moves it across the operating point. This supports a hypothesis that the challenger overweights similarity under sparse evidence. It does not prove the production root cause.
+
+`D-010` is denied permission and challenger exceeds threshold. In the real architecture, permission is a deterministic pre-score gate, so any result reaching threshold indicates either the experiment is testing ranker behavior before policy or the integration bypassed policy. Clarify the layer before recommending weight tuning.
+
+`D-007` and `D-009` are relevant long-tail items below challenger threshold. The challenger both raises a bad long-tail item and lowers good ones, indicating separation failure in constructed scores.
+
+The next experiment should enforce hard eligibility and compare ranking only within eligible candidates. It may retain ordinary gain without making policy a feature.
+
+## Distinguish model selection from policy validation
+
+Model/ranker experiments can compare scores among eligible cases. Policy tests verify permission, scope, incompatibility, freshness, and effects. Do not ask a threshold to do both.
+
+Run two gates:
+
+1. **policy gate**: zero prohibited/unauthorized/known-incompatible transitions;
+2. **quality gate**: relevance, coverage, abstention, segments, operation among allowed cases.
+
+A quality experiment that includes prohibited cases is useful for proving controls catch them, not for choosing a threshold that tolerates them.
+
+This separation also clarifies ownership: model/ranking owner optimizes quality; application/domain/security owners maintain controls; release authority consumes both.
+
+## Handle a null or inconclusive result
+
+If baseline and challenger have similar outcomes with wide uncertainty:
+
+- retain simpler/current baseline unless other evidence justifies change;
+- inspect whether the minimum important effect was realistic;
+- verify evaluator reliability and implementation;
+- decide whether more evidence is worth cost/exposure;
+- narrow the hypothesis;
+- stop if the value difference is immaterial.
+
+Do not call **no statistically significant difference** equivalence without an equivalence/non-inferiority design. Do not call it success because the challenger did not lose.
+
+Negative or null results can save complexity.
+
+## Design a non-inferiority comparison
+
+Sometimes a cheaper/faster provider need only preserve quality within a bounded margin.
+
+Predeclare:
+
+- which criteria must be non-inferior;
+- practical margin and authority;
+- critical stop conditions with zero margin;
+- operational improvement required;
+- population/segments;
+- evaluator precision;
+- fallback/portability evidence.
+
+If quality is within margin but permission behavior changes, reject. If quality evidence is too uncertain, do not claim non-inferiority.
+
+This design is useful for cost or portability work and must not become a way to weaken critical segments.
+
+## Compare providers without benchmark laundering
+
+Provider comparison records:
+
+- exact task and evidence packet;
+- adapter/schema behavior;
+- tested model identifiers/access date;
+- refusal/truncation;
+- quality criteria;
+- segment outcomes;
+- latency/cost;
+- data-use/privacy constraints;
+- version stability;
+- fallback/exit cost.
+
+Public benchmarks can inform candidate selection. Product replay decides bounded fitness. Do not adopt the benchmark winner without system evidence.
+
+When a provider is unpinnable, increase replay frequency and reduce confidence in long-lived conclusions.
+
+## Experiment with thresholds without leaking release cases
+
+Use development cases to plot the decision surface. Select candidate threshold from consequence and uncertainty. Freeze it before release evaluation.
+
+If no point passes, revise mechanism or scope. Do not search the release set for the best threshold and then report its result as held out.
+
+When threshold changes after a legitimate policy revision, increment plan/policy version and use fresh evidence. Preserve the old rejected run.
+
+## Interpret qualitative warnings
+
+A participant may say, **The explanation sounds certain even though the card says unresolved**. This may reveal a category not captured by the rubric or interface sequence.
+
+Treat it as an evidence lead:
+
+1. preserve the report and context;
+2. reproduce on authorized cases;
+3. map to existing taxonomy or add a category;
+4. create development cases;
+5. update criterion/evaluator;
+6. assess prior experiment conclusions;
+7. obtain fresh holdout;
+8. decide whether to stop exposure.
+
+Do not reject qualitative evidence because an A/B metric improved. Do not generalize one comment without investigation.
+
+## Apply the method to care routing
+
+For the fictional care router, online randomization may be inappropriate for urgent or clinical-boundary messages. Use:
+
+- deterministic control tests;
+- retrospective authorized replay;
+- specialist-reviewed synthetic scenarios;
+- shadow routing without changing work queues;
+- operational timing simulation;
+- internal low-consequence cohort only if authorities approve.
+
+Primary criteria include routing correctness under defined labels, time to qualified review, and zero prohibited clinical claims/access violations. Aggregate administrative accuracy cannot compensate for urgent-message delay.
+
+The disposition may be reduce scope to administrative categories.
+
+## Apply the method to forecasting
+
+Compare forecast model against current planning baseline on time-ordered held-out data. Preserve leakage controls, item segments, cold start, regime change, and inventory consequence.
+
+Use paired item-period errors, interval coverage/calibration, planner workload, stockout/waste proxies, and cost/latency. Avoid random row split that leaks future or item patterns.
+
+An online test may randomize eligible inventory decisions under business authority, but interference and supply constraints matter. A shadow forecast may be safer first.
+
+Again, no language grader is necessary.
+
+## Common experiment failure patterns
+
+### Demo versus straw baseline
+
+The challenger beats an intentionally weak prompt. Correct with the current best allowed baseline.
+
+### Bundle without attribution
+
+Model, prompt, retrieval, and UI all change. Correct by calling it a bundle or adding ablations.
+
+### Metric chosen after results
+
+The primary fails, so a secondary becomes headline. Correct by labeling exploratory and preregistering confirmation.
+
+### Average hides segment
+
+Ordinary volume overwhelms long-tail harm. Correct with critical segment guardrails.
+
+### Evaluator tuned to challenger
+
+Rubric/grader examples come from preferred output. Correct with evaluator-development separation and fresh calibration.
+
+### Online exposure as validation
+
+Weak offline controls are skipped. Correct with evidence ladder and authority.
+
+### Repeated peeking
+
+Stop when preferred result appears. Correct with fixed/sequential stopping design.
+
+### Silent provider drift
+
+Re-run uses changed hosted behavior. Correct with tested identity, access date, replay, and limitation.
+
+### Negative case deletion
+
+An inconvenient case is called bad data after results. Correct through blinded case-admission/adjudication and full change record.
+
+### Significance as launch
+
+Statistical threshold becomes authorization. Correct with practical effect, guardrails, operational evidence, and authority.
+
+## Define evidence expiry
+
+Experiment evidence expires or weakens when:
+
+- task/population changes;
+- data/context/index changes;
+- model/provider/adapter changes;
+- policy/threshold changes;
+- evaluator/rubric changes;
+- interface changes user interpretation;
+- operational environment changes;
+- case exposure/contamination occurs;
+- relevant incident reveals a missing category.
+
+Record expiry triggers in the packet. A result is not a permanent property of a model name.
+
+## The Chapter 12 acceptance packet
+
+The completed packet contains preregistered plan and hash; version manifest; suite/fixture hash; baseline/change; paired cases; ablations; implementation check; metric and segment reports; critical gates; evaluator identity; confounds; negative evidence; reproduction; result hash; disposition; next experiment; and authority handoff.
+
+It passes when the preferred mechanism can lose, results reproduce, and every conclusion stays within the synthetic scope. It fails if the report ends at a metric without an action.
+
+## Keep plan and result immutable
+
+Do not edit a finished packet to reflect later interpretation. Append a memo, amendment, or new experiment version. Preserve hashes and affected authority decisions. Immutability means evidence history, not that mistakes cannot be corrected.
+
+If a label is wrong, mark the run affected, correct the reference through its process, create a new suite/plan version, and rerun. Do not rewrite the old result hash.
+
+## Communicate the rejection
+
+Use a scoped statement:
+
+> Challenger v0.2 improved constructed recall at threshold 0.70 but failed the critical gate by presenting one incompatible and one denied-permission case and missing the long-tail recall floor. `PF-08` v0.1 rejects challenger and retains baseline while hard eligibility is repaired. The sixteen cases support no real-world rate or release claim.
+
+This preserves positive evidence, exact failure, policy, limitation, and next action.
+
+## Completion test
+
+Ask an independent reviewer to reproduce the packet, then remove the conclusion and ask which disposition follows. If they select rejection because guardrail failure is visible, the experiment is decision-grade for its scope.
+
+If they need the team's preferred narrative, add versions, paired cases, segments, negative evidence, or authority until the decision is derivable.
+
+## Close the loop without chasing a win
+
+The next experiment should target the uncertainty most likely to change the rejection: can hard eligibility preserve permission/incompatibility while challenger weights improve ordinary ranking among allowed candidates? Predeclare that question, create fresh groups, and retain the same stop conditions.
+
+If the answer remains no, stop or simplify. Do not cycle through prompts, models, and evaluators until something wins. Record the evidence that the added mechanism did not earn its burden.
+
+If the answer becomes yes offline, the next step is still bounded. Add operational failure, latency, cost, control, and authorized user evidence. Each stage can reject the candidate again.
+
+Decision-changing experimentation is recursive: a result can return the team to task, contract, mechanism, data, context, or evaluation. The hashes and dossiers keep that return from erasing what was learned.
+
+The chapter is complete when the plan exists before the result, all versions and hashes resolve, paired/segment evidence remains visible, confounds and negative evidence survive reporting, and the disposition follows the declared policy. A green metric without these properties is not experiment evidence.
+
+Carry the rejected packet into Chapter 13. Failure engineering must operate on the retained or revised behavior, not on a challenger that already violated controls. If the team later repairs and accepts a new version, its new packet becomes the input; the rejected version remains part of the change history.
+
+This prevents launch momentum from outrunning evidence. It also gives operators a precise baseline for later timeouts, retries, degradation, recovery, and incident analysis: the behavior that survived experiment, the cases it passed, the limitations it carried, and the authorities that allowed the next bounded step.
+
+Future operational evidence may still overturn the choice. When it does, the team returns through the evidence loop with a new question and preserved history instead of defending a past winner.
+
+That is how experiments compound sound decisions.
+
+## PF-08 v0.1
+
+The companion implements:
+
+- preregistered immutable plan;
+- plan validation and timestamp ordering;
+- canonical hashes;
+- sixteen seeded paired cases;
+- baseline/challenger metrics;
+- segment reports;
+- critical regression gates;
+- ablation runner;
+- negative evidence;
+- reproducible result packet;
+- explicit disposition and authority.
+
+The packet begins the dossier; it does not approve release.
+
+## Practice: let the preferred system lose
+
+Pre-register one ablation and one paired comparison.
+
+Required plan:
+
+- decision/dispositions;
+- falsifiable hypothesis;
+- real baseline;
+- one controlled change;
+- versions/hashes;
+- cases/population/segments;
+- primary metric and guardrails;
+- evaluator;
+- stopping/sample rationale;
+- confounds;
+- authority;
+- prohibited inference.
+
+Required result:
+
+- implementation check;
+- paired case changes;
+- aggregate and segment results;
+- uncertainty;
+- negative evidence;
+- reproduction;
+- disposition;
+- next action.
+
+Inject a segment regression into the preferred configuration. Pass only if the process rejects, revises, or reduces scope rather than hiding it behind significance or average gain.
+
+## Handoff to failure engineering
+
+The experiment selects what deserves further engineering. It does not make the selected behavior dependable under real timeouts, retries, partial dependencies, capacity, or recovery.
+
+Chapter 13 takes the accepted or revised behavior and designs layered failure semantics. Every component will receive a timeout, retry, idempotency, fallback, circuit, recovery, and ownership decision without weakening the behavior contract.
