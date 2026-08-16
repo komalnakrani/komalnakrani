@@ -5,10 +5,10 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 08 manuscript production under parent `#45`; Chapters 4-6 active under `#50`
+- Current global phase: Phase 08 manuscript production under parent `#45`; Chapters 7-9 active under `#53`
 - Last updated: 2026-08-16
-- Last completed issue: `#47` — Phase 08 Chapters 1-3
-- Active issue: `#50` — Phase 08 Chapters 4-6
+- Last completed issue: `#50` — Phase 08 Chapters 4-6, accepted at `d3b86f4`
+- Active issue: `#53` — Phase 08 Chapters 7-9
 - Role root issue: `#32` — open
 
 ## Locked accepted decisions
@@ -58,8 +58,8 @@ and `#35` are closed with `status:done`.
 - Phase 07 verification: `books/agentic-ai-engineering/blueprints/verification-report.md`
 - Phase 08 handoff: `books/agentic-ai-engineering/blueprints/phase-08-handoff.md`
 - Phase 08 prepared issue body: `issues/phase-08-manuscript.md`
-- manuscripts: Chapters 1-3 accepted at `b48f375`; Chapters 4-6 complete locally under `#50`; 29,529 words total through Chapter 6
-- publication records and deterministic companion: complete locally through Chapter 6
+- manuscripts: Chapters 1-3 accepted at `b48f375`; Chapters 4-6 accepted at `d3b86f4`; 29,529 words total through Chapter 6
+- publication records and deterministic companion: accepted through Chapter 6
 - figure anchors: `F01.1` through `F06.2` specified; root-owned PNG artwork pending; no image or SVG assets created in this lane
 - publication/PDF/course/final QA: not started
 
@@ -80,12 +80,11 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 08 Chapters 4-6 are complete locally under active child `#50`: 13,295
-words, `AR-03` through `AR-05`, three schemas, deterministic runtime and 9 new
-tests, learning/state/QA records, and six pending PNG anchors. Combined Chapters
-1-6 companion tests pass 14/14, with publication, build, reference, format, and
-scoped diff checks passing. Parent acceptance, root ImageGen artwork,
-commit/push, and issue closure remain outside this lane.
+Phase 08 Chapters 1-6 are accepted through `d3b86f4`: 29,529 manuscript words,
+`AR-01` through `AR-05`, deterministic companion artifacts, six learning/state/QA
+records, and twelve specified PNG anchors. Combined tests pass 14/14, with
+publication, build, reference, format, and scoped diff checks passing. Child #53
+is active for Chapters 7-9 while root-owned ImageGen production remains separate.
 
 ## Unresolved blockers
 
@@ -104,22 +103,23 @@ commit/push, and issue closure remain outside this lane.
 
 ## Quality debt
 
-- Chapters 7-20 remain unwritten.
+- Chapters 7-20 remain unwritten; Chapters 7-9 are now active.
 - ImageGen assets and their provenance/visual QA remain pending root production.
 - The Agentic publication stays draft and therefore is not listed in the
   built public book index.
 
 ## Exact next action
 
-Parent reviews Chapters 4-6, root produces and visually QA-checks `F04.1`
-through `F06.2`, then Chapter 7 advances from `AR-05 v1.0.0` without widening
-identity, delegation, capability, or effect authority.
+Write and immediately QA Chapters 7-9 under #53, advancing from `AR-05 v1.0.0`
+through explicit state/context/artifact/memory handling, a one-agent baseline,
+and evidence-gated handoffs without widening identity, delegation, capability,
+or effect authority. Root separately owns ImageGen production.
 
 ## Resume instructions
 
 Read repository `AGENTS.md`, accepted commits `b59c3f5`, `abed872`, and
-`e4e8ec4` and `b48f375`, parent `#45`, active child `#50`, this file, Chapters 4-6
-blueprints/research packs, and Phase 08 handoff. Inspect
+`e4e8ec4`, `b48f375`, and `d3b86f4`, parent `#45`, active child `#53`, this file,
+Chapters 7-9 blueprints/research packs, and Phase 08 handoff. Inspect
 git status because parallel agents share the worktree. Do not edit shared
 factory state or other role directories from this lane. Do not enter Abhyaas
 while the Komal-first decision remains locked.

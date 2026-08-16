@@ -56,10 +56,11 @@
 ### Applied AI Engineer
 
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Phase parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27)
-- Last completed child: [#49 - Write Applied AI Engineering chapters 16-18](https://github.com/alpeshznakrani/komalnakrani/issues/49), accepted at commit `0614ce8`
-- Active child: [#52 - Write Applied AI Engineering chapters 19-21](https://github.com/alpeshznakrani/komalnakrani/issues/52)
-- Visual state: Chapters 01-18 use 36 final ImageGen PNG teaching figures; all earlier SVG placeholders were removed and no WebP derivatives are stored.
+- Phase 08 parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27), closed
+- Last completed child: [#52 - Write Applied AI Engineering chapters 19-21](https://github.com/alpeshznakrani/komalnakrani/issues/52), accepted at commit `51be79f`
+- Active phase: [#55 - QA the complete Applied AI Engineering book](https://github.com/alpeshznakrani/komalnakrani/issues/55)
+- Manuscript state: complete 21-chapter book, 133,810 words, 118 claims, 55 sources, 42 figures, and 109 passing companion tests.
+- Visual state: all 21 chapters use 42 final ImageGen PNG teaching figures; no SVG or stored WebP derivatives.
 - State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
 
 ### Agentic AI Engineer
@@ -68,8 +69,8 @@
 - Phases 01, 04, and 05: accepted at commit `b59c3f5`; canonical decision is one 20-chapter book.
 - Phase 07: accepted at commit `e4e8ec4` with 20 complete production blueprints and all 38 forecast figures allocated.
 - Phase 08 parent: [#45 - Write the complete Agentic AI Engineering manuscript](https://github.com/alpeshznakrani/komalnakrani/issues/45)
-- Last completed child: [#47 - Write Agentic AI Engineering chapters 1-3](https://github.com/alpeshznakrani/komalnakrani/issues/47), accepted at `b48f375`
-- Active child: [#50 - Write Agentic AI Engineering chapters 4-6](https://github.com/alpeshznakrani/komalnakrani/issues/50)
+- Last completed child: [#50 - Write Agentic AI Engineering chapters 4-6](https://github.com/alpeshznakrani/komalnakrani/issues/50), accepted at `d3b86f4`
+- Active child: [#53 - Write Agentic AI Engineering chapters 7-9](https://github.com/alpeshznakrani/komalnakrani/issues/53)
 - State: `project-control/roles/agentic-ai-engineer/ROLE-STATE.md`
 
 ### LLM Engineer
@@ -78,15 +79,15 @@
 - Phases 01, 04, and 05: accepted at commit `18332c3`; canonical decision is a 33-chapter two-volume series.
 - Phase 07: accepted at commit `9d9e1c3` with 33 complete production blueprints and all 66 forecast figures allocated.
 - Phase 08 parent: [#46 - Write the complete LLM Engineering two-volume manuscript](https://github.com/alpeshznakrani/komalnakrani/issues/46)
-- Last completed child: [#48 - Write LLM Engineering Volume 1 chapters 1-3](https://github.com/alpeshznakrani/komalnakrani/issues/48), accepted at `9a66d79`
-- Active child: [#51 - Write LLM Engineering Volume 1 chapters 4-6](https://github.com/alpeshznakrani/komalnakrani/issues/51)
+- Last completed child: [#51 - Write LLM Engineering Volume 1 chapters 4-6](https://github.com/alpeshznakrani/komalnakrani/issues/51), accepted at `f53b7bd`
+- Active child: [#54 - Write LLM Engineering Volume 1 chapters 7-9](https://github.com/alpeshznakrani/komalnakrani/issues/54)
 - State: `project-control/roles/llm-engineer/ROLE-STATE.md` (created during active Phase 06)
 
 ## Exact next action
 
-Advance the three isolated Komal lanes in parallel: Applied AI Chapters 19-21
-under #52, Agentic AI Chapters 4-6 under #50, and LLM Engineering Volume 1
-Chapters 4-6 under #51. Keep shared publication/factory integration root-owned.
+Advance the three isolated Komal lanes in parallel: hostile full-book Applied AI
+QA under #55, Agentic AI Chapters 7-9 under #53, and LLM Engineering Volume 1
+Chapters 7-9 under #54. Keep shared publication/factory integration root-owned.
 Do not enter deferred Abhyaas work.
 
 ## Resume instructions

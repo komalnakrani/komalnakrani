@@ -5,12 +5,12 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 08 manuscript production - Chapters 19-21 active
+- Current global phase: Komal Phase 09 complete-book QA active under #55
 - Last updated: 2026-08-16
-- Last completed issue: Phase 08 child #49, complete Chapters 16-18 and controls/release/incident companion progression
+- Last completed issue: Phase 08 child #52 and parent #27, complete 21-chapter manuscript and companion
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27)
-- Active issue: [#52](https://github.com/alpeshznakrani/komalnakrani/issues/52)
+- Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27), closed
+- Active issue: [#55](https://github.com/alpeshznakrani/komalnakrani/issues/55)
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -40,8 +40,8 @@
 - source register: 55 primary/official records, all used, 118 unique planned claim IDs
 - case-study register: 11 public/primary cases plus one explicitly constructed Patchwork case, all used
 - chapter blueprints: 21 verified files plus `blueprints/blueprint-verification.md`
-- manuscript(s): Chapters 01-18 complete through commit `0614ce8`; Chapters 19-21 pending
-- figure manifest: `content/publications/applied-ai-engineering/figures.json`, complete through `FIG-036`
+- manuscript(s): all 21 chapters complete through commit `51be79f`; 133,810 words
+- figure manifest: `content/publications/applied-ai-engineering/figures.json`, complete through `FIG-042`
 - PDF(s): pending
 - preparation resources: deferred
 - optional course: pending Phase 13
@@ -60,7 +60,7 @@
 - [x] 05 book architecture
 - [x] 06 research
 - [x] 07 chapter blueprints
-- [ ] 08 manuscript
+- [x] 08 manuscript
 - [ ] 09 book QA
 - [ ] 10 visuals
 - [ ] 11 publication
@@ -75,7 +75,7 @@
 
 ## Current work
 
-Phase 08 parent #27 remains open. Children #28-#31, #42, and #49 are accepted and closed. Chapters 01-18 total 116,290 words with eighteen learning/state/QA sets, 100 traced claims, thirty-six final ImageGen PNG figures, and a provider-neutral companion that now includes implemented controls, bounded release, and durable incident learning through 91 passing tests. Child #52 is active for final Chapters 19-21.
+Phase 08 parent #27 and all manuscript children are accepted and closed. The complete book has 21 fresh chapters totaling 133,810 words, 21 learning/state/QA sets, 118 traced claims, 55 sources, 42 final ImageGen PNG teaching figures, and a provider-neutral Patchwork companion with 109 passing tests. Phase 09 hostile complete-book QA is active under #55.
 
 ## Unresolved blockers
 
@@ -92,12 +92,12 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 ## Quality debt
 
-None. Chapters 01-18 and all current companions pass canonical `npm run check`, Astro build, and 630 built-site reference checks. Blueprint QA remains complete for all 21 chapters. Applied AI has no SVG or WebP artwork; Chapters 01-18 use labeled ImageGen PNG figures.
+None. All 21 chapters and the completed companion pass canonical `npm run check`, Astro build, 630 built-site reference checks, and 109 companion tests. Blueprint QA remains complete for all chapters. Applied AI has no SVG or WebP artwork; all chapters use labeled ImageGen PNG figures. Phase 09 hostile QA remains to certify the full-book whole.
 
 ## Exact next action
 
-Write and immediately QA final Applied AI Engineering Chapters 19-21 under issue #52. Finish Patchwork through controlled model change, evidence-gated reuse, and leadership decisions. Create PNG figure anchors only; root owns ImageGen production.
+Perform hostile complete-book QA under issue #55 across continuity, originality, claims, sources, authority boundaries, figures, exercises, companion behavior, and publication integrity; repair any in-scope defects and produce a durable verification report.
 
 ## Resume instructions
 
-Read this file, the role root, Phase 08 parent #27, active issue #52, completed chapter states 16-18, architecture, research packs, blueprints 19-21, and blueprint verification before resuming only Chapters 19-21.
+Read this file, active issue #55, all 21 chapter state/QA records, architecture, research and claim registers, figure registry, ImageGen production log, companion tests, and publication validators before resuming Phase 09 only.

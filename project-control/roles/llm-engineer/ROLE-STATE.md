@@ -5,10 +5,10 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapters 4-6 locally complete under `#51`, pending coordinator acceptance
+- Current global phase: Phase 08 manuscript production under parent `#46`; Volume 1 Chapters 7-9 active under `#54`
 - Last updated: 2026-08-16
-- Last completed issue: `#48` — Phase 08 Volume 1 Chapters 1-3
-- Active issue: `#51` — Phase 08 Volume 1 Chapters 4-6, locally complete
+- Last completed issue: `#51` — Phase 08 Volume 1 Chapters 4-6, accepted at `f53b7bd`
+- Active issue: `#54` — Phase 08 Volume 1 Chapters 7-9
 - Role root issue: `#36` — open
 
 ## Locked accepted decisions
@@ -48,7 +48,7 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 - Phase 07 verification: `books/llm-engineering/blueprints/verification-report.md`
 - Phase 08 manuscript handoff: `books/llm-engineering/blueprints/phase-08-handoff.md`
 - issue bodies: `issues/root.md`, Phase 01/04/05/06/07 bodies, `issues/phase-08-manuscript.md`, and Phase 08 child bodies through Chapters 4-6
-- Volume 1 Chapters 1-6 manuscripts, learning/state/QA records, production manifests, and deterministic companion implementation: complete locally
+- Volume 1 Chapters 1-6 manuscripts, learning/state/QA records, production manifests, and deterministic companion implementation: accepted through `f53b7bd`
 - generated visuals, Chapters 7-33, final publication, PDF, course, and final QA: not started
 
 ## Completed gates
@@ -71,11 +71,11 @@ Phases 01, 04, and 05 were accepted in commit `18332c3`; Phase 06 was accepted i
 
 ## Current work
 
-Phase 07 is accepted at `9d9e1c3`. Volume 1 Chapters 1-3 are accepted at `9a66d79`. Chapters 4-6 are locally complete under #51: 8,528 new manuscript words, nine assigned claims, six pending PNG anchors, three learning/state/QA sets, 16 rechecked source URLs, and 12 new deterministic tests. The cumulative LLM companion passes 24/24. `MD-02` is complete and `MD-03` now holds the reproducible baseline and instruction/message trust state. Full `npm run check` passes.
+Phase 07 is accepted at `9d9e1c3`. Volume 1 Chapters 1-3 are accepted at `9a66d79`; Chapters 4-6 are accepted at `f53b7bd`. The first six chapters total 18,163 manuscript words, 18 assigned claims, twelve pending PNG anchors, six learning/state/QA sets, and 24/24 passing deterministic companion tests. `MD-02` is complete and `MD-03` holds the reproducible baseline and instruction/message trust state. Child #54 is active for Chapters 7-9.
 
 ## Unresolved blockers
 
-No content blocker. Twelve cumulative raster figure assets for Chapters 1-6 remain intentionally pending root ImageGen production; coordinator acceptance is a workflow gate. Abhyaas remains intentionally deferred.
+No content blocker. Twelve cumulative raster figure assets for Chapters 1-6 remain intentionally pending root ImageGen production. Abhyaas remains intentionally deferred.
 
 ## Research gaps and volatile evidence
 
@@ -88,14 +88,14 @@ No content blocker. Twelve cumulative raster figure assets for Chapters 1-6 rema
 
 ## Quality debt
 
-- Only Volume 1 Chapters 1-6 have manuscripts; Chapters 7-33 remain unwritten.
+- Only Volume 1 Chapters 1-6 have manuscripts; Chapters 7-33 remain unwritten and Chapters 7-9 are now active.
 - The first twelve manuscript anchors and production figure specifications exist, but no image/vector asset exists; later visual production remains ImageGen-only raster.
 - The publication stays draft and is not registered as a launched Komal title; final PDF and publication QA remain future gates.
 
 ## Exact next action
 
-Coordinator reviews and accepts child #51, then opens the next bounded Phase 08 manuscript batch. Chapter 7 must continue `MD-03` with typed proposal syntax, deterministic validation, evidence-reference checks, and explicit fallback states. Root separately owns ImageGen production.
+Write and immediately QA Volume 1 Chapters 7-9 under #54. Continue `MD-03` with typed and bounded outputs, deliberate context budgeting, and retrieval-question design, including deterministic validation, evidence-reference checks, abstention, provenance, and explicit fallback states. Root separately owns ImageGen production.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, `9d9e1c3`, and `9a66d79`, parent #46, child #51, this state, `content/publications/llm-behavior-engineering/production/v1-chapters-04-06-verification.md`, the next accepted blueprints/research packs, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in the LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.
+Read repository `AGENTS.md`, accepted commits `18332c3`, `717367e`, `9d9e1c3`, `9a66d79`, and `f53b7bd`, parent #46, child #54, this state, accepted Chapters 4-6 verification, Chapters 7-9 blueprints/research packs, and Phase 08 handoff. Inspect git status because parallel agents share the worktree. Work only in the LLM Engineer project-control, role-record, and publication directories; do not edit shared factory state, another role, git state, or Abhyaas.
