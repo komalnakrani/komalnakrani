@@ -5,8 +5,8 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 11 source assembly PASS under #66; root artifact gate active
-- Last updated: 2026-08-16
+- Current global phase: Komal Phase 11 source assembly and deterministic proof QA PASS under #66; root publication transition active
+- Last updated: 2026-08-17
 - Last completed issue: Phase 10 #63, visual certification PASS
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27), closed
@@ -43,9 +43,9 @@
 - manuscript(s): all 21 chapters complete; Phase 09 content lock totals 133,981 words
 - front matter: complete under `content/publications/applied-ai-engineering/front-matter/`, 4,031 words including six part introductions
 - appendices: six architecture-locked files complete under `content/publications/applied-ai-engineering/appendices/`, 12,370 words
-- complete edition source: 150,382 words; manifest status `review`, PDF disabled until root artifact QA
+- complete edition source: 150,382 words; manifest status `review`, PDF disabled until root publication transition
 - figure manifest: `content/publications/applied-ai-engineering/figures.json`, complete through `FIG-042`
-- PDF(s): pending
+- PDF(s): deterministic 633-page review proof QA PASS at SHA-256 `a2118ba48bdedcf890a48e09171928e086afc8fdf57a74bb7f526acc643104b8`; exact public mirror pending
 - preparation resources: deferred
 - optional course: pending Phase 13
 - certification page: deferred to Abhyaas
@@ -78,7 +78,7 @@
 
 ## Current work
 
-Phases 09 and 10 are accepted `PASS`. Phase 11 source assembly is also `PASS`: original front matter, six part introductions, and six appendices bring the complete edition to 150,382 words while preserving the 21-chapter content lock, 118 claims, 55 sources, 42 certified PNG figures, and 109-test Patchwork companion. The manifest is `review`, `publishedAt` is null, and PDF is disabled. Root owns shared-pipeline integration, PDF/web rendering, final hashes, and publication state under #66.
+Phases 09 and 10 are accepted `PASS`. Phase 11 source assembly and review-proof artifact QA are also `PASS`: original front matter, six part introductions, and six appendices bring the complete edition to 150,382 words while preserving the 21-chapter content lock, 118 claims, 55 sources, 42 certified PNG figures, and 109-test Patchwork companion. The exact proof built twice to a byte-identical 633-page PDF at SHA-256 `a2118ba48bdedcf890a48e09171928e086afc8fdf57a74bb7f526acc643104b8`; all 633 pages were rendered at 144 DPI and passed raster, contact-sheet, and representative full-resolution QA. The manifest remains `review`, `publishedAt` is null, and PDF is disabled. Root owns the public mirror, published web-route QA, and publication-state transition under #66.
 
 ## Unresolved blockers
 
@@ -95,12 +95,12 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 ## Quality debt
 
-No role-local content blocker. Source assembly and canonical checks pass. Root must remove three FDE-specific PDF defaults: five part starts `[1, 6, 11, 15, 18]` instead of the Applied AI six `[1, 5, 9, 13, 17, 20]`, an appendix summary that promises a completed fictional dossier index, and a figure note that names Orchid. The schema currently disallows the builder's optional override fields. PDF generation, complete-page inspection, web route enablement, exact mirror/hash evidence, and the final publication-state transition remain open. Seven source URLs remain explicitly access-restricted to automation.
+No role-local content or proof-artifact blocker. Source assembly, Applied-specific part/appendix/figure metadata, deterministic PDF generation, complete-page inspection, and canonical checks pass. The public download mirror, published web-route QA, and final publication-state transition remain open. Seven source URLs remain explicitly access-restricted to automation.
 
 ## Exact next action
 
-Root-integrate the six Applied AI part starts, build and inspect the complete web/PDF edition, record deterministic artifact evidence, and only then mark version 1.0.0 published and close #66.
+Root copy the exact reviewed proof to the public download path, verify byte identity and published web routes, then mark version 1.0.0 published and close #66.
 
 ## Resume instructions
 
-Read this file, #66, and `project-control/roles/applied-ai-engineer/qa/phase-11-publication-assembly.md`. Preserve the source assembly and do not reopen content/visual gates without a demonstrated defect. Complete only the root-owned Phase 11 artifact gate before entering another phase or Abhyaas.
+Read this file, #66, and `project-control/roles/applied-ai-engineer/qa/phase-11-publication-assembly.md`. Preserve the source assembly and reviewed proof hash; do not reopen content/visual gates without a demonstrated defect. Complete only the root-owned Phase 11 publication transition before entering another phase or Abhyaas.

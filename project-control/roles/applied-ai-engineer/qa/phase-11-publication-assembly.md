@@ -1,8 +1,8 @@
 # Applied AI Engineering - Phase 11 Publication Assembly
 
-Status: **PASS - SOURCE ASSEMBLY COMPLETE; ROOT ARTIFACT GATE OPEN**
+Status: **PASS - SOURCE ASSEMBLY AND REVIEW-PROOF QA COMPLETE; ROOT PUBLICATION TRANSITION OPEN**
 
-Date: 2026-08-16
+Date: 2026-08-17
 
 Issue: #66
 
@@ -10,7 +10,7 @@ Issue: #66
 
 This record verifies the role-local source assembly for *Applied AI Engineering: From Model Capability to Dependable Product Behavior*. It adds original front matter, six architecture-locked part introductions, and six architecture-locked appendices from the accepted manuscripts, registries, figures, learning records, and deterministic Patchwork companion.
 
-It deliberately does not modify the shared PDF pipeline, generate a PDF, enable web/PDF publication, mark the edition published, set a publication date, edit artwork, change the Phase 09 chapter lock, change companion behavior, or enter another role/Abhyaas.
+It does not enable web/PDF publication, copy a public download, mark the edition published, set a publication date, edit artwork, change the Phase 09 chapter lock, change companion behavior, or enter another role/Abhyaas. It does verify the shared manifest overrides and generate deterministic review proofs for artifact QA.
 
 ## Complete-edition inventory
 
@@ -80,9 +80,9 @@ Appendix A explicitly says it is a decision-depth refresher and not a substitute
 - edition label: `First edition release candidate`;
 - `publishedAt`: `null`;
 - PDF filename reserved as `applied-ai-engineering-v1.0.0.pdf`;
-- PDF `enabled`: `false`.
+- PDF `enabled`: `false` after proof generation.
 
-The metadata therefore identifies a complete edition candidate without making it public or claiming a PDF exists.
+The metadata therefore identifies a complete edition candidate without making the reviewed proof publicly downloadable.
 
 ## Continuity, originality, and safety review
 
@@ -101,7 +101,7 @@ Similarity review is a hostile-review aid, not legal proof of originality. The f
 ## Validation evidence
 
 - `npm run validate:publications`: PASS, four role records and five publication records.
-- `npm run test:publications`: PASS, 3/3.
+- `npm run test:publications`: PASS, 4/4 including optional assembly-field regression coverage.
 - `npm run test:companion:aae`: PASS, 109/109.
 - custom assembly/word/order/boundary audit: PASS with zero errors.
 - exact and near cross-publication paragraph scans: PASS with zero matches at the recorded thresholds.
@@ -110,18 +110,29 @@ Similarity review is a hostile-review aid, not legal proof of originality. The f
 
 The current Astro route count does not include Applied AI because its manifest correctly remains `review`. Root must verify the additional routes only after the final publication-state transition.
 
+## Deterministic review-proof evidence
+
+- Proofs G and H were built independently with the bundled PDF Python runtime and `--proof`.
+- Both proofs are 633 A4 pages and 167,241,129 bytes.
+- Both source digests are `bb3fe78926cca1ada640a963db38b668a2412278bfa0d0262656c8dcd3c3d07b`.
+- Both PDF SHA-256 values are `a2118ba48bdedcf890a48e09171928e086afc8fdf57a74bb7f526acc643104b8`.
+- PDF metadata records Komal Nakrani, the exact title/subject, invariant 2000-01-01 timestamps, A4 geometry, no encryption, and no JavaScript or embedded files.
+- The outline has 39 destinations: 12 top-level entries plus 21 nested chapters and six nested appendices.
+- Text extraction succeeds on all 633 pages (minimum 219 non-whitespace characters on any page), with no replacement glyph, Orchid note, or stale dossier-index text.
+- Link audit finds 78 valid internal destinations and 59 valid external URI annotations representing 55 unique source URLs.
+
+## Complete rendered-page QA
+
+The exact proof G was rendered into 633 PNGs at 144 DPI, each 1,191 x 1,684 pixels. Automated raster checks found zero blank pages, zero marks touching the outer three-pixel edge, and zero missing author/version/footer/rule/page-number frames. Ten 64-page contact sheets (the last partial) were visually inspected for sequence, density discontinuities, clipping, broken tables/code, figure placement, blank pages, and broken glyphs. Representative full-resolution inspection covered the cover, contents, all six part starts, chapter starts, figures, appendices and each appendix transition, figure registry, sources, edition record, and pages 587-588.
+
+The earlier page-587 defect is closed. The mechanism decision statement now fits as one complete three-line template on page 587; it does not clip or leave an orphan heading. Page 588 begins PF-04 inside the normal frame. Pixel-level checks confirm the header/footer furniture remains present on both pages.
+
 ## Root-owned artifact handoff
 
-Three shared-PDF defaults must be resolved outside this scoped task. The builder currently uses five FDE part starts `[1, 6, 11, 15, 18]`, while Applied AI requires six starts `[1, 5, 9, 13, 17, 20]`. Its default appendix summary promises a completed fictional dossier index that this six-appendix architecture does not contain. Its default figure-registry note names Orchid rather than Patchwork. The publication schema currently rejects the builder's optional `partStarts`, `appendicesSummary`, and `figureRegistryNote` manifest fields. Root must add reviewed schema/manifest support or generalize those defaults in a backward-compatible way before building. This agent did not modify the prohibited shared pipeline.
+The shared Applied-specific overrides, deterministic generation, structure/text/link checks, and full rendered-page QA are complete. Root must now:
 
-After that integration, root must:
+1. copy the exact reviewed PDF to its public download path and compare bytes;
+2. enable and inspect all Applied AI web routes at desktop/mobile widths;
+3. only then set `published`, fill `publishedAt`, enable PDF, record final public hashes/page count, and close #66.
 
-1. build twice and compare PDF/source hashes;
-2. verify complete sequence: front matter, six parts, 21 chapters, six appendices, figure/source/edition records;
-3. inspect every rendered page plus representative full-resolution pages;
-4. verify metadata, bookmarks, searchable text, figures, immediate alternatives/long descriptions, tables, code, links, page furniture, and no clipping/blank/broken-glyph defects;
-5. copy the exact reviewed PDF to its public download path and compare bytes;
-6. enable and inspect all Applied AI web routes at desktop/mobile widths;
-7. only then set `published`, fill `publishedAt`, enable PDF, record final hashes/page count, and close #66.
-
-Final source-assembly disposition: **PASS**. Phase 11 publication itself remains open solely for the root-owned artifact and state-transition gate.
+Final source-assembly and review-proof disposition: **PASS**. Phase 11 publication itself remains open solely for the root-owned public mirror, web verification, and state transition.

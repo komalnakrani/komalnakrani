@@ -155,6 +155,17 @@ export async function validateWorkspace(options = {}) {
     if (chapters.some((chapter, index) => chapter.order !== expectedOrders[index])) {
       errors.push(`${manifest.slug} chapter order must be contiguous and sorted from 1`);
     }
+    const partStarts = manifest.partStarts ?? [];
+    if (partStarts.length > 0) {
+      const chapterOrders = new Set(chapters.map((chapter) => chapter.order));
+      if (partStarts[0] !== 1) errors.push(`${manifest.slug} first part must start at chapter 1`);
+      if (partStarts.some((order, index) => index > 0 && order <= partStarts[index - 1])) {
+        errors.push(`${manifest.slug} partStarts must be sorted in increasing chapter order`);
+      }
+      for (const order of partStarts) {
+        if (!chapterOrders.has(order)) errors.push(`${manifest.slug} part start ${order} does not match a chapter order`);
+      }
+    }
 
     const sourceIds = new Set((registryRecords.sources?.sources ?? []).map((source) => source.id));
     const claimIds = new Set((registryRecords.claims?.claims ?? []).map((claim) => claim.id));

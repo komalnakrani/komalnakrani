@@ -97,11 +97,7 @@ For rules, structured lookup, lexical retrieval, learned retrieval, ranking, pre
 - cheapest falsifying experiment;
 - disposition: use, test, defer, reject, or keep as fallback.
 
-### Decision statement
-
-```text
-For task scope ___ and contract version ___, choose ___ because evidence ___ supports clauses ___ within limits ___. Reject/defer ___ because ___. Preserve fallback ___. Reopen when trigger ___ occurs. Owner ___ recommends; authority ___ decides the product scope.
-```
+**Decision statement:** scope ___; contract v___; choose ___; evidence ___ supports clauses ___ within limits ___; reject or defer ___ because ___; preserve fallback ___; reopen on trigger ___; owner ___ recommends; authority ___ decides scope.
 
 Do not use a maturity ladder. More complex mechanisms are not later or better by default.
 

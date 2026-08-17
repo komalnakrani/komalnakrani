@@ -71,3 +71,34 @@ test('figure records without accessible metadata fail schema validation', async 
   assert.equal(result.ok, false);
   assert.match(result.errors.join('\n'), /must NOT have fewer than 20 characters/);
 });
+
+test('optional publication assembly fields validate part boundaries and notes', async () => {
+  const validTemporary = await mkdtemp(path.join(os.tmpdir(), 'komal-publication-parts-valid-'));
+  await cp(fixtureRoot, validTemporary, { recursive: true });
+  const validFile = path.join(
+    validTemporary,
+    'content/publications/pipeline-verification/publication.json',
+  );
+  const validPublication = JSON.parse(await readFile(validFile, 'utf8'));
+  validPublication.partStarts = [1];
+  validPublication.appendicesSummary = 'A truthful appendix summary for this publication fixture.';
+  validPublication.figureRegistryNote = 'A truthful figure provenance note for this publication fixture.';
+  await writeFile(validFile, `${JSON.stringify(validPublication, null, 2)}\n`);
+  const validResult = await validateWorkspace({ root: validTemporary });
+  assert.equal(validResult.ok, true, validResult.errors.join('\n'));
+
+  const invalidTemporary = await mkdtemp(path.join(os.tmpdir(), 'komal-publication-parts-invalid-'));
+  await cp(fixtureRoot, invalidTemporary, { recursive: true });
+  const invalidFile = path.join(
+    invalidTemporary,
+    'content/publications/pipeline-verification/publication.json',
+  );
+  const invalidPublication = JSON.parse(await readFile(invalidFile, 'utf8'));
+  invalidPublication.partStarts = [1, 3];
+  invalidPublication.appendicesSummary = 'A truthful appendix summary for this publication fixture.';
+  invalidPublication.figureRegistryNote = 'A truthful figure provenance note for this publication fixture.';
+  await writeFile(invalidFile, `${JSON.stringify(invalidPublication, null, 2)}\n`);
+  const invalidResult = await validateWorkspace({ root: invalidTemporary });
+  assert.equal(invalidResult.ok, false);
+  assert.match(invalidResult.errors.join('\n'), /part start 3 does not match a chapter order/);
+});

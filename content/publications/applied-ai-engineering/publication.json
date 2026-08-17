@@ -35,6 +35,9 @@
     {"order":20,"slug":"earn-reuse-from-repeated-evidence","title":"Earn Reuse From Repeated Evidence","summary":"Separate reusable mechanisms from local evidence and authority, validate stable seams across consumers, and reject abstractions that have not earned their blast radius.","minutes":80,"sourceFile":"chapters/earn-reuse-from-repeated-evidence.mdx","objectiveIds":["AAE-K03","AAE-K06","AAE-K08","AAE-K10"]},
     {"order":21,"slug":"lead-applied-ai-decisions","title":"Lead Applied AI Decisions","summary":"Direct attention across unlike systems, communicate at the right altitude, preserve evidence and authority, and grow by improving the decisions and people around the work.","minutes":80,"sourceFile":"chapters/lead-applied-ai-decisions.mdx","objectiveIds":["AAE-K01","AAE-K06","AAE-K08","AAE-K09","AAE-K10"]}
   ],
+  "partStarts": [1, 5, 9, 13, 17, 20],
+  "appendicesSummary": "Decision-depth measurement refreshers, reusable artifact templates, system and threat checklists, provider-neutral companion guidance, terminology and role boundaries, and publication provenance records.",
+  "figureRegistryNote": "All 42 figures are original Komal ImageGen PNG teaching assets. Patchwork and every illustrated product state, value, incident, and outcome are fictional or synthetic unless a caption explicitly identifies sourced evidence.",
   "registries": {"sources":"sources.json","claims":"claims.json","figures":"figures.json","errata":"errata.json"},
   "pdf": {"enabled":false,"filename":"applied-ai-engineering-v1.0.0.pdf"}
 }
