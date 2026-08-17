@@ -17,8 +17,8 @@ Deployable identity must bind base or checkpoint, tokenizer and template, adapte
 
 Use content identities, not final-v2 filenames. Every digest names algorithm and object scope. Missing artifacts remain absent and never receive pretend hashes.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F14.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f14-1-model-system-crate.png">
-  <div role="img" aria-label="One versioned crate contains separately labeled base, tokenizer, template, adapter, configuration, schema, runtime, license, evidence, and hash compartments.">Pending ImageGen figure V2-F14.1</div>
+<figure className="book-figure" data-figure-id="V2-F14.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f14-1-model-system-crate.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f14-1-model-system-crate.png" alt="One versioned crate contains separately labeled base, tokenizer, template, adapter, configuration, schema, runtime, license, evidence, and hash compartments." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F14.1 - Release identity spans the behavior-facing system.</strong> Essential labels: base, tokenizer, template, adapter, config, schema, runtime, license, evidence, hash. Supports CLM-040 and CLM-041.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic crate has fitted compartments for every system component; the adapter slot is marked absent.</p></details>
 </figure>
@@ -35,8 +35,8 @@ Compatibility checks base/config digests, tokenizer/embedding assumptions, speci
 
 The failure injection supplies a validly hashed adapter with the wrong tokenizer and old template. Integrity passes; compatibility stops before load. A second fixture has the right tuple but no adapter artifact. It remains incomplete.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F14.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f14-2-compatibility-lock.png">
-  <div role="img" aria-label="Matched base, tokenizer, template, adapter, and runtime keys open a lock while a validly hashed mismatched combination stops.">Pending ImageGen figure V2-F14.2</div>
+<figure className="book-figure" data-figure-id="V2-F14.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f14-2-compatibility-lock.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f14-2-compatibility-lock.png" alt="Matched base, tokenizer, template, adapter, and runtime keys open a lock while a validly hashed mismatched combination stops." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F14.2 - Integrity cannot substitute for compatibility.</strong> Essential labels: match, mismatch, hash, compatibility, stop. Supports CLM-042.</figcaption>
   <details><summary>Long description</summary><p>A three-dimensional lock accepts a correctly shaped component chain while a shiny wrong-tokenizer key hits a mechanical stop.</p></details>
 </figure>
@@ -59,7 +59,7 @@ For Mosaic, base and tokenizer digests are synthetic teaching identities, the ad
 
 Compatibility fixtures include golden serialization of a normal dialogue, system control, tool-shaped data, empty/long inputs, Gujarati-English shorthand, stop-token behavior, padding, and structured output. Replay compares exact bytes where deterministic and semantic contract outcomes where runtime variation is expected. Tolerances must be declared before comparison.
 
-The adapter-lineage case is bounded: LoRA and PEFT research motivates binding adapter and base, but no paper proves this fictional package. The lifecycle case shows that managed APIs and schemas change; it supports dated identities and migration evidence, not permanence.
+The adapter-lineage case (`LLME-CASE-009`) is bounded: LoRA and PEFT research motivates binding adapter and base, but no paper proves this fictional package. The lifecycle case (`LLME-CASE-013`) shows that managed APIs and schemas change; it supports dated identities and migration evidence, not permanence.
 
 ## Write a useful change card
 

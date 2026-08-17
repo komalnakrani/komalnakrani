@@ -377,7 +377,7 @@
       "author_or_org": "Google Cloud",
       "source_type": "official-platform-documentation",
       "publication_date": null,
-      "url_or_identifier": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/evaluate-judge-model",
+      "url_or_identifier": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/evaluate-judge-model",
       "domains": ["model-grader", "human-ground-truth", "calibration"],
       "chapters": ["V1-14", "V2-07", "V2-12"],
       "claims_supported": ["LLME-SCLM-009", "LLME-SCLM-010", "LLME-SCLM-015"],

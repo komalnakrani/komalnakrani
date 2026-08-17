@@ -39,8 +39,8 @@ The experiment card also names the question and alternative explanations. The ca
 
 Do not place secrets, raw protected examples, or unrestricted paths in the manifest. Use content identities and approved references. Access control, secret management, scheduling, durable storage, and cluster reliability remain platform/MLOps responsibilities; the behavioral experiment still records the environment it depends on.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F09.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f09-1-training-lineage-cockpit.png">
-  <div role="img" aria-label="Data, configuration, seeds, code, hardware, checkpoints, logs, and behavioral evaluators connect into one traceable training experiment cockpit.">Pending ImageGen figure V2-F09.1</div>
+<figure className="book-figure" data-figure-id="V2-F09.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f09-1-training-lineage-cockpit.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f09-1-training-lineage-cockpit.png" alt="Data, configuration, seeds, code, hardware, checkpoints, logs, and behavioral evaluators connect into one traceable training experiment cockpit." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F09.1 - Every run state points back to one manifest.</strong> Essential labels: data, config, seed, code, hardware, checkpoint, logs, eval. Connector shapes supplement color. The figure supports `CLM-025`; it does not show a successful run.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic three-dimensional cockpit links sealed data and configuration modules to seed, code, hardware, checkpoint, log, and evaluation instruments. A central manifest plate carries lineage arrows; the start lever remains locked.</p></details>
 </figure>
@@ -55,7 +55,7 @@ Record sequences and supervised tokens too, because variable lengths make row co
 
 The failure injection changes accumulation from 4 to 8 while logging only microbatch 2 on 2 devices. The effective batch changes from 16 to 32. A schedule expressed in steps now sees a different example/token exposure. The validator rejects the manifest until batch semantics and schedule are reconciled.
 
-Optimizer papers describe mechanisms, not universally correct hyperparameters. Tülu 3 is one staged recipe, not Mosaic's configuration. Chapters 10-11 will compare bounded candidates only after this frame is accepted.
+Optimizer papers describe mechanisms, not universally correct hyperparameters. Tülu 3 (`LLME-CASE-008`) is one staged recipe, not Mosaic's configuration. Chapters 10-11 will compare bounded candidates only after this frame is accepted.
 
 Sequence policy records maximum length, truncation side, packing, padding, sampling buckets, and supervised-token distribution. A batch can contain the same row count but twice the supervised tokens. Log examples, total tokens, and supervised tokens per update so resource and learning curves remain interpretable.
 
@@ -67,8 +67,8 @@ Mixed precision and sharding change memory/communication behavior and checkpoint
 
 PyTorch AMP and FSDP documentation are living, version-specific interfaces. Hardware, operators, kernels, topology, and library versions affect numerical and recovery behavior. Platform/MLOps owns reliable shared infrastructure and capacity; LLM engineering owns the model-experiment specification and behavior linkage.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F09.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f09-2-training-state-memory.png">
-  <div role="img" aria-label="Batch and sequence flow through weights, activations, gradients, optimizer state, and checkpoint shelves that compete for finite memory.">Pending ImageGen figure V2-F09.2</div>
+<figure className="book-figure" data-figure-id="V2-F09.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f09-2-training-state-memory.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f09-2-training-state-memory.png" alt="Batch and sequence flow through weights, activations, gradients, optimizer state, and checkpoint shelves that compete for finite memory." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F09.2 - Training state is larger than model weights.</strong> Essential labels: batch, sequence, weights, activations, gradients, optimizer, checkpoint. Shelf shapes supplement color. The figure supports `CLM-026`; it reports no hardware capacity.</figcaption>
   <details><summary>Long description</summary><p>A realistic three-dimensional memory cabinet holds distinct shelves for weights, activations, gradients, optimizer state, and checkpoints. Batch and sequence blocks enter from one side while a finite-memory gauge and sharding links remain visible.</p></details>
 </figure>

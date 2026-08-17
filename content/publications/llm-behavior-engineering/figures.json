@@ -144,8 +144,8 @@
     {
       "id": "FIG-015",
       "file": "assets/v1-f08-1-context-budget.png",
-      "alt": "A finite context container allocates separate space to trusted control, history, authorized evidence, and reserved output.",
-      "caption": "V1-F08.1 - Context is an allocated budget. Essential labels: control, history, evidence, output. Distinct shapes and dividers show trust and allocation. The figure explains the token ledger; it does not represent a real model window or optimal ratio.",
+      "alt": "A finite context container allocates separate space to trusted control, history, authorized evidence, and reserved output, with excluded items moved to an omitted tray.",
+      "caption": "V1-F08.1 - Context is an allocated budget. Essential labels: control, history, evidence, output, omitted. Distinct shapes and dividers show trust and allocation. The figure explains the token ledger; it does not represent a real model window or optimal ratio.",
       "chapterSlug": "budget-context-deliberately",
       "creator": "Komal Nakrani",
       "sourceIds": [],

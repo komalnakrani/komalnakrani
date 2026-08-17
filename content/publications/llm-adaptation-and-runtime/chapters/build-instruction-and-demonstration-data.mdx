@@ -51,8 +51,8 @@ The structured record contains:
 
 Keep desired output and evidence links separate. A target can be schema-valid yet unsupported. A source can be cited yet stale, unauthorized, or irrelevant. Deterministic validators should check structural and referential conditions before a domain reviewer judges correctness.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F06.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f06-1-instruction-example-anatomy.png">
-  <div role="img" aria-label="One instruction example separates trusted instruction, untrusted input, authorized context, typed target, intentional loss region, and provenance metadata.">Pending ImageGen figure V2-F06.1</div>
+<figure className="book-figure" data-figure-id="V2-F06.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f06-1-instruction-example-anatomy.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f06-1-instruction-example-anatomy.png" alt="One instruction example separates trusted instruction, untrusted input, authorized context, typed target, intentional loss region, and provenance metadata." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F06.1 - Show exactly what is supplied and learned.</strong> Essential labels: instruction, input, context, target, loss, metadata. Border and mask patterns supplement color. The figure supports `CLM-016` and `CLM-017`; it reports no training effect.</figcaption>
   <details><summary>Long description</summary><p>A crisp realistic three-dimensional record unfolds into layered cards: trusted instruction, untrusted input, authorized context, typed target, a highlighted assistant-only loss band, and provenance metadata. Evidence cords connect each target claim to a context span.</p></details>
 </figure>
@@ -149,8 +149,8 @@ Coverage must also retain the curation denominator. If twenty rendered records d
 
 Before freezing a dataset version, sample records from every populated high-consequence cell and every rejection class. Review the structured form, evidence, rendered tokens, mask, and lineage together. Aggregate coverage cannot reveal a target pasted into the wrong role or a citation pointing to the wrong revision.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F06.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f06-2-coverage-quilt.png">
-  <div role="img" aria-label="A coverage quilt maps behavior clauses and error categories to positive, negative, abstention, and multilingual example families while leaving missing cells visible.">Pending ImageGen figure V2-F06.2</div>
+<figure className="book-figure" data-figure-id="V2-F06.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f06-2-coverage-quilt.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f06-2-coverage-quilt.png" alt="A coverage quilt maps behavior clauses and error categories to positive, negative, abstention, and multilingual example families while leaving missing cells visible." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F06.2 - Varied learning signals still leave honest holes.</strong> Essential labels: clause, error, positive, negative, abstain, multilingual, gap. Patch textures supplement color. The figure supports `CLM-016` and `CLM-018`; coverage is not a quality result.</figcaption>
   <details><summary>Long description</summary><p>A colorful tactile three-dimensional quilt has rows for behavior clauses and errors and columns for positive, negative, abstention, and multilingual families. Some patches contain reviewed record bundles; transparent outlined patches labeled gap remain empty.</p></details>
 </figure>

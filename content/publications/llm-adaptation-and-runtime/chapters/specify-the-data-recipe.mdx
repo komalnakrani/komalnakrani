@@ -40,8 +40,8 @@ Give the recipe an immutable identity derived from its canonical fields. Bind it
 
 A recipe change creates a new identity. Do not overwrite version 1 after seeing a candidate result.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F04.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f04-1-data-recipe-workbench.png">
-  <div role="img" aria-label="Authorized source trays pass through a versioned recipe workbench into example records that retain source and transformation provenance tabs.">Pending ImageGen figure V2-F04.1</div>
+<figure className="book-figure" data-figure-id="V2-F04.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f04-1-data-recipe-workbench.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f04-1-data-recipe-workbench.png" alt="Authorized source trays pass through a versioned recipe workbench into example records that retain source and transformation provenance tabs." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F04.1 - A recipe turns sources into traceable examples.</strong> Essential labels: source, recipe, example, provenance. Shape and tab patterns supplement color. The figure supports `CLM-010`; documentation does not grant data rights.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic three-dimensional workbench receives sealed source trays. Named transformation tools operate only after an authority gate. Finished example cards retain bright tabs pointing back to source and recipe versions, while a rejected tray remains outside the workbench.</p></details>
 </figure>
@@ -83,7 +83,7 @@ Legal/privacy/data/domain authorities approve sources and intended uses within t
 
 ## Treat synthetic generation as a fallible source
 
-Synthetic instruction data can scale examples but may reproduce generator errors and biases. [CLM-011] `LLME-CASE-007` and the Self-Instruct evidence show bounded multilingual and synthetic-data methods under their studied generators, filtering, languages, and evaluations. They do not make synthetic output independent truth or establish Mosaic quality.
+Synthetic instruction data can scale examples but may reproduce generator errors and biases. [CLM-011] `LLME-CASE-006` bounds the documented corpus-pipeline pattern. `LLME-CASE-007` and the Self-Instruct evidence show bounded multilingual and synthetic-data methods under their studied generators, filtering, languages, and evaluations. They do not make synthetic output independent truth or establish Mosaic quality.
 
 For every generation batch, record:
 
@@ -147,8 +147,8 @@ Record the denominator behind every mixture view. `40% Gujarati` could mean rows
 
 Mixture changes are experimental variables. If the team later increases abstention examples, it creates a new recipe and a new hypothesis about behavior. It must not compare the resulting candidate with the old baseline as though only adapter configuration changed.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F04.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f04-2-population-balance-trays.png">
-  <div role="img" aria-label="A target-population outline is compared with separate language, domain, error, and abstention trays, leaving convenience-sampling gaps visibly empty.">Pending ImageGen figure V2-F04.2</div>
+<figure className="book-figure" data-figure-id="V2-F04.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f04-2-population-balance-trays.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f04-2-population-balance-trays.png" alt="A target-population outline is compared with separate language, domain, error, and abstention trays, leaving convenience-sampling gaps visibly empty." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F04.2 - Planned balance makes convenience gaps visible.</strong> Essential labels: language, domain, error, abstention, gap. Patterns and empty tray outlines supplement color. The figure supports `CLM-011` and `CLM-012`; it reports no real population frequencies.</figcaption>
   <details><summary>Long description</summary><p>A crisp three-dimensional target silhouette stands beside colorful trays for language, domain, error, and abstention examples. Several slots remain transparently empty and labeled gap. A convenience-export box overfills one easy English slot but is blocked by a red authority gate.</p></details>
 </figure>

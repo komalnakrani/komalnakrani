@@ -13,7 +13,7 @@ figureIds: []
 
 Chapter 10 forwarded a simulated SFT comparator, not a trained checkpoint. The real `MD-12` run remains blocked. Chapter 11 adds equally explicit PEFT simulations so we can ask the engineering question: if two candidates meet the behavior contract, what resource and lifecycle evidence distinguishes them?
 
-LoRA freezes the base weights and learns low-rank updates on selected transformations, reducing the trainable-parameter and delta-storage burden in the settings studied by its authors. [CLM-031] That formulation does not promise equal quality, safety, latency, or total cost for a new model and task. Small trainable state still depends on a large base, tokenizer, template, runtime, evaluators, and serving plan.
+LoRA freezes the base weights and learns low-rank updates on selected transformations, reducing the trainable-parameter and delta-storage burden in the settings studied by its authors. [CLM-031] `LLME-CASE-009` bounds that adapter evidence to its evaluated settings. The formulation does not promise equal quality, safety, latency, or total cost for a new model and task. Small trainable state still depends on a large base, tokenizer, template, runtime, evaluators, and serving plan.
 
 For a transformed weight matrix, the adapter represents an update through lower-dimensional factors. Rank limits the update subspace; scale controls its contribution. Target modules decide where updates enter. Dropout and initialization shape the experiment. These are hypotheses, not magic constants.
 
@@ -32,8 +32,8 @@ The Mosaic adapter manifest binds:
 
 The teaching fixture uses the exact base revision `rev-synthetic-a1`, tokenizer `tok-synthetic-a1`, and runtime `1.0.0-teaching`. Because the serving template mismatch remains unresolved, every PEFT row has `executable: false`. Resource and behavior values are deterministic fixtures for comparison, not measurements.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F11.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f11-1-low-rank-adapter-cutaway.png">
-  <div role="img" aria-label="Small trainable low-rank adapter inserts sit beside frozen base-model layers, while a compatibility key binds the adapter to one exact base revision.">Pending ImageGen figure V2-F11.1</div>
+<figure className="book-figure" data-figure-id="V2-F11.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f11-1-low-rank-adapter-cutaway.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f11-1-low-rank-adapter-cutaway.png" alt="Small trainable low-rank adapter inserts sit beside frozen base-model layers, while a compatibility key binds the adapter to one exact base revision." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F11.1 - The adapter is small; its dependency surface is not.</strong> Essential labels: frozen, adapter, base revision, compatibility. Texture and connector shape supplement color. The figure supports `CLM-031`; it makes no quality claim.</figcaption>
   <details><summary>Long description</summary><p>A crisp colorful three-dimensional cutaway shows tall frozen layer blocks with small luminous adapter modules inserted beside them. A physical key joins each module to a plate carrying the exact base revision.</p></details>
 </figure>
@@ -58,8 +58,8 @@ Merged and unmerged forms are distinct artifacts. If merging is supported, compa
 
 Hotswapping requires its own support and state-isolation checks. Concurrent adapters must not leak between requests. Caches and batching must carry adapter identity. These serving-platform mechanisms remain platform/MLOps responsibility, while the LLM engineer specifies the behavior and compatibility evidence the platform must expose.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F11.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f11-2-peft-tradeoff-rig.png">
-  <div role="img" aria-label="No-tune, supervised, and two adapter candidates are compared across target behavior, retention, language slices, memory, storage, and runtime compatibility rather than parameter count alone.">Pending ImageGen figure V2-F11.2</div>
+<figure className="book-figure" data-figure-id="V2-F11.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f11-2-peft-tradeoff-rig.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f11-2-peft-tradeoff-rig.png" alt="No-tune, supervised, and two adapter candidates are compared across target behavior, retention, language slices, memory, storage, and runtime compatibility rather than parameter count alone." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F11.2 - Efficient adaptation lives on a behavior-resource frontier.</strong> Essential labels: target, retention, language, memory, storage, runtime. Axis shapes and pass-block symbols supplement color. The figure supports `CLM-032` and `CLM-033`; values are illustrative.</figcaption>
   <details><summary>Long description</summary><p>A polished three-dimensional testing rig holds four candidate capsules. Separate gauges show target, retention, language, memory, storage, and runtime compatibility. One small adapter capsule is blocked by an identity lock.</p></details>
 </figure>

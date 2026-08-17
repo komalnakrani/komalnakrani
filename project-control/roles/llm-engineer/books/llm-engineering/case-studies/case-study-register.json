@@ -90,7 +90,7 @@
       "failures_or_risks": ["Position and style can influence scores", "A judge can share the system's blind spots"],
       "reported_outcomes": "The paper reported useful agreement in its setup while documenting important biases and limitations.",
       "lessons": ["Calibrate automated graders", "Keep human adjudication for high-stakes or ambiguous cases"],
-      "chapter_ids": ["V1-13", "V1-14", "V1-15", "V2-12"],
+      "chapter_ids": ["V1-13", "V1-14", "V1-15", "V2-07", "V2-12"],
       "source_ids": ["LLME-BSRC-027", "LLME-BSRC-029", "LLME-BSRC-033"],
       "limitations": "Judge quality changes with rubric, model, sampling, and task.",
       "status": "verified"
@@ -108,7 +108,7 @@
       "failures_or_risks": ["Contamination and duplication can inflate evaluation", "Web data carries provenance and consent concerns"],
       "reported_outcomes": "The authors released a documented multi-trillion-token corpus and described its processing pipeline.",
       "lessons": ["Treat data lineage and split integrity as model-system requirements"],
-      "chapter_ids": ["V2-04", "V2-05", "V2-13"],
+      "chapter_ids": ["V1-13", "V2-04", "V2-05", "V2-13"],
       "source_ids": ["LLME-BSRC-034", "LLME-BSRC-035", "LLME-BSRC-036"],
       "limitations": "A published corpus is evidence of process, not blanket authorization for every use.",
       "status": "verified"
@@ -126,7 +126,7 @@
       "failures_or_risks": ["Aggregate scores can conceal weak languages", "Translation can erase local context"],
       "reported_outcomes": "The project reported multilingual instruction-following results for its released data and models.",
       "lessons": ["Stratify data and evaluation by language", "Do not infer authority from language fluency"],
-      "chapter_ids": ["V1-13", "V2-04", "V2-06", "V2-08"],
+      "chapter_ids": ["V1-13", "V2-04", "V2-06", "V2-08", "V2-10"],
       "source_ids": ["LLME-BSRC-037", "LLME-BSRC-038"],
       "limitations": "Results are model- and language-specific and require local validation.",
       "status": "verified"
@@ -144,7 +144,7 @@
       "failures_or_risks": ["Stage interactions complicate causal attribution", "Public benchmarks can be contaminated or incomplete"],
       "reported_outcomes": "The authors report improvements for their model family and recipe on named evaluations.",
       "lessons": ["Freeze a baseline and preserve stage-level artifacts", "Record the full data and training recipe"],
-      "chapter_ids": ["V2-01", "V2-03", "V2-04", "V2-05", "V2-06", "V2-08", "V2-09", "V2-10", "V2-11", "V2-17"],
+      "chapter_ids": ["V2-01", "V2-03", "V2-04", "V2-05", "V2-06", "V2-08", "V2-09", "V2-10", "V2-11", "V2-13", "V2-17"],
       "source_ids": ["LLME-BSRC-039", "LLME-BSRC-040"],
       "limitations": "A research recipe is not a turnkey operational standard.",
       "status": "verified"
@@ -162,7 +162,7 @@
       "failures_or_risks": ["A small training loss does not demonstrate retained behavior", "Quantized training may change numerical behavior"],
       "reported_outcomes": "The papers report substantial resource reductions with competitive results in their evaluated settings.",
       "lessons": ["Choose the smallest adaptation that clears measured acceptance criteria", "Version tokenizer, base, adapter, and merge state together"],
-      "chapter_ids": ["V2-03", "V2-11", "V2-14", "V2-16"],
+      "chapter_ids": ["V2-03", "V2-11", "V2-14", "V2-16", "V2-17"],
       "source_ids": ["LLME-BSRC-041", "LLME-BSRC-042", "LLME-BSRC-043", "LLME-BSRC-061"],
       "limitations": "No universal equivalence to full finetuning is claimed.",
       "status": "verified"
@@ -180,7 +180,7 @@
       "failures_or_risks": ["Reward or benchmark gains can mask regressions", "Preference labels may encode annotator bias"],
       "reported_outcomes": "The paper reports competitive preference-alignment results on its evaluated tasks.",
       "lessons": ["Audit preference provenance", "Use retention, safety, and judge-calibration controls"],
-      "chapter_ids": ["V2-07", "V2-12"],
+      "chapter_ids": ["V2-03", "V2-07", "V2-12"],
       "source_ids": ["LLME-BSRC-028", "LLME-BSRC-030", "LLME-BSRC-044"],
       "limitations": "Method evidence does not establish domain values or universal safety.",
       "status": "verified"
@@ -252,7 +252,7 @@
       "failures_or_risks": ["Data exfiltration", "Unauthorized tool action", "Instruction override"],
       "reported_outcomes": "The sources characterize risks and recommended controls; no guaranteed prevention rate is claimed.",
       "lessons": ["Treat model output as untrusted", "Keep authorization outside the model"],
-      "chapter_ids": ["V1-06", "V1-07", "V1-08", "V1-11", "V1-16", "V2-08", "V2-14", "V2-17"],
+      "chapter_ids": ["V1-01", "V1-02", "V1-06", "V1-07", "V1-08", "V1-11", "V1-16", "V2-08", "V2-14", "V2-17"],
       "source_ids": ["LLME-BSRC-008", "LLME-BSRC-017", "LLME-BSRC-018", "LLME-BSRC-065"],
       "limitations": "Security ownership remains with the appropriate security and system authorities.",
       "status": "verified-current"

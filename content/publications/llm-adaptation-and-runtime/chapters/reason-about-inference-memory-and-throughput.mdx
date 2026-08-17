@@ -17,8 +17,8 @@ Inference memory includes weights plus runtime state such as KV cache whose size
 
 For a simplified decoder, KV bytes depend on active sequences, retained tokens, layers, key/value factor, KV heads, head dimension, and bytes per element. Architecture, grouping, paging, quantization, and prefix reuse change the result. Expose every factor and validate peak memory on the exact stack.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F15.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f15-1-inference-memory-warehouse.png">
-  <div role="img" aria-label="Finite shelves hold weights, workspace, activations, KV cache, adapter state, and safety margin while concurrent sequences consume cache blocks.">Pending ImageGen figure V2-F15.1</div>
+<figure className="book-figure" data-figure-id="V2-F15.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f15-1-inference-memory-warehouse.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f15-1-inference-memory-warehouse.png" alt="Finite shelves hold weights, workspace, activations, KV cache, adapter state, and safety margin while concurrent sequences consume cache blocks." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F15.1 - Weights share memory with growing request state.</strong> Essential labels: weights, workspace, activations, KV, adapter, margin, concurrency. Supports CLM-043 and CLM-045.</figcaption>
   <details><summary>Long description</summary><p>A realistic memory warehouse fills with fixed weight crates and growing KV blocks for short and long sequences.</p></details>
 </figure>
@@ -33,12 +33,12 @@ Warm and cold runs answer different questions. Record load, compilation, cache, 
 
 ## Batching can win throughput and lose interaction
 
-Waiting to batch raises queue delay even when utilization improves. Paged KV, continuous batching, chunked prefill, and prefix caching change the frontier under particular stacks. Published PagedAttention throughput is not portable.
+Waiting to batch raises queue delay even when utilization improves. Paged KV, continuous batching, chunked prefill, and prefix caching change the frontier under particular stacks. Published PagedAttention throughput (`LLME-CASE-011`) is not portable.
 
 The fixture compares interactive-small-batch and throughput-large-batch. The larger batch completes more synthetic tokens per unit but breaches p99 TTFT during bursts, so it is rejected for interactive routing.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F15.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f15-2-scheduling-tail-tradeoff.png">
-  <div role="img" aria-label="Short, long, and burst arrivals enter batching and cache scheduling; a larger batch raises throughput while p99 TTFT crosses the interactive limit.">Pending ImageGen figure V2-F15.2</div>
+<figure className="book-figure" data-figure-id="V2-F15.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f15-2-scheduling-tail-tradeoff.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f15-2-scheduling-tail-tradeoff.png" alt="Short, long, and burst arrivals enter batching and cache scheduling; a larger batch raises throughput while p99 TTFT crosses the interactive limit." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F15.2 - Utilization can lengthen a user-visible tail.</strong> Essential labels: arrivals, batch, cache, TTFT, throughput, p99 tail, limit. Supports CLM-044; trace is synthetic.</figcaption>
   <details><summary>Long description</summary><p>A colorful scheduler fills a throughput gauge while its burst tail crosses a marked interactive limit.</p></details>
 </figure>

@@ -30,8 +30,8 @@ Count total tokens and supervised tokens by record type and language. The Mosaic
 
 Mask checks must fail closed. User requests, untrusted retrieved instructions, padding, and system controls are not assistant targets. Truncation must not remove the citation while retaining a fluent answer. Packed records need explicit boundaries so one example cannot supervise another. A tiny-overfit diagnostic, once authorized, can show that the implementation fits a disposable sample; it cannot show held-out improvement.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F10.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f10-1-sft-learning-path.png">
-  <div role="img" aria-label="A frozen base model receives reviewed supervised examples, produces several checkpoints, and sends each checkpoint to an independent behavior evaluation before a selection gate.">Pending ImageGen figure V2-F10.1</div>
+<figure className="book-figure" data-figure-id="V2-F10.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f10-1-sft-learning-path.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f10-1-sft-learning-path.png" alt="A frozen base model receives reviewed supervised examples, produces several checkpoints, and sends each checkpoint to an independent behavior evaluation before a selection gate." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F10.1 - Optimization creates candidates; evaluation creates evidence.</strong> Essential labels: base, examples, checkpoints, behavior eval, selection. Shape and connector direction supplement color. The figure supports `CLM-028` and `CLM-029`; it depicts a process, not a Mosaic training result.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic three-dimensional workshop shows a sealed base-model block receiving supervised example cards. Three checkpoint capsules leave the workshop, pass through a separate evaluation scanner, and arrive at a gate labelled select or reject.</p></details>
 </figure>
@@ -57,15 +57,15 @@ Use a matrix with at least these columns:
 
 The no-tune row is not an obsolete control. It is the counterfactual that reveals whether added complexity earned value. A candidate that ties it within uncertainty but costs more and introduces new lifecycle surfaces has not earned promotion.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F10.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f10-2-overfit-diagnostic.png">
-  <div role="img" aria-label="Training loss continues downward while held-out behavior flattens and protected retention turns downward, causing an earlier stop marker to win over the final checkpoint.">Pending ImageGen figure V2-F10.2</div>
+<figure className="book-figure" data-figure-id="V2-F10.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f10-2-overfit-diagnostic.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f10-2-overfit-diagnostic.png" alt="Training loss continues downward while held-out behavior flattens and protected retention turns downward, causing an earlier stop marker to win over the final checkpoint." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F10.2 - The best loss can be the wrong checkpoint.</strong> Essential labels: train, held-out, retention, stop. Line pattern and marker shapes supplement color. The figure supports `CLM-029` and `CLM-030`; all curves are illustrative.</figcaption>
   <details><summary>Long description</summary><p>A vivid three-dimensional plotting table carries a descending train-loss ribbon, a flattening held-out ribbon, and a retention ribbon that bends into a red guarded zone. A raised stop marker sits before the late checkpoint.</p></details>
 </figure>
 
 ## Never let an aggregate erase a language
 
-Synthetic and multilingual training gains require independent held-out evaluation. [CLM-030] Aya demonstrates that multilingual coverage can be made explicit, but its reported model and language results do not transfer to Mosaic Desk. Self-Instruct demonstrates a synthetic-data route, but generated data can reproduce generator errors. Neither case licenses an aggregate-only conclusion.
+Synthetic and multilingual training gains require independent held-out evaluation. [CLM-030] Aya (`LLME-CASE-007`) demonstrates that multilingual coverage can be made explicit, but its reported model and language results do not transfer to Mosaic Desk. The staged-recipe evidence in `LLME-CASE-008` and the Self-Instruct synthetic-data route remain bounded to their own data and evaluations; generated data can reproduce generator errors. Neither case licenses an aggregate-only conclusion.
 
 Report each declared language and mixed-language segment separately. Preserve comparable task intent where translation is appropriate, but do not assume translation preserves shorthand, cultural context, evidence conventions, or error severity. A language authority reviews ambiguous cases; an LLM engineer cannot declare linguistic adequacy from fluent output.
 

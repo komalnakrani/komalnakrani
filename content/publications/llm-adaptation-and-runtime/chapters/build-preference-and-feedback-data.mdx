@@ -46,8 +46,8 @@ Raters must be able to choose A, B, tie, both-fail, or cannot-judge. `Both-fail`
 
 The guide also names prohibited shortcuts: word count as actionability, citation count as support, refusal language as safe behavior, majority as domain truth, and grader confidence as authority. Version guide changes because they change the label-generating process.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F07.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f07-1-blinded-pair-bench.png">
-  <div role="img" aria-label="Two admissible outputs labeled A and B sit on a blinded comparison bench beside one rubric and a visible disagreement marker.">Pending ImageGen figure V2-F07.1</div>
+<figure className="book-figure" data-figure-id="V2-F07.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f07-1-blinded-pair-bench.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f07-1-blinded-pair-bench.png" alt="Two admissible outputs labeled A and B sit on a blinded comparison bench beside one rubric and a visible disagreement marker." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F07.1 - A preference is evidence about one rubric.</strong> Essential labels: A, B, rubric, disagree. Shape and order markers supplement color. The figure supports `CLM-019`; it does not turn preference into truth.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic three-dimensional bench holds two masked response cards labeled A and B. One criterion card sits between them. Separate rater tokens point in different directions, and a disagreement flag remains attached rather than being erased.</p></details>
 </figure>
@@ -68,8 +68,8 @@ Audit at least:
 
 Require rubric-level reasons such as `stronger-supported-citation`, `correct-abstention`, or `clearer-bounded-action`. A choice without a reason may remain raw feedback but cannot enter the accepted comparative dataset.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F07.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f07-2-preference-bias-magnets.png">
-  <div role="img" aria-label="Length, position, style, familiarity, and coupling magnets pull a preference marker away from the intended rubric target.">Pending ImageGen figure V2-F07.2</div>
+<figure className="book-figure" data-figure-id="V2-F07.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f07-2-preference-bias-magnets.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f07-2-preference-bias-magnets.png" alt="Length, position, style, familiarity, and coupling magnets pull a preference marker away from the intended rubric target." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F07.2 - Bias can move the label without improving the criterion.</strong> Essential labels: length, position, style, familiarity, coupling. Distinct magnet shapes supplement color. The figure supports `CLM-020` and `CLM-021`; it reports no prevalence.</figcaption>
   <details><summary>Long description</summary><p>Five colorful three-dimensional magnets surround a criterion compass. A preference token bends toward a long first polished response while an evidence arrow points elsewhere. The layout makes multiple possible distortions visible without ranking their strength.</p></details>
 </figure>

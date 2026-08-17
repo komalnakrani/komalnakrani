@@ -23,8 +23,8 @@ AWQ, GPTQ, QLoRA, bitsandbytes, and TensorRT-LLM describe bounded methods or imp
 
 `LLME-CASE-012` contributes only the lesson that quantization needs method-specific calibration and behavior replay. Its reported model, benchmark, hardware, and runtime results are non-portable. `LLME-CASE-011` contributes only the serving lesson that KV allocation and scheduling affect a measured workload; its throughput is not a Mosaic capacity estimate.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F16.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f16-1-behavior-resource-frontier.png">
-  <div role="img" aria-label="Reference, quantized, alternate-runtime, and scheduling candidates occupy different positions across protected behavior, p99 tail latency, throughput, memory, and cost, with unsafe points rejected.">Pending ImageGen figure V2-F16.1</div>
+<figure className="book-figure" data-figure-id="V2-F16.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f16-1-behavior-resource-frontier.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f16-1-behavior-resource-frontier.png" alt="Reference, quantized, alternate-runtime, and scheduling candidates occupy different positions across protected behavior, p99 tail latency, throughput, memory, and cost, with unsafe points rejected." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F16.1 - No single configuration dominates every dimension.</strong> Essential labels: behavior, p99 tail, throughput, memory, cost, reject. Marker shapes supplement color. Supports CLM-046 to CLM-048; all points are synthetic.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic three-dimensional frontier table plots several candidate capsules against behavior, tail, throughput, memory, and cost gauges. Two fast points sit behind protected-regression barriers.</p></details>
 </figure>
@@ -63,8 +63,8 @@ Graceful degradation is a predeclared state machine, not arbitrary quality loss:
 
 Never silently drop authoritative evidence, truncate required citations, switch language handling, disable controls, or route to an unqualified model. A fallback response states its limitations without leaking system details. Recovery requires replaying the affected cases before leaving degradation.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F16.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f16-2-graceful-degradation-ladder.png">
-  <div role="img" aria-label="Runtime pressure follows bounded steps from full qualified service to alternate candidate, reduced optional context, queue, abstain, fallback, and stop.">Pending ImageGen figure V2-F16.2</div>
+<figure className="book-figure" data-figure-id="V2-F16.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f16-2-graceful-degradation-ladder.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f16-2-graceful-degradation-ladder.png" alt="Runtime pressure follows bounded steps from full qualified service to alternate candidate, reduced optional context, queue, abstain, fallback, and stop." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F16.2 - Pressure changes service state, not hidden truthfulness.</strong> Essential labels: full, alternate, context, queue, abstain, fallback, stop. Step shapes supplement color. Supports the operational fallback evidence for CLM-048.</figcaption>
   <details><summary>Long description</summary><p>A vivid three-dimensional staircase descends through explicit service states. Guard rails prevent a shortcut from full service to an unsafe fast model.</p></details>
 </figure>

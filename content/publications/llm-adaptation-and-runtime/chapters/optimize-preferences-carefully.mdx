@@ -19,8 +19,8 @@ In its original formulation, Direct Preference Optimization optimizes a policy r
 
 For Mosaic, every pair binds task intent, allowed evidence, two response identities, a criterion-specific rubric, randomized order, rater population, disagreement, provenance, and adjudication. The pair cannot simply say “A is better.” Better at evidence linkage, abstention, language adequacy, or concision are different learning signals.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F12.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f12-1-preference-optimization-loop.png">
-  <div role="img" aria-label="Audited preference pairs feed a policy and frozen reference into a preference objective, producing a candidate that must pass an independent evaluation gate.">Pending ImageGen figure V2-F12.1</div>
+<figure className="book-figure" data-figure-id="V2-F12.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f12-1-preference-optimization-loop.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f12-1-preference-optimization-loop.png" alt="Audited preference pairs feed a policy and frozen reference into a preference objective, producing a candidate that must pass an independent evaluation gate." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F12.1 - The preference objective remains coupled to data and reference.</strong> Essential labels: pairs, policy, reference, objective, candidate, independent eval. Connector direction and gate shape supplement color. The figure supports `CLM-034` and `CLM-035`; it is method-level, not a training result.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic three-dimensional loop shows paired response cards entering a mechanism with policy and frozen-reference chambers. A candidate leaves the objective chamber but meets a separate independent evaluation gate.</p></details>
 </figure>
@@ -53,8 +53,8 @@ Build an evidence matrix that names the generator, rater, adjudicator, candidate
 
 Model judges can be useful instruments when calibrated on a versioned sample against qualified human or domain review. Measure position sensitivity, verbosity preference, self/family preference, agreement by criterion and language, and consequential disagreement. A score from an uncalibrated judge is a hypothesis, not approval.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F12.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f12-2-proxy-shortcut-alarm.png">
-  <div role="img" aria-label="A verbose confident response takes a shortcut to a high proxy score while unsupported-detail, abstention, and language-regression alarms block promotion.">Pending ImageGen figure V2-F12.2</div>
+<figure className="book-figure" data-figure-id="V2-F12.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f12-2-proxy-shortcut-alarm.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f12-2-proxy-shortcut-alarm.png" alt="A verbose confident response takes a shortcut to a high proxy score while unsupported-detail, abstention, and language-regression alarms block promotion." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F12.2 - A proxy can reward the visible style and miss the contract.</strong> Essential labels: proxy, shortcut, unsupported, abstention, regression, reject. Alarm icons and barrier shapes supplement color. The figure supports `CLM-035` and `CLM-036`; the scene is a failure simulation.</figcaption>
   <details><summary>Long description</summary><p>A crisp three-dimensional arcade-like scene shows a long polished response taking a bright shortcut to a high proxy gauge. Separate evidence, abstention, and multilingual alarms lower a physical rejection barrier.</p></details>
 </figure>
@@ -75,7 +75,7 @@ Run only if the remaining error is preference-sensitive, pair evidence is author
 
 Product and domain owners define desired behavior and consequence. Language authorities judge linguistic adequacy. Privacy/legal authorities govern permissible pair and feedback use. Safety/security authorities own relevant controls. LLM engineering implements the objective and evidence system, but a grader score cannot grant release authority.
 
-The DPO paper reports outcomes for its evaluated tasks and formulation. The MT-Bench and RewardBench evidence documents bounded judge/reward-model behavior, not universal correctness. Mosaic transfers only the method questions and controls, not their numerical outcomes.
+The DPO paper (`LLME-CASE-010`) reports outcomes for its evaluated tasks and formulation. The MT-Bench and RewardBench evidence (`LLME-CASE-005`) documents bounded judge/reward-model behavior, not universal correctness. Mosaic transfers only the method questions and controls, not their numerical outcomes.
 
 ## Complete MD-13 with an explicit rejection
 

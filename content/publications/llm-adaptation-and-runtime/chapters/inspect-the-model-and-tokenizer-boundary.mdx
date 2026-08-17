@@ -39,8 +39,8 @@ Artifact provenance matters alongside bytes. Record publisher, source repository
 
 Managed access exposes a smaller tuple: provider, endpoint, dated model identifier or immutable version where available, API contract, region or processing posture, tool/schema options, explicit generation settings, and the provider's declared lifecycle. Hidden tokenizer or runtime details become limitations. A managed comparator can still be replayed at the semantic boundary, but the team must not pretend it offers open-weight inspection.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F02.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f02-1-model-tokenizer-cutaway.png">
-  <div role="img" aria-label="A cutaway model system shows tokens entering embeddings and transformer blocks before a prediction head, with precision recorded as a separate runtime surface.">Pending ImageGen figure V2-F02.1</div>
+<figure className="book-figure" data-figure-id="V2-F02.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f02-1-model-tokenizer-cutaway.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f02-1-model-tokenizer-cutaway.png" alt="A cutaway model system shows tokens entering embeddings and transformer blocks before a prediction head, with precision recorded as a separate runtime surface." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F02.1 - Inspect separate surfaces inside one model bundle.</strong> Essential labels: tokens, embed, blocks, head, precision. Texture and component shape supplement color. The figure supports `CLM-004`; it is not a performance ranking.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic three-dimensional cutaway shows token tiles entering an embedding deck, stacked transformer blocks, and an output head. A separate precision dial and artifact seals make clear that weights, tokenizer, and runtime configuration are related but separately identified.</p></details>
 </figure>
@@ -80,8 +80,8 @@ Do not inspect special-token IDs only as a list. Exercise the paths that use the
 
 Record attention masks and the exact prompt tokens for these fixtures. A padding token equal to an end token can be valid under some implementations, but the mask, loss, stopping rule, and batching path must agree. The inspection blocks only because Mosaic's declared synthetic batcher requires distinct semantics. It is a local compatibility result, not a universal tokenizer rule.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F02.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f02-2-tokenizer-contrast.png">
-  <div role="img" aria-label="The same Gujarati-English shorthand string is divided differently by tokenizer A and tokenizer B, producing visibly different sequence lengths without asserting which is better.">Pending ImageGen figure V2-F02.2</div>
+<figure className="book-figure" data-figure-id="V2-F02.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f02-2-tokenizer-contrast.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f02-2-tokenizer-contrast.png" alt="The same Gujarati-English shorthand string is divided differently by tokenizer A and tokenizer B, producing visibly different sequence lengths without asserting which is better." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F02.2 - Token boundaries change the experiment surface.</strong> Essential labels: tokenizer A, tokenizer B, length. Brackets and count blocks supplement color. The figure supports `CLM-005`; it makes no multilingual quality claim.</figcaption>
   <details><summary>Long description</summary><p>One colorful text strip enters two realistic tokenizer machines. Tokenizer A emits a few large pieces and tokenizer B emits more small pieces; length counters differ. Both paths end at question marks rather than winner badges.</p></details>
 </figure>

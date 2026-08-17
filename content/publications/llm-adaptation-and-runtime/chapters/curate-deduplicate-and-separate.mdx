@@ -98,8 +98,8 @@ Select a threshold for a declared use. A conservative train-evaluation firewall 
 
 Recalibrate when normalization, tokenizer, embedding model, signature rules, language mix, or source type changes. Even then, the result estimates behavior on the calibration pairs; it does not establish a universal semantic-duplicate boundary.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F05.1" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f05-1-duplicate-contamination-map.png">
-  <div role="img" aria-label="Near-identical record families approach train, development, and evaluation barriers; shared signatures trigger a false alarm while a paraphrased evaluation relative triggers a real overlap alarm.">Pending ImageGen figure V2-F05.1</div>
+<figure className="book-figure" data-figure-id="V2-F05.1" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f05-1-duplicate-contamination-map.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f05-1-duplicate-contamination-map.png" alt="Near-identical record families approach train, development, and evaluation barriers; shared signatures trigger a false alarm while a paraphrased evaluation relative triggers a real overlap alarm." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F05.1 - Indirect duplicates threaten split claims.</strong> Essential labels: train, dev, eval, overlap, false alarm. Line patterns and alarm shapes supplement color. The figure supports `CLM-013`; it does not prescribe a universal similarity threshold.</figcaption>
   <details><summary>Long description</summary><p>A colorful realistic three-dimensional map shows record cards moving toward train, development, and evaluation barriers. Two unrelated cards share a detachable signature strip and are released from a false alarm. A paraphrased child card remains linked by a family cord to an evaluation card and is stopped at the overlap gate.</p></details>
 </figure>
@@ -122,8 +122,8 @@ Physical and logical separation should agree. Give evaluation and retention vaul
 
 This is an engineering control design, not a security certification. Security and privacy owners decide the actual storage, access, monitoring, and retention implementation. The companion demonstrates only an allowlisted reference boundary between synthetic JSON objects.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V2-F05.2" data-image="/assets/publications/llm-adaptation-and-runtime/v2-f05-2-split-manifest-vaults.png">
-  <div role="img" aria-label="Five physically separated hashed vaults hold train, development, evaluation, retention, and control records, with family links forbidden from crossing vault walls.">Pending ImageGen figure V2-F05.2</div>
+<figure className="book-figure" data-figure-id="V2-F05.2" data-png="/assets/publications/llm-adaptation-and-runtime/v2-f05-2-split-manifest-vaults.png">
+  <img src="/assets/publications/llm-adaptation-and-runtime/v2-f05-2-split-manifest-vaults.png" alt="Five physically separated hashed vaults hold train, development, evaluation, retention, and control records, with family links forbidden from crossing vault walls." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V2-F05.2 - Purpose-separated vaults preserve claim validity.</strong> Essential labels: train, dev, eval, retention, control. Distinct vault shapes and hash seals supplement color. The figure supports `CLM-014` and `CLM-015`; separation does not prove absence of unknown historical overlap.</figcaption>
   <details><summary>Long description</summary><p>Five colorful three-dimensional vaults sit on separate platforms. Each carries a digest seal and manifest. Family cords join records only inside one vault; a crossing cord is cut at an audit checkpoint and routed to a rejection ledger.</p></details>
 </figure>
