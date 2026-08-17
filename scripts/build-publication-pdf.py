@@ -73,6 +73,19 @@ def inline_markup(text: str) -> str:
     return escaped
 
 
+def fitted_code_style(code: list[str], base_style: ParagraphStyle) -> ParagraphStyle:
+    """Shrink a preformatted block only enough to keep its longest line in frame."""
+    available = CONTENT_WIDTH - 6 * mm
+    longest = max((stringWidth(line, "Courier", base_style.fontSize) for line in code), default=0)
+    if longest <= available:
+        return base_style
+    scale = available / longest
+    fitted = base_style.clone(f"{base_style.name}Fit{round(scale * 1000)}")
+    fitted.fontSize = base_style.fontSize * scale
+    fitted.leading = max(fitted.fontSize * 1.28, base_style.leading * scale)
+    return fitted
+
+
 def split_part_introductions(raw: str) -> list[tuple[str, str]]:
     parts = []
     matches = list(re.finditer(r"^## (Part [IVX]+ - .+)$", raw, flags=re.MULTILINE))
@@ -172,7 +185,8 @@ def markdown_flowables(raw: str, styles: dict, publication_dir: Path, skip_first
 
     def flush_code() -> None:
         if code:
-            story.append(KeepTogether([Preformatted("\n".join(code), styles["KomalCode"]), Spacer(1, 3 * mm)]))
+            code_style = fitted_code_style(code, styles["KomalCode"])
+            story.append(KeepTogether([Preformatted("\n".join(code), code_style), Spacer(1, 3 * mm)]))
             code.clear()
 
     while index < len(lines):

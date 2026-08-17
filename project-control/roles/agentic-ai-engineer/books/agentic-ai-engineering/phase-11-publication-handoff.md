@@ -1,6 +1,11 @@
 # Agentic AI Engineering - Phase 11 Publication Handoff
 
 Prepared: 2026-08-17
+Updated after review proof: 2026-08-17
+
+## Current disposition
+
+Issue #73 is active. Original front matter, all six part introductions, and all six appendices are assembled. Deterministic repaired proofs pass at 600 pages and SHA-256 `ebc7aacc416c7615a006f1c9aaa06fdcfb7e2ed8030f6475dcb0ad92df0a7419`; all pages have been rendered and inspected. The manifest is `review`, `publishedAt` is null, and PDF download remains disabled. Durable evidence is `project-control/roles/agentic-ai-engineer/qa/phase-11-publication-assembly.md`.
 
 ## Accepted input
 
@@ -15,15 +20,15 @@ The Phase 10 inputs are frozen unless a demonstrated visual or accessibility def
 
 ## Current publication state
 
-`content/publications/agentic-ai-engineering/publication.json` intentionally remains `draft`, with null version/edition/published date and PDF disabled. The Astro build therefore does not expose Agentic web routes yet. This is correct Phase 10 behavior, not a build defect.
+`content/publications/agentic-ai-engineering/publication.json` is now `review`, with version 1.0.0, release-candidate edition label, null published date, and PDF disabled. The Astro build therefore does not expose Agentic web routes yet. This is the correct post-proof state, not a build defect.
 
-Unlike Applied AI's already assembled publication, Agentic currently has no publication-level front matter, part introductions, appendices, or PDF proof. Phase 11 must assemble and validate those artifacts before changing publication state.
+Agentic now has publication-level front matter, six part introductions, six appendices, and a validated deterministic PDF proof. Publication remains gated on root's exact public mirror and responsive web-route review.
 
 ## Phase 11 executable scope
 
 1. Assemble original front matter, six part introductions, and architecture-required appendices without changing the accepted chapter or figure teaching claims.
 2. Add publication-specific PDF assembly metadata, part boundaries, running-case/figure notes, edition identity, errata guidance, and professional/non-certification boundaries.
-3. Transition only to a review release candidate first; keep `publishedAt` null and PDF disabled during proofing.
+3. Transition only to a review release candidate first; keep `publishedAt` null, enable the PDF flag only for the local proof builder, and restore it to disabled after proofing.
 4. Build the complete PDF twice and verify deterministic byte identity, source/PDF hashes, page count, searchable text, metadata, outline, internal/external links, and exact public download mirror.
 5. Rasterize and inspect every PDF page for clipping, blank pages, broken glyphs, figures, captions, tables, code, part/appendix order, and page furniture.
 6. Enable and inspect the complete web edition: overview, all 20 chapters, edition, errata, figures, navigation, canonical metadata, and desktop/mobile overflow.
@@ -38,4 +43,4 @@ Unlike Applied AI's already assembled publication, Agentic currently has no publ
 - Preserve FieldOps Relay as fictional and all synthetic examples as non-production evidence.
 - Preserve explicit authority, identity, privacy, recovery, protocol, and professional-practice limitations.
 
-Phase 11 is ready to open as the next Agentic current-book issue. No publication claim is made by this handoff.
+Phase 11 review proof is complete under open issue #73. No publication claim is made by this handoff.

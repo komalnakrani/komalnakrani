@@ -5,10 +5,10 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 10 visual certification PASS under `#69`; Phase 11 publication handoff prepared
+- Current global phase: Phase 11 review proof PASS under `#73`; publication transition pending root review
 - Last updated: 2026-08-17
 - Last completed issue: `#69` — Phase 10 Agentic AI Engineering visuals, PASS
-- Active issue: none; Phase 11 is ready to open for the current Agentic book
+- Active issue: `#73` - Phase 11 Agentic web/PDF publication, review proof passed and still open
 - Role root issue: `#32` — open
 
 ## Locked accepted decisions
@@ -61,10 +61,13 @@ and `#35` are closed with `status:done`.
 - ImageGen production log: `books/agentic-ai-engineering/imagegen-production-log.md`
 - Phase 10 verification: `qa/phase-10-visual-verification.md`
 - Phase 11 handoff: `books/agentic-ai-engineering/phase-11-publication-handoff.md`
+- Phase 11 assembly/proof QA: `qa/phase-11-publication-assembly.md`
+- Phase 11 issue record: `issues/phase-11-publication.md`
 - manuscripts: all 20 chapters complete locally; 176,372 chapter words; every accepted blueprint depth range passes
 - publication records and deterministic companion: complete locally through Chapter 20; `AR-14 v1.0.0` closes the capstone chain
 - figures: `F01.1` through `F20.2` complete and certified, exactly two ImageGen PNGs per chapter with byte-identical public mirrors
-- publication/PDF/course/final QA: Phase 11 handoff prepared; artifact assembly and publication not started
+- publication/PDF: complete review assembly and deterministic 600-page proof pass; public mirror/web proof and published transition pending root
+- course/final QA: not started and outside current #73 review-proof scope
 
 ## Completed gates
 
@@ -76,19 +79,20 @@ and `#35` are closed with `status:done`.
 - [x] 08
 - [x] 09
 - [x] 10
-- [ ] 11
+- [ ] 11 - review proof PASS; public artifact transition remains
 - [ ] 13
 - [ ] 18
 - [ ] 19
 
 ## Current work
 
-Phases 08-10 pass. The complete 20-chapter manuscript contains 176,372 chapter
-words, the deterministic companion passes 60/60 tests, and all 40 final ImageGen
-PNG figures are integrated, registered, provenance-matched, visually certified,
-and mirrored byte-for-byte to the public asset directory. Publication validation,
-publication tests, Astro build, built-site reference checking, and diff checks pass.
-The publication intentionally remains draft and is not exposed by the site build.
+Phases 08-10 pass. Phase 11 source assembly and local review proof also pass under
+issue #73: 4,014 front/orientation words, six architecture-locked appendices at
+11,010 words, and a deterministic 600-page PDF built twice at SHA-256
+`ebc7aacc416c7615a006f1c9aaa06fdcfb7e2ed8030f6475dcb0ad92df0a7419`.
+All 600 repaired proof pages were rendered and inspected. The manifest remains
+`review`, `publishedAt` is null, and the public PDF is disabled pending root's
+public mirror and responsive web-route proof.
 
 ## Unresolved blockers
 
@@ -108,20 +112,19 @@ The publication intentionally remains draft and is not exposed by the site build
 ## Quality debt
 
 - No Phase 10 visual debt remains.
-- The Agentic publication stays draft and therefore is not listed in the built
-  public book index; Phase 11 must assemble front matter, part introductions,
-  appendices, and deterministic web/PDF proofs before publication.
+- The Agentic publication stays in review and therefore is not listed in the
+  built public book index. Root must verify the exact public PDF mirror and all
+  web routes before the published-state transition.
 
 ## Exact next action
 
-Open the next Agentic current-book Phase 11 issue from
-`books/agentic-ai-engineering/phase-11-publication-handoff.md`, assemble the
-complete review edition, and run deterministic PDF/web proof QA before any
-published-state transition.
+Review `qa/phase-11-publication-assembly.md`, copy the exact accepted proof to
+the public download path, verify byte identity and all Agentic web routes, then
+perform the root-owned published-state transition for #73 only if those checks pass.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, issue `#69`, this file,
+Read repository `AGENTS.md`, issue `#73`, this file,
 `qa/phase-10-visual-verification.md`, `books/agentic-ai-engineering/imagegen-production-log.md`,
 and `books/agentic-ai-engineering/phase-11-publication-handoff.md`. Inspect git
 status because parallel agents share the worktree. Preserve the 40 certified
