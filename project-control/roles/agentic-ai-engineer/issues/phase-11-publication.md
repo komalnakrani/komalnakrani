@@ -1,6 +1,6 @@
 # Issue #73 - Publish Agentic AI Engineering web and PDF edition
 
-Status: `review proof passed`; publication transition remains root-owned and open.
+Status: `PASS - published web and PDF edition verified locally`; root issue #32 remains open.
 
 ## Completed review scope
 
@@ -29,10 +29,18 @@ The accepted local proof is `output/pdf/agentic-ai-engineering-review-proof-a/ag
 
 Durable evidence: `project-control/roles/agentic-ai-engineer/qa/phase-11-publication-assembly.md`.
 
-## Remaining root-owned publication work
+## Final publication delivery
 
-- copy the exact reviewed proof to the public download path and verify byte identity;
-- enable and inspect the Agentic web overview, twenty chapters, edition, errata, figures, navigation, canonical metadata, and responsive behavior;
-- only after those exact artifacts pass, set `published`, set `publishedAt`, enable the PDF, record final public hashes, and close #73.
+- [x] manifest transitioned to `published`, `publishedAt: 2026-08-17`, First edition, and PDF enabled;
+- [x] optimized final PDF built twice with byte-identical outputs;
+- [x] exact final PDF installed at `public/downloads/agentic-ai-engineering-v1.0.0.pdf`;
+- [x] final PDF metadata, outline, text, links, security, A4 geometry, and asset counts verified;
+- [x] all 600 final pages rendered and inspected;
+- [x] overview, twenty chapters, edition, errata, figures, navigation, metadata, and responsive behavior verified;
+- [x] all 170 desktop/mobile route checks pass with zero findings;
+- [x] final release evidence recorded in `qa/phase-11-publication-release.md`.
 
-No commit, push, issue closure, course, new role/book, or Abhyaas work was performed in this lane.
+The final public PDF is 17,106,362 bytes at SHA-256
+`787939e34f561fbc54e901ca258175786a3ad71926fc0c814112553071cc909a`.
+Root issue #32 and Phase 11 issue #73 were not closed. No commit, push, course,
+new role/book, or Abhyaas work was performed in this lane.

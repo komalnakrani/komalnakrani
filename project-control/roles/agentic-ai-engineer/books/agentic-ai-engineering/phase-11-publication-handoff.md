@@ -1,11 +1,11 @@
 # Agentic AI Engineering - Phase 11 Publication Handoff
 
 Prepared: 2026-08-17
-Updated after review proof: 2026-08-17
+Updated after final publication verification: 2026-08-17
 
 ## Current disposition
 
-Issue #73 is active. Original front matter, all six part introductions, and all six appendices are assembled. Deterministic repaired proofs pass at 600 pages and SHA-256 `ebc7aacc416c7615a006f1c9aaa06fdcfb7e2ed8030f6475dcb0ad92df0a7419`; all pages have been rendered and inspected. The manifest is `review`, `publishedAt` is null, and PDF download remains disabled. Durable evidence is `project-control/roles/agentic-ai-engineer/qa/phase-11-publication-assembly.md`.
+Phase 11 is locally complete under root issue #32. Original front matter, all six part introductions, and all six appendices are assembled. The optimized final edition passes at 600 pages and SHA-256 `787939e34f561fbc54e901ca258175786a3ad71926fc0c814112553071cc909a`; all pages and all public routes have been inspected. The manifest is `published`, `publishedAt` is `2026-08-17`, and the exact final PDF download is enabled. Final durable evidence is `project-control/roles/agentic-ai-engineer/qa/phase-11-publication-release.md`; the earlier review-proof evidence remains in `qa/phase-11-publication-assembly.md`.
 
 ## Accepted input
 
@@ -20,9 +20,9 @@ The Phase 10 inputs are frozen unless a demonstrated visual or accessibility def
 
 ## Current publication state
 
-`content/publications/agentic-ai-engineering/publication.json` is now `review`, with version 1.0.0, release-candidate edition label, null published date, and PDF disabled. The Astro build therefore does not expose Agentic web routes yet. This is the correct post-proof state, not a build defect.
+`content/publications/agentic-ai-engineering/publication.json` is `published`, with version 1.0.0, First edition, published date 2026-08-17, and PDF enabled. The Astro build exposes the overview, 20 chapters, edition, and errata routes and installs the exact deterministic final PDF.
 
-Agentic now has publication-level front matter, six part introductions, six appendices, and a validated deterministic PDF proof. Publication remains gated on root's exact public mirror and responsive web-route review.
+Agentic now has publication-level front matter, six part introductions, six appendices, a validated deterministic final PDF, an exact public mirror, and responsive web-route proof. Root issue #32 remains open only for root-owned independent verification, Git actions, and GitHub reconciliation.
 
 ## Phase 11 executable scope
 
@@ -43,4 +43,5 @@ Agentic now has publication-level front matter, six part introductions, six appe
 - Preserve FieldOps Relay as fictional and all synthetic examples as non-production evidence.
 - Preserve explicit authority, identity, privacy, recovery, protocol, and professional-practice limitations.
 
-Phase 11 review proof is complete under open issue #73. No publication claim is made by this handoff.
+Phase 11 publication delivery is locally complete. Root issue #32 and Phase 11
+issue #73 remain unclosed; no commit or push was performed in this lane.

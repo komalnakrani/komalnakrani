@@ -166,23 +166,23 @@ Typos with no semantic effect may enter a patch edition. Changes to authority, s
 
 ## Edition record
 
-The publication manifest is the canonical edition identity. For the first-edition review candidate it records:
+The publication manifest is the canonical edition identity. For the published first edition it records:
 
 - title: *Agentic AI Engineering*;
 - subtitle: *Designing, Evaluating, and Operating Systems That Act*;
 - author: Komal Nakrani;
 - version: 1.0.0;
-- status: review;
-- published date: empty;
+- status: published;
+- published date: 2026-08-17;
 - chapters: twenty;
 - parts: six;
 - appendices: six;
 - canonical figures: forty;
-- public PDF enabled: false after proof QA.
+- public PDF enabled: true after final artifact QA.
 
 The Phase 11 proof record adds input digest, PDF hash, byte count, page count, bookmark inventory, link inventory, extracted-text checks, raster dimensions, full-page render results, and visual inspection disposition. Two builds from identical proof inputs must be byte-identical.
 
-Publication is a separate root-owned transition. It requires review of the exact public PDF mirror and web routes, a publication date, an enabled PDF flag, final hashes, and issue/state updates. A review proof must not be called published.
+Publication was a separate root-owned transition after review of the exact public PDF mirror and web routes, assignment of the publication date, PDF enablement, and final artifact checks. Earlier review proofs remain review artifacts and must not be described as the published edition.
 
 ## Index and stable-reference conventions
 
@@ -212,9 +212,9 @@ Do not invent unofficial figure, claim, source, or dossier IDs in derivative not
 - Proof builds are deterministic from identical inputs.
 - PDF metadata, outline, links, text extraction, page geometry, and security properties pass.
 - Every page is rendered and inspected for blankness, clipping, broken glyphs, malformed tables/code, image defects, and sequence.
-- Review status and disabled public PDF are restored after proof.
-- No publication date, public mirror, published claim, issue closure, commit, or push occurs before root authorization.
+- Published status, date, and enabled PDF identify only the exact artifact that passed final review.
+- No later replacement, correction, issue closure, commit, or push bypasses root authorization and the edition process.
 
 ## Status statement
 
-The durable record should always end with the strongest justified state. At source assembly, that state is **complete review candidate**. After deterministic proof and rendered-page inspection, it may become **review proof passed**. Only the explicit final transition can make it **published**.
+The durable record should always end with the strongest justified state. Source assembly reached **complete review candidate**. Deterministic proof and rendered-page inspection reached **review proof passed**. The final root-authorized artifact and web checks make version 1.0.0 **published** as of 2026-08-17.

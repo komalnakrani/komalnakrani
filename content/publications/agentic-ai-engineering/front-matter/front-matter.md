@@ -6,9 +6,9 @@
 
 Komal Nakrani
 
-Version 1.0.0, first-edition release candidate. Copyright 2026 Komal Nakrani. All rights reserved.
+Version 1.0.0, first edition, published 2026-08-17. Copyright 2026 Komal Nakrani. All rights reserved.
 
-This is an original professional field book. It is not a certification guide, legal opinion, security authorization, safety case, production approval, or substitute for review by the people who hold authority over a real system and its consequences. The review candidate has not been published. A proof PDF exists to expose assembly and rendering defects; its existence does not make the edition public or approved.
+This is an original professional field book. It is not a certification guide, legal opinion, security authorization, safety case, production approval, or substitute for review by the people who hold authority over a real system and its consequences. Publication identifies this reviewed edition; it does not approve any system, product, deployment, or residual risk discussed by a reader.
 
 FieldOps Relay, its organization, people, customers, sites, work orders, policies, incidents, messages, measurements, and outcomes are fictional or synthetic. Satellite examples are constructed teaching cases unless a passage explicitly identifies sourced evidence. Synthetic examples can reveal reasoning and control failures, but they cannot establish that a design is safe, compliant, useful, or production-ready in another environment.
 
@@ -164,4 +164,4 @@ The Komal mascot appears only where a human teaching cue materially helps. It is
 
 Chapter numbers, claim IDs, figure IDs, source IDs, and appendix letters are stable within version 1.0.0. Corrections must enter the errata record. A rendered PDF must never be replaced silently under the same edition identity.
 
-This source assembly is a review candidate. Its proof is generated deterministically so two builds from identical inputs can be compared byte for byte. Publication requires separate final review of the exact PDF, all rendered pages, public asset mirrors, and web routes, followed by an explicit root-owned state transition. Until then, `publishedAt` remains empty, the public PDF remains disabled, and no reader should infer publication from a local proof artifact.
+This first edition was generated deterministically so two builds from identical inputs could be compared byte for byte. The exact final PDF, all rendered pages, public asset mirrors, and web routes passed review before the root-authorized publication transition. Its publication date is 2026-08-17. Future corrections must use the visible errata and edition process; the PDF must not be silently replaced under the same version and recorded hash.

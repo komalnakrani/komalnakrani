@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Btn from '../../../components/Btn.astro';
+import BookBodyTitle from '../../../components/BookBodyTitle.astro';
 import K from '../../../components/K.astro';
 import { BOOKS } from '../../../data/publications';
 
@@ -32,7 +33,7 @@ const ChapterContent = ((await loadChapter()) as { default: (_props: Record<stri
           <h1 class="h1" style="margin:18px 0 0">{chapter.title}</h1>
           <p class="lead" style="margin-top:16px">{chapter.summary}</p>
           <div class="prose book-prose">
-            <ChapterContent />
+            <ChapterContent components={{ h1: BookBodyTitle }} />
           </div>
           <nav class="chapter-nav" aria-label="Chapter navigation">
             <a href={previous ? `/books/${book.slug}/${previous.slug}/` : `/books/${book.slug}/`}>

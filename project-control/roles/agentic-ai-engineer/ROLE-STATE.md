@@ -5,10 +5,10 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 11 review proof PASS under `#73`; publication transition pending root review
+- Current global phase: Phase 11 published delivery PASS under root `#32`; root Git/GitHub verification pending
 - Last updated: 2026-08-17
 - Last completed issue: `#69` — Phase 10 Agentic AI Engineering visuals, PASS
-- Active issue: `#73` - Phase 11 Agentic web/PDF publication, review proof passed and still open
+- Active issue: `#32` - root Agentic delivery issue, still open for independent verification and Git/GitHub work
 - Role root issue: `#32` — open
 
 ## Locked accepted decisions
@@ -62,12 +62,13 @@ and `#35` are closed with `status:done`.
 - Phase 10 verification: `qa/phase-10-visual-verification.md`
 - Phase 11 handoff: `books/agentic-ai-engineering/phase-11-publication-handoff.md`
 - Phase 11 assembly/proof QA: `qa/phase-11-publication-assembly.md`
+- Phase 11 final release QA: `qa/phase-11-publication-release.md`
 - Phase 11 issue record: `issues/phase-11-publication.md`
 - manuscripts: all 20 chapters complete locally; 176,372 chapter words; every accepted blueprint depth range passes
 - publication records and deterministic companion: complete locally through Chapter 20; `AR-14 v1.0.0` closes the capstone chain
 - figures: `F01.1` through `F20.2` complete and certified, exactly two ImageGen PNGs per chapter with byte-identical public mirrors
-- publication/PDF: complete review assembly and deterministic 600-page proof pass; public mirror/web proof and published transition pending root
-- course/final QA: not started and outside current #73 review-proof scope
+- publication/PDF: version 1.0.0 published locally; deterministic 600-page final PDF, exact public mirror, all-page inspection, and responsive web proof pass
+- course/final QA: not started and outside current #32 scope
 
 ## Completed gates
 
@@ -79,20 +80,20 @@ and `#35` are closed with `status:done`.
 - [x] 08
 - [x] 09
 - [x] 10
-- [ ] 11 - review proof PASS; public artifact transition remains
+- [x] 11 - published web/PDF delivery PASS locally; root #32 remains open for independent Git/GitHub completion
 - [ ] 13
 - [ ] 18
 - [ ] 19
 
 ## Current work
 
-Phases 08-10 pass. Phase 11 source assembly and local review proof also pass under
-issue #73: 4,014 front/orientation words, six architecture-locked appendices at
-11,010 words, and a deterministic 600-page PDF built twice at SHA-256
-`ebc7aacc416c7615a006f1c9aaa06fdcfb7e2ed8030f6475dcb0ad92df0a7419`.
-All 600 repaired proof pages were rendered and inspected. The manifest remains
-`review`, `publishedAt` is null, and the public PDF is disabled pending root's
-public mirror and responsive web-route proof.
+Phases 08-10 pass. Phase 11 publication delivery also passes locally under root
+issue #32: 4,005 front/orientation words, six architecture-locked appendices at
+11,020 words, and a deterministic optimized 600-page final PDF built twice at
+SHA-256 `787939e34f561fbc54e901ca258175786a3ad71926fc0c814112553071cc909a`.
+All 600 final pages were rendered and inspected. The manifest is `published`,
+`publishedAt` is `2026-08-17`, and the exact public PDF is enabled. The 85-route
+production build passes 170/170 desktop/mobile rendered checks.
 
 ## Unresolved blockers
 
@@ -112,21 +113,22 @@ public mirror and responsive web-route proof.
 ## Quality debt
 
 - No Phase 10 visual debt remains.
-- The Agentic publication stays in review and therefore is not listed in the
-  built public book index. Root must verify the exact public PDF mirror and all
-  web routes before the published-state transition.
+- No Agentic publication quality debt remains. Root must independently verify
+  the prepared release before committing, pushing, and reconciling #32/#73.
 
 ## Exact next action
 
-Review `qa/phase-11-publication-assembly.md`, copy the exact accepted proof to
-the public download path, verify byte identity and all Agentic web routes, then
-perform the root-owned published-state transition for #73 only if those checks pass.
+Root independently verifies `qa/phase-11-publication-release.md`, the exact
+public PDF hash, and the responsive routes; then performs the root-owned commit,
+push, and GitHub reconciliation for #32/#73. Stop afterward. Do not start Phase
+13, a course, a new role/book, or Abhyaas work.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, issue `#73`, this file,
+Read repository `AGENTS.md`, root issue `#32`, Phase 11 issue `#73`, this file,
 `qa/phase-10-visual-verification.md`, `books/agentic-ai-engineering/imagegen-production-log.md`,
-and `books/agentic-ai-engineering/phase-11-publication-handoff.md`. Inspect git
+`qa/phase-11-publication-release.md`, and
+`books/agentic-ai-engineering/phase-11-publication-handoff.md`. Inspect git
 status because parallel agents share the worktree. Preserve the 40 certified
 figures and do not edit shared factory state or other role directories from this
 lane. Do not enter Abhyaas while the Komal-first decision remains locked.

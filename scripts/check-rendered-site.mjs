@@ -168,6 +168,8 @@ try {
           const unnamedLinks = [...document.querySelectorAll('a[href]')]
             .filter((link) => !(link.textContent || '').trim() && !link.getAttribute('aria-label'))
             .map((link) => link.getAttribute('href'));
+          const pageTitle = document.querySelector('h1')?.textContent?.trim();
+          const bodyTitle = document.querySelector('.book-prose > :first-child:is(h1, h2)')?.textContent?.trim();
           return {
             title: document.title,
             bodyText: document.body.innerText.trim().length,
@@ -178,6 +180,7 @@ try {
             missingImages,
             missingAlt,
             unnamedLinks,
+            duplicateBodyTitle: Boolean(pageTitle && bodyTitle && pageTitle === bodyTitle),
           };
         })())`,
         returnByValue: true,
@@ -193,6 +196,7 @@ try {
       if (metrics.missingImages.length) problems.push(`missing images: ${metrics.missingImages.join(', ')}`);
       if (metrics.missingAlt.length) problems.push(`images without alt: ${metrics.missingAlt.join(', ')}`);
       if (metrics.unnamedLinks.length) problems.push(`unnamed links: ${metrics.unnamedLinks.join(', ')}`);
+      if (metrics.duplicateBodyTitle) problems.push('duplicate chapter title in body');
       if (problems.length) failures.push({ viewport: viewport.name, route, problems });
     }
   }
