@@ -82,8 +82,8 @@ Record control events without storing the malicious payload by default: untruste
 
 Monitoring is detective, not preventive. A monitor alert after a secret left the boundary is not containment. Pair detection with scope, isolation, revoke, and recovery.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F14.1" data-png="/assets/publications/agentic-ai-engineering/f14-1-injection-containment-layers.png">
-  <div role="img" aria-label="Pending colorful realistic 3D flow where Untrusted Data passes through separate gates labeled Validate, Scope, and Approval before reaching Effect. A malicious instruction is stopped at several independent layers, and no relationship depends on color.">ImageGen raster pending: F14.1</div>
+<figure className="book-figure" data-figure-id="F14.1" data-png="/assets/publications/agentic-ai-engineering/f14-1-injection-containment-layers.png">
+  <img src="/assets/publications/agentic-ai-engineering/f14-1-injection-containment-layers.png" alt="colorful realistic 3D flow where Untrusted Data passes through separate gates labeled Validate, Scope, and Approval before reaching Effect. A malicious instruction is stopped at several independent layers, and no relationship depends on color." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>F14.1 - Injection containment layers.</strong> Essential labels: Untrusted Data, Validate, Scope, Approval, Effect. Evidence role: a defense-in-depth scaffold, not proof of universal containment.</figcaption>
 </figure>
 
@@ -191,8 +191,8 @@ Test downgrade, missing migration signature, changed canonicalization, and old a
 
 Defense in depth means controls fail differently and enforce at distinct boundaries. Five prompts all asking the model to be safe are not five layers. Useful layers include context admission, typed validation, least capability, service authorization, tenant isolation, exact approval, sandbox/egress, effect identity, monitoring, revocation, and human response.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F14.2" data-png="/assets/publications/agentic-ai-engineering/f14-2-containment-shells.png">
-  <div role="img" aria-label="Pending crisp realistic 3D nested containment shells labeled Sandbox, Tenant, Network, Budget, and Revoke around a bounded FieldOps action. A failure passes one shell but is stopped by another, and no relationship depends on color.">ImageGen raster pending: F14.2</div>
+<figure className="book-figure" data-figure-id="F14.2" data-png="/assets/publications/agentic-ai-engineering/f14-2-containment-shells.png">
+  <img src="/assets/publications/agentic-ai-engineering/f14-2-containment-shells.png" alt="crisp realistic 3D nested containment shells labeled Sandbox, Tenant, Network, Budget, and Revoke around a bounded FieldOps action. A failure passes one shell but is stopped by another, and no relationship depends on color." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>F14.2 - Independent containment shells.</strong> Essential labels: Sandbox, Tenant, Network, Budget, Revoke. Evidence role: a control-independence scaffold, not a security assurance claim.</figcaption>
 </figure>
 

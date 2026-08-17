@@ -5,10 +5,10 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 08 manuscript production under parent `#45`; all 20 chapters complete locally through `#64`
-- Last updated: 2026-08-16
-- Last completed issue: `#61` — Phase 08 Chapters 16-18, accepted at `877ea8e`
-- Active issue: `#64` — Phase 08 Chapters 19-20 and hostile whole-book defense
+- Current global phase: Phase 10 visual certification PASS under `#69`; Phase 11 publication handoff prepared
+- Last updated: 2026-08-17
+- Last completed issue: `#69` — Phase 10 Agentic AI Engineering visuals, PASS
+- Active issue: none; Phase 11 is ready to open for the current Agentic book
 - Role root issue: `#32` — open
 
 ## Locked accepted decisions
@@ -58,10 +58,13 @@ and `#35` are closed with `status:done`.
 - Phase 07 verification: `books/agentic-ai-engineering/blueprints/verification-report.md`
 - Phase 08 handoff: `books/agentic-ai-engineering/blueprints/phase-08-handoff.md`
 - Phase 08 prepared issue body: `issues/phase-08-manuscript.md`
-- manuscripts: all 20 chapters complete locally; 176,447 words; every accepted blueprint depth range passes
+- ImageGen production log: `books/agentic-ai-engineering/imagegen-production-log.md`
+- Phase 10 verification: `qa/phase-10-visual-verification.md`
+- Phase 11 handoff: `books/agentic-ai-engineering/phase-11-publication-handoff.md`
+- manuscripts: all 20 chapters complete locally; 176,372 chapter words; every accepted blueprint depth range passes
 - publication records and deterministic companion: complete locally through Chapter 20; `AR-14 v1.0.0` closes the capstone chain
-- figure anchors: `F01.1` through `F20.2` specified, exactly two per chapter; root owns ImageGen production and visual QA
-- publication/PDF/course/final QA: not started
+- figures: `F01.1` through `F20.2` complete and certified, exactly two ImageGen PNGs per chapter with byte-identical public mirrors
+- publication/PDF/course/final QA: Phase 11 handoff prepared; artifact assembly and publication not started
 
 ## Completed gates
 
@@ -70,9 +73,9 @@ and `#35` are closed with `status:done`.
 - [x] 05 accepted/committed/closed (`#35`, `b59c3f5`)
 - [x] 06 accepted/committed/closed (`#40`, `abed872`)
 - [x] 07 accepted/committed/closed (`#43`, `e4e8ec4`)
-- [ ] 08
-- [ ] 09
-- [ ] 10
+- [x] 08
+- [x] 09
+- [x] 10
 - [ ] 11
 - [ ] 13
 - [ ] 18
@@ -80,13 +83,12 @@ and `#35` are closed with `status:done`.
 
 ## Current work
 
-Phase 08 Chapters 19-20 and hostile whole-book defense are complete locally under
-active child `#64`. Chapters 19-20 contain 17,265 words and close `AR-13 v1.0.0`
-and `AR-14 v1.0.0`; the complete manuscript contains 176,447 words. All twenty
-frozen depth gates pass after substantive repairs to inherited Chapters 1-9.
-Evidence manifests, claim/source symmetry, continuity, figure/accessibility
-anchors, learning/state/QA records, originality, 60 deterministic tests, and the
-full repository check pass.
+Phases 08-10 pass. The complete 20-chapter manuscript contains 176,372 chapter
+words, the deterministic companion passes 60/60 tests, and all 40 final ImageGen
+PNG figures are integrated, registered, provenance-matched, visually certified,
+and mirrored byte-for-byte to the public asset directory. Publication validation,
+publication tests, Astro build, built-site reference checking, and diff checks pass.
+The publication intentionally remains draft and is not exposed by the site build.
 
 ## Unresolved blockers
 
@@ -105,22 +107,23 @@ full repository check pass.
 
 ## Quality debt
 
-- ImageGen assets beyond the four root-produced Chapter 1-2 figures and their provenance/visual QA remain pending root production.
-- The Agentic publication stays draft and therefore is not listed in the
-  built public book index.
+- No Phase 10 visual debt remains.
+- The Agentic publication stays draft and therefore is not listed in the built
+  public book index; Phase 11 must assemble front matter, part introductions,
+  appendices, and deterministic web/PDF proofs before publication.
 
 ## Exact next action
 
-Parent reviews and accepts `#64`, then root produces and visually QA-checks the
-remaining pending ImageGen figures before Phase 08 root acceptance and the next
-factory phase. Publication remains draft until those later gates pass.
+Open the next Agentic current-book Phase 11 issue from
+`books/agentic-ai-engineering/phase-11-publication-handoff.md`, assemble the
+complete review edition, and run deterministic PDF/web proof QA before any
+published-state transition.
 
 ## Resume instructions
 
-Read repository `AGENTS.md`, accepted commits `b59c3f5`, `abed872`,
-`e4e8ec4`, `b48f375`, `d3b86f4`, `2c908cd`, `9fb4001`, `a32c9d6`, and
-`877ea8e`, parent `#45`, active child `#64`, this file, Chapters 19-20
-blueprints/research packs, the hostile whole-book QA report, and Phase 08
-handoff. Inspect git status because parallel agents share the worktree. Do not
-edit shared factory state or other role directories from this lane. Do not enter
-Abhyaas while the Komal-first decision remains locked.
+Read repository `AGENTS.md`, issue `#69`, this file,
+`qa/phase-10-visual-verification.md`, `books/agentic-ai-engineering/imagegen-production-log.md`,
+and `books/agentic-ai-engineering/phase-11-publication-handoff.md`. Inspect git
+status because parallel agents share the worktree. Preserve the 40 certified
+figures and do not edit shared factory state or other role directories from this
+lane. Do not enter Abhyaas while the Komal-first decision remains locked.

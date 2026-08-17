@@ -43,8 +43,8 @@ This separation prevents a subtle failure. Suppose the conversation is summarize
 
 The run also has exactly one terminal disposition. `COMPLETED`, `FAILED`, `CANCELLED`, and `ESCALATED` are mutually exclusive in `AR-03`. Later designs may add more terminal kinds, but they must preserve the invariant: once terminal, no ordinary proposal can reopen the run.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F04.2" data-png="/assets/publications/agentic-ai-engineering/f04-2-transparent-run-capsule.png">
-  <div role="img" aria-label="Pending colorful realistic 3D transparent capsule with compartments labeled Run, Events, Budgets, Cancel, and Disposition. A stable run identity surrounds ordered events, monotonic budget counters, a cancellation latch, and one terminal disposition. No relationship depends on color.">ImageGen raster pending: F04.2</div>
+<figure className="book-figure" data-figure-id="F04.2" data-png="/assets/publications/agentic-ai-engineering/f04-2-transparent-run-capsule.png">
+  <img src="/assets/publications/agentic-ai-engineering/f04-2-transparent-run-capsule.png" alt="Colorful transparent three-dimensional run capsule with distinct compartments labeled Run, Events, Budgets, Cancel, and Disposition. A fingerprint plate, ordered event cards, three budget gauges, a cancellation lever, and a terminal output slot make the run controls concrete." width="1586" height="992" loading="lazy" decoding="async" />
   <figcaption><strong>F04.2 - Inspectable run capsule.</strong> Essential labels: Run, Events, Budgets, Cancel, Disposition. Evidence role: a mental model of run identity and controls, not runtime proof.</figcaption>
 </figure>
 
@@ -111,8 +111,8 @@ A model's success declaration is evidence, not the completion predicate. Determi
 
 This limitation matters. Some writing or research tasks have no purely mechanical quality predicate. Independent grading can support completion, yet it introduces its own uncertainty. FieldOps avoids claiming that all agent tasks can be completed through deterministic assertions; it claims that reservation state and contract invariants can.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F04.1" data-png="/assets/publications/agentic-ai-engineering/f04-1-loop-track.png">
-  <div role="img" aria-label="Pending crisp realistic 3D loop track labeled Observe, Decide, Validate, Act, Verify, and Stop. Decide is marked as the model proposal point; Validate, budgets, cancellation, authority, and Verify are marked as deterministic gates. An invalid branch reaches Stop. No relationship depends on color.">ImageGen raster pending: F04.1</div>
+<figure className="book-figure" data-figure-id="F04.1" data-png="/assets/publications/agentic-ai-engineering/f04-1-loop-track.png">
+  <img src="/assets/publications/agentic-ai-engineering/f04-1-loop-track.png" alt="Crisp three-dimensional loop track labeled Observe, Decide, Validate, Act, Verify, and Stop. Arrows establish the direction, validation and verification are physical gates, and a striped barrier makes the explicit stop state visible." width="1568" height="1003" loading="lazy" decoding="async" />
   <figcaption><strong>F04.1 - Inspectable action loop.</strong> Essential labels: Observe, Decide, Validate, Act, Verify, Stop. Evidence role: a causal control scaffold, not proof that any implementation enforces the gates.</figcaption>
 </figure>
 

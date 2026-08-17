@@ -123,8 +123,8 @@ Use one of four dispositions. **Replay compatible** means the new worker can con
 
 Migration itself cannot issue external effects. Test it against frozen checkpoints representing each state, including waiting, cancelled, ambiguous effect, and partially compensated. Preserve the old record and migration version. If the transformation cannot decide, quarantine rather than inventing missing semantics.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F10.1" data-png="/assets/publications/agentic-ai-engineering/f10-1-checkpoint-bridge.png">
-  <div role="img" aria-label="Pending colorful realistic 3D bridge labeled Checkpoint spanning a gap labeled Crash. A work capsule crosses by Resume, while duplicate capsules are blocked by Deduplicate and an optional separate Compensate route remains visible. No relationship depends on color.">ImageGen raster pending: F10.1</div>
+<figure className="book-figure" data-figure-id="F10.1" data-png="/assets/publications/agentic-ai-engineering/f10-1-checkpoint-bridge.png">
+  <img src="/assets/publications/agentic-ai-engineering/f10-1-checkpoint-bridge.png" alt="colorful realistic 3D bridge labeled Checkpoint spanning a gap labeled Crash. A work capsule crosses by Resume, while duplicate capsules are blocked by Deduplicate and an optional separate Compensate route remains visible. No relationship depends on color." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>F10.1 - Durable checkpoint bridge.</strong> Essential labels: Checkpoint, Crash, Resume, Deduplicate, Compensate. Evidence role: a recovery scaffold, not an exactly-once guarantee.</figcaption>
 </figure>
 
@@ -184,8 +184,8 @@ Event ordering needs sequence numbers or conditional state transitions. If cance
 
 User-facing status should distinguish "cancellation requested," "new work stopped," "effect reconciliation pending," and "cancelled with effect remaining." A spinner that jumps directly to "cancelled" may be comforting but operationally false.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F10.2" data-png="/assets/publications/agentic-ai-engineering/f10-2-recovery-roundabout.png">
-  <div role="img" aria-label="Pending crisp realistic 3D roundabout with exits labeled Retry, Resume, Reconcile, Compensate, and Stop. Entry signs distinguish known pre-send failure, durable checkpoint, ambiguous effect, separately authorized corrective effect, and terminal failure. No relationship depends on color.">ImageGen raster pending: F10.2</div>
+<figure className="book-figure" data-figure-id="F10.2" data-png="/assets/publications/agentic-ai-engineering/f10-2-recovery-roundabout.png">
+  <img src="/assets/publications/agentic-ai-engineering/f10-2-recovery-roundabout.png" alt="crisp realistic 3D roundabout with exits labeled Retry, Resume, Reconcile, Compensate, and Stop. Entry signs distinguish known pre-send failure, durable checkpoint, ambiguous effect, separately authorized corrective effect, and terminal failure. No relationship depends on color." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>F10.2 - Recovery decision roundabout.</strong> Essential labels: Retry, Resume, Reconcile, Compensate, Stop. Evidence role: a failure-routing scaffold, not a rollback promise.</figcaption>
 </figure>
 

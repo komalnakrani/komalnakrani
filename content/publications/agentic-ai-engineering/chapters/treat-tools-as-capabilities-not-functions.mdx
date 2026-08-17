@@ -36,8 +36,8 @@ Use a stable capability ID and semantic version. The model-facing name can be ad
 
 The catalog owner is not automatically the service owner. The inventory team owns its service semantics. Agentic AI engineering owns the adapter contract exposed to the run and the evidence that the harness enforces it. Security owns formal threat review. Domain owners define compatibility and consequence.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F05.1" data-png="/assets/publications/agentic-ai-engineering/f05-1-capability-cabinet.png">
-  <div role="img" aria-label="Pending colorful realistic 3D cabinet with narrow drawers labeled Read, Compute, Propose, and Effect. Each drawer has visible cards for Intent, Schema, Scope, Errors, Evidence, and Recovery. A large master-key drawer is blocked. No relationship depends on color.">ImageGen raster pending: F05.1</div>
+<figure className="book-figure" data-figure-id="F05.1" data-png="/assets/publications/agentic-ai-engineering/f05-1-capability-cabinet.png">
+  <img src="/assets/publications/agentic-ai-engineering/f05-1-capability-cabinet.png" alt="Realistic three-dimensional capability cabinet with separate locked compartments labeled Read, Compute, Propose, and Effect. A contract strip below is labeled Intent, Schema, Scope, Errors, Evidence, and Recovery, while a rejected master key stands outside the cabinet." width="1586" height="992" loading="lazy" decoding="async" />
   <figcaption><strong>F05.1 - Capability cabinet.</strong> Essential labels: Read, Compute, Propose, Effect, Intent, Schema, Scope, Errors, Evidence, Recovery. Evidence role: a classification and contract scaffold, not security assurance.</figcaption>
 </figure>
 
@@ -111,8 +111,8 @@ Inject the central failure. `reserve_part` commits, but the response is lost. Th
 
 If the ledger finds the matching effect, the harness records it once and proceeds to verification. If it proves absence and the approval, stock, budget, and delegation are still valid, policy may allow a redispatch with the same key. If the outcome remains unknown, the run escalates. It never blind-retries an effect.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F05.2" data-png="/assets/publications/agentic-ai-engineering/f05-2-ambiguous-effect-ledger.png">
-  <div role="img" aria-label="Pending crisp 3D scene where an effect marked Committed crosses a service boundary but its response ends at Timeout. A Retry route is blocked until a Ledger lookup checks the same idempotency key and intent. A different-intent duplicate is denied. No relationship depends on color.">ImageGen raster pending: F05.2</div>
+<figure className="book-figure" data-figure-id="F05.2" data-png="/assets/publications/agentic-ai-engineering/f05-2-ambiguous-effect-ledger.png">
+  <img src="/assets/publications/agentic-ai-engineering/f05-2-ambiguous-effect-ledger.png" alt="Crisp three-dimensional effect machine where a completed parcel is followed by a broken response pipe labeled Timeout. A Retry route remains locked until a central Ledger reconciles the committed parcel, while a different parcel is visibly rejected." width="1568" height="1003" loading="lazy" decoding="async" />
   <figcaption><strong>F05.2 - Ambiguous effect reconciliation.</strong> Essential labels: Committed, Timeout, Retry, Ledger. Evidence role: a causal duplicate-prevention scaffold; it does not claim exactly-once execution.</figcaption>
 </figure>
 

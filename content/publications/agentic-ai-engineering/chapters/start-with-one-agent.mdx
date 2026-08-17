@@ -79,8 +79,8 @@ Measuring one agent first is a design rule, not a universal law. Some systems be
 
 In those cases, document the incompatibility rather than invoking complexity as a vibe. Name the privileges that cannot coexist, the data that cannot cross, the independent owner, or the measured context limit. Then define the smallest baseline that respects the boundary. It may contain one agent per security zone while still avoiding a router, debate team, or manager hierarchy. The evidence burden remains because an unavoidable separation does not justify every additional coordination layer. [CLM-015]
 
-<figure className="book-figure book-figure--pending" data-figure-id="F08.1" data-png="/assets/publications/agentic-ai-engineering/f08-1-one-agent-workbench.png">
-  <div role="img" aria-label="Pending colorful realistic 3D workbench labeled One Agent with organized stations labeled Tools, State, Policy, and Evidence. Several empty specialist booths remain visibly unused by design. A single run-owner badge connects all stations, while the effect gate remains separate. No relationship depends on color.">ImageGen raster pending: F08.1</div>
+<figure className="book-figure" data-figure-id="F08.1" data-png="/assets/publications/agentic-ai-engineering/f08-1-one-agent-workbench.png">
+  <img src="/assets/publications/agentic-ai-engineering/f08-1-one-agent-workbench.png" alt="colorful realistic 3D workbench labeled One Agent with organized stations labeled Tools, State, Policy, and Evidence. Several empty specialist booths remain visibly unused by design. A single run-owner badge connects all stations, while the effect gate remains separate. No relationship depends on color." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>F08.1 - Single-agent workbench.</strong> Essential labels: One Agent, Tools, State, Policy, Evidence. Evidence role: an integration scaffold; unused specialists are intentional, not missing functionality.</figcaption>
 </figure>
 
@@ -287,8 +287,8 @@ The simplest way to test the slice is to run every service in process, but in-pr
 
 Conversely, provider neutrality does not require premature distributed infrastructure. Local interfaces and test doubles are enough. A queue, workflow runtime, remote tool protocol, or service mesh may eventually implement a boundary, but the boundary's semantics should exist before that deployment choice. This keeps the first artifact small while preventing a later transport from defining authority or state by accident.
 
-<figure className="book-figure book-figure--pending" data-figure-id="F08.2" data-png="/assets/publications/agentic-ai-engineering/f08-2-vertical-slice-evidence-path.png">
-  <div role="img" aria-label="Pending crisp realistic 3D vertical path from Request through Read, Evidence, Proposal, Approval, Effect, Verify, and Disposition. One agent moves a bounded workpiece while separate deterministic gates inspect state, policy, identity, and evidence. No additional agents appear and no relationship depends on color.">ImageGen raster pending: F08.2</div>
+<figure className="book-figure" data-figure-id="F08.2" data-png="/assets/publications/agentic-ai-engineering/f08-2-vertical-slice-evidence-path.png">
+  <img src="/assets/publications/agentic-ai-engineering/f08-2-vertical-slice-evidence-path.png" alt="crisp realistic 3D vertical path from Request through Read, Evidence, Proposal, Approval, Effect, Verify, and Disposition. One agent moves a bounded workpiece while separate deterministic gates inspect state, policy, identity, and evidence. No additional agents appear and no relationship depends on color." width="1774" height="887" loading="lazy" decoding="async" />
   <figcaption><strong>F08.2 - FieldOps vertical slice.</strong> Essential labels: Request, Evidence, Proposal, Approval, Effect, Verify, Disposition. Evidence role: a causal integration scaffold, not an outcome or performance claim.</figcaption>
 </figure>
 
