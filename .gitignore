@@ -14,8 +14,7 @@ book-pdfs/
 playwright-report/
 test-results/
 tmp/pdfs/
-output/pdf/*.pdf
-output/pdf/*.manifest.json
+output/pdf/*
 !output/pdf/.gitkeep
 
 # Local tool caches.
