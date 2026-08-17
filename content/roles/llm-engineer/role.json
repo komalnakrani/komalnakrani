@@ -3,7 +3,7 @@
   "slug": "llm-engineer",
   "title": "LLM Engineer",
   "summary": "An engineer who turns language-model behavior into explicit, measurable, adaptable, and operable systems while preserving evidence and authority boundaries.",
-  "status": "draft",
+  "status": "published",
   "boundary": {
     "includes": [
       "Define language-task contracts and engineer prompts, context, retrieval, structured output, evaluation, adaptation, and inference evidence.",

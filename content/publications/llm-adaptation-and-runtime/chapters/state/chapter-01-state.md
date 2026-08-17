@@ -4,7 +4,8 @@
 - Mosaic milestone: `MD-09` opened from accepted `MD-08`.
 - Production claims: `CLM-001` through `CLM-003` map exactly to `V2-C01-CL01` through `V2-C01-CL03`.
 - Bounded case: `LLME-CASE-008`, used only for the structure of a staged open post-training recipe and evaluation; no recipe or outcome transfers to Mosaic.
-- Figure anchors: `V2-F01.1`, `V2-F01.2`; assets pending root ImageGen.
+- Visual gate: complete; 2/2 ready accepted ImageGen PNGs: `V2-F01.1`, `V2-F01.2`.
+- Record boundary: This chapter-state record does not assert publication or runtime behavior.
 - Companion: frozen baseline fixture plus deterministic audit helper; four Chapter 1 tests.
 
 ## Locked decisions

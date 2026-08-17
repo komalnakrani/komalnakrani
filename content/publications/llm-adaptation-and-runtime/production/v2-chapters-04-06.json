@@ -3,7 +3,7 @@
   "batchId": "V2-04-06",
   "issue": 65,
   "parentIssue": 46,
-  "status": "manuscript-complete-assets-pending",
+  "status": "manuscript-complete-visual-gate-complete",
   "producedAt": "2026-08-16",
   "mosaicDesk": {"fictional":true,"start":"MD-09-method-selection-complete-training-not-approved","end":"MD-11-instruction-data-specified-render-blocked","completedMilestones":["MD-10"],"openedMilestones":["MD-11"],"inventedProductionOutcomes":false},
   "chapters": [
@@ -12,12 +12,12 @@
     {"number":6,"slug":"build-instruction-and-demonstration-data","title":"Build Instruction and Demonstration Data","wordCount":2249,"claims":[{"productionId":"CLM-016","acceptedId":"V2-C06-CL01"},{"productionId":"CLM-017","acceptedId":"V2-C06-CL02"},{"productionId":"CLM-018","acceptedId":"V2-C06-CL03"}],"caseIds":["LLME-CASE-007","LLME-CASE-008"],"figureIds":["V2-F06.1","V2-F06.2"],"companionTestsAdded":4,"qaStatus":"pass"}
   ],
   "figures": [
-    {"id":"V2-F04.1","chapter":4,"plannedPath":"/assets/publications/llm-adaptation-and-runtime/v2-f04-1-data-recipe-workbench.png","labels":["source","recipe","example","provenance"],"alt":"Authorized source trays pass through a versioned recipe workbench into example records that retain source and transformation provenance tabs.","evidenceRole":"Explains reproducible lineage without implying rights or approval.","assetStatus":"pending-root-imagegen"},
-    {"id":"V2-F04.2","chapter":4,"plannedPath":"/assets/publications/llm-adaptation-and-runtime/v2-f04-2-population-balance-trays.png","labels":["language","domain","error","abstention","gap"],"alt":"A target-population outline is compared with separate language, domain, error, and abstention trays, leaving convenience-sampling gaps visibly empty.","evidenceRole":"Shows mixture hypotheses and gaps without reporting population frequencies.","assetStatus":"pending-root-imagegen"},
-    {"id":"V2-F05.1","chapter":5,"plannedPath":"/assets/publications/llm-adaptation-and-runtime/v2-f05-1-duplicate-contamination-map.png","labels":["train","dev","eval","overlap","false alarm"],"alt":"Near-identical record families approach train, development, and evaluation barriers; shared signatures trigger a false alarm while a paraphrased evaluation relative triggers a real overlap alarm.","evidenceRole":"Distinguishes false removal from indirect leakage without prescribing a threshold.","assetStatus":"pending-root-imagegen"},
-    {"id":"V2-F05.2","chapter":5,"plannedPath":"/assets/publications/llm-adaptation-and-runtime/v2-f05-2-split-manifest-vaults.png","labels":["train","dev","eval","retention","control"],"alt":"Five physically separated hashed vaults hold train, development, evaluation, retention, and control records, with family links forbidden from crossing vault walls.","evidenceRole":"Explains purpose separation without proving absence of unknown historical overlap.","assetStatus":"pending-root-imagegen"},
-    {"id":"V2-F06.1","chapter":6,"plannedPath":"/assets/publications/llm-adaptation-and-runtime/v2-f06-1-instruction-example-anatomy.png","labels":["instruction","input","context","target","loss","metadata"],"alt":"One instruction example separates trusted instruction, untrusted input, authorized context, typed target, intentional loss region, and provenance metadata.","evidenceRole":"Explains the training record interface without reporting a training effect.","assetStatus":"pending-root-imagegen"},
-    {"id":"V2-F06.2","chapter":6,"plannedPath":"/assets/publications/llm-adaptation-and-runtime/v2-f06-2-coverage-quilt.png","labels":["clause","error","positive","negative","abstain","multilingual","gap"],"alt":"A coverage quilt maps behavior clauses and error categories to positive, negative, abstention, and multilingual example families while leaving missing cells visible.","evidenceRole":"Shows varied learning signals and gaps without claiming quality.","assetStatus":"pending-root-imagegen"}
+    {"id":"V2-F04.1","chapter":4,"path":"/assets/publications/llm-adaptation-and-runtime/v2-f04-1-data-recipe-workbench.png","labels":["source","recipe","example","provenance"],"alt":"Authorized source trays pass through a versioned recipe workbench into example records that retain source and transformation provenance tabs.","evidenceRole":"Explains reproducible lineage without implying rights or approval.","assetStatus":"accepted-imagegen-png"},
+    {"id":"V2-F04.2","chapter":4,"path":"/assets/publications/llm-adaptation-and-runtime/v2-f04-2-population-balance-trays.png","labels":["language","domain","error","abstention","gap"],"alt":"A target-population outline is compared with separate language, domain, error, and abstention trays, leaving convenience-sampling gaps visibly empty.","evidenceRole":"Shows mixture hypotheses and gaps without reporting population frequencies.","assetStatus":"accepted-imagegen-png"},
+    {"id":"V2-F05.1","chapter":5,"path":"/assets/publications/llm-adaptation-and-runtime/v2-f05-1-duplicate-contamination-map.png","labels":["train","dev","eval","overlap","false alarm"],"alt":"Near-identical record families approach train, development, and evaluation barriers; shared signatures trigger a false alarm while a paraphrased evaluation relative triggers a real overlap alarm.","evidenceRole":"Distinguishes false removal from indirect leakage without prescribing a threshold.","assetStatus":"accepted-imagegen-png"},
+    {"id":"V2-F05.2","chapter":5,"path":"/assets/publications/llm-adaptation-and-runtime/v2-f05-2-split-manifest-vaults.png","labels":["train","dev","eval","retention","control"],"alt":"Five physically separated hashed vaults hold train, development, evaluation, retention, and control records, with family links forbidden from crossing vault walls.","evidenceRole":"Explains purpose separation without proving absence of unknown historical overlap.","assetStatus":"accepted-imagegen-png"},
+    {"id":"V2-F06.1","chapter":6,"path":"/assets/publications/llm-adaptation-and-runtime/v2-f06-1-instruction-example-anatomy.png","labels":["instruction","input","context","target","loss","metadata"],"alt":"One instruction example separates trusted instruction, untrusted input, authorized context, typed target, intentional loss region, and provenance metadata.","evidenceRole":"Explains the training record interface without reporting a training effect.","assetStatus":"accepted-imagegen-png"},
+    {"id":"V2-F06.2","chapter":6,"path":"/assets/publications/llm-adaptation-and-runtime/v2-f06-2-coverage-quilt.png","labels":["clause","error","positive","negative","abstain","multilingual","gap"],"alt":"A coverage quilt maps behavior clauses and error categories to positive, negative, abstention, and multilingual example families while leaving missing cells visible.","evidenceRole":"Shows varied learning signals and gaps without claiming quality.","assetStatus":"accepted-imagegen-png"}
   ],
   "companion": {"runner":"companion/run.mjs","testPattern":"companion/tests/*.test.mjs","testsAdded":12,"volume2CumulativeTests":24,"seriesCumulativeTests":88,"expectedPassing":24,"providerCalls":0,"trainingRuns":0,"deterministic":true},
   "limitations": [
@@ -25,6 +25,12 @@
     "Recipe and dataset documentation expose decisions but prove no rights, consent, privacy, representativeness, correctness, or fitness.",
     "Local split audits cannot establish absence of unknown base-model or managed-service historical overlap.",
     "Template and loss-mask fixtures prove validator mechanics only; training/serving compatibility remains blocked and no training runs.",
-    "Figure records are semantic anchors only; root owns ImageGen production."
-  ]
+    "Figure records describe accepted ImageGen PNG teaching assets; this visual gate does not assert publication or runtime behavior."
+  ],
+  "visualGate": {
+    "status": "complete",
+    "acceptedImageGenPngs": 6,
+    "readyFiguresPerChapter": 2,
+    "assertsPublicationOrRuntimeBehavior": false
+  }
 }

@@ -1,12 +1,14 @@
 # Volume 1 Hostile Verification - LLM Behavior Engineering
 
-Date: 2026-08-16
+Original hostile audit: 2026-08-16
+
+Current-state reconciliation: 2026-08-17
 
 Issue: `#60` under Phase 08 parent `#46`
 
 Accepted baseline entering review: `a89460a`
 
-Result: `PASS - VOLUME 1 MANUSCRIPT AND COMPANION COMPLETE, IMAGEGEN ASSETS PENDING`
+Result: `PASS - VOLUME 1 COMPLETE, 32 PNGS ACCEPTED, PUBLISHED AND RELEASE-VERIFIED`
 
 ## Frozen inventory
 
@@ -22,7 +24,11 @@ Result: `PASS - VOLUME 1 MANUSCRIPT AND COMPANION COMPLETE, IMAGEGEN ASSETS PEND
 | Long descriptions | 32/32 |
 | Learning/state/immediate-QA sets | 16/16 each |
 | Deterministic companion tests | 64/64 passing |
-| Actual PNG/SVG/WebP assets | 0 |
+| Accepted canonical PNG assets | 32/32 |
+| Byte-identical public PNG mirrors | 32/32 |
+| SVG/WebP figure assets | 0 |
+| Historical deterministic review proofs | 2/2 byte-identical, 210 A4 pages |
+| Published-state final builds | A/B/public verified byte-identical, 210 A4 pages |
 
 ## Hostile-review method
 
@@ -38,7 +44,7 @@ The automated audit required:
 - exact figure IDs `V1-F01.1` through `V1-F16.2`, PNG paths, labels, alt containers, and long descriptions;
 - matching word counts in every immediate-QA record;
 - explicit milestone presence across the `MD-01..MD-08` chain;
-- zero role-local raster/vector assets;
+- exact accepted PNG assets, ready anchors, registry records, and byte-identical public mirrors;
 - deterministic companion validation and no-effect boundaries;
 - normalized exact-paragraph and shingle comparison inside Volume 1, against 55 other publication manuscripts, and against 94 LLM control/research files.
 
@@ -78,9 +84,9 @@ The chapters revisit the same Mosaic Desk system only to consume and change its 
 - Nineteen case placements use nine registered cases. Every blueprint-required case is named. Papers remain setup-bound, lifecycle evidence remains volatile, and Mosaic outcomes remain synthetic.
 - No source, case, schema, judge, safety guide, or model card is promoted into proof of source truth, representativeness, control sufficiency, production quality, or formal approval.
 
-## Figure and visual handoff
+## Figure and visual certification
 
-All 32 exact anchors use `.png` planned paths. Every anchor has short essential labels, non-color cues where relevant, a role/aria-label container, a caption with evidence role, and a long description. No PNG, SVG, or WebP asset exists. Root retains ImageGen production using the accepted colorful, crisp, artistic 3D/realistic raster direction and must validate labels/accessibility before registering assets in `figures.json`.
+All 32 exact anchors now render accepted original synthetic ImageGen PNG teaching figures, two per chapter. Every ready figure block has a canonical PNG path, accessible alt text, short essential labels, non-color cues where relevant, a caption with evidence role, and a long description. `figures.json` contains 32 records, and every canonical file has a byte-identical public mirror. The common Phase 10 manifest and provenance ledger record generation source, dimensions, SHA-256, label review, mascot non-use, and disclosure. No canonical SVG or WebP figure asset is used.
 
 ## Companion and authority verification
 
@@ -109,13 +115,19 @@ Chapter 16 specifically verifies:
 | Full Volume 1 companion | PASS: 64/64 |
 | Companion runner | PASS: all error arrays empty |
 | Lane-scoped publication validation | PASS: 1 role, 1 publication, 0 errors |
-| Repository-wide `npm run check` | PASS: validators, repository tests, Astro build, 630 references across 36 HTML pages |
+| Repository-wide `npm run check` | PASS: validators, repository tests, PDF artifact tests, 85-page Astro build, and 1,537 built-site references |
 | Originality/near-duplicate scan | PASS: no material duplication |
-| PNG/SVG/WebP asset scan | PASS: 0 |
+| Accepted PNG certification | PASS: 32 canonical + 32 byte-identical public mirrors |
+| Figure integration and registry | PASS: 32/32 ready anchors and 32 records; zero pending anchors |
+| Historical review proof determinism | PASS: two byte-identical 210-page PDFs |
+| Historical review PDF SHA-256 | `62476f25d475d42b790194b8c0dd15e0de79b2f82140e6725fbff6bcc6f60476` |
+| Historical review source SHA-256 | `01fd392df1bbe610a163848f71b0c5f9999f4c281c62e1b0a8ce7ec6f7e07018` |
+| Published-state final A/B/public result | Verified byte-identical: 10,997,350 bytes, 210 pages |
+| Published-state PDF SHA-256 | `5cd5d16cd69c3c766fafa737812918cb1f37f34a91cb6753c7db044cd8c9375b` |
 | `git diff --check` and trailing whitespace | PASS |
 
-## Exit and Volume 2 boundary
+## Current publication boundary
 
-Volume 1 manuscript production is complete locally, but publication, figures, PDF, and final editorial QA remain future gates. The publication stays draft.
+Volume 1 manuscript, visual, companion, assembly, and historical deterministic review-proof gates pass. Root has transitioned `publication.json` to `status: published`, `edition.publishedAt: 2026-08-17`, and `pdf.enabled: true`. The published-state A/B/public builds are verified byte-identical at SHA-256 `5cd5d16cd69c3c766fafa737812918cb1f37f34a91cb6753c7db044cd8c9375b`, 10,997,350 bytes, and 210 pages. The earlier `62476f…` review proof remains historical review evidence and is not the published-state artifact identity.
 
-Do not start Volume 2 until root accepts issue `#60`. The accepted `MD-08` handoff must enter Volume 2 with status `audit-required-no-adaptation-approved`. Volume 2 Chapter 1 must reconstruct the frozen identities and test whether a valuable residual remains after simpler repairs; it cannot infer training approval from the provider migration regression.
+Root independently reconciled canonical/public PDF copy integrity, the full 210-page rendered release inspection, and web/download behavior. Any later source, figure, registry, metadata, or builder change invalidates the affected final build and requires the affected gates to rerun.

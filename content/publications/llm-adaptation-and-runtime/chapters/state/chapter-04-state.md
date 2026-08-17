@@ -4,7 +4,8 @@
 - Mosaic milestone: `MD-10` opened from accepted `MD-09`.
 - Production claims: `CLM-010` through `CLM-012` map exactly to `V2-C04-CL01` through `V2-C04-CL03`.
 - Bounded cases: `LLME-CASE-006`, `LLME-CASE-007`, and `LLME-CASE-008`, used for documented data-pipeline, multilingual, and staged-recipe patterns only.
-- Figure anchors: `V2-F04.1`, `V2-F04.2`; assets pending root ImageGen.
+- Visual gate: complete; 2/2 ready accepted ImageGen PNGs: `V2-F04.1`, `V2-F04.2`.
+- Record boundary: This chapter-state record does not assert publication or runtime behavior.
 - Companion: authority-aware data recipe plus deterministic validator; four Chapter 4 tests.
 
 ## Locked decisions

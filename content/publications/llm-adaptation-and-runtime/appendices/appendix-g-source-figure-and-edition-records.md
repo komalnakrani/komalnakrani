@@ -2,21 +2,21 @@
 
 ## Publication identity
 
-The canonical publication manifest is `publication.json`. It records the series and volume, title, author, language, review state, edition version, chapter order, part boundaries, appendix summary, registry paths, canonical URL, and PDF configuration.
+The canonical publication manifest is `publication.json`. It records the series and volume, title, author, language, publication state, edition version, chapter order, part boundaries, appendix summary, registry paths, canonical URL, and PDF configuration.
 
-For this review edition:
+For this published edition:
 
 - series: LLM Engineering;
 - volume: 2;
-- edition: 1.0.0, first edition review;
+- edition: 1.0.0, first edition;
 - chapter count: 17;
 - part count: 5;
 - appendix count: 7;
-- publication state: review;
-- published date: null;
-- canonical PDF: disabled until release review is complete.
+- publication state: published;
+- published date: 2026-08-17;
+- canonical PDF: enabled for `llm-adaptation-and-runtime-v1.0.0.pdf`.
 
-The manifest is not a release decision. Review status permits complete web and proof inspection without claiming a published edition.
+The manifest records the accepted publication decision. It does not approve a model, training job, package, deployment, production outcome, or organizational risk decision.
 
 ## Source register
 
@@ -66,9 +66,9 @@ The canonical errata register is `errata.json`. An erratum should identify editi
 
 Review-stage corrections can be incorporated before publication while retaining review history. After publication, content must not change silently under the same edition identity. Material source, figure, code, or claim corrections require registry and proof review.
 
-## Deterministic PDF proof
+## Deterministic PDF release
 
-A review proof should be generated from the same chapter order, front matter, five part introductions, seven appendices, figures, source register, and edition metadata used by the web edition. Record:
+A release PDF should be generated from the same chapter order, front matter, five part introductions, seven appendices, figures, source register, and edition metadata used by the web edition. Record:
 
 - source SHA-256 over the assembled publication inputs;
 - PDF SHA-256 and byte count;
@@ -80,9 +80,9 @@ A review proof should be generated from the same chapter order, front matter, fi
 - full rendered-page inspection for clipping, overlap, missing glyphs, missing figures, and broken transitions;
 - independent second build and byte comparison.
 
-During proof generation the builder may require an enabled PDF flag. The final review manifest must return to `pdf.enabled: false`, retain `status: review`, and keep `edition.publishedAt: null`. Proof files are review artifacts, not the canonical published PDF.
+The final manifest must retain `pdf.enabled: true`, `status: published`, and `edition.publishedAt: 2026-08-17`. The installed canonical download must be byte-identical to the accepted release artifact. Any later material source or edition change requires a new reviewed artifact identity rather than silent replacement.
 
-## Complete-edition review
+## Complete-edition release
 
 A truthful complete edition includes:
 
@@ -94,20 +94,19 @@ A truthful complete edition includes:
 6. source, claim, figure, and errata registries;
 7. deterministic companion evidence and explicit execution limits;
 8. web build and local-reference validation;
-9. two deterministic PDF proofs with structural and visual inspection;
-10. an explicit release boundary.
+9. two deterministic final PDF builds with structural and visual inspection;
+10. an explicit publication record and immutable download identity.
 
-Completeness does not imply correctness, production readiness, approval, or publication. It means the intended edition components are present and reviewable.
+Publication does not imply production readiness, model approval, deployment approval, or organizational authority. It means this educational edition passed its declared source, manuscript, figure, companion, web, PDF, and release checks.
 
-## Release transition
+## Release record
 
-Only a deliberate release change may:
+The deliberate release change for version 1.0.0:
 
-- change status from review to published;
-- set a real publication date;
-- enable the canonical PDF;
-- attach the approved PDF identity and release evidence;
-- expose the edition in published catalog and route surfaces;
-- update release, issue, and repository state under designated authority.
+- changed status from review to published;
+- recorded 2026-08-17 as the publication date;
+- enabled the canonical PDF;
+- attached the approved PDF identity and release evidence;
+- exposed the edition in published catalog and route surfaces.
 
 Any source, figure, code, registry, metadata, or builder change after proof invalidates the prior source digest and requires the affected gates to rerun.

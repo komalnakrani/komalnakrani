@@ -52,49 +52,52 @@
 - Forward Deployed Engineer: [#3 — complete Komal learning ecosystem](https://github.com/alpeshznakrani/komalnakrani/issues/3), hostile final QA `PASS` at commit `5061fe8`.
 - Forward Deployed Engineer: Phases 01, 04-11, 13, and 19, including all nineteen manuscripts, 38 final figures, complete web/PDF edition, 64-test provider-neutral companion, six-module/12-test guided lab course, and hostile final QA `PASS`.
 
-## Active three-book wave
+## Completed three-book wave
 
 ### Applied AI Engineer
 
-- Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
-- Phase 08 parent: [#27 - Write Applied AI Engineering manuscript and companion](https://github.com/alpeshznakrani/komalnakrani/issues/27), closed
-- Last completed child: [#52 - Write Applied AI Engineering chapters 19-21](https://github.com/alpeshznakrani/komalnakrani/issues/52), accepted at commit `51be79f`
-- Active phase: [#55 - QA the complete Applied AI Engineering book](https://github.com/alpeshznakrani/komalnakrani/issues/55)
-- Manuscript state: complete 21-chapter book, 133,810 words, 118 claims, 55 sources, 42 figures, and 109 passing companion tests.
-- Visual state: all 21 chapters use 42 final ImageGen PNG teaching figures; no SVG or stored WebP derivatives.
-- State: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`
+- Root issue [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21): completed and closed.
+- Published book: *Applied AI Engineering: From Behavior Contracts to Reliable Products*.
+- Edition: 21 chapters, 42 ImageGen PNG figures, 55 sources, 118 claims, 109 passing companion tests, and a 633-page A4 PDF.
+- Published PDF SHA-256: `0ea2dbd9a77edf30dbaffba8700e17f684ea32abb9135d0afa5a630394914fda`.
+- Publication commit: `89ce225`; role state: `project-control/roles/applied-ai-engineer/ROLE-STATE.md`.
 
 ### Agentic AI Engineer
 
-- Root issue: [#32](https://github.com/alpeshznakrani/komalnakrani/issues/32)
-- Phases 01, 04, and 05: accepted at commit `b59c3f5`; canonical decision is one 20-chapter book.
-- Phase 07: accepted at commit `e4e8ec4` with 20 complete production blueprints and all 38 forecast figures allocated.
-- Phase 08 parent: [#45 - Write the complete Agentic AI Engineering manuscript](https://github.com/alpeshznakrani/komalnakrani/issues/45)
-- Last completed child: [#56 - Write Agentic AI Engineering chapters 10-12](https://github.com/alpeshznakrani/komalnakrani/issues/56), accepted at `9fb4001`
-- Manuscript state: 12 chapters and 64,307 words accepted; 33/33 cumulative companion tests pass; first two final ImageGen PNG figures are integrated.
-- Active child: [#59 - Write Agentic AI Engineering chapters 13-15](https://github.com/alpeshznakrani/komalnakrani/issues/59)
-- State: `project-control/roles/agentic-ai-engineer/ROLE-STATE.md`
+- Root issue [#32](https://github.com/alpeshznakrani/komalnakrani/issues/32): completed and closed.
+- Published book: *Agentic AI Engineering: Designing, Evaluating, and Operating Systems That Act*.
+- Edition: 20 chapters, 40 ImageGen PNG figures, 44 sources, 40 claims, 60 passing companion tests, and a 600-page A4 PDF.
+- Published PDF SHA-256: `787939e34f561fbc54e901ca258175786a3ad71926fc0c814112553071cc909a`.
+- Visual commit: `d902d51`; review assembly: `4e900f4`; publication commit: `209d091`.
+- Role state: `project-control/roles/agentic-ai-engineer/ROLE-STATE.md`.
 
 ### LLM Engineer
 
-- Root issue: [#36](https://github.com/alpeshznakrani/komalnakrani/issues/36)
-- Phases 01, 04, and 05: accepted at commit `18332c3`; canonical decision is a 33-chapter two-volume series.
-- Phase 07: accepted at commit `9d9e1c3` with 33 complete production blueprints and all 66 forecast figures allocated.
-- Phase 08 parent: [#46 - Write the complete LLM Engineering two-volume manuscript](https://github.com/alpeshznakrani/komalnakrani/issues/46)
-- Last completed child: [#57 - Write LLM Engineering Volume 1 chapters 10-12](https://github.com/alpeshznakrani/komalnakrani/issues/57), accepted at `e19d530`
-- Manuscript state: Volume 1 Chapters 1-12 and 48/48 cumulative companion tests accepted.
-- Active child: [#58 - Write LLM Engineering Volume 1 chapters 13-15](https://github.com/alpeshznakrani/komalnakrani/issues/58)
-- State: `project-control/roles/llm-engineer/ROLE-STATE.md` (created during active Phase 06)
+- Root issue [#36](https://github.com/alpeshznakrani/komalnakrani/issues/36): final publication closure in the current worktree.
+- Published two-volume series: *LLM Behavior Engineering* and *LLM Adaptation and Runtime*.
+- Series: 33 chapters, 66 ImageGen PNG figures, 66 unique source URLs, 99 claims, 14 bounded cases, and 132 passing companion tests.
+- Volume 1: 16 chapters, 32 figures, 210 A4 pages; PDF SHA-256 `5cd5d16cd69c3c766fafa737812918cb1f37f34a91cb6753c7db044cd8c9375b`.
+- Volume 2: 17 chapters, 34 figures, 156 A4 pages; PDF SHA-256 `36199bf5e69a13502cbbdee4ba8a12a0fb606c04f3577c6870e82822cb93ccd4`.
+- Visual and review-proof commit: `d6a3159`; final publication is recorded by the root integration commit that contains this factory state.
+- Role state: `project-control/roles/llm-engineer/ROLE-STATE.md`.
+
+## Current public catalog
+
+- Published roles: Forward Deployed Engineer, Applied AI Engineer, Agentic AI Engineer, and LLM Engineer.
+- Published books: Forward Deployed Engineering, Applied AI Engineering, Agentic AI Engineering, LLM Behavior Engineering, and LLM Adaptation and Runtime.
+- Published course: Forward Deployed Engineering Lab only.
+- Image policy: canonical PNG assets only; no stored SVG or WebP publication figures. Astro owns delivery optimization.
+- The existing Komal Astro visual structure is preserved; all book content and figures are original to Komal.
 
 ## Exact next action
 
-Advance the three isolated Komal lanes in parallel: hostile full-book Applied AI
-QA under #55, Agentic AI Chapters 13-15 under #59, and LLM Engineering Volume 1
-Chapters 13-15 under #58. Continue root-owned ImageGen production and shared
-publication/factory integration without entering deferred Abhyaas work.
+Hold after the final LLM commit, push, issue closure, and production smoke checks.
+Do not start another role, book, or course until the user explicitly resumes the
+factory. Do not resume Abhyaas as part of this hold transition.
 
 ## Resume instructions
 
-Read this file and the applicable active GitHub issue, inspect `git status`, and
-resume one of the three isolated Komal lanes without editing another lane's
-state. Do not resume Abhyaas until Komal is complete.
+On a future user instruction, inspect Git status and GitHub state, read the
+relevant role state, and select the next approved role from the 32-role catalog.
+Preserve the current-book completion boundary and do not infer authorization for
+Abhyaas or a new Komal role from this completed wave.

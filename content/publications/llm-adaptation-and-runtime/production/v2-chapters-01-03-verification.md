@@ -1,10 +1,12 @@
 # Verification - Volume 2 Chapters 1-3
 
+> **Historical manuscript-batch checkpoint — superseded for visual status.** This record preserves the evidence captured before figure production. The current Volume 2 release has all **34/34 accepted ImageGen PNG figures** integrated and mirrored. Current release authority is [`../final-release-qa.md`](../final-release-qa.md); Phase 10 asset and provenance records are in [`../../../../project-control/roles/llm-engineer/phase-10/`](../../../../project-control/roles/llm-engineer/phase-10/).
+
 Date: 2026-08-16
 
 Issue: `#62` under parent `#46`
 
-Result: `PASS - MANUSCRIPT COMPLETE, IMAGEGEN ASSETS PENDING`
+Historical result at capture time: `PASS - MANUSCRIPT COMPLETE, IMAGEGEN ASSETS PENDING` (superseded; assets are now complete).
 
 ## Production counts
 
@@ -14,7 +16,7 @@ Result: `PASS - MANUSCRIPT COMPLETE, IMAGEGEN ASSETS PENDING`
 - Sources: 21 unique; all 21 returned HTTP 200 on 2026-08-16 with limitations retained.
 - Cases: `LLME-CASE-008`, `LLME-CASE-001`, `LLME-CASE-009`, and `LLME-CASE-010`, bounded to accepted method roles.
 - Figure anchors: 6/6, exactly two accessible PNG paths per chapter.
-- Actual PNG/SVG/WebP assets: 0.
+- Actual PNG/SVG/WebP assets at this historical checkpoint: 0.
 - Learning/state/immediate-QA records: 3/3 each.
 - Companion tests added: 12/12; Volume 2 target 12/12; series cumulative target 76/76.
 
@@ -39,11 +41,11 @@ Result: `PASS - MANUSCRIPT COMPLETE, IMAGEGEN ASSETS PENDING`
 | Publication validation | PASS: 4 role records and 5 publication records |
 | Repository-wide `npm run check` | PASS: schemas, repository tests, companion suites, Astro build, and 630 built-site references across 36 HTML pages |
 | Source URL reachability | PASS: 21/21 HTTP 200 |
-| Actual PNG/SVG/WebP assets | PASS: 0 |
+| Actual PNG/SVG/WebP assets at this historical checkpoint | PASS: 0 |
 
 ## Publication-system note
 
-`figures.json` remains empty until actual raster assets exist. The manifest and manuscript anchors retain six accepted semantic specifications. Root should produce colorful, crisp, artistic 3D/realistic raster figures with ImageGen, verify short essential labels and accessibility, then add schema-valid records and frontmatter figure IDs.
+At this historical checkpoint, `figures.json` was empty and the manifest/manuscript anchors retained six accepted semantic specifications. That pending handoff is complete and superseded: the final Volume 2 registry, frontmatter figure IDs, canonical PNGs, public mirrors, essential labels, and accessibility records are integrated within the accepted 34/34-figure release documented by the current final release QA and Phase 10 records linked above.
 
 ## Next handoff
 

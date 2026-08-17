@@ -4,7 +4,8 @@
 - Mosaic milestone: `MD-09` artifact compatibility audit complete; milestone remains open.
 - Production claims: `CLM-004` through `CLM-006` map exactly to `V2-C02-CL01` through `V2-C02-CL03`.
 - Bounded case: `LLME-CASE-001`, used only for foundational Transformer mechanisms and historic limits.
-- Figure anchors: `V2-F02.1`, `V2-F02.2`; assets pending root ImageGen.
+- Visual gate: complete; 2/2 ready accepted ImageGen PNGs: `V2-F02.1`, `V2-F02.2`.
+- Record boundary: This chapter-state record does not assert publication or runtime behavior.
 - Companion: model/tokenizer inspection fixture plus deterministic validator; four Chapter 2 tests.
 
 ## Locked decisions

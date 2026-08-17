@@ -1,15 +1,18 @@
-# Phase 11 publication proof QA
+# Phase 11 historical review-proof QA (superseded)
 
-## Scope and current disposition
+> **Historical evidence notice:** This file preserves the deterministic review-proof evidence captured before publication. Its review-state metadata and proof hashes are historical and have been superseded as the current release authority by [`final-release-qa.md`](./final-release-qa.md) and the published [`publication.json`](./publication.json).
+
+## Historical scope and disposition
 
 - Publication: `llm-adaptation-and-runtime`, Volume 2 of the LLM Engineering series.
-- Current disposition: **deterministic review-proof pass; not published**.
-- Publication invariant: `status` is `review`, `edition.publishedAt` is `null`, and `pdf.enabled` is `false`.
-- Scope boundary: this report owns Volume 2 front matter, part introductions, appendices, review metadata, and later proof inspection. Phase 10 figures, assets, mirrors, registry, common provenance, and common manifest remain separately owned.
+- Proof-time disposition: **deterministic review-proof pass; not yet published at the time this evidence was recorded**.
+- Proof-time invariant: `status` was `review`, `edition.publishedAt` was `null`, and `pdf.enabled` was `false`.
+- Current release disposition: **published First edition**, dated `2026-08-17`, with `pdf.enabled: true`; see the current manifest and final release QA linked above.
+- Scope boundary: this historical report covered Volume 2 front matter, part introductions, appendices, review metadata, and proof inspection. Phase 10 figures, assets, mirrors, registry, common provenance, and common manifest remained separately owned.
 
 ## Complete-edition source assembly
 
-- Front matter: present in `front-matter/front-matter.md` and identifies the file as a review edition rather than a published edition.
+- Front matter: at proof time, present in `front-matter/front-matter.md` and identifying the file as a review edition rather than a published edition.
 - Part introductions: five introductions in `front-matter/part-introductions.md`, aligned with chapter starts 1, 4, 9, 14, and 17.
 - Chapters: 17 chapter source files remain assembled in manifest order.
 - Appendices: seven Volume2-local appendices are present after the chapters.
@@ -17,15 +20,15 @@
 - Boundaries: Mosaic Desk remains fictional; its data, run values, candidates, capacity, incident, and release evidence remain synthetic or simulated. No real training, model execution, benchmark, adapter/checkpoint creation, deployment, production incident, or release is claimed.
 - Authority: product, domain, data, privacy/legal, security, platform/SRE, risk, and release authority remain separate from the LLM Engineer's technical recommendation.
 
-## Metadata review
+## Historical metadata review
 
-- Edition label: `First edition review`.
+- Proof-time edition label: `First edition review`.
 - Part starts: `[1, 4, 9, 14, 17]`.
 - Appendix summary: present and aligned with the seven appendix source files.
 - Figure registry note: declares 34 original synthetic PNG teaching figures and excludes measured model, product, user, capacity, and production interpretations.
-- Publication state: review only.
-- Publication date: null.
-- Canonical PDF: disabled.
+- Proof-time publication state: review only.
+- Proof-time publication date: null.
+- Proof-time canonical PDF: disabled.
 
 ## Source-assembly validation
 
@@ -70,9 +73,9 @@ Both proofs were built independently with the bundled PDF runtime from the same 
 - Re-rendered and reviewed 24 critical pages at 120 DPI: cover, copyright, contents, all five part starts, the first chapter after each part boundary, appendices landing page, all seven appendix starts, figure registry, sources, and edition record.
 - No visible clipping, overlap, missing glyphs, broken images, blank assembly pages, malformed tables, or bad section transitions.
 - Figures remain crisp and legible with their captions; dense registry and source pages remain within the page bounds.
-- The edition record's `Published: None` is the truthful rendering of `edition.publishedAt: null` for this review-only proof, not a publication claim.
+- The edition record's `Published: None` was the truthful rendering of `edition.publishedAt: null` for this historical review-only proof, not a statement of the current published edition.
 
-## Traceability and final state
+## Traceability and proof-time state
 
 - Forward/reverse source and claim symmetry: pass for 57 sources and 51 claims.
 - Forward/reverse case-study symmetry: pass for 36 declared links spanning 11 cases.
@@ -80,8 +83,10 @@ Both proofs were built independently with the bundled PDF runtime from the same 
 - Companion validation: 68/68 tests pass.
 - Publication schema/source validation and publication tests: pass.
 - Originality scan: zero exact duplicate paragraphs and zero nontrivial cross-file 12-gram overlaps above the review threshold.
-- Retained publication state: `status: review`, `edition.publishedAt: null`, and `pdf.enabled: false`.
+- Retained proof-time state: `status: review`, `edition.publishedAt: null`, and `pdf.enabled: false`. This state applies only to the historical proof recorded here and is not the current manifest state.
 
-## Release boundary
+## Historical release boundary and current authority
 
-This complete-edition source and both deterministic files pass the review-proof gate, not the publication gate. No release PDF is enabled and no published date has been asserted. Any later source, figure, registry, metadata, or builder change invalidates the proof source digest and requires the affected gates to rerun.
+At the time this evidence was recorded, the complete-edition source and both deterministic files passed the review-proof gate but had not passed the publication gate; no release PDF was then enabled and no publication date had then been asserted. Those proof-time files and hashes remain valid historical evidence for that review snapshot.
+
+That disposition is superseded. The current `publication.json` records the published First edition dated `2026-08-17` with its canonical PDF enabled, and `final-release-qa.md` records the accepted final-release hashes, render inspection, validation, and web checks. Any future material source, figure, registry, metadata, or builder change remains subject to the current edition and release controls documented there.

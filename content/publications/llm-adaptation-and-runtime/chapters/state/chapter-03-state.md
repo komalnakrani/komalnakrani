@@ -4,7 +4,8 @@
 - Mosaic milestone: `MD-09` complete as a decision dossier.
 - Production claims: `CLM-007` through `CLM-009` map exactly to `V2-C03-CL01` through `V2-C03-CL03`.
 - Bounded cases: `LLME-CASE-008`, `LLME-CASE-009`, and `LLME-CASE-010`; each illustrates a method under its reported conditions, not a Mosaic outcome or universal prescription.
-- Figure anchors: `V2-F03.1`, `V2-F03.2`; assets pending root ImageGen.
+- Visual gate: complete; 2/2 ready accepted ImageGen PNGs: `V2-F03.1`, `V2-F03.2`.
+- Record boundary: This chapter-state record does not assert publication or runtime behavior.
 - Companion: intervention ladder fixture plus deterministic evaluator; four Chapter 3 tests.
 
 ## Locked decisions

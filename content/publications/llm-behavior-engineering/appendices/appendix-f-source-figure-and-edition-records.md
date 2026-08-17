@@ -4,9 +4,9 @@ Publication integrity depends on stable identity. A reader or reviewer should be
 
 ## Publication identity
 
-The canonical manifest is `publication.json`. It records the publication and role slugs, series and volume, title and subtitle, author, language, review status, edition identity, ordered chapters, part boundaries, registry paths, and PDF disposition.
+The canonical manifest is `publication.json`. It records the publication and role slugs, series and volume, title and subtitle, author, language, publication status, edition identity, ordered chapters, part boundaries, registry paths, and PDF disposition.
 
-Version 1.0.0 is currently a first-edition review. Its `publishedAt` value is null and `pdf.enabled` remains false. A locally generated proof may be complete enough for inspection while remaining unreleased. Proof generation must not silently transition the manifest to published state or enable a canonical download.
+Version 1.0.0 is the published First edition dated 2026-08-17. Its manifest records `status: published`, `edition.publishedAt: 2026-08-17`, and `pdf.enabled: true`. The enabled download identifies only the exact PDF that passed final artifact and web review. A locally generated proof may be complete enough for inspection while remaining unreleased. Proof generation must not silently transition the manifest to published state or enable a canonical download.
 
 Status meanings are:
 
@@ -90,4 +90,4 @@ Two consecutive proof builds from unchanged inputs must produce the same PDF has
 
 ## Release transition
 
-A passing proof remains a proof. Publication requires an explicit transition that records the accepted canonical files, exact PDF digest, web route checks, complete render review, issue and authority state, publication date, and enabled download path. Until that transition occurs, `status: review`, `publishedAt: null`, and `pdf.enabled: false` remain the truthful manifest state.
+A passing proof remains a proof. Publication requires an explicit transition that records the accepted canonical files, exact PDF digest, web route checks, complete render review, issue and authority state, publication date, and enabled download path. Version 1.0.0 completed that transition on 2026-08-17; future corrections must follow the correction and edition rules above rather than silently replacing the accepted artifact.

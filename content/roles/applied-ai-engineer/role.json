@@ -3,7 +3,7 @@
   "slug": "applied-ai-engineer",
   "title": "Applied AI Engineer",
   "summary": "A product-oriented engineer who turns uncertain model capability into useful, measurable, reliable, and governable behavior for defined users and tasks.",
-  "status": "draft",
+  "status": "published",
   "boundary": {
     "includes": [
       "Define task-specific product behavior and maintain the evidence loop from hypothesis through operation and controlled change.",

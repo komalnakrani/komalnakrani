@@ -16,7 +16,7 @@ node content/publications/llm-adaptation-and-runtime/production/audit-traceabili
 
 - The 17 publication chapters exactly match the frozen Volume 2 architecture order and titles.
 - Part starts remain `[1, 4, 9, 14, 17]`.
-- Publication state remains `review`, `edition.publishedAt` remains `null`, and `pdf.enabled` remains `false` outside proof generation.
+- Publication state remains `published`, `edition.publishedAt` remains `2026-08-17`, and `pdf.enabled` remains `true` for the canonical release.
 - Every chapter `sourceIds` entry resolves to `sources.json`.
 - Every chapter `claimIds` entry resolves to `claims.json`, belongs to that chapter, and appears visibly in the manuscript.
 - Every claim source resolves.
@@ -39,4 +39,4 @@ The case-study register may intentionally contain additional architecture or cro
 - Missing reverse case links repaired: five.
 - Previously abbreviated or absent visible case placements repaired: 18.
 
-The gate must pass before a review proof or release handoff is accepted.
+The gate must pass before a final release artifact or later release handoff is accepted.

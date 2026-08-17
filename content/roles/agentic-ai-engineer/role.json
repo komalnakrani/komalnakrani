@@ -3,7 +3,7 @@
   "slug": "agentic-ai-engineer",
   "title": "Agentic AI Engineer",
   "summary": "Designs, evaluates, and operates bounded model-directed systems that act through tools while preserving state, authority, evidence, recovery, and named professional boundaries.",
-  "status": "draft",
+  "status": "published",
   "boundary": {
     "includes": [
       "Agent suitability, goal and action contracts, harnesses, tools, state, handoffs, durable effects, evaluation, controls, operations, and change evidence",

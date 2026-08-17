@@ -4,7 +4,7 @@
 
 Komal Nakrani
 
-First edition review, version 1.0.0 (2026)
+First edition, version 1.0.0, published 2026-08-17
 
 Copyright (c) 2026 Komal Nakrani. All rights reserved except where separately stated for cited sources or companion dependencies. This book is original. Mosaic Desk and all satellite cases are fictional. Their records, cases, measurements, failures, decisions, and outcomes are synthetic teaching material, not evidence about a real product, customer, employer, model, provider, or deployment.
 
@@ -125,7 +125,7 @@ The figures explain relationships and decision states. They do not report measur
 
 Material chapter claims use stable claim IDs that resolve through `claims.json` to `sources.json`. Sources include primary standards, peer-reviewed papers, official documentation, first-party technical publications, and bounded first-party evidence. A source may support one narrow statement without proving the entire synthesis. Vendor evidence remains vendor evidence. A benchmark retains its task, dataset, version, and limitations.
 
-This edition remains under review. `publishedAt` is intentionally null and the canonical PDF is disabled until complete web/PDF review and release authority are recorded. Review proofs are not released editions.
+This first edition was published on 2026-08-17 after complete web and PDF review. Publication identifies the exact reviewed edition and canonical download; it does not approve any model, product, deployment, residual risk, or organizational decision discussed by a reader.
 
 Corrections must enter `errata.json` or a reviewed edition change. A correction identifies edition, location, problem, disposition, resolution, and replacement text when applicable. No web page or PDF should silently change while retaining the same released edition identity.
 

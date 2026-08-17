@@ -4,7 +4,8 @@
 - Mosaic milestone: `MD-10` complete as a synthetic data gate.
 - Production claims: `CLM-013` through `CLM-015` map exactly to `V2-C05-CL01` through `V2-C05-CL03`.
 - Bounded cases: `LLME-CASE-006` and `LLME-CASE-008`, used for pipeline and stage-artifact lessons only.
-- Figure anchors: `V2-F05.1`, `V2-F05.2`; assets pending root ImageGen.
+- Visual gate: complete; 2/2 ready accepted ImageGen PNGs: `V2-F05.1`, `V2-F05.2`.
+- Record boundary: This chapter-state record does not assert publication or runtime behavior.
 - Companion: curation and five-vault manifest plus deterministic audit; four Chapter 5 tests.
 
 ## Locked decisions

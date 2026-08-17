@@ -19,6 +19,7 @@ const readJson = (file) => JSON.parse(readText(file));
 const publication = readJson(path.join(publicationDir, "publication.json"));
 const sourceRecords = readJson(path.join(publicationDir, "sources.json")).sources;
 const claimRecords = readJson(path.join(publicationDir, "claims.json")).claims;
+const figureRecords = readJson(path.join(publicationDir, "figures.json")).figures;
 const caseRecords = readJson(caseRegisterPath).cases;
 const errors = [];
 
@@ -41,6 +42,7 @@ const parseFrontmatterArray = (raw, key, file) => {
 const duplicates = (values) => values.filter((value, index) => values.indexOf(value) !== index);
 assert(duplicates(sourceRecords.map((source) => source.id)).length === 0, "sources.json: duplicate source IDs");
 assert(duplicates(claimRecords.map((claim) => claim.id)).length === 0, "claims.json: duplicate claim IDs");
+assert(duplicates(figureRecords.map((figure) => figure.id)).length === 0, "figures.json: duplicate figure IDs");
 assert(duplicates(caseRecords.map((record) => record.case_id)).length === 0, "case-study-register.json: duplicate case IDs");
 
 const architecture = readText(architecturePath);
@@ -59,9 +61,9 @@ assert(
   "publication.json: chapter order/title differs from the frozen Volume 2 architecture",
 );
 assert(JSON.stringify(publication.partStarts) === JSON.stringify([1, 4, 9, 14, 17]), "publication.json: partStarts drifted");
-assert(publication.status === "review", "publication.json: status must remain review");
-assert(publication.edition.publishedAt === null, "publication.json: edition.publishedAt must remain null");
-assert(publication.pdf.enabled === false, "publication.json: pdf.enabled must remain false outside proof generation");
+assert(publication.status === "published", "publication.json: status must remain published");
+assert(publication.edition.publishedAt === "2026-08-17", "publication.json: edition.publishedAt must remain 2026-08-17");
+assert(publication.pdf.enabled === true, "publication.json: pdf.enabled must remain true for the canonical release");
 
 const sourceById = new Map(sourceRecords.map((source) => [source.id, source]));
 const claimById = new Map(claimRecords.map((claim) => [claim.id, claim]));
@@ -69,6 +71,7 @@ const caseById = new Map(caseRecords.map((record) => [record.case_id, record]));
 const expectedSourceChapters = new Map(sourceRecords.map((source) => [source.id, []]));
 const expectedSourceClaims = new Map(sourceRecords.map((source) => [source.id, []]));
 const chapterRawBySlug = new Map();
+let figureBindings = 0;
 
 for (const chapter of publication.chapters) {
   const chapterPath = path.join(publicationDir, chapter.sourceFile);
@@ -78,12 +81,21 @@ for (const chapter of publication.chapters) {
   chapterRawBySlug.set(chapter.slug, raw);
   const sourceIds = parseFrontmatterArray(raw, "sourceIds", chapter.sourceFile);
   const claimIds = parseFrontmatterArray(raw, "claimIds", chapter.sourceFile);
+  const figureIds = parseFrontmatterArray(raw, "figureIds", chapter.sourceFile);
   const inlineClaimIds = [...raw.matchAll(/\[(CLM-\d{3})\]/g)].map((match) => match[1]);
+  const expectedFigureIds = figureRecords
+    .filter((figure) => figure.chapterSlug === chapter.slug)
+    .map((figure) => figure.id);
 
   assert(
     JSON.stringify([...new Set(claimIds)].sort()) === JSON.stringify([...new Set(inlineClaimIds)].sort()),
     `${chapter.sourceFile}: claimIds do not match the visible inline claim-citation set`,
   );
+  assert(
+    JSON.stringify(figureIds) === JSON.stringify(expectedFigureIds),
+    `${chapter.sourceFile}: figureIds must exactly match the chapter's figures.json records in registry order`,
+  );
+  figureBindings += figureIds.length;
   for (const sourceId of sourceIds) {
     assert(sourceById.has(sourceId), `${chapter.sourceFile}: unknown source ${sourceId}`);
     expectedSourceChapters.get(sourceId)?.push(chapter.slug);
@@ -162,6 +174,8 @@ console.log(
       appendices: appendixFiles.length,
       sources: sourceRecords.length,
       claims: claimRecords.length,
+      figures: figureRecords.length,
+      figureBindings,
       batchFiles: batchFiles.length,
       declaredCaseLinks,
       distinctDeclaredCases: declaredCaseIds.size,
