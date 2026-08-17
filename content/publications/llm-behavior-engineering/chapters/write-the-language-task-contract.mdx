@@ -107,8 +107,8 @@ Every clause has a working owner, an authority, and conditions that require reva
 
 Success criteria should specify task, inputs, outputs, failure behavior, consequence, and judgment method before model optimization. This chapter's field set is a practical synthesis, not an industry standard. Provider guidance on evaluation criteria and broad evaluation research are useful inputs, but the team must define the consequence and contract for its own system. [CLM-004]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F02.1" data-image="/assets/publications/llm-behavior-engineering/v1-f02-1-task-consequence-authority.png">
-  <div role="img" aria-label="Authorized case input flows to a Mosaic Desk proposal, then to a human decision gate, and only then to an allowed workflow effect.">Pending ImageGen figure V1-F02.1</div>
+<figure className="book-figure" data-figure-id="V1-F02.1" data-png="/assets/publications/llm-behavior-engineering/v1-f02-1-task-consequence-authority.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f02-1-task-consequence-authority.png" alt="Authorized case input flows to a proposal, then to a locked decision gate, and only then to an allowed effect." width="1693" height="929" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F02.1 - The proposal is not the decision.</strong> Essential labels: input, proposal, decision, effect. The figure locates Mosaic Desk before the human authority gate and makes the downstream consequence explicit. It illustrates the task contract rather than proving control effectiveness.</figcaption>
   <details><summary>Long description</summary><p>On the left, authorized case records enter a box labeled input. They flow to a translucent Mosaic Desk box labeled proposal. The proposal stops at a solid gate labeled decision, operated by an accountable human. A final arrow reaches an allowed workflow effect. A blocked side path shows that the proposal cannot bypass the decision gate.</p></details>
 </figure>
@@ -155,8 +155,8 @@ Prohibited behavior must not occur, even if requested in user or retrieved text.
 
 Mosaic cannot expose another case, approve warranty, issue a safety-critical instruction, contact a customer, order a part, or mutate a record. It also cannot treat instructions embedded in case text as authorization.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F02.2" data-image="/assets/publications/llm-behavior-engineering/v1-f02-2-behavior-state-ring.png">
-  <div role="img" aria-label="Six differently shaped stations represent required, uncertain, abstain, escalate, degraded, and prohibited behavior around the Mosaic task contract.">Pending ImageGen figure V1-F02.2</div>
+<figure className="book-figure" data-figure-id="V1-F02.2" data-png="/assets/publications/llm-behavior-engineering/v1-f02-2-behavior-state-ring.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f02-2-behavior-state-ring.png" alt="Six differently shaped stations represent required, uncertain, abstain, escalate, degraded, and prohibited behavior around a central contract." width="1402" height="1122" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F02.2 - Six explicit behavior states.</strong> Essential labels: required, uncertain, abstain, escalate, degraded, prohibited. Shape and path differences carry meaning in addition to color. The ring is a contract model, not a claim that every runtime exposes these states automatically.</figcaption>
   <details><summary>Long description</summary><p>A central contract card connects to six stations in reading order. Required is a solid check station. Uncertain is a split sign. Abstain is a closed output gate. Escalate is a handoff arrow to a human. Degraded is a narrowed path. Prohibited is a blocked barrier. Each station has its full text label.</p></details>
 </figure>

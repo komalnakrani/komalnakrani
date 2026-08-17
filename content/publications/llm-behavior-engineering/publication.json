@@ -9,9 +9,9 @@
   "description": "A professional guide to making language-model behavior explicit, grounded, measurable, and change-ready across managed and open-weight systems.",
   "author": "Komal Nakrani",
   "language": "en",
-  "status": "draft",
+  "status": "review",
   "cover": "indigo",
-  "edition": {"version":"1.0.0","label":"First edition draft","publishedAt":null,"copyrightYear":2026,"canonicalUrl":"https://komalnakrani.com/books/llm-behavior-engineering/"},
+  "edition": {"version":"1.0.0","label":"First edition review","publishedAt":null,"copyrightYear":2026,"canonicalUrl":"https://komalnakrani.com/books/llm-behavior-engineering/"},
   "chapters": [
     {"order":1,"slug":"the-model-is-not-the-behavior","title":"The Model Is Not the Behavior","summary":"Separate a model response from configured system behavior, outcome evidence, and accountable human authority.","minutes":65,"sourceFile":"chapters/the-model-is-not-the-behavior.mdx","objectiveIds":["LLME-K01","LLME-K12"]},
     {"order":2,"slug":"write-the-language-task-contract","title":"Write the Language-Task Contract","summary":"Turn an ambiguous language feature into measurable states, consequences, non-goals, escalation, and named decision authority.","minutes":75,"sourceFile":"chapters/write-the-language-task-contract.mdx","objectiveIds":["LLME-K01","LLME-K10"]},
@@ -30,6 +30,9 @@
     {"order":15,"slug":"run-experiments-that-isolate-change","title":"Run Experiments That Isolate Change","summary":"Turn a proposed system change into a preregistered, paired, repeatable comparison with visible segments, uncertainty, confounds, and explicit disposition.","minutes":105,"sourceFile":"chapters/run-experiments-that-isolate-change.mdx","objectiveIds":["LLME-K03","LLME-K04","LLME-K05","LLME-K06"]},
     {"order":16,"slug":"release-observe-and-change-the-model","title":"Release, Observe, and Change the Model","summary":"Turn the complete behavior dossier into an authority-bound release, observation, rollback, migration, and adaptation-referral system.","minutes":115,"sourceFile":"chapters/release-observe-and-change-the-model.mdx","objectiveIds":["LLME-K03","LLME-K09","LLME-K10","LLME-K11","LLME-K12"]}
   ],
+  "partStarts": [1, 5, 9, 13, 16],
+  "appendicesSummary": "Measurement and mechanism refreshers, reusable behavior-system artifacts, provider-neutral companion guidance, runtime and distributed-systems boundaries, terminology and adjacent-role guidance, and publication provenance records.",
+  "figureRegistryNote": "All 32 figures are original synthetic ImageGen PNG teaching illustrations for the fictional Mosaic Desk case. They explain relationships and decision states; they do not report measured model, product, user, or production outcomes.",
   "registries": {"sources":"sources.json","claims":"claims.json","figures":"figures.json","errata":"errata.json"},
   "pdf": {"enabled":false,"filename":"llm-behavior-engineering-v1.0.0.pdf"}
 }

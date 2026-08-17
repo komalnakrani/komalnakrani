@@ -118,8 +118,8 @@ Attention-based computation can combine information from prior context. It does 
 
 The original Transformer paper is a foundational mechanism source. `LLME-CASE-001` retains its machine-translation task, hardware, and historical limits rather than turning those results into Mosaic evidence. The paper does not establish that a current chat model is truthful, safe, or fit for this system. Transformer generation conditions each next token on represented prior context through attention-based layers. Modern architectures add variations and other mechanisms. [CLM-007]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F03.1" data-image="/assets/publications/llm-behavior-engineering/v1-f03-1-token-attention-next.png">
-  <div role="img" aria-label="Text passes through a tokenizer into positioned token pieces, then through an attention-based field to next-token scores and an output token.">Pending ImageGen figure V1-F03.1</div>
+<figure className="book-figure" data-figure-id="V1-F03.1" data-png="/assets/publications/llm-behavior-engineering/v1-f03-1-token-attention-next.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f03-1-token-attention-next.png" alt="Discrete tokens pass through a transparent attention matrix to one selected next token." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F03.1 - A bounded generation chain.</strong> Essential labels: tokens, attention, next. The figure connects input representation to next-token generation. It does not depict attention as a full causal explanation, database lookup, consciousness, or truth mechanism.</figcaption>
   <details><summary>Long description</summary><p>Text cards enter a bead-like gate labeled tokens. Positioned token beads enter a layered field labeled attention. The field produces a set of next-token scores, and one route reaches a token labeled next. A note states that decoding chooses the route. No human-like head or brain appears.</p></details>
 </figure>
@@ -180,8 +180,8 @@ Some runtimes restrict token choices so that output matches a grammar or schema.
 
 Decoding is a tradeoff surface, not a personality dial. Raising temperature does not make a model creative in a human sense. Lowering it does not make the model truthful. Each configuration changes the distribution of observable responses and belongs in behavior identity.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F03.2" data-image="/assets/publications/llm-behavior-engineering/v1-f03-2-decoding-landscape.png">
-  <div role="img" aria-label="Greedy, sampled, and constrained decoding follow different routes across the same next-token probability landscape.">Pending ImageGen figure V1-F03.2</div>
+<figure className="book-figure" data-figure-id="V1-F03.2" data-png="/assets/publications/llm-behavior-engineering/v1-f03-2-decoding-landscape.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f03-2-decoding-landscape.png" alt="Greedy, sampled, and constrained decoding follow visually distinct routes across the same probability landscape." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F03.2 - Decoding selects a route.</strong> Essential labels: greedy, sampled, constrained. The same score landscape supports different configured paths. The illustration explains variation and constraints; it does not rank the methods or imply that any route is factually correct.</figcaption>
   <details><summary>Long description</summary><p>A branching terrain represents possible next tokens over several steps. One solid route labeled greedy takes the locally highest branch. Several dotted routes labeled sampled show possible draws. A route labeled constrained passes through a mechanical gate that blocks invalid branches. All routes begin from the same context marker.</p></details>
 </figure>

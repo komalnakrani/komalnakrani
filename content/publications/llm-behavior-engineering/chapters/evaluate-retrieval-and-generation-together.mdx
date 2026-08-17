@@ -78,8 +78,8 @@ Ask whether each citation resolves to the intended source revision and span and 
 
 Ask whether labels, metrics, graders, adjudicators, and aggregation rules are credible for the claim being made. An evaluator can be the failing component.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F12.1" data-image="/assets/publications/llm-behavior-engineering/v1-f12-1-two-stage-evaluation.png">
-  <div role="img" aria-label="Retrieval evidence and generated proposal receive separate judgments before a joint case decision preserves both results.">Pending ImageGen figure V1-F12.1</div>
+<figure className="book-figure" data-figure-id="V1-F12.1" data-png="/assets/publications/llm-behavior-engineering/v1-f12-1-two-stage-evaluation.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f12-1-two-stage-evaluation.png" alt="Retrieval evidence and generated proposal receive separate judgments before a joint case decision preserves both results." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F12.1 - Component judgments combine without collapsing.</strong> Essential labels: retrieve, generate, joint, abstain. Two evidence cards remain visible in the joint record. The figure supports `CLM-034`; it contains no performance result.</figcaption>
   <details><summary>Long description</summary><p>A colorful three-dimensional evaluation bench has two independent stations. The retrieve station inspects eligible candidates, rank, and source state. The generate station inspects evidence use, citations, and bounded behavior. Their signed evidence cards enter a joint case folder that preserves both results, including a branch where retrieval fails but abstention passes.</p></details>
 </figure>
@@ -229,8 +229,8 @@ No eligible supporting unit exists in the snapshot. A noisy candidate is correct
 
 `LLME-CASE-003` contributes the limited lesson that retrieval and generation remain linked failure surfaces in the original RAG method. `LLME-CASE-004` contributes the limited lesson that retrieval stages are separable experiment variables. Their published benchmark results do not establish Mosaic quality, current model rankings, or production fitness.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F12.2" data-image="/assets/publications/llm-behavior-engineering/v1-f12-2-causal-failure-tree.png">
-  <div role="img" aria-label="A failed proposal branches backward through corpus, query, candidates, rank, context, model, citation, and evaluator evidence.">Pending ImageGen figure V1-F12.2</div>
+<figure className="book-figure" data-figure-id="V1-F12.2" data-png="/assets/publications/llm-behavior-engineering/v1-f12-2-causal-failure-tree.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f12-2-causal-failure-tree.png" alt="A failed proposal branches backward through corpus, query, candidates, rank, context, model, citation, and evaluator evidence." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F12.2 - Diagnose the layer before changing the system.</strong> Essential labels: corpus, query, candidates, rank, context, model, citation, evaluator. Evidence markers and question nodes avoid implying automatic causality. The figure supports `CLM-035` and `CLM-036`.</figcaption>
   <details><summary>Long description</summary><p>A realistic three-dimensional diagnostic tree begins with a failed proposal card and branches backward through eight labeled stations. Each branch contains a trace artifact and a question mark rather than a blame symbol. One path ends at missing corpus evidence, another at truncated context, another at unsupported model use, and another at evaluator disagreement.</p></details>
 </figure>

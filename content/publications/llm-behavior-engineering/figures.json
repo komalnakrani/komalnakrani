@@ -1,1 +1,325 @@
-{"schemaVersion":1,"figures":[]}
+{
+  "schemaVersion": 1,
+  "figures": [
+    {
+      "id": "FIG-001",
+      "file": "assets/v1-f01-1-model-system-outcome.png",
+      "alt": "A language model core sits inside an accountable system of configuration, software, evidence, users, and authority, ending in an observed outcome.",
+      "caption": "V1-F01.1 - The model is inside the accountable system. Essential labels: model, system, outcome. The figure separates a learned component from configuration, software, evidence, users, and authority. It illustrates the boundary; it does not measure causal contribution.",
+      "chapterSlug": "the-model-is-not-the-behavior",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-002",
+      "file": "assets/v1-f01-2-role-boundary-workbench.png",
+      "alt": "A shared LLM workbench has separate stations for behavior, agent effects, platform operations, and assurance around one case dossier.",
+      "caption": "V1-F01.2 - One workbench, distinct decision rights. Essential labels: behavior, agent effects, platform, assurance. The stations share evidence while the human authority gate remains separate. The figure is an ownership aid, not an organizational standard.",
+      "chapterSlug": "the-model-is-not-the-behavior",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-003",
+      "file": "assets/v1-f02-1-task-consequence-authority.png",
+      "alt": "Authorized case input flows to a proposal, then to a locked decision gate, and only then to an allowed effect.",
+      "caption": "V1-F02.1 - The proposal is not the decision. Essential labels: input, proposal, decision, effect. The figure locates Mosaic Desk before the human authority gate and makes the downstream consequence explicit. It illustrates the task contract rather than proving control effectiveness.",
+      "chapterSlug": "write-the-language-task-contract",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-004",
+      "file": "assets/v1-f02-2-behavior-state-ring.png",
+      "alt": "Six differently shaped stations represent required, uncertain, abstain, escalate, degraded, and prohibited behavior around a central contract.",
+      "caption": "V1-F02.2 - Six explicit behavior states. Essential labels: required, uncertain, abstain, escalate, degraded, prohibited. Shape and path differences carry meaning in addition to color. The ring is a contract model, not a claim that every runtime exposes these states automatically.",
+      "chapterSlug": "write-the-language-task-contract",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-005",
+      "file": "assets/v1-f03-1-token-attention-next.png",
+      "alt": "Discrete tokens pass through a transparent attention matrix to one selected next token.",
+      "caption": "V1-F03.1 - A bounded generation chain. Essential labels: tokens, attention, next. The figure connects input representation to next-token generation. It does not depict attention as a full causal explanation, database lookup, consciousness, or truth mechanism.",
+      "chapterSlug": "reason-about-tokens-attention-and-generation",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-006",
+      "file": "assets/v1-f03-2-decoding-landscape.png",
+      "alt": "Greedy, sampled, and constrained decoding follow visually distinct routes across the same probability landscape.",
+      "caption": "V1-F03.2 - Decoding selects a route. Essential labels: greedy, sampled, constrained. The same score landscape supports different configured paths. The illustration explains variation and constraints; it does not rank the methods or imply that any route is factually correct.",
+      "chapterSlug": "reason-about-tokens-attention-and-generation",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-007",
+      "file": "assets/v1-f04-1-access-postures.png",
+      "alt": "Five access booths expose different combinations of model control, hosting responsibility, inspection, adaptation, and external dependency.",
+      "caption": "V1-F04.1 - Access redistributes responsibility. Essential labels: managed, hosted, self-hosted, adapted, hybrid. Each booth exposes different control and operating surfaces. The figure supports responsibility comparison; it does not declare one posture safer, cheaper, or better.",
+      "chapterSlug": "select-a-model-and-access-posture",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-008",
+      "file": "assets/v1-f04-2-constraint-frontier.png",
+      "alt": "Candidate artifacts balance across behavior, privacy, latency, cost, control, and change after hard constraints remove ineligible paths.",
+      "caption": "V1-F04.2 - Selection is a constraint frontier. Essential labels: behavior, privacy, latency, cost, control, change. Hard gates remove candidates before weighted comparison. The artwork operationalizes the selection method; it is not empirical candidate performance.",
+      "chapterSlug": "select-a-model-and-access-posture",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-009",
+      "file": "assets/v1-f05-1-configuration-lockbox.png",
+      "alt": "A transparent lockbox binds model, prompt, context, decoding, schema, evaluator, and runtime version tokens into one baseline identity.",
+      "caption": "V1-F05.1 - Lock the complete behavior identity. Essential labels: model, prompt, context, runtime. Smaller visible tokens represent decoding, schema, evaluator, cases, and adapter. The illustration defines manifest completeness; it does not claim bitwise determinism.",
+      "chapterSlug": "establish-a-reproducible-baseline",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-010",
+      "file": "assets/v1-f05-2-repeated-trials.png",
+      "alt": "One frozen configuration enters several repeated trials whose outputs occupy a visible variation band rather than one identical point.",
+      "caption": "V1-F05.2 - Same configuration can yield variation. Essential labels: same config, trials, variation. The figure separates repeated observations from configuration changes; it does not specify an expected statistical distribution.",
+      "chapterSlug": "establish-a-reproducible-baseline",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-011",
+      "file": "assets/v1-f06-1-message-trust-stack.png",
+      "alt": "A message stack separates trusted application control from user intent, context, and untrusted content using solid trust boundaries.",
+      "caption": "V1-F06.1 - Preserve trust through the message stack. Essential labels: control, user, context, untrusted. Shape and border cues distinguish zones without relying on color alone. The figure supports the control-data boundary; it does not claim that separation alone prevents attacks.",
+      "chapterSlug": "engineer-instructions-and-messages",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-012",
+      "file": "assets/v1-f06-2-ablation-workbench.png",
+      "alt": "One instruction module is removed from a locked baseline while all other message, model, case, and evaluator components remain fixed for comparison.",
+      "caption": "V1-F06.2 - Change one instruction component. Essential labels: baseline, remove one, compare. The workbench illustrates controlled ablation; it does not claim that any component produces a measured improvement.",
+      "chapterSlug": "engineer-instructions-and-messages",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-013",
+      "file": "assets/v1-f07-1-validation-ladder.png",
+      "alt": "Generated output passes separate parse, schema, semantic, and provenance gates before a bounded proposal may be displayed.",
+      "caption": "V1-F07.1 - Typed output still crosses several gates. Essential labels: parse, schema, semantic, display. A provenance gate remains visible beside semantic validation. The figure explains the validation ladder; it does not claim that passing gates proves factual truth.",
+      "chapterSlug": "make-outputs-typed-and-bounded",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-014",
+      "file": "assets/v1-f07-2-bounded-output-states.png",
+      "alt": "A validator routes candidates into distinct valid, repair, abstain, escalate, and fail-closed terminal paths.",
+      "caption": "V1-F07.2 - Every candidate reaches an explicit state. Essential labels: valid, repair, abstain, escalate, fail closed. Shape and icon cues distinguish branches without color alone. The figure defines fallback behavior; it does not assign approval authority.",
+      "chapterSlug": "make-outputs-typed-and-bounded",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-015",
+      "file": "assets/v1-f08-1-context-budget.png",
+      "alt": "A finite context container allocates separate space to trusted control, history, authorized evidence, and reserved output.",
+      "caption": "V1-F08.1 - Context is an allocated budget. Essential labels: control, history, evidence, output. Distinct shapes and dividers show trust and allocation. The figure explains the token ledger; it does not represent a real model window or optimal ratio.",
+      "chapterSlug": "budget-context-deliberately",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-016",
+      "file": "assets/v1-f08-2-context-failures.png",
+      "alt": "Oversized, stale, conflicting, unauthorized, and absent context objects have different visible defects and bounded responses.",
+      "caption": "V1-F08.2 - Context failures are not interchangeable. Essential labels: oversized, stale, conflicting, unauthorized, absent. Cracks, clocks, opposing arrows, locks, and gaps provide non-color cues. The figure supports failure classification; it does not measure prevalence.",
+      "chapterSlug": "budget-context-deliberately",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-017",
+      "file": "assets/v1-f09-1-evidence-path-decision.png",
+      "alt": "An evidence-need decision tree routes a task to parametric response, deterministic lookup, search, retrieval-generation, or abstention.",
+      "caption": "V1-F09.1 - Choose the evidence path before the technology. Essential labels: parametric, lookup, search, retrieve, abstain. The tree operationalizes the retrieval decision; it does not declare retrieval superior.",
+      "chapterSlug": "design-the-retrieval-question",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-018",
+      "file": "assets/v1-f09-2-source-authority-shelves.png",
+      "alt": "Manuals, bulletins, warranty records, parts data, and case notes sit on shelves marked by owner, freshness, and permission.",
+      "caption": "V1-F09.2 - Relevance does not determine authority. Essential labels: owner, fresh, allowed. Locks, clocks, and owner tabs provide non-color cues. The figure supports source qualification; it does not claim the pictured hierarchy applies outside Mosaic.",
+      "chapterSlug": "design-the-retrieval-question",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-019",
+      "file": "assets/v1-f10-1-retrieval-pipeline.png",
+      "alt": "Authorized sources move through ingestion, chunks, candidate lanes, filters, reranking, and selected evidence while retaining a trace at every stage.",
+      "caption": "V1-F10.1 - Retrieval is a sequence of inspectable decisions. Essential labels: ingest, chunks, candidates, filters, rerank, evidence. Identity tags remain attached throughout. The figure localizes failures for `CLM-028` and `CLM-029`; it reports no measured quality result.",
+      "chapterSlug": "build-the-retrieval-and-reranking-path",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-020",
+      "file": "assets/v1-f10-2-candidate-comparison.png",
+      "alt": "Lexical, vector, and hybrid trays contain overlapping but different useful and noisy candidates for the same authorized query set.",
+      "caption": "V1-F10.2 - Retrieval signals can complement and contradict one another. Essential labels: lexical, vector, hybrid, useful, noisy. Shape and document-ID cues supplement color. The figure explains candidate diversity without declaring a best method.",
+      "chapterSlug": "build-the-retrieval-and-reranking-path",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-021",
+      "file": "assets/v1-f11-1-provenance-aware-assembly.png",
+      "alt": "Selected evidence tiles keep source, freshness, permission, span, and revision tabs while being packed into a bounded context tray.",
+      "caption": "V1-F11.1 - Evidence retains identity inside context. Essential labels: source, fresh, allowed, span, revision. Tabs and lock/clock icons supplement color. The figure supports `CLM-031` and the transport portion of `CLM-032`; it does not prove source truth.",
+      "chapterSlug": "assemble-context-with-provenance",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-022",
+      "file": "assets/v1-f11-2-evidence-state-junction.png",
+      "alt": "Supporting, conflicting, stale, missing, and unauthorized evidence take separate answer, abstain, escalate, or fail-closed paths.",
+      "caption": "V1-F11.2 - Source conditions produce distinct bounded behavior. Essential labels: support, conflict, stale, missing, unauthorized, answer, abstain, escalate. Shapes and barrier icons distinguish states without color alone. The figure defines behavior; it does not adjudicate source truth.",
+      "chapterSlug": "assemble-context-with-provenance",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-023",
+      "file": "assets/v1-f12-1-two-stage-evaluation.png",
+      "alt": "Retrieval evidence and generated proposal receive separate judgments before a joint case decision preserves both results.",
+      "caption": "V1-F12.1 - Component judgments combine without collapsing. Essential labels: retrieve, generate, joint, abstain. Two evidence cards remain visible in the joint record. The figure supports `CLM-034`; it contains no performance result.",
+      "chapterSlug": "evaluate-retrieval-and-generation-together",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-024",
+      "file": "assets/v1-f12-2-causal-failure-tree.png",
+      "alt": "A failed proposal branches backward through corpus, query, candidates, rank, context, model, citation, and evaluator evidence.",
+      "caption": "V1-F12.2 - Diagnose the layer before changing the system. Essential labels: corpus, query, candidates, rank, context, model, citation, evaluator. Evidence markers and question nodes avoid implying automatic causality. The figure supports `CLM-035` and `CLM-036`.",
+      "chapterSlug": "evaluate-retrieval-and-generation-together",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-025",
+      "file": "assets/v1-f13-1-evaluation-population.png",
+      "alt": "A defined case population is sampled into language, appliance, risk, and evidence-condition trays, with covered and missing intersections visibly marked.",
+      "caption": "V1-F13.1 - Coverage is relative to a declared population. Essential labels: language, appliance, risk, evidence, covered, gap. Patterns supplement color. The figure supports `CLM-037` and `CLM-039`; it reports no population frequency.",
+      "chapterSlug": "build-representative-evaluation-cases",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-026",
+      "file": "assets/v1-f13-2-case-lifecycle.png",
+      "alt": "Evaluation cases move from authorized source through annotation, family-aware split, freeze, refresh, and retirement behind leakage barriers.",
+      "caption": "V1-F13.2 - Evaluation data has a controlled lifecycle. Essential labels: source, annotate, split, freeze, refresh, retire. Firewall and family-link icons make leakage controls visible. The figure supports `CLM-038`; it is not evidence that contamination is fully detectable.",
+      "chapterSlug": "build-representative-evaluation-cases",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-027",
+      "file": "assets/v1-f14-1-error-topology.png",
+      "alt": "One error specimen connects to separate criterion, consequence, severity, detectability, segment, control, and disposition records.",
+      "caption": "V1-F14.1 - One label cannot describe an error completely. Essential labels: criterion, consequence, severity, detectability, segment, control, disposition. Shape-coded cards supplement color. The figure supports `CLM-040`; it defines no universal severity.",
+      "chapterSlug": "name-errors-and-judgment-methods",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-028",
+      "file": "assets/v1-f14-2-judgment-stack.png",
+      "alt": "Judgment escalates from deterministic check to reference, grader, human, domain specialist, and accountable authority as ambiguity and consequence increase.",
+      "caption": "V1-F14.2 - Use the cheapest credible judge, then escalate. Essential labels: check, reference, grader, human, domain, authority. Stair height and icons supplement color. The figure supports `CLM-041` and `CLM-042`; it does not rank human or model infallibility.",
+      "chapterSlug": "name-errors-and-judgment-methods",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-029",
+      "file": "assets/v1-f15-1-controlled-experiment.png",
+      "alt": "Baseline and candidate systems share frozen controls while one unlocked variable is compared across paired cases, repeated trials, and segment lenses.",
+      "caption": "V1-F15.1 - One named change earns one bounded claim. Essential labels: baseline, one change, trials, slices, controls. Lock icons and a single open switch supplement color. The figure supports `CLM-043`; it does not claim scientific causality beyond the design.",
+      "chapterSlug": "run-experiments-that-isolate-change",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-030",
+      "file": "assets/v1-f15-2-disposition-gates.png",
+      "alt": "Experiment evidence, regressions, uncertainty, and confounds enter retain, revise, reject, scope, or release disposition gates.",
+      "caption": "V1-F15.2 - Results end in an explicit decision state. Essential labels: retain, revise, reject, scope, release. Gate shapes and evidence folders supplement color. The figure supports `CLM-044` and `CLM-045`; release remains a handoff, not approval.",
+      "chapterSlug": "run-experiments-that-isolate-change",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-031",
+      "file": "assets/v1-f16-1-production-trace.png",
+      "alt": "One Mosaic case crosses interface, retrieval, model, validation, human gate, and minimized-signal checkpoints without granting the model decision authority.",
+      "caption": "V1-F16.1 - Observe the whole behavior path, not only the model call. Essential labels: interface, retrieval, model, validate, human gate, signals. Distinct checkpoint shapes supplement color. The figure supports `CLM-046` and `CLM-048`; it reports no live traffic or quality.",
+      "chapterSlug": "release-observe-and-change-the-model",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    },
+    {
+      "id": "FIG-032",
+      "file": "assets/v1-f16-2-migration-replay-bridge.png",
+      "alt": "Current and candidate model adapters cross the same frozen replay bridge, with a shadow lane, changed-limit records, and a rollback path to the qualified current adapter.",
+      "caption": "V1-F16.2 - Provider change crosses a frozen evidence bridge. Essential labels: current, candidate, replay, shadow, changed limits, rollback. Direction and gate symbols supplement color. The figure supports `CLM-047` and the Volume 2 handoff; it is not migration-success evidence.",
+      "chapterSlug": "release-observe-and-change-the-model",
+      "creator": "Komal Nakrani",
+      "sourceIds": [],
+      "license": "Original; all rights reserved"
+    }
+  ]
+}

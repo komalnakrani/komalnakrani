@@ -67,8 +67,8 @@ The last four states are not interchangeable. Increasing context size cannot rep
 
 Supporting, conflicting, stale, absent, and unauthorized evidence require different behavior. NIST guidance, prompt-injection research, and citation interfaces motivate explicit provenance and control boundaries, but the exact behavior contract and authority owners remain local. Mosaic uses `answer`, `partial`, `abstain`, `escalate`, and `fail-closed` states under the Chapter 2 and Chapter 7 contracts; none grants an effect. [CLM-032]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F11.1" data-image="/assets/publications/llm-behavior-engineering/v1-f11-1-provenance-aware-assembly.png">
-  <div role="img" aria-label="Selected evidence tiles keep source, freshness, permission, span, and revision tabs while being packed into a bounded context tray.">Pending ImageGen figure V1-F11.1</div>
+<figure className="book-figure" data-figure-id="V1-F11.1" data-png="/assets/publications/llm-behavior-engineering/v1-f11-1-provenance-aware-assembly.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f11-1-provenance-aware-assembly.png" alt="Selected evidence tiles keep source, freshness, permission, span, and revision tabs while being packed into a bounded context tray." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F11.1 - Evidence retains identity inside context.</strong> Essential labels: source, fresh, allowed, span, revision. Tabs and lock/clock icons supplement color. The figure supports `CLM-031` and the transport portion of `CLM-032`; it does not prove source truth.</figcaption>
   <details><summary>Long description</summary><p>A crisp three-dimensional packing table receives document tiles from a retrieval tray. Each tile has a source tag, revision tab, freshness clock, permission lock, and highlighted qualifying span. An assembler fits eligible tiles into a bounded context case while a trace panel records included and omitted identities. No tile loses its metadata.</p></details>
 </figure>
@@ -208,8 +208,8 @@ Run the assembler.
 
 Now replace the stale unit with a second current authoritative bulletin that contradicts `EV-A7-SEC3`. The assembler preserves both and sets `conflicting`; it does not select the more similar or higher-ranked rule. A qualified domain owner resolves source authority outside Mosaic's generation path.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F11.2" data-image="/assets/publications/llm-behavior-engineering/v1-f11-2-evidence-state-junction.png">
-  <div role="img" aria-label="Supporting, conflicting, stale, missing, and unauthorized evidence take separate answer, abstain, escalate, or fail-closed paths.">Pending ImageGen figure V1-F11.2</div>
+<figure className="book-figure" data-figure-id="V1-F11.2" data-png="/assets/publications/llm-behavior-engineering/v1-f11-2-evidence-state-junction.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f11-2-evidence-state-junction.png" alt="Supporting, conflicting, stale, missing, and unauthorized evidence take separate answer, abstain, escalate, or fail-closed paths." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F11.2 - Source conditions produce distinct bounded behavior.</strong> Essential labels: support, conflict, stale, missing, unauthorized, answer, abstain, escalate. Shapes and barrier icons distinguish states without color alone. The figure defines behavior; it does not adjudicate source truth.</figcaption>
   <details><summary>Long description</summary><p>Five labeled evidence lanes enter a bright junction. Supporting evidence moves to a reviewable proposal. Conflict reaches a human-domain gate. Stale and missing evidence reach abstention or a request-for-evidence stop. Unauthorized evidence meets a locked fail-closed barrier. None of the lanes connects to an external action.</p></details>
 </figure>

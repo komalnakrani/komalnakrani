@@ -71,8 +71,8 @@ A gate can be `evidence-attached`, `authority-review-required`, `blocked`, or `a
 
 The deterministic companion intentionally leaves privacy, security, platform, domain, and release gates awaiting their authorities. Its result is `hold-for-authority-review`. That is a complete technical handoff, not a failed engineering task.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F16.1" data-image="/assets/publications/llm-behavior-engineering/v1-f16-1-production-trace.png">
-  <div role="img" aria-label="One Mosaic case crosses interface, retrieval, model, validation, human gate, and minimized-signal checkpoints without granting the model decision authority.">Pending ImageGen figure V1-F16.1</div>
+<figure className="book-figure" data-figure-id="V1-F16.1" data-png="/assets/publications/llm-behavior-engineering/v1-f16-1-production-trace.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f16-1-production-trace.png" alt="One Mosaic case crosses interface, retrieval, model, validation, human gate, and minimized-signal checkpoints without granting the model decision authority." width="1672" height="941" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F16.1 - Observe the whole behavior path, not only the model call.</strong> Essential labels: interface, retrieval, model, validate, human gate, signals. Distinct checkpoint shapes supplement color. The figure supports `CLM-046` and `CLM-048`; it reports no live traffic or quality.</figcaption>
   <details><summary>Long description</summary><p>A colorful three-dimensional service path carries one case envelope through an interface gate, authorized retrieval shelves, a model chamber, schema and citation validation, and a human decision desk. Small side gauges receive only version, state, segment, reason-code, and duration buckets. The proposal path stops before any external-effect system.</p></details>
 </figure>
@@ -172,8 +172,8 @@ Build a migration compatibility matrix across:
 
 Run the candidate in replay and shadow before any cohort. Keep current and candidate identities separate, preserve pass-to-fail transitions, and record every limitation that changes. A candidate can improve one slice while becoming unacceptable overall.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F16.2" data-image="/assets/publications/llm-behavior-engineering/v1-f16-2-migration-replay-bridge.png">
-  <div role="img" aria-label="Current and candidate model adapters cross the same frozen replay bridge, with a shadow lane, changed-limit records, and a rollback path to the qualified current adapter.">Pending ImageGen figure V1-F16.2</div>
+<figure className="book-figure" data-figure-id="V1-F16.2" data-png="/assets/publications/llm-behavior-engineering/v1-f16-2-migration-replay-bridge.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f16-2-migration-replay-bridge.png" alt="Current and candidate model adapters cross the same frozen replay bridge, with a shadow lane, changed-limit records, and a rollback path to the qualified current adapter." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F16.2 - Provider change crosses a frozen evidence bridge.</strong> Essential labels: current, candidate, replay, shadow, changed limits, rollback. Direction and gate symbols supplement color. The figure supports `CLM-047` and the Volume 2 handoff; it is not migration-success evidence.</figcaption>
   <details><summary>Long description</summary><p>Two realistic three-dimensional adapter modules labeled current and candidate connect to one frozen case vault and judgment console. The candidate travels through replay and shadow checkpoints. A changed-limits ledger records Gujarati citation and tail-duration regressions, while a bright rollback rail returns traffic eligibility to the current adapter. No path advances directly to production.</p></details>
 </figure>

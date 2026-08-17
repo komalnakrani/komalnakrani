@@ -63,8 +63,8 @@ Candidates that survive the hard gates can be compared on named dimensions:
 
 Do not force unlike systems to expose identical internals. A managed service may not reveal its tokenizer or weights. A self-hosted path may expose both but require the team to qualify kernels and hardware. The comparison schema should contain `not observable`, `not supported`, and `owner decision pending` rather than invented equivalence.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F04.1" data-image="/assets/publications/llm-behavior-engineering/v1-f04-1-access-postures.png">
-  <div role="img" aria-label="Five access booths expose different combinations of model control, hosting responsibility, inspection, adaptation, and external dependency.">Pending ImageGen figure V1-F04.1</div>
+<figure className="book-figure" data-figure-id="V1-F04.1" data-png="/assets/publications/llm-behavior-engineering/v1-f04-1-access-postures.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f04-1-access-postures.png" alt="Five access booths expose different combinations of model control, hosting responsibility, inspection, adaptation, and external dependency." width="1692" height="930" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F04.1 - Access redistributes responsibility.</strong> Essential labels: managed, hosted, self-hosted, adapted, hybrid. Each booth exposes different control and operating surfaces. The figure supports responsibility comparison; it does not declare one posture safer, cheaper, or better.</figcaption>
   <details><summary>Long description</summary><p>Five colorful three-dimensional booths share one request-and-result rail. The managed booth exposes an API panel but hides weights and runtime. Hosted and self-hosted booths progressively expose artifacts, runtime, and hardware controls. The adapted booth adds a versioned adapter package. The hybrid booth connects two bounded paths. Responsibility tokens move between an external provider and the organization at each booth.</p></details>
 </figure>
@@ -120,8 +120,8 @@ For each dimension, record:
 
 The result is a frontier, not a universal rank. One survivor may offer stronger Mosaic behavior with more external lifecycle dependence. Another may offer greater artifact control with unacceptable operational load. A third may be cheaper at a synthetic test volume but fail the evidence-residence gate. The decision chooses a bounded starting posture under current facts.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F04.2" data-image="/assets/publications/llm-behavior-engineering/v1-f04-2-constraint-frontier.png">
-  <div role="img" aria-label="Candidate artifacts balance across behavior, privacy, latency, cost, control, and change after hard constraints remove ineligible paths.">Pending ImageGen figure V1-F04.2</div>
+<figure className="book-figure" data-figure-id="V1-F04.2" data-png="/assets/publications/llm-behavior-engineering/v1-f04-2-constraint-frontier.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f04-2-constraint-frontier.png" alt="Candidate artifacts balance across behavior, privacy, latency, cost, control, and change after hard constraints remove ineligible paths." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F04.2 - Selection is a constraint frontier.</strong> Essential labels: behavior, privacy, latency, cost, control, change. Hard gates remove candidates before weighted comparison. The artwork operationalizes the selection method; it is not empirical candidate performance.</figcaption>
   <details><summary>Long description</summary><p>A bright workbench has a gate on the left and six mechanical balance arms on the right. Candidate blocks that fail residence or typed-boundary gates fall into a rejected tray. Remaining blocks occupy different positions across behavior, privacy, latency, cost, control, and change arms; no single podium or first-place marker appears.</p></details>
 </figure>

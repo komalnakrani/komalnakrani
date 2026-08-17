@@ -96,8 +96,8 @@ The final interface does not emit anonymous strings. It emits evidence-unit enve
 
 Chunking, metadata filters, candidate retrieval, and reranking are separately diagnosable stages. Research on foundational RAG, late interaction, and retrieval benchmarks motivates this separation, while the exact unit policy and behavior remain corpus and configuration specific. A high final rank cannot reveal which upstream stage created or hid the candidate unless the trace retains every transition. [CLM-029]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F10.1" data-image="/assets/publications/llm-behavior-engineering/v1-f10-1-retrieval-pipeline.png">
-  <div role="img" aria-label="Authorized sources move through ingestion, chunks, candidate lanes, filters, reranking, and selected evidence while retaining a trace at every stage.">Pending ImageGen figure V1-F10.1</div>
+<figure className="book-figure" data-figure-id="V1-F10.1" data-png="/assets/publications/llm-behavior-engineering/v1-f10-1-retrieval-pipeline.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f10-1-retrieval-pipeline.png" alt="Authorized sources move through ingestion, chunks, candidate lanes, filters, reranking, and selected evidence while retaining a trace at every stage." width="1693" height="929" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F10.1 - Retrieval is a sequence of inspectable decisions.</strong> Essential labels: ingest, chunks, candidates, filters, rerank, evidence. Identity tags remain attached throughout. The figure localizes failures for `CLM-028` and `CLM-029`; it reports no measured quality result.</figcaption>
   <details><summary>Long description</summary><p>A colorful three-dimensional workshop begins with locked source cabinets. Documents pass through an ingestion scanner into labeled chunk capsules. Separate lexical, vector, and late-interaction lanes produce candidate trays. A permission and freshness gate blocks ineligible items before a reranking station orders the remaining candidates. Every accepted evidence capsule keeps a visible source-and-revision tag.</p></details>
 </figure>
@@ -148,8 +148,8 @@ Record annotator role, instructions, disagreement, and adjudication. A domain ow
 
 When a query has multiple acceptable units, record the set. When only a combination supports the claim, record the group requirement rather than declaring either fragment sufficient. When no eligible unit exists, label the case `no-evidence`; do not force a positive document into the set for metric convenience.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F10.2" data-image="/assets/publications/llm-behavior-engineering/v1-f10-2-candidate-comparison.png">
-  <div role="img" aria-label="Lexical, vector, and hybrid trays contain overlapping but different useful and noisy candidates for the same authorized query set.">Pending ImageGen figure V1-F10.2</div>
+<figure className="book-figure" data-figure-id="V1-F10.2" data-png="/assets/publications/llm-behavior-engineering/v1-f10-2-candidate-comparison.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f10-2-candidate-comparison.png" alt="Lexical, vector, and hybrid trays contain overlapping but different useful and noisy candidates for the same authorized query set." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F10.2 - Retrieval signals can complement and contradict one another.</strong> Essential labels: lexical, vector, hybrid, useful, noisy. Shape and document-ID cues supplement color. The figure explains candidate diversity without declaring a best method.</figcaption>
   <details><summary>Long description</summary><p>Three bright evidence trays sit on a laboratory bench. The lexical tray contains an exact code match and an obsolete look-alike. The vector tray contains a paraphrase and a wrong appliance-family document. The hybrid tray overlaps both but still passes through a separate eligibility gate. Matching document IDs make overlaps visible, while warning badges mark noise.</p></details>
 </figure>

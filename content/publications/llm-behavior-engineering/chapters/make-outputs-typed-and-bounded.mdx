@@ -102,8 +102,8 @@ Even a valid, evidence-backed proposal is not an effect. Application software ch
 
 Syntactic validity does not establish factual correctness, permission, provenance, or authorization. Structured-output and citation features help produce inspectable artifacts, while NIST guidance reinforces that technical and governance controls must be evaluated in context. None of them transfers domain or risk authority to the schema, model, provider, or LLM engineer. [CLM-020]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F07.1" data-image="/assets/publications/llm-behavior-engineering/v1-f07-1-validation-ladder.png">
-  <div role="img" aria-label="Generated output passes separate parse, schema, semantic, and provenance gates before a bounded proposal may be displayed.">Pending ImageGen figure V1-F07.1</div>
+<figure className="book-figure" data-figure-id="V1-F07.1" data-png="/assets/publications/llm-behavior-engineering/v1-f07-1-validation-ladder.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f07-1-validation-ladder.png" alt="Generated output passes separate parse, schema, semantic, and provenance gates before a bounded proposal may be displayed." width="1693" height="929" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F07.1 - Typed output still crosses several gates.</strong> Essential labels: parse, schema, semantic, display. A provenance gate remains visible beside semantic validation. The figure explains the validation ladder; it does not claim that passing gates proves factual truth.</figcaption>
   <details><summary>Long description</summary><p>A bright three-dimensional output capsule moves through four distinct machines. The parse gate checks serialization, the schema gate checks field shapes, the semantic/provenance gate checks states and allowed evidence identifiers, and a final authority barrier keeps the result in a proposal display. Rejected capsules enter labeled evidence trays rather than disappearing.</p></details>
 </figure>
@@ -162,8 +162,8 @@ Malformed transport, incompatible schema, repeated invalid output, unauthorized 
 
 Abstention, escalation, repair, and fail-closed behavior should be explicit product states rather than improvised prose. This state machine is the book's engineering pattern, not a universal standard. It must be tested against the local consequence, workload, retry cost, and named owners. [CLM-021]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F07.2" data-image="/assets/publications/llm-behavior-engineering/v1-f07-2-bounded-output-states.png">
-  <div role="img" aria-label="A validator routes candidates into distinct valid, repair, abstain, escalate, and fail-closed terminal paths.">Pending ImageGen figure V1-F07.2</div>
+<figure className="book-figure" data-figure-id="V1-F07.2" data-png="/assets/publications/llm-behavior-engineering/v1-f07-2-bounded-output-states.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f07-2-bounded-output-states.png" alt="A validator routes candidates into distinct valid, repair, abstain, escalate, and fail-closed terminal paths." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F07.2 - Every candidate reaches an explicit state.</strong> Essential labels: valid, repair, abstain, escalate, fail closed. Shape and icon cues distinguish branches without color alone. The figure defines fallback behavior; it does not assign approval authority.</figcaption>
   <details><summary>Long description</summary><p>A central validation hub sends proposal capsules into five differently shaped tracks. Valid reaches a review screen, repair loops once through a small tool, abstain ends at an empty-evidence marker, escalate reaches a human decision gate, and fail closed reaches a locked stop. None connects directly to an external action.</p></details>
 </figure>

@@ -61,8 +61,8 @@ Reserve output before packing input. A request that consumes the full nominal wi
 
 The synthetic companion uses abstract units rather than claiming a real candidate's token count. Its ledger proves arithmetic and policy invariants. A future authorized run must replace those units with actual measured behavior.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F08.1" data-image="/assets/publications/llm-behavior-engineering/v1-f08-1-context-budget.png">
-  <div role="img" aria-label="A finite context container allocates separate space to trusted control, history, authorized evidence, and reserved output.">Pending ImageGen figure V1-F08.1</div>
+<figure className="book-figure" data-figure-id="V1-F08.1" data-png="/assets/publications/llm-behavior-engineering/v1-f08-1-context-budget.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f08-1-context-budget.png" alt="A finite context container allocates separate space to trusted control, history, authorized evidence, and reserved output." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F08.1 - Context is an allocated budget.</strong> Essential labels: control, history, evidence, output. Distinct shapes and dividers show trust and allocation. The figure explains the token ledger; it does not represent a real model window or optimal ratio.</figcaption>
   <details><summary>Long description</summary><p>A colorful transparent case has a fixed outer boundary. Locked control blocks occupy a protected section, evidence cards with source tabs fill another, compressed history tiles occupy a conditional section, and an empty compartment labeled output remains reserved. Overflow items move to a visible omitted tray rather than vanishing.</p></details>
 </figure>
@@ -156,8 +156,8 @@ A required record is missing or unavailable. State the absence. Do not fill the 
 
 Truncation, conflict, staleness, and authorization are distinct context failure states. This taxonomy is an engineering synthesis supported by risk/trust-boundary evidence, but exact metadata and controls depend on the source systems and competent owners. [CLM-024]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F08.2" data-image="/assets/publications/llm-behavior-engineering/v1-f08-2-context-failures.png">
-  <div role="img" aria-label="Oversized, stale, conflicting, unauthorized, and absent context objects have different visible defects and bounded responses.">Pending ImageGen figure V1-F08.2</div>
+<figure className="book-figure" data-figure-id="V1-F08.2" data-png="/assets/publications/llm-behavior-engineering/v1-f08-2-context-failures.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f08-2-context-failures.png" alt="Oversized, stale, conflicting, unauthorized, and absent context objects have different visible defects and bounded responses." width="1693" height="929" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F08.2 - Context failures are not interchangeable.</strong> Essential labels: oversized, stale, conflicting, unauthorized, absent. Cracks, clocks, opposing arrows, locks, and gaps provide non-color cues. The figure supports failure classification; it does not measure prevalence.</figcaption>
   <details><summary>Long description</summary><p>Five evidence objects enter separate inspection bays. An oversized bundle crosses a capacity line, a stale card carries an expired clock, conflicting cards point in opposite directions, an unauthorized card is behind a lock, and an absent card appears as a labeled gap. Each bay routes to a different selection, abstention, or escalation marker.</p></details>
 </figure>

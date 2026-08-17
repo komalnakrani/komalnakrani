@@ -55,8 +55,8 @@ Untrusted model output that must be parsed, validated, and presented within the 
 
 The message contract records every zone's source, owner, trust class, allowed use, prohibited interpretation, and downstream validator.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F06.1" data-image="/assets/publications/llm-behavior-engineering/v1-f06-1-message-trust-stack.png">
-  <div role="img" aria-label="A message stack separates trusted application control from user intent, context, and untrusted content using solid trust boundaries.">Pending ImageGen figure V1-F06.1</div>
+<figure className="book-figure" data-figure-id="V1-F06.1" data-png="/assets/publications/llm-behavior-engineering/v1-f06-1-message-trust-stack.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f06-1-message-trust-stack.png" alt="A message stack separates trusted application control from user intent, context, and untrusted content using solid trust boundaries." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F06.1 - Preserve trust through the message stack.</strong> Essential labels: control, user, context, untrusted. Shape and border cues distinguish zones without relying on color alone. The figure supports the control-data boundary; it does not claim that separation alone prevents attacks.</figcaption>
   <details><summary>Long description</summary><p>A colorful three-dimensional stack places a locked control card at the top, an authorized-user card below it, and context/data trays beneath. Instruction-like text inside an untrusted tray remains behind a thick boundary. A deterministic authorization gate sits outside the stack, and the generated proposal exits through a validator rather than an effect path.</p></details>
 </figure>
@@ -221,8 +221,8 @@ An ablation can also remove a component:
 
 The purpose is not to discover a universally best prompt. It is to learn whether a named component changes a named Mosaic behavior under the frozen configuration.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F06.2" data-image="/assets/publications/llm-behavior-engineering/v1-f06-2-ablation-workbench.png">
-  <div role="img" aria-label="One instruction module is removed from a locked baseline while all other message, model, case, and evaluator components remain fixed for comparison.">Pending ImageGen figure V1-F06.2</div>
+<figure className="book-figure" data-figure-id="V1-F06.2" data-png="/assets/publications/llm-behavior-engineering/v1-f06-2-ablation-workbench.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f06-2-ablation-workbench.png" alt="One instruction module is removed from a locked baseline while all other message, model, case, and evaluator components remain fixed for comparison." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F06.2 - Change one instruction component.</strong> Essential labels: baseline, remove one, compare. The workbench illustrates controlled ablation; it does not claim that any component produces a measured improvement.</figcaption>
   <details><summary>Long description</summary><p>Two parallel message assemblies sit on a bright laboratory bench. Locks hold model, cases, decoding, adapter, and evaluator blocks in place. On the candidate side, a robotic arm removes exactly one instruction module. Result trays feed a comparison lens with separate segment and failure compartments.</p></details>
 </figure>

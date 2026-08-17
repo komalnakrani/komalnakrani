@@ -57,8 +57,8 @@ The candidate differs in one declared variable family. A "prompt change" can inc
 
 A causal model-system claim needs a baseline, explicit hypothesis, controlled variable family, repeated trials where relevant, and decision criteria. Provider evaluation guidance supports iterative, versioned comparison, but attribution remains bounded by the design and some production changes cannot be perfectly isolated. [CLM-043]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F15.1" data-image="/assets/publications/llm-behavior-engineering/v1-f15-1-controlled-experiment.png">
-  <div role="img" aria-label="Baseline and candidate systems share frozen controls while one unlocked variable is compared across paired cases, repeated trials, and segment lenses.">Pending ImageGen figure V1-F15.1</div>
+<figure className="book-figure" data-figure-id="V1-F15.1" data-png="/assets/publications/llm-behavior-engineering/v1-f15-1-controlled-experiment.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f15-1-controlled-experiment.png" alt="Baseline and candidate systems share frozen controls while one unlocked variable is compared across paired cases, repeated trials, and segment lenses." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F15.1 - One named change earns one bounded claim.</strong> Essential labels: baseline, one change, trials, slices, controls. Lock icons and a single open switch supplement color. The figure supports `CLM-043`; it does not claim scientific causality beyond the design.</figcaption>
   <details><summary>Long description</summary><p>Two colorful three-dimensional experiment rigs sit side by side. Identical model, retrieval, context, schema, case, and judge modules are locked. Only one instruction cartridge differs. Paired case cards pass through repeated trial loops, then results enter language, evidence, risk, and latency lenses.</p></details>
 </figure>
@@ -239,8 +239,8 @@ The candidate may support a narrower population, language, source state, or acce
 
 The experiment supplies evidence to a separate release gate. It does not itself approve deployment, risk, privacy, safety, domain policy, capacity, or external effects.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F15.2" data-image="/assets/publications/llm-behavior-engineering/v1-f15-2-disposition-gates.png">
-  <div role="img" aria-label="Experiment evidence, regressions, uncertainty, and confounds enter retain, revise, reject, scope, or release disposition gates.">Pending ImageGen figure V1-F15.2</div>
+<figure className="book-figure" data-figure-id="V1-F15.2" data-png="/assets/publications/llm-behavior-engineering/v1-f15-2-disposition-gates.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f15-2-disposition-gates.png" alt="Experiment evidence, regressions, uncertainty, and confounds enter retain, revise, reject, scope, or release disposition gates." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F15.2 - Results end in an explicit decision state.</strong> Essential labels: retain, revise, reject, scope, release. Gate shapes and evidence folders supplement color. The figure supports `CLM-044` and `CLM-045`; release remains a handoff, not approval.</figcaption>
   <details><summary>Long description</summary><p>A realistic three-dimensional decision hall receives an experiment folder containing paired results, segment regressions, uncertainty bands, resource evidence, and confound notes. Five distinct gates route the folder to retain, revise, reject, scope, or a formal release-review checkpoint. No gate connects directly to production.</p></details>
 </figure>

@@ -69,8 +69,8 @@ Criteria, error category, consequence, severity, detectability, segment, and dis
 
 Severity cannot be inferred from model confidence, judge score, or frequency. A rare another-tenant disclosure can be more consequential than many tone defects. Detectability is also independent: a severe fabricated citation may be easy to catch deterministically, while a subtle domain qualifier loss may require expert review.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F14.1" data-image="/assets/publications/llm-behavior-engineering/v1-f14-1-error-topology.png">
-  <div role="img" aria-label="One error specimen connects to separate criterion, consequence, severity, detectability, segment, control, and disposition records.">Pending ImageGen figure V1-F14.1</div>
+<figure className="book-figure" data-figure-id="V1-F14.1" data-png="/assets/publications/llm-behavior-engineering/v1-f14-1-error-topology.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f14-1-error-topology.png" alt="One error specimen connects to separate criterion, consequence, severity, detectability, segment, control, and disposition records." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F14.1 - One label cannot describe an error completely.</strong> Essential labels: criterion, consequence, severity, detectability, segment, control, disposition. Shape-coded cards supplement color. The figure supports `CLM-040`; it defines no universal severity.</figcaption>
   <details><summary>Long description</summary><p>A central three-dimensional error specimen card is connected to seven distinct evidence cards. Consequence and severity are separate, detectability points to a searchlight, segment to a mosaic tile, control to a barrier, and disposition to a routing gate. An owner badge sits outside the technical record.</p></details>
 </figure>
@@ -156,8 +156,8 @@ Model graders should be calibrated against credible human or domain judgments an
 
 Separate measurement uncertainty from system uncertainty. If graders disagree about a fixed proposal, that is measurement uncertainty. If the proposal correctly reports conflicting sources, that is system/domain uncertainty. One cannot be repaired by increasing the other's confidence score.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F14.2" data-image="/assets/publications/llm-behavior-engineering/v1-f14-2-judgment-stack.png">
-  <div role="img" aria-label="Judgment escalates from deterministic check to reference, grader, human, domain specialist, and accountable authority as ambiguity and consequence increase.">Pending ImageGen figure V1-F14.2</div>
+<figure className="book-figure" data-figure-id="V1-F14.2" data-png="/assets/publications/llm-behavior-engineering/v1-f14-2-judgment-stack.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f14-2-judgment-stack.png" alt="Judgment escalates from deterministic check to reference, grader, human, domain specialist, and accountable authority as ambiguity and consequence increase." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F14.2 - Use the cheapest credible judge, then escalate.</strong> Essential labels: check, reference, grader, human, domain, authority. Stair height and icons supplement color. The figure supports `CLM-041` and `CLM-042`; it does not rank human or model infallibility.</figcaption>
   <details><summary>Long description</summary><p>A bright three-dimensional staircase begins with a code-check terminal, then a reference card, model-grader cube, trained-human desk, domain-specialist station, and formal authority gate. Cases travel only as high as their ambiguity and consequence require. Disagreement cards remain attached between levels.</p></details>
 </figure>

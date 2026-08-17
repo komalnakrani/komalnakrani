@@ -52,8 +52,8 @@ Examples for fictional Mosaic:
 
 Retrieval is justified only when external evidence ownership, freshness, or coverage materially improves the task. The original RAG research established one architecture for combining non-parametric retrieval with generation on knowledge-intensive benchmarks, while NIST guidance reinforces provenance, risk, and governance concerns. The decision rule here is a task-specific engineering synthesis, not a mandate to use RAG. [CLM-025]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F09.1" data-image="/assets/publications/llm-behavior-engineering/v1-f09-1-evidence-path-decision.png">
-  <div role="img" aria-label="An evidence-need decision tree routes a task to parametric response, deterministic lookup, search, retrieval-generation, or abstention.">Pending ImageGen figure V1-F09.1</div>
+<figure className="book-figure" data-figure-id="V1-F09.1" data-png="/assets/publications/llm-behavior-engineering/v1-f09-1-evidence-path-decision.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f09-1-evidence-path-decision.png" alt="An evidence-need decision tree routes a task to parametric response, deterministic lookup, search, retrieval-generation, or abstention." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F09.1 - Choose the evidence path before the technology.</strong> Essential labels: parametric, lookup, search, retrieve, abstain. The tree operationalizes the retrieval decision; it does not declare retrieval superior.</figcaption>
   <details><summary>Long description</summary><p>A colorful three-dimensional decision tree begins with current, attributable, authorized evidence need. Exact application facts route to a lookup drawer, reviewer exploration routes to search, updateable evidence for generated proposals routes to retrieval, bounded general language can route to a parametric branch, and unsupported or unauthorized needs end at abstain.</p></details>
 </figure>
@@ -103,8 +103,8 @@ Mosaic's manuals, service bulletins, warranty policies, parts catalog, technicia
 
 A manual may describe general repair procedure but not warranty eligibility. A current bulletin may override an older instruction for a specific appliance family. A technician note is an observation, not policy. A parts record may be authoritative for compatibility within its revision. A customer message is evidence of reported experience, not proof of cause.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F09.2" data-image="/assets/publications/llm-behavior-engineering/v1-f09-2-source-authority-shelves.png">
-  <div role="img" aria-label="Manuals, bulletins, warranty records, parts data, and case notes sit on shelves marked by owner, freshness, and permission.">Pending ImageGen figure V1-F09.2</div>
+<figure className="book-figure" data-figure-id="V1-F09.2" data-png="/assets/publications/llm-behavior-engineering/v1-f09-2-source-authority-shelves.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f09-2-source-authority-shelves.png" alt="Manuals, bulletins, warranty records, parts data, and case notes sit on shelves marked by owner, freshness, and permission." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F09.2 - Relevance does not determine authority.</strong> Essential labels: owner, fresh, allowed. Locks, clocks, and owner tabs provide non-color cues. The figure supports source qualification; it does not claim the pictured hierarchy applies outside Mosaic.</figcaption>
   <details><summary>Long description</summary><p>A crisp library-workshop contains separate shelves for manuals, bulletins, warranty, parts, and notes. Every document has an owner tab, freshness clock, and permission lock. A bright semantically similar card is blocked because its tenant lock does not match, while a less flashy authorized record remains eligible.</p></details>
 </figure>

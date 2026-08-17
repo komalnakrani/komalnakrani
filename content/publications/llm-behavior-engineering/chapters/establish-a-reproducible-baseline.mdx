@@ -47,8 +47,8 @@ Record raw response bytes or a privacy-approved representation, provider metadat
 
 A reproducible behavior baseline identifies model, prompt/messages, context, decoding, schema, evaluator, and runtime configuration. Official optimization and evaluation documentation supports versioned evaluation loops, while generation and template documentation shows that inference settings and serialization are behavior-facing. These are current interfaces, not universal or permanent field lists. Hardware and provider nondeterminism can still prevent bitwise reproduction. [CLM-013]
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F05.1" data-image="/assets/publications/llm-behavior-engineering/v1-f05-1-configuration-lockbox.png">
-  <div role="img" aria-label="A transparent lockbox binds model, prompt, context, decoding, schema, evaluator, and runtime version tokens into one baseline identity.">Pending ImageGen figure V1-F05.1</div>
+<figure className="book-figure" data-figure-id="V1-F05.1" data-png="/assets/publications/llm-behavior-engineering/v1-f05-1-configuration-lockbox.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f05-1-configuration-lockbox.png" alt="A transparent lockbox binds model, prompt, context, decoding, schema, evaluator, and runtime version tokens into one baseline identity." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F05.1 - Lock the complete behavior identity.</strong> Essential labels: model, prompt, context, runtime. Smaller visible tokens represent decoding, schema, evaluator, cases, and adapter. The illustration defines manifest completeness; it does not claim bitwise determinism.</figcaption>
   <details><summary>Long description</summary><p>A crisp three-dimensional lockbox contains interlocking, labeled version blocks. Four large blocks read model, prompt, context, and runtime. Smaller blocks for decoding, schema, evaluator, cases, and adapter fill the remaining space. A hash tag seals the box, while a side compartment labeled not observable remains visibly empty but documented.</p></details>
 </figure>
@@ -126,8 +126,8 @@ Start by declaring why repetition matters. Examples:
 
 Then record the trial count, order, seed if supported, concurrency, cache state, and stopping rule. A seed may reduce one source of variation in a particular stack. It cannot guarantee identical results across provider revisions, devices, kernels, library releases, or every sampling implementation.
 
-<figure class="book-figure book-figure--pending" data-figure-id="V1-F05.2" data-image="/assets/publications/llm-behavior-engineering/v1-f05-2-repeated-trials.png">
-  <div role="img" aria-label="One frozen configuration enters several repeated trials whose outputs occupy a visible variation band rather than one identical point.">Pending ImageGen figure V1-F05.2</div>
+<figure className="book-figure" data-figure-id="V1-F05.2" data-png="/assets/publications/llm-behavior-engineering/v1-f05-2-repeated-trials.png">
+  <img src="/assets/publications/llm-behavior-engineering/v1-f05-2-repeated-trials.png" alt="One frozen configuration enters several repeated trials whose outputs occupy a visible variation band rather than one identical point." width="1536" height="1024" loading="lazy" decoding="async" />
   <figcaption><strong>V1-F05.2 - Same configuration can yield variation.</strong> Essential labels: same config, trials, variation. The figure separates repeated observations from configuration changes; it does not specify an expected statistical distribution.</figcaption>
   <details><summary>Long description</summary><p>A single locked configuration cartridge enters a circular trial rig. Several numbered result capsules emerge at different positions inside a translucent band labeled variation. A separate cartridge with a changed template sits outside the band and is labeled different configuration.</p></details>
 </figure>
