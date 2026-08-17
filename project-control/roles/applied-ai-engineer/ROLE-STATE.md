@@ -5,12 +5,12 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 11 source assembly and deterministic proof QA PASS under #66; root publication transition active
+- Current global phase: Komal Phase 11 publication PASS; version 1.0.0 published; user-authorized hold after active books
 - Last updated: 2026-08-17
-- Last completed issue: Phase 10 #63, visual certification PASS
+- Last completed issue: Phase 11 #66, published web/PDF edition PASS
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27), closed
-- Active issue: [#66](https://github.com/alpeshznakrani/komalnakrani/issues/66)
+- Active issue: none; hold boundary active after closing #66 and root #21
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -43,16 +43,16 @@
 - manuscript(s): all 21 chapters complete; Phase 09 content lock totals 133,981 words
 - front matter: complete under `content/publications/applied-ai-engineering/front-matter/`, 4,031 words including six part introductions
 - appendices: six architecture-locked files complete under `content/publications/applied-ai-engineering/appendices/`, 12,370 words
-- complete edition source: 150,382 words; manifest status `review`, PDF disabled until root publication transition
+- complete edition source: 150,382 words; manifest status `published`, first edition version 1.0.0 dated 2026-08-17
 - figure manifest: `content/publications/applied-ai-engineering/figures.json`, complete through `FIG-042`
-- PDF(s): deterministic 633-page review proof QA PASS at SHA-256 `a2118ba48bdedcf890a48e09171928e086afc8fdf57a74bb7f526acc643104b8`; exact public mirror pending
+- PDF(s): deterministic 633-page published artifact, 19,066,601 bytes, SHA-256 `0ea2dbd9a77edf30dbaffba8700e17f684ea32abb9135d0afa5a630394914fda`; canonical/public mirrors byte-identical
 - preparation resources: deferred
 - optional course: pending Phase 13
 - certification page: deferred to Abhyaas
 - bank specification: deferred to Abhyaas
 - question bank: deferred to Abhyaas
 - simulation report: deferred to Abhyaas
-- final QA: pending Phase 19
+- final QA: publication-scope hostile artifact and route QA PASS; deferred certification phases remain outside current Komal book scope
 
 ## Completed gates
 
@@ -66,7 +66,7 @@
 - [x] 08 manuscript
 - [x] 09 book QA
 - [x] 10 visuals
-- [ ] 11 publication
+- [x] 11 publication
 - [ ] 12 preparation library (deferred)
 - [ ] 13 course decision
 - [ ] 14 certification (deferred)
@@ -78,7 +78,7 @@
 
 ## Current work
 
-Phases 09 and 10 are accepted `PASS`. Phase 11 source assembly and review-proof artifact QA are also `PASS`: original front matter, six part introductions, and six appendices bring the complete edition to 150,382 words while preserving the 21-chapter content lock, 118 claims, 55 sources, 42 certified PNG figures, and 109-test Patchwork companion. The exact proof built twice to a byte-identical 633-page PDF at SHA-256 `a2118ba48bdedcf890a48e09171928e086afc8fdf57a74bb7f526acc643104b8`; all 633 pages were rendered at 144 DPI and passed raster, contact-sheet, and representative full-resolution QA. The manifest remains `review`, `publishedAt` is null, and PDF is disabled. Root owns the public mirror, published web-route QA, and publication-state transition under #66.
+Phases 09, 10, and 11 are accepted `PASS`. Original front matter, six part introductions, and six appendices bring the complete edition to 150,382 words while preserving the 21-chapter content lock, 118 claims, 55 sources, 42 certified PNG figures, and 109-test Patchwork companion. The final delivery artifact built twice to a byte-identical 633-page PDF at SHA-256 `0ea2dbd9a77edf30dbaffba8700e17f684ea32abb9135d0afa5a630394914fda`; all 633 pages were rendered at 144 DPI and passed raster, contact-sheet, and representative full-resolution QA. The manifest is `published`, `publishedAt` is `2026-08-17`, the web edition and PDF are enabled, and canonical/public PDF mirrors are byte-identical. Phase 11 evidence is frozen in the assembly and release reports.
 
 ## Unresolved blockers
 
@@ -95,12 +95,12 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 ## Quality debt
 
-No role-local content or proof-artifact blocker. Source assembly, Applied-specific part/appendix/figure metadata, deterministic PDF generation, complete-page inspection, and canonical checks pass. The public download mirror, published web-route QA, and final publication-state transition remain open. Seven source URLs remain explicitly access-restricted to automation.
+No role-local content, visual, publication, or artifact blocker. Source assembly, Applied-specific metadata, deterministic PDF generation, complete-page inspection, public download mirror, published web routes, and canonical checks pass. Seven source URLs remain explicitly access-restricted to automation.
 
 ## Exact next action
 
-Root copy the exact reviewed proof to the public download path, verify byte identity and published web routes, then mark version 1.0.0 published and close #66.
+Hold. Do not start Phase 13, a new Komal role/book, or Abhyaas work until the user explicitly resumes the factory.
 
 ## Resume instructions
 
-Read this file, #66, and `project-control/roles/applied-ai-engineer/qa/phase-11-publication-assembly.md`. Preserve the source assembly and reviewed proof hash; do not reopen content/visual gates without a demonstrated defect. Complete only the root-owned Phase 11 publication transition before entering another phase or Abhyaas.
+Read this file plus the Phase 11 assembly and release reports. Preserve the published source/artifact hashes and do not reopen content, visual, or publication gates without a demonstrated defect. Remain at the user-authorized hold boundary.

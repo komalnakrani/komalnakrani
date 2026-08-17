@@ -8,8 +8,10 @@ import hashlib
 import html
 import json
 import re
+from io import BytesIO
 from pathlib import Path
 
+from PIL import Image as PillowImage
 from pypdf import PdfReader
 from reportlab.graphics.shapes import Drawing
 from reportlab.lib import colors
@@ -94,7 +96,19 @@ def scaled_svg(file: Path, max_width: float = CONTENT_WIDTH, max_height: float =
 def scaled_figure(file: Path, max_width: float = CONTENT_WIDTH, max_height: float = 115 * mm):
     if file.suffix.lower() == ".svg":
         return scaled_svg(file, max_width=max_width, max_height=max_height)
-    image = FlowableImage(str(file))
+    with PillowImage.open(file) as source:
+        source.load()
+        if source.mode in {"RGBA", "LA"} or "transparency" in source.info:
+            rgba = source.convert("RGBA")
+            flattened = PillowImage.new("RGB", rgba.size, "white")
+            flattened.paste(rgba, mask=rgba.getchannel("A"))
+            raster = flattened
+        else:
+            raster = source.convert("RGB")
+        stream = BytesIO()
+        raster.save(stream, format="JPEG", quality=82, subsampling=0, progressive=False)
+        stream.seek(0)
+    image = FlowableImage(stream)
     image._restrictSize(max_width, max_height)
     return image
 

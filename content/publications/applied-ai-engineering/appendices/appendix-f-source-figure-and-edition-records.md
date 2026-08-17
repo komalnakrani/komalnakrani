@@ -23,7 +23,7 @@ The status states are not decorative:
 - `published`: canonical web and PDF artifacts passed release checks and the publication date is recorded;
 - `withdrawn`: the edition is no longer offered as current, with reason and replacement where applicable.
 
-At the Phase 11 assembly handoff, this book is `review`, `publishedAt` is null, and PDF delivery remains disabled until the root publication process builds and inspects the exact artifact.
+Version 1.0.0 is `published` with `publishedAt` set to 2026-08-17. Its downloadable PDF is enabled only because the exact reviewed artifact passed the release checks recorded below.
 
 ## Source register
 
@@ -191,7 +191,7 @@ Before changing status to `published`, create a release record with:
 - known source restrictions and residual publication limitations;
 - approver and publication-state transition time.
 
-The downloadable PDF must be the exact reviewed artifact. Rebuilding after review creates a new hash and requires comparison. The manifest should not be marked `published`, `publishedAt` should not be filled, and PDF delivery should not be enabled until this record passes.
+The downloadable PDF is the exact reviewed artifact. Rebuilding after review creates a new hash and requires comparison. Version 1.0.0 was marked `published`, dated, and enabled for PDF delivery only after this record passed; any later replacement must preserve that rule and receive a new recorded identity when required.
 
 ## Index conventions
 

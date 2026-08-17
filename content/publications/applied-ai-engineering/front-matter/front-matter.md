@@ -4,7 +4,7 @@
 
 Komal Nakrani
 
-First edition release candidate, version 1.0.0 (2026)
+First edition, version 1.0.0 (published 2026-08-17)
 
 Copyright (c) 2026 Komal Nakrani. All rights reserved except where separately stated for cited sources or companion dependencies. This book is original. Patchwork, Patchwork Find, and every constructed satellite scenario are fictional. Their records, measurements, incidents, decisions, and outcomes are synthetic teaching material, not evidence about a real product, customer, employer, or deployment.
 
@@ -157,7 +157,7 @@ Conciseness is valuable when it preserves the decision. Compression becomes harm
 
 ## Edition, corrections, and status
 
-This file belongs to version 1.0.0, first edition release candidate. At this assembly stage the publication remains under review: `publishedAt` is null and PDF delivery is disabled. The final published edition must be built from the reviewed canonical files, pass web and PDF rendering checks, preserve searchable text and bookmarks, mirror the exact downloadable artifact, and record the publication state transition.
+This file belongs to version 1.0.0, first edition, published on 2026-08-17. The web edition and downloadable PDF were released only after the reviewed canonical files passed deterministic PDF generation, complete-page rendering, searchable-text, bookmark, link, asset-mirror, and web-route checks. The release record in Appendix F identifies the exact artifact and publication transition.
 
 Corrections after publication must enter the errata record. A correction identifies the edition, location, problem, disposition, resolution date when applicable, and replacement text. No web page or PDF should be silently changed while retaining the same edition identity. Appendix F supplies the record format and explains when a correction requires a patch edition rather than an erratum alone.
 

@@ -13,6 +13,7 @@
     "validate:publications": "node scripts/validate-publications.mjs",
     "validate:courses": "node scripts/validate-courses.mjs",
     "test:publications": "node --test tests/publication-validation.test.mjs",
+    "test:pdf-artifacts": "${PDF_PYTHON:-python3} -m unittest tests/test_publication_pdf_raster.py",
     "test:courses": "node --test tests/course-validation.test.mjs",
     "test:companion": "node --test content/publications/forward-deployed-engineering/companion/tests/*.test.mjs",
     "test:companion:aae": "node --test content/publications/applied-ai-engineering/companion/tests/*.test.mjs",
@@ -21,7 +22,7 @@
     "course:fde": "node content/courses/forward-deployed-engineering-lab/lab-kit/run.mjs",
     "test:course:fde": "node --test content/courses/forward-deployed-engineering-lab/lab-kit/tests/*.test.mjs",
     "build:pdf": "node scripts/build-publication-pdf.mjs",
-    "check": "npm run validate:publications && npm run validate:courses && npm run test:publications && npm run test:courses && npm run test:companion && npm run test:companion:aae && npm run test:course:fde && npm run build && npm run check:site",
+    "check": "npm run validate:publications && npm run validate:courses && npm run test:publications && npm run test:pdf-artifacts && npm run test:courses && npm run test:companion && npm run test:companion:aae && npm run test:course:fde && npm run build && npm run check:site",
     "astro": "astro"
   },
   "dependencies": {
