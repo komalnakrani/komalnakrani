@@ -1,0 +1,107 @@
+:root { --foundry-graphite: #15171C; --reactor-lime: #B7F34A; --foundry-ultraviolet: #7559FF; --foundry-copper: #F58B57; --foundry-alloy: #F4F1E9; --foundry-steel: #D9DDD8; }
+
+@page {
+  @top-left { content: "LLM ADAPTATION / MODEL ADAPTATION FOUNDRY"; color: #70756f; font-family: "Field Mono"; font-size: 6.8pt; letter-spacing: .06em; }
+  @top-right { content: string(chapter-title); color: #70756f; font-family: "Field Mono"; font-size: 6.8pt; }
+  @bottom-left { content: "KOMAL NAKRANI"; color: #70756f; font-family: "Field Mono"; font-size: 6.8pt; letter-spacing: .08em; }
+  @bottom-right { content: counter(page, decimal-leading-zero); color: #5d40e6; font-family: "Field Mono"; font-size: 7pt; font-weight: 700; }
+}
+
+html { color: var(--foundry-graphite); background: #d8dad6; }
+body { background: var(--foundry-alloy); }
+h1, h2, h3, h4, .body-entry b, .chapter-handoff p, blockquote p { font-family: "Studio Sans", sans-serif; font-weight: 850; letter-spacing: -.035em; }
+.eyebrow { color: #5d40e6; }
+.route-rule { height: .06in; background: linear-gradient(90deg, var(--reactor-lime) 0 36%, var(--foundry-ultraviolet) 36% 70%, transparent 70%); }
+
+.cover { color: #fff; background: var(--foundry-graphite); }
+.cover::before { content: "BASELINE  >  DATA  >  TRAIN  >  QUALIFY  >  HOLD"; position: absolute; inset: .68in .58in auto .68in; padding: .18in .2in; border: 1px solid rgba(183,243,74,.6); color: var(--reactor-lime); font-family: "Field Mono"; font-size: 7pt; letter-spacing: .08em; transform: none; }
+.cover::after { content: ""; position: absolute; left: .68in; right: .58in; bottom: 1.48in; height: .88in; border: 2px solid var(--foundry-ultraviolet); background: repeating-linear-gradient(135deg, var(--foundry-ultraviolet) 0 .14in, transparent .14in .23in, var(--foundry-copper) .23in .31in, transparent .31in .4in); border-radius: 0; transform: none; }
+.cover-coordinate { color: var(--foundry-graphite); background: var(--reactor-lime); }
+.cover-kicker { top: 2.42in; color: #dcff9f; }
+.cover h1 { max-width: 5.45in; margin-top: 2.76in; font-size: 47pt; line-height: .84; font-weight: 900; text-transform: uppercase; }
+.cover-subtitle { max-width: 4.6in; color: #e1e4dc; }
+.cover-author { font-size: 14pt; font-weight: 900; text-transform: uppercase; }
+.review-stamp { border-color: var(--foundry-copper); color: #ffb395; }
+
+.opening-statement, .title-page, .edition-page, .how-to, .legend, .chapter-coordinate, .appendix-opener, .register-opener, .author-page { background: var(--foundry-alloy); }
+.opening-index { color: #d9ddcf; font-size: 65pt; font-weight: 900; }
+.opening-statement h2 { max-width: 5.1in; font-size: 41pt; line-height: .9; text-transform: uppercase; }
+.mode-grid article { border: 1px solid #cfd3ca; border-radius: 0; background: #e8ebdf; box-shadow: none; }
+.mode-grid article:nth-child(2) { background: #ebe6ff; }
+.mode-grid article:last-child { background: #ffe5d9; }
+.mode-grid span, .field-note span, .boundary-card span { color: #5d40e6; }
+.mode-grid article:first-child span { color: #4c6b16; }
+.mode-grid article:last-child span { color: #a64624; }
+.title-page h1 { font-size: 48pt; line-height: .86; text-transform: uppercase; }
+.boundary-card { border-radius: 0; background: var(--foundry-graphite); box-shadow: none; }
+.boundary-card span { color: var(--reactor-lime); }
+.how-to h2, .legend h2, .contents-route h2 { font-size: 39pt; text-transform: uppercase; }
+.how-to li span, .mark { border-radius: 0; border-color: #5d40e6; color: #5d40e6; }
+.mark.decision, .mark.warning { border-color: #a64624; color: #a64624; }
+.field-note { border-radius: 0; border-left: 5px solid var(--reactor-lime); background: #e8ebdf; box-shadow: none; }
+.contents-part { border-radius: 0; border-color: #cbd0c6; background: #faf8f1; box-shadow: none; }
+.contents-part header { background: var(--foundry-graphite); }
+.contents-part header span { color: var(--reactor-lime); }
+.contents-part a span, .contents-part a small { color: #5d40e6; }
+
+.part-opener { background: var(--foundry-graphite); }
+.part-opener::after { background: linear-gradient(90deg, var(--reactor-lime) 0 35%, transparent 35% 39%, var(--foundry-ultraviolet) 39% 74%, transparent 74% 78%, var(--foundry-copper) 78%); border-radius: 0; clip-path: polygon(0 55%, 100% 0, 100% 45%, 0 100%); transform: none; }
+.part-number { color: #292d2e; font-size: 152pt; font-weight: 900; }
+.part-opener h2 { max-width: 5.1in; font-size: 48pt; line-height: .84; text-transform: uppercase; }
+.part-copy { color: #dfe3db; }
+.part-route { color: #cfe89c; }
+.part-route i { background: var(--reactor-lime); }
+.part-route i:last-of-type { background: var(--foundry-ultraviolet); }
+
+.chapter-coordinate::before { border-radius: 0; background: repeating-linear-gradient(135deg, #e4e7de 0 .12in, transparent .12in .22in); }
+.chapter-coordinate h2 { max-width: 5.2in; font-size: 43pt; line-height: .86; text-transform: uppercase; }
+.coordinate-orbit { border: 0; border-radius: 0; color: var(--foundry-graphite); background: var(--reactor-lime); transform: rotate(2deg); }
+.coordinate-orbit::before { border-radius: 0; border-color: rgba(21,23,28,.45); }
+.coordinate-orbit span { color: var(--foundry-graphite); font-weight: 900; transform: rotate(-2deg); }
+.chapter-contract div { border: 1px solid #cfd3ca; border-radius: 0; background: #e8ebdf; box-shadow: none; }
+.chapter-contract div:nth-child(2) { background: #ebe6ff; }
+.chapter-contract div:nth-child(3) { background: #ffe5d9; }
+.chapter-contract span { color: #4c6b16; }
+.chapter-contract div:nth-child(2) span { color: #5d40e6; }
+.chapter-contract div:nth-child(3) span { color: #a64624; }
+.chapter-route i { background: linear-gradient(90deg, var(--foundry-ultraviolet) 0 calc(var(--route-progress) * 100%), #ced2ca calc(var(--route-progress) * 100%)); }
+
+.body-entry { border-color: var(--reactor-lime); }
+.body-entry span { color: #5d40e6; }
+.section-heading::before { border: 0; border-radius: 0; background: var(--reactor-lime); transform: none; }
+.section-heading--decision::before { background: var(--foundry-copper); }
+.field-list li::before { border-radius: 0; background: #5d40e6; }
+blockquote { border-radius: 0; background: var(--foundry-graphite); box-shadow: none; }
+blockquote > span { color: var(--reactor-lime); }
+th { background: var(--foundry-graphite); }
+th:first-child { box-shadow: inset .05in 0 var(--reactor-lime); }
+tbody tr:nth-child(even) { background: #e9ebe5; }
+.artifact-code { border-radius: 0; color: #efffd5; background: var(--foundry-graphite); box-shadow: none; }
+.artifact-code > span { color: var(--reactor-lime); }
+.chapter-handoff { border-radius: 0; border-left: 5px solid var(--foundry-copper); background: #ffe5d9; box-shadow: none; }
+.chapter-handoff span { color: #a64624; }
+
+.book-figure { background: var(--foundry-alloy); }
+.figure-coordinate { color: #5d40e6; }
+.figure-stage { border: 1px solid #cbd0c6; border-radius: 0; background: #e6e8e2; box-shadow: none; }
+.book-figure figcaption { border-color: var(--foundry-copper); font-size: 17pt; font-weight: 850; }
+.figure-reading span { color: #5d40e6; }
+.figure-boundary span { color: #a64624; }
+
+.appendix-opener::after, .register-opener::after { border-radius: 0; background: linear-gradient(90deg, var(--reactor-lime) 0 34%, var(--foundry-ultraviolet) 34% 72%, var(--foundry-copper) 72%); }
+.appendix-coordinate { color: #d9ddcf; }
+.appendix-opener h2, .register-opener h2 { text-transform: uppercase; }
+.record-counts article { border: 1px solid #cfd3ca; border-radius: 0; background: #e8ebdf; }
+.record-counts article:nth-child(2) { background: #ebe6ff; }
+.record-counts article:nth-child(3) { background: #ffe5d9; }
+.register > article > span { color: #5d40e6; }
+.register > article a, .register > article small { color: #4c6b16; }
+.author-mark { border-radius: 0; color: var(--foundry-graphite); background: var(--reactor-lime); }
+.author-page > b { color: #a64624; }
+.closing { background: var(--foundry-graphite); }
+.closing h2 { max-width: 5.2in; font-size: 48pt; line-height: .84; text-transform: uppercase; }
+.closing > p { color: #dfe3db; }
+.closing-route { border-color: var(--foundry-ultraviolet); }
+.closing-route i { border-radius: 0; background: var(--reactor-lime); transform: none; }
+.closing-route i:nth-child(2) { background: var(--foundry-ultraviolet); }
+.closing-route i:last-child { background: var(--foundry-copper); }

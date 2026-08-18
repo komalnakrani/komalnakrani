@@ -5,11 +5,11 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: both volumes published and release-verified; Volume 1 private screen-first review edition PASS
+- Current global phase: both volumes published and release-verified; both private screen-first review editions PASS
 - Last updated: 2026-08-18
 - Last completed manuscript issue: `#71` — Volume 2 Chapters 16-17 and hostile two-volume QA
-- Last completed private-edition issue: `#77` - Volume 1 Language Systems Studio PASS
-- Active release gate: none; Volume 2 screen-first redesign is next in the authorized sequence
+- Last completed private-edition issue: `#78` - Volume 2 Model Adaptation Foundry PASS
+- Active release gate: none; current book wave complete and on hold
 - Role root issue: `#36` — complete; root closes it after the integration commit is pushed
 
 ## Locked accepted decisions
@@ -92,6 +92,14 @@ by 10 edition at SHA-256
 built twice byte-identically and visually inspected across all pages. The public
 Volume 1 manifest and published 210-page PDF remain unchanged.
 
+Volume 2 now has its own private `Model Adaptation Foundry` screen-first review
+artifact. It is a 291-page 7 by 10 edition at SHA-256
+`de9676665d4277b339fdacb98f6cd15e538b013b079b1267a32e7a3709b20925`,
+built twice byte-identically and visually inspected across all pages. Its 34
+accepted PNG figures, five-part route, seven appendices, and full beginning and
+ending matter are integrated. The public Volume 2 manifest and published
+156-page PDF remain unchanged.
+
 Root has now transitioned both manifests to `status: published`, `edition.publishedAt: 2026-08-17`, and `pdf.enabled: true`. Published-state V1 final A/B/public are verified byte-identical at SHA-256 `5cd5d16cd69c3c766fafa737812918cb1f37f34a91cb6753c7db044cd8c9375b`, 10,997,350 bytes, and 210 pages. Published-state V2 final A/B/public are verified byte-identical at SHA-256 `36199bf5e69a13502cbbdee4ba8a12a0fb606c04f3577c6870e82822cb93ccd4`, 12,828,329 bytes, and 156 pages; its final source SHA-256 is `1726b7c5534682e291e7946b5d626f60ccccdacf88e5284c0240a4fc439ad4bc`. The historical review hashes are not the published artifact identities.
 
 ## Unresolved blockers
@@ -115,9 +123,9 @@ No manuscript, companion, visual, assembly, proof, publication, PDF, render, web
 
 ## Exact next action
 
-After root commits, pushes, and closes #77, continue the already authorized
-screen-first redesign sequence with Volume 2, *LLM Adaptation and Runtime*. Do
-not start a new role, course, or Abhyaas work.
+Commit, push, and close #78, then hold. Every current LLM volume has its private
+screen-first review edition. Do not start a new role, book, course, or Abhyaas
+work without a new user instruction.
 
 ## Resume instructions
 

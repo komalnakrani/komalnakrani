@@ -1,0 +1,38 @@
+export default Object.freeze({
+  slug: 'llm-adaptation-and-runtime',
+  publicationDirectory: 'content/publications/llm-adaptation-and-runtime',
+  output: 'output/pdf/llm-adaptation-and-runtime-screen-first-review.pdf',
+  reviewAssetDirectory: 'content/publications/llm-adaptation-and-runtime/assets',
+  assetHrefRoot: '../../../content/publications/llm-adaptation-and-runtime',
+  expected: { chapters: 17, figures: 34, parts: 5, appendices: 7 },
+  partStarts: [1, 4, 9, 14, 17],
+  parts: [
+    { number: 1, roman: 'I', title: 'Earn the Right to Change Weights', range: 'Chapters 01-03' },
+    { number: 2, roman: 'II', title: 'Engineer the Learning Data', range: 'Chapters 04-08' },
+    { number: 3, roman: 'III', title: 'Run Post-Training Experiments', range: 'Chapters 09-13' },
+    { number: 4, roman: 'IV', title: 'Engineer the Runtime Envelope', range: 'Chapters 14-16' },
+    { number: 5, roman: 'V', title: 'Operate Adapted Models Through Change', range: 'Chapter 17' },
+  ],
+  appendices: [
+    { id: 'A', title: 'Adaptation, Measurement, and Optimization Refresher', file: 'appendices/appendix-a-adaptation-measurement-and-optimization-refresher.md' },
+    { id: 'B', title: 'Model, Data, and Artifact Identity', file: 'appendices/appendix-b-model-data-and-artifact-identity.md' },
+    { id: 'C', title: 'Adaptation and Runtime Artifacts and Review Gates', file: 'appendices/appendix-c-adaptation-runtime-artifacts-and-review-gates.md' },
+    { id: 'D', title: 'Provider-Neutral Companion Guide', file: 'appendices/appendix-d-provider-neutral-companion-guide.md' },
+    { id: 'E', title: 'Inference and Distributed-Systems Refresher', file: 'appendices/appendix-e-inference-and-distributed-systems-refresher.md' },
+    { id: 'F', title: 'Terminology and Role Boundaries', file: 'appendices/appendix-f-terminology-and-role-boundaries.md' },
+    { id: 'G', title: 'Source, Figure, and Edition Records', file: 'appendices/appendix-g-source-figure-and-edition-records.md' },
+  ],
+  palette: { graphite: '#15171C', reactorLime: '#B7F34A', ultraviolet: '#7559FF', copper: '#F58B57', alloy: '#F4F1E9', steel: '#D9DDD8' },
+  fonts: {
+    display: 'tools/screen-first-books/fonts/source-sans-3.ttf',
+    reading: 'tools/screen-first-books/fonts/source-sans-3.ttf',
+    technical: 'tools/screen-first-books/fonts/ibm-plex-mono.ttf',
+  },
+  visualSystem: 'Model Adaptation Foundry',
+  closingStatement: 'Change the smallest surface. Preserve the evidence.',
+  reviewLabel: 'Complete screen-first review edition - not the published edition',
+  protectedPublication: {
+    manifest: { file: 'content/publications/llm-adaptation-and-runtime/publication.json', sha256: 'ba125eca98cebf895c6265fb3f874441ecfc077cbb276d696c965e2f218f6d65' },
+    pdf: { file: 'public/downloads/llm-adaptation-and-runtime-v1.0.0.pdf', sha256: '36199bf5e69a13502cbbdee4ba8a12a0fb606c04f3577c6870e82822cb93ccd4' },
+  },
+});

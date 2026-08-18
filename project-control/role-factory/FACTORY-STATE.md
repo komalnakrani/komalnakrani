@@ -92,12 +92,16 @@
 ## Exact next action
 
 The user approved the private *Forward Deployed Engineering* Field Expedition
-Log standard. Private screen-first editions now pass for Applied AI Engineering
-(`Behavior Systems Atlas`, 992 pages), Agentic AI Engineering (`Autonomy Control
-Room`, 1,013 pages), and LLM Behavior Engineering (`Language Systems Studio`,
-371 pages), while their published editions remain unchanged. After root closes
-#77, continue the authorized one-book-at-a-time redesign sequence with *LLM
-Adaptation and Runtime*. Do not start a new role, course, or Abhyaas work.
+Log standard. The entire current redesign wave now passes: Applied AI
+Engineering (`Behavior Systems Atlas`, 992 pages), Agentic AI Engineering
+(`Autonomy Control Room`, 1,013 pages), LLM Behavior Engineering (`Language
+Systems Studio`, 371 pages), and LLM Adaptation and Runtime (`Model Adaptation
+Foundry`, 291 pages). Every private edition uses Komal Nakrani authorship,
+screen-first 7 by 10 geometry, complete opening and ending matter, embedded
+fonts, navigable outlines, deterministic builds, and its own genre-led palette.
+Published editions remain unchanged. After root commits, pushes, and closes
+#78, hold; do not start a new role, book, course, or Abhyaas work without a new
+user instruction.
 
 ## Resume instructions
 

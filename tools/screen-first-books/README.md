@@ -10,4 +10,8 @@ The first book configuration is `books/forward-deployed-engineering.mjs`. It rea
 
 `books/llm-behavior-engineering.mjs` adds the `Language Systems Studio` direction with an editorial cobalt/apricot/mint palette, language-interface vocabulary, and studio-plate reading model. Build it with `node tools/screen-first-books/build-llm-behavior.mjs`; audit it with `llm-behavior-qa.test.mjs`. Its published Volume 1 manifest and PDF remain protected.
 
+`books/llm-adaptation-and-runtime.mjs` completes the current wave with the `Model Adaptation Foundry` direction: graphite, reactor lime, ultraviolet, copper, and alloy paper; transformation rails, experiment furnaces, checkpoint cards, runtime gauges, and release dossiers. Build it with `node tools/screen-first-books/build-llm-adaptation.mjs`; audit it with `llm-adaptation-qa.test.mjs`. Its published Volume 2 manifest and PDF remain protected.
+
+The approved current-book set is now complete. Each title has its own genre-led visual system while sharing the private 7 by 10 inch screen-reading contract, Komal Nakrani authorship, complete opening and ending matter, navigable outlines, embedded fonts, explanatory PNG figures, deterministic builds, and protected published artifacts.
+
 The full-edition design contract is `docs/superpowers/specs/2026-08-18-fde-full-screen-first-edition-design.md`.
