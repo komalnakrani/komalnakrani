@@ -168,7 +168,13 @@ function renderDecision(page) {
 
 function renderArtifact(page) {
   const code = page.code.map((line, index) => `<div class="chain-line depth-${Math.min(index, 6)}"><span>${String(index + 1).padStart(2, '0')}</span><code>${esc(line)}</code></div>`).join('');
-  return `${kicker(page)}<h2>${esc(page.title)}</h2><div class="artifact-layout"><div class="artifact-code">${code}</div><aside>${paragraphs(page.body, 'body-copy')}<div class="artifact-tag">MINIMUM ACCESS / NAMED DECISION</div></aside></div>`;
+  return `${kicker(page)}<h2>${esc(page.title)}</h2><div class="artifact-layout"><div class="artifact-code">${code}</div><aside>${paragraphs(page.body, 'body-copy')}<div class="artifact-tag">MINIMUM ACCESS / NAMED DECISION</div></aside></div>
+    <section class="artifact-proof">
+      <article><span>01</span><b>PURPOSE BOUND</b><p>The question determines which evidence is legitimate to request.</p></article>
+      <article><span>02</span><b>OWNER NAMED</b><p>Approval and handling remain attached to an accountable role.</p></article>
+      <article><span>03</span><b>EXPIRY RECORDED</b><p>Access ends when the named decision no longer needs it.</p></article>
+      <div class="artifact-result"><span>RESULT</span><b>ONE BOUNDED DECISION BECOMES LEGITIMATE TO MAKE.</b></div>
+    </section>`;
 }
 
 function renderExercise(page) {

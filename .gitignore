@@ -20,3 +20,5 @@ output/pdf/*
 # Local tool caches.
 scripts/__pycache__/
 *.pyc
+.superpowers/
+tools/fde-design-proof/build/

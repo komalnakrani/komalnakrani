@@ -38,6 +38,14 @@ test('renders a selectable and accessible figure treatment', () => {
   assert.match(html, /<figcaption>Illustrative field model\./);
 });
 
+test('keeps the decision marker outside the title measure and fully develops the artifact page', () => {
+  assert.match(html, /\.page--decision h2\s*\{[^}]*max-width:/s);
+  assert.match(html, /class="artifact-proof"/);
+  assert.match(html, />PURPOSE BOUND</);
+  assert.match(html, />OWNER NAMED</);
+  assert.match(html, />EXPIRY RECORDED</);
+});
+
 test('escapes supplied content before inserting it into HTML', () => {
   const unsafe = [{
     pageNumber: 1,
