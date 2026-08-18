@@ -7,8 +7,8 @@
 - Catalog position: 5 of 32
 - State: `project-control/roles/machine-learning-engineer/ROLE-STATE.md`
 - Creative system: `Learning Systems Test Bench`
-- Last completed child: [#80 — Phase 01 role validation](https://github.com/alpeshznakrani/komalnakrani/issues/80)
-- Active child: [#81 — Phase 04 book scope](https://github.com/alpeshznakrani/komalnakrani/issues/81)
+- Last completed child: [#81 — Phase 04 book scope](https://github.com/alpeshznakrani/komalnakrani/issues/81)
+- Active child: none
 
 ## Objective
 
@@ -20,7 +20,7 @@ figure records.
 ## Phase checklist
 
 - [x] 01 role validation and adjacent-role boundary evidence
-- [ ] 04 evidence-based book count and volume decision
+- [x] 04 evidence-based book count and volume decision — `SINGLE BOOK`
 - [ ] 05 book or series architecture
 - [ ] 06 source and case-study research
 - [ ] 07 chapter blueprints and frozen figure contracts
@@ -46,9 +46,10 @@ figure records.
 
 ## Current executable action
 
-Complete Phase 04 book scope and volume decision under accepted Phase 01 verdict
-`PROCEED`. Do not begin Phase 05 architecture before one exact scope verdict is
-accepted.
+Open Phase 05 architecture for the accepted single book *Machine Learning
+Engineering: From Task Contract to Operating Evidence*. Do not begin
+manuscript, research packs, blueprints, or visuals until that architecture gate
+is independently accepted.
 
 ## Completion
 

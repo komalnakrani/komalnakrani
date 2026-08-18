@@ -37,24 +37,24 @@ existing Komal books or later catalog roles.
 
 ## Acceptance criteria
 
-- [ ] Every durable cluster has explicit depth, artifact, dependency, and claim
+- [x] Every durable cluster has explicit depth, artifact, dependency, and claim
   traceability.
-- [ ] All four volume alternatives are evaluated.
-- [ ] Every retained volume has a distinct thesis and independent professional
+- [x] All four volume alternatives are evaluated.
+- [x] Every retained volume has a distinct thesis and independent professional
   reader transformation.
-- [ ] Rejected alternatives have explicit evidence-based reasons.
-- [ ] All 22 Phase 01 claims, 17 boundary rows, and 10 scenarios are traced.
-- [ ] Existing Komal books and later catalog roles retain their professional
+- [x] Rejected alternatives have explicit evidence-based reasons.
+- [x] All 22 Phase 01 claims, 17 boundary rows, and 10 scenarios are traced.
+- [x] Existing Komal books and later catalog roles retain their professional
   centers and reader endpoints.
-- [ ] Audience, prerequisites, exclusions, capstone shape, approximate depth,
+- [x] Audience, prerequisites, exclusions, capstone shape, approximate depth,
   and visual-production implications are actionable.
-- [ ] ImageGen PNG / semantic HTML-CSS / no stored SVG-WebP / selective mascot
+- [x] ImageGen PNG / semantic HTML-CSS / no stored SVG-WebP / selective mascot
   policy is preserved.
-- [ ] Independent task and hostile integration reviews end in specification PASS
+- [x] Independent task and hostile integration reviews end in specification PASS
   and quality APPROVED.
-- [ ] The Phase 04 validator, mutation tests, full repository check, marker,
+- [x] The Phase 04 validator, mutation tests, full repository check, marker,
   addition-aware file hygiene, and path-leak audit pass.
-- [ ] Exactly one actionable scope verdict is recorded.
+- [x] Exactly one actionable scope verdict is recorded.
 
 ## Outputs
 
@@ -75,5 +75,8 @@ final decision.
 
 ## Handoff
 
-Only an accepted exact scope verdict may activate Phase 05 architecture. The
-Machine Learning Engineer root issue remains open.
+Accepted verdict: **SINGLE BOOK** — *Machine Learning Engineering: From Task
+Contract to Operating Evidence*, authored by Komal Nakrani. Phase 05
+architecture is the sole next gate. The Machine Learning Engineer root issue
+remains open; manuscript, visuals, course, Abhyaas, another volume, and another
+role remain inactive.
