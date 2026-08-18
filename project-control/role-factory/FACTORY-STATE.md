@@ -97,13 +97,13 @@ Machine Learning Engineer Phase 01 is accepted with verdict `PROCEED`: 36
 sources, 22 claims, 119 exact bidirectional links, 17 adjacent-role rows, and 10
 scenario tests. The creative direction remains `Learning Systems Test Bench`,
 a profession-specific 7 by 10 screen-first system authored by Komal Nakrani.
-Phase 04 book scope and volume decision is the exact next gate. Do not begin
+Phase 04 book scope and volume decision is active under [#81](https://github.com/alpeshznakrani/komalnakrani/issues/81). Do not begin
 architecture, manuscript, visuals, another book, another role, a course, or
 Abhyaas work before the Phase 04 scope decision is accepted.
 
 ## Resume instructions
 
 Inspect Git status and GitHub state, then read the Machine Learning Engineer
-role state, root issue, accepted Phase 01 evidence, and approved design spec.
-Open only the Phase 04 scope/volume child issue and resume the same Machine
-Learning Engineer track. Abhyaas remains out of scope for this book-only run.
+role state, root issue, active child #81, accepted Phase 01 evidence, and
+approved design spec. Resume the Phase 04 Machine Learning Engineer track.
+Abhyaas remains out of scope for this book-only run.

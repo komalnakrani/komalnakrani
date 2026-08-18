@@ -5,11 +5,11 @@
 - Role: Machine Learning Engineer
 - Slug: `machine-learning-engineer`
 - Catalog position: 5 of 32
-- Current global phase: Phase 04 book scope and volume decision ready
+- Current global phase: Phase 04 book scope and volume decision in progress
 - Last updated: 2026-08-18
 - Komal root issue: [#79](https://github.com/alpeshznakrani/komalnakrani/issues/79)
 - Last completed child issue: [#80 — Phase 01 role validation](https://github.com/alpeshznakrani/komalnakrani/issues/80)
-- Active child issue: none; Phase 04 issue is the next authorized child
+- Active child issue: [#81 — Phase 04 book scope](https://github.com/alpeshznakrani/komalnakrani/issues/81)
 - Abhyaas: intentionally out of scope for this book-only run
 
 ## Locked decisions
@@ -20,7 +20,7 @@
 - Image policy: ImageGen conceptual PNGs; semantic HTML/CSS for precise labels and quantitative evidence; no stored SVG or WebP publication figures
 - Execution boundary: one active book at a time, with disjoint parallel work inside it
 - Design authority: `docs/superpowers/specs/2026-08-18-machine-learning-engineer-learning-systems-test-bench-design.md`
-- Active implementation plan: `docs/superpowers/plans/2026-08-18-machine-learning-engineer-phase-01.md`
+- Active implementation plan: `docs/superpowers/plans/2026-08-18-machine-learning-engineer-phase-04.md`
 
 ## Current work
 
@@ -48,11 +48,11 @@ or series boundary; no manuscript or new role is active.
 
 ## Exact next action
 
-Write and execute the Phase 04 book-scope and volume-decision plan, open its
-child issue under #79, and preserve the accepted role boundary.
+Complete the Phase 04 cluster, guardrail, and volume-alternative analyses; then
+accept exactly one evidence-backed book or series scope decision.
 
 ## Resume instructions
 
-Read this file, the approved design specification, root issue, accepted Phase 01
-evidence, git status, and GitHub issue state. Create only the Phase 04 child
-issue; do not start another role, a manuscript, a course, or Abhyaas work.
+Read this file, the approved design specification, root issue, active child #81,
+accepted Phase 01 evidence, git status, and GitHub issue state. Resume Phase 04;
+do not start another role, a manuscript, a course, or Abhyaas work.
