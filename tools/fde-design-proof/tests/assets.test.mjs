@@ -41,3 +41,16 @@ test('contains no stored SVG or WebP assets', async () => {
   const forbidden = files.filter((file) => /\.(?:svg|webp)$/i.test(file));
   assert.deepEqual(forbidden, []);
 });
+
+test('contains one production-size explanatory PNG and its prompt record', async () => {
+  const imagePath = path.join(proofRoot, 'assets', 'system-boundary-field.png');
+  const promptPath = path.join(proofRoot, 'assets', 'system-boundary-field.prompt.md');
+  const image = await readFile(imagePath);
+  const prompt = await readFile(promptPath, 'utf8');
+
+  assert.ok(image.length > 500_000, 'explanatory PNG must contain production image data');
+  assert.equal(image.subarray(1, 4).toString('ascii'), 'PNG');
+  assert.match(prompt, /built-in ImageGen/i);
+  assert.match(prompt, /customer workflow/i);
+  assert.match(prompt, /no embedded words/i);
+});
