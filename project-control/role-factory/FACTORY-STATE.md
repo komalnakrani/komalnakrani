@@ -91,21 +91,18 @@
 
 ## Exact next action
 
-The user approved the private *Forward Deployed Engineering* Field Expedition
-Log standard. The entire current redesign wave now passes: Applied AI
-Engineering (`Behavior Systems Atlas`, 992 pages), Agentic AI Engineering
-(`Autonomy Control Room`, 1,013 pages), LLM Behavior Engineering (`Language
-Systems Studio`, 371 pages), and LLM Adaptation and Runtime (`Model Adaptation
-Foundry`, 291 pages). Every private edition uses Komal Nakrani authorship,
-screen-first 7 by 10 geometry, complete opening and ending matter, embedded
-fonts, navigable outlines, deterministic builds, and its own genre-led palette.
-Published editions remain unchanged. After root commits, pushes, and closes
-#78, hold; do not start a new role, book, course, or Abhyaas work without a new
-user instruction.
+The user resumed the catalog on 2026-08-18 and approved Machine Learning
+Engineer, position 5 of 32, as the sole active role. Its creative direction is
+`Learning Systems Test Bench`: a profession-specific, 7 by 10 screen-first book
+system authored by Komal Nakrani. Phase 01 role validation and adjacent-role
+boundary evidence is the only active gate. Do not begin book scope,
+architecture, manuscript, visuals, another book, another role, a course, or
+Abhyaas work until the Phase 01 verdict is accepted.
 
 ## Resume instructions
 
-On a future user instruction, inspect Git status and GitHub state, read the
-relevant role state, and select the next approved role from the 32-role catalog.
-Preserve the current-book completion boundary and do not infer authorization for
-Abhyaas or a new Komal role from this completed wave.
+Inspect Git status and GitHub state, then read
+`project-control/roles/machine-learning-engineer/ROLE-STATE.md`, its root issue,
+and its active child issue. Resume the same Machine Learning Engineer gate
+before creating another issue. Abhyaas remains out of scope for this book-only
+run.
