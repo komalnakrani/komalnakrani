@@ -115,9 +115,16 @@ chapter-local reopen drift, and compressed `CP-02`/`CP-05` clauses.
 | `.superpowers/sdd/2026-08-18-machine-learning-engineer-phase-05/task-5-report.md` | `ae3c405169800ea0443fa36d8115a07f44c7b37618516faadf7528a4877669c3` |
 | `project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.md` | `5f41bfc624f7085b8e3b2a12d6c2c3d52d6c21659eb5140d94cfa29b0edce630` |
 | `project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.json` | `bb2b6fe1137b6b56ff4729d0131c1b9496804bcd3a37e07a92361f4af4da972f` |
+| `project-control/roles/machine-learning-engineer/reviews/phase-05/task-05-repair.md` | `3eb8c0686e2103034175764b9972ad44895660248b6368c5b30f7b082db7bf39` |
 
 ### Repair and regression evidence
 
+- **Paired repair chain accepted:** `task-05-repair.md` accurately preserves
+  the first review's failed forecast identity and verdict, binds the final
+  forecast and ignored-report identities without creating a reverse review-
+  hash cycle, and records every prerequisite, figure-identity, reopen, and
+  creative-policy disposition verified below. Its verification statements
+  agree with the final replacement and this independent re-review.
 - **F-01 resolved:** all 21 ordered `Prerequisites` arrays deep-equal the
   accepted `prerequisiteArtifacts` arrays. This includes exact `BL-06` for
   Chapter 8, `BL-11:TECHNICALLY-QUALIFIED` for Chapter 13, `BL-15` plus
