@@ -5,11 +5,11 @@
 - Role: Machine Learning Engineer
 - Slug: `machine-learning-engineer`
 - Catalog position: 5 of 32
-- Current global phase: Phase 04 accepted; Phase 05 book architecture is the sole next gate
+- Current global phase: Phase 05 book architecture active
 - Last updated: 2026-08-18
 - Komal root issue: [#79](https://github.com/alpeshznakrani/komalnakrani/issues/79)
 - Last completed child issue: [#81 — Phase 04 book scope](https://github.com/alpeshznakrani/komalnakrani/issues/81)
-- Active child issue: none
+- Active child issue: [#82 — Phase 05 book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
 - Abhyaas: intentionally out of scope for this book-only run
 
 ## Locked decisions
@@ -21,29 +21,25 @@
 - Execution boundary: one active book at a time, with disjoint parallel work inside it
 - Design authority: `docs/superpowers/specs/2026-08-18-machine-learning-engineer-learning-systems-test-bench-design.md`
 - Accepted Phase 04 plan: `docs/superpowers/plans/2026-08-18-machine-learning-engineer-phase-04.md`
+- Approved Phase 05 plan: `docs/superpowers/plans/2026-08-18-machine-learning-engineer-phase-05.md`
 - Canonical scope decision: `project-control/roles/machine-learning-engineer/books/book-scope-decision.md`
 
 ## Current work
 
-Phase 04 is accepted with exact verdict **SINGLE BOOK**. The selected working
-identity is *Machine Learning Engineering: From Task Contract to Operating
-Evidence*, authored by Komal Nakrani. One continuous Benchline Inspection
-Dossier retains all eight learning clusters, 22/22 accepted claims, 17/17
-boundary rows, and 10/10 scenarios. All four structure alternatives were
-tested; three task analyses and their independent reviews pass; the canonical
-validator passes with 4/4 alternatives, 22/22 claims, 17/17 boundaries, 10/10
-scenarios, 3/3 task reviews, 1/1 hostile review, and 4/4 checks; its mutation
-suite passes 30/30; Phase 01 remains 42/42; and the full repository gate passes
-with 129 built pages and 2,341 local references. The initial hostile findings
-were repaired and the final hostile re-review returned exact specification
-PASS and quality APPROVED. No manuscript, visual, course, Abhyaas, second
-volume, or new role is active.
+Phase 05 is active under child #82. The accepted single-book architecture target
+is seven parts and twenty-one chapters for *Machine Learning Engineering: From
+Task Contract to Operating Evidence*, authored by Komal Nakrani. This phase
+freezes the shared chapter, dossier, companion, competency, case, learning,
+source-research, and visual-production contracts before any downstream work.
+The dedicated Phase 05 plan passed hostile review and is checkpointed at
+`ad34c46`. No manuscript, research pack, blueprint, generated visual, course,
+Abhyaas, second volume, or new role is active.
 
 ## Completed gates
 
 - [x] 01 role validation and boundary
 - [x] 04 book scope and volume decision
-- [ ] 05 book or series architecture
+- [ ] 05 book architecture — active in #82
 - [ ] 06 source and case-study research
 - [ ] 07 chapter blueprints
 - [ ] 08 manuscript
@@ -54,12 +50,12 @@ volume, or new role is active.
 
 ## Exact next action
 
-Write, independently review, and accept the Phase 05 single-book architecture
-plan before creating any manuscript, research pack, blueprint, or visual.
+Complete, independently review, semantically validate, and accept the Phase 05
+single-book architecture package before Phase 06 research begins.
 
 ## Resume instructions
 
-Read this file, the canonical Phase 04 scope decision and verification, approved
-design specification, root issue, accepted Phase 01 evidence, Git status, and
-GitHub issue state. Open only the Phase 05 architecture gate; do not start a
-manuscript, visual, second volume, course, another role, or Abhyaas work.
+Read this file, active #82, the accepted Phase 05 plan, canonical Phase 04 scope
+decision and verification, approved design, Phase 01 evidence, Git status, and
+GitHub issue state. Resume only Phase 05 architecture; do not start Phase 06,
+manuscript, visual production, second volume, course, another role, or Abhyaas.

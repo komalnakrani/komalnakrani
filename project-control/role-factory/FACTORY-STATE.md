@@ -93,19 +93,17 @@
 
 ## Exact next action
 
-Machine Learning Engineer Phase 04 is accepted with exact verdict `SINGLE
-BOOK`: *Machine Learning Engineering: From Task Contract to Operating
-Evidence*, authored by Komal Nakrani. The decision retains eight learning
-clusters, all 22 claims, 17 boundary rows, and 10 scenarios in one continuous
-Benchline Inspection Dossier under the `Learning Systems Test Bench` 7 by 10
-screen-first system. Phase 05 book architecture is the sole next gate. Do not
-begin manuscript, visuals, a second volume, another role, a course, or Abhyaas
-work before the architecture is accepted.
+Machine Learning Engineer Phase 05 book architecture is active in Komal child
+[#82](https://github.com/alpeshznakrani/komalnakrani/issues/82). Freeze and
+independently accept the seven-part, twenty-one-chapter architecture for
+*Machine Learning Engineering: From Task Contract to Operating Evidence*,
+authored by Komal Nakrani, under the `Learning Systems Test Bench` system. Do
+not begin Phase 06 research, manuscript, generated visuals, a second volume,
+another role, a course, or Abhyaas before #82 is closed `status:done`.
 
 ## Resume instructions
 
-Inspect Git status and GitHub state, then read the Machine Learning Engineer
-role state, root issue, accepted Phase 04 decision and verification, Phase 01
-evidence, and approved design spec. Open only the Phase 05 Machine Learning
-Engineer architecture gate. Abhyaas remains out of scope for this book-only
-run.
+Inspect Git status and GitHub state, then read active #82, the Machine Learning
+Engineer role state, accepted Phase 05 plan, Phase 04 decision and verification,
+Phase 01 evidence, and approved design. Resume only Phase 05 architecture.
+Abhyaas remains out of scope for this book-only run.
