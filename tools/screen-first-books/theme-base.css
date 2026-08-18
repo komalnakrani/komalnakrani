@@ -5,10 +5,6 @@
 @page {
   size: 7in 10in;
   margin: 0.72in 0.64in 0.72in 0.76in;
-  @top-left { content: "FDE / FIELD EXPEDITION LOG"; color: #62788a; font-family: "Field Mono"; font-size: 6.8pt; letter-spacing: 0.08em; }
-  @top-right { content: string(chapter-title); color: #62788a; font-family: "Field Mono"; font-size: 6.8pt; }
-  @bottom-left { content: "KOMAL NAKRANI"; color: #62788a; font-family: "Field Mono"; font-size: 6.8pt; letter-spacing: 0.08em; }
-  @bottom-right { content: counter(page, decimal-leading-zero); color: #00A8CF; font-family: "Field Mono"; font-size: 7pt; font-weight: 700; }
 }
 
 @page full {

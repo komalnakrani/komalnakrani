@@ -5,12 +5,12 @@
 - Role: Applied AI Engineer
 - Slug: `applied-ai-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal Phase 11 publication PASS; version 1.0.0 published; user-authorized hold after active books
-- Last updated: 2026-08-17
-- Last completed issue: Phase 11 #66, published web/PDF edition PASS
+- Current global phase: published edition PASS; private 7 by 10 screen-first review edition PASS
+- Last updated: 2026-08-18
+- Last completed issue: #75, private screen-first review edition PASS
 - Root issue: [#21](https://github.com/alpeshznakrani/komalnakrani/issues/21)
 - Phase parent issue: [#27](https://github.com/alpeshznakrani/komalnakrani/issues/27), closed
-- Active issue: none; hold boundary active after closing #66 and root #21
+- Active issue: none; #75 closes with the root integration push
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -80,6 +80,8 @@
 
 Phases 09, 10, and 11 are accepted `PASS`. Original front matter, six part introductions, and six appendices bring the complete edition to 150,382 words while preserving the 21-chapter content lock, 118 claims, 55 sources, 42 certified PNG figures, and 109-test Patchwork companion. The final delivery artifact built twice to a byte-identical 633-page PDF at SHA-256 `0ea2dbd9a77edf30dbaffba8700e17f684ea32abb9135d0afa5a630394914fda`; all 633 pages were rendered at 144 DPI and passed raster, contact-sheet, and representative full-resolution QA. The manifest is `published`, `publishedAt` is `2026-08-17`, the web edition and PDF are enabled, and canonical/public PDF mirrors are byte-identical. Phase 11 evidence is frozen in the assembly and release reports.
 
+The user-approved screen-first design standard is now applied in a separate private `Behavior Systems Atlas` review artifact. It is a 992-page 7 by 10 edition at SHA-256 `b34fec23c795672303d5752ce21603c56f2d112393d4d3b2d2d6991f1a29f327`, built twice byte-identically and visually inspected across all pages. Its deep-indigo, violet, aqua, coral, and warm-paper palette, Space Grotesk display type, evidence cards, system coordinates, and decision surfaces are Applied-specific. The public manifest and published 633-page PDF remain unchanged.
+
 ## Unresolved blockers
 
 None. Research is executable. Abhyaas work is intentionally deferred.
@@ -95,11 +97,11 @@ None. Research is executable. Abhyaas work is intentionally deferred.
 
 ## Quality debt
 
-No role-local content, visual, publication, or artifact blocker. Source assembly, Applied-specific metadata, deterministic PDF generation, complete-page inspection, public download mirror, published web routes, and canonical checks pass. Seven source URLs remain explicitly access-restricted to automation.
+No role-local content, visual, publication, screen-first review, or artifact blocker. Seven source URLs remain explicitly access-restricted to automation.
 
 ## Exact next action
 
-Hold. Do not start Phase 13, a new Komal role/book, or Abhyaas work until the user explicitly resumes the factory.
+After root commits, pushes, and closes #75, continue the already authorized screen-first redesign sequence with the current Agentic AI Engineering book. Do not start a new role, course, or Abhyaas work.
 
 ## Resume instructions
 

@@ -3,6 +3,8 @@ export default Object.freeze({
   publicationDirectory: 'content/publications/forward-deployed-engineering',
   output: 'output/pdf/forward-deployed-engineering-screen-first-review.pdf',
   reviewAssetDirectory: 'tools/screen-first-books/books/forward-deployed-engineering/assets',
+  assetHrefRoot: '../books/forward-deployed-engineering/assets',
+  expected: { chapters: 19, figures: 38, parts: 5, appendices: 5 },
   partStarts: [1, 6, 11, 15, 18],
   parts: [
     { number: 1, roman: 'I', title: 'Own the Outcome', range: 'Chapters 01-05' },

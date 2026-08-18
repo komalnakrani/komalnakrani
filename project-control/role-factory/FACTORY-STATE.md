@@ -91,11 +91,12 @@
 
 ## Exact next action
 
-Hold for user review of the complete private *Forward Deployed Engineering*
-Field Expedition Log edition. Its 592-page 7 by 10 screen-first PDF is recorded
-under the Forward Deployed Engineer QA handoff; the published edition remains
-unchanged. Do not redesign another book, start another role or course, or resume
-Abhyaas until the user explicitly approves the standard and resumes the factory.
+The user approved the private *Forward Deployed Engineering* Field Expedition
+Log standard. The private *Applied AI Engineering* Behavior Systems Atlas review
+edition now passes at 992 screen-first pages while its published edition remains
+unchanged. After root closes #75, continue the authorized one-book-at-a-time
+redesign sequence with the current Agentic AI Engineering book. Do not start a
+new role, course, or Abhyaas work.
 
 ## Resume instructions
 

@@ -1,4 +1,10 @@
 :root { --midnight: #07192f; --cyan: #00a8cf; --cyan-bright: #24d1f3; --orange: #ff7a1a; --paper: #f4f7fb; --ink: #10233c; --mist: #d9f7ff; --muted: #62788a; }
+@page {
+  @top-left { content: "FDE / FIELD EXPEDITION LOG"; color: #62788a; font-family: "Field Mono"; font-size: 6.8pt; letter-spacing: 0.08em; }
+  @top-right { content: string(chapter-title); color: #62788a; font-family: "Field Mono"; font-size: 6.8pt; }
+  @bottom-left { content: "KOMAL NAKRANI"; color: #62788a; font-family: "Field Mono"; font-size: 6.8pt; letter-spacing: 0.08em; }
+  @bottom-right { content: counter(page, decimal-leading-zero); color: #00A8CF; font-family: "Field Mono"; font-size: 7pt; font-weight: 700; }
+}
 .cover, .part-opener, .closing { color: #fff; background: var(--midnight); }
 .cover { padding: 0.72in 0.66in; }
 .cover-coordinate { position: absolute; right: 0.58in; top: 0.45in; padding: 0.06in 0.11in; color: var(--midnight); background: var(--cyan-bright); font-family: "Field Mono"; font-size: 6.7pt; font-weight: 700; }

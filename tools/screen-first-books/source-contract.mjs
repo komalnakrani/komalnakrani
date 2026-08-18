@@ -50,10 +50,10 @@ export function loadBookContract(config) {
 
   assertContract(manifest.slug === config.slug, `manifest slug must be ${config.slug}`);
   assertContract(manifest.author === 'Komal Nakrani', 'author must be Komal Nakrani');
-  assertContract(manifest.chapters.length === 19, 'expected 19 chapters');
-  assertContract(figures.length === 38, 'expected 38 figures');
-  assertContract(config.parts.length === 5, 'expected five parts');
-  assertContract(config.appendices.length === 5, 'expected five appendices');
+  assertContract(manifest.chapters.length === config.expected.chapters, `expected ${config.expected.chapters} chapters`);
+  assertContract(figures.length === config.expected.figures, `expected ${config.expected.figures} figures`);
+  assertContract(config.parts.length === config.expected.parts, `expected ${config.expected.parts} parts`);
+  assertContract(config.appendices.length === config.expected.appendices, `expected ${config.expected.appendices} appendices`);
 
   const figureIds = new Set();
   const figuresByChapter = new Map();
@@ -105,6 +105,8 @@ export function loadBookContract(config) {
     fonts: Object.freeze(Object.fromEntries(Object.entries(config.fonts).map(([key, value]) => [key, absolute(value)]))),
     publicationDirectory: absolute(config.publicationDirectory),
     reviewAssetDirectory: absolute(config.reviewAssetDirectory),
+    assetHrefRoot: config.assetHrefRoot,
+    visualSystem: config.visualSystem ?? 'Field Expedition Log',
     output: absolute(config.output),
     partStarts: Object.freeze([...config.partStarts]),
     parts: Object.freeze(config.parts.map((part) => Object.freeze({ ...part }))),
