@@ -1,0 +1,1117 @@
+{
+  "schema": "mle-phase-06-cases/v1",
+  "role": "machine-learning-engineer",
+  "book": "machine-learning-engineering",
+  "architectureVersion": "1.0.0",
+  "caseCount": 12,
+  "cases": [
+    {
+      "caseId": "CASE-01",
+      "name": "Benchline Inspection Dossier",
+      "portId": "PORT-EDGE",
+      "truthLabel": "FICTIONAL SYNTHETIC CAPSTONE",
+      "kind": "constructed-capstone",
+      "realConstructedRule": "All data, results, incidents, and outcomes are constructed; primary sources support doctrine only.",
+      "problem": "Carry one bounded inspection workload through complete evidence-preserving retirement.",
+      "context": "All data, results, incidents, and outcomes are constructed; primary sources support doctrine only.",
+      "constraints": [
+        "No real production, industrial, safety, performance, or business claim."
+      ],
+      "approach": [],
+      "tradeoffs": [],
+      "failuresOrRisks": [],
+      "reportedFacts": [],
+      "attributedOutcomes": [],
+      "allowedInferences": [],
+      "lessons": [],
+      "chapterIds": [
+        "MLE-CH-01",
+        "MLE-CH-02",
+        "MLE-CH-03",
+        "MLE-CH-04",
+        "MLE-CH-05",
+        "MLE-CH-06",
+        "MLE-CH-07",
+        "MLE-CH-08",
+        "MLE-CH-09",
+        "MLE-CH-10",
+        "MLE-CH-11",
+        "MLE-CH-12",
+        "MLE-CH-13",
+        "MLE-CH-14",
+        "MLE-CH-15",
+        "MLE-CH-16",
+        "MLE-CH-17",
+        "MLE-CH-18",
+        "MLE-CH-19",
+        "MLE-CH-20",
+        "MLE-CH-21"
+      ],
+      "claimIds": [
+        "MLE-BCLM-001",
+        "MLE-BCLM-002",
+        "MLE-BCLM-003",
+        "MLE-BCLM-004",
+        "MLE-BCLM-005",
+        "MLE-BCLM-006",
+        "MLE-BCLM-007",
+        "MLE-BCLM-008",
+        "MLE-BCLM-009",
+        "MLE-BCLM-010",
+        "MLE-BCLM-011",
+        "MLE-BCLM-012",
+        "MLE-BCLM-013",
+        "MLE-BCLM-014",
+        "MLE-BCLM-015",
+        "MLE-BCLM-016",
+        "MLE-BCLM-017",
+        "MLE-BCLM-018",
+        "MLE-BCLM-019",
+        "MLE-BCLM-020",
+        "MLE-BCLM-021",
+        "MLE-BCLM-022",
+        "MLE-BCLM-023",
+        "MLE-BCLM-024",
+        "MLE-BCLM-025",
+        "MLE-BCLM-026",
+        "MLE-BCLM-027",
+        "MLE-BCLM-028",
+        "MLE-BCLM-029",
+        "MLE-BCLM-030",
+        "MLE-BCLM-031",
+        "MLE-BCLM-032",
+        "MLE-BCLM-033",
+        "MLE-BCLM-034",
+        "MLE-BCLM-035",
+        "MLE-BCLM-036",
+        "MLE-BCLM-037",
+        "MLE-BCLM-038",
+        "MLE-BCLM-039",
+        "MLE-BCLM-040",
+        "MLE-BCLM-041",
+        "MLE-BCLM-042"
+      ],
+      "sourceUses": [],
+      "decisionJob": "Carry one bounded inspection workload through complete evidence-preserving retirement.",
+      "authorityOwner": "Fictional product, operations, domain, evaluation, platform, security, safety, privacy, legal, and governance owners remain separate.",
+      "limitations": [
+        "No real production, industrial, safety, performance, or business claim."
+      ],
+      "sourceResearchNeed": "Lifecycle doctrine, edge constraints, sensor/data shift, qualification, serving, controls, and retirement from primary sources.",
+      "replaceabilityTest": "Every chapter decision must transfer to the four satellite ports.",
+      "transferRules": [],
+      "status": "constructed-frozen"
+    },
+    {
+      "caseId": "CASE-02",
+      "name": "Managed demand forecast",
+      "portId": "PORT-MANAGED",
+      "truthLabel": "CONSTRUCTED SATELLITE",
+      "kind": "constructed-satellite",
+      "realConstructedRule": "No provider outcome is claimed; official docs may support current mechanism notes.",
+      "problem": "Test exportability and evidence ownership under managed opacity.",
+      "context": "No provider outcome is claimed; official docs may support current mechanism notes.",
+      "constraints": [
+        "Not a cloud-provider tutorial."
+      ],
+      "approach": [],
+      "tradeoffs": [],
+      "failuresOrRisks": [],
+      "reportedFacts": [],
+      "attributedOutcomes": [],
+      "allowedInferences": [],
+      "lessons": [],
+      "chapterIds": [
+        "MLE-CH-02",
+        "MLE-CH-04",
+        "MLE-CH-07",
+        "MLE-CH-08",
+        "MLE-CH-10",
+        "MLE-CH-12",
+        "MLE-CH-13",
+        "MLE-CH-16",
+        "MLE-CH-17",
+        "MLE-CH-18",
+        "MLE-CH-20",
+        "MLE-CH-21"
+      ],
+      "claimIds": [
+        "MLE-BCLM-004",
+        "MLE-BCLM-005",
+        "MLE-BCLM-010",
+        "MLE-BCLM-011",
+        "MLE-BCLM-012",
+        "MLE-BCLM-019",
+        "MLE-BCLM-020",
+        "MLE-BCLM-021",
+        "MLE-BCLM-022",
+        "MLE-BCLM-023",
+        "MLE-BCLM-024",
+        "MLE-BCLM-028",
+        "MLE-BCLM-029",
+        "MLE-BCLM-030",
+        "MLE-BCLM-034",
+        "MLE-BCLM-035",
+        "MLE-BCLM-036",
+        "MLE-BCLM-037",
+        "MLE-BCLM-038",
+        "MLE-BCLM-039"
+      ],
+      "sourceUses": [],
+      "decisionJob": "Test exportability and evidence ownership under managed opacity.",
+      "authorityOwner": "Product/domain/provider/platform/formal owners remain external.",
+      "limitations": [
+        "Not a cloud-provider tutorial."
+      ],
+      "sourceResearchNeed": "Official exportability, managed lifecycle, monitoring, rollback, and deletion mechanisms plus independent limitations.",
+      "replaceabilityTest": "Must produce the same dossier fields without provider names.",
+      "transferRules": [],
+      "status": "constructed-frozen"
+    },
+    {
+      "caseId": "CASE-03",
+      "name": "Classical credit triage",
+      "portId": "PORT-CLASSICAL",
+      "truthLabel": "CONSTRUCTED SATELLITE",
+      "kind": "constructed-satellite",
+      "realConstructedRule": "Synthetic records only; no lending, fairness, compliance, or outcome claim.",
+      "problem": "Prove that classical simplicity does not remove qualification or authority duties.",
+      "context": "Synthetic records only; no lending, fairness, compliance, or outcome claim.",
+      "constraints": [
+        "Not financial advice or credit authorization."
+      ],
+      "approach": [],
+      "tradeoffs": [],
+      "failuresOrRisks": [],
+      "reportedFacts": [],
+      "attributedOutcomes": [],
+      "allowedInferences": [],
+      "lessons": [],
+      "chapterIds": [
+        "MLE-CH-02",
+        "MLE-CH-03",
+        "MLE-CH-04",
+        "MLE-CH-05",
+        "MLE-CH-06",
+        "MLE-CH-07",
+        "MLE-CH-09",
+        "MLE-CH-10",
+        "MLE-CH-11",
+        "MLE-CH-12",
+        "MLE-CH-13",
+        "MLE-CH-17",
+        "MLE-CH-19",
+        "MLE-CH-20",
+        "MLE-CH-21"
+      ],
+      "claimIds": [
+        "MLE-BCLM-004",
+        "MLE-BCLM-005",
+        "MLE-BCLM-006",
+        "MLE-BCLM-007",
+        "MLE-BCLM-008",
+        "MLE-BCLM-009",
+        "MLE-BCLM-010",
+        "MLE-BCLM-011",
+        "MLE-BCLM-012",
+        "MLE-BCLM-013",
+        "MLE-BCLM-014",
+        "MLE-BCLM-015",
+        "MLE-BCLM-016",
+        "MLE-BCLM-017",
+        "MLE-BCLM-018",
+        "MLE-BCLM-019",
+        "MLE-BCLM-020",
+        "MLE-BCLM-021",
+        "MLE-BCLM-025",
+        "MLE-BCLM-026",
+        "MLE-BCLM-027",
+        "MLE-BCLM-028",
+        "MLE-BCLM-029",
+        "MLE-BCLM-030",
+        "MLE-BCLM-031",
+        "MLE-BCLM-032",
+        "MLE-BCLM-033",
+        "MLE-BCLM-034",
+        "MLE-BCLM-035",
+        "MLE-BCLM-036",
+        "MLE-BCLM-037",
+        "MLE-BCLM-038",
+        "MLE-BCLM-039"
+      ],
+      "sourceUses": [],
+      "decisionJob": "Prove that classical simplicity does not remove qualification or authority duties.",
+      "authorityOwner": "Product, domain, evaluation, privacy, legal, and risk owners remain external.",
+      "limitations": [
+        "Not financial advice or credit authorization."
+      ],
+      "sourceResearchNeed": "Classical model qualification, calibration, segment analysis, monitoring, and formal credit-domain authority boundaries.",
+      "replaceabilityTest": "Must satisfy the same evidence interface without deep-learning assumptions.",
+      "transferRules": [],
+      "status": "constructed-frozen"
+    },
+    {
+      "caseId": "CASE-04",
+      "name": "Deep acoustic event classifier",
+      "portId": "PORT-DEEP",
+      "truthLabel": "CONSTRUCTED SATELLITE",
+      "kind": "constructed-satellite",
+      "realConstructedRule": "Synthetic fixtures and bounded local runs only; no field performance claim.",
+      "problem": "Stress run identity, checkpoint/preprocessor binding, uncertainty, and serving limits.",
+      "context": "Synthetic fixtures and bounded local runs only; no field performance claim.",
+      "constraints": [
+        "Not a deep-learning recipe book."
+      ],
+      "approach": [],
+      "tradeoffs": [],
+      "failuresOrRisks": [],
+      "reportedFacts": [],
+      "attributedOutcomes": [],
+      "allowedInferences": [],
+      "lessons": [],
+      "chapterIds": [
+        "MLE-CH-04",
+        "MLE-CH-06",
+        "MLE-CH-07",
+        "MLE-CH-08",
+        "MLE-CH-09",
+        "MLE-CH-10",
+        "MLE-CH-11",
+        "MLE-CH-13",
+        "MLE-CH-15",
+        "MLE-CH-16",
+        "MLE-CH-18",
+        "MLE-CH-20",
+        "MLE-CH-21"
+      ],
+      "claimIds": [
+        "MLE-BCLM-010",
+        "MLE-BCLM-011",
+        "MLE-BCLM-012",
+        "MLE-BCLM-016",
+        "MLE-BCLM-017",
+        "MLE-BCLM-018",
+        "MLE-BCLM-019",
+        "MLE-BCLM-020",
+        "MLE-BCLM-021",
+        "MLE-BCLM-022",
+        "MLE-BCLM-023",
+        "MLE-BCLM-024",
+        "MLE-BCLM-025",
+        "MLE-BCLM-026",
+        "MLE-BCLM-027",
+        "MLE-BCLM-028",
+        "MLE-BCLM-029",
+        "MLE-BCLM-030",
+        "MLE-BCLM-031",
+        "MLE-BCLM-032",
+        "MLE-BCLM-033",
+        "MLE-BCLM-037",
+        "MLE-BCLM-038",
+        "MLE-BCLM-039"
+      ],
+      "sourceUses": [],
+      "decisionJob": "Stress run identity, checkpoint/preprocessor binding, uncertainty, and serving limits.",
+      "authorityOwner": "Research, evaluation, platform, domain, safety, and product owners remain external.",
+      "limitations": [
+        "Not a deep-learning recipe book."
+      ],
+      "sourceResearchNeed": "Deep run identity, nondeterminism, checkpoint/preprocessor lineage, uncertainty, serving, and supply-chain controls.",
+      "replaceabilityTest": "Must preserve the same decision/evidence job when swapped for another model family.",
+      "transferRules": [],
+      "status": "constructed-frozen"
+    },
+    {
+      "caseId": "CASE-05",
+      "name": "Shared ranking platform tenant",
+      "portId": "PORT-SHARED",
+      "truthLabel": "CONSTRUCTED SATELLITE",
+      "kind": "constructed-satellite",
+      "realConstructedRule": "Synthetic tenant and fleet evidence; no SLO or platform assurance claim.",
+      "problem": "Separate workload qualification from tenancy, fleet, platform, and incident-command authority.",
+      "context": "Synthetic tenant and fleet evidence; no SLO or platform assurance claim.",
+      "constraints": [
+        "Not a platform-engineering curriculum."
+      ],
+      "approach": [],
+      "tradeoffs": [],
+      "failuresOrRisks": [],
+      "reportedFacts": [],
+      "attributedOutcomes": [],
+      "allowedInferences": [],
+      "lessons": [],
+      "chapterIds": [
+        "MLE-CH-02",
+        "MLE-CH-04",
+        "MLE-CH-05",
+        "MLE-CH-06",
+        "MLE-CH-08",
+        "MLE-CH-10",
+        "MLE-CH-12",
+        "MLE-CH-13",
+        "MLE-CH-14",
+        "MLE-CH-15",
+        "MLE-CH-16",
+        "MLE-CH-17",
+        "MLE-CH-18",
+        "MLE-CH-19",
+        "MLE-CH-20",
+        "MLE-CH-21"
+      ],
+      "claimIds": [
+        "MLE-BCLM-004",
+        "MLE-BCLM-005",
+        "MLE-BCLM-010",
+        "MLE-BCLM-011",
+        "MLE-BCLM-012",
+        "MLE-BCLM-013",
+        "MLE-BCLM-014",
+        "MLE-BCLM-015",
+        "MLE-BCLM-016",
+        "MLE-BCLM-017",
+        "MLE-BCLM-018",
+        "MLE-BCLM-022",
+        "MLE-BCLM-023",
+        "MLE-BCLM-024",
+        "MLE-BCLM-028",
+        "MLE-BCLM-029",
+        "MLE-BCLM-030",
+        "MLE-BCLM-034",
+        "MLE-BCLM-035",
+        "MLE-BCLM-036",
+        "MLE-BCLM-037",
+        "MLE-BCLM-038",
+        "MLE-BCLM-039",
+        "MLE-BCLM-040",
+        "MLE-BCLM-041",
+        "MLE-BCLM-042"
+      ],
+      "sourceUses": [],
+      "decisionJob": "Separate workload qualification from tenancy, fleet, platform, and incident-command authority.",
+      "authorityOwner": "Platform, SRE, security, product, domain, and evaluation owners remain external.",
+      "limitations": [
+        "Not a platform-engineering curriculum."
+      ],
+      "sourceResearchNeed": "Tenant isolation, compatibility, shared serving, fleet incidents, access control, aliases, and workload retirement.",
+      "replaceabilityTest": "Workload evidence must remain valid when the shared substrate changes.",
+      "transferRules": [],
+      "status": "constructed-frozen"
+    },
+    {
+      "caseId": "CASE-06",
+      "name": "Google ML Test Score production-readiness method",
+      "portId": "PORT-SHARED",
+      "truthLabel": "PUBLIC REPORTED CASE",
+      "kind": "public-method",
+      "realConstructedRule": "Use only the paper's reported 2017 test taxonomy and attributed author claims; treat NIST AI RMF and TensorFlow Data Validation only as bounded transfer context, and invent no certification, universal threshold, causal readiness outcome, or formal approval.",
+      "problem": "Offline research results do not expose many data, feature, infrastructure, and monitoring failures that affect production ML systems.",
+      "context": "A 2017 IEEE Big Data paper by Google authors presents 28 tests and monitoring needs drawn from their experience with production ML systems.",
+      "constraints": [
+        "The rubric is a dated method from Google authors, not a standard, certification, or regulatory approval.",
+        "Test applicability and thresholds remain workload-, port-, domain-, and consequence-specific.",
+        "The paper does not report an independently controlled quantitative readiness or business outcome."
+      ],
+      "approach": [
+        "Inventory tests across features and data, model development, and infrastructure/monitoring.",
+        "Use failed or absent tests as evidence-gap prompts rather than aggregate-score absolution.",
+        "Bind each selected test to an input identity, expected evidence, limitation, authority owner, and disposition.",
+        "Keep a retained incumbent and controlled comparison alongside test coverage."
+      ],
+      "tradeoffs": [
+        "A compact rubric improves diagnostic coverage but can hide context if reduced to one number.",
+        "Broad system checks increase production evidence while imposing implementation and maintenance cost.",
+        "Reusable test categories still require workload-specific failure fixtures and owner acceptance."
+      ],
+      "failuresOrRisks": [
+        "Calling a high rubric score production qualification.",
+        "Applying every check without relevance or omitting a consequence-critical check because a quota was met.",
+        "Letting the workload owner design and self-certify all evaluation gates.",
+        "Treating tool success as proof of intended-use validity."
+      ],
+      "reportedFacts": [
+        "The paper presents 28 specific tests and monitoring needs grouped as a production-readiness rubric.",
+        "The authors state that the tests are drawn from experience with a wide range of production ML systems.",
+        "The method includes data/feature, model-development, infrastructure, and monitoring concerns beyond offline model evaluation."
+      ],
+      "attributedOutcomes": [
+        "The authors characterize the rubric as an easy-to-follow roadmap for improving production readiness and reducing technical debt; the paper does not provide a universal causal or quantitative outcome for adopting it."
+      ],
+      "allowedInferences": [
+        "A multi-layer test inventory can reveal missing evidence that a model-only review would miss.",
+        "The useful transfer unit is a test's decision job and evidence, not its point value.",
+        "A HOLD can be justified by a release-critical missing test even when other checks pass."
+      ],
+      "lessons": [
+        "Translate rubric items into workload-specific failure tests.",
+        "Keep score, evidence, limitation, and authority distinct.",
+        "Require every retained test to explain which decision it changes."
+      ],
+      "chapterIds": [
+        "MLE-CH-01",
+        "MLE-CH-02",
+        "MLE-CH-03",
+        "MLE-CH-04",
+        "MLE-CH-05",
+        "MLE-CH-06",
+        "MLE-CH-07"
+      ],
+      "claimIds": [
+        "MLE-BCLM-002",
+        "MLE-BCLM-003",
+        "MLE-BCLM-004",
+        "MLE-BCLM-007",
+        "MLE-BCLM-011",
+        "MLE-BCLM-014",
+        "MLE-BCLM-015",
+        "MLE-BCLM-018",
+        "MLE-BCLM-019"
+      ],
+      "sourceUses": [
+        {
+          "sourceId": "MLE-BSRC-028",
+          "evidenceRole": "doctrine"
+        },
+        {
+          "sourceId": "MLE-BSRC-007",
+          "evidenceRole": "reported-fact"
+        },
+        {
+          "sourceId": "MLE-BSRC-024",
+          "evidenceRole": "mechanism"
+        }
+      ],
+      "decisionJob": "Use a public test taxonomy to expose system-level evidence gaps without turning its score into certification or a universal gate.",
+      "authorityOwner": "The paper authors own the reported method; each adopting organization retains product, domain, evaluation, platform, and formal gate authority.",
+      "limitations": [
+        "No universal score or threshold is supported.",
+        "The paper predates many current frameworks and deployment patterns.",
+        "Google experience is not independent evidence of outcomes elsewhere.",
+        "No paper figure, wording, or proprietary implementation is imported."
+      ],
+      "sourceResearchNeed": "Production-readiness test taxonomies, data and feature validation, infrastructure and monitoring evidence, evidence-gap disposition, and independent gate limitations.",
+      "replaceabilityTest": "The case must reduce to selected test decision jobs, expected evidence, limitations, owners, and PASS, HOLD, or REJECT semantics across all five ports without Google-specific scoring or tooling.",
+      "transferRules": [
+        "Select tests from failure modes and consequence, never to satisfy a count quota.",
+        "Replace point totals with evidence-bearing PASS, HOLD, or REJECT decisions and named owners.",
+        "Use current official mechanisms only as examples that implement a test category.",
+        "Carry the method across all five ports without assuming a shared platform."
+      ],
+      "status": "verified"
+    },
+    {
+      "caseId": "CASE-07",
+      "name": "Uber Michelangelo feature and deployment evidence pattern",
+      "portId": "PORT-SHARED",
+      "truthLabel": "PUBLIC REPORTED CASE",
+      "kind": "public-production-pattern",
+      "realConstructedRule": "Use only Uber's dated first-party descriptions and attributed scale or adoption statements; supporting external sources provide doctrine or mechanism context, and no independent safety, reliability, business-value, or platform-assurance outcome is invented.",
+      "problem": "Uber reported fragmented data pipelines, experiment records, and deployment paths, then later described validation controls for a much larger centralized ML estate.",
+      "context": "First-party Uber Engineering reports dated 2017 and 2025 describing Michelangelo; the reports are browser-readable but reject command-line ranged retrieval with HTTP 406.",
+      "constraints": [
+        "All architecture, scale, adoption, and outcome statements are attributed to Uber and carry their source date.",
+        "The case cannot establish independent production safety, universal reliability, business value, or platform-wide assurance.",
+        "Named Uber mechanisms remain PORT-SHARED implementation examples rather than prerequisites for other ports."
+      ],
+      "approach": [
+        "Record canonical feature identity and owner metadata.",
+        "Connect offline and online feature computation or explicitly measure their conformance.",
+        "Preserve training configuration, experiment comparison, model reports, schema checks, missing-value behavior, and deployment validation evidence.",
+        "Keep workload evidence exportable from the platform's internal names and interfaces."
+      ],
+      "tradeoffs": [
+        "Centralized feature and workflow services can improve consistency and reuse while increasing dependence on shared-platform semantics and access.",
+        "Shared code and automatic checks reduce selected skew paths but cannot prove freshness, representativeness, or outcome quality.",
+        "Standardization improves comparison only when required fields are actually logged and retained."
+      ],
+      "failuresOrRisks": [
+        "Treating a feature-store name as sufficient lineage.",
+        "Importing a 2017 architecture or scale statement as current fact.",
+        "Treating first-party deployment-safety controls as independent assurance.",
+        "Allowing platform ownership to absorb product, domain, evaluation, security, safety, or risk authority."
+      ],
+      "reportedFacts": [
+        "Uber's 2017 report says that before Michelangelo it lacked uniform reproducible training and prediction pipelines, a standard experiment store and comparison path, and an established model deployment path.",
+        "The 2017 report describes a six-step workflow covering data management, training, evaluation, deployment, prediction, and monitoring, with a shared feature store and offline/online mechanisms.",
+        "Uber's 2025 report describes schema validation, identical missing-value and imputation handling between training and serving, recorded offline feature statistics, standardized model reports, and deployment validation mechanisms."
+      ],
+      "attributedOutcomes": [
+        "Uber reported in 2017 that Michelangelo had served production use cases for about a year, had become its de-facto ML system, and was used by dozens of teams; these are not independently audited here.",
+        "Uber reported in 2025 that Michelangelo supported over 400 active use cases, more than 20,000 monthly training jobs, and over 15 million real-time predictions per second at peak; all quantities remain 2025 first-party claims."
+      ],
+      "allowedInferences": [
+        "Stable feature, transformation, input, and run identities can make conformance failures and comparison gaps easier to detect.",
+        "A shared platform can supply mechanisms for workload evidence without itself qualifying the workload.",
+        "Training-serving parity needs measured evidence even when the organization reuses code or a feature store."
+      ],
+      "lessons": [
+        "Transfer evidence fields, not platform branding or topology.",
+        "Keep reported scale visually separate from portable doctrine.",
+        "Require exportable workload identities and limitations before accepting platform-generated evidence."
+      ],
+      "chapterIds": [
+        "MLE-CH-01",
+        "MLE-CH-05",
+        "MLE-CH-06",
+        "MLE-CH-07"
+      ],
+      "claimIds": [
+        "MLE-BCLM-001",
+        "MLE-BCLM-002",
+        "MLE-BCLM-013",
+        "MLE-BCLM-014",
+        "MLE-BCLM-015",
+        "MLE-BCLM-018",
+        "MLE-BCLM-020"
+      ],
+      "sourceUses": [
+        {
+          "sourceId": "MLE-BSRC-015",
+          "evidenceRole": "transfer-context"
+        },
+        {
+          "sourceId": "MLE-BSRC-005",
+          "evidenceRole": "doctrine"
+        },
+        {
+          "sourceId": "MLE-BSRC-043",
+          "evidenceRole": "reported-fact"
+        },
+        {
+          "sourceId": "MLE-BSRC-044",
+          "evidenceRole": "attributed-outcome"
+        },
+        {
+          "sourceId": "MLE-BSRC-018",
+          "evidenceRole": "mechanism"
+        }
+      ],
+      "decisionJob": "Separate transferable workload evidence from a first-party shared-platform implementation and its self-reported scale.",
+      "authorityOwner": "Uber owns its report; in transfer, product, domain, evaluation, platform, SRE, security, safety, privacy, legal, and governance authorities remain external to workload-facing MLE evidence.",
+      "limitations": [
+        "First-party reports, not an independent audit or incident postmortem.",
+        "The 2017 and 2025 system states differ and must not be collapsed into one timeless architecture.",
+        "The public pages returned HTTP 406 to command-line ranged GET and were verified through the browser path.",
+        "No Uber prose, figures, UI, branding, or architecture drawings may be imported into the book."
+      ],
+      "sourceResearchNeed": "Feature and transformation identity, training-serving conformance, experiment comparison, model reporting, deployment validation, exportability, and shared-platform authority limits.",
+      "replaceabilityTest": "The case must reduce to provider-neutral feature, transformation, run, comparison, deployment, limitation, and authority fields across all five ports without Uber branding, topology, scale, or proprietary interfaces.",
+      "transferRules": [
+        "Re-express every lesson as provider-neutral evidence fields and validation decisions.",
+        "Carry an as-of date beside every reported quantity or mechanism state.",
+        "Require the same transformation, lineage, comparison, and limitation evidence for managed, classical, deep, edge, and shared ports.",
+        "Do not claim that adopting a feature store or tracker reproduces Uber's reported outcomes."
+      ],
+      "status": "verified"
+    },
+    {
+      "caseId": "CASE-08",
+      "name": "PyTorch bounded reproducibility contract",
+      "portId": "PORT-DEEP",
+      "truthLabel": "PUBLIC REPORTED CASE",
+      "kind": "public-method",
+      "realConstructedRule": "Use only the PyTorch project's reported guarantees, limitations, and mechanisms plus the NeurIPS program's general research-transfer context; invent no workload outcome.",
+      "problem": "Teams can turn same-seed reruns into an absolute reproducibility promise despite release, platform, device, and nondeterministic-operation differences.",
+      "context": "PyTorch stable documentation, live-checked 2026-08-18, states explicit reproducibility limits and documents controls for a specific platform/device/release context.",
+      "constraints": [
+        "Framework- and release-specific behavior",
+        "CPU/GPU and backend differences",
+        "Known and unknown nondeterministic operations",
+        "Performance cost of deterministic algorithms"
+      ],
+      "approach": [
+        "Record every random source and run context.",
+        "Enable deterministic operations where supported and fail on known unsupported nondeterminism.",
+        "Compare reruns only under a named bounded context and retain divergence evidence."
+      ],
+      "tradeoffs": [
+        "Deterministic execution can reduce single-run performance.",
+        "Tighter context bounds improve interpretability but narrow the claim's transfer scope."
+      ],
+      "failuresOrRisks": [
+        "Same seed treated as full run identity",
+        "Cross-hardware divergence erased",
+        "Unsupported operations silently accepted",
+        "Framework guidance mistaken for workload proof"
+      ],
+      "reportedFacts": [
+        "PyTorch states that completely reproducible results are not guaranteed across releases, commits, platforms, or between CPU and GPU execution even with identical seeds.",
+        "PyTorch documents deterministic-algorithm controls that may throw on known nondeterministic operations."
+      ],
+      "attributedOutcomes": [
+        "PyTorch reports that deterministic operations are often slower but can facilitate experimentation, debugging, and regression testing."
+      ],
+      "allowedInferences": [
+        "A production rerun claim should name its supported context and tolerances.",
+        "Divergence across a changed context is evidence to explain, not evidence to delete."
+      ],
+      "lessons": [
+        "A seed is one manifest field, not a reproducibility certificate.",
+        "Mechanism coverage and performance cost travel with the result."
+      ],
+      "chapterIds": [
+        "MLE-CH-08"
+      ],
+      "claimIds": [
+        "MLE-BCLM-022",
+        "MLE-BCLM-023",
+        "MLE-BCLM-024"
+      ],
+      "sourceUses": [
+        {
+          "sourceId": "MLE-BSRC-021",
+          "evidenceRole": "reported-fact"
+        },
+        {
+          "sourceId": "MLE-BSRC-021",
+          "evidenceRole": "limitation"
+        },
+        {
+          "sourceId": "MLE-BSRC-018",
+          "evidenceRole": "mechanism"
+        },
+        {
+          "sourceId": "MLE-BSRC-009",
+          "evidenceRole": "transfer-context"
+        }
+      ],
+      "decisionJob": "Write the strongest supportable rerun statement and preserve deliberate cross-context divergence.",
+      "authorityOwner": "PyTorch owns its documented mechanism; workload owners define evidence needs; platform owners define supported runtime; evaluation/research owners retain claim-validity decisions.",
+      "limitations": [
+        "No claim that PyTorch controls cover every source of nondeterminism.",
+        "No claim of bitwise cross-platform identity.",
+        "No reported production outcome."
+      ],
+      "sourceResearchNeed": "Reproducibility standards, hardware nondeterminism, and experiment metadata.",
+      "replaceabilityTest": "The method must reduce to context identity, controls, tolerances, divergence, and limitation fields in managed, classical, edge, and shared-platform ports without PyTorch-specific meaning.",
+      "transferRules": [
+        "Transfer the bounded-claim and evidence-retention method, not PyTorch API names.",
+        "Recheck mechanisms against the exact framework/runtime version used in Phase 07."
+      ],
+      "status": "verified"
+    },
+    {
+      "caseId": "CASE-09",
+      "name": "Gender Shades intersectional evaluation audit",
+      "portId": "PORT-CLASSICAL",
+      "truthLabel": "PUBLIC REPORTED CASE",
+      "kind": "public-method",
+      "realConstructedRule": "Preserve the paper's 2018 task, systems, dataset, group definitions, reported numbers, and limitations; use it only to teach evaluation method and bounded inference.",
+      "problem": "Broad or aggregate accuracy can hide materially different error rates for consequential intersections.",
+      "context": "A 2018 peer-reviewed audit evaluated three commercial gender-classification systems with a dataset balanced by gender and Fitzpatrick skin type.",
+      "constraints": [
+        "Historical systems and results",
+        "Binary gender-classification task",
+        "Specific phenotypic grouping method",
+        "Dataset and annotation limitations",
+        "No authority to define groups or thresholds for another domain"
+      ],
+      "approach": [
+        "Construct an evaluation set balanced across named intersecting groups.",
+        "Report error separately for each intersection rather than only in aggregate.",
+        "Separate measured disparities from recommendations and transfer claims."
+      ],
+      "tradeoffs": [
+        "Finer segmentation exposes failures but reduces per-cell sample size.",
+        "A chosen grouping enables measurement while carrying social and measurement limitations."
+      ],
+      "failuresOrRisks": [
+        "Historical vendor results presented as current",
+        "Group definitions copied into unrelated workloads",
+        "Measured disparity converted into a universal fairness threshold",
+        "Technical audit presented as domain or legal authorization"
+      ],
+      "reportedFacts": [
+        "The paper reports that IJB-A and Adience were 79.6% and 86.2% lighter-skinned, respectively.",
+        "The audit evaluated three commercial systems on the authors' balanced dataset."
+      ],
+      "attributedOutcomes": [
+        "The paper reports error rates up to 34.7% for darker-skinned women and a maximum of 0.8% for lighter-skinned men."
+      ],
+      "allowedInferences": [
+        "Aggregate performance may conceal important intersectional errors.",
+        "Relevant intersections should be named from workload context and consequence, then evaluated with limitations."
+      ],
+      "lessons": [
+        "Segment precedence needs source-backed consequence and owner decisions.",
+        "Public case numbers remain bounded historical facts."
+      ],
+      "chapterIds": [
+        "MLE-CH-10",
+        "MLE-CH-11",
+        "MLE-CH-12"
+      ],
+      "claimIds": [
+        "MLE-BCLM-028",
+        "MLE-BCLM-029",
+        "MLE-BCLM-030",
+        "MLE-BCLM-031",
+        "MLE-BCLM-032",
+        "MLE-BCLM-033",
+        "MLE-BCLM-034",
+        "MLE-BCLM-035"
+      ],
+      "sourceUses": [
+        {
+          "sourceId": "MLE-BSRC-025",
+          "evidenceRole": "limitation"
+        },
+        {
+          "sourceId": "MLE-BSRC-032",
+          "evidenceRole": "transfer-context"
+        },
+        {
+          "sourceId": "MLE-BSRC-011",
+          "evidenceRole": "reported-fact"
+        },
+        {
+          "sourceId": "MLE-BSRC-011",
+          "evidenceRole": "attributed-outcome"
+        }
+      ],
+      "decisionJob": "Use segment evidence to block an aggregate winner while keeping evaluation and domain authority external.",
+      "authorityOwner": "The paper's authors own the reported study; local evaluation, affected-population, product, domain, safety, legal, and governance authorities own another workload's groups and acceptance decisions.",
+      "limitations": [
+        "Not evidence of current vendor performance.",
+        "Not a universal fairness definition, taxonomy, or threshold.",
+        "Not domain, legal, or safety authorization."
+      ],
+      "sourceResearchNeed": "Representative evaluation, segment performance, consequence-based thresholds, calibration/uncertainty limits, and independent disposition authority.",
+      "replaceabilityTest": "The case must teach report/fact/inference/limitation separation and segment precedence even when replaced by a non-face, non-human, or non-classification workload.",
+      "transferRules": [
+        "Transfer the audit pattern and warning about aggregates, not the group taxonomy or numeric thresholds.",
+        "Any new case must preserve intended population, intersections, sample limits, and authority boundaries."
+      ],
+      "status": "verified"
+    },
+    {
+      "caseId": "CASE-10",
+      "name": "ONNX multi-axis compatibility contract",
+      "portId": "PORT-SHARED",
+      "truthLabel": "PUBLIC REPORTED CASE",
+      "kind": "public-standard",
+      "realConstructedRule": "Use only the ONNX project’s normative/recommended version rules and documented checker boundary; invent no adoption, portability, or production-success outcome.",
+      "problem": "A model file can carry a familiar extension or model version while its IR, required operator set, interface semantics, runtime, or consumers are incompatible.",
+      "context": "ONNX 1.23.0 documentation distinguishes IR, operator-set, and model versioning and specifies how breaking changes affect those axes.",
+      "constraints": [
+        "ONNX-specific format and operator semantics",
+        "Runtime implementations may support different versions/operators",
+        "Model-version policy is partly recommended rather than universally enforced",
+        "Unknown consumers remain outside format validation"
+      ],
+      "approach": [
+        "Record IR, operator-set imports, model version, interface, producer, runtime, and consumer identities separately.",
+        "Classify breaking versus nonbreaking changes against a declared contract.",
+        "Run old/new consumer fixtures and retain migration, coexistence, and fallback evidence."
+      ],
+      "tradeoffs": [
+        "Strict compatibility blocks silent breakage but increases matrix and migration work.",
+        "Format standardization improves inspectability without guaranteeing equivalent runtime behavior."
+      ],
+      "failuresOrRisks": [
+        "Model version mistaken for operator-set compatibility",
+        "Checker pass mistaken for product compatibility",
+        "Undeclared old consumer stranded",
+        "Breaking semantic change mislabeled as a patch"
+      ],
+      "reportedFacts": [
+        "ONNX documents three distinct versioned entities: IR, operator specifications/operator sets, and models.",
+        "ONNX models declare required operator sets and the checker enforces required IR fields."
+      ],
+      "attributedOutcomes": [
+        "The ONNX versioning policy states that consumers should accept updated files only when the relevant IR, operator, and model-version changes are nonbreaking; this is normative guidance, not measured field compatibility."
+      ],
+      "allowedInferences": [
+        "Compatibility must be evaluated across all declared version axes and known consumers.",
+        "A format checker is necessary mechanical evidence in its scope but insufficient release evidence."
+      ],
+      "lessons": [
+        "Compatibility is a consumer-specific relation, not a property of the model file alone.",
+        "Migration and rollback ownership must remain explicit."
+      ],
+      "chapterIds": [
+        "MLE-CH-14"
+      ],
+      "claimIds": [
+        "MLE-BCLM-040",
+        "MLE-BCLM-041",
+        "MLE-BCLM-042"
+      ],
+      "sourceUses": [
+        {
+          "sourceId": "MLE-BSRC-017",
+          "evidenceRole": "transfer-context"
+        },
+        {
+          "sourceId": "MLE-BSRC-020",
+          "evidenceRole": "reported-fact"
+        },
+        {
+          "sourceId": "MLE-BSRC-020",
+          "evidenceRole": "mechanism"
+        },
+        {
+          "sourceId": "MLE-BSRC-034",
+          "evidenceRole": "doctrine"
+        }
+      ],
+      "decisionJob": "Produce a compatibility or migration disposition that cannot pass while a known old consumer, version axis, or fallback owner is missing.",
+      "authorityOwner": "ONNX and SemVer projects own their specifications; application consumers own product compatibility; platform owners own shared runtime support; the MLE owns workload-specific evidence.",
+      "limitations": [
+        "No claim that ONNX ensures portability across all runtimes.",
+        "No claim that SemVer discovers or tests consumers.",
+        "No production or business outcome is reported."
+      ],
+      "sourceResearchNeed": "Interface compatibility, model consumers, versioning, migration, coexistence, and rollback.",
+      "replaceabilityTest": "The case must reduce to independent version axes, declared interface, known consumers, compatibility fixtures, migration, and fallback fields for managed, classical, deep, edge, and shared ports.",
+      "transferRules": [
+        "Transfer the multi-axis and consumer-test method, not ONNX field names.",
+        "Recheck exact format/runtime compatibility against the release versions selected in Phase 07."
+      ],
+      "status": "verified"
+    },
+    {
+      "caseId": "CASE-11",
+      "name": "PyTorch nightly dependency-chain compromise",
+      "portId": "PORT-DEEP",
+      "truthLabel": "PUBLIC REPORTED CASE",
+      "kind": "public-incident",
+      "realConstructedRule": "Use only the PyTorch Foundation's reported affected window, package mechanism, indicators, scope caveats, and mitigations; SLSA and SSDF are transfer context, and no affected-population, loss, or complete-cleanup outcome is invented.",
+      "problem": "A malicious package with the same dependency name was published to a higher-precedence public index and could be installed into affected Linux PyTorch nightly environments.",
+      "context": "PyTorch nightly Linux packages installed with pip during the disclosed 2022-12-25 through 2022-12-30 window; stable packages were reported unaffected.",
+      "constraints": [
+        "Use only the PyTorch Foundation's reported scope and indicators.",
+        "Do not infer how many environments were compromised or that every package resolver behaves identically.",
+        "Treat SLSA and SSDF as transfer context, not as controls PyTorch claimed to have used."
+      ],
+      "approach": [
+        "Identify the affected package, platform, installer, and time window.",
+        "Use the disclosed malicious binary hash and environment check as bounded investigation evidence.",
+        "Remove affected packages and caches, replace the dependency identity, remove affected nightly packages from the project index, and reserve the public package name.",
+        "Translate the event into package-source, digest, provenance, index-precedence, inventory, access, and recovery checks."
+      ],
+      "tradeoffs": [
+        "Removing the dependency and packages contains a known path but may disrupt nightly users.",
+        "A reserved package name reduces recurrence of this mechanism but does not address every supply-chain threat.",
+        "User-side cleanup instructions cannot prove completion across all environments."
+      ],
+      "failuresOrRisks": [
+        "Dependency identity was under-specified by name alone.",
+        "Index precedence allowed unintended origin substitution.",
+        "Nightly consumers may retain installed packages, caches, credentials, or copied artifacts after project-side remediation."
+      ],
+      "reportedFacts": [
+        "PyTorch reported learning on 2022-12-30 of a malicious torchtriton package uploaded to PyPI with the same name as its nightly dependency.",
+        "The advisory bounded affected installations to PyTorch-nightly on Linux installed via pip between 2022-12-25 and 2022-12-30 and reported stable packages unaffected.",
+        "The advisory published a malicious binary SHA-256 and described data collection and encrypted DNS exfiltration behavior.",
+        "PyTorch reported removing torchtriton as a dependency, replacing it with pytorch-triton, removing affected nightly packages from its indices, and coordinating package-name control with PyPI."
+      ],
+      "attributedOutcomes": [
+        "PyTorch attributed package substitution to PyPI taking precedence over its nightly index for the same dependency name.",
+        "PyTorch stated that the malicious binary executed when the package was imported and that this was not PyTorch's default behavior.",
+        "PyTorch attributed the listed mitigation steps to its response; no complete count of affected or cleaned environments was reported."
+      ],
+      "allowedInferences": [
+        "Dependency origin, version, digest, and resolver/index context belong in the release identity, not just the package name.",
+        "Containment evidence must distinguish project-side removal from consumer-side non-serving and credential cleanup.",
+        "Supply-chain assurance should test expected provenance and fail mismatches before promotion."
+      ],
+      "lessons": [
+        "Package identity must include origin and digest.",
+        "Reported remediation should preserve affected scope and uncertainty.",
+        "Cleanup instructions require bounded verification rather than an unsupported global-success claim."
+      ],
+      "chapterIds": [
+        "MLE-CH-15",
+        "MLE-CH-18",
+        "MLE-CH-19",
+        "MLE-CH-20",
+        "MLE-CH-21"
+      ],
+      "claimIds": [
+        "MLE-BCLM-043",
+        "MLE-BCLM-044",
+        "MLE-BCLM-045",
+        "MLE-BCLM-052",
+        "MLE-BCLM-055",
+        "MLE-BCLM-058",
+        "MLE-BCLM-060",
+        "MLE-BCLM-061",
+        "MLE-BCLM-062"
+      ],
+      "sourceUses": [
+        {
+          "sourceId": "MLE-BSRC-042",
+          "evidenceRole": "reported-fact"
+        },
+        {
+          "sourceId": "MLE-BSRC-042",
+          "evidenceRole": "attributed-outcome"
+        },
+        {
+          "sourceId": "MLE-BSRC-042",
+          "evidenceRole": "limitation"
+        },
+        {
+          "sourceId": "MLE-BSRC-036",
+          "evidenceRole": "transfer-context"
+        },
+        {
+          "sourceId": "MLE-BSRC-030",
+          "evidenceRole": "transfer-context"
+        }
+      ],
+      "decisionJob": "Trace an affected release candidate from dependency origin through containment and reject any claim of complete cleanup without consumer-side residual-path evidence.",
+      "authorityOwner": "PyTorch owns its report; security owns trust roots and exceptions, package and platform owners control indexes and promotion, SRE or incident owners command response, consumers verify their environments, and formal authorities remain external to the MLE.",
+      "limitations": [
+        "First-party advisory, not independent forensics.",
+        "No verified population-wide cleanup or loss outcome.",
+        "No universal claim about package managers, model registries, or all supply-chain attacks.",
+        "Stable PyTorch packages were explicitly outside the reported affected scope."
+      ],
+      "sourceResearchNeed": "Artifact provenance and verification, dependency-origin identity, supply-chain incident containment, credential and access response, consumer cleanup, and non-serving evidence.",
+      "replaceabilityTest": "The case must reduce to origin, version, digest, provenance, affected scope, containment, residual-path, and authority fields across all five ports without pip, PyPI, or PyTorch-specific meaning.",
+      "transferRules": [
+        "Transfer the identity and verification method to any of the five ports, but replace pip/index mechanics with that port's actual package path.",
+        "Do not claim that SLSA or SSDF would have prevented the exact event unless a specific implemented control and trust root are evidenced.",
+        "Use the case to test release integrity, containment, residual-path audit, and evidence review; never use it as proof of model performance."
+      ],
+      "status": "verified"
+    },
+    {
+      "caseId": "CASE-12",
+      "name": "Knight Capital deployment and control failure",
+      "portId": "PORT-SHARED",
+      "truthLabel": "PUBLIC REPORTED CASE",
+      "kind": "public-incident",
+      "realConstructedRule": "Preserve the regulator’s reported findings, the issuer’s attributed statements, the settlement’s no-admit-or-deny limitation, and the fact that this was automated trading software rather than ML; invent no ML outcome, regulatory conclusion, or complete retirement proof.",
+      "problem": "An incorrect deployment activated defective legacy behavior in an automated equity router without adequate pre-submission, aggregate-exposure, deployment, monitoring, incident-response, or review controls.",
+      "context": "A U.S. broker-dealer's automated trading router incident on 2012-08-01, documented by the SEC in a 2013 enforcement release and an issuer filing.",
+      "constraints": [
+        "This was automated trading software, not a machine-learning model.",
+        "Regulator findings are preserved as reported and the settlement's no-admit/no-deny limitation remains visible.",
+        "Issuer-reported software removal is not treated as complete non-serving proof."
+      ],
+      "approach": [
+        "Trace deployed code identity, dormant legacy behavior, target nodes, pre-submission controls, aggregate exposure, and alert ownership.",
+        "Separate regulator-reported facts and outcomes from transferable workload-control inferences.",
+        "Contrast incident restoration and issuer-reported removal with the stronger residual-path evidence required for model retirement.",
+        "Route deployment, monitoring, incident, control, and systemic-review actions to their actual authorities."
+      ],
+      "tradeoffs": [
+        "Fast automated execution magnified a deployment/control error within minutes.",
+        "An inventory-focused control review was less effective than malfunction-oriented testing and root-cause learning.",
+        "Removal of implicated software supports containment but does not expose every prior or fallback path."
+      ],
+      "failuresOrRisks": [
+        "Incorrect code deployment across router instances.",
+        "Defective dormant code remained available for activation.",
+        "No adequate control compared outgoing with entered orders or bounded aggregate firm exposure.",
+        "Ninety-seven error emails were not designed or acted on as effective alerts.",
+        "Control review emphasized inventory/functioning rather than plausible malfunction and prior root causes."
+      ],
+      "reportedFacts": [
+        "The SEC reported that incorrect deployment activated defective router behavior and produced more than four million orders while attempting to fill 212 customer orders during the first 45 minutes after market open.",
+        "The SEC reported more than 397 million shares traded, several billion dollars in unwanted positions, and an eventual loss of more than $460 million.",
+        "The SEC reported 97 automated error emails before market open that were not designed or acted upon as system alerts.",
+        "The SEC reported inadequate deployment/testing, pre-submission, aggregate-exposure, incident-response, and control-review procedures.",
+        "The SEC-hosted issuer filing stated that the software was subsequently removed and reported an approximate pre-tax loss of $457.6 million."
+      ],
+      "attributedOutcomes": [
+        "The SEC attributed the erroneous orders and loss to the deployment and control failures described in its order.",
+        "The SEC required a $12 million penalty and an independent consultant review as part of the settled enforcement action.",
+        "Knight attributed removal of the implicated software and business impact in its issuer filing; complete terminal-path evidence was not published in the reviewed sources."
+      ],
+      "allowedInferences": [
+        "Serving envelopes need hard absolute controls and attributable signals, not only averages or passive messages.",
+        "Incident closure should preserve changed identity, control evidence, owners, and independent requalification rather than silently replacing code.",
+        "Control review should inject plausible malfunction and inspect root causes, not merely inventory controls.",
+        "Reported removal of one software component is weaker than proof that no endpoint, alias, credential, consumer, or fallback path remains."
+      ],
+      "lessons": [
+        "Deployment identity and target completeness are release evidence.",
+        "Signals become useful alerts only when thresholds, owners, and actions are explicit.",
+        "Aggregate damage bounds and kill paths must be tested before exposure.",
+        "Formal control review needs failure-oriented evidence and follow-through.",
+        "Retirement evidence must exceed a removal statement."
+      ],
+      "chapterIds": [
+        "MLE-CH-16",
+        "MLE-CH-17",
+        "MLE-CH-18",
+        "MLE-CH-19",
+        "MLE-CH-20",
+        "MLE-CH-21"
+      ],
+      "claimIds": [
+        "MLE-BCLM-046",
+        "MLE-BCLM-047",
+        "MLE-BCLM-048",
+        "MLE-BCLM-049",
+        "MLE-BCLM-051",
+        "MLE-BCLM-052",
+        "MLE-BCLM-053",
+        "MLE-BCLM-054",
+        "MLE-BCLM-055",
+        "MLE-BCLM-056",
+        "MLE-BCLM-058",
+        "MLE-BCLM-060",
+        "MLE-BCLM-061",
+        "MLE-BCLM-062"
+      ],
+      "sourceUses": [
+        {
+          "sourceId": "MLE-BSRC-039",
+          "evidenceRole": "reported-fact"
+        },
+        {
+          "sourceId": "MLE-BSRC-039",
+          "evidenceRole": "attributed-outcome"
+        },
+        {
+          "sourceId": "MLE-BSRC-039",
+          "evidenceRole": "limitation"
+        },
+        {
+          "sourceId": "MLE-BSRC-026",
+          "evidenceRole": "reported-fact"
+        },
+        {
+          "sourceId": "MLE-BSRC-026",
+          "evidenceRole": "limitation"
+        },
+        {
+          "sourceId": "MLE-BSRC-040",
+          "evidenceRole": "transfer-context"
+        },
+        {
+          "sourceId": "MLE-BSRC-027",
+          "evidenceRole": "transfer-context"
+        },
+        {
+          "sourceId": "MLE-BSRC-041",
+          "evidenceRole": "transfer-context"
+        },
+        {
+          "sourceId": "MLE-BSRC-031",
+          "evidenceRole": "transfer-context"
+        }
+      ],
+      "decisionJob": "Trace deployment identity, serving limits, alert ownership, containment, control effectiveness, and residual paths without treating a removal statement as complete non-serving proof.",
+      "authorityOwner": "The SEC and Knight own their respective reported records; platform and SRE owners retain serving and incident command, compliance and risk authorities retain regulatory and exposure decisions, product and domain owners retain use decisions, and the MLE owns only workload-specific evidence and bounded transfer.",
+      "limitations": [
+        "Not an ML system or evidence of ML-specific failure rates.",
+        "SEC settlement was without admitting or denying the findings.",
+    "The official SEC search result exposed the exact issuer removal and approximate pre-tax loss statements, while full-document extraction remained size-limited; later freezes must recheck the accession and passage.",
+        "No public evidence reviewed here proves all serving paths, credentials, consumers, or recovery copies were eliminated."
+      ],
+      "sourceResearchNeed": "Staged serving limits, attributable monitoring, incident containment and learning, lifecycle control effectiveness, formal authority, software removal, and residual-path retirement evidence.",
+      "replaceabilityTest": "The case must reduce to deployment identity, hard limits, signal routing, incident evidence, control testing, removal, residual-path, and authority fields across all five ML ports without trading thresholds, router topology, or regulatory transfer.",
+      "transferRules": [
+        "Transfer deployment, signal-routing, hard-limit, incident, control-review, and residual-path methods only; do not transfer trading thresholds or regulatory conclusions.",
+        "For each ML port, replace router nodes and order paths with that port's model packages, endpoints, devices, aliases, consumers, credentials, and fallback routes.",
+        "Do not imply that an MLE owns fleet incident command, financial controls, regulator compliance, or formal risk acceptance."
+      ],
+      "status": "verified"
+    }
+  ]
+}

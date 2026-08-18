@@ -1,0 +1,744 @@
+{
+  "schema": "mle-phase-06-integration/v1",
+  "architecture": {
+    "version": "1.0.0",
+    "markdown": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.md",
+      "sha256": "5f41bfc624f7085b8e3b2a12d6c2c3d52d6c21659eb5140d94cfa29b0edce630"
+    },
+    "json": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.json",
+      "sha256": "bb2b6fe1137b6b56ff4729d0131c1b9496804bcd3a37e07a92361f4af4da972f"
+    },
+    "phase05Verification": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-05-verification.md",
+      "sha256": "23962470dd64fff18bb82d0d1eb1260bb13b4e6331bc3f1d34e62695df490699"
+    }
+  },
+  "scratchInputs": [
+    {
+      "lane": "A",
+      "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-06/lane-a-discovery.json",
+      "sha256": "8ca4398f0b6c520ab20bdca878801c54188bf961b242abacb724a9af51fb6e1b"
+    },
+    {
+      "lane": "B",
+      "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-06/lane-b-discovery.json",
+      "sha256": "4c151bdac35728f11fa704c439215fba769dc4a788072c7ed31f0a6f502c5883"
+    },
+    {
+      "lane": "C",
+      "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-06/lane-c-discovery.json",
+      "sha256": "bc3e22a1d73d4301ff570f1add7a90f7da18908126167ffa03f13be9c540ecfc"
+    }
+  ],
+  "registers": {
+    "sources": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/source-register.json",
+      "sha256": "6dc8cc380f42238e5dce26ec9357118fd6dac9e2f037b0307827bd64f8d4d902"
+    },
+    "claims": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-register.json",
+      "sha256": "953572463965ffe79a1fd4ef4d8a5c2ee70e8c507ad83214b0e1d1e6246f569c"
+    },
+    "cases": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/case-studies/case-study-register.json",
+      "sha256": "afdf9b955b766660efa7ec6ec7da1a22ea54d050436b271aff24d1aceaed5e51"
+    },
+    "csv": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-to-chapter.csv",
+      "sha256": "39eda5b2d97e5af91f95cc5d33589c4152cc66db4fd77936be895d2643df3154",
+      "schema": "mle-phase-06-claim-chapter/v1"
+    }
+  },
+  "sourceIds": [
+    "MLE-BSRC-001",
+    "MLE-BSRC-002",
+    "MLE-BSRC-003",
+    "MLE-BSRC-004",
+    "MLE-BSRC-005",
+    "MLE-BSRC-006",
+    "MLE-BSRC-007",
+    "MLE-BSRC-008",
+    "MLE-BSRC-009",
+    "MLE-BSRC-010",
+    "MLE-BSRC-011",
+    "MLE-BSRC-012",
+    "MLE-BSRC-013",
+    "MLE-BSRC-014",
+    "MLE-BSRC-015",
+    "MLE-BSRC-016",
+    "MLE-BSRC-017",
+    "MLE-BSRC-018",
+    "MLE-BSRC-019",
+    "MLE-BSRC-020",
+    "MLE-BSRC-021",
+    "MLE-BSRC-022",
+    "MLE-BSRC-023",
+    "MLE-BSRC-024",
+    "MLE-BSRC-025",
+    "MLE-BSRC-026",
+    "MLE-BSRC-027",
+    "MLE-BSRC-028",
+    "MLE-BSRC-029",
+    "MLE-BSRC-030",
+    "MLE-BSRC-031",
+    "MLE-BSRC-032",
+    "MLE-BSRC-033",
+    "MLE-BSRC-034",
+    "MLE-BSRC-035",
+    "MLE-BSRC-036",
+    "MLE-BSRC-037",
+    "MLE-BSRC-038",
+    "MLE-BSRC-039",
+    "MLE-BSRC-040",
+    "MLE-BSRC-041",
+    "MLE-BSRC-042",
+    "MLE-BSRC-043",
+    "MLE-BSRC-044",
+    "MLE-BSRC-045",
+    "MLE-BSRC-046"
+  ],
+  "claimAllocation": {
+    "MLE-CH-01": [
+      "MLE-BCLM-001",
+      "MLE-BCLM-002",
+      "MLE-BCLM-003"
+    ],
+    "MLE-CH-02": [
+      "MLE-BCLM-004",
+      "MLE-BCLM-005",
+      "MLE-BCLM-006"
+    ],
+    "MLE-CH-03": [
+      "MLE-BCLM-007",
+      "MLE-BCLM-008",
+      "MLE-BCLM-009"
+    ],
+    "MLE-CH-04": [
+      "MLE-BCLM-010",
+      "MLE-BCLM-011",
+      "MLE-BCLM-012"
+    ],
+    "MLE-CH-05": [
+      "MLE-BCLM-013",
+      "MLE-BCLM-014",
+      "MLE-BCLM-015"
+    ],
+    "MLE-CH-06": [
+      "MLE-BCLM-016",
+      "MLE-BCLM-017",
+      "MLE-BCLM-018"
+    ],
+    "MLE-CH-07": [
+      "MLE-BCLM-019",
+      "MLE-BCLM-020",
+      "MLE-BCLM-021"
+    ],
+    "MLE-CH-08": [
+      "MLE-BCLM-022",
+      "MLE-BCLM-023",
+      "MLE-BCLM-024"
+    ],
+    "MLE-CH-09": [
+      "MLE-BCLM-025",
+      "MLE-BCLM-026",
+      "MLE-BCLM-027"
+    ],
+    "MLE-CH-10": [
+      "MLE-BCLM-028",
+      "MLE-BCLM-029",
+      "MLE-BCLM-030"
+    ],
+    "MLE-CH-11": [
+      "MLE-BCLM-031",
+      "MLE-BCLM-032",
+      "MLE-BCLM-033"
+    ],
+    "MLE-CH-12": [
+      "MLE-BCLM-034",
+      "MLE-BCLM-035",
+      "MLE-BCLM-036"
+    ],
+    "MLE-CH-13": [
+      "MLE-BCLM-037",
+      "MLE-BCLM-038",
+      "MLE-BCLM-039"
+    ],
+    "MLE-CH-14": [
+      "MLE-BCLM-040",
+      "MLE-BCLM-041",
+      "MLE-BCLM-042"
+    ],
+    "MLE-CH-15": [
+      "MLE-BCLM-043",
+      "MLE-BCLM-044",
+      "MLE-BCLM-045"
+    ],
+    "MLE-CH-16": [
+      "MLE-BCLM-046",
+      "MLE-BCLM-047",
+      "MLE-BCLM-048"
+    ],
+    "MLE-CH-17": [
+      "MLE-BCLM-049",
+      "MLE-BCLM-050",
+      "MLE-BCLM-051"
+    ],
+    "MLE-CH-18": [
+      "MLE-BCLM-052",
+      "MLE-BCLM-053",
+      "MLE-BCLM-054"
+    ],
+    "MLE-CH-19": [
+      "MLE-BCLM-055",
+      "MLE-BCLM-056",
+      "MLE-BCLM-057"
+    ],
+    "MLE-CH-20": [
+      "MLE-BCLM-058",
+      "MLE-BCLM-059",
+      "MLE-BCLM-060"
+    ],
+    "MLE-CH-21": [
+      "MLE-BCLM-061",
+      "MLE-BCLM-062",
+      "MLE-BCLM-063"
+    ]
+  },
+  "caseIds": [
+    "CASE-01",
+    "CASE-02",
+    "CASE-03",
+    "CASE-04",
+    "CASE-05",
+    "CASE-06",
+    "CASE-07",
+    "CASE-08",
+    "CASE-09",
+    "CASE-10",
+    "CASE-11",
+    "CASE-12"
+  ],
+  "chapterAssignments": {
+    "MLE-CH-01": {
+      "sourceIds": [
+        "MLE-BSRC-005",
+        "MLE-BSRC-007",
+        "MLE-BSRC-027",
+        "MLE-BSRC-028",
+        "MLE-BSRC-045",
+        "MLE-BSRC-046"
+      ],
+      "claimIds": [
+        "MLE-BCLM-001",
+        "MLE-BCLM-002",
+        "MLE-BCLM-003"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-06",
+        "CASE-07"
+      ]
+    },
+    "MLE-CH-02": {
+      "sourceIds": [
+        "MLE-BSRC-006",
+        "MLE-BSRC-015",
+        "MLE-BSRC-027",
+        "MLE-BSRC-028",
+        "MLE-BSRC-038"
+      ],
+      "claimIds": [
+        "MLE-BCLM-004",
+        "MLE-BCLM-005",
+        "MLE-BCLM-006"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-05",
+        "CASE-06"
+      ]
+    },
+    "MLE-CH-03": {
+      "sourceIds": [
+        "MLE-BSRC-006",
+        "MLE-BSRC-007",
+        "MLE-BSRC-015",
+        "MLE-BSRC-027",
+        "MLE-BSRC-028",
+        "MLE-BSRC-038"
+      ],
+      "claimIds": [
+        "MLE-BCLM-007",
+        "MLE-BCLM-008",
+        "MLE-BCLM-009"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-06"
+      ]
+    },
+    "MLE-CH-04": {
+      "sourceIds": [
+        "MLE-BSRC-002",
+        "MLE-BSRC-003",
+        "MLE-BSRC-004",
+        "MLE-BSRC-007",
+        "MLE-BSRC-024",
+        "MLE-BSRC-028",
+        "MLE-BSRC-038"
+      ],
+      "claimIds": [
+        "MLE-BCLM-010",
+        "MLE-BCLM-011",
+        "MLE-BCLM-012"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-04",
+        "CASE-05",
+        "CASE-06"
+      ]
+    },
+    "MLE-CH-05": {
+      "sourceIds": [
+        "MLE-BSRC-004",
+        "MLE-BSRC-005",
+        "MLE-BSRC-015",
+        "MLE-BSRC-024",
+        "MLE-BSRC-043",
+        "MLE-BSRC-044"
+      ],
+      "claimIds": [
+        "MLE-BCLM-013",
+        "MLE-BCLM-014",
+        "MLE-BCLM-015"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-05",
+        "CASE-06",
+        "CASE-07"
+      ]
+    },
+    "MLE-CH-06": {
+      "sourceIds": [
+        "MLE-BSRC-013",
+        "MLE-BSRC-014",
+        "MLE-BSRC-015",
+        "MLE-BSRC-024",
+        "MLE-BSRC-025",
+        "MLE-BSRC-044"
+      ],
+      "claimIds": [
+        "MLE-BCLM-016",
+        "MLE-BCLM-017",
+        "MLE-BCLM-018"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-04",
+        "CASE-05",
+        "CASE-06",
+        "CASE-07"
+      ]
+    },
+    "MLE-CH-07": {
+      "sourceIds": [
+        "MLE-BSRC-007",
+        "MLE-BSRC-010",
+        "MLE-BSRC-015",
+        "MLE-BSRC-018",
+        "MLE-BSRC-021",
+        "MLE-BSRC-043"
+      ],
+      "claimIds": [
+        "MLE-BCLM-019",
+        "MLE-BCLM-020",
+        "MLE-BCLM-021"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-04",
+        "CASE-06",
+        "CASE-07"
+      ]
+    },
+    "MLE-CH-08": {
+      "sourceIds": [
+        "MLE-BSRC-009",
+        "MLE-BSRC-018",
+        "MLE-BSRC-021"
+      ],
+      "claimIds": [
+        "MLE-BCLM-022",
+        "MLE-BCLM-023",
+        "MLE-BCLM-024"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-04",
+        "CASE-05",
+        "CASE-08"
+      ]
+    },
+    "MLE-CH-09": {
+      "sourceIds": [
+        "MLE-BSRC-006",
+        "MLE-BSRC-010",
+        "MLE-BSRC-018",
+        "MLE-BSRC-022",
+        "MLE-BSRC-028"
+      ],
+      "claimIds": [
+        "MLE-BCLM-025",
+        "MLE-BCLM-026",
+        "MLE-BCLM-027"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-04"
+      ]
+    },
+    "MLE-CH-10": {
+      "sourceIds": [
+        "MLE-BSRC-006",
+        "MLE-BSRC-011",
+        "MLE-BSRC-025",
+        "MLE-BSRC-028",
+        "MLE-BSRC-032"
+      ],
+      "claimIds": [
+        "MLE-BCLM-028",
+        "MLE-BCLM-029",
+        "MLE-BCLM-030"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-04",
+        "CASE-05",
+        "CASE-09"
+      ]
+    },
+    "MLE-CH-11": {
+      "sourceIds": [
+        "MLE-BSRC-006",
+        "MLE-BSRC-012",
+        "MLE-BSRC-023",
+        "MLE-BSRC-025"
+      ],
+      "claimIds": [
+        "MLE-BCLM-031",
+        "MLE-BCLM-032",
+        "MLE-BCLM-033"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-03",
+        "CASE-04",
+        "CASE-09"
+      ]
+    },
+    "MLE-CH-12": {
+      "sourceIds": [
+        "MLE-BSRC-006",
+        "MLE-BSRC-019",
+        "MLE-BSRC-025",
+        "MLE-BSRC-028"
+      ],
+      "claimIds": [
+        "MLE-BCLM-034",
+        "MLE-BCLM-035",
+        "MLE-BCLM-036"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-05",
+        "CASE-09"
+      ]
+    },
+    "MLE-CH-13": {
+      "sourceIds": [
+        "MLE-BSRC-006",
+        "MLE-BSRC-016",
+        "MLE-BSRC-017",
+        "MLE-BSRC-018",
+        "MLE-BSRC-028",
+        "MLE-BSRC-033",
+        "MLE-BSRC-036",
+        "MLE-BSRC-037"
+      ],
+      "claimIds": [
+        "MLE-BCLM-037",
+        "MLE-BCLM-038",
+        "MLE-BCLM-039"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-02",
+        "CASE-03",
+        "CASE-04",
+        "CASE-05"
+      ]
+    },
+    "MLE-CH-14": {
+      "sourceIds": [
+        "MLE-BSRC-005",
+        "MLE-BSRC-016",
+        "MLE-BSRC-017",
+        "MLE-BSRC-020",
+        "MLE-BSRC-028",
+        "MLE-BSRC-034"
+      ],
+      "claimIds": [
+        "MLE-BCLM-040",
+        "MLE-BCLM-041",
+        "MLE-BCLM-042"
+      ],
+      "caseIds": [
+        "CASE-01",
+        "CASE-05",
+        "CASE-10"
+      ]
+    },
+    "MLE-CH-15": {
+      "sourceIds": [
+        "MLE-BSRC-030",
+        "MLE-BSRC-031",
+        "MLE-BSRC-035",
+        "MLE-BSRC-036",
+        "MLE-BSRC-042"
+      ],
+      "claimIds": [
+        "MLE-BCLM-043",
+        "MLE-BCLM-044",
+        "MLE-BCLM-045"
+      ],
+      "caseIds": [
+        "CASE-11"
+      ]
+    },
+    "MLE-CH-16": {
+      "sourceIds": [
+        "MLE-BSRC-007",
+        "MLE-BSRC-008",
+        "MLE-BSRC-016",
+        "MLE-BSRC-039",
+        "MLE-BSRC-040"
+      ],
+      "claimIds": [
+        "MLE-BCLM-046",
+        "MLE-BCLM-047",
+        "MLE-BCLM-048"
+      ],
+      "caseIds": [
+        "CASE-12"
+      ]
+    },
+    "MLE-CH-17": {
+      "sourceIds": [
+        "MLE-BSRC-001",
+        "MLE-BSRC-005",
+        "MLE-BSRC-007",
+        "MLE-BSRC-024",
+        "MLE-BSRC-027",
+        "MLE-BSRC-039"
+      ],
+      "claimIds": [
+        "MLE-BCLM-049",
+        "MLE-BCLM-050",
+        "MLE-BCLM-051"
+      ],
+      "caseIds": [
+        "CASE-12"
+      ]
+    },
+    "MLE-CH-18": {
+      "sourceIds": [
+        "MLE-BSRC-007",
+        "MLE-BSRC-016",
+        "MLE-BSRC-027",
+        "MLE-BSRC-030",
+        "MLE-BSRC-031",
+        "MLE-BSRC-039",
+        "MLE-BSRC-040",
+        "MLE-BSRC-041",
+        "MLE-BSRC-042"
+      ],
+      "claimIds": [
+        "MLE-BCLM-052",
+        "MLE-BCLM-053",
+        "MLE-BCLM-054"
+      ],
+      "caseIds": [
+        "CASE-11",
+        "CASE-12"
+      ]
+    },
+    "MLE-CH-19": {
+      "sourceIds": [
+        "MLE-BSRC-027",
+        "MLE-BSRC-030",
+        "MLE-BSRC-031",
+        "MLE-BSRC-036",
+        "MLE-BSRC-039"
+      ],
+      "claimIds": [
+        "MLE-BCLM-055",
+        "MLE-BCLM-056",
+        "MLE-BCLM-057"
+      ],
+      "caseIds": [
+        "CASE-11",
+        "CASE-12"
+      ]
+    },
+    "MLE-CH-20": {
+      "sourceIds": [
+        "MLE-BSRC-016",
+        "MLE-BSRC-026",
+        "MLE-BSRC-027",
+        "MLE-BSRC-029",
+        "MLE-BSRC-031",
+        "MLE-BSRC-042"
+      ],
+      "claimIds": [
+        "MLE-BCLM-058",
+        "MLE-BCLM-059",
+        "MLE-BCLM-060"
+      ],
+      "caseIds": [
+        "CASE-11",
+        "CASE-12"
+      ]
+    },
+    "MLE-CH-21": {
+      "sourceIds": [
+        "MLE-BSRC-005",
+        "MLE-BSRC-007",
+        "MLE-BSRC-027",
+        "MLE-BSRC-030",
+        "MLE-BSRC-036",
+        "MLE-BSRC-039",
+        "MLE-BSRC-041"
+      ],
+      "claimIds": [
+        "MLE-BCLM-061",
+        "MLE-BCLM-062",
+        "MLE-BCLM-063"
+      ],
+      "caseIds": [
+        "CASE-11",
+        "CASE-12"
+      ]
+    }
+  },
+  "integrationContractHash": "3b0f07b8048d3a5cc5b3ca7d4e6b69e62e2c0f2e2b60a196171d25469c155433",
+  "packContract": {
+    "requiredIntegrationContractHash": "3b0f07b8048d3a5cc5b3ca7d4e6b69e62e2c0f2e2b60a196171d25469c155433",
+    "reviewRequirement": "Every chapter pack and Phase 06 lane/integration review must state this exact integrationContractHash.",
+    "packs": [
+      {
+        "chapterId": "MLE-CH-01",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-01.md"
+      },
+      {
+        "chapterId": "MLE-CH-02",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-02.md"
+      },
+      {
+        "chapterId": "MLE-CH-03",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-03.md"
+      },
+      {
+        "chapterId": "MLE-CH-04",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-04.md"
+      },
+      {
+        "chapterId": "MLE-CH-05",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-05.md"
+      },
+      {
+        "chapterId": "MLE-CH-06",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-06.md"
+      },
+      {
+        "chapterId": "MLE-CH-07",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-07.md"
+      },
+      {
+        "chapterId": "MLE-CH-08",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-08.md"
+      },
+      {
+        "chapterId": "MLE-CH-09",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-09.md"
+      },
+      {
+        "chapterId": "MLE-CH-10",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-10.md"
+      },
+      {
+        "chapterId": "MLE-CH-11",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-11.md"
+      },
+      {
+        "chapterId": "MLE-CH-12",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-12.md"
+      },
+      {
+        "chapterId": "MLE-CH-13",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-13.md"
+      },
+      {
+        "chapterId": "MLE-CH-14",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-14.md"
+      },
+      {
+        "chapterId": "MLE-CH-15",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-15.md"
+      },
+      {
+        "chapterId": "MLE-CH-16",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-16.md"
+      },
+      {
+        "chapterId": "MLE-CH-17",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-17.md"
+      },
+      {
+        "chapterId": "MLE-CH-18",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-18.md"
+      },
+      {
+        "chapterId": "MLE-CH-19",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-19.md"
+      },
+      {
+        "chapterId": "MLE-CH-20",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-20.md"
+      },
+      {
+        "chapterId": "MLE-CH-21",
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/research-packs/chapter-21.md"
+      }
+    ]
+  },
+  "generatedAt": "2026-08-18T22:56:00+05:30"
+}
