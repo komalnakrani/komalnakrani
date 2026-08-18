@@ -46,3 +46,15 @@ test('renders semantic and accessible publication structures', async () => {
   assert.match(html, /<section class="figure-register register"/);
   assert.match(html, /<section class="author-page page--full"/);
 });
+
+test('moves headings that directly introduce full-page figures onto the figure page', async () => {
+  const [{ renderBookHtml }, { loadBookContract }, { default: config }] = await Promise.all([
+    import('../render.mjs'),
+    import('../source-contract.mjs'),
+    import('../books/forward-deployed-engineering.mjs'),
+  ]);
+  const html = renderBookHtml(loadBookContract(config));
+
+  assert.match(html, /class="figure-prelude"/);
+  assert.doesNotMatch(html, /class="section-heading[^"]*"[^>]*>[^<]+<\/h[2-4]>\s*<figure class="book-figure"/);
+});

@@ -45,7 +45,7 @@ h4 { margin: 0.24in 0 0.1in; color: #24435b; font-size: 16pt; line-height: 1.08;
 .section-heading { position: relative; max-width: 4.75in; padding-top: 0.04in; }
 .section-heading::before { content: ""; position: absolute; left: -0.24in; top: 0.1in; width: 0.07in; height: 0.07in; border: 1.5px solid #00a8cf; border-radius: 50%; }
 .section-heading--decision::before { border-color: #ff7a1a; background: #ff7a1a; }
-.field-list { max-width: 5.05in; margin: 0.08in 0 0.22in; padding: 0; list-style: none; }
+.field-list { max-width: 5.05in; margin: 0.08in 0 0.22in; padding: 0; break-inside: avoid-page; list-style: none; }
 .field-list li { position: relative; margin: 0 0 0.08in; padding-left: 0.24in; }
 .field-list li::before { content: ""; position: absolute; left: 0; top: 0.48em; width: 0.08in; height: 2px; background: #00a8cf; }
 .field-list li.depth-1 { margin-left: 0.2in; }

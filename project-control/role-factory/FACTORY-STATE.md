@@ -91,9 +91,11 @@
 
 ## Exact next action
 
-Hold after the final LLM commit, push, issue closure, and production smoke checks.
-Do not start another role, book, or course until the user explicitly resumes the
-factory. Do not resume Abhyaas as part of this hold transition.
+Hold for user review of the complete private *Forward Deployed Engineering*
+Field Expedition Log edition. Its 592-page 7 by 10 screen-first PDF is recorded
+under the Forward Deployed Engineer QA handoff; the published edition remains
+unchanged. Do not redesign another book, start another role or course, or resume
+Abhyaas until the user explicitly approves the standard and resumes the factory.
 
 ## Resume instructions
 

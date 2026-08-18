@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: screen-first publication design revision
+- Current global phase: screen-first publication review handoff complete
 - Last updated: 2026-08-18
 - Last completed issue: Phase 19 #20 closed at commit `5061fe8`
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: [#74](https://github.com/alpeshznakrani/komalnakrani/issues/74) - complete FDE screen-first Field Expedition Log edition
+- Last design issue: [#74](https://github.com/alpeshznakrani/komalnakrani/issues/74) - complete FDE screen-first Field Expedition Log edition
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -74,7 +74,7 @@
 
 ## Current work
 
-Phase 19 final verdict remains `PASS`. Issue #74 is an isolated design revision that converts the accepted publication into the user-approved 7 by 10 Field Expedition Log system. It preserves manuscript, source, claim, companion, course, and public-edition truth while a private full-book review PDF is built and inspected. Abhyaas remains deferred.
+Phase 19 final verdict remains `PASS`. Issue #74 produced a complete private 7 by 10 Field Expedition Log review edition: 592 pages, 19 chapters, 38 original ImageGen PNG explainers, and five appendices. Two builds are byte-identical at SHA-256 `86f32e507ca9eb9c0cd6394f1c1e5a58c0891a540b98c5b1546ac20bd653595d`; every page was rasterized and reviewed. The published edition remains byte-identical to its frozen state. Abhyaas remains deferred.
 
 ## Unresolved blockers
 
@@ -92,8 +92,8 @@ No blocking role, content, source, visual, companion, course, security, web, or 
 
 ## Exact next action
 
-Execute issue #74 through the private full-book review artifact and QA handoff. Do not replace the public FDE edition, enter Abhyaas, or start another book inside this issue.
+Hold for the user's review of the complete private Field Expedition Log PDF. Do not replace the public FDE edition, enter Abhyaas, or start another book until the user explicitly approves the standard and resumes the work.
 
 ## Resume instructions
 
-The role content remains complete. Resume issue #74 from `docs/superpowers/plans/2026-08-18-fde-full-screen-first-edition.md`, preserving the private-review boundary until the new edition passes every gate.
+The role content and private screen-first review edition are complete. Resume from `project-control/roles/forward-deployed-engineer/qa/screen-first-review-edition.md`, preserving the private-review boundary until the user authorizes promotion or another redesign.

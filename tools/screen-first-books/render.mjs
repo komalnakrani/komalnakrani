@@ -48,7 +48,8 @@ function renderFigure(block, contract, chapter) {
   const source = `../books/${contract.slug}/assets/${block.reviewFile}`;
   return `<figure class="book-figure" id="${block.id.toLowerCase()}">
     <div class="figure-coordinate"><span>${escapeHtml(block.id)}</span><b>${escapeHtml(chapter.part.title)}</b></div>
-    <div class="figure-stage"><img src="${source}" alt="${block.alt}" /></div>
+    ${block.preludeHtml ? `<div class="figure-prelude">${block.preludeHtml}</div>` : ''}
+    <div class="figure-stage${block.preludeHtml ? ' figure-stage--with-prelude' : ''}"><img src="${source}" alt="${block.alt}" /></div>
     <figcaption>${block.captionHtml}</figcaption>
     <div class="figure-reading"><span>READING KEY</span><p>${inlineHtml(registry.alt)}</p></div>
     <div class="figure-boundary"><span>EVIDENCE BOUNDARY</span><p>Use this explanatory model with the chapter text and registered caption. It does not replace evidence, authority, or the actual operating record.</p></div>
@@ -119,7 +120,15 @@ function renderChapter(contract, chapter) {
   const figures = chapter.figures.map((figure) => ({ ...figure, reviewFile: chapterAsset(figure) }));
   const blocks = parsePublicationMarkdown(chapter.source, { figures });
   const claimIds = contract.claims.filter((claim) => claim.chapterSlug === chapter.slug).map((claim) => claim.id);
-  const body = blocks.map((block) => renderBlock(block, contract, chapter)).join('\n');
+  const body = blocks.map((block, index) => {
+    const next = blocks[index + 1];
+    const previous = blocks[index - 1];
+    if (block.type === 'heading' && next?.type === 'figure') return '';
+    if (block.type === 'figure' && previous?.type === 'heading') {
+      return renderBlock({ ...block, preludeHtml: previous.html }, contract, chapter);
+    }
+    return renderBlock(block, contract, chapter);
+  }).join('\n');
   return `<section class="chapter-coordinate page--full" id="chapter-${pad(chapter.order)}">
     <div class="coordinate-orbit"><span>${pad(chapter.order)}</span></div>
     <div class="eyebrow">CHAPTER ${pad(chapter.order)} / ${escapeHtml(chapter.part.title)}</div>

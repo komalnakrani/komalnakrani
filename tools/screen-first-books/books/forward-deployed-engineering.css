@@ -77,7 +77,9 @@
 .book-figure { page: full; position: relative; width: 7in; height: 10in; margin: 0; padding: 0.62in 0.64in 0.58in; overflow: hidden; break-before: page; break-after: page; color: var(--ink); background: var(--paper); }
 .figure-coordinate { display: flex; justify-content: space-between; align-items: center; color: var(--cyan); font-family: "Field Mono"; font-size: 6.7pt; letter-spacing: 0.06em; }
 .figure-coordinate b { color: var(--midnight); }
+.figure-prelude { margin-top: 0.08in; color: var(--midnight); font-family: "Field Display"; font-size: 16pt; font-weight: 700; line-height: 1; }
 .figure-stage { display: grid; place-items: center; height: 5.6in; margin-top: 0.26in; overflow: hidden; background: #e3ebf0; }
+.figure-stage--with-prelude { height: 5.35in; margin-top: 0.12in; }
 .figure-stage img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .book-figure figcaption { margin-top: 0.2in; padding-top: 0.14in; border-top: 3px solid var(--orange); font-family: "Field Display"; font-size: 15pt; line-height: 1.16; }
 .figure-reading, .figure-boundary { display: grid; grid-template-columns: 1in 1fr; gap: 0.12in; margin-top: 0.12in; }

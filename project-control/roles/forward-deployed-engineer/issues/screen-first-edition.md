@@ -25,13 +25,13 @@ Apply the user-approved Field Expedition Log design system to the complete *Forw
 
 ## Acceptance
 
-- [ ] Private review PDF exists at `output/pdf/forward-deployed-engineering-screen-first-review.pdf`.
-- [ ] Exactly 19 chapters, 38 PNG figures, five parts, and five appendices are present.
-- [ ] Every page is 7×10, searchable, nonblank, rasterized, and visually inspected.
-- [ ] Fonts, headings, figures, tables, exercises, transitions, author identity, and ending pages are clean.
-- [ ] Tool tests, publication validation, PDF artifact tests, repository build, and built-site references pass.
-- [ ] Published FDE manifest and public PDF remain unchanged.
-- [ ] Durable QA and review handoff are recorded.
+- [x] Private review PDF exists at `output/pdf/forward-deployed-engineering-screen-first-review.pdf`.
+- [x] Exactly 19 chapters, 38 PNG figures, five parts, and five appendices are present.
+- [x] Every page is 7×10, searchable, nonblank, rasterized, and visually inspected.
+- [x] Fonts, headings, figures, tables, exercises, transitions, author identity, and ending pages are clean.
+- [x] Tool tests, publication validation, PDF artifact tests, repository build, and built-site references pass.
+- [x] Published FDE manifest and public PDF remain unchanged.
+- [x] Durable QA and review handoff are recorded.
 
 ## Design and implementation records
 
