@@ -8,7 +8,7 @@
 - State: `project-control/roles/machine-learning-engineer/ROLE-STATE.md`
 - Creative system: `Learning Systems Test Bench`
 - Last completed child: [#83 — Phase 06 source and bounded case-study research](https://github.com/alpeshznakrani/komalnakrani/issues/83)
-- Active child: none
+- Active child: [#84 — Phase 07 chapter blueprints and frozen figure contracts](https://github.com/alpeshznakrani/komalnakrani/issues/84)
 
 ## Objective
 
@@ -23,7 +23,7 @@ figure records.
 - [x] 04 evidence-based book count and volume decision — `SINGLE BOOK`
 - [x] 05 book architecture — complete
 - [x] 06 source and case-study research — complete
-- [ ] 07 chapter blueprints and frozen figure contracts — sole next gate, inactive
+- [ ] 07 chapter blueprints and frozen figure contracts — active in #84
 - [ ] 08 original manuscript and deterministic companion production
 - [ ] 09 whole-book or series consistency QA
 - [ ] 10 original ImageGen PNG visuals and visual QA
@@ -47,9 +47,10 @@ figure records.
 ## Current executable action
 
 Phase 06 is complete and #83 is closed `status:done`. Phase 07 chapter
-blueprints and frozen figure contracts is the sole next gate and remains
-inactive. Do not begin manuscript, visuals, course, Abhyaas, a second volume,
-or another role before its reviewed activation.
+blueprints and frozen figure contracts is active under #84 from approved plan
+commit `21d4cfa`. Complete the independently reviewed Task 01 bootstrap before
+any blueprint lane starts. Phase 08, manuscript, visuals, course, Abhyaas, a
+second volume, catalog position 6, and another role remain inactive.
 
 ## Completion
 
