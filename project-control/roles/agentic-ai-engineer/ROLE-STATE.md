@@ -5,11 +5,11 @@
 - Role: Agentic AI Engineer
 - Slug: `agentic-ai-engineer`
 - Catalog version: master operating prompt catalog, position 3 of 32
-- Current global phase: Phase 11 published delivery PASS under root `#32`; root Git/GitHub verification pending
-- Last updated: 2026-08-17
-- Last completed issue: `#69` — Phase 10 Agentic AI Engineering visuals, PASS
-- Active issue: `#32` - root Agentic delivery issue, still open for independent verification and Git/GitHub work
-- Role root issue: `#32` — open
+- Current global phase: published edition PASS; private 7 by 10 screen-first review edition PASS
+- Last updated: 2026-08-18
+- Last completed issue: `#76` - private screen-first review edition PASS
+- Active issue: none; #76 closes with the root integration push
+- Role root issue: `#32` - closed
 
 ## Locked accepted decisions
 
@@ -95,6 +95,15 @@ All 600 final pages were rendered and inspected. The manifest is `published`,
 `publishedAt` is `2026-08-17`, and the exact public PDF is enabled. The 85-route
 production build passes 170/170 desktop/mobile rendered checks.
 
+The user-approved screen-first design standard is now applied in a separate
+private `Autonomy Control Room` review artifact. It is a 1,013-page 7 by 10
+edition at SHA-256 `ac7fc13c3ec2e17abecfd3ce83c5f1e213f9ec3a7c44374703dc424f75abea5b`,
+built twice byte-identically and visually inspected across all pages. Its
+control-black, signal-green, route-cyan, and alert-amber palette; Barlow
+Condensed display voice; control-plane grid; trajectory labs; and recovery
+records are Agentic-specific. The public manifest and published 600-page PDF
+remain unchanged.
+
 ## Unresolved blockers
 
 - None for Komal research, architecture, or manuscript preparation.
@@ -112,16 +121,13 @@ production build passes 170/170 desktop/mobile rendered checks.
 
 ## Quality debt
 
-- No Phase 10 visual debt remains.
-- No Agentic publication quality debt remains. Root must independently verify
-  the prepared release before committing, pushing, and reconciling #32/#73.
+- No Agentic content, publication, visual, or private screen-first review debt remains.
 
 ## Exact next action
 
-Root independently verifies `qa/phase-11-publication-release.md`, the exact
-public PDF hash, and the responsive routes; then performs the root-owned commit,
-push, and GitHub reconciliation for #32/#73. Stop afterward. Do not start Phase
-13, a course, a new role/book, or Abhyaas work.
+After root commits, pushes, and closes #76, continue the already authorized
+screen-first redesign sequence with the current LLM Behavior Engineering book.
+Do not start a new role, course, or Abhyaas work.
 
 ## Resume instructions
 

@@ -1,0 +1,52 @@
+export default Object.freeze({
+  slug: 'agentic-ai-engineering',
+  publicationDirectory: 'content/publications/agentic-ai-engineering',
+  output: 'output/pdf/agentic-ai-engineering-screen-first-review.pdf',
+  reviewAssetDirectory: 'content/publications/agentic-ai-engineering/assets',
+  assetHrefRoot: '../../../content/publications/agentic-ai-engineering',
+  expected: { chapters: 20, figures: 40, parts: 6, appendices: 6 },
+  partStarts: [1, 4, 8, 12, 15, 18],
+  parts: [
+    { number: 1, roman: 'I', title: 'Decide What May Act', range: 'Chapters 01-03' },
+    { number: 2, roman: 'II', title: 'Build the Action Surface', range: 'Chapters 04-07' },
+    { number: 3, roman: 'III', title: 'Orchestrate Work That Must Endure', range: 'Chapters 08-11' },
+    { number: 4, roman: 'IV', title: 'Prove the Trajectory and Its Effects', range: 'Chapters 12-14' },
+    { number: 5, roman: 'V', title: 'Operate What Acts', range: 'Chapters 15-17' },
+    { number: 6, roman: 'VI', title: 'Evolve Without Losing Control', range: 'Chapters 18-20' },
+  ],
+  appendices: [
+    { id: 'A', title: 'Agent System and Distributed Failure Refresher', file: 'appendices/appendix-a-agent-system-and-distributed-failure-refresher.md' },
+    { id: 'B', title: 'Action-System Artifact Templates', file: 'appendices/appendix-b-action-system-artifact-templates.md' },
+    { id: 'C', title: 'Threat, Control, and Human-Authority Checklists', file: 'appendices/appendix-c-threat-control-and-human-authority-checklists.md' },
+    { id: 'D', title: 'Provider-Neutral Companion Guide', file: 'appendices/appendix-d-provider-neutral-companion-guide.md' },
+    { id: 'E', title: 'Protocol and Portability Notes', file: 'appendices/appendix-e-protocol-and-portability-notes.md' },
+    { id: 'F', title: 'Terminology, Sources, Figures, and Edition Records', file: 'appendices/appendix-f-terminology-sources-figures-and-edition-records.md' },
+  ],
+  palette: {
+    control: '#101821',
+    signalGreen: '#5EE6A8',
+    alertAmber: '#FFB84D',
+    routeCyan: '#57C7FF',
+    paper: '#F5F8F7',
+    ink: '#16232C',
+    steel: '#DDE5E8',
+  },
+  fonts: {
+    display: 'tools/screen-first-books/fonts/barlow-condensed.ttf',
+    reading: 'tools/screen-first-books/fonts/source-sans-3.ttf',
+    technical: 'tools/screen-first-books/fonts/ibm-plex-mono.ttf',
+  },
+  visualSystem: 'Autonomy Control Room',
+  closingStatement: 'Let autonomy earn every next action.',
+  reviewLabel: 'Complete screen-first review edition - not the published edition',
+  protectedPublication: {
+    manifest: {
+      file: 'content/publications/agentic-ai-engineering/publication.json',
+      sha256: 'c9e1dabcc981549b551ed4605db9418c314c5351745280f8c1a0def459f09bd0',
+    },
+    pdf: {
+      file: 'public/downloads/agentic-ai-engineering-v1.0.0.pdf',
+      sha256: '787939e34f561fbc54e901ca258175786a3ad71926fc0c814112553071cc909a',
+    },
+  },
+});

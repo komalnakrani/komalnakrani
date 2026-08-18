@@ -6,4 +6,6 @@ The first book configuration is `books/forward-deployed-engineering.mjs`. It rea
 
 `books/applied-ai-engineering.mjs` extends the same screen-first structural standard through the distinct `Behavior Systems Atlas` direction. Build it with `node tools/screen-first-books/build-applied-ai.mjs`; audit the resulting private artifact with `PDF_PYTHON=/Users/alpesh/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 node --test tools/screen-first-books/tests/applied-qa.test.mjs`. Its protected published manifest and PDF remain immutable.
 
+`books/agentic-ai-engineering.mjs` adds the `Autonomy Control Room` direction with an industrial control-plane palette and trajectory language. Build it with `node tools/screen-first-books/build-agentic-ai.mjs`; audit it with the corresponding `agentic-qa.test.mjs` gate. Its published manifest and PDF are likewise protected.
+
 The full-edition design contract is `docs/superpowers/specs/2026-08-18-fde-full-screen-first-edition-design.md`.
