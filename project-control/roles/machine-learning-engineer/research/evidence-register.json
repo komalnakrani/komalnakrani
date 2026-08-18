@@ -1,0 +1,1287 @@
+{
+  "register_version": "1.0.0",
+  "role": "Machine Learning Engineer",
+  "role_slug": "machine-learning-engineer",
+  "phase": "01-role-validation",
+  "access_date": "2026-08-18",
+  "method": {
+    "scope": "Official employer role evidence plus primary technical, standards, engineering, and postmortem sources.",
+    "source_policy": "Primary and official sources for all material claims; no aggregators or generic role summaries.",
+    "currentness_note": "Employer postings and vendor mechanisms are volatile; durable scope requires cross-source convergence."
+  },
+  "sources": [
+    {
+      "source_id": "MLE-SRC-001",
+      "title": "Senior Machine Learning Engineer - Worldwide Product Marketing",
+      "author_or_org": "Apple",
+      "source_type": "official-employer-career-page",
+      "publication_date": "2026-07-27",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.apple.com/en-us/details/200657324/senior-machine-learning-engineer-worldwide-product-marketing",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "canonical-title",
+        "consumer-technology",
+        "end-to-end-ml",
+        "production-deployment",
+        "model-evaluation",
+        "stakeholder-collaboration"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-005",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Apple uses a senior exact-title variant in Cupertino for end-to-end AI/ML solution design, benchmarking, adaptation, integration, production deployment, monitoring, support, LLM evaluation, and cross-functional delivery; it asks for eight years of relevant experience and a bachelor's degree.",
+      "limitations": "One corporate-functions posting with substantial LLM and agent content; older official Apple search views showed April 23 for the same role number, so that date is retained only as repost or search-index ambiguity rather than publication metadata.",
+      "currentness": "Direct employer page returned live job content on 2026-08-18; embedded metadata for role number 200657324 reported postDateInGMT 2026-07-27T16:42:34.019+00:00, postingDateMeta 2026-07-27, and postingDate Jul 27, 2026.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-002",
+      "title": "Machine Learning Engineer",
+      "author_or_org": "IMC",
+      "source_type": "employer-controlled-greenhouse-job-posting",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://job-boards.eu.greenhouse.io/imc/jobs/4567047101",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "canonical-title",
+        "systematic-trading",
+        "distributed-training",
+        "low-latency-inference",
+        "hpc-collaboration"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-004",
+        "MLE-CLM-005",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "IMC uses the exact title in Amsterdam and London for distributed training pipelines, low-latency production inference, GPU/framework optimization, automated experiments and retraining, and partnership with quantitative researchers and HPC specialists; it asks for five-plus years focused on training or inference systems.",
+      "limitations": "Trading-specific infrastructure-heavy role; the posting exposes an update timestamp but no publication date and should not be generalized to all model-product teams.",
+      "currentness": "Canonical Greenhouse page and official board API were live on 2026-08-18; API updated_at was 2026-08-10T02:34:58-04:00.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-003",
+      "title": "Machine Learning Engineer-Technical Research Personnel (머신러닝 엔지니어-전문연구요원)",
+      "author_or_org": "Moloco",
+      "source_type": "employer-controlled-greenhouse-job-posting",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://job-boards.greenhouse.io/moloco/jobs/6245366003",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "canonical-title",
+        "advertising-technology",
+        "model-development",
+        "training-and-serving-data",
+        "scalable-model-servers"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-004",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Moloco uses a localized exact-title variant in Seoul for large-scale advertising models, training and serving data pipelines, scalable cloud model servers, and product-roadmap work with product, account, and infrastructure teams; qualifications emphasize an MS or PhD, software development, and production ML systems.",
+      "limitations": "The page is explicitly an always-open expression of interest for technical research personnel, not proof of an immediate vacancy; latency and throughput figures are employer claims and were not independently audited.",
+      "currentness": "Canonical Greenhouse page and official board API were live on 2026-08-18; API updated_at was 2026-08-12T14:35:22-04:00.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-004",
+      "title": "ML Engineer",
+      "author_or_org": "Human Computer Lab",
+      "source_type": "employer-controlled-ashby-job-posting",
+      "publication_date": "2026-04-02",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.ashbyhq.com/human-computer-lab/eb62af20-f469-40dc-b0a1-8b7ec59c9225",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "title-alias",
+        "consumer-robotics",
+        "multimodal-models",
+        "hardware-integration",
+        "research-to-deployment"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Human Computer Lab uses the abbreviated ML Engineer title in San Francisco for multimodal perception and behavior models, production-quality code, training/deployment pipelines, embedded integration, and collaboration with research, mechanical, and robotics engineers; it asks for three-plus years or equivalent.",
+      "limitations": "Small consumer-robotics lab with unusually broad research-to-hardware ownership; it does not establish ML Engineer as a universal alias or define mature-team separation of duties.",
+      "currentness": "Ashby page returned active JobPosting structured data on 2026-08-18 with datePosted 2026-04-02.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-005",
+      "title": "Machine Learning Engineer: Imitation and Reinforcement Learning for Robotics",
+      "author_or_org": "Bedrock Robotics Inc",
+      "source_type": "employer-controlled-ashby-job-posting",
+      "publication_date": "2026-01-31",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.ashbyhq.com/bedrock-robotics/90558d16-8adb-4c62-a0fc-8fdfa809c0ca",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "specialized-title",
+        "construction-autonomy",
+        "reinforcement-learning",
+        "data-pipelines",
+        "real-world-evaluation"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-004",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Bedrock uses a specialization-qualified title in San Francisco for behavior-policy architectures, ingestion/labeling/management pipelines, open-loop/simulation/real-world metrics, launch, deployment, and debugging under latency, hardware, and integration constraints; it asks for three-plus years in applied and production ML.",
+      "limitations": "Autonomous heavy-equipment specialization emphasizes behavior learning and physical deployment; its real-world safety and authority boundaries are not fully specified by the posting.",
+      "currentness": "Ashby page returned active JobPosting structured data on 2026-08-18 with datePosted 2026-01-31.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-006",
+      "title": "Machine learning Engineer",
+      "author_or_org": "Faculty",
+      "source_type": "employer-controlled-ashby-job-posting",
+      "publication_date": "2026-06-22",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.ashbyhq.com/faculty/27dee06f-ffaa-462e-9b91-888272ba5989",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "canonical-title-case-variant",
+        "energy-transition",
+        "consulting-delivery",
+        "architecture",
+        "stakeholder-advisory"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-005",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Faculty uses the title with a case variation in London for production ML software, reusable infrastructure, technical scoping, architecture, deployment standards, client advisory, and work with engineers, data scientists, and commercial leads in energy transition; qualifications cover full-lifecycle operationalization, Python, cloud, containers, orchestration, and communication.",
+      "limitations": "Consulting role combines delivery and advisory responsibilities across clients; the posting gives no numeric experience threshold and does not isolate product ownership from client authority.",
+      "currentness": "Ashby page returned active JobPosting structured data on 2026-08-18 with datePosted 2026-06-22.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-007",
+      "title": "Machine Learning Engineer",
+      "author_or_org": "Mariana Minerals",
+      "source_type": "employer-controlled-ashby-job-posting",
+      "publication_date": "2026-06-10",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.ashbyhq.com/marianaminerals/44c92dd6-55f2-4e44-9360-bf4676466dac",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "canonical-title",
+        "minerals-and-refining",
+        "reinforcement-learning",
+        "simulation-to-real",
+        "domain-expert-collaboration"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-004",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Mariana uses the exact title across Ann Arbor, Houston, and San Francisco for simulator-based reinforcement-learning experiments, training-environment design, performance diagnosis, simulation-to-real comparison, production services, and partnership with process and chemistry experts; it accepts two-to-eight-plus years or a strong recent graduate.",
+      "limitations": "Early-stage industrial-control role describes a progression toward live-plant ownership; plant autonomy goals and business claims are prospective and do not prove deployed safety or performance.",
+      "currentness": "Ashby page returned active JobPosting structured data on 2026-08-18 with datePosted 2026-06-10.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-008",
+      "title": "Machine Learning Engineer",
+      "author_or_org": "Virtu Financial",
+      "source_type": "employer-controlled-greenhouse-job-posting",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://job-boards.greenhouse.io/virtu/jobs/8457186002",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "canonical-title",
+        "systematic-trading",
+        "ml-research-platform",
+        "reproducibility",
+        "production-monitoring"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-003",
+        "MLE-CLM-004",
+        "MLE-CLM-005",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Virtu uses the exact title in New York for an ML research platform spanning experiment tracking, orchestration, reproducibility, back-testing, production monitoring, GPU utilization, distributed-training diagnosis, versioned data pipelines, and direct workflow work with quantitative researchers; it asks for five-plus years.",
+      "limitations": "Infrastructure-centered trading role supplies little evidence about direct model selection or domain decision authority; the public page exposes an update timestamp but no publication date.",
+      "currentness": "Canonical Greenhouse page and official board API were live on 2026-08-18; API updated_at was 2026-05-12T18:11:31-04:00.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-009",
+      "title": "Machine Learning Engineer",
+      "author_or_org": "AI Squared",
+      "source_type": "employer-controlled-greenhouse-job-posting",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://job-boards.greenhouse.io/aisquared/jobs/4604010006",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "canonical-title",
+        "enterprise-ai-platform",
+        "deployment-pipelines",
+        "model-monitoring",
+        "mlops-overlap"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-003",
+        "MLE-CLM-005",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "AI Squared uses the exact title in Washington, DC for deployment pipelines, LLM operationalization, availability, monitoring, logging, drift detection, ML CI/CD, runtime optimization, and collaboration with data science, data engineering, and product teams; it asks for five-plus years as an MLE, MLOps Engineer, or similar.",
+      "limitations": "This is an operations-heavy role with explicit MLOps overlap and little direct model-development evidence; the API record is live but has an older update timestamp and no publication date.",
+      "currentness": "Canonical Greenhouse page, current employer openings page, and official board API were live on 2026-08-18; API updated_at was 2025-11-25T20:53:48-05:00.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-010",
+      "title": "Machine Learning Engineer",
+      "author_or_org": "Local Infusion",
+      "source_type": "employer-controlled-ashby-job-posting",
+      "publication_date": "2026-06-12",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.ashbyhq.com/Local%20Infusion/1ae56b4b-4568-48f7-b393-5937c3db64fe/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "canonical-title",
+        "healthcare-operations",
+        "model-development",
+        "data-pipelines",
+        "monitoring-and-feedback"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-004",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Local Infusion uses the exact title in Nashville for models that predict and triage care-workflow friction, LLM workflows, data collection/cleaning/labeling/storage, metrics, monitoring, feedback loops, and product/engineering/operations partnership; it asks for six-plus years and experience with production models and healthcare data.",
+      "limitations": "Single healthcare-operations startup posting combines ML, applied AI, data infrastructure, and basic DevOps; its HIPAA reference is a desired background, not evidence of compliance or delegated clinical authority.",
+      "currentness": "Ashby page returned active JobPosting structured data on 2026-08-18 with datePosted 2026-06-12.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-011",
+      "title": "AI & Machine Learning Engineer",
+      "author_or_org": "Lightspeed",
+      "source_type": "employer-controlled-ashby-job-posting",
+      "publication_date": "2026-06-23",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.ashbyhq.com/lightspeed/0b8bb2c8-8049-4b53-b1d1-74397807ccf2",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "title-alias",
+        "construction-robotics",
+        "computer-vision",
+        "edge-inference",
+        "ml-lifecycle"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-004",
+        "MLE-CLM-005",
+        "MLE-CLM-006",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Lightspeed uses the AI & Machine Learning Engineer alias in Northbrook for robotics models, computer vision, predictive maintenance, sensor-to-deployment data pipelines, labeling/versioning, experiment tracking, monitoring, A/B testing, edge optimization, and hardware collaboration; it asks for four-plus years deploying production models.",
+      "limitations": "Broad construction-robotics role combines computer vision, robot learning, MLOps, and edge integration; employer claims about production data and housing impact are not independently verified.",
+      "currentness": "Ashby page returned active JobPosting structured data on 2026-08-18 with datePosted 2026-06-23.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-012",
+      "title": "Machine Learning Engineer - Computer Vision & Robotics",
+      "author_or_org": "Tycho.AI",
+      "source_type": "employer-controlled-ashby-job-posting",
+      "publication_date": "2026-07-27",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.ashbyhq.com/tycho-ai/d4dd3f4b-451d-4f60-a2b1-f2368bbd7368",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "specialized-title",
+        "defense-and-autonomy",
+        "computer-vision",
+        "model-compression",
+        "edge-deployment"
+      ],
+      "claims_supported": [
+        "MLE-CLM-001",
+        "MLE-CLM-002",
+        "MLE-CLM-003",
+        "MLE-CLM-005",
+        "MLE-CLM-007"
+      ],
+      "evidence_summary": "Tycho.AI uses a domain-qualified title in Cambridge for vision and robotics models under compute and memory limits, large-scale training and fine-tuning pipelines, compression, embedded deployment, and latency/throughput/accuracy profiling; requirements emphasize applied CV/robotics, Python or C++, frameworks, deployment, and software collaboration.",
+      "limitations": "Defense/autonomy specialization emphasizes embedded inference and may involve export-control or clearance constraints; the posting does not describe release authority, field validation, or ongoing monitoring ownership.",
+      "currentness": "Ashby page returned active JobPosting structured data on 2026-08-18 with datePosted 2026-07-27.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-013",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "author_or_org": "Elham Tabassi / National Institute of Standards and Technology",
+      "source_type": "official-engineering-publication",
+      "publication_date": "2023-01-26",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "problem-framing",
+        "evaluation",
+        "risk-management",
+        "lifecycle-records",
+        "retirement"
+      ],
+      "claims_supported": [
+        "MLE-CLM-008",
+        "MLE-CLM-011",
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "NIST AI RMF 1.0 treats risk management as a continuous lifecycle activity and organizes reviewable work through GOVERN, MAP, MEASURE, and MANAGE, including context, metrics, impacts, documentation, monitoring, and decommissioning considerations.",
+      "limitations": "Voluntary, sector-neutral risk guidance rather than an implementation specification or role definition. NIST states that AI RMF 1.0 is being updated, so this edition must be checked again before publication.",
+      "currentness": "Published 2023-01-26; official landing page and DOI were live on 2026-08-18; NIST AIRC reports that a revision is in progress.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-014",
+      "title": "Rules of Machine Learning: Best Practices for ML Engineering",
+      "author_or_org": "Google",
+      "source_type": "official-engineering-publication",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://developers.google.com/machine-learning/guides/rules-of-ml",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "problem-framing",
+        "baselines",
+        "feature-contracts",
+        "evaluation",
+        "training-serving-skew",
+        "monitoring"
+      ],
+      "claims_supported": [
+        "MLE-CLM-008",
+        "MLE-CLM-009",
+        "MLE-CLM-013"
+      ],
+      "evidence_summary": "Google's engineering guidance starts with measurable objectives and simple heuristics, emphasizes a solid end-to-end pipeline, requires train/serve feature consistency, recommends time-aware evaluation, and calls for explicit monitoring of training-serving skew.",
+      "limitations": "Experience-based guidance from Google, not a standard; several examples and scale assumptions are organization-specific, and the page does not define universal acceptance thresholds.",
+      "currentness": "Official Google Developers page was live and returned HTTP 200 on 2026-08-18; no stable publication date is displayed on the inspected page.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-015",
+      "title": "Get started with TensorFlow Data Validation",
+      "author_or_org": "TensorFlow",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://www.tensorflow.org/tfx/data_validation/get_started",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "data-contracts",
+        "feature-contracts",
+        "schema-validation",
+        "training-serving-skew",
+        "drift"
+      ],
+      "claims_supported": [
+        "MLE-CLM-009",
+        "MLE-CLM-013"
+      ],
+      "evidence_summary": "TFDV documents machine-readable feature schemas, aggregate and example-level conformance checks, training/serving environments, and configurable skew and drift comparators with explicit thresholds.",
+      "limitations": "Tool-specific documentation, not a general data-contract standard. Inferred schemas require human review, and useful drift thresholds depend on data type, domain knowledge, and experimentation.",
+      "currentness": "Official TensorFlow documentation was live and returned HTTP 200 on 2026-08-18; the page does not expose a stable publication date.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-016",
+      "title": "MLflow Tracking",
+      "author_or_org": "MLflow Project, a Series of LF Projects, LLC",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://mlflow.org/docs/latest/tracking",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "experiment-tracking",
+        "lineage"
+      ],
+      "claims_supported": [
+        "MLE-CLM-010"
+      ],
+      "evidence_summary": "MLflow Tracking records runs with parameters, code versions, metrics, timestamps, and output artifacts, groups related runs into experiments, and retains trained models with run-linked metadata for later comparison.",
+      "limitations": "Tracking metadata does not prove that a run is reproducible or that a model is safe to release. Exact persistence and sharing behavior vary by MLflow version, backend stores, artifact stores, and operator configuration.",
+      "currentness": "The official latest-documentation URL was live and returned HTTP 200 on 2026-08-18; its unpinned latest path is intentionally volatile.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-017",
+      "title": "Reproducibility",
+      "author_or_org": "PyTorch",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://docs.pytorch.org/docs/stable/notes/randomness.html",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "training",
+        "experiment-reproducibility",
+        "randomness",
+        "determinism",
+        "regression-testing"
+      ],
+      "claims_supported": [
+        "MLE-CLM-010"
+      ],
+      "evidence_summary": "PyTorch documents how to control random sources and request deterministic algorithms for repeatable runs while explicitly warning that complete reproducibility is not guaranteed across releases, commits, platforms, or CPU/GPU execution.",
+      "limitations": "Framework-specific and bounded to a controlled platform and release; deterministic execution can reduce performance, and seeding alone does not capture code, data, dependencies, or hardware.",
+      "currentness": "Official stable documentation was live and returned HTTP 200 on 2026-08-18; page metadata states last updated 2025-10-03.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-018",
+      "title": "1.16. Probability calibration",
+      "author_or_org": "scikit-learn",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://scikit-learn.org/stable/modules/calibration.html",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "evaluation",
+        "probability-calibration",
+        "uncertainty",
+        "reliability-diagrams",
+        "proper-scoring-rules"
+      ],
+      "claims_supported": [
+        "MLE-CLM-011"
+      ],
+      "evidence_summary": "The scikit-learn guide defines calibrated probabilistic predictions, describes reliability diagrams, and explains that Brier and log loss combine calibration, resolution, and uncertainty rather than isolating calibration quality.",
+      "limitations": "Focused on probabilistic classification and scikit-learn estimators; calibration is only one uncertainty-related check and does not establish validity under distribution shift or for every model family.",
+      "currentness": "Official stable documentation identified itself as scikit-learn 1.9.0 and returned HTTP 200 on 2026-08-18; the stable URL moves with releases.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-019",
+      "title": "Model Cards for Model Reporting",
+      "author_or_org": "Margaret Mitchell et al. / Google Research",
+      "source_type": "primary-paper",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://research.google/pubs/model-cards-for-model-reporting/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "evaluation",
+        "segment-analysis",
+        "model-documentation",
+        "intended-use",
+        "limitations",
+        "release-records"
+      ],
+      "claims_supported": [
+        "MLE-CLM-011",
+        "MLE-CLM-012",
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "The paper proposes that released models travel with documentation of intended use, evaluation procedures, limitations, and benchmarked performance across relevant conditions and population subgroups.",
+      "limitations": "A 2019 documentation proposal, not an enforcement mechanism or complete release manifest. Its examples emphasize human-centered vision and language systems and require domain-specific adaptation.",
+      "currentness": "The official Google Research record and ACM download link were live on 2026-08-18; the paper is durable but older than current tooling and regulation.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-020",
+      "title": "Use AI securely and responsibly",
+      "author_or_org": "Google Cloud Architecture Center",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://docs.cloud.google.com/architecture/framework/security/use-ai-securely-and-responsibly",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "security-implementation",
+        "data-protection",
+        "artifact-integrity",
+        "supply-chain",
+        "threat-detection",
+        "incident-response"
+      ],
+      "claims_supported": [
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "Google Cloud's SAIF-aligned guidance applies security from design through operations and calls for access control, protected data, validated tools and artifacts, tamper-resistant pipelines, asset and run tracking, input monitoring, and detection and response.",
+      "limitations": "Cloud-provider guidance rather than a neutral standard; implementation examples favor Google Cloud services, and governance or security authorities retain final policy and incident authority.",
+      "currentness": "Official documentation was live and returned HTTP 200 on 2026-08-18; the page states last reviewed 2025-02-05.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-021",
+      "title": "Horizontal Pod Autoscaling",
+      "author_or_org": "Kubernetes Authors / Cloud Native Computing Foundation",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "serving",
+        "capacity",
+        "autoscaling",
+        "resource-metrics",
+        "custom-metrics"
+      ],
+      "claims_supported": [
+        "MLE-CLM-013"
+      ],
+      "evidence_summary": "Kubernetes documents a metric-driven control loop that adjusts workload replicas to match demand, with resource, per-pod, object, and custom metrics plus readiness and stabilization behavior.",
+      "limitations": "Infrastructure mechanism only: autoscaling does not define the model's latency target, quality gate, load-test distribution, safe maximum, or business capacity requirement. It applies only to scalable workload resources.",
+      "currentness": "Official Kubernetes documentation was live and returned HTTP 200 on 2026-08-18; the page documents the stable autoscaling/v2 API but is continuously maintained.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-022",
+      "title": "Deployment guardrails for updating models in production",
+      "author_or_org": "Amazon Web Services",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-guardrails.html",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "serving",
+        "staged-deployment",
+        "latency",
+        "error-rate",
+        "rollback",
+        "capacity"
+      ],
+      "claims_supported": [
+        "MLE-CLM-013"
+      ],
+      "evidence_summary": "SageMaker deployment guardrails illustrate canary, linear, all-at-once, and rolling traffic shifts with bake periods, alarms, capacity increments, endpoint state visibility, and rollback protections for latency or error regressions.",
+      "limitations": "Vendor-specific mechanism limited to supported SageMaker asynchronous and real-time endpoint configurations. Managed rollback does not choose correct alarms, thresholds, bake periods, or business acceptance criteria.",
+      "currentness": "Official AWS documentation was live and returned HTTP 200 on 2026-08-18; no stable publication date is displayed.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-023",
+      "title": "Machine learning operations",
+      "author_or_org": "Microsoft Azure Architecture Center",
+      "source_type": "official-engineering-publication",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/machine-learning-operations-v2",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "end-to-end-lifecycle",
+        "role-boundary",
+        "model-registry",
+        "staging",
+        "monitoring",
+        "retraining",
+        "rollback",
+        "retirement"
+      ],
+      "claims_supported": [
+        "MLE-CLM-008",
+        "MLE-CLM-009",
+        "MLE-CLM-012",
+        "MLE-CLM-013",
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "Microsoft's MLOps v2 reference architecture connects development, registration, gated staging, endpoint performance and data checks, deployment, monitoring, threshold-triggered investigation or retraining, CI/CD rollback, and retirement of unused models while distinguishing data, infrastructure, and project ownership.",
+      "limitations": "A reference architecture with Azure examples, not a universal team topology or role standard. It often groups data scientist and ML engineer work and delegates infrastructure, policy, and business authority to other personas.",
+      "currentness": "Official Microsoft Learn page was live and returned HTTP 200 on 2026-08-18; page metadata states last updated 2024-07-12.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-024",
+      "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+      "author_or_org": "Apostol Vassilev, Alina Oprea, Alie Fordyce, and Hyrum Anderson / National Institute of Standards and Technology",
+      "source_type": "official-engineering-publication",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2023.pdf",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "security-implementation",
+        "threat-modeling",
+        "data-poisoning",
+        "evasion",
+        "privacy",
+        "mitigations"
+      ],
+      "claims_supported": [
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "NIST AI 100-2e2023 defines adversarial ML threats and mitigations across data, model, training, testing, deployment, and operating infrastructure, including poisoning, evasion, privacy, and model-access attack surfaces.",
+      "limitations": "A voluntary taxonomy and terminology report, not an exhaustive threat model, implementation checklist, or certification. Controls must be selected with security, privacy, safety, and domain authorities.",
+      "currentness": "The official NIST PDF was live and returned HTTP 200 on 2026-08-18; approved by the NIST Editorial Review Board on 2024-01-02 and published January 2024.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-025",
+      "title": "Hidden Technical Debt in Machine Learning Systems",
+      "author_or_org": "D. Sculley; Gary Holt; Daniel Golovin; Eugene Davydov; Todd Phillips; Dietmar Ebner; Vinay Chaudhary; Michael Young; Jean-François Crespo; Dan Dennison",
+      "source_type": "primary-paper",
+      "publication_date": "2015",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://research.google/pubs/hidden-technical-debt-in-machine-learning-systems/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "ml-systems",
+        "technical-debt",
+        "failure-patterns",
+        "software-engineering-boundary"
+      ],
+      "claims_supported": [
+        "MLE-CLM-017"
+      ],
+      "evidence_summary": "The primary Google paper identifies ML-specific system risks including boundary erosion, entanglement, hidden feedback loops, undeclared consumers, data dependencies, configuration debt, external-world change, glue code, and pipeline jungles. It argues that the hard maintenance burden is system-level, not confined to model code.",
+      "limitations": "A 2015 research paper describing Google experience; it predates foundation-model and agentic stacks and does not prescribe organizational reporting lines.",
+      "currentness": "Stable archival primary publication; official Google Research landing page and paper metadata were live on 2026-08-18.",
+      "verification_status": "verified-live-http-200"
+    },
+    {
+      "source_id": "MLE-SRC-026",
+      "title": "The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction",
+      "author_or_org": "Eric Breck; Shanqing Cai; Eric Nielsen; Michael Salib; D. Sculley",
+      "source_type": "primary-paper",
+      "publication_date": "2017",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "production-readiness",
+        "testing",
+        "monitoring",
+        "rollback"
+      ],
+      "claims_supported": [
+        "MLE-CLM-016"
+      ],
+      "evidence_summary": "The primary paper presents 28 production-readiness tests spanning data and features, model development, ML infrastructure, and monitoring, and explicitly treats debuggability, rollback, and monitoring as production duties for trained models.",
+      "limitations": "The rubric is based on Google production experience and is not a universal compliance standard; teams must adapt thresholds and test depth to consequence and context.",
+      "currentness": "Stable archival primary publication; official Google Research landing page and paper download were live on 2026-08-18.",
+      "verification_status": "verified-live-http-200"
+    },
+    {
+      "source_id": "MLE-SRC-027",
+      "title": "MLOps: Continuous delivery and automation pipelines in machine learning",
+      "author_or_org": "Jarek Kazmierczak; Khalid Salama; Valentín Huerta; Google Cloud",
+      "source_type": "official-documentation",
+      "publication_date": "2024-08-28",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "ml-lifecycle",
+        "mlops",
+        "continuous-delivery",
+        "operations",
+        "role-boundary"
+      ],
+      "claims_supported": [
+        "MLE-CLM-015",
+        "MLE-CLM-016",
+        "MLE-CLM-021"
+      ],
+      "evidence_summary": "Google Cloud distinguishes exploratory model work from the engineering challenge of integrating and continuously operating an ML system. It describes CI, CD, continuous training, data and model validation, serving, monitoring, retraining triggers, and rollback as one production lifecycle.",
+      "limitations": "Cloud-architecture guidance aimed primarily at predictive AI; product names and maturity levels are examples, and team boundaries vary by organization.",
+      "currentness": "Official page states last reviewed 2024-08-28 and was live on 2026-08-18.",
+      "verification_status": "verified-live-http-200"
+    },
+    {
+      "source_id": "MLE-SRC-028",
+      "title": "MLOPS02-BP01 Establish ML roles and responsibilities",
+      "author_or_org": "Amazon Web Services",
+      "source_type": "official-documentation",
+      "publication_date": "2025-11-19",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/mlops02-bp01.html",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "role-boundary",
+        "mlops",
+        "data-engineering",
+        "data-science",
+        "security",
+        "governance",
+        "domain-authority"
+      ],
+      "claims_supported": [
+        "MLE-CLM-015",
+        "MLE-CLM-016",
+        "MLE-CLM-018",
+        "MLE-CLM-020",
+        "MLE-CLM-021"
+      ],
+      "evidence_summary": "The AWS Machine Learning Lens explicitly separates domain expert, data engineer, data scientist, ML engineer, MLOps engineer, auditor, model-risk, cloud-security, prompt-engineering, and integration functions. It centers the ML engineer on converting prototypes into production-ready software and the MLOps engineer on reusable training, testing, and deployment automation.",
+      "limitations": "Prescriptive cloud guidance, not a labor-market taxonomy or mandatory staffing model; its ML engineer definition is intentionally concise and organizations may combine roles.",
+      "currentness": "Part of the AWS Machine Learning Lens published 2025-11-19; section was live on 2026-08-18.",
+      "verification_status": "verified-live-http-200"
+    },
+    {
+      "source_id": "MLE-SRC-029",
+      "title": "5 AI RMF Core",
+      "author_or_org": "National Institute of Standards and Technology",
+      "source_type": "official-government-framework",
+      "publication_date": "2023-01-26",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "risk-management",
+        "governance",
+        "evaluation",
+        "incidents",
+        "authority-boundary"
+      ],
+      "claims_supported": [
+        "MLE-CLM-017",
+        "MLE-CLM-019",
+        "MLE-CLM-020"
+      ],
+      "evidence_summary": "The NIST AI RMF Core separates govern, map, measure, and manage; requires clear roles, lines of communication, ongoing review, incident processes, and executive responsibility for AI risk decisions. It notes that lifecycle actors often lack visibility or control over other parts of an interdependent system.",
+      "limitations": "Voluntary, non-sector-specific framework; the page states AI RMF 1.0 is being revised, so later integration must recheck the revision status.",
+      "currentness": "Official AIRC rendering of AI RMF 1.0 was live on 2026-08-18 and prominently disclosed an in-progress revision.",
+      "verification_status": "verified-live-http-200"
+    },
+    {
+      "source_id": "MLE-SRC-030",
+      "title": "Artificial Intelligence overview",
+      "author_or_org": "Microsoft",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://learn.microsoft.com/en-us/compliance/assurance/assurance-artificial-intelligence",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "shared-responsibility",
+        "security",
+        "privacy",
+        "governance",
+        "safety",
+        "platform-boundary"
+      ],
+      "claims_supported": [
+        "MLE-CLM-018",
+        "MLE-CLM-019",
+        "MLE-CLM-020"
+      ],
+      "evidence_summary": "Microsoft documents a shared-responsibility boundary across provider infrastructure and model operations, customer application use and governance, and board, council, policy, research, and engineering functions. Existing privacy, security, accessibility, compliance, and sensitive-use programs retain their formal controls.",
+      "limitations": "Microsoft-specific assurance documentation with deployment-model-dependent responsibilities; it is not a generic role definition and the page does not expose a reliable publication date.",
+      "currentness": "Official Microsoft Learn page was live on 2026-08-18; content is operational guidance and may change without a versioned publication date.",
+      "verification_status": "verified-live-http-200"
+    },
+    {
+      "source_id": "MLE-SRC-031",
+      "title": "Good Machine Learning Practice for Medical Device Development: Guiding Principles",
+      "author_or_org": "U.S. Food and Drug Administration; International Medical Device Regulators Forum",
+      "source_type": "official-government-guidance",
+      "publication_date": "2025-01",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "medical-device",
+        "domain-authority",
+        "safety",
+        "total-product-lifecycle"
+      ],
+      "claims_supported": [
+        "MLE-CLM-020"
+      ],
+      "evidence_summary": "FDA points to the 2025 IMDRF final GMLP principles for safe, effective, high-quality AI/ML medical devices across the total product lifecycle, preserving the role of regulators, clinical context, and sector-specific evidence beyond engineering implementation.",
+      "limitations": "Sector-specific medical-device guidance; it should not be generalized into a universal release procedure, and the linked IMDRF document carries the detailed principles.",
+      "currentness": "Official FDA page and linked final-document reference were live through official indexing and browser inspection on 2026-08-18; the review curl path redirected to Akamai abuse detection and then returned 404.",
+      "verification_status": "verified-live-index-curl-302-abuse-detection"
+    },
+    {
+      "source_id": "MLE-SRC-032",
+      "title": "Expanding on what we missed with sycophancy",
+      "author_or_org": "OpenAI",
+      "source_type": "official-postmortem",
+      "publication_date": "2025-05-02",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://openai.com/index/expanding-on-sycophancy/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "postmortem",
+        "model-behavior",
+        "evaluation",
+        "safety",
+        "rollback"
+      ],
+      "claims_supported": [
+        "MLE-CLM-016",
+        "MLE-CLM-017",
+        "MLE-CLM-019"
+      ],
+      "evidence_summary": "OpenAI's public postmortem describes a model update whose individually positive changes combined into harmful sycophancy, while offline evaluations and aggregate A/B signals missed the behavior. It records monitoring, mitigation, full rollback, targeted evaluation gaps, and a commitment to make qualitative and proxy behavior signals launch-blocking.",
+      "limitations": "A self-reported incident from one consumer LLM product; it does not disclose all internal evidence or transfer unchanged to predictive ML systems.",
+      "currentness": "Official page content was retrievable through browser verification on 2026-08-18; direct curl received HTTP 403 bot protection without changing the canonical URL.",
+      "verification_status": "verified-live-browser-curl-403-bot-protection"
+    },
+    {
+      "source_id": "MLE-SRC-033",
+      "title": "Spotify Technology Career Steps",
+      "author_or_org": "Kevin Goldsmith; Spotify Engineering",
+      "source_type": "official-engineering-publication",
+      "publication_date": "2016-02-15",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://engineering.atspotify.com/2016/02/spotify-technology-career-steps",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "career-depth",
+        "staff-engineering",
+        "cross-team-impact",
+        "technical-leadership"
+      ],
+      "claims_supported": [
+        "MLE-CLM-022"
+      ],
+      "evidence_summary": "Spotify's primary career framework defines progression by widening impact, accountability, business thinking, mastery, cross-team leadership, company-level problem solving, and sustained responsibility rather than by title or a move into management.",
+      "limitations": "Published in 2016 as Spotify's version-one framework and not ML-specific; useful for durable depth dimensions, not current Spotify level mapping or universal promotion criteria.",
+      "currentness": "Stable official engineering publication remained live on 2026-08-18; historical status is explicit.",
+      "verification_status": "verified-live-http-200"
+    },
+    {
+      "source_id": "MLE-SRC-034",
+      "title": "Jobs",
+      "author_or_org": "Spotify",
+      "source_type": "official-employer-job-index",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://engineering.atspotify.com/jobs",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "adjacent-role-taxonomy",
+        "machine-learning-engineering",
+        "data-engineering",
+        "applied-research",
+        "platform",
+        "security",
+        "safety"
+      ],
+      "claims_supported": [
+        "MLE-CLM-018",
+        "MLE-CLM-021"
+      ],
+      "evidence_summary": "Spotify's live employer-controlled index concurrently listed Machine Learning Engineer at senior through senior-staff depth and distinct Data Engineer, Staff Engineer for content-intelligence infrastructure, platform, cloud-security, enterprise-AI, experimentation, and applied/R&D contexts. This is evidence of differentiated families, not universal definitions.",
+      "limitations": "A volatile snapshot of openings; titles, linked postings, locations, and availability can change or disappear and the index alone does not define each role's formal authority.",
+      "currentness": "Live employer-controlled index inspected and HTTP 200 verified on 2026-08-18.",
+      "verification_status": "verified-live-http-200-volatile"
+    },
+    {
+      "source_id": "MLE-SRC-035",
+      "title": "Staff Machine Learning Engineer, AI",
+      "author_or_org": "Sentry",
+      "source_type": "official-employer-job-description",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://jobs.ashbyhq.com/sentry/81f09568-da7d-4ed1-8283-614f846c9b00/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "career-depth",
+        "staff-machine-learning-engineer",
+        "production-ownership",
+        "mentoring",
+        "cross-functional-work"
+      ],
+      "claims_supported": [
+        "MLE-CLM-022"
+      ],
+      "evidence_summary": "The employer-controlled Staff MLE posting combines production-grade model and agent development, scaled deployment, major-initiative ownership, documentation, mentoring, and leadership or collaboration across engineers, product teams, and multiple teams.",
+      "limitations": "One volatile employer posting for an AI-focused role; requirements reflect Sentry's current team and cannot define staff scope for every organization.",
+      "currentness": "Employer-controlled Ashby posting returned HTTP 200 and remained open on 2026-08-18.",
+      "verification_status": "verified-live-http-200-volatile"
+    },
+    {
+      "source_id": "MLE-SRC-036",
+      "title": "Regulation (EU) 2024/1689 of the European Parliament and of the Council (Artificial Intelligence Act)",
+      "author_or_org": "European Parliament and Council of the European Union",
+      "source_type": "official-government-regulation",
+      "publication_date": "2024-07-12",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "legal-authority",
+        "provider-deployer-boundary",
+        "human-oversight",
+        "post-market-monitoring",
+        "compliance"
+      ],
+      "claims_supported": [
+        "MLE-CLM-020"
+      ],
+      "evidence_summary": "The official regulation assigns distinct obligations to providers and deployers of high-risk AI systems, including provider responsibility, deployer monitoring, competent human oversight, and links to data-protection duties. Legal status attaches to regulated actors, not to an engineering job title.",
+      "limitations": "Jurisdiction- and risk-class-specific law with staged application, amendments, and interpretive guidance; this research does not provide legal advice or determine whether a particular system is in scope.",
+      "currentness": "Official EUR-Lex record resolved on 2026-08-18; automated curl returned HTTP 202 and a JavaScript challenge, while the official indexed record exposed the regulation text and metadata.",
+      "verification_status": "verified-official-index-http-202-js-challenge"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "MLE-CLM-001",
+      "statement": "Machine Learning Engineer is a current standalone employer title across multiple independent industries, with common title variants including Senior Machine Learning Engineer, ML Engineer, AI & Machine Learning Engineer, and domain-qualified Machine Learning Engineer titles.",
+      "source_ids": [
+        "MLE-SRC-001",
+        "MLE-SRC-002",
+        "MLE-SRC-003",
+        "MLE-SRC-004",
+        "MLE-SRC-005",
+        "MLE-SRC-006",
+        "MLE-SRC-007",
+        "MLE-SRC-008",
+        "MLE-SRC-009",
+        "MLE-SRC-010",
+        "MLE-SRC-011",
+        "MLE-SRC-012"
+      ],
+      "evidence_strength": "high",
+      "volatility": "high",
+      "limitations": "Job titles are employer-defined and volatile; exact spelling, seniority, specialization, and organizational placement are not standardized professions or legal scopes."
+    },
+    {
+      "claim_id": "MLE-CLM-002",
+      "statement": "Across model-product and physical-system contexts, employers repeatedly assign Machine Learning Engineers work that connects problem framing or model design to training, validation, integration, and production deployment rather than stopping at offline modeling.",
+      "source_ids": [
+        "MLE-SRC-001",
+        "MLE-SRC-002",
+        "MLE-SRC-003",
+        "MLE-SRC-004",
+        "MLE-SRC-005",
+        "MLE-SRC-006",
+        "MLE-SRC-007",
+        "MLE-SRC-010",
+        "MLE-SRC-011",
+        "MLE-SRC-012"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Not every posting assigns every lifecycle stage, and broad startup roles may collapse work that larger organizations divide among scientists, data engineers, and platform teams."
+    },
+    {
+      "claim_id": "MLE-CLM-003",
+      "statement": "Production accountability recurs through deployment, serving, latency or resource constraints, reliability, monitoring, support, or real-world debugging; a trained model artifact alone is not the recurring unit of delivery.",
+      "source_ids": [
+        "MLE-SRC-001",
+        "MLE-SRC-002",
+        "MLE-SRC-003",
+        "MLE-SRC-004",
+        "MLE-SRC-005",
+        "MLE-SRC-006",
+        "MLE-SRC-007",
+        "MLE-SRC-008",
+        "MLE-SRC-009",
+        "MLE-SRC-010",
+        "MLE-SRC-011",
+        "MLE-SRC-012"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "The operational depth ranges from application-level monitoring to generalized research infrastructure and embedded deployment; it does not imply universal ownership of SRE, platform, hardware, or incident authority."
+    },
+    {
+      "claim_id": "MLE-CLM-004",
+      "statement": "Data pipelines, reproducible experiments, evaluation across representative environments, and feedback or retraining loops are recurring mechanisms by which Machine Learning Engineers make model changes traceable and supportable.",
+      "source_ids": [
+        "MLE-SRC-002",
+        "MLE-SRC-003",
+        "MLE-SRC-005",
+        "MLE-SRC-007",
+        "MLE-SRC-008",
+        "MLE-SRC-010",
+        "MLE-SRC-011"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "The evidence is responsibility language in postings, not audited proof that each employer's data, evaluation, or retraining practice is mature or effective."
+    },
+    {
+      "claim_id": "MLE-CLM-005",
+      "statement": "Machine Learning Engineer roles can be architecture-and-implementation roles at either the model-product layer or the ML platform and inference layer, so the canonical role must define a model-system accountability without absorbing generalized platform engineering.",
+      "source_ids": [
+        "MLE-SRC-001",
+        "MLE-SRC-002",
+        "MLE-SRC-006",
+        "MLE-SRC-008",
+        "MLE-SRC-009",
+        "MLE-SRC-011",
+        "MLE-SRC-012"
+      ],
+      "evidence_strength": "moderate",
+      "volatility": "medium",
+      "limitations": "This is a cross-posting synthesis: team topology determines whether architecture means a product-specific model path, an embedded path, or shared infrastructure, and postings alone cannot settle every adjacent-role boundary."
+    },
+    {
+      "claim_id": "MLE-CLM-006",
+      "statement": "Stakeholder work is intrinsic: employers repeatedly pair Machine Learning Engineers with product, domain, research, data, infrastructure, hardware, commercial, operations, or client partners to translate needs and evidence into deployed systems.",
+      "source_ids": [
+        "MLE-SRC-001",
+        "MLE-SRC-002",
+        "MLE-SRC-003",
+        "MLE-SRC-004",
+        "MLE-SRC-005",
+        "MLE-SRC-006",
+        "MLE-SRC-007",
+        "MLE-SRC-008",
+        "MLE-SRC-009",
+        "MLE-SRC-010",
+        "MLE-SRC-011"
+      ],
+      "evidence_strength": "high",
+      "volatility": "low",
+      "limitations": "Collaboration language does not transfer final product, clinical, trading, chemical-process, safety, security, compliance, or business authority to the Machine Learning Engineer."
+    },
+    {
+      "claim_id": "MLE-CLM-007",
+      "statement": "Hiring seniority and scope are not standardized: current postings range from recent-graduate eligibility or two-plus years to senior roles requiring eight-plus years, while similar work appears under exact, abbreviated, hybrid, seniority-qualified, and domain-qualified titles.",
+      "source_ids": [
+        "MLE-SRC-001",
+        "MLE-SRC-002",
+        "MLE-SRC-003",
+        "MLE-SRC-004",
+        "MLE-SRC-005",
+        "MLE-SRC-006",
+        "MLE-SRC-007",
+        "MLE-SRC-008",
+        "MLE-SRC-009",
+        "MLE-SRC-010",
+        "MLE-SRC-011",
+        "MLE-SRC-012"
+      ],
+      "evidence_strength": "high",
+      "volatility": "high",
+      "limitations": "Experience thresholds are hiring filters tied to a specific employer and vacancy; they are not a competency standard or proof that entry-level independent ownership is safe."
+    },
+    {
+      "claim_id": "MLE-CLM-008",
+      "statement": "Machine learning engineering begins with a reviewable task contract: intended decision or user outcome, population and context, measurable baseline, acceptance criteria, constraints, owners, and a justified reason to use machine learning before model complexity is introduced.",
+      "source_ids": [
+        "MLE-SRC-013",
+        "MLE-SRC-014",
+        "MLE-SRC-023"
+      ],
+      "evidence_strength": "high",
+      "volatility": "low",
+      "limitations": "The sources establish durable decision structure but do not supply universal metrics or thresholds; product, domain, safety, privacy, and governance owners must define consequences and acceptable risk for the use case."
+    },
+    {
+      "claim_id": "MLE-CLM-009",
+      "statement": "Data and feature expectations are executable lifecycle contracts: schemas, allowed domains, provenance and versions, train/serve environments, transformations, and skew or drift thresholds must be retained with conformance results so a candidate can be diagnosed and reproduced.",
+      "source_ids": [
+        "MLE-SRC-014",
+        "MLE-SRC-015",
+        "MLE-SRC-023"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Schema and statistical checks cannot prove semantic correctness, lawful collection, representative coverage, or label validity; data engineering, domain, privacy, and governance authorities retain those decisions."
+    },
+    {
+      "claim_id": "MLE-CLM-010",
+      "statement": "Training and experimentation require immutable run evidence—code and dependency versions, data identifiers, parameters, seeds, hardware or execution context, metrics, and artifacts—while reproducibility must be stated within a bounded platform and release rather than promised absolutely.",
+      "source_ids": [
+        "MLE-SRC-016",
+        "MLE-SRC-017"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Tracking metadata is necessary but not sufficient for reproducibility; some kernels and distributed executions remain nondeterministic, and stronger determinism can reduce throughput."
+    },
+    {
+      "claim_id": "MLE-CLM-011",
+      "statement": "Model qualification is a decision record, not a single score: compare the candidate with retained baselines on the intended population and meaningful segments, report uncertainty or probability calibration where applicable, document evaluation procedure and limitations, and tie thresholds to consequences.",
+      "source_ids": [
+        "MLE-SRC-013",
+        "MLE-SRC-018",
+        "MLE-SRC-019"
+      ],
+      "evidence_strength": "high",
+      "volatility": "low",
+      "limitations": "Calibration applies to probabilistic outputs and does not guarantee correctness under shift; subgroup choice, statistical power, fairness interpretation, and acceptance authority remain use-case specific."
+    },
+    {
+      "claim_id": "MLE-CLM-012",
+      "statement": "A releasable model is a versioned package plus evidence: executable artifact and dependencies, interface or inference schema, lineage to its run and data, intended and excluded uses, evaluated conditions, limitations, approval state, and recovery target must travel together.",
+      "source_ids": [
+        "MLE-SRC-019",
+        "MLE-SRC-023"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Registries and model-card formats are implementation choices; neither storage nor documentation alone verifies artifact integrity, compatibility, operational readiness, or organizational approval."
+    },
+    {
+      "claim_id": "MLE-CLM-013",
+      "statement": "Serving qualification joins model evidence with software operations: test latency, error behavior, and capacity under representative demand; expose health and model metrics; use staged traffic and explicit bake gates; retain rollback; and connect drift or performance thresholds to investigation, retraining, or requalification rather than automatic promotion.",
+      "source_ids": [
+        "MLE-SRC-014",
+        "MLE-SRC-015",
+        "MLE-SRC-021",
+        "MLE-SRC-022",
+        "MLE-SRC-023"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Autoscaling, deployment, and monitoring mechanisms are stack-specific. Proxy drift can alert without proving quality loss, delayed labels constrain monitoring, and automatic retraining is inappropriate when review or relabeling is required."
+    },
+    {
+      "claim_id": "MLE-CLM-014",
+      "statement": "Security and lifecycle accountability are continuous: inventory and protect data, code, dependencies, models, and endpoints; record threat assumptions, access and integrity controls, monitoring and incident paths, owners, approvals, rollback state, and retirement or decommissioning evidence for every released model.",
+      "source_ids": [
+        "MLE-SRC-013",
+        "MLE-SRC-019",
+        "MLE-SRC-020",
+        "MLE-SRC-023",
+        "MLE-SRC-024"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Threats and controls evolve; these sources do not transfer final authority from security, privacy, safety, governance, legal, product, or domain owners, and retirement evidence must follow local retention and incident obligations."
+    },
+    {
+      "claim_id": "MLE-CLM-015",
+      "statement": "The durable center of Machine Learning Engineering is converting model or data-science work into a production-ready learning system and owning workload-specific integration across qualification, serving, monitoring, and change; it is not model experimentation alone.",
+      "source_ids": [
+        "MLE-SRC-027",
+        "MLE-SRC-028"
+      ],
+      "evidence_strength": "corroborated-official",
+      "volatility": "low",
+      "limitations": "Organizations may combine model development, ML engineering, and MLOps in one person or team; this claim defines the accountability center, not a universal org chart."
+    },
+    {
+      "claim_id": "MLE-CLM-016",
+      "statement": "Production readiness requires evidence across data, features, models, pipeline components, serving behavior, monitoring, retraining, and rollback because an ML model can degrade or fail even when conventional code tests and offline metrics pass.",
+      "source_ids": [
+        "MLE-SRC-026",
+        "MLE-SRC-027",
+        "MLE-SRC-028",
+        "MLE-SRC-032"
+      ],
+      "evidence_strength": "strong-multi-organization-primary",
+      "volatility": "low",
+      "limitations": "The required tests, thresholds, monitoring windows, and release controls remain consequence- and domain-specific."
+    },
+    {
+      "claim_id": "MLE-CLM-017",
+      "statement": "Recurring ML lifecycle failures are system-interface failures: entangled changes, hidden data or feedback dependencies, undeclared consumers, configuration drift, incomplete actor visibility, and individually acceptable changes whose combination creates unsafe behavior.",
+      "source_ids": [
+        "MLE-SRC-025",
+        "MLE-SRC-029",
+        "MLE-SRC-032"
+      ],
+      "evidence_strength": "strong-primary-and-government",
+      "volatility": "low",
+      "limitations": "The sources establish recurring mechanisms and one public incident, not frequency estimates or a complete failure taxonomy."
+    },
+    {
+      "claim_id": "MLE-CLM-018",
+      "statement": "MLOps, ML platform, infrastructure, SRE, and security functions own reusable automation, shared runtime or fleet reliability, access boundaries, and cross-workload controls; the Machine Learning Engineer owns the model workload's use of those capabilities and its model-specific operational evidence unless authority is explicitly reassigned.",
+      "source_ids": [
+        "MLE-SRC-028",
+        "MLE-SRC-030",
+        "MLE-SRC-034"
+      ],
+      "evidence_strength": "corroborated-official-and-employer",
+      "volatility": "medium",
+      "limitations": "Small organizations often collapse these roles, and shared-responsibility boundaries vary with managed-service and deployment choices."
+    },
+    {
+      "claim_id": "MLE-CLM-019",
+      "statement": "Evaluation and safety must retain an independent release-gate voice: aggregate offline or A/B metrics can miss consequential behavior, so targeted deployment evaluations, qualitative expert evidence, incident processes, and formal risk review can block or reverse a launch.",
+      "source_ids": [
+        "MLE-SRC-029",
+        "MLE-SRC-030",
+        "MLE-SRC-032"
+      ],
+      "evidence_strength": "strong-multi-organization-official",
+      "volatility": "low",
+      "limitations": "The sources do not mandate one universal evaluation organization; independence may be procedural rather than a separate reporting line."
+    },
+    {
+      "claim_id": "MLE-CLM-020",
+      "statement": "Product, domain, security, safety, privacy, governance, legal, executive, and regulatory authorities retain decisions about purpose, intended use, risk tolerance, compliance, sensitive use, and domain validity; an MLE supplies implementation and evidence but does not unilaterally authorize those decisions.",
+      "source_ids": [
+        "MLE-SRC-028",
+        "MLE-SRC-029",
+        "MLE-SRC-030",
+        "MLE-SRC-031",
+        "MLE-SRC-036"
+      ],
+      "evidence_strength": "strong-cross-sector-official",
+      "volatility": "medium",
+      "limitations": "Exact authorities depend on jurisdiction, sector, company policy, deployment model, and system risk class; this is a responsibility boundary, not legal advice."
+    },
+    {
+      "claim_id": "MLE-CLM-021",
+      "statement": "Current practice distinguishes Machine Learning Engineer from data science, data engineering, applied research, platform or infrastructure, security, policy and safety, and generative or agentic specializations; shared implementation does not erase their different decision centers.",
+      "source_ids": [
+        "MLE-SRC-027",
+        "MLE-SRC-028",
+        "MLE-SRC-034"
+      ],
+      "evidence_strength": "corroborated-official-and-employer",
+      "volatility": "high",
+      "limitations": "Employer titles are volatile and inconsistent, and the sampled index cannot prove that every organization uses each title or the same boundary."
+    },
+    {
+      "claim_id": "MLE-CLM-022",
+      "statement": "Advanced and staff-level MLE depth is demonstrated by sustained production ownership, wider cross-team or company impact, ambiguous problem framing, architecture and initiative leadership, business judgment, mentoring, and raising operational standards—not by algorithm novelty or people management alone.",
+      "source_ids": [
+        "MLE-SRC-033",
+        "MLE-SRC-035"
+      ],
+      "evidence_strength": "corroborated-independent-employers",
+      "volatility": "medium",
+      "limitations": "One source is a historical general technology framework and one is a current AI-focused job posting; level calibration remains employer-specific."
+    }
+  ]
+}

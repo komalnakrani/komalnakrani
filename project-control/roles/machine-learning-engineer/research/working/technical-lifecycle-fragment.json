@@ -1,0 +1,396 @@
+{
+  "sources": [
+    {
+      "source_id": "MLE-SRC-013",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "author_or_org": "Elham Tabassi / National Institute of Standards and Technology",
+      "source_type": "official-engineering-publication",
+      "publication_date": "2023-01-26",
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "problem-framing",
+        "evaluation",
+        "risk-management",
+        "lifecycle-records",
+        "retirement"
+      ],
+      "claims_supported": [
+        "MLE-CLM-008",
+        "MLE-CLM-011",
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "NIST AI RMF 1.0 treats risk management as a continuous lifecycle activity and organizes reviewable work through GOVERN, MAP, MEASURE, and MANAGE, including context, metrics, impacts, documentation, monitoring, and decommissioning considerations.",
+      "limitations": "Voluntary, sector-neutral risk guidance rather than an implementation specification or role definition. NIST states that AI RMF 1.0 is being updated, so this edition must be checked again before publication.",
+      "currentness": "Published 2023-01-26; official landing page and DOI were live on 2026-08-18; NIST AIRC reports that a revision is in progress.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-014",
+      "title": "Rules of Machine Learning: Best Practices for ML Engineering",
+      "author_or_org": "Google",
+      "source_type": "official-engineering-publication",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://developers.google.com/machine-learning/guides/rules-of-ml",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "problem-framing",
+        "baselines",
+        "feature-contracts",
+        "evaluation",
+        "training-serving-skew",
+        "monitoring"
+      ],
+      "claims_supported": [
+        "MLE-CLM-008",
+        "MLE-CLM-009",
+        "MLE-CLM-013"
+      ],
+      "evidence_summary": "Google's engineering guidance starts with measurable objectives and simple heuristics, emphasizes a solid end-to-end pipeline, requires train/serve feature consistency, recommends time-aware evaluation, and calls for explicit monitoring of training-serving skew.",
+      "limitations": "Experience-based guidance from Google, not a standard; several examples and scale assumptions are organization-specific, and the page does not define universal acceptance thresholds.",
+      "currentness": "Official Google Developers page was live and returned HTTP 200 on 2026-08-18; no stable publication date is displayed on the inspected page.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-015",
+      "title": "Get started with TensorFlow Data Validation",
+      "author_or_org": "TensorFlow",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://www.tensorflow.org/tfx/data_validation/get_started",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "data-contracts",
+        "feature-contracts",
+        "schema-validation",
+        "training-serving-skew",
+        "drift"
+      ],
+      "claims_supported": [
+        "MLE-CLM-009",
+        "MLE-CLM-013"
+      ],
+      "evidence_summary": "TFDV documents machine-readable feature schemas, aggregate and example-level conformance checks, training/serving environments, and configurable skew and drift comparators with explicit thresholds.",
+      "limitations": "Tool-specific documentation, not a general data-contract standard. Inferred schemas require human review, and useful drift thresholds depend on data type, domain knowledge, and experimentation.",
+      "currentness": "Official TensorFlow documentation was live and returned HTTP 200 on 2026-08-18; the page does not expose a stable publication date.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-016",
+      "title": "MLflow Tracking",
+      "author_or_org": "MLflow Project, a Series of LF Projects, LLC",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://mlflow.org/docs/latest/tracking",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "experiment-tracking",
+        "lineage"
+      ],
+      "claims_supported": [
+        "MLE-CLM-010"
+      ],
+      "evidence_summary": "MLflow Tracking records runs with parameters, code versions, metrics, timestamps, and output artifacts, groups related runs into experiments, and retains trained models with run-linked metadata for later comparison.",
+      "limitations": "Tracking metadata does not prove that a run is reproducible or that a model is safe to release. Exact persistence and sharing behavior vary by MLflow version, backend stores, artifact stores, and operator configuration.",
+      "currentness": "The official latest-documentation URL was live and returned HTTP 200 on 2026-08-18; its unpinned latest path is intentionally volatile.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-017",
+      "title": "Reproducibility",
+      "author_or_org": "PyTorch",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://docs.pytorch.org/docs/stable/notes/randomness.html",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "training",
+        "experiment-reproducibility",
+        "randomness",
+        "determinism",
+        "regression-testing"
+      ],
+      "claims_supported": [
+        "MLE-CLM-010"
+      ],
+      "evidence_summary": "PyTorch documents how to control random sources and request deterministic algorithms for repeatable runs while explicitly warning that complete reproducibility is not guaranteed across releases, commits, platforms, or CPU/GPU execution.",
+      "limitations": "Framework-specific and bounded to a controlled platform and release; deterministic execution can reduce performance, and seeding alone does not capture code, data, dependencies, or hardware.",
+      "currentness": "Official stable documentation was live and returned HTTP 200 on 2026-08-18; page metadata states last updated 2025-10-03.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-018",
+      "title": "1.16. Probability calibration",
+      "author_or_org": "scikit-learn",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://scikit-learn.org/stable/modules/calibration.html",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "evaluation",
+        "probability-calibration",
+        "uncertainty",
+        "reliability-diagrams",
+        "proper-scoring-rules"
+      ],
+      "claims_supported": [
+        "MLE-CLM-011"
+      ],
+      "evidence_summary": "The scikit-learn guide defines calibrated probabilistic predictions, describes reliability diagrams, and explains that Brier and log loss combine calibration, resolution, and uncertainty rather than isolating calibration quality.",
+      "limitations": "Focused on probabilistic classification and scikit-learn estimators; calibration is only one uncertainty-related check and does not establish validity under distribution shift or for every model family.",
+      "currentness": "Official stable documentation identified itself as scikit-learn 1.9.0 and returned HTTP 200 on 2026-08-18; the stable URL moves with releases.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-019",
+      "title": "Model Cards for Model Reporting",
+      "author_or_org": "Margaret Mitchell et al. / Google Research",
+      "source_type": "primary-paper",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://research.google/pubs/model-cards-for-model-reporting/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "evaluation",
+        "segment-analysis",
+        "model-documentation",
+        "intended-use",
+        "limitations",
+        "release-records"
+      ],
+      "claims_supported": [
+        "MLE-CLM-011",
+        "MLE-CLM-012",
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "The paper proposes that released models travel with documentation of intended use, evaluation procedures, limitations, and benchmarked performance across relevant conditions and population subgroups.",
+      "limitations": "A 2019 documentation proposal, not an enforcement mechanism or complete release manifest. Its examples emphasize human-centered vision and language systems and require domain-specific adaptation.",
+      "currentness": "The official Google Research record and ACM download link were live on 2026-08-18; the paper is durable but older than current tooling and regulation.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-020",
+      "title": "Use AI securely and responsibly",
+      "author_or_org": "Google Cloud Architecture Center",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://docs.cloud.google.com/architecture/framework/security/use-ai-securely-and-responsibly",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "security-implementation",
+        "data-protection",
+        "artifact-integrity",
+        "supply-chain",
+        "threat-detection",
+        "incident-response"
+      ],
+      "claims_supported": [
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "Google Cloud's SAIF-aligned guidance applies security from design through operations and calls for access control, protected data, validated tools and artifacts, tamper-resistant pipelines, asset and run tracking, input monitoring, and detection and response.",
+      "limitations": "Cloud-provider guidance rather than a neutral standard; implementation examples favor Google Cloud services, and governance or security authorities retain final policy and incident authority.",
+      "currentness": "Official documentation was live and returned HTTP 200 on 2026-08-18; the page states last reviewed 2025-02-05.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-021",
+      "title": "Horizontal Pod Autoscaling",
+      "author_or_org": "Kubernetes Authors / Cloud Native Computing Foundation",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "serving",
+        "capacity",
+        "autoscaling",
+        "resource-metrics",
+        "custom-metrics"
+      ],
+      "claims_supported": [
+        "MLE-CLM-013"
+      ],
+      "evidence_summary": "Kubernetes documents a metric-driven control loop that adjusts workload replicas to match demand, with resource, per-pod, object, and custom metrics plus readiness and stabilization behavior.",
+      "limitations": "Infrastructure mechanism only: autoscaling does not define the model's latency target, quality gate, load-test distribution, safe maximum, or business capacity requirement. It applies only to scalable workload resources.",
+      "currentness": "Official Kubernetes documentation was live and returned HTTP 200 on 2026-08-18; the page documents the stable autoscaling/v2 API but is continuously maintained.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-022",
+      "title": "Deployment guardrails for updating models in production",
+      "author_or_org": "Amazon Web Services",
+      "source_type": "official-documentation",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-guardrails.html",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "serving",
+        "staged-deployment",
+        "latency",
+        "error-rate",
+        "rollback",
+        "capacity"
+      ],
+      "claims_supported": [
+        "MLE-CLM-013"
+      ],
+      "evidence_summary": "SageMaker deployment guardrails illustrate canary, linear, all-at-once, and rolling traffic shifts with bake periods, alarms, capacity increments, endpoint state visibility, and rollback protections for latency or error regressions.",
+      "limitations": "Vendor-specific mechanism limited to supported SageMaker asynchronous and real-time endpoint configurations. Managed rollback does not choose correct alarms, thresholds, bake periods, or business acceptance criteria.",
+      "currentness": "Official AWS documentation was live and returned HTTP 200 on 2026-08-18; no stable publication date is displayed.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-023",
+      "title": "Machine learning operations",
+      "author_or_org": "Microsoft Azure Architecture Center",
+      "source_type": "official-engineering-publication",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/machine-learning-operations-v2",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "end-to-end-lifecycle",
+        "role-boundary",
+        "model-registry",
+        "staging",
+        "monitoring",
+        "retraining",
+        "rollback",
+        "retirement"
+      ],
+      "claims_supported": [
+        "MLE-CLM-008",
+        "MLE-CLM-009",
+        "MLE-CLM-012",
+        "MLE-CLM-013",
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "Microsoft's MLOps v2 reference architecture connects development, registration, gated staging, endpoint performance and data checks, deployment, monitoring, threshold-triggered investigation or retraining, CI/CD rollback, and retirement of unused models while distinguishing data, infrastructure, and project ownership.",
+      "limitations": "A reference architecture with Azure examples, not a universal team topology or role standard. It often groups data scientist and ML engineer work and delegates infrastructure, policy, and business authority to other personas.",
+      "currentness": "Official Microsoft Learn page was live and returned HTTP 200 on 2026-08-18; page metadata states last updated 2024-07-12.",
+      "verification_status": "verified-live"
+    },
+    {
+      "source_id": "MLE-SRC-024",
+      "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+      "author_or_org": "Apostol Vassilev, Alina Oprea, Alie Fordyce, and Hyrum Anderson / National Institute of Standards and Technology",
+      "source_type": "official-engineering-publication",
+      "publication_date": null,
+      "access_date": "2026-08-18",
+      "url_or_identifier": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2023.pdf",
+      "role": "Machine Learning Engineer",
+      "domains": [
+        "security-implementation",
+        "threat-modeling",
+        "data-poisoning",
+        "evasion",
+        "privacy",
+        "mitigations"
+      ],
+      "claims_supported": [
+        "MLE-CLM-014"
+      ],
+      "evidence_summary": "NIST AI 100-2e2023 defines adversarial ML threats and mitigations across data, model, training, testing, deployment, and operating infrastructure, including poisoning, evasion, privacy, and model-access attack surfaces.",
+      "limitations": "A voluntary taxonomy and terminology report, not an exhaustive threat model, implementation checklist, or certification. Controls must be selected with security, privacy, safety, and domain authorities.",
+      "currentness": "The official NIST PDF was live and returned HTTP 200 on 2026-08-18; approved by the NIST Editorial Review Board on 2024-01-02 and published January 2024.",
+      "verification_status": "verified-live"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "MLE-CLM-008",
+      "statement": "Machine learning engineering begins with a reviewable task contract: intended decision or user outcome, population and context, measurable baseline, acceptance criteria, constraints, owners, and a justified reason to use machine learning before model complexity is introduced.",
+      "source_ids": [
+        "MLE-SRC-013",
+        "MLE-SRC-014",
+        "MLE-SRC-023"
+      ],
+      "evidence_strength": "high",
+      "volatility": "low",
+      "limitations": "The sources establish durable decision structure but do not supply universal metrics or thresholds; product, domain, safety, privacy, and governance owners must define consequences and acceptable risk for the use case."
+    },
+    {
+      "claim_id": "MLE-CLM-009",
+      "statement": "Data and feature expectations are executable lifecycle contracts: schemas, allowed domains, provenance and versions, train/serve environments, transformations, and skew or drift thresholds must be retained with conformance results so a candidate can be diagnosed and reproduced.",
+      "source_ids": [
+        "MLE-SRC-014",
+        "MLE-SRC-015",
+        "MLE-SRC-023"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Schema and statistical checks cannot prove semantic correctness, lawful collection, representative coverage, or label validity; data engineering, domain, privacy, and governance authorities retain those decisions."
+    },
+    {
+      "claim_id": "MLE-CLM-010",
+      "statement": "Training and experimentation require immutable run evidence—code and dependency versions, data identifiers, parameters, seeds, hardware or execution context, metrics, and artifacts—while reproducibility must be stated within a bounded platform and release rather than promised absolutely.",
+      "source_ids": [
+        "MLE-SRC-016",
+        "MLE-SRC-017"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Tracking metadata is necessary but not sufficient for reproducibility; some kernels and distributed executions remain nondeterministic, and stronger determinism can reduce throughput."
+    },
+    {
+      "claim_id": "MLE-CLM-011",
+      "statement": "Model qualification is a decision record, not a single score: compare the candidate with retained baselines on the intended population and meaningful segments, report uncertainty or probability calibration where applicable, document evaluation procedure and limitations, and tie thresholds to consequences.",
+      "source_ids": [
+        "MLE-SRC-013",
+        "MLE-SRC-018",
+        "MLE-SRC-019"
+      ],
+      "evidence_strength": "high",
+      "volatility": "low",
+      "limitations": "Calibration applies to probabilistic outputs and does not guarantee correctness under shift; subgroup choice, statistical power, fairness interpretation, and acceptance authority remain use-case specific."
+    },
+    {
+      "claim_id": "MLE-CLM-012",
+      "statement": "A releasable model is a versioned package plus evidence: executable artifact and dependencies, interface or inference schema, lineage to its run and data, intended and excluded uses, evaluated conditions, limitations, approval state, and recovery target must travel together.",
+      "source_ids": [
+        "MLE-SRC-019",
+        "MLE-SRC-023"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Registries and model-card formats are implementation choices; neither storage nor documentation alone verifies artifact integrity, compatibility, operational readiness, or organizational approval."
+    },
+    {
+      "claim_id": "MLE-CLM-013",
+      "statement": "Serving qualification joins model evidence with software operations: test latency, error behavior, and capacity under representative demand; expose health and model metrics; use staged traffic and explicit bake gates; retain rollback; and connect drift or performance thresholds to investigation, retraining, or requalification rather than automatic promotion.",
+      "source_ids": [
+        "MLE-SRC-014",
+        "MLE-SRC-015",
+        "MLE-SRC-021",
+        "MLE-SRC-022",
+        "MLE-SRC-023"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Autoscaling, deployment, and monitoring mechanisms are stack-specific. Proxy drift can alert without proving quality loss, delayed labels constrain monitoring, and automatic retraining is inappropriate when review or relabeling is required."
+    },
+    {
+      "claim_id": "MLE-CLM-014",
+      "statement": "Security and lifecycle accountability are continuous: inventory and protect data, code, dependencies, models, and endpoints; record threat assumptions, access and integrity controls, monitoring and incident paths, owners, approvals, rollback state, and retirement or decommissioning evidence for every released model.",
+      "source_ids": [
+        "MLE-SRC-013",
+        "MLE-SRC-019",
+        "MLE-SRC-020",
+        "MLE-SRC-023",
+        "MLE-SRC-024"
+      ],
+      "evidence_strength": "high",
+      "volatility": "medium",
+      "limitations": "Threats and controls evolve; these sources do not transfer final authority from security, privacy, safety, governance, legal, product, or domain owners, and retirement evidence must follow local retention and incident obligations."
+    }
+  ]
+}

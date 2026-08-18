@@ -45,16 +45,16 @@ name; `MERGE WITH` followed by an approved role; `KEEP AS SPECIALIZATION`; or
 
 ## Acceptance criteria
 
-- [ ] Current official evidence supports or rejects the exact title.
-- [ ] Evidence spans independent employers, industries, and technical bodies.
-- [ ] All responsibility families, deliverables, failures, and advanced work are specific.
-- [ ] The primary engineering decision and unit of accountability are explicit.
-- [ ] Adjacent overlap and formal authority boundaries are resolved.
-- [ ] At least 30 sources and 20 claims pass structured validation.
-- [ ] All source/claim links are exact and bidirectional.
-- [ ] URL currentness, redirects, restrictions, and limitations are recorded.
-- [ ] The verdict is exact and actionable.
-- [ ] Repository checks and hostile Phase 01 QA pass.
+- [x] Current official evidence supports or rejects the exact title.
+- [x] Evidence spans independent employers, industries, and technical bodies.
+- [x] All responsibility families, deliverables, failures, and advanced work are specific.
+- [x] The primary engineering decision and unit of accountability are explicit.
+- [x] Adjacent overlap and formal authority boundaries are resolved.
+- [x] At least 30 sources and 20 claims pass structured validation.
+- [x] All source/claim links are exact and bidirectional.
+- [x] URL currentness, redirects, restrictions, and limitations are recorded.
+- [x] The verdict is exact and actionable.
+- [x] Repository checks and hostile Phase 01 QA pass.
 
 ## Outputs
 
@@ -67,3 +67,27 @@ name; `MERGE WITH` followed by an approved role; `KEEP AS SPECIALIZATION`; or
 
 Only an accepted `PROCEED` verdict allows Phase 04. Any other verdict stops the
 book pipeline at the catalog decision.
+
+## Integrated evidence checkpoint
+
+- Verdict: `PROCEED`
+- Sources: 36
+- Claims: 22
+- Exact source/claim links: 119 in each direction
+- Employer evidence: 14 sources / 14 organizations
+- Technical, standards, or primary research: 21 sources
+- Adjacent-role rows: 17
+- Scenario tests: 10
+- Validator: PASS, zero errors
+- Mutation suite: 42/42 PASS
+- Independent task reviews: all final verdicts PASS / APPROVED
+- Durable report: `research/verification-report.md`
+
+## Final acceptance
+
+- Independent Task 6 review: specification PASS / quality APPROVED
+- Hostile merge, heading, matrix, scenario, leakage, marker, and addition-aware
+  file-hygiene audit: PASS
+- Full repository check: PASS with 129 built pages and 2,341 local references
+- PDF artifact tests: 3/3 PASS through the bundled document runtime
+- Transition: Phase 01 accepted; Phase 04 is the exact next gate

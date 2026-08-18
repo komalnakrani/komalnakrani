@@ -22,7 +22,9 @@
 - Finish all Komal publishing foundations and role books before resuming Abhyaas.
 - Komal teaches; Abhyaas independently certifies competence.
 - Roles are processed in user-authorized three-book waves while preserving the approved 32-role catalog order and isolated role state.
-- Current stop boundary (2026-08-16): finish the active Applied AI, Agentic AI, and LLM Engineering publication tracks, then hold. Do not start another role or book until the user resumes the factory.
+- The user resumed the factory on 2026-08-18. Machine Learning Engineer is the
+  sole active role; complete it before starting catalog position 6. Parallel
+  work is allowed only inside disjoint lanes of the same active role/book.
 
 ## Bootstrap status
 
@@ -91,18 +93,17 @@
 
 ## Exact next action
 
-The user resumed the catalog on 2026-08-18 and approved Machine Learning
-Engineer, position 5 of 32, as the sole active role. Its creative direction is
-`Learning Systems Test Bench`: a profession-specific, 7 by 10 screen-first book
-system authored by Komal Nakrani. Phase 01 role validation and adjacent-role
-boundary evidence is the only active gate. Do not begin book scope,
+Machine Learning Engineer Phase 01 is accepted with verdict `PROCEED`: 36
+sources, 22 claims, 119 exact bidirectional links, 17 adjacent-role rows, and 10
+scenario tests. The creative direction remains `Learning Systems Test Bench`,
+a profession-specific 7 by 10 screen-first system authored by Komal Nakrani.
+Phase 04 book scope and volume decision is the exact next gate. Do not begin
 architecture, manuscript, visuals, another book, another role, a course, or
-Abhyaas work until the Phase 01 verdict is accepted.
+Abhyaas work before the Phase 04 scope decision is accepted.
 
 ## Resume instructions
 
-Inspect Git status and GitHub state, then read
-`project-control/roles/machine-learning-engineer/ROLE-STATE.md`, its root issue,
-and its active child issue. Resume the same Machine Learning Engineer gate
-before creating another issue. Abhyaas remains out of scope for this book-only
-run.
+Inspect Git status and GitHub state, then read the Machine Learning Engineer
+role state, root issue, accepted Phase 01 evidence, and approved design spec.
+Open only the Phase 04 scope/volume child issue and resume the same Machine
+Learning Engineer track. Abhyaas remains out of scope for this book-only run.
