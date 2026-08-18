@@ -83,6 +83,20 @@ test('accepts a complete, symmetrical Phase 01 evidence package', () => {
   assert.deepEqual(validatePhase01(makeValidInput()), []);
 });
 
+test('accepts employer-controlled job-board evidence from the planned market fragment', () => {
+  const input = makeValidInput();
+  for (const source of input.register.sources.slice(0, 8)) {
+    source.source_type = 'employer-controlled-greenhouse-job-posting';
+  }
+  assert.deepEqual(validatePhase01(input), []);
+});
+
+test('accepts MERGE WITH only for an approved catalog role', () => {
+  const input = makeValidInput();
+  input.roleValidation = input.roleValidation.replace('**PROCEED**', '**MERGE WITH LLM Engineer**');
+  assert.deepEqual(validatePhase01(input), []);
+});
+
 const invalidCases = [
   ['rejects the wrong role identity', (input) => { input.register.role = 'ML Developer'; }, 'IDENTITY_ROLE'],
   ['rejects the wrong role slug', (input) => { input.register.role_slug = 'ml-developer'; }, 'IDENTITY_SLUG'],
@@ -95,12 +109,23 @@ const invalidCases = [
   ['rejects a source without reverse claim links', (input) => { input.register.sources[0].claims_supported = []; }, 'SOURCE_CLAIMS_EMPTY'],
   ['rejects a claim with fewer than two sources', (input) => { input.register.claims[0].source_ids = [input.register.claims[0].source_ids[0]]; }, 'CLAIM_SOURCES_MINIMUM'],
   ['rejects duplicate sources masquerading as independent corroboration', (input) => { input.register.claims[0].source_ids = [input.register.claims[0].source_ids[0], input.register.claims[0].source_ids[0]]; }, 'CLAIM_SOURCES_UNIQUE'],
+  ['rejects duplicate claim-to-source edges in an otherwise corroborated claim', (input) => { input.register.claims[0].source_ids.push(input.register.claims[0].source_ids[0]); }, 'CLAIM_SOURCE_DUPLICATE'],
+  ['rejects duplicate source-to-claim edges', (input) => { input.register.sources[0].claims_supported.push(input.register.sources[0].claims_supported[0]); }, 'SOURCE_CLAIM_DUPLICATE'],
+  ['rejects two source IDs from the same organization as independent corroboration', (input) => { const [first, second] = input.register.claims[0].source_ids.map((id) => input.register.sources.find((source) => source.source_id === id)); second.author_or_org = first.author_or_org; }, 'CLAIM_ORG_INDEPENDENCE'],
   ['rejects a claim without an explicit limitation', (input) => { input.register.claims[0].limitations = ''; }, 'CLAIM_LIMITATION'],
   ['rejects an unknown forward source reference', (input) => { input.register.claims[0].source_ids[0] = 'MLE-SRC-999'; }, 'CLAIM_SOURCE_UNKNOWN'],
   ['rejects an unknown reverse claim reference', (input) => { input.register.sources[0].claims_supported.push('MLE-CLM-999'); }, 'SOURCE_CLAIM_UNKNOWN'],
   ['rejects asymmetric source and claim references', (input) => { input.register.sources[0].claims_supported = input.register.sources[0].claims_supported.filter((id) => id !== 'MLE-CLM-001'); }, 'REFERENCE_ASYMMETRY'],
   ['rejects a source without a limitation', (input) => { input.register.sources[0].limitations = ''; }, 'SOURCE_LIMITATION'],
   ['rejects a source without verification status', (input) => { input.register.sources[0].verification_status = ''; }, 'SOURCE_VERIFICATION'],
+  ['rejects a source with the wrong access date', (input) => { input.register.sources[0].access_date = '2026-08-17'; }, 'SOURCE_ACCESS_DATE'],
+  ['rejects a source with the wrong role', (input) => { input.register.sources[0].role = 'Data Scientist'; }, 'SOURCE_ROLE'],
+  ['rejects a source without a title', (input) => { input.register.sources[0].title = ''; }, 'SOURCE_TITLE'],
+  ['rejects a source without an organization', (input) => { input.register.sources[0].author_or_org = ''; }, 'SOURCE_ORGANIZATION'],
+  ['rejects a source without a type', (input) => { input.register.sources[0].source_type = ''; }, 'SOURCE_TYPE'],
+  ['rejects a source without domains', (input) => { input.register.sources[0].domains = []; }, 'SOURCE_DOMAINS'],
+  ['rejects a source without an evidence summary', (input) => { input.register.sources[0].evidence_summary = ''; }, 'SOURCE_EVIDENCE_SUMMARY'],
+  ['rejects a source without a currentness record', (input) => { input.register.sources[0].currentness = ''; }, 'SOURCE_CURRENTNESS'],
   ['rejects a non-http source identifier', (input) => { input.register.sources[0].url_or_identifier = 'isbn:123'; }, 'SOURCE_URL'],
   ['rejects fewer than eight employer role sources', (input) => { input.register.sources[7].source_type = 'primary-paper'; }, 'EMPLOYER_SOURCE_COUNT'],
   ['rejects fewer than six employer organizations', (input) => { for (const source of input.register.sources.slice(0, 8)) source.author_or_org = 'One Employer'; }, 'EMPLOYER_ORG_COUNT'],
@@ -108,7 +133,9 @@ const invalidCases = [
   ['rejects a missing allowed verdict', (input) => { input.roleValidation = input.roleValidation.replace('**PROCEED**', '**PENDING**'); }, 'VERDICT'],
   ['rejects RENAME TO without a canonical name', (input) => { input.roleValidation = input.roleValidation.replace('**PROCEED**', '**RENAME TO**'); }, 'VERDICT'],
   ['rejects MERGE WITH without an approved role', (input) => { input.roleValidation = input.roleValidation.replace('**PROCEED**', '**MERGE WITH**'); }, 'VERDICT'],
+  ['rejects MERGE WITH an unapproved catalog role', (input) => { input.roleValidation = input.roleValidation.replace('**PROCEED**', '**MERGE WITH Not A Catalog Role**'); }, 'VERDICT'],
   ['rejects a claim absent from both canonical markdown files', (input) => { input.roleValidation = input.roleValidation.replaceAll('MLE-CLM-020', ''); input.adjacentBoundary = input.adjacentBoundary.replaceAll('MLE-CLM-020', ''); }, 'CLAIM_MARKDOWN_COVERAGE'],
+  ['rejects a longer numeric token masquerading as an exact claim citation', (input) => { input.roleValidation = input.roleValidation.replaceAll('MLE-CLM-020', 'MLE-CLM-0200'); input.adjacentBoundary = input.adjacentBoundary.replaceAll('MLE-CLM-020', 'MLE-CLM-0200'); }, 'CLAIM_MARKDOWN_COVERAGE'],
   ['rejects missing adjacent-role classification vocabulary', (input) => { input.adjacentBoundary = input.adjacentBoundary.replace('OUT OF SCOPE', ''); }, 'BOUNDARY_VOCABULARY'],
 ];
 

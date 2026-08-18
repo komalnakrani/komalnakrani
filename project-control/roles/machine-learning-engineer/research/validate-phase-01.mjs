@@ -4,8 +4,42 @@ import { fileURLToPath } from 'node:url';
 
 const SOURCE_ID = /^MLE-SRC-\d{3}$/;
 const CLAIM_ID = /^MLE-CLM-\d{3}$/;
-const EMPLOYER_SOURCE = /^official-employer-/;
+const EMPLOYER_SOURCE = /^(official-employer-|employer-controlled-)/;
 const TECHNICAL_SOURCE = /^(official-(documentation|standard|specification|engineering-publication|government-framework|government-guidance|postmortem|research-publication)|primary-(paper|research))$/;
+const APPROVED_CATALOG_ROLES = new Set([
+  'Forward Deployed Engineer',
+  'Applied AI Engineer',
+  'Agentic AI Engineer',
+  'LLM Engineer',
+  'Machine Learning Engineer',
+  'AI Research Engineer',
+  'AI Evaluation Engineer',
+  'Applied Scientist',
+  'Data Scientist',
+  'Data Engineer',
+  'Analytics Engineer',
+  'Data Platform Engineer',
+  'Data Architect',
+  'MLOps Engineer',
+  'Machine Learning Platform Engineer',
+  'Machine Learning Infrastructure Engineer',
+  'AI Reliability Engineer',
+  'AI Performance Engineer',
+  'AI Security Engineer',
+  'AI Red Team Engineer',
+  'AI Safety Engineer',
+  'AI Governance Specialist',
+  'Solutions Architect',
+  'AI Solutions Architect',
+  'Enterprise Architect',
+  'Software Architect',
+  'Cloud Architect',
+  'Security Architect',
+  'Cloud Engineer',
+  'DevOps Engineer',
+  'Platform Engineer',
+  'Site Reliability Engineer',
+]);
 const BOUNDARY_VOCABULARY = [
   'CORE HERE',
   'SHARED AT DIFFERENT DEPTH',
@@ -27,6 +61,14 @@ function duplicateValues(values) {
   return [...duplicates];
 }
 
+function hasText(value) {
+  return typeof value === 'string' && Boolean(value.trim());
+}
+
+function claimTokens(markdown) {
+  return new Set(String(markdown ?? '').match(/MLE-CLM-\d{3}(?!\d)/g) ?? []);
+}
+
 function extractVerdict(markdown) {
   const lines = String(markdown ?? '').split(/\r?\n/);
   const heading = lines.findIndex((line) => /^##\s+Verdict\s*$/i.test(line.trim()));
@@ -36,11 +78,12 @@ function extractVerdict(markdown) {
 }
 
 function isAllowedVerdict(verdict) {
+  const mergeTarget = verdict.startsWith('MERGE WITH ') ? verdict.slice('MERGE WITH '.length) : '';
   return verdict === 'PROCEED'
     || verdict === 'KEEP AS SPECIALIZATION'
     || verdict === 'REJECT'
     || /^RENAME TO\s+\S(?:.*\S)?$/.test(verdict)
-    || /^MERGE WITH\s+\S(?:.*\S)?$/.test(verdict);
+    || APPROVED_CATALOG_ROLES.has(mergeTarget);
 }
 
 export function validatePhase01({ register, roleValidation, adjacentBoundary }) {
@@ -94,6 +137,33 @@ export function validatePhase01({ register, roleValidation, adjacentBoundary }) 
     if (typeof source.limitations !== 'string' || !source.limitations.trim()) {
       errors.push(issue('SOURCE_LIMITATION', `${source.source_id ?? 'unknown source'} has no limitation`));
     }
+    if (new Set(source.claims_supported ?? []).size !== (source.claims_supported ?? []).length) {
+      errors.push(issue('SOURCE_CLAIM_DUPLICATE', `${source.source_id ?? 'unknown source'} repeats a claim relationship`));
+    }
+    if (!hasText(source.title)) {
+      errors.push(issue('SOURCE_TITLE', `${source.source_id ?? 'unknown source'} has no title`));
+    }
+    if (!hasText(source.author_or_org)) {
+      errors.push(issue('SOURCE_ORGANIZATION', `${source.source_id ?? 'unknown source'} has no author or organization`));
+    }
+    if (!hasText(source.source_type)) {
+      errors.push(issue('SOURCE_TYPE', `${source.source_id ?? 'unknown source'} has no source type`));
+    }
+    if (source.access_date !== register.access_date) {
+      errors.push(issue('SOURCE_ACCESS_DATE', `${source.source_id ?? 'unknown source'} access date must match the register`));
+    }
+    if (source.role !== register.role) {
+      errors.push(issue('SOURCE_ROLE', `${source.source_id ?? 'unknown source'} role must match the register`));
+    }
+    if (!Array.isArray(source.domains) || source.domains.length === 0 || source.domains.some((domain) => !hasText(domain))) {
+      errors.push(issue('SOURCE_DOMAINS', `${source.source_id ?? 'unknown source'} needs at least one named domain`));
+    }
+    if (!hasText(source.evidence_summary)) {
+      errors.push(issue('SOURCE_EVIDENCE_SUMMARY', `${source.source_id ?? 'unknown source'} has no evidence summary`));
+    }
+    if (!hasText(source.currentness)) {
+      errors.push(issue('SOURCE_CURRENTNESS', `${source.source_id ?? 'unknown source'} has no currentness record`));
+    }
     if (typeof source.verification_status !== 'string' || !source.verification_status.trim()) {
       errors.push(issue('SOURCE_VERIFICATION', `${source.source_id ?? 'unknown source'} has no verification status`));
     }
@@ -116,6 +186,17 @@ export function validatePhase01({ register, roleValidation, adjacentBoundary }) 
     }
     if (new Set(claim.source_ids ?? []).size < 2) {
       errors.push(issue('CLAIM_SOURCES_UNIQUE', `${claim.claim_id ?? 'unknown claim'} needs two distinct sources`));
+    }
+    if (new Set(claim.source_ids ?? []).size !== (claim.source_ids ?? []).length) {
+      errors.push(issue('CLAIM_SOURCE_DUPLICATE', `${claim.claim_id ?? 'unknown claim'} repeats a source relationship`));
+    }
+    const supportingOrganizations = new Set(
+      (claim.source_ids ?? [])
+        .map((sourceIdValue) => sourceById.get(sourceIdValue)?.author_or_org)
+        .filter(hasText),
+    );
+    if (supportingOrganizations.size < 2) {
+      errors.push(issue('CLAIM_ORG_INDEPENDENCE', `${claim.claim_id ?? 'unknown claim'} needs evidence from two organizations`));
     }
     if (typeof claim.limitations !== 'string' || !claim.limitations.trim()) {
       errors.push(issue('CLAIM_LIMITATION', `${claim.claim_id ?? 'unknown claim'} has no limitation`));
@@ -146,8 +227,9 @@ export function validatePhase01({ register, roleValidation, adjacentBoundary }) 
   if (!isAllowedVerdict(extractVerdict(roleValidation))) {
     errors.push(issue('VERDICT', 'role validation lacks an allowed verdict under a Verdict heading'));
   }
+  const documentedClaims = new Set([...claimTokens(roleValidation), ...claimTokens(adjacentBoundary)]);
   for (const id of claimIds.filter((value) => CLAIM_ID.test(value ?? ''))) {
-    if (!(roleValidation ?? '').includes(id) && !(adjacentBoundary ?? '').includes(id)) {
+    if (!documentedClaims.has(id)) {
       errors.push(issue('CLAIM_MARKDOWN_COVERAGE', `${id} is absent from both canonical markdown files`));
     }
   }
