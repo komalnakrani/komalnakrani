@@ -15,7 +15,7 @@ It recorded 106/106 GREEN and a passing `pre-hostile` CLI, but returned
 - `validate-phase-05.mjs` SHA-256:
   `a3b2273461508c2ea12610837d3d6127c96db53d0b67e4e04e46b202e59e14b6`
 - `validate-phase-05.test.mjs` SHA-256:
-  `a7d01be4f43a759b6fbb0f764c2eb83212d9baa8b8a43cdd26dda567322cf51b`
+  `ca14b2cf5c62579e5ea0294f4380c6d9ce07ae7ef417fb1cac188a1e4e7cc409`
 
 ## Finding dispositions
 
@@ -101,6 +101,11 @@ Repaired. The manifest contract now requires and mutation-tests:
 - Frozen-inventory RED: 190 total, 169 pass, 21 fail; twenty naming/root
   bypasses failed with their containing parent test.
 - Final GREEN: 190 total, 190 pass, 0 fail.
+- After the accepted verification and state files became canonical, three
+  lifecycle tests were updated to construct the historical pre-hostile or
+  incomplete-state view explicitly instead of assuming the live repository
+  remained incomplete. Test count and production validator semantics are
+  unchanged; the post-transition suite remains 190/190 GREEN.
 - Syntax, marker, whitespace, EOF, and `git diff --check`: PASS.
 - Canonical `--stage=pre-hostile`: PASS with 7 parts, 21 chapters, 21
   milestones, trace 8/22/17/10, 12 domains, 5 ports, 40 contexts, 35 exits, 5

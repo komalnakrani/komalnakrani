@@ -499,3 +499,47 @@ covered. Final findings: none.
 SPEC COMPLIANCE PASS
 
 QUALITY APPROVED
+
+---
+
+## Post-closeout lifecycle adaptation acceptance
+
+This is the final disposition and supersedes every earlier block in this
+report. The production validator remains unchanged at SHA-256
+`a3b2273461508c2ea12610837d3d6127c96db53d0b67e4e04e46b202e59e14b6`.
+The closeout-aware test harness is SHA-256
+`ca14b2cf5c62579e5ea0294f4380c6d9ce07ae7ef417fb1cac188a1e4e7cc409`,
+and the paired repair record is SHA-256
+`6e8209fefc19baf58be00a74434f962fb3f97e0b540c8fa187593869f2b5dfa3`.
+
+The lifecycle-only adaptation is accepted:
+
+- Historical `pre-hostile` acceptance now constructs that historical view by
+  removing the now-canonical verification file from both `files` and
+  `inventory`. The resulting bundle passes with no errors and preserves the
+  accepted external inventory digest
+  `1b3d92809cbe2279dda0e5782083882936874f4f1a458c86423593548fad8132`.
+- The staged-circularity fixture removes both the hostile review and
+  verification file, so `pre-hostile` passes while `pre-close` and `final`
+  independently report both missing gates. It no longer assumes canonical
+  state is incomplete after closeout.
+- The incomplete-final-state case now mutates the completed role authority back
+  to active child `#82`; all four exact state-authority mutations remain
+  independently covered. The existing-prior-publication baseline uses the same
+  explicit historical bundle and remains free of path false positives.
+- The complete suite freshly exited `0` with `190` tests, `190` pass, `0`
+  fail, `0` skipped, and `0` todo. The bounded-root/path, exact review
+  allowlist, semantic artifact, durable manifest, temporary-copy, and canonical
+  byte-preservation coverage is otherwise unchanged.
+- Before this final report append, the live `pre-close` and `final` invocations
+  reached the completed state and failed only on the intentionally stale Task
+  6 test/report bindings in the verification chain. No state, path, semantic,
+  or other validation error occurred. Refreshing those identities is the
+  required non-circular coordinator step after this report receives its final
+  hash.
+
+Final findings: none.
+
+SPEC COMPLIANCE PASS
+
+QUALITY APPROVED

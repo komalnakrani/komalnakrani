@@ -5,11 +5,11 @@
 - Role: Machine Learning Engineer
 - Slug: `machine-learning-engineer`
 - Catalog position: 5 of 32
-- Current global phase: Phase 05 book architecture active
+- Current global phase: Phase 05 book architecture complete
 - Last updated: 2026-08-18
 - Komal root issue: [#79](https://github.com/alpeshznakrani/komalnakrani/issues/79)
-- Last completed child issue: [#81 — Phase 04 book scope](https://github.com/alpeshznakrani/komalnakrani/issues/81)
-- Active child issue: [#82 — Phase 05 book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
+- Last completed child issue: [#82 — Phase 05 book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
+- Active child issue: none
 - Abhyaas: intentionally out of scope for this book-only run
 
 ## Locked decisions
@@ -26,21 +26,22 @@
 
 ## Current work
 
-Phase 05 is active under child #82. The accepted single-book architecture target
-is seven parts and twenty-one chapters for *Machine Learning Engineering: From
-Task Contract to Operating Evidence*, authored by Komal Nakrani. This phase
-freezes the shared chapter, dossier, companion, competency, case, learning,
-source-research, and visual-production contracts before any downstream work.
-The dedicated Phase 05 plan passed hostile review and is checkpointed at
-`ad34c46`. No manuscript, research pack, blueprint, generated visual, course,
+Phase 05 is complete and child #82 is closed `status:done`. The accepted
+single-book architecture freezes seven parts, twenty-one chapters, the
+Benchline dossier, five replaceable ports, source-research needs, learning
+evidence, and the Learning Systems Test Bench visual contract. The final
+architecture validator passes 190/190 mutation tests and hostile review. Phase
+06 source and bounded case-study research is the next gate and remains
+inactive until this final state is committed, pushed, and verified. No
+manuscript, blueprint, companion implementation, generated visual, course,
 Abhyaas, second volume, or new role is active.
 
 ## Completed gates
 
 - [x] 01 role validation and boundary
 - [x] 04 book scope and volume decision
-- [ ] 05 book architecture — active in #82
-- [ ] 06 source and case-study research
+- [x] 05 book architecture — complete
+- [ ] 06 source and case-study research — next gate, inactive
 - [ ] 07 chapter blueprints
 - [ ] 08 manuscript
 - [ ] 09 whole-book QA
@@ -50,12 +51,14 @@ Abhyaas, second volume, or new role is active.
 
 ## Exact next action
 
-Complete, independently review, semantically validate, and accept the Phase 05
-single-book architecture package before Phase 06 research begins.
+Commit and push the final Phase 05 verification/state record, verify local and
+remote `main` equality, then activate only Phase 06 source and bounded
+case-study research under a new child issue.
 
 ## Resume instructions
 
-Read this file, active #82, the accepted Phase 05 plan, canonical Phase 04 scope
-decision and verification, approved design, Phase 01 evidence, Git status, and
-GitHub issue state. Resume only Phase 05 architecture; do not start Phase 06,
+Read this file, closed #82, the accepted Phase 05 architecture and verification,
+canonical Phase 04 scope decision, approved design, Phase 01 evidence, Git
+status, and GitHub issue state. Phase 06 is the sole next gate and is inactive
+until the final Phase 05 state commit is on remote `main`. Do not start a
 manuscript, visual production, second volume, course, another role, or Abhyaas.

@@ -229,8 +229,15 @@ ${JSON.stringify(manifest, null, 2)}
   return bundle;
 }
 
+async function loadPreHostileRepositoryBundle() {
+  const bundle = await loadPhase05Bundle(repoRoot);
+  delete bundle.files[VERIFICATION];
+  bundle.inventory = bundle.inventory.filter((relative) => relative !== VERIFICATION);
+  return bundle;
+}
+
 test('accepts the exact accepted Task 2-5 package at the pre-hostile gate', async () => {
-  const result = validatePhase05(await loadPhase05Bundle(repoRoot), { stage: 'pre-hostile' });
+  const result = validatePhase05(await loadPreHostileRepositoryBundle(), { stage: 'pre-hostile' });
   assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2));
   assert.deepEqual(result.counts, {
     parts: 7,
@@ -264,7 +271,8 @@ test('uses distinct staged gates to break hostile-review and closeout circularit
   assert.equal(hostile.ok, true);
   assert.ok(close.errors.some(({ code }) => code === 'HOSTILE_REVIEW_MISSING'));
   assert.ok(close.errors.some(({ code }) => code === 'VERIFICATION_MISSING'));
-  assert.ok(final.errors.some(({ code }) => code === 'STATE_PHASE05_NOT_COMPLETE'));
+  assert.ok(final.errors.some(({ code }) => code === 'HOSTILE_REVIEW_MISSING'));
+  assert.ok(final.errors.some(({ code }) => code === 'VERIFICATION_MISSING'));
 });
 
 test('rejects identity, decision, schema, and version drift semantically', async (t) => {
@@ -603,10 +611,11 @@ test('rejects premature Phase 06 activation and incomplete final state', async (
   const role = 'project-control/roles/machine-learning-engineer/ROLE-STATE.md';
   await t.test('premature phase06', (st) => expectMutation(st, {
     relative: role,
-    transform: (s) => s.replace('Phase 05 book architecture active', 'Phase 06 source research active'),
+    transform: (s) => s.replace(/Phase\n06 source and bounded case-study research is the next gate and remains\ninactive/, 'Phase 06 source research active'),
     code: 'STATE_PHASE06_PREMATURE',
   }));
   const bundle = await loadPhase05Bundle(repoRoot);
+  replaceBundleText(bundle, role, bundle.files[role].text.replace('Active child issue: none', 'Active child issue: #82'));
   const result = validatePhase05(bundle, { stage: 'final' });
   assert.ok(result.errors.some(({ code }) => code === 'STATE_PHASE05_NOT_COMPLETE'));
 });
@@ -784,7 +793,7 @@ test('frozen production inventory rejects naming and root bypasses', async (t) =
 });
 
 test('bounded repository inventory accepts existing prior-role publication roots', async () => {
-  const bundle = await loadPhase05Bundle(repoRoot);
+  const bundle = await loadPreHostileRepositoryBundle();
   for (const prefix of [
     'content/courses/forward-deployed-engineering-lab/',
     'content/publications/forward-deployed-engineering/',

@@ -7,8 +7,8 @@
 - Catalog position: 5 of 32
 - State: `project-control/roles/machine-learning-engineer/ROLE-STATE.md`
 - Creative system: `Learning Systems Test Bench`
-- Last completed child: [#81 — Phase 04 book scope](https://github.com/alpeshznakrani/komalnakrani/issues/81)
-- Active child: [#82 — Phase 05 book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
+- Last completed child: [#82 — Phase 05 book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
+- Active child: none
 
 ## Objective
 
@@ -21,8 +21,8 @@ figure records.
 
 - [x] 01 role validation and adjacent-role boundary evidence
 - [x] 04 evidence-based book count and volume decision — `SINGLE BOOK`
-- [ ] 05 book architecture — active in #82
-- [ ] 06 source and case-study research
+- [x] 05 book architecture — complete
+- [ ] 06 source and case-study research — next gate, inactive
 - [ ] 07 chapter blueprints and frozen figure contracts
 - [ ] 08 original manuscript and deterministic companion production
 - [ ] 09 whole-book or series consistency QA
@@ -46,10 +46,10 @@ figure records.
 
 ## Current executable action
 
-Complete and independently accept Phase 05 architecture in #82 for the single
-book *Machine Learning Engineering: From Task Contract to Operating Evidence*.
-Do not begin Phase 06 research, manuscript, blueprints, or visual production
-until that architecture gate is closed `status:done`.
+Phase 05 is complete and #82 is closed `status:done`. Commit and push the final
+verification/state record, verify local and remote `main` equality, then open
+only Phase 06 source and bounded case-study research. Phase 06 is the sole next
+gate and remains inactive until that final Phase 05 checkpoint is verified.
 
 ## Completion
 

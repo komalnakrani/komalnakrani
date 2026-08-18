@@ -2,7 +2,9 @@
 
 Parent: [#79 — Machine Learning Engineer publication ecosystem](https://github.com/alpeshznakrani/komalnakrani/issues/79)
 
-Live issue: [#82 — Freeze the Machine Learning Engineer book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
+Closed issue: [#82 — Freeze the Machine Learning Engineer book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
+
+Status: complete; live child #82 closed with status:done.
 
 ## Objective
 
@@ -27,27 +29,27 @@ manuscript work begins.
 
 ## Acceptance criteria
 
-- [ ] The single-book decision, author, title, architecture version, thesis,
+- [x] The single-book decision, author, title, architecture version, thesis,
   audience, prerequisites, exclusions, and reader endpoint are frozen.
-- [ ] Exactly seven parts and twenty-one contiguous chapters have unique,
+- [x] Exactly seven parts and twenty-one contiguous chapters have unique,
   complete decision/evidence contracts.
-- [ ] `LC-01`–`LC-08`, all 22 accepted claims, 17 boundaries, and 10 scenarios
+- [x] `LC-01`–`LC-08`, all 22 accepted claims, 17 boundaries, and 10 scenarios
   are preserved semantically.
-- [ ] Exactly 21 connected Benchline milestones `BL-00`–`BL-20` and a separate
+- [x] Exactly 21 connected Benchline milestones `BL-00`–`BL-20` and a separate
   legal dossier-state rail are valid.
-- [ ] Five replaceable ports, 40 semantic cluster-context tests, and 35
+- [x] Five replaceable ports, 40 semantic cluster-context tests, and 35
   part-exit compatibility checks are complete.
-- [ ] Twelve provisional publication domains, bounded cases, opening/closing
+- [x] Twelve provisional publication domains, bounded cases, opening/closing
   furniture, appendices, and the approved closing statement are frozen.
-- [ ] Every chapter has actionable learning, source-research, assessment,
+- [x] Every chapter has actionable learning, source-research, assessment,
   authority, dossier, companion, and visual-production contracts.
-- [ ] Selectable semantic HTML/CSS remains the default for exact information;
+- [x] Selectable semantic HTML/CSS remains the default for exact information;
   ImageGen PNG is selective; no stored SVG/WebP or image assets are created.
-- [ ] Task reviews and hostile integration review return exact specification
+- [x] Task reviews and hostile integration review return exact specification
   PASS and quality APPROVED against final file hashes.
-- [ ] Phase 01, Phase 04, Phase 05, mutation, hygiene, path, and full repository
+- [x] Phase 01, Phase 04, Phase 05, mutation, hygiene, path, and full repository
   checks pass.
-- [ ] Local and remote `main` are equal; this issue is closed `status:done`;
+- [x] Local and remote `main` are equal; this issue is closed `status:done`;
   root #79 remains open.
 
 ## Boundaries
@@ -64,3 +66,5 @@ GitHub; parallel lanes may edit only their allocated files.
 After acceptance, Phase 06 source and bounded case-study research becomes the
 sole next gate. It must consume the frozen architecture without beginning
 manuscript or visual production.
+
+Phase 06 source and bounded case-study research is the sole next gate, inactive.
