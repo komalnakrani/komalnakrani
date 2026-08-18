@@ -7,8 +7,8 @@
 - Catalog position: 5 of 32
 - State: `project-control/roles/machine-learning-engineer/ROLE-STATE.md`
 - Creative system: `Learning Systems Test Bench`
-- Last completed child: [#82 — Phase 05 book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
-- Active child: [#83 — Phase 06 source and bounded case-study research](https://github.com/alpeshznakrani/komalnakrani/issues/83)
+- Last completed child: [#83 — Phase 06 source and bounded case-study research](https://github.com/alpeshznakrani/komalnakrani/issues/83)
+- Active child: none
 
 ## Objective
 
@@ -22,8 +22,8 @@ figure records.
 - [x] 01 role validation and adjacent-role boundary evidence
 - [x] 04 evidence-based book count and volume decision — `SINGLE BOOK`
 - [x] 05 book architecture — complete
-- [ ] 06 source and case-study research — active in #83
-- [ ] 07 chapter blueprints and frozen figure contracts
+- [x] 06 source and case-study research — complete
+- [ ] 07 chapter blueprints and frozen figure contracts — sole next gate, inactive
 - [ ] 08 original manuscript and deterministic companion production
 - [ ] 09 whole-book or series consistency QA
 - [ ] 10 original ImageGen PNG visuals and visual QA
@@ -46,11 +46,10 @@ figure records.
 
 ## Current executable action
 
-Phase 05 is complete and #82 is closed `status:done`. Phase 06 source and
-bounded case-study research is active under #83 from reviewed plan commit
-`464b231`. Complete its independently reviewed bootstrap before the three
-disjoint discovery lanes. Do not begin Phase 07, manuscript, visuals, course,
-Abhyaas, second volume, or another role.
+Phase 06 is complete and #83 is closed `status:done`. Phase 07 chapter
+blueprints and frozen figure contracts is the sole next gate and remains
+inactive. Do not begin manuscript, visuals, course, Abhyaas, a second volume,
+or another role before its reviewed activation.
 
 ## Completion
 

@@ -4,7 +4,7 @@ Parent: [#79 — Machine Learning Engineer publication ecosystem](https://github
 
 Live issue: [#83 — Machine Learning Engineer Phase 06 source and bounded case-study research](https://github.com/alpeshznakrani/komalnakrani/issues/83)
 
-Status: active; live child #83 is open with status:in-progress.
+Status: complete; live child #83 is closed with status:done.
 
 ## Objective
 
@@ -26,20 +26,22 @@ Operating Evidence* by Komal Nakrani without beginning manuscript production.
 
 ## Acceptance criteria
 
-- [ ] Bootstrap issue/state/schema and ownership contracts are accepted before
+- [x] Bootstrap issue/state/schema and ownership contracts are accepted before
   discovery starts; validator TDD follows canonical integration.
-- [ ] Three disjoint research lanes complete under frozen interfaces.
-- [ ] Exactly 63 claims, 12 cases, and 21 chapter packs trace bidirectionally.
-- [ ] All sources are primary, official, standards, or original research with
+- [x] Three disjoint research lanes complete under frozen interfaces.
+- [x] Exactly 63 claims, 12 cases, and 21 chapter packs trace bidirectionally.
+- [x] All sources are primary, official, standards, or original research with
   explicit currentness, volatility, access, limitations, and recheck fields.
-- [ ] The 22 architecture claims, 17 boundaries, 10 scenarios, 12 domains, five
+- [x] The 22 architecture claims, 17 boundaries, 10 scenarios, 12 domains, five
   ports, five constructed cases, and 21 milestones remain semantically exact.
-- [ ] Independent lane, integration, and hostile reviews return exact
+- [x] Independent lane, integration, and hostile reviews return exact
   `SPEC COMPLIANCE PASS` and `QUALITY APPROVED` against final hashes.
-- [ ] Phase 01, 04, 05, and 06 validators/tests plus repository, path,
+- [x] Phase 01, 04, 05, and 06 validators/tests plus repository, path,
   currentness, marker, whitespace/EOF, and diff checks pass.
-- [ ] The accepted package and final state are committed and pushed; #83 is
-  closed `status:done`; root #79 remains open; Phase 07 remains inactive.
+- [x] The accepted pre-close package is committed and pushed; #83 is closed
+  `status:done`.
+- [x] The synchronized final state and verification are complete for the
+  checkpoint-2 commit; root #79 remains open; Phase 07 remains inactive.
 
 ## Boundaries
 
@@ -52,5 +54,4 @@ author. Root owns canonical integration, shared state, Git, and GitHub.
 
 ## Handoff
 
-After full acceptance and pushed closure, Phase 07 chapter blueprints becomes
-the sole next gate but remains inactive until explicitly activated.
+Phase 07 chapter blueprints is the sole next gate and is inactive.
