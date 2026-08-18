@@ -93,11 +93,11 @@
 
 The user approved the private *Forward Deployed Engineering* Field Expedition
 Log standard. Private screen-first editions now pass for Applied AI Engineering
-(`Behavior Systems Atlas`, 992 pages) and Agentic AI Engineering (`Autonomy
-Control Room`, 1,013 pages), while both published editions remain unchanged.
-After root closes #76, continue the authorized one-book-at-a-time redesign
-sequence with *LLM Behavior Engineering*. Do not start a new role, course, or
-Abhyaas work.
+(`Behavior Systems Atlas`, 992 pages), Agentic AI Engineering (`Autonomy Control
+Room`, 1,013 pages), and LLM Behavior Engineering (`Language Systems Studio`,
+371 pages), while their published editions remain unchanged. After root closes
+#77, continue the authorized one-book-at-a-time redesign sequence with *LLM
+Adaptation and Runtime*. Do not start a new role, course, or Abhyaas work.
 
 ## Resume instructions
 

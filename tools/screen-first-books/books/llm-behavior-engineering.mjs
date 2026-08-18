@@ -1,0 +1,51 @@
+export default Object.freeze({
+  slug: 'llm-behavior-engineering',
+  publicationDirectory: 'content/publications/llm-behavior-engineering',
+  output: 'output/pdf/llm-behavior-engineering-screen-first-review.pdf',
+  reviewAssetDirectory: 'content/publications/llm-behavior-engineering/assets',
+  assetHrefRoot: '../../../content/publications/llm-behavior-engineering',
+  expected: { chapters: 16, figures: 32, parts: 5, appendices: 6 },
+  partStarts: [1, 5, 9, 13, 16],
+  parts: [
+    { number: 1, roman: 'I', title: 'Make Language Behavior Explicit', range: 'Chapters 01-04' },
+    { number: 2, roman: 'II', title: 'Build the Language Interface', range: 'Chapters 05-08' },
+    { number: 3, roman: 'III', title: 'Ground Behavior in Evidence', range: 'Chapters 09-12' },
+    { number: 4, roman: 'IV', title: 'Make the Evidence Credible', range: 'Chapters 13-15' },
+    { number: 5, roman: 'V', title: 'Cross the Production Threshold', range: 'Chapter 16' },
+  ],
+  appendices: [
+    { id: 'A', title: 'Measurement and Generation Refresher', file: 'appendices/appendix-a-measurement-and-generation-refresher.md' },
+    { id: 'B', title: 'Behavior-System Artifacts', file: 'appendices/appendix-b-behavior-system-artifacts.md' },
+    { id: 'C', title: 'Provider-Neutral Companion Guide', file: 'appendices/appendix-c-provider-neutral-companion-guide.md' },
+    { id: 'D', title: 'Runtime and Distributed-Systems Refresher', file: 'appendices/appendix-d-runtime-and-distributed-systems-refresher.md' },
+    { id: 'E', title: 'Terminology and Role Boundaries', file: 'appendices/appendix-e-terminology-and-role-boundaries.md' },
+    { id: 'F', title: 'Source, Figure, and Edition Records', file: 'appendices/appendix-f-source-figure-and-edition-records.md' },
+  ],
+  palette: {
+    studioCobalt: '#3157D5',
+    apricot: '#FF9A72',
+    mint: '#7BE0C3',
+    paper: '#FFF9F2',
+    ink: '#171E38',
+    lavender: '#E7E5FF',
+    mist: '#E9F6F2',
+  },
+  fonts: {
+    display: 'tools/screen-first-books/fonts/source-sans-3.ttf',
+    reading: 'tools/screen-first-books/fonts/source-sans-3.ttf',
+    technical: 'tools/screen-first-books/fonts/ibm-plex-mono.ttf',
+  },
+  visualSystem: 'Language Systems Studio',
+  closingStatement: 'Make every language behavior inspectable.',
+  reviewLabel: 'Complete screen-first review edition - not the published edition',
+  protectedPublication: {
+    manifest: {
+      file: 'content/publications/llm-behavior-engineering/publication.json',
+      sha256: '43d0d2b3a23edd27ae79937757131f0cffe1600eb975f00968e6d48c6495f4dc',
+    },
+    pdf: {
+      file: 'public/downloads/llm-behavior-engineering-v1.0.0.pdf',
+      sha256: '5cd5d16cd69c3c766fafa737812918cb1f37f34a91cb6753c7db044cd8c9375b',
+    },
+  },
+});

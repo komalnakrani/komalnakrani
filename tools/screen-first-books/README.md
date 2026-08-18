@@ -8,4 +8,6 @@ The first book configuration is `books/forward-deployed-engineering.mjs`. It rea
 
 `books/agentic-ai-engineering.mjs` adds the `Autonomy Control Room` direction with an industrial control-plane palette and trajectory language. Build it with `node tools/screen-first-books/build-agentic-ai.mjs`; audit it with the corresponding `agentic-qa.test.mjs` gate. Its published manifest and PDF are likewise protected.
 
+`books/llm-behavior-engineering.mjs` adds the `Language Systems Studio` direction with an editorial cobalt/apricot/mint palette, language-interface vocabulary, and studio-plate reading model. Build it with `node tools/screen-first-books/build-llm-behavior.mjs`; audit it with `llm-behavior-qa.test.mjs`. Its published Volume 1 manifest and PDF remain protected.
+
 The full-edition design contract is `docs/superpowers/specs/2026-08-18-fde-full-screen-first-edition-design.md`.

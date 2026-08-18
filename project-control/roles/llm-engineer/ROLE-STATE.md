@@ -5,10 +5,11 @@
 - Role: LLM Engineer
 - Slug: `llm-engineer`
 - Catalog version: master operating prompt catalog, position 4 of 32
-- Current global phase: Phase 11 complete; both volumes published and release-verified
+- Current global phase: both volumes published and release-verified; Volume 1 private screen-first review edition PASS
 - Last updated: 2026-08-18
 - Last completed manuscript issue: `#71` — Volume 2 Chapters 16-17 and hostile two-volume QA
-- Active release gate: none; current-book wave is on hold
+- Last completed private-edition issue: `#77` - Volume 1 Language Systems Studio PASS
+- Active release gate: none; Volume 2 screen-first redesign is next in the authorized sequence
 - Role root issue: `#36` — complete; root closes it after the integration commit is pushed
 
 ## Locked accepted decisions
@@ -84,6 +85,13 @@ All 33 manuscripts are complete: 72,012 words, 99 exact claims, 66 ready figure 
 
 Both complete editions passed deterministic review-proof QA. Historically, V1 built twice to byte-identical 210-page review proofs at PDF SHA-256 `62476f25d475d42b790194b8c0dd15e0de79b2f82140e6725fbff6bcc6f60476` and source SHA-256 `01fd392df1bbe610a163848f71b0c5f9999f4c281c62e1b0a8ce7ec6f7e07018`; V2 built twice to byte-identical 156-page review proofs at PDF SHA-256 `09d4b2cd13614759d922735d689766ad68ef8054c0f7a11db2f96a2d9d1c3aa5` and source SHA-256 `1fe0ab331f907049c143e1fe90ce96e204ad1c0668980b3079f232b79ee76460`. All historical review-proof pages had extractable text; outlines, links, all-page raster review, representative higher-resolution structural review, publication validation, and the full repository check passed.
 
+The user-approved screen-first design standard is now applied to Volume 1 as a
+separate private `Language Systems Studio` review artifact. It is a 371-page 7
+by 10 edition at SHA-256
+`b51b5b4e2bbf9b6adb495511b49a48f8d9007af3577dc1dd9748b5c992d007d6`,
+built twice byte-identically and visually inspected across all pages. The public
+Volume 1 manifest and published 210-page PDF remain unchanged.
+
 Root has now transitioned both manifests to `status: published`, `edition.publishedAt: 2026-08-17`, and `pdf.enabled: true`. Published-state V1 final A/B/public are verified byte-identical at SHA-256 `5cd5d16cd69c3c766fafa737812918cb1f37f34a91cb6753c7db044cd8c9375b`, 10,997,350 bytes, and 210 pages. Published-state V2 final A/B/public are verified byte-identical at SHA-256 `36199bf5e69a13502cbbdee4ba8a12a0fb606c04f3577c6870e82822cb93ccd4`, 12,828,329 bytes, and 156 pages; its final source SHA-256 is `1726b7c5534682e291e7946b5d626f60ccccdacf88e5284c0240a4fc439ad4bc`. The historical review hashes are not the published artifact identities.
 
 ## Unresolved blockers
@@ -107,7 +115,9 @@ No manuscript, companion, visual, assembly, proof, publication, PDF, render, web
 
 ## Exact next action
 
-Commit and push the completed LLM release, close issues `#72` and `#36`, run the production smoke check, then hold. Do not start another role, book, course, or Abhyaas work until the user explicitly resumes the factory.
+After root commits, pushes, and closes #77, continue the already authorized
+screen-first redesign sequence with Volume 2, *LLM Adaptation and Runtime*. Do
+not start a new role, course, or Abhyaas work.
 
 ## Resume instructions
 
