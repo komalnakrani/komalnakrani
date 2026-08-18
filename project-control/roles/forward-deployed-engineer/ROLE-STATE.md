@@ -5,11 +5,11 @@
 - Role: Forward Deployed Engineer
 - Slug: `forward-deployed-engineer`
 - Catalog version: master catalog dated 2026-08-16
-- Current global phase: Komal role complete - closed at commit `5061fe8`
-- Last updated: 2026-08-16
+- Current global phase: screen-first publication design revision
+- Last updated: 2026-08-18
 - Last completed issue: Phase 19 #20 closed at commit `5061fe8`
 - Root issue: [#3](https://github.com/alpeshznakrani/komalnakrani/issues/3)
-- Active issue: none - role root closed
+- Active issue: [#74](https://github.com/alpeshznakrani/komalnakrani/issues/74) - complete FDE screen-first Field Expedition Log edition
 - Cross-repo root issue: deferred by locked Komal-first execution order
 
 ## Locked decisions
@@ -74,7 +74,7 @@
 
 ## Current work
 
-Phase 19 final verdict is `PASS`. The complete Komal FDE ecosystem passes role-boundary, source/claim, manuscript, duplication, companion, visual, web, PDF, course, security, link, mobile/desktop render, and deterministic-hash gates. All hostile-review defects were fixed and reverified. Abhyaas remains deferred.
+Phase 19 final verdict remains `PASS`. Issue #74 is an isolated design revision that converts the accepted publication into the user-approved 7 by 10 Field Expedition Log system. It preserves manuscript, source, claim, companion, course, and public-edition truth while a private full-book review PDF is built and inspected. Abhyaas remains deferred.
 
 ## Unresolved blockers
 
@@ -92,8 +92,8 @@ No blocking role, content, source, visual, companion, course, security, web, or 
 
 ## Exact next action
 
-No FDE action remains in Komal. Resume the active Applied AI Engineer state from the factory file; do not enter Abhyaas.
+Execute issue #74 through the private full-book review artifact and QA handoff. Do not replace the public FDE edition, enter Abhyaas, or start another book inside this issue.
 
 ## Resume instructions
 
-This role is complete. Read `project-control/role-factory/FACTORY-STATE.md` and resume its active Komal role; reopen FDE only for a documented defect or new edition.
+The role content remains complete. Resume issue #74 from `docs/superpowers/plans/2026-08-18-fde-full-screen-first-edition.md`, preserving the private-review boundary until the new edition passes every gate.
