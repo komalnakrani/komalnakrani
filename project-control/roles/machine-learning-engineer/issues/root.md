@@ -8,7 +8,7 @@
 - State: `project-control/roles/machine-learning-engineer/ROLE-STATE.md`
 - Creative system: `Learning Systems Test Bench`
 - Last completed child: [#82 — Phase 05 book architecture](https://github.com/alpeshznakrani/komalnakrani/issues/82)
-- Active child: none
+- Active child: [#83 — Phase 06 source and bounded case-study research](https://github.com/alpeshznakrani/komalnakrani/issues/83)
 
 ## Objective
 
@@ -22,7 +22,7 @@ figure records.
 - [x] 01 role validation and adjacent-role boundary evidence
 - [x] 04 evidence-based book count and volume decision — `SINGLE BOOK`
 - [x] 05 book architecture — complete
-- [ ] 06 source and case-study research — next gate, inactive
+- [ ] 06 source and case-study research — active in #83
 - [ ] 07 chapter blueprints and frozen figure contracts
 - [ ] 08 original manuscript and deterministic companion production
 - [ ] 09 whole-book or series consistency QA
@@ -46,10 +46,11 @@ figure records.
 
 ## Current executable action
 
-Phase 05 is complete and #82 is closed `status:done`. Commit and push the final
-verification/state record, verify local and remote `main` equality, then open
-only Phase 06 source and bounded case-study research. Phase 06 is the sole next
-gate and remains inactive until that final Phase 05 checkpoint is verified.
+Phase 05 is complete and #82 is closed `status:done`. Phase 06 source and
+bounded case-study research is active under #83 from reviewed plan commit
+`464b231`. Complete its independently reviewed bootstrap before the three
+disjoint discovery lanes. Do not begin Phase 07, manuscript, visuals, course,
+Abhyaas, second volume, or another role.
 
 ## Completion
 

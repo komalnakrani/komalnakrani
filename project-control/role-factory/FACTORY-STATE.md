@@ -95,19 +95,22 @@
 
 Machine Learning Engineer Phase 05 book architecture: complete.
 Last completed child: #82.
-Active child: none.
-Phase 06 source and bounded case-study research: sole next gate, inactive.
+Active child: #83.
+Phase 06 source and bounded case-study research: active.
 Catalog position 6: not started.
 
 The accepted seven-part, twenty-one-chapter architecture for *Machine Learning
 Engineering: From Task Contract to Operating Evidence* is frozen under the
-`Learning Systems Test Bench` system. Do not begin manuscript production,
-generated visuals, a second volume, another role, a course, or Abhyaas.
+`Learning Systems Test Bench` system. The reviewed Phase 06 plan is pinned at
+`464b231`; complete the independent bootstrap, three disjoint discovery lanes,
+canonical integration, and hostile research QA. Do not begin manuscript
+production, generated visuals, a second volume, another role, a course, or
+Abhyaas.
 
 ## Resume instructions
 
-Inspect Git status and GitHub state, then read closed #82, the Machine Learning
-Engineer role state, accepted Phase 05 architecture and verification, Phase 04
-decision, Phase 01 evidence, and approved design. Phase 06 research is the sole
-next gate and remains inactive until the final Phase 05 state commit is pushed
-and verified. Abhyaas remains out of scope for this book-only run.
+Inspect Git status and GitHub state, then read active #83, closed #82, the
+reviewed Phase 06 plan, Machine Learning Engineer role state, accepted Phase 05
+architecture and verification, Phase 04 decision, Phase 01 evidence, and
+approved design. Phase 06 research is the sole active gate. Abhyaas remains
+out of scope for this book-only run.
