@@ -63,6 +63,12 @@ const VERIFICATION_ARTIFACT_PATHS = [
   `${ROLE}/issues/phase-06-source-research.md`,
   'project-control/role-factory/FACTORY-STATE.md',
 ];
+const FINAL_STATE_ARTIFACT_PATHS = [
+  `${ROLE}/ROLE-STATE.md`,
+  `${ROLE}/issues/root.md`,
+  `${ROLE}/issues/phase-06-source-research.md`,
+  'project-control/role-factory/FACTORY-STATE.md',
+];
 const VERIFICATION_CHECKS = [
   'phase01_validator','phase01_tests','phase04_validator','phase04_tests',
   'phase05_validator','phase05_tests','phase06_tests','phase06_preclose',
@@ -414,7 +420,9 @@ function reviewRequiredHashes(bundle, task) {
   if (task === 'TASK-02') return [manifest, ...PACK_PATHS.slice(0, 7)];
   if (task === 'TASK-03') return [manifest, ...PACK_PATHS.slice(7, 14)];
   if (task === 'TASK-04') return [manifest, ...PACK_PATHS.slice(14, 21)];
-  if (task === 'TASK-05') return VERIFICATION_ARTIFACT_PATHS.filter((relative) => !/validate-phase-06\.(?:mjs|test\.mjs)$/.test(relative));
+  if (task === 'TASK-05') return VERIFICATION_ARTIFACT_PATHS.filter((relative) =>
+    !/validate-phase-06\.(?:mjs|test\.mjs)$/.test(relative) &&
+    !FINAL_STATE_ARTIFACT_PATHS.includes(relative));
   if (task === 'TASK-06') return [`${BOOK}/validate-phase-06.mjs`, `${BOOK}/validate-phase-06.test.mjs`, reviewPath('task-05-canonical-integration')];
   return [];
 }

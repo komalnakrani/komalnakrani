@@ -11,8 +11,8 @@
 - Frozen architecture JSON SHA-256: `bb2b6fe1137b6b56ff4729d0131c1b9496804bcd3a37e07a92361f4af4da972f`
 - Integration contract hash: `3b0f07b8048d3a5cc5b3ca7d4e6b69e62e2c0f2e2b60a196171d25469c155433`
 - Canonical integration review SHA-256: `8558119277bddaffb83b946e30e0ab1559b364867efdd8a3b22f91dca6861daf`
-- Phase 06 validator SHA-256: `e67f2b0e79039e34ad956e8cc9303b0e39c119d37ffbaf99997cd0f265bd1d33`
-- Phase 06 tests SHA-256: `834a3bb10e56dbd3803eba177eb4fe99be514c650fe9dcf33d8f348d8c970903`
+- Phase 06 validator SHA-256: `02c98583659926b3036f16e9dd92012d0d7b861a5ad4e3795e3c88791c4a99af`
+- Phase 06 tests SHA-256: `5268e5e761b070f5f45df4c73b5cd4bc6276d8f8200cd8e015a918da99526ecd`
 
 This review is limited to the Phase 06 source-and-case-study research package.
 It reviews research registers, case truth, all 21 research packs, architecture
@@ -33,8 +33,8 @@ PDF, course, second volume, another role, or Abhyaas work.
 | `sources/integration-manifest.json` | `c8f2dff28008101c40d8eeac6916fb73625d46064c10aeedb27fb0aaad400bc4` |
 | `sources/verification-report.md` | `88508e7cf7bf3031e252b8b30ffaea589a2c503a2aa5aa5687f5afbc05c2c137` |
 | `sources/phase-07-handoff.md` | `98301e0108ace18f69a3e212d0b55d59cdf7380d1c5beaefc7dbc19926a6a119` |
-| `validate-phase-06.mjs` | `e67f2b0e79039e34ad956e8cc9303b0e39c119d37ffbaf99997cd0f265bd1d33` |
-| `validate-phase-06.test.mjs` | `834a3bb10e56dbd3803eba177eb4fe99be514c650fe9dcf33d8f348d8c970903` |
+| `validate-phase-06.mjs` | `02c98583659926b3036f16e9dd92012d0d7b861a5ad4e3795e3c88791c4a99af` |
+| `validate-phase-06.test.mjs` | `5268e5e761b070f5f45df4c73b5cd4bc6276d8f8200cd8e015a918da99526ecd` |
 
 The manifest binds all 21 ordered chapter packs and the three frozen scratch
 lanes. Its recursively key-sorted projection recomputed to the exact
@@ -111,18 +111,27 @@ The final suite rejects all required schema, graph, evidence, review,
 lifecycle, and path mutations. The independent audit specifically reproduced
 and then rechecked the following repair history:
 
-1. Verification schema families: unknown fields, count drift, stale artifact
+1. Lifecycle hash-cycle repair: the realistic final-stage fixture recomputes
+   the four final lifecycle-state file hashes before building verification.
+   The RED run exposed four `REVIEW_ARTIFACT_HASH` failures because Task 05 was
+   forced to bind state bytes that are required to change only after the
+   pre-close review. The GREEN contract removes only those four state files
+   from Task 05's reviewed-artifact set. Final verification still binds all
+   four current state hashes, and Task 06 still binds the current validator,
+   tests, and Task 05 review. The repaired fixture passes; stale Task 05
+   canonical evidence and all four final-state drifts remain rejected.
+2. Verification schema families: unknown fields, count drift, stale artifact
    or review hashes, frozen-case drift, incomplete architecture trace,
    currentness drift, altered RED/GREEN evidence, missing executable checks,
    path-boundary drift, state drift, GitHub expectation drift, and next-gate
    activation are rejected. The valid final-content fixture passes before any
    mutation. A syntactically shaped but impossible timestamp such as month 99
    is rejected semantically.
-2. Review chains: a later conflicting final verdict is rejected; historical
+3. Review chains: a later conflicting final verdict is rejected; historical
    requested-change evidence requires a paired repair even when a later
    accepted verdict exists; missing repair, changed repair identity, and stale
    current artifact hashes are rejected.
-3. Four-authority lifecycle: active-state drift is rejected independently in
+4. Four-authority lifecycle: active-state drift is rejected independently in
    `ROLE-STATE.md`, the root issue, local Phase 06 issue, and
    `FACTORY-STATE.md`. Final-content fixtures require child #83 closed
    `status:done`, active child none, Phase 07 as sole-next inactive, and catalog
@@ -130,19 +139,19 @@ and then rechecked the following repair history:
    or child-open statements are rejected independently for all four
    authorities. The verification manifest binds all four final state-file
    hashes.
-4. Final runtime: a dirty worktree, non-`main` branch, live remote-main
+5. Final runtime: a dirty worktree, non-`main` branch, live remote-main
    mismatch, root #79 closure or label drift, and child #83 open or label drift
    are rejected. The CLI reads the remote branch with `git ls-remote` and reads
    both issues through `gh`; pre-push verification records only expectations,
    not fictional live results.
-5. Path inventory: manuscript, blueprint, companion, media, publication, PDF,
+6. Path inventory: manuscript, blueprint, companion, media, publication, PDF,
    course, Abhyaas, certification, question-bank, second-volume, and next-role
    additions are rejected. The loader freezes production roots, top-level
    directories, top-level symlinks, the exact three scratch files, and the
    `.superpowers`, `tmp`, and `.astro` inventories. An isolated temporary
    filesystem test proves that hidden files and a top-level symlink are
    discovered, and cleanup leaves canonical bytes untouched.
-6. Evidence strength: every technical claim class requires acceptable
+7. Evidence strength: every technical claim class requires acceptable
    non-role primary or official support; role-market evidence remains isolated;
    low confidence is rejected; public facts, attributed outcomes, allowed
    inferences, limitations, and transfer rules remain separated; constructed

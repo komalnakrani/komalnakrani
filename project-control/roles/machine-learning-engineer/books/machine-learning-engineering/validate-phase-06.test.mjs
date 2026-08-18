@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { mkdir, mkdtemp, rm, symlink, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
@@ -19,6 +20,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../../../../..');
 const canonical = await loadPhase06Bundle(root);
 const clone = (value) => structuredClone(value);
+const sha256 = (value) => createHash('sha256').update(value).digest('hex');
 
 function codes(result) {
   return result.errors.map((item) => item.code);
@@ -64,6 +66,12 @@ function finalStageFixture() {
     'Phase 07 chapter blueprints: sole next gate, inactive.',
     'Catalog position 6: not started.',
   ].join('\n');
+  for (const relative of [
+    'project-control/roles/machine-learning-engineer/ROLE-STATE.md',
+    'project-control/roles/machine-learning-engineer/issues/root.md',
+    'project-control/roles/machine-learning-engineer/issues/phase-06-source-research.md',
+    'project-control/role-factory/FACTORY-STATE.md',
+  ]) bundle.files[relative].sha256 = sha256(bundle.files[relative].text);
   bundle.verification = buildExpectedVerification(bundle);
   bundle.files['project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-06-verification.json'] = { text: JSON.stringify(bundle.verification), sha256: 'not-self-bound' };
   return bundle;
