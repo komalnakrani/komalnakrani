@@ -94,6 +94,8 @@ const invalidCases = [
   ['rejects malformed claim identifiers', (input) => { input.register.claims[0].claim_id = 'CLAIM-1'; }, 'CLAIM_ID_FORMAT'],
   ['rejects a source without reverse claim links', (input) => { input.register.sources[0].claims_supported = []; }, 'SOURCE_CLAIMS_EMPTY'],
   ['rejects a claim with fewer than two sources', (input) => { input.register.claims[0].source_ids = [input.register.claims[0].source_ids[0]]; }, 'CLAIM_SOURCES_MINIMUM'],
+  ['rejects duplicate sources masquerading as independent corroboration', (input) => { input.register.claims[0].source_ids = [input.register.claims[0].source_ids[0], input.register.claims[0].source_ids[0]]; }, 'CLAIM_SOURCES_UNIQUE'],
+  ['rejects a claim without an explicit limitation', (input) => { input.register.claims[0].limitations = ''; }, 'CLAIM_LIMITATION'],
   ['rejects an unknown forward source reference', (input) => { input.register.claims[0].source_ids[0] = 'MLE-SRC-999'; }, 'CLAIM_SOURCE_UNKNOWN'],
   ['rejects an unknown reverse claim reference', (input) => { input.register.sources[0].claims_supported.push('MLE-CLM-999'); }, 'SOURCE_CLAIM_UNKNOWN'],
   ['rejects asymmetric source and claim references', (input) => { input.register.sources[0].claims_supported = input.register.sources[0].claims_supported.filter((id) => id !== 'MLE-CLM-001'); }, 'REFERENCE_ASYMMETRY'],
@@ -104,6 +106,8 @@ const invalidCases = [
   ['rejects fewer than six employer organizations', (input) => { for (const source of input.register.sources.slice(0, 8)) source.author_or_org = 'One Employer'; }, 'EMPLOYER_ORG_COUNT'],
   ['rejects fewer than twelve official technical or standards sources', (input) => { input.register.sources[19].source_type = 'official-employer-job-description'; }, 'TECHNICAL_SOURCE_COUNT'],
   ['rejects a missing allowed verdict', (input) => { input.roleValidation = input.roleValidation.replace('**PROCEED**', '**PENDING**'); }, 'VERDICT'],
+  ['rejects RENAME TO without a canonical name', (input) => { input.roleValidation = input.roleValidation.replace('**PROCEED**', '**RENAME TO**'); }, 'VERDICT'],
+  ['rejects MERGE WITH without an approved role', (input) => { input.roleValidation = input.roleValidation.replace('**PROCEED**', '**MERGE WITH**'); }, 'VERDICT'],
   ['rejects a claim absent from both canonical markdown files', (input) => { input.roleValidation = input.roleValidation.replaceAll('MLE-CLM-020', ''); input.adjacentBoundary = input.adjacentBoundary.replaceAll('MLE-CLM-020', ''); }, 'CLAIM_MARKDOWN_COVERAGE'],
   ['rejects missing adjacent-role classification vocabulary', (input) => { input.adjacentBoundary = input.adjacentBoundary.replace('OUT OF SCOPE', ''); }, 'BOUNDARY_VOCABULARY'],
 ];

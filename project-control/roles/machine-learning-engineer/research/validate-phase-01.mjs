@@ -6,7 +6,6 @@ const SOURCE_ID = /^MLE-SRC-\d{3}$/;
 const CLAIM_ID = /^MLE-CLM-\d{3}$/;
 const EMPLOYER_SOURCE = /^official-employer-/;
 const TECHNICAL_SOURCE = /^(official-(documentation|standard|specification|engineering-publication|government-framework|government-guidance|postmortem|research-publication)|primary-(paper|research))$/;
-const VERDICT = /##\s+Verdict[\s\S]{0,240}\b(PROCEED|RENAME TO|MERGE WITH|KEEP AS SPECIALIZATION|REJECT)\b/;
 const BOUNDARY_VOCABULARY = [
   'CORE HERE',
   'SHARED AT DIFFERENT DEPTH',
@@ -26,6 +25,22 @@ function duplicateValues(values) {
     seen.add(value);
   }
   return [...duplicates];
+}
+
+function extractVerdict(markdown) {
+  const lines = String(markdown ?? '').split(/\r?\n/);
+  const heading = lines.findIndex((line) => /^##\s+Verdict\s*$/i.test(line.trim()));
+  if (heading === -1) return '';
+  const line = lines.slice(heading + 1).find((candidate) => candidate.trim());
+  return line ? line.replaceAll('**', '').trim() : '';
+}
+
+function isAllowedVerdict(verdict) {
+  return verdict === 'PROCEED'
+    || verdict === 'KEEP AS SPECIALIZATION'
+    || verdict === 'REJECT'
+    || /^RENAME TO\s+\S(?:.*\S)?$/.test(verdict)
+    || /^MERGE WITH\s+\S(?:.*\S)?$/.test(verdict);
 }
 
 export function validatePhase01({ register, roleValidation, adjacentBoundary }) {
@@ -99,6 +114,12 @@ export function validatePhase01({ register, roleValidation, adjacentBoundary }) 
     if (!Array.isArray(claim.source_ids) || claim.source_ids.length < 2) {
       errors.push(issue('CLAIM_SOURCES_MINIMUM', `${claim.claim_id ?? 'unknown claim'} needs at least two sources`));
     }
+    if (new Set(claim.source_ids ?? []).size < 2) {
+      errors.push(issue('CLAIM_SOURCES_UNIQUE', `${claim.claim_id ?? 'unknown claim'} needs two distinct sources`));
+    }
+    if (typeof claim.limitations !== 'string' || !claim.limitations.trim()) {
+      errors.push(issue('CLAIM_LIMITATION', `${claim.claim_id ?? 'unknown claim'} has no limitation`));
+    }
     for (const sourceIdValue of claim.source_ids ?? []) {
       const source = sourceById.get(sourceIdValue);
       if (!source) {
@@ -122,7 +143,7 @@ export function validatePhase01({ register, roleValidation, adjacentBoundary }) 
     errors.push(issue('TECHNICAL_SOURCE_COUNT', `expected at least 12 official technical or standards sources, found ${technicalSources.length}`));
   }
 
-  if (!VERDICT.test(roleValidation ?? '')) {
+  if (!isAllowedVerdict(extractVerdict(roleValidation))) {
     errors.push(issue('VERDICT', 'role validation lacks an allowed verdict under a Verdict heading'));
   }
   for (const id of claimIds.filter((value) => CLAIM_ID.test(value ?? ''))) {
