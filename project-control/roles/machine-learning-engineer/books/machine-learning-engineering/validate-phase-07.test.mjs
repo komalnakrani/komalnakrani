@@ -603,7 +603,7 @@ function makeReview(task, name, boundArtifacts, fileSha) {
 function materializeReviewFiles(files, reviews, bindingHashes) {
   for (const review of reviews) {
     if (review.task === 'TASK-10') {
-      const digest = preClosePackageDigest(files, CLEAN_FINAL_PATHS);
+      const digest = preClosePackageDigest(files, CLEAN_FINAL_PATHS, bindingHashes[STATE_PATHS.localIssue]);
       review.boundArtifacts.find((item) => item.path === 'digest:pre-close-path-package').sha256 = digest;
       bindingHashes['digest:pre-close-path-package'] = digest;
     }
@@ -680,9 +680,9 @@ function boundArtifacts(task, files, bindingHashes = {}) {
   });
 }
 
-function preClosePackageDigest(files, inventory) {
+function preClosePackageDigest(files, inventory, localIssueSha256 = files[STATE_PATHS.localIssue]?.sha256) {
   const paths = inventory.filter((item) => !item.endsWith('/phase-07-verification.json') && !item.endsWith('/task-10-hostile-integration.md') && !item.endsWith('/task-10-hostile-integration-repair.md'));
-  return orderedInventoryDigest(paths.map((item) => ({ path: item, sha256: files[item].sha256 })));
+  return orderedInventoryDigest(paths.map((item) => ({ path: item, sha256: item === STATE_PATHS.localIssue ? localIssueSha256 : files[item].sha256 })));
 }
 
 function independentlyRecomputePreClosePackageDigest(bundle) {
@@ -695,7 +695,10 @@ function independentlyRecomputePreClosePackageDigest(bundle) {
     .filter((relative) => !excluded.has(relative))
     .map((relative) => {
       assert.equal(typeof bundle.files[relative]?.text, 'string', true, `pre-close package byte source ${relative}`);
-      return { path: relative, sha256: sha256(bundle.files[relative].text) };
+      const digest = relative === STATE_PATHS.localIssue
+        ? bundle.activationSnapshot.authorityHashes[STATE_PATHS.localIssue]
+        : sha256(bundle.files[relative].text);
+      return { path: relative, sha256: digest };
     });
   return sha256(JSON.stringify(records));
 }
@@ -764,7 +767,7 @@ function makeBundle({ activationCheckpoint = ACTIVATION_CHECKPOINT } = {}) {
   for (const [name, text] of Object.entries(finalState())) files[STATE_PATHS[name]] = { text, sha256: sha256(text) };
   const externalBindings = {
     ...task01BindingHashes(activationCheckpoint),
-    'digest:pre-close-path-package': preClosePackageDigest(files, CLEAN_FINAL_PATHS),
+    'digest:pre-close-path-package': preClosePackageDigest(files, CLEAN_FINAL_PATHS, EXPECTED_ACTIVATION_STATE_HASHES[STATE_PATHS.localIssue]),
   };
   const reviews = REVIEW_NAMES.map((name, index) => {
     const task = ['TASK-01','TASK-05','TASK-06','TASK-07','TASK-09','TASK-10'][index];
@@ -847,7 +850,7 @@ function makePreCloseBundle() {
 }
 
 function refreshPreCloseBinding(bundle) {
-  const preCloseDigest = preClosePackageDigest(bundle.files, bundle.inventory);
+  const preCloseDigest = preClosePackageDigest(bundle.files, bundle.inventory, bundle.activationSnapshot.authorityHashes[STATE_PATHS.localIssue]);
   if (bundle.activationSnapshot) bundle.activationSnapshot.bindingHashes['digest:pre-close-path-package'] = preCloseDigest;
   const hostileReview = bundle.reviews.find((review) => review.task === 'TASK-10');
   const preCloseBinding = hostileReview?.boundArtifacts.find((binding) => binding.path === 'digest:pre-close-path-package');
@@ -1039,6 +1042,12 @@ test('filesystem-loaded stage-valid canonical register and final-content fixture
     assert.equal(bootstrapReview.boundArtifacts.find((binding) => binding.path === item).sha256, activationHash);
     assert.notEqual(activationHash, bundle.files[item].sha256, `${item} immutable activation snapshot differs from final closure state`);
   }
+  const task10Review = bundle.reviews.find((review) => review.task === 'TASK-10');
+  const acceptedPreCloseDigest = task10Review.boundArtifacts.find((binding) => binding.path === 'digest:pre-close-path-package').sha256;
+  const finalStateDigest = preClosePackageDigest(bundle.files, bundle.inventory, bundle.files[STATE_PATHS.localIssue].sha256);
+  assert.equal(acceptedPreCloseDigest, independentlyRecomputePreClosePackageDigest(bundle), 'Task 10 permanently binds the accepted active local-issue identity');
+  assert.notEqual(acceptedPreCloseDigest, finalStateDigest, 'final local-issue bytes must not rewrite the accepted Task 10 package digest');
+  assert.equal(bundle.verification.stateTransition.localIssue.sha256, bundle.files[STATE_PATHS.localIssue].sha256, 'final verification binds the complete local-issue bytes');
   for (const review of bundle.reviews.slice(1)) {
     for (const item of FROZEN_INPUT_PATHS) assert.equal(review.boundArtifacts.find((binding) => binding.path === item)?.sha256, sha256(FROZEN_INPUT_TEXTS[item]), `${review.task} actual frozen binding ${item}`);
   }
@@ -1773,6 +1782,15 @@ test('review chains require exact verdicts current bindings and directed repair'
   preClose.activationSnapshot.bindingHashes['digest:pre-close-path-package'] = '0'.repeat(64);
   refreshMaterializedReviewRecord(preClose.files, hostileReview);
   expectCode(validatePhase07Bundle(preClose, { stage: 'pre-close' }), 'TASK10_PACKAGE_DIGEST');
+  const finalDigestDrift = makeBundle();
+  const finalHostileReview = finalDigestDrift.reviews.find((review) => review.task === 'TASK-10');
+  const recomputedFromFinalState = preClosePackageDigest(finalDigestDrift.files, finalDigestDrift.inventory, finalDigestDrift.files[STATE_PATHS.localIssue].sha256);
+  assert.notEqual(recomputedFromFinalState, finalDigestDrift.activationSnapshot.bindingHashes['digest:pre-close-path-package']);
+  finalHostileReview.boundArtifacts.find((binding) => binding.path === 'digest:pre-close-path-package').sha256 = recomputedFromFinalState;
+  finalDigestDrift.activationSnapshot.bindingHashes['digest:pre-close-path-package'] = recomputedFromFinalState;
+  refreshMaterializedReviewRecord(finalDigestDrift.files, finalHostileReview);
+  syncVerification(finalDigestDrift);
+  expectCode(validatePhase07Bundle(finalDigestDrift, { stage: 'final-content' }), 'TASK10_PACKAGE_DIGEST');
 });
 
 test('active and final lifecycle projections reject contradictions', () => {
@@ -1912,6 +1930,7 @@ test('verification manifest enforces every nested schema hash check temporal pro
     (v) => { v.pathBoundaries.unexpectedPaths.push('tmp/drift'); },
     (v) => { v.stateTransition.role.status = 'phase-07-active'; },
     (v) => { v.stateTransition.root.sha256 = '0'.repeat(64); },
+    (v) => { v.stateTransition.localIssue.sha256 = EXPECTED_ACTIVATION_STATE_HASHES[STATE_PATHS.localIssue]; },
     (v) => { v.stateTransition.localIssue.path = 'wrong.md'; },
     (v) => { v.stateTransition.factory.status = 'phase-08-active'; },
     (v) => { v.githubExpectations.rootIssue.number = 80; },

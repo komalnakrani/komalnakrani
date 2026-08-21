@@ -93,26 +93,26 @@
 
 ## Exact next action
 
-Machine Learning Engineer Phase 06 source and bounded case-study research: complete.
-Last completed child: #83.
-Active child: #84.
-Phase 07 chapter blueprints and frozen figure contracts: active.
-Phase 08 original manuscript and deterministic companion production: next gate, inactive.
+Machine Learning Engineer Phase 07 chapter blueprints and frozen figure contracts: complete.
+Last completed child: #84.
+Active child: none.
+Phase 08 original manuscript and deterministic companion production: sole next gate, inactive.
 Catalog position 6: not started.
 
 The accepted seven-part, twenty-one-chapter architecture for *Machine Learning
 Engineering: From Task Contract to Operating Evidence* is frozen under the
-`Learning Systems Test Bench` system. The accepted Phase 06 package contains
-46 sources, 63 claims, 12 cases, and 21 research packs. Phase 07 is active under
-#84 from approved plan commit `21d4cfa`; Task 01 bootstrap must pass before any
-blueprint file exists. Do not begin Phase 08 manuscript production, generated
-visuals, a second volume, another role, a course, or Abhyaas.
+`Learning Systems Test Bench` system. The accepted Phase 07 package contains
+twenty-one chapter blueprints, one strict register, whole-book furniture, an
+inactive Phase 08 handoff, and a hostile-QA-clean review chain. Phase 07 is
+complete and #84 is closed `status:done`. Do not begin Phase 08 manuscript
+production, generated visuals, a second volume, another role, a course, or
+Abhyaas until Phase 08 is explicitly planned and activated.
 
 ## Resume instructions
 
-Inspect Git status and GitHub state, then read closed #83, open root #79, the
-Phase 06 verification and handoff, Machine Learning Engineer role state,
-accepted Phase 05 architecture and verification, Phase 04 decision, Phase 01
-evidence, approved design, and the approved Phase 07 plan. Phase 07 is active
-under #84, with blueprint production blocked until Task 01 bootstrap acceptance.
-Phase 08 and Abhyaas remain inactive.
+Inspect Git status and GitHub state, then read closed #84, open root #79, the
+Phase 07 verification and inactive Phase 08 handoff, Machine Learning Engineer
+role state, accepted blueprints, Phase 06 verification, accepted Phase 05
+architecture and verification, Phase 04 decision, Phase 01 evidence, approved
+design, and the approved Phase 07 plan. Phase 07 is complete. Phase 08 is the
+sole next gate and inactive. Catalog position 6 and Abhyaas remain inactive.

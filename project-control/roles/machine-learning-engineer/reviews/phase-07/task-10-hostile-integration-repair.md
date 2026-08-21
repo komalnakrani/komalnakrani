@@ -30,12 +30,12 @@ bytes rather than the pre-normalization identities.
 
 - `project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.mjs`
   SHA-256:
-  `7d196ba5c25e5270ae50da791848a3fefb3a5108dfa051c21337bdd8a893e4ae`
+  `1c59117e7d1f89f86f8d59ba3da6d91ecafe52934d62f58d545c4ac26408742d`
 - `project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs`
   SHA-256:
-  `5117fc9769c54ad4a8a2d74f472199d51c7a5e3ee220cdaac3f9a8b4f4c4b460`
+  `d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11`
 - Reaccepted Task 09 canonical-integration review SHA-256:
-  `b217068cd2d356aefe1befdc8a8dcd6aebbfe04e7343fc47130b36c8600f8cd8`
+  `fffd7aa614b1f55d79c168322f50e3202d0a49853cdcdf49b9b7c945257dd65c`
 - Reaccepted Lane C review SHA-256:
   `0727825a59042ac63077b6ec18b1c507e04da167cd2842c74bbf0e6d123540ce`
 - Refreshed ignored Lane C manifest SHA-256:
@@ -121,6 +121,17 @@ accepted report and handoff bytes did not require revision.
   exactly 220 tests, 218 pass, 2 fail. One failure proved a valid declared
   Task 10 repair was rejected by `PATH_BOUNDARY`; the other proved the first
   modified validator path was corrupted by whole-output porcelain trimming.
+- Final-content hash-cycle RED against validator
+  `7d196ba5c25e5270ae50da791848a3fefb3a5108dfa051c21337bdd8a893e4ae`
+  and frozen test
+  `d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11`:
+  exactly 220 tests, 216 pass, 4 fail. The positive final-content fixtures
+  failed because the Task 10 pre-close digest was recomputed from the later
+  completed local-issue bytes. The final validator now preserves the accepted
+  active local-issue hash inside Task 10's pre-close digest, while final
+  verification independently binds and validates the completed local-issue
+  hash. Mutations reject a digest derived from final state and a verification
+  record that retains the stale active-state hash.
 - Final GREEN: exactly 220 tests, 220 pass, 0 fail, 0 skipped, and 0 todo.
 - `node --check` passed for both replacement files.
 - Phase 01 validation and 42/42 tests passed.

@@ -85,6 +85,22 @@ lane artifact, retains null repair fields, and ends with the exact
 PASS/APPROVED pair. This reviewer independently repeated the whole-package
 reconstruction and all gates below; no Task 09 failure or repair was required.
 
+### Final closure hash-cycle refresh
+
+The EOF-normalized reapproval had SHA-256
+`b217068cd2d356aefe1befdc8a8dcd6aebbfe04e7343fc47130b36c8600f8cd8`.
+The authorized closure hash-cycle repair changed exactly the validator and test
+members of this review's forty-artifact directed binding set. The validator now
+keeps the accepted pre-close package digest anchored to the checkpoint-one
+local-issue identity while final verification separately binds the final
+local-issue bytes. The normalized package, Task 07 review, accepted lane
+artifacts, and frozen inputs are unchanged.
+
+This reviewer repeated the canonical reconstruction and exercised Task 09 in
+an isolated pre-hostile checkpoint-one projection, excluding Task 10 and final
+verification as required by the Task 09 boundary. The repaired hash-cycle
+contract and adversarial coverage passed without a Task 09 finding.
+
 ## Independent canonical reconstruction
 
 The reviewer parsed each fenced chapter projection and rebuilt every register
@@ -199,8 +215,8 @@ contains exactly the approved plan/review/repair and three lane manifests.
 - `node --test project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs`
   exits 0 at exactly 220 tests, 220 passes, 0 failures, 0 skipped, and 0 todo.
 - The accepted lifecycle-repaired validator/test SHA-256 pair is
-  `7d196ba5c25e5270ae50da791848a3fefb3a5108dfa051c21337bdd8a893e4ae` /
-  `5117fc9769c54ad4a8a2d74f472199d51c7a5e3ee220cdaac3f9a8b4f4c4b460`.
+  `1c59117e7d1f89f86f8d59ba3da6d91ecafe52934d62f58d545c4ac26408742d` /
+  `d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11`.
 - Addition-aware whitespace/EOF, exact marker, unfinished-marker, symlink,
   generated-media, SVG/WebP, forbidden-output, and `git diff --check` audits
   return no finding.
@@ -325,11 +341,11 @@ PHASE07-REVIEW-RECORD-START
     },
     {
       "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.mjs",
-      "sha256": "7d196ba5c25e5270ae50da791848a3fefb3a5108dfa051c21337bdd8a893e4ae"
+      "sha256": "1c59117e7d1f89f86f8d59ba3da6d91ecafe52934d62f58d545c4ac26408742d"
     },
     {
       "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
-      "sha256": "5117fc9769c54ad4a8a2d74f472199d51c7a5e3ee220cdaac3f9a8b4f4c4b460"
+      "sha256": "d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11"
     },
     {
       "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-05-lane-a.md",

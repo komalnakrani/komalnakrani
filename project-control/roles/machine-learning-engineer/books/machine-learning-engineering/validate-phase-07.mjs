@@ -474,7 +474,9 @@ function preClosePackageDigest(bundle) {
   ]);
   const records = bundle.inventory.filter((relative) => !excluded.has(relative)).map((relative) => ({
     path: relative,
-    sha256: hash(bundle.files?.[relative]?.text ?? ''),
+    sha256: relative === STATE_PATHS.localIssue
+      ? bundle.activationSnapshot?.authorityHashes?.[STATE_PATHS.localIssue]
+      : hash(bundle.files?.[relative]?.text ?? ''),
   }));
   return hash(JSON.stringify(records));
 }

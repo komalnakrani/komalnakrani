@@ -1,0 +1,1212 @@
+{
+  "schema": "mle-phase-07-verification/v1",
+  "role": "machine-learning-engineer",
+  "book": "machine-learning-engineering",
+  "phase": "07",
+  "generatedAt": "2026-08-21T16:53:42.228Z",
+  "counts": {
+    "parts": 7,
+    "chapters": 21,
+    "claims": 63,
+    "sources": 46,
+    "sourceClaimEdges": 160,
+    "cases": 12,
+    "caseChapterEdges": 104,
+    "claimCaseEdges": 198,
+    "caseSourceUses": 34,
+    "architectureClaims": 22,
+    "boundaries": 17,
+    "scenarios": 10,
+    "domains": 12,
+    "clusters": 8,
+    "ports": 5,
+    "chapterPortAssertions": 105,
+    "partExitChecks": 35,
+    "states": 17,
+    "legalTransitions": 19,
+    "forbiddenTransitions": 2,
+    "reopenTriggers": 4,
+    "appendices": 7,
+    "frontMatterItems": 10,
+    "closingItems": 5,
+    "sections": 168,
+    "labs": 42,
+    "assessments": 21,
+    "visuals": 25,
+    "handoffs": 21,
+    "imagegenCandidates": 4
+  },
+  "artifacts": [
+    {
+      "path": "docs/superpowers/plans/2026-08-18-machine-learning-engineer-phase-07.md",
+      "sha256": "c0c1eccec1f4bd05fc5c194cb874027a2b3bc0761c91be3cc0a5b5e933b6a107",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/issues/phase-07-chapter-blueprints.md",
+      "sha256": "0ada257993fa53cb805b9b17f87ab15f78674b16a4ed4da76112641b934e49b0",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/blueprint-register.json",
+      "sha256": "d05d14663fcae623faa529fa2405552752a4a7b90760de48ab9512bd4d4553b6",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-01.md",
+      "sha256": "256beee3eadb97ab25aa30df16711f27b744bf62e5cf571ba83f79d6b6bc4e53",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-02.md",
+      "sha256": "a473ec67c3768ca46cd8779939264baf28c00b81633eb68aeadd18bd6d5640b4",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-03.md",
+      "sha256": "6758e7b3884622076317a374fb49a5b07e8373a82219af673d2e02b9bcf9dff5",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-04.md",
+      "sha256": "9eb611fcdc946ca985937d322e153871ac1dd9aaf56e4737137ac2914095bfd3",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-05.md",
+      "sha256": "f59f90c252e48742d1431e28cf11b143041c22fcdbb2578f9a59c83723ae4713",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-06.md",
+      "sha256": "9ab405ab13448302b5b6770998f7cdb54d839cd23b47cdbf8a1570ce76676de6",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-07.md",
+      "sha256": "fbba1795fe0017fa2d7978a2489b9a79f43a147773ef949d18f19d956ee58a4f",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-08.md",
+      "sha256": "a1a3796c9a9076cc1b5d0723d41a562472860cab90f3026a80fd49fa22c6e5c7",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-09.md",
+      "sha256": "33f4d93c3cdbad2231d9d38cb9d5444e9fde881486dbed2e00ba89a1d4fe6cce",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-10.md",
+      "sha256": "7106a22eeb8e6e402bb2f27189f5b2734ea5615dacb097ba6eae50943eba266b",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-11.md",
+      "sha256": "78b50abaf1ca31a3b184466ded25efd23b27be703ea6dfd632438f8f9cf1d68f",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-12.md",
+      "sha256": "4a9012b91e6ad6cfa7174a9346c34423861a820b10e94c010f8095897cb20c97",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-13.md",
+      "sha256": "e22345a4981e19a68cf3dd306990279808d2cc9b6ef9fdbcedf4fbe884e7c395",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-14.md",
+      "sha256": "44d7653267bd4f7cb8112a756904c9d9d1805f5f8e21e0e0421c3fef891b0c19",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-15.md",
+      "sha256": "53ddcef9df0363799aba20aae4964f495d6ef98faf774bade31b74a63020998b",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-16.md",
+      "sha256": "b346602368aa295c88158a5f398efd090ad6441473ae12225fe49cf5ff6440b1",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-17.md",
+      "sha256": "0370effce2ac4d1aaa153bb4044982f0b386f76ecdf0282181556c89519e82d0",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-18.md",
+      "sha256": "fa4d83b480c3b732a8004bf22787f6609c1e5de3c712e3a98d61ff72d963d3fb",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-19.md",
+      "sha256": "702a19e43c4618ed8880ebd69a284cd6d6fded171d7b2cbfa4148492beb13ac1",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-20.md",
+      "sha256": "29d4c1e14082fb54b0c7b05acb64804b9028ef28196ffe568307a849a883bfc3",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-21.md",
+      "sha256": "ad8bde6a8c87719de7d91ae198927a308d23c42e5987a926f6c55015470357c7",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/whole-book-furniture.md",
+      "sha256": "42ec2b992cde815015745d9c50845b5ba83024eaf00e5c32d8434a9d47b8ae4a",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/verification-report.md",
+      "sha256": "ead317e38987f6ae8dc0ddcf2188c4bf929c70ac16569950afbecea3e027137a",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/phase-08-handoff.md",
+      "sha256": "df7c39ef9ec152d5deadde7ab31b26d0274a4b2aa6d4b3b74589f0bfd59aecb0",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.mjs",
+      "sha256": "1c59117e7d1f89f86f8d59ba3da6d91ecafe52934d62f58d545c4ac26408742d",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
+      "sha256": "d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-01-bootstrap.md",
+      "sha256": "a99dbc0d272cc1b96e22d644c6d001743e2e7cccefe799393f3d29f99503ef95",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-05-lane-a.md",
+      "sha256": "3e348f878f564cc3236c64e3e1e58b84a6635319f60e17432dcdccd776f99de6",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-06-lane-b.md",
+      "sha256": "04ddb1ff7ccb35c3ab4e5ddb4d46334214e80f3723d4d18b7ca9149152b8061e",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-07-lane-c.md",
+      "sha256": "0727825a59042ac63077b6ec18b1c507e04da167cd2842c74bbf0e6d123540ce",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-09-canonical-integration.md",
+      "sha256": "fffd7aa614b1f55d79c168322f50e3202d0a49853cdcdf49b9b7c945257dd65c",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-10-hostile-integration.md",
+      "sha256": "17475aa85f1ec3e7c6a63286d43a229e21a56e52d43d9188b05656715a90369a",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-10-hostile-integration-repair.md",
+      "sha256": "d01f6aee23c01f034f20b9ae66e801ec8a4ee175d6ffdc0b3bffb69de651ac1a",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/ROLE-STATE.md",
+      "sha256": "22adafa785eaf3306445cb86a4e43d455267e0ba63c1cf7cfef133efb1a335ec",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/issues/root.md",
+      "sha256": "db57cace9630e5120fb075ef159769a12b06ef48ad0d2da91fb7677995e4d738",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/issues/phase-07-chapter-blueprints.md",
+      "sha256": "0ada257993fa53cb805b9b17f87ab15f78674b16a4ed4da76112641b934e49b0",
+      "kind": "required",
+      "required": true
+    },
+    {
+      "path": "project-control/role-factory/FACTORY-STATE.md",
+      "sha256": "20a3876caaa642df660c2ccfa18c3e8783d64ee61741751d99165a02bf663475",
+      "kind": "required",
+      "required": true
+    }
+  ],
+  "reviews": [
+    {
+      "task": "TASK-01",
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-01-bootstrap.md",
+      "sha256": "a99dbc0d272cc1b96e22d644c6d001743e2e7cccefe799393f3d29f99503ef95",
+      "repairPath": null,
+      "repairSha256": null,
+      "specVerdict": "SPEC COMPLIANCE PASS",
+      "qualityVerdict": "QUALITY APPROVED",
+      "boundArtifacts": [
+        {
+          "path": "git:plan-commit:21d4cfa2581193a5d76642e177bf44831cd3ea7b",
+          "sha256": "998f0396041ad181ed8de234fb1e9a3e1ae6e0426165dff2d07b03bf4c80b053"
+        },
+        {
+          "path": "docs/superpowers/plans/2026-08-18-machine-learning-engineer-phase-07.md",
+          "sha256": "c0c1eccec1f4bd05fc5c194cb874027a2b3bc0761c91be3cc0a5b5e933b6a107"
+        },
+        {
+          "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/phase-07-plan.md",
+          "sha256": "c0c1eccec1f4bd05fc5c194cb874027a2b3bc0761c91be3cc0a5b5e933b6a107"
+        },
+        {
+          "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/phase-07-plan-review.md",
+          "sha256": "d56f84c22ed459eabc0dad54a3435978e15d609038091884433510a92c94dc52"
+        },
+        {
+          "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/phase-07-plan-repair.md",
+          "sha256": "c1e7cae4d3574f8d312efeeda43226b06a4d0e0d08eb83bf7abb87ad0e6cb72d"
+        },
+        {
+          "path": "github:#79:body",
+          "sha256": "072fe6fb8f54293edff5c7c96095b93bb6566fc6f3fcadd81f3ab598c726d54a"
+        },
+        {
+          "path": "github:#79:labels",
+          "sha256": "b2d267f831b339fbc1e94be05e253ae2d84c86ce5115f8ca2fce5b2df9ed840c"
+        },
+        {
+          "path": "github:#84:body",
+          "sha256": "6b785594faea236eb92aac516330c36dda04cef8df888e985a371c2670fd325c"
+        },
+        {
+          "path": "github:#84:labels",
+          "sha256": "12ebefc59557f5e4b26fbc09dac5e10380f46025eb5285829c67f32861ac7cf6"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/ROLE-STATE.md",
+          "sha256": "544b92eeff860af3dcae7515efae5188714826ed3d6c08823538dd19d22542ae"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/issues/root.md",
+          "sha256": "072fe6fb8f54293edff5c7c96095b93bb6566fc6f3fcadd81f3ab598c726d54a"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/issues/phase-07-chapter-blueprints.md",
+          "sha256": "ae2283a43cfbc53d63ab2c359efe521a0497f0f5e83cc31e61eb4e47dbbf7dc5"
+        },
+        {
+          "path": "project-control/role-factory/FACTORY-STATE.md",
+          "sha256": "970f6780ec05f35f247fedb73486ad6eb6ff18e40e5541b1c0b0fb71185703cc"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.mjs",
+          "sha256": "39e017b58ad48b218fac431ca67597d14f0d96a7e39f3b6c72bac7ae8ea29198"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
+          "sha256": "4e9ad56957cc071012501f6623eb6435b471247409fd7508f334a3b6fd2ca234"
+        },
+        {
+          "path": "inventory:phase07-production-absence",
+          "sha256": "968ad666b7552e378dfb82b92ccd60c3070f1e0434b57c035d90206752e33fd7"
+        },
+        {
+          "path": "inventory:phase07-scratch",
+          "sha256": "208dc4b85388b650f355a64744b0c2d480d91924df71cf6337dc1788d5c9408e"
+        },
+        {
+          "path": "git:activation-checkpoint",
+          "sha256": "40ef3e96342b020b8e52ccdcf92005269a4b1c5b7d337f7e673a8c2338ec67e0"
+        }
+      ]
+    },
+    {
+      "task": "TASK-05",
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-05-lane-a.md",
+      "sha256": "3e348f878f564cc3236c64e3e1e58b84a6635319f60e17432dcdccd776f99de6",
+      "repairPath": null,
+      "repairSha256": null,
+      "specVerdict": "SPEC COMPLIANCE PASS",
+      "qualityVerdict": "QUALITY APPROVED",
+      "boundArtifacts": [
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-01.md",
+          "sha256": "256beee3eadb97ab25aa30df16711f27b744bf62e5cf571ba83f79d6b6bc4e53"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-02.md",
+          "sha256": "a473ec67c3768ca46cd8779939264baf28c00b81633eb68aeadd18bd6d5640b4"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-03.md",
+          "sha256": "6758e7b3884622076317a374fb49a5b07e8373a82219af673d2e02b9bcf9dff5"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-04.md",
+          "sha256": "9eb611fcdc946ca985937d322e153871ac1dd9aaf56e4737137ac2914095bfd3"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-05.md",
+          "sha256": "f59f90c252e48742d1431e28cf11b143041c22fcdbb2578f9a59c83723ae4713"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-06.md",
+          "sha256": "9ab405ab13448302b5b6770998f7cdb54d839cd23b47cdbf8a1570ce76676de6"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-07.md",
+          "sha256": "fbba1795fe0017fa2d7978a2489b9a79f43a147773ef949d18f19d956ee58a4f"
+        },
+        {
+          "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/lane-a-blueprint-manifest.json",
+          "sha256": "e19f085d5aea4e3f18d5a591ac24a6ce41e3557e7e495cf6e0c9a60d1dc6b629"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.md",
+          "sha256": "5f41bfc624f7085b8e3b2a12d6c2c3d52d6c21659eb5140d94cfa29b0edce630"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.json",
+          "sha256": "bb2b6fe1137b6b56ff4729d0131c1b9496804bcd3a37e07a92361f4af4da972f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/visual-forecast.md",
+          "sha256": "64861260b24e57342b3d56d651f5b4d55850ad4ac749cea33f1802616c952b94"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/source-register.json",
+          "sha256": "6dc8cc380f42238e5dce26ec9357118fd6dac9e2f037b0307827bd64f8d4d902"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-register.json",
+          "sha256": "953572463965ffe79a1fd4ef4d8a5c2ee70e8c507ad83214b0e1d1e6246f569c"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/case-studies/case-study-register.json",
+          "sha256": "afdf9b955b766660efa7ec6ec7da1a22ea54d050436b271aff24d1aceaed5e51"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-to-chapter.csv",
+          "sha256": "39eda5b2d97e5af91f95cc5d33589c4152cc66db4fd77936be895d2643df3154"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/integration-manifest.json",
+          "sha256": "c8f2dff28008101c40d8eeac6916fb73625d46064c10aeedb27fb0aaad400bc4"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/phase-07-handoff.md",
+          "sha256": "98301e0108ace18f69a3e212d0b55d59cdf7380d1c5beaefc7dbc19926a6a119"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-06-verification.json",
+          "sha256": "ca0f0fb8f4385c36a7ea59c75a5ddf25960f891ee561db0354054ce71f0cd33a"
+        }
+      ]
+    },
+    {
+      "task": "TASK-06",
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-06-lane-b.md",
+      "sha256": "04ddb1ff7ccb35c3ab4e5ddb4d46334214e80f3723d4d18b7ca9149152b8061e",
+      "repairPath": null,
+      "repairSha256": null,
+      "specVerdict": "SPEC COMPLIANCE PASS",
+      "qualityVerdict": "QUALITY APPROVED",
+      "boundArtifacts": [
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-08.md",
+          "sha256": "a1a3796c9a9076cc1b5d0723d41a562472860cab90f3026a80fd49fa22c6e5c7"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-09.md",
+          "sha256": "33f4d93c3cdbad2231d9d38cb9d5444e9fde881486dbed2e00ba89a1d4fe6cce"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-10.md",
+          "sha256": "7106a22eeb8e6e402bb2f27189f5b2734ea5615dacb097ba6eae50943eba266b"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-11.md",
+          "sha256": "78b50abaf1ca31a3b184466ded25efd23b27be703ea6dfd632438f8f9cf1d68f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-12.md",
+          "sha256": "4a9012b91e6ad6cfa7174a9346c34423861a820b10e94c010f8095897cb20c97"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-13.md",
+          "sha256": "e22345a4981e19a68cf3dd306990279808d2cc9b6ef9fdbcedf4fbe884e7c395"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-14.md",
+          "sha256": "44d7653267bd4f7cb8112a756904c9d9d1805f5f8e21e0e0421c3fef891b0c19"
+        },
+        {
+          "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/lane-b-blueprint-manifest.json",
+          "sha256": "9f191137de2cc861bd9380a18b147d40989d95626261332ba5d6f575092d7e1c"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.md",
+          "sha256": "5f41bfc624f7085b8e3b2a12d6c2c3d52d6c21659eb5140d94cfa29b0edce630"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.json",
+          "sha256": "bb2b6fe1137b6b56ff4729d0131c1b9496804bcd3a37e07a92361f4af4da972f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/visual-forecast.md",
+          "sha256": "64861260b24e57342b3d56d651f5b4d55850ad4ac749cea33f1802616c952b94"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/source-register.json",
+          "sha256": "6dc8cc380f42238e5dce26ec9357118fd6dac9e2f037b0307827bd64f8d4d902"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-register.json",
+          "sha256": "953572463965ffe79a1fd4ef4d8a5c2ee70e8c507ad83214b0e1d1e6246f569c"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/case-studies/case-study-register.json",
+          "sha256": "afdf9b955b766660efa7ec6ec7da1a22ea54d050436b271aff24d1aceaed5e51"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-to-chapter.csv",
+          "sha256": "39eda5b2d97e5af91f95cc5d33589c4152cc66db4fd77936be895d2643df3154"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/integration-manifest.json",
+          "sha256": "c8f2dff28008101c40d8eeac6916fb73625d46064c10aeedb27fb0aaad400bc4"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/phase-07-handoff.md",
+          "sha256": "98301e0108ace18f69a3e212d0b55d59cdf7380d1c5beaefc7dbc19926a6a119"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-06-verification.json",
+          "sha256": "ca0f0fb8f4385c36a7ea59c75a5ddf25960f891ee561db0354054ce71f0cd33a"
+        }
+      ]
+    },
+    {
+      "task": "TASK-07",
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-07-lane-c.md",
+      "sha256": "0727825a59042ac63077b6ec18b1c507e04da167cd2842c74bbf0e6d123540ce",
+      "repairPath": null,
+      "repairSha256": null,
+      "specVerdict": "SPEC COMPLIANCE PASS",
+      "qualityVerdict": "QUALITY APPROVED",
+      "boundArtifacts": [
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-15.md",
+          "sha256": "53ddcef9df0363799aba20aae4964f495d6ef98faf774bade31b74a63020998b"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-16.md",
+          "sha256": "b346602368aa295c88158a5f398efd090ad6441473ae12225fe49cf5ff6440b1"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-17.md",
+          "sha256": "0370effce2ac4d1aaa153bb4044982f0b386f76ecdf0282181556c89519e82d0"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-18.md",
+          "sha256": "fa4d83b480c3b732a8004bf22787f6609c1e5de3c712e3a98d61ff72d963d3fb"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-19.md",
+          "sha256": "702a19e43c4618ed8880ebd69a284cd6d6fded171d7b2cbfa4148492beb13ac1"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-20.md",
+          "sha256": "29d4c1e14082fb54b0c7b05acb64804b9028ef28196ffe568307a849a883bfc3"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-21.md",
+          "sha256": "ad8bde6a8c87719de7d91ae198927a308d23c42e5987a926f6c55015470357c7"
+        },
+        {
+          "path": ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/lane-c-blueprint-manifest.json",
+          "sha256": "f10b263d7bc1f1150f58465c8e0255059134678a07661d25c0aa1a4a28d9e31b"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.md",
+          "sha256": "5f41bfc624f7085b8e3b2a12d6c2c3d52d6c21659eb5140d94cfa29b0edce630"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.json",
+          "sha256": "bb2b6fe1137b6b56ff4729d0131c1b9496804bcd3a37e07a92361f4af4da972f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/visual-forecast.md",
+          "sha256": "64861260b24e57342b3d56d651f5b4d55850ad4ac749cea33f1802616c952b94"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/source-register.json",
+          "sha256": "6dc8cc380f42238e5dce26ec9357118fd6dac9e2f037b0307827bd64f8d4d902"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-register.json",
+          "sha256": "953572463965ffe79a1fd4ef4d8a5c2ee70e8c507ad83214b0e1d1e6246f569c"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/case-studies/case-study-register.json",
+          "sha256": "afdf9b955b766660efa7ec6ec7da1a22ea54d050436b271aff24d1aceaed5e51"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-to-chapter.csv",
+          "sha256": "39eda5b2d97e5af91f95cc5d33589c4152cc66db4fd77936be895d2643df3154"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/integration-manifest.json",
+          "sha256": "c8f2dff28008101c40d8eeac6916fb73625d46064c10aeedb27fb0aaad400bc4"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/phase-07-handoff.md",
+          "sha256": "98301e0108ace18f69a3e212d0b55d59cdf7380d1c5beaefc7dbc19926a6a119"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-06-verification.json",
+          "sha256": "ca0f0fb8f4385c36a7ea59c75a5ddf25960f891ee561db0354054ce71f0cd33a"
+        }
+      ]
+    },
+    {
+      "task": "TASK-09",
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-09-canonical-integration.md",
+      "sha256": "fffd7aa614b1f55d79c168322f50e3202d0a49853cdcdf49b9b7c945257dd65c",
+      "repairPath": null,
+      "repairSha256": null,
+      "specVerdict": "SPEC COMPLIANCE PASS",
+      "qualityVerdict": "QUALITY APPROVED",
+      "boundArtifacts": [
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/blueprint-register.json",
+          "sha256": "d05d14663fcae623faa529fa2405552752a4a7b90760de48ab9512bd4d4553b6"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-01.md",
+          "sha256": "256beee3eadb97ab25aa30df16711f27b744bf62e5cf571ba83f79d6b6bc4e53"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-02.md",
+          "sha256": "a473ec67c3768ca46cd8779939264baf28c00b81633eb68aeadd18bd6d5640b4"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-03.md",
+          "sha256": "6758e7b3884622076317a374fb49a5b07e8373a82219af673d2e02b9bcf9dff5"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-04.md",
+          "sha256": "9eb611fcdc946ca985937d322e153871ac1dd9aaf56e4737137ac2914095bfd3"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-05.md",
+          "sha256": "f59f90c252e48742d1431e28cf11b143041c22fcdbb2578f9a59c83723ae4713"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-06.md",
+          "sha256": "9ab405ab13448302b5b6770998f7cdb54d839cd23b47cdbf8a1570ce76676de6"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-07.md",
+          "sha256": "fbba1795fe0017fa2d7978a2489b9a79f43a147773ef949d18f19d956ee58a4f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-08.md",
+          "sha256": "a1a3796c9a9076cc1b5d0723d41a562472860cab90f3026a80fd49fa22c6e5c7"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-09.md",
+          "sha256": "33f4d93c3cdbad2231d9d38cb9d5444e9fde881486dbed2e00ba89a1d4fe6cce"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-10.md",
+          "sha256": "7106a22eeb8e6e402bb2f27189f5b2734ea5615dacb097ba6eae50943eba266b"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-11.md",
+          "sha256": "78b50abaf1ca31a3b184466ded25efd23b27be703ea6dfd632438f8f9cf1d68f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-12.md",
+          "sha256": "4a9012b91e6ad6cfa7174a9346c34423861a820b10e94c010f8095897cb20c97"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-13.md",
+          "sha256": "e22345a4981e19a68cf3dd306990279808d2cc9b6ef9fdbcedf4fbe884e7c395"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-14.md",
+          "sha256": "44d7653267bd4f7cb8112a756904c9d9d1805f5f8e21e0e0421c3fef891b0c19"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-15.md",
+          "sha256": "53ddcef9df0363799aba20aae4964f495d6ef98faf774bade31b74a63020998b"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-16.md",
+          "sha256": "b346602368aa295c88158a5f398efd090ad6441473ae12225fe49cf5ff6440b1"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-17.md",
+          "sha256": "0370effce2ac4d1aaa153bb4044982f0b386f76ecdf0282181556c89519e82d0"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-18.md",
+          "sha256": "fa4d83b480c3b732a8004bf22787f6609c1e5de3c712e3a98d61ff72d963d3fb"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-19.md",
+          "sha256": "702a19e43c4618ed8880ebd69a284cd6d6fded171d7b2cbfa4148492beb13ac1"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-20.md",
+          "sha256": "29d4c1e14082fb54b0c7b05acb64804b9028ef28196ffe568307a849a883bfc3"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-21.md",
+          "sha256": "ad8bde6a8c87719de7d91ae198927a308d23c42e5987a926f6c55015470357c7"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/whole-book-furniture.md",
+          "sha256": "42ec2b992cde815015745d9c50845b5ba83024eaf00e5c32d8434a9d47b8ae4a"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/verification-report.md",
+          "sha256": "ead317e38987f6ae8dc0ddcf2188c4bf929c70ac16569950afbecea3e027137a"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/phase-08-handoff.md",
+          "sha256": "df7c39ef9ec152d5deadde7ab31b26d0274a4b2aa6d4b3b74589f0bfd59aecb0"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.mjs",
+          "sha256": "1c59117e7d1f89f86f8d59ba3da6d91ecafe52934d62f58d545c4ac26408742d"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
+          "sha256": "d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-05-lane-a.md",
+          "sha256": "3e348f878f564cc3236c64e3e1e58b84a6635319f60e17432dcdccd776f99de6"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-06-lane-b.md",
+          "sha256": "04ddb1ff7ccb35c3ab4e5ddb4d46334214e80f3723d4d18b7ca9149152b8061e"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-07-lane-c.md",
+          "sha256": "0727825a59042ac63077b6ec18b1c507e04da167cd2842c74bbf0e6d123540ce"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.md",
+          "sha256": "5f41bfc624f7085b8e3b2a12d6c2c3d52d6c21659eb5140d94cfa29b0edce630"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.json",
+          "sha256": "bb2b6fe1137b6b56ff4729d0131c1b9496804bcd3a37e07a92361f4af4da972f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/visual-forecast.md",
+          "sha256": "64861260b24e57342b3d56d651f5b4d55850ad4ac749cea33f1802616c952b94"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/source-register.json",
+          "sha256": "6dc8cc380f42238e5dce26ec9357118fd6dac9e2f037b0307827bd64f8d4d902"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-register.json",
+          "sha256": "953572463965ffe79a1fd4ef4d8a5c2ee70e8c507ad83214b0e1d1e6246f569c"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/case-studies/case-study-register.json",
+          "sha256": "afdf9b955b766660efa7ec6ec7da1a22ea54d050436b271aff24d1aceaed5e51"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-to-chapter.csv",
+          "sha256": "39eda5b2d97e5af91f95cc5d33589c4152cc66db4fd77936be895d2643df3154"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/integration-manifest.json",
+          "sha256": "c8f2dff28008101c40d8eeac6916fb73625d46064c10aeedb27fb0aaad400bc4"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/phase-07-handoff.md",
+          "sha256": "98301e0108ace18f69a3e212d0b55d59cdf7380d1c5beaefc7dbc19926a6a119"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-06-verification.json",
+          "sha256": "ca0f0fb8f4385c36a7ea59c75a5ddf25960f891ee561db0354054ce71f0cd33a"
+        }
+      ]
+    },
+    {
+      "task": "TASK-10",
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-10-hostile-integration.md",
+      "sha256": "17475aa85f1ec3e7c6a63286d43a229e21a56e52d43d9188b05656715a90369a",
+      "repairPath": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-10-hostile-integration-repair.md",
+      "repairSha256": "d01f6aee23c01f034f20b9ae66e801ec8a4ee175d6ffdc0b3bffb69de651ac1a",
+      "specVerdict": "SPEC COMPLIANCE PASS",
+      "qualityVerdict": "QUALITY APPROVED",
+      "boundArtifacts": [
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/blueprint-register.json",
+          "sha256": "d05d14663fcae623faa529fa2405552752a4a7b90760de48ab9512bd4d4553b6"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-01.md",
+          "sha256": "256beee3eadb97ab25aa30df16711f27b744bf62e5cf571ba83f79d6b6bc4e53"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-02.md",
+          "sha256": "a473ec67c3768ca46cd8779939264baf28c00b81633eb68aeadd18bd6d5640b4"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-03.md",
+          "sha256": "6758e7b3884622076317a374fb49a5b07e8373a82219af673d2e02b9bcf9dff5"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-04.md",
+          "sha256": "9eb611fcdc946ca985937d322e153871ac1dd9aaf56e4737137ac2914095bfd3"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-05.md",
+          "sha256": "f59f90c252e48742d1431e28cf11b143041c22fcdbb2578f9a59c83723ae4713"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-06.md",
+          "sha256": "9ab405ab13448302b5b6770998f7cdb54d839cd23b47cdbf8a1570ce76676de6"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-07.md",
+          "sha256": "fbba1795fe0017fa2d7978a2489b9a79f43a147773ef949d18f19d956ee58a4f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-08.md",
+          "sha256": "a1a3796c9a9076cc1b5d0723d41a562472860cab90f3026a80fd49fa22c6e5c7"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-09.md",
+          "sha256": "33f4d93c3cdbad2231d9d38cb9d5444e9fde881486dbed2e00ba89a1d4fe6cce"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-10.md",
+          "sha256": "7106a22eeb8e6e402bb2f27189f5b2734ea5615dacb097ba6eae50943eba266b"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-11.md",
+          "sha256": "78b50abaf1ca31a3b184466ded25efd23b27be703ea6dfd632438f8f9cf1d68f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-12.md",
+          "sha256": "4a9012b91e6ad6cfa7174a9346c34423861a820b10e94c010f8095897cb20c97"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-13.md",
+          "sha256": "e22345a4981e19a68cf3dd306990279808d2cc9b6ef9fdbcedf4fbe884e7c395"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-14.md",
+          "sha256": "44d7653267bd4f7cb8112a756904c9d9d1805f5f8e21e0e0421c3fef891b0c19"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-15.md",
+          "sha256": "53ddcef9df0363799aba20aae4964f495d6ef98faf774bade31b74a63020998b"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-16.md",
+          "sha256": "b346602368aa295c88158a5f398efd090ad6441473ae12225fe49cf5ff6440b1"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-17.md",
+          "sha256": "0370effce2ac4d1aaa153bb4044982f0b386f76ecdf0282181556c89519e82d0"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-18.md",
+          "sha256": "fa4d83b480c3b732a8004bf22787f6609c1e5de3c712e3a98d61ff72d963d3fb"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-19.md",
+          "sha256": "702a19e43c4618ed8880ebd69a284cd6d6fded171d7b2cbfa4148492beb13ac1"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-20.md",
+          "sha256": "29d4c1e14082fb54b0c7b05acb64804b9028ef28196ffe568307a849a883bfc3"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-21.md",
+          "sha256": "ad8bde6a8c87719de7d91ae198927a308d23c42e5987a926f6c55015470357c7"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/whole-book-furniture.md",
+          "sha256": "42ec2b992cde815015745d9c50845b5ba83024eaf00e5c32d8434a9d47b8ae4a"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/verification-report.md",
+          "sha256": "ead317e38987f6ae8dc0ddcf2188c4bf929c70ac16569950afbecea3e027137a"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/phase-08-handoff.md",
+          "sha256": "df7c39ef9ec152d5deadde7ab31b26d0274a4b2aa6d4b3b74589f0bfd59aecb0"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.mjs",
+          "sha256": "1c59117e7d1f89f86f8d59ba3da6d91ecafe52934d62f58d545c4ac26408742d"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
+          "sha256": "d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-01-bootstrap.md",
+          "sha256": "a99dbc0d272cc1b96e22d644c6d001743e2e7cccefe799393f3d29f99503ef95"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-05-lane-a.md",
+          "sha256": "3e348f878f564cc3236c64e3e1e58b84a6635319f60e17432dcdccd776f99de6"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-06-lane-b.md",
+          "sha256": "04ddb1ff7ccb35c3ab4e5ddb4d46334214e80f3723d4d18b7ca9149152b8061e"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-07-lane-c.md",
+          "sha256": "0727825a59042ac63077b6ec18b1c507e04da167cd2842c74bbf0e6d123540ce"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-09-canonical-integration.md",
+          "sha256": "fffd7aa614b1f55d79c168322f50e3202d0a49853cdcdf49b9b7c945257dd65c"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.md",
+          "sha256": "5f41bfc624f7085b8e3b2a12d6c2c3d52d6c21659eb5140d94cfa29b0edce630"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.json",
+          "sha256": "bb2b6fe1137b6b56ff4729d0131c1b9496804bcd3a37e07a92361f4af4da972f"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/visual-forecast.md",
+          "sha256": "64861260b24e57342b3d56d651f5b4d55850ad4ac749cea33f1802616c952b94"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/source-register.json",
+          "sha256": "6dc8cc380f42238e5dce26ec9357118fd6dac9e2f037b0307827bd64f8d4d902"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-register.json",
+          "sha256": "953572463965ffe79a1fd4ef4d8a5c2ee70e8c507ad83214b0e1d1e6246f569c"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/case-studies/case-study-register.json",
+          "sha256": "afdf9b955b766660efa7ec6ec7da1a22ea54d050436b271aff24d1aceaed5e51"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/claim-to-chapter.csv",
+          "sha256": "39eda5b2d97e5af91f95cc5d33589c4152cc66db4fd77936be895d2643df3154"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/integration-manifest.json",
+          "sha256": "c8f2dff28008101c40d8eeac6916fb73625d46064c10aeedb27fb0aaad400bc4"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/phase-07-handoff.md",
+          "sha256": "98301e0108ace18f69a3e212d0b55d59cdf7380d1c5beaefc7dbc19926a6a119"
+        },
+        {
+          "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-06-verification.json",
+          "sha256": "ca0f0fb8f4385c36a7ea59c75a5ddf25960f891ee561db0354054ce71f0cd33a"
+        },
+        {
+          "path": "digest:pre-close-path-package",
+          "sha256": "21ca61c9e9d97f9918c8c497e35441fc1f213c34dff89eb3d6edc9724f7002b9"
+        }
+      ]
+    }
+  ],
+  "architectureTrace": {
+    "claims": 22,
+    "boundaries": 17,
+    "scenarios": 10,
+    "domains": 12,
+    "clusters": 8,
+    "chapterEdges": 103
+  },
+  "researchTrace": {
+    "sources": 46,
+    "claims": 63,
+    "cases": 12,
+    "sourceClaimEdges": 160,
+    "caseChapterEdges": 104,
+    "claimCaseEdges": 198,
+    "caseSourceUses": 34,
+    "reverseSymmetry": "PASS"
+  },
+  "dossierTrace": {
+    "milestones": 21,
+    "states": 17,
+    "legalTransitions": 19,
+    "forbiddenTransitions": 2,
+    "reopenTriggers": 4,
+    "firstMilestone": "BL-00",
+    "terminalMilestone": "BL-20",
+    "terminalState": "REVIEWED"
+  },
+  "visualContract": {
+    "semanticVisuals": 21,
+    "imagegenCandidates": 4,
+    "generatedAssets": 0,
+    "svgAssets": 0,
+    "webpAssets": 0,
+    "numericTruth": "semantic-html-css",
+    "candidateIds": [
+      "MLE-F05.1",
+      "MLE-F14.1",
+      "MLE-F16.1",
+      "MLE-F18.1"
+    ]
+  },
+  "furniture": {
+    "benchZero": 10,
+    "parts": 7,
+    "partObligationsEach": 5,
+    "appendices": 7,
+    "closing": 5,
+    "aboutKomalIncluded": true,
+    "closingStatement": "Ship the model only when its evidence can travel with it."
+  },
+  "tdd": {
+    "red": {
+      "command": "node --test project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
+      "nodeVersion": "v22.23.1",
+      "exitCode": 1,
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "errorCode": "ERR_MODULE_NOT_FOUND",
+      "missingPath": "validate-phase-07.mjs"
+    },
+    "green": {
+      "command": "node --test project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
+      "exitCode": 0,
+      "tests": 220,
+      "pass": 220,
+      "fail": 0,
+      "skipped": 0,
+      "todo": 0
+    }
+  },
+  "checks": {
+    "phase01Validator": {
+      "status": "PASS",
+      "evidence": "phase01Validator PASS with fresh Phase 07 evidence."
+    },
+    "phase01Tests": {
+      "status": "PASS",
+      "evidence": "phase01Tests PASS with fresh Phase 07 evidence."
+    },
+    "phase04Validator": {
+      "status": "PASS",
+      "evidence": "phase04Validator PASS with fresh Phase 07 evidence."
+    },
+    "phase04Tests": {
+      "status": "PASS",
+      "evidence": "phase04Tests PASS with fresh Phase 07 evidence."
+    },
+    "temporalPhase05Validator": {
+      "status": "PASS",
+      "evidence": "e1705e03389d174cc107af9850cb3cb839f92b1f | 1b3d92809cbe2279dda0e5782083882936874f4f1a458c86423593548fad8132 | 2111 | tracked bytes only | ordinary empty node_modules | node project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-05.mjs --stage=final | 7 parts, 21 chapters, 21 milestones, trace 8/22/17/10, 12 domains, 5 ports, 40 contexts, 35 exits, 5 cases, 5 reviews"
+    },
+    "temporalPhase05Tests": {
+      "status": "PASS",
+      "evidence": "node --test project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-05.test.mjs | 190/190"
+    },
+    "temporalPhase06Validator": {
+      "status": "PASS",
+      "evidence": "e4b9af4ee2d6abd31e8160224db7a99e66b6f02a | 666935f13e6aee676a3142b8c80a395adb56204dbb08abed9b42e51564a59c9d | 02c1ff0b7ee4c9174f507511f88f2acf3c8719e96d5f71aa735bc7c564a397ec | 7cfe18f9837363c9785e49728d1c3b8e060b5295dbc4763ff9d10d56d51146a3 | GH_REPO=alpeshznakrani/komalnakrani | standalone local clone | ordinary empty node_modules | node project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-06.mjs --stage=final | 46 sources, 63 claims, 12 cases, 21 packs, edges 160/34"
+    },
+    "temporalPhase06Tests": {
+      "status": "PASS",
+      "evidence": "node --test project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-06.test.mjs | 190/190"
+    },
+    "phase07Tests": {
+      "status": "PASS",
+      "evidence": "phase07Tests PASS with fresh Phase 07 evidence."
+    },
+    "phase07PreClose": {
+      "status": "PASS",
+      "evidence": "phase07PreClose PASS with fresh Phase 07 evidence."
+    },
+    "phase07FinalContent": {
+      "status": "PASS",
+      "evidence": "phase07FinalContent PASS with fresh Phase 07 evidence."
+    },
+    "markerScan": {
+      "status": "PASS",
+      "evidence": "markerScan PASS with fresh Phase 07 evidence."
+    },
+    "whitespaceEof": {
+      "status": "PASS",
+      "evidence": "whitespaceEof PASS with fresh Phase 07 evidence."
+    },
+    "pathAudit": {
+      "status": "PASS",
+      "evidence": "pathAudit PASS with fresh Phase 07 evidence."
+    },
+    "diffCheck": {
+      "status": "PASS",
+      "evidence": "diffCheck PASS with fresh Phase 07 evidence."
+    },
+    "repositoryCheck": {
+      "status": "PASS",
+      "evidence": "repositoryCheck PASS with fresh Phase 07 evidence."
+    }
+  },
+  "pathBoundaries": {
+    "allowlist": [
+      "docs/superpowers/plans/2026-08-18-machine-learning-engineer-phase-07.md",
+      "project-control/roles/machine-learning-engineer/issues/phase-07-chapter-blueprints.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/blueprint-register.json",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-01.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-02.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-03.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-04.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-05.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-06.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-07.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-08.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-09.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-10.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-11.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-12.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-13.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-14.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-15.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-16.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-17.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-18.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-19.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-20.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-21.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/whole-book-furniture.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/verification-report.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/phase-08-handoff.md",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.mjs",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-07-verification.json",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-01-bootstrap.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-01-bootstrap-repair.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-05-lane-a.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-05-lane-a-repair.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-06-lane-b.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-06-lane-b-repair.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-07-lane-c.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-07-lane-c-repair.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-09-canonical-integration.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-09-canonical-integration-repair.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-10-hostile-integration.md",
+      "project-control/roles/machine-learning-engineer/reviews/phase-07/task-10-hostile-integration-repair.md"
+    ],
+    "scratchAllowlist": [
+      ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/phase-07-plan.md",
+      ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/phase-07-plan-review.md",
+      ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/phase-07-plan-repair.md",
+      ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/lane-a-blueprint-manifest.json",
+      ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/lane-b-blueprint-manifest.json",
+      ".superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/lane-c-blueprint-manifest.json"
+    ],
+    "preCloseInventoryDigest": "337ccf813055587208dacbf763eb75d4cd5feab2c8329742d7307a46ee413ac6",
+    "finalInventoryDigest": "dba0c1117f34ed13a97b27b7ab8967a3d09f68bc3a9fcc5d68fc91cba971b5f0",
+    "packageDigest": "0b9e21570aac4d7cd012a8762b5de39eb93ed66e97b5d18339f9250b600256c0",
+    "unexpectedPaths": [],
+    "symlinks": []
+  },
+  "stateTransition": {
+    "role": {
+      "path": "project-control/roles/machine-learning-engineer/ROLE-STATE.md",
+      "sha256": "22adafa785eaf3306445cb86a4e43d455267e0ba63c1cf7cfef133efb1a335ec",
+      "status": "phase-07-complete"
+    },
+    "root": {
+      "path": "project-control/roles/machine-learning-engineer/issues/root.md",
+      "sha256": "db57cace9630e5120fb075ef159769a12b06ef48ad0d2da91fb7677995e4d738",
+      "status": "phase-07-complete"
+    },
+    "localIssue": {
+      "path": "project-control/roles/machine-learning-engineer/issues/phase-07-chapter-blueprints.md",
+      "sha256": "0ada257993fa53cb805b9b17f87ab15f78674b16a4ed4da76112641b934e49b0",
+      "status": "phase-07-complete"
+    },
+    "factory": {
+      "path": "project-control/role-factory/FACTORY-STATE.md",
+      "sha256": "20a3876caaa642df660c2ccfa18c3e8783d64ee61741751d99165a02bf663475",
+      "status": "phase-07-complete"
+    }
+  },
+  "githubExpectations": {
+    "rootIssue": {
+      "number": 79,
+      "state": "OPEN",
+      "labels": [
+        "role:machine-learning-engineer",
+        "status:in-progress"
+      ]
+    },
+    "childIssue": {
+      "number": 84,
+      "state": "CLOSED",
+      "labels": [
+        "phase:07-chapter-blueprints",
+        "role:machine-learning-engineer",
+        "status:done"
+      ]
+    }
+  },
+  "nextGate": {
+    "name": "Phase 08 original manuscript and deterministic companion production",
+    "status": "inactive",
+    "catalogPosition6": "not-started"
+  }
+}

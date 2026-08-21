@@ -14,15 +14,15 @@ future closure-state bytes, and final verification.
   `21d4cfa2581193a5d76642e177bf44831cd3ea7b`.
 - Approved plan SHA-256:
   `c0c1eccec1f4bd05fc5c194cb874027a2b3bc0761c91be3cc0a5b5e933b6a107`.
-- Current integration base and live remote `main`:
+- Original pre-close integration base and then-live remote `main`:
   `d50a07d78bef16b31902ae02321e7506db5ac54a`.
 - Task 09 review SHA-256:
-  `b217068cd2d356aefe1befdc8a8dcd6aebbfe04e7343fc47130b36c8600f8cd8`.
+  `fffd7aa614b1f55d79c168322f50e3202d0a49853cdcdf49b9b7c945257dd65c`.
 - Current pre-close inventory: 34 ordered paths before Task 10, with ordered
   path digest
   `337ccf813055587208dacbf763eb75d4cd5feab2c8329742d7307a46ee413ac6`.
 - Independently recomputed ordered `{path, sha256}` digest:
-  `3c748f37e774a9d57322c0de90ccaf6befeb97b7bf1c17a56b5309b53603a8fb`.
+  `21ca61c9e9d97f9918c8c497e35441fc1f213c34dff89eb3d6edc9724f7002b9`.
 - Scratch inventory: exactly the approved plan, plan review, plan repair, and
   three lane manifests; no additional Phase 07 scratch path or symlink.
 
@@ -217,14 +217,14 @@ by this review.
 ## Same-reviewer reapproval
 
 The directed Task 10 repair is present at SHA-256
-`56a9bcc3c60e0ae4a722e8c95d651a21e6a961f4ffaf4a3c498d504123a04405`.
+`d01f6aee23c01f034f20b9ae66e801ec8a4ee175d6ffdc0b3bffb69de651ac1a`.
 The final validator and test identities are respectively
-`7d196ba5c25e5270ae50da791848a3fefb3a5108dfa051c21337bdd8a893e4ae`
+`1c59117e7d1f89f86f8d59ba3da6d91ecafe52934d62f58d545c4ac26408742d`
 and
-`5117fc9769c54ad4a8a2d74f472199d51c7a5e3ee220cdaac3f9a8b4f4c4b460`.
+`d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11`.
 The refreshed Task 09 review binds both identities and remains accepted at
 SHA-256
-`b217068cd2d356aefe1befdc8a8dcd6aebbfe04e7343fc47130b36c8600f8cd8`.
+`fffd7aa614b1f55d79c168322f50e3202d0a49853cdcdf49b9b7c945257dd65c`.
 
 The final EOF-normalization audit proved exact mechanical equivalence for the
 register, chapters 15 through 21, furniture, report, and handoff: appending
@@ -274,6 +274,40 @@ No manuscript, companion implementation, generated asset, publication,
 course, Abhyaas, certification, catalog-position-6, or new-role output was
 created.
 
+### Closure-aware final-state revalidation
+
+After checkpoint 1 and the authorized closure transition, the same hostile
+reviewer repeated the complete review against the quiescent final identities.
+Checkpoint 1 and current synchronized `main` / `origin/main` are
+`02cae8ad24c0bee09a8e6bb67ea722398ba275b0`.
+An isolated projection of checkpoint-1 active state, open child #84, no final
+verification, synchronized `main`, and the current accepted review chain
+passes `pre-close`; the identical projection with one unrelated dirty path
+fails `GIT_ACTIVE`. The real current state files and live GitHub issue #84 are
+final/closed, and the real final-content package passes when the exact expected
+verification object is constructed in memory. The on-disk verification is
+intentionally stale until this review's new SHA-256 can be bound and is not
+reported as a current final PASS.
+
+The closure-aware digest was independently recomputed over the exact 34
+ordered pre-close records, preserving the activation-time local-issue hash,
+and equals
+`21ca61c9e9d97f9918c8c497e35441fc1f213c34dff89eb3d6edc9724f7002b9`.
+The only identity changes since the normalized acceptance are the authorized
+validator/test pair, Task 09 review, and Task 10 repair listed above. The
+register, all twenty-one chapters, furniture, report, handoff, Lane C review,
+and every frozen input remain byte-identical to their normalized accepted
+identities.
+
+Fresh execution again passed `node --check`, exactly 220/220 Phase 07 tests,
+all four original hostile mutations, Phase 05 final plus 190/190 tests, Phase
+06 final plus 190/190 tests, the full repository check, and addition-aware
+whitespace/EOF, marker, generated-media, forbidden-output, path, symlink, and
+Git diff audits. The final inventory is exactly 37 approved production paths
+and six approved scratch paths. No Phase 08, manuscript, code, asset,
+publication, course, Abhyaas, certification, second-volume, catalog-position-6,
+or new-role output was created.
+
 ## Machine-readable review record
 
 PHASE07-REVIEW-RECORD-START
@@ -284,7 +318,7 @@ PHASE07-REVIEW-RECORD-START
   "task": "TASK-10",
   "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-10-hostile-integration.md",
   "repairPath": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-10-hostile-integration-repair.md",
-  "repairSha256": "56a9bcc3c60e0ae4a722e8c95d651a21e6a961f4ffaf4a3c498d504123a04405",
+  "repairSha256": "d01f6aee23c01f034f20b9ae66e801ec8a4ee175d6ffdc0b3bffb69de651ac1a",
   "specVerdict": "SPEC COMPLIANCE PASS",
   "qualityVerdict": "QUALITY APPROVED",
   "boundArtifacts": [
@@ -390,11 +424,11 @@ PHASE07-REVIEW-RECORD-START
     },
     {
       "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.mjs",
-      "sha256": "7d196ba5c25e5270ae50da791848a3fefb3a5108dfa051c21337bdd8a893e4ae"
+      "sha256": "1c59117e7d1f89f86f8d59ba3da6d91ecafe52934d62f58d545c4ac26408742d"
     },
     {
       "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-07.test.mjs",
-      "sha256": "5117fc9769c54ad4a8a2d74f472199d51c7a5e3ee220cdaac3f9a8b4f4c4b460"
+      "sha256": "d1c1a29123f063e166f09c20c818af9f38db9018e89e59f848b493826427ff11"
     },
     {
       "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-01-bootstrap.md",
@@ -414,7 +448,7 @@ PHASE07-REVIEW-RECORD-START
     },
     {
       "path": "project-control/roles/machine-learning-engineer/reviews/phase-07/task-09-canonical-integration.md",
-      "sha256": "b217068cd2d356aefe1befdc8a8dcd6aebbfe04e7343fc47130b36c8600f8cd8"
+      "sha256": "fffd7aa614b1f55d79c168322f50e3202d0a49853cdcdf49b9b7c945257dd65c"
     },
     {
       "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/architecture.md",
@@ -458,7 +492,7 @@ PHASE07-REVIEW-RECORD-START
     },
     {
       "path": "digest:pre-close-path-package",
-      "sha256": "3c748f37e774a9d57322c0de90ccaf6befeb97b7bf1c17a56b5309b53603a8fb"
+      "sha256": "21ca61c9e9d97f9918c8c497e35441fc1f213c34dff89eb3d6edc9724f7002b9"
     }
   ]
 }

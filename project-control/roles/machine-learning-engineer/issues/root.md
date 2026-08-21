@@ -7,8 +7,8 @@
 - Catalog position: 5 of 32
 - State: `project-control/roles/machine-learning-engineer/ROLE-STATE.md`
 - Creative system: `Learning Systems Test Bench`
-- Last completed child: [#83 — Phase 06 source and bounded case-study research](https://github.com/alpeshznakrani/komalnakrani/issues/83)
-- Active child: [#84 — Phase 07 chapter blueprints and frozen figure contracts](https://github.com/alpeshznakrani/komalnakrani/issues/84)
+- Last completed child: [#84 — Phase 07 chapter blueprints and frozen figure contracts](https://github.com/alpeshznakrani/komalnakrani/issues/84)
+- Active child: none
 
 ## Objective
 
@@ -23,8 +23,8 @@ figure records.
 - [x] 04 evidence-based book count and volume decision — `SINGLE BOOK`
 - [x] 05 book architecture — complete
 - [x] 06 source and case-study research — complete
-- [ ] 07 chapter blueprints and frozen figure contracts — active in #84
-- [ ] 08 original manuscript and deterministic companion production
+- [x] 07 chapter blueprints and frozen figure contracts — complete
+- [ ] 08 original manuscript and deterministic companion production — sole next gate, inactive
 - [ ] 09 whole-book or series consistency QA
 - [ ] 10 original ImageGen PNG visuals and visual QA
 - [ ] 11 web and screen-first PDF publication
@@ -46,11 +46,12 @@ figure records.
 
 ## Current executable action
 
-Phase 06 is complete and #83 is closed `status:done`. Phase 07 chapter
-blueprints and frozen figure contracts is active under #84 from approved plan
-commit `21d4cfa`. Complete the independently reviewed Task 01 bootstrap before
-any blueprint lane starts. Phase 08, manuscript, visuals, course, Abhyaas, a
-second volume, catalog position 6, and another role remain inactive.
+Phase 07 is complete and #84 is closed `status:done`. The twenty-one chapter
+blueprints, strict register, furniture, inactive Phase 08 handoff, validator,
+and full independent review chain are accepted and committed.
+Phase 08 sole next gate, inactive
+Manuscript, companion implementation, generated visuals, publication, course,
+Abhyaas, a second volume, catalog position 6, and another role remain inactive.
 
 ## Completion
 
