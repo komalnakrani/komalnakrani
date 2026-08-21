@@ -135,6 +135,11 @@ const EXPECTED_BOOTSTRAP_PATHS = [
   `${book}/validate-phase-07.mjs`,
   `${book}/validate-phase-07.test.mjs`,
 ];
+const ACTIVE_CHECKPOINT_CLEAN_PATHS = new Set([
+  EXPECTED_BOOTSTRAP_PATHS[0],
+  EXPECTED_BOOTSTRAP_PATHS[1],
+  `${role}/reviews/phase-07/task-01-bootstrap.md`,
+]);
 const EXPECTED_BOOTSTRAP_SCRATCH_PATHS = [
   '.superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/phase-07-plan.md',
   '.superpowers/sdd/2026-08-18-machine-learning-engineer-phase-07/phase-07-plan-review.md',
@@ -173,6 +178,15 @@ assert.deepEqual(PHASE07_SCRATCH_PATHS, EXPECTED_PHASE07_SCRATCH_PATHS);
 
 const readTextMap = async (paths) => Object.fromEntries(await Promise.all(paths.map(async (relative) => [relative, await readFile(path.join(root, relative), 'utf8')])));
 const FROZEN_INPUT_TEXTS = await readTextMap(FROZEN_INPUT_PATHS);
+const REAL_BLUEPRINT_PATHS = [
+  `${book}/blueprints/blueprint-register.json`,
+  ...Array.from({ length: 21 }, (_, index) => `${book}/blueprints/chapter-${String(index + 1).padStart(2, '0')}.md`),
+  `${book}/blueprints/whole-book-furniture.md`,
+  `${book}/blueprints/verification-report.md`,
+  `${book}/blueprints/phase-08-handoff.md`,
+];
+const REAL_BLUEPRINT_TEXTS = await readTextMap(REAL_BLUEPRINT_PATHS);
+const REAL_BLUEPRINT_REGISTER = JSON.parse(REAL_BLUEPRINT_TEXTS[`${book}/blueprints/blueprint-register.json`]);
 const CURRENT_SCRATCH_TEXTS = await readTextMap(EXPECTED_BOOTSTRAP_SCRATCH_PATHS);
 const SCRATCH_FIXTURE_TEXTS = {
   ...CURRENT_SCRATCH_TEXTS,
@@ -337,6 +351,10 @@ for (const [item, digest] of Object.entries(EXPECTED_BOOTSTRAP_SCRATCH_HASHES)) 
 
 function orderedInventoryDigest(paths) {
   return sha256(JSON.stringify(paths));
+}
+
+function expectedActiveDirtyPaths(inventory) {
+  return inventory.filter((item) => !ACTIVE_CHECKPOINT_CLEAN_PATHS.has(item)).sort();
 }
 
 function task01BindingHashes(checkpoint) {
@@ -667,6 +685,21 @@ function preClosePackageDigest(files, inventory) {
   return orderedInventoryDigest(paths.map((item) => ({ path: item, sha256: files[item].sha256 })));
 }
 
+function independentlyRecomputePreClosePackageDigest(bundle) {
+  const excluded = new Set([
+    `${book}/phase-07-verification.json`,
+    `${role}/reviews/phase-07/task-10-hostile-integration.md`,
+    `${role}/reviews/phase-07/task-10-hostile-integration-repair.md`,
+  ]);
+  const records = bundle.inventory
+    .filter((relative) => !excluded.has(relative))
+    .map((relative) => {
+      assert.equal(typeof bundle.files[relative]?.text, 'string', true, `pre-close package byte source ${relative}`);
+      return { path: relative, sha256: sha256(bundle.files[relative].text) };
+    });
+  return sha256(JSON.stringify(records));
+}
+
 function chapterProjection(register, chapter) {
   return clone({
     chapter,
@@ -681,16 +714,6 @@ function chapterProjection(register, chapter) {
     visuals: register.visuals.filter((item) => item.chapterId === chapter.chapterId),
     handoff: register.handoffs.find((item) => item.chapterId === chapter.chapterId),
   });
-}
-
-function projectionMarkdown(projection, { furniture = false } = {}) {
-  const body = furniture
-    ? '# Whole-book furniture blueprint\n\nThis screen-first production contract routes Bench Zero, seven part gates, appendices, and closing dossier furniture.\n'
-    : `# ${projection.chapter.chapterId} — ${projection.chapter.title}\n\n${CHAPTER_HEADINGS.map((heading, index) => {
-      const grammar = index === 5 ? '\n\nBench Setup\n\nBench Sheet\n\nQualification Gate\n\nstate and dossier delta\n\nauthority route\n\nnext evidence' : '';
-      return `## ${heading}\n\n${projection.chapter.chapterId} chapter-specific blueprint instruction for ${projection.chapter.decisionJob}.${grammar}`;
-    }).join('\n\n')}\n`;
-  return `${body}\nPHASE07-CHAPTER-PROJECTION-START\n\n\`\`\`json\n${JSON.stringify(projection, null, 2)}\n\`\`\`\n\nPHASE07-CHAPTER-PROJECTION-END\n`;
 }
 
 function activeState() {
@@ -712,7 +735,7 @@ function finalState() {
 }
 
 function makeBundle({ activationCheckpoint = ACTIVATION_CHECKPOINT } = {}) {
-  const register = makeRegister();
+  const register = clone(REAL_BLUEPRINT_REGISTER);
   const chapterProjections = Object.fromEntries(register.chapters.map((chapter) => [chapter.chapterId, chapterProjection(register, chapter)]));
   const bootstrapHashes = task01BindingHashes(activationCheckpoint);
   const bootstrapRecord = {
@@ -733,14 +756,8 @@ function makeBundle({ activationCheckpoint = ACTIVATION_CHECKPOINT } = {}) {
     ...Object.fromEntries(Object.entries(SCRATCH_FIXTURE_TEXTS).map(([item, text]) => [item, { text, sha256: sha256(text) }])),
   };
   for (const item of CLEAN_FINAL_PATHS) {
-    let text = `accepted ${item}\n`;
-    const chapterMatch = item.match(/blueprints\/chapter-(\d{2})\.md$/);
-    if (chapterMatch) text = projectionMarkdown(chapterProjections[`MLE-CH-${chapterMatch[1]}`]);
-    else if (item.endsWith('/blueprint-register.json')) text = `${JSON.stringify(register, null, 2)}\n`;
-    else if (item.endsWith('/whole-book-furniture.md')) text = projectionMarkdown(register.furniture, { furniture: true });
-    else if (item.endsWith('/verification-report.md')) text = '# Phase 07 verification report\n\n## Register and projections\n\nExact counts, graph symmetry, dossier seams, five-port parity, furniture, and accessibility were recomputed from canonical inputs.\n\n## Boundaries\n\nNo manuscript, asset, code, publication, course, Abhyaas, certification, second-volume, or next-role output is authorized.\n';
-    else if (item.endsWith('/phase-08-handoff.md')) text = '# Phase 08 inactive handoff\n\nPhase 08 remains inactive. Writers must use the accepted chapter projections, preserve truth and authority ceilings, and recheck volatile sources before manuscript prose.\n';
-    else if (item.endsWith('/task-01-bootstrap.md')) text = `# Task 01 bootstrap independent review\n\n## Immutable activation snapshot\n\n\`\`\`json\n${JSON.stringify(bootstrapRecord, null, 2)}\n\`\`\`\n\nThe snapshot binds the existing activation implementation checkpoint and never the later closure-state bytes.\n\nSPEC COMPLIANCE PASS\nQUALITY APPROVED\n`;
+    let text = REAL_BLUEPRINT_TEXTS[item] ?? `accepted ${item}\n`;
+    if (item.endsWith('/task-01-bootstrap.md')) text = `# Task 01 bootstrap independent review\n\n## Immutable activation snapshot\n\n\`\`\`json\n${JSON.stringify(bootstrapRecord, null, 2)}\n\`\`\`\n\nThe snapshot binds the existing activation implementation checkpoint and never the later closure-state bytes.\n\nSPEC COMPLIANCE PASS\nQUALITY APPROVED\n`;
     else if (item.includes('/reviews/phase-07/')) text = `# ${path.basename(item, '.md')} independent review\n\n## Scope and evidence\n\nThe reviewer recomputed the directed artifact bindings, graph edges, lifecycle state, path inventory, and exact hashes owned by this task.\n\n## Findings\n\nNo unresolved finding remains.\n\nSPEC COMPLIANCE PASS\nQUALITY APPROVED\n`;
     files[item] = { text, sha256: sha256(text) };
   }
@@ -776,7 +793,7 @@ function makeBundle({ activationCheckpoint = ACTIVATION_CHECKPOINT } = {}) {
       scratchInventory: { present: [...EXPECTED_BOOTSTRAP_SCRATCH_PATHS], absent: EXPECTED_PHASE07_SCRATCH_PATHS.slice(3) },
       bindingHashes: externalBindings,
     },
-    runtime: { git: { branch: 'main', clean: true, head: 'c'.repeat(40), remoteMain: 'c'.repeat(40), activationCheckpoint }, github: { rootIssue: { number: 79, state: 'OPEN', labels: ['role:machine-learning-engineer','status:in-progress'] }, childIssue: { number: 84, state: 'CLOSED', labels: ['phase:07-chapter-blueprints','role:machine-learning-engineer','status:done'] } } },
+    runtime: { git: { branch: 'main', clean: true, dirtyPaths: [], head: 'c'.repeat(40), remoteMain: 'c'.repeat(40), activationCheckpoint }, github: { rootIssue: { number: 79, state: 'OPEN', labels: ['role:machine-learning-engineer','status:in-progress'] }, childIssue: { number: 84, state: 'CLOSED', labels: ['phase:07-chapter-blueprints','role:machine-learning-engineer','status:done'] } } },
   };
   bundle.verification = buildExpectedVerification(bundle);
   const verificationText = `${JSON.stringify(bundle.verification, null, 2)}\n`;
@@ -887,6 +904,26 @@ function makeAcceptedRepairBundle() {
   return rehashBundle(bundle);
 }
 
+function makeAcceptedTask10RepairBundle() {
+  const bundle = makePreCloseBundle();
+  const review = bundle.reviews.find((item) => item.task === 'TASK-10');
+  const repairPath = `${role}/reviews/phase-07/task-10-hostile-integration-repair.md`;
+  const repairText = '# Task 10 directed repair\n\nThe bounded hostile-integration findings were repaired and returned to the same reviewer.\n';
+  bundle.files[review.path].text = bundle.files[review.path].text.replace(
+    '\nPHASE07-REVIEW-RECORD-START',
+    '\nSPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\n\nThe directed repair closes every historical finding.\n\nPHASE07-REVIEW-RECORD-START',
+  );
+  bundle.files[repairPath] = { text: repairText, sha256: sha256(repairText) };
+  review.repairPath = repairPath;
+  review.repairSha256 = sha256(repairText);
+  bundle.inventory = EXPECTED_PHASE07_PATHS.filter((item) => item !== `${book}/phase-07-verification.json`
+    && (!item.endsWith('-repair.md') || item === repairPath));
+  bundle.runtime.git.clean = false;
+  bundle.runtime.git.dirtyPaths = expectedActiveDirtyPaths(bundle.inventory);
+  refreshMaterializedReviewRecord(bundle.files, review);
+  return rehashBundle(bundle, { rebuildVerification: false });
+}
+
 function mutateBundle(bundle, mutate, options) {
   mutate(bundle);
   return rehashBundle(bundle, options);
@@ -934,6 +971,14 @@ async function writeFilesystemFixture(rootPath, bundle) {
   }
 }
 
+async function writeDeclaredFilesystemFixture(rootPath, bundle) {
+  for (const [relative, entry] of Object.entries(bundle.files)) {
+    const absolute = path.join(rootPath, relative);
+    await mkdir(path.dirname(absolute), { recursive: true });
+    await writeFile(absolute, entry.text);
+  }
+}
+
 async function withFilesystemFixture(bundleOrFactory, run, prefix = 'mle-phase07-loader-') {
   const fixtureRoot = await mkdtemp(path.join(tmpdir(), prefix));
   try {
@@ -976,6 +1021,7 @@ async function withFilesystemFixture(bundleOrFactory, run, prefix = 'mle-phase07
 test('filesystem-loaded stage-valid canonical register and final-content fixture pass', async () => {
   const bundle = makeBundle();
   assert.equal(validateBlueprintRegister(bundle.register, canonical).ok, true);
+  for (const [item, text] of Object.entries(REAL_BLUEPRINT_TEXTS)) assert.equal(bundle.files[item].text, text, `real package fixture byte equality ${item}`);
   for (const [item, text] of Object.entries(FROZEN_INPUT_TEXTS)) assert.equal(bundle.files[item].sha256, sha256(text), `actual frozen-input hash ${item}`);
   for (const [item, text] of Object.entries(SCRATCH_FIXTURE_TEXTS)) assert.equal(bundle.files[item].sha256, sha256(text), `actual scratch hash ${item}`);
   const bootstrapReview = bundle.reviews[0];
@@ -1037,6 +1083,76 @@ test('filesystem-loaded stage-valid canonical register and final-content fixture
       const result = validatePhase07Bundle(loaded, { stage: 'pre-close' });
       assert.equal(result.ok, true, JSON.stringify(result.errors, null, 2));
     }, 'mle-phase07-pre-close-loader-');
+  });
+
+  await captureHardeningFailure('loader exposes exact lifecycle-real uncommitted paths before checkpoint 1', async () => {
+    const lifecycleFailures = [];
+    for (const [stage, source] of [['pre-hostile', makePreHostileBundle()], ['pre-close', makeAcceptedTask10RepairBundle()]]) {
+      try {
+        const bootstrap = makeBootstrapBundle();
+        const task01Path = `${role}/reviews/phase-07/task-01-bootstrap.md`;
+        bootstrap.inventory.push(task01Path);
+        bootstrap.files[task01Path] = clone(source.files[task01Path]);
+        for (const relative of [`${book}/validate-phase-07.mjs`, `${book}/validate-phase-07.test.mjs`]) {
+          const text = ACTIVATION_CHECKPOINT_ARTIFACT_TEXTS[relative];
+          bootstrap.files[relative] = { text, sha256: sha256(text) };
+        }
+        await withFilesystemFixture(bootstrap, async (fixture, gitHistory) => {
+          await writeDeclaredFilesystemFixture(fixture, source);
+          const expectedDirtyPaths = expectedActiveDirtyPaths(source.inventory);
+          const status = spawnSync('git', ['status','--porcelain','--untracked-files=all'], { cwd: fixture, encoding: 'utf8' });
+          assert.equal(status.status, 0, status.stderr);
+          const actualStatusRecords = status.stdout.split('\n').filter(Boolean).sort();
+          const modifiedTracked = new Set([`${book}/validate-phase-07.mjs`, `${book}/validate-phase-07.test.mjs`]);
+          const expectedStatusRecords = expectedDirtyPaths.map((relative) => `${modifiedTracked.has(relative) ? ' M' : '??'} ${relative}`).sort();
+          assert.deepEqual(actualStatusRecords, expectedStatusRecords, `${stage} fixture must preserve modified versus untracked status kinds`);
+          const actualDirtyPaths = actualStatusRecords.map((line) => line.slice(3)).sort();
+          assert.deepEqual(actualDirtyPaths, expectedDirtyPaths, `${stage} fixture must mirror the d50a07d tracked/untracked Phase 07 projection`);
+          assert.equal(actualDirtyPaths.includes(task01Path), false, `${stage} Task 01 review is already tracked and clean`);
+          assert.equal(actualDirtyPaths.includes(`${book}/validate-phase-07.mjs`), true, `${stage} repaired validator is modified`);
+          assert.equal(actualDirtyPaths.includes(`${book}/validate-phase-07.test.mjs`), true, `${stage} repaired tests are modified`);
+          if (stage === 'pre-close') assert.equal(actualDirtyPaths.includes(`${role}/reviews/phase-07/task-10-hostile-integration-repair.md`), true, 'pre-close declared Task 10 repair is untracked');
+
+          const runtime = clone(source.runtime);
+          runtime.git.head = gitHistory.head;
+          runtime.git.remoteMain = gitHistory.head;
+          runtime.git.clean = false;
+          delete runtime.git.dirtyPaths;
+          const loaded = await loadPhase07Bundle(fixture, { runtime });
+          assert.equal(loaded.runtime.git.branch, 'main');
+          assert.equal(loaded.runtime.git.head, loaded.runtime.git.remoteMain);
+          assert.equal(loaded.runtime.git.clean, false);
+          assert.deepEqual(loaded.runtime.git.dirtyPaths, expectedDirtyPaths, `${stage} loader must expose exact dirtyPaths`);
+          const accepted = validatePhase07Bundle(loaded, { stage });
+          assert.equal(accepted.ok, true, JSON.stringify(accepted.errors, null, 2));
+
+          for (const mutate of [
+            (candidate) => { candidate.runtime.git.dirtyPaths.pop(); },
+            (candidate) => { candidate.runtime.git.dirtyPaths.push(`${book}/validate-phase-07.mjs`); candidate.runtime.git.dirtyPaths.sort(); },
+            (candidate) => { candidate.runtime.git.clean = true; },
+          ]) {
+            const drift = clone(loaded); mutate(drift);
+            expectCode(validatePhase07Bundle(drift, { stage }), 'GIT_ACTIVE');
+          }
+
+          const outside = 'notes/phase07-outside-allowlist.txt';
+          await mkdir(path.dirname(path.join(fixture, outside)), { recursive: true });
+          await writeFile(path.join(fixture, outside), 'outside lifecycle allowlist\n');
+          const outsideLoaded = await loadPhase07Bundle(fixture, { runtime });
+          assert.equal(outsideLoaded.runtime.git.dirtyPaths.includes(outside), true, 'loader must expose dirty files outside its content inventory');
+          expectCode(validatePhase07Bundle(outsideLoaded, { stage }), 'GIT_ACTIVE');
+
+          const missingPath = expectedDirtyPaths.find((relative) => relative.endsWith('/blueprints/chapter-21.md'));
+          assert.equal(typeof missingPath, 'string');
+          await rm(path.join(fixture, missingPath));
+          const missingLoaded = await loadPhase07Bundle(fixture, { runtime });
+          expectCode(validatePhase07Bundle(missingLoaded, { stage }), 'PATH_BOUNDARY');
+        }, `mle-phase07-${stage}-dirty-loader-`);
+      } catch (error) {
+        lifecycleFailures.push(`${stage}: ${error?.stack ?? error}`);
+      }
+    }
+    assert.deepEqual(lifecycleFailures, [], lifecycleFailures.join('\n\n'));
   });
 
   await captureHardeningFailure('loader inventories and rejects discovered unexpected paths', async () => {
@@ -1496,12 +1612,73 @@ test('chapter and furniture Markdown projections must deep-equal the register', 
   expectCode(validatePhase07Bundle(missingHeading, { stage: 'final-content' }), 'CHAPTER_MARKDOWN_CONTRACT');
   const reordered = mutateFileText(makeBundle(), CHAPTER_PATHS[0], (text) => swapTextOnce(text, '## Observable objectives', '## Owned decision and retained authority'));
   expectCode(validatePhase07Bundle(reordered, { stage: 'final-content' }), 'CHAPTER_MARKDOWN_CONTRACT');
-  const grammar = mutateFileText(makeBundle(), CHAPTER_PATHS[0], (text) => text.replace('Bench Sheet', 'Worksheet'));
-  expectCode(validatePhase07Bundle(grammar, { stage: 'final-content' }), 'CHAPTER_MARKDOWN_CONTRACT');
+  const markdownHardeningFailures = [];
+  for (const [name, mutate] of [
+    ['visible Bench Setup heading is required', (text) => text.replace('\n### Bench Setup\n', '\nBench Setup\n')],
+    ['visible Bench Sheet block is required', (text) => text.replace(/\n### Bench Sheet\n[\s\S]*?(?=\n### Qualification Gate\n)/, '')],
+    ['visible Qualification Gate heading is required', (text) => text.replace('\n### Qualification Gate\n', '\nQualification Gate\n')],
+    ...['state and dossier delta','authority route','next evidence']
+      .map((element) => [`visible ${element} label is required`, (text) => text.replace(new RegExp(`^\\| ${element} \\|.*\\n`, 'm'), '')]),
+    ['labeled content may not become an H3', (text) => text.replace('| authority route |', '### authority route\n\n| authority route |')],
+    ['an eighteenth H2 is prohibited', (text) => text.replace('\nPHASE07-CHAPTER-PROJECTION-START', '\n## Unapproved eighteenth heading\n\nDrift.\n\nPHASE07-CHAPTER-PROJECTION-START')],
+    ['a duplicate H2 is prohibited', (text) => text.replace('\nPHASE07-CHAPTER-PROJECTION-START', '\n## Observable objectives\n\nDuplicate.\n\nPHASE07-CHAPTER-PROJECTION-START')],
+  ]) {
+    try {
+      const drift = mutateFileText(makeBundle(), CHAPTER_PATHS[0], mutate);
+      expectCode(validatePhase07Bundle(drift, { stage: 'final-content' }), 'CHAPTER_MARKDOWN_CONTRACT');
+    } catch (error) {
+      markdownHardeningFailures.push(`${name}: ${error?.message ?? error}`);
+    }
+  }
   const report = mutateFileText(makeBundle(), `${book}/blueprints/verification-report.md`, () => 'accepted\n');
   expectCode(validatePhase07Bundle(report, { stage: 'final-content' }), 'REPORT_HANDOFF_CONTRACT');
   const handoff = mutateFileText(makeBundle(), `${book}/blueprints/phase-08-handoff.md`, () => 'Phase 08 active.\n');
   expectCode(validatePhase07Bundle(handoff, { stage: 'final-content' }), 'REPORT_HANDOFF_CONTRACT');
+  const semanticHardeningFailures = [];
+  const reportPath = `${book}/blueprints/verification-report.md`;
+  const handoffPath = `${book}/blueprints/phase-08-handoff.md`;
+  const exactSemanticMutations = [
+    [reportPath, 'report accepted chapter count', (text) => text.replace('21 accepted chapter projections', '20 accepted chapter projections')],
+    ...[
+      ['7 parts', '6 parts'], ['21 milestones', '20 milestones'], ['63 claim-teaching records', '62 claim-teaching records'],
+      ['160 source-claim uses', '159 source-claim uses'], ['12 case records', '11 case records'], ['168 sections', '167 sections'],
+      ['42 deterministic labs', '41 deterministic labs'], ['21 assessments', '20 assessments'],
+      ['105 five-port assertions', '104 five-port assertions'], ['25 visuals', '24 visuals'],
+      ['21 Phase 08 handoffs', '20 Phase 08 handoffs'],
+    ].map(([before, after]) => [reportPath, `report canonical count ${before}`, (text) => text.replace(before, after)]),
+    [reportPath, 'report primary teaching identity', (text) => text.replace('Each chapter retains exactly one primary teaching section per claim.', 'Each chapter may retain two primary teaching sections per claim.')],
+    [reportPath, 'report dossier seam identity', (text) => text.replace('The CH07 to CH08 and CH14 to CH15 seams preserve exact incoming evidence and dossier identity.', 'The chapter seams may repair missing evidence.')],
+    [reportPath, 'report terminal dossier identity', (text) => text.replace('Chapter 21 reaches BL-20 and REVIEWED', 'Chapter 21 reaches BL-19 and RETIRED')],
+    [reportPath, 'report visual count identity', (text) => text.replace('The four ImageGen candidates MLE-F05.1, MLE-F14.1, MLE-F16.1, and MLE-F18.1 are reserved only', 'Three ImageGen candidates are reserved only')],
+    [reportPath, 'report furniture count identity', (text) => text.replace('10 opening items, seven five-obligation part gates, seven appendices, five closing items, About Komal', '9 opening items, six part gates, six appendices, four closing items')],
+    [reportPath, 'report stop rule', (text) => text.replace('No manuscript, asset, code, publication, course, Abhyaas, certification, second-volume, or next-role output is authorized. ', '')],
+    [reportPath, 'report Phase 08 status', (text) => text.replace('Phase 08 remains inactive pending accepted Phase 07 closure.', 'Phase 08 may begin before Phase 07 closes.')],
+    [handoffPath, 'handoff inactive gate', (text) => text.replace('Phase 08 remains inactive. This record is a complete writer-facing handoff, not authorization to begin manuscript production.', 'Phase 08 is active and manuscript production is authorized.')],
+    [handoffPath, 'handoff 21-chapter identity', (text) => text.replace('all 21 chapter blueprints', '20 selected chapter blueprints')],
+    [handoffPath, 'handoff author identity', (text) => text.replace('Komal Nakrani as author', 'a replacement author')],
+    [handoffPath, 'handoff design identity', (text) => text.replace('the Learning Systems Test Bench design system', 'an unspecified design system')],
+    [handoffPath, 'handoff format identity', (text) => text.replace('the screen-first 7 by 10 inch format', 'an unspecified format')],
+    [handoffPath, 'handoff chapter production counts', (text) => text.replace('eight-section production sequence, two deterministic labs, one assessment', 'seven-section production sequence, one deterministic lab, two assessments')],
+    [handoffPath, 'handoff furniture counts', (text) => text.replace('all ten Bench Zero items, all seven part openers and Qualification Gates, seven appendices, five closing dossier items including About Komal', 'nine Bench Zero items, six part openers, six appendices, and four closing items')],
+    [handoffPath, 'handoff visual identity', (text) => text.replace('the four reserved ImageGen candidates ungenerated', 'three ImageGen candidates generated')],
+    [handoffPath, 'handoff currentness rule', (text) => text.replace('Recheck every volatile source or mechanism on its recorded trigger.', 'Assume every source remains current.')],
+    [handoffPath, 'handoff truth and authority rule', (text) => text.replace('Preserve every public-case limitation and all adjacent-authority routes.', 'Discard public-case limitations and authority routes.')],
+    [handoffPath, 'handoff prohibited claims', (text) => text.replace('Do not claim real training, production deployment, independent approval, benchmark outcomes, or business effects from synthetic labs.', 'Synthetic labs prove production and business outcomes.')],
+    [handoffPath, 'handoff exact activation preconditions', (text) => text.replace('Manuscript work begins only after Phase 07 final verification, child closure, synchronized state, and an explicitly activated Phase 08 child.', 'Manuscript work may begin immediately.')],
+  ];
+  for (const [relative, name, mutate] of exactSemanticMutations) {
+    try {
+      const drift = mutateFileText(makeBundle(), relative, mutate);
+      expectCode(validatePhase07Bundle(drift, { stage: 'final-content' }), 'REPORT_HANDOFF_CONTRACT');
+    } catch (error) {
+      semanticHardeningFailures.push(`${name}: ${error?.message ?? error}`);
+    }
+  }
+  const projectionHardeningFailures = [
+    ...markdownHardeningFailures.map((failure) => `chapter: ${failure}`),
+    ...semanticHardeningFailures.map((failure) => `report/handoff: ${failure}`),
+  ];
+  assert.deepEqual(projectionHardeningFailures, [], `projection hardening failures:\n${projectionHardeningFailures.join('\n')}`);
 });
 
 test('review chains require exact verdicts current bindings and directed repair', () => {
@@ -1564,6 +1741,38 @@ test('review chains require exact verdicts current bindings and directed repair'
   expectCode(validatePhase07Bundle(missingRepair, { stage: 'final-content' }), 'REVIEW_CHAIN');
   const staleReplacement = clone(acceptedRepair); staleReplacement.runtime.git.activationCheckpoint = 'e'.repeat(40); staleReplacement.activationSnapshot.checkpoint = 'e'.repeat(40);
   expectCode(validatePhase07Bundle(staleReplacement, { stage: 'final-content' }), 'REVIEW_CHAIN');
+  const acceptedTask10Repair = makeAcceptedTask10RepairBundle();
+  const task10Review = acceptedTask10Repair.reviews.find((review) => review.task === 'TASK-10');
+  assert.equal(acceptedTask10Repair.inventory.includes(task10Review.repairPath), true, 'declared Task 10 repair must be in the pre-close inventory');
+  assert.equal(task10Review.repairPath in acceptedTask10Repair.files, true, 'declared Task 10 repair must have filesystem bytes');
+  assert.equal(acceptedTask10Repair.runtime.git.dirtyPaths.includes(task10Review.repairPath), true, 'declared Task 10 repair must be lifecycle-real dirt');
+  assert.equal(acceptedTask10Repair.runtime.git.clean, false);
+  const acceptedTask10RepairResult = validatePhase07Bundle(acceptedTask10Repair, { stage: 'pre-close' });
+  assert.equal(acceptedTask10RepairResult.ok, true, JSON.stringify(acceptedTask10RepairResult.errors, null, 2));
+  const missingTask10Repair = clone(acceptedTask10Repair);
+  delete missingTask10Repair.files[task10Review.repairPath];
+  missingTask10Repair.inventory = missingTask10Repair.inventory.filter((item) => item !== task10Review.repairPath);
+  missingTask10Repair.runtime.git.dirtyPaths = missingTask10Repair.runtime.git.dirtyPaths.filter((item) => item !== task10Review.repairPath);
+  expectCode(validatePhase07Bundle(missingTask10Repair, { stage: 'pre-close' }), 'REVIEW_CHAIN');
+  const orphanTask10Repair = makePreCloseBundle();
+  orphanTask10Repair.files[task10Review.repairPath] = clone(acceptedTask10Repair.files[task10Review.repairPath]);
+  orphanTask10Repair.inventory = EXPECTED_PHASE07_PATHS.filter((item) => item !== `${book}/phase-07-verification.json`
+    && (!item.endsWith('-repair.md') || item === task10Review.repairPath));
+  orphanTask10Repair.runtime.git.clean = false;
+  orphanTask10Repair.runtime.git.dirtyPaths = expectedActiveDirtyPaths(orphanTask10Repair.inventory);
+  expectCode(validatePhase07Bundle(orphanTask10Repair, { stage: 'pre-close' }), 'REVIEW_CHAIN');
+  const staleTask10Repair = clone(acceptedTask10Repair);
+  staleTask10Repair.files[task10Review.repairPath].text += 'stale bytes\n';
+  staleTask10Repair.files[task10Review.repairPath].sha256 = sha256(staleTask10Repair.files[task10Review.repairPath].text);
+  expectCode(validatePhase07Bundle(staleTask10Repair, { stage: 'pre-close' }), 'REVIEW_CHAIN');
+  const preClose = makePreCloseBundle();
+  const hostileReview = preClose.reviews.find((review) => review.task === 'TASK-10');
+  const digestBinding = hostileReview.boundArtifacts.find((binding) => binding.path === 'digest:pre-close-path-package');
+  assert.equal(digestBinding.sha256, independentlyRecomputePreClosePackageDigest(preClose), 'Task 10 fixture digest must be independently recomputed from actual pre-close bytes');
+  digestBinding.sha256 = '0'.repeat(64);
+  preClose.activationSnapshot.bindingHashes['digest:pre-close-path-package'] = '0'.repeat(64);
+  refreshMaterializedReviewRecord(preClose.files, hostileReview);
+  expectCode(validatePhase07Bundle(preClose, { stage: 'pre-close' }), 'TASK10_PACKAGE_DIGEST');
 });
 
 test('active and final lifecycle projections reject contradictions', () => {

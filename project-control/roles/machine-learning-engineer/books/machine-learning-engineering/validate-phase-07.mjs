@@ -46,6 +46,9 @@ export const PHASE07_SCRATCH_PATHS = [
 const BOOTSTRAP_PATHS = [PHASE07_ALLOWED_PATHS[0], PHASE07_ALLOWED_PATHS[1], `${BOOK}/validate-phase-07.mjs`, `${BOOK}/validate-phase-07.test.mjs`];
 const BOOTSTRAP_SCRATCH = PHASE07_SCRATCH_PATHS.slice(0, 3);
 const CLEAN_FINAL_PATHS = PHASE07_ALLOWED_PATHS.filter((item) => !item.endsWith('-repair.md'));
+const ACTIVE_CHECKPOINT_CLEAN_PATHS = new Set([
+  PHASE07_ALLOWED_PATHS[0], PHASE07_ALLOWED_PATHS[1], `${REVIEW}/task-01-bootstrap.md`,
+]);
 const STATE_PATHS = {
   role: `${ROLE}/ROLE-STATE.md`,
   root: `${ROLE}/issues/root.md`,
@@ -155,6 +158,8 @@ const CHAPTER_HEADINGS = [
   'Durable doctrine, volatile context, and re-verification',
   'Originality and adjacent-publication boundary','Phase 08 handoff and evidence manifest',
 ];
+const CHAPTER_H3_HEADINGS = ['Bench Setup','Bench Sheet','Qualification Gate'];
+const BENCH_SHEET_LABELS = ['state and dossier delta','authority route','next evidence'];
 
 const ACTIVATION_STATE_HASHES = {
   [STATE_PATHS.role]: '544b92eeff860af3dcae7515efae5188714826ed3d6c08823538dd19d22542ae',
@@ -461,6 +466,57 @@ function reviewBindings(task, bundle) {
   return [...shared, ...prior, ...FROZEN_INPUT_PATHS, 'digest:pre-close-path-package'];
 }
 
+function preClosePackageDigest(bundle) {
+  const excluded = new Set([
+    VERIFICATION_PATH,
+    `${REVIEW}/task-10-hostile-integration.md`,
+    `${REVIEW}/task-10-hostile-integration-repair.md`,
+  ]);
+  const records = bundle.inventory.filter((relative) => !excluded.has(relative)).map((relative) => ({
+    path: relative,
+    sha256: hash(bundle.files?.[relative]?.text ?? ''),
+  }));
+  return hash(JSON.stringify(records));
+}
+
+function validateTask10PackageDigest(bundle) {
+  const review = bundle.reviews?.find((item) => item.task === 'TASK-10');
+  if (!review) return pass();
+  const expected = preClosePackageDigest(bundle);
+  const binding = review.boundArtifacts?.find((item) => item.path === 'digest:pre-close-path-package');
+  if (binding?.sha256 !== expected || bundle.activationSnapshot?.bindingHashes?.['digest:pre-close-path-package'] !== expected) return fail('TASK10_PACKAGE_DIGEST');
+  return pass();
+}
+
+function validateReportHandoff(report, handoff) {
+  const reportContracts = [
+    '21 accepted chapter projections',
+    '7 parts', '21 milestones', '63 claim-teaching records', '160 source-claim uses', '12 case records',
+    '168 sections', '42 deterministic labs', '21 assessments', '105 five-port assertions', '25 visuals', '21 Phase 08 handoffs',
+    'Each chapter retains exactly one primary teaching section per claim.',
+    'The CH07 to CH08 and CH14 to CH15 seams preserve exact incoming evidence and dossier identity.',
+    'Chapter 21 reaches BL-20 and REVIEWED',
+    'The four ImageGen candidates MLE-F05.1, MLE-F14.1, MLE-F16.1, and MLE-F18.1 are reserved only',
+    '10 opening items, seven five-obligation part gates, seven appendices, five closing items, About Komal',
+    'No manuscript, asset, code, publication, course, Abhyaas, certification, second-volume, or next-role output is authorized.',
+    'Phase 08 remains inactive pending accepted Phase 07 closure.',
+  ];
+  const handoffContracts = [
+    'Phase 08 remains inactive. This record is a complete writer-facing handoff, not authorization to begin manuscript production.',
+    'all 21 chapter blueprints', 'Komal Nakrani as author', 'the Learning Systems Test Bench design system',
+    'the screen-first 7 by 10 inch format', 'eight-section production sequence, two deterministic labs, one assessment',
+    'all ten Bench Zero items, all seven part openers and Qualification Gates, seven appendices, five closing dossier items including About Komal',
+    'the four reserved ImageGen candidates ungenerated',
+    'Recheck every volatile source or mechanism on its recorded trigger.',
+    'Preserve every public-case limitation and all adjacent-authority routes.',
+    'Do not claim real training, production deployment, independent approval, benchmark outcomes, or business effects from synthetic labs.',
+    'Manuscript work begins only after Phase 07 final verification, child closure, synchronized state, and an explicitly activated Phase 08 child.',
+  ];
+  return reportContracts.every((contract) => report.includes(contract))
+    && handoffContracts.every((contract) => handoff.includes(contract))
+    && !/Phase 08 active/i.test(handoff);
+}
+
 function temporalEvidence() {
   return {
     temporalPhase05Validator: ['e1705e03389d174cc107af9850cb3cb839f92b1f','1b3d92809cbe2279dda0e5782083882936874f4f1a458c86423593548fad8132','2111','tracked bytes only','ordinary empty node_modules','node project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-05.mjs --stage=final','7 parts, 21 chapters, 21 milestones, trace 8/22/17/10, 12 domains, 5 ports, 40 contexts, 35 exits, 5 cases, 5 reviews'].join(' | '),
@@ -606,8 +662,8 @@ function pathBoundary(bundle, stage) {
   const declaredRepairs = new Set((bundle.reviews ?? []).map((item) => item.repairPath).filter(Boolean));
   const finalExpected = PHASE07_ALLOWED_PATHS.filter((item) => !item.endsWith('-repair.md') || declaredRepairs.has(item));
   const expected = stage === 'bootstrap' ? BOOTSTRAP_PATHS
-    : stage === 'pre-hostile' ? CLEAN_FINAL_PATHS.filter((item) => item !== VERIFICATION_PATH && !item.endsWith('/task-10-hostile-integration.md'))
-      : stage === 'pre-close' ? CLEAN_FINAL_PATHS.filter((item) => item !== VERIFICATION_PATH)
+    : stage === 'pre-hostile' ? finalExpected.filter((item) => item !== VERIFICATION_PATH && !item.includes('/task-10-hostile-integration'))
+      : stage === 'pre-close' ? finalExpected.filter((item) => item !== VERIFICATION_PATH)
         : finalExpected;
   if (stage === 'bootstrap') {
     if (!same(bundle.inventory, expected) || !same(bundle.scratchInventory, BOOTSTRAP_SCRATCH)) return fail('BOOTSTRAP_OUTPUT_PREMATURE');
@@ -616,6 +672,15 @@ function pathBoundary(bundle, stage) {
     if (bundle.inventory.some((item) => !permitted.has(item)) || bundle.scratchInventory.some((item) => !PHASE07_SCRATCH_PATHS.includes(item)) || (bundle.symlinks ?? []).length) return fail('PATH_BOUNDARY');
     if (!same(bundle.inventory, expected)) return fail('PATH_BOUNDARY');
   }
+  return pass();
+}
+
+function pathBoundaryPreflight(bundle) {
+  const permitted = new Set(PHASE07_ALLOWED_PATHS);
+  if (bundle.inventory.some((item) => !permitted.has(item))
+      || bundle.scratchInventory.some((item) => !PHASE07_SCRATCH_PATHS.includes(item))
+      || (bundle.symlinks ?? []).length
+      || CHAPTER_PATHS.some((item) => !bundle.inventory.includes(item))) return fail('PATH_BOUNDARY');
   return pass();
 }
 
@@ -679,6 +744,7 @@ export function validatePhase07Bundle(bundle, { stage = 'pre-hostile' } = {}) {
 
   result = validateFrozenInputIdentity(bundle); if (!result.ok) return result;
   if (stage === 'final') { result = validateActivationCheckpoint(bundle); if (!result.ok) return result; }
+  result = pathBoundaryPreflight(bundle); if (!result.ok) return result;
 
   for (const chapter of bundle.register?.chapters ?? []) {
     const relative = CHAPTER_PATHS[chapter.order - 1]; const parsed = parseProjection(bundle.files?.[relative]?.text);
@@ -690,24 +756,35 @@ export function validatePhase07Bundle(bundle, { stage = 'pre-hostile' } = {}) {
   result = validateBlueprintRegister(bundle.register, bundle.canonical); if (!result.ok) return result;
   for (const relative of CHAPTER_PATHS) {
     const text = bundle.files?.[relative]?.text ?? '';
-    let cursor = -1;
-    for (const heading of CHAPTER_HEADINGS) { const next = text.indexOf(`## ${heading}`); if (next <= cursor) return fail('CHAPTER_MARKDOWN_CONTRACT'); cursor = next; }
-    for (const literal of ['Bench Setup','Bench Sheet','Qualification Gate','state and dossier delta','authority route','next evidence']) if (!text.includes(literal)) return fail('CHAPTER_MARKDOWN_CONTRACT');
+    const h2 = [...text.matchAll(/^## ([^\r\n]+)\r?$/gm)].map((match) => match[1].trim());
+    const h3 = [...text.matchAll(/^### ([^\r\n]+)\r?$/gm)].map((match) => match[1].trim());
+    const grammarStart = text.indexOf('## Bench Setup, Bench Sheet, and Qualification Gate');
+    const grammarEnd = grammarStart < 0 ? -1 : text.indexOf('\n## ', grammarStart + 3);
+    const grammar = grammarStart < 0 ? '' : text.slice(grammarStart, grammarEnd < 0 ? text.length : grammarEnd);
+    const grammarH3 = [...grammar.matchAll(/^### ([^\r\n]+)\r?$/gm)].map((match) => match[1].trim());
+    const labelsVisible = BENCH_SHEET_LABELS.every((label) => new RegExp(`^\\|(?:[^|\\r\\n]*\\|)* ${label} \\|`, 'm').test(text));
+    if (!same(h2, CHAPTER_HEADINGS) || !same(grammarH3, CHAPTER_H3_HEADINGS)
+        || BENCH_SHEET_LABELS.some((label) => h3.includes(label)) || !labelsVisible) return fail('CHAPTER_MARKDOWN_CONTRACT');
   }
   const report = bundle.files?.[`${BOOK}/blueprints/verification-report.md`]?.text ?? '';
   const handoff = bundle.files?.[`${BOOK}/blueprints/phase-08-handoff.md`]?.text ?? '';
-  if (!/Register and projections/i.test(report) || !/Boundaries/i.test(report) || !/No manuscript, asset, code, publication, course, Abhyaas, certification, second-volume, or next-role output is authorized/i.test(report)
-      || !/Phase 08 remains inactive/i.test(handoff) || /Phase 08 active/i.test(handoff)) return fail('REPORT_HANDOFF_CONTRACT');
+  if (!validateReportHandoff(report, handoff)) return fail('REPORT_HANDOFF_CONTRACT');
 
   const tasks = stage === 'pre-hostile' ? REVIEW_TASKS.slice(0,5) : REVIEW_TASKS;
   result = validateReviewChain(bundle, tasks); if (!result.ok) return result;
   if (stage === 'pre-close' && bundle.verification) return fail('VERIFICATION_PREMATURE');
   if ((stage === 'final-content' || stage === 'final') && !bundle.verification) return fail('VERIFICATION_MISSING');
   result = pathBoundary(bundle, stage); if (!result.ok) return result;
+  result = validateTask10PackageDigest(bundle); if (!result.ok) return result;
   if (stage === 'pre-hostile' || stage === 'pre-close') {
     result = validateActiveState(bundle); if (!result.ok) return result;
     result = githubActive(bundle); if (!result.ok) return result;
-    if (bundle.runtime?.git?.branch !== 'main' || bundle.runtime?.git?.clean !== true || bundle.runtime?.git?.head !== bundle.runtime?.git?.remoteMain) return fail('GIT_ACTIVE');
+    const expectedDirtyPaths = bundle.inventory.filter((item) => !ACTIVE_CHECKPOINT_CLEAN_PATHS.has(item)).sort();
+    const dirtyPaths = bundle.runtime?.git?.dirtyPaths ?? [];
+    const validWorktree = bundle.runtime?.git?.clean === true
+      ? same(dirtyPaths, [])
+      : bundle.runtime?.git?.clean === false && same(dirtyPaths, expectedDirtyPaths);
+    if (bundle.runtime?.git?.branch !== 'main' || bundle.runtime?.git?.head !== bundle.runtime?.git?.remoteMain || !validWorktree) return fail('GIT_ACTIVE');
     return pass(COUNT_VALUES);
   }
 
@@ -752,7 +829,13 @@ function runtimeFromGitHub(root) {
   const run = (command, args) => execFileSync(command, args, { cwd: root, encoding: 'utf8' }).trim();
   const issue = (number) => { const data = JSON.parse(run('gh',['issue','view',String(number),'--json','number,state,labels,body'])); return { number:data.number,state:data.state,labels:data.labels.map((item) => item.name).sort(),body:data.body,bodySha256:hash(data.body) }; };
   const head = run('git',['rev-parse','HEAD']);
-  return { git:{ branch:run('git',['branch','--show-current']),clean:run('git',['status','--porcelain']) === '',head,remoteMain:run('git',['ls-remote','origin','refs/heads/main']).split(/\s+/)[0],activationCheckpoint:head }, github:{rootIssue:issue(79),childIssue:issue(84)} };
+  const dirtyPaths = gitDirtyPaths(root);
+  return { git:{ branch:run('git',['branch','--show-current']),clean:dirtyPaths.length === 0,dirtyPaths,head,remoteMain:run('git',['ls-remote','origin','refs/heads/main']).split(/\s+/)[0],activationCheckpoint:head }, github:{rootIssue:issue(79),childIssue:issue(84)} };
+}
+
+function gitDirtyPaths(root) {
+  const status = execFileSync('git', ['status','--porcelain','--untracked-files=all'], { cwd: root, encoding: 'utf8' });
+  return status.split(/\r?\n/).filter(Boolean).map((line) => line.slice(3)).sort();
 }
 
 function activationCheckpointInHistory(root, checkpoint, head) {
@@ -812,7 +895,12 @@ export async function loadPhase07Bundle(root, { runtime } = {}) {
   const state = Object.fromEntries(Object.entries(STATE_PATHS).map(([name,relative]) => [name,files[relative]?.text ?? '']));
   const loadedRuntime = structuredClone(runtime ?? runtimeFromGitHub(root));
   if (bootstrapRecord?.activationCheckpoint) loadedRuntime.git.activationCheckpoint = bootstrapRecord.activationCheckpoint;
-  if (existsSync(path.join(root, '.git'))) loadedRuntime.git.activationCheckpointValid = activationCheckpointInHistory(root, loadedRuntime.git.activationCheckpoint, loadedRuntime.git.head);
+  if (existsSync(path.join(root, '.git'))) {
+    const dirtyPaths = gitDirtyPaths(root);
+    loadedRuntime.git.clean = dirtyPaths.length === 0;
+    loadedRuntime.git.dirtyPaths = dirtyPaths;
+    loadedRuntime.git.activationCheckpointValid = activationCheckpointInHistory(root, loadedRuntime.git.activationCheckpoint, loadedRuntime.git.head);
+  }
   for (const issue of Object.values(loadedRuntime.github ?? {})) {
     if (typeof issue.body === 'string') issue.bodySha256 = hash(issue.body);
   }
