@@ -95,8 +95,8 @@
 
 Machine Learning Engineer Phase 07 chapter blueprints and frozen figure contracts: complete.
 Last completed child: #84.
-Active child: none.
-Phase 08 original manuscript and deterministic companion production: sole next gate, inactive.
+Active child: #85.
+Phase 08 original manuscript and deterministic companion production: active; bootstrap review required before production.
 Catalog position 6: not started.
 
 The accepted seven-part, twenty-one-chapter architecture for *Machine Learning
@@ -104,9 +104,10 @@ Engineering: From Task Contract to Operating Evidence* is frozen under the
 `Learning Systems Test Bench` system. The accepted Phase 07 package contains
 twenty-one chapter blueprints, one strict register, whole-book furniture, an
 inactive Phase 08 handoff, and a hostile-QA-clean review chain. Phase 07 is
-complete and #84 is closed `status:done`. Do not begin Phase 08 manuscript
-production, generated visuals, a second volume, another role, a course, or
-Abhyaas until Phase 08 is explicitly planned and activated.
+complete and #84 is closed `status:done`. Phase 08 is planned and active under
+#85, but manuscript and companion production are blocked until the Phase 08
+validator/test bootstrap and independent Task 01 review pass. Generated
+visuals, a second volume, another role, a course, and Abhyaas remain inactive.
 
 ## Resume instructions
 
@@ -114,5 +115,6 @@ Inspect Git status and GitHub state, then read closed #84, open root #79, the
 Phase 07 verification and inactive Phase 08 handoff, Machine Learning Engineer
 role state, accepted blueprints, Phase 06 verification, accepted Phase 05
 architecture and verification, Phase 04 decision, Phase 01 evidence, approved
-design, and the approved Phase 07 plan. Phase 07 is complete. Phase 08 is the
-sole next gate and inactive. Catalog position 6 and Abhyaas remain inactive.
+design, the approved Phase 07 plan, and the approved Phase 08 design/plan/review
+chain. Phase 07 is complete. Phase 08 is active under #85 at the bootstrap gate.
+Catalog position 6 and Abhyaas remain inactive.
