@@ -122,3 +122,48 @@ failures, zero skipped, and zero todo.
 Production remains blocked until the original reviewer independently binds this
 iteration, appends the final accepted machine record to the base review, and the
 accepted review commit is pushed.
+
+## Same-reviewer repair iteration 3
+
+The next hostile review is preserved at base-review SHA-256
+`4ff8583aed89262924cceb10a4ba014f82092ad02a75ddfbb667e025d1c12eb3`.
+It retained one companion trust-boundary family: transitive imported modules
+could perform an effect before the runner reported denial, and dossier history
+was regenerated rather than proven immutable on disk.
+
+### Terminal replacement identities
+
+- Validator SHA-256:
+  `0c58850f983b2c65c19f8bd6dcfed871ea3178d2a9c5cfd2d50f55dc3a496789`
+- Test SHA-256:
+  `81210a75f34adbe317cb0873dfba42ab4aaacbccf417c1aa8e093b3c3d15b678`
+
+### Terminal test-first evidence
+
+The new RED against the prior iteration-2 validator runs under Node `v22.23.1`
+at exactly 200 tests, 191 passes, 9 failures, zero skipped, and zero todo. The
+final direct contract passes 200/200. Its focused embedded reconstruction gate
+passes 1/1 while proving the activation-hardening validator/test pairing at
+exactly 200 tests, 167 passes, 33 failures. The direct and reconstruction gates
+complete together in 25.3 seconds. The live bootstrap exits zero.
+
+### Companion trust-boundary closure
+
+- The complete companion runs in a permission-restricted isolated Node child.
+  Instrumented guards cover child process, network, environment-secret, and
+  unauthorized filesystem attempts across transitive imports and record the
+  attempt even if the runner later throws `EFFECT_DENIED`.
+- The complete relative module graph is inspected for cloud, model, and external
+  imports; environment input is sanitized rather than trusted.
+- All five ports materialize two independent `BL-00` through `BL-20` chains in
+  fresh outside-repository targets seeded by the exact loaded `BL-ENTRY` bytes.
+- Every expected file is compared as complete canonical JSON bytes and SHA-256,
+  including prior-hash links, dispositions, transitions, and reopen triggers.
+- Pre/post snapshots across positive and negative runs prove every earlier
+  target file remains byte-identical; a negative path cannot rewrite accepted
+  history.
+
+This is the final candidate for same-reviewer Task 01 acceptance. Production
+remains blocked until the reviewer binds these exact identities and the final
+repair SHA, appends exact PASS/APPROVED to the historical base review, and that
+accepted review is committed and pushed.

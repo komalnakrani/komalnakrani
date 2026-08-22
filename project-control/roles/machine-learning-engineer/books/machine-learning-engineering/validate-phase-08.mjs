@@ -2,8 +2,9 @@
 
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { readFile, readdir } from 'node:fs/promises';
-import { dirname, isAbsolute, relative, resolve, sep } from 'node:path';
+import { mkdtemp, readFile, readdir, realpath } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const BOOK = 'project-control/roles/machine-learning-engineer/books/machine-learning-engineering';
@@ -603,12 +604,22 @@ function validateLoadedArtifacts(snapshot, stage) {
   if (presentCompanion.length > 0 && presentCompanion.length !== COMPANION_PATHS.length) {
     errors.push(error('COMPANION_INVENTORY', `companion inventory is partial: ${presentCompanion.length}/${COMPANION_PATHS.length}`));
   }
+  let expectedPriorHash = snapshot.files[`${BOOK}/companion/fixtures/bl-entry.json`]?.sha256 ?? null;
+  const expectedFields = ['disposition', 'incomingState', 'milestoneId', 'outgoingState', 'priorHash'];
   for (let index = 0; index < EXPECTED_FILES.length; index += 1) {
     const path = EXPECTED_FILES[index];
     if (!snapshot.files[path]) continue;
     try {
       const record = JSON.parse(snapshot.files[path].text);
-      if (record.milestoneId !== EXPECTED_DOSSIERS[index]) errors.push(error('COMPANION_EXPECTED_RECORD', `expected ${EXPECTED_DOSSIERS[index]}`, path));
+      const complete = expectedFields.every((field) => Object.hasOwn(record, field))
+        && record.disposition === 'PASS'
+        && typeof record.incomingState === 'string'
+        && typeof record.outgoingState === 'string'
+        && /^[a-f0-9]{64}$/.test(record.priorHash);
+      if (!complete || record.milestoneId !== EXPECTED_DOSSIERS[index] || snapshot.files[path].text !== canonicalJson(record) || (expectedPriorHash && record.priorHash !== expectedPriorHash)) {
+        errors.push(error('COMPANION_EXPECTED_RECORD', `expected complete canonical ${EXPECTED_DOSSIERS[index]} record with exact prior hash`, path));
+      }
+      expectedPriorHash = snapshot.files[path].sha256;
     } catch {
       errors.push(error('COMPANION_EXPECTED_RECORD', 'expected dossier record must be valid JSON', path));
     }
@@ -768,7 +779,7 @@ export function validateCompanionBoundary(contract) {
   return errors;
 }
 
-export async function executeCompanionProbe({ runnerPath, repositoryRoot }) {
+async function executeCompanionProbeLegacy({ runnerPath, repositoryRoot }) {
   const errors = [];
   let runnerSource;
   try {
@@ -893,6 +904,303 @@ export async function executeCompanionProbe({ runnerPath, repositoryRoot }) {
   };
 }
 
+const ISOLATED_COMPANION_PROBE = String.raw`
+import childProcess from 'node:child_process';
+import crypto from 'node:crypto';
+import dns from 'node:dns';
+import fs from 'node:fs';
+import http from 'node:http';
+import https from 'node:https';
+import net from 'node:net';
+import tls from 'node:tls';
+import dgram from 'node:dgram';
+import { syncBuiltinESMExports } from 'node:module';
+import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+
+const fsp = fs.promises;
+const safe = {
+  readFile: fsp.readFile.bind(fsp),
+  readdir: fsp.readdir.bind(fsp),
+};
+const input = JSON.parse(fs.readFileSync(0, 'utf8'));
+const attempts = [];
+const errors = [];
+const error = (code, message, pathValue = null) => ({ code, message, ...(pathValue ? { path: pathValue } : {}) });
+const canonicalJson = (value) => {
+  const normalize = (item) => Array.isArray(item)
+    ? item.map(normalize)
+    : item && typeof item === 'object'
+      ? Object.fromEntries(Object.keys(item).sort().map((key) => [key, normalize(item[key])]))
+      : item;
+  return JSON.stringify(normalize(value)) + '\n';
+};
+const sha256 = (bytes) => crypto.createHash('sha256').update(bytes).digest('hex');
+const resolved = (value) => {
+  if (typeof value === 'number') return null;
+  if (value instanceof URL) return path.resolve(fileURLToPath(value));
+  if (Buffer.isBuffer(value)) return path.resolve(value.toString());
+  return typeof value === 'string' ? path.resolve(value) : null;
+};
+const within = (candidate, root) => candidate === root || candidate.startsWith(root + path.sep);
+const runnerRoot = path.dirname(path.resolve(input.runnerPath));
+const probeRoot = path.resolve(input.probeRoot);
+const repositoryRoot = path.resolve(input.repositoryRoot);
+const mark = (family, detail) => {
+  attempts.push({ family, detail: String(detail) });
+  const caught = new Error('guard denied ' + family);
+  caught.code = 'MLE_EFFECT_ATTEMPT';
+  throw caught;
+};
+const guardRead = (value) => {
+  const candidate = resolved(value);
+  if (candidate && !within(candidate, runnerRoot) && !within(candidate, probeRoot) && !within(candidate, repositoryRoot)) mark('filesystem-read', candidate);
+};
+const guardWrite = (value) => {
+  const candidate = resolved(value);
+  if (candidate && !within(candidate, probeRoot)) mark('filesystem-write', candidate);
+};
+const patch = (object, name, family, guard = null) => {
+  const original = object?.[name];
+  if (typeof original !== 'function') return;
+  try {
+    object[name] = function guardedEffect(...args) {
+      if (guard) guard(args);
+      else mark(family, name);
+      return original.apply(this, args);
+    };
+  } catch {}
+};
+for (const name of ['exec','execFile','execFileSync','execSync','fork','spawn','spawnSync']) patch(childProcess, name, 'child-process');
+for (const [object, names, family] of [
+  [http, ['get','request','createServer'], 'network'],
+  [https, ['get','request','createServer'], 'network'],
+  [net, ['connect','createConnection','createServer'], 'network'],
+  [tls, ['connect','createServer'], 'network'],
+  [dgram, ['createSocket'], 'network'],
+  [dns, ['lookup','resolve','resolve4','resolve6','reverse'], 'network'],
+]) for (const name of names) patch(object, name, family);
+if (dns.promises) for (const name of ['lookup','resolve','resolve4','resolve6','reverse']) patch(dns.promises, name, 'network');
+globalThis.fetch = async function guardedFetch() { return mark('network', 'fetch'); };
+
+const writeMethods = ['appendFile','chmod','chown','copyFile','cp','link','lchown','lutimes','mkdir','mkdtemp','rename','rm','rmdir','symlink','truncate','unlink','utimes','writeFile'];
+for (const name of writeMethods) {
+  patch(fsp, name, 'filesystem-write', (args) => {
+    guardWrite(args[0]);
+    if (['copyFile','cp','link','rename','symlink'].includes(name)) guardWrite(args[1]);
+  });
+  patch(fs, name + 'Sync', 'filesystem-write', (args) => {
+    guardWrite(args[0]);
+    if (['copyFile','cp','link','rename','symlink'].includes(name)) guardWrite(args[1]);
+  });
+}
+for (const [object, name] of [[fsp, 'open'], [fs, 'openSync']]) {
+  patch(object, name, 'filesystem-write', (args) => {
+    const flags = args[1] ?? 'r';
+    if (typeof flags === 'string' ? /[wa+]/.test(flags) : flags !== 0) guardWrite(args[0]);
+    else guardRead(args[0]);
+  });
+}
+patch(fs, 'createWriteStream', 'filesystem-write', (args) => guardWrite(args[0]));
+for (const name of ['access','lstat','readFile','readdir','realpath','stat']) {
+  patch(fsp, name, 'filesystem-read', (args) => guardRead(args[0]));
+  patch(fs, name + 'Sync', 'filesystem-read', (args) => guardRead(args[0]));
+}
+patch(fs, 'createReadStream', 'filesystem-read', (args) => guardRead(args[0]));
+syncBuiltinESMExports();
+
+const originalEnv = process.env;
+const safeEnvReads = new Set(['WATCH_REPORT_DEPENDENCIES','NODE_V8_COVERAGE','FORCE_COLOR','NODE_DEBUG','NODE_OPTIONS']);
+Object.defineProperty(process, 'env', {
+  configurable: false,
+  enumerable: true,
+  value: new Proxy(originalEnv, {
+    get(target, property, receiver) {
+      if (typeof property === 'string' && !safeEnvReads.has(property)) mark('environment-secret', property);
+      return Reflect.get(target, property, receiver);
+    },
+    ownKeys() { return mark('environment-secret', 'enumeration'); },
+    getOwnPropertyDescriptor(target, property) {
+      if (typeof property === 'string' && !safeEnvReads.has(property)) mark('environment-secret', property);
+      return Reflect.getOwnPropertyDescriptor(target, property);
+    },
+  }),
+});
+
+const importPattern = /(?:\bimport\s*(?:[^'"()]*?\sfrom\s*)?|\bexport\s+[^'"()]*?\sfrom\s*|\bimport\s*\()\s*['"]([^'"]+)['"]/g;
+const scanned = new Set();
+async function scanModuleGraph(file) {
+  const absolute = path.resolve(file);
+  if (scanned.has(absolute)) return;
+  scanned.add(absolute);
+  if (!within(absolute, runnerRoot)) mark('filesystem-read', absolute);
+  const source = await safe.readFile(absolute, 'utf8');
+  if (/\bimport\s*\(\s*(?!['"])/.test(source)) mark('external-module', 'computed dynamic import in ' + absolute);
+  for (const match of source.matchAll(importPattern)) {
+    const specifier = match[1];
+    if (specifier.startsWith('.') || specifier.startsWith('/')) {
+      await scanModuleGraph(path.resolve(path.dirname(absolute), specifier));
+    } else if (!specifier.startsWith('node:') && !['fs','path','url','crypto','assert','util'].includes(specifier)) {
+      const family = /aws|google-cloud|azure|cloudinary|firebase/i.test(specifier)
+        ? 'cloud-sdk'
+        : /huggingface|openai|anthropic|tensorflow|torch|onnx/i.test(specifier) ? 'model-sdk' : 'external-module';
+      mark(family, specifier);
+    } else if (/^(?:node:)?(?:module|vm|worker_threads|cluster|inspector)$/.test(specifier)) {
+      mark('process-capability', specifier);
+    }
+  }
+}
+
+const transitions = [
+  ['UNORIENTED','ORIENTED'], ['ORIENTED','CONTRACTED'], ['CONTRACTED','CONTRACTED'],
+  ['CONTRACTED','CONTRACTED'], ['CONTRACTED','CONTRACTED'], ['CONTRACTED','ADMISSIBLE'],
+  ['ADMISSIBLE','ADMISSIBLE'], ['ADMISSIBLE','RECONSTRUCTIBLE'], ['RECONSTRUCTIBLE','CANDIDATE'],
+  ['CANDIDATE','CANDIDATE'], ['CANDIDATE','CANDIDATE'], ['CANDIDATE','TECHNICALLY-QUALIFIED'],
+  ['TECHNICALLY-QUALIFIED','TECHNICALLY-QUALIFIED'], ['TECHNICALLY-QUALIFIED','TECHNICALLY-QUALIFIED'],
+  ['TECHNICALLY-QUALIFIED','RELEASABLE'], ['RELEASABLE','OPERABLE'], ['OPERABLE','OBSERVED'],
+  ['OBSERVED','REQUALIFIED'], ['REQUALIFIED','CONTROLLED'], ['CONTROLLED','RETIRED'], ['RETIRED','REVIEWED'],
+];
+const reopenTriggers = [
+  'purpose or intended use',
+  'data labels features or population',
+  'runtime dependencies interface or serving envelope',
+  'authority constraint or permitted use',
+];
+const acceptedBytes = async (target, names) => {
+  const snapshot = new Map();
+  for (const name of names) {
+    try { snapshot.set(name, await safe.readFile(path.join(target, name), 'utf8')); } catch {}
+  }
+  return snapshot;
+};
+const compareAccepted = async (target, before, label) => {
+  for (const [name, bytes] of before) {
+    let current;
+    try { current = await safe.readFile(path.join(target, name), 'utf8'); } catch { current = null; }
+    if (current !== bytes) errors.push(error('COMPANION_IMMUTABILITY', label + ' changed accepted ' + name));
+  }
+};
+
+async function runProbe() {
+  await scanModuleGraph(input.runnerPath);
+  const runner = await import(pathToFileURL(input.runnerPath).href + '?isolated=' + Date.now());
+  if (typeof runner.runPort !== 'function') throw new Error('runner must export runPort');
+  const canonicalBytes = [];
+  const canonicalHashes = [];
+  let deterministic = true;
+  let historyImmutable = true;
+  for (const port of input.ports) {
+    const primary = path.join(probeRoot, 'primary', port);
+    const repeat = path.join(probeRoot, 'repeat', port);
+    const names = [];
+    let priorHash = input.entryHash ?? sha256(canonicalJson({ fixture: 'fixed', milestoneId: 'BL-ENTRY' }));
+    const records = [];
+    for (let index = 0; index < input.dossiers.length; index += 1) {
+      const milestoneId = input.dossiers[index];
+      const fileName = milestoneId.toLowerCase() + '.json';
+      const incomingState = transitions[index][0];
+      const outgoingState = transitions[index][1];
+      const history = Object.freeze({ records: Object.freeze(records.map((record) => Object.freeze({ ...record }))) });
+      const historyBefore = canonicalJson(history);
+      const options = { target: primary, history, milestoneId, priorHash, incomingState, outgoingState };
+      const beforePrimary = await acceptedBytes(primary, names);
+      const first = await runner.runPort(port, options);
+      await compareAccepted(primary, beforePrimary, port + ' ' + milestoneId + ' positive');
+      const firstBytes = canonicalJson(first);
+      let materialized = null;
+      try { materialized = await safe.readFile(path.join(primary, fileName), 'utf8'); } catch {}
+      if (materialized !== firstBytes) errors.push(error('COMPANION_CANONICAL_FILE', port + ' ' + milestoneId + ' must materialize exact canonical bytes'));
+      const beforeRepeat = await acceptedBytes(repeat, names);
+      const second = await runner.runPort(port, { ...options, target: repeat });
+      await compareAccepted(repeat, beforeRepeat, port + ' ' + milestoneId + ' repeat');
+      const secondBytes = canonicalJson(second);
+      let repeatedFile = null;
+      try { repeatedFile = await safe.readFile(path.join(repeat, fileName), 'utf8'); } catch {}
+      if (repeatedFile !== secondBytes) errors.push(error('COMPANION_CANONICAL_FILE', port + ' ' + milestoneId + ' repeat must materialize exact canonical bytes'));
+      if (firstBytes !== secondBytes || materialized !== repeatedFile) deterministic = false;
+      if (first?.port !== port || first?.milestoneId !== milestoneId || first?.priorHash !== priorHash || first?.disposition !== 'PASS' || first?.incomingState !== incomingState || first?.outgoingState !== outgoingState) {
+        errors.push(error('COMPANION_DOSSIER', port + ' ' + milestoneId + ' returned a wrong envelope, link, disposition, or transition'));
+      }
+      const expected = input.expectedRecords?.[index];
+      if (expected) {
+        const projection = Object.fromEntries(Object.keys(expected).map((key) => [key, first?.[key]]));
+        if (canonicalJson(projection) !== canonicalJson(expected)) errors.push(error('COMPANION_EXPECTED_BYTES', port + ' ' + milestoneId + ' differs from complete expected record'));
+      }
+      canonicalBytes.push(firstBytes);
+      const currentHash = sha256(firstBytes);
+      canonicalHashes.push(currentHash);
+      const reopenTrigger = index < reopenTriggers.length ? reopenTriggers[index] : null;
+      const beforeNegative = await acceptedBytes(primary, [...names, fileName]);
+      const negative = await runner.runPort(port, { ...options, mode: 'negative', reopenTrigger });
+      await compareAccepted(primary, beforeNegative, port + ' ' + milestoneId + ' negative');
+      if (!['HOLD','REJECT','REOPEN'].includes(negative?.disposition) || (reopenTrigger && negative.disposition !== 'REOPEN')) {
+        errors.push(error('COMPANION_NEGATIVE_PATH', port + ' ' + milestoneId + ' negative disposition is illegal'));
+      }
+      if (canonicalJson(history) !== historyBefore) historyImmutable = false;
+      names.push(fileName);
+      records.push({ hash: currentHash, milestoneId });
+      priorHash = currentHash;
+    }
+  }
+  if (!deterministic) errors.push(error('COMPANION_DETERMINISM', 'independent fresh targets must produce byte-identical canonical output'));
+  if (!historyImmutable) errors.push(error('COMPANION_IMMUTABILITY', 'runner mutated supplied prior dossier history'));
+  let effectProbesDenied = 0;
+  for (let index = 0; index < input.ports.length; index += 1) {
+    const mode = ['network','shell','cloud','model','secret'][index];
+    try { await runner.runPort(input.ports[index], { mode, target: path.join(probeRoot, 'effects', mode), history: Object.freeze({ records: Object.freeze([]) }) }); }
+    catch (caught) { if (caught?.code === 'EFFECT_DENIED') effectProbesDenied += 1; }
+  }
+  if (effectProbesDenied !== 5) errors.push(error('COMPANION_EFFECT_PROBE', 'all five forbidden effect probes must be denied; got ' + effectProbesDenied));
+  let deniedEscapes = 0;
+  for (const port of input.ports) {
+    try { await runner.runPort(port, { mode: 'escape', target: path.join(repositoryRoot, 'public'), history: Object.freeze({ records: Object.freeze([]) }) }); }
+    catch (caught) { if (caught?.code === 'PATH_DENIED') deniedEscapes += 1; }
+  }
+  const escapeProbeDenied = deniedEscapes === input.ports.length;
+  if (!escapeProbeDenied) errors.push(error('COMPANION_ESCAPE_PROBE', 'all five escape probes must be denied; got ' + deniedEscapes));
+  return {
+    errors, ports: input.ports, canonicalBytes, canonicalHashes, deterministic, historyImmutable,
+    effectProbesDenied, escapeProbeDenied, negativePaths: input.ports.length * input.dossiers.length,
+    dossierSteps: input.dossiers.length, reopenTriggers: reopenTriggers.length,
+  };
+}
+
+let report;
+try { report = await runProbe(); }
+catch (caught) { report = { errors: [error('COMPANION_EXECUTION', caught.message)], ports: [] }; }
+if (attempts.length) report.errors.push(error('COMPANION_EFFECT_ATTEMPT', 'isolated guard recorded forbidden attempts: ' + canonicalJson(attempts).trim()));
+process.stdout.write('MLE_GUARD_REPORT:' + JSON.stringify(report) + '\n');
+`;
+
+export async function executeCompanionProbe({ runnerPath, repositoryRoot, expectedRecords = null, entryHash = null }) {
+  const probeRoot = await realpath(await mkdtemp(join(tmpdir(), 'mle-p8-isolated-probe-')));
+  const guardedRunnerPath = await realpath(resolve(runnerPath));
+  const guardedRepositoryRoot = await realpath(resolve(repositoryRoot));
+  const payload = JSON.stringify({
+    runnerPath: guardedRunnerPath, repositoryRoot: guardedRepositoryRoot, probeRoot,
+    ports: [...EXPECTED_PORTS], dossiers: [...EXPECTED_DOSSIERS], expectedRecords, entryHash,
+  });
+  try {
+    const output = execFileSync(process.execPath, [
+      '--permission',
+      '--allow-fs-read=*',
+      `--allow-fs-write=${probeRoot}`,
+      '--input-type=module', '--eval', ISOLATED_COMPANION_PROBE,
+    ], {
+      input: payload,
+      encoding: 'utf8',
+      maxBuffer: 64 * 1024 * 1024,
+      env: { PATH: '/usr/bin:/bin' },
+      stdio: ['pipe', 'pipe', 'pipe'],
+    });
+    const marker = output.lastIndexOf('MLE_GUARD_REPORT:');
+    if (marker < 0) return { errors: [error('COMPANION_EXECUTION', 'isolated probe emitted no guarded report')], ports: [] };
+    return JSON.parse(output.slice(marker + 'MLE_GUARD_REPORT:'.length).trim());
+  } catch (caught) {
+    return { errors: [error('COMPANION_EXECUTION', `isolated probe failed: ${caught.stderr?.toString().trim() || caught.message}`)], ports: [] };
+  }
+}
+
 export async function validateRepository(root, options = {}) {
   const snapshot = await loadRepositorySnapshot(root, options);
   const stage = options.stage ?? 'bootstrap';
@@ -901,6 +1209,10 @@ export async function validateRepository(root, options = {}) {
     const companionReport = await executeCompanionProbe({
       runnerPath: resolve(root, `${BOOK}/companion/lib/run.mjs`),
       repositoryRoot: resolve(root),
+      expectedRecords: EXPECTED_FILES.map((path) => {
+        try { return JSON.parse(snapshot.files[path].text); } catch { return null; }
+      }),
+      entryHash: snapshot.files[`${BOOK}/companion/fixtures/bl-entry.json`]?.sha256 ?? null,
     });
     errors.push(...companionReport.errors);
   }

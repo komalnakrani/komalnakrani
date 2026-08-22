@@ -750,6 +750,17 @@ test('real loaded invalid manuscript, register, companion, and review bytes invo
   for (const [, , code] of fixtures) await t.test(code, () => expectCode(errors, code));
 });
 
+test('loaded expected dossier records must be complete canonical records rather than milestone labels', async () => {
+  const root = await copiedBootstrapRoot();
+  const path = `${BOOK}/companion/expected/bl-00.json`;
+  await mkdir(dirname(join(root, path)), { recursive: true });
+  await writeFile(join(root, path), '{"milestoneId":"BL-00"}\n');
+  const snapshot = await loadRepositorySnapshot(root, {
+    stage: 'integration', git: { ...bootstrapGit, clean: true, changedPaths: [] }, github: await bootstrapGithub(root),
+  });
+  expectCode(validatePhase08Snapshot(snapshot, { stage: 'integration' }), 'COMPANION_EXPECTED_RECORD');
+});
+
 test('conditional repair paths are illegal without a preserved failed base review', async () => {
   const snapshot = await loadBootstrap();
   const repair = `${ROLE}/reviews/phase-08/task-02-lane-a-repair.md`;
@@ -762,10 +773,17 @@ test('executes a real companion fixture across all five ports with deterministic
   const root = await mkdtemp(join(tmpdir(), 'mle-p8-companion-'));
   const runner = join(root, 'run.mjs');
   await writeFile(runner, `
+import { mkdir, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+function canonical(value) { return JSON.stringify(Object.fromEntries(Object.entries(value).sort(([a], [b]) => a.localeCompare(b)))) + '\\n'; }
 export async function runPort(port, { mode = 'positive', target, history, milestoneId = 'BL-00', priorHash = 'entry', reopenTrigger = null, incomingState, outgoingState }) {
   if (['network','shell','cloud','model','secret'].includes(mode)) throw Object.assign(new Error('denied'), { code: 'EFFECT_DENIED' });
   if (mode === 'escape') throw Object.assign(new Error('denied'), { code: 'PATH_DENIED' });
-  return { port, disposition: mode === 'negative' ? (reopenTrigger ? 'REOPEN' : 'HOLD') : 'PASS', milestoneId, priorHash, incomingState, outgoingState, target, history, reopenTrigger, limitation: 'mechanics only' };
+  if (mode === 'negative') return { disposition: reopenTrigger ? 'REOPEN' : 'HOLD', milestoneId, reopenTrigger };
+  const record = { disposition: 'PASS', incomingState, limitation: 'mechanics only', milestoneId, outgoingState, port, priorHash };
+  await mkdir(target, { recursive: true });
+  await writeFile(join(target, milestoneId.toLowerCase() + '.json'), canonical(record));
+  return record;
 }
 `);
   const report = await validatorModule.executeCompanionProbe({ runnerPath: runner, repositoryRoot: REPO });
@@ -780,6 +798,61 @@ export async function runPort(port, { mode = 'positive', target, history, milest
   assert.equal(report.historyImmutable, true);
   assert.equal(report.effectProbesDenied, 5);
   assert.equal(report.escapeProbeDenied, true);
+});
+
+test('isolated effect guard detects attempted effects in transitive imported helpers despite later approved denial', async (t) => {
+  const attempts = [
+    ['child_process', 'shell', `import { execFileSync } from 'node:child_process'; export async function attempt() { execFileSync('/usr/bin/true'); }`],
+    ['network', 'network', `export async function attempt() { await fetch('data:text/plain,guard-probe'); }`],
+    ['environment secret', 'secret', `export async function attempt() { void process.env.MLE_FAKE_SECRET; }`],
+    ['cloud SDK', 'cloud', `export async function attempt() { await import('@aws-sdk/client-s3').catch(() => {}); }`],
+    ['model SDK', 'model', `export async function attempt() { await import('@huggingface/inference').catch(() => {}); }`],
+    ['unauthorized filesystem', 'shell', `import { writeFileSync } from 'node:fs'; export async function attempt() { writeFileSync('/dev/null', 'x'); }`],
+  ];
+  for (const [name, effectMode, helperSource] of attempts) await t.test(name, async () => {
+    const root = await mkdtemp(join(tmpdir(), 'mle-p8-transitive-effect-'));
+    await writeFile(join(root, 'helper.mjs'), `${helperSource}\n`);
+    await writeFile(join(root, 'run.mjs'), `
+import { mkdir, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { attempt } from './helper.mjs';
+function canonical(value) { return JSON.stringify(Object.fromEntries(Object.entries(value).sort(([a], [b]) => a.localeCompare(b)))) + '\\n'; }
+export async function runPort(port, { mode = 'positive', target, milestoneId = 'BL-00', priorHash = 'entry', reopenTrigger = null, incomingState, outgoingState }) {
+  if (mode === '${effectMode}') { await attempt(); throw Object.assign(new Error('denied'), { code: 'EFFECT_DENIED' }); }
+  if (['network','shell','cloud','model','secret'].includes(mode)) throw Object.assign(new Error('denied'), { code: 'EFFECT_DENIED' });
+  if (mode === 'escape') throw Object.assign(new Error('denied'), { code: 'PATH_DENIED' });
+  if (mode === 'negative') return { disposition: reopenTrigger ? 'REOPEN' : 'HOLD', milestoneId, reopenTrigger };
+  const record = { disposition: 'PASS', incomingState, limitation: 'mechanics only', milestoneId, outgoingState, port, priorHash };
+  await mkdir(target, { recursive: true });
+  await writeFile(join(target, milestoneId.toLowerCase() + '.json'), canonical(record));
+  return record;
+}
+`);
+    const report = await validatorModule.executeCompanionProbe({ runnerPath: join(root, 'run.mjs'), repositoryRoot: REPO });
+    expectCode(report.errors, 'COMPANION_EFFECT_ATTEMPT');
+  });
+});
+
+test('companion probe detects mutation of an earlier materialized dossier file', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'mle-p8-dossier-mutation-'));
+  const runner = join(root, 'run.mjs');
+  await writeFile(runner, `
+import { mkdir, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+function canonical(value) { return JSON.stringify(Object.fromEntries(Object.entries(value).sort(([a], [b]) => a.localeCompare(b)))) + '\\n'; }
+export async function runPort(port, { mode = 'positive', target, milestoneId = 'BL-00', priorHash = 'entry', reopenTrigger = null, incomingState, outgoingState }) {
+  if (['network','shell','cloud','model','secret'].includes(mode)) throw Object.assign(new Error('denied'), { code: 'EFFECT_DENIED' });
+  if (mode === 'escape') throw Object.assign(new Error('denied'), { code: 'PATH_DENIED' });
+  if (mode === 'negative') return { disposition: reopenTrigger ? 'REOPEN' : 'HOLD', milestoneId, reopenTrigger };
+  await mkdir(target, { recursive: true });
+  if (milestoneId !== 'BL-00') await writeFile(join(target, 'bl-00.json'), 'tampered\\n');
+  const record = { disposition: 'PASS', incomingState, limitation: 'mechanics only', milestoneId, outgoingState, port, priorHash };
+  await writeFile(join(target, milestoneId.toLowerCase() + '.json'), canonical(record));
+  return record;
+}
+`);
+  const report = await validatorModule.executeCompanionProbe({ runnerPath: runner, repositoryRoot: REPO });
+  expectCode(report.errors, 'COMPANION_IMMUTABILITY');
 });
 
 test('effect guard detects real attempted effects even when runner later throws approved denial', async (t) => {
@@ -870,6 +943,6 @@ if (!process.env.MLE_SKIP_RED_RECONSTRUCTION) {
     assert.ok(summary.tests > 0, result.slice(-2000));
     assert.ok(summary.fail > 0, JSON.stringify(summary));
     assert.equal(summary.tests, summary.pass + summary.fail + (summary.skipped ?? 0));
-    assert.deepEqual(summary, { tests: 191, pass: 167, fail: 24, skipped: 0, todo: 0 });
+    assert.deepEqual(summary, { tests: 200, pass: 167, fail: 33, skipped: 0, todo: 0 });
   });
 }
