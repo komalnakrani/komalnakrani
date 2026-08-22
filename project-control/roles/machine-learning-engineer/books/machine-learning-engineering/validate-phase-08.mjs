@@ -144,10 +144,35 @@ const BOOTSTRAP_DIRT = new Set([
 ]);
 const STAGES = new Set(['bootstrap', 'production', 'integration', 'pre-hostile', 'pre-close', 'final-content', 'final']);
 const ACTIVATION_COMMIT = 'c5a5357373c1f2f887a58be8f3d8b52825b1b444';
-const BOUNDED_ROOTS = [
-  'public', 'output', 'content/publications', 'content/courses',
-  'project-control/abhyaas', 'project-control/roles',
-];
+const BOUNDED_ROOTS = ['.'];
+
+const REVIEW_CONTRACTS = Object.freeze({
+  [`${ROLE}/reviews/phase-08/task-01-bootstrap.md`]: {
+    taskId: 'TASK-01', ...EXPECTED_REVIEW_IDENTITIES['TASK-01'],
+    artifacts: [...VALIDATOR_PATHS, `${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`, FACTORY],
+  },
+  [`${ROLE}/reviews/phase-08/task-02-lane-a.md`]: {
+    taskId: 'TASK-02', ...EXPECTED_REVIEW_IDENTITIES['TASK-02'],
+    artifacts: [...CHAPTER_PATHS.slice(0, 7), SCRATCH_PATHS[0]],
+  },
+  [`${ROLE}/reviews/phase-08/task-03-lane-b.md`]: {
+    taskId: 'TASK-03', ...EXPECTED_REVIEW_IDENTITIES['TASK-03'],
+    artifacts: [...CHAPTER_PATHS.slice(7, 14), SCRATCH_PATHS[1]],
+  },
+  [`${ROLE}/reviews/phase-08/task-04-lane-c.md`]: {
+    taskId: 'TASK-04', ...EXPECTED_REVIEW_IDENTITIES['TASK-04'],
+    artifacts: [...CHAPTER_PATHS.slice(14), SCRATCH_PATHS[2]],
+  },
+  [`${ROLE}/reviews/phase-08/task-05-companion.md`]: {
+    taskId: 'TASK-05', ...EXPECTED_REVIEW_IDENTITIES['TASK-05'], artifacts: [...COMPANION_PATHS],
+  },
+  [`${ROLE}/reviews/phase-08/task-06-canonical-integration.md`]: {
+    taskId: 'TASK-06', ...EXPECTED_REVIEW_IDENTITIES['TASK-06'], artifacts: [...CHAPTER_PATHS, ...FURNITURE_PATHS, ...COMPANION_PATHS, ...INTEGRATION_PATHS],
+  },
+  [`${ROLE}/reviews/phase-08/task-07-hostile-integration.md`]: {
+    taskId: 'TASK-07', ...EXPECTED_REVIEW_IDENTITIES['TASK-07'], artifacts: [...INTEGRATION_PATHS, ...VALIDATOR_PATHS, `${ROLE}/reviews/phase-08/task-06-canonical-integration.md`],
+  },
+});
 
 function error(code, message, path = null) {
   return { code, message, ...(path ? { path } : {}) };
@@ -187,7 +212,7 @@ async function listFiles(root, relativeRoot) {
       .filter((entry) => entry.isFile() || entry.isSymbolicLink())
       .map((entry) => {
         const parent = relative(absolute, entry.parentPath ?? entry.path);
-        return [relativeRoot, parent, entry.name].filter(Boolean).join('/');
+        return [relativeRoot === '.' ? '' : relativeRoot, parent, entry.name].filter(Boolean).join('/');
       })
       .sort();
   } catch (caught) {
@@ -426,9 +451,11 @@ function validateInventory(snapshot, stage) {
     if (stage === 'bootstrap' && !BOOTSTRAP_ALLOWED.has(path)) {
       const isFailedBootstrapReview = path === `${ROLE}/reviews/phase-08/task-01-bootstrap.md`
         && reviewIsFailed(snapshot.files[path]?.text);
+      const isAcceptedBootstrapReview = path === `${ROLE}/reviews/phase-08/task-01-bootstrap.md`
+        && reviewIsAccepted(snapshot.files[path]?.text);
       const isBootstrapRepair = path === `${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`
         && /SPEC COMPLIANCE FAIL/.test(snapshot.files[`${ROLE}/reviews/phase-08/task-01-bootstrap.md`]?.text ?? '');
-      if (!isFailedBootstrapReview && !isBootstrapRepair) errors.push(error('STAGE_PATH_FORBIDDEN', 'path is not legal at bootstrap', path));
+      if (!isFailedBootstrapReview && !isAcceptedBootstrapReview && !isBootstrapRepair) errors.push(error('STAGE_PATH_FORBIDDEN', 'path is not legal at bootstrap', path));
     }
   }
   const futurePaths = stage === 'production'
@@ -614,7 +641,7 @@ function validateLoadedArtifacts(snapshot, stage) {
       continue;
     }
     const expected = EXPECTED_REVIEW_IDENTITIES[record.taskId];
-    errors.push(...validateReviewRecord(record, expected, { files: snapshot.files }).map((item) => ({ ...item, path })));
+    errors.push(...validateReviewRecord(record, expected, { files: snapshot.files, reviewPath: path }).map((item) => ({ ...item, path })));
   }
   return errors;
 }
@@ -647,14 +674,25 @@ const REVIEW_FIELDS = [
 
 export function validateReviewRecord(review, expectedIdentity, context = {}) {
   const errors = [];
+  const pathContract = context.reviewPath ? REVIEW_CONTRACTS[context.reviewPath] : null;
+  if (context.reviewPath && (!pathContract || review.taskId !== pathContract.taskId)) {
+    errors.push(error('REVIEW_PATH_TASK', 'review path and task identity must match exactly', context.reviewPath));
+  }
+  const effectiveIdentity = pathContract ?? expectedIdentity;
   if (REVIEW_FIELDS.some((field) => !Object.hasOwn(review, field)) || !Array.isArray(review.artifactBindings) || review.artifactBindings.length === 0) errors.push(error('REVIEW_SCHEMA', 'review record is missing a closed-schema field or binding'));
   if (review.producerIdentity === review.reviewerIdentity) errors.push(error('REVIEW_SELF_APPROVAL', 'producer and reviewer must differ'));
-  if (!expectedIdentity || review.producerIdentity !== expectedIdentity.producerIdentity || review.reviewerIdentity !== expectedIdentity.reviewerIdentity) errors.push(error('REVIEW_IDENTITY', 'review identities differ from the frozen plan'));
+  if (!effectiveIdentity || review.producerIdentity !== effectiveIdentity.producerIdentity || review.reviewerIdentity !== effectiveIdentity.reviewerIdentity) errors.push(error('REVIEW_IDENTITY', 'review identities differ from the frozen plan'));
+  if (pathContract) {
+    const actualPaths = (review.artifactBindings ?? []).map((binding) => binding.path).sort();
+    const requiredPaths = [...pathContract.artifacts].sort();
+    if (!sameArray(actualPaths, requiredPaths)) errors.push(error('REVIEW_ARTIFACT_SET', 'review bindings must equal the exact frozen task artifact set', context.reviewPath));
+  }
   const hasRepair = [review.repairPath, review.repairSha256, review.reacceptedBy, review.reacceptedAt].every(Boolean);
   const hasAnyRepair = [review.repairPath, review.repairSha256, review.reacceptedBy, review.reacceptedAt].some(Boolean);
   if (hasAnyRepair && !hasRepair) errors.push(error('REVIEW_REPAIR_CHAIN', 'repair chain must be complete'));
   if (hasRepair) {
-    if (!review.priorVerdict || review.reacceptedBy !== review.reviewerIdentity || Date.parse(review.reacceptedAt) <= Date.parse(review.reviewedAt) || !/^[a-f0-9]{64}$/.test(review.repairSha256)) errors.push(error('REVIEW_REPAIR_CHAIN', 'repair must bind a prior failure and same later reviewer'));
+    const expectedRepairPath = context.reviewPath?.replace(/\.md$/, '-repair.md');
+    if (!review.priorVerdict || (expectedRepairPath && review.repairPath !== expectedRepairPath) || review.reacceptedBy !== review.reviewerIdentity || Date.parse(review.reacceptedAt) <= Date.parse(review.reviewedAt) || !/^[a-f0-9]{64}$/.test(review.repairSha256)) errors.push(error('REVIEW_REPAIR_CHAIN', 'repair must bind a prior failure, exact repair path, and same later reviewer'));
   } else if (review.priorVerdict) {
     errors.push(error('REVIEW_REPAIR_CHAIN', 'prior failure requires a complete repair chain'));
   }
@@ -732,6 +770,26 @@ export function validateCompanionBoundary(contract) {
 
 export async function executeCompanionProbe({ runnerPath, repositoryRoot }) {
   const errors = [];
+  let runnerSource;
+  try {
+    runnerSource = await readFile(runnerPath, 'utf8');
+  } catch (caught) {
+    return { errors: [error('COMPANION_EXECUTION', `cannot read runner: ${caught.message}`)], ports: [] };
+  }
+  const forbiddenAttempts = [
+    /node:child_process|\bchild_process\b/,
+    /node:(?:http|https|net|tls|dgram|dns)|\bfetch\s*\(/,
+    /process\.env(?:\.|\[)/,
+    /@aws-sdk|@google-cloud|@azure|cloudinary|firebase-admin/,
+    /@huggingface|\bopenai\b|@anthropic|tensorflow|torch|onnxruntime/,
+    /(?:writeFile|appendFile|createWriteStream|mkdir|rename|copyFile|rm|unlink)(?:Sync)?\s*\(\s*['"]\/(?!private\/tmp\/mle-p8-probe)/,
+  ];
+  if (forbiddenAttempts.some((pattern) => pattern.test(runnerSource))) {
+    return {
+      errors: [error('COMPANION_EFFECT_ATTEMPT', 'runner source attempts a forbidden process, network, secret, cloud/model, or filesystem effect', runnerPath)],
+      ports: [],
+    };
+  }
   let runner;
   try {
     runner = await import(`${pathToFileURL(runnerPath).href}?probe=${Date.now()}-${Math.random()}`);
@@ -743,20 +801,56 @@ export async function executeCompanionProbe({ runnerPath, repositoryRoot }) {
   }
   const history = Object.freeze({ records: Object.freeze([{ milestoneId: 'BL-ENTRY', hash: 'entry' }]) });
   const historyBefore = canonicalJson(history);
+  const transitions = [
+    ['UNORIENTED', 'ORIENTED'], ['ORIENTED', 'CONTRACTED'], ['CONTRACTED', 'CONTRACTED'],
+    ['CONTRACTED', 'CONTRACTED'], ['CONTRACTED', 'CONTRACTED'], ['CONTRACTED', 'ADMISSIBLE'],
+    ['ADMISSIBLE', 'ADMISSIBLE'], ['ADMISSIBLE', 'RECONSTRUCTIBLE'], ['RECONSTRUCTIBLE', 'CANDIDATE'],
+    ['CANDIDATE', 'CANDIDATE'], ['CANDIDATE', 'CANDIDATE'], ['CANDIDATE', 'TECHNICALLY-QUALIFIED'],
+    ['TECHNICALLY-QUALIFIED', 'TECHNICALLY-QUALIFIED'], ['TECHNICALLY-QUALIFIED', 'TECHNICALLY-QUALIFIED'],
+    ['TECHNICALLY-QUALIFIED', 'RELEASABLE'], ['RELEASABLE', 'OPERABLE'], ['OPERABLE', 'OBSERVED'],
+    ['OBSERVED', 'REQUALIFIED'], ['REQUALIFIED', 'CONTROLLED'], ['CONTROLLED', 'RETIRED'], ['RETIRED', 'REVIEWED'],
+  ];
+  const reopenTriggerNames = [
+    'purpose or intended use',
+    'data labels features or population',
+    'runtime dependencies interface or serving envelope',
+    'authority constraint or permitted use',
+  ];
   const canonicalBytes = [];
+  const canonicalHashes = [];
   let deterministic = true;
   for (const port of EXPECTED_PORTS) {
-    try {
-      const options = { target: `/private/tmp/mle-p8-probe/${port}`, history };
-      const first = await runner.runPort(port, options);
-      const second = await runner.runPort(port, options);
-      const firstBytes = canonicalJson(first);
-      const secondBytes = canonicalJson(second);
-      canonicalBytes.push(firstBytes);
-      if (firstBytes !== secondBytes) deterministic = false;
-      if (first?.port !== port || first?.milestoneId !== 'BL-00') errors.push(error('COMPANION_PORTS', `${port} returned a wrong envelope`));
-    } catch (caught) {
-      errors.push(error('COMPANION_EXECUTION', `${port} positive execution failed: ${caught.message}`));
+    let priorHash = sha256(canonicalJson({ milestoneId: 'BL-ENTRY', fixture: 'fixed' }));
+    const acceptedHistory = [];
+    for (let index = 0; index < 21; index += 1) {
+      const milestoneId = EXPECTED_DOSSIERS[index];
+      const [incomingState, outgoingState] = transitions[index];
+      const options = { target: `/private/tmp/mle-p8-probe/${port}`, history, milestoneId, priorHash, incomingState, outgoingState };
+      try {
+        const first = await runner.runPort(port, options);
+        const second = await runner.runPort(port, options);
+        const firstBytes = canonicalJson(first);
+        const secondBytes = canonicalJson(second);
+        canonicalBytes.push(firstBytes);
+        const currentHash = sha256(firstBytes);
+        canonicalHashes.push(currentHash);
+        if (firstBytes !== secondBytes) deterministic = false;
+        if (first?.port !== port || first?.milestoneId !== milestoneId || first?.priorHash !== priorHash || first?.disposition !== 'PASS' || first?.incomingState !== incomingState || first?.outgoingState !== outgoingState) {
+          errors.push(error('COMPANION_DOSSIER', `${port} ${milestoneId} returned a wrong envelope, link, disposition, or transition`));
+        }
+        acceptedHistory.push(firstBytes);
+        priorHash = currentHash;
+        const reopenTrigger = index < 4 ? reopenTriggerNames[index] : null;
+        const negative = await runner.runPort(port, { ...options, mode: 'negative', reopenTrigger });
+        if (!['HOLD', 'REJECT', 'REOPEN'].includes(negative?.disposition) || (reopenTrigger && negative.disposition !== 'REOPEN')) {
+          errors.push(error('COMPANION_NEGATIVE_PATH', `${port} ${milestoneId} negative disposition is illegal`));
+        }
+        if (acceptedHistory.some((bytes, acceptedIndex) => bytes !== canonicalBytes[canonicalBytes.length - acceptedHistory.length + acceptedIndex])) {
+          errors.push(error('COMPANION_IMMUTABILITY', `${port} earlier accepted bytes changed after negative path`));
+        }
+      } catch (caught) {
+        errors.push(error('COMPANION_EXECUTION', `${port} ${milestoneId} execution failed: ${caught.message}`));
+      }
     }
   }
   if (!deterministic) errors.push(error('COMPANION_DETERMINISM', 'same inputs must produce byte-identical canonical output'));
@@ -788,10 +882,14 @@ export async function executeCompanionProbe({ runnerPath, repositoryRoot }) {
     errors,
     ports: [...EXPECTED_PORTS],
     canonicalBytes,
+    canonicalHashes,
     deterministic,
     historyImmutable,
     effectProbesDenied,
     escapeProbeDenied,
+    negativePaths: EXPECTED_PORTS.length * EXPECTED_DOSSIERS.length,
+    dossierSteps: EXPECTED_DOSSIERS.length,
+    reopenTriggers: reopenTriggerNames.length,
   };
 }
 

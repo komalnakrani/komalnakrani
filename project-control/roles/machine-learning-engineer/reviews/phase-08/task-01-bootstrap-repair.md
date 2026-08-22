@@ -69,3 +69,56 @@ The same reviewer must reconstruct the replacement checkpoint, bind these
 replacement hashes and the final SHA-256 of this repair record, preserve the
 historical failure, and append exact terminal `SPEC COMPLIANCE PASS` and
 `QUALITY APPROVED` only if all four findings remain closed.
+
+## Same-reviewer repair iteration 2
+
+The first same-reviewer re-review is preserved at base-review SHA-256
+`94c9adb8c636ef4eccc2962b34059a5e1ec49cf4e8ec88204baf3ccf39927de5`
+and retained five residual findings.
+
+### Final replacement identities
+
+- Validator SHA-256:
+  `13f90d3f2f770e92047183f74224e9c1d02f01df9a647bde01aad09aeee1f323`
+- Test SHA-256:
+  `b32055f94d9414e77ec880fe0fdad2f554121c33f2edb1e2b9d79f59b96a7c4d`
+
+### Reproducible hardening evidence
+
+The uncommitted outer RED observed before iteration-2 implementation was 192
+tests, 167 passes, 25 failures. The durable reproducible RED is the final test
+file above executed against validator bytes from committed checkpoint
+`8cf1fce280ffd5932201d33470255c98bd6e3aba`: Node `v22.23.1`, exit `1`,
+exactly 191 tests, 167 passes, 24 failures, zero skipped, and zero todo. The test
+strips `NODE_TEST_CONTEXT` for the nested run. This replaces the earlier
+non-reconstructible 158/119/39 claim; that observation is retained as history
+only and is not acceptance evidence.
+
+The final current pair exits `0` with exactly 192 tests, 192 passes, zero
+failures, zero skipped, and zero todo.
+
+### Residual finding closure
+
+1. Accepted Task 01 base+repair+terminal-reacceptance is a legal bootstrap
+   lifecycle with `bootstrapLifecycle=accepted` and
+   `productionAuthorized=true`; failed and repair-in-progress histories remain
+   legal but non-authorizing.
+2. Every review path maps to an exact task, producer, reviewer, complete required
+   artifact set, and conditional repair semantics. Missing, added, wrong-task,
+   wrong-identity, stale-hash, and orphan-repair records fail through the loaded
+   filesystem path.
+3. Companion probes use instrumented/enforced effect guards rather than trusting
+   a thrown code after an effect. They execute five ports across `BL-00` through
+   `BL-20`, positive and negative paths, canonical bytes/hashes, previous links,
+   dispositions, legal transitions, four reopen triggers, and immutable earlier
+   outputs.
+4. Committed-clean validation compares the complete tracked tree against the
+   activation checkpoint and exact Phase 08 allowlist. Generic nested additions
+   under assets, tools, src, scripts, tests, dist, build, `.output`, artifacts,
+   downloads, public, output, content, project-control, and other roots fail.
+5. The exact RED evidence is now reconstructible from one committed validator
+   identity and the final bound test file, as recorded above.
+
+Production remains blocked until the original reviewer independently binds this
+iteration, appends the final accepted machine record to the base review, and the
+accepted review commit is pushed.

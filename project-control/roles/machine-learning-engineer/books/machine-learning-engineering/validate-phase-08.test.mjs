@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';
+import { execFile } from 'node:child_process';
 import { mkdtemp, mkdir, cp, readFile, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import test from 'node:test';
+import { promisify } from 'node:util';
 
 import * as validatorModule from './validate-phase-08.mjs';
 
@@ -26,6 +28,7 @@ const BOOK = 'project-control/roles/machine-learning-engineer/books/machine-lear
 const ROLE = 'project-control/roles/machine-learning-engineer';
 const FACTORY = 'project-control/role-factory/FACTORY-STATE.md';
 const HEAD = 'c9edc934e463dc2d8837244f2512d5d9fe8579e8';
+const execFileAsync = promisify(execFile);
 
 const bootstrapGit = {
   head: HEAD,
@@ -560,6 +563,68 @@ test('bootstrap explicitly classifies the preserved failed Task 01 review as rep
   assert.equal(report.productionAuthorized, false);
 });
 
+test('real filesystem accepted Task 01 failure-repair-reacceptance chain authorizes production bootstrap', async () => {
+  const root = await copiedBootstrapRoot();
+  const basePath = `${ROLE}/reviews/phase-08/task-01-bootstrap.md`;
+  const repairPath = `${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`;
+  await mkdir(dirname(join(root, basePath)), { recursive: true });
+  await cp(join(REPO, basePath), join(root, basePath));
+  await cp(join(REPO, repairPath), join(root, repairPath));
+  const requiredPaths = [
+    `${BOOK}/validate-phase-08.mjs`, `${BOOK}/validate-phase-08.test.mjs`,
+    `${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`, FACTORY,
+  ];
+  const artifactBindings = [];
+  for (const path of requiredPaths) artifactBindings.push({ path, sha256: sha256(await readFile(join(root, path), 'utf8')) });
+  const repairSha256 = sha256(await readFile(join(root, repairPath), 'utf8'));
+  const accepted = {
+    taskId: 'TASK-01', producerIdentity: '/root/mle_p8_bootstrap', reviewerIdentity: '/root/mle_p8_bootstrap_review',
+    reviewedAt: '2026-08-22T07:40:11+05:30', artifactBindings,
+    priorVerdict: 'SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED', repairPath, repairSha256,
+    reacceptedBy: '/root/mle_p8_bootstrap_review', reacceptedAt: '2026-08-22T12:00:00+05:30',
+    specVerdict: 'SPEC COMPLIANCE PASS', qualityVerdict: 'QUALITY APPROVED',
+  };
+  await writeFile(join(root, basePath), `${await readFile(join(root, basePath), 'utf8')}\n\n\`\`\`json\n${JSON.stringify(accepted, null, 2)}\n\`\`\`\n\nSPEC COMPLIANCE PASS\nQUALITY APPROVED\n`);
+  const acceptedHead = '8cf1fce280ffd5932201d33470255c98bd6e3aba';
+  const report = await validateRepository(root, {
+    stage: 'bootstrap',
+    git: { head: acceptedHead, originMain: acceptedHead, remoteMain: acceptedHead, clean: true, changedPaths: [] },
+    github: await bootstrapGithub(root),
+  });
+  assert.deepEqual(report.errors, []);
+  assert.equal(report.bootstrapLifecycle, 'accepted');
+  assert.equal(report.productionAuthorized, true);
+});
+
+test('review path freezes task, identities, exact artifact set, and repair semantics', async (t) => {
+  const files = {};
+  const required = [
+    `${BOOK}/manuscript/chapter-01.md`, `${BOOK}/manuscript/chapter-02.md`, `${BOOK}/manuscript/chapter-03.md`,
+    `${BOOK}/manuscript/chapter-04.md`, `${BOOK}/manuscript/chapter-05.md`, `${BOOK}/manuscript/chapter-06.md`, `${BOOK}/manuscript/chapter-07.md`,
+    '.superpowers/sdd/2026-08-22-machine-learning-engineer-phase-08/lane-a-manifest.json',
+  ];
+  for (const path of required) files[path] = { text: `${path}\n`, sha256: sha256(`${path}\n`) };
+  const reviewPath = `${ROLE}/reviews/phase-08/task-02-lane-a.md`;
+  const base = {
+    taskId: 'TASK-02', producerIdentity: '/root/mle_p8_lane_a', reviewerIdentity: '/root/mle_p8_lane_a_review',
+    reviewedAt: '2026-08-22T12:00:00+05:30', artifactBindings: required.map((path) => ({ path, sha256: files[path].sha256 })),
+    priorVerdict: null, repairPath: null, repairSha256: null, reacceptedBy: null, reacceptedAt: null,
+    specVerdict: 'SPEC COMPLIANCE PASS', qualityVerdict: 'QUALITY APPROVED',
+  };
+  assert.deepEqual(validateReviewRecord(base, EXPECTED_REVIEW_IDENTITIES['TASK-02'], { files, reviewPath }), []);
+  const mutations = [
+    ['wrong task for path', (r) => { r.taskId = 'TASK-03'; r.producerIdentity = '/root/mle_p8_lane_b'; r.reviewerIdentity = '/root/mle_p8_lane_b_review'; }, 'REVIEW_PATH_TASK'],
+    ['omitted binding', (r) => { r.artifactBindings.pop(); }, 'REVIEW_ARTIFACT_SET'],
+    ['added binding', (r) => { r.artifactBindings.push({ path: `${BOOK}/validate-phase-08.mjs`, sha256: '0'.repeat(64) }); }, 'REVIEW_ARTIFACT_SET'],
+    ['wrong identity', (r) => { r.producerIdentity = '/root/mle_p8_lane_b'; }, 'REVIEW_IDENTITY'],
+    ['unexpected prior verdict', (r) => { r.priorVerdict = 'SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED'; }, 'REVIEW_REPAIR_CHAIN'],
+  ];
+  for (const [name, mutate, code] of mutations) await t.test(name, () => {
+    const record = clone(base); mutate(record);
+    expectCode(validateReviewRecord(record, EXPECTED_REVIEW_IDENTITIES[record.taskId], { files, reviewPath }), code);
+  });
+});
+
 test('exact graph and reverse-edge equality reject count-preserving substitutions', async (t) => {
   const mutations = [
     ['source', (r) => { r.sourceUses[0].sourceId = r.sourceUses.find((item) => item.sourceId !== r.sourceUses[0].sourceId).sourceId; }],
@@ -697,20 +762,42 @@ test('executes a real companion fixture across all five ports with deterministic
   const root = await mkdtemp(join(tmpdir(), 'mle-p8-companion-'));
   const runner = join(root, 'run.mjs');
   await writeFile(runner, `
-export async function runPort(port, { mode = 'positive', target, history }) {
+export async function runPort(port, { mode = 'positive', target, history, milestoneId = 'BL-00', priorHash = 'entry', reopenTrigger = null, incomingState, outgoingState }) {
   if (['network','shell','cloud','model','secret'].includes(mode)) throw Object.assign(new Error('denied'), { code: 'EFFECT_DENIED' });
   if (mode === 'escape') throw Object.assign(new Error('denied'), { code: 'PATH_DENIED' });
-  return { port, disposition: 'PASS', milestoneId: 'BL-00', target, history, limitation: 'mechanics only' };
+  return { port, disposition: mode === 'negative' ? (reopenTrigger ? 'REOPEN' : 'HOLD') : 'PASS', milestoneId, priorHash, incomingState, outgoingState, target, history, reopenTrigger, limitation: 'mechanics only' };
 }
 `);
   const report = await validatorModule.executeCompanionProbe({ runnerPath: runner, repositoryRoot: REPO });
   assert.deepEqual(report.errors, []);
   assert.deepEqual(report.ports, [...EXPECTED_PORTS]);
-  assert.equal(new Set(report.canonicalBytes).size, 5);
+  assert.equal(report.canonicalBytes.length, 105);
+  assert.equal(new Set(report.canonicalBytes).size, 105);
+  assert.equal(report.negativePaths, 105);
+  assert.equal(report.dossierSteps, 21);
+  assert.equal(report.reopenTriggers, 4);
   assert.equal(report.deterministic, true);
   assert.equal(report.historyImmutable, true);
   assert.equal(report.effectProbesDenied, 5);
   assert.equal(report.escapeProbeDenied, true);
+});
+
+test('effect guard detects real attempted effects even when runner later throws approved denial', async (t) => {
+  const attempts = [
+    ['child_process', `import { execFileSync } from 'node:child_process'; execFileSync('/usr/bin/true');`],
+    ['network', `import * as http from 'node:http'; http.get('http://127.0.0.1');`],
+    ['env secret', `const stolen = process.env.SECRET_TOKEN;`],
+    ['cloud', `import('@aws-sdk/client-s3');`],
+    ['model', `import('@huggingface/inference');`],
+    ['filesystem', `import { writeFileSync } from 'node:fs'; writeFileSync('/tmp/unauthorized', 'x');`],
+  ];
+  for (const [name, attempt] of attempts) await t.test(name, async () => {
+    const root = await mkdtemp(join(tmpdir(), 'mle-p8-effect-attempt-'));
+    const runner = join(root, 'run.mjs');
+    await writeFile(runner, `${attempt}\nexport async function runPort() { throw Object.assign(new Error('denied'), { code: 'EFFECT_DENIED' }); }\n`);
+    const report = await validatorModule.executeCompanionProbe({ runnerPath: runner, repositoryRoot: REPO });
+    expectCode(report.errors, 'COMPANION_EFFECT_ATTEMPT');
+  });
 });
 
 test('companion execution catches a runner that permits an escape probe', async () => {
@@ -729,6 +816,16 @@ test('committed clean leakage is found by bounded real filesystem inventory with
     'content/courses/hidden/leak.txt',
     'project-control/abhyaas/hidden/leak.txt',
     'project-control/roles/data-engineer/hidden/leak.txt',
+    'assets/nested/generic.bin',
+    'tools/hidden/generic.dat',
+    'src/generated/generic.txt',
+    'scripts/hidden/generic.txt',
+    'tests/fixtures/generic.txt',
+    'dist/nested/generic.txt',
+    'build/nested/generic.txt',
+    '.output/nested/generic.txt',
+    'artifacts/nested/generic.txt',
+    'downloads/nested/generic.txt',
   ];
   for (const leakedPath of roots) {
     await t.test(leakedPath, async () => {
@@ -746,3 +843,33 @@ test('committed clean leakage is found by bounded real filesystem inventory with
     });
   }
 });
+
+if (!process.env.MLE_SKIP_RED_RECONSTRUCTION) {
+  test('current final test bytes reconstruct a prior-validator hardening RED exactly', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'mle-p8-red-reconstruction-'));
+    const validatorPath = `${BOOK}/validate-phase-08.mjs`;
+    const testPath = `${BOOK}/validate-phase-08.test.mjs`;
+    const prior = await execFileAsync('git', ['show', `8cf1fce280ffd5932201d33470255c98bd6e3aba:${validatorPath}`], { cwd: REPO, maxBuffer: 20 * 1024 * 1024 });
+    await writeFile(join(root, 'validate-phase-08.mjs'), prior.stdout);
+    await cp(join(REPO, testPath), join(root, 'validate-phase-08.test.mjs'));
+    const childEnv = { ...process.env, MLE_SKIP_RED_RECONSTRUCTION: '1' };
+    delete childEnv.NODE_TEST_CONTEXT;
+    let result;
+    let unexpectedlyPassed = false;
+    try {
+      const passed = await execFileAsync(process.execPath, ['--test', 'validate-phase-08.test.mjs'], {
+        cwd: root, env: childEnv, maxBuffer: 50 * 1024 * 1024,
+      });
+      result = `${passed.stdout ?? ''}\n${passed.stderr ?? ''}`;
+      unexpectedlyPassed = true;
+    } catch (caught) {
+      result = `${caught.message ?? ''}\n${caught.stdout ?? ''}\n${caught.stderr ?? ''}`;
+    }
+    assert.equal(unexpectedlyPassed, false, `prior validator unexpectedly passed current tests\n${result}`);
+    const summary = Object.fromEntries([...result.matchAll(/^\s*# (tests|pass|fail|skipped|todo) (\d+)\s*$/gm)].map((match) => [match[1], Number(match[2])]));
+    assert.ok(summary.tests > 0, result.slice(-2000));
+    assert.ok(summary.fail > 0, JSON.stringify(summary));
+    assert.equal(summary.tests, summary.pass + summary.fail + (summary.skipped ?? 0));
+    assert.deepEqual(summary, { tests: 191, pass: 167, fail: 24, skipped: 0, todo: 0 });
+  });
+}
