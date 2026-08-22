@@ -4,6 +4,8 @@ import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import test from 'node:test';
 
+import * as validatorModule from './validate-phase-08.mjs';
+
 import {
   EXPECTED_COUNTS,
   EXPECTED_PORTS,
@@ -120,7 +122,9 @@ test('loads the activated repository and passes the bootstrap contract without p
   assert.equal(report.stage, 'bootstrap');
   assert.equal(report.counts.chapters, 21);
   assert.equal(report.productionInventory.length, 0);
-  assert.equal(report.reviewInventory.includes('task-01-bootstrap.md'), false);
+  assert.equal(report.reviewInventory.includes('task-01-bootstrap.md'), true);
+  assert.equal(report.bootstrapLifecycle, 'repair-in-progress');
+  assert.equal(report.productionAuthorized, false);
 });
 
 test('the bootstrap snapshot reads real state and all twenty-one blueprint files', async () => {
@@ -215,6 +219,9 @@ test('bootstrap forbids manuscript, furniture, appendix, companion, lane manifes
     await t.test(path, async () => {
       const snapshot = await loadBootstrap();
       snapshot.phase08Paths.push(path);
+      if (path.endsWith('task-01-bootstrap.md')) {
+        snapshot.files[path] = { text: 'unexpected accepted-looking review\n', sha256: sha256('unexpected accepted-looking review\n') };
+      }
       expectCode(validatePhase08Snapshot(snapshot, { stage: 'bootstrap' }), 'STAGE_PATH_FORBIDDEN');
     });
   }
@@ -377,6 +384,7 @@ function chapterFixture(blueprint, wordCount = 4300) {
     'synthetic-deterministic', 'reported facts', 'attributed outcomes',
     'allowed inference', 'forbidden inference', 'limitations', 'source notes',
     'currentness', 'next dossier handoff',
+    ...blueprint.primaryClaimIds.map((claimId) => `Primary teaching ${claimId}`),
   ].join('\n');
   const prose = Array.from({ length: wordCount }, (_, i) => `word${i % 997}`).join(' ');
   return `# ${blueprint.chapterId} — ${blueprint.title}\n\n${headings}\n\n${required}\n\n${prose}\n`;
@@ -503,3 +511,238 @@ test('a copied realistic filesystem fixture detects a frozen-file mutation from 
   expectCode(validatePhase08Snapshot(snapshot, { stage: 'bootstrap' }), 'FROZEN_INPUT_HASH');
 });
 
+test('current bootstrap-only real tree fails every later production stage with exact missing inventories', async (t) => {
+  const expectedCodes = {
+    production: ['STAGE_MANUSCRIPT_MISSING', 'STAGE_FURNITURE_MISSING', 'STAGE_COMPANION_MISSING', 'STAGE_REVIEW_MISSING'],
+    integration: ['STAGE_INTEGRATION_MISSING', 'STAGE_MANUSCRIPT_MISSING', 'STAGE_COMPANION_MISSING'],
+    'pre-hostile': ['STAGE_INTEGRATION_MISSING', 'STAGE_REVIEW_MISSING'],
+    'pre-close': ['STAGE_INTEGRATION_MISSING', 'STAGE_REVIEW_MISSING'],
+  };
+  for (const [stage, codes] of Object.entries(expectedCodes)) {
+    await t.test(stage, async () => {
+      const snapshot = await loadRepositorySnapshot(REPO, {
+        stage,
+        git: bootstrapGit,
+        github: await bootstrapGithub(),
+      });
+      const errors = validatePhase08Snapshot(snapshot, { stage });
+      for (const code of codes) expectCode(errors, code);
+    });
+  }
+});
+
+test('each stage rejects artifacts that belong only to a future stage', async (t) => {
+  const cases = [
+    ['production', `${BOOK}/manuscript/manuscript-register.json`],
+    ['production', `${ROLE}/reviews/phase-08/task-06-canonical-integration.md`],
+    ['integration', `${ROLE}/reviews/phase-08/task-07-hostile-integration.md`],
+    ['pre-hostile', `${BOOK}/phase-08-verification.json`],
+    ['pre-close', `${BOOK}/phase-08-verification.json`],
+  ];
+  for (const [stage, path] of cases) {
+    await t.test(`${stage}:${path}`, async () => {
+      const snapshot = await loadBootstrap();
+      snapshot.phase08Paths.push(path);
+      snapshot.files[path] = { text: '{}\n', sha256: sha256('{}\n') };
+      expectCode(validatePhase08Snapshot(snapshot, { stage }), 'STAGE_PATH_FORBIDDEN');
+    });
+  }
+});
+
+test('bootstrap explicitly classifies the preserved failed Task 01 review as repair-in-progress without authorizing production', async () => {
+  const report = await validateRepository(REPO, {
+    stage: 'bootstrap',
+    git: { ...bootstrapGit, head: 'c5a5357373c1f2f887a58be8f3d8b52825b1b444', originMain: 'c5a5357373c1f2f887a58be8f3d8b52825b1b444', remoteMain: 'c5a5357373c1f2f887a58be8f3d8b52825b1b444', changedPaths: [`${ROLE}/reviews/phase-08/task-01-bootstrap.md`] },
+    github: await bootstrapGithub(),
+  });
+  assert.deepEqual(report.errors, []);
+  assert.equal(report.bootstrapLifecycle, 'repair-in-progress');
+  assert.equal(report.productionAuthorized, false);
+});
+
+test('exact graph and reverse-edge equality reject count-preserving substitutions', async (t) => {
+  const mutations = [
+    ['source', (r) => { r.sourceUses[0].sourceId = r.sourceUses.find((item) => item.sourceId !== r.sourceUses[0].sourceId).sourceId; }],
+    ['claim teaching', (r) => { r.claimTeaching[0].chapterId = r.claimTeaching.find((item) => item.chapterId !== r.claimTeaching[0].chapterId).chapterId; }],
+    ['claim source reverse', (r) => { r.claimTeaching[0].sourceIds[0] = r.claimTeaching[1].sourceIds[0]; }],
+    ['case chapter', (r) => { r.caseUses[0].chapterIds[0] = r.caseUses[1].chapterIds[0]; }],
+    ['case claim', (r) => { r.caseUses[0].claimIds[0] = r.caseUses[1].claimIds[0]; }],
+    ['case source', (r) => { r.caseUses.find((item) => item.sourceUses.length > 0).sourceUses[0].sourceId = 'MLE-BSRC-999'; }],
+    ['section architecture', (r) => { r.sections[0].architectureClaimIds[0] = r.sections[1].architectureClaimIds[0]; }],
+    ['lifecycle', (r) => { r.dossier[0].incomingState = r.dossier[1].incomingState; }],
+    ['lab', (r) => { r.labs[0].chapterId = r.labs.find((item) => item.chapterId !== r.labs[0].chapterId).chapterId; }],
+    ['visual', (r) => { r.visuals[0].insertionAnchor = r.visuals[1].insertionAnchor; }],
+    ['handoff', (r) => { r.handoffs[0].chapterId = r.handoffs[1].chapterId; }],
+  ];
+  for (const [name, mutate] of mutations) {
+    await t.test(name, async () => {
+      const snapshot = await loadBootstrap();
+      mutate(snapshot.register);
+      expectCode(validatePhase08Snapshot(snapshot, { stage: 'bootstrap' }), 'GRAPH_EXACT');
+    });
+  }
+});
+
+test('each canonical claim requires exactly one visible primary teaching placement', async () => {
+  const snapshot = await loadBootstrap();
+  const blueprint = snapshot.register.chapters[0];
+  const withoutOne = chapterFixture(blueprint).replace(`Primary teaching ${blueprint.primaryClaimIds[0]}`, 'trace only');
+  expectCode(
+    validateManuscriptChapter(withoutOne, blueprint, snapshot.register, { minWords: 4200, maxWords: 4800, otherChapters: [] }),
+    'MANUSCRIPT_CLAIM_PRIMARY',
+  );
+});
+
+test('review artifact and repair bindings must equal actual loaded bytes', async (t) => {
+  const files = {
+    [`${BOOK}/validate-phase-08.mjs`]: { text: 'validator bytes', sha256: sha256('validator bytes') },
+    [`${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`]: { text: 'repair bytes', sha256: sha256('repair bytes') },
+  };
+  const review = {
+    ...clone(reviewBase),
+    artifactBindings: [{ path: `${BOOK}/validate-phase-08.mjs`, sha256: sha256('validator bytes') }],
+  };
+  assert.deepEqual(validateReviewRecord(review, EXPECTED_REVIEW_IDENTITIES['TASK-01'], { files }), []);
+  await t.test('artifact byte mismatch', () => {
+    const altered = clone(review);
+    altered.artifactBindings[0].sha256 = '0'.repeat(64);
+    expectCode(validateReviewRecord(altered, EXPECTED_REVIEW_IDENTITIES['TASK-01'], { files }), 'REVIEW_ARTIFACT_BINDING');
+  });
+  await t.test('repair byte mismatch', () => {
+    const altered = {
+      ...clone(review),
+      priorVerdict: 'SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED',
+      repairPath: `${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`,
+      repairSha256: '0'.repeat(64),
+      reacceptedBy: '/root/mle_p8_bootstrap_review',
+      reacceptedAt: '2026-08-22T10:00:00+05:30',
+    };
+    expectCode(validateReviewRecord(altered, EXPECTED_REVIEW_IDENTITIES['TASK-01'], { files }), 'REVIEW_ARTIFACT_BINDING');
+  });
+});
+
+async function copiedBootstrapRoot() {
+  const root = await mkdtemp(join(tmpdir(), 'mle-p8-hardening-'));
+  const required = [
+    ...Object.keys(FROZEN_INPUTS), SPEC_PATH, PLAN_PATH,
+    ...Array.from({ length: 21 }, (_, index) => `${BOOK}/blueprints/chapter-${String(index + 1).padStart(2, '0')}.md`),
+    `${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`, FACTORY,
+    `${ROLE}/reviews/phase-08/task-00-plan.md`, `${ROLE}/reviews/phase-08/task-00-plan-repair.md`,
+    `${BOOK}/validate-phase-08.mjs`, `${BOOK}/validate-phase-08.test.mjs`,
+  ];
+  for (const path of required) {
+    await mkdir(dirname(join(root, path)), { recursive: true });
+    await cp(join(REPO, path), join(root, path));
+  }
+  return root;
+}
+
+const SPEC_PATH = 'docs/superpowers/specs/2026-08-22-machine-learning-engineer-manuscript-companion-design.md';
+const PLAN_PATH = 'docs/superpowers/plans/2026-08-22-machine-learning-engineer-phase-08.md';
+
+test('loader reads every stage-legal artifact byte instead of only listing its filename', async () => {
+  const root = await copiedBootstrapRoot();
+  const paths = {
+    chapter: `${BOOK}/manuscript/chapter-01.md`,
+    furniture: `${BOOK}/manuscript/opening-and-closing.md`,
+    register: `${BOOK}/manuscript/manuscript-register.json`,
+    companion: `${BOOK}/companion/package.json`,
+    review: `${ROLE}/reviews/phase-08/task-02-lane-a.md`,
+    verification: `${BOOK}/phase-08-verification.json`,
+  };
+  for (const [kind, path] of Object.entries(paths)) {
+    await mkdir(dirname(join(root, path)), { recursive: true });
+    await writeFile(join(root, path), kind === 'register' || kind === 'companion' || kind === 'verification' ? '{}\n' : `${kind} bytes\n`);
+  }
+  const snapshot = await loadRepositorySnapshot(root, {
+    stage: 'final', git: { ...bootstrapGit, clean: true, changedPaths: [] }, github: await bootstrapGithub(root),
+  });
+  for (const path of Object.values(paths)) {
+    assert.equal(typeof snapshot.files[path]?.text, 'string', path);
+    assert.equal(snapshot.files[path].sha256, sha256(snapshot.files[path].text), path);
+  }
+});
+
+test('real loaded invalid manuscript, register, companion, and review bytes invoke their validators', async (t) => {
+  const root = await copiedBootstrapRoot();
+  const fixtures = [
+    [`${BOOK}/manuscript/chapter-01.md`, 'outline only\n', 'MANUSCRIPT_DEPTH'],
+    [`${BOOK}/manuscript/opening-and-closing.md`, 'furniture placeholder\n', 'FURNITURE_CONTRACT'],
+    [`${BOOK}/manuscript/manuscript-register.json`, '{"schema":"wrong"}\n', 'MANUSCRIPT_REGISTER'],
+    [`${BOOK}/companion/package.json`, '{"type":"module"}\n', 'COMPANION_INVENTORY'],
+    [`${BOOK}/companion/expected/bl-00.json`, '{"milestoneId":"WRONG"}\n', 'COMPANION_EXPECTED_RECORD'],
+    [`${ROLE}/reviews/phase-08/task-02-lane-a.md`, 'SPEC COMPLIANCE PASS\nQUALITY APPROVED\n', 'REVIEW_SCHEMA'],
+    [`${BOOK}/phase-08-verification.json`, '{"schema":"wrong"}\n', 'FINAL_VERIFICATION_SCHEMA'],
+  ];
+  for (const [path, bytes] of fixtures) {
+    await mkdir(dirname(join(root, path)), { recursive: true });
+    await writeFile(join(root, path), bytes);
+  }
+  const snapshot = await loadRepositorySnapshot(root, {
+    stage: 'integration', git: { ...bootstrapGit, clean: true, changedPaths: [] }, github: await bootstrapGithub(root),
+  });
+  const errors = validatePhase08Snapshot(snapshot, { stage: 'integration' });
+  for (const [, , code] of fixtures) await t.test(code, () => expectCode(errors, code));
+});
+
+test('conditional repair paths are illegal without a preserved failed base review', async () => {
+  const snapshot = await loadBootstrap();
+  const repair = `${ROLE}/reviews/phase-08/task-02-lane-a-repair.md`;
+  snapshot.phase08Paths.push(repair);
+  snapshot.files[repair] = { text: 'orphan repair\n', sha256: sha256('orphan repair\n') };
+  expectCode(validatePhase08Snapshot(snapshot, { stage: 'bootstrap' }), 'REPAIR_WITHOUT_FAILURE');
+});
+
+test('executes a real companion fixture across all five ports with deterministic canonical bytes and immutable dossier history', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'mle-p8-companion-'));
+  const runner = join(root, 'run.mjs');
+  await writeFile(runner, `
+export async function runPort(port, { mode = 'positive', target, history }) {
+  if (['network','shell','cloud','model','secret'].includes(mode)) throw Object.assign(new Error('denied'), { code: 'EFFECT_DENIED' });
+  if (mode === 'escape') throw Object.assign(new Error('denied'), { code: 'PATH_DENIED' });
+  return { port, disposition: 'PASS', milestoneId: 'BL-00', target, history, limitation: 'mechanics only' };
+}
+`);
+  const report = await validatorModule.executeCompanionProbe({ runnerPath: runner, repositoryRoot: REPO });
+  assert.deepEqual(report.errors, []);
+  assert.deepEqual(report.ports, [...EXPECTED_PORTS]);
+  assert.equal(new Set(report.canonicalBytes).size, 5);
+  assert.equal(report.deterministic, true);
+  assert.equal(report.historyImmutable, true);
+  assert.equal(report.effectProbesDenied, 5);
+  assert.equal(report.escapeProbeDenied, true);
+});
+
+test('companion execution catches a runner that permits an escape probe', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'mle-p8-companion-bad-'));
+  const runner = join(root, 'run.mjs');
+  await writeFile(runner, `export async function runPort(port, options) { return { port, options }; }\n`);
+  const report = await validatorModule.executeCompanionProbe({ runnerPath: runner, repositoryRoot: REPO });
+  expectCode(report.errors, 'COMPANION_ESCAPE_PROBE');
+});
+
+test('committed clean leakage is found by bounded real filesystem inventory without Git dirt', async (t) => {
+  const roots = [
+    'public/nested/mle-leak.bin',
+    'output/archive/leak.dat',
+    'content/publications/hidden/leak.txt',
+    'content/courses/hidden/leak.txt',
+    'project-control/abhyaas/hidden/leak.txt',
+    'project-control/roles/data-engineer/hidden/leak.txt',
+  ];
+  for (const leakedPath of roots) {
+    await t.test(leakedPath, async () => {
+      const root = await copiedBootstrapRoot();
+      const baseline = await loadRepositorySnapshot(root, {
+        stage: 'bootstrap', git: { ...bootstrapGit, clean: true, changedPaths: [] }, github: await bootstrapGithub(root),
+      });
+      await mkdir(dirname(join(root, leakedPath)), { recursive: true });
+      await writeFile(join(root, leakedPath), 'committed leakage\n');
+      const snapshot = await loadRepositorySnapshot(root, {
+        stage: 'bootstrap', git: { ...bootstrapGit, clean: true, changedPaths: [] }, github: await bootstrapGithub(root),
+        activationInventory: baseline.repositoryInventory,
+      });
+      expectCode(validatePhase08Snapshot(snapshot, { stage: 'bootstrap' }), 'STOP_BOUNDARY_COMMITTED');
+    });
+  }
+});

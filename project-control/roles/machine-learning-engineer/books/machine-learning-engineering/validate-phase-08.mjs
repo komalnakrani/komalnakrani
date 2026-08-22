@@ -2,9 +2,9 @@
 
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { lstat, readFile, readdir } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import { dirname, isAbsolute, relative, resolve, sep } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const BOOK = 'project-control/roles/machine-learning-engineer/books/machine-learning-engineering';
 const ROLE = 'project-control/roles/machine-learning-engineer';
@@ -139,8 +139,15 @@ const BOOTSTRAP_ALLOWED = new Set([
 const BOOTSTRAP_DIRT = new Set([
   `${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`,
   FACTORY, ...VALIDATOR_PATHS,
+  `${ROLE}/reviews/phase-08/task-01-bootstrap.md`,
+  `${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`,
 ]);
 const STAGES = new Set(['bootstrap', 'production', 'integration', 'pre-hostile', 'pre-close', 'final-content', 'final']);
+const ACTIVATION_COMMIT = 'c5a5357373c1f2f887a58be8f3d8b52825b1b444';
+const BOUNDED_ROOTS = [
+  'public', 'output', 'content/publications', 'content/courses',
+  'project-control/abhyaas', 'project-control/roles',
+];
 
 function error(code, message, path = null) {
   return { code, message, ...(path ? { path } : {}) };
@@ -238,17 +245,48 @@ export async function loadRepositorySnapshot(root, options = {}) {
       || path.startsWith('.superpowers/sdd/2026-08-22-machine-learning-engineer-phase-08/'),
     )
     .sort();
+  for (const path of phase08Paths) {
+    if (!files[path]) {
+      const record = await readRecord(root, path, true);
+      if (record) files[path] = record;
+    }
+  }
   const reviewInventory = phase08Paths
     .filter((path) => path.startsWith(`${ROLE}/reviews/phase-08/`))
     .map((path) => path.split('/').at(-1));
   const productionInventory = phase08Paths.filter((path) => PRODUCTION_PATHS.includes(path));
 
+  let repositoryInventory;
+  try {
+    repositoryInventory = execFileSync(
+      'git', ['ls-files', '--', ...BOUNDED_ROOTS],
+      { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] },
+    ).split('\n').filter(Boolean).sort();
+  } catch {
+    repositoryInventory = (
+      await Promise.all(BOUNDED_ROOTS.map((path) => listFiles(root, path)))
+    ).flat().sort();
+  }
+  let activationInventory = options.activationInventory ?? null;
+  if (!activationInventory) {
+    try {
+      activationInventory = execFileSync(
+        'git', ['ls-tree', '-r', '--name-only', ACTIVATION_COMMIT, '--', ...BOUNDED_ROOTS],
+        { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] },
+      ).split('\n').filter(Boolean).sort();
+    } catch {
+      activationInventory = repositoryInventory;
+    }
+  }
+
   return {
     root: resolve(root), stage, files, phase07, register, blueprints,
     phase08Paths, reviewInventory, productionInventory,
-    changedPaths: options.changedPaths ?? options.git?.changedPaths ?? [],
+    changedPaths: structuredClone(options.changedPaths ?? options.git?.changedPaths ?? []),
     git: options.git ? structuredClone(options.git) : null,
     github: options.github ? structuredClone(options.github) : null,
+    repositoryInventory,
+    activationInventory: structuredClone(activationInventory),
   };
 }
 
@@ -286,6 +324,9 @@ function validateRegister(snapshot) {
   const errors = [];
   const { register } = snapshot;
   const baseline = JSON.parse(snapshot.files[`${BOOK}/blueprints/blueprint-register.json`].text);
+  if (canonicalJson(register) !== canonicalJson(baseline)) {
+    errors.push(error('GRAPH_EXACT', 'register must preserve the complete frozen graph and every reverse edge'));
+  }
   const derived = countDerived(register);
   for (const [name, expected] of Object.entries(EXPECTED_COUNTS)) {
     if (register.counts?.[name] !== expected) errors.push(error(`COUNT_${name}`, `expected ${name}=${expected}; got ${register.counts?.[name]}`));
@@ -310,12 +351,95 @@ function validateRegister(snapshot) {
   return errors;
 }
 
+function parseReviewRecord(text) {
+  const blocks = [...text.matchAll(/```json\s*([\s\S]*?)```/g)];
+  if (blocks.length === 0) return null;
+  try {
+    return JSON.parse(blocks.at(-1)[1]);
+  } catch {
+    return null;
+  }
+}
+
+function reviewIsFailed(text = '') {
+  return /SPEC COMPLIANCE FAIL/.test(text) && /QUALITY CHANGES REQUESTED/.test(text)
+    && !/SPEC COMPLIANCE PASS\s*\nQUALITY APPROVED\s*$/s.test(text);
+}
+
+function reviewIsAccepted(text = '') {
+  return /SPEC COMPLIANCE PASS\s*\nQUALITY APPROVED\s*$/s.test(text);
+}
+
+function missingPaths(seen, paths) {
+  return paths.filter((path) => !seen.has(path));
+}
+
+function validateStageRequirements(snapshot, stage, seen) {
+  const errors = [];
+  if (stage === 'bootstrap') return errors;
+  const missingChapters = missingPaths(seen, CHAPTER_PATHS);
+  const missingFurniture = missingPaths(seen, FURNITURE_PATHS);
+  const missingCompanion = missingPaths(seen, COMPANION_PATHS);
+  const requiredLaneReviews = [
+    `${ROLE}/reviews/phase-08/task-01-bootstrap.md`,
+    `${ROLE}/reviews/phase-08/task-02-lane-a.md`,
+    `${ROLE}/reviews/phase-08/task-03-lane-b.md`,
+    `${ROLE}/reviews/phase-08/task-04-lane-c.md`,
+    `${ROLE}/reviews/phase-08/task-05-companion.md`,
+  ];
+  const missingLaneReviews = requiredLaneReviews.filter((path) => !seen.has(path) || !reviewIsAccepted(snapshot.files[path]?.text));
+  if (missingChapters.length) errors.push(error('STAGE_MANUSCRIPT_MISSING', `missing ${missingChapters.length} chapter manuscripts`));
+  if (missingFurniture.length) errors.push(error('STAGE_FURNITURE_MISSING', `missing ${missingFurniture.length} furniture files`));
+  if (missingCompanion.length) errors.push(error('STAGE_COMPANION_MISSING', `missing ${missingCompanion.length} companion files`));
+  if (missingLaneReviews.length) errors.push(error('STAGE_REVIEW_MISSING', `missing ${missingLaneReviews.length} accepted production reviews`));
+  if (missingPaths(seen, SCRATCH_PATHS).length) errors.push(error('STAGE_LANE_MANIFEST_MISSING', 'all three lane manifests are required during production and integration'));
+
+  if (['integration', 'pre-hostile', 'pre-close', 'final-content', 'final'].includes(stage)) {
+    const missingIntegration = missingPaths(seen, INTEGRATION_PATHS);
+    const task06 = `${ROLE}/reviews/phase-08/task-06-canonical-integration.md`;
+    if (!seen.has(task06) || !reviewIsAccepted(snapshot.files[task06]?.text)) missingIntegration.push(task06);
+    if (missingIntegration.length) errors.push(error('STAGE_INTEGRATION_MISSING', `missing ${missingIntegration.length} integration files`));
+  }
+  if (['pre-close', 'final-content', 'final'].includes(stage) && (!seen.has(`${ROLE}/reviews/phase-08/task-07-hostile-integration.md`) || !reviewIsAccepted(snapshot.files[`${ROLE}/reviews/phase-08/task-07-hostile-integration.md`]?.text))) {
+    errors.push(error('STAGE_REVIEW_MISSING', 'hostile integration review is required before close'));
+  }
+  return errors;
+}
+
+function validateConditionalRepairs(snapshot) {
+  const errors = [];
+  for (const repairPath of snapshot.phase08Paths.filter((path) => path.endsWith('-repair.md'))) {
+    const basePath = repairPath.replace(/-repair\.md$/, '.md');
+    const base = snapshot.files[basePath]?.text ?? '';
+    if (!base || !/SPEC COMPLIANCE FAIL/.test(base)) {
+      errors.push(error('REPAIR_WITHOUT_FAILURE', 'repair path requires a preserved failed base review', repairPath));
+    }
+  }
+  return errors;
+}
+
 function validateInventory(snapshot, stage) {
   const errors = [];
   const seen = new Set(snapshot.phase08Paths);
   for (const path of snapshot.phase08Paths) {
     if (!ALL_PHASE08_PATHS.has(path)) errors.push(error('UNEXPECTED_PHASE08_PATH', 'path is outside the closed Phase 08 allowlist', path));
-    if (stage === 'bootstrap' && !BOOTSTRAP_ALLOWED.has(path)) errors.push(error('STAGE_PATH_FORBIDDEN', 'path is not legal at bootstrap', path));
+    if (stage === 'bootstrap' && !BOOTSTRAP_ALLOWED.has(path)) {
+      const isFailedBootstrapReview = path === `${ROLE}/reviews/phase-08/task-01-bootstrap.md`
+        && reviewIsFailed(snapshot.files[path]?.text);
+      const isBootstrapRepair = path === `${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`
+        && /SPEC COMPLIANCE FAIL/.test(snapshot.files[`${ROLE}/reviews/phase-08/task-01-bootstrap.md`]?.text ?? '');
+      if (!isFailedBootstrapReview && !isBootstrapRepair) errors.push(error('STAGE_PATH_FORBIDDEN', 'path is not legal at bootstrap', path));
+    }
+  }
+  const futurePaths = stage === 'production'
+    ? [...INTEGRATION_PATHS, `${ROLE}/reviews/phase-08/task-06-canonical-integration.md`, `${ROLE}/reviews/phase-08/task-06-canonical-integration-repair.md`, `${ROLE}/reviews/phase-08/task-07-hostile-integration.md`, `${ROLE}/reviews/phase-08/task-07-hostile-integration-repair.md`, FINAL_VERIFICATION]
+    : ['integration', 'pre-hostile'].includes(stage)
+      ? [`${ROLE}/reviews/phase-08/task-07-hostile-integration.md`, `${ROLE}/reviews/phase-08/task-07-hostile-integration-repair.md`, FINAL_VERIFICATION]
+      : stage === 'pre-close'
+        ? [FINAL_VERIFICATION]
+        : [];
+  for (const path of futurePaths) {
+    if (seen.has(path)) errors.push(error('STAGE_PATH_FORBIDDEN', 'artifact belongs to a future Phase 08 stage', path));
   }
   if (stage === 'bootstrap') {
     for (const path of VALIDATOR_PATHS) {
@@ -324,6 +448,8 @@ function validateInventory(snapshot, stage) {
   }
   if (stage !== 'final' && seen.has(FINAL_VERIFICATION)) errors.push(error('FINAL_VERIFICATION_TIMING', 'final verification may exist only after child closure'));
   if (stage === 'final' && !seen.has(FINAL_VERIFICATION)) errors.push(error('FINAL_VERIFICATION_TIMING', 'final stage requires final verification'));
+  errors.push(...validateStageRequirements(snapshot, stage, seen));
+  errors.push(...validateConditionalRepairs(snapshot));
   return errors;
 }
 
@@ -380,6 +506,116 @@ function validateStopBoundary(snapshot) {
   for (const path of [...(snapshot.changedPaths ?? []), ...(snapshot.git?.changedPaths ?? [])]) {
     if (patterns.some((pattern) => pattern.test(path))) errors.push(error('STOP_BOUNDARY', 'path crosses the Phase 08 stop boundary', path));
   }
+  const activation = new Set(snapshot.activationInventory ?? []);
+  for (const path of snapshot.repositoryInventory ?? []) {
+    const legalPhase08 = ALL_PHASE08_PATHS.has(path)
+      || path === `${ROLE}/ROLE-STATE.md`
+      || path === `${ROLE}/issues/root.md`
+      || path === `${ROLE}/issues/phase-08-manuscript.md`;
+    if (!activation.has(path) && !legalPhase08) {
+      errors.push(error('STOP_BOUNDARY_COMMITTED', 'committed file is outside the activation tree and closed Phase 08 allowlist', path));
+    }
+  }
+  return errors;
+}
+
+function parseWordRange(value = '') {
+  const match = value.match(/([\d,]+)\s*[-–]\s*([\d,]+)/);
+  return match ? { minWords: Number(match[1].replaceAll(',', '')), maxWords: Number(match[2].replaceAll(',', '')) } : null;
+}
+
+function validateLoadedArtifacts(snapshot, stage) {
+  const errors = [];
+  for (let index = 0; index < CHAPTER_PATHS.length; index += 1) {
+    const path = CHAPTER_PATHS[index];
+    if (!snapshot.files[path]) continue;
+    const range = parseWordRange(snapshot.register.handoffs[index]?.wordRange);
+    if (!range) {
+      errors.push(error('MANUSCRIPT_DEPTH', 'frozen word range is unreadable', path));
+      continue;
+    }
+    errors.push(...validateManuscriptChapter(
+      snapshot.files[path].text,
+      snapshot.register.chapters[index],
+      snapshot.register,
+      {
+        ...range,
+        otherChapters: CHAPTER_PATHS.filter((other) => other !== path && snapshot.files[other]).map((other) => snapshot.files[other].text),
+      },
+    ).map((item) => ({ ...item, path })));
+  }
+
+  const manuscriptRegisterPath = `${BOOK}/manuscript/manuscript-register.json`;
+  if (snapshot.files[manuscriptRegisterPath]) {
+    try {
+      const register = JSON.parse(snapshot.files[manuscriptRegisterPath].text);
+      if (register.schema !== 'mle-phase-08-manuscript-register/v1') errors.push(error('MANUSCRIPT_REGISTER', 'manuscript register schema drift', manuscriptRegisterPath));
+    } catch {
+      errors.push(error('MANUSCRIPT_REGISTER', 'manuscript register must be valid JSON', manuscriptRegisterPath));
+    }
+  }
+
+  const openingPath = `${BOOK}/manuscript/opening-and-closing.md`;
+  if (snapshot.files[openingPath]) {
+    const text = snapshot.files[openingPath].text;
+    const required = ['Bench Zero', 'About Komal', 'Komal Nakrani', 'Ship the model only when its evidence can travel with it.'];
+    if (required.some((token) => !text.includes(token)) || proseWords(text) < 300) {
+      errors.push(error('FURNITURE_CONTRACT', 'opening and closing furniture is incomplete or placeholder-depth', openingPath));
+    }
+  }
+  for (const path of PART_PATHS) {
+    if (snapshot.files[path] && (!snapshot.files[path].text.includes('Bench Setup') || !snapshot.files[path].text.includes('Qualification Gate'))) {
+      errors.push(error('FURNITURE_CONTRACT', 'part furniture must preserve setup and exit gate', path));
+    }
+  }
+  for (const path of APPENDIX_PATHS) {
+    if (snapshot.files[path] && proseWords(snapshot.files[path].text) < 100) errors.push(error('FURNITURE_CONTRACT', 'appendix is placeholder-depth', path));
+  }
+
+  const presentCompanion = COMPANION_PATHS.filter((path) => snapshot.files[path]);
+  if (presentCompanion.length > 0 && presentCompanion.length !== COMPANION_PATHS.length) {
+    errors.push(error('COMPANION_INVENTORY', `companion inventory is partial: ${presentCompanion.length}/${COMPANION_PATHS.length}`));
+  }
+  for (let index = 0; index < EXPECTED_FILES.length; index += 1) {
+    const path = EXPECTED_FILES[index];
+    if (!snapshot.files[path]) continue;
+    try {
+      const record = JSON.parse(snapshot.files[path].text);
+      if (record.milestoneId !== EXPECTED_DOSSIERS[index]) errors.push(error('COMPANION_EXPECTED_RECORD', `expected ${EXPECTED_DOSSIERS[index]}`, path));
+    } catch {
+      errors.push(error('COMPANION_EXPECTED_RECORD', 'expected dossier record must be valid JSON', path));
+    }
+  }
+  for (const path of COMPANION_PATHS.filter((item) => item.endsWith('.json') && !EXPECTED_FILES.includes(item))) {
+    if (!snapshot.files[path]) continue;
+    try {
+      JSON.parse(snapshot.files[path].text);
+    } catch {
+      errors.push(error('COMPANION_JSON', 'companion JSON artifact is invalid', path));
+    }
+  }
+
+  if (snapshot.files[FINAL_VERIFICATION]) {
+    try {
+      const verification = JSON.parse(snapshot.files[FINAL_VERIFICATION].text);
+      if (verification.schema !== 'mle-phase-08-final-verification/v1') errors.push(error('FINAL_VERIFICATION_SCHEMA', 'final verification schema drift', FINAL_VERIFICATION));
+    } catch {
+      errors.push(error('FINAL_VERIFICATION_SCHEMA', 'final verification must be valid JSON', FINAL_VERIFICATION));
+    }
+  }
+
+  for (const path of snapshot.phase08Paths.filter((item) => item.startsWith(`${ROLE}/reviews/phase-08/task-`) && !item.endsWith('-repair.md'))) {
+    if (path.endsWith('task-00-plan.md')) continue;
+    const text = snapshot.files[path]?.text ?? '';
+    if (stage === 'bootstrap' && reviewIsFailed(text)) continue;
+    const record = parseReviewRecord(text);
+    if (!record) {
+      errors.push(error('REVIEW_SCHEMA', 'review must end with a machine-readable closed record', path));
+      continue;
+    }
+    const expected = EXPECTED_REVIEW_IDENTITIES[record.taskId];
+    errors.push(...validateReviewRecord(record, expected, { files: snapshot.files }).map((item) => ({ ...item, path })));
+  }
   return errors;
 }
 
@@ -399,6 +635,7 @@ export function validatePhase08Snapshot(snapshot, options = {}) {
   errors.push(...validateAuthorities(snapshot, stage));
   errors.push(...validateExternal(snapshot, stage));
   errors.push(...validateStopBoundary(snapshot));
+  errors.push(...validateLoadedArtifacts(snapshot, stage));
   return errors;
 }
 
@@ -408,7 +645,7 @@ const REVIEW_FIELDS = [
   'specVerdict', 'qualityVerdict',
 ];
 
-export function validateReviewRecord(review, expectedIdentity) {
+export function validateReviewRecord(review, expectedIdentity, context = {}) {
   const errors = [];
   if (REVIEW_FIELDS.some((field) => !Object.hasOwn(review, field)) || !Array.isArray(review.artifactBindings) || review.artifactBindings.length === 0) errors.push(error('REVIEW_SCHEMA', 'review record is missing a closed-schema field or binding'));
   if (review.producerIdentity === review.reviewerIdentity) errors.push(error('REVIEW_SELF_APPROVAL', 'producer and reviewer must differ'));
@@ -420,6 +657,16 @@ export function validateReviewRecord(review, expectedIdentity) {
     if (!review.priorVerdict || review.reacceptedBy !== review.reviewerIdentity || Date.parse(review.reacceptedAt) <= Date.parse(review.reviewedAt) || !/^[a-f0-9]{64}$/.test(review.repairSha256)) errors.push(error('REVIEW_REPAIR_CHAIN', 'repair must bind a prior failure and same later reviewer'));
   } else if (review.priorVerdict) {
     errors.push(error('REVIEW_REPAIR_CHAIN', 'prior failure requires a complete repair chain'));
+  }
+  if (context.files) {
+    for (const binding of review.artifactBindings ?? []) {
+      if (!binding?.path || context.files[binding.path]?.sha256 !== binding.sha256) {
+        errors.push(error('REVIEW_ARTIFACT_BINDING', 'review artifact binding differs from loaded bytes', binding?.path));
+      }
+    }
+    if (review.repairPath && context.files[review.repairPath]?.sha256 !== review.repairSha256) {
+      errors.push(error('REVIEW_ARTIFACT_BINDING', 'repair binding differs from loaded bytes', review.repairPath));
+    }
   }
   if (review.specVerdict !== 'SPEC COMPLIANCE PASS' || review.qualityVerdict !== 'QUALITY APPROVED') errors.push(error('REVIEW_VERDICT', 'terminal verdict must be exact PASS/APPROVED'));
   return errors;
@@ -453,7 +700,8 @@ export function validateManuscriptChapter(markdown, blueprint, register, options
   if (bindings.some((token) => !markdown.includes(token))) errors.push(error('MANUSCRIPT_BINDING', 'chapter is missing a frozen claim, port, lab, assessment, visual, or milestone binding'));
   for (const claimId of blueprint.primaryClaimIds) {
     const primaryPattern = new RegExp(`Primary teaching\\s+${claimId}`, 'g');
-    if ((markdown.match(primaryPattern) ?? []).length > 1) errors.push(error('MANUSCRIPT_CLAIM_PRIMARY', `${claimId} has duplicate primary teaching treatment`));
+    const placements = (markdown.match(primaryPattern) ?? []).length;
+    if (placements !== 1) errors.push(error('MANUSCRIPT_CLAIM_PRIMARY', `${claimId} requires exactly one primary teaching treatment; got ${placements}`));
   }
   if ((options.otherChapters ?? []).some((other) => other === markdown)) errors.push(error('MANUSCRIPT_ORIGINALITY', 'chapter duplicates another manuscript byte-for-byte'));
   const truthTokens = ['synthetic-deterministic', 'reported facts', 'attributed outcomes', 'allowed inference', 'forbidden inference', 'limitations', 'source notes', 'currentness'];
@@ -482,15 +730,97 @@ export function validateCompanionBoundary(contract) {
   return errors;
 }
 
+export async function executeCompanionProbe({ runnerPath, repositoryRoot }) {
+  const errors = [];
+  let runner;
+  try {
+    runner = await import(`${pathToFileURL(runnerPath).href}?probe=${Date.now()}-${Math.random()}`);
+  } catch (caught) {
+    return { errors: [error('COMPANION_EXECUTION', `cannot load runner: ${caught.message}`)], ports: [] };
+  }
+  if (typeof runner.runPort !== 'function') {
+    return { errors: [error('COMPANION_EXECUTION', 'runner must export runPort')], ports: [] };
+  }
+  const history = Object.freeze({ records: Object.freeze([{ milestoneId: 'BL-ENTRY', hash: 'entry' }]) });
+  const historyBefore = canonicalJson(history);
+  const canonicalBytes = [];
+  let deterministic = true;
+  for (const port of EXPECTED_PORTS) {
+    try {
+      const options = { target: `/private/tmp/mle-p8-probe/${port}`, history };
+      const first = await runner.runPort(port, options);
+      const second = await runner.runPort(port, options);
+      const firstBytes = canonicalJson(first);
+      const secondBytes = canonicalJson(second);
+      canonicalBytes.push(firstBytes);
+      if (firstBytes !== secondBytes) deterministic = false;
+      if (first?.port !== port || first?.milestoneId !== 'BL-00') errors.push(error('COMPANION_PORTS', `${port} returned a wrong envelope`));
+    } catch (caught) {
+      errors.push(error('COMPANION_EXECUTION', `${port} positive execution failed: ${caught.message}`));
+    }
+  }
+  if (!deterministic) errors.push(error('COMPANION_DETERMINISM', 'same inputs must produce byte-identical canonical output'));
+  const historyImmutable = canonicalJson(history) === historyBefore;
+  if (!historyImmutable) errors.push(error('COMPANION_IMMUTABILITY', 'runner mutated earlier dossier history'));
+
+  const effectModes = ['network', 'shell', 'cloud', 'model', 'secret'];
+  let effectProbesDenied = 0;
+  for (let index = 0; index < EXPECTED_PORTS.length; index += 1) {
+    try {
+      await runner.runPort(EXPECTED_PORTS[index], { mode: effectModes[index], target: '/private/tmp/mle-p8-probe/effect', history });
+    } catch (caught) {
+      if (caught?.code === 'EFFECT_DENIED') effectProbesDenied += 1;
+    }
+  }
+  if (effectProbesDenied !== 5) errors.push(error('COMPANION_EFFECT_PROBE', `all five forbidden effect probes must be denied; got ${effectProbesDenied}`));
+
+  let deniedEscapes = 0;
+  for (const port of EXPECTED_PORTS) {
+    try {
+      await runner.runPort(port, { mode: 'escape', target: `${repositoryRoot}/public`, history });
+    } catch (caught) {
+      if (caught?.code === 'PATH_DENIED') deniedEscapes += 1;
+    }
+  }
+  const escapeProbeDenied = deniedEscapes === EXPECTED_PORTS.length;
+  if (!escapeProbeDenied) errors.push(error('COMPANION_ESCAPE_PROBE', `all five escape probes must be denied; got ${deniedEscapes}`));
+  return {
+    errors,
+    ports: [...EXPECTED_PORTS],
+    canonicalBytes,
+    deterministic,
+    historyImmutable,
+    effectProbesDenied,
+    escapeProbeDenied,
+  };
+}
+
 export async function validateRepository(root, options = {}) {
   const snapshot = await loadRepositorySnapshot(root, options);
+  const stage = options.stage ?? 'bootstrap';
+  const errors = validatePhase08Snapshot(snapshot, options);
+  if (stage !== 'bootstrap' && COMPANION_PATHS.every((path) => snapshot.files[path])) {
+    const companionReport = await executeCompanionProbe({
+      runnerPath: resolve(root, `${BOOK}/companion/lib/run.mjs`),
+      repositoryRoot: resolve(root),
+    });
+    errors.push(...companionReport.errors);
+  }
+  const task01Text = snapshot.files[`${ROLE}/reviews/phase-08/task-01-bootstrap.md`]?.text ?? '';
+  const bootstrapLifecycle = !task01Text
+    ? 'pre-review'
+    : reviewIsAccepted(task01Text)
+      ? 'accepted'
+      : 'repair-in-progress';
   return {
     schema: 'mle-phase-08-validator-report/v1',
-    stage: options.stage ?? 'bootstrap',
+    stage,
     counts: snapshot.register.counts,
     productionInventory: snapshot.productionInventory,
     reviewInventory: snapshot.reviewInventory,
-    errors: validatePhase08Snapshot(snapshot, options),
+    bootstrapLifecycle,
+    productionAuthorized: bootstrapLifecycle === 'accepted',
+    errors,
   };
 }
 
