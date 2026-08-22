@@ -204,3 +204,134 @@ return the replacement hashes and repair record to this same reviewer.
 
 SPEC COMPLIANCE FAIL
 QUALITY CHANGES REQUESTED
+
+## Same-reviewer re-review — 2026-08-22
+
+Reviewer identity: `/root/mle_p8_bootstrap_review`
+
+Replacement checkpoint:
+`8cf1fce280ffd5932201d33470255c98bd6e3aba`
+
+Failed-review checkpoint:
+`5fc2420fb2a4ea4d82d0badcd6cafc6f5c272111`
+
+### Replacement bindings
+
+| Replacement artifact | SHA-256 |
+|---|---|
+| `project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-08.mjs` | `b97b840667bbca4f3d1b87e3b22d0b933eb75ba503ea0109d22e62f8b8083158` |
+| `project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-08.test.mjs` | `100abb784e8c883a886a70fd977e565abb92e9576ba60fa887dd1aa6ac82e271` |
+| `project-control/roles/machine-learning-engineer/reviews/phase-08/task-01-bootstrap-repair.md` | `af015a17c20ec87d3352682375be0ae6d7137e17de71598a241da6493766d706` |
+
+Local `main`, `origin/main`, and live remote `main` equal the replacement
+checkpoint. Live #79 remains open/in-progress, #84 closed/done, and #85
+open/in-progress with their exact accepted label sets. The filesystem still
+contains zero manuscript, furniture, appendix, companion, lane-manifest,
+final-verification, image, PDF, publication, course, Abhyaas, second-volume,
+catalog-position-6, or next-role additions.
+
+Node `v22.23.1` syntax checks pass. The replacement suite is exactly 167 tests,
+167 passes, zero failures, zero skipped, and zero todo. The real current
+bootstrap is PASS with lifecycle `repair-in-progress` and
+`productionAuthorized=false`. The current bootstrap-only tree now correctly
+fails production, integration, pre-hostile, and pre-close instead of approving
+an absent package.
+
+The claimed historical hardening RED is not independently bound by a committed
+intermediate test identity. Running the final 167-test replacement suite
+against the failed-review validator reconstructs 167 tests, 119 passes, and 48
+failures, not the recorded 158/119/39. The nine-test delta is arithmetically
+consistent with further tests added during repair, but no immutable 158-test
+blob or SHA is supplied for exact reconstruction.
+
+### Residual blocking findings
+
+#### P08-BOOT-001 — Accepted bootstrap becomes illegal at its own stage
+
+The later-stage absence defect is repaired, but bootstrap stage legality now
+permits `task-01-bootstrap.md` only while `reviewIsFailed` is true. Appending a
+same-reviewer PASS/APPROVED record makes that same path produce
+`STAGE_PATH_FORBIDDEN`. Therefore the accepted bootstrap cannot pass the real
+bootstrap CLI or prove the lifecycle gate that is supposed to authorize the
+production lanes.
+
+Required repair: make bootstrap accept exactly the Task 01 failed/repair-in-
+progress chain before reacceptance and exactly the same base review plus its
+bound repair and final accepted machine record afterward. Add a real-filesystem
+test for the accepted-review state requiring zero errors,
+`bootstrapLifecycle=accepted`, and `productionAuthorized=true`, while preserving
+the current non-authorizing repair-in-progress test.
+
+#### P08-BOOT-002 — Review identity and artifact sets remain path-unbound
+
+The loader verifies hashes that a review chooses to list, but it derives the
+expected identity from `record.taskId`, not from the review path. A record saved
+as `task-02-lane-a.md` can claim `TASK-03` and the Lane B producer/reviewer and
+pass. A production or integration review can also bind only the validator file
+and omit every manuscript or furniture artifact it is required to review; the
+helper returns zero errors because no exact per-task artifact set is frozen.
+
+Required repair: map each base review path to one exact task ID, producer,
+reviewer, required artifact set, and permitted conditional repair. Reject a
+record whose task differs from its path, whose bindings omit or add paths, or
+whose repair/prior-verdict semantics differ from the preserved base history.
+Mutation-test these cases through the real loaded review path.
+
+#### P08-BOOT-003 — The executed companion probe can approve real effects and does not prove the dossier
+
+The probe asks the runner to self-report denial by throwing `EFFECT_DENIED`.
+An independent hostile runner executed `/usr/bin/true` through
+`node:child_process` and then threw `EFFECT_DENIED` for each mode; the probe
+returned `errors: []`, `effectProbesDenied: 5`, and full success. The gate thus
+proves a post-effect exception label, not effect freedom. It also exercises only
+`BL-00`; it does not execute or validate `BL-00` through `BL-20`, previous-hash
+continuity, legal dispositions/transitions, four reopen triggers, or immutable
+earlier output bytes. The expected JSON loader checks only `milestoneId`.
+
+Required repair: run the companion under enforceable or instrumented effect
+guards that fail on attempted network, child process, environment-secret,
+cloud/model, and unauthorized filesystem access even when the runner later
+throws an approved code. Execute all five ports across the complete dossier and
+negative-path sequence; compare exact canonical bytes/hashes, prior links,
+dispositions, transitions, reopen triggers, and earlier-file immutability.
+
+#### P08-BOOT-004 — The committed-clean inventory still omits prohibited roots
+
+The new comparison inspects only `public`, `output`, two `content` subtrees,
+`project-control/abhyaas`, and `project-control/roles`. The approved closed path
+boundary also prohibits output under `assets`, `tools/screen-first-books`,
+certification, and other publication/build surfaces. A later committed clean
+file under `assets`, `tools`, `src`, `scripts`, `tests`, or `dist` is never
+present in `repositoryInventory`, so it cannot reach
+`STOP_BOUNDARY_COMMITTED`. The six new tests cover only the six scanned roots.
+
+Required repair: compare the complete tracked tree at each later checkpoint to
+the activation tree with the exact Phase 08 allowlist, or freeze every actual
+repository root including all expressly prohibited paths. Add nested,
+generic-name, committed-clean probes for each formerly unscanned family.
+
+#### P08-BOOT-005 — The hardening RED identity is not reproducible
+
+The repair record states an exact 158/119/39 RED but binds only the final
+167-test SHA. The only reconstructible old-validator/new-test pairing is
+167/119/48. A count without the exact intermediate test bytes cannot establish
+which mutations produced the reported failures.
+
+Required repair: bind an immutable intermediate hardening-test SHA and make its
+exact bytes reproducible from tracked evidence, or revise the repair history to
+the actually reconstructible 167/119/48 pairing. Preserve the original
+missing-module RED separately.
+
+### Re-review decision
+
+The first repair materially improves stage inventory, byte loading, exact
+frozen-register equality, and later-stage rejection. It does not yet close the
+review-path identity contract, accepted-bootstrap lifecycle, real effect
+boundary, complete dossier proof, or committed-tree boundary. Do not authorize
+production. Append the next directed repair to
+`task-01-bootstrap-repair.md`, harden validator/tests test-first, commit and
+push replacement bytes without rewriting either historical failure, then
+return to this same reviewer.
+
+SPEC COMPLIANCE FAIL
+QUALITY CHANGES REQUESTED
