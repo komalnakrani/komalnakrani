@@ -205,6 +205,7 @@ return the replacement hashes and repair record to this same reviewer.
 SPEC COMPLIANCE FAIL
 QUALITY CHANGES REQUESTED
 
+
 ## Same-reviewer re-review — 2026-08-22
 
 Reviewer identity: `/root/mle_p8_bootstrap_review`
@@ -398,6 +399,59 @@ RED findings are materially repaired. The explicit effect-free and immutable
 dossier contract is not. Production remains unauthorized; preserve every prior
 FAIL/CHANGES record, append the next repair iteration to the existing repair
 record, and return the replacement pair to this same reviewer.
+
+SPEC COMPLIANCE FAIL
+QUALITY CHANGES REQUESTED
+
+## Terminal same-reviewer audit — 2026-08-22
+
+Replacement checkpoint:
+`fcc7ea243dd8cc62a09b3679baf02886b3a683b1`
+
+Replacement bindings:
+
+- validator:
+  `0c58850f983b2c65c19f8bd6dcfed871ea3178d2a9c5cfd2d50f55dc3a496789`
+- tests:
+  `81210a75f34adbe317cb0873dfba42ab4aaacbccf417c1aa8e093b3c3d15b678`
+- repair record:
+  `b277b8b1e5f5b388cb2eff0d0da62be106956e12acba9e5ef661e5546c461379`
+
+Local `main`, `origin/main`, and live remote `main` equal the replacement
+checkpoint. The four authority hashes, frozen inputs, exact GitHub issue
+states/labels/bodies, bootstrap absence inventory, later-stage rejection,
+complete tracked-tree allowlist, exact review contracts, imported-effect
+guards, and two real five-port `BL-00` through `BL-20` dossier chains all pass
+their hostile probes. The real accepted-review simulation returns zero errors,
+`bootstrapLifecycle=accepted`, and `productionAuthorized=true`. The terminal
+repair RED independently reproduces at 200/191/9, the activation-hardening RED
+at 200/167/33, and the pre-review direct suite passes 200/200 plus its 1/1
+focused reconstruction gate under Node `v22.23.1`.
+
+### P08-BOOT-006 — The bound suite fails after the review becomes accepted
+
+The terminal acceptance record was appended with the exact validator, test,
+authority, and repair hashes, then the real bootstrap and full direct test
+command were rerun against that actual on-disk state. The real bootstrap passed
+and classified the lifecycle as accepted, but the bound direct suite exited
+`1`: exactly 200 tests, 198 passes, and 2 failures. Tests at lines 118-130 and
+555-563 load the live `task-01-bootstrap.md` while unconditionally asserting
+`bootstrapLifecycle=repair-in-progress` and
+`productionAuthorized=false`. Once the required same-reviewer terminal record
+makes the live lifecycle accepted, both assertions necessarily fail. The
+separate copied accepted fixture does not repair these live-state assertions.
+Therefore the claimed final 200/200 contract is not true of the terminal
+accepted repository state, and the review cannot honestly bind approval.
+
+Required repair: make the preserved failed-history test load an immutable
+failed-review fixture rather than the mutable live base review. Make the live
+repository test assert the lifecycle implied by the actual terminal record,
+including accepted/authorizing after reacceptance, while retaining a separate
+real-filesystem repair-in-progress fixture that proves non-authorization.
+Commit and push the replacement test bytes, append the new exact test hash and
+RED/GREEN evidence to the repair record, and return to this same reviewer. The
+terminal state must pass the real bootstrap and the complete direct suite after
+the acceptance record exists; pre-acceptance GREEN is insufficient.
 
 SPEC COMPLIANCE FAIL
 QUALITY CHANGES REQUESTED
