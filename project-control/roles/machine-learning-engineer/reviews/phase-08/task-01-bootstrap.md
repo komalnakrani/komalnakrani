@@ -335,3 +335,69 @@ return to this same reviewer.
 
 SPEC COMPLIANCE FAIL
 QUALITY CHANGES REQUESTED
+
+## Same-reviewer final-iteration audit — 2026-08-22
+
+Replacement checkpoint:
+`7b37ffd064d2d9774cbde26f6c1fa64fda842f2f`
+
+Replacement bindings:
+
+- validator:
+  `13f90d3f2f770e92047183f74224e9c1d02f01df9a647bde01aad09aeee1f323`
+- tests:
+  `b32055f94d9414e77ec880fe0fdad2f554121c33f2edb1e2b9d79f59b96a7c4d`
+- repair record:
+  `71afbdfbd2d36032a26542a01f33a67671661505f784241db8944363783c5eda`
+
+Local `main`, `origin/main`, and live remote `main` equal the replacement
+checkpoint. Node `v22.23.1` syntax checks pass. The final suite independently
+returns exactly 192 tests, 192 passes, zero failures, zero skipped, and zero
+todo. Its nested durable reconstruction executes the final test bytes against
+the committed `8cf1fce...` validator and proves exactly 191 tests, 167 passes,
+24 failures, zero skipped, and zero todo. The current repair-in-progress
+bootstrap passes while remaining non-authorizing. The accepted-review
+filesystem fixture passes with lifecycle `accepted`, authorization true, and
+zero errors. Exact review path/task/identity/artifact-set checks and whole-tree
+committed-clean additions now reject their covered mutations.
+
+### Residual blocker — imported effects bypass the claimed enforceable guard
+
+`P08-BOOT-003` remains open. `executeCompanionProbe` scans only the source bytes
+of `companion/lib/run.mjs`; it neither traverses nor scans the runner's imported
+modules and does not execute under a process, network, environment, or
+filesystem sandbox. An independent hostile fixture put
+`execFileSync('/usr/bin/true')` at module scope in a relative dependency and
+imported that dependency from a lexically clean runner. The process effect ran
+when the runner was imported. The probe still returned `errors: []`,
+`effectProbesDenied: 5`, `dossierSteps: 21`, and `negativePaths: 105`.
+
+The same execution loop does not prove dossier immutability. It passes the same
+frozen `BL-ENTRY` history to all 105 positive calls, stores returned strings in
+validator-owned arrays, and then compares those arrays to themselves. It never
+passes the accumulated accepted records back to the runner, inventories the
+caller target, or verifies that an earlier dossier file was not overwritten.
+A runner can therefore mutate or replace earlier target files while returning
+the expected envelope tokens. Expected JSON artifacts are still checked only
+for `milestoneId`, not their canonical bytes, hashes, previous links,
+dispositions, transitions, or immutable file identities.
+
+Required repair: evaluate the complete closed companion module graph rather
+than only `run.mjs`, and run the probe under enforceable effect controls so
+import-time, indirect, aliased, and throw-after-effect attempts cannot execute.
+Use a fresh real target outside the repository, persist the accepted chain,
+pass the actual accumulated immutable history at each step, snapshot every
+earlier file before and after positive/negative runs, and compare all 21
+expected records to exact canonical bytes, hashes, previous links,
+dispositions, transitions, and reopen evidence. Add mutations for an effect in
+a relative imported module and for rewriting an earlier dossier file while
+returning an otherwise valid envelope.
+
+The lifecycle, review binding, full tracked-tree boundary, and reconstructible
+RED findings are materially repaired. The explicit effect-free and immutable
+dossier contract is not. Production remains unauthorized; preserve every prior
+FAIL/CHANGES record, append the next repair iteration to the existing repair
+record, and return the replacement pair to this same reviewer.
+
+SPEC COMPLIANCE FAIL
+QUALITY CHANGES REQUESTED
