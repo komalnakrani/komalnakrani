@@ -13,6 +13,7 @@ import {
   FROZEN_ENTRY,
   INITIAL_RED_EVIDENCE,
   buildTask01Evidence,
+  recoverInitialRedTestSource,
   KNOWN_OPENING_FINDINGS,
   PHASE08_CHECKPOINT,
   parseGitStatus,
@@ -300,12 +301,40 @@ test('durably binds the genuine initial missing-validator RED without rewriting 
       [`${BOOK}/validate-phase-09.test.mjs`]: record('test bytes\n'),
     },
   });
-  assert.equal(evidence.green.tests, 126);
-  assert.equal(evidence.green.pass, 126);
+  assert.equal(evidence.green.tests, 136);
+  assert.equal(evidence.green.pass, 136);
   assert.deepEqual(evidence.green.artifacts, [
     { path: `${BOOK}/validate-phase-09.mjs`, sha256: record('validator bytes\n').sha256, bytes: 16 },
     { path: `${BOOK}/validate-phase-09.test.mjs`, sha256: record('test bytes\n').sha256, bytes: 11 },
   ]);
+});
+
+test('replays the exact historical initial test bytes without a validator and reproduces ERR_MODULE_NOT_FOUND', async () => {
+  const source = recoverInitialRedTestSource();
+  assert.equal(Buffer.byteLength(source), 15224);
+  assert.equal(sha256(source), 'b60c9abb891f8aa90a92a411036e867b3d4b0604c745fd79accb2ab1021b959e');
+  const fixture = await mkdtemp(join(tmpdir(), 'mle-p09-initial-red-'));
+  const testPath = join(fixture, INITIAL_RED_EVIDENCE.testPath);
+  try {
+    await mkdir(dirname(testPath), { recursive: true });
+    await writeFile(testPath, source);
+    const env = { ...process.env };
+    delete env.NODE_TEST_CONTEXT;
+    let failure;
+    try {
+      await execFileAsync(process.execPath, ['--test', INITIAL_RED_EVIDENCE.testPath], { cwd: fixture, env });
+    } catch (caught) {
+      failure = caught;
+    }
+    assert.ok(failure, 'historical test unexpectedly passed without its validator');
+    assert.equal(failure.code, 1);
+    const output = `${failure.stdout ?? ''}${failure.stderr ?? ''}`;
+    assert.match(output, /ERR_MODULE_NOT_FOUND/);
+    assert.match(output, /validate-phase-09\.mjs/);
+    assert.match(output, /# tests 1[\s\S]*# pass 0[\s\S]*# fail 1/);
+  } finally {
+    await rm(fixture, { recursive: true, force: true });
+  }
 });
 
 test('bootstrap permits the preserved Task 01 review but no QA output or final verification', async (t) => {
@@ -342,11 +371,34 @@ test('loaded review Markdown rejects malformed, forged, missing, wrong-reviewer,
     ['forged hash', (text) => text.replace('"sha256": "3b256a6d', '"sha256": "0b256a6d'), 'REVIEW_ARTIFACT_BINDING'],
     ['missing binding', (text) => text.replace('    { "path": "docs/superpowers/specs/2026-08-23-machine-learning-engineer-whole-book-qa-design.md", "sha256": "3b256a6dac36b31e39e9a402f48a8641195b177fcf083e4ee65cc53ce2fda3b5" },\n', ''), 'REVIEW_ARTIFACT_SET'],
     ['rebound path', (text) => text.replace('docs/superpowers/specs/2026-08-23-machine-learning-engineer-whole-book-qa-design.md', `${BOOK}/validate-phase-09.mjs`), 'REVIEW_ARTIFACT_SET'],
+    ['contradictory terminal verdict', (text) => text.replace(/SPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\n$/, 'SPEC COMPLIANCE PASS\nQUALITY APPROVED\n'), 'REVIEW_MARKDOWN_VERDICT'],
+    ['missing terminal verdict', (text) => text.replace(/\nSPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\n$/, '\n'), 'REVIEW_MARKDOWN_VERDICT'],
+    ['extra terminal verdict', (text) => text.replace(/SPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\n$/, 'SPEC COMPLIANCE PASS\nQUALITY APPROVED\nSPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\n'), 'REVIEW_MARKDOWN_VERDICT'],
+    ['PASS-ish terminal verdict', (text) => text.replace(/SPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\n$/, 'SPEC COMPLIANCE PASS WITH NOTES\nQUALITY APPROVED\n'), 'REVIEW_MARKDOWN_VERDICT'],
   ];
   for (const [name, mutate, code] of cases) await t.test(name, async () => {
     const snapshot = await loadRepositorySnapshot(REPO, { stage: 'audit', git: cleanGit(), github: await bootstrapGithub() });
     snapshot.files[TASK01_REVIEW] = record(mutate(snapshot.files[TASK01_REVIEW].text));
     expectCode(validateLoadedReviews(snapshot, { stage: 'audit', mode: 'checkpoint' }), code);
+  });
+});
+
+test('base and paired-repair Markdown terminal verdicts exactly mirror their JSON records', async (t) => {
+  const snapshot = await loadRepositorySnapshot(REPO, { stage: 'audit', git: cleanGit(), github: await bootstrapGithub() });
+  const acceptedBase = snapshot.files[TASK01_REVIEW].text
+    .replace('"specVerdict": "SPEC COMPLIANCE FAIL"', '"specVerdict": "SPEC COMPLIANCE PASS"')
+    .replace('"qualityVerdict": "QUALITY CHANGES REQUESTED"', '"qualityVerdict": "QUALITY APPROVED"')
+    .replace(/SPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\n$/, 'SPEC COMPLIANCE PASS\nQUALITY APPROVED\n');
+  assert.deepEqual(parseReviewMarkdown(acceptedBase).errors, []);
+
+  for (const [name, mutate] of [
+    ['contradictory repair terminal verdict', (text) => text.replace(/SPEC COMPLIANCE PASS\nQUALITY APPROVED\n$/, 'SPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\n')],
+    ['missing repair terminal verdict', (text) => text.replace(/\nSPEC COMPLIANCE PASS\nQUALITY APPROVED\n$/, '\n')],
+    ['extra repair terminal verdict', (text) => text.replace(/SPEC COMPLIANCE PASS\nQUALITY APPROVED\n$/, 'SPEC COMPLIANCE FAIL\nQUALITY CHANGES REQUESTED\nSPEC COMPLIANCE PASS\nQUALITY APPROVED\n')],
+    ['PASS-ish repair terminal verdict', (text) => text.replace(/SPEC COMPLIANCE PASS\nQUALITY APPROVED\n$/, 'SPEC COMPLIANCE PASS WITH NOTES\nQUALITY APPROVED\n')],
+  ]) await t.test(name, () => {
+    const parsed = parseReviewMarkdown(mutate(task01RepairMarkdown(snapshot)));
+    expectCode(parsed.errors, 'REVIEW_MARKDOWN_VERDICT');
   });
 });
 

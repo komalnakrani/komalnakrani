@@ -6,6 +6,7 @@ import { access, cp, mkdir, mkdtemp, readFile, readdir, rm } from 'node:fs/promi
 import { tmpdir } from 'node:os';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { gunzipSync } from 'node:zlib';
 
 const BOOK = 'project-control/roles/machine-learning-engineer/books/machine-learning-engineering';
 const ROLE = 'project-control/roles/machine-learning-engineer';
@@ -86,12 +87,23 @@ export const INITIAL_RED_EVIDENCE = Object.freeze({
   green: Object.freeze({
     command: `node --test ${BOOK}/validate-phase-09.test.mjs`,
     exitCode: 0,
-    tests: 126,
-    pass: 126,
+    tests: 136,
+    pass: 136,
     fail: 0,
     implementationPaths: Object.freeze([`${BOOK}/validate-phase-09.mjs`, `${BOOK}/validate-phase-09.test.mjs`]),
   }),
 });
+
+const INITIAL_RED_TEST_GZIP_BASE64 = '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';
+
+export function recoverInitialRedTestSource() {
+  const source = gunzipSync(Buffer.from(INITIAL_RED_TEST_GZIP_BASE64, 'base64')).toString('utf8');
+  if (Buffer.byteLength(source) !== INITIAL_RED_EVIDENCE.testBytes
+      || sha256(source) !== INITIAL_RED_EVIDENCE.testSha256) {
+    throw new Error('embedded initial RED test source binding drift');
+  }
+  return source;
+}
 
 export function buildTask01Evidence(snapshot) {
   const artifacts = INITIAL_RED_EVIDENCE.green.implementationPaths.map((path) => {
@@ -638,6 +650,18 @@ export function parseReviewMarkdown(text) {
     catch { errors.push(error('REVIEW_MARKDOWN_JSON', 'review Markdown contains malformed fenced JSON')); }
   }
   if (blocks.length === 0) errors.push(error('REVIEW_MARKDOWN_JSON', 'review Markdown must contain one fenced JSON record'));
+  if (records.length === 1) {
+    const proseLines = text.replace(/```[\s\S]*?```/g, '')
+      .split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    const terminal = proseLines.slice(-2);
+    const verdictLines = proseLines.filter((line) => /^(?:SPEC COMPLIANCE|QUALITY )/.test(line));
+    const expected = [records[0].specVerdict, records[0].qualityVerdict];
+    if (verdictLines.length !== 2 || terminal.length !== 2
+        || terminal[0] !== expected[0] || terminal[1] !== expected[1]
+        || verdictLines[0] !== expected[0] || verdictLines[1] !== expected[1]) {
+      errors.push(error('REVIEW_MARKDOWN_VERDICT', 'review Markdown must end with exactly the JSON spec and quality verdict lines'));
+    }
+  }
   const reviewedCheckpoint = text.match(/Reviewed checkpoint:\s*`([0-9a-f]{40})`/i)?.[1] ?? null;
   return { records, errors, reviewedCheckpoint };
 }
