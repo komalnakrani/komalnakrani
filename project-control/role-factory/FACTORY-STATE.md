@@ -95,27 +95,27 @@
 
 Machine Learning Engineer Phase 08 original manuscript and deterministic companion: complete.
 Last completed child: #85 — closed `status:done`.
-Active child: none.
-Phase 09 whole-book QA: sole next gate; inactive.
+Active child: #86 — Phase 09 whole-book QA.
+Phase 09 whole-book QA: active; validator/bootstrap review required before audits or repair.
+Phase 10 visuals: inactive.
 Catalog position 6: not started.
 
 The accepted private Phase 08 package for *Machine Learning Engineering: From
 Task Contract to Operating Evidence* contains the complete twenty-one-chapter
 manuscript, whole-book furniture, deterministic provider-neutral companion,
 integration register, and hostile review evidence. Phase 08 is complete and
-#85 is closed `status:done`; there is no active child. Phase 09 is the sole next
-gate and remains inactive. Generated visuals, images, PDF, web publication, a
-second volume, another role, course, Abhyaas, and catalog position 6 remain
-inactive or not started.
+#85 is closed `status:done`. Phase 09 whole-book QA is active under #86, but its
+audits and canonical repair remain blocked until the validator/test bootstrap
+and independent Task 01 review pass. Phase 10, generated visuals, images, PDF,
+web publication, a second volume, another role, course, Abhyaas, and catalog
+position 6 remain inactive or not started.
 
 ## Resume instructions
 
-Inspect Git status and GitHub state, then read closed #85, open root #79, the
-Phase 08 final verification and inactive Phase 09 handoff, Machine Learning
-Engineer role state, accepted manuscript/companion/review chain, Phase 07
-verification, accepted blueprints, Phase 06 verification, Phase 05
-architecture, Phase 04 decision, Phase 01 evidence, and approved Phase 08
-design/plan. Phase 08 is complete, #85 is the last completed child, and there is
-no active child. Phase 09 is the sole next gate and remains inactive. Catalog
-position 6 is not started; visuals, images, PDF, web publication, course,
-another role, and Abhyaas remain inactive.
+Inspect Git status and GitHub state, then read active #86, closed #85, open root
+#79, the Phase 08 final verification and Phase 09 handoff, Machine Learning
+Engineer role state, accepted manuscript/companion/review chain, and approved
+Phase 09 design/plan/Task 00 review. Phase 09 is active under #86 but audits and
+repair remain blocked until Task 01 bootstrap approval. Phase 10 is inactive
+and catalog position 6 is not started; visuals, images, PDF, web publication,
+course, another role, and Abhyaas remain inactive.

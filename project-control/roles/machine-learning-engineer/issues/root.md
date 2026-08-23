@@ -8,7 +8,7 @@
 - State: `project-control/roles/machine-learning-engineer/ROLE-STATE.md`
 - Creative system: `Learning Systems Test Bench`
 - Last completed child: [#85 — Phase 08 original manuscript and deterministic companion](https://github.com/alpeshznakrani/komalnakrani/issues/85) — closed `status:done`
-- Active child: none
+- Active child: [#86 — Phase 09 whole-book QA](https://github.com/alpeshznakrani/komalnakrani/issues/86)
 
 ## Objective
 
@@ -25,7 +25,7 @@ figure records.
 - [x] 06 source and case-study research — complete
 - [x] 07 chapter blueprints and frozen figure contracts — complete
 - [x] 08 original manuscript and deterministic companion production — complete; #85 closed `status:done`
-- [ ] 09 whole-book or series consistency QA — sole next gate; inactive
+- [ ] 09 whole-book or series consistency QA — active under #86; bootstrap review required
 - [ ] 10 original ImageGen PNG visuals and visual QA
 - [ ] 11 web and screen-first PDF publication
 - [ ] 19 hostile final QA
@@ -46,12 +46,12 @@ figure records.
 
 ## Current executable action
 
-Phase 08 is complete and #85 is closed `status:done`; there is no active child.
-The complete private twenty-one-chapter manuscript, whole-book furniture,
-deterministic companion, integration register, and hostile review chain are
-accepted and checkpointed. Phase 09 is the sole next gate and remains inactive.
-Generated visuals, images, PDF, web publication, course, Abhyaas, a second
-volume, catalog position 6, and another role remain inactive.
+Phase 08 is complete and #85 is closed `status:done`. Phase 09 whole-book QA is
+active under #86. The approved design/plan and Task 00 review are committed and
+pushed; QA artifacts and canonical repair remain blocked until the Phase 09
+validator/test bootstrap and independent Task 01 review are accepted. Phase 10,
+generated visuals, images, PDF, web publication, course, Abhyaas, a second
+volume, catalog position 6, and another role remain inactive or not started.
 
 ## Completion
 
