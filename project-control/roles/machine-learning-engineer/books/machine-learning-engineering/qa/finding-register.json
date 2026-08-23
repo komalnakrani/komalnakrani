@@ -1,0 +1,972 @@
+{
+  "schema": "mle-phase-09-finding-register/v1",
+  "taskId": "TASK-06",
+  "bookId": "machine-learning-engineering",
+  "producerIdentity": "/root/mle_p9_finding_integration",
+  "reviewerIdentity": "/root/mle_p9_finding_review",
+  "frozenAt": "2026-08-23T16:59:55+05:30",
+  "entryAuthority": {
+    "phase08ClosureCommit": "5f862da964e6c74f582737a3eb4b68cb9c6c5824",
+    "phase08ActivePackageCheckpoint": "aed6f459d64b092ed4377c7da8f88dcc6c09d726",
+    "phase08FinalVerificationSha256": "67b9ba41bdef4c048b1f74777e18ab18455ef1eedbdc491ce2a9f70cc6eb8493",
+    "phase09AuditPackageCheckpoint": "031c671c550ff9a9f2cb3467dabcc7bd10e444f1"
+  },
+  "mutationBoundary": {
+    "createdPaths": [
+      "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/qa/finding-register.json"
+    ],
+    "canonicalBytesChanged": false,
+    "prohibitedUntilIndependentAcceptance": [
+      "manuscript",
+      "furniture",
+      "companion",
+      "shared-registers",
+      "visuals",
+      "pdf",
+      "publication"
+    ],
+    "verificationCommands": [
+      "git status --short",
+      "node --input-type=module -e validateFindingRegister",
+      "node --input-type=module -e validateCanonicalBindings"
+    ]
+  },
+  "acceptedAuditPackages": {
+    "TASK-02": {
+      "audit": "coverage-depth",
+      "producerIdentity": "/root/mle_p9_coverage",
+      "reviewerIdentity": "/root/mle_p9_coverage_review",
+      "report": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/qa/coverage-depth.md",
+        "sha256": "6b0dc1e0a7b850ecdb71420aaa8c6d9ff26e90d43f4aed1a051bce9fb9260df3",
+        "reviewedCheckpoint": "b337c2e819a26456743c00de23e7d5f7ab042885"
+      },
+      "baseReview": {
+        "path": "project-control/roles/machine-learning-engineer/reviews/phase-09/task-02-coverage-depth.md",
+        "sha256": "c280518959f1c646189e3ee36a0b9140570f4de81b534488dbe12116f8eac57f",
+        "verdict": "SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED"
+      },
+      "repairReview": {
+        "path": "project-control/roles/machine-learning-engineer/reviews/phase-09/task-02-coverage-depth-repair.md",
+        "sha256": "673eea243bb51dc14f18a4a7d95ca30f954dac8f4c644c68ec6fb68925a17c63",
+        "verdict": "SPEC COMPLIANCE PASS / QUALITY APPROVED"
+      },
+      "acceptedAtCheckpoint": "2263ebaf59d45b3569aedc708719b2d81e92a1f9"
+    },
+    "TASK-03": {
+      "audit": "continuity-originality",
+      "producerIdentity": "/root/mle_p9_continuity",
+      "reviewerIdentity": "/root/mle_p9_continuity_review",
+      "report": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/qa/continuity-originality.md",
+        "sha256": "1c8f737f9eae75abf61b23bb4509c949943753398371de433faec352aa7df923",
+        "reviewedCheckpoint": "b337c2e819a26456743c00de23e7d5f7ab042885"
+      },
+      "baseReview": {
+        "path": "project-control/roles/machine-learning-engineer/reviews/phase-09/task-03-continuity-originality.md",
+        "sha256": "0d45040d288e1d99eedfd7e4008060ac6e7e37a274789512e428c49d0567698e",
+        "verdict": "SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED"
+      },
+      "repairReview": {
+        "path": "project-control/roles/machine-learning-engineer/reviews/phase-09/task-03-continuity-originality-repair.md",
+        "sha256": "4e4d1e1785bad9d5153867e0dda91f79c80fd1718ae65a395dea9710c7d262c9",
+        "verdict": "SPEC COMPLIANCE PASS / QUALITY APPROVED"
+      },
+      "acceptedAtCheckpoint": "2263ebaf59d45b3569aedc708719b2d81e92a1f9"
+    },
+    "TASK-04": {
+      "audit": "evidence-currentness-authority",
+      "producerIdentity": "/root/mle_p9_evidence",
+      "reviewerIdentity": "/root/mle_p9_evidence_review",
+      "report": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/qa/evidence-currentness-authority.md",
+        "sha256": "1647f2dd224ec9a5b35141ae802d75981e5e6bcd2ff4d2e938a724df5d67e17c",
+        "reviewedCheckpoint": "95681c26b9ed88c64730469b100123347df301ca"
+      },
+      "baseReview": {
+        "path": "project-control/roles/machine-learning-engineer/reviews/phase-09/task-04-evidence-currentness-authority.md",
+        "sha256": "7d09f9dbd35a4158d45ecaf5d7609c897476f8b7786af833237ee9fcff24f651",
+        "verdict": "SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED"
+      },
+      "repairReview": {
+        "path": "project-control/roles/machine-learning-engineer/reviews/phase-09/task-04-evidence-currentness-authority-repair.md",
+        "sha256": "9777da384969adaecd895267e7079ba52e61099d98cb52f15b8a330df3971ff7",
+        "verdict": "SPEC COMPLIANCE PASS / QUALITY APPROVED"
+      },
+      "acceptedAtCheckpoint": "031c671c550ff9a9f2cb3467dabcc7bd10e444f1"
+    },
+    "TASK-05": {
+      "audit": "companion-furniture-visual-readiness",
+      "producerIdentity": "/root/mle_p9_systems",
+      "reviewerIdentity": "/root/mle_p9_systems_review",
+      "report": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/qa/companion-furniture-visual-readiness.md",
+        "sha256": "98dc4943992a6ce16ddfdc771343ddc51dbaeee14df8a69c6e591e95d2f63a5d",
+        "reviewedCheckpoint": "8a29861eafa8ed09bd6256e8c36abca1ba8e7323"
+      },
+      "baseReview": {
+        "path": "project-control/roles/machine-learning-engineer/reviews/phase-09/task-05-systems-readiness.md",
+        "sha256": "a5bf52922ec3da5f5459ad833bbb6f082e2378676ea81d702bb262fcbc2813e9",
+        "verdict": "SPEC COMPLIANCE PASS / QUALITY APPROVED"
+      },
+      "repairReview": null,
+      "acceptedAtCheckpoint": "5eb65ad6bd22978826ee267bbaba602dd3dad456"
+    }
+  },
+  "bindingContract": "Each findings[].bindingRef resolves to the exact report, base review, optional paired repair review, producer, reviewer, and accepted checkpoint in acceptedAuditPackages.",
+  "openingFindings": [
+    {
+      "id": "P09-OPEN-01",
+      "audit": "continuity-originality",
+      "summary": "Remove reader-facing factory, blueprint, phase-control, production-specification, and private-package instructions.",
+      "requiredUntilDisposed": true,
+      "disposition": "open",
+      "evidence": [
+        "Accepted report finding P09-CON-001 binds the reader-visible leakage across MLE-CH-01 through MLE-CH-21, FURN-BZ-03, and Appendix G."
+      ],
+      "resolvedByAuditFindingIds": [
+        "P09-CON-001"
+      ]
+    },
+    {
+      "id": "P09-OPEN-02",
+      "audit": "continuity-originality",
+      "summary": "Reconcile Chapter N, MLE-CH-N, and title-only H1 and metadata conventions across both lane seams.",
+      "requiredUntilDisposed": true,
+      "disposition": "open",
+      "evidence": [
+        "Accepted report findings P09-CON-002 and P09-CON-003 bind the three incompatible reader conventions and both voice seams."
+      ],
+      "resolvedByAuditFindingIds": [
+        "P09-CON-002",
+        "P09-CON-003"
+      ]
+    },
+    {
+      "id": "P09-OPEN-03",
+      "audit": "continuity-originality",
+      "summary": "Reconstruct classified overlaps after identifier removal and inspect the known Chapter 02-05 and Chapter 06-07 repeated frames.",
+      "requiredUntilDisposed": true,
+      "disposition": "open",
+      "evidence": [
+        "Accepted report findings P09-CON-004 and P09-CON-005 bind both exact 75-word groups and the broader machine-prefix exemption defect."
+      ],
+      "resolvedByAuditFindingIds": [
+        "P09-CON-004",
+        "P09-CON-005"
+      ]
+    },
+    {
+      "id": "P09-OPEN-04",
+      "audit": "companion-furniture-visual-readiness",
+      "summary": "Freeze one textual path contract for all 25 visual records and four ungenerated raster candidates.",
+      "requiredUntilDisposed": true,
+      "disposition": "open",
+      "evidence": [
+        "Accepted report finding P09-SYS-006 binds the conflicting path, label, caption, alt, long-description, dimension, prompt, and provenance projections without authorizing image generation."
+      ],
+      "resolvedByAuditFindingIds": [
+        "P09-SYS-006"
+      ]
+    },
+    {
+      "id": "P09-OPEN-05",
+      "audit": "evidence-currentness-authority",
+      "summary": "Recheck ten living and two volatile sources by version, date, limitation, retrieval meaning, and next trigger.",
+      "requiredUntilDisposed": true,
+      "disposition": "open",
+      "evidence": [
+        "Accepted report findings P09-EVD-001 and P09-EVD-002 bind the absent registered posting and incomplete freeze identities; P09-EVD-005 is an additional content-lock blocker but does not replace this opening gate."
+      ],
+      "resolvedByAuditFindingIds": [
+        "P09-EVD-001",
+        "P09-EVD-002"
+      ]
+    },
+    {
+      "id": "P09-OPEN-06",
+      "audit": "coverage-depth",
+      "summary": "Replay historical Phase 08 263/263 at its checkpoint and validate the current closed lifecycle tree separately.",
+      "requiredUntilDisposed": true,
+      "disposition": "open",
+      "evidence": [
+        "Accepted report finding P09-COV-002 preserves the isolated 263/263 historical replay and binds the four mutable-real-state Phase 09 fixture failures as one repair class."
+      ],
+      "resolvedByAuditFindingIds": [
+        "P09-COV-002"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "P09-COV-001",
+      "audit": "coverage-depth",
+      "severity": "HIGH",
+      "summary": "Chapter 19's lab drops four frozen prerequisite dossiers.",
+      "artifactLineEvidence": [
+        "blueprints/chapter-19.md:24-29 requires BL-01, BL-03, BL-11, BL-14, and BL-17.",
+        "blueprints/chapter-19.md:60,98,289 repeats the five fixed inputs and the required backward exception trace.",
+        "manuscript/chapter-19.md:9 promises a trace from task contract through retirement.",
+        "manuscript/chapter-19.md:70-74 makes both fixed labs consume only bound BL-17."
+      ],
+      "affectedArtifacts": [
+        "blueprints/chapter-19.md",
+        "manuscript/chapter-19.md",
+        "manuscript/manuscript-register.json"
+      ],
+      "affectedProjections": [
+        "MLE-CH-19 prerequisites",
+        "MLE-BCLM-055",
+        "MLE-CH-19-LAB-01/02",
+        "MLE-CH-19-ASMT-01",
+        "BL-18",
+        "Chapter 18->19 and 19->20 seams",
+        "Part 7 exit",
+        "Chapter 21 complete-dossier promise"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Enumerate the five immutable inputs in Chapter 19 S01/S05.",
+        "Add one worked reverse trace through BL-01, BL-03, BL-11, BL-14, and BL-17 plus distinct missing-link and incompatible-scope mutations.",
+        "Preserve external authority, failure history, historical Phase 08 evidence, and all unaffected graph identities."
+      ],
+      "verification": [
+        "Require all five inputs in actual Chapter 19 bytes.",
+        "Require both labs to fail when any required link is removed.",
+        "Require Chapter 20 to consume the bounded BL-18.",
+        "Recompute prose range, seams, part exit, and exact graph projections."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-02"
+    },
+    {
+      "id": "P09-COV-002",
+      "audit": "coverage-depth",
+      "severity": "HIGH",
+      "summary": "Four Phase 09 tests reuse mutable real-repository state for historical assertions.",
+      "artifactLineEvidence": [
+        "validate-phase-09.test.mjs:71-76 loads mutable REPO bytes as bootstrap.",
+        "validate-phase-09.test.mjs:109-120,186-193,266-275 fail after authorized audit inventory exists.",
+        "validate-phase-09.test.mjs:277-281 asserts an unrepaired Task 01 state after its paired repair is accepted.",
+        "validate-phase-09.mjs:462-471 separately preserves the valid historical 263/263 replay.",
+        "Fresh accepted-audit result is exactly 132/136 with those four tests as the only failures."
+      ],
+      "affectedArtifacts": [
+        "validate-phase-09.test.mjs"
+      ],
+      "affectedProjections": [
+        "Phase 09 bootstrap working-tree/checkpoint evidence",
+        "Task 01 fail/repair/reacceptance lifecycle",
+        "accepted audit inventory",
+        "Task 06/07/08 review evidence",
+        "P09-OPEN-06"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Build isolated immutable bootstrap working-tree and clean-checkpoint fixtures for the three bootstrap tests.",
+        "Build a separate exact failed Task 01 base fixture and positive current accepted-audit fixture.",
+        "Do not weaken STAGE_PATH_FORBIDDEN, BOOTSTRAP_QA_ABSENT, or the historical 263/263 replay."
+      ],
+      "verification": [
+        "Require the full Phase 09 suite green on the accepted audit package.",
+        "Mutate missing and forged Task 01 repairs, one bootstrap contaminant, and omission or rebinding of every required report/review.",
+        "Require the isolated historical Phase 08 replay to remain exactly 263/263."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-06"
+      ],
+      "bindingRef": "TASK-02"
+    },
+    {
+      "id": "P09-CON-001",
+      "audit": "continuity-originality",
+      "severity": "HIGH",
+      "summary": "Reader prose contains private production control and visual implementation status.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-01.md:147 through chapter-07.md:204 retains repeated Phase 08 blueprint activation commands.",
+        "manuscript/chapter-08.md:3 through chapter-14.md:184 retains private-package, production-specification, and inactive-next-phase language.",
+        "manuscript/chapter-15.md:3, chapter-16.md:3, chapter-17.md:3, chapter-18.md:3, chapter-19.md:3, chapter-20.md:3, and chapter-21.md:3 exposes the Lane C visual placeholder or implementation-status family.",
+        "manuscript/opening-and-closing.md:37-38 and manuscript/appendix-g.md:49-52 expose private Phase 08 manuscript status."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-01.md through manuscript/chapter-21.md",
+        "manuscript/opening-and-closing.md",
+        "manuscript/appendix-g.md"
+      ],
+      "affectedProjections": [
+        "MLE-CH-01 through MLE-CH-21",
+        "FURN-BZ-03",
+        "Appendix G",
+        "all retained visual IDs and accessibility meanings"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Rewrite each affected passage as reader-facing limitation, edition-neutral visual/accessibility contract, or currentness trigger.",
+        "Delete historical phase, producer, private-package, activation, generation, placeholder, and next-work commands.",
+        "Preserve teaching, canonical IDs, decision purpose, selectable-text/accessibility meaning, and genuine non-proof limits."
+      ],
+      "verification": [
+        "Scan actual reader bytes for phase, factory, blueprint activation, producer/reviewer, private package, generation/implementation state, and production specification language.",
+        "Require all seven Lane C top visual records to retain exact visual IDs and edition-neutral accessibility meaning."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-01"
+      ],
+      "bindingRef": "TASK-03"
+    },
+    {
+      "id": "P09-CON-002",
+      "audit": "continuity-originality",
+      "severity": "HIGH",
+      "summary": "The book uses three incompatible H1 and metadata regimes.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-01.md:1-5 through chapter-07.md:1-5 uses Chapter N plus author, chapter ID, and milestone.",
+        "manuscript/chapter-08.md:1 through chapter-14.md:1 uses MLE-CH-NN without the same metadata.",
+        "manuscript/chapter-15.md:1 through chapter-21.md:1 uses title-only H1s and no chapter metadata.",
+        "No reader chapter exposes its registered slug."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-01.md through manuscript/chapter-21.md",
+        "manuscript/manuscript-register.json"
+      ],
+      "affectedProjections": [
+        "21 titles",
+        "21 slugs",
+        "21 chapter IDs",
+        "parts",
+        "milestones",
+        "lane seams 07->08 and 14->15"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Select one H1 pattern and metadata schema for all 21 chapters.",
+        "Preserve every registered title, slug, order, part, milestone, and dossier identity.",
+        "Rebuild hashes rather than changing canonical identities."
+      ],
+      "verification": [
+        "Require one convention across all 21 chapter bytes.",
+        "Require 21 unique registered titles, slugs, IDs, parts, milestones, and unchanged order.",
+        "Recheck both lane seams."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-02"
+      ],
+      "bindingRef": "TASK-03"
+    },
+    {
+      "id": "P09-CON-003",
+      "audit": "continuity-originality",
+      "severity": "HIGH",
+      "summary": "Lane voice and terminology break at both handoffs.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-07.md:204 to chapter-08.md:3-16 preserves the semantic handoff but changes into private-package and frozen-machine-projection diction.",
+        "manuscript/chapter-14.md:178-184 to chapter-15.md:1-9 preserves the semantic handoff but changes from production specification to a short title-only placeholder opening.",
+        "Chapters 08-14 relabel one stable invariant while retaining the same surrounding template."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-01.md through manuscript/chapter-21.md"
+      ],
+      "affectedProjections": [
+        "MLE-CH-07->08 seam",
+        "MLE-CH-14->15 seam",
+        "stable decision/evidence/state/authority/limitation terminology"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Normalize stable reader terms and opening/closing rhythm across all three lanes.",
+        "Retain chapter-specific nouns only for genuine mechanism differences.",
+        "Do not change dossier identity to manufacture stylistic consistency."
+      ],
+      "verification": [
+        "Human-read the 07->08 and 14->15 seams after metadata and leakage repair.",
+        "Scan for frozen machine projection, role doctrine, and production sequence/specification diction."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-02"
+      ],
+      "bindingRef": "TASK-03"
+    },
+    {
+      "id": "P09-CON-004",
+      "audit": "continuity-originality",
+      "severity": "HIGH",
+      "summary": "Known long repeats are accidental authorial reuse.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-02.md:161, chapter-03.md:176, chapter-04.md:188, and chapter-05.md:189 repeat one exact 75-word paragraph.",
+        "manuscript/chapter-06.md:203 and chapter-07.md:200 repeat a second exact 75-word paragraph.",
+        "manuscript/chapter-01.md:143 shares the same 68-word core.",
+        "Additional repeated durable-record, limitation, and phase/blueprint frames are bound at chapter-01.md:141-145 through chapter-07.md:198-204."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-01.md through manuscript/chapter-07.md",
+        "manuscript/appendix-b.md"
+      ],
+      "affectedProjections": [
+        "two exact 75-word repeat groups",
+        "Lane A state/reopen explanation",
+        "durable-record and limitation frames"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Keep one canonical lifecycle explanation in Appendix B.",
+        "Rewrite each chapter around its local incoming/outgoing state, trigger, decision, and limitation.",
+        "Preserve the lifecycle rule without repeating ordinary connective prose."
+      ],
+      "verification": [
+        "Require both exact 75-word groups absent.",
+        "Require zero ordinary reader paragraphs sharing normalized 20-word windows across chapters.",
+        "Recheck prose ranges without filler."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-03"
+      ],
+      "bindingRef": "TASK-03"
+    },
+    {
+      "id": "P09-CON-005",
+      "audit": "continuity-originality",
+      "severity": "HIGH",
+      "summary": "Broad machine-record exemptions hide Lane B authorial templates.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-08.md:168 through chapter-14.md:176 repeats dossier contract frames.",
+        "manuscript/chapter-08.md:105 through chapter-14.md:111 repeats first deterministic lab contract frames.",
+        "manuscript/chapter-08.md:87 through chapter-14.md:93 repeats truth-class bridge prose.",
+        "Repeated source ledger prose is bound at chapter-09.md:42 through chapter-14.md:54; 95-word and 53-word exact runs survive identifier removal."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-08.md through manuscript/chapter-14.md",
+        "manuscript/appendix-a.md",
+        "manuscript/appendix-b.md",
+        "manuscript/appendix-e.md",
+        "manuscript/appendix-f.md"
+      ],
+      "affectedProjections": [
+        "dossier contract rows",
+        "lab contract rows",
+        "truth-class bridge",
+        "source ledger prose",
+        "port rows"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Use Appendices A/B/E/F as canonical schema, lifecycle, truth, and source homes.",
+        "Retain only local decisions, deltas, and transfer limits in chapter prose.",
+        "Register any remaining structured overlap by exact file, line, byte slice, SHA-256, purpose, and reviewer disposition; never exempt a prefix family."
+      ],
+      "verification": [
+        "Run identifier-stripped paragraph-bounded 20-word scans across same-book, internal, same-pack, and 93 published other-role chapters.",
+        "Require zero ordinary overlaps and exact byte-bound registration for intentional rows."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-03"
+      ],
+      "bindingRef": "TASK-03"
+    },
+    {
+      "id": "P09-CON-006",
+      "audit": "continuity-originality",
+      "severity": "MEDIUM",
+      "summary": "Chapter 19 drops the explicit BL-17 predecessor identity.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-18.md:98-100 explicitly hands BL-17 in REQUALIFIED or ROLLED-BACK state to controls.",
+        "manuscript/part-07.md:5-9 preserves BL-17.",
+        "manuscript/chapter-19.md:9-19 names only the incoming states before BL-18 and omits BL-17."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-18.md",
+        "manuscript/chapter-19.md",
+        "manuscript/part-07.md"
+      ],
+      "affectedProjections": [
+        "MLE-CH-18->MLE-CH-19 seam",
+        "BL-17",
+        "BL-18"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Add an explicit immutable BL-17 input to Chapter 19 Bench Setup and Bench Sheet.",
+        "Preserve both legal incoming states, lifecycle states, and milestones."
+      ],
+      "verification": [
+        "Require Chapter 19 opening to name BL-17 and both REQUALIFIED and ROLLED-BACK.",
+        "Recompute all 20 adjacent seams and seven part exits."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-03"
+    },
+    {
+      "id": "P09-EVD-001",
+      "audit": "evidence-currentness-authority",
+      "severity": "HIGH",
+      "summary": "An absent registered posting cannot support a current plural market claim.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-01.md:39,46 projects the current market claim.",
+        "sources/research-packs/chapter-01.md:28,55,62 and sources/source-register.json:1770-1791 bind MLE-BSRC-045.",
+        "Registered Ashby ID 97acd33b-9ce1-4663-b556-917347263bb3 now returns posting:null and is absent from the official Blissway board; preserve 2026-07-16 only as the former deadline.",
+        "Different listed ID 662f1761-5d28-421d-8b47-605cc910991d is only a proposed rebind pending exact identity and duty verification."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-01.md",
+        "sources/research-packs/chapter-01.md",
+        "sources/source-register.json",
+        "manuscript/manuscript-register.json"
+      ],
+      "affectedProjections": [
+        "MLE-BSRC-045",
+        "MLE-BCLM-001",
+        "CASE-01",
+        "CASE-07"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Either fully verify and rebind a currently open employer-controlled record or narrow all plural-current language to a dated recent or historical signal.",
+        "Preserve the old ID, former deadline, and 2026-08-23 absent-state retrieval in the repair trail.",
+        "Do not broaden the source into prevalence, doctrine, or authority."
+      ],
+      "verification": [
+        "Verify exact posting identity, current open state, duty text, and claim fit for any rebind.",
+        "Recompute every affected forward/reverse source-claim and reader projection.",
+        "Require the claim to remain bounded to observed evidence."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-05"
+      ],
+      "bindingRef": "TASK-04"
+    },
+    {
+      "id": "P09-EVD-002",
+      "audit": "evidence-currentness-authority",
+      "severity": "MEDIUM",
+      "summary": "Four living mechanisms lack a complete freeze identity.",
+      "artifactLineEvidence": [
+        "sources/source-register.json:520-539 leaves MLE-BSRC-015 version null although the page is updated 2025-08-25.",
+        "sources/source-register.json:607-628 and 647-668 bind MLE-BSRC-017/018 to mutable MLflow latest routes without a concrete release.",
+        "sources/source-register.json:877-898 omits MLE-BSRC-024's available 2024-04-30 update identity.",
+        "Representative reader projections occur at chapter-02.md:52, chapter-05.md:56, chapter-07.md:58, chapter-08.md:44, and chapter-14.md:42,50."
+      ],
+      "affectedArtifacts": [
+        "sources/source-register.json",
+        "sources/research-packs",
+        "manuscript/chapter-02.md",
+        "manuscript/chapter-05.md",
+        "manuscript/chapter-07.md",
+        "manuscript/chapter-08.md",
+        "manuscript/chapter-14.md"
+      ],
+      "affectedProjections": [
+        "MLE-BSRC-015",
+        "MLE-BSRC-017",
+        "MLE-BSRC-018",
+        "MLE-BSRC-024",
+        "their claim edges and CASE-06/07/08/10 transfers"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Record official update dates and the 2026-08-23 retrieval for sources 015 and 024.",
+        "Pin a concrete MLflow release and versioned documentation identity for 017 and 018, or narrow named field/API behavior to a visibly dated generic example.",
+        "Update only affected source, pack, chapter-currentness, edge, and derived-register projections."
+      ],
+      "verification": [
+        "Recheck source identity, version/date, limitation, retrieval, and next trigger.",
+        "Require every changed forward source-claim edge to equal its reverse edge.",
+        "Recheck on page, release, API, schema, or tutorial change."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-05"
+      ],
+      "bindingRef": "TASK-04"
+    },
+    {
+      "id": "P09-EVD-003",
+      "audit": "evidence-currentness-authority",
+      "severity": "MEDIUM",
+      "summary": "CASE-11's PyTorch Foundation reporter is misidentified as an issuer.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-21.md:58 calls the CASE-11 account the issuer's.",
+        "MLE-BSRC-042 is the PyTorch Foundation first-party incident advisory, published 2022-12-31 and updated 2024-11-14."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-21.md",
+        "manuscript/manuscript-register.json"
+      ],
+      "affectedProjections": [
+        "CASE-11",
+        "MLE-BCLM-043/044/045/052/055/058/060/061/062",
+        "MLE-BSRC-042"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Replace issuer's with PyTorch Foundation's or project's first-party in Chapter 21 only.",
+        "Preserve affected-window, stable-package, first-party, and incomplete-cleanup limits; do not alter CASE-12 issuer language."
+      ],
+      "verification": [
+        "Require CASE-11 to identify the reporter as PyTorch Foundation or the project first party.",
+        "Rebuild Chapter 21 exact projections without changing the case graph."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-04"
+    },
+    {
+      "id": "P09-EVD-004",
+      "audit": "evidence-currentness-authority",
+      "severity": "MEDIUM",
+      "summary": "Constructed satellite cases are described as proof.",
+      "artifactLineEvidence": [
+        "manuscript/chapter-21.md:56 says CASE-02 through CASE-05 prove the same review semantics.",
+        "manuscript/chapter-21.md:62 correctly limits inference to the synthetic-deterministic fixture.",
+        "CASE-02 through CASE-05 are CONSTRUCTED SATELLITE with zero reported facts, outcomes, and source uses."
+      ],
+      "affectedArtifacts": [
+        "manuscript/chapter-21.md",
+        "case-studies/case-study-register.json",
+        "manuscript/manuscript-register.json"
+      ],
+      "affectedProjections": [
+        "CASE-02",
+        "CASE-03",
+        "CASE-04",
+        "CASE-05"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Replace prove with exercise, test, or demonstrate within the fixed fixture.",
+        "Preserve zero reported facts, outcomes, and source uses plus every real-world non-inference boundary."
+      ],
+      "verification": [
+        "Require Chapter 21 wording to remain explicitly fixture-bounded.",
+        "Require zero public-source and reported-outcome inflation for CASE-02 through CASE-05."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-04"
+    },
+    {
+      "id": "P09-EVD-005",
+      "audit": "evidence-currentness-authority",
+      "severity": "HIGH",
+      "summary": "Constructed-case machine truth is empty and disagrees with the reader.",
+      "artifactLineEvidence": [
+        "case-studies/case-study-register.json:23-25,97-102 leaves CASE-01 allowedInferences and transferRules empty and has no forbiddenInferences field.",
+        "case-study-register.json:120-122,163-168; 186-188,245-250; 268-270,316-321; and 339-341,392-397 repeats that gap for CASE-02 through CASE-05.",
+        "blueprints/blueprint-register.json:4861-4870,4998-5007,5172-5181,5321-5330,5496-5505 preserves empty allowed/transfer values while adding a generic forbidden sentence.",
+        "Reader projections such as chapter-08.md:77-83, chapter-18.md:68, chapter-20.md:66, and chapter-21.md:62 state non-empty bounded meaning."
+      ],
+      "affectedArtifacts": [
+        "case-studies/case-study-register.json",
+        "blueprints/blueprint-register.json",
+        "sources/research-packs",
+        "manuscript",
+        "manuscript/manuscript-register.json",
+        "integration and validator projections"
+      ],
+      "affectedProjections": [
+        "CASE-01 through CASE-05 truth fields",
+        "all chapter case applications",
+        "blueprint case-use records",
+        "reader/register equality",
+        "12-case truth audit"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Preserve exactly zero reported facts, attributed outcomes, and case-source uses for CASE-01 through CASE-05.",
+        "Encode explicit case-bounded allowed inference, forbidden inference, transfer rule, limitation, and authority owner in each canonical case object.",
+        "Project exact values without semantic expansion into blueprints, packs, manuscript, registers, integration artifacts, and validator contract; do not use one shared slogan."
+      ],
+      "verification": [
+        "Require canonical-to-reader and reader/register equality for every truth field.",
+        "Re-audit all 12 cases.",
+        "Preserve graph counts 46/63/160/12/34 and keep P09-EVD-004 as a separate wording repair."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-04"
+    },
+    {
+      "id": "P09-SYS-001",
+      "audit": "companion-furniture-visual-readiness",
+      "severity": "HIGH",
+      "summary": "Explicit reopen advances unevidenced BL-00 state.",
+      "artifactLineEvidence": [
+        "companion/lib/lifecycle.mjs:34-39,53-58 defines targets without a source-state constraint.",
+        "companion/lib/dossier.mjs:118-162 assigns the trigger target directly and records incoming state only as sourceState.",
+        "companion/tests/effects.test.mjs:215-233 and companion/tests/core.test.mjs:118-128 explicitly expect BL-00 UNORIENTED to reopen to CONTRACTED.",
+        "Fresh audit output is REOPEN/UNORIENTED/CONTRACTED/CONTRACTED."
+      ],
+      "affectedArtifacts": [
+        "companion/lib/lifecycle.mjs",
+        "companion/lib/dossier.mjs",
+        "companion/tests/effects.test.mjs",
+        "companion/tests/core.test.mjs",
+        "manuscript/appendix-a.md",
+        "manuscript/appendix-b.md",
+        "manuscript chapters 01-21"
+      ],
+      "affectedProjections": [
+        "BL-00 negative mode",
+        "four reopen triggers",
+        "lifecycle legend",
+        "port-result semantics"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Permit explicit reopen only when source state is later than target and named evidence could already exist.",
+        "Reject BL-00 and equal or earlier sources with DOSSIER_TRANSITION_INVALID.",
+        "Do not weaken trigger targets or mutate historical Phase 08 evidence."
+      ],
+      "verification": [
+        "Test all four triggers from valid later states and invalid early/equal states.",
+        "Require UNORIENTED->CONTRACTED explicit reopen rejection."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-05"
+    },
+    {
+      "id": "P09-SYS-002",
+      "audit": "companion-furniture-visual-readiness",
+      "severity": "HIGH",
+      "summary": "Declared and persisted nineteen-transition sets diverge.",
+      "artifactLineEvidence": [
+        "companion/lib/lifecycle.mjs:10-30 declares the 19-transition table.",
+        "companion/lib/dossier.mjs:9-36 defines milestone transition arrays.",
+        "companion/tests/chapters-15-21.test.mjs:10-28 exercises primary/rollback arrays while lifecycle.test.mjs:17-27 asserts only declarations.",
+        "Declared-only transitions are CANDIDATE->HOLD, CANDIDATE->REJECT, HOLD->CANDIDATE, and REJECT->CANDIDATE; executable-only entries are four self-state enrichments."
+      ],
+      "affectedArtifacts": [
+        "companion/lib/lifecycle.mjs",
+        "companion/lib/dossier.mjs",
+        "companion/tests",
+        "companion/README.md",
+        "manuscript/appendix-b.md"
+      ],
+      "affectedProjections": [
+        "17/19/2/4 lifecycle tuple",
+        "HOLD/REJECT repair grammar",
+        "Chapter 12 qualification",
+        "BL-11 through BL-14",
+        "full-chain claims"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Keep the 19 legal transition declaration and classify self-state dossier enrichments separately.",
+        "Either implement append-only HOLD/REJECT and repair-to-new-candidate records or narrow every executed-all-19 claim.",
+        "Do not let runPort and assertLegalTransition drift independently."
+      ],
+      "verification": [
+        "Add cross-contract set-equality tests that cannot pass on cardinality alone.",
+        "Require claims to distinguish declared transitions, persisted scenarios, and dossier enrichments."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-05"
+    },
+    {
+      "id": "P09-SYS-003",
+      "audit": "companion-furniture-visual-readiness",
+      "severity": "HIGH",
+      "summary": "Appendix A is not the executable dossier schema.",
+      "artifactLineEvidence": [
+        "manuscript/appendix-a.md:11-24 requires artifactId, inputArtifactIds, inputHashes, decisionQuestion, plural limitations, authorityOwner, and mleCeiling.",
+        "companion/contracts/dossier-record.schema.json:1 instead closes a different required shape including artifactVersion, authorityCeiling, authorityRoute, chapterId, singular limitation, owner, fixtureHash, fixedClock, fixedSeed, labId, and truthState.",
+        "companion/lib/dossier.mjs:104-115 constructs the executable schema rather than Appendix A's envelope."
+      ],
+      "affectedArtifacts": [
+        "manuscript/appendix-a.md",
+        "companion/contracts/dossier-record.schema.json",
+        "companion/lib/dossier.mjs",
+        "companion/expected",
+        "manuscript chapters 01-21"
+      ],
+      "affectedProjections": [
+        "reader dossier reference",
+        "21 chapter record-shape claims",
+        "expected records",
+        "hostile review schema examples"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Choose one edition-neutral reader schema and align Appendix A, JSON schemas, generator, expected records, and chapter examples exactly.",
+        "If Appendix A is intentionally richer, label it conceptual and provide an exact field-by-field mapping to the executable synthetic record.",
+        "Preserve bounded authority and canonical hash semantics."
+      ],
+      "verification": [
+        "Validate Appendix A field names and cardinalities against the executable JSON schema and produced records.",
+        "Require every chapter example to use the chosen exact contract or explicit conceptual mapping."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-05"
+    },
+    {
+      "id": "P09-SYS-004",
+      "audit": "companion-furniture-visual-readiness",
+      "severity": "HIGH",
+      "summary": "Chapter lab and port prose overstates executable semantics.",
+      "artifactLineEvidence": [
+        "companion/fixtures/bl-entry.json:1 and companion/fixtures/mutations.json:1 contain label-like one-line fixture payloads.",
+        "companion/lib/dossier.mjs:38-69,80-162 constructs generic bounded records.",
+        "companion/tests/chapters-01-07.test.mjs:15-33, chapters-08-14.test.mjs:17-38, and chapters-15-21.test.mjs:37-58 compare broad expected fields rather than recomputing the 42 named domain procedures.",
+        "companion/lib/ports.mjs:19-26 changes hidden metadata while manuscript/appendix-c.md:3-14 claims mechanism and failure variation."
+      ],
+      "affectedArtifacts": [
+        "manuscript chapters 01-21",
+        "manuscript/appendix-c.md",
+        "companion/fixtures",
+        "companion/lib/dossier.mjs",
+        "companion/lib/ports.mjs",
+        "companion/tests",
+        "companion/expected"
+      ],
+      "affectedProjections": [
+        "42 labs",
+        "105 chapter-port assertions",
+        "project-map command intents",
+        "lab currentness and readiness claims"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Truthfully narrow every executable claim unless a bounded fixture actually discriminates the named defect.",
+        "Require every retained executable claim to point to input fields, computation, assertion, and RED mutation.",
+        "Label conceptual variants as reader exercises and retain equal-interface-only port limits unless distinct local fixtures are implemented."
+      ],
+      "verification": [
+        "Audit all 42 lab rows and 105 port assertions against executable inputs, computations, assertions, and mutations.",
+        "Preserve effect denial and all production, safety, performance, legal, privacy, business, and unknown-retirement non-proof boundaries."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-05"
+    },
+    {
+      "id": "P09-SYS-005",
+      "audit": "companion-furniture-visual-readiness",
+      "severity": "MEDIUM",
+      "summary": "Correct ownership and determinism behavior lacks a committed process-level regression.",
+      "artifactLineEvidence": [
+        "companion/lib/run.mjs:17,76-121 uses process-local OWNED_ROOTS and random token bytes.",
+        "companion/README.md:7 claims later-process denial.",
+        "companion/tests/effects.test.mjs:117-123 compares dossier record objects only, while effects.test.mjs:172-185 copies a marker within one process and a different directory.",
+        "No committed test spawns a second process over the same dossier or asserts unequal markers with equal record bytes."
+      ],
+      "affectedArtifacts": [
+        "companion/lib/run.mjs",
+        "companion/README.md",
+        "companion/tests/effects.test.mjs"
+      ],
+      "affectedProjections": [
+        "same-process append boundary",
+        "later-process adoption denial",
+        "deterministic double materialization",
+        "output-directory interpretation"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Add a child-process test that materializes BL-00 in process A and requires ROOT_UNOWNED for BL-01 in process B.",
+        "Add two full fresh materializations proving BL-00 through BL-20 record equality while marker tokens differ.",
+        "Document that directory equality is not promised and keep the live capability unexported."
+      ],
+      "verification": [
+        "Require process B denial against the same dossier root.",
+        "Require all 21 dossier record bytes equal and ownership marker bytes unequal across fresh roots.",
+        "Require the companion suite green after adding committed regression coverage."
+      ],
+      "openingGateIds": [],
+      "bindingRef": "TASK-05"
+    },
+    {
+      "id": "P09-SYS-006",
+      "audit": "companion-furniture-visual-readiness",
+      "severity": "HIGH",
+      "summary": "Four raster candidates have conflicting textual path and accessibility contracts.",
+      "artifactLineEvidence": [
+        "blueprints/blueprint-register.json:13274-13291,13474-13491,13534-13551,13594-13611 reserves assets/images/machine-learning-engineering/MLE-Fxx.1-2400x1600.png.",
+        "manuscript/manuscript-register.json:6171-6287 repeats the blueprint path family.",
+        "manuscript/chapter-05.md:66, chapter-16.md:48, and chapter-18.md:42 reserve src/assets/books/machine-learning-engineering/figures/fig-mle-xx-01.png; chapter-14.md:79-81 retains the opposite path family and generic labels.",
+        "manuscript/appendix-g.md:18-30 and visual-forecast.md:575-582 use the src/assets/books path family and candidate-specific qualitative labels."
+      ],
+      "affectedArtifacts": [
+        "blueprints/blueprint-register.json",
+        "manuscript/manuscript-register.json",
+        "manuscript/chapter-05.md",
+        "manuscript/chapter-14.md",
+        "manuscript/chapter-16.md",
+        "manuscript/chapter-18.md",
+        "manuscript/appendix-g.md",
+        "visual-forecast.md"
+      ],
+      "affectedProjections": [
+        "MLE-F05.1",
+        "MLE-F14.1",
+        "MLE-F16.1",
+        "MLE-F18.1",
+        "25 textual visual records",
+        "Phase 10 handoff"
+      ],
+      "owner": "/root/mle_p9_integration",
+      "disposition": "accepted-for-task-07-repair",
+      "status": "open",
+      "repairBoundary": [
+        "Freeze one canonical path convention and one exact per-candidate S03 anchor, decision, labels, caption, alt, long description, 2400x1600 3:2 dimensions, prompt/prohibitions, ImageGen-only provenance, and canonical-PNG contract.",
+        "Project exact values into both registers, four chapters, Appendix G, and visual forecast.",
+        "Do not generate, rename, or add an image asset in Phase 09."
+      ],
+      "verification": [
+        "Require all four candidates to have one equal path and accessibility contract across every projection.",
+        "Require all 25 visual records textual and exactly four candidates ungenerated.",
+        "Require zero MLE PNG, SVG, WebP, or PDF outputs before Phase 10."
+      ],
+      "openingGateIds": [
+        "P09-OPEN-04"
+      ],
+      "bindingRef": "TASK-05"
+    }
+  ],
+  "integrity": {
+    "openingFindingCount": 6,
+    "auditFindingCount": 19,
+    "auditCounts": {
+      "coverage-depth": 2,
+      "continuity-originality": 6,
+      "evidence-currentness-authority": 5,
+      "companion-furniture-visual-readiness": 6
+    },
+    "severityCounts": {
+      "HIGH": 14,
+      "MEDIUM": 5
+    },
+    "duplicateIds": [],
+    "missingAcceptedAuditIds": [],
+    "openingFindingsAreRelationshipsNotAuditDuplicates": true,
+    "canonicalRepairAuthorizedBeforeAcceptance": false
+  }
+}
