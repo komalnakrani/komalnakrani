@@ -1,19 +1,28 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { execFile } from 'node:child_process';
+import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { dirname, join } from 'node:path';
 import test from 'node:test';
+import { promisify } from 'node:util';
 
 import {
   ALLOWED_BOOTSTRAP_DIRT,
   EXPECTED_COUNTS,
   EXPECTED_REVIEW_IDENTITIES,
   FROZEN_ENTRY,
+  INITIAL_RED_EVIDENCE,
+  buildTask01Evidence,
   KNOWN_OPENING_FINDINGS,
   PHASE08_CHECKPOINT,
   parseGitStatus,
   REVIEW_CONTRACTS,
   loadRepositorySnapshot,
+  parseReviewMarkdown,
   runHistoricalPhase08Replay,
   sha256,
+  validateCanonicalBindings,
+  validateLoadedReviews,
   validatePhase09Snapshot,
   validateFindingRegister,
   validateRepository,
@@ -31,6 +40,9 @@ const AUTHORITIES = [
   `${ROLE}/issues/phase-09-book-qa.md`,
 ];
 const FINAL_VERIFICATION = `${BOOK}/phase-09-verification.json`;
+const TASK01_REVIEW = `${ROLE}/reviews/phase-09/task-01-bootstrap.md`;
+const TASK01_REPAIR = `${ROLE}/reviews/phase-09/task-01-bootstrap-repair.md`;
+const execFileAsync = promisify(execFile);
 
 const CURRENT_COMMIT = '6a1f1b861b33e0dcf3b5087784a15763e8ca599b';
 const bootstrapGit = {
@@ -61,6 +73,10 @@ async function loadBootstrap() {
     git: bootstrapGit,
     github: await bootstrapGithub(),
   });
+}
+
+function cleanGit(commit = 'd370ab578f5a1911185b0c86515f4b8d091cefc6') {
+  return { branch: 'main', head: commit, originMain: commit, remoteMain: commit, clean: true, changedPaths: [] };
 }
 
 function clone(value) {
@@ -246,11 +262,56 @@ test('permits exactly the four activation authorities plus validator and tests a
   });
 });
 
-test('bootstrap requires no QA output, Task 01 review, or final verification yet', async (t) => {
+test('bootstrap distinguishes exact producer working-tree dirt from a clean immutable checkpoint', async () => {
+  const working = await loadBootstrap();
+  assert.deepEqual(validatePhase09Snapshot(working, { stage: 'bootstrap', mode: 'working-tree' }), []);
+  const checkpoint = await loadBootstrap();
+  checkpoint.git = cleanGit();
+  checkpoint.repositoryCommittedInventory = [...checkpoint.phase09Paths];
+  const errors = validatePhase09Snapshot(checkpoint, { stage: 'bootstrap', mode: 'checkpoint' });
+  assert.equal(codes(errors).includes('GIT_BOOTSTRAP_DIRT'), false, JSON.stringify(errors, null, 2));
+  assert.equal(codes(errors).includes('GIT_CHECKPOINT_CLEAN'), false, JSON.stringify(errors, null, 2));
+});
+
+test('audit remains closed while the real preserved Task 01 review is failed and unrepaired', async () => {
+  const snapshot = await loadRepositorySnapshot(REPO, {
+    stage: 'audit', git: cleanGit(), github: await bootstrapGithub(),
+  });
+  expectCode(validatePhase09Snapshot(snapshot, { stage: 'audit', mode: 'checkpoint', relaxMissingStageArtifacts: true }), 'TASK01_REVIEW_NOT_ACCEPTED');
+});
+
+test('durably binds the genuine initial missing-validator RED without rewriting history', () => {
+  assert.equal(INITIAL_RED_EVIDENCE.schema, 'mle-phase-09-initial-red-evidence/v1');
+  assert.equal(INITIAL_RED_EVIDENCE.testPath, `${BOOK}/validate-phase-09.test.mjs`);
+  assert.equal(INITIAL_RED_EVIDENCE.testBytes, 15224);
+  assert.equal(INITIAL_RED_EVIDENCE.testSha256, 'b60c9abb891f8aa90a92a411036e867b3d4b0604c745fd79accb2ab1021b959e');
+  assert.equal(INITIAL_RED_EVIDENCE.command, `node --test ${BOOK}/validate-phase-09.test.mjs`);
+  assert.equal(INITIAL_RED_EVIDENCE.exitCode, 1);
+  assert.equal(INITIAL_RED_EVIDENCE.errorCode, 'ERR_MODULE_NOT_FOUND');
+  assert.match(INITIAL_RED_EVIDENCE.output, /Cannot find module .*validate-phase-09\.mjs/);
+  assert.match(INITIAL_RED_EVIDENCE.output, /# tests 1[\s\S]*# pass 0[\s\S]*# fail 1/);
+  assert.equal(sha256(INITIAL_RED_EVIDENCE.output), INITIAL_RED_EVIDENCE.outputSha256);
+  assert.equal(INITIAL_RED_EVIDENCE.green.command, `node --test ${BOOK}/validate-phase-09.test.mjs`);
+  assert.equal(INITIAL_RED_EVIDENCE.green.exitCode, 0);
+  assert.equal(INITIAL_RED_EVIDENCE.green.fail, 0);
+  const evidence = buildTask01Evidence({
+    files: {
+      [`${BOOK}/validate-phase-09.mjs`]: record('validator bytes\n'),
+      [`${BOOK}/validate-phase-09.test.mjs`]: record('test bytes\n'),
+    },
+  });
+  assert.equal(evidence.green.tests, 126);
+  assert.equal(evidence.green.pass, 126);
+  assert.deepEqual(evidence.green.artifacts, [
+    { path: `${BOOK}/validate-phase-09.mjs`, sha256: record('validator bytes\n').sha256, bytes: 16 },
+    { path: `${BOOK}/validate-phase-09.test.mjs`, sha256: record('test bytes\n').sha256, bytes: 11 },
+  ]);
+});
+
+test('bootstrap permits the preserved Task 01 review but no QA output or final verification', async (t) => {
   const paths = [
     `${BOOK}/qa/coverage-depth.md`,
     `${BOOK}/qa/finding-register.json`,
-    `${ROLE}/reviews/phase-09/task-01-bootstrap.md`,
     FINAL_VERIFICATION,
   ];
   for (const path of paths) await t.test(path, async () => {
@@ -259,6 +320,59 @@ test('bootstrap requires no QA output, Task 01 review, or final verification yet
     snapshot.files[path] = record('{}\n');
     expectCode(validatePhase09Snapshot(snapshot, { stage: 'bootstrap' }), 'STAGE_PATH_FORBIDDEN');
   });
+  const snapshot = await loadBootstrap();
+  assert.equal(snapshot.phase09Paths.includes(TASK01_REVIEW), true);
+});
+
+test('parses the real failed Task 01 Markdown JSON block and binds its reviewed checkpoint', async () => {
+  const snapshot = await loadRepositorySnapshot(REPO, { stage: 'bootstrap', git: cleanGit(), github: await bootstrapGithub() });
+  const parsed = parseReviewMarkdown(snapshot.files[TASK01_REVIEW].text);
+  assert.equal(parsed.records.length, 1);
+  assert.deepEqual(parsed.errors, []);
+  assert.equal(parsed.records[0].taskId, 'TASK-01');
+  assert.equal(parsed.records[0].specVerdict, 'SPEC COMPLIANCE FAIL');
+  assert.equal(parsed.reviewedCheckpoint, '025f6bdd6310f6d6d23e8ab30cf91759f82e1fea');
+  assert.equal(codes(validateLoadedReviews(snapshot, { stage: 'bootstrap', mode: 'checkpoint' })).includes('REVIEW_ARTIFACT_BINDING'), false);
+});
+
+test('loaded review Markdown rejects malformed, forged, missing, wrong-reviewer, and rebound records', async (t) => {
+  const cases = [
+    ['malformed JSON', (text) => text.replace('"schema": "mle-phase-09-review/v1"', '"schema": '), 'REVIEW_MARKDOWN_JSON'],
+    ['wrong reviewer', (text) => text.replace('"reviewerIdentity": "/root/mle_p9_bootstrap_review"', '"reviewerIdentity": "/root"'), 'REVIEW_IDENTITY'],
+    ['forged hash', (text) => text.replace('"sha256": "3b256a6d', '"sha256": "0b256a6d'), 'REVIEW_ARTIFACT_BINDING'],
+    ['missing binding', (text) => text.replace('    { "path": "docs/superpowers/specs/2026-08-23-machine-learning-engineer-whole-book-qa-design.md", "sha256": "3b256a6dac36b31e39e9a402f48a8641195b177fcf083e4ee65cc53ce2fda3b5" },\n', ''), 'REVIEW_ARTIFACT_SET'],
+    ['rebound path', (text) => text.replace('docs/superpowers/specs/2026-08-23-machine-learning-engineer-whole-book-qa-design.md', `${BOOK}/validate-phase-09.mjs`), 'REVIEW_ARTIFACT_SET'],
+  ];
+  for (const [name, mutate, code] of cases) await t.test(name, async () => {
+    const snapshot = await loadRepositorySnapshot(REPO, { stage: 'audit', git: cleanGit(), github: await bootstrapGithub() });
+    snapshot.files[TASK01_REVIEW] = record(mutate(snapshot.files[TASK01_REVIEW].text));
+    expectCode(validateLoadedReviews(snapshot, { stage: 'audit', mode: 'checkpoint' }), code);
+  });
+});
+
+function task01RepairMarkdown(snapshot) {
+  const artifacts = REVIEW_CONTRACTS[TASK01_REVIEW].artifacts.map((path) => ({ path, sha256: snapshot.files[path].sha256 }));
+  const repair = {
+    schema: 'mle-phase-09-review-repair/v1', taskId: 'TASK-01',
+    producerIdentity: '/root/mle_p9_bootstrap', reviewerIdentity: '/root/mle_p9_bootstrap_review',
+    reviewedAt: '2026-08-23T16:30:00+05:30', priorReviewPath: TASK01_REVIEW,
+    priorReviewSha256: snapshot.files[TASK01_REVIEW].sha256, artifactBindings: artifacts,
+    reacceptedBy: '/root/mle_p9_bootstrap_review', reacceptedAt: '2026-08-23T16:31:00+05:30',
+    specVerdict: 'SPEC COMPLIANCE PASS', qualityVerdict: 'QUALITY APPROVED',
+  };
+  return `# Task 01 paired repair\n\n\`\`\`json\n${JSON.stringify(repair, null, 2)}\n\`\`\`\n\nSPEC COMPLIANCE PASS\nQUALITY APPROVED\n`;
+}
+
+test('a committed exact paired same-reviewer repair can open audit without erasing the failed base', async () => {
+  const snapshot = await loadRepositorySnapshot(REPO, { stage: 'audit', git: cleanGit(), github: await bootstrapGithub() });
+  const text = task01RepairMarkdown(snapshot);
+  snapshot.files[TASK01_REPAIR] = record(text);
+  snapshot.phase09Paths.push(TASK01_REPAIR);
+  snapshot.reviewInventory.push(TASK01_REPAIR);
+  snapshot.repositoryCommittedInventory.push(TASK01_REPAIR);
+  const errors = validateLoadedReviews(snapshot, { stage: 'audit', mode: 'checkpoint' });
+  assert.deepEqual(errors, []);
+  assert.match(snapshot.files[TASK01_REVIEW].text, /SPEC COMPLIANCE FAIL/);
 });
 
 test('pre-close fixtures reject contamination by the final verification artifact', async () => {
@@ -380,10 +494,76 @@ test('rejects every forbidden output family from changed or filesystem paths', a
   });
 });
 
+async function realInventoryFixture() {
+  const root = await mkdtemp(join(tmpdir(), 'mle-p9-inventory-'));
+  const archive = join(root, 'repo.tar');
+  await execFileAsync('git', ['archive', '--format=tar', '--output', archive, 'HEAD'], { cwd: REPO });
+  await execFileAsync('tar', ['-xf', archive, '-C', root]);
+  for (const name of ['validate-phase-09.mjs', 'validate-phase-09.test.mjs']) {
+    await cp(join(REPO, BOOK, name), join(root, BOOK, name));
+  }
+  await execFileAsync('git', ['init', '-q'], { cwd: root });
+  await execFileAsync('git', ['add', '.'], { cwd: root });
+  await execFileAsync('git', ['-c', 'user.name=fixture', '-c', 'user.email=fixture@example.invalid', 'commit', '-qm', 'checkpoint'], { cwd: root });
+  return root;
+}
+
+test('real filesystem and committed-tree inventories reject forbidden leakage independent of Git dirt', async (t) => {
+  const root = await realInventoryFixture();
+  t.after(async () => rm(root, { recursive: true, force: true }));
+  const untracked = 'public/images/machine-learning-engineering/untracked.png';
+  await mkdir(dirname(join(root, untracked)), { recursive: true });
+  await writeFile(join(root, untracked), 'not-an-image\n');
+  let snapshot = await loadRepositorySnapshot(root, { stage: 'bootstrap', git: cleanGit(), github: await bootstrapGithub(root) });
+  snapshot.git.changedPaths = [];
+  expectCode(validatePhase09Snapshot(snapshot, { stage: 'bootstrap', mode: 'checkpoint' }), 'STOP_BOUNDARY');
+
+  await rm(join(root, untracked));
+  const committed = 'output/machine-learning-engineering-committed.pdf';
+  await mkdir(dirname(join(root, committed)), { recursive: true });
+  await writeFile(join(root, committed), 'not-a-pdf\n');
+  await execFileAsync('git', ['add', committed], { cwd: root });
+  await execFileAsync('git', ['-c', 'user.name=fixture', '-c', 'user.email=fixture@example.invalid', 'commit', '-qm', 'forbidden'], { cwd: root });
+  snapshot = await loadRepositorySnapshot(root, { stage: 'bootstrap', git: cleanGit(), github: await bootstrapGithub(root) });
+  snapshot.git.changedPaths = [];
+  expectCode(validatePhase09Snapshot(snapshot, { stage: 'bootstrap', mode: 'checkpoint' }), 'STOP_BOUNDARY');
+});
+
 test('current closed Phase 08 verification binds actual artifact bytes rather than trusting labels', async () => {
   const snapshot = await loadBootstrap();
   const bound = snapshot.phase08Verification.artifacts.find((item) => item.path === `${BOOK}/manuscript/manuscript-register.json`);
   assert.equal(bound.sha256, snapshot.files[bound.path].sha256);
   snapshot.files[bound.path].sha256 = '0'.repeat(64);
   expectCode(validatePhase09Snapshot(snapshot, { stage: 'bootstrap' }), 'PHASE08_CURRENT_BINDING');
+});
+
+test('canonical Phase 08 bytes stay exact unless an accepted finding freeze and revision entry authorize replacement', async (t) => {
+  const path = `${BOOK}/manuscript/chapter-01.md`;
+  const snapshot = await loadBootstrap();
+  const before = snapshot.phase08Verification.artifacts.find((item) => item.path === path).sha256;
+  snapshot.files[path] = record(`${snapshot.files[path].text}\nAuthorized editorial repair fixture.\n`);
+  expectCode(validateCanonicalBindings(snapshot, { stage: 'repair', findingFreezeAccepted: false }), 'PHASE08_CURRENT_BINDING');
+
+  const findingRegister = {
+    schema: 'mle-phase-09-finding-register/v1',
+    openingFindings: KNOWN_OPENING_FINDINGS.map(({ id, audit }) => ({ id, audit, disposition: 'open', evidence: ['audit'] })),
+    findings: [{ id: 'P09-OPEN-01', disposition: 'accepted', path }],
+  };
+  const ledger = {
+    schema: 'mle-phase-09-revision-ledger/v1', entries: [{
+      findingId: 'P09-OPEN-01', path, beforeSha256: before, afterSha256: snapshot.files[path].sha256,
+      reason: 'Accepted reader-facing factory leakage repair', affectedGraphProjections: ['chapter-01'],
+      verificationCommands: ['node --test validate-phase-09.test.mjs'], producerIdentity: '/root/mle_p9_integration',
+      reviewerIdentity: '/root/mle_p9_integration_review', disposition: 'accepted',
+    }],
+  };
+  snapshot.files[`${BOOK}/qa/finding-register.json`] = record(`${JSON.stringify(findingRegister)}\n`);
+  snapshot.files[`${BOOK}/qa/revision-ledger.json`] = record(`${JSON.stringify(ledger)}\n`);
+  assert.deepEqual(validateCanonicalBindings(snapshot, { stage: 'repair', findingFreezeAccepted: true }), []);
+
+  await t.test('an unchanged/unlisted second artifact still cannot drift', () => {
+    const second = `${BOOK}/manuscript/chapter-02.md`;
+    snapshot.files[second] = record(`${snapshot.files[second].text}\nunlisted drift\n`);
+    expectCode(validateCanonicalBindings(snapshot, { stage: 'repair', findingFreezeAccepted: true }), 'PHASE08_CURRENT_BINDING');
+  });
 });

@@ -13,6 +13,9 @@ const FACTORY = 'project-control/role-factory/FACTORY-STATE.md';
 const SPEC = 'docs/superpowers/specs/2026-08-23-machine-learning-engineer-whole-book-qa-design.md';
 const PLAN = 'docs/superpowers/plans/2026-08-23-machine-learning-engineer-phase-09.md';
 const FINAL_VERIFICATION = `${BOOK}/phase-09-verification.json`;
+const TASK01_REVIEW = `${ROLE}/reviews/phase-09/task-01-bootstrap.md`;
+const TASK01_REPAIR = `${ROLE}/reviews/phase-09/task-01-bootstrap-repair.md`;
+const TASK01_REVIEWED_CHECKPOINT = '025f6bdd6310f6d6d23e8ab30cf91759f82e1fea';
 
 export const PHASE08_CHECKPOINT = 'aed6f459d64b092ed4377c7da8f88dcc6c09d726';
 export const PHASE08_CLOSURE = '5f862da964e6c74f582737a3eb4b68cb9c6c5824';
@@ -30,6 +33,77 @@ export const FROZEN_ENTRY = Object.freeze({
   [`${BOOK}/validate-phase-08.mjs`]: '3a31bb40a68e35d0a7994a4ce7fa4ed62e66d512f8e9b71d3cb2113d91b4eb62',
   [`${BOOK}/validate-phase-08.test.mjs`]: '3d00bdd770cfb71c9a2f3b2677d0e6794b1327912cdda8b07341150605c2db54',
 });
+
+const INITIAL_RED_OUTPUT = `TAP version 13
+# node:internal/modules/esm/resolve:275
+#     throw new ERR_MODULE_NOT_FOUND(
+#           ^
+# Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Applications/ServBay/www/komalnakrani/project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-09.mjs' imported from /Applications/ServBay/www/komalnakrani/project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-09.test.mjs
+#     at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+#     at moduleResolve (node:internal/modules/esm/resolve:861:10)
+#     at defaultResolve (node:internal/modules/esm/resolve:985:11)
+#     at #cachedDefaultResolve (node:internal/modules/esm/loader:747:20)
+#     at ModuleLoader.resolve (node:internal/modules/esm/loader:724:38)
+#     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:320:38)
+#     at ModuleJob._link (node:internal/modules/esm/module_job:182:49) {
+#   code: 'ERR_MODULE_NOT_FOUND',
+#   url: 'file:///Applications/ServBay/www/komalnakrani/project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-09.mjs'
+# }
+# Node.js v22.23.1
+# Subtest: project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-09.test.mjs
+not ok 1 - project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-09.test.mjs
+  ---
+  duration_ms: 43.24375
+  type: 'test'
+  location: '/Applications/ServBay/www/komalnakrani/project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-09.test.mjs:1:1'
+  failureType: 'testCodeFailure'
+  exitCode: 1
+  signal: ~
+  error: 'test failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 47.797542
+`;
+
+export const INITIAL_RED_EVIDENCE = Object.freeze({
+  schema: 'mle-phase-09-initial-red-evidence/v1',
+  testPath: `${BOOK}/validate-phase-09.test.mjs`,
+  testBytes: 15224,
+  testSha256: 'b60c9abb891f8aa90a92a411036e867b3d4b0604c745fd79accb2ab1021b959e',
+  command: `node --test ${BOOK}/validate-phase-09.test.mjs`,
+  exitCode: 1,
+  errorCode: 'ERR_MODULE_NOT_FOUND',
+  output: INITIAL_RED_OUTPUT,
+  outputSha256: sha256(INITIAL_RED_OUTPUT),
+  green: Object.freeze({
+    command: `node --test ${BOOK}/validate-phase-09.test.mjs`,
+    exitCode: 0,
+    tests: 126,
+    pass: 126,
+    fail: 0,
+    implementationPaths: Object.freeze([`${BOOK}/validate-phase-09.mjs`, `${BOOK}/validate-phase-09.test.mjs`]),
+  }),
+});
+
+export function buildTask01Evidence(snapshot) {
+  const artifacts = INITIAL_RED_EVIDENCE.green.implementationPaths.map((path) => {
+    const file = snapshot.files[path];
+    return { path, sha256: file?.sha256, bytes: file?.bytes };
+  });
+  return {
+    schema: 'mle-phase-09-task-01-tdd-evidence/v1',
+    initialRed: INITIAL_RED_EVIDENCE,
+    green: { ...INITIAL_RED_EVIDENCE.green, artifacts },
+  };
+}
 
 export const EXPECTED_COUNTS = Object.freeze({
   parts: 7,
@@ -96,12 +170,47 @@ const REVIEW_NAMES = [
   'task-08-hostile-integration.md', 'task-08-hostile-integration-repair.md',
 ];
 
+const TASK01_ARTIFACTS = Object.freeze([
+  SPEC, PLAN,
+  `${ROLE}/reviews/phase-09/task-00-plan.md`, `${ROLE}/reviews/phase-09/task-00-plan-repair.md`,
+  `${BOOK}/phase-08-verification.json`, `${BOOK}/manuscript/phase-09-handoff.md`,
+  `${ROLE}/reviews/phase-08/task-07-hostile-integration.md`,
+  FACTORY, `${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-09-book-qa.md`,
+  `${BOOK}/validate-phase-09.mjs`, `${BOOK}/validate-phase-09.test.mjs`,
+]);
+
+const REVIEW_ARTIFACTS = Object.freeze({
+  'TASK-01': TASK01_ARTIFACTS,
+  'TASK-02': [`${BOOK}/qa/coverage-depth.md`],
+  'TASK-03': [`${BOOK}/qa/continuity-originality.md`],
+  'TASK-04': [`${BOOK}/qa/evidence-currentness-authority.md`],
+  'TASK-05': [`${BOOK}/qa/companion-furniture-visual-readiness.md`],
+  'TASK-06': [
+    `${BOOK}/qa/finding-register.json`, `${BOOK}/qa/coverage-depth.md`, `${BOOK}/qa/continuity-originality.md`,
+    `${BOOK}/qa/evidence-currentness-authority.md`, `${BOOK}/qa/companion-furniture-visual-readiness.md`,
+    ...[2, 3, 4, 5].map((task) => `${ROLE}/reviews/phase-09/${REVIEW_NAMES.find((name) => name.startsWith(`task-${String(task).padStart(2, '0')}-`) && !name.endsWith('-repair.md'))}`),
+  ],
+  'TASK-07': [
+    `${BOOK}/qa/finding-register.json`, `${BOOK}/qa/revision-ledger.json`, `${BOOK}/qa/phase-09-register.json`,
+    `${BOOK}/qa/verification-report.md`, `${BOOK}/qa/phase-10-handoff.md`, `${ROLE}/reviews/phase-09/task-06-finding-freeze.md`,
+  ],
+  'TASK-08': [
+    ...Array.from({ length: 9 }, (_, index) => `${BOOK}/qa/${[
+      'finding-register.json', 'coverage-depth.md', 'continuity-originality.md', 'evidence-currentness-authority.md',
+      'companion-furniture-visual-readiness.md', 'revision-ledger.json', 'phase-09-register.json',
+      'verification-report.md', 'phase-10-handoff.md',
+    ][index]}`),
+    `${ROLE}/reviews/phase-09/task-07-canonical-integration.md`,
+  ],
+});
+
 export const REVIEW_CONTRACTS = Object.freeze(Object.fromEntries(
   Array.from({ length: 9 }, (_, index) => {
     const task = `TASK-${String(index).padStart(2, '0')}`;
     return [`${ROLE}/reviews/phase-09/${REVIEW_NAMES.find((name) => name.startsWith(`task-${String(index).padStart(2, '0')}-`) && !name.endsWith('-repair.md'))}`, {
       taskId: task,
       ...EXPECTED_REVIEW_IDENTITIES[task],
+      artifacts: REVIEW_ARTIFACTS[task] ?? [],
     }];
   }),
 ));
@@ -158,12 +267,13 @@ async function readRecord(root, path, required = false) {
 
 async function listFiles(root, relativeRoot) {
   const result = [];
+  const ignoredDirectories = new Set(['.git', 'node_modules', 'dist', '.astro', '.vercel', '.DS_Store']);
   async function walk(path) {
     let entries;
     try { entries = await readdir(join(root, path), { withFileTypes: true }); } catch { return; }
     for (const entry of entries) {
       const child = path === '.' ? entry.name : `${path}/${entry.name}`;
-      if (entry.isDirectory()) await walk(child);
+      if (entry.isDirectory() && !ignoredDirectories.has(entry.name)) await walk(child);
       else if (entry.isFile() || entry.isSymbolicLink()) result.push(child);
     }
   }
@@ -231,20 +341,60 @@ export async function loadRepositorySnapshot(root, options = {}) {
     }
   }
 
+  let repositoryCommittedInventory = [];
+  let repositoryUntrackedInventory = [];
+  let activationInventory = [];
+  try {
+    repositoryCommittedInventory = execFileSync('git', ['ls-tree', '-r', '--name-only', 'HEAD'], { cwd: root, encoding: 'utf8' }).split('\n').filter(Boolean).sort();
+    repositoryUntrackedInventory = execFileSync('git', ['ls-files', '--others', '--exclude-standard'], { cwd: root, encoding: 'utf8' }).split('\n').filter(Boolean).sort();
+    activationInventory = execFileSync('git', ['ls-tree', '-r', '--name-only', TASK01_REVIEWED_CHECKPOINT], { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).split('\n').filter(Boolean).sort();
+  } catch {
+    repositoryCommittedInventory = [...phase09Paths];
+    activationInventory = [...repositoryCommittedInventory];
+  }
+  const repositoryFilesystemInventory = await listFiles(root, '.');
+
+  const reviewCheckpointBindings = {};
+  for (const path of reviewInventory.filter((item) => !item.endsWith('-repair.md'))) {
+    const parsed = parseReviewMarkdown(files[path]?.text ?? '');
+    if (!parsed.reviewedCheckpoint || parsed.records.length !== 1) continue;
+    const historical = {};
+    for (const binding of parsed.records[0].artifactBindings ?? []) {
+      try {
+        const bytes = execFileSync('git', ['show', `${parsed.reviewedCheckpoint}:${binding.path}`], { cwd: root, maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
+        historical[binding.path] = { path: binding.path, bytes: bytes.byteLength, sha256: sha256(bytes) };
+      } catch {
+        historical[binding.path] = null;
+      }
+    }
+    reviewCheckpointBindings[path] = { checkpoint: parsed.reviewedCheckpoint, files: historical };
+  }
+
   return {
     root: resolve(root), stage, files, phase08Verification, manuscriptRegister, blueprintRegister,
     derivedCounts: deriveCounts(blueprintRegister), phase09Paths,
     qaInventory: qaInventory.filter((path) => QA_PATHS.includes(path)),
     reviewInventory,
+    repositoryCommittedInventory, repositoryUntrackedInventory, repositoryFilesystemInventory,
+    activationInventory, reviewCheckpointBindings,
     git: options.git ? structuredClone(options.git) : null,
     github: options.github ? structuredClone(options.github) : null,
     historicalReplay: options.historicalReplay ? structuredClone(options.historicalReplay) : null,
   };
 }
 
-function validateFrozenEntry(snapshot) {
+function isRepairStage(stage) {
+  return ['repair', 'integration', 'pre-hostile', 'pre-close', 'final-content', 'final'].includes(stage);
+}
+
+function isMutableCanonicalPath(path) {
+  return path.startsWith(`${BOOK}/manuscript/`) || path.startsWith(`${BOOK}/companion/`);
+}
+
+function validateFrozenEntry(snapshot, stage = 'bootstrap') {
   const errors = [];
   for (const [path, expected] of Object.entries(FROZEN_ENTRY)) {
+    if (isRepairStage(stage) && isMutableCanonicalPath(path)) continue;
     if (snapshot.files[path]?.sha256 !== expected) errors.push(error('FROZEN_ENTRY_HASH', `expected ${expected}`, path));
   }
   return errors;
@@ -262,17 +412,37 @@ function validateCounts(snapshot) {
   return errors;
 }
 
-function validateCurrentPhase08Bindings(snapshot) {
+export function validateCanonicalBindings(snapshot, context = {}) {
   const errors = [];
+  const stage = context.stage ?? snapshot.stage ?? 'bootstrap';
   if (snapshot.phase08Verification.schema !== 'mle-phase-08-final-verification/v1') {
     errors.push(error('PHASE08_CURRENT_SCHEMA', 'terminal Phase 08 verification schema drift'));
   }
   const bindings = [...(snapshot.phase08Verification.frozenInputs ?? []), ...(snapshot.phase08Verification.artifacts ?? [])];
+  let findingRegister = null;
+  let revisionLedger = null;
+  try { findingRegister = JSON.parse(snapshot.files[`${BOOK}/qa/finding-register.json`]?.text ?? 'null'); } catch {}
+  try { revisionLedger = JSON.parse(snapshot.files[`${BOOK}/qa/revision-ledger.json`]?.text ?? 'null'); } catch {}
   for (const binding of bindings) {
     const loaded = snapshot.files[binding.path];
-    if (!loaded || loaded.sha256 !== binding.sha256 || loaded.bytes !== binding.bytes) {
-      errors.push(error('PHASE08_CURRENT_BINDING', 'current closed-tree bytes differ from terminal Phase 08 verification', binding.path));
-    }
+    if (loaded && loaded.sha256 === binding.sha256 && loaded.bytes === binding.bytes) continue;
+    const canReplace = isRepairStage(stage) && isMutableCanonicalPath(binding.path) && context.findingFreezeAccepted === true;
+    const entry = revisionLedger?.schema === 'mle-phase-09-revision-ledger/v1'
+      ? revisionLedger.entries?.find((item) => item.path === binding.path)
+      : null;
+    const finding = findingRegister?.findings?.find((item) => item.id === entry?.findingId);
+    const validReplacement = canReplace && entry
+      && finding?.disposition === 'accepted'
+      && entry.beforeSha256 === binding.sha256
+      && entry.afterSha256 === loaded?.sha256
+      && typeof entry.reason === 'string' && entry.reason.trim().length > 0
+      && Array.isArray(entry.affectedGraphProjections) && entry.affectedGraphProjections.length > 0
+      && Array.isArray(entry.verificationCommands) && entry.verificationCommands.length > 0
+      && entry.producerIdentity === '/root/mle_p9_integration'
+      && entry.reviewerIdentity === '/root/mle_p9_integration_review'
+      && entry.producerIdentity !== entry.reviewerIdentity
+      && entry.disposition === 'accepted';
+    if (!validReplacement) errors.push(error('PHASE08_CURRENT_BINDING', 'current bytes require an independently frozen finding and exact before/after revision entry', binding.path));
   }
   return errors;
 }
@@ -332,33 +502,52 @@ function validateGithub(snapshot, stage) {
   return errors;
 }
 
-function validateGit(snapshot, stage) {
+function validateGit(snapshot, stage, mode) {
   if (!snapshot.git) return [];
   const errors = [];
   if (snapshot.git.branch !== 'main' || snapshot.git.head !== snapshot.git.originMain || snapshot.git.head !== snapshot.git.remoteMain) {
     errors.push(error('GIT_MAIN_EQUALITY', 'main, origin/main, and live remote main must be equal'));
   }
-  if (stage === 'bootstrap' && (!sameSet(snapshot.git.changedPaths ?? [], ALLOWED_BOOTSTRAP_DIRT) || snapshot.git.clean !== false)) {
+  if (stage === 'bootstrap' && mode === 'working-tree' && (!sameSet(snapshot.git.changedPaths ?? [], ALLOWED_BOOTSTRAP_DIRT) || snapshot.git.clean !== false)) {
     errors.push(error('GIT_BOOTSTRAP_DIRT', 'bootstrap dirt must be exactly four authorities plus validator and tests'));
+  }
+  if (mode === 'checkpoint') {
+    const implementationCommitted = VALIDATOR_PATHS.every((path) => snapshot.repositoryCommittedInventory?.includes(path));
+    if (!snapshot.git.clean || (snapshot.git.changedPaths ?? []).length !== 0 || !implementationCommitted) {
+      errors.push(error('GIT_CHECKPOINT_CLEAN', 'checkpoint mode requires clean equal Git and committed validator/test bytes'));
+    }
   }
   if (stage === 'final' && (!snapshot.git.clean || (snapshot.git.changedPaths ?? []).length > 0)) errors.push(error('GIT_FINAL_CLEAN', 'final stage requires clean Git equality'));
   return errors;
 }
 
-function stopBoundaryPath(path) {
+function stopBoundaryPath(path, options = {}) {
   return /^public\/.*machine-learning-engineering.*\.(?:png|svg|webp|pdf)$/i.test(path)
     || /^output\/.*machine-learning-engineering.*\.pdf$/i.test(path)
     || /^content\/publications\/machine-learning-engineering(?:\/|$)/i.test(path)
     || /^content\/courses\/machine-learning-engineering(?:\/|$)/i.test(path)
-    || /(?:certification|abhyaas)/i.test(path)
+    || /certification.*machine-learning|machine-learning.*certification/i.test(path)
+    || /abhyaas\/(?:mle|machine-learning)/i.test(path)
     || new RegExp(`^${BOOK.replaceAll('/', '\\/')}\/volume-02(?:\/|$)`, 'i').test(path)
-    || /^project-control\/roles\/(?:data-engineer|mlops-engineer|ai-research-scientist)\//i.test(path);
+    || ((options.changed || options.newSinceActivation) && /^project-control\/roles\/(?!machine-learning-engineer\/)[^/]+\/(?:books|issues)\//i.test(path))
+    || (options.changed && /^project-control\/roles\/(?:data-engineer|mlops-engineer|ai-research-scientist)\//i.test(path));
 }
 
 function validateStopBoundary(snapshot) {
   const errors = [];
-  for (const path of [...(snapshot.git?.changedPaths ?? []), ...snapshot.phase09Paths]) {
-    if (stopBoundaryPath(path)) errors.push(error('STOP_BOUNDARY', 'Phase 09 may not start visual, PDF, publication, course, Abhyaas, volume 2, catalog 6, or next-role output', path));
+  const activation = new Set(snapshot.activationInventory ?? []);
+  const sources = [
+    ...(snapshot.git?.changedPaths ?? []).map((path) => ({ path, changed: true })),
+    ...snapshot.phase09Paths.map((path) => ({ path })),
+    ...(snapshot.repositoryFilesystemInventory ?? []).map((path) => ({ path, newSinceActivation: !activation.has(path) })),
+    ...(snapshot.repositoryCommittedInventory ?? []).map((path) => ({ path, newSinceActivation: !activation.has(path) })),
+    ...(snapshot.repositoryUntrackedInventory ?? []).map((path) => ({ path, newSinceActivation: true })),
+  ];
+  const seen = new Set();
+  for (const item of sources) {
+    if (seen.has(item.path)) continue;
+    seen.add(item.path);
+    if (stopBoundaryPath(item.path, item)) errors.push(error('STOP_BOUNDARY', 'Phase 09 may not start visual, PDF, publication, course, Abhyaas, volume 2, catalog 6, or next-role output', item.path));
   }
   return errors;
 }
@@ -366,7 +555,7 @@ function validateStopBoundary(snapshot) {
 function allowedAtStage(stage) {
   const allowed = new Set(BASE_ALLOWED);
   const maxReviewTask = {
-    bootstrap: 0, audit: 5, repair: 6, integration: 7,
+    bootstrap: 1, audit: 5, repair: 6, integration: 7,
     'pre-hostile': 7, 'pre-close': 8, 'final-content': 8, final: 8,
   }[stage];
   for (const name of REVIEW_NAMES) {
@@ -423,6 +612,7 @@ export function validateReviewRecord(review, expectedIdentity, context = {}) {
   if (!expectedIdentity || review.producerIdentity !== expectedIdentity.producerIdentity || review.reviewerIdentity !== expectedIdentity.reviewerIdentity) {
     errors.push(error('REVIEW_IDENTITY', 'review identity drift'));
   }
+  const terminalFailure = review.specVerdict === 'SPEC COMPLIANCE FAIL' && review.qualityVerdict === 'QUALITY CHANGES REQUESTED';
   const failure = review.priorVerdict === 'SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED';
   const hasRepair = Boolean(review.repairPath || review.repairSha256 || review.reacceptedBy || review.reacceptedAt);
   if (!failure && hasRepair) errors.push(error('REVIEW_REPAIR_CHAIN', 'repair fields require a preserved failed base review'));
@@ -433,7 +623,113 @@ export function validateReviewRecord(review, expectedIdentity, context = {}) {
       errors.push(error('REVIEW_REPAIR_CHAIN', 'failure requires exact paired repair and same-reviewer later reacceptance'));
     }
   }
-  if (review.specVerdict !== 'SPEC COMPLIANCE PASS' || review.qualityVerdict !== 'QUALITY APPROVED') errors.push(error('REVIEW_VERDICT', 'accepted review must end exact PASS/APPROVED'));
+  if (terminalFailure && hasRepair) errors.push(error('REVIEW_REPAIR_CHAIN', 'a preserved failed base may not rewrite itself into its paired repair'));
+  if (!(review.specVerdict === 'SPEC COMPLIANCE PASS' && review.qualityVerdict === 'QUALITY APPROVED')
+      && !(context.allowFailure && terminalFailure)) errors.push(error('REVIEW_VERDICT', 'review must be exact PASS/APPROVED or a preserved exact FAIL/CHANGES base'));
+  return errors;
+}
+
+export function parseReviewMarkdown(text) {
+  const records = [];
+  const errors = [];
+  const blocks = [...text.matchAll(/```json\s*([\s\S]*?)```/g)];
+  for (const block of blocks) {
+    try { records.push(JSON.parse(block[1])); }
+    catch { errors.push(error('REVIEW_MARKDOWN_JSON', 'review Markdown contains malformed fenced JSON')); }
+  }
+  if (blocks.length === 0) errors.push(error('REVIEW_MARKDOWN_JSON', 'review Markdown must contain one fenced JSON record'));
+  const reviewedCheckpoint = text.match(/Reviewed checkpoint:\s*`([0-9a-f]{40})`/i)?.[1] ?? null;
+  return { records, errors, reviewedCheckpoint };
+}
+
+function validateReviewArtifactBindings(record, contract, files) {
+  const errors = [];
+  const actualPaths = (record.artifactBindings ?? []).map((binding) => binding.path);
+  if (!sameSet(actualPaths, contract.artifacts ?? []) || new Set(actualPaths).size !== actualPaths.length) {
+    errors.push(error('REVIEW_ARTIFACT_SET', `${record.taskId} artifact set drift`));
+    return errors;
+  }
+  for (const binding of record.artifactBindings) {
+    if (!/^[0-9a-f]{64}$/.test(binding.sha256 ?? '') || files[binding.path]?.sha256 !== binding.sha256) {
+      errors.push(error('REVIEW_ARTIFACT_BINDING', 'review artifact binding differs from actual bytes', binding.path));
+    }
+  }
+  return errors;
+}
+
+function validateRepairRecord(record, baseRecord, basePath, repairPath, contract, snapshot) {
+  const errors = [];
+  const required = ['schema', 'taskId', 'producerIdentity', 'reviewerIdentity', 'reviewedAt', 'priorReviewPath', 'priorReviewSha256', 'artifactBindings', 'reacceptedBy', 'reacceptedAt', 'specVerdict', 'qualityVerdict'];
+  if (!record || required.some((key) => !Object.hasOwn(record, key)) || record.schema !== 'mle-phase-09-review-repair/v1' || !Array.isArray(record.artifactBindings)) {
+    return [error('REVIEW_REPAIR_SCHEMA', 'paired repair record schema is incomplete', repairPath)];
+  }
+  if (record.taskId !== contract.taskId || record.producerIdentity !== contract.producerIdentity || record.reviewerIdentity !== contract.reviewerIdentity || record.producerIdentity === record.reviewerIdentity) {
+    errors.push(error('REVIEW_IDENTITY', 'paired repair identity drift', repairPath));
+  }
+  const later = Date.parse(record.reviewedAt) > Date.parse(baseRecord.reviewedAt)
+    && Date.parse(record.reacceptedAt) >= Date.parse(record.reviewedAt);
+  if (record.priorReviewPath !== basePath || record.priorReviewSha256 !== snapshot.files[basePath]?.sha256
+      || record.reacceptedBy !== baseRecord.reviewerIdentity || !later
+      || record.specVerdict !== 'SPEC COMPLIANCE PASS' || record.qualityVerdict !== 'QUALITY APPROVED') {
+    errors.push(error('REVIEW_REPAIR_CHAIN', 'paired repair must bind the failed base and same-reviewer later reacceptance', repairPath));
+  }
+  errors.push(...validateReviewArtifactBindings(record, contract, snapshot.files));
+  return errors;
+}
+
+function requiredReviewTasks(stage) {
+  if (stage === 'bootstrap') return [];
+  if (stage === 'audit') return ['TASK-01'];
+  if (stage === 'repair') return ['TASK-01', 'TASK-02', 'TASK-03', 'TASK-04', 'TASK-05', 'TASK-06'];
+  if (['integration', 'pre-hostile'].includes(stage)) return ['TASK-01', 'TASK-02', 'TASK-03', 'TASK-04', 'TASK-05', 'TASK-06', 'TASK-07'];
+  return Object.keys(EXPECTED_REVIEW_IDENTITIES).filter((task) => task !== 'TASK-00');
+}
+
+export function validateLoadedReviews(snapshot, context = {}) {
+  const stage = context.stage ?? snapshot.stage ?? 'bootstrap';
+  const mode = context.mode ?? (stage === 'bootstrap' ? 'working-tree' : 'checkpoint');
+  const errors = [];
+  const accepted = new Set();
+  const required = new Set(requiredReviewTasks(stage));
+  const presentBases = snapshot.reviewInventory.filter((path) => /\/task-0[1-8]-.*\.md$/.test(path) && !path.endsWith('-repair.md'));
+
+  for (const basePath of presentBases) {
+    const contract = REVIEW_CONTRACTS[basePath];
+    if (!contract) { errors.push(error('REVIEW_PATH_TASK', 'review path has no frozen task contract', basePath)); continue; }
+    const parsed = parseReviewMarkdown(snapshot.files[basePath]?.text ?? '');
+    errors.push(...parsed.errors.map((item) => ({ ...item, path: basePath })));
+    if (parsed.records.length !== 1) { if (parsed.records.length > 1) errors.push(error('REVIEW_MARKDOWN_JSON', 'review Markdown must contain exactly one JSON record', basePath)); continue; }
+    const record = parsed.records[0];
+    if (record.taskId !== contract.taskId) errors.push(error('REVIEW_PATH_TASK', 'review task does not match its path', basePath));
+    errors.push(...validateReviewRecord(record, contract, { allowFailure: true }));
+    const failed = record.specVerdict === 'SPEC COMPLIANCE FAIL' && record.qualityVerdict === 'QUALITY CHANGES REQUESTED';
+    const bindingFiles = failed && snapshot.reviewCheckpointBindings?.[basePath]?.files
+      ? snapshot.reviewCheckpointBindings[basePath].files
+      : snapshot.files;
+    if (failed && parsed.reviewedCheckpoint !== snapshot.reviewCheckpointBindings?.[basePath]?.checkpoint) {
+      errors.push(error('REVIEW_CHECKPOINT_BINDING', 'failed review checkpoint is not replayable', basePath));
+    }
+    errors.push(...validateReviewArtifactBindings(record, contract, bindingFiles));
+    if (!failed) { accepted.add(record.taskId); continue; }
+
+    const repairPath = basePath.replace(/\.md$/, '-repair.md');
+    if (!snapshot.files[repairPath]) continue;
+    const repairParsed = parseReviewMarkdown(snapshot.files[repairPath].text);
+    errors.push(...repairParsed.errors.map((item) => ({ ...item, path: repairPath })));
+    if (repairParsed.records.length !== 1) continue;
+    const repairErrors = validateRepairRecord(repairParsed.records[0], record, basePath, repairPath, contract, snapshot);
+    errors.push(...repairErrors);
+    if (mode === 'checkpoint' && !snapshot.repositoryCommittedInventory.includes(repairPath)) errors.push(error('REVIEW_NOT_COMMITTED', 'accepted repair must be committed at a clean checkpoint', repairPath));
+    if (repairErrors.length === 0 && (mode !== 'checkpoint' || snapshot.repositoryCommittedInventory.includes(repairPath))) accepted.add(record.taskId);
+  }
+
+  for (const repairPath of snapshot.reviewInventory.filter((path) => path.endsWith('-repair.md') && /\/task-0[1-8]-/.test(path))) {
+    const basePath = repairPath.replace(/-repair\.md$/, '.md');
+    if (!snapshot.files[basePath]) errors.push(error('REPAIR_WITHOUT_FAILURE', 'paired repair has no preserved base review', repairPath));
+  }
+  for (const task of required) {
+    if (!accepted.has(task)) errors.push(error(task === 'TASK-01' ? 'TASK01_REVIEW_NOT_ACCEPTED' : 'REVIEW_NOT_ACCEPTED', `${task} must be exactly accepted before ${stage}`));
+  }
   return errors;
 }
 
@@ -459,6 +755,7 @@ export function validateFindingRegister(register) {
 
 export function validatePhase09Snapshot(snapshot, options = {}) {
   const stage = options.stage ?? snapshot.stage ?? 'bootstrap';
+  const mode = options.mode ?? (stage === 'bootstrap' ? 'working-tree' : 'checkpoint');
   if (!STAGES.has(stage)) return [error('STAGE_UNKNOWN', `unsupported Phase 09 stage ${stage}`)];
   let findingErrors = [];
   const findingPath = `${BOOK}/qa/finding-register.json`;
@@ -466,15 +763,18 @@ export function validatePhase09Snapshot(snapshot, options = {}) {
     try { findingErrors = validateFindingRegister(JSON.parse(snapshot.files[findingPath].text)); }
     catch { findingErrors = [error('FINDING_REGISTER_SCHEMA', 'finding register must be valid JSON', findingPath)]; }
   }
+  const reviewErrors = validateLoadedReviews(snapshot, { stage, mode });
+  const findingFreezeAccepted = isRepairStage(stage) && reviewErrors.length === 0;
   return [
-    ...validateFrozenEntry(snapshot),
+    ...validateFrozenEntry(snapshot, stage),
     ...validateCounts(snapshot),
-    ...validateCurrentPhase08Bindings(snapshot),
+    ...validateCanonicalBindings(snapshot, { stage, findingFreezeAccepted }),
     ...validateHistoricalReplay(snapshot.historicalReplay),
     ...validateAuthorities(snapshot, stage),
     ...validateGithub(snapshot, stage),
-    ...validateGit(snapshot, stage),
+    ...validateGit(snapshot, stage, mode),
     ...validateInventory(snapshot, stage, options),
+    ...reviewErrors,
     ...findingErrors,
     ...validateStopBoundary(snapshot),
   ];
@@ -533,8 +833,10 @@ export async function validateRepository(root, options = {}) {
   const errors = validatePhase09Snapshot(snapshot, options);
   return {
     schema: 'mle-phase-09-validator-report/v1', stage: options.stage ?? 'bootstrap',
+    mode: options.mode ?? ((options.stage ?? 'bootstrap') === 'bootstrap' ? 'working-tree' : 'checkpoint'),
     counts: snapshot.derivedCounts, qaInventory: snapshot.qaInventory,
     historicalReplay: snapshot.historicalReplay,
+    task01Evidence: buildTask01Evidence(snapshot),
     bootstrapLifecycle: 'pre-review', productionAuthorized: false, errors,
   };
 }
@@ -562,9 +864,11 @@ function liveIssue(root, number) {
 
 async function main() {
   const stage = process.argv.find((arg) => arg.startsWith('--stage='))?.slice('--stage='.length) ?? 'bootstrap';
+  const mode = process.argv.find((arg) => arg.startsWith('--mode='))?.slice('--mode='.length)
+    ?? (stage === 'bootstrap' ? 'working-tree' : 'checkpoint');
   const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../../../..');
   const report = await validateRepository(root, {
-    stage,
+    stage, mode,
     runHistoricalReplay: stage === 'bootstrap',
     git: liveGit(root),
     github: { 79: liveIssue(root, 79), 85: liveIssue(root, 85), 86: liveIssue(root, 86) },
@@ -574,7 +878,7 @@ async function main() {
     process.exitCode = 1;
     return;
   }
-  console.log(`PASS Phase 09 ${stage}: current closed tree bound; historical Phase 08 ${report.historicalReplay?.pass ?? 'not-run'}/${report.historicalReplay?.tests ?? 'not-run'}; chapters=${report.counts.chapters}; claims=${report.counts.claims}; sources=${report.counts.sources}`);
+  console.log(`PASS Phase 09 ${stage}/${mode}: current closed tree bound; historical Phase 08 ${report.historicalReplay?.pass ?? 'not-run'}/${report.historicalReplay?.tests ?? 'not-run'}; chapters=${report.counts.chapters}; claims=${report.counts.claims}; sources=${report.counts.sources}`);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) await main();
