@@ -4,7 +4,7 @@ Parent: [#79 — Machine Learning Engineer publication ecosystem](https://github
 
 Live issue: [#85 — Machine Learning Engineer Phase 08 original manuscript and deterministic companion](https://github.com/alpeshznakrani/komalnakrani/issues/85)
 
-Status: active; bootstrap review required before production.
+Status: complete; #85 closed `status:done`; no active child. Phase 09 is the sole next gate and remains inactive. Catalog position 6 is not started.
 
 Approved design:
 `docs/superpowers/specs/2026-08-22-machine-learning-engineer-manuscript-companion-design.md`
@@ -21,24 +21,24 @@ Evidence* by Komal Nakrani.
 
 ## Acceptance criteria
 
-- [ ] The validator/test bootstrap records a genuine missing-validator RED and
+- [x] The validator/test bootstrap records a genuine missing-validator RED and
   passes its frozen GREEN suite before production begins.
-- [ ] The independent Task 01 bootstrap review binds the activation checkpoint,
+- [x] The independent Task 01 bootstrap review binds the activation checkpoint,
   live issue bodies/labels, state hashes, absent production inventory, and test
   evidence and ends exact PASS/APPROVED.
-- [ ] Three disjoint lanes produce Chapters 01-07, 08-14, and 15-21 within the
+- [x] Three disjoint lanes produce Chapters 01-07, 08-14, and 15-21 within the
   frozen prose, evidence, truth, authority, dossier, lab, assessment, port,
   visual-placeholder, and handoff contracts.
-- [ ] The local offline companion implements all five equal ports, `BL-ENTRY`
+- [x] The local offline companion implements all five equal ports, `BL-ENTRY`
   and `BL-00` through `BL-20`, deterministic positive and failure paths, legal
   dispositions, immutable records, canonical hashes, and no hidden effects.
-- [ ] Ten Bench Zero items, seven part records, seven appendices, five closing
+- [x] Ten Bench Zero items, seven part records, seven appendices, five closing
   items, About Komal, and the exact closing line are complete.
-- [ ] Exact canonical counts and all claim/source/case/architecture/dossier/port
+- [x] Exact canonical counts and all claim/source/case/architecture/dossier/port
   reverse edges pass independent integration and hostile review.
-- [ ] No image, SVG, WebP, PDF, public site, course, certification, Abhyaas,
+- [x] No image, SVG, WebP, PDF, public site, course, certification, Abhyaas,
   second volume, catalog position 6, or next-role output is created.
-- [ ] The final two-checkpoint close leaves #85 closed `status:done`, root #79
+- [x] The final two-checkpoint close leaves #85 closed `status:done`, root #79
   open, Phase 09 sole next gate and inactive, local/remote Git equal, and final
   verification accepted.
 
@@ -54,3 +54,10 @@ the independent Task 01 review ends exact `SPEC COMPLIANCE PASS` and
 Phase 08 may hand a complete private manuscript and companion to an inactive
 Phase 09. It may not begin whole-book QA, visuals, PDF/web publication, course,
 Abhyaas, a second volume, catalog position 6, or another role.
+
+## Closure
+
+Phase 08 is complete. #85 is the last completed child and is closed
+`status:done`; there is no active child. Phase 09 is the sole next gate and
+remains inactive. Visuals, images, PDF, web publication, course, Abhyaas, a
+second volume, catalog position 6, and the next role have not started.

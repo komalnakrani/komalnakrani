@@ -7,8 +7,8 @@
 - Catalog position: 5 of 32
 - State: `project-control/roles/machine-learning-engineer/ROLE-STATE.md`
 - Creative system: `Learning Systems Test Bench`
-- Last completed child: [#84 — Phase 07 chapter blueprints and frozen figure contracts](https://github.com/alpeshznakrani/komalnakrani/issues/84)
-- Active child: [#85 — Phase 08 original manuscript and deterministic companion](https://github.com/alpeshznakrani/komalnakrani/issues/85)
+- Last completed child: [#85 — Phase 08 original manuscript and deterministic companion](https://github.com/alpeshznakrani/komalnakrani/issues/85) — closed `status:done`
+- Active child: none
 
 ## Objective
 
@@ -24,8 +24,8 @@ figure records.
 - [x] 05 book architecture — complete
 - [x] 06 source and case-study research — complete
 - [x] 07 chapter blueprints and frozen figure contracts — complete
-- [ ] 08 original manuscript and deterministic companion production — active under #85
-- [ ] 09 whole-book or series consistency QA
+- [x] 08 original manuscript and deterministic companion production — complete; #85 closed `status:done`
+- [ ] 09 whole-book or series consistency QA — sole next gate; inactive
 - [ ] 10 original ImageGen PNG visuals and visual QA
 - [ ] 11 web and screen-first PDF publication
 - [ ] 19 hostile final QA
@@ -46,12 +46,12 @@ figure records.
 
 ## Current executable action
 
-Phase 07 is complete and #84 is closed `status:done`. The approved Phase 08
-design, plan, and Task 00 review chain are committed and pushed. Phase 08 is
-active under #85. Manuscript and companion production remain blocked until the
-validator/test bootstrap and independent Task 01 review are accepted and
-pushed. Generated visuals, publication, course, Abhyaas, a second volume,
-catalog position 6, and another role remain inactive.
+Phase 08 is complete and #85 is closed `status:done`; there is no active child.
+The complete private twenty-one-chapter manuscript, whole-book furniture,
+deterministic companion, integration register, and hostile review chain are
+accepted and checkpointed. Phase 09 is the sole next gate and remains inactive.
+Generated visuals, images, PDF, web publication, course, Abhyaas, a second
+volume, catalog position 6, and another role remain inactive.
 
 ## Completion
 
