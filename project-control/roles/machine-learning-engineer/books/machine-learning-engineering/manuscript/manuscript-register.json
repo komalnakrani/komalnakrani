@@ -1,0 +1,6721 @@
+{
+  "schema": "mle-phase-08-manuscript-register/v1",
+  "integrationState": "CANONICAL_INTEGRATION_ACCEPTED",
+  "identity": {
+    "role": "machine-learning-engineer",
+    "bookId": "machine-learning-engineering",
+    "title": "Machine Learning Engineering",
+    "author": "Komal Nakrani",
+    "formatDirection": "screen-first 7 by 10",
+    "phase": 8,
+    "phase09Active": false
+  },
+  "frozenInputs": {
+    "phase07Verification": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/phase-07-verification.json",
+      "bytes": 61706,
+      "sha256": "781b86503df3e40cf7f59424ea95e60bab5ce1cd2ae79199d3efd569d07aa454"
+    },
+    "blueprintRegister": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/blueprint-register.json",
+      "bytes": 578405,
+      "sha256": "d05d14663fcae623faa529fa2405552752a4a7b90760de48ab9512bd4d4553b6"
+    },
+    "wholeBookFurniture": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/whole-book-furniture.md",
+      "bytes": 16031,
+      "sha256": "42ec2b992cde815015745d9c50845b5ba83024eaf00e5c32d8434a9d47b8ae4a"
+    },
+    "blueprintVerification": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/verification-report.md",
+      "bytes": 1748,
+      "sha256": "ead317e38987f6ae8dc0ddcf2188c4bf929c70ac16569950afbecea3e027137a"
+    },
+    "phase08Handoff": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/phase-08-handoff.md",
+      "bytes": 1974,
+      "sha256": "df7c39ef9ec152d5deadde7ab31b26d0274a4b2aa6d4b3b74589f0bfd59aecb0"
+    },
+    "phase06IntegrationManifest": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/integration-manifest.json",
+      "bytes": 18103,
+      "sha256": "c8f2dff28008101c40d8eeac6916fb73625d46064c10aeedb27fb0aaad400bc4"
+    },
+    "phase07ResearchHandoff": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/sources/phase-07-handoff.md",
+      "bytes": 18915,
+      "sha256": "98301e0108ace18f69a3e212d0b55d59cdf7380d1c5beaefc7dbc19926a6a119"
+    }
+  },
+  "counts": {
+    "frozen": {
+      "parts": 7,
+      "chapters": 21,
+      "claims": 63,
+      "sources": 46,
+      "sourceClaimEdges": 160,
+      "cases": 12,
+      "caseChapterEdges": 104,
+      "claimCaseEdges": 198,
+      "caseSourceUses": 34,
+      "architectureClaims": 22,
+      "boundaries": 17,
+      "scenarios": 10,
+      "domains": 12,
+      "clusters": 8,
+      "ports": 5,
+      "chapterPortAssertions": 105,
+      "partExitChecks": 35,
+      "states": 17,
+      "legalTransitions": 19,
+      "forbiddenTransitions": 2,
+      "reopenTriggers": 4,
+      "appendices": 7,
+      "frontMatterItems": 10,
+      "closingItems": 5,
+      "sections": 168,
+      "labs": 42,
+      "assessments": 21,
+      "visuals": 25,
+      "handoffs": 21,
+      "imagegenCandidates": 4
+    },
+    "derived": {
+      "parts": 7,
+      "chapters": 21,
+      "claims": 63,
+      "sources": 46,
+      "sourceClaimEdges": 160,
+      "cases": 12,
+      "caseChapterEdges": 104,
+      "claimCaseEdges": 198,
+      "caseSourceUses": 34,
+      "architectureClaims": 22,
+      "boundaries": 17,
+      "scenarios": 10,
+      "domains": 12,
+      "clusters": 8,
+      "ports": 5,
+      "chapterPortAssertions": 105,
+      "partExitChecks": 35,
+      "states": 17,
+      "legalTransitions": 19,
+      "forbiddenTransitions": 2,
+      "reopenTriggers": 4,
+      "appendices": 7,
+      "frontMatterItems": 10,
+      "closingItems": 5,
+      "sections": 168,
+      "labs": 42,
+      "assessments": 21,
+      "visuals": 25,
+      "handoffs": 21,
+      "imagegenCandidates": 4
+    },
+    "equal": true
+  },
+  "lanes": [
+    {
+      "lane": "A",
+      "chapterIds": [
+        "MLE-CH-01",
+        "MLE-CH-02",
+        "MLE-CH-03",
+        "MLE-CH-04",
+        "MLE-CH-05",
+        "MLE-CH-06",
+        "MLE-CH-07"
+      ],
+      "counts": {
+        "chapters": 7,
+        "claims": 21,
+        "sourceUnion": 21,
+        "sourceClaimEdges": 49,
+        "claimCaseEdges": 83,
+        "casePlacements": 34,
+        "architectureClaims": 31,
+        "boundaries": 42,
+        "scenarios": 9,
+        "domains": 7,
+        "ports": 35,
+        "sections": 56,
+        "labs": 14,
+        "assessments": 7,
+        "visuals": 8,
+        "handoffs": 7
+      },
+      "manifest": {
+        "path": ".superpowers/sdd/2026-08-22-machine-learning-engineer-phase-08/lane-a-manifest.json",
+        "bytes": 2550,
+        "sha256": "b2cb591b92ec286f121c4a8b52cd18b2508b2b7264509c07ebbb219e448ce390"
+      }
+    },
+    {
+      "lane": "B",
+      "chapterIds": [
+        "MLE-CH-08",
+        "MLE-CH-09",
+        "MLE-CH-10",
+        "MLE-CH-11",
+        "MLE-CH-12",
+        "MLE-CH-13",
+        "MLE-CH-14"
+      ],
+      "counts": {
+        "chapters": 7,
+        "claims": 21,
+        "sourceUnion": 21,
+        "sourceClaimEdges": 52,
+        "claimCaseEdges": 92,
+        "casePlacements": 31,
+        "architectureClaims": 30,
+        "boundaries": 37,
+        "scenarios": 14,
+        "domains": 7,
+        "ports": 35,
+        "sections": 56,
+        "labs": 14,
+        "assessments": 7,
+        "visuals": 8,
+        "handoffs": 7
+      },
+      "manifest": {
+        "path": ".superpowers/sdd/2026-08-22-machine-learning-engineer-phase-08/lane-b-manifest.json",
+        "bytes": 2062,
+        "sha256": "5f8106b7255f8acaaf15539bc6105e89a47781d10dc813a305cbc931db3d8501"
+      }
+    },
+    {
+      "lane": "C",
+      "chapterIds": [
+        "MLE-CH-15",
+        "MLE-CH-16",
+        "MLE-CH-17",
+        "MLE-CH-18",
+        "MLE-CH-19",
+        "MLE-CH-20",
+        "MLE-CH-21"
+      ],
+      "counts": {
+        "chapters": 7,
+        "claims": 21,
+        "sourceUnion": 17,
+        "sourceClaimEdges": 59,
+        "claimCaseEdges": 23,
+        "casePlacements": 39,
+        "architectureClaims": 42,
+        "boundaries": 49,
+        "scenarios": 25,
+        "domains": 7,
+        "ports": 35,
+        "sections": 56,
+        "labs": 14,
+        "assessments": 7,
+        "visuals": 9,
+        "handoffs": 7
+      },
+      "manifest": {
+        "path": ".superpowers/sdd/2026-08-22-machine-learning-engineer-phase-08/lane-c-manifest.json",
+        "bytes": 2396,
+        "sha256": "d1b505cce3b526969500da7c27435ee702ddb95dff0b3eaf2c97c50110dff71e"
+      }
+    }
+  ],
+  "chapters": [
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-01.md",
+      "bytes": 32842,
+      "sha256": "5bd6f218f5b3efc94035efd9bac64fd9e2accd3a9d8be246f5834effa19b4f19",
+      "chapterId": "MLE-CH-01",
+      "order": 1,
+      "title": "The MLE Decision Center",
+      "slug": "the-mle-decision-center",
+      "partId": "PART-01",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-01.md",
+        "bytes": 47221,
+        "sha256": "256beee3eadb97ab25aa30df16711f27b744bf62e5cf571ba83f79d6b6bc4e53"
+      },
+      "proseWords": 4525,
+      "frozenWordRange": {
+        "min": 4200,
+        "max": 4800
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-001",
+          "primarySectionId": "MLE-CH-01-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-002",
+          "primarySectionId": "MLE-CH-01-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-003",
+          "primarySectionId": "MLE-CH-01-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-00",
+      "incomingState": "UNORIENTED",
+      "outgoingStates": [
+        "ORIENTED"
+      ],
+      "nextChapterId": "MLE-CH-02",
+      "mappingProjectionSha256": "673b5020fb1df559c90bb17076731623230b5f9285f771f8248487a6ecc84625",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-02.md",
+      "bytes": 32578,
+      "sha256": "64c67df89fde059fc6e44e562f2d4ed011aba712edc98ef0a786bcf1e8a3d3f8",
+      "chapterId": "MLE-CH-02",
+      "order": 2,
+      "title": "Contract the Task and Decision Rights",
+      "slug": "contract-the-task-and-decision-rights",
+      "partId": "PART-01",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-02.md",
+        "bytes": 47320,
+        "sha256": "a473ec67c3768ca46cd8779939264baf28c00b81633eb68aeadd18bd6d5640b4"
+      },
+      "proseWords": 4441,
+      "frozenWordRange": {
+        "min": 4300,
+        "max": 4900
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-004",
+          "primarySectionId": "MLE-CH-02-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-005",
+          "primarySectionId": "MLE-CH-02-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-006",
+          "primarySectionId": "MLE-CH-02-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-01",
+      "incomingState": "ORIENTED",
+      "outgoingStates": [
+        "CONTRACTED"
+      ],
+      "nextChapterId": "MLE-CH-03",
+      "mappingProjectionSha256": "7500482bb73df3e566bf5b7c2877c8ecae6a5ad1d24a9869ff7f58b5435c16d3",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-03.md",
+      "bytes": 31508,
+      "sha256": "e5f9dec573bf194d387eda98f399620af83842267b05917c786a0e764507594d",
+      "chapterId": "MLE-CH-03",
+      "order": 3,
+      "title": "Retain the Incumbent and Name Consequences",
+      "slug": "retain-the-incumbent-and-name-consequences",
+      "partId": "PART-01",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-03.md",
+        "bytes": 45899,
+        "sha256": "6758e7b3884622076317a374fb49a5b07e8373a82219af673d2e02b9bcf9dff5"
+      },
+      "proseWords": 4264,
+      "frozenWordRange": {
+        "min": 4000,
+        "max": 4600
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-007",
+          "primarySectionId": "MLE-CH-03-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-008",
+          "primarySectionId": "MLE-CH-03-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-009",
+          "primarySectionId": "MLE-CH-03-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-02",
+      "incomingState": "CONTRACTED",
+      "outgoingStates": [
+        "CONTRACTED"
+      ],
+      "nextChapterId": "MLE-CH-04",
+      "mappingProjectionSha256": "7d7f5b83dfa4e5ed5fae9aab1226fd45c39ab5b3664541d612a0f0f6222db19c",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-04.md",
+      "bytes": 34411,
+      "sha256": "c1617312339ac7e7d9ae426e919647fa9fcb7ebdf13ba51e3f9c20c9fa79a0ee",
+      "chapterId": "MLE-CH-04",
+      "order": 4,
+      "title": "Make Data and Labels Contractual",
+      "slug": "make-data-and-labels-contractual",
+      "partId": "PART-02",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-04.md",
+        "bytes": 49283,
+        "sha256": "9eb611fcdc946ca985937d322e153871ac1dd9aaf56e4737137ac2914095bfd3"
+      },
+      "proseWords": 4586,
+      "frozenWordRange": {
+        "min": 4400,
+        "max": 5000
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-010",
+          "primarySectionId": "MLE-CH-04-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-011",
+          "primarySectionId": "MLE-CH-04-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-012",
+          "primarySectionId": "MLE-CH-04-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-03",
+      "incomingState": "CONTRACTED",
+      "outgoingStates": [
+        "CONTRACTED"
+      ],
+      "nextChapterId": "MLE-CH-05",
+      "mappingProjectionSha256": "0f7780767221f074acf34d8f35b54d5798646d68b79dc7858eda795c0282371e",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-05.md",
+      "bytes": 34244,
+      "sha256": "917a13bfa99d90a37c1e88cfa9bd949607fa4ce091c3601773239711cbed8b74",
+      "chapterId": "MLE-CH-05",
+      "order": 5,
+      "title": "Trace Features, Transformations, and Feedback",
+      "slug": "trace-features-transformations-and-feedback",
+      "partId": "PART-02",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-05.md",
+        "bytes": 52834,
+        "sha256": "f59f90c252e48742d1431e28cf11b143041c22fcdbb2578f9a59c83723ae4713"
+      },
+      "proseWords": 4548,
+      "frozenWordRange": {
+        "min": 4500,
+        "max": 5100
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-013",
+          "primarySectionId": "MLE-CH-05-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-014",
+          "primarySectionId": "MLE-CH-05-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-015",
+          "primarySectionId": "MLE-CH-05-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-04",
+      "incomingState": "CONTRACTED",
+      "outgoingStates": [
+        "CONTRACTED"
+      ],
+      "nextChapterId": "MLE-CH-06",
+      "mappingProjectionSha256": "62fd0d60db76a6c7d5a40d87afca4c54a348305cf0a162121cb42f3f8131804d",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-06.md",
+      "bytes": 34046,
+      "sha256": "dd98ed7fc0310f3f563ea039aabd10db2af2b61297dda805adffbf0990967e96",
+      "chapterId": "MLE-CH-06",
+      "order": 6,
+      "title": "Split Without Leakage and Test Train-Serve Conformance",
+      "slug": "split-without-leakage-and-test-train-serve-conformance",
+      "partId": "PART-02",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-06.md",
+        "bytes": 50581,
+        "sha256": "9ab405ab13448302b5b6770998f7cdb54d839cd23b47cdbf8a1570ce76676de6"
+      },
+      "proseWords": 4510,
+      "frozenWordRange": {
+        "min": 4500,
+        "max": 5100
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-016",
+          "primarySectionId": "MLE-CH-06-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-017",
+          "primarySectionId": "MLE-CH-06-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-018",
+          "primarySectionId": "MLE-CH-06-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-05",
+      "incomingState": "CONTRACTED",
+      "outgoingStates": [
+        "ADMISSIBLE"
+      ],
+      "nextChapterId": "MLE-CH-07",
+      "mappingProjectionSha256": "2b1f0fffe328eefee72d3001b3ad4e15aa339ddbdb212032559d819bfdda529d",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-07.md",
+      "bytes": 33935,
+      "sha256": "e28597c40f294fbfbf175e0011d893b72385333d604c3dd3892e9074e0192dba",
+      "chapterId": "MLE-CH-07",
+      "order": 7,
+      "title": "Build Baselines and Controlled Comparisons",
+      "slug": "build-baselines-and-controlled-comparisons",
+      "partId": "PART-03",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-07.md",
+        "bytes": 51083,
+        "sha256": "fbba1795fe0017fa2d7978a2489b9a79f43a147773ef949d18f19d956ee58a4f"
+      },
+      "proseWords": 4424,
+      "frozenWordRange": {
+        "min": 4300,
+        "max": 4900
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-019",
+          "primarySectionId": "MLE-CH-07-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-020",
+          "primarySectionId": "MLE-CH-07-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-021",
+          "primarySectionId": "MLE-CH-07-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-06",
+      "incomingState": "ADMISSIBLE",
+      "outgoingStates": [
+        "ADMISSIBLE"
+      ],
+      "nextChapterId": "MLE-CH-08",
+      "mappingProjectionSha256": "a6cbb3b89dbd8caea8f7feb8a10bb96427e44ac5ee55094a2c1d1a434d3d9dd9",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-08.md",
+      "bytes": 51525,
+      "sha256": "593e2ccf026d5d0929a344022f145ceb904d77d6bff0abf157f87780529180ac",
+      "chapterId": "MLE-CH-08",
+      "order": 8,
+      "title": "Bind Run Identity and Bounded Reproducibility",
+      "slug": "bind-run-identity-and-bounded-reproducibility",
+      "partId": "PART-03",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-08.md",
+        "bytes": 42818,
+        "sha256": "a1a3796c9a9076cc1b5d0723d41a562472860cab90f3026a80fd49fa22c6e5c7"
+      },
+      "proseWords": 6925,
+      "frozenWordRange": {
+        "min": 6400,
+        "max": 7600
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-022",
+          "primarySectionId": "MLE-CH-08-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-023",
+          "primarySectionId": "MLE-CH-08-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-024",
+          "primarySectionId": "MLE-CH-08-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-07",
+      "incomingState": "ADMISSIBLE",
+      "outgoingStates": [
+        "RECONSTRUCTIBLE"
+      ],
+      "nextChapterId": "MLE-CH-09",
+      "mappingProjectionSha256": "86e3c68b8d9fcef7f5537d9a31cac8e6ffe48acc32e2ae3f3cbe2e3ca92fafce",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-09.md",
+      "bytes": 48888,
+      "sha256": "6f5abd7fa0daeb00b75c8392efd0c2ec45d7eb7611469d2e53998509f1948cdc",
+      "chapterId": "MLE-CH-09",
+      "order": 9,
+      "title": "Compare Candidates Without Losing the Baseline",
+      "slug": "compare-candidates-without-losing-the-baseline",
+      "partId": "PART-03",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-09.md",
+        "bytes": 41045,
+        "sha256": "33f4d93c3cdbad2231d9d38cb9d5444e9fde881486dbed2e00ba89a1d4fe6cce"
+      },
+      "proseWords": 6594,
+      "frozenWordRange": {
+        "min": 6200,
+        "max": 7400
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-025",
+          "primarySectionId": "MLE-CH-09-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-026",
+          "primarySectionId": "MLE-CH-09-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-027",
+          "primarySectionId": "MLE-CH-09-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-08",
+      "incomingState": "RECONSTRUCTIBLE",
+      "outgoingStates": [
+        "CANDIDATE"
+      ],
+      "nextChapterId": "MLE-CH-10",
+      "mappingProjectionSha256": "a9ede8df52b77d629d3224f1f778efd1fd9328416c1f6ef9cfb207d75cffb9d7",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-10.md",
+      "bytes": 50737,
+      "sha256": "6b25b7704018e39382c1388d5e57e004e265424acf08ee2e73442baa76b26e2e",
+      "chapterId": "MLE-CH-10",
+      "order": 10,
+      "title": "Represent Populations and Consequential Segments",
+      "slug": "represent-populations-and-consequential-segments",
+      "partId": "PART-04",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-10.md",
+        "bytes": 43987,
+        "sha256": "7106a22eeb8e6e402bb2f27189f5b2734ea5615dacb097ba6eae50943eba266b"
+      },
+      "proseWords": 6800,
+      "frozenWordRange": {
+        "min": 6700,
+        "max": 8000
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-028",
+          "primarySectionId": "MLE-CH-10-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-029",
+          "primarySectionId": "MLE-CH-10-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-030",
+          "primarySectionId": "MLE-CH-10-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-09",
+      "incomingState": "CANDIDATE",
+      "outgoingStates": [
+        "CANDIDATE"
+      ],
+      "nextChapterId": "MLE-CH-11",
+      "mappingProjectionSha256": "3c9100f745e6131c0179ae2c44d4f17bcfe602e13369ed4036567ad4f46f8e78",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-11.md",
+      "bytes": 53226,
+      "sha256": "4f0e7ae5c33b4ffba90341e6c2b19e9e9201be93d414cfe2f1fcd8b5dcca9313",
+      "chapterId": "MLE-CH-11",
+      "order": 11,
+      "title": "Treat Uncertainty, Calibration, and Failure as Evidence",
+      "slug": "treat-uncertainty-calibration-and-failure-as-evidence",
+      "partId": "PART-04",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-11.md",
+        "bytes": 41241,
+        "sha256": "78b50abaf1ca31a3b184466ded25efd23b27be703ea6dfd632438f8f9cf1d68f"
+      },
+      "proseWords": 6968,
+      "frozenWordRange": {
+        "min": 6500,
+        "max": 7800
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-031",
+          "primarySectionId": "MLE-CH-11-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-032",
+          "primarySectionId": "MLE-CH-11-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-033",
+          "primarySectionId": "MLE-CH-11-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-10",
+      "incomingState": "CANDIDATE",
+      "outgoingStates": [
+        "CANDIDATE"
+      ],
+      "nextChapterId": "MLE-CH-12",
+      "mappingProjectionSha256": "aca894b255c4aca7767d2ed99a52bfab8d261ed6f876c1394e970faf4580146a",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-12.md",
+      "bytes": 51909,
+      "sha256": "6a5b3c9c123dcb1db56841b94511a3fba4e4600a60ce9b526fd4d395127004ab",
+      "chapterId": "MLE-CH-12",
+      "order": 12,
+      "title": "Issue a Technical Qualification Disposition",
+      "slug": "issue-a-technical-qualification-disposition",
+      "partId": "PART-04",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-12.md",
+        "bytes": 43638,
+        "sha256": "4a9012b91e6ad6cfa7174a9346c34423861a820b10e94c010f8095897cb20c97"
+      },
+      "proseWords": 6848,
+      "frozenWordRange": {
+        "min": 6600,
+        "max": 7900
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-034",
+          "primarySectionId": "MLE-CH-12-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-035",
+          "primarySectionId": "MLE-CH-12-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-036",
+          "primarySectionId": "MLE-CH-12-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-11",
+      "incomingState": "CANDIDATE",
+      "outgoingStates": [
+        "TECHNICALLY-QUALIFIED|HOLD|REJECT"
+      ],
+      "nextChapterId": "MLE-CH-13",
+      "mappingProjectionSha256": "ff235591a26d415445c6457add5f15420ef897559aba6a74d5d0d1c3be04dfac",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-13.md",
+      "bytes": 56603,
+      "sha256": "0a827e6eb74248bcb8dd5216d6d5418c4ac7434aca1f9e95acd6693b9a6695ee",
+      "chapterId": "MLE-CH-13",
+      "order": 13,
+      "title": "Release a Package Plus Evidence",
+      "slug": "release-a-package-plus-evidence",
+      "partId": "PART-05",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-13.md",
+        "bytes": 47140,
+        "sha256": "e22345a4981e19a68cf3dd306990279808d2cc9b6ef9fdbcedf4fbe884e7c395"
+      },
+      "proseWords": 7516,
+      "frozenWordRange": {
+        "min": 6600,
+        "max": 8000
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-037",
+          "primarySectionId": "MLE-CH-13-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-038",
+          "primarySectionId": "MLE-CH-13-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-039",
+          "primarySectionId": "MLE-CH-13-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-12",
+      "incomingState": "TECHNICALLY-QUALIFIED",
+      "outgoingStates": [
+        "TECHNICALLY-QUALIFIED"
+      ],
+      "nextChapterId": "MLE-CH-14",
+      "mappingProjectionSha256": "4e2f6294e3b8e246a8413f50278478e7e348a3b331951ad7ae9a9698c78b47f6",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-14.md",
+      "bytes": 54394,
+      "sha256": "0818bed134aff864f3dc221f655c32223cef71accd79574a4f0d9a2bee5eaf7c",
+      "chapterId": "MLE-CH-14",
+      "order": 14,
+      "title": "Bind Interfaces, Consumers, and Compatibility",
+      "slug": "bind-interfaces-consumers-and-compatibility",
+      "partId": "PART-05",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-14.md",
+        "bytes": 44151,
+        "sha256": "44d7653267bd4f7cb8112a756904c9d9d1805f5f8e21e0e0421c3fef891b0c19"
+      },
+      "proseWords": 7202,
+      "frozenWordRange": {
+        "min": 6700,
+        "max": 8100
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-040",
+          "primarySectionId": "MLE-CH-14-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-041",
+          "primarySectionId": "MLE-CH-14-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-042",
+          "primarySectionId": "MLE-CH-14-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-13",
+      "incomingState": "TECHNICALLY-QUALIFIED",
+      "outgoingStates": [
+        "TECHNICALLY-QUALIFIED"
+      ],
+      "nextChapterId": "MLE-CH-15",
+      "mappingProjectionSha256": "2a67b1a0b05b7ffe60638f824e80007677c352ff14bdc6e23de13e5abb189114",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-15.md",
+      "bytes": 22083,
+      "sha256": "6b6fedb183c157e5a9f0df95e2bd94e5e08a350a7c2e4ca833d577b0496ea015",
+      "chapterId": "MLE-CH-15",
+      "order": 15,
+      "title": "Preserve Integrity, Lineage, and Recovery Identity",
+      "slug": "preserve-integrity-lineage-and-recovery-identity",
+      "partId": "PART-05",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-15.md",
+        "bytes": 53231,
+        "sha256": "53ddcef9df0363799aba20aae4964f495d6ef98faf774bade31b74a63020998b"
+      },
+      "proseWords": 2954,
+      "frozenWordRange": {
+        "min": 2400,
+        "max": 3200
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-043",
+          "primarySectionId": "MLE-CH-15-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-044",
+          "primarySectionId": "MLE-CH-15-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-045",
+          "primarySectionId": "MLE-CH-15-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-14",
+      "incomingState": "TECHNICALLY-QUALIFIED",
+      "outgoingStates": [
+        "RELEASABLE"
+      ],
+      "nextChapterId": "MLE-CH-16",
+      "mappingProjectionSha256": "309ec0d21272c73cd27c52811d78014d90bda3c8328fa67e7e7d948a916826c6",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-16.md",
+      "bytes": 23345,
+      "sha256": "570e65133f743f60389a48e7c5ed9003010a816633add4ec64247ca13581ed54",
+      "chapterId": "MLE-CH-16",
+      "order": 16,
+      "title": "Measure the Serving Envelope",
+      "slug": "measure-the-serving-envelope",
+      "partId": "PART-06",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-16.md",
+        "bytes": 55678,
+        "sha256": "b346602368aa295c88158a5f398efd090ad6441473ae12225fe49cf5ff6440b1"
+      },
+      "proseWords": 3096,
+      "frozenWordRange": {
+        "min": 2400,
+        "max": 3200
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-046",
+          "primarySectionId": "MLE-CH-16-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-047",
+          "primarySectionId": "MLE-CH-16-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-048",
+          "primarySectionId": "MLE-CH-16-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-15",
+      "incomingState": "RELEASABLE",
+      "outgoingStates": [
+        "OPERABLE"
+      ],
+      "nextChapterId": "MLE-CH-17",
+      "mappingProjectionSha256": "5786ba0d9cae6f7cbd540cda7e83eb20828d1f62bc2563961baac46aedcedb73",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-17.md",
+      "bytes": 19825,
+      "sha256": "ea937a2b95a0ff76032bd469db8b8b5ec1b6188e842cfbd3a6135e0fd57c216d",
+      "chapterId": "MLE-CH-17",
+      "order": 17,
+      "title": "Observe Without Inventing Ground Truth",
+      "slug": "observe-without-inventing-ground-truth",
+      "partId": "PART-06",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-17.md",
+        "bytes": 56830,
+        "sha256": "0370effce2ac4d1aaa153bb4044982f0b386f76ecdf0282181556c89519e82d0"
+      },
+      "proseWords": 2518,
+      "frozenWordRange": {
+        "min": 2400,
+        "max": 3200
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-049",
+          "primarySectionId": "MLE-CH-17-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-050",
+          "primarySectionId": "MLE-CH-17-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-051",
+          "primarySectionId": "MLE-CH-17-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-16",
+      "incomingState": "OPERABLE",
+      "outgoingStates": [
+        "OBSERVED"
+      ],
+      "nextChapterId": "MLE-CH-18",
+      "mappingProjectionSha256": "e33923ea79a46463021f8f56fc5e3094fc45fb3f3e3d37d2361525ea5db66b18",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-18.md",
+      "bytes": 20925,
+      "sha256": "37136daa9b51f315ad7cc99bf6075d2bd94bd2db2709a8753a64fc2c77475224",
+      "chapterId": "MLE-CH-18",
+      "order": 18,
+      "title": "Contain, Roll Back, Repair, and Requalify",
+      "slug": "contain-roll-back-repair-and-requalify",
+      "partId": "PART-06",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-18.md",
+        "bytes": 64513,
+        "sha256": "fa4d83b480c3b732a8004bf22787f6609c1e5de3c712e3a98d61ff72d963d3fb"
+      },
+      "proseWords": 2573,
+      "frozenWordRange": {
+        "min": 2400,
+        "max": 3200
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-052",
+          "primarySectionId": "MLE-CH-18-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-053",
+          "primarySectionId": "MLE-CH-18-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-054",
+          "primarySectionId": "MLE-CH-18-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-17",
+      "incomingState": "OBSERVED",
+      "outgoingStates": [
+        "REQUALIFIED|ROLLED-BACK"
+      ],
+      "nextChapterId": "MLE-CH-19",
+      "mappingProjectionSha256": "a266d8b981d41bcbb1142e90aa48a711d6743dccbb1c952ae29a73b3a0a960a4",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-19.md",
+      "bytes": 19791,
+      "sha256": "7dd33904e55110667e503d241454ccf19fa809e2100e798c569e96569ebf5c13",
+      "chapterId": "MLE-CH-19",
+      "order": 19,
+      "title": "Trace Controls, Exceptions, and Formal Decisions",
+      "slug": "trace-controls-exceptions-and-formal-decisions",
+      "partId": "PART-07",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-19.md",
+        "bytes": 59486,
+        "sha256": "702a19e43c4618ed8880ebd69a284cd6d6fded171d7b2cbfa4148492beb13ac1"
+      },
+      "proseWords": 2576,
+      "frozenWordRange": {
+        "min": 2400,
+        "max": 3200
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-055",
+          "primarySectionId": "MLE-CH-19-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-056",
+          "primarySectionId": "MLE-CH-19-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-057",
+          "primarySectionId": "MLE-CH-19-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-18",
+      "incomingState": "REQUALIFIED|ROLLED-BACK",
+      "outgoingStates": [
+        "CONTROLLED"
+      ],
+      "nextChapterId": "MLE-CH-20",
+      "mappingProjectionSha256": "834279e06081c43633279430882fb5d50d4bed2338392db642f9dbab6b581ae6",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-20.md",
+      "bytes": 20514,
+      "sha256": "eb655b318acaa3be9e9c451d7aba54cf918d7eacb3cdf472806f38502a8b9052",
+      "chapterId": "MLE-CH-20",
+      "order": 20,
+      "title": "Retire the Workload and Prove Non-Serving State",
+      "slug": "retire-the-workload-and-prove-non-serving-state",
+      "partId": "PART-07",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-20.md",
+        "bytes": 63704,
+        "sha256": "29d4c1e14082fb54b0c7b05acb64804b9028ef28196ffe568307a849a883bfc3"
+      },
+      "proseWords": 2578,
+      "frozenWordRange": {
+        "min": 2400,
+        "max": 3200
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-058",
+          "primarySectionId": "MLE-CH-20-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-059",
+          "primarySectionId": "MLE-CH-20-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-060",
+          "primarySectionId": "MLE-CH-20-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-19",
+      "incomingState": "CONTROLLED",
+      "outgoingStates": [
+        "RETIRED"
+      ],
+      "nextChapterId": "MLE-CH-21",
+      "mappingProjectionSha256": "6f741862568709dea035fd92857c906d858baeebbb27f89e558c516a589ce262",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/chapter-21.md",
+      "bytes": 20759,
+      "sha256": "f399bedbf4e5e539085c64b7a978ffe4c3aaa9fc677b7edddb2efe2887354a0f",
+      "chapterId": "MLE-CH-21",
+      "order": 21,
+      "title": "Review the Dossier and Raise the Standard",
+      "slug": "review-the-dossier-and-raise-the-standard",
+      "partId": "PART-07",
+      "blueprint": {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/blueprints/chapter-21.md",
+        "bytes": 65732,
+        "sha256": "ad8bde6a8c87719de7d91ae198927a308d23c42e5987a926f6c55015470357c7"
+      },
+      "proseWords": 2608,
+      "frozenWordRange": {
+        "min": 2400,
+        "max": 3200
+      },
+      "wordRangePass": true,
+      "primaryClaims": [
+        {
+          "claimId": "MLE-BCLM-061",
+          "primarySectionId": "MLE-CH-21-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-062",
+          "primarySectionId": "MLE-CH-21-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        },
+        {
+          "claimId": "MLE-BCLM-063",
+          "primarySectionId": "MLE-CH-21-S02",
+          "chapterOccurrences": 1,
+          "wholeBookOccurrences": 1,
+          "solePrimary": true
+        }
+      ],
+      "milestoneId": "BL-20",
+      "incomingState": "RETIRED",
+      "outgoingStates": [
+        "REVIEWED"
+      ],
+      "nextChapterId": null,
+      "mappingProjectionSha256": "d6ae45c1a2aab86e447f5c2f4cecdec9f9c39f5395f85dcfffda73854834c6a0",
+      "missingExpectedIds": {
+        "sourceIds": [],
+        "caseIds": [],
+        "architectureClaimIds": [],
+        "boundaryIds": [],
+        "scenarioIds": [],
+        "domainIds": [],
+        "portIds": [],
+        "labIds": [],
+        "assessmentIds": [],
+        "visualIds": []
+      }
+    }
+  ],
+  "furniture": [
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/opening-and-closing.md",
+      "bytes": 19897,
+      "sha256": "7ea70be4ad27e64e2922e34be74bf36ac69f2efc9065c550ffbde8a44cba5ec4"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/part-01.md",
+      "bytes": 2487,
+      "sha256": "17be5092dc181512e24309732fb28e82f6c58d1d77bc72f5dd1d4f7c361caad2"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/part-02.md",
+      "bytes": 2430,
+      "sha256": "9a1decf0fc0f9160f3f81a2b7a94987d45767a32ff88ae2295daaf65c5c8a57f"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/part-03.md",
+      "bytes": 2375,
+      "sha256": "7d985da2e742ee60ccc37d3f38f9e590cb35483e0a3a42f11624964b1cde6c29"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/part-04.md",
+      "bytes": 2154,
+      "sha256": "8210008dddecf1c52a9398ac4ec6aae6693f7a4f8a57e070e96497ce69615b42"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/part-05.md",
+      "bytes": 2304,
+      "sha256": "1529be5605351255995fc6d1fa76c43d17469af8192e0e36609e9e7ac5bfd2f3"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/part-06.md",
+      "bytes": 2338,
+      "sha256": "6cb1a3fac04ed8eb6f2fd48b1aeb6ff6d3a28f201016797e51a554498ccc8eb2"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/part-07.md",
+      "bytes": 2402,
+      "sha256": "c23d6551b27b7c84f0e628bb170cb150803e9dc38464aae54bf4969a527cc583"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/appendix-a.md",
+      "bytes": 3455,
+      "sha256": "01c7b986c33a44a4e5b338a2ac0cbcebb88d269214e89e86a2b06379b9d5a942"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/appendix-b.md",
+      "bytes": 3740,
+      "sha256": "3cac5fb7b9c30ad9e286ea6fcfd562d49f8fba6822f51fdc412565e18e866834"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/appendix-c.md",
+      "bytes": 3784,
+      "sha256": "79e81fc8c092a3d5e7ecb89c8afc5d162ed075796f33e3439885bfc453a6716b"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/appendix-d.md",
+      "bytes": 3926,
+      "sha256": "9a6781c4502bf8077c2bb1ee0c9b9ff3ea9ebe2efbdb17f4f511d81431425799"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/appendix-e.md",
+      "bytes": 4462,
+      "sha256": "04d1ba68386c9e632d7526e247fcc6a282458e661bed3b56305f2bc7a917639b"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/appendix-f.md",
+      "bytes": 7063,
+      "sha256": "738dccfe48eca3f6778b05f2401a781a6a62aa5ad351f2110525ca633d955081"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/appendix-g.md",
+      "bytes": 3852,
+      "sha256": "8c913be0bf9fb5c40f16b6febdee94427050633f7fa52a7b656b3240e752a24a"
+    }
+  ],
+  "reverseMappings": {
+    "claimPrimary": [
+      [
+        "MLE-BCLM-001",
+        "MLE-CH-01",
+        "MLE-CH-01-S02",
+        [
+          "MLE-BSRC-045",
+          "MLE-BSRC-046"
+        ],
+        [
+          "CASE-01",
+          "CASE-07"
+        ]
+      ],
+      [
+        "MLE-BCLM-002",
+        "MLE-CH-01",
+        "MLE-CH-01-S02",
+        [
+          "MLE-BSRC-005",
+          "MLE-BSRC-007"
+        ],
+        [
+          "CASE-01",
+          "CASE-06",
+          "CASE-07"
+        ]
+      ],
+      [
+        "MLE-BCLM-003",
+        "MLE-CH-01",
+        "MLE-CH-01-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-028"
+        ],
+        [
+          "CASE-01",
+          "CASE-06"
+        ]
+      ],
+      [
+        "MLE-BCLM-004",
+        "MLE-CH-02",
+        "MLE-CH-02-S02",
+        [
+          "MLE-BSRC-006",
+          "MLE-BSRC-028",
+          "MLE-BSRC-038"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-05",
+          "CASE-06"
+        ]
+      ],
+      [
+        "MLE-BCLM-005",
+        "MLE-CH-02",
+        "MLE-CH-02-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-028"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-006",
+        "MLE-CH-02",
+        "MLE-CH-02-S02",
+        [
+          "MLE-BSRC-015"
+        ],
+        [
+          "CASE-01",
+          "CASE-03"
+        ]
+      ],
+      [
+        "MLE-BCLM-007",
+        "MLE-CH-03",
+        "MLE-CH-03-S02",
+        [
+          "MLE-BSRC-007",
+          "MLE-BSRC-015"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-06"
+        ]
+      ],
+      [
+        "MLE-BCLM-008",
+        "MLE-CH-03",
+        "MLE-CH-03-S02",
+        [
+          "MLE-BSRC-006",
+          "MLE-BSRC-028",
+          "MLE-BSRC-038"
+        ],
+        [
+          "CASE-01",
+          "CASE-03"
+        ]
+      ],
+      [
+        "MLE-BCLM-009",
+        "MLE-CH-03",
+        "MLE-CH-03-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-028"
+        ],
+        [
+          "CASE-01",
+          "CASE-03"
+        ]
+      ],
+      [
+        "MLE-BCLM-010",
+        "MLE-CH-04",
+        "MLE-CH-04-S02",
+        [
+          "MLE-BSRC-002",
+          "MLE-BSRC-003"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-011",
+        "MLE-CH-04",
+        "MLE-CH-04-S02",
+        [
+          "MLE-BSRC-007",
+          "MLE-BSRC-024"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05",
+          "CASE-06"
+        ]
+      ],
+      [
+        "MLE-BCLM-012",
+        "MLE-CH-04",
+        "MLE-CH-04-S02",
+        [
+          "MLE-BSRC-004",
+          "MLE-BSRC-028",
+          "MLE-BSRC-038"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-013",
+        "MLE-CH-05",
+        "MLE-CH-05-S02",
+        [
+          "MLE-BSRC-005",
+          "MLE-BSRC-043"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-05",
+          "CASE-07"
+        ]
+      ],
+      [
+        "MLE-BCLM-014",
+        "MLE-CH-05",
+        "MLE-CH-05-S02",
+        [
+          "MLE-BSRC-004",
+          "MLE-BSRC-005",
+          "MLE-BSRC-015"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-05",
+          "CASE-06",
+          "CASE-07"
+        ]
+      ],
+      [
+        "MLE-BCLM-015",
+        "MLE-CH-05",
+        "MLE-CH-05-S02",
+        [
+          "MLE-BSRC-015",
+          "MLE-BSRC-024",
+          "MLE-BSRC-043",
+          "MLE-BSRC-044"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-05",
+          "CASE-06",
+          "CASE-07"
+        ]
+      ],
+      [
+        "MLE-BCLM-016",
+        "MLE-CH-06",
+        "MLE-CH-06-S02",
+        [
+          "MLE-BSRC-014",
+          "MLE-BSRC-015"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-017",
+        "MLE-CH-06",
+        "MLE-CH-06-S02",
+        [
+          "MLE-BSRC-013",
+          "MLE-BSRC-025"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-018",
+        "MLE-CH-06",
+        "MLE-CH-06-S02",
+        [
+          "MLE-BSRC-015",
+          "MLE-BSRC-024",
+          "MLE-BSRC-044"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05",
+          "CASE-06",
+          "CASE-07"
+        ]
+      ],
+      [
+        "MLE-BCLM-019",
+        "MLE-CH-07",
+        "MLE-CH-07-S02",
+        [
+          "MLE-BSRC-007",
+          "MLE-BSRC-010",
+          "MLE-BSRC-015"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-06"
+        ]
+      ],
+      [
+        "MLE-BCLM-020",
+        "MLE-CH-07",
+        "MLE-CH-07-S02",
+        [
+          "MLE-BSRC-018",
+          "MLE-BSRC-043"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-07"
+        ]
+      ],
+      [
+        "MLE-BCLM-021",
+        "MLE-CH-07",
+        "MLE-CH-07-S02",
+        [
+          "MLE-BSRC-018",
+          "MLE-BSRC-021"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04"
+        ]
+      ],
+      [
+        "MLE-BCLM-022",
+        "MLE-CH-08",
+        "MLE-CH-08-S02",
+        [
+          "MLE-BSRC-009",
+          "MLE-BSRC-021"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-04",
+          "CASE-05",
+          "CASE-08"
+        ]
+      ],
+      [
+        "MLE-BCLM-023",
+        "MLE-CH-08",
+        "MLE-CH-08-S02",
+        [
+          "MLE-BSRC-009",
+          "MLE-BSRC-018"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-04",
+          "CASE-05",
+          "CASE-08"
+        ]
+      ],
+      [
+        "MLE-BCLM-024",
+        "MLE-CH-08",
+        "MLE-CH-08-S02",
+        [
+          "MLE-BSRC-021"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-04",
+          "CASE-05",
+          "CASE-08"
+        ]
+      ],
+      [
+        "MLE-BCLM-025",
+        "MLE-CH-09",
+        "MLE-CH-09-S02",
+        [
+          "MLE-BSRC-010",
+          "MLE-BSRC-022"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04"
+        ]
+      ],
+      [
+        "MLE-BCLM-026",
+        "MLE-CH-09",
+        "MLE-CH-09-S02",
+        [
+          "MLE-BSRC-006",
+          "MLE-BSRC-010",
+          "MLE-BSRC-018"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04"
+        ]
+      ],
+      [
+        "MLE-BCLM-027",
+        "MLE-CH-09",
+        "MLE-CH-09-S02",
+        [
+          "MLE-BSRC-006",
+          "MLE-BSRC-028"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04"
+        ]
+      ],
+      [
+        "MLE-BCLM-028",
+        "MLE-CH-10",
+        "MLE-CH-10-S02",
+        [
+          "MLE-BSRC-006",
+          "MLE-BSRC-025"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05",
+          "CASE-09"
+        ]
+      ],
+      [
+        "MLE-BCLM-029",
+        "MLE-CH-10",
+        "MLE-CH-10-S02",
+        [
+          "MLE-BSRC-011",
+          "MLE-BSRC-032"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05",
+          "CASE-09"
+        ]
+      ],
+      [
+        "MLE-BCLM-030",
+        "MLE-CH-10",
+        "MLE-CH-10-S02",
+        [
+          "MLE-BSRC-025",
+          "MLE-BSRC-028",
+          "MLE-BSRC-032"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05",
+          "CASE-09"
+        ]
+      ],
+      [
+        "MLE-BCLM-031",
+        "MLE-CH-11",
+        "MLE-CH-11-S02",
+        [
+          "MLE-BSRC-012",
+          "MLE-BSRC-023"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04",
+          "CASE-09"
+        ]
+      ],
+      [
+        "MLE-BCLM-032",
+        "MLE-CH-11",
+        "MLE-CH-11-S02",
+        [
+          "MLE-BSRC-012",
+          "MLE-BSRC-023"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04",
+          "CASE-09"
+        ]
+      ],
+      [
+        "MLE-BCLM-033",
+        "MLE-CH-11",
+        "MLE-CH-11-S02",
+        [
+          "MLE-BSRC-006",
+          "MLE-BSRC-025"
+        ],
+        [
+          "CASE-01",
+          "CASE-03",
+          "CASE-04",
+          "CASE-09"
+        ]
+      ],
+      [
+        "MLE-BCLM-034",
+        "MLE-CH-12",
+        "MLE-CH-12-S02",
+        [
+          "MLE-BSRC-006",
+          "MLE-BSRC-019",
+          "MLE-BSRC-028"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-05",
+          "CASE-09"
+        ]
+      ],
+      [
+        "MLE-BCLM-035",
+        "MLE-CH-12",
+        "MLE-CH-12-S02",
+        [
+          "MLE-BSRC-019",
+          "MLE-BSRC-028"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-05",
+          "CASE-09"
+        ]
+      ],
+      [
+        "MLE-BCLM-036",
+        "MLE-CH-12",
+        "MLE-CH-12-S02",
+        [
+          "MLE-BSRC-025",
+          "MLE-BSRC-028"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-037",
+        "MLE-CH-13",
+        "MLE-CH-13-S02",
+        [
+          "MLE-BSRC-016",
+          "MLE-BSRC-018",
+          "MLE-BSRC-033",
+          "MLE-BSRC-036",
+          "MLE-BSRC-037"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-038",
+        "MLE-CH-13",
+        "MLE-CH-13-S02",
+        [
+          "MLE-BSRC-017"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-039",
+        "MLE-CH-13",
+        "MLE-CH-13-S02",
+        [
+          "MLE-BSRC-006",
+          "MLE-BSRC-016",
+          "MLE-BSRC-017",
+          "MLE-BSRC-028",
+          "MLE-BSRC-036"
+        ],
+        [
+          "CASE-01",
+          "CASE-02",
+          "CASE-03",
+          "CASE-04",
+          "CASE-05"
+        ]
+      ],
+      [
+        "MLE-BCLM-040",
+        "MLE-CH-14",
+        "MLE-CH-14-S02",
+        [
+          "MLE-BSRC-020"
+        ],
+        [
+          "CASE-01",
+          "CASE-05",
+          "CASE-10"
+        ]
+      ],
+      [
+        "MLE-BCLM-041",
+        "MLE-CH-14",
+        "MLE-CH-14-S02",
+        [
+          "MLE-BSRC-016",
+          "MLE-BSRC-017",
+          "MLE-BSRC-020",
+          "MLE-BSRC-034"
+        ],
+        [
+          "CASE-01",
+          "CASE-05",
+          "CASE-10"
+        ]
+      ],
+      [
+        "MLE-BCLM-042",
+        "MLE-CH-14",
+        "MLE-CH-14-S02",
+        [
+          "MLE-BSRC-005",
+          "MLE-BSRC-017",
+          "MLE-BSRC-020",
+          "MLE-BSRC-028"
+        ],
+        [
+          "CASE-01",
+          "CASE-05",
+          "CASE-10"
+        ]
+      ],
+      [
+        "MLE-BCLM-043",
+        "MLE-CH-15",
+        "MLE-CH-15-S02",
+        [
+          "MLE-BSRC-030",
+          "MLE-BSRC-031",
+          "MLE-BSRC-036"
+        ],
+        [
+          "CASE-11"
+        ]
+      ],
+      [
+        "MLE-BCLM-044",
+        "MLE-CH-15",
+        "MLE-CH-15-S02",
+        [
+          "MLE-BSRC-035",
+          "MLE-BSRC-036"
+        ],
+        [
+          "CASE-11"
+        ]
+      ],
+      [
+        "MLE-BCLM-045",
+        "MLE-CH-15",
+        "MLE-CH-15-S02",
+        [
+          "MLE-BSRC-042"
+        ],
+        [
+          "CASE-11"
+        ]
+      ],
+      [
+        "MLE-BCLM-046",
+        "MLE-CH-16",
+        "MLE-CH-16-S02",
+        [
+          "MLE-BSRC-008"
+        ],
+        [
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-047",
+        "MLE-CH-16",
+        "MLE-CH-16-S02",
+        [
+          "MLE-BSRC-007",
+          "MLE-BSRC-008",
+          "MLE-BSRC-016",
+          "MLE-BSRC-040"
+        ],
+        [
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-048",
+        "MLE-CH-16",
+        "MLE-CH-16-S02",
+        [
+          "MLE-BSRC-039",
+          "MLE-BSRC-040"
+        ],
+        [
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-049",
+        "MLE-CH-17",
+        "MLE-CH-17-S02",
+        [
+          "MLE-BSRC-024"
+        ],
+        [
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-050",
+        "MLE-CH-17",
+        "MLE-CH-17-S02",
+        [
+          "MLE-BSRC-001"
+        ],
+        []
+      ],
+      [
+        "MLE-BCLM-051",
+        "MLE-CH-17",
+        "MLE-CH-17-S02",
+        [
+          "MLE-BSRC-005",
+          "MLE-BSRC-007",
+          "MLE-BSRC-024",
+          "MLE-BSRC-027",
+          "MLE-BSRC-039"
+        ],
+        [
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-052",
+        "MLE-CH-18",
+        "MLE-CH-18-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-031",
+          "MLE-BSRC-042"
+        ],
+        [
+          "CASE-11",
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-053",
+        "MLE-CH-18",
+        "MLE-CH-18-S02",
+        [
+          "MLE-BSRC-007",
+          "MLE-BSRC-016",
+          "MLE-BSRC-027",
+          "MLE-BSRC-040"
+        ],
+        [
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-054",
+        "MLE-CH-18",
+        "MLE-CH-18-S02",
+        [
+          "MLE-BSRC-030",
+          "MLE-BSRC-039",
+          "MLE-BSRC-041"
+        ],
+        [
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-055",
+        "MLE-CH-19",
+        "MLE-CH-19-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-030",
+          "MLE-BSRC-031",
+          "MLE-BSRC-036",
+          "MLE-BSRC-039"
+        ],
+        [
+          "CASE-11",
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-056",
+        "MLE-CH-19",
+        "MLE-CH-19-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-031"
+        ],
+        [
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-057",
+        "MLE-CH-19",
+        "MLE-CH-19-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-031"
+        ],
+        []
+      ],
+      [
+        "MLE-BCLM-058",
+        "MLE-CH-20",
+        "MLE-CH-20-S02",
+        [
+          "MLE-BSRC-016",
+          "MLE-BSRC-026",
+          "MLE-BSRC-027",
+          "MLE-BSRC-031"
+        ],
+        [
+          "CASE-11",
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-059",
+        "MLE-CH-20",
+        "MLE-CH-20-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-029"
+        ],
+        []
+      ],
+      [
+        "MLE-BCLM-060",
+        "MLE-CH-20",
+        "MLE-CH-20-S02",
+        [
+          "MLE-BSRC-026",
+          "MLE-BSRC-027",
+          "MLE-BSRC-029",
+          "MLE-BSRC-031",
+          "MLE-BSRC-042"
+        ],
+        [
+          "CASE-11",
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-061",
+        "MLE-CH-21",
+        "MLE-CH-21-S02",
+        [
+          "MLE-BSRC-007",
+          "MLE-BSRC-027",
+          "MLE-BSRC-036",
+          "MLE-BSRC-039"
+        ],
+        [
+          "CASE-11",
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-062",
+        "MLE-CH-21",
+        "MLE-CH-21-S02",
+        [
+          "MLE-BSRC-027",
+          "MLE-BSRC-030",
+          "MLE-BSRC-041"
+        ],
+        [
+          "CASE-11",
+          "CASE-12"
+        ]
+      ],
+      [
+        "MLE-BCLM-063",
+        "MLE-CH-21",
+        "MLE-CH-21-S02",
+        [
+          "MLE-BSRC-005",
+          "MLE-BSRC-007"
+        ],
+        []
+      ]
+    ],
+    "sourceClaim": [
+      [
+        "MLE-BSRC-045",
+        "MLE-BCLM-001",
+        "MLE-CH-01",
+        [
+          "MLE-CH-01-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-046",
+        "MLE-BCLM-001",
+        "MLE-CH-01",
+        [
+          "MLE-CH-01-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-005",
+        "MLE-BCLM-002",
+        "MLE-CH-01",
+        [
+          "MLE-CH-01-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-002",
+        "MLE-CH-01",
+        [
+          "MLE-CH-01-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-003",
+        "MLE-CH-01",
+        [
+          "MLE-CH-01-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-003",
+        "MLE-CH-01",
+        [
+          "MLE-CH-01-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-006",
+        "MLE-BCLM-004",
+        "MLE-CH-02",
+        [
+          "MLE-CH-02-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-004",
+        "MLE-CH-02",
+        [
+          "MLE-CH-02-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-038",
+        "MLE-BCLM-004",
+        "MLE-CH-02",
+        [
+          "MLE-CH-02-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-005",
+        "MLE-CH-02",
+        [
+          "MLE-CH-02-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-005",
+        "MLE-CH-02",
+        [
+          "MLE-CH-02-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-015",
+        "MLE-BCLM-006",
+        "MLE-CH-02",
+        [
+          "MLE-CH-02-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-007",
+        "MLE-CH-03",
+        [
+          "MLE-CH-03-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-015",
+        "MLE-BCLM-007",
+        "MLE-CH-03",
+        [
+          "MLE-CH-03-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-006",
+        "MLE-BCLM-008",
+        "MLE-CH-03",
+        [
+          "MLE-CH-03-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-008",
+        "MLE-CH-03",
+        [
+          "MLE-CH-03-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-038",
+        "MLE-BCLM-008",
+        "MLE-CH-03",
+        [
+          "MLE-CH-03-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-009",
+        "MLE-CH-03",
+        [
+          "MLE-CH-03-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-009",
+        "MLE-CH-03",
+        [
+          "MLE-CH-03-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-002",
+        "MLE-BCLM-010",
+        "MLE-CH-04",
+        [
+          "MLE-CH-04-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-003",
+        "MLE-BCLM-010",
+        "MLE-CH-04",
+        [
+          "MLE-CH-04-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-011",
+        "MLE-CH-04",
+        [
+          "MLE-CH-04-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-024",
+        "MLE-BCLM-011",
+        "MLE-CH-04",
+        [
+          "MLE-CH-04-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-004",
+        "MLE-BCLM-012",
+        "MLE-CH-04",
+        [
+          "MLE-CH-04-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-012",
+        "MLE-CH-04",
+        [
+          "MLE-CH-04-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-038",
+        "MLE-BCLM-012",
+        "MLE-CH-04",
+        [
+          "MLE-CH-04-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-005",
+        "MLE-BCLM-013",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-043",
+        "MLE-BCLM-013",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-004",
+        "MLE-BCLM-014",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-005",
+        "MLE-BCLM-014",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-015",
+        "MLE-BCLM-014",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-015",
+        "MLE-BCLM-015",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-024",
+        "MLE-BCLM-015",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-043",
+        "MLE-BCLM-015",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-044",
+        "MLE-BCLM-015",
+        "MLE-CH-05",
+        [
+          "MLE-CH-05-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-014",
+        "MLE-BCLM-016",
+        "MLE-CH-06",
+        [
+          "MLE-CH-06-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-015",
+        "MLE-BCLM-016",
+        "MLE-CH-06",
+        [
+          "MLE-CH-06-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-013",
+        "MLE-BCLM-017",
+        "MLE-CH-06",
+        [
+          "MLE-CH-06-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-025",
+        "MLE-BCLM-017",
+        "MLE-CH-06",
+        [
+          "MLE-CH-06-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-015",
+        "MLE-BCLM-018",
+        "MLE-CH-06",
+        [
+          "MLE-CH-06-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-024",
+        "MLE-BCLM-018",
+        "MLE-CH-06",
+        [
+          "MLE-CH-06-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-044",
+        "MLE-BCLM-018",
+        "MLE-CH-06",
+        [
+          "MLE-CH-06-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-019",
+        "MLE-CH-07",
+        [
+          "MLE-CH-07-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-010",
+        "MLE-BCLM-019",
+        "MLE-CH-07",
+        [
+          "MLE-CH-07-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-015",
+        "MLE-BCLM-019",
+        "MLE-CH-07",
+        [
+          "MLE-CH-07-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-018",
+        "MLE-BCLM-020",
+        "MLE-CH-07",
+        [
+          "MLE-CH-07-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-043",
+        "MLE-BCLM-020",
+        "MLE-CH-07",
+        [
+          "MLE-CH-07-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-018",
+        "MLE-BCLM-021",
+        "MLE-CH-07",
+        [
+          "MLE-CH-07-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-021",
+        "MLE-BCLM-021",
+        "MLE-CH-07",
+        [
+          "MLE-CH-07-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-009",
+        "MLE-BCLM-022",
+        "MLE-CH-08",
+        [
+          "MLE-CH-08-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-021",
+        "MLE-BCLM-022",
+        "MLE-CH-08",
+        [
+          "MLE-CH-08-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-009",
+        "MLE-BCLM-023",
+        "MLE-CH-08",
+        [
+          "MLE-CH-08-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-018",
+        "MLE-BCLM-023",
+        "MLE-CH-08",
+        [
+          "MLE-CH-08-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-021",
+        "MLE-BCLM-024",
+        "MLE-CH-08",
+        [
+          "MLE-CH-08-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-010",
+        "MLE-BCLM-025",
+        "MLE-CH-09",
+        [
+          "MLE-CH-09-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-022",
+        "MLE-BCLM-025",
+        "MLE-CH-09",
+        [
+          "MLE-CH-09-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-006",
+        "MLE-BCLM-026",
+        "MLE-CH-09",
+        [
+          "MLE-CH-09-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-010",
+        "MLE-BCLM-026",
+        "MLE-CH-09",
+        [
+          "MLE-CH-09-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-018",
+        "MLE-BCLM-026",
+        "MLE-CH-09",
+        [
+          "MLE-CH-09-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-006",
+        "MLE-BCLM-027",
+        "MLE-CH-09",
+        [
+          "MLE-CH-09-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-027",
+        "MLE-CH-09",
+        [
+          "MLE-CH-09-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-006",
+        "MLE-BCLM-028",
+        "MLE-CH-10",
+        [
+          "MLE-CH-10-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-025",
+        "MLE-BCLM-028",
+        "MLE-CH-10",
+        [
+          "MLE-CH-10-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-011",
+        "MLE-BCLM-029",
+        "MLE-CH-10",
+        [
+          "MLE-CH-10-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-032",
+        "MLE-BCLM-029",
+        "MLE-CH-10",
+        [
+          "MLE-CH-10-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-025",
+        "MLE-BCLM-030",
+        "MLE-CH-10",
+        [
+          "MLE-CH-10-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-030",
+        "MLE-CH-10",
+        [
+          "MLE-CH-10-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-032",
+        "MLE-BCLM-030",
+        "MLE-CH-10",
+        [
+          "MLE-CH-10-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-012",
+        "MLE-BCLM-031",
+        "MLE-CH-11",
+        [
+          "MLE-CH-11-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-023",
+        "MLE-BCLM-031",
+        "MLE-CH-11",
+        [
+          "MLE-CH-11-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-012",
+        "MLE-BCLM-032",
+        "MLE-CH-11",
+        [
+          "MLE-CH-11-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-023",
+        "MLE-BCLM-032",
+        "MLE-CH-11",
+        [
+          "MLE-CH-11-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-006",
+        "MLE-BCLM-033",
+        "MLE-CH-11",
+        [
+          "MLE-CH-11-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-025",
+        "MLE-BCLM-033",
+        "MLE-CH-11",
+        [
+          "MLE-CH-11-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-006",
+        "MLE-BCLM-034",
+        "MLE-CH-12",
+        [
+          "MLE-CH-12-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-019",
+        "MLE-BCLM-034",
+        "MLE-CH-12",
+        [
+          "MLE-CH-12-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-034",
+        "MLE-CH-12",
+        [
+          "MLE-CH-12-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-019",
+        "MLE-BCLM-035",
+        "MLE-CH-12",
+        [
+          "MLE-CH-12-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-035",
+        "MLE-CH-12",
+        [
+          "MLE-CH-12-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-025",
+        "MLE-BCLM-036",
+        "MLE-CH-12",
+        [
+          "MLE-CH-12-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-036",
+        "MLE-CH-12",
+        [
+          "MLE-CH-12-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-016",
+        "MLE-BCLM-037",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-018",
+        "MLE-BCLM-037",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-033",
+        "MLE-BCLM-037",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-036",
+        "MLE-BCLM-037",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-037",
+        "MLE-BCLM-037",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-017",
+        "MLE-BCLM-038",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-006",
+        "MLE-BCLM-039",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-016",
+        "MLE-BCLM-039",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-017",
+        "MLE-BCLM-039",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-039",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-036",
+        "MLE-BCLM-039",
+        "MLE-CH-13",
+        [
+          "MLE-CH-13-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-020",
+        "MLE-BCLM-040",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-016",
+        "MLE-BCLM-041",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-017",
+        "MLE-BCLM-041",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-020",
+        "MLE-BCLM-041",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-034",
+        "MLE-BCLM-041",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-005",
+        "MLE-BCLM-042",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-017",
+        "MLE-BCLM-042",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-020",
+        "MLE-BCLM-042",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-028",
+        "MLE-BCLM-042",
+        "MLE-CH-14",
+        [
+          "MLE-CH-14-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-030",
+        "MLE-BCLM-043",
+        "MLE-CH-15",
+        [
+          "MLE-CH-15-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-031",
+        "MLE-BCLM-043",
+        "MLE-CH-15",
+        [
+          "MLE-CH-15-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-036",
+        "MLE-BCLM-043",
+        "MLE-CH-15",
+        [
+          "MLE-CH-15-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-035",
+        "MLE-BCLM-044",
+        "MLE-CH-15",
+        [
+          "MLE-CH-15-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-036",
+        "MLE-BCLM-044",
+        "MLE-CH-15",
+        [
+          "MLE-CH-15-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-042",
+        "MLE-BCLM-045",
+        "MLE-CH-15",
+        [
+          "MLE-CH-15-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-008",
+        "MLE-BCLM-046",
+        "MLE-CH-16",
+        [
+          "MLE-CH-16-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-047",
+        "MLE-CH-16",
+        [
+          "MLE-CH-16-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-008",
+        "MLE-BCLM-047",
+        "MLE-CH-16",
+        [
+          "MLE-CH-16-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-016",
+        "MLE-BCLM-047",
+        "MLE-CH-16",
+        [
+          "MLE-CH-16-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-040",
+        "MLE-BCLM-047",
+        "MLE-CH-16",
+        [
+          "MLE-CH-16-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-039",
+        "MLE-BCLM-048",
+        "MLE-CH-16",
+        [
+          "MLE-CH-16-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-040",
+        "MLE-BCLM-048",
+        "MLE-CH-16",
+        [
+          "MLE-CH-16-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-024",
+        "MLE-BCLM-049",
+        "MLE-CH-17",
+        [
+          "MLE-CH-17-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-001",
+        "MLE-BCLM-050",
+        "MLE-CH-17",
+        [
+          "MLE-CH-17-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-005",
+        "MLE-BCLM-051",
+        "MLE-CH-17",
+        [
+          "MLE-CH-17-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-051",
+        "MLE-CH-17",
+        [
+          "MLE-CH-17-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-024",
+        "MLE-BCLM-051",
+        "MLE-CH-17",
+        [
+          "MLE-CH-17-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-051",
+        "MLE-CH-17",
+        [
+          "MLE-CH-17-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-039",
+        "MLE-BCLM-051",
+        "MLE-CH-17",
+        [
+          "MLE-CH-17-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-052",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-031",
+        "MLE-BCLM-052",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-042",
+        "MLE-BCLM-052",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-053",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-016",
+        "MLE-BCLM-053",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-053",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-040",
+        "MLE-BCLM-053",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-030",
+        "MLE-BCLM-054",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-039",
+        "MLE-BCLM-054",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-041",
+        "MLE-BCLM-054",
+        "MLE-CH-18",
+        [
+          "MLE-CH-18-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-055",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-030",
+        "MLE-BCLM-055",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-031",
+        "MLE-BCLM-055",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-036",
+        "MLE-BCLM-055",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-039",
+        "MLE-BCLM-055",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-056",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-031",
+        "MLE-BCLM-056",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-057",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-031",
+        "MLE-BCLM-057",
+        "MLE-CH-19",
+        [
+          "MLE-CH-19-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-016",
+        "MLE-BCLM-058",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-026",
+        "MLE-BCLM-058",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-058",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-031",
+        "MLE-BCLM-058",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-059",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-029",
+        "MLE-BCLM-059",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-026",
+        "MLE-BCLM-060",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-060",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-029",
+        "MLE-BCLM-060",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-031",
+        "MLE-BCLM-060",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-042",
+        "MLE-BCLM-060",
+        "MLE-CH-20",
+        [
+          "MLE-CH-20-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-061",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-061",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-036",
+        "MLE-BCLM-061",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-039",
+        "MLE-BCLM-061",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-027",
+        "MLE-BCLM-062",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-030",
+        "MLE-BCLM-062",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-041",
+        "MLE-BCLM-062",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-005",
+        "MLE-BCLM-063",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ],
+      [
+        "MLE-BSRC-007",
+        "MLE-BCLM-063",
+        "MLE-CH-21",
+        [
+          "MLE-CH-21-S02"
+        ]
+      ]
+    ],
+    "caseChapter": [
+      [
+        "CASE-01",
+        [
+          "MLE-CH-01",
+          "MLE-CH-02",
+          "MLE-CH-03",
+          "MLE-CH-04",
+          "MLE-CH-05",
+          "MLE-CH-06",
+          "MLE-CH-07",
+          "MLE-CH-08",
+          "MLE-CH-09",
+          "MLE-CH-10",
+          "MLE-CH-11",
+          "MLE-CH-12",
+          "MLE-CH-13",
+          "MLE-CH-14",
+          "MLE-CH-15",
+          "MLE-CH-16",
+          "MLE-CH-17",
+          "MLE-CH-18",
+          "MLE-CH-19",
+          "MLE-CH-20",
+          "MLE-CH-21"
+        ]
+      ],
+      [
+        "CASE-02",
+        [
+          "MLE-CH-02",
+          "MLE-CH-04",
+          "MLE-CH-07",
+          "MLE-CH-08",
+          "MLE-CH-10",
+          "MLE-CH-12",
+          "MLE-CH-13",
+          "MLE-CH-16",
+          "MLE-CH-17",
+          "MLE-CH-18",
+          "MLE-CH-20",
+          "MLE-CH-21"
+        ]
+      ],
+      [
+        "CASE-03",
+        [
+          "MLE-CH-02",
+          "MLE-CH-03",
+          "MLE-CH-04",
+          "MLE-CH-05",
+          "MLE-CH-06",
+          "MLE-CH-07",
+          "MLE-CH-09",
+          "MLE-CH-10",
+          "MLE-CH-11",
+          "MLE-CH-12",
+          "MLE-CH-13",
+          "MLE-CH-17",
+          "MLE-CH-19",
+          "MLE-CH-20",
+          "MLE-CH-21"
+        ]
+      ],
+      [
+        "CASE-04",
+        [
+          "MLE-CH-04",
+          "MLE-CH-06",
+          "MLE-CH-07",
+          "MLE-CH-08",
+          "MLE-CH-09",
+          "MLE-CH-10",
+          "MLE-CH-11",
+          "MLE-CH-13",
+          "MLE-CH-15",
+          "MLE-CH-16",
+          "MLE-CH-18",
+          "MLE-CH-20",
+          "MLE-CH-21"
+        ]
+      ],
+      [
+        "CASE-05",
+        [
+          "MLE-CH-02",
+          "MLE-CH-04",
+          "MLE-CH-05",
+          "MLE-CH-06",
+          "MLE-CH-08",
+          "MLE-CH-10",
+          "MLE-CH-12",
+          "MLE-CH-13",
+          "MLE-CH-14",
+          "MLE-CH-15",
+          "MLE-CH-16",
+          "MLE-CH-17",
+          "MLE-CH-18",
+          "MLE-CH-19",
+          "MLE-CH-20",
+          "MLE-CH-21"
+        ]
+      ],
+      [
+        "CASE-06",
+        [
+          "MLE-CH-01",
+          "MLE-CH-02",
+          "MLE-CH-03",
+          "MLE-CH-04",
+          "MLE-CH-05",
+          "MLE-CH-06",
+          "MLE-CH-07"
+        ]
+      ],
+      [
+        "CASE-07",
+        [
+          "MLE-CH-01",
+          "MLE-CH-05",
+          "MLE-CH-06",
+          "MLE-CH-07"
+        ]
+      ],
+      [
+        "CASE-08",
+        [
+          "MLE-CH-08"
+        ]
+      ],
+      [
+        "CASE-09",
+        [
+          "MLE-CH-10",
+          "MLE-CH-11",
+          "MLE-CH-12"
+        ]
+      ],
+      [
+        "CASE-10",
+        [
+          "MLE-CH-14"
+        ]
+      ],
+      [
+        "CASE-11",
+        [
+          "MLE-CH-15",
+          "MLE-CH-18",
+          "MLE-CH-19",
+          "MLE-CH-20",
+          "MLE-CH-21"
+        ]
+      ],
+      [
+        "CASE-12",
+        [
+          "MLE-CH-16",
+          "MLE-CH-17",
+          "MLE-CH-18",
+          "MLE-CH-19",
+          "MLE-CH-20",
+          "MLE-CH-21"
+        ]
+      ]
+    ],
+    "claimCase": [
+      [
+        "CASE-01",
+        [
+          "MLE-BCLM-001",
+          "MLE-BCLM-002",
+          "MLE-BCLM-003",
+          "MLE-BCLM-004",
+          "MLE-BCLM-005",
+          "MLE-BCLM-006",
+          "MLE-BCLM-007",
+          "MLE-BCLM-008",
+          "MLE-BCLM-009",
+          "MLE-BCLM-010",
+          "MLE-BCLM-011",
+          "MLE-BCLM-012",
+          "MLE-BCLM-013",
+          "MLE-BCLM-014",
+          "MLE-BCLM-015",
+          "MLE-BCLM-016",
+          "MLE-BCLM-017",
+          "MLE-BCLM-018",
+          "MLE-BCLM-019",
+          "MLE-BCLM-020",
+          "MLE-BCLM-021",
+          "MLE-BCLM-022",
+          "MLE-BCLM-023",
+          "MLE-BCLM-024",
+          "MLE-BCLM-025",
+          "MLE-BCLM-026",
+          "MLE-BCLM-027",
+          "MLE-BCLM-028",
+          "MLE-BCLM-029",
+          "MLE-BCLM-030",
+          "MLE-BCLM-031",
+          "MLE-BCLM-032",
+          "MLE-BCLM-033",
+          "MLE-BCLM-034",
+          "MLE-BCLM-035",
+          "MLE-BCLM-036",
+          "MLE-BCLM-037",
+          "MLE-BCLM-038",
+          "MLE-BCLM-039",
+          "MLE-BCLM-040",
+          "MLE-BCLM-041",
+          "MLE-BCLM-042"
+        ]
+      ],
+      [
+        "CASE-02",
+        [
+          "MLE-BCLM-004",
+          "MLE-BCLM-005",
+          "MLE-BCLM-010",
+          "MLE-BCLM-011",
+          "MLE-BCLM-012",
+          "MLE-BCLM-019",
+          "MLE-BCLM-020",
+          "MLE-BCLM-021",
+          "MLE-BCLM-022",
+          "MLE-BCLM-023",
+          "MLE-BCLM-024",
+          "MLE-BCLM-028",
+          "MLE-BCLM-029",
+          "MLE-BCLM-030",
+          "MLE-BCLM-034",
+          "MLE-BCLM-035",
+          "MLE-BCLM-036",
+          "MLE-BCLM-037",
+          "MLE-BCLM-038",
+          "MLE-BCLM-039"
+        ]
+      ],
+      [
+        "CASE-03",
+        [
+          "MLE-BCLM-004",
+          "MLE-BCLM-005",
+          "MLE-BCLM-006",
+          "MLE-BCLM-007",
+          "MLE-BCLM-008",
+          "MLE-BCLM-009",
+          "MLE-BCLM-010",
+          "MLE-BCLM-011",
+          "MLE-BCLM-012",
+          "MLE-BCLM-013",
+          "MLE-BCLM-014",
+          "MLE-BCLM-015",
+          "MLE-BCLM-016",
+          "MLE-BCLM-017",
+          "MLE-BCLM-018",
+          "MLE-BCLM-019",
+          "MLE-BCLM-020",
+          "MLE-BCLM-021",
+          "MLE-BCLM-025",
+          "MLE-BCLM-026",
+          "MLE-BCLM-027",
+          "MLE-BCLM-028",
+          "MLE-BCLM-029",
+          "MLE-BCLM-030",
+          "MLE-BCLM-031",
+          "MLE-BCLM-032",
+          "MLE-BCLM-033",
+          "MLE-BCLM-034",
+          "MLE-BCLM-035",
+          "MLE-BCLM-036",
+          "MLE-BCLM-037",
+          "MLE-BCLM-038",
+          "MLE-BCLM-039"
+        ]
+      ],
+      [
+        "CASE-04",
+        [
+          "MLE-BCLM-010",
+          "MLE-BCLM-011",
+          "MLE-BCLM-012",
+          "MLE-BCLM-016",
+          "MLE-BCLM-017",
+          "MLE-BCLM-018",
+          "MLE-BCLM-019",
+          "MLE-BCLM-020",
+          "MLE-BCLM-021",
+          "MLE-BCLM-022",
+          "MLE-BCLM-023",
+          "MLE-BCLM-024",
+          "MLE-BCLM-025",
+          "MLE-BCLM-026",
+          "MLE-BCLM-027",
+          "MLE-BCLM-028",
+          "MLE-BCLM-029",
+          "MLE-BCLM-030",
+          "MLE-BCLM-031",
+          "MLE-BCLM-032",
+          "MLE-BCLM-033",
+          "MLE-BCLM-037",
+          "MLE-BCLM-038",
+          "MLE-BCLM-039"
+        ]
+      ],
+      [
+        "CASE-05",
+        [
+          "MLE-BCLM-004",
+          "MLE-BCLM-005",
+          "MLE-BCLM-010",
+          "MLE-BCLM-011",
+          "MLE-BCLM-012",
+          "MLE-BCLM-013",
+          "MLE-BCLM-014",
+          "MLE-BCLM-015",
+          "MLE-BCLM-016",
+          "MLE-BCLM-017",
+          "MLE-BCLM-018",
+          "MLE-BCLM-022",
+          "MLE-BCLM-023",
+          "MLE-BCLM-024",
+          "MLE-BCLM-028",
+          "MLE-BCLM-029",
+          "MLE-BCLM-030",
+          "MLE-BCLM-034",
+          "MLE-BCLM-035",
+          "MLE-BCLM-036",
+          "MLE-BCLM-037",
+          "MLE-BCLM-038",
+          "MLE-BCLM-039",
+          "MLE-BCLM-040",
+          "MLE-BCLM-041",
+          "MLE-BCLM-042"
+        ]
+      ],
+      [
+        "CASE-06",
+        [
+          "MLE-BCLM-002",
+          "MLE-BCLM-003",
+          "MLE-BCLM-004",
+          "MLE-BCLM-007",
+          "MLE-BCLM-011",
+          "MLE-BCLM-014",
+          "MLE-BCLM-015",
+          "MLE-BCLM-018",
+          "MLE-BCLM-019"
+        ]
+      ],
+      [
+        "CASE-07",
+        [
+          "MLE-BCLM-001",
+          "MLE-BCLM-002",
+          "MLE-BCLM-013",
+          "MLE-BCLM-014",
+          "MLE-BCLM-015",
+          "MLE-BCLM-018",
+          "MLE-BCLM-020"
+        ]
+      ],
+      [
+        "CASE-08",
+        [
+          "MLE-BCLM-022",
+          "MLE-BCLM-023",
+          "MLE-BCLM-024"
+        ]
+      ],
+      [
+        "CASE-09",
+        [
+          "MLE-BCLM-028",
+          "MLE-BCLM-029",
+          "MLE-BCLM-030",
+          "MLE-BCLM-031",
+          "MLE-BCLM-032",
+          "MLE-BCLM-033",
+          "MLE-BCLM-034",
+          "MLE-BCLM-035"
+        ]
+      ],
+      [
+        "CASE-10",
+        [
+          "MLE-BCLM-040",
+          "MLE-BCLM-041",
+          "MLE-BCLM-042"
+        ]
+      ],
+      [
+        "CASE-11",
+        [
+          "MLE-BCLM-043",
+          "MLE-BCLM-044",
+          "MLE-BCLM-045",
+          "MLE-BCLM-052",
+          "MLE-BCLM-055",
+          "MLE-BCLM-058",
+          "MLE-BCLM-060",
+          "MLE-BCLM-061",
+          "MLE-BCLM-062"
+        ]
+      ],
+      [
+        "CASE-12",
+        [
+          "MLE-BCLM-046",
+          "MLE-BCLM-047",
+          "MLE-BCLM-048",
+          "MLE-BCLM-049",
+          "MLE-BCLM-051",
+          "MLE-BCLM-052",
+          "MLE-BCLM-053",
+          "MLE-BCLM-054",
+          "MLE-BCLM-055",
+          "MLE-BCLM-056",
+          "MLE-BCLM-058",
+          "MLE-BCLM-060",
+          "MLE-BCLM-061",
+          "MLE-BCLM-062"
+        ]
+      ]
+    ],
+    "caseSource": [
+      [
+        "CASE-01",
+        []
+      ],
+      [
+        "CASE-02",
+        []
+      ],
+      [
+        "CASE-03",
+        []
+      ],
+      [
+        "CASE-04",
+        []
+      ],
+      [
+        "CASE-05",
+        []
+      ],
+      [
+        "CASE-06",
+        [
+          {
+            "sourceId": "MLE-BSRC-028",
+            "evidenceRole": "doctrine"
+          },
+          {
+            "sourceId": "MLE-BSRC-007",
+            "evidenceRole": "reported-fact"
+          },
+          {
+            "sourceId": "MLE-BSRC-024",
+            "evidenceRole": "mechanism"
+          }
+        ]
+      ],
+      [
+        "CASE-07",
+        [
+          {
+            "sourceId": "MLE-BSRC-015",
+            "evidenceRole": "transfer-context"
+          },
+          {
+            "sourceId": "MLE-BSRC-005",
+            "evidenceRole": "doctrine"
+          },
+          {
+            "sourceId": "MLE-BSRC-043",
+            "evidenceRole": "reported-fact"
+          },
+          {
+            "sourceId": "MLE-BSRC-044",
+            "evidenceRole": "attributed-outcome"
+          },
+          {
+            "sourceId": "MLE-BSRC-018",
+            "evidenceRole": "mechanism"
+          }
+        ]
+      ],
+      [
+        "CASE-08",
+        [
+          {
+            "sourceId": "MLE-BSRC-021",
+            "evidenceRole": "reported-fact"
+          },
+          {
+            "sourceId": "MLE-BSRC-021",
+            "evidenceRole": "limitation"
+          },
+          {
+            "sourceId": "MLE-BSRC-018",
+            "evidenceRole": "mechanism"
+          },
+          {
+            "sourceId": "MLE-BSRC-009",
+            "evidenceRole": "transfer-context"
+          }
+        ]
+      ],
+      [
+        "CASE-09",
+        [
+          {
+            "sourceId": "MLE-BSRC-025",
+            "evidenceRole": "limitation"
+          },
+          {
+            "sourceId": "MLE-BSRC-032",
+            "evidenceRole": "transfer-context"
+          },
+          {
+            "sourceId": "MLE-BSRC-011",
+            "evidenceRole": "reported-fact"
+          },
+          {
+            "sourceId": "MLE-BSRC-011",
+            "evidenceRole": "attributed-outcome"
+          }
+        ]
+      ],
+      [
+        "CASE-10",
+        [
+          {
+            "sourceId": "MLE-BSRC-017",
+            "evidenceRole": "transfer-context"
+          },
+          {
+            "sourceId": "MLE-BSRC-020",
+            "evidenceRole": "reported-fact"
+          },
+          {
+            "sourceId": "MLE-BSRC-020",
+            "evidenceRole": "mechanism"
+          },
+          {
+            "sourceId": "MLE-BSRC-034",
+            "evidenceRole": "doctrine"
+          }
+        ]
+      ],
+      [
+        "CASE-11",
+        [
+          {
+            "sourceId": "MLE-BSRC-042",
+            "evidenceRole": "reported-fact"
+          },
+          {
+            "sourceId": "MLE-BSRC-042",
+            "evidenceRole": "attributed-outcome"
+          },
+          {
+            "sourceId": "MLE-BSRC-042",
+            "evidenceRole": "limitation"
+          },
+          {
+            "sourceId": "MLE-BSRC-036",
+            "evidenceRole": "transfer-context"
+          },
+          {
+            "sourceId": "MLE-BSRC-030",
+            "evidenceRole": "transfer-context"
+          }
+        ]
+      ],
+      [
+        "CASE-12",
+        [
+          {
+            "sourceId": "MLE-BSRC-039",
+            "evidenceRole": "reported-fact"
+          },
+          {
+            "sourceId": "MLE-BSRC-039",
+            "evidenceRole": "attributed-outcome"
+          },
+          {
+            "sourceId": "MLE-BSRC-039",
+            "evidenceRole": "limitation"
+          },
+          {
+            "sourceId": "MLE-BSRC-026",
+            "evidenceRole": "reported-fact"
+          },
+          {
+            "sourceId": "MLE-BSRC-026",
+            "evidenceRole": "limitation"
+          },
+          {
+            "sourceId": "MLE-BSRC-040",
+            "evidenceRole": "transfer-context"
+          },
+          {
+            "sourceId": "MLE-BSRC-027",
+            "evidenceRole": "transfer-context"
+          },
+          {
+            "sourceId": "MLE-BSRC-041",
+            "evidenceRole": "transfer-context"
+          },
+          {
+            "sourceId": "MLE-BSRC-031",
+            "evidenceRole": "transfer-context"
+          }
+        ]
+      ]
+    ],
+    "architectureByChapter": [
+      [
+        "MLE-CH-01",
+        [
+          "MLE-CLM-001",
+          "MLE-CLM-002",
+          "MLE-CLM-005",
+          "MLE-CLM-006",
+          "MLE-CLM-007",
+          "MLE-CLM-021",
+          "MLE-CLM-022"
+        ],
+        [
+          "BND-01",
+          "BND-02",
+          "BND-03",
+          "BND-04",
+          "BND-05",
+          "BND-06",
+          "BND-07",
+          "BND-08",
+          "BND-09",
+          "BND-10",
+          "BND-11",
+          "BND-12",
+          "BND-13",
+          "BND-14",
+          "BND-15",
+          "BND-16",
+          "BND-17"
+        ],
+        [],
+        [
+          "PD-01"
+        ]
+      ],
+      [
+        "MLE-CH-02",
+        [
+          "MLE-CLM-002",
+          "MLE-CLM-006",
+          "MLE-CLM-008",
+          "MLE-CLM-015",
+          "MLE-CLM-020"
+        ],
+        [
+          "BND-13",
+          "BND-15",
+          "BND-16",
+          "BND-17"
+        ],
+        [
+          "SCN-06",
+          "SCN-08"
+        ],
+        [
+          "PD-01"
+        ]
+      ],
+      [
+        "MLE-CH-03",
+        [
+          "MLE-CLM-008",
+          "MLE-CLM-015"
+        ],
+        [
+          "BND-01",
+          "BND-13",
+          "BND-17"
+        ],
+        [
+          "SCN-09"
+        ],
+        [
+          "PD-01"
+        ]
+      ],
+      [
+        "MLE-CH-04",
+        [
+          "MLE-CLM-004",
+          "MLE-CLM-009",
+          "MLE-CLM-017",
+          "MLE-CLM-018",
+          "MLE-CLM-020"
+        ],
+        [
+          "BND-02",
+          "BND-09",
+          "BND-10",
+          "BND-16",
+          "BND-17"
+        ],
+        [
+          "SCN-02",
+          "SCN-08"
+        ],
+        [
+          "PD-02"
+        ]
+      ],
+      [
+        "MLE-CH-05",
+        [
+          "MLE-CLM-004",
+          "MLE-CLM-009",
+          "MLE-CLM-017",
+          "MLE-CLM-018"
+        ],
+        [
+          "BND-02",
+          "BND-09",
+          "BND-10",
+          "BND-16"
+        ],
+        [
+          "SCN-02"
+        ],
+        [
+          "PD-03"
+        ]
+      ],
+      [
+        "MLE-CH-06",
+        [
+          "MLE-CLM-004",
+          "MLE-CLM-009",
+          "MLE-CLM-010",
+          "MLE-CLM-017"
+        ],
+        [
+          "BND-02",
+          "BND-09",
+          "BND-10",
+          "BND-17"
+        ],
+        [
+          "SCN-03",
+          "SCN-08"
+        ],
+        [
+          "PD-03"
+        ]
+      ],
+      [
+        "MLE-CH-07",
+        [
+          "MLE-CLM-004",
+          "MLE-CLM-008",
+          "MLE-CLM-010",
+          "MLE-CLM-017"
+        ],
+        [
+          "BND-01",
+          "BND-03",
+          "BND-04",
+          "BND-09",
+          "BND-10"
+        ],
+        [
+          "SCN-09"
+        ],
+        [
+          "PD-04"
+        ]
+      ],
+      [
+        "MLE-CH-08",
+        [
+          "MLE-CLM-010",
+          "MLE-CLM-017",
+          "MLE-CLM-018",
+          "MLE-CLM-022"
+        ],
+        [
+          "BND-03",
+          "BND-04",
+          "BND-09",
+          "BND-10"
+        ],
+        [
+          "SCN-03"
+        ],
+        [
+          "PD-04"
+        ]
+      ],
+      [
+        "MLE-CH-09",
+        [
+          "MLE-CLM-011",
+          "MLE-CLM-015",
+          "MLE-CLM-017"
+        ],
+        [
+          "BND-01",
+          "BND-03",
+          "BND-04",
+          "BND-05"
+        ],
+        [
+          "SCN-09"
+        ],
+        [
+          "PD-05"
+        ]
+      ],
+      [
+        "MLE-CH-10",
+        [
+          "MLE-CLM-011",
+          "MLE-CLM-016",
+          "MLE-CLM-019",
+          "MLE-CLM-020"
+        ],
+        [
+          "BND-01",
+          "BND-05",
+          "BND-13",
+          "BND-15",
+          "BND-17"
+        ],
+        [
+          "SCN-01",
+          "SCN-08"
+        ],
+        [
+          "PD-06"
+        ]
+      ],
+      [
+        "MLE-CH-11",
+        [
+          "MLE-CLM-011",
+          "MLE-CLM-016",
+          "MLE-CLM-019"
+        ],
+        [
+          "BND-01",
+          "BND-05",
+          "BND-15",
+          "BND-17"
+        ],
+        [
+          "SCN-01"
+        ],
+        [
+          "PD-06"
+        ]
+      ],
+      [
+        "MLE-CH-12",
+        [
+          "MLE-CLM-006",
+          "MLE-CLM-011",
+          "MLE-CLM-019",
+          "MLE-CLM-020",
+          "MLE-CLM-022"
+        ],
+        [
+          "BND-01",
+          "BND-05",
+          "BND-13",
+          "BND-15",
+          "BND-16",
+          "BND-17"
+        ],
+        [
+          "SCN-01",
+          "SCN-08",
+          "SCN-09"
+        ],
+        [
+          "PD-07"
+        ]
+      ],
+      [
+        "MLE-CH-13",
+        [
+          "MLE-CLM-003",
+          "MLE-CLM-005",
+          "MLE-CLM-012",
+          "MLE-CLM-015",
+          "MLE-CLM-017",
+          "MLE-CLM-021"
+        ],
+        [
+          "BND-03",
+          "BND-04",
+          "BND-06",
+          "BND-07",
+          "BND-08",
+          "BND-09",
+          "BND-10",
+          "BND-11"
+        ],
+        [
+          "SCN-05",
+          "SCN-09",
+          "SCN-10"
+        ],
+        [
+          "PD-08"
+        ]
+      ],
+      [
+        "MLE-CH-14",
+        [
+          "MLE-CLM-005",
+          "MLE-CLM-012",
+          "MLE-CLM-017",
+          "MLE-CLM-018",
+          "MLE-CLM-021"
+        ],
+        [
+          "BND-06",
+          "BND-07",
+          "BND-08",
+          "BND-09",
+          "BND-10",
+          "BND-11"
+        ],
+        [
+          "SCN-02",
+          "SCN-05",
+          "SCN-06"
+        ],
+        [
+          "PD-08"
+        ]
+      ],
+      [
+        "MLE-CH-15",
+        [
+          "MLE-CLM-012",
+          "MLE-CLM-014",
+          "MLE-CLM-017",
+          "MLE-CLM-018",
+          "MLE-CLM-020"
+        ],
+        [
+          "BND-09",
+          "BND-10",
+          "BND-11",
+          "BND-14"
+        ],
+        [
+          "SCN-10"
+        ],
+        [
+          "PD-09"
+        ]
+      ],
+      [
+        "MLE-CH-16",
+        [
+          "MLE-CLM-003",
+          "MLE-CLM-013",
+          "MLE-CLM-016",
+          "MLE-CLM-018"
+        ],
+        [
+          "BND-09",
+          "BND-10",
+          "BND-11",
+          "BND-12"
+        ],
+        [
+          "SCN-02",
+          "SCN-07",
+          "SCN-09"
+        ],
+        [
+          "PD-10"
+        ]
+      ],
+      [
+        "MLE-CH-17",
+        [
+          "MLE-CLM-003",
+          "MLE-CLM-004",
+          "MLE-CLM-013",
+          "MLE-CLM-016",
+          "MLE-CLM-017",
+          "MLE-CLM-018",
+          "MLE-CLM-019"
+        ],
+        [
+          "BND-05",
+          "BND-09",
+          "BND-10",
+          "BND-11",
+          "BND-12"
+        ],
+        [
+          "SCN-04",
+          "SCN-05"
+        ],
+        [
+          "PD-10"
+        ]
+      ],
+      [
+        "MLE-CH-18",
+        [
+          "MLE-CLM-003",
+          "MLE-CLM-013",
+          "MLE-CLM-016",
+          "MLE-CLM-017",
+          "MLE-CLM-018",
+          "MLE-CLM-019",
+          "MLE-CLM-022"
+        ],
+        [
+          "BND-05",
+          "BND-09",
+          "BND-10",
+          "BND-11",
+          "BND-12",
+          "BND-14"
+        ],
+        [
+          "SCN-01",
+          "SCN-04",
+          "SCN-07",
+          "SCN-09"
+        ],
+        [
+          "PD-11"
+        ]
+      ],
+      [
+        "MLE-CH-19",
+        [
+          "MLE-CLM-014",
+          "MLE-CLM-018",
+          "MLE-CLM-019",
+          "MLE-CLM-020"
+        ],
+        [
+          "BND-05",
+          "BND-08",
+          "BND-13",
+          "BND-14",
+          "BND-15",
+          "BND-16",
+          "BND-17"
+        ],
+        [
+          "SCN-06",
+          "SCN-08",
+          "SCN-10"
+        ],
+        [
+          "PD-11"
+        ]
+      ],
+      [
+        "MLE-CH-20",
+        [
+          "MLE-CLM-014",
+          "MLE-CLM-018",
+          "MLE-CLM-020",
+          "MLE-CLM-022"
+        ],
+        [
+          "BND-08",
+          "BND-12",
+          "BND-14",
+          "BND-15",
+          "BND-16",
+          "BND-17"
+        ],
+        [
+          "SCN-08",
+          "SCN-10"
+        ],
+        [
+          "PD-12"
+        ]
+      ],
+      [
+        "MLE-CH-21",
+        [
+          "MLE-CLM-001",
+          "MLE-CLM-002",
+          "MLE-CLM-005",
+          "MLE-CLM-006",
+          "MLE-CLM-007",
+          "MLE-CLM-015",
+          "MLE-CLM-018",
+          "MLE-CLM-019",
+          "MLE-CLM-020",
+          "MLE-CLM-021",
+          "MLE-CLM-022"
+        ],
+        [
+          "BND-01",
+          "BND-02",
+          "BND-03",
+          "BND-04",
+          "BND-05",
+          "BND-06",
+          "BND-07",
+          "BND-08",
+          "BND-09",
+          "BND-10",
+          "BND-11",
+          "BND-12",
+          "BND-13",
+          "BND-14",
+          "BND-15",
+          "BND-16",
+          "BND-17"
+        ],
+        [
+          "SCN-01",
+          "SCN-02",
+          "SCN-03",
+          "SCN-04",
+          "SCN-05",
+          "SCN-06",
+          "SCN-07",
+          "SCN-08",
+          "SCN-09",
+          "SCN-10"
+        ],
+        [
+          "PD-12"
+        ]
+      ]
+    ],
+    "portsByChapter": [
+      [
+        "MLE-CH-01",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-02",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-03",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-04",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-05",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-06",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-07",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-08",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-09",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-10",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-11",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-12",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-13",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-14",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-15",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-16",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-17",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-18",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-19",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-20",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ],
+      [
+        "MLE-CH-21",
+        [
+          "PORT-MANAGED",
+          "PORT-CLASSICAL",
+          "PORT-DEEP",
+          "PORT-EDGE",
+          "PORT-SHARED"
+        ]
+      ]
+    ],
+    "milestoneToChapter": [
+      [
+        "BL-00",
+        "MLE-CH-01",
+        "UNORIENTED",
+        [
+          "ORIENTED"
+        ],
+        "MLE-CH-02"
+      ],
+      [
+        "BL-01",
+        "MLE-CH-02",
+        "ORIENTED",
+        [
+          "CONTRACTED"
+        ],
+        "MLE-CH-03"
+      ],
+      [
+        "BL-02",
+        "MLE-CH-03",
+        "CONTRACTED",
+        [
+          "CONTRACTED"
+        ],
+        "MLE-CH-04"
+      ],
+      [
+        "BL-03",
+        "MLE-CH-04",
+        "CONTRACTED",
+        [
+          "CONTRACTED"
+        ],
+        "MLE-CH-05"
+      ],
+      [
+        "BL-04",
+        "MLE-CH-05",
+        "CONTRACTED",
+        [
+          "CONTRACTED"
+        ],
+        "MLE-CH-06"
+      ],
+      [
+        "BL-05",
+        "MLE-CH-06",
+        "CONTRACTED",
+        [
+          "ADMISSIBLE"
+        ],
+        "MLE-CH-07"
+      ],
+      [
+        "BL-06",
+        "MLE-CH-07",
+        "ADMISSIBLE",
+        [
+          "ADMISSIBLE"
+        ],
+        "MLE-CH-08"
+      ],
+      [
+        "BL-07",
+        "MLE-CH-08",
+        "ADMISSIBLE",
+        [
+          "RECONSTRUCTIBLE"
+        ],
+        "MLE-CH-09"
+      ],
+      [
+        "BL-08",
+        "MLE-CH-09",
+        "RECONSTRUCTIBLE",
+        [
+          "CANDIDATE"
+        ],
+        "MLE-CH-10"
+      ],
+      [
+        "BL-09",
+        "MLE-CH-10",
+        "CANDIDATE",
+        [
+          "CANDIDATE"
+        ],
+        "MLE-CH-11"
+      ],
+      [
+        "BL-10",
+        "MLE-CH-11",
+        "CANDIDATE",
+        [
+          "CANDIDATE"
+        ],
+        "MLE-CH-12"
+      ],
+      [
+        "BL-11",
+        "MLE-CH-12",
+        "CANDIDATE",
+        [
+          "TECHNICALLY-QUALIFIED|HOLD|REJECT"
+        ],
+        "MLE-CH-13"
+      ],
+      [
+        "BL-12",
+        "MLE-CH-13",
+        "TECHNICALLY-QUALIFIED",
+        [
+          "TECHNICALLY-QUALIFIED"
+        ],
+        "MLE-CH-14"
+      ],
+      [
+        "BL-13",
+        "MLE-CH-14",
+        "TECHNICALLY-QUALIFIED",
+        [
+          "TECHNICALLY-QUALIFIED"
+        ],
+        "MLE-CH-15"
+      ],
+      [
+        "BL-14",
+        "MLE-CH-15",
+        "TECHNICALLY-QUALIFIED",
+        [
+          "RELEASABLE"
+        ],
+        "MLE-CH-16"
+      ],
+      [
+        "BL-15",
+        "MLE-CH-16",
+        "RELEASABLE",
+        [
+          "OPERABLE"
+        ],
+        "MLE-CH-17"
+      ],
+      [
+        "BL-16",
+        "MLE-CH-17",
+        "OPERABLE",
+        [
+          "OBSERVED"
+        ],
+        "MLE-CH-18"
+      ],
+      [
+        "BL-17",
+        "MLE-CH-18",
+        "OBSERVED",
+        [
+          "REQUALIFIED|ROLLED-BACK"
+        ],
+        "MLE-CH-19"
+      ],
+      [
+        "BL-18",
+        "MLE-CH-19",
+        "REQUALIFIED|ROLLED-BACK",
+        [
+          "CONTROLLED"
+        ],
+        "MLE-CH-20"
+      ],
+      [
+        "BL-19",
+        "MLE-CH-20",
+        "CONTROLLED",
+        [
+          "RETIRED"
+        ],
+        "MLE-CH-21"
+      ],
+      [
+        "BL-20",
+        "MLE-CH-21",
+        "RETIRED",
+        [
+          "REVIEWED"
+        ],
+        null
+      ]
+    ]
+  },
+  "reverseMappingSha256": {
+    "claimPrimary": "cd48614427ea9d33e5d043d995dc2e2011f2067472a3d649d8051a11deea3755",
+    "sourceClaim": "3ff2989f8a9959e87d4ab9933146669672d2cc491170fa1a0fc22596736054ce",
+    "caseChapter": "af2343c1b5552e39f5657ec21de3ade3f15896c672d59134fe78f0ccb994267d",
+    "claimCase": "911ea0acca46b6ed6e487fbcba3f7b77d54d0f93d749f8f7a0adb507e5a62ee9",
+    "caseSource": "5e2aa3503972f397d7dae900d4c44dbde03419dc45b670b54bba01d169ccece6",
+    "architectureByChapter": "b2713a6cf2a003af8ae1857fcac62d89f7b847674512aede4d3005bd40c9aa18",
+    "portsByChapter": "3799cb6080c45f02319cdccb1150dd3799ca4fdb476123aabffee17adb68b740",
+    "milestoneToChapter": "aaf99e838b56eeaf5f82ff5bec2a06c67de7ae96b7d70068128734e9d806f124"
+  },
+  "dossier": {
+    "fixtureAndExpectedRecords": [
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/fixtures/bl-entry.json",
+        "bytes": 3538,
+        "sha256": "24b2ef5873262d45c5fbf5df16386dfc7df434fc56295a35b25d32fa2a32c8c9",
+        "incomingState": null,
+        "outgoingState": null,
+        "disposition": null,
+        "priorHash": null
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-00.json",
+        "bytes": 1529,
+        "sha256": "d362f770784ae16fb94bb14522bbe0163e1f3d8f5f645cbaf500ad87217c6d7c",
+        "milestoneId": "BL-00",
+        "incomingState": "UNORIENTED",
+        "outgoingState": "ORIENTED",
+        "disposition": "PASS",
+        "priorHash": "24b2ef5873262d45c5fbf5df16386dfc7df434fc56295a35b25d32fa2a32c8c9"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-01.json",
+        "bytes": 1600,
+        "sha256": "621cfe98286e805cf8523c739668e93e9f8d92104add916caa3e976ab680ccd0",
+        "milestoneId": "BL-01",
+        "incomingState": "ORIENTED",
+        "outgoingState": "CONTRACTED",
+        "disposition": "PASS",
+        "priorHash": "d362f770784ae16fb94bb14522bbe0163e1f3d8f5f645cbaf500ad87217c6d7c"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-02.json",
+        "bytes": 1594,
+        "sha256": "b591afccdab66159581571519f8d75476d263973f98f0ea3ecb53498b901d44f",
+        "milestoneId": "BL-02",
+        "incomingState": "CONTRACTED",
+        "outgoingState": "CONTRACTED",
+        "disposition": "PASS",
+        "priorHash": "621cfe98286e805cf8523c739668e93e9f8d92104add916caa3e976ab680ccd0"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-03.json",
+        "bytes": 1623,
+        "sha256": "2c102c6a4c774db7fd168d785a5730619b927ffcb20e2f40ad6e70baa956b6ae",
+        "milestoneId": "BL-03",
+        "incomingState": "CONTRACTED",
+        "outgoingState": "CONTRACTED",
+        "disposition": "PASS",
+        "priorHash": "b591afccdab66159581571519f8d75476d263973f98f0ea3ecb53498b901d44f"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-04.json",
+        "bytes": 1602,
+        "sha256": "70fbc2bcc47d7521d10d89eede497b719b026db55607054d74fb9820fd2af04f",
+        "milestoneId": "BL-04",
+        "incomingState": "CONTRACTED",
+        "outgoingState": "CONTRACTED",
+        "disposition": "PASS",
+        "priorHash": "2c102c6a4c774db7fd168d785a5730619b927ffcb20e2f40ad6e70baa956b6ae"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-05.json",
+        "bytes": 1587,
+        "sha256": "51ceedb372eba68c9ac0c1893df150e03a3c3317307054a8b2d060f44fb6a9bc",
+        "milestoneId": "BL-05",
+        "incomingState": "CONTRACTED",
+        "outgoingState": "ADMISSIBLE",
+        "disposition": "PASS",
+        "priorHash": "70fbc2bcc47d7521d10d89eede497b719b026db55607054d74fb9820fd2af04f"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-06.json",
+        "bytes": 1552,
+        "sha256": "e8116bff62ca7ef1aa00a5097a260b6a362586657efa43440310695c317ab051",
+        "milestoneId": "BL-06",
+        "incomingState": "ADMISSIBLE",
+        "outgoingState": "ADMISSIBLE",
+        "disposition": "PASS",
+        "priorHash": "51ceedb372eba68c9ac0c1893df150e03a3c3317307054a8b2d060f44fb6a9bc"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-07.json",
+        "bytes": 1605,
+        "sha256": "674536448cb3e32eb2bd747d6612e077b8de6930c6cb2a5693c88c2a55e99f5c",
+        "milestoneId": "BL-07",
+        "incomingState": "ADMISSIBLE",
+        "outgoingState": "RECONSTRUCTIBLE",
+        "disposition": "PASS",
+        "priorHash": "e8116bff62ca7ef1aa00a5097a260b6a362586657efa43440310695c317ab051"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-08.json",
+        "bytes": 1576,
+        "sha256": "8f6ba0dc4b80505ecb213014bb027f8c20e45737d08503c12589219c903b5324",
+        "milestoneId": "BL-08",
+        "incomingState": "RECONSTRUCTIBLE",
+        "outgoingState": "CANDIDATE",
+        "disposition": "PASS",
+        "priorHash": "674536448cb3e32eb2bd747d6612e077b8de6930c6cb2a5693c88c2a55e99f5c"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-09.json",
+        "bytes": 1579,
+        "sha256": "b5a89e2af76e5813a1b49e263d90f708276fc5fa5871119e391528187d5641c1",
+        "milestoneId": "BL-09",
+        "incomingState": "CANDIDATE",
+        "outgoingState": "CANDIDATE",
+        "disposition": "PASS",
+        "priorHash": "8f6ba0dc4b80505ecb213014bb027f8c20e45737d08503c12589219c903b5324"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-10.json",
+        "bytes": 1589,
+        "sha256": "c4e0231741e6b75a4a6b0e4b6930351e75459d677298f83a66ed19803da899f8",
+        "milestoneId": "BL-10",
+        "incomingState": "CANDIDATE",
+        "outgoingState": "CANDIDATE",
+        "disposition": "PASS",
+        "priorHash": "b5a89e2af76e5813a1b49e263d90f708276fc5fa5871119e391528187d5641c1"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-11.json",
+        "bytes": 1626,
+        "sha256": "e807e7d6a02a311cf3ce9a6a70f9c7ec9501120d68ab038731504f880d67ca98",
+        "milestoneId": "BL-11",
+        "incomingState": "CANDIDATE",
+        "outgoingState": "TECHNICALLY-QUALIFIED",
+        "disposition": "PASS",
+        "priorHash": "c4e0231741e6b75a4a6b0e4b6930351e75459d677298f83a66ed19803da899f8"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-12.json",
+        "bytes": 1647,
+        "sha256": "eb9645e16376a74960f12317888436f294ca832406fa76b302089b9a3bf213dc",
+        "milestoneId": "BL-12",
+        "incomingState": "TECHNICALLY-QUALIFIED",
+        "outgoingState": "TECHNICALLY-QUALIFIED",
+        "disposition": "PASS",
+        "priorHash": "e807e7d6a02a311cf3ce9a6a70f9c7ec9501120d68ab038731504f880d67ca98"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-13.json",
+        "bytes": 1626,
+        "sha256": "6a8e767373903db35f90f988313af87d00ddebad48651a83b48aa1f35a369f08",
+        "milestoneId": "BL-13",
+        "incomingState": "TECHNICALLY-QUALIFIED",
+        "outgoingState": "TECHNICALLY-QUALIFIED",
+        "disposition": "PASS",
+        "priorHash": "eb9645e16376a74960f12317888436f294ca832406fa76b302089b9a3bf213dc"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-14.json",
+        "bytes": 1622,
+        "sha256": "70531907903f2a2b210e5f4640a675ec02798ef77fcfb805b7491a7e0f81f35d",
+        "milestoneId": "BL-14",
+        "incomingState": "TECHNICALLY-QUALIFIED",
+        "outgoingState": "RELEASABLE",
+        "disposition": "PASS",
+        "priorHash": "6a8e767373903db35f90f988313af87d00ddebad48651a83b48aa1f35a369f08"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-15.json",
+        "bytes": 1575,
+        "sha256": "86f363f418cfd2434187fafa234902d331eb9fd07ad71d5e5567c237bf89f5ba",
+        "milestoneId": "BL-15",
+        "incomingState": "RELEASABLE",
+        "outgoingState": "OPERABLE",
+        "disposition": "PASS",
+        "priorHash": "70531907903f2a2b210e5f4640a675ec02798ef77fcfb805b7491a7e0f81f35d"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-16.json",
+        "bytes": 1628,
+        "sha256": "b0f3e38b3db4030dc454de787cdbf8fe6890e36039a3ae50fe37d73cd782caf0",
+        "milestoneId": "BL-16",
+        "incomingState": "OPERABLE",
+        "outgoingState": "OBSERVED",
+        "disposition": "PASS",
+        "priorHash": "86f363f418cfd2434187fafa234902d331eb9fd07ad71d5e5567c237bf89f5ba"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-17.json",
+        "bytes": 1616,
+        "sha256": "e2a76fed05d7bdaef4fc3210d9f662fd4d49253ea3de8f6fbd564e08287ac652",
+        "milestoneId": "BL-17",
+        "incomingState": "OBSERVED",
+        "outgoingState": "REQUALIFIED",
+        "disposition": "PASS",
+        "priorHash": "b0f3e38b3db4030dc454de787cdbf8fe6890e36039a3ae50fe37d73cd782caf0"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-18.json",
+        "bytes": 1611,
+        "sha256": "ac70c60ddee77d2b3b7ca2c7b3cb2d75998081f258dea505417179a32f7e20f0",
+        "milestoneId": "BL-18",
+        "incomingState": "REQUALIFIED",
+        "outgoingState": "CONTROLLED",
+        "disposition": "PASS",
+        "priorHash": "e2a76fed05d7bdaef4fc3210d9f662fd4d49253ea3de8f6fbd564e08287ac652"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-19.json",
+        "bytes": 1660,
+        "sha256": "2b5a71599e51cb8bfdbf566304f6cff974bdd7df3ad1f0d1472475f912b2f208",
+        "milestoneId": "BL-19",
+        "incomingState": "CONTROLLED",
+        "outgoingState": "RETIRED",
+        "disposition": "PASS",
+        "priorHash": "ac70c60ddee77d2b3b7ca2c7b3cb2d75998081f258dea505417179a32f7e20f0"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-20.json",
+        "bytes": 1631,
+        "sha256": "15006e872adcfdd1c4c6e37018f5474e2d9247cdcb693c4786a0f42621a8ed60",
+        "milestoneId": "BL-20",
+        "incomingState": "RETIRED",
+        "outgoingState": "REVIEWED",
+        "disposition": "PASS",
+        "priorHash": "2b5a71599e51cb8bfdbf566304f6cff974bdd7df3ad1f0d1472475f912b2f208"
+      }
+    ],
+    "seams": [
+      {
+        "fromChapter": "MLE-CH-07",
+        "artifact": "BL-06",
+        "toChapter": "MLE-CH-08"
+      },
+      {
+        "fromChapter": "MLE-CH-14",
+        "artifact": "BL-13",
+        "toChapter": "MLE-CH-15"
+      }
+    ],
+    "states": [
+      "UNORIENTED",
+      "ORIENTED",
+      "CONTRACTED",
+      "ADMISSIBLE",
+      "RECONSTRUCTIBLE",
+      "CANDIDATE",
+      "TECHNICALLY-QUALIFIED",
+      "HOLD",
+      "REJECT",
+      "RELEASABLE",
+      "OPERABLE",
+      "OBSERVED",
+      "REQUALIFIED",
+      "ROLLED-BACK",
+      "CONTROLLED",
+      "RETIRED",
+      "REVIEWED"
+    ],
+    "legalTransitions": [
+      {
+        "from": "UNORIENTED",
+        "to": "ORIENTED",
+        "evidence": "BL-00"
+      },
+      {
+        "from": "ORIENTED",
+        "to": "CONTRACTED",
+        "evidence": "BL-01"
+      },
+      {
+        "from": "CONTRACTED",
+        "to": "ADMISSIBLE",
+        "evidence": "BL-03 through BL-05"
+      },
+      {
+        "from": "ADMISSIBLE",
+        "to": "RECONSTRUCTIBLE",
+        "evidence": "BL-06 and BL-07"
+      },
+      {
+        "from": "RECONSTRUCTIBLE",
+        "to": "CANDIDATE",
+        "evidence": "BL-08"
+      },
+      {
+        "from": "CANDIDATE",
+        "to": "TECHNICALLY-QUALIFIED",
+        "evidence": "BL-09 through BL-11 PASS"
+      },
+      {
+        "from": "CANDIDATE",
+        "to": "HOLD",
+        "evidence": "BL-11 HOLD with named repair"
+      },
+      {
+        "from": "CANDIDATE",
+        "to": "REJECT",
+        "evidence": "BL-11 REJECT with reason"
+      },
+      {
+        "from": "HOLD",
+        "to": "CANDIDATE",
+        "evidence": "Named repair, new evidence, and new candidate identity"
+      },
+      {
+        "from": "REJECT",
+        "to": "CANDIDATE",
+        "evidence": "New task/candidate basis, new evidence, and requalification"
+      },
+      {
+        "from": "TECHNICALLY-QUALIFIED",
+        "to": "RELEASABLE",
+        "evidence": "BL-12 through BL-14"
+      },
+      {
+        "from": "RELEASABLE",
+        "to": "OPERABLE",
+        "evidence": "BL-15"
+      },
+      {
+        "from": "OPERABLE",
+        "to": "OBSERVED",
+        "evidence": "BL-16"
+      },
+      {
+        "from": "OBSERVED",
+        "to": "REQUALIFIED",
+        "evidence": "BL-17 repaired candidate passes qualification"
+      },
+      {
+        "from": "OBSERVED",
+        "to": "ROLLED-BACK",
+        "evidence": "BL-17 previous-good restoration"
+      },
+      {
+        "from": "REQUALIFIED",
+        "to": "CONTROLLED",
+        "evidence": "BL-18"
+      },
+      {
+        "from": "ROLLED-BACK",
+        "to": "CONTROLLED",
+        "evidence": "BL-18"
+      },
+      {
+        "from": "CONTROLLED",
+        "to": "RETIRED",
+        "evidence": "BL-19"
+      },
+      {
+        "from": "RETIRED",
+        "to": "REVIEWED",
+        "evidence": "BL-20"
+      }
+    ],
+    "forbiddenTransitions": [
+      "HOLD->RELEASABLE",
+      "REJECT->RELEASABLE"
+    ],
+    "reopenTriggers": [
+      {
+        "change": "purpose or intended use",
+        "reopenTarget": "CONTRACTED",
+        "invalidates": [
+          "task",
+          "population",
+          "acceptance",
+          "qualification",
+          "release"
+        ]
+      },
+      {
+        "change": "data, labels, features, or population",
+        "reopenTarget": "ADMISSIBLE",
+        "invalidates": [
+          "input conformance",
+          "experiment",
+          "qualification",
+          "release"
+        ]
+      },
+      {
+        "change": "runtime, dependencies, interface, or serving envelope",
+        "reopenTarget": "RECONSTRUCTIBLE",
+        "invalidates": [
+          "run identity",
+          "package",
+          "compatibility",
+          "operating evidence"
+        ]
+      },
+      {
+        "change": "authority, constraint, or permitted use",
+        "reopenTarget": "CONTRACTED",
+        "invalidates": [
+          "approvals",
+          "controls",
+          "technical disposition",
+          "release"
+        ]
+      }
+    ]
+  },
+  "labs": [
+    [
+      "MLE-CH-01-LAB-01",
+      "MLE-CH-01",
+      [
+        "FIX-MLE-CH-01-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-01-LAB-02",
+      "MLE-CH-01",
+      [
+        "FIX-MLE-CH-01-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-02-LAB-01",
+      "MLE-CH-02",
+      [
+        "FIX-MLE-CH-02-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-02-LAB-02",
+      "MLE-CH-02",
+      [
+        "FIX-MLE-CH-02-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-03-LAB-01",
+      "MLE-CH-03",
+      [
+        "FIX-MLE-CH-03-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-03-LAB-02",
+      "MLE-CH-03",
+      [
+        "FIX-MLE-CH-03-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-04-LAB-01",
+      "MLE-CH-04",
+      [
+        "FIX-MLE-CH-04-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-04-LAB-02",
+      "MLE-CH-04",
+      [
+        "FIX-MLE-CH-04-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-05-LAB-01",
+      "MLE-CH-05",
+      [
+        "FIX-MLE-CH-05-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-05-LAB-02",
+      "MLE-CH-05",
+      [
+        "FIX-MLE-CH-05-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-06-LAB-01",
+      "MLE-CH-06",
+      [
+        "FIX-MLE-CH-06-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-06-LAB-02",
+      "MLE-CH-06",
+      [
+        "FIX-MLE-CH-06-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-07-LAB-01",
+      "MLE-CH-07",
+      [
+        "FIX-MLE-CH-07-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-07-LAB-02",
+      "MLE-CH-07",
+      [
+        "FIX-MLE-CH-07-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-08-LAB-01",
+      "MLE-CH-08",
+      [
+        "FIX-MLE-CH-08-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-08-LAB-02",
+      "MLE-CH-08",
+      [
+        "FIX-MLE-CH-08-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-09-LAB-01",
+      "MLE-CH-09",
+      [
+        "FIX-MLE-CH-09-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-09-LAB-02",
+      "MLE-CH-09",
+      [
+        "FIX-MLE-CH-09-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-10-LAB-01",
+      "MLE-CH-10",
+      [
+        "FIX-MLE-CH-10-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-10-LAB-02",
+      "MLE-CH-10",
+      [
+        "FIX-MLE-CH-10-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-11-LAB-01",
+      "MLE-CH-11",
+      [
+        "FIX-MLE-CH-11-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-11-LAB-02",
+      "MLE-CH-11",
+      [
+        "FIX-MLE-CH-11-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-12-LAB-01",
+      "MLE-CH-12",
+      [
+        "FIX-MLE-CH-12-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-12-LAB-02",
+      "MLE-CH-12",
+      [
+        "FIX-MLE-CH-12-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-13-LAB-01",
+      "MLE-CH-13",
+      [
+        "FIX-MLE-CH-13-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-13-LAB-02",
+      "MLE-CH-13",
+      [
+        "FIX-MLE-CH-13-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-14-LAB-01",
+      "MLE-CH-14",
+      [
+        "FIX-MLE-CH-14-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-14-LAB-02",
+      "MLE-CH-14",
+      [
+        "FIX-MLE-CH-14-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-15-LAB-01",
+      "MLE-CH-15",
+      [
+        "FIX-MLE-CH-15-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-15-LAB-02",
+      "MLE-CH-15",
+      [
+        "FIX-MLE-CH-15-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-16-LAB-01",
+      "MLE-CH-16",
+      [
+        "FIX-MLE-CH-16-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-16-LAB-02",
+      "MLE-CH-16",
+      [
+        "FIX-MLE-CH-16-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-17-LAB-01",
+      "MLE-CH-17",
+      [
+        "FIX-MLE-CH-17-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-17-LAB-02",
+      "MLE-CH-17",
+      [
+        "FIX-MLE-CH-17-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-18-LAB-01",
+      "MLE-CH-18",
+      [
+        "FIX-MLE-CH-18-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-18-LAB-02",
+      "MLE-CH-18",
+      [
+        "FIX-MLE-CH-18-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-19-LAB-01",
+      "MLE-CH-19",
+      [
+        "FIX-MLE-CH-19-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-19-LAB-02",
+      "MLE-CH-19",
+      [
+        "FIX-MLE-CH-19-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-20-LAB-01",
+      "MLE-CH-20",
+      [
+        "FIX-MLE-CH-20-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-20-LAB-02",
+      "MLE-CH-20",
+      [
+        "FIX-MLE-CH-20-2"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-21-LAB-01",
+      "MLE-CH-21",
+      [
+        "FIX-MLE-CH-21-1"
+      ],
+      "synthetic-deterministic"
+    ],
+    [
+      "MLE-CH-21-LAB-02",
+      "MLE-CH-21",
+      [
+        "FIX-MLE-CH-21-2"
+      ],
+      "synthetic-deterministic"
+    ]
+  ],
+  "visuals": {
+    "records": [
+      [
+        "MLE-V01.1",
+        "MLE-CH-01",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V02.1",
+        "MLE-CH-02",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V03.1",
+        "MLE-CH-03",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V04.1",
+        "MLE-CH-04",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V05.1",
+        "MLE-CH-05",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-F05.1",
+        "MLE-CH-05",
+        "imagegen-candidate",
+        "reserved",
+        "assets/images/machine-learning-engineering/MLE-F05.1-2400x1600.png"
+      ],
+      [
+        "MLE-V06.1",
+        "MLE-CH-06",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V07.1",
+        "MLE-CH-07",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V08.1",
+        "MLE-CH-08",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V09.1",
+        "MLE-CH-09",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V10.1",
+        "MLE-CH-10",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V11.1",
+        "MLE-CH-11",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V12.1",
+        "MLE-CH-12",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V13.1",
+        "MLE-CH-13",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V14.1",
+        "MLE-CH-14",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-F14.1",
+        "MLE-CH-14",
+        "imagegen-candidate",
+        "reserved",
+        "assets/images/machine-learning-engineering/MLE-F14.1-2400x1600.png"
+      ],
+      [
+        "MLE-V15.1",
+        "MLE-CH-15",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V16.1",
+        "MLE-CH-16",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-F16.1",
+        "MLE-CH-16",
+        "imagegen-candidate",
+        "reserved",
+        "assets/images/machine-learning-engineering/MLE-F16.1-2400x1600.png"
+      ],
+      [
+        "MLE-V17.1",
+        "MLE-CH-17",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V18.1",
+        "MLE-CH-18",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-F18.1",
+        "MLE-CH-18",
+        "imagegen-candidate",
+        "reserved",
+        "assets/images/machine-learning-engineering/MLE-F18.1-2400x1600.png"
+      ],
+      [
+        "MLE-V19.1",
+        "MLE-CH-19",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V20.1",
+        "MLE-CH-20",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ],
+      [
+        "MLE-V21.1",
+        "MLE-CH-21",
+        "semantic-html-css",
+        "not-applicable",
+        null
+      ]
+    ],
+    "reservedRasterCandidates": [
+      "MLE-F05.1",
+      "MLE-F14.1",
+      "MLE-F16.1",
+      "MLE-F18.1"
+    ],
+    "generatedAssets": 0
+  },
+  "companion": {
+    "files": [
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/README.md",
+        "bytes": 2327,
+        "sha256": "0c1e386566c06c6e27bd5e02961da6faa51407110a35462f8aafe9423cbcbc1f"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/package.json",
+        "bytes": 163,
+        "sha256": "ddcc8770105d6afee147475bce28ea0b8507e4587086c6985a41c04fb89ff621"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/lib/canonical-json.mjs",
+        "bytes": 1599,
+        "sha256": "04926f7a0757339c5266c3a4ff4efa091a86ce6055c0c76e6f5978c63e11fff4"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/lib/evidence-envelope.mjs",
+        "bytes": 1207,
+        "sha256": "3451bd62271a9ed48c7cfbe90b08c0a8c34deebd2e6c460037fac4d3867e0fc4"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/lib/lifecycle.mjs",
+        "bytes": 3581,
+        "sha256": "8ec73808b043de8c24147164d28a30b977f6ad677a2d9db3b130ccfdcdaf377e"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/lib/ports.mjs",
+        "bytes": 1173,
+        "sha256": "923f3c1ad7f2dfab00fb72485b1fb89254153d944b955d53a7b129b4099feb3e"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/lib/dossier.mjs",
+        "bytes": 19023,
+        "sha256": "7acc8ae1e7b66e5777c1e1623caba6950f1f6a91e28ba209d931eb7889126bd3"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/lib/run.mjs",
+        "bytes": 14489,
+        "sha256": "fc604676744418ec4dce0dcd24c9d5e12aaf92dd428bbc1eaa8cf8fff24c67a0"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/contracts/evidence-envelope.schema.json",
+        "bytes": 833,
+        "sha256": "aa7aa86ae85f031edea7897b94a8d962a90594b5e34f97e0302ec01a3fb3b01f"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/contracts/dossier-record.schema.json",
+        "bytes": 1619,
+        "sha256": "ad38d69ec2967f236bf973172fa7ccebf87a602a4e87c41fff05d1e5ba9e4601"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/contracts/port-result.schema.json",
+        "bytes": 1881,
+        "sha256": "bcd895d371cdf3ef73075812edc3c1e4e84932663db47976fc1565ab1916c838"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/fixtures/bl-entry.json",
+        "bytes": 3538,
+        "sha256": "24b2ef5873262d45c5fbf5df16386dfc7df434fc56295a35b25d32fa2a32c8c9"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/fixtures/mutations.json",
+        "bytes": 2486,
+        "sha256": "9cc1e9acca3612f4568bfc03f58a5e9155e9df8d157096cf489558b86e3af736"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-00.json",
+        "bytes": 1529,
+        "sha256": "d362f770784ae16fb94bb14522bbe0163e1f3d8f5f645cbaf500ad87217c6d7c"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-01.json",
+        "bytes": 1600,
+        "sha256": "621cfe98286e805cf8523c739668e93e9f8d92104add916caa3e976ab680ccd0"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-02.json",
+        "bytes": 1594,
+        "sha256": "b591afccdab66159581571519f8d75476d263973f98f0ea3ecb53498b901d44f"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-03.json",
+        "bytes": 1623,
+        "sha256": "2c102c6a4c774db7fd168d785a5730619b927ffcb20e2f40ad6e70baa956b6ae"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-04.json",
+        "bytes": 1602,
+        "sha256": "70fbc2bcc47d7521d10d89eede497b719b026db55607054d74fb9820fd2af04f"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-05.json",
+        "bytes": 1587,
+        "sha256": "51ceedb372eba68c9ac0c1893df150e03a3c3317307054a8b2d060f44fb6a9bc"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-06.json",
+        "bytes": 1552,
+        "sha256": "e8116bff62ca7ef1aa00a5097a260b6a362586657efa43440310695c317ab051"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-07.json",
+        "bytes": 1605,
+        "sha256": "674536448cb3e32eb2bd747d6612e077b8de6930c6cb2a5693c88c2a55e99f5c"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-08.json",
+        "bytes": 1576,
+        "sha256": "8f6ba0dc4b80505ecb213014bb027f8c20e45737d08503c12589219c903b5324"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-09.json",
+        "bytes": 1579,
+        "sha256": "b5a89e2af76e5813a1b49e263d90f708276fc5fa5871119e391528187d5641c1"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-10.json",
+        "bytes": 1589,
+        "sha256": "c4e0231741e6b75a4a6b0e4b6930351e75459d677298f83a66ed19803da899f8"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-11.json",
+        "bytes": 1626,
+        "sha256": "e807e7d6a02a311cf3ce9a6a70f9c7ec9501120d68ab038731504f880d67ca98"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-12.json",
+        "bytes": 1647,
+        "sha256": "eb9645e16376a74960f12317888436f294ca832406fa76b302089b9a3bf213dc"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-13.json",
+        "bytes": 1626,
+        "sha256": "6a8e767373903db35f90f988313af87d00ddebad48651a83b48aa1f35a369f08"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-14.json",
+        "bytes": 1622,
+        "sha256": "70531907903f2a2b210e5f4640a675ec02798ef77fcfb805b7491a7e0f81f35d"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-15.json",
+        "bytes": 1575,
+        "sha256": "86f363f418cfd2434187fafa234902d331eb9fd07ad71d5e5567c237bf89f5ba"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-16.json",
+        "bytes": 1628,
+        "sha256": "b0f3e38b3db4030dc454de787cdbf8fe6890e36039a3ae50fe37d73cd782caf0"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-17.json",
+        "bytes": 1616,
+        "sha256": "e2a76fed05d7bdaef4fc3210d9f662fd4d49253ea3de8f6fbd564e08287ac652"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-18.json",
+        "bytes": 1611,
+        "sha256": "ac70c60ddee77d2b3b7ca2c7b3cb2d75998081f258dea505417179a32f7e20f0"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-19.json",
+        "bytes": 1660,
+        "sha256": "2b5a71599e51cb8bfdbf566304f6cff974bdd7df3ad1f0d1472475f912b2f208"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/expected/bl-20.json",
+        "bytes": 1631,
+        "sha256": "15006e872adcfdd1c4c6e37018f5474e2d9247cdcb693c4786a0f42621a8ed60"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/core.test.mjs",
+        "bytes": 7155,
+        "sha256": "d2d1bd7bdb37aba506fae811738d59170ea426241c9ab488549586b94d64ccf7"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/lifecycle.test.mjs",
+        "bytes": 2681,
+        "sha256": "e05c5af6ec4d3f0e618222eaffc97d19b80415b4d965554b6077a8be34d1ba35"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/ports.test.mjs",
+        "bytes": 1409,
+        "sha256": "fad41f0f2fb49cb437bda986132272605135fec30cb2316c6fd2410fd192620f"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/chapters-01-07.test.mjs",
+        "bytes": 1851,
+        "sha256": "283327da95ec35a7ddd96e0332d51d978531030a7ed22625dc3181d055290e06"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/chapters-08-14.test.mjs",
+        "bytes": 2110,
+        "sha256": "4ee555d0c6592375e8bf90a407f1abbb52712f7272f12ba5446333f295e9e345"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/chapters-15-21.test.mjs",
+        "bytes": 5601,
+        "sha256": "dc937498893bc4012317d1865a7948651b967391cc86f5f48f59433e1e3bef97"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/effects.test.mjs",
+        "bytes": 12742,
+        "sha256": "a50b3d356460a9f3bdd573d2664787cc5ac1312f233ffe4de8cc3add5d2fe6e5"
+      }
+    ],
+    "inventoryCount": 41,
+    "testFiles": [
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/chapters-01-07.test.mjs",
+        "bytes": 1851,
+        "sha256": "283327da95ec35a7ddd96e0332d51d978531030a7ed22625dc3181d055290e06"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/chapters-08-14.test.mjs",
+        "bytes": 2110,
+        "sha256": "4ee555d0c6592375e8bf90a407f1abbb52712f7272f12ba5446333f295e9e345"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/chapters-15-21.test.mjs",
+        "bytes": 5601,
+        "sha256": "dc937498893bc4012317d1865a7948651b967391cc86f5f48f59433e1e3bef97"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/core.test.mjs",
+        "bytes": 7155,
+        "sha256": "d2d1bd7bdb37aba506fae811738d59170ea426241c9ab488549586b94d64ccf7"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/effects.test.mjs",
+        "bytes": 12742,
+        "sha256": "a50b3d356460a9f3bdd573d2664787cc5ac1312f233ffe4de8cc3add5d2fe6e5"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/lifecycle.test.mjs",
+        "bytes": 2681,
+        "sha256": "e05c5af6ec4d3f0e618222eaffc97d19b80415b4d965554b6077a8be34d1ba35"
+      },
+      {
+        "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion/tests/ports.test.mjs",
+        "bytes": 1409,
+        "sha256": "fad41f0f2fb49cb437bda986132272605135fec30cb2316c6fd2410fd192620f"
+      }
+    ],
+    "testCommand": "npm test --prefix project-control/roles/machine-learning-engineer/books/machine-learning-engineering/companion",
+    "freshResult": {
+      "tests": 33,
+      "pass": 33,
+      "fail": 0
+    },
+    "ports": [
+      "PORT-MANAGED",
+      "PORT-CLASSICAL",
+      "PORT-DEEP",
+      "PORT-EDGE",
+      "PORT-SHARED"
+    ],
+    "effectBoundary": {
+      "network": 0,
+      "shell": 0,
+      "cloudSdk": 0,
+      "model": 0,
+      "secretReads": 0,
+      "repositoryWrites": 0
+    }
+  },
+  "validator": {
+    "module": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-08.mjs",
+      "bytes": 111935,
+      "sha256": "3a31bb40a68e35d0a7994a4ce7fa4ed62e66d512f8e9b71d3cb2113d91b4eb62"
+    },
+    "tests": {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-08.test.mjs",
+      "bytes": 87240,
+      "sha256": "3d00bdd770cfb71c9a2f3b2677d0e6794b1327912cdda8b07341150605c2db54"
+    },
+    "freshResult": {
+      "tests": 263,
+      "pass": 263,
+      "fail": 0
+    }
+  },
+  "reviewBindings": [
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-02-lane-a.md",
+      "bytes": 22097,
+      "sha256": "2ed28f8e336fcfb9f90e8b514128116a41b639370159dfed3b3fd7a7e8332a13"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-02-lane-a-repair.md",
+      "bytes": 13406,
+      "sha256": "9695aaadab309ca7cc99d8fd3ffbfd0e7da4dae3df2cee1d5e0b95d492fe3b6e"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-03-lane-b.md",
+      "bytes": 65131,
+      "sha256": "03be154cc76f6c0dcb6afad59317b6fa137353321c1546e26304984dc36854fa"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-03-lane-b-repair.md",
+      "bytes": 27063,
+      "sha256": "200f96820c60ab2fb2f7dd417099a6188191c1d606f8c96679601cfdfc35166c"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-04-lane-c.md",
+      "bytes": 18463,
+      "sha256": "a1bdef7c97da91723f356c95405000695ba403826a24a326af6d4f330dac6581"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-04-lane-c-repair.md",
+      "bytes": 13465,
+      "sha256": "0a9dd13da6b93f559ffbaa093bb989beb5538f5747a093db0483429d38e6e1cd"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-05-companion.md",
+      "bytes": 29918,
+      "sha256": "fe0d1d41dedeeeafb33738b042544260ba15591c8a959c23f7668d249694ac94"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-05-companion-repair.md",
+      "bytes": 15876,
+      "sha256": "8efd7c7014f44143c95204f5675798d4fc4c766cee02a2247936b7080a503fc7"
+    }
+  ],
+  "reviewAcceptance": {
+    "allTerminal": true,
+    "records": [
+      {
+        "taskId": "TASK-02",
+        "baseReviewSha256": "2ed28f8e336fcfb9f90e8b514128116a41b639370159dfed3b3fd7a7e8332a13",
+        "repairSha256": "9695aaadab309ca7cc99d8fd3ffbfd0e7da4dae3df2cee1d5e0b95d492fe3b6e",
+        "specVerdict": "SPEC COMPLIANCE PASS",
+        "qualityVerdict": "QUALITY APPROVED"
+      },
+      {
+        "taskId": "TASK-03",
+        "baseReviewSha256": "03be154cc76f6c0dcb6afad59317b6fa137353321c1546e26304984dc36854fa",
+        "repairSha256": "200f96820c60ab2fb2f7dd417099a6188191c1d606f8c96679601cfdfc35166c",
+        "specVerdict": "SPEC COMPLIANCE PASS",
+        "qualityVerdict": "QUALITY APPROVED"
+      },
+      {
+        "taskId": "TASK-04",
+        "baseReviewSha256": "a1bdef7c97da91723f356c95405000695ba403826a24a326af6d4f330dac6581",
+        "repairSha256": "0a9dd13da6b93f559ffbaa093bb989beb5538f5747a093db0483429d38e6e1cd",
+        "specVerdict": "SPEC COMPLIANCE PASS",
+        "qualityVerdict": "QUALITY APPROVED"
+      },
+      {
+        "taskId": "TASK-05",
+        "baseReviewSha256": "fe0d1d41dedeeeafb33738b042544260ba15591c8a959c23f7668d249694ac94",
+        "repairSha256": "8efd7c7014f44143c95204f5675798d4fc4c766cee02a2247936b7080a503fc7",
+        "specVerdict": "SPEC COMPLIANCE PASS",
+        "qualityVerdict": "QUALITY APPROVED"
+      }
+    ]
+  },
+  "originality": {
+    "status": "PASS",
+    "proseSameChapterResearchPackExact20WordMatches": 0,
+    "publishedOtherRoleExact20WordMatches": 0,
+    "ordinaryAuthorialInternalExact20WordDuplicates": 0,
+    "structuredProjectionExceptions": [
+      {
+        "chapterId": "MLE-CH-13",
+        "kind": "frozen-source-ledger",
+        "assessment": "Identical Kubernetes source-use rows only; prose-excluded and accepted by Task 03 independent reviewer."
+      },
+      {
+        "chapterId": "MLE-CH-14",
+        "kind": "frozen-source-ledger",
+        "assessment": "Identical MLflow source-use rows only; prose-excluded and accepted by Task 03 independent reviewer."
+      },
+      {
+        "chapterId": "MLE-CH-21",
+        "kind": "canonical-id-list",
+        "exactWords": 36,
+        "assessment": "One MLE-CLM-022 through BND-01..16 canonical identifier projection; structured machine mapping, not authorial prose."
+      }
+    ],
+    "humanReview": "PASS",
+    "proseExcludedAuditRequired": true
+  },
+  "integrationFiles": {
+    "registerPath": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/manuscript-register.json",
+    "reportPath": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/verification-report.md",
+    "handoffPath": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/manuscript/phase-09-handoff.md"
+  },
+  "stopBoundary": {
+    "privateProductionOnly": true,
+    "phase09Active": false,
+    "generatedImages": 0,
+    "pdfs": 0,
+    "publicationOutputs": 0,
+    "courseOutputs": 0,
+    "abhyaasOutputs": 0,
+    "newRoleOutputs": 0
+  }
+}
+

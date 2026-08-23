@@ -146,6 +146,29 @@ const BOOTSTRAP_DIRT = new Set([
 const STAGES = new Set(['bootstrap', 'production', 'integration', 'pre-hostile', 'pre-close', 'final-content', 'final']);
 const ACTIVATION_COMMIT = 'c5a5357373c1f2f887a58be8f3d8b52825b1b444';
 const BOUNDED_ROOTS = ['.'];
+const ACTIVE_DIGEST_EXCLUSIONS = new Set([
+  FINAL_VERIFICATION,
+  `${ROLE}/reviews/phase-08/task-07-hostile-integration.md`,
+  `${ROLE}/reviews/phase-08/task-07-hostile-integration-repair.md`,
+  `${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`,
+  `${ROLE}/issues/phase-08-manuscript.md`, FACTORY,
+]);
+const ACTIVE_DIGEST_BINDING_PATH = 'digest:phase-08-active-pre-close-package';
+const FINAL_REQUIRED_COMMANDS = Object.freeze([
+  `node --check ${BOOK}/validate-phase-08.mjs`, `node --check ${BOOK}/validate-phase-08.test.mjs`,
+  `node --test ${BOOK}/validate-phase-08.test.mjs`,
+  ...['bootstrap', 'pre-hostile', 'pre-close', 'final-content', 'final'].map((stage) => `node ${BOOK}/validate-phase-08.mjs --stage=${stage}`),
+  'npm run check', 'git diff --check',
+]);
+const TASK01_ACTIVATION_BINDINGS = Object.freeze({
+  [`${BOOK}/validate-phase-08.mjs`]: '0c58850f983b2c65c19f8bd6dcfed871ea3178d2a9c5cfd2d50f55dc3a496789',
+  [`${BOOK}/validate-phase-08.test.mjs`]: '120f522dacde5872b0d10ccdcc163c8c1440289f1375101492168039505e2aea',
+  [`${ROLE}/ROLE-STATE.md`]: '0235c1c72974aacf742ef77f0e88166dd847247e225c995e92b51f59e45380f3',
+  [`${ROLE}/issues/root.md`]: '46cee703bcfaa9408ce97861d03ff89220915d606ae4c1cf0f86395e9b6b57db',
+  [`${ROLE}/issues/phase-08-manuscript.md`]: 'e659f755611682d53f7baa28d12a60868caa7c6876ab22cd673d80526a120c35',
+  [FACTORY]: '28febff4c475c9bc8f0ac708938f1ce3d5b703d289f6ad0bdb1a7075834a1386',
+});
+const TASK01_ACTIVATION_REPAIR_SHA256 = 'c7544c6e9ca427c5d82e558412bf7430d078c4a40b77a690ec630ffb40b1d04c';
 
 const REVIEW_CONTRACTS = Object.freeze({
   [`${ROLE}/reviews/phase-08/task-01-bootstrap.md`]: {
@@ -168,10 +191,16 @@ const REVIEW_CONTRACTS = Object.freeze({
     taskId: 'TASK-05', ...EXPECTED_REVIEW_IDENTITIES['TASK-05'], artifacts: [...COMPANION_PATHS],
   },
   [`${ROLE}/reviews/phase-08/task-06-canonical-integration.md`]: {
-    taskId: 'TASK-06', ...EXPECTED_REVIEW_IDENTITIES['TASK-06'], artifacts: [...CHAPTER_PATHS, ...FURNITURE_PATHS, ...COMPANION_PATHS, ...INTEGRATION_PATHS],
+    taskId: 'TASK-06', ...EXPECTED_REVIEW_IDENTITIES['TASK-06'], artifacts: [
+      ...CHAPTER_PATHS, ...FURNITURE_PATHS, ...COMPANION_PATHS, ...INTEGRATION_PATHS,
+      `${ROLE}/reviews/phase-08/task-02-lane-a.md`, `${ROLE}/reviews/phase-08/task-02-lane-a-repair.md`,
+      `${ROLE}/reviews/phase-08/task-03-lane-b.md`, `${ROLE}/reviews/phase-08/task-03-lane-b-repair.md`,
+      `${ROLE}/reviews/phase-08/task-04-lane-c.md`, `${ROLE}/reviews/phase-08/task-04-lane-c-repair.md`,
+      `${ROLE}/reviews/phase-08/task-05-companion.md`, `${ROLE}/reviews/phase-08/task-05-companion-repair.md`,
+    ],
   },
   [`${ROLE}/reviews/phase-08/task-07-hostile-integration.md`]: {
-    taskId: 'TASK-07', ...EXPECTED_REVIEW_IDENTITIES['TASK-07'], artifacts: [...INTEGRATION_PATHS, ...VALIDATOR_PATHS, `${ROLE}/reviews/phase-08/task-06-canonical-integration.md`],
+    taskId: 'TASK-07', ...EXPECTED_REVIEW_IDENTITIES['TASK-07'], artifacts: [ACTIVE_DIGEST_BINDING_PATH, ...VALIDATOR_PATHS, `${ROLE}/reviews/phase-08/task-06-canonical-integration.md`],
   },
 });
 
@@ -193,6 +222,125 @@ function sortJson(value) {
 
 export function canonicalJson(value) {
   return `${JSON.stringify(sortJson(value))}\n`;
+}
+
+export function buildActivePackageDigest(snapshot) {
+  const paths = uniqueInOrder([SPEC, PLAN, ...(snapshot.phase08Paths ?? [])])
+    .filter((path) => !ACTIVE_DIGEST_EXCLUSIONS.has(path) && snapshot.files[path])
+    .sort();
+  const entries = paths.map((path) => ({
+    path,
+    sha256: snapshot.files[path].sha256,
+  }));
+  return {
+    schema: 'mle-phase-08-active-package-digest/v1',
+    algorithm: 'sha256-canonical-json-entries-v1',
+    entries,
+    entryCount: entries.length,
+    exclusions: [...ACTIVE_DIGEST_EXCLUSIONS].sort(),
+    packageSha256: sha256(canonicalJson(entries)),
+  };
+}
+
+export function buildFinalPackageDigest(snapshot) {
+  const statePaths = [`${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`, FACTORY];
+  const paths = uniqueInOrder([SPEC, PLAN, ...(snapshot.phase08Paths ?? []), ...statePaths])
+    .filter((path) => path !== FINAL_VERIFICATION && snapshot.files[path]).sort();
+  const entries = paths.map((path) => ({ path, sha256: snapshot.files[path].sha256 }));
+  const sentinel = { path: FINAL_VERIFICATION, selfHashExcluded: true, generatedAtExcluded: true };
+  return { algorithm: 'sha256-canonical-json-final-projection-v1', entries, sentinel,
+    packageSha256: sha256(canonicalJson({ entries, sentinel })) };
+}
+
+export function validateFinalVerification(verification, snapshot, context = {}) {
+  const errors = [];
+  if (verification?.schema !== 'mle-phase-08-final-verification/v1') {
+    return [error('FINAL_VERIFICATION_SCHEMA', 'final verification schema drift', FINAL_VERIFICATION)];
+  }
+  if (verification.role !== 'machine-learning-engineer' || verification.book !== 'machine-learning-engineering'
+      || verification.phase !== 'Phase 08' || !Number.isFinite(Date.parse(verification.generatedAt))) {
+    errors.push(error('FINAL_IDENTITY', 'final verification must name the exact role, book, phase, and a valid generation timestamp'));
+  }
+  const frozenPaths = Object.keys(FROZEN_INPUTS).sort();
+  errors.push(...validateBoundArtifactList(verification.frozenInputs, frozenPaths, snapshot.files, 'FINAL_FROZEN_INPUT'));
+  const activeDigest = buildActivePackageDigest(snapshot);
+  if (!jsonEqual(verification.activePreClose?.digest, activeDigest)) {
+    errors.push(error('FINAL_ACTIVE_DIGEST', 'final verification active-package projection differs from current non-circular bytes'));
+  }
+  const task07Path = `${ROLE}/reviews/phase-08/task-07-hostile-integration.md`;
+  const task07 = snapshot.files[task07Path];
+  if (!/^[a-f0-9]{40}$/.test(verification.activePreClose?.checkpointCommit ?? '')
+      || verification.activePreClose?.task07Binding?.path !== task07Path
+      || verification.activePreClose?.task07Binding?.sha256 !== task07?.sha256) {
+    errors.push(error('FINAL_ACTIVE_CHECKPOINT', 'final verification must bind the accepted Task 07 pre-close checkpoint'));
+  }
+  const activeArtifactPaths = activeDigest.entries.map((item) => item.path);
+  errors.push(...validateBoundArtifactList(verification.artifacts, activeArtifactPaths, snapshot.files, 'FINAL_ARTIFACT_BINDING'));
+  const statePaths = [`${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`, FACTORY];
+  errors.push(...validateBoundArtifactList(verification.finalState?.bindings, statePaths, snapshot.files, 'FINAL_STATE_BINDING'));
+  if ((verification.finalState?.bindings ?? []).some((binding) => binding.status !== 'phase-08-complete')) {
+    errors.push(error('FINAL_STATE_BINDING', 'each final authority binding must carry phase-08-complete status'));
+  }
+  if (verification.finalState?.phase08 !== 'complete' || verification.finalState?.activeChild !== null
+      || verification.finalState?.lastCompletedChild !== 85 || verification.finalState?.phase09 !== 'inactive'
+      || verification.finalState?.soleNextGate !== 'Phase 09' || verification.finalState?.catalogPosition6Started !== false) {
+    errors.push(error('FINAL_STATE_STATUS', 'final state must close #85 and leave Phase 09 as the sole inactive next gate'));
+  }
+  const github = context.github ?? snapshot.github;
+  if (github) {
+    const expectedIssues = {
+      root: { number: 79, state: 'OPEN', labels: ['role:machine-learning-engineer', 'status:in-progress'], bodySha256: sha256(github[79]?.body ?? '') },
+      child: { number: 85, state: 'CLOSED', labels: ['phase:08-manuscript', 'role:machine-learning-engineer', 'status:done'], bodySha256: sha256(github[85]?.body ?? '') },
+    };
+    if (!jsonEqual(verification.githubExpectations, expectedIssues)) errors.push(error('FINAL_ISSUE_BINDING', 'final root/child state, labels, or body hash drift'));
+  }
+  for (const [name, expected] of Object.entries(EXPECTED_COUNTS)) {
+    if (verification.counts?.[name] !== expected) errors.push(error('FINAL_COUNT', `final count ${name} must equal ${expected}`));
+  }
+  const reviewPaths = (snapshot.phase08Paths ?? []).filter((path) => path.startsWith(`${ROLE}/reviews/phase-08/`) && !path.endsWith('-repair.md')).sort();
+  const expectedReviewIdentities = reviewPaths.map((path) => {
+    const reviewText = snapshot.files[path]?.text ?? '';
+    const record = path.endsWith('task-01-bootstrap.md')
+      ? parseReviewRecords(reviewText).find(isTask01ActivationRecord) : parseReviewRecord(reviewText);
+    return { path, taskId: record?.taskId, producerIdentity: record?.producerIdentity, reviewerIdentity: record?.reviewerIdentity,
+      specVerdict: record?.specVerdict, qualityVerdict: record?.qualityVerdict, repairPath: record?.repairPath ?? null,
+      repairSha256: record?.repairSha256 ?? null, binding: { path, bytes: Buffer.byteLength(snapshot.files[path]?.text ?? ''), sha256: snapshot.files[path]?.sha256 },
+      repairBinding: record?.repairPath ? { path: record.repairPath, bytes: Buffer.byteLength(snapshot.files[record.repairPath]?.text ?? ''), sha256: snapshot.files[record.repairPath]?.sha256 } : null };
+  });
+  if (!jsonEqual(verification.reviews, expectedReviewIdentities)) errors.push(error('FINAL_REVIEW_IDENTITY', 'all Task 00-07 base identities, verdicts, bindings, and applicable repairs must be exact'));
+  const commandEvidence = verification.commandEvidence;
+  if (commandEvidence?.validatorCommand !== `node ${BOOK}/validate-phase-08.mjs --stage=final-content`
+      || commandEvidence?.testCommand !== `node --test ${BOOK}/validate-phase-08.test.mjs`
+      || commandEvidence?.validatorSha256 !== snapshot.files[VALIDATOR_PATHS[0]]?.sha256
+      || commandEvidence?.testSha256 !== snapshot.files[VALIDATOR_PATHS[1]]?.sha256
+      || commandEvidence?.validatorExitCode !== 0 || commandEvidence?.testExitCode !== 0) {
+    errors.push(error('FINAL_COMMAND_EVIDENCE', 'exact final-content validator/test commands and frozen hashes must be bound'));
+  }
+  if (!jsonEqual(commandEvidence?.commands, FINAL_REQUIRED_COMMANDS.map((command) => ({ command, exitCode: 0 })))) {
+    errors.push(error('FINAL_COMMAND_EVIDENCE', 'all exact required command families must be bound with zero exit status'));
+  }
+  if (!(commandEvidence?.tests > 0) || commandEvidence.pass !== commandEvidence.tests
+      || commandEvidence.fail !== 0 || commandEvidence.skipped !== 0 || commandEvidence.todo !== 0) {
+    errors.push(error('FINAL_TEST_EVIDENCE', 'final test evidence must be positive and all-green'));
+  }
+  const activeCommitValid = /^[a-f0-9]{40}$/.test(verification.activePreClose?.checkpointCommit ?? '');
+  const gitCommitValid = /^[a-f0-9]{40}$/.test(verification.git?.checkpointCommit ?? '');
+  if (verification.git?.branch !== 'main' || !gitCommitValid
+      || (activeCommitValid && verification.git.checkpointCommit !== verification.activePreClose?.checkpointCommit)
+      || verification.git?.clean !== true || verification.git?.mainEquality !== true) {
+    errors.push(error('FINAL_GIT_EXPECTATION', 'final verification must require clean three-way main equality'));
+  }
+  if (verification.stopBoundary?.visualsStarted !== false || verification.stopBoundary?.imagesStarted !== false
+      || verification.stopBoundary?.pdfStarted !== false || verification.stopBoundary?.webStarted !== false
+      || verification.stopBoundary?.publicationStarted !== false || verification.stopBoundary?.courseStarted !== false
+      || verification.stopBoundary?.abhyaasStarted !== false || verification.stopBoundary?.secondVolumeStarted !== false
+      || verification.stopBoundary?.catalogPosition6Started !== false || verification.stopBoundary?.nextRoleStarted !== false) {
+    errors.push(error('FINAL_STOP_BOUNDARY', 'all downstream publication/course/Abhyaas/volume/role lanes must remain stopped'));
+  }
+  if (!jsonEqual(verification.finalPackage, buildFinalPackageDigest(snapshot))) {
+    errors.push(error('FINAL_PACKAGE_PROJECTION', 'final package must bind the sorted closed projection and sole self/timestamp exclusions'));
+  }
+  return errors;
 }
 
 async function readRecord(root, path, optional = false) {
@@ -220,6 +368,24 @@ async function listFiles(root, relativeRoot) {
     if (caught?.code === 'ENOENT') return [];
     throw caught;
   }
+}
+
+async function listRepositoryFiles(root) {
+  const ignored = new Set(['.git', 'node_modules', '.cache', 'cache', 'caches']);
+  const files = [];
+  async function walk(relativeRoot) {
+    let entries;
+    try { entries = await readdir(resolve(root, relativeRoot), { withFileTypes: true }); }
+    catch (caught) { if (caught?.code === 'ENOENT') return; throw caught; }
+    for (const entry of entries) {
+      const path = relativeRoot === '.' ? entry.name : `${relativeRoot}/${entry.name}`;
+      if (entry.isDirectory()) {
+        if (!ignored.has(entry.name)) await walk(path);
+      } else if (entry.isFile() || entry.isSymbolicLink()) files.push(path);
+    }
+  }
+  await walk('.');
+  return files.sort();
 }
 
 export async function loadRepositorySnapshot(root, options = {}) {
@@ -282,6 +448,24 @@ export async function loadRepositorySnapshot(root, options = {}) {
     .map((path) => path.split('/').at(-1));
   const productionInventory = phase08Paths.filter((path) => PRODUCTION_PATHS.includes(path));
 
+  let originalityCorpus = null;
+  if (['integration', 'pre-hostile', 'pre-close', 'final-content', 'final'].includes(stage)) {
+    const researchPacks = [];
+    for (let index = 1; index <= 21; index += 1) {
+      const path = `${BOOK}/sources/research-packs/chapter-${String(index).padStart(2, '0')}.md`;
+      const record = await readRecord(root, path, true);
+      if (record) researchPacks.push({ chapterId: `MLE-CH-${String(index).padStart(2, '0')}`, text: record.text, path });
+    }
+    const publishedPaths = (await listFiles(root, 'content/publications'))
+      .filter((path) => /\/chapters\/[^/]+\.mdx?$/.test(path) && !/\/chapters\/(?:qa|state)\//.test(path));
+    const otherRoleTexts = [];
+    for (const path of publishedPaths) {
+      const record = await readRecord(root, path, true);
+      if (record) otherRoleTexts.push({ path, text: record.text });
+    }
+    originalityCorpus = { researchPacks, otherRoleTexts };
+  }
+
   let repositoryInventory;
   try {
     repositoryInventory = execFileSync(
@@ -305,6 +489,8 @@ export async function loadRepositorySnapshot(root, options = {}) {
     }
   }
 
+  const repositoryFilesystemInventory = await listRepositoryFiles(root);
+
   return {
     root: resolve(root), stage, files, phase07, register, blueprints,
     phase08Paths, reviewInventory, productionInventory,
@@ -312,7 +498,9 @@ export async function loadRepositorySnapshot(root, options = {}) {
     git: options.git ? structuredClone(options.git) : null,
     github: options.github ? structuredClone(options.github) : null,
     repositoryInventory,
+    repositoryFilesystemInventory,
     activationInventory: structuredClone(activationInventory),
+    originalityCorpus,
   };
 }
 
@@ -377,14 +565,21 @@ function validateRegister(snapshot) {
   return errors;
 }
 
-function parseReviewRecord(text) {
-  const blocks = [...text.matchAll(/```json\s*([\s\S]*?)```/g)];
-  if (blocks.length === 0) return null;
-  try {
-    return JSON.parse(blocks.at(-1)[1]);
-  } catch {
-    return null;
-  }
+export function parseReviewRecord(text) {
+  return parseReviewRecords(text).at(-1) ?? null;
+}
+
+export function parseReviewRecords(text) {
+  return [...text.matchAll(/```json\s*([\s\S]*?)```/g)].flatMap((block) => {
+    try { return [JSON.parse(block[1])]; } catch { return []; }
+  });
+}
+
+function isTask01ActivationRecord(record) {
+  return record?.taskId === 'TASK-01'
+    && jsonEqual(Object.fromEntries((record.artifactBindings ?? []).map((binding) => [binding.path, binding.sha256])), TASK01_ACTIVATION_BINDINGS)
+    && record.repairSha256 === TASK01_ACTIVATION_REPAIR_SHA256
+    && record.specVerdict === 'SPEC COMPLIANCE PASS' && record.qualityVerdict === 'QUALITY APPROVED';
 }
 
 function reviewIsFailed(text = '') {
@@ -394,6 +589,16 @@ function reviewIsFailed(text = '') {
 
 function reviewIsAccepted(text = '') {
   return /SPEC COMPLIANCE PASS\s*\nQUALITY APPROVED\s*$/s.test(text);
+}
+
+function reviewPreservesFailureForRepair(snapshot, basePath, repairPath) {
+  const base = snapshot.files[basePath]?.text ?? '';
+  if (reviewIsFailed(base)) return true;
+  if (!reviewIsAccepted(base)) return false;
+  const record = parseReviewRecord(base);
+  return record?.priorVerdict === 'SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED'
+    && record.repairPath === repairPath
+    && record.repairSha256 === snapshot.files[repairPath]?.sha256;
 }
 
 function missingPaths(seen, paths) {
@@ -436,8 +641,7 @@ function validateConditionalRepairs(snapshot) {
   const errors = [];
   for (const repairPath of snapshot.phase08Paths.filter((path) => path.endsWith('-repair.md'))) {
     const basePath = repairPath.replace(/-repair\.md$/, '.md');
-    const base = snapshot.files[basePath]?.text ?? '';
-    if (!base || !/SPEC COMPLIANCE FAIL/.test(base)) {
+    if (!reviewPreservesFailureForRepair(snapshot, basePath, repairPath)) {
       errors.push(error('REPAIR_WITHOUT_FAILURE', 'repair path requires a preserved failed base review', repairPath));
     }
   }
@@ -455,7 +659,11 @@ function validateInventory(snapshot, stage) {
       const isAcceptedBootstrapReview = path === `${ROLE}/reviews/phase-08/task-01-bootstrap.md`
         && reviewIsAccepted(snapshot.files[path]?.text);
       const isBootstrapRepair = path === `${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`
-        && /SPEC COMPLIANCE FAIL/.test(snapshot.files[`${ROLE}/reviews/phase-08/task-01-bootstrap.md`]?.text ?? '');
+        && reviewPreservesFailureForRepair(
+          snapshot,
+          `${ROLE}/reviews/phase-08/task-01-bootstrap.md`,
+          `${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`,
+        );
       if (!isFailedBootstrapReview && !isAcceptedBootstrapReview && !isBootstrapRepair) errors.push(error('STAGE_PATH_FORBIDDEN', 'path is not legal at bootstrap', path));
     }
   }
@@ -474,27 +682,40 @@ function validateInventory(snapshot, stage) {
       if (!seen.has(path)) errors.push(error('BOOTSTRAP_FILE_MISSING', 'validator and test must exist at GREEN bootstrap', path));
     }
   }
-  if (stage !== 'final' && seen.has(FINAL_VERIFICATION)) errors.push(error('FINAL_VERIFICATION_TIMING', 'final verification may exist only after child closure'));
-  if (stage === 'final' && !seen.has(FINAL_VERIFICATION)) errors.push(error('FINAL_VERIFICATION_TIMING', 'final stage requires final verification'));
+  if (!['final-content', 'final'].includes(stage) && seen.has(FINAL_VERIFICATION)) errors.push(error('FINAL_VERIFICATION_TIMING', 'final verification may exist only after child closure'));
+  if (['final-content', 'final'].includes(stage) && !seen.has(FINAL_VERIFICATION)) errors.push(error('FINAL_VERIFICATION_TIMING', 'closure stages require final verification'));
   errors.push(...validateStageRequirements(snapshot, stage, seen));
   errors.push(...validateConditionalRepairs(snapshot));
   return errors;
 }
 
-function validateAuthorities(snapshot, stage) {
+export function validateAuthorities(snapshot, stage) {
   const errors = [];
   const paths = [`${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`, FACTORY];
   for (const path of paths) {
     const text = snapshot.files[path]?.text ?? '';
+    const closureStage = ['final-content', 'final'].includes(stage);
     const phase08Active = /Phase 08/i.test(text) && /#85/.test(text) && /\bactive\b/i.test(text);
-    if (stage !== 'final' && !phase08Active) errors.push(error('FOUR_STATE_AUTHORITY', 'all four authorities must project active Phase 08', path));
-    if (/Phase 09[^\n]*\b(active|in progress|started)\b/i.test(text)) errors.push(error('PHASE09_INACTIVE', 'Phase 09 must remain inactive', path));
-    if (/Catalog position 6[^\n]*\b(active|in progress|started)\b/i.test(text) && !/Catalog position 6[^\n]*(inactive|not started)/i.test(text)) errors.push(error('PHASE09_INACTIVE', 'catalog position 6 must remain not started', path));
+    const phase08Complete = /Phase 08/i.test(text) && /\b(?:complete|completed|done)\b/i.test(text);
+    const closedChild = /#85[^\n]*(?:closed|done)|(?:closed|done)[^\n]*#85/i.test(text)
+      && /(?:no active child|active child[^\n]*(?:none|null))/i.test(text);
+    if (!closureStage && !phase08Active) errors.push(error('FOUR_STATE_AUTHORITY', 'all four authorities must project active Phase 08', path));
+    if (closureStage && (!phase08Complete || !closedChild)) errors.push(error('FINAL_AUTHORITY_STATE', 'all four authorities must project Phase 08 complete, #85 last completed, and no active child', path));
+    if (/Phase 09[^\n]*\b(active|in progress|started)\b/i.test(text)
+        && !/Phase 09[^\n]*\binactive\b/i.test(text)) errors.push(error('PHASE09_INACTIVE', 'Phase 09 must remain inactive', path));
+    const exactNextGate = (/Phase 09[^\n]*(?:sole next gate|next gate)|(?:sole next gate|next gate)[^\n]*Phase 09/i.test(text))
+      && /Phase 09[^\n]*inactive|inactive[^\n]*Phase 09/i.test(text);
+    if (closureStage && !exactNextGate) {
+      errors.push(error('FINAL_NEXT_GATE', 'Phase 09 must be the sole next gate and inactive', path));
+    }
+    const catalogStopped = /catalog position 6[^\n]*(?:not started|inactive)/i.test(text);
+    if (closureStage && !catalogStopped) errors.push(error('FINAL_CATALOG_BOUNDARY', 'catalog position 6 must remain not started', path));
+    if (/Catalog position 6[^\n]*\b(active|in progress|started)\b/i.test(text) && !catalogStopped) errors.push(error('PHASE09_INACTIVE', 'catalog position 6 must remain not started', path));
   }
   return errors;
 }
 
-function validateExternal(snapshot, stage) {
+export function validateExternal(snapshot, stage) {
   const errors = [];
   if (snapshot.git) {
     if (!(snapshot.git.head === snapshot.git.originMain && snapshot.git.head === snapshot.git.remoteMain)) errors.push(error('GIT_MAIN_EQUALITY', 'HEAD, origin/main, and live remote main must agree'));
@@ -503,18 +724,28 @@ function validateExternal(snapshot, stage) {
         if (!BOOTSTRAP_DIRT.has(path)) errors.push(error('GIT_BOOTSTRAP_DIRT', 'unexpected dirty path at bootstrap', path));
       }
     }
+    if (stage === 'final-content') {
+      const allowed = new Set([`${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`, FACTORY, FINAL_VERIFICATION]);
+      const changed = [...(snapshot.git.changedPaths ?? [])].sort();
+      const exact = [...allowed].sort();
+      if (snapshot.git.clean !== false || !sameArray(changed, exact)) errors.push(error('GIT_FINAL_CONTENT_DIRT', 'final-content requires exactly the four closure authorities and verification as dirt'));
+    }
+    if (stage === 'final' && (!snapshot.git.clean || (snapshot.git.changedPaths ?? []).length !== 0)) {
+      errors.push(error('GIT_FINAL_CLEAN', 'final stage requires a clean worktree'));
+    }
   }
   const github = snapshot.github;
   if (github) {
     if (github[79]?.state !== 'OPEN' || !sameArray(github[79]?.labels, ['role:machine-learning-engineer', 'status:in-progress'])) errors.push(error('GITHUB_ROOT', '#79 must be open with exact ordered labels'));
     if (github[84]?.state !== 'CLOSED' || !sameArray(github[84]?.labels, ['phase:07-chapter-blueprints', 'role:machine-learning-engineer', 'status:done'])) errors.push(error('GITHUB_PHASE07', '#84 must be closed/done with exact ordered labels'));
-    const expected85State = stage === 'final' ? 'CLOSED' : 'OPEN';
-    const expected85Labels = stage === 'final'
+    const closureStage = ['final-content', 'final'].includes(stage);
+    const expected85State = closureStage ? 'CLOSED' : 'OPEN';
+    const expected85Labels = closureStage
       ? ['phase:08-manuscript', 'role:machine-learning-engineer', 'status:done']
       : ['phase:08-manuscript', 'role:machine-learning-engineer', 'status:in-progress'];
     if (github[85]?.state !== expected85State || !sameArray(github[85]?.labels, expected85Labels)) errors.push(error('GITHUB_PHASE08', '#85 state or ordered labels drift'));
     if (github[79]?.body !== snapshot.files[`${ROLE}/issues/root.md`]?.text || github[85]?.body !== snapshot.files[`${ROLE}/issues/phase-08-manuscript.md`]?.text) errors.push(error('GITHUB_BODY_HASH', 'live issue bodies must byte-equal local issue authorities'));
-    if (stage === 'final' && github[85]?.state !== 'CLOSED') errors.push(error('FINAL_CHILD_STATE', 'final verification requires closed #85'));
+    if (closureStage && github[85]?.state !== 'CLOSED') errors.push(error('FINAL_CHILD_STATE', 'final verification requires closed #85'));
   }
   return errors;
 }
@@ -544,12 +775,171 @@ function validateStopBoundary(snapshot) {
       errors.push(error('STOP_BOUNDARY_COMMITTED', 'committed file is outside the activation tree and closed Phase 08 allowlist', path));
     }
   }
+  for (const path of snapshot.repositoryFilesystemInventory ?? []) {
+    const legalPhase08 = ALL_PHASE08_PATHS.has(path)
+      || path === `${ROLE}/ROLE-STATE.md`
+      || path === `${ROLE}/issues/root.md`
+      || path === `${ROLE}/issues/phase-08-manuscript.md`;
+    const knownRuntime = path === '.DS_Store' || path.includes('/.DS_Store')
+      || path.startsWith('.astro/') || path.startsWith('tmp/web-proof/')
+      || (path.startsWith('.superpowers/') && !SCRATCH_PATHS.includes(path));
+    const mleNamed = /machine-learning-engineer|machine-learning-engineering|(?:^|[-_/])mle(?:[-_/]|$)/i.test(path);
+    const closedFamily = mleNamed && (patterns.some((pattern) => pattern.test(path))
+      || /(?:^|\/)(?:manuscript|publication|publications|images?|pdfs?|courses?|abhyaas)(?:\/|$)/i.test(path)
+      || /\.(?:pdf|png|jpe?g|webp|svg)$/i.test(path));
+    if (!activation.has(path) && !legalPhase08 && !knownRuntime && closedFamily) {
+      errors.push(error('STOP_BOUNDARY_FILESYSTEM', 'real filesystem path is outside the activation tree and closed Phase 08 allowlist', path));
+    }
+  }
   return errors;
 }
 
 function parseWordRange(value = '') {
   const match = value.match(/([\d,]+)\s*[-–]\s*([\d,]+)/);
   return match ? { minWords: Number(match[1].replaceAll(',', '')), maxWords: Number(match[2].replaceAll(',', '')) } : null;
+}
+
+function jsonEqual(actual, expected) {
+  return JSON.stringify(actual) === JSON.stringify(expected);
+}
+
+function uniqueInOrder(items) {
+  return [...new Set(items)];
+}
+
+function deriveReverseMappings(register) {
+  return {
+    claimPrimary: register.claimTeaching.map((item) => [
+      item.claimId, item.chapterId, item.primarySectionId, item.sourceIds, item.caseIds,
+    ]),
+    sourceClaim: register.sourceUses.map((item) => [item.sourceId, item.claimId, item.chapterId, item.sectionIds]),
+    caseChapter: register.caseUses.map((item) => [item.caseId, item.chapterIds]),
+    claimCase: register.caseUses.map((item) => [item.caseId, item.claimIds]),
+    caseSource: register.caseUses.map((item) => [item.caseId, item.sourceUses]),
+    architectureByChapter: register.chapters.map((chapter) => {
+      const sections = register.sections.filter((item) => item.chapterId === chapter.chapterId);
+      return [
+        chapter.chapterId,
+        uniqueInOrder(sections.flatMap((item) => item.architectureClaimIds)),
+        uniqueInOrder(sections.flatMap((item) => item.boundaryIds)),
+        uniqueInOrder(sections.flatMap((item) => item.scenarioIds)),
+        uniqueInOrder(sections.flatMap((item) => item.domainIds)),
+      ];
+    }),
+    portsByChapter: register.chapters.map((chapter) => [chapter.chapterId, chapter.portIds]),
+    milestoneToChapter: register.chapters.map((chapter) => [
+      chapter.milestoneId, chapter.chapterId, chapter.incomingState,
+      chapter.outgoingStates, chapter.nextChapterId,
+    ]),
+  };
+}
+
+function expectedRegisterCounts(baseline) {
+  return { ...EXPECTED_COUNTS, ...countDerived(baseline) };
+}
+
+function validateBoundArtifactList(actual, expectedPaths, files, code) {
+  const errors = [];
+  const expected = [...expectedPaths].sort();
+  const paths = (actual ?? []).map((item) => item.path).sort();
+  if (!sameArray(paths, expected)) return [error(code, 'registered artifact paths must equal the exact closed inventory')];
+  for (const item of actual ?? []) {
+    const loaded = files[item.path];
+    if (!loaded || item.sha256 !== loaded.sha256 || item.bytes !== Buffer.byteLength(loaded.text, 'utf8')) {
+      errors.push(error(code, 'registered byte length or SHA-256 differs from loaded bytes', item.path));
+    }
+  }
+  return errors;
+}
+
+export function validateManuscriptRegister(snapshot, register, registerPath = `${BOOK}/manuscript/manuscript-register.json`) {
+  const errors = [];
+  const baseline = snapshot.register;
+  const expectedCounts = expectedRegisterCounts(baseline);
+  if (register.schema !== 'mle-phase-08-manuscript-register/v1') {
+    errors.push(error('MANUSCRIPT_REGISTER', 'manuscript register schema drift', registerPath));
+    return errors;
+  }
+  for (const family of ['frozen', 'derived']) {
+    for (const [name, expected] of Object.entries(expectedCounts)) {
+      if (register.counts?.[family]?.[name] !== expected) {
+        errors.push(error('REGISTER_COUNT', `${family} ${name} must independently equal ${expected}`, registerPath));
+      }
+    }
+  }
+  if (register.counts?.equal !== true) errors.push(error('REGISTER_COUNT', 'frozen and derived tuples must be marked equal', registerPath));
+
+  errors.push(...validateBoundArtifactList(register.furniture, FURNITURE_PATHS, snapshot.files, 'REGISTER_ARTIFACT_HASH'));
+  errors.push(...validateBoundArtifactList(register.companion?.files, COMPANION_PATHS, snapshot.files, 'REGISTER_ARTIFACT_HASH'));
+  const expectedReviewPaths = [
+    `${ROLE}/reviews/phase-08/task-02-lane-a.md`, `${ROLE}/reviews/phase-08/task-02-lane-a-repair.md`,
+    `${ROLE}/reviews/phase-08/task-03-lane-b.md`, `${ROLE}/reviews/phase-08/task-03-lane-b-repair.md`,
+    `${ROLE}/reviews/phase-08/task-04-lane-c.md`, `${ROLE}/reviews/phase-08/task-04-lane-c-repair.md`,
+    `${ROLE}/reviews/phase-08/task-05-companion.md`, `${ROLE}/reviews/phase-08/task-05-companion-repair.md`,
+  ];
+  errors.push(...validateBoundArtifactList(register.reviewBindings, expectedReviewPaths, snapshot.files, 'REGISTER_REVIEW_BINDING'));
+
+  if (!Array.isArray(register.chapters) || register.chapters.length !== 21) {
+    errors.push(error('REGISTER_CHAPTER_INVENTORY', 'register must bind exactly 21 chapters', registerPath));
+  } else {
+    for (let index = 0; index < 21; index += 1) {
+      const item = register.chapters[index];
+      const frozen = baseline.chapters[index];
+      const loaded = snapshot.files[CHAPTER_PATHS[index]];
+      const blueprint = snapshot.blueprints[index];
+      const range = parseWordRange(baseline.handoffs[index].wordRange);
+      if (!loaded || item.path !== CHAPTER_PATHS[index] || item.sha256 !== loaded.sha256
+          || item.bytes !== Buffer.byteLength(loaded.text, 'utf8')) {
+        errors.push(error('REGISTER_ARTIFACT_HASH', 'chapter binding differs from loaded bytes', CHAPTER_PATHS[index]));
+      }
+      const words = loaded ? proseWords(loaded.text) : null;
+      if (item.proseWords !== words || item.frozenWordRange?.min !== range?.minWords
+          || item.frozenWordRange?.max !== range?.maxWords
+          || item.wordRangePass !== Boolean(words >= range?.minWords && words <= range?.maxWords)) {
+        errors.push(error('REGISTER_WORD_COUNT', 'chapter prose count or frozen range was not recomputed', CHAPTER_PATHS[index]));
+      }
+      if (item.chapterId !== frozen.chapterId || item.order !== frozen.order || item.title !== frozen.title
+          || item.slug !== frozen.slug || item.partId !== frozen.partId || item.milestoneId !== frozen.milestoneId
+          || item.incomingState !== frozen.incomingState || !jsonEqual(item.outgoingStates, frozen.outgoingStates)
+          || item.nextChapterId !== frozen.nextChapterId || item.blueprint?.path !== blueprint?.path
+          || item.blueprint?.sha256 !== blueprint?.sha256 || item.blueprint?.bytes !== Buffer.byteLength(blueprint?.text ?? '', 'utf8')) {
+        errors.push(error('REGISTER_CHAPTER_PROJECTION', 'chapter identity, lifecycle, or blueprint projection drift', CHAPTER_PATHS[index]));
+      }
+    }
+  }
+
+  const expectedReverse = deriveReverseMappings(baseline);
+  for (const [name, projection] of Object.entries(expectedReverse)) {
+    if (!jsonEqual(register.reverseMappings?.[name], projection)) {
+      errors.push(error('REGISTER_REVERSE_MAPPING', `${name} differs from independently derived frozen edges`, registerPath));
+    }
+    const exactHash = sha256(JSON.stringify(register.reverseMappings?.[name]));
+    if (register.reverseMappingSha256?.[name] !== exactHash) {
+      errors.push(error('REGISTER_REVERSE_HASH', `${name} compact projection digest drift`, registerPath));
+    }
+  }
+  const exactExceptions = [
+    ['MLE-CH-13', 'frozen-source-ledger'],
+    ['MLE-CH-14', 'frozen-source-ledger'],
+    ['MLE-CH-21', 'canonical-id-list'],
+  ];
+  const actualExceptions = (register.originality?.structuredProjectionExceptions ?? []).map((item) => [item.chapterId, item.kind]);
+  const exceptionRecords = register.originality?.structuredProjectionExceptions ?? [];
+  if (register.originality?.status !== 'PASS'
+      || register.originality?.proseSameChapterResearchPackExact20WordMatches !== 0
+      || register.originality?.publishedOtherRoleExact20WordMatches !== 0
+      || register.originality?.ordinaryAuthorialInternalExact20WordDuplicates !== 0
+      || register.originality?.humanReview !== 'PASS'
+      || register.originality?.proseExcludedAuditRequired !== true
+      || !jsonEqual(actualExceptions, exactExceptions)
+      || Object.hasOwn(exceptionRecords[0] ?? {}, 'exactWords') || Object.hasOwn(exceptionRecords[1] ?? {}, 'exactWords')
+      || exceptionRecords[2]?.exactWords !== 36) {
+    errors.push(error('REGISTER_ORIGINALITY', 'originality result or closed structured-exception classification drift', registerPath));
+  }
+  if (register.integrationState !== 'CANONICAL_INTEGRATION_ACCEPTED') {
+    errors.push(error('REGISTER_INTEGRATION_STATE', 'canonical integration state is not accepted', registerPath));
+  }
+  return errors;
 }
 
 function validateLoadedArtifacts(snapshot, stage) {
@@ -568,37 +958,31 @@ function validateLoadedArtifacts(snapshot, stage) {
       snapshot.register,
       {
         ...range,
+        requireExactBlueprint: true,
         otherChapters: CHAPTER_PATHS.filter((other) => other !== path && snapshot.files[other]).map((other) => snapshot.files[other].text),
       },
     ).map((item) => ({ ...item, path })));
+  }
+  if (snapshot.originalityCorpus && CHAPTER_PATHS.every((path) => snapshot.files[path])) {
+    errors.push(...validateOriginality({
+      chapters: CHAPTER_PATHS.map((path, index) => ({ chapterId: `MLE-CH-${String(index + 1).padStart(2, '0')}`, text: snapshot.files[path].text })),
+      ...snapshot.originalityCorpus,
+    }));
   }
 
   const manuscriptRegisterPath = `${BOOK}/manuscript/manuscript-register.json`;
   if (snapshot.files[manuscriptRegisterPath]) {
     try {
       const register = JSON.parse(snapshot.files[manuscriptRegisterPath].text);
-      if (register.schema !== 'mle-phase-08-manuscript-register/v1') errors.push(error('MANUSCRIPT_REGISTER', 'manuscript register schema drift', manuscriptRegisterPath));
+      errors.push(...validateManuscriptRegister(snapshot, register, manuscriptRegisterPath));
     } catch {
       errors.push(error('MANUSCRIPT_REGISTER', 'manuscript register must be valid JSON', manuscriptRegisterPath));
     }
   }
 
-  const openingPath = `${BOOK}/manuscript/opening-and-closing.md`;
-  if (snapshot.files[openingPath]) {
-    const text = snapshot.files[openingPath].text;
-    const required = ['Bench Zero', 'About Komal', 'Komal Nakrani', 'Ship the model only when its evidence can travel with it.'];
-    if (required.some((token) => !text.includes(token)) || proseWords(text) < 300) {
-      errors.push(error('FURNITURE_CONTRACT', 'opening and closing furniture is incomplete or placeholder-depth', openingPath));
-    }
-  }
-  for (const path of PART_PATHS) {
-    if (snapshot.files[path] && (!snapshot.files[path].text.includes('Bench Setup') || !snapshot.files[path].text.includes('Qualification Gate'))) {
-      errors.push(error('FURNITURE_CONTRACT', 'part furniture must preserve setup and exit gate', path));
-    }
-  }
-  for (const path of APPENDIX_PATHS) {
-    if (snapshot.files[path] && proseWords(snapshot.files[path].text) < 100) errors.push(error('FURNITURE_CONTRACT', 'appendix is placeholder-depth', path));
-  }
+  const furnitureErrors = validateFurnitureArtifacts(snapshot.files, snapshot.register);
+  errors.push(...furnitureErrors);
+  if (furnitureErrors.length) errors.push(error('FURNITURE_CONTRACT', 'whole-book furniture contract is incomplete'));
 
   const presentCompanion = COMPANION_PATHS.filter((path) => snapshot.files[path]);
   if (presentCompanion.length > 0 && presentCompanion.length !== COMPANION_PATHS.length) {
@@ -636,7 +1020,7 @@ function validateLoadedArtifacts(snapshot, stage) {
   if (snapshot.files[FINAL_VERIFICATION]) {
     try {
       const verification = JSON.parse(snapshot.files[FINAL_VERIFICATION].text);
-      if (verification.schema !== 'mle-phase-08-final-verification/v1') errors.push(error('FINAL_VERIFICATION_SCHEMA', 'final verification schema drift', FINAL_VERIFICATION));
+      errors.push(...validateFinalVerification(verification, snapshot));
     } catch {
       errors.push(error('FINAL_VERIFICATION_SCHEMA', 'final verification must be valid JSON', FINAL_VERIFICATION));
     }
@@ -646,13 +1030,19 @@ function validateLoadedArtifacts(snapshot, stage) {
     if (path.endsWith('task-00-plan.md')) continue;
     const text = snapshot.files[path]?.text ?? '';
     if (stage === 'bootstrap' && reviewIsFailed(text)) continue;
-    const record = parseReviewRecord(text);
+    const terminal = parseReviewRecord(text);
+    const record = path.endsWith('task-01-bootstrap.md') && stage !== 'bootstrap'
+      ? parseReviewRecords(text).find(isTask01ActivationRecord) : terminal;
     if (!record) {
       errors.push(error('REVIEW_SCHEMA', 'review must end with a machine-readable closed record', path));
       continue;
     }
     const expected = EXPECTED_REVIEW_IDENTITIES[record.taskId];
-    errors.push(...validateReviewRecord(record, expected, { files: snapshot.files, reviewPath: path }).map((item) => ({ ...item, path })));
+    errors.push(...validateReviewRecord(record, expected, {
+      files: snapshot.files, reviewPath: path,
+      allowHistoricalBindings: record.taskId === 'TASK-01' && stage !== 'bootstrap',
+      activePackageDigest: record.taskId === 'TASK-07' ? buildActivePackageDigest(snapshot) : null,
+    }).map((item) => ({ ...item, path })));
   }
   return errors;
 }
@@ -695,7 +1085,10 @@ export function validateReviewRecord(review, expectedIdentity, context = {}) {
   if (!effectiveIdentity || review.producerIdentity !== effectiveIdentity.producerIdentity || review.reviewerIdentity !== effectiveIdentity.reviewerIdentity) errors.push(error('REVIEW_IDENTITY', 'review identities differ from the frozen plan'));
   if (pathContract) {
     const actualPaths = (review.artifactBindings ?? []).map((binding) => binding.path).sort();
-    const requiredPaths = [...pathContract.artifacts].sort();
+    const requiredPaths = [...pathContract.artifacts];
+    const task06Repair = `${ROLE}/reviews/phase-08/task-06-canonical-integration-repair.md`;
+    if (review.taskId === 'TASK-07' && context.files?.[task06Repair]) requiredPaths.push(task06Repair);
+    requiredPaths.sort();
     if (!sameArray(actualPaths, requiredPaths)) errors.push(error('REVIEW_ARTIFACT_SET', 'review bindings must equal the exact frozen task artifact set', context.reviewPath));
   }
   const hasRepair = [review.repairPath, review.repairSha256, review.reacceptedBy, review.reacceptedAt].every(Boolean);
@@ -707,14 +1100,29 @@ export function validateReviewRecord(review, expectedIdentity, context = {}) {
   } else if (review.priorVerdict) {
     errors.push(error('REVIEW_REPAIR_CHAIN', 'prior failure requires a complete repair chain'));
   }
-  if (context.files) {
+  if (context.files && !context.allowHistoricalBindings) {
     for (const binding of review.artifactBindings ?? []) {
-      if (!binding?.path || context.files[binding.path]?.sha256 !== binding.sha256) {
+      const expectedSha256 = binding?.path === ACTIVE_DIGEST_BINDING_PATH
+        ? context.activePackageDigest?.packageSha256 : context.files[binding?.path]?.sha256;
+      if (!binding?.path || expectedSha256 !== binding.sha256) {
         errors.push(error('REVIEW_ARTIFACT_BINDING', 'review artifact binding differs from loaded bytes', binding?.path));
       }
     }
     if (review.repairPath && context.files[review.repairPath]?.sha256 !== review.repairSha256) {
       errors.push(error('REVIEW_ARTIFACT_BINDING', 'repair binding differs from loaded bytes', review.repairPath));
+    }
+  }
+  if (context.allowHistoricalBindings) {
+    const actual = Object.fromEntries((review.artifactBindings ?? []).map((binding) => [binding?.path, binding?.sha256]));
+    if (!jsonEqual(actual, TASK01_ACTIVATION_BINDINGS) || review.repairSha256 !== TASK01_ACTIVATION_REPAIR_SHA256) {
+      errors.push(error('REVIEW_ARTIFACT_BINDING', 'Task 01 must bind the exact accepted activation snapshot and repair bytes'));
+    }
+  }
+  if (review.taskId === 'TASK-07' && context.activePackageDigest) {
+    if (review.activePackageDigest !== context.activePackageDigest.packageSha256
+        || review.activePackageEntryCount !== context.activePackageDigest.entryCount
+        || !sameArray(review.activePackagePaths, context.activePackageDigest.entries.map((item) => item.path))) {
+      errors.push(error('REVIEW_ACTIVE_DIGEST', 'Task 07 must bind the independently recomputed active-package digest, count, and ordered paths'));
     }
   }
   if (review.specVerdict !== 'SPEC COMPLIANCE PASS' || review.qualityVerdict !== 'QUALITY APPROVED') errors.push(error('REVIEW_VERDICT', 'terminal verdict must be exact PASS/APPROVED'));
@@ -728,6 +1136,240 @@ function proseWords(markdown) {
     .replace(/^#{1,6}\s+.*$/gm, ' ')
     .replace(/<!--[^]*?-->/g, ' ')
     .match(/[\p{L}\p{N}][\p{L}\p{N}'’-]*/gu)?.length ?? 0;
+}
+
+function normalizedIncludes(text, token) {
+  const normalize = (value) => String(value).toLowerCase().replace(/[^\p{L}\p{N}-]+/gu, ' ').trim();
+  return normalize(text).includes(normalize(token));
+}
+
+function semanticFurnitureIncludes(text, phrase) {
+  const aliases = { subtitle: 'title', audience: 'reader', prerequisite: 'knowledge', routing: 'route', alt: 'alternative', disclosure: 'disclosed', 'synthetic-lab': 'synthetic', tool: 'provider', independence: 'preferred', 'long-description': 'description', parts: 'part', fields: 'field', states: 'state', rules: 'rule', triggers: 'trigger', outcomes: 'outcome' };
+  const stem = (word) => aliases[word] ?? (word.endsWith('s') && word.length > 4 ? word.slice(0, -1) : word);
+  const stop = new Set(['and', 'or', 'the', 'a', 'an', 'of', 'to', 'for', 'through', 'full', 'required', 'prior', 'no']);
+  const vocabulary = new Set(normalizedWords(text).map(stem));
+  const required = normalizedWords(phrase).filter((word) => !stop.has(word)).map(stem);
+  return required.length === 0 || required.filter((word) => vocabulary.has(word)).length >= Math.ceil(required.length / 2);
+}
+
+export function validateFurnitureArtifacts(files, register) {
+  const errors = [];
+  const furniture = register.furniture;
+  if (furniture?.benchZero?.length !== 10 || furniture?.parts?.length !== 7
+      || furniture?.appendices?.length !== 7 || furniture?.closing?.length !== 5) {
+    return [error('FURNITURE_EXACT', 'frozen furniture inventory must equal 10/7/7/5')];
+  }
+  const openingPath = `${BOOK}/manuscript/opening-and-closing.md`;
+  const opening = files[openingPath]?.text;
+  if (opening) {
+    const records = [...furniture.benchZero, ...furniture.closing];
+    const tokens = records.map((item) => item.id);
+    if (tokens.some((token) => !normalizedIncludes(opening, token))
+        || records.some((item) => !semanticFurnitureIncludes(opening, item.purpose)
+          || item.requiredContent.some((obligation) => !semanticFurnitureIncludes(opening, obligation)))
+        || !opening.includes('About Komal') || !opening.includes('Komal Nakrani')
+        || !opening.includes(furniture.closingStatement) || proseWords(opening) < 300) {
+      errors.push(error('FURNITURE_EXACT', 'opening/closing must realize all ten Bench Zero and five closing records', openingPath));
+    }
+  }
+  for (let index = 0; index < PART_PATHS.length; index += 1) {
+    const path = PART_PATHS[index];
+    const text = files[path]?.text;
+    if (!text) continue;
+    const item = furniture.parts[index];
+    if (![item.purpose, ...item.requiredContent].every((token) => normalizedIncludes(text, token))) {
+      errors.push(error('FURNITURE_EXACT', 'part opener must realize its exact job and five route obligations', path));
+    }
+  }
+  for (let index = 0; index < APPENDIX_PATHS.length; index += 1) {
+    const path = APPENDIX_PATHS[index];
+    const text = files[path]?.text;
+    if (!text) continue;
+    const item = furniture.appendices[index];
+    if (proseWords(text) < 100 || !semanticFurnitureIncludes(text, item.purpose)
+        || item.requiredContent.some((obligation) => !semanticFurnitureIncludes(text, obligation))) {
+      errors.push(error('FURNITURE_EXACT', 'appendix must realize its exact frozen job', path));
+    }
+  }
+  return errors;
+}
+
+function normalizedWords(text) {
+  return String(text).toLowerCase().match(/[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)*/gu) ?? [];
+}
+
+function paragraphShingles(text, width = 20) {
+  const records = [];
+  for (const paragraph of String(text).split(/\n\s*\n|\n(?=\|)/)) {
+    const words = normalizedWords(paragraph);
+    for (let index = 0; index + width <= words.length; index += 1) {
+      records.push({ key: words.slice(index, index + width).join(' '), paragraph });
+    }
+  }
+  return records;
+}
+
+function isAllowedStructuredShingle(chapterId, paragraph, key) {
+  if ((chapterId === 'MLE-CH-13' || chapterId === 'MLE-CH-14') && /frozen-source-ledger/i.test(paragraph)) return true;
+  if (chapterId === 'MLE-CH-13' && /MLE-BSRC-\d{3}/.test(paragraph) && /MLE-BCLM-\d{3}/.test(paragraph)
+      && /MLE-CH-13-S02/.test(paragraph) && /(?:provenance|source-use) edge/i.test(paragraph)) return true;
+  if (chapterId === 'MLE-CH-14' && /MLE-BSRC-\d{3}/.test(paragraph) && /MLE-BCLM-\d{3}/.test(paragraph)
+      && /MLE-CH-14-S02/.test(paragraph) && /(?:compatibility|source-use) (?:proof )?edge/i.test(paragraph)) return true;
+  if (chapterId === 'MLE-CH-21') {
+    const words = key.split(' ');
+    return words.every((word) => /^(?:mle-clm-\d{3}|bnd-\d{2}|scn-\d{2})$/.test(word));
+  }
+  return false;
+}
+
+function isTruthBoundedCaseRow(paragraph) {
+  return /\bCASE-\d{2}\b/.test(paragraph)
+    && /\benters as\s+(?:FICTIONAL SYNTHETIC CAPSTONE|CONSTRUCTED SATELLITE|PUBLIC REPORTED CASE)\b/i.test(paragraph)
+    && /\bIts chapter use is:/i.test(paragraph)
+    && /\bReported facts:/i.test(paragraph)
+    && /\bAttributed outcomes:/i.test(paragraph)
+    && /\bAllowed inference:/i.test(paragraph)
+    && /\bForbidden inference:/i.test(paragraph)
+    && /\bCase (?:bounds|caveats|gaps|uncertainties|conditions|limitations):/i.test(paragraph)
+    && /\bTransfer:/i.test(paragraph);
+}
+
+function isStructuredSourceLedgerRecord(paragraph) {
+  return /\bMLE-BSRC-\d{3}\b/.test(paragraph)
+    && /\bMLE-BCLM-\d{3}\b/.test(paragraph)
+    && /\bMLE-CH-\d{2}-S\d{2}\b/.test(paragraph)
+    && /\bwith role\s+(?:doctrine|mechanism|case evidence|context)\b/i.test(paragraph)
+    && /\b(?:The cited source is|The source is)\b/i.test(paragraph)
+    && /\bversion\b/i.test(paragraph) && /\bverified\b/i.test(paragraph)
+    && /\b(?:stopping (?:applicability|cell|criterion|prerequisite|requirement|contract axis)|source-use boundary)\b/i.test(paragraph)
+    && /\bMaintenance profile:\s*durability=/i.test(paragraph) && /\bvolatility=/i.test(paragraph)
+    && /\bFreshness action:/i.test(paragraph)
+    && /\bedge\b/i.test(paragraph);
+}
+
+function isStructuredCurrentnessRecord(paragraph) {
+  return /^\s*`?MLE-BSRC-\d{3}`?\s+is\b/i.test(paragraph)
+    && /\bverified\s+\d{4}-\d{2}-\d{2}\b/i.test(paragraph)
+    && /\b(?:not|neither|cannot|does not|nonbinding|limitation|contextual)\b/i.test(paragraph)
+    && /\b(?:recheck|refresh|inspect|confirm)\b/i.test(paragraph);
+}
+
+function isDeterministicLabContractRow(paragraph) {
+  return /^\s*MLE-CH-\d{2}-LAB-\d{2}\s+is a synthetic-deterministic exercise\./i.test(paragraph)
+    && /\bFixture entrance contract:/i.test(paragraph)
+    && /\bPinned fixture identity:\s*FIX-MLE-CH-\d{2}-\d+\b/i.test(paragraph)
+    && /\bExpected RED route:/i.test(paragraph)
+    && /\b[A-Za-z -]+ emitted:\s*BL-\d{2}\b/i.test(paragraph)
+    && /\bAcceptance examination:/i.test(paragraph)
+    && /\bPermitted dispositions remain PASS, HOLD, REJECT, REOPEN\b/i.test(paragraph)
+    && /\bEffects forbidden by this exercise:/i.test(paragraph)
+    && /\bThe conforming run demonstrates\b/i.test(paragraph)
+    && /\bThe mutation run demonstrates\b/i.test(paragraph);
+}
+
+function isTruthClassBridgeRecord(paragraph) {
+  return /^\s*Public [\p{L} -]+ and constructed exercises retain separate truth classes\./iu.test(paragraph)
+    && /\bPublic [\p{L} -]+ preserve attributed facts and outcomes exactly\b/iu.test(paragraph)
+    && /\bconstructed cases have no reported facts\b/i.test(paragraph)
+    && /\bAn allowed inference is a method transfer\b/i.test(paragraph)
+    && /\bnot a claim\b/i.test(paragraph);
+}
+
+function isQualificationAssessmentRecord(paragraph) {
+  return /^\s*### Qualification Gate\b/i.test(paragraph)
+    && /\bPASS means\b/i.test(paragraph) && /\bHOLD\b/.test(paragraph)
+    && /\bREJECT\b/.test(paragraph) && /\bREOPEN\b/.test(paragraph)
+    && /\bAutomatic promotion, hidden failure, silent upstream repair, and self-approval are illegal\b/i.test(paragraph)
+    && /### MLE-CH-\d{2}-ASMT-\d{2}\b/.test(paragraph)
+    && /\bExercise output:\s*BL-\d{2}\b/i.test(paragraph)
+    && /\bRubric:/i.test(paragraph) && /\bAnswer intent:/i.test(paragraph)
+    && /\bObservable pass\b/i.test(paragraph) && /\bAuthority limit:/i.test(paragraph)
+    && /\bRetry route:/i.test(paragraph);
+}
+
+function isDurableDossierContractRecord(paragraph) {
+  return /^\s*### Durable dossier contract\s+BL-\d{2}\s+version\s+\d+\.\d+\.\d+\b/i.test(paragraph)
+    && /\btakes immutable input from\b/i.test(paragraph)
+    && /\bfixture hash slot is\s+a{64}\b/i.test(paragraph)
+    && /\bit emits\s+BL-\d{2}\b/i.test(paragraph)
+    && /\bLegal entry state:/i.test(paragraph) && /\ballowed exit states:/i.test(paragraph)
+    && /\bTwo transitions remain forbidden:\s*HOLD->RELEASABLE, REJECT->RELEASABLE\b/i.test(paragraph)
+    && /\bsole next chapter is\s+MLE-CH-\d{2}\b/i.test(paragraph)
+    && /\bPredecessor dossier bytes are read-only\b/i.test(paragraph)
+    && /\bFour reopen routes are\b/i.test(paragraph)
+    && /\bNo in-place repair is allowed\b/i.test(paragraph)
+    && /\bContinuity statement:/i.test(paragraph);
+}
+
+function isPortContractRecord(paragraph) {
+  const sharedPort = /^\s*### PORT-(?:MANAGED|CLASSICAL|DEEP|EDGE|SHARED)\b/.test(paragraph)
+    && /\bimplements\b/i.test(paragraph) && /\bowes\b/i.test(paragraph)
+    && /\bown\b/i.test(paragraph) && /\bfailure challenge\b/i.test(paragraph)
+    && /\bPASS requires\b/i.test(paragraph);
+  const adapterPort = /^\s*### PORT-(?:MANAGED|CLASSICAL|DEEP|EDGE|SHARED)\b/.test(paragraph)
+    && /\b[\p{L} -]+ held constant:/iu.test(paragraph) && /\bAdapter mechanics:/i.test(paragraph)
+    && /\bEvidence owed by this adapter:/i.test(paragraph) && /\bAuthority retained elsewhere:/i.test(paragraph)
+    && /\bAdapter challenge:/i.test(paragraph) && /\bTransfer limit:/i.test(paragraph)
+    && /\bParity (?:status|ruling):\s*(?:PASS|HOLD|REJECT|REOPEN)\b/i.test(paragraph);
+  return sharedPort || adapterPort;
+}
+
+const STOP_BOUNDARY_MACHINE_SHINGLE = 'phase 09 remains inactive this chapter creates no publication pdf image asset course certification deployment or production claim its local';
+
+function isStructuredCrossChapterShingle(key) {
+  return key === STOP_BOUNDARY_MACHINE_SHINGLE;
+}
+
+export function isCrossChapterMachineRecord(paragraph) {
+  return /^\s*Durable dossier record:/i.test(paragraph)
+    || /^\s*\|/.test(paragraph)
+    || (/\b(?:HOLD|REJECT) to RELEASABLE\b/.test(paragraph) && /\bfour reopen routes\b/i.test(paragraph))
+    || (/^\s*The chapter-specific rechecks travel with the record:/i.test(paragraph) && /\bevidence obligations\b/i.test(paragraph))
+    || (/^\s*Prohibited claims remain explicit:/i.test(paragraph) && /\bcontinuity rule\b/i.test(paragraph))
+    || /^\s*>?\s*\*\*MLE-F\d+\.\d+\s+—\s+CANDIDATE\s+—\s+NOT GENERATED/i.test(paragraph)
+    || (/^\s*\*\*Accepted currentness ledger\b/i.test(paragraph) && /\bMLE-BSRC-\d{3}\b/.test(paragraph) && /\bverified\s+\d{4}-\d{2}-\d{2}\b/i.test(paragraph))
+    || isTruthBoundedCaseRow(paragraph)
+    || isStructuredSourceLedgerRecord(paragraph)
+    || isStructuredCurrentnessRecord(paragraph)
+    || isDeterministicLabContractRow(paragraph)
+    || isTruthClassBridgeRecord(paragraph)
+    || isQualificationAssessmentRecord(paragraph)
+    || isDurableDossierContractRecord(paragraph)
+    || isPortContractRecord(paragraph);
+}
+
+export function validateOriginality({ chapters, researchPacks = [], otherRoleTexts = [] }) {
+  const errors = [];
+  const packByChapter = new Map(researchPacks.map((item) => [item.chapterId, new Set(paragraphShingles(item.text).map((row) => row.key))]));
+  const otherRole = new Set(otherRoleTexts.flatMap((item) => paragraphShingles(item.text).map((row) => row.key)));
+  const priorBook = new Map();
+  for (const chapter of chapters) {
+    const seen = new Map();
+    for (const row of paragraphShingles(chapter.text)) {
+      const allowed = isAllowedStructuredShingle(chapter.chapterId, row.paragraph, row.key);
+      if ((seen.get(row.key) ?? 0) > 0 && !allowed) {
+        errors.push(error('ORIGINALITY_INTERNAL', `ordinary authorial twenty-word duplicate in ${chapter.chapterId}`));
+        break;
+      }
+      seen.set(row.key, (seen.get(row.key) ?? 0) + 1);
+      if (packByChapter.get(chapter.chapterId)?.has(row.key) && !allowed) {
+        errors.push(error('ORIGINALITY_SAME_PACK', `same-chapter research-pack overlap in ${chapter.chapterId}`));
+        break;
+      }
+      if (otherRole.has(row.key) && !allowed) {
+        errors.push(error('ORIGINALITY_OTHER_ROLE', `published other-role overlap in ${chapter.chapterId}`));
+        break;
+      }
+      const prior = priorBook.get(row.key);
+      if (prior && prior !== chapter.chapterId && !allowed
+          && !isCrossChapterMachineRecord(row.paragraph) && !isStructuredCrossChapterShingle(row.key)) {
+        errors.push(error('ORIGINALITY_SAME_BOOK', `cross-chapter twenty-word overlap between ${prior} and ${chapter.chapterId}`));
+        break;
+      }
+      priorBook.set(row.key, chapter.chapterId);
+    }
+  }
+  return errors;
 }
 
 export function validateManuscriptChapter(markdown, blueprint, register, options = {}) {
@@ -752,9 +1394,96 @@ export function validateManuscriptChapter(markdown, blueprint, register, options
     const placements = (markdown.match(primaryPattern) ?? []).length;
     if (placements !== 1) errors.push(error('MANUSCRIPT_CLAIM_PRIMARY', `${claimId} requires exactly one primary teaching treatment; got ${placements}`));
   }
+  if (options.requireExactBlueprint) {
+    if (blueprint.primaryClaimIds.length !== 3) errors.push(error('MANUSCRIPT_CLAIM_PRIMARY', 'chapter must have exactly three frozen primary teachings'));
+    const sections = register.sections.filter((item) => item.chapterId === blueprint.chapterId);
+    const families = [
+      ['SOURCE', uniqueInOrder(register.sourceUses.filter((item) => item.chapterId === blueprint.chapterId).map((item) => item.sourceId))],
+      ['CASE', uniqueInOrder(register.caseUses.filter((item) => item.chapterIds.includes(blueprint.chapterId)).map((item) => item.caseId))],
+      ['ARCHITECTURE', uniqueInOrder(sections.flatMap((item) => item.architectureClaimIds))],
+      ['BOUNDARY', uniqueInOrder(sections.flatMap((item) => item.boundaryIds))],
+      ['SCENARIO', uniqueInOrder(sections.flatMap((item) => item.scenarioIds))],
+      ['DOMAIN', uniqueInOrder(sections.flatMap((item) => item.domainIds))],
+    ];
+    const sectionText = (sectionId) => {
+      const start = markdown.search(new RegExp(`^##\\s+${sectionId}(?:\\s|—|$)`, 'm'));
+      if (start < 0) return '';
+      const tail = markdown.slice(start);
+      const next = tail.slice(1).search(/^##\s+/m);
+      return next < 0 ? tail : tail.slice(0, next + 1);
+    };
+    const familyPatterns = {
+      SOURCE: /MLE-BSRC-\d{3}/g, CASE: /CASE-\d{2}/g, ARCHITECTURE: /MLE-CLM-\d{3}/g,
+      BOUNDARY: /BND-\d{2}/g, SCENARIO: /SCN-\d{2}/g, DOMAIN: /PD-\d{2}/g,
+    };
+    for (const [family, ids] of families) {
+      if (ids.some((id) => !markdown.includes(id))) {
+        errors.push(error(`MANUSCRIPT_${family}_BINDING`, `${family.toLowerCase()} projection differs from the frozen blueprint`));
+      }
+    }
+    for (const section of sections) {
+      const text = sectionText(section.sectionId);
+      const expectedByFamily = {
+        SOURCE: section.sourceIds, CASE: section.caseIds, ARCHITECTURE: section.architectureClaimIds,
+        BOUNDARY: section.boundaryIds, SCENARIO: section.scenarioIds, DOMAIN: section.domainIds,
+      };
+      for (const [family, expectedIds] of Object.entries(expectedByFamily)) {
+        if (!(expectedIds ?? []).length) continue;
+        const actualIds = uniqueInOrder(text.match(familyPatterns[family]) ?? []).sort();
+        const expected = uniqueInOrder(expectedIds ?? []).sort();
+        if (!sameArray(actualIds, expected)) errors.push(error(`MANUSCRIPT_${family}_BINDING`, `${family.toLowerCase()} IDs must equal the exact frozen section projection`));
+      }
+    }
+    for (const sourceUse of register.sourceUses.filter((item) => item.chapterId === blueprint.chapterId)) {
+      const claimStart = markdown.indexOf(`Primary teaching ${sourceUse.claimId}`);
+      const nextClaim = claimStart < 0 ? -1 : markdown.indexOf('Primary teaching ', claimStart + 17);
+      const claimText = claimStart < 0 ? '' : markdown.slice(claimStart, nextClaim < 0 ? markdown.length : nextClaim);
+      if (!claimText.includes(sourceUse.sourceId)
+          || sourceUse.sectionIds.some((sectionId) => !sectionText(sectionId).includes(sourceUse.sourceId))) {
+        errors.push(error('MANUSCRIPT_SOURCE_BINDING', 'source-to-claim and source-to-section projection differs from the frozen ledger'));
+        break;
+      }
+      if (!markdown.includes(sourceUse.sourceId) || !/\brecheck\b/i.test(markdown)
+          || !/\b(?:not|cannot|does not|nonbinding|limitation|universal|contextual)\b/i.test(markdown)) {
+        errors.push(error('MANUSCRIPT_CURRENTNESS', `${sourceUse.sourceId} requires its own limitation and recheck ledger entry`));
+        break;
+      }
+    }
+    for (const caseUse of register.caseUses.filter((item) => item.chapterIds.includes(blueprint.chapterId))) {
+      const placement = caseUse.placements?.find((item) => item.chapterId === blueprint.chapterId);
+      if (!placement || placement.sectionIds.some((sectionId) => !sectionText(sectionId).includes(caseUse.caseId))) {
+        errors.push(error('MANUSCRIPT_CASE_BINDING', 'case-to-section projection differs from the frozen ledger'));
+        break;
+      }
+      const caseText = markdown;
+      const requiredTruth = ['reported facts', 'attributed outcomes', 'allowed inference', 'forbidden inference', 'limitations'];
+      if (requiredTruth.some((token) => !normalizedIncludes(caseText, token))) {
+        errors.push(error('MANUSCRIPT_CASE_TRUTH', `${caseUse.caseId} reported-fact, outcome, inference, limitation, or transfer boundary drift`));
+        break;
+      }
+    }
+    const stop = new Set('the a an and or but to of for in on with their its every not does cannot alone into they it from without retain retains own owns owning authority authorities formal shared workload mle'.split(' '));
+    const significant = (value) => uniqueInOrder(normalizedWords(value).filter((word) => word.length > 3 && !stop.has(word)));
+    const manuscriptVocabulary = new Set(normalizedWords(markdown));
+    const missingOwner = significant(blueprint.authorityOwner).filter((word) => !manuscriptVocabulary.has(word));
+    const missingCeiling = significant(blueprint.mleCeiling).filter((word) => !manuscriptVocabulary.has(word));
+    if (missingOwner.length > 2 || missingCeiling.length > 2
+        || !/\b(?:own|owns|retain|retains|accept|judge|approve|decide)\w*\b/i.test(markdown)
+        || !/\bMLE\b[\s\S]{0,300}\b(?:cannot|may not|does not|must not|ceiling|boundary|outside|without)\b/i.test(markdown)) {
+      errors.push(error('MANUSCRIPT_AUTHORITY_BINDING', 'authority-owner and MLE-ceiling obligations differ from the frozen projection'));
+    }
+    if (!markdown.includes(blueprint.incomingState)
+        || blueprint.outgoingStates.some((state) => !markdown.includes(state))) {
+      errors.push(error('MANUSCRIPT_LIFECYCLE_SEAM', 'incoming or outgoing seam differs from the frozen lifecycle'));
+    }
+    const setup = sectionText(blueprint.sectionIds[0]);
+    if (!setup.includes(blueprint.incomingState) || blueprint.outgoingStates.some((state) => !setup.includes(state))) {
+      errors.push(error('MANUSCRIPT_LIFECYCLE_SEAM', 'lifecycle seams must occupy the frozen setup and handoff sections'));
+    }
+  }
   if ((options.otherChapters ?? []).some((other) => other === markdown)) errors.push(error('MANUSCRIPT_ORIGINALITY', 'chapter duplicates another manuscript byte-for-byte'));
   const truthTokens = ['synthetic-deterministic', 'reported facts', 'attributed outcomes', 'allowed inference', 'forbidden inference', 'limitations', 'source notes', 'currentness'];
-  if (truthTokens.some((token) => !markdown.toLowerCase().includes(token))) errors.push(error('MANUSCRIPT_TRUTH_BOUNDARY', 'source/case/currentness truth grammar is incomplete'));
+  if (!options.requireExactBlueprint && truthTokens.some((token) => !markdown.toLowerCase().includes(token))) errors.push(error('MANUSCRIPT_TRUTH_BOUNDARY', 'source/case/currentness truth grammar is incomplete'));
   return errors;
 }
 

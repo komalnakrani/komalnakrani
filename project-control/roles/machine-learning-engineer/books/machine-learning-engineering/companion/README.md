@@ -1,0 +1,11 @@
+# Machine Learning Engineering deterministic companion
+
+This private Phase 08 companion demonstrates the book's evidence-contract mechanics over fixed synthetic fixtures. It is local, offline, provider-neutral, deterministic, and effect-free by default. It needs Node.js only: no paid service, credential, model download, accelerator, database, network, shell command, cloud SDK, or production system.
+
+Run `npm test` from this directory. The tests exercise all five equal ports, the seventeen-state and nineteen-transition lifecycle, two forbidden transitions, four reopen triggers, twenty-one positive labs, twenty-one named changed-evidence labs, canonical JSON bytes, immutable dossier history, and path/effect denial.
+
+`runPort(port, options)` starts only at `BL-00` in a fresh caller-supplied real directory outside the repository. During that same Node.js process, its live unexported ownership capability permits ordered appends through `BL-20`; a marker copied into another directory or a directory presented by a later process is not authority to adopt it. Every append re-reads the exact canonical `BL-00` through predecessor bytes, hashes, states, inventory, root identity, and caller history. Gaps, forgery, tampering, replacement races, unrelated files, traversal, repository and protected absolute targets, pre-existing directories, symlinks, and out-of-root writes fail closed. Existing dossier files are never replaced.
+
+The primary chain uses `OBSERVED -> REQUALIFIED -> CONTROLLED`; the executable recovery branch uses `OBSERVED -> ROLLED-BACK -> CONTROLLED` and then converges on retirement and hostile review. Negative labs validate the same incoming state and predecessor hash. A named changed-evidence mutation retains its frozen diagnostic, while an explicit reopen trigger produces a separate `REOPEN_*` record that names the changed and invalidated evidence, source state, and reopen target.
+
+The five port labels identify mechanical adapters only. All enumerable decision and evidence fields remain equal, and no port is privileged. Results are synthetic-deterministic demonstrations. They do not prove model quality, real-hardware reproducibility, fleet SLOs, safety, legal or privacy approval, deployment readiness, production availability, business value, or complete retirement of unknown paths.

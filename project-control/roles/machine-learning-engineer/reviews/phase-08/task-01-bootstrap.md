@@ -600,3 +600,83 @@ FAIL/CHANGES verdict remains preserved.
 
 SPEC COMPLIANCE PASS
 QUALITY APPROVED
+
+## Current shared validator/test same-reviewer reacceptance — 2026-08-23
+
+The accepted activation snapshot and every historical FAIL/CHANGES and repair
+record above remain immutable evidence. This re-review is limited to the
+stage-aware evolution of the shared Phase 08 validator/test pair during active
+production; it does not change Task 01's activation semantics.
+
+Current bindings:
+
+- validator SHA-256:
+  `eb37ebd58aba574b54b9b52d00d060a369b7254161d4a51dcf23bd7eb0e5bce5`
+- test SHA-256:
+  `69bebc207a77cfc91313e53aa4037d4486ca96da2b5b5d78f4087e4d2a2392fb`
+- repair SHA-256:
+  `cb63b1fedc032fd3c0378a706350a3c27e0f49974d5c8fc489018b33693d8bf0`
+
+The validator change is bounded to exact machine-bound conditional-repair
+semantics. It no longer treats a quoted failure phrase as repair authority and
+requires an accepted review's machine record to bind the exact repair path and
+current repair bytes. The test changes isolate bootstrap assertions from the
+live production tree, add exact production and integration stage fixtures, and
+preserve the historical reconstruction in a temporary repository assembled
+only from pinned `8cf1fce...` bytes and failed-review SHA
+`f5956762f9db538c9d57039779f331114f60945ec0fd81032ca64427bbd6bcd1`.
+
+Under Node `v22.23.1`, both files pass syntax checks and the complete suite
+passes 204/204. The nested historical result remains exactly 200 tests, 167
+passes, and 33 failures. All prior exact graph, primary-teaching, review-path,
+artifact-byte, stage, path-escape, imported/transitive/throw-after-effect,
+five-port two-chain dossier, canonical-byte/hash, prior-link, disposition,
+transition, reopen, immutable-history, Git/GitHub authority, and complete
+tracked-tree gates remain closed. The accepted bootstrap lifecycle remains
+accepted and authorizing. Current production artifacts and lane review state
+are outside this Task 01 re-review.
+
+```json
+{
+  "taskId": "TASK-01",
+  "producerIdentity": "/root/mle_p8_bootstrap",
+  "reviewerIdentity": "/root/mle_p8_bootstrap_review",
+  "reviewedAt": "2026-08-22T07:40:11+05:30",
+  "artifactBindings": [
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-08.mjs",
+      "sha256": "eb37ebd58aba574b54b9b52d00d060a369b7254161d4a51dcf23bd7eb0e5bce5"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-08.test.mjs",
+      "sha256": "69bebc207a77cfc91313e53aa4037d4486ca96da2b5b5d78f4087e4d2a2392fb"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/ROLE-STATE.md",
+      "sha256": "0235c1c72974aacf742ef77f0e88166dd847247e225c995e92b51f59e45380f3"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/issues/root.md",
+      "sha256": "46cee703bcfaa9408ce97861d03ff89220915d606ae4c1cf0f86395e9b6b57db"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/issues/phase-08-manuscript.md",
+      "sha256": "e659f755611682d53f7baa28d12a60868caa7c6876ab22cd673d80526a120c35"
+    },
+    {
+      "path": "project-control/role-factory/FACTORY-STATE.md",
+      "sha256": "28febff4c475c9bc8f0ac708938f1ce3d5b703d289f6ad0bdb1a7075834a1386"
+    }
+  ],
+  "priorVerdict": "SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED",
+  "repairPath": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-01-bootstrap-repair.md",
+  "repairSha256": "cb63b1fedc032fd3c0378a706350a3c27e0f49974d5c8fc489018b33693d8bf0",
+  "reacceptedBy": "/root/mle_p8_bootstrap_review",
+  "reacceptedAt": "2026-08-23T12:15:52+05:30",
+  "specVerdict": "SPEC COMPLIANCE PASS",
+  "qualityVerdict": "QUALITY APPROVED"
+}
+```
+
+SPEC COMPLIANCE PASS
+QUALITY APPROVED

@@ -228,3 +228,34 @@ inside the direct suite and binds the exact current validator, test, and repair
 before requiring zero errors, accepted lifecycle, and production authorization.
 The live current failed review remains repair-in-progress and non-authorizing
 until the same reviewer accepts these exact bytes.
+
+## Same-reviewer shared validator/test reacceptance — 2026-08-23
+
+The accepted Task 01 activation snapshot, all historical failure and directed
+repair evidence, and the pinned `8cf1fce...` reconstruction remain immutable.
+During active Phase 08 production, the shared validator/test pair evolved only
+to make stage fixtures independent of the live production tree and to require
+machine-bound preserved failure semantics for conditional repair paths.
+
+Current shared identities:
+
+- validator SHA-256:
+  `eb37ebd58aba574b54b9b52d00d060a369b7254161d4a51dcf23bd7eb0e5bce5`
+- test SHA-256:
+  `69bebc207a77cfc91313e53aa4037d4486ca96da2b5b5d78f4087e4d2a2392fb`
+
+The bounded validator change rejects a quoted failure phrase as repair
+authority and accepts an exact preserved failure only when the accepted base
+machine record binds the exact repair path and current repair bytes. The test
+change moves bootstrap-only assertions to an immutable copied activation
+fixture, adds exact isolated production and integration stage inventories, and
+keeps the historical child isolated to pinned `8cf1fce...` bytes with failed
+review SHA-256
+`f5956762f9db538c9d57039779f331114f60945ec0fd81032ca64427bbd6bcd1`.
+
+Node `v22.23.1` syntax passes. The complete suite passes exactly 204/204,
+including production/integration stage regressions, all prior graph/review/
+effect/companion/full-tree gates, and a 1/1 reconstruction gate whose nested
+historical result remains exactly 200 tests, 167 passes, and 33 failures.
+This reacceptance updates only the current Task 01 shared-pair and repair
+bindings; it does not rewrite or reinterpret any earlier activation evidence.
