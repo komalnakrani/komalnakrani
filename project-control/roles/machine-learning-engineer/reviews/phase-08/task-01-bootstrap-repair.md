@@ -167,3 +167,36 @@ This is the final candidate for same-reviewer Task 01 acceptance. Production
 remains blocked until the reviewer binds these exact identities and the final
 repair SHA, appends exact PASS/APPROVED to the historical base review, and that
 accepted review is committed and pushed.
+
+## Same-reviewer repair iteration 4
+
+The next review is preserved at base-review SHA-256
+`e6c1b9d187080d38584e1cd638c88640a1ae0ed437b1289759bf0194ab1b5d1e`.
+It confirmed the full companion safety contract but found that two tests read
+the mutable live base review while hard-coding the pre-acceptance lifecycle,
+causing a legitimate appended acceptance to regress from 200/200 to 198/200.
+
+### Terminal test identity
+
+- Validator SHA-256 remains:
+  `0c58850f983b2c65c19f8bd6dcfed871ea3178d2a9c5cfd2d50f55dc3a496789`
+- Test SHA-256:
+  `24918a6ddbff2e3235b92b8bf9d285c3b850b15400dd46a2b6060001c4b1cfbc`
+
+### Lifecycle-test closure
+
+- Failed-history tests load immutable review bytes from committed checkpoint
+  `5fc2420fb2a4ea4d82d0badcd6cafc6f5c272111` and verify SHA-256
+  `f5956762f9db538c9d57039779f331114f60945ec0fd81032ca64427bbd6bcd1`.
+- The live-current-state assertion derives accepted versus repair-in-progress
+  from exact terminal verdict bytes instead of assuming one state.
+- The simulated accepted review binds the exact current validator/test hashes
+  and repair hash before requiring zero errors,
+  `bootstrapLifecycle=accepted`, and `productionAuthorized=true`.
+- Focused lifecycle tests pass 3/3, the direct suite passes 200/200, and the
+  reconstruction gate passes 1/1 while preserving the exact nested 200/167/33
+  historical RED. Syntax, live bootstrap, and diff checks pass.
+
+No production artifact was created. Production remains blocked until the same
+reviewer appends and commits terminal acceptance against this exact test and the
+final hash of this repair record.

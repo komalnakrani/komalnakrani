@@ -29,6 +29,8 @@ const ROLE = 'project-control/roles/machine-learning-engineer';
 const FACTORY = 'project-control/role-factory/FACTORY-STATE.md';
 const HEAD = 'c9edc934e463dc2d8837244f2512d5d9fe8579e8';
 const execFileAsync = promisify(execFile);
+const FAILED_TASK01_REVIEW_COMMIT = '5fc2420fb2a4ea4d82d0badcd6cafc6f5c272111';
+const FAILED_TASK01_REVIEW_SHA256 = 'f5956762f9db538c9d57039779f331114f60945ec0fd81032ca64427bbd6bcd1';
 
 const bootstrapGit = {
   head: HEAD,
@@ -126,8 +128,10 @@ test('loads the activated repository and passes the bootstrap contract without p
   assert.equal(report.counts.chapters, 21);
   assert.equal(report.productionInventory.length, 0);
   assert.equal(report.reviewInventory.includes('task-01-bootstrap.md'), true);
-  assert.equal(report.bootstrapLifecycle, 'repair-in-progress');
-  assert.equal(report.productionAuthorized, false);
+  const liveReview = await readFile(join(REPO, `${ROLE}/reviews/phase-08/task-01-bootstrap.md`), 'utf8');
+  const liveAccepted = /SPEC COMPLIANCE PASS\s*\nQUALITY APPROVED\s*$/s.test(liveReview);
+  assert.equal(report.bootstrapLifecycle, liveAccepted ? 'accepted' : 'repair-in-progress');
+  assert.equal(report.productionAuthorized, liveAccepted);
 });
 
 test('the bootstrap snapshot reads real state and all twenty-one blueprint files', async () => {
@@ -553,10 +557,18 @@ test('each stage rejects artifacts that belong only to a future stage', async (t
 });
 
 test('bootstrap explicitly classifies the preserved failed Task 01 review as repair-in-progress without authorizing production', async () => {
-  const report = await validateRepository(REPO, {
+  const root = await copiedBootstrapRoot();
+  const reviewPath = `${ROLE}/reviews/phase-08/task-01-bootstrap.md`;
+  const failedReview = await execFileAsync('git', ['show', `${FAILED_TASK01_REVIEW_COMMIT}:${reviewPath}`], {
+    cwd: REPO, encoding: 'utf8', maxBuffer: 20 * 1024 * 1024,
+  });
+  assert.equal(sha256(failedReview.stdout), FAILED_TASK01_REVIEW_SHA256);
+  await mkdir(dirname(join(root, reviewPath)), { recursive: true });
+  await writeFile(join(root, reviewPath), failedReview.stdout);
+  const report = await validateRepository(root, {
     stage: 'bootstrap',
     git: { ...bootstrapGit, head: 'c5a5357373c1f2f887a58be8f3d8b52825b1b444', originMain: 'c5a5357373c1f2f887a58be8f3d8b52825b1b444', remoteMain: 'c5a5357373c1f2f887a58be8f3d8b52825b1b444', changedPaths: [`${ROLE}/reviews/phase-08/task-01-bootstrap.md`] },
-    github: await bootstrapGithub(),
+    github: await bootstrapGithub(root),
   });
   assert.deepEqual(report.errors, []);
   assert.equal(report.bootstrapLifecycle, 'repair-in-progress');
@@ -584,6 +596,10 @@ test('real filesystem accepted Task 01 failure-repair-reacceptance chain authori
     reacceptedBy: '/root/mle_p8_bootstrap_review', reacceptedAt: '2026-08-22T12:00:00+05:30',
     specVerdict: 'SPEC COMPLIANCE PASS', qualityVerdict: 'QUALITY APPROVED',
   };
+  const bindingByPath = new Map(artifactBindings.map((binding) => [binding.path, binding.sha256]));
+  assert.equal(bindingByPath.get(`${BOOK}/validate-phase-08.mjs`), sha256(await readFile(join(root, `${BOOK}/validate-phase-08.mjs`), 'utf8')));
+  assert.equal(bindingByPath.get(`${BOOK}/validate-phase-08.test.mjs`), sha256(await readFile(join(root, `${BOOK}/validate-phase-08.test.mjs`), 'utf8')));
+  assert.equal(accepted.repairSha256, sha256(await readFile(join(root, repairPath), 'utf8')));
   await writeFile(join(root, basePath), `${await readFile(join(root, basePath), 'utf8')}\n\n\`\`\`json\n${JSON.stringify(accepted, null, 2)}\n\`\`\`\n\nSPEC COMPLIANCE PASS\nQUALITY APPROVED\n`);
   const acceptedHead = '8cf1fce280ffd5932201d33470255c98bd6e3aba';
   const report = await validateRepository(root, {
