@@ -206,6 +206,7 @@ SPEC COMPLIANCE FAIL
 QUALITY CHANGES REQUESTED
 
 
+
 ## Same-reviewer re-review — 2026-08-22
 
 Reviewer identity: `/root/mle_p8_bootstrap_review`
@@ -452,6 +453,62 @@ Commit and push the replacement test bytes, append the new exact test hash and
 RED/GREEN evidence to the repair record, and return to this same reviewer. The
 terminal state must pass the real bootstrap and the complete direct suite after
 the acceptance record exists; pre-acceptance GREEN is insufficient.
+
+SPEC COMPLIANCE FAIL
+QUALITY CHANGES REQUESTED
+
+## Terminal same-reviewer re-review — 2026-08-23
+
+Replacement checkpoint:
+`53cd464e4c83449ca7d472aa3fce57f62879159a`
+
+Replacement bindings:
+
+- validator:
+  `0c58850f983b2c65c19f8bd6dcfed871ea3178d2a9c5cfd2d50f55dc3a496789`
+- tests:
+  `24918a6ddbff2e3235b92b8bf9d285c3b850b15400dd46a2b6060001c4b1cfbc`
+- repair record:
+  `9065af0b56b36be30e6a64fafa4aae798930a2ada1a8f0606fc788ba5a7df79e`
+
+P08-BOOT-006 is materially repaired. The failed-history fixture loads the
+exact review bytes from `5fc2420fb2a4ea4d82d0badcd6cafc6f5c272111` and
+verifies SHA-256
+`f5956762f9db538c9d57039779f331114f60945ec0fd81032ca64427bbd6bcd1`.
+The live test derives its lifecycle from the actual terminal verdict. The
+accepted-review simulation binds the current validator, test, and repair bytes
+and returns zero errors, `bootstrapLifecycle=accepted`, and
+`productionAuthorized=true`. With an actual accepted machine record appended
+to this real base review, syntax and the real bootstrap pass and the direct
+suite remains exactly 200/200. All companion isolation, imported/throw-after-
+effect detection, full five-port two-chain dossier, canonical-byte, immutable-
+history, complete tracked-tree, review-binding, stage, authority, Git/GitHub,
+and no-production findings remain closed.
+
+### P08-BOOT-007 — Historical reconstruction still depends on the live terminal verdict
+
+The focused reconstruction gate is not terminal-state stable. Before the
+accepted record exists, the aggregate suite passes 201/201 and the nested final
+tests against validator checkpoint `8cf1fce...` reproduce 200 tests, 167 passes,
+and 33 failures. After appending the exact accepted machine record, the real
+bootstrap and direct 200-test suite still pass, but the nested reconstruction
+changes to 200 tests, 166 passes, and 34 failures. Its outer assertion still
+requires 200/167/33, so the focused gate fails 0/1 and the aggregate suite exits
+`1` at 200 passes and 1 failure. The nested test copies only the historical
+validator and current test bytes; those tests retain the absolute live
+repository path, so one historical-validator expectation continues to observe
+the mutable accepted base review.
+
+Required repair: make the embedded historical reconstruction execute against a
+complete immutable historical repository/review fixture rather than the live
+base review, or explicitly inject the pinned failed review and every other
+historical state input into the nested run. Preserve the exact reconstructible
+200/167/33 result independently of whether the live review is failed,
+repair-in-progress, or accepted. Commit and push the replacement test, append
+its exact identity and RED/GREEN evidence to the repair record, and return to
+this same reviewer. Acceptance requires the real appended terminal record to
+leave syntax, real bootstrap, direct 200/200, and focused reconstruction 1/1
+all green in the same on-disk state.
 
 SPEC COMPLIANCE FAIL
 QUALITY CHANGES REQUESTED
