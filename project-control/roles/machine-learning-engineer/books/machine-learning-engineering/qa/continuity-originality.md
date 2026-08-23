@@ -30,7 +30,7 @@ surfaces.
 
 | Opening ID | Audit disposition | Result |
 |---|---|---|
-| `P09-OPEN-01` | accepted | Reader-facing phase, blueprint, production-specification, private-package, and next-work instructions are present. See `P09-CON-001`. |
+| `P09-OPEN-01` | accepted | Reader-facing phase, blueprint, production-specification, private-package, generation/implementation-status, and next-work instructions are present. See `P09-CON-001`. |
 | `P09-OPEN-02` | accepted | The three chapter lanes have incompatible H1 and metadata regimes. See `P09-CON-002` and `P09-CON-003`. |
 | `P09-OPEN-03` | accepted | Identifier-stripped reconstruction confirms both named 75-word repeats and exposes additional templated authorial frames. See `P09-CON-004` and `P09-CON-005`. |
 
@@ -67,8 +67,8 @@ after identifier removal.
 
 ### P09-CON-001 — HIGH — Reader prose contains private production control
 
-**Affected identities:** `MLE-CH-01` through `MLE-CH-14`, `MLE-CH-16`,
-`MLE-CH-18`, `MLE-CH-20`, `MLE-CH-21`, `FURN-BZ-03`, and `Appendix G`.
+**Affected identities:** `MLE-CH-01` through `MLE-CH-21`, `FURN-BZ-03`, and
+`Appendix G`.
 
 The reader is repeatedly told what Phase 08 or Phase 09 may do, how a producer
 must create the chapter, what a future phase may generate, and which later work
@@ -89,6 +89,14 @@ examples include:
 - Phase-specific visual production instructions occur at `chapter-05.md:66`,
   `chapter-08.md:71`, `chapter-10.md:75`, `chapter-11.md:73`,
   `chapter-14.md:79-81`, `chapter-16.md:48`, and `chapter-18.md:42`.
+- The complete Lane C top-of-chapter visual-placeholder family exposes current
+  phase or implementation status in reader prose: `chapter-15.md:3`,
+  `chapter-16.md:3`, `chapter-17.md:3`, `chapter-18.md:3`,
+  `chapter-19.md:3`, `chapter-20.md:3`, and `chapter-21.md:3`. Chapters 15, 17,
+  and 19 were absent from the original affected-identity list even though their
+  lines explicitly say the visual is a placeholder and/or that no asset is
+  created. The other four lines belong to the same reader-visible family and
+  must be reconciled under one disposition rather than treated piecemeal.
 - Later-role/package status leaks at `chapter-18.md:100`,
   `chapter-20.md:104`, and `chapter-21.md:98`.
 - Reader furniture identifies the edition as private Phase 08 production at
@@ -102,10 +110,15 @@ producer instruction, private-package status, and next-work boundary must not.
 **Proposed disposition:** Task 07 should rewrite each affected passage as one
 of: a reader-facing limitation, an edition-neutral visual/accessibility
 contract, or a currentness trigger. Delete historical lifecycle commands and
-authoring instructions. Preserve teaching content, canonical IDs, and genuine
-non-proof boundaries. Verification must search actual reader bytes for phase,
-factory, blueprint-activation, producer/reviewer, private-package, and
-production-specification language rather than relying on a word allowlist.
+authoring instructions. For every Chapter 15–21 top visual record, retain its
+exact visual ID, decision purpose, selectable-text/accessibility meaning, and
+canonical register binding while moving phase/generation/placeholder status
+out of reader prose or rewriting that status as edition-neutral reader content.
+Preserve teaching content, canonical IDs, and genuine non-proof boundaries.
+Verification must search actual reader bytes for phase, factory,
+blueprint-activation, producer/reviewer, private-package,
+generation/implementation-state, and production-specification language rather
+than relying on a word allowlist.
 
 ### P09-CON-002 — HIGH — Three incompatible H1 and metadata regimes
 
@@ -315,7 +328,9 @@ not a blocking identity defect.
 3. All 20 adjacent seams and seven part exits must be recomputed from actual
    bytes; Chapter 19 must explicitly consume `BL-17`.
 4. Reader bytes must contain no factory, phase-control, producer/reviewer,
-   private-package, production-specification, or next-work instruction.
+   private-package, production-specification, generation/implementation-state,
+   or next-work instruction. The seven Chapter 15–21 top visual records must
+   retain their visual IDs and accessibility meaning in edition-neutral prose.
 5. Identifier-stripped, paragraph-bounded twenty-word scans must return zero
    ordinary same-book, internal, same-pack, and published-other-role matches.
    Any intentional structured match must be an exact byte-bound registered row,
@@ -329,9 +344,10 @@ Result: **6 findings — 5 HIGH, 1 MEDIUM.** Reader continuity is structurally
 recoverable: identity order, part order, 19 adjacent seams, canonical titles and
 slugs, furniture routes, same-pack originality, published-other-role
 originality, and within-file originality are sound. Content lock is blocked by
-private production leakage, incompatible reader conventions, lane voice
-fracture, two confirmed exact long-repeat groups, broader same-book templating,
-and the Chapter 19 predecessor omission.
+private production and visual implementation-status leakage across all three
+lanes, incompatible reader conventions, lane voice fracture, two confirmed
+exact long-repeat groups, broader same-book templating, and the Chapter 19
+predecessor omission.
 
 The audited 36-file reader corpus totals exactly **814,757 bytes**. Its
 canonical framed digest—lexicographically sorted relative path, NUL, decimal

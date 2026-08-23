@@ -21,10 +21,13 @@ test, failure response, authority boundary, limitation, and next-evidence
 route. This is not a count-only pass, however. Chapter 19 collapses a required
 five-dossier prerequisite chain to `BL-17` in the actual lab input, so its
 promised task-to-retirement reverse trace is not executable from the exercise
-as written. Separately, the current Phase 09 test module contains a temporal
-negative fixture that becomes false after its paired Task 01 repair is present;
-the historical Phase 08 result remains valid, but the current tree does not yet
-have a monotonic green verification suite.
+as written. Separately, four current Phase 09 tests load mutable real-repository
+state while asserting historical bootstrap or failed-review states. After the
+accepted Task 01 repair and four authorized audit reports exist, the suite is
+exactly `132/136`: three bootstrap assertions reject the legitimate audit
+inventory, and one failed-base assertion rejects the accepted repair. The
+historical Phase 08 result remains valid, but the current tree does not yet have
+a monotonic green verification suite.
 
 ## Method and evidence standard
 
@@ -221,13 +224,26 @@ green line.
   `PHASE09_INACTIVE` expectation. That result is not a manuscript regression
   and must not overwrite the historical checkpoint; it proves why current
   lifecycle evidence needs a Phase 09-owned validator.
-- The current Phase 09 test module does reconstruct the 30 current graph/count
-  families and the isolated historical replay. However, after the accepted
-  paired Task 01 repair file exists, its real-repository negative test at
-  `validate-phase-09.test.mjs:277-281` still expects
-  `TASK01_REVIEW_NOT_ACCEPTED`. The actual error list is empty because the repair
-  is now accepted. The test therefore fails on the state it was designed to
-  authorize. This is `P09-COV-002`, not evidence against the historical replay.
+- A fresh complete Phase 09 run after all four authorized audit reports were
+  committed is exactly `132/136` in 119,694 ms, with four failures, zero
+  cancelled, zero skipped, and zero todo. The isolated historical replay remains
+  `263/263`, and all 30 current graph/count subtests pass. The four failures are:
+
+  | Test | Exact lines | Observed current-state failure |
+  |---|---:|---|
+  | `loads real repository bytes and accepts the active bootstrap only` | `validate-phase-09.test.mjs:109-120` | `validateRepository(REPO, stage=bootstrap)` sees the four authorized QA reports plus current audit reviews and emits `STAGE_PATH_FORBIDDEN` and `BOOTSTRAP_QA_ABSENT` instead of the asserted empty list. |
+  | `all four real authorities project Phase 09 active and Phase 10 inactive` | `validate-phase-09.test.mjs:186-193` | `loadBootstrap()` loads the same mutable audit inventory, so the authority assertions pass but the final bootstrap validation fails on later-stage paths. |
+  | `bootstrap distinguishes exact producer working-tree dirt from a clean immutable checkpoint` | `validate-phase-09.test.mjs:266-275` | Both the working and checkpoint snapshots are loaded from the current audit repository; the first asserted empty bootstrap result fails before the intended Git-mode distinction can be tested. |
+  | `audit remains closed while the real preserved Task 01 review is failed and unrepaired` | `validate-phase-09.test.mjs:277-281` | The real repository now contains the accepted paired Task 01 repair, so the validator correctly returns no `TASK01_REVIEW_NOT_ACCEPTED` error and the historical negative assertion fails. |
+
+  The first three tests share `loadBootstrap()` at
+  `validate-phase-09.test.mjs:71-76`, which calls `loadRepositorySnapshot(REPO,
+  stage=bootstrap)` without reconstructing the historical bootstrap inventory.
+  The fourth also loads `REPO` directly while asserting a pre-repair state.
+  These are one mutable-real-state fixture class: current audit files and the
+  accepted repair are legitimate, while the tests need immutable historical or
+  negative snapshots. This is `P09-COV-002`, not evidence against the
+  historical replay or manuscript package.
 
 ## Findings
 
@@ -244,18 +260,22 @@ green line.
 - **Why it matters:** An exception can be current relative to `BL-17` while still being disconnected from the purpose/data/qualification/release evidence it purports to constrain. The actual exercise cannot demonstrate reverse trace, historical supersession, or scope compatibility across the lifecycle, so label presence and the final checklist overstate depth.
 - **Proposed disposition and repair boundary:** Task 07 should amend Chapter 19 only after freeze: enumerate the five immutable inputs in S01/S05, add a worked reverse trace for one control/exception through task (`BL-01`), data (`BL-03`), qualification (`BL-11`), release/recovery (`BL-14`), and incident/requalification (`BL-17`), and add distinct mutations for missing historical link and incompatible scope. Preserve external authority and failure history. Update shared registers only if their exact hashes/count projections require it; do not alter historical Phase 08 evidence. Verify that the exact five inputs appear, both labs fail when any required link is removed, Chapter 20 consumes the resulting bounded `BL-18`, and prose remains substantive and in range.
 
-### P09-COV-002 — The current Phase 09 negative fixture is not monotonic after Task 01 repair acceptance
+### P09-COV-002 — Four Phase 09 tests reuse mutable real-repository state for historical assertions
 
 - **Severity:** High
 - **Status:** open; validator/test repair prohibited until the independently accepted Task 06 finding freeze
 - **Exact evidence:**
   - `reviews/phase-09/task-01-bootstrap-repair.md:31-39` records that `136/136` passed before the paired repair existed and that the unrepaired audit gate must emit `TASK01_REVIEW_NOT_ACCEPTED`.
-  - `validate-phase-09.test.mjs:277-281` loads the real repository at audit stage and always expects `TASK01_REVIEW_NOT_ACCEPTED`.
-  - With the paired repair now present and accepted, a fresh execution returns no such error and the test fails with `expected TASK01_REVIEW_NOT_ACCEPTED; got []`.
+  - `validate-phase-09.test.mjs:71-76` defines `loadBootstrap()` by loading mutable `REPO` bytes rather than an immutable bootstrap snapshot.
+  - `validate-phase-09.test.mjs:109-120` uses mutable `REPO` as bootstrap, asserts zero QA inventory and zero errors, and now fails with `STAGE_PATH_FORBIDDEN` plus `BOOTSTRAP_QA_ABSENT` because the four authorized audit reports and current audit reviews exist.
+  - `validate-phase-09.test.mjs:186-193` verifies the real authorities through the same mutable bootstrap snapshot and fails on the same legitimate later-stage inventory.
+  - `validate-phase-09.test.mjs:266-275` attempts to distinguish working-tree and checkpoint bootstrap modes, but both snapshots load the current audit inventory and the first asserted empty result fails before the intended Git assertions.
+  - `validate-phase-09.test.mjs:277-281` loads mutable `REPO` at audit stage and expects `TASK01_REVIEW_NOT_ACCEPTED`; with the paired repair accepted, it instead fails with `expected TASK01_REVIEW_NOT_ACCEPTED; got []`.
+  - The fresh complete result is exactly `132/136`, not a one-test failure. These four named tests are the only failures; historical replay and all 30 graph/count subtests remain green.
   - `validate-phase-09.mjs:462-471` correctly freezes the independent historical replay at `263/263`; that valid historical gate is separate from the failing current-state negative fixture.
-- **Affected claims/projections:** `P09-OPEN-06`; Phase 09 current closed-tree verification; Task 01 fail/repair/reacceptance lifecycle; audit-stage entry; later Task 06/07/08 review evidence; any final claim that the current Phase 09 test module is green.
-- **Why it matters:** A lifecycle test that loads mutable real state but asserts a prior-state failure passes only during one short window. Once the authorized repair is committed, the same test becomes a false failure. Historical evidence remains valid, but the current tree cannot be certified by a suite whose negative fixture is time-dependent.
-- **Proposed disposition and repair boundary:** Task 07 should make the negative fixture reconstruct the exact failed-base state by removing or masking the paired repair from an isolated snapshot, then assert `TASK01_REVIEW_NOT_ACCEPTED`. Add a separate positive fixture over the exact current fail-plus-repair chain that requires audit entry to pass. Keep the historical Phase 08 replay isolated and unchanged. Verify the full Phase 09 suite on the actual accepted audit package, plus a mutation that removes the repair and one that forges its bindings.
+- **Affected claims/projections:** `P09-OPEN-06`; Phase 09 bootstrap working-tree and checkpoint evidence; Task 01 fail/repair/reacceptance lifecycle; accepted audit inventory; audit-stage entry; later Task 06/07/08 review evidence; any final claim that the current Phase 09 test module is green.
+- **Why it matters:** A lifecycle test that loads mutable real state while asserting an earlier inventory or review state passes only during one short window. Bootstrap fixtures become false as soon as authorized audit outputs exist; the failed-base fixture becomes false as soon as its authorized repair exists. Historical evidence remains valid, but the current tree cannot be certified by a suite whose state fixtures drift with normal lifecycle progress.
+- **Proposed disposition and repair boundary:** Task 07 must repair the entire fixture class, not patch only line 277. Reconstruct immutable bootstrap working-tree and clean-checkpoint inventories in isolated snapshots for the three bootstrap tests, excluding every later audit output by construction rather than by weakening `STAGE_PATH_FORBIDDEN` or `BOOTSTRAP_QA_ABSENT`. Reconstruct the exact failed Task 01 base without its paired repair in a separate isolated negative snapshot and require `TASK01_REVIEW_NOT_ACCEPTED`. Add distinct positive current-state coverage over the exact accepted fail-plus-repair chain and all four authorized audit reports/reviews, requiring audit entry and current inventory acceptance. Keep the historical Phase 08 replay isolated and unchanged. Verify the full Phase 09 suite is green on the actual accepted audit package after all four reports and accepted reviews exist, plus mutations for a missing/forged Task 01 repair, bootstrap contamination by one later-stage path, and audit omission/rebinding of each required report or review.
 
 ## Explicit non-findings and retained boundaries
 
@@ -277,7 +297,7 @@ green line.
 ## Required Task 06 dispositions
 
 1. Freeze `P09-COV-001` as an accepted Chapter 19 prerequisite/depth repair.
-2. Freeze `P09-COV-002` as an accepted Phase 09 current-state test-fixture repair.
+2. Freeze `P09-COV-002` as one accepted Phase 09 mutable-real-state fixture-class repair covering all four current failures, isolated historical/negative snapshots, and positive accepted-audit coverage.
 3. Preserve the exact-count, sole-primary, furniture, seam, and no-padding pass
    evidence as constraints on Task 07 rather than treating them as permission
    for broad rewrites.
@@ -288,6 +308,8 @@ green line.
 
 Quantitative coverage is exact and 20 chapters pass the human-read depth gate.
 Chapter 19 fails one material prerequisite/exercise-depth gate, and the current
-Phase 09 verification suite fails one temporal accepted-repair fixture. Two
-High findings remain open. No padding is authorized, no canonical repair was
-made, and the historical Phase 08 `263/263` checkpoint remains intact.
+Phase 09 verification suite is exactly `132/136` because four tests reuse
+mutable real-repository state for historical bootstrap or failed-review
+assertions. These are one fixture-class defect, so two High findings remain
+open. No padding is authorized, no canonical repair was made, and the
+historical Phase 08 `263/263` checkpoint remains intact.
