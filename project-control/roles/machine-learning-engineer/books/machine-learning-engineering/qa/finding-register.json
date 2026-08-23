@@ -225,7 +225,7 @@
         "Chapter 21 complete-dossier promise"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Enumerate the five immutable inputs in Chapter 19 S01/S05.",
@@ -264,7 +264,7 @@
         "P09-OPEN-06"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Build isolated immutable bootstrap working-tree and clean-checkpoint fixtures for the three bootstrap tests.",
@@ -304,7 +304,7 @@
         "all retained visual IDs and accessibility meanings"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Rewrite each affected passage as reader-facing limitation, edition-neutral visual/accessibility contract, or currentness trigger.",
@@ -344,7 +344,7 @@
         "lane seams 07->08 and 14->15"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Select one H1 pattern and metadata schema for all 21 chapters.",
@@ -380,7 +380,7 @@
         "stable decision/evidence/state/authority/limitation terminology"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Normalize stable reader terms and opening/closing rhythm across all three lanes.",
@@ -417,7 +417,7 @@
         "durable-record and limitation frames"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Keep one canonical lifecycle explanation in Appendix B.",
@@ -460,7 +460,7 @@
         "port rows"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Use Appendices A/B/E/F as canonical schema, lifecycle, truth, and source homes.",
@@ -497,7 +497,7 @@
         "BL-18"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Add an explicit immutable BL-17 input to Chapter 19 Bench Setup and Bench Sheet.",
@@ -534,7 +534,7 @@
         "CASE-07"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Either fully verify and rebind a currently open employer-controlled record or narrow all plural-current language to a dated recent or historical signal.",
@@ -579,7 +579,7 @@
         "their claim edges and CASE-06/07/08/10 transfers"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Record official update dates and the 2026-08-23 retrieval for sources 015 and 024.",
@@ -615,7 +615,7 @@
         "MLE-BSRC-042"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Replace issuer's with PyTorch Foundation's or project's first-party in Chapter 21 only.",
@@ -650,7 +650,7 @@
         "CASE-05"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Replace prove with exercise, test, or demonstrate within the fixed fixture.",
@@ -690,7 +690,7 @@
         "12-case truth audit"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Preserve exactly zero reported facts, attributed outcomes, and case-source uses for CASE-01 through CASE-05.",
@@ -732,7 +732,7 @@
         "port-result semantics"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Permit explicit reopen only when source state is later than target and named evidence could already exist.",
@@ -772,7 +772,7 @@
         "full-chain claims"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Keep the 19 legal transition declaration and classify self-state dossier enrichments separately.",
@@ -810,7 +810,7 @@
         "hostile review schema examples"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Choose one edition-neutral reader schema and align Appendix A, JSON schemas, generator, expected records, and chapter examples exactly.",
@@ -851,7 +851,7 @@
         "lab currentness and readiness claims"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Truthfully narrow every executable claim unless a bounded fixture actually discriminates the named defect.",
@@ -888,7 +888,7 @@
         "output-directory interpretation"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Add a child-process test that materializes BL-00 in process A and requires ROOT_UNOWNED for BL-01 in process B.",
@@ -933,7 +933,7 @@
         "Phase 10 handoff"
       ],
       "owner": "/root/mle_p9_integration",
-      "disposition": "accepted-for-task-07-repair",
+      "disposition": "accepted",
       "status": "open",
       "repairBoundary": [
         "Freeze one canonical path convention and one exact per-candidate S03 anchor, decision, labels, caption, alt, long description, 2400x1600 3:2 dimensions, prompt/prohibitions, ImageGen-only provenance, and canonical-PNG contract.",
