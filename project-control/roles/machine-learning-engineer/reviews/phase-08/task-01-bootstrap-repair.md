@@ -200,3 +200,31 @@ causing a legitimate appended acceptance to regress from 200/200 to 198/200.
 No production artifact was created. Production remains blocked until the same
 reviewer appends and commits terminal acceptance against this exact test and the
 final hash of this repair record.
+
+## Same-reviewer repair iteration 5
+
+The next review is preserved at base-review SHA-256
+`e9bef7e1a92a47b4012082490d01fa441d003e26acaac2e4bc9674bb303a5283`.
+It closed accepted-state direct testing but found the embedded historical
+reconstruction still read the mutable live review and changed after acceptance.
+
+### Final quiescent test identity
+
+- Validator SHA-256 remains:
+  `0c58850f983b2c65c19f8bd6dcfed871ea3178d2a9c5cfd2d50f55dc3a496789`
+- Test SHA-256:
+  `120f522dacde5872b0d10ccdcc163c8c1440289f1375101492168039505e2aea`
+
+The reconstruction child now receives `MLE_PHASE08_FIXTURE_REPO` pointing to a
+fresh temporary repository assembled solely from pinned checkpoint
+`8cf1fce280ffd5932201d33470255c98bd6e3aba` bytes. It verifies the failed base
+review SHA-256 `f5956762f9db538c9d57039779f331114f60945ec0fd81032ca64427bbd6bcd1`
+inside that fixture and never reads the live Task 01 review.
+
+The direct suite passes 200/200. The full command passes all 201 registered
+tests, including a 1/1 reconstruction gate that proves the historical child is
+exactly 200 tests, 167 passes, 33 failures. The accepted lifecycle simulation is
+inside the direct suite and binds the exact current validator, test, and repair
+before requiring zero errors, accepted lifecycle, and production authorization.
+The live current failed review remains repair-in-progress and non-authorizing
+until the same reviewer accepts these exact bytes.

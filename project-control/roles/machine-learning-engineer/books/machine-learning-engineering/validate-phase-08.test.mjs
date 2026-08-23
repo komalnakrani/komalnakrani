@@ -23,7 +23,8 @@ import {
   validateReviewRecord,
 } from './validate-phase-08.mjs';
 
-const REPO = '/Applications/ServBay/www/komalnakrani';
+const GIT_REPO = '/Applications/ServBay/www/komalnakrani';
+const REPO = process.env.MLE_PHASE08_FIXTURE_REPO ?? GIT_REPO;
 const BOOK = 'project-control/roles/machine-learning-engineer/books/machine-learning-engineering';
 const ROLE = 'project-control/roles/machine-learning-engineer';
 const FACTORY = 'project-control/role-factory/FACTORY-STATE.md';
@@ -31,6 +32,7 @@ const HEAD = 'c9edc934e463dc2d8837244f2512d5d9fe8579e8';
 const execFileAsync = promisify(execFile);
 const FAILED_TASK01_REVIEW_COMMIT = '5fc2420fb2a4ea4d82d0badcd6cafc6f5c272111';
 const FAILED_TASK01_REVIEW_SHA256 = 'f5956762f9db538c9d57039779f331114f60945ec0fd81032ca64427bbd6bcd1';
+const PRIOR_VALIDATOR_COMMIT = '8cf1fce280ffd5932201d33470255c98bd6e3aba';
 
 const bootstrapGit = {
   head: HEAD,
@@ -560,7 +562,7 @@ test('bootstrap explicitly classifies the preserved failed Task 01 review as rep
   const root = await copiedBootstrapRoot();
   const reviewPath = `${ROLE}/reviews/phase-08/task-01-bootstrap.md`;
   const failedReview = await execFileAsync('git', ['show', `${FAILED_TASK01_REVIEW_COMMIT}:${reviewPath}`], {
-    cwd: REPO, encoding: 'utf8', maxBuffer: 20 * 1024 * 1024,
+    cwd: GIT_REPO, encoding: 'utf8', maxBuffer: 20 * 1024 * 1024,
   });
   assert.equal(sha256(failedReview.stdout), FAILED_TASK01_REVIEW_SHA256);
   await mkdir(dirname(join(root, reviewPath)), { recursive: true });
@@ -715,6 +717,28 @@ async function copiedBootstrapRoot() {
     await mkdir(dirname(join(root, path)), { recursive: true });
     await cp(join(REPO, path), join(root, path));
   }
+  return root;
+}
+
+async function pinnedHistoricalBootstrapRoot() {
+  const root = await mkdtemp(join(tmpdir(), 'mle-p8-pinned-history-'));
+  const required = [
+    ...Object.keys(FROZEN_INPUTS), SPEC_PATH, PLAN_PATH,
+    ...Array.from({ length: 21 }, (_, index) => `${BOOK}/blueprints/chapter-${String(index + 1).padStart(2, '0')}.md`),
+    `${ROLE}/ROLE-STATE.md`, `${ROLE}/issues/root.md`, `${ROLE}/issues/phase-08-manuscript.md`, FACTORY,
+    `${ROLE}/reviews/phase-08/task-00-plan.md`, `${ROLE}/reviews/phase-08/task-00-plan-repair.md`,
+    `${ROLE}/reviews/phase-08/task-01-bootstrap.md`, `${ROLE}/reviews/phase-08/task-01-bootstrap-repair.md`,
+    `${BOOK}/validate-phase-08.mjs`, `${BOOK}/validate-phase-08.test.mjs`,
+  ];
+  for (const path of required) {
+    const historical = await execFileAsync('git', ['show', `${PRIOR_VALIDATOR_COMMIT}:${path}`], {
+      cwd: GIT_REPO, encoding: 'utf8', maxBuffer: 20 * 1024 * 1024,
+    });
+    await mkdir(dirname(join(root, path)), { recursive: true });
+    await writeFile(join(root, path), historical.stdout);
+  }
+  const failedReview = await readFile(join(root, `${ROLE}/reviews/phase-08/task-01-bootstrap.md`), 'utf8');
+  assert.equal(sha256(failedReview), FAILED_TASK01_REVIEW_SHA256);
   return root;
 }
 
@@ -935,13 +959,18 @@ test('committed clean leakage is found by bounded real filesystem inventory with
 
 if (!process.env.MLE_SKIP_RED_RECONSTRUCTION) {
   test('current final test bytes reconstruct a prior-validator hardening RED exactly', async () => {
+    const fixtureRoot = await pinnedHistoricalBootstrapRoot();
     const root = await mkdtemp(join(tmpdir(), 'mle-p8-red-reconstruction-'));
     const validatorPath = `${BOOK}/validate-phase-08.mjs`;
     const testPath = `${BOOK}/validate-phase-08.test.mjs`;
-    const prior = await execFileAsync('git', ['show', `8cf1fce280ffd5932201d33470255c98bd6e3aba:${validatorPath}`], { cwd: REPO, maxBuffer: 20 * 1024 * 1024 });
+    const prior = await execFileAsync('git', ['show', `${PRIOR_VALIDATOR_COMMIT}:${validatorPath}`], { cwd: GIT_REPO, maxBuffer: 20 * 1024 * 1024 });
     await writeFile(join(root, 'validate-phase-08.mjs'), prior.stdout);
-    await cp(join(REPO, testPath), join(root, 'validate-phase-08.test.mjs'));
-    const childEnv = { ...process.env, MLE_SKIP_RED_RECONSTRUCTION: '1' };
+    await cp(join(GIT_REPO, testPath), join(root, 'validate-phase-08.test.mjs'));
+    const childEnv = {
+      ...process.env,
+      MLE_SKIP_RED_RECONSTRUCTION: '1',
+      MLE_PHASE08_FIXTURE_REPO: fixtureRoot,
+    };
     delete childEnv.NODE_TEST_CONTEXT;
     let result;
     let unexpectedlyPassed = false;
