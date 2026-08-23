@@ -22,10 +22,12 @@ primary, official, regulator/standard, or first-party evidence; no secondary
 aggregator is used as technical proof. The prose usually separates source fact,
 book synthesis, bounded inference, limitation, and external authority well.
 
-Four defects prevent evidence lock:
+Five defects prevent evidence lock (`2` HIGH, `3` MEDIUM):
 
 1. One of the two sources supporting the opening claim of *current* plural
-   employer use has a passed application deadline.
+   employer use is now absent from the employer board: the exact registered
+   Ashby record returns `posting: null`. Its earlier `2026-07-16` deadline is
+   retained as dated evidence, not current-opening proof.
 2. Four living mechanism records do not yet carry an adequate editorial-freeze
    identity: one omits an available official update date, two cite mutable
    `latest` MLflow routes without a concrete release, and one omits an available
@@ -34,6 +36,10 @@ Four defects prevent evidence lock:
 4. Chapter 21 says four constructed cases “prove” cross-port semantics even
    though their registered truth class permits only a synthetic test or
    demonstration.
+5. CASE-01 through CASE-05 have correct zero reported facts, attributed
+   outcomes, and source uses, but their canonical case records leave allowed
+   inference and transfer empty, omit a forbidden-inference field, and disagree
+   with the non-empty reader-facing truth boundaries.
 
 `P09-OPEN-05` is preserved and remains open until `P09-EVD-001` and
 `P09-EVD-002` are repaired and independently accepted. HTTP reachability was
@@ -107,7 +113,7 @@ public-source evidence uses.
 | [`MLE-BSRC-042`](https://pytorch.org/blog/compromised-nightly-dependency/) | Published `2022-12-31`, updated `2024-11-14`, retrieved `2026-08-23` | Retain first-party affected window/mechanism; no population-wide cleanup. |
 | [`MLE-BSRC-043`](https://www.uber.com/us/en/blog/michelangelo-machine-learning-platform/) | Dated `2017-09-05` Uber report browser-readable `2026-08-23` | Retain historical first-party description; no independent outcome assurance. |
 | [`MLE-BSRC-044`](https://www.uber.com/us/en/blog/raising-the-bar-on-ml-model-deployment-safety/) | Dated `2025-10-30` Uber report browser-readable; command client returned `406` | Retain all quantities/mechanisms as dated first-party claims only. |
-| [`MLE-BSRC-045`](https://jobs.ashbyhq.com/blissway/97acd33b-9ce1-4663-b556-917347263bb3/) | Employer-controlled page readable; title unchanged; application deadline `2026-07-16`, rechecked `2026-08-23` | Does not support “current” open-posting claim; `P09-EVD-001`. |
+| [`MLE-BSRC-045`](https://jobs.ashbyhq.com/blissway/97acd33b-9ce1-4663-b556-917347263bb3/) | Exact registered posting `97acd33b-9ce1-4663-b556-917347263bb3` is absent from the employer board and its Ashby route now exposes `posting: null`, retrieved `2026-08-23`; preserve the earlier observed `2026-07-16` application deadline as dated evidence | Does not support “current” open-posting claim. A separate listing `662f1761-5d28-421d-8b47-605cc910991d` is only a proposed rebind pending identity/duty verification; replace or narrow under `P09-EVD-001`. |
 | [`MLE-BSRC-046`](https://jobs.ashbyhq.com/sprinter-health/0469d8f2-4d39-4e36-ab92-5380937efbfd) | Employer-controlled `Machine Learning Engineer (Staff)` page readable `2026-08-23`; duties still include train/deploy/monitor/retrain/serve | Retain as one current dated market signal only. |
 
 ## Deep living and volatile recheck
@@ -124,7 +130,7 @@ public-source evidence uses.
 | `024` | TFDV tutorial officially last updated `2024-04-30`; schema environments and schema/feature/distribution skew mechanisms remain | Detection does not establish semantics, thresholds, causality, or promotion. Record page date; recheck API/tutorial change. | Claims `011,015,018,049,051`; CASE-06 mechanism |
 | `027` | AI RMF 1.0 Core excerpt (2023); revised version still in progress; outcomes remain voluntary/contextual | No certification, legal determination, or organization-specific MLE authority. Recheck revision notice/Core change. | Claims `003,005,009,051,052,053,055,056,057,058,059,060,061,062`; CASE-12 transfer context |
 | `042` | PyTorch Foundation advisory still shows `2022-12-31` and update `2024-11-14`; affected Linux-nightly/pip window and stable-package exclusion unchanged | First-party report; no universal resolver rule, prevalence, or complete cleanup. Recheck correction/scope/indicator/final report. | Claims `045,052,060`; CASE-11 fact/outcome/limit |
-| `045` | Blissway exact title and duties remain readable, but the page states deadline `2026-07-16` | A readable expired posting is dated historical/recent market evidence, not a current opening. Replace or narrow wording now. | Claim `001`; Chapter 01 market panel |
+| `045` | The exact registered Blissway ID `97acd33b-9ce1-4663-b556-917347263bb3` is no longer listed and its Ashby route exposes `posting: null`; the earlier observed `2026-07-16` deadline remains dated evidence. The board separately lists `Machine Learning Engineer` ID `662f1761-5d28-421d-8b47-605cc910991d`, but it is not the registered record. | Exact-record access now means absent/unlisted, not dead-host or merely expired. Rebind the separate listing only after exact identity and duty verification plus projection repair; otherwise narrow the claim. Recheck withdrawal, ID, title, duties, deadline, or board-state change. | Claim `001`; Chapter 01 market panel |
 | `046` | Sprinter Health exact staff title and broad production-ML duties remain readable; no withdrawal/deadline was exposed | One employer signal, not prevalence, doctrine, or authority. Recheck every freeze/withdrawal/material retitle. | Claim `001`; Chapter 01 market panel |
 
 ## Source-to-claim and primary-authority audit
@@ -172,13 +178,13 @@ routes source and claim IDs without introducing a new technical authority.
 
 ## Case truth audit
 
-| Case | Truth/kind | Facts / attributed / inferences / source uses | Audit result |
+| Case | Truth/kind | Reported / attributed / allowed / source uses | Audit result |
 |---|---|---:|---|
-| `CASE-01` Benchline | FICTIONAL SYNTHETIC CAPSTONE | `0 / 0 / 0 / 0` | Pass; synthetic fixture only. |
-| `CASE-02` Managed forecast | CONSTRUCTED SATELLITE | `0 / 0 / 0 / 0` | Register passes; Chapter 21 “prove” wording fails. |
-| `CASE-03` Credit triage | CONSTRUCTED SATELLITE | `0 / 0 / 0 / 0` | Register passes; Chapter 21 “prove” wording fails. |
-| `CASE-04` Acoustic classifier | CONSTRUCTED SATELLITE | `0 / 0 / 0 / 0` | Register passes; Chapter 21 “prove” wording fails. |
-| `CASE-05` Ranking tenant | CONSTRUCTED SATELLITE | `0 / 0 / 0 / 0` | Register passes; Chapter 21 “prove” wording fails. |
+| `CASE-01` Benchline | FICTIONAL SYNTHETIC CAPSTONE | `0 / 0 / 0 / 0` | **FAIL truth projection:** zeros are correct, but canonical allowed/transfer are empty, canonical forbidden is absent, and reader meaning is non-empty. `P09-EVD-005`. |
+| `CASE-02` Managed forecast | CONSTRUCTED SATELLITE | `0 / 0 / 0 / 0` | **FAIL truth projection:** same canonical/reader gap; Chapter 21 also says “prove.” `P09-EVD-004/005`. |
+| `CASE-03` Credit triage | CONSTRUCTED SATELLITE | `0 / 0 / 0 / 0` | **FAIL truth projection:** same canonical/reader gap; Chapter 21 also says “prove.” `P09-EVD-004/005`. |
+| `CASE-04` Acoustic classifier | CONSTRUCTED SATELLITE | `0 / 0 / 0 / 0` | **FAIL truth projection:** same canonical/reader gap; Chapter 21 also says “prove.” `P09-EVD-004/005`. |
+| `CASE-05` Ranking tenant | CONSTRUCTED SATELLITE | `0 / 0 / 0 / 0` | **FAIL truth projection:** same canonical/reader gap; Chapter 21 also says “prove.” `P09-EVD-004/005`. |
 | `CASE-06` ML Test Score method | PUBLIC REPORTED CASE / public method | `3 / 1 / 3 / 3` | Pass; 28-test report is attributed, not certification/outcome. |
 | `CASE-07` Uber Michelangelo | PUBLIC REPORTED CASE / first-party production pattern | `3 / 2 / 3 / 5` | Pass; 2017 and 2025 reports and first-party quantities remain distinct. |
 | `CASE-08` PyTorch reproducibility | PUBLIC REPORTED CASE / public method | `2 / 1 / 2 / 4` | Pass; documented mechanism does not become workload outcome. |
@@ -190,13 +196,17 @@ routes source and claim IDs without introducing a new technical authority.
 The public-case source-use total is exactly `34` and equals the reverse
 source-register role total. CASE-01 through CASE-05 have no source uses and do
 not acquire reported outcomes from their source-backed surrounding doctrine.
-The registered allowed/forbidden inference, limitation, transfer, and authority
-fields are present for all seven public cases. The two reader-facing failures
-are wording/attribution defects, not graph-count defects.
+Their graph counts and zero reported/outcome/source-use boundary pass, but their
+machine truth schema does not: the case register has empty allowed-inference and
+transfer arrays and no forbidden-inference field, while reader projections
+state non-empty meanings. The registered allowed/forbidden inference,
+limitation, transfer, and authority fields remain present for all seven public
+cases. The public-case records pass; the constructed-case truth projection must
+be repaired without changing its zeros.
 
 ## Findings
 
-### P09-EVD-001 — HIGH — expired posting cannot support a current plural market claim
+### P09-EVD-001 — HIGH — absent registered posting cannot support a current plural market claim
 
 - Exact manuscript/register evidence:
   `manuscript/chapter-01.md:39`, `manuscript/chapter-01.md:46`,
@@ -204,23 +214,33 @@ are wording/attribution defects, not graph-count defects.
   `sources/research-packs/chapter-01.md:55`,
   `sources/research-packs/chapter-01.md:62`, and
   `sources/source-register.json:1770`-`1791`.
-- Source: [`MLE-BSRC-045`](https://jobs.ashbyhq.com/blissway/97acd33b-9ce1-4663-b556-917347263bb3/), unversioned employer-controlled posting,
-  title `Machine Learning Engineer`, retrieved `2026-08-23`; the page exposes
-  an application deadline of `2026-07-16`.
-- Primary support/access status: the official employer-controlled record is
-  still readable and retains the title/duties, but the passed deadline means it
-  no longer supports the manuscript's present-tense claim that two employers
-  *currently* use an open title across settings. Readability is not currentness.
+- Source: [`MLE-BSRC-045`](https://jobs.ashbyhq.com/blissway/97acd33b-9ce1-4663-b556-917347263bb3/), exact registered Ashby ID
+  `97acd33b-9ce1-4663-b556-917347263bb3`, unversioned employer-controlled
+  posting, retrieved `2026-08-23`. Its route now exposes `posting: null`, and
+  that ID is absent from the official Blissway board. Preserve the previously
+  observed `2026-07-16` application deadline as dated evidence of the former
+  record, not evidence that it remains open.
+- Primary support/access status: the host and employer board are reachable, but
+  the exact registered record is absent/unlisted. This is not a dead-host
+  finding and not merely an HTTP test; the returned application state has no
+  posting object. The board separately lists a `Machine Learning Engineer`
+  posting at ID `662f1761-5d28-421d-8b47-605cc910991d`, but a title match does
+  not establish record identity or duty equivalence and cannot silently rebind
+  the registered source.
 - Affected claim/cases: `MLE-BCLM-001`; its registered applications include
   CASE-01 and CASE-07, though neither case supplies replacement market proof.
-- Proposed disposition and repair boundary: replace `MLE-BSRC-045` with a
-  currently open, employer-controlled exact-title posting that independently
-  supports the bounded duties, or narrow `MLE-BCLM-001` and every Chapter 01
-  occurrence to a dated recent/historical signal without plural-current
-  language. Preserve the posting's deadline and retrieval date. Do not broaden
-  it into prevalence, doctrine, or authority. Repair only the source/claim
-  register projections, Chapter 01 pack/prose/furniture projections, and their
-  generated bindings; no new role definition is authorized.
+- Proposed disposition and repair boundary: either replace/rebind
+  `MLE-BSRC-045` with a currently open employer-controlled record that supports
+  the bounded duties, or narrow `MLE-BCLM-001` and every Chapter 01 occurrence
+  to a dated recent/historical signal without plural-current language. The
+  separate ID `662f1761-5d28-421d-8b47-605cc910991d` is only a proposed rebind:
+  verify exact posting identity, current open state, duty text, and claim fit
+  before updating every affected forward/reverse projection. Preserve the old
+  ID, the dated `2026-07-16` evidence, and the `2026-08-23` absent-state
+  retrieval in the repair trail. Do not broaden the source into prevalence,
+  doctrine, or authority. Repair only the source/claim register projections,
+  Chapter 01 pack/prose/furniture projections, and generated bindings; no new
+  role definition is authorized.
 
 ### P09-EVD-002 — MEDIUM — four living mechanisms lack a complete freeze identity
 
@@ -297,6 +317,49 @@ are wording/attribution defects, not graph-count defects.
   production, fairness, safety, business, governance-adoption, or readiness
   inference. Repair Chapter 21 and derived projections only.
 
+### P09-EVD-005 — HIGH — constructed-case machine truth is empty and disagrees with the reader
+
+- Exact manuscript/register evidence: the canonical case register retains
+  correct zero `reportedFacts`/`attributedOutcomes`, but CASE-01 has empty
+  `allowedInferences` and `transferRules` at
+  `case-studies/case-study-register.json:23`-`:25` and `:97`-`:102`; CASE-02 at
+  `:120`-`:122` and `:163`-`:168`; CASE-03 at `:186`-`:188` and `:245`-`:250`;
+  CASE-04 at `:268`-`:270` and `:316`-`:321`; and CASE-05 at `:339`-`:341` and
+  `:392`-`:397`. Those five objects have limitations and authority owners but
+  no canonical `forbiddenInferences` field. Their blueprint projections retain
+  the zeros and add only a generic forbidden sentence while leaving allowed
+  and transfer empty at `blueprints/blueprint-register.json:4861`-`:4870`,
+  `:4998`-`:5007`, `:5172`-`:5181`, `:5321`-`:5330`, and `:5496`-`:5505`.
+  Reader projections nevertheless state non-empty allowed, forbidden,
+  limitation, transfer, and authority meaning—for example
+  `manuscript/chapter-08.md:77`-`:83`, `manuscript/chapter-18.md:68`,
+  `manuscript/chapter-20.md:66`, and `manuscript/chapter-21.md:62`.
+- Source/version/date/retrieval: no public source applies to CASE-01 through
+  CASE-05. The canonical case register, blueprint projection, manuscript,
+  manuscript register, research packs, and integration projections were frozen
+  and re-read `2026-08-23`. Surrounding sources remain doctrine/mechanism
+  anchors only and must not create a reported fact, outcome, or case-source use.
+- Primary support/access status: not applicable by construction. This is a
+  machine-truth completeness and projection-equality defect, not missing public
+  evidence. The reader currently supplies a bounded meaning that canonical
+  arrays do not encode, so neither canonical-to-reader derivation nor exact
+  reader/register equality is demonstrable.
+- Affected claims/cases: CASE-01, CASE-02, CASE-03, CASE-04, and CASE-05; every
+  chapter application, research-pack case panel, blueprint case-use record,
+  manuscript-register binding, integration projection, and validator assertion
+  derived from those five truth records. Existing claim/source graph counts are
+  unaffected and must remain `46/63/160/12/34`.
+- Proposed disposition and repair boundary: preserve exactly zero reported
+  facts, zero attributed outcomes, and zero case-source uses for all five. In
+  each canonical case object, encode an explicit, case-bounded allowed
+  inference, forbidden inference, transfer rule, limitation, and authority
+  owner; do not substitute a shared slogan for case-specific meaning. Project
+  those exact values into the blueprint, research packs, manuscript reader,
+  manuscript register, integration/derived artifacts, and validator contract,
+  with reader/register equality and no semantic expansion. Re-audit every one
+  of the 12 cases after repair. P09-EVD-004 remains a separate wording repair:
+  fixing “prove” alone does not close this canonical truth gap.
+
 ## Passed authority and truth boundaries
 
 - Product/domain owners retain purpose and domain validity; independent
@@ -308,9 +371,12 @@ are wording/attribution defects, not graph-count defects.
   their registered sector, mechanism, standard, regulator, or first-party
   ceilings.
 - CASE-06 through CASE-12 keep reported facts distinct from attributed outcomes
-  and portable inference. CASE-12 remains explicitly non-ML and preserves the
-  no-admit/no-deny and extraction limitations. CASE-07 retains separate 2017 and
-  2025 platform states. CASE-09 retains historical groups/systems/results.
+  and portable inference. CASE-01 through CASE-05 preserve zero reported facts,
+  zero attributed outcomes, and zero source uses, but remain pending the bounded
+  canonical-truth/equality repair in `P09-EVD-005`. CASE-12 remains explicitly
+  non-ML and preserves the no-admit/no-deny and extraction limitations. CASE-07
+  retains separate 2017 and 2025 platform states. CASE-09 retains historical
+  groups/systems/results.
 - No source or case supports a universal threshold, certification, prevalence,
   complete cleanup, global non-serving negative, formal approval, or automatic
   transfer to another port.
@@ -318,12 +384,15 @@ are wording/attribution defects, not graph-count defects.
 ## Gate disposition
 
 Task 04 is complete as an audit, but the evidence package is not content-locked.
-Freeze these four findings into the independently reviewed Task 06 finding
+Freeze these five findings into the independently reviewed Task 06 finding
 register. Task 07 may repair only the exact boundaries above and must preserve
 the before bytes and graph counts. Re-run all `46/63/160/12/34` forward/reverse
 checks, the living/volatile matrix, and all case truth fields after repair.
 
 `P09-OPEN-05`: **PRESERVED — OPEN PENDING ACCEPTED REPAIR OF P09-EVD-001 AND
 P09-EVD-002.**
+
+Independent content lock additionally remains blocked by accepted repair of
+`P09-EVD-005`; this does not replace or close `P09-OPEN-05`.
 
 CHANGES REQUIRED
