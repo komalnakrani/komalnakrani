@@ -512,3 +512,91 @@ all green in the same on-disk state.
 
 SPEC COMPLIANCE FAIL
 QUALITY CHANGES REQUESTED
+
+## Final terminal same-reviewer acceptance — 2026-08-23
+
+Reviewer identity: `/root/mle_p8_bootstrap_review`
+
+Terminal replacement checkpoint:
+`67d7108c572777fede870539a1b4ab429643d244`
+
+Terminal bindings:
+
+- validator:
+  `0c58850f983b2c65c19f8bd6dcfed871ea3178d2a9c5cfd2d50f55dc3a496789`
+- tests:
+  `120f522dacde5872b0d10ccdcc163c8c1440289f1375101492168039505e2aea`
+- repair record:
+  `c7544c6e9ca427c5d82e558412bf7430d078c4a40b77a690ec630ffb40b1d04c`
+
+P08-BOOT-007 is closed. The historical reconstruction now runs against a fresh
+temporary repository assembled only from pinned checkpoint
+`8cf1fce280ffd5932201d33470255c98bd6e3aba` bytes. The fixture independently
+binds the failed Task 01 review SHA-256
+`f5956762f9db538c9d57039779f331114f60945ec0fd81032ca64427bbd6bcd1`
+and does not read the live base review. The nested historical run remains exact
+at 200 tests, 167 passes, and 33 failures regardless of the live terminal
+verdict.
+
+Local `main`, `origin/main`, and live remote `main` equal the terminal
+replacement checkpoint before this review edit. The current accepted-review
+simulation binds the exact validator, test, authority, and repair bytes,
+returns zero errors, classifies `bootstrapLifecycle=accepted`, and sets
+`productionAuthorized=true`. All earlier lifecycle, stage, exact review path,
+identity, artifact-set, actual-byte, graph, exactly-one-primary, full tracked-
+tree, imported/transitive/throw-after-effect, five-port, two-chain dossier,
+canonical-byte, prior-link, disposition, transition, reopen, and real on-disk
+immutability findings remain closed. The four authority hashes and live
+GitHub issue bodies/states/exact labels remain accepted. No manuscript,
+companion, furniture, appendix, lane manifest, image, PDF, publication, course,
+Abhyaas, second volume, catalog-position-6, or next-role output exists.
+
+Node `v22.23.1` syntax and real bootstrap checks pass. The exact terminal
+accepted on-disk state is required to retain direct 200/200 and full 201/201,
+including the 1/1 reconstruction gate described above. Every historical
+FAIL/CHANGES verdict remains preserved.
+
+```json
+{
+  "taskId": "TASK-01",
+  "producerIdentity": "/root/mle_p8_bootstrap",
+  "reviewerIdentity": "/root/mle_p8_bootstrap_review",
+  "reviewedAt": "2026-08-22T07:40:11+05:30",
+  "artifactBindings": [
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-08.mjs",
+      "sha256": "0c58850f983b2c65c19f8bd6dcfed871ea3178d2a9c5cfd2d50f55dc3a496789"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/books/machine-learning-engineering/validate-phase-08.test.mjs",
+      "sha256": "120f522dacde5872b0d10ccdcc163c8c1440289f1375101492168039505e2aea"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/ROLE-STATE.md",
+      "sha256": "0235c1c72974aacf742ef77f0e88166dd847247e225c995e92b51f59e45380f3"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/issues/root.md",
+      "sha256": "46cee703bcfaa9408ce97861d03ff89220915d606ae4c1cf0f86395e9b6b57db"
+    },
+    {
+      "path": "project-control/roles/machine-learning-engineer/issues/phase-08-manuscript.md",
+      "sha256": "e659f755611682d53f7baa28d12a60868caa7c6876ab22cd673d80526a120c35"
+    },
+    {
+      "path": "project-control/role-factory/FACTORY-STATE.md",
+      "sha256": "28febff4c475c9bc8f0ac708938f1ce3d5b703d289f6ad0bdb1a7075834a1386"
+    }
+  ],
+  "priorVerdict": "SPEC COMPLIANCE FAIL / QUALITY CHANGES REQUESTED",
+  "repairPath": "project-control/roles/machine-learning-engineer/reviews/phase-08/task-01-bootstrap-repair.md",
+  "repairSha256": "c7544c6e9ca427c5d82e558412bf7430d078c4a40b77a690ec630ffb40b1d04c",
+  "reacceptedBy": "/root/mle_p8_bootstrap_review",
+  "reacceptedAt": "2026-08-23T10:22:15+05:30",
+  "specVerdict": "SPEC COMPLIANCE PASS",
+  "qualityVerdict": "QUALITY APPROVED"
+}
+```
+
+SPEC COMPLIANCE PASS
+QUALITY APPROVED
