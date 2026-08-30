@@ -2,9 +2,8 @@
 import Icon from './Icon.astro';
 
 const nav = [
-  ['/themes/astro/', 'Astro Themes'],
+  ['/themes/', 'Themes'],
   ['/themes/nextjs/', 'Next.js Themes'],
-  ['/ai-solutions/', 'AI Solutions'],
   ['/docs/getting-started/', 'Docs'],
   ['/bundles/', 'All-Access Pass'],
 ] as const;
@@ -14,16 +13,16 @@ const pathname = Astro.url.pathname;
 <!-- Announcement Bar -->
 <div style="background: var(--ark-ink); color: #ffffff; padding: 8px 16px; text-align: center; font-family: var(--mono); font-size: 11.5px; border-bottom: 1px solid rgba(255, 103, 17, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px;">
   <span style="background: var(--accent); color: #ffffff; padding: 2px 6px; border-radius: var(--r-xs); font-weight: 700; font-size: 10px; text-transform: uppercase;">NEW</span>
-  <span>Astro 5 & Next.js 15 Themes + Turnkey AI Solutions Kits</span>
+  <span>Production Web Themes & Turnkey Architectures</span>
   <a href="/bundles/" style="color: var(--accent); text-decoration: underline; font-weight: 600; margin-left: 4px;">Get Lifetime Pass ($199) →</a>
 </div>
 
 <header class="mast">
   <div class="wrap mast-in">
-    <a class="wm" href="/" aria-label="Komal Nakrani Themes & AI Home">
+    <a class="wm" href="/" aria-label="Komal Nakrani Home">
       <span class="glyph">KN</span>
       <span class="wmt">Komal</span>
-      <span class="badge">Themes & AI</span>
+      <span class="badge">Themes</span>
     </a>
     <nav class="nav" aria-label="Primary navigation">
       {nav.map(([href, label]) => {
@@ -36,7 +35,7 @@ const pathname = Astro.url.pathname;
       })}
     </nav>
     <div style="display: flex; align-items: center; gap: 12px;">
-      <a href="/bundles/" class="btn btn-primary" style="font-size: 13.5px; padding: 99px 16px; padding: 9px 16px;">
+      <a href="/bundles/" class="btn btn-primary" style="font-size: 13.5px; padding: 9px 16px;">
         Get All Access
       </a>
       <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" data-menu-btn>
