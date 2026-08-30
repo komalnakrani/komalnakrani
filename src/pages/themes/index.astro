@@ -5,22 +5,32 @@ import Icon from '../../components/Icon.astro';
 import ThemeCard from '../../components/ThemeCard.astro';
 import { themes } from '../../data/themes';
 
-// Dynamically compute unique categories from active theme collection
-const activeCategories = ['all', ...Array.from(new Set(themes.map((t) => t.category.toLowerCase())))];
+// Komal Nakrani Original Category Taxonomy
+const komalCategories = [
+  { slug: 'all', label: 'All Themes' },
+  { slug: 'saas', label: 'SaaS & B2B' },
+  { slug: 'ai-app', label: 'AI Agent Apps' },
+  { slug: 'agency', label: 'Creative & Editorial' },
+  { slug: 'shader', label: 'WebGL & 3D Shaders' },
+  { slug: 'docs', label: 'Developer Docs' },
+  { slug: 'ecommerce', label: 'Marketplace & Stores' },
+  { slug: 'portfolio', label: 'Portfolios & Media' },
+  { slug: 'directory', label: 'Directories & Job Boards' }
+];
 
 const astroCount = themes.filter((t) => t.framework === 'astro').length;
 const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
 ---
-<Layout title="200 Production Web Themes | Komal Nakrani Marketplace" description="Explore 100 Astro 5 themes and 100 Next.js 15 App Router templates categorized by SaaS, Agency, Job Board, Directory, Ecommerce, Real Estate, and Shaders.">
+<Layout title="200 Production Web Themes | Komal Nakrani Marketplace" description="Explore 100 Astro 5 themes and 100 Next.js 15 App Router templates categorized across SaaS, AI Apps, Editorial Studios, 3D Shaders, Developer Docs, and Marketplaces.">
   <main class="rise">
     <section class="wrap section">
       <div style="text-align: center; max-width: 760px; margin: 0 auto 40px;">
-        <K idx="01">Theme Catalog</K>
+        <K idx="01">Original Product Catalog</K>
         <h1 class="display" style="margin-top: 14px;">
           Production Web <span class="grad">Themes</span>
         </h1>
         <p class="lead" style="margin-top: 14px;">
-          Browse 100 Astro 5 zero-JS templates & 100 Next.js 15 App Router boilerplates. Buy individually for $29 or unlock all 200 themes for $199 lifetime.
+          Engineered for high-performing tech startups, agencies, and AI developers. Buy individual themes for $29 or unlock all 200 themes + AI kits for $199 lifetime.
         </p>
       </div>
 
@@ -31,12 +41,12 @@ const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
         <a href="/themes/nextjs/" class="btn btn-secondary">Next.js 15 ({nextCount})</a>
       </div>
 
-      <!-- Dynamically Computed Category Filter Bar -->
-      <div class="lexington-cat-bar">
+      <!-- Komal Nakrani Original Category Filter Bar -->
+      <div class="komal-cat-bar">
         <div class="cat-bar-track">
-          {activeCategories.map((cat, idx) => (
-            <button class={`cat-pill-btn ${idx === 0 ? 'active' : ''}`} data-cat-filter={cat}>
-              {cat === 'all' ? 'All Categories' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+          {komalCategories.map((cat, idx) => (
+            <button class={`cat-pill-btn ${idx === 0 ? 'active' : ''}`} data-cat-filter={cat.slug}>
+              {cat.label}
             </button>
           ))}
         </div>
@@ -80,8 +90,8 @@ const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
 </Layout>
 
 <style>
-.lexington-cat-bar {
-  max-width: 1000px;
+.komal-cat-bar {
+  max-width: 960px;
   margin: 0 auto 36px;
   padding: 10px 16px;
   background: var(--surface-2);
@@ -95,6 +105,7 @@ const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
   gap: 8px;
   align-items: center;
   white-space: nowrap;
+  justify-content: center;
 }
 .cat-pill-btn {
   background: transparent;
@@ -115,6 +126,10 @@ const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
 .cat-pill-btn.active {
   background: var(--accent);
   color: #ffffff;
+}
+
+@media (max-width: 800px) {
+  .cat-bar-track { justify-content: flex-start; }
 }
 </style>
 
@@ -137,7 +152,7 @@ const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
         const category = wrapper.getAttribute('data-category') || '';
         const tech = wrapper.getAttribute('data-tech') || '';
 
-        const matchesCat = currentCat === 'all' || category === currentCat || name.includes(currentCat) || tech.includes(currentCat);
+        const matchesCat = currentCat === 'all' || category.includes(currentCat) || name.includes(currentCat) || tech.includes(currentCat);
         const matchesQuery = !currentQuery || name.includes(currentQuery) || framework.includes(currentQuery) || category.includes(currentQuery) || tech.includes(currentQuery);
 
         if (matchesCat && matchesQuery) {
