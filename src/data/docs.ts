@@ -23,9 +23,9 @@ export const docSections: DocSection[] = [
     ]
   },
   {
-    title: 'Astro 5 Themes',
+    title: 'Web sites',
     items: [
-      { slug: 'astro-quickstart', title: 'Astro 5 Setup' },
+      { slug: 'astro-quickstart', title: 'Next.js 16 Setup' },
       { slug: 'astro-styling', title: 'Tailwind & CSS Tokens' },
       { slug: 'astro-mdx', title: 'MDX Content & Blog' },
       { slug: 'astro-deployment', title: 'Deploying Astro Sites' },
@@ -56,7 +56,7 @@ export const docArticles: Record<string, DocArticle> = {
     slug: 'getting-started',
     category: 'Getting Started',
     title: 'Quickstart Guide',
-    description: 'Learn how to download, extract, and launch your Astro 5, Next.js 15, or AI Solution Kit source code.',
+    description: 'Learn how to download, extract, and launch your Next.js 16, Next.js 15, or AI Solution Kit source code.',
     lastUpdated: 'August 2026',
     content: `
 ### Overview
@@ -136,10 +136,10 @@ PINECONE_API_KEY="pcsk_..."
     slug: 'folder-structure',
     category: 'Getting Started',
     title: 'Directory Structure',
-    description: 'Understand the organized folder architecture of our Astro 5 and Next.js 15 templates.',
+    description: 'Understand the organized folder architecture of our Next.js 16 and Next.js 15 templates.',
     lastUpdated: 'August 2026',
     content: `
-### Astro 5 Theme Architecture
+### Web site Architecture
 
 \`\`\`
 ├── src/
@@ -149,7 +149,7 @@ PINECONE_API_KEY="pcsk_..."
 │   ├── styles/           # Global CSS variables & typography tokens
 │   └── data/             # Type-safe TypeScript data catalogs
 ├── public/               # Static assets, fonts & favicon SVGs
-├── astro.config.mjs      # Astro 5 configuration
+├── astro.config.mjs      # Next.js 16 configuration
 └── package.json
 \`\`\`
 
@@ -184,14 +184,14 @@ Both individual purchases ($29 themes / $39 AI solution kits) and the **$199 Lif
   },
   'astro-quickstart': {
     slug: 'astro-quickstart',
-    category: 'Astro 5 Themes',
-    title: 'Astro 5 Setup & Configuration',
-    description: 'Getting started with Astro 5 Content Layer, Server Islands, and zero-JS hydration.',
+    category: 'Web sites',
+    title: 'Next.js 16 Setup & Configuration',
+    description: 'Getting started with Next.js 16 Content Layer, Server Islands, and zero-JS hydration.',
     lastUpdated: 'August 2026',
     content: `
-### Astro 5 Engine Highlights
+### Next.js 16 Engine Highlights
 
-All Astro 5 themes leverage the new **Content Layer API**, **Server Islands**, and optimized asset pipeline:
+All Web sites leverage the new **Content Layer API**, **Server Islands**, and optimized asset pipeline:
 
 \`\`\`bash
 # Run local dev server
@@ -204,12 +204,12 @@ npm run build
 npm run preview
 \`\`\`
 
-> **Note**: Astro 5 builds produce static HTML files with zero client-side JavaScript overhead unless explicitly hydrated with \`client:visible\`.
+> **Note**: Next.js 16 builds produce static HTML files with zero client-side JavaScript overhead unless explicitly hydrated with \`client:visible\`.
 `
   },
   'astro-styling': {
     slug: 'astro-styling',
-    category: 'Astro 5 Themes',
+    category: 'Web sites',
     title: 'Tailwind CSS & Token Systems',
     description: 'Customizing brand colors, Orlean & Satoshi font stacks, and CSS design tokens.',
     lastUpdated: 'August 2026',
@@ -231,7 +231,7 @@ Open \`src/styles/theme.css\` to customize your palette variables:
   },
   'astro-mdx': {
     slug: 'astro-mdx',
-    category: 'Astro 5 Themes',
+    category: 'Web sites',
     title: 'MDX Content & Blog Integration',
     description: 'Creating blog posts, case studies, and documentation pages with MDX and frontmatter.',
     lastUpdated: 'August 2026',
@@ -256,14 +256,14 @@ Your long-form markdown content goes here...
   },
   'astro-deployment': {
     slug: 'astro-deployment',
-    category: 'Astro 5 Themes',
+    category: 'Web sites',
     title: 'Deploying Astro Sites to Vercel & Netlify',
     description: 'One-click zero-config deployment to Vercel, Netlify, Cloudflare Pages, or GitHub Pages.',
     lastUpdated: 'August 2026',
     content: `
 ### Vercel Deployment
 
-Connect your Git repository to Vercel. Vercel automatically detects Astro 5 and builds the static output in under 30 seconds.
+Connect your Git repository to Vercel. Vercel automatically detects Next.js 16 and builds the static output in under 30 seconds.
 
 \`\`\`bash
 npx vercel
@@ -377,7 +377,7 @@ The Multi-Agent Content Kit uses CrewAI to orchestrate autonomous web research (
 
 \`\`\`python
 # Run autonomous content crew
-python run_crew.py --topic "Astro 5 vs Next.js 15 Architecture"
+python run_crew.py --topic "Next.js 16 vs Next.js 15 Architecture"
 \`\`\`
 `
   },

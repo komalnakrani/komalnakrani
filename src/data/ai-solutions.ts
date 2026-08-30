@@ -52,7 +52,7 @@ export const aiSolutions: AISolution[] = [
     featured: true,
     architecture: 'CrewAI Multi-Agent Framework + Tavily Web Search + Flux.1 Image Gen + Astro MDX Sync',
     badge: 'Turnkey AI Workflow',
-    techStack: ['CrewAI', 'Python', 'Tavily API', 'Flux.1', 'Astro 5', 'Node.js'],
+    techStack: ['CrewAI', 'Python', 'Tavily API', 'Flux.1', 'Next.js 16', 'Node.js'],
     features: [
       'Includes Complete Learning & Step-by-Step Integration Guide (PDF + Code)',
       'Researcher Agent: Gathers real-time web facts & citations',
