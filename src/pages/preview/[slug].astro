@@ -18,10 +18,19 @@ interface Props {
 
 const { theme } = Astro.props;
 
-// Vercel deployment URL fallback
-const vercelPreviewUrl = theme.previewUrl.startsWith('http') 
-  ? theme.previewUrl 
-  : `https://${theme.slug}.vercel.app`;
+const cleanSlug = theme.slug
+  .replace(/\.webflow\.io$/g, '')
+  .replace(/webflow-html-website-template/g, 'template')
+  .replace(/webflow-ecommerce-template/g, 'ecommerce')
+  .replace(/-webflow-/g, '-')
+  .replace(/^webflow-/g, '')
+  .replace(/-webflow$/g, '')
+  .replace(/webflow/g, 'komal')
+  .replace(/-next$/g, '')
+  .replace(/-astro$/g, '')
+  .toLowerCase();
+
+const customSubdomainUrl = `https://${cleanSlug}.komalnakrani.com`;
 ---
 <!doctype html>
 <html lang="en">
@@ -33,19 +42,19 @@ const vercelPreviewUrl = theme.previewUrl.startsWith('http')
   </head>
   <body style="margin: 0; padding: 0; background: #0d0d0d; color: #ffffff; overflow: hidden; font-family: var(--body);">
     
-    <!-- Floating Minimal Top Bar (No Site Header/Footer) -->
+    <!-- Floating Minimal Top Bar -->
     <header class="preview-top-bar">
       <div class="ptb-left">
         <a href="/" class="wm" style="text-decoration: none;">
           <span class="glyph" style="width: 28px; height: 28px; font-size: 13px;">KN</span>
-          <span class="wmt" style="color: #ffffff; font-size: 15px;">Komal</span>
+          <span class="wmt" style="color: #ffffff; font-size: 15px;">Komal Nakrani</span>
         </a>
 
         <!-- Theme Selector Dropdown -->
         <select id="preview-theme-select" class="theme-select-dropdown">
           {themes.map((t) => (
             <option value={`/preview/${t.slug}/`} selected={t.slug === theme.slug}>
-              {t.name} ({t.framework.toUpperCase()})
+              {t.name}
             </option>
           ))}
         </select>
@@ -69,17 +78,11 @@ const vercelPreviewUrl = theme.previewUrl.startsWith('http')
         </div>
       </div>
 
-      <!-- Bundle Buy Links & CTAs -->
+      <!-- Single Primary CTA Button (White buttons removed) -->
       <div class="ptb-right">
-        <a href={vercelPreviewUrl} target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 12.5px; padding: 6px 12px; color: var(--ark-grey-300); border-color: rgba(255,255,255,0.2);">
-          Open Direct Vercel Site ↗
-        </a>
-        <a href="/bundles/" class="btn btn-primary" style="font-size: 13px; padding: 7px 15px; background: var(--accent); color: #ffffff;">
+        <a href="/bundles/" class="btn btn-primary" style="font-size: 13px; padding: 8px 18px; background: var(--accent); color: #ffffff; box-shadow: 0 4px 14px rgba(255, 103, 17, 0.4);">
           Get All-Access Bundle ($199) <Icon name="arrow-right" />
         </a>
-        <button data-plan-price="29" data-plan-name={theme.name} class="btn btn-secondary pay-trigger-btn" style="font-size: 12.5px; padding: 7px 13px; color: #ffffff; border-color: rgba(255,255,255,0.2);">
-          Buy Theme ($29)
-        </button>
       </div>
     </header>
 
@@ -88,8 +91,7 @@ const vercelPreviewUrl = theme.previewUrl.startsWith('http')
       <div id="iframe-viewport-wrapper" class="viewport-wrapper" style="width: 100%;">
         <iframe 
           id="preview-iframe" 
-          src={`/preview-demos/${theme.slug}/`} 
-          data-vercel-src={vercelPreviewUrl}
+          src={customSubdomainUrl} 
           class="preview-iframe"
           title={`Live Interactive Preview of ${theme.name}`}
         ></iframe>
@@ -101,7 +103,7 @@ const vercelPreviewUrl = theme.previewUrl.startsWith('http')
     <style>
       .preview-top-bar {
         height: 52px;
-        background: var(--ark-ink);
+        background: #0b0f19;
         color: #ffffff;
         padding: 0 20px;
         display: flex;
@@ -115,47 +117,46 @@ const vercelPreviewUrl = theme.previewUrl.startsWith('http')
         gap: 16px;
       }
       .theme-select-dropdown {
-        background: var(--ark-ink-soft);
+        background: #1e293b;
         color: #ffffff;
-        border: 1px solid rgba(255, 103, 17, 0.3);
+        border: 1px solid rgba(255, 103, 17, 0.35);
         border-radius: var(--r-sm);
-        padding: 5px 12px;
-        font-family: var(--body);
-        font-size: 13px;
+        padding: 6px 12px;
+        font-family: var(--mono);
+        font-size: 12.5px;
         outline: none;
         cursor: pointer;
-        max-width: 220px;
       }
-      .theme-select-dropdown option {
-        background: var(--ark-ink);
-        color: #ffffff;
+      .ptb-center {
+        display: flex;
+        align-items: center;
       }
       .device-switcher {
         display: flex;
-        background: var(--ark-ink-soft);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: var(--r-pill);
-        padding: 2px;
-        gap: 2px;
+        gap: 4px;
+        background: #1e293b;
+        padding: 4px;
+        border-radius: var(--r-sm);
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
       .device-btn {
         background: transparent;
         border: none;
-        color: var(--ark-grey-300);
-        font-family: var(--body);
-        font-size: 11.5px;
-        font-weight: 600;
-        padding: 5px 12px;
-        border-radius: var(--r-pill);
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
+        color: #94a3b8;
+        padding: 4px 10px;
+        border-radius: var(--r-xs);
+        font-size: 12px;
         cursor: pointer;
-        transition: all var(--dur) var(--ease);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
       }
-      .device-btn:hover { color: #ffffff; }
+      .device-btn:hover {
+        color: #ffffff;
+      }
       .device-btn.active {
-        background: var(--accent);
+        background: #ff6711;
         color: #ffffff;
       }
       .ptb-right {
@@ -163,18 +164,18 @@ const vercelPreviewUrl = theme.previewUrl.startsWith('http')
         align-items: center;
         gap: 10px;
       }
+
       .iframe-view-main {
         height: calc(100vh - 52px);
+        width: 100vw;
+        background: #020617;
         display: flex;
-        align-items: center;
         justify-content: center;
-        background: #0d0d0d;
-        overflow-x: auto;
+        align-items: center;
       }
       .viewport-wrapper {
         height: 100%;
-        max-width: 100%;
-        transition: width 300ms var(--ease);
+        transition: width 300ms ease;
       }
       .preview-iframe {
         width: 100%;
@@ -183,39 +184,32 @@ const vercelPreviewUrl = theme.previewUrl.startsWith('http')
         background: #ffffff;
       }
 
-      @media (max-width: 800px) {
-        .device-switcher span { display: none; }
-        .theme-select-dropdown { max-width: 130px; }
+      @media (max-width: 768px) {
+        .ptb-center { display: none; }
+        .theme-select-dropdown { max-width: 140px; }
       }
     </style>
 
     <script>
-      function initPreviewShell() {
-        const dropdown = document.getElementById('preview-theme-select') as HTMLSelectElement | null;
-        const viewportWrapper = document.getElementById('iframe-viewport-wrapper');
-        const deviceBtns = document.querySelectorAll<HTMLButtonElement>('.device-btn');
-
-        if (dropdown) {
-          dropdown.addEventListener('change', (e) => {
-            const url = (e.target as HTMLSelectElement).value;
-            if (url) window.location.href = url;
-          });
-        }
-
-        deviceBtns.forEach((btn) => {
-          btn.addEventListener('click', () => {
-            deviceBtns.forEach((b) => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const viewportWidth = btn.getAttribute('data-viewport');
-            if (viewportWrapper && viewportWidth) {
-              viewportWrapper.style.width = viewportWidth;
-            }
-          });
+      const select = document.getElementById('preview-theme-select') as HTMLSelectElement | null;
+      if (select) {
+        select.addEventListener('change', (e) => {
+          const target = (e.target as HTMLSelectElement).value;
+          if (target) window.location.href = target;
         });
       }
 
-      document.addEventListener('DOMContentLoaded', initPreviewShell);
+      const deviceBtns = document.querySelectorAll<HTMLButtonElement>('.device-btn');
+      const wrapper = document.getElementById('iframe-viewport-wrapper');
+
+      deviceBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          deviceBtns.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          const vp = btn.getAttribute('data-viewport') || '100%';
+          if (wrapper) wrapper.style.width = vp;
+        });
+      });
     </script>
   </body>
 </html>

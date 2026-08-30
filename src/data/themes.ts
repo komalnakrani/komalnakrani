@@ -18,7 +18,7 @@ export interface Theme {
 export const themes: Theme[] = [
   {
     "id": "apex-saas-astro",
-    "name": "Apex SaaS (Astro Edition)",
+    "name": "Apex SaaS",
     "slug": "apex-saas-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Apex SaaS",
     "description": "Ultra-fast Astro 5 starter kit engineered for Apex SaaS. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -28,7 +28,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/apex-saas-astro/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff6711 160%)",
-    "badge": "Astro 5 · Featured",
+    "badge": "Featured",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -46,7 +46,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "apex-saas-next",
-    "name": "Apex SaaS (Next.js Edition)",
+    "name": "Apex SaaS",
     "slug": "apex-saas-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Apex SaaS",
     "description": "Production Next.js 15 App Router boilerplate for Apex SaaS. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -56,7 +56,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/apex-saas-next/",
     "imageBg": "linear-gradient(135deg, #0d0d0d 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Featured",
+    "badge": "Featured",
     "techStack": [
       "Next.js 15",
       "React 19",
@@ -74,7 +74,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "nova-startup-astro",
-    "name": "Nova Startup (Astro Edition)",
+    "name": "Nova Startup",
     "slug": "nova-startup-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Nova Startup",
     "description": "Ultra-fast Astro 5 starter kit engineered for Nova Startup. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -84,7 +84,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/nova-startup-astro/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Astro 5 · Featured",
+    "badge": "Featured",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -102,7 +102,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "nova-startup-next",
-    "name": "Nova Startup (Next.js Edition)",
+    "name": "Nova Startup",
     "slug": "nova-startup-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Nova Startup",
     "description": "Production Next.js 15 App Router boilerplate for Nova Startup. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -112,7 +112,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/nova-startup-next/",
     "imageBg": "linear-gradient(135deg, #0d0d0d 0%, #ff6b35 160%)",
-    "badge": "Next.js 15 · Featured",
+    "badge": "Featured",
     "techStack": [
       "Next.js 15",
       "React 19",
@@ -130,7 +130,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "lumina-saas-astro",
-    "name": "Lumina SaaS (Astro Edition)",
+    "name": "Lumina SaaS",
     "slug": "lumina-saas-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Lumina SaaS",
     "description": "Ultra-fast Astro 5 starter kit engineered for Lumina SaaS. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -140,7 +140,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/lumina-saas-astro/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff6711 160%)",
-    "badge": "Astro 5 · Featured",
+    "badge": "Featured",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -158,7 +158,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "lumina-saas-next",
-    "name": "Lumina SaaS (Next.js Edition)",
+    "name": "Lumina SaaS",
     "slug": "lumina-saas-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Lumina SaaS",
     "description": "Production Next.js 15 App Router boilerplate for Lumina SaaS. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -168,7 +168,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/lumina-saas-next/",
     "imageBg": "linear-gradient(135deg, #0d0d0d 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Featured",
+    "badge": "Featured",
     "techStack": [
       "Next.js 15",
       "React 19",
@@ -186,7 +186,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "vortex-platform-astro",
-    "name": "Vortex Platform (Astro Edition)",
+    "name": "Vortex Platform",
     "slug": "vortex-platform-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Vortex Platform",
     "description": "Ultra-fast Astro 5 starter kit engineered for Vortex Platform. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -214,7 +214,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "vortex-platform-next",
-    "name": "Vortex Platform (Next.js Edition)",
+    "name": "Vortex Platform",
     "slug": "vortex-platform-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Vortex Platform",
     "description": "Production Next.js 15 App Router boilerplate for Vortex Platform. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -242,7 +242,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "orbit-b2b-astro",
-    "name": "Orbit B2B (Astro Edition)",
+    "name": "Orbit B2B",
     "slug": "orbit-b2b-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Orbit B2B",
     "description": "Ultra-fast Astro 5 starter kit engineered for Orbit B2B. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -270,7 +270,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "orbit-b2b-next",
-    "name": "Orbit B2B (Next.js Edition)",
+    "name": "Orbit B2B",
     "slug": "orbit-b2b-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Orbit B2B",
     "description": "Production Next.js 15 App Router boilerplate for Orbit B2B. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -298,7 +298,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "pulse-cloud-astro",
-    "name": "Pulse Cloud (Astro Edition)",
+    "name": "Pulse Cloud",
     "slug": "pulse-cloud-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Pulse Cloud",
     "description": "Ultra-fast Astro 5 starter kit engineered for Pulse Cloud. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -326,7 +326,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "pulse-cloud-next",
-    "name": "Pulse Cloud (Next.js Edition)",
+    "name": "Pulse Cloud",
     "slug": "pulse-cloud-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Pulse Cloud",
     "description": "Production Next.js 15 App Router boilerplate for Pulse Cloud. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -354,7 +354,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "zenith-ai-astro",
-    "name": "Zenith AI (Astro Edition)",
+    "name": "Zenith AI",
     "slug": "zenith-ai-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Zenith AI",
     "description": "Ultra-fast Astro 5 starter kit engineered for Zenith AI. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -382,7 +382,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "zenith-ai-next",
-    "name": "Zenith AI (Next.js Edition)",
+    "name": "Zenith AI",
     "slug": "zenith-ai-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Zenith AI",
     "description": "Production Next.js 15 App Router boilerplate for Zenith AI. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -410,7 +410,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "strata-engine-astro",
-    "name": "Strata Engine (Astro Edition)",
+    "name": "Strata Engine",
     "slug": "strata-engine-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Strata Engine",
     "description": "Ultra-fast Astro 5 starter kit engineered for Strata Engine. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -438,7 +438,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "strata-engine-next",
-    "name": "Strata Engine (Next.js Edition)",
+    "name": "Strata Engine",
     "slug": "strata-engine-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Strata Engine",
     "description": "Production Next.js 15 App Router boilerplate for Strata Engine. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -466,7 +466,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "hyperion-flow-astro",
-    "name": "Hyperion Flow (Astro Edition)",
+    "name": "Hyperion Flow",
     "slug": "hyperion-flow-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Hyperion Flow",
     "description": "Ultra-fast Astro 5 starter kit engineered for Hyperion Flow. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -494,7 +494,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "hyperion-flow-next",
-    "name": "Hyperion Flow (Next.js Edition)",
+    "name": "Hyperion Flow",
     "slug": "hyperion-flow-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Hyperion Flow",
     "description": "Production Next.js 15 App Router boilerplate for Hyperion Flow. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -522,7 +522,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "aether-saas-astro",
-    "name": "Aether SaaS (Astro Edition)",
+    "name": "Aether SaaS",
     "slug": "aether-saas-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Aether SaaS",
     "description": "Ultra-fast Astro 5 starter kit engineered for Aether SaaS. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -550,7 +550,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "aether-saas-next",
-    "name": "Aether SaaS (Next.js Edition)",
+    "name": "Aether SaaS",
     "slug": "aether-saas-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Aether SaaS",
     "description": "Production Next.js 15 App Router boilerplate for Aether SaaS. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -578,7 +578,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "quantum-analytics-astro",
-    "name": "Quantum Analytics (Astro Edition)",
+    "name": "Quantum Analytics",
     "slug": "quantum-analytics-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Quantum Analytics",
     "description": "Ultra-fast Astro 5 starter kit engineered for Quantum Analytics. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -606,7 +606,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "quantum-analytics-next",
-    "name": "Quantum Analytics (Next.js Edition)",
+    "name": "Quantum Analytics",
     "slug": "quantum-analytics-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Quantum Analytics",
     "description": "Production Next.js 15 App Router boilerplate for Quantum Analytics. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -634,7 +634,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "helix-crm-astro",
-    "name": "Helix CRM (Astro Edition)",
+    "name": "Helix CRM",
     "slug": "helix-crm-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Helix CRM",
     "description": "Ultra-fast Astro 5 starter kit engineered for Helix CRM. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -662,7 +662,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "helix-crm-next",
-    "name": "Helix CRM (Next.js Edition)",
+    "name": "Helix CRM",
     "slug": "helix-crm-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Helix CRM",
     "description": "Production Next.js 15 App Router boilerplate for Helix CRM. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -690,7 +690,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "krypton-devtools-astro",
-    "name": "Krypton DevTools (Astro Edition)",
+    "name": "Krypton DevTools",
     "slug": "krypton-devtools-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Krypton DevTools",
     "description": "Ultra-fast Astro 5 starter kit engineered for Krypton DevTools. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -718,7 +718,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "krypton-devtools-next",
-    "name": "Krypton DevTools (Next.js Edition)",
+    "name": "Krypton DevTools",
     "slug": "krypton-devtools-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Krypton DevTools",
     "description": "Production Next.js 15 App Router boilerplate for Krypton DevTools. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -746,7 +746,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "spectra-platform-astro",
-    "name": "Spectra Platform (Astro Edition)",
+    "name": "Spectra Platform",
     "slug": "spectra-platform-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Spectra Platform",
     "description": "Ultra-fast Astro 5 starter kit engineered for Spectra Platform. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -774,7 +774,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "spectra-platform-next",
-    "name": "Spectra Platform (Next.js Edition)",
+    "name": "Spectra Platform",
     "slug": "spectra-platform-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Spectra Platform",
     "description": "Production Next.js 15 App Router boilerplate for Spectra Platform. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -802,7 +802,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "nexus-cloud-astro",
-    "name": "Nexus Cloud (Astro Edition)",
+    "name": "Nexus Cloud",
     "slug": "nexus-cloud-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Nexus Cloud",
     "description": "Ultra-fast Astro 5 starter kit engineered for Nexus Cloud. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -830,7 +830,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "nexus-cloud-next",
-    "name": "Nexus Cloud (Next.js Edition)",
+    "name": "Nexus Cloud",
     "slug": "nexus-cloud-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Nexus Cloud",
     "description": "Production Next.js 15 App Router boilerplate for Nexus Cloud. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -858,7 +858,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "aura-workspace-astro",
-    "name": "Aura Workspace (Astro Edition)",
+    "name": "Aura Workspace",
     "slug": "aura-workspace-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Aura Workspace",
     "description": "Ultra-fast Astro 5 starter kit engineered for Aura Workspace. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -886,7 +886,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "aura-workspace-next",
-    "name": "Aura Workspace (Next.js Edition)",
+    "name": "Aura Workspace",
     "slug": "aura-workspace-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Aura Workspace",
     "description": "Production Next.js 15 App Router boilerplate for Aura Workspace. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -914,7 +914,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "velocity-saas-astro",
-    "name": "Velocity SaaS (Astro Edition)",
+    "name": "Velocity SaaS",
     "slug": "velocity-saas-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Velocity SaaS",
     "description": "Ultra-fast Astro 5 starter kit engineered for Velocity SaaS. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -942,7 +942,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "velocity-saas-next",
-    "name": "Velocity SaaS (Next.js Edition)",
+    "name": "Velocity SaaS",
     "slug": "velocity-saas-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Velocity SaaS",
     "description": "Production Next.js 15 App Router boilerplate for Velocity SaaS. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -970,7 +970,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "synthetix-ai-astro",
-    "name": "Synthetix AI (Astro Edition)",
+    "name": "Synthetix AI",
     "slug": "synthetix-ai-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Synthetix AI",
     "description": "Ultra-fast Astro 5 starter kit engineered for Synthetix AI. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -998,7 +998,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "synthetix-ai-next",
-    "name": "Synthetix AI (Next.js Edition)",
+    "name": "Synthetix AI",
     "slug": "synthetix-ai-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Synthetix AI",
     "description": "Production Next.js 15 App Router boilerplate for Synthetix AI. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1026,7 +1026,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "echo-platform-astro",
-    "name": "Echo Platform (Astro Edition)",
+    "name": "Echo Platform",
     "slug": "echo-platform-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Echo Platform",
     "description": "Ultra-fast Astro 5 starter kit engineered for Echo Platform. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1054,7 +1054,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "echo-platform-next",
-    "name": "Echo Platform (Next.js Edition)",
+    "name": "Echo Platform",
     "slug": "echo-platform-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Echo Platform",
     "description": "Production Next.js 15 App Router boilerplate for Echo Platform. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1082,7 +1082,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "prism-cloud-astro",
-    "name": "Prism Cloud (Astro Edition)",
+    "name": "Prism Cloud",
     "slug": "prism-cloud-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Prism Cloud",
     "description": "Ultra-fast Astro 5 starter kit engineered for Prism Cloud. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1110,7 +1110,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "prism-cloud-next",
-    "name": "Prism Cloud (Next.js Edition)",
+    "name": "Prism Cloud",
     "slug": "prism-cloud-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Prism Cloud",
     "description": "Production Next.js 15 App Router boilerplate for Prism Cloud. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1138,7 +1138,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "titan-b2b-astro",
-    "name": "Titan B2B (Astro Edition)",
+    "name": "Titan B2B",
     "slug": "titan-b2b-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Titan B2B",
     "description": "Ultra-fast Astro 5 starter kit engineered for Titan B2B. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1166,7 +1166,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "titan-b2b-next",
-    "name": "Titan B2B (Next.js Edition)",
+    "name": "Titan B2B",
     "slug": "titan-b2b-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Titan B2B",
     "description": "Production Next.js 15 App Router boilerplate for Titan B2B. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1194,7 +1194,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "horizon-ai-astro",
-    "name": "Horizon AI (Astro Edition)",
+    "name": "Horizon AI",
     "slug": "horizon-ai-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Horizon AI",
     "description": "Ultra-fast Astro 5 starter kit engineered for Horizon AI. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1222,7 +1222,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "horizon-ai-next",
-    "name": "Horizon AI (Next.js Edition)",
+    "name": "Horizon AI",
     "slug": "horizon-ai-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Horizon AI",
     "description": "Production Next.js 15 App Router boilerplate for Horizon AI. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1250,7 +1250,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "cipher-saas-astro",
-    "name": "Cipher SaaS (Astro Edition)",
+    "name": "Cipher SaaS",
     "slug": "cipher-saas-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Cipher SaaS",
     "description": "Ultra-fast Astro 5 starter kit engineered for Cipher SaaS. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1278,7 +1278,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "cipher-saas-next",
-    "name": "Cipher SaaS (Next.js Edition)",
+    "name": "Cipher SaaS",
     "slug": "cipher-saas-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Cipher SaaS",
     "description": "Production Next.js 15 App Router boilerplate for Cipher SaaS. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1306,7 +1306,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "ignite-launch-astro",
-    "name": "Ignite Launch (Astro Edition)",
+    "name": "Ignite Launch",
     "slug": "ignite-launch-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Ignite Launch",
     "description": "Ultra-fast Astro 5 starter kit engineered for Ignite Launch. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1334,7 +1334,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "ignite-launch-next",
-    "name": "Ignite Launch (Next.js Edition)",
+    "name": "Ignite Launch",
     "slug": "ignite-launch-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Ignite Launch",
     "description": "Production Next.js 15 App Router boilerplate for Ignite Launch. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1362,7 +1362,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "vanguard-saas-astro",
-    "name": "Vanguard SaaS (Astro Edition)",
+    "name": "Vanguard SaaS",
     "slug": "vanguard-saas-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Vanguard SaaS",
     "description": "Ultra-fast Astro 5 starter kit engineered for Vanguard SaaS. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1390,7 +1390,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "vanguard-saas-next",
-    "name": "Vanguard SaaS (Next.js Edition)",
+    "name": "Vanguard SaaS",
     "slug": "vanguard-saas-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Vanguard SaaS",
     "description": "Production Next.js 15 App Router boilerplate for Vanguard SaaS. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1418,7 +1418,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "solstice-engine-astro",
-    "name": "Solstice Engine (Astro Edition)",
+    "name": "Solstice Engine",
     "slug": "solstice-engine-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Solstice Engine",
     "description": "Ultra-fast Astro 5 starter kit engineered for Solstice Engine. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1446,7 +1446,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "solstice-engine-next",
-    "name": "Solstice Engine (Next.js Edition)",
+    "name": "Solstice Engine",
     "slug": "solstice-engine-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Solstice Engine",
     "description": "Production Next.js 15 App Router boilerplate for Solstice Engine. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1474,7 +1474,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "mirage-platform-astro",
-    "name": "Mirage Platform (Astro Edition)",
+    "name": "Mirage Platform",
     "slug": "mirage-platform-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Mirage Platform",
     "description": "Ultra-fast Astro 5 starter kit engineered for Mirage Platform. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1502,7 +1502,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "mirage-platform-next",
-    "name": "Mirage Platform (Next.js Edition)",
+    "name": "Mirage Platform",
     "slug": "mirage-platform-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Mirage Platform",
     "description": "Production Next.js 15 App Router boilerplate for Mirage Platform. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1530,7 +1530,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "stellar-ai-astro",
-    "name": "Stellar AI (Astro Edition)",
+    "name": "Stellar AI",
     "slug": "stellar-ai-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Stellar AI",
     "description": "Ultra-fast Astro 5 starter kit engineered for Stellar AI. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1558,7 +1558,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "stellar-ai-next",
-    "name": "Stellar AI (Next.js Edition)",
+    "name": "Stellar AI",
     "slug": "stellar-ai-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Stellar AI",
     "description": "Production Next.js 15 App Router boilerplate for Stellar AI. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1586,7 +1586,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "cascade-saas-astro",
-    "name": "Cascade SaaS (Astro Edition)",
+    "name": "Cascade SaaS",
     "slug": "cascade-saas-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Cascade SaaS",
     "description": "Ultra-fast Astro 5 starter kit engineered for Cascade SaaS. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1614,7 +1614,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "cascade-saas-next",
-    "name": "Cascade SaaS (Next.js Edition)",
+    "name": "Cascade SaaS",
     "slug": "cascade-saas-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Cascade SaaS",
     "description": "Production Next.js 15 App Router boilerplate for Cascade SaaS. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1642,7 +1642,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "frontier-b2b-astro",
-    "name": "Frontier B2B (Astro Edition)",
+    "name": "Frontier B2B",
     "slug": "frontier-b2b-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Frontier B2B",
     "description": "Ultra-fast Astro 5 starter kit engineered for Frontier B2B. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1670,7 +1670,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "frontier-b2b-next",
-    "name": "Frontier B2B (Next.js Edition)",
+    "name": "Frontier B2B",
     "slug": "frontier-b2b-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Frontier B2B",
     "description": "Production Next.js 15 App Router boilerplate for Frontier B2B. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1698,7 +1698,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "apex-prime-astro",
-    "name": "Apex Prime (Astro Edition)",
+    "name": "Apex Prime",
     "slug": "apex-prime-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Apex Prime",
     "description": "Ultra-fast Astro 5 starter kit engineered for Apex Prime. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1726,7 +1726,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "apex-prime-next",
-    "name": "Apex Prime (Next.js Edition)",
+    "name": "Apex Prime",
     "slug": "apex-prime-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Apex Prime",
     "description": "Production Next.js 15 App Router boilerplate for Apex Prime. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1754,7 +1754,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "zenith-pro-astro",
-    "name": "Zenith Pro (Astro Edition)",
+    "name": "Zenith Pro",
     "slug": "zenith-pro-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Zenith Pro",
     "description": "Ultra-fast Astro 5 starter kit engineered for Zenith Pro. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1782,7 +1782,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "zenith-pro-next",
-    "name": "Zenith Pro (Next.js Edition)",
+    "name": "Zenith Pro",
     "slug": "zenith-pro-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Zenith Pro",
     "description": "Production Next.js 15 App Router boilerplate for Zenith Pro. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1810,7 +1810,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "strata-pro-astro",
-    "name": "Strata Pro (Astro Edition)",
+    "name": "Strata Pro",
     "slug": "strata-pro-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Strata Pro",
     "description": "Ultra-fast Astro 5 starter kit engineered for Strata Pro. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1838,7 +1838,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "strata-pro-next",
-    "name": "Strata Pro (Next.js Edition)",
+    "name": "Strata Pro",
     "slug": "strata-pro-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Strata Pro",
     "description": "Production Next.js 15 App Router boilerplate for Strata Pro. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1866,7 +1866,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "hyperion-x-astro",
-    "name": "Hyperion X (Astro Edition)",
+    "name": "Hyperion X",
     "slug": "hyperion-x-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Hyperion X",
     "description": "Ultra-fast Astro 5 starter kit engineered for Hyperion X. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1894,7 +1894,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "hyperion-x-next",
-    "name": "Hyperion X (Next.js Edition)",
+    "name": "Hyperion X",
     "slug": "hyperion-x-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Hyperion X",
     "description": "Production Next.js 15 App Router boilerplate for Hyperion X. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1922,7 +1922,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "orbit-pro-astro",
-    "name": "Orbit Pro (Astro Edition)",
+    "name": "Orbit Pro",
     "slug": "orbit-pro-astro",
     "tagline": "High-Converting Astro 5 Landing Page & Marketing Template for Orbit Pro",
     "description": "Ultra-fast Astro 5 starter kit engineered for Orbit Pro. Includes 100/100 Lighthouse performance, dynamic pricing toggle, and MDX blog integration.",
@@ -1950,7 +1950,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "orbit-pro-next",
-    "name": "Orbit Pro (Next.js Edition)",
+    "name": "Orbit Pro",
     "slug": "orbit-pro-next",
     "tagline": "Full-Stack Next.js 15 App Router B2B Starter for Orbit Pro",
     "description": "Production Next.js 15 App Router boilerplate for Orbit Pro. Pre-configured with NextAuth, Stripe subscriptions, User Dashboard, and Server Actions.",
@@ -1978,7 +1978,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "lexicon-studio-astro",
-    "name": "Lexicon Studio (Astro Edition)",
+    "name": "Lexicon Studio",
     "slug": "lexicon-studio-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Lexicon Studio",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -1988,7 +1988,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/lexicon-studio-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #ede9e3 100%)",
-    "badge": "Astro 5 · Agency",
+    "badge": "Agency",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2006,7 +2006,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "lexicon-studio-next",
-    "name": "Lexicon Studio (Next.js Edition)",
+    "name": "Lexicon Studio",
     "slug": "lexicon-studio-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Lexicon Studio",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2016,7 +2016,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/lexicon-studio-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #1a1a1a 100%)",
-    "badge": "Next.js 15 · Agency",
+    "badge": "Agency",
     "techStack": [
       "Next.js 15",
       "React 19",
@@ -2033,7 +2033,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "atelier-quiet-luxury-astro",
-    "name": "Atelier Quiet Luxury (Astro Edition)",
+    "name": "Atelier Quiet Luxury",
     "slug": "atelier-quiet-luxury-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Atelier Quiet Luxury",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2043,7 +2043,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/atelier-quiet-luxury-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #ede9e3 100%)",
-    "badge": "Astro 5 · Agency",
+    "badge": "Agency",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2061,7 +2061,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "atelier-quiet-luxury-next",
-    "name": "Atelier Quiet Luxury (Next.js Edition)",
+    "name": "Atelier Quiet Luxury",
     "slug": "atelier-quiet-luxury-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Atelier Quiet Luxury",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2071,7 +2071,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/atelier-quiet-luxury-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #1a1a1a 100%)",
-    "badge": "Next.js 15 · Agency",
+    "badge": "Agency",
     "techStack": [
       "Next.js 15",
       "React 19",
@@ -2088,7 +2088,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "cyber-serif-agency-astro",
-    "name": "Cyber Serif Agency (Astro Edition)",
+    "name": "Cyber Serif Agency",
     "slug": "cyber-serif-agency-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Cyber Serif Agency",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2116,7 +2116,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "cyber-serif-agency-next",
-    "name": "Cyber Serif Agency (Next.js Edition)",
+    "name": "Cyber Serif Agency",
     "slug": "cyber-serif-agency-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Cyber Serif Agency",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2143,7 +2143,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "disruptor-brutalist-astro",
-    "name": "Disruptor Brutalist (Astro Edition)",
+    "name": "Disruptor Brutalist",
     "slug": "disruptor-brutalist-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Disruptor Brutalist",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2171,7 +2171,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "disruptor-brutalist-next",
-    "name": "Disruptor Brutalist (Next.js Edition)",
+    "name": "Disruptor Brutalist",
     "slug": "disruptor-brutalist-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Disruptor Brutalist",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2198,7 +2198,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "red-sun-editorial-astro",
-    "name": "Red Sun Editorial (Astro Edition)",
+    "name": "Red Sun Editorial",
     "slug": "red-sun-editorial-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Red Sun Editorial",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2226,7 +2226,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "red-sun-editorial-next",
-    "name": "Red Sun Editorial (Next.js Edition)",
+    "name": "Red Sun Editorial",
     "slug": "red-sun-editorial-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Red Sun Editorial",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2253,7 +2253,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "obsidian-elite-astro",
-    "name": "Obsidian Elite (Astro Edition)",
+    "name": "Obsidian Elite",
     "slug": "obsidian-elite-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Obsidian Elite",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2281,7 +2281,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "obsidian-elite-next",
-    "name": "Obsidian Elite (Next.js Edition)",
+    "name": "Obsidian Elite",
     "slug": "obsidian-elite-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Obsidian Elite",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2308,7 +2308,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "crimson-craft-astro",
-    "name": "Crimson Craft (Astro Edition)",
+    "name": "Crimson Craft",
     "slug": "crimson-craft-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Crimson Craft",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2336,7 +2336,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "crimson-craft-next",
-    "name": "Crimson Craft (Next.js Edition)",
+    "name": "Crimson Craft",
     "slug": "crimson-craft-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Crimson Craft",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2363,7 +2363,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "midnight-editorial-astro",
-    "name": "Midnight Editorial (Astro Edition)",
+    "name": "Midnight Editorial",
     "slug": "midnight-editorial-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Midnight Editorial",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2391,7 +2391,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "midnight-editorial-next",
-    "name": "Midnight Editorial (Next.js Edition)",
+    "name": "Midnight Editorial",
     "slug": "midnight-editorial-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Midnight Editorial",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2418,7 +2418,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "atmospheric-agency-astro",
-    "name": "Atmospheric Agency (Astro Edition)",
+    "name": "Atmospheric Agency",
     "slug": "atmospheric-agency-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Atmospheric Agency",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2446,7 +2446,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "atmospheric-agency-next",
-    "name": "Atmospheric Agency (Next.js Edition)",
+    "name": "Atmospheric Agency",
     "slug": "atmospheric-agency-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Atmospheric Agency",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2473,7 +2473,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "studio-editorial-astro",
-    "name": "Studio Editorial (Astro Edition)",
+    "name": "Studio Editorial",
     "slug": "studio-editorial-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Studio Editorial",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2501,7 +2501,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "studio-editorial-next",
-    "name": "Studio Editorial (Next.js Edition)",
+    "name": "Studio Editorial",
     "slug": "studio-editorial-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Studio Editorial",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2528,7 +2528,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "terroir-creative-astro",
-    "name": "Terroir Creative (Astro Edition)",
+    "name": "Terroir Creative",
     "slug": "terroir-creative-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Terroir Creative",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2556,7 +2556,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "terroir-creative-next",
-    "name": "Terroir Creative (Next.js Edition)",
+    "name": "Terroir Creative",
     "slug": "terroir-creative-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Terroir Creative",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2583,7 +2583,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "raw-form-agency-astro",
-    "name": "Raw Form Agency (Astro Edition)",
+    "name": "Raw Form Agency",
     "slug": "raw-form-agency-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Raw Form Agency",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2611,7 +2611,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "raw-form-agency-next",
-    "name": "Raw Form Agency (Next.js Edition)",
+    "name": "Raw Form Agency",
     "slug": "raw-form-agency-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Raw Form Agency",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2638,7 +2638,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "kinetix-agency-astro",
-    "name": "Kinetix Agency (Astro Edition)",
+    "name": "Kinetix Agency",
     "slug": "kinetix-agency-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Kinetix Agency",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2666,7 +2666,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "kinetix-agency-next",
-    "name": "Kinetix Agency (Next.js Edition)",
+    "name": "Kinetix Agency",
     "slug": "kinetix-agency-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Kinetix Agency",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2693,7 +2693,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "vanguard-studio-astro",
-    "name": "Vanguard Studio (Astro Edition)",
+    "name": "Vanguard Studio",
     "slug": "vanguard-studio-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Vanguard Studio",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2721,7 +2721,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "vanguard-studio-next",
-    "name": "Vanguard Studio (Next.js Edition)",
+    "name": "Vanguard Studio",
     "slug": "vanguard-studio-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Vanguard Studio",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2748,7 +2748,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "monolith-design-astro",
-    "name": "Monolith Design (Astro Edition)",
+    "name": "Monolith Design",
     "slug": "monolith-design-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Monolith Design",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2776,7 +2776,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "monolith-design-next",
-    "name": "Monolith Design (Next.js Edition)",
+    "name": "Monolith Design",
     "slug": "monolith-design-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Monolith Design",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2803,7 +2803,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "aesthetic-core-astro",
-    "name": "Aesthetic Core (Astro Edition)",
+    "name": "Aesthetic Core",
     "slug": "aesthetic-core-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Aesthetic Core",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2831,7 +2831,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "aesthetic-core-next",
-    "name": "Aesthetic Core (Next.js Edition)",
+    "name": "Aesthetic Core",
     "slug": "aesthetic-core-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Aesthetic Core",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2858,7 +2858,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "veritas-agency-astro",
-    "name": "Veritas Agency (Astro Edition)",
+    "name": "Veritas Agency",
     "slug": "veritas-agency-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Veritas Agency",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2886,7 +2886,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "veritas-agency-next",
-    "name": "Veritas Agency (Next.js Edition)",
+    "name": "Veritas Agency",
     "slug": "veritas-agency-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Veritas Agency",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2913,7 +2913,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "noir-studio-astro",
-    "name": "Noir Studio (Astro Edition)",
+    "name": "Noir Studio",
     "slug": "noir-studio-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Noir Studio",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2941,7 +2941,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "noir-studio-next",
-    "name": "Noir Studio (Next.js Edition)",
+    "name": "Noir Studio",
     "slug": "noir-studio-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Noir Studio",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -2968,7 +2968,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "minimalist-craft-astro",
-    "name": "Minimalist Craft (Astro Edition)",
+    "name": "Minimalist Craft",
     "slug": "minimalist-craft-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Minimalist Craft",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -2996,7 +2996,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "minimalist-craft-next",
-    "name": "Minimalist Craft (Next.js Edition)",
+    "name": "Minimalist Craft",
     "slug": "minimalist-craft-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Minimalist Craft",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -3023,7 +3023,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "prism-studio-astro",
-    "name": "Prism Studio (Astro Edition)",
+    "name": "Prism Studio",
     "slug": "prism-studio-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Prism Studio",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -3051,7 +3051,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "prism-studio-next",
-    "name": "Prism Studio (Next.js Edition)",
+    "name": "Prism Studio",
     "slug": "prism-studio-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Prism Studio",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -3078,7 +3078,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "serif-line-astro",
-    "name": "Serif Line (Astro Edition)",
+    "name": "Serif Line",
     "slug": "serif-line-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Serif Line",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -3106,7 +3106,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "serif-line-next",
-    "name": "Serif Line (Next.js Edition)",
+    "name": "Serif Line",
     "slug": "serif-line-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Serif Line",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -3133,7 +3133,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "architectural-type-astro",
-    "name": "Architectural Type (Astro Edition)",
+    "name": "Architectural Type",
     "slug": "architectural-type-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Architectural Type",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -3161,7 +3161,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "architectural-type-next",
-    "name": "Architectural Type (Next.js Edition)",
+    "name": "Architectural Type",
     "slug": "architectural-type-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Architectural Type",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -3188,7 +3188,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "elysian-studio-astro",
-    "name": "Elysian Studio (Astro Edition)",
+    "name": "Elysian Studio",
     "slug": "elysian-studio-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Elysian Studio",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -3216,7 +3216,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "elysian-studio-next",
-    "name": "Elysian Studio (Next.js Edition)",
+    "name": "Elysian Studio",
     "slug": "elysian-studio-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Elysian Studio",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -3243,7 +3243,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "nexus-creative-astro",
-    "name": "Nexus Creative (Astro Edition)",
+    "name": "Nexus Creative",
     "slug": "nexus-creative-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Nexus Creative",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -3271,7 +3271,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "nexus-creative-next",
-    "name": "Nexus Creative (Next.js Edition)",
+    "name": "Nexus Creative",
     "slug": "nexus-creative-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Nexus Creative",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -3298,7 +3298,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "apex-atelier-astro",
-    "name": "Apex Atelier (Astro Edition)",
+    "name": "Apex Atelier",
     "slug": "apex-atelier-astro",
     "tagline": "Editorial Design Agency & Portfolio Theme for Apex Atelier",
     "description": "Editorial agency theme with custom cursor micro-interactions, Orlean typography, and interactive case study layouts.",
@@ -3326,7 +3326,7 @@ export const themes: Theme[] = [
   },
   {
     "id": "apex-atelier-next",
-    "name": "Apex Atelier (Next.js Edition)",
+    "name": "Apex Atelier",
     "slug": "apex-atelier-next",
     "tagline": "High-Performance Next.js Portfolio & Studio Theme for Apex Atelier",
     "description": "Next.js 15 agency portfolio theme with Framer Motion page transitions, dark mode, and dynamic CMS integration.",
@@ -3390,7 +3390,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/webgl-matrix-canvas-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3444,7 +3444,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/neural-aurora-shader-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3498,7 +3498,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/fluid-dynamics-3d-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3552,7 +3552,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/raymarching-particle-grid-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3606,7 +3606,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/hyperspace-tunnel-3d-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3660,7 +3660,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/glassmorphic-distortion-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3714,7 +3714,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/cybernetic-particle-wave-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3768,7 +3768,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/holographic-mesh-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3822,7 +3822,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/quantum-field-shader-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3876,7 +3876,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/organic-waveform-3d-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3930,7 +3930,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/neon-velocity-canvas-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -3984,7 +3984,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/celestial-sphere-3d-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -4038,7 +4038,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/voxel-terrain-engine-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -4092,7 +4092,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/sub-surface-light-mesh-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -4146,7 +4146,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/dark-matter-particle-grid-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 180%)",
-    "badge": "Next.js 15 · R3F 3D",
+    "badge": "R3F 3D",
     "techStack": [
       "Next.js 15",
       "React Three Fiber",
@@ -4173,7 +4173,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/hyperdocs-engine-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4199,7 +4199,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/hyperdocs-engine-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4225,7 +4225,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/starlight-pro-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4251,7 +4251,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/starlight-pro-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4277,7 +4277,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/sdk-reference-manual-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4303,7 +4303,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/sdk-reference-manual-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4329,7 +4329,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/devhub-portal-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4355,7 +4355,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/devhub-portal-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4381,7 +4381,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/api-spec-explorer-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4407,7 +4407,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/api-spec-explorer-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4433,7 +4433,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/opensource-docs-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4459,7 +4459,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/opensource-docs-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4485,7 +4485,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/typedocs-engine-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4511,7 +4511,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/typedocs-engine-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4537,7 +4537,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/nexus-knowledge-base-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4563,7 +4563,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/nexus-knowledge-base-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4589,7 +4589,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/terminal-docs-shell-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4615,7 +4615,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/terminal-docs-shell-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4641,7 +4641,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/codebase-manual-astro/",
     "imageBg": "linear-gradient(135deg, #111822 0%, #101820 100%)",
-    "badge": "Astro 5 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Astro 5",
       "Starlight",
@@ -4667,7 +4667,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/codebase-manual-next/",
     "imageBg": "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%)",
-    "badge": "Next.js 15 · Docs",
+    "badge": "Docs",
     "techStack": [
       "Next.js 15",
       "Nextra",
@@ -4693,7 +4693,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/commerce-core-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -4719,7 +4719,7 @@ export const themes: Theme[] = [
     "featured": true,
     "previewUrl": "/preview/commerce-core-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -4745,7 +4745,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/forest-sage-organic-store-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -4771,7 +4771,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/forest-sage-organic-store-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -4797,7 +4797,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/heavyweight-brutalist-shop-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -4823,7 +4823,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/heavyweight-brutalist-shop-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -4849,7 +4849,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/season-04-store-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -4875,7 +4875,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/season-04-store-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -4901,7 +4901,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/digital-asset-mart-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -4927,7 +4927,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/digital-asset-mart-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -4953,7 +4953,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/aesthetic-goods-co-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -4979,7 +4979,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/aesthetic-goods-co-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5005,7 +5005,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/cyber-storefront-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5031,7 +5031,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/cyber-storefront-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5057,7 +5057,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/minimal-merchant-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5083,7 +5083,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/minimal-merchant-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5109,7 +5109,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/luxurious-goods-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5135,7 +5135,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/luxurious-goods-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5161,7 +5161,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/vogue-commerce-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5187,7 +5187,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/vogue-commerce-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5213,7 +5213,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/artifact-store-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5239,7 +5239,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/artifact-store-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5265,7 +5265,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/neobrutalist-shop-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5291,7 +5291,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/neobrutalist-shop-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5317,7 +5317,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/echo-storefront-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5343,7 +5343,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/echo-storefront-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5369,7 +5369,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/pulse-market-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5395,7 +5395,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/pulse-market-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
@@ -5421,7 +5421,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/urban-supply-co-astro/",
     "imageBg": "linear-gradient(135deg, #fffdfa 0%, #fffbf6 100%)",
-    "badge": "Astro 5 · Store",
+    "badge": "Store",
     "techStack": [
       "Astro 5",
       "LemonSqueezy",
@@ -5447,7 +5447,7 @@ export const themes: Theme[] = [
     "featured": false,
     "previewUrl": "/preview/urban-supply-co-next/",
     "imageBg": "linear-gradient(135deg, #101820 0%, #ff8200 160%)",
-    "badge": "Next.js 15 · Store",
+    "badge": "Store",
     "techStack": [
       "Next.js 15",
       "Stripe",
