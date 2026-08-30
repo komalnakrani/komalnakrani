@@ -1,58 +1,235 @@
 ---
-import type { Theme } from '../data/themes';
 import Icon from './Icon.astro';
+import type { Theme } from '../data/themes';
 
 interface Props {
   theme: Theme;
 }
 
 const { theme } = Astro.props;
+
+// Curated high-resolution Unsplash stock imagery based on category
+const fallbackImages: Record<string, string> = {
+  saas: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+  agency: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+  portfolio: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80',
+  shader: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+  docs: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+  ecommerce: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80',
+  'job board': 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+  directory: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+  'real estate': 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+  podcast: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',
+  event: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80'
+};
+
+const cardImage = theme.imageUrl || fallbackImages[theme.category] || fallbackImages.saas;
 ---
-<div class="theme-card">
-  <a href={`/preview/${theme.slug}/`} target="_blank" rel="noopener" class="theme-preview" style={`background: ${theme.imageBg}`}>
-    <!-- Mac Window Bar Mockup -->
-    <div style="position: absolute; top: 12px; left: 16px; display: flex; align-items: center; gap: 6px; z-index: 3;">
-      <span style="width: 9px; height: 9px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
-      <span style="width: 9px; height: 9px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
-      <span style="width: 9px; height: 9px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
-      <span style="font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.6); margin-left: 6px; letter-spacing: 0.05em;">{theme.slug}.astro</span>
+<article class="theme-card">
+  <!-- Lexington Style Browser Window Frame Mockup -->
+  <div class="card-browser-mockup">
+    <div class="browser-header">
+      <div class="browser-dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="browser-url">{theme.slug}.komalnakrani.com</div>
+      <span class="framework-tag" data-fw={theme.framework}>
+        {theme.framework === 'astro' ? 'Astro 5' : 'Next.js 15'}
+      </span>
     </div>
 
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px; width: 100%;">
-      {theme.badge ? (
-        <span class="theme-badge">{theme.badge}</span>
-      ) : <span />}
+    <a href={`/preview/${theme.slug}/`} target="_blank" rel="noopener" class="card-stage-link" title={`Live Preview ${theme.name}`}>
+      <img 
+        src={cardImage} 
+        alt={`${theme.name} - Free Unsplash Stock Preview`}
+        loading="lazy"
+        class="card-preview-img"
+      />
+      <div class="stage-overlay">
+        <span class="btn btn-primary" style="font-size: 13px; padding: 8px 18px; box-shadow: 0 4px 14px rgba(0,0,0,0.4);">
+          Live Preview <Icon name="arrow-right" />
+        </span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Card Information Footer -->
+  <div class="card-body">
+    <div class="card-meta-bar">
+      <span class="cat-chip">{theme.category}</span>
+      <span class="price-chip">$29</span>
     </div>
 
-    <div class="theme-frameworks">
-      {theme.techStack.slice(0, 3).map((tech) => (
-        <span class="fw-pill">{tech}</span>
-      ))}
-    </div>
-  </a>
+    <h3 class="card-title">
+      <a href={`/themes/${theme.slug}/`}>{theme.name}</a>
+    </h3>
 
-  <div class="theme-content">
-    <div class="theme-header">
-      <a href={`/themes/${theme.slug}/`} style="text-decoration: none;">
-        <h3 class="theme-title">{theme.name}</h3>
+    <p class="card-desc">{theme.tagline}</p>
+
+    <div class="card-actions">
+      <a href={`/preview/${theme.slug}/`} target="_blank" rel="noopener" class="btn btn-secondary" style="flex: 1; font-size: 13px; text-align: center;">
+        Preview ↗
       </a>
-      <div class="theme-price">${theme.price}<span>/single</span></div>
-    </div>
-    <p class="theme-tagline">{theme.tagline}</p>
-    
-    <div class="tech-stack-row">
-      {theme.techStack.map((tech) => (
-        <span class="tech-item">{tech}</span>
-      ))}
-    </div>
-
-    <div class="theme-footer">
-      <a href={`/preview/${theme.slug}/`} target="_blank" rel="noopener" class="demo-link">
-        Preview Theme <Icon name="arrow-right" />
+      <a href={`/themes/${theme.slug}/`} class="btn btn-primary" style="flex: 1; font-size: 13px; text-align: center;">
+        Details ($29)
       </a>
-      <button data-plan-price="29" data-plan-name={theme.name} class="btn btn-primary pay-trigger-btn" style="font-size: 12.5px; padding: 6px 12px;">
-        Buy $29
-      </button>
     </div>
   </div>
-</div>
+</article>
+
+<style>
+.theme-card {
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--sh-sm);
+  transition: all var(--dur) var(--ease);
+}
+.theme-card:hover {
+  border-color: rgba(255, 103, 17, 0.4);
+  box-shadow: var(--sh-md);
+  transform: translateY(-3px);
+}
+
+.card-browser-mockup {
+  background: var(--ark-ink);
+  border-bottom: 1px solid var(--line-2);
+}
+.browser-header {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.browser-dots {
+  display: flex;
+  gap: 5px;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.browser-url {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ark-grey-300);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+.framework-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--r-xs);
+  text-transform: uppercase;
+}
+.framework-tag[data-fw="astro"] {
+  background: rgba(255, 103, 17, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(255, 103, 17, 0.3);
+}
+.framework-tag[data-fw="nextjs"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-stage-link {
+  display: block;
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  background: #0d0d0d;
+}
+.card-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms var(--ease);
+}
+.card-stage-link:hover .card-preview-img {
+  transform: scale(1.05);
+}
+.stage-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 24, 32, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+.card-stage-link:hover .stage-overlay {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.cat-chip {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 700;
+}
+.price-chip {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--ink);
+}
+.card-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 19px;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.card-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.card-title a:hover {
+  color: var(--accent);
+}
+.card-desc {
+  font-family: var(--body);
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  margin: 0 0 20px;
+  flex: 1;
+}
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+</style>

@@ -5,11 +5,8 @@ import Icon from '../../components/Icon.astro';
 import ThemeCard from '../../components/ThemeCard.astro';
 import { themes } from '../../data/themes';
 
-const lexingtonCategories = [
-  'All', 'Free', 'Agency', 'Blog', 'Directory', 'Documentation', 'Ecommerce', 
-  'Education', 'EmDash CMS', 'Event', 'Job Board', 'Photography', 'Podcast', 
-  'Portfolio', 'Real Estate', 'SaaS', 'Sanity CMS', 'Services'
-];
+// Dynamically compute unique categories from active theme collection
+const activeCategories = ['all', ...Array.from(new Set(themes.map((t) => t.category.toLowerCase())))];
 
 const astroCount = themes.filter((t) => t.framework === 'astro').length;
 const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
@@ -34,12 +31,12 @@ const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
         <a href="/themes/nextjs/" class="btn btn-secondary">Next.js 15 ({nextCount})</a>
       </div>
 
-      <!-- Lexington Style 17-Category Filter Bar -->
+      <!-- Dynamically Computed Category Filter Bar -->
       <div class="lexington-cat-bar">
         <div class="cat-bar-track">
-          {lexingtonCategories.map((cat, idx) => (
-            <button class={`cat-pill-btn ${idx === 0 ? 'active' : ''}`} data-cat-filter={cat.toLowerCase()}>
-              {cat}
+          {activeCategories.map((cat, idx) => (
+            <button class={`cat-pill-btn ${idx === 0 ? 'active' : ''}`} data-cat-filter={cat}>
+              {cat === 'all' ? 'All Categories' : cat.charAt(0).toUpperCase() + cat.slice(1)}
             </button>
           ))}
         </div>
@@ -64,7 +61,7 @@ const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
           <div 
             class="theme-card-wrapper" 
             data-framework={theme.framework} 
-            data-category={theme.category}
+            data-category={theme.category.toLowerCase()}
             data-name={theme.name.toLowerCase()}
             data-tech={theme.techStack.join(' ').toLowerCase()}
           >
@@ -86,7 +83,7 @@ const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
 .lexington-cat-bar {
   max-width: 1000px;
   margin: 0 auto 36px;
-  padding: 12px 16px;
+  padding: 10px 16px;
   background: var(--surface-2);
   border: 1px solid var(--line-2);
   border-radius: var(--r-pill);
