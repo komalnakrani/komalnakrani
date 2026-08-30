@@ -17,6 +17,11 @@ interface Props {
 }
 
 const { theme } = Astro.props;
+
+// Vercel deployment URL fallback
+const vercelPreviewUrl = theme.previewUrl.startsWith('http') 
+  ? theme.previewUrl 
+  : `https://${theme.slug}.vercel.app`;
 ---
 <!doctype html>
 <html lang="en">
@@ -66,6 +71,9 @@ const { theme } = Astro.props;
 
       <!-- Bundle Buy Links & CTAs -->
       <div class="ptb-right">
+        <a href={vercelPreviewUrl} target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 12.5px; padding: 6px 12px; color: var(--ark-grey-300); border-color: rgba(255,255,255,0.2);">
+          Open Direct Vercel Site ↗
+        </a>
         <a href="/bundles/" class="btn btn-primary" style="font-size: 13px; padding: 7px 15px; background: var(--accent); color: #ffffff;">
           Get All-Access Bundle ($199) <Icon name="arrow-right" />
         </a>
@@ -81,6 +89,7 @@ const { theme } = Astro.props;
         <iframe 
           id="preview-iframe" 
           src={`/preview-demos/${theme.slug}/`} 
+          data-vercel-src={vercelPreviewUrl}
           class="preview-iframe"
           title={`Live Interactive Preview of ${theme.name}`}
         ></iframe>
