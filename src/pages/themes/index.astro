@@ -1,109 +1,176 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import K from '../../components/K.astro';
+import Icon from '../../components/Icon.astro';
 import ThemeCard from '../../components/ThemeCard.astro';
 import { themes } from '../../data/themes';
+
+const lexingtonCategories = [
+  'All', 'Free', 'Agency', 'Blog', 'Directory', 'Documentation', 'Ecommerce', 
+  'Education', 'EmDash CMS', 'Event', 'Job Board', 'Photography', 'Podcast', 
+  'Portfolio', 'Real Estate', 'SaaS', 'Sanity CMS', 'Services'
+];
 
 const astroCount = themes.filter((t) => t.framework === 'astro').length;
 const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
 ---
-<Layout title="200 Premium Astro & Next.js Themes Catalog | Komal Nakrani" description="Search 200 production-ready Astro 5 & Next.js 15 themes for SaaS, Agencies, Portfolios, 3D Canvas, Docs, and E-Commerce.">
+<Layout title="200 Production Web Themes | Komal Nakrani Marketplace" description="Explore 100 Astro 5 themes and 100 Next.js 15 App Router templates categorized by SaaS, Agency, Job Board, Directory, Ecommerce, Real Estate, and Shaders.">
   <main class="rise">
     <section class="wrap section">
-      <div style="max-width: 720px; margin-bottom: 28px;">
-        <K idx="01">Themes Marketplace</K>
+      <div style="text-align: center; max-width: 760px; margin: 0 auto 40px;">
+        <K idx="01">Theme Catalog</K>
         <h1 class="display" style="margin-top: 14px;">
-          Explore All <span class="grad">200 Themes</span>
+          Production Web <span class="grad">Themes</span>
         </h1>
         <p class="lead" style="margin-top: 14px;">
-          100 Astro 5 templates & 100 Next.js 15 App Router starters. Zero bloat, 100/100 Lighthouse speed.
+          Browse 100 Astro 5 zero-JS templates & 100 Next.js 15 App Router boilerplates. Buy individually for $29 or unlock all 200 themes for $199 lifetime.
         </p>
       </div>
 
-      <!-- Live Search & Filter Bar -->
-      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 28px;">
-        <div style="flex: 1; min-width: 280px; position: relative;">
-          <input type="text" id="theme-search-input" placeholder="🔍 Search 200 themes by name, framework, or tech stack (e.g. Astro, Next.js, Stripe, Three.js)..." class="form-input" style="padding: 14px 18px; font-size: 15px; border-radius: var(--r-pill);" />
+      <!-- Framework Switcher Tabs -->
+      <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 32px;">
+        <a href="/themes/" class="btn btn-secondary active">All Themes ({themes.length})</a>
+        <a href="/themes/astro/" class="btn btn-secondary">Astro 5 ({astroCount})</a>
+        <a href="/themes/nextjs/" class="btn btn-secondary">Next.js 15 ({nextCount})</a>
+      </div>
+
+      <!-- Lexington Style 17-Category Filter Bar -->
+      <div class="lexington-cat-bar">
+        <div class="cat-bar-track">
+          {lexingtonCategories.map((cat, idx) => (
+            <button class={`cat-pill-btn ${idx === 0 ? 'active' : ''}`} data-cat-filter={cat.toLowerCase()}>
+              {cat}
+            </button>
+          ))}
         </div>
       </div>
 
-      <div class="filter-tabs" data-filter-tabs>
-        <button class="tab-btn active" data-filter="all">All ({themes.length})</button>
-        <button class="tab-btn" data-filter="astro">Astro 5 ({astroCount})</button>
-        <button class="tab-btn" data-filter="nextjs">Next.js 15 ({nextCount})</button>
-        <button class="tab-btn" data-filter="saas">SaaS</button>
-        <button class="tab-btn" data-filter="agency">Agency</button>
-        <button class="tab-btn" data-filter="docs">Docs</button>
-        <button class="tab-btn" data-filter="ecommerce">E-Commerce</button>
+      <!-- Live Search Bar -->
+      <div style="max-width: 600px; margin: 0 auto 48px; position: relative;">
+        <input
+          type="text"
+          id="theme-search-input"
+          placeholder="Search by name, framework (Astro/Next), category, or tech stack..."
+          style="width: 100%; padding: 16px 20px 16px 48px; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-md); color: var(--ink); font-family: var(--body); font-size: 15px; outline: none; box-shadow: var(--sh-sm);"
+        />
+        <span style="position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: var(--ink-3);">
+          <Icon name="search" />
+        </span>
       </div>
 
-      <div class="grid-cards" data-themes-grid>
+      <!-- Theme Cards Grid -->
+      <div id="themes-grid" class="grid-cards">
         {themes.map((theme) => (
-          <div data-framework={theme.framework} data-category={theme.category} data-name={theme.name.toLowerCase()} data-tech={theme.techStack.join(' ').toLowerCase()} class="theme-card-wrapper">
+          <div 
+            class="theme-card-wrapper" 
+            data-framework={theme.framework} 
+            data-category={theme.category}
+            data-name={theme.name.toLowerCase()}
+            data-tech={theme.techStack.join(' ').toLowerCase()}
+          >
             <ThemeCard theme={theme} />
           </div>
         ))}
       </div>
 
-      <div id="no-results-msg" style="display: none; text-align: center; padding: 60px 20px; font-family: var(--body); color: var(--ink-3);">
-        <h3 class="h3" style="margin-bottom: 8px;">No matching themes found</h3>
-        <p>Try searching for different keywords like 'Astro', 'Next.js', 'Stripe', or 'SaaS'.</p>
+      <!-- No Search Results Found -->
+      <div id="no-results-msg" style="display: none; text-align: center; padding: 64px 20px; color: var(--ink-3);">
+        <h3 class="h3" style="color: var(--ink);">No themes found</h3>
+        <p class="body-t" style="margin-top: 8px;">Try searching for "SaaS", "Agency", "Docs", "Astro", or "Next.js".</p>
       </div>
     </section>
   </main>
 </Layout>
 
+<style>
+.lexington-cat-bar {
+  max-width: 1000px;
+  margin: 0 auto 36px;
+  padding: 12px 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-pill);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.cat-bar-track {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+.cat-pill-btn {
+  background: transparent;
+  border: none;
+  color: var(--ink-2);
+  font-family: var(--body);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+}
+.cat-pill-btn:hover {
+  color: var(--ink);
+  background: rgba(255, 103, 17, 0.08);
+}
+.cat-pill-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+}
+</style>
+
 <script>
   function initThemeFilters() {
     const searchInput = document.getElementById('theme-search-input') as HTMLInputElement | null;
-    const filterBtns = document.querySelectorAll<HTMLButtonElement>('[data-filter-tabs] button');
-    const themeWrappers = document.querySelectorAll<HTMLElement>('[data-themes-grid] .theme-card-wrapper');
-    const noResults = document.getElementById('no-results-msg');
+    const catBtns = document.querySelectorAll<HTMLButtonElement>('[data-cat-filter]');
+    const cardWrappers = document.querySelectorAll<HTMLElement>('.theme-card-wrapper');
+    const noResultsMsg = document.getElementById('no-results-msg');
 
-    let currentFilter = 'all';
+    let currentCat = 'all';
+    let currentQuery = '';
 
-    function applyFilter() {
-      const query = (searchInput?.value || '').toLowerCase().trim();
+    function filterGrid() {
       let visibleCount = 0;
 
-      themeWrappers.forEach((wrapper) => {
-        const framework = wrapper.getAttribute('data-framework');
-        const category = wrapper.getAttribute('data-category');
+      cardWrappers.forEach((wrapper) => {
         const name = wrapper.getAttribute('data-name') || '';
+        const framework = wrapper.getAttribute('data-framework') || '';
+        const category = wrapper.getAttribute('data-category') || '';
         const tech = wrapper.getAttribute('data-tech') || '';
 
-        const matchesTab = (currentFilter === 'all') || 
-                           (currentFilter === framework) || 
-                           (currentFilter === category);
-        
-        const matchesQuery = !query || name.includes(query) || tech.includes(query) || (framework && framework.includes(query));
+        const matchesCat = currentCat === 'all' || category === currentCat || name.includes(currentCat) || tech.includes(currentCat);
+        const matchesQuery = !currentQuery || name.includes(currentQuery) || framework.includes(currentQuery) || category.includes(currentQuery) || tech.includes(currentQuery);
 
-        if (matchesTab && matchesQuery) {
-          wrapper.style.display = 'flex';
-          wrapper.style.flexDirection = 'column';
+        if (matchesCat && matchesQuery) {
+          wrapper.style.display = 'block';
           visibleCount++;
         } else {
           wrapper.style.display = 'none';
         }
       });
 
-      if (noResults) {
-        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      if (noResultsMsg) {
+        noResultsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
       }
     }
 
-    filterBtns.forEach((btn) => {
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentQuery = (e.target as HTMLInputElement).value.toLowerCase().trim();
+        filterGrid();
+      });
+    }
+
+    catBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        filterBtns.forEach((b) => b.classList.remove('active'));
+        catBtns.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
-        currentFilter = btn.getAttribute('data-filter') || 'all';
-        applyFilter();
+        currentCat = btn.getAttribute('data-cat-filter') || 'all';
+        filterGrid();
       });
     });
-
-    if (searchInput) {
-      searchInput.addEventListener('input', applyFilter);
-    }
   }
 
   document.addEventListener('DOMContentLoaded', initThemeFilters);
