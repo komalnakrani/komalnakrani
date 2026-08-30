@@ -1,14 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { execFile } from 'node:child_process';
 import { lstat, mkdir, mkdtemp, readFile, readdir, rename, rm, symlink, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
+import { promisify } from 'node:util';
 import { runPort } from '../lib/run.mjs';
 import { canonicalJson, sha256Bytes } from '../lib/canonical-json.mjs';
 import { PORTS } from '../lib/ports.mjs';
 
 const entryBytes = await readFile(new URL('../fixtures/bl-entry.json', import.meta.url));
 const ENTRY_HASH = sha256Bytes(entryBytes);
+const execFileAsync = promisify(execFile);
 const baseOptions = Object.freeze({
   milestoneId: 'BL-00', priorHash: ENTRY_HASH, incomingState: 'UNORIENTED', outgoingState: 'ORIENTED',
   history: Object.freeze({ records: Object.freeze([]) }),
@@ -116,10 +119,21 @@ test('a fresh outside-repository run writes exact canonical bytes and never muta
 
 test('independent fresh targets produce byte-identical records', async () => {
   const sandbox = await mkdtemp(join(tmpdir(), 'mle-repeat-'));
+  const first = join(sandbox, 'one');
+  const second = join(sandbox, 'two');
   try {
-    const first = await runPort('PORT-EDGE', { ...baseOptions, target: join(sandbox, 'one') });
-    const second = await runPort('PORT-EDGE', { ...baseOptions, target: join(sandbox, 'two') });
-    assert.equal(canonicalJson(first), canonicalJson(second));
+    for (const target of [first, second]) {
+      const history = [];
+      for (let index = 0; index < 21; index += 1) await appendAt(target, index, history, {}, 'PORT-EDGE');
+    }
+    for (let index = 0; index < 21; index += 1) {
+      const name = `bl-${String(index).padStart(2, '0')}.json`;
+      assert.equal(await readFile(join(first, name), 'utf8'), await readFile(join(second, name), 'utf8'), name);
+    }
+    assert.notEqual(
+      await readFile(join(first, '.mle-companion-root.json'), 'utf8'),
+      await readFile(join(second, '.mle-companion-root.json'), 'utf8'),
+    );
   } finally { await rm(sandbox, { recursive: true, force: true }); }
 });
 
@@ -182,6 +196,26 @@ test('a copied regular ownership marker and unrelated content cannot spoof a fre
     await assert.rejects(runPort('PORT-MANAGED', { ...baseOptions, target: forged }), (error) => ['ROOT_UNOWNED', 'PATH_DENIED'].includes(error.code));
     assert.equal(await readFile(join(forged, 'sentinel.txt'), 'utf8'), 'do not touch\n');
     assert.equal((await readdir(forged)).includes('bl-00.json'), false);
+    const script = `
+      import { readFile } from 'node:fs/promises';
+      import { runPort } from ${JSON.stringify(new URL('../lib/run.mjs', import.meta.url).href)};
+      import { canonicalJson, sha256Bytes } from ${JSON.stringify(new URL('../lib/canonical-json.mjs', import.meta.url).href)};
+      const bytes = await readFile(${JSON.stringify(join(legitimate, 'bl-00.json'))}, 'utf8');
+      const record = JSON.parse(bytes);
+      try {
+        await runPort('PORT-MANAGED', {
+          target: ${JSON.stringify(legitimate)}, history: { records: [{ milestoneId: 'BL-00', hash: sha256Bytes(canonicalJson(record)) }] },
+          milestoneId: 'BL-01', priorHash: sha256Bytes(canonicalJson(record)), incomingState: 'ORIENTED', outgoingState: 'CONTRACTED',
+        });
+        process.exitCode = 2;
+      } catch (error) {
+        if (error.code !== 'ROOT_UNOWNED') throw error;
+        process.stdout.write(error.code);
+      }
+    `;
+    const result = await execFileAsync(process.execPath, ['--input-type=module', '-e', script]);
+    assert.equal(result.stdout, 'ROOT_UNOWNED');
+    assert.equal((await readdir(legitimate)).includes('bl-01.json'), false);
   } finally { await rm(sandbox, { recursive: true, force: true }); }
 });
 
@@ -212,23 +246,15 @@ test('negative execution rejects malformed hashes and contradictory chapter stat
   } finally { await rm(sandbox, { recursive: true, force: true }); }
 });
 
-test('explicit reopen records name changed evidence without replacing the frozen mutation diagnostic', async () => {
+test('explicit reopen rejects BL-00 because its target evidence cannot already exist', async () => {
   const sandbox = await mkdtemp(join(tmpdir(), 'mle-reopen-'));
   try {
     for (const port of PORTS) {
       const target = join(sandbox, port.toLowerCase());
       await appendAt(target, 0, [], {}, port);
-      const reopened = await runPort(port, {
+      await assert.rejects(runPort(port, {
         ...baseOptions, target, mode: 'negative', reopenTrigger: 'purpose or intended use',
-      });
-      assert.equal(reopened.diagnostic, 'REOPEN_PURPOSE_OR_INTENDED_USE');
-      assert.equal(reopened.disposition, 'REOPEN');
-      assert.equal(reopened.reopenTrigger, 'purpose or intended use');
-      assert.equal(reopened.sourceState, 'UNORIENTED');
-      assert.equal(reopened.reopenTarget, 'CONTRACTED');
-      assert.deepEqual(reopened.invalidatedEvidence, ['task', 'population', 'acceptance', 'qualification', 'release']);
-      assert.equal(reopened.inputHash, ENTRY_HASH);
-      assert.match(reopened.outputHash, /^[a-f0-9]{64}$/);
+      }), (error) => error.code === 'DOSSIER_TRANSITION_INVALID');
     }
   } finally { await rm(sandbox, { recursive: true, force: true }); }
 });

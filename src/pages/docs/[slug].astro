@@ -1,0 +1,271 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import { docSections, docArticles, type DocArticle } from '../../data/docs';
+
+export function getStaticPaths() {
+  return Object.keys(docArticles).map((slug) => ({
+    params: { slug },
+    props: { article: docArticles[slug] },
+  }));
+}
+
+interface Props {
+  article: DocArticle;
+}
+
+const { article } = Astro.props;
+
+// Simple markdown-to-html renderer helper for doc content
+function renderMarkdown(md: string) {
+  return md
+    .replace(/^### (.*$)/gim, '<h3 class="doc-h3">$1</h3>')
+    .replace(/^## (.*$)/gim, '<h2 class="doc-h2">$1</h2>')
+    .replace(/^# (.*$)/gim, '<h1 class="doc-h1">$1</h1>')
+    .replace(/^> (.*$)/gim, '<blockquote class="doc-callout">$1</blockquote>')
+    .replace(/```(bash|env|css|ts|python|mdx)([\s\S]*?)```/gim, (_, lang, code) => {
+      return `<div class="doc-code-block"><div class="doc-code-header"><span>${lang}</span><button class="copy-code-btn" onclick="navigator.clipboard.writeText(\`${code.trim().replace(/`/g, '\\`').replace(/\$/g, '\\$')}\`)">Copy</button></div><pre><code>${code.trim()}</code></pre></div>`;
+    })
+    .replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n\n/g, '</p><p class="doc-p">')
+    .replace(/- ✅ (.*$)/gim, '<li class="doc-li check">✅ $1</li>')
+    .replace(/- ❌ (.*$)/gim, '<li class="doc-li cross">❌ $1</li>')
+    .replace(/- (.*$)/gim, '<li class="doc-li">$1</li>');
+}
+
+const htmlContent = renderMarkdown(article.content);
+---
+<Layout title={`${article.title} - Documentation | Komal Nakrani`} description={article.description}>
+  <main class="rise wrap section" style="padding-top: 40px;">
+    <div class="docs-layout">
+      <!-- Left Sidebar Navigation -->
+      <aside class="docs-sidebar">
+        <div style="margin-bottom: 24px;">
+          <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 4px;">
+            DOCUMENTATION CENTER
+          </div>
+          <div style="font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--ink);">
+            Komal Architecture
+          </div>
+        </div>
+
+        <nav aria-label="Documentation sidebar">
+          {docSections.map((sec) => (
+            <div class="doc-nav-group">
+              <div class="doc-nav-heading">{sec.title}</div>
+              <ul class="doc-nav-list">
+                {sec.items.map((item) => {
+                  const isActive = item.slug === article.slug;
+                  return (
+                    <li>
+                      <a href={`/docs/${item.slug}/`} class={`doc-nav-link ${isActive ? 'active' : ''}`}>
+                        {item.title}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
+        </nav>
+      </aside>
+
+      <!-- Right Main Content Area -->
+      <article class="docs-main">
+        <!-- Breadcrumbs -->
+        <div class="doc-breadcrumbs">
+          <a href="/docs/getting-started/">Docs</a>
+          <span>/</span>
+          <span style="color: var(--ink-3);">{article.category}</span>
+          <span>/</span>
+          <span style="color: var(--accent);">{article.title}</span>
+        </div>
+
+        <h1 class="display" style="font-size: clamp(32px, 4vw, 48px); margin: 16px 0 8px;">
+          {article.title}
+        </h1>
+        <p class="lead" style="font-size: 17px; margin-bottom: 24px; color: var(--ink-2);">
+          {article.description}
+        </p>
+
+        <div style="display: flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); padding-bottom: 20px; border-bottom: 1px solid var(--line); margin-bottom: 32px;">
+          <span>Updated: {article.lastUpdated}</span>
+          <span>·</span>
+          <span>License: Commercial & Personal</span>
+        </div>
+
+        <!-- Rendered Documentation Content -->
+        <div class="doc-content-body" set:html={htmlContent} />
+
+        <!-- Bottom All-Access Pass Banner -->
+        <div style="margin-top: 56px; padding: 32px; background: var(--ark-ink); color: #ffffff; border-radius: var(--r-lg); border: 1px solid rgba(255, 103, 17, 0.4); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+          <div>
+            <div style="font-family: var(--display); font-weight: 700; font-size: 22px; color: #ffffff;">Unlock All 200 Themes + AI Kits</div>
+            <p style="font-family: var(--body); font-size: 14.5px; color: var(--ark-grey-300); margin: 6px 0 0;">Get full source code ownership for $199 lifetime.</p>
+          </div>
+          <a href="/bundles/" class="btn btn-primary" style="font-size: 14px; padding: 10px 20px;">
+            Get All-Access Pass ($199) <Icon name="arrow-right" />
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+.docs-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.docs-sidebar {
+  position: sticky;
+  top: 96px;
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-lg);
+  padding: 24px;
+}
+.doc-nav-group {
+  margin-bottom: 20px;
+}
+.doc-nav-heading {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  margin-bottom: 8px;
+}
+.doc-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.doc-nav-link {
+  font-family: var(--body);
+  font-size: 14px;
+  color: var(--ink-2);
+  display: block;
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  transition: all var(--dur) var(--ease);
+}
+.doc-nav-link:hover {
+  color: var(--ink);
+  background: var(--surface-2);
+}
+.doc-nav-link.active {
+  background: rgba(255, 103, 17, 0.12);
+  color: var(--accent);
+  font-weight: 600;
+  border: 1px solid rgba(255, 103, 17, 0.25);
+}
+
+.doc-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.doc-breadcrumbs a {
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.doc-breadcrumbs a:hover { color: var(--accent); }
+
+/* Document Content Typography */
+.doc-content-body {
+  font-family: var(--body);
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+:global(.doc-h1), :global(.doc-h2), :global(.doc-h3) {
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 32px 0 16px;
+}
+:global(.doc-h2) { font-size: 24px; border-bottom: 1px solid var(--line-2); padding-bottom: 8px; }
+:global(.doc-h3) { font-size: 20px; }
+:global(.doc-p) { margin-bottom: 18px; }
+
+:global(.doc-code-block) {
+  background: var(--ark-ink);
+  color: #ffffff;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(255, 103, 17, 0.25);
+  margin: 20px 0;
+  overflow: hidden;
+}
+:global(.doc-code-header) {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+:global(.copy-code-btn) {
+  background: rgba(255, 103, 17, 0.2);
+  color: #ffffff;
+  border: none;
+  padding: 3px 8px;
+  border-radius: var(--r-xs);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 10px;
+}
+:global(.doc-code-block pre) {
+  padding: 16px;
+  margin: 0;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.5;
+}
+:global(.inline-code) {
+  font-family: var(--mono);
+  font-size: 13.5px;
+  background: var(--surface-2);
+  color: var(--accent);
+  padding: 2px 6px;
+  border-radius: var(--r-xs);
+  border: 1px solid var(--line-2);
+}
+:global(.doc-callout) {
+  background: rgba(255, 103, 17, 0.08);
+  border-left: 4px solid var(--accent);
+  padding: 14px 18px;
+  margin: 20px 0;
+  border-radius: var(--r-sm);
+  font-size: 15px;
+  color: var(--ink);
+}
+:global(.doc-li) {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .docs-layout {
+    grid-template-columns: 1fr;
+  }
+  .docs-sidebar {
+    position: static;
+  }
+}
+</style>

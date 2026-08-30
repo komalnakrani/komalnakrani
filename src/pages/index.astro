@@ -1,46 +1,289 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Btn from '../components/Btn.astro';
 import K from '../components/K.astro';
+import Icon from '../components/Icon.astro';
+import ThemeCard from '../components/ThemeCard.astro';
+import AISolutionCard from '../components/AISolutionCard.astro';
+import { themes } from '../data/themes';
+import { aiSolutions } from '../data/ai-solutions';
+
+const astroThemes = themes.filter((t) => t.framework === 'astro');
+const nextThemes = themes.filter((t) => t.framework === 'nextjs');
+const featuredAI = aiSolutions.filter((s) => s.featured);
+
+const techPills = [
+  'Astro 5 Engine', 'Next.js 15 App Router', 'Tailwind CSS', 'TypeScript', 'React 19', 
+  'Pinecone Vector DB', 'LangChain', 'CrewAI Framework', 'Ollama Local LLM', 'OpenAI GPT-4o', 
+  'Claude 3.5 Sonnet', 'LiveKit WebRTC', 'Flux.1 API', 'Pagefind Search'
+];
+
+const faqs = [
+  {
+    q: 'What makes Komal Nakrani themes faster than traditional market templates?',
+    a: 'Every Astro 5 theme ships with zero client-side JavaScript by default, achieving perfect 100/100 Core Web Vitals scores. Next.js 15 themes utilize Server Components, React 19, and optimized asset delivery for sub-second page loads.'
+  },
+  {
+    q: 'What is included with each $39 Turnkey AI Solution Kit?',
+    a: 'Each AI Kit includes complete production-ready source code (RAG pipelines, CrewAI multi-agent engines, or local Ollama wrappers) paired with a step-by-step Learning & Integration Document PDF that walks you through architecture configuration and API key setup.'
+  },
+  {
+    q: 'How does the $199 Lifetime All-Access Pass work?',
+    a: 'The $199 All-Access Pass provides lifetime commercial source code access to all 100 Astro 5 themes, all 100 Next.js 15 themes, and all turnkey AI Solution Kits with free updates forever and zero recurring subscriptions.'
+  },
+  {
+    q: 'Can I use these themes and AI kits for commercial client projects?',
+    a: 'Yes. Both individual purchases ($29 themes / $39 AI kits) and the $199 Lifetime All-Access Pass include full commercial licensing for unlimited personal and client projects.'
+  }
+];
 ---
-<Layout>
+<Layout title="Komal Nakrani | 200 Premium Astro 5 & Next.js 15 Themes + Turnkey AI Solutions" description="Production-grade Astro 5 & Next.js 15 templates engineered for high-performance web applications, paired with turnkey RAG and multi-agent AI architectures.">
   <main class="rise">
+    <!-- Hero Section -->
     <section class="wrap hero">
       <div class="hero-grid">
         <div>
-          <K idx="01" sig>Original role-based learning</K>
-          <h1 class="display" style="margin-top: 22px">
-            Learn the work.<br />Understand the judgment.<br /><span class="grad">Build real mastery.</span>
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Astro 5 & Next.js 15 Engine + Production AI Architecture
+          </div>
+          <h1 class="display">
+            Production-Grade Web Themes.<br />
+            <span class="grad">Turnkey AI Architecture.</span>
           </h1>
           <p class="lead">
-            Komal Nakrani publishes fresh, evidence-led books for applied AI and production engineering roles.
-            Every title begins with role research, maps to explicit competencies, and carries its sources with it.
+            Engineered for high-performing tech startups, agencies, and AI developers. Pre-configured with 100/100 Core Web Vitals performance, type-safe APIs, and ready-to-deploy RAG & multi-agent workflows.
           </p>
           <div class="hero-cta">
-            <Btn variant="primary" size="lg" href="/roles/" iconRight="arrow-right">Explore roles</Btn>
-            <Btn variant="secondary" size="lg" href="/books/" icon="book-open">Browse books</Btn>
+            <a class="btn btn-primary btn-lg" href="#astro-themes">
+              Explore Astro 5 Themes <Icon name="arrow-right" />
+            </a>
+            <a class="btn btn-secondary btn-lg" href="#nextjs-themes">
+              Next.js 15 Themes
+            </a>
+            <a class="btn btn-secondary btn-lg" href="#ai-solutions">
+              Turnkey AI Kits ($39)
+            </a>
           </div>
         </div>
-        <div class="portrait">
-          <div class="portrait-block" style="display:grid; place-items:center; padding:42px">
-            <div style="position:relative; z-index:2; color:white; max-width:320px">
-              <K sig>Publishing standard</K>
-              <p class="h2" style="color:white; margin-top:18px">Nothing inherited. Nothing relabelled. Every book written fresh.</p>
+        
+        <!-- Hero Visual Code Mockup -->
+        <div style="background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-lg); border-top: 4px solid var(--accent);">
+          <div style="background: var(--ark-ink); color: #ffffff; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 103, 17, 0.2);">
+            <div style="display: flex; gap: 6px;">
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56;"></span>
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e;"></span>
+              <span style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></span>
             </div>
+            <div style="font-family: var(--mono); font-size: 11px; color: var(--accent);">rag-agent.config.ts</div>
           </div>
+          
+          <div style="background: var(--ark-ink-soft); color: var(--ark-paper-3); padding: 24px; font-family: var(--mono); font-size: 12px; line-height: 1.6;">
+            <div><span style="color: #ff6711;">import</span> &#123; createRAGAgent &#125; <span style="color: #ff6711;">from</span> <span style="color: #adb5bd;">'@komal/ai-sdk'</span>;</div>
+            <br />
+            <div><span style="color: #ff6711;">export const</span> agent = <span style="color: #ff8400;">createRAGAgent</span>(&#123;</div>
+            <div style="padding-left: 16px;">model: <span style="color: #adb5bd;">'claude-3-5-sonnet'</span>,</div>
+            <div style="padding-left: 16px;">vectorDb: <span style="color: #adb5bd;">'pinecone'</span>,</div>
+            <div style="padding-left: 16px;">hybridSearch: <span style="color: #ff8400;">true</span>,</div>
+            <div style="padding-left: 16px;">hallucinationGuard: <span style="color: #ff8400;">true</span>,</div>
+            <div>&#125;);</div>
+          </div>
+
+          <div style="padding: 20px; background: var(--surface); border-top: 1px solid var(--line);">
+            <div class="k" style="margin-bottom: 6px;"><span class="idx">01</span> The Engineering Standard</div>
+            <div style="font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--ink);">Zero Bloat. 100/100 Core Web Vitals. Production AI.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Marquee -->
+      <div class="tech-marquee">
+        <div class="marquee-track">
+          {techPills.map((pill) => (
+            <span class="tech-pill-badge">
+              <span class="accent-dot"></span>
+              {pill}
+            </span>
+          ))}
+          {techPills.map((pill) => (
+            <span class="tech-pill-badge">
+              <span class="accent-dot"></span>
+              {pill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Stats Ledger -->
+      <div class="stats-ledger">
+        <div class="stat-cell">
+          <div class="stat-num">100<span>+</span></div>
+          <div class="stat-lbl">Astro 5 Themes</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100<span>+</span></div>
+          <div class="stat-lbl">Next.js 15 Themes</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100<span>/100</span></div>
+          <div class="stat-lbl">Lighthouse Speed</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">$199</div>
+          <div class="stat-lbl">Lifetime All-Access</div>
         </div>
       </div>
     </section>
 
+    <!-- Lexington Value Manifesto Section -->
     <section class="wrap section">
-      <div class="sec-head">
-        <div><K idx="02">The method</K><h2 class="h2" style="margin-top:12px">From role evidence to a usable book</h2></div>
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 48px;">
+        <K idx="02">Why Komal Marketplace</K>
+        <h2 class="h1" style="margin-top: 10px;">Built for Developers Who Value Speed</h2>
+        <p class="body-t" style="margin-top: 8px;">
+          Stop wasting weeks wiring together vector database boilerplate or debugging slow, bloated theme templates.
+        </p>
       </div>
-      <div class="help">
-        <div class="hc"><span class="hk">01</span><span class="hn">Research</span><span class="hd">Define the role from current, attributable evidence.</span></div>
-        <div class="hc"><span class="hk">02</span><span class="hn">Map</span><span class="hd">Turn responsibilities into explicit competencies and learning objectives.</span></div>
-        <div class="hc"><span class="hk">03</span><span class="hn">Write</span><span class="hd">Build original chapters, examples, figures, and references from the ground up.</span></div>
-        <div class="hc"><span class="hk">04</span><span class="hn">Verify</span><span class="hd">Review claims, sources, accessibility, edition identity, and publication quality.</span></div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <Icon name="check" />
+          </div>
+          <h3 class="feature-title">Uncompromising Speed</h3>
+          <p class="feature-desc">
+            Zero client-side JS overhead by default in Astro 5. Fast React 19 Server Components in Next.js 15. Every page delivers 100/100 Core Web Vitals performance.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <Icon name="check" />
+          </div>
+          <h3 class="feature-title">Production AI Architecture</h3>
+          <p class="feature-desc">
+            Turnkey RAG pipelines, CrewAI multi-agent workflows, and Ollama local LLM desktop shells paired with step-by-step Learning & Setup Guides ($39).
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <Icon name="check" />
+          </div>
+          <h3 class="feature-title">100% Code Ownership</h3>
+          <p class="feature-desc">
+            No recurring monthly theme subscriptions or platform lock-in. Buy once ($29 theme / $39 AI kit / $199 Pass), own full commercial source code forever.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Astro Themes Section -->
+    <section id="astro-themes" class="wrap section" style="border-top: 1px dashed var(--line-2);">
+      <div class="sec-head">
+        <div>
+          <K idx="03">Framework Ecosystem</K>
+          <h2 class="h1">Zero-JS <span class="grad">Astro 5 Templates</span></h2>
+          <p class="body-t" style="margin-top: 6px;">
+            High-converting Astro 5 landing pages, WebGL 3D shader canvases, and technical documentation systems.
+          </p>
+        </div>
+        <a href="/themes/astro/" class="btn btn-secondary">
+          Explore All 100 Astro Themes →
+        </a>
+      </div>
+
+      <div class="grid-cards">
+        {astroThemes.slice(0, 3).map((theme) => (
+          <ThemeCard theme={theme} />
+        ))}
+      </div>
+    </section>
+
+    <!-- Next.js Themes Section -->
+    <section id="nextjs-themes" class="wrap section" style="background: var(--surface-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <K idx="04">Full-Stack Starters</K>
+            <h2 class="h1">Production <span class="grad">Next.js 15 Boilerplates</span></h2>
+            <p class="body-t" style="margin-top: 6px;">
+              Full-stack App Router templates pre-configured with React 19, Server Actions, NextAuth, and Stripe Subscriptions.
+            </p>
+          </div>
+          <a href="/themes/nextjs/" class="btn btn-secondary">
+            Explore All 100 Next.js Themes →
+          </a>
+        </div>
+
+        <div class="grid-cards">
+          {nextThemes.slice(0, 3).map((theme) => (
+            <ThemeCard theme={theme} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Turnkey AI Solutions Section -->
+    <section id="ai-solutions" class="wrap section">
+      <div class="sec-head">
+        <div>
+          <K idx="05">AI Agent Architecture</K>
+          <h2 class="h1">Turnkey <span class="grad">AI Solutions ($39)</span></h2>
+          <p class="body-t" style="margin-top: 6px;">
+            Battle-tested RAG engines, CrewAI multi-agent pipelines, local LLM shells, and WebRTC voice reps with complete Learning Guides.
+          </p>
+        </div>
+        <a href="/ai-solutions/" class="btn btn-secondary">
+          View All AI Kits →
+        </a>
+      </div>
+
+      <div class="grid-cards">
+        {featuredAI.map((solution) => (
+          <AISolutionCard solution={solution} />
+        ))}
+      </div>
+    </section>
+
+    <!-- FAQ Section (AEO & GEO Optimized) -->
+    <section class="wrap section" style="border-top: 1px dashed var(--line-2);">
+      <div style="text-align: center; max-width: 640px; margin: 0 auto 48px;">
+        <K idx="06">Knowledge Base & FAQ</K>
+        <h2 class="h1" style="margin-top: 10px;">Frequently Asked Questions</h2>
+        <p class="body-t" style="margin-top: 8px;">Technical specifications, licensing model, and integration answers.</p>
+      </div>
+
+      <div class="faq-grid">
+        {faqs.map((faq) => (
+          <div class="faq-item">
+            <h3 class="faq-q">{faq.q}</h3>
+            <p class="faq-a">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Lifetime Pass CTA Banner -->
+    <section class="wrap section">
+      <div class="pass-banner">
+        <div class="pass-content">
+          <div>
+            <span class="hero-badge" style="background: rgba(255,103,17,0.15); color: var(--ark-orange-bright); border-color: rgba(255,103,17,0.4);">
+              LIFETIME COMMERCIAL LICENSE
+            </span>
+            <h2 class="pass-title">Unlock All 200 Themes & AI Kits Today</h2>
+            <p class="pass-desc">
+              Get full source code ownership for 100 Astro 5 themes, 100 Next.js 15 themes, and all 4 turnkey AI Solution Kits with lifetime updates and zero recurring fees.
+            </p>
+          </div>
+          <div class="pass-pricing-card">
+            <div class="pass-price">$199 <span>/ lifetime</span></div>
+            <p class="small" style="color: var(--ark-grey-400); margin: 8px 0 20px;">Single payment · Unlimited commercial use</p>
+            <a href="/bundles/" class="btn btn-primary btn-lg" style="width: 100%;">
+              Get All-Access Pass ($199) <Icon name="arrow-right" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>

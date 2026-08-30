@@ -123,9 +123,12 @@ export function createNegativeRecord(options) {
   }
   const mutation = MUTATION_CONTRACTS[contract.index];
   if (mutation.chapterId !== contract.chapterId) throw Object.assign(new Error(`mutation fixture drift for ${contract.chapterId}`), { code: 'FIXTURE_INVALID' });
-  const reopen = options.reopenTrigger ? resolveReopen(options.reopenTrigger) : null;
+  const reopen = options.reopenTrigger ? resolveReopen(options.reopenTrigger, options.incomingState) : null;
   const mutationReopen = !reopen && mutation.disposition === 'REOPEN'
-    ? resolveReopen(contract.index === 18 ? 'authority constraint or permitted use' : 'runtime dependencies interface or serving envelope')
+    ? resolveReopen(
+      contract.index === 18 ? 'authority constraint or permitted use' : 'runtime dependencies interface or serving envelope',
+      options.incomingState,
+    )
     : null;
   const activeReopen = reopen ?? mutationReopen;
   const diagnostic = reopen

@@ -50,6 +50,8 @@
 | `CASE-06` — Google ML Test Score production-readiness method | PUBLIC REPORTED CASE | Transfer test decision jobs and missing-evidence disposition, never universal points or certification. |
 | `CASE-07` — Uber Michelangelo feature and deployment evidence pattern | PUBLIC REPORTED CASE | Use its dated experiment-comparison pattern as reported fact only; reduce it to provider-neutral run and comparison fields. |
 
+Frozen constructed-case truth projections preserve zero reported facts, attributed outcomes, and source uses. `CASE-01`: allowed inference — The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence. Forbidden inference — Do not infer real industrial performance, safety, production readiness, business outcome, or external approval. Transfer rule — Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence. `CASE-02`: allowed inference — The constructed managed fixture may test exportable identity and evidence under provider opacity. Forbidden inference — Do not infer provider capability or outcome, real accuracy or use, approval, or a cloud tutorial. Transfer rule — Reproduce the same dossier fields without provider names using the selected service's actual evidence. `CASE-03`: allowed inference — The constructed classical fixture may test that qualification and authority gates still apply to a simple model. Forbidden inference — Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization. Transfer rule — Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally. `CASE-04`: allowed inference — The constructed deep fixture may test checkpoint, preprocessor, runtime, uncertainty, and serving identity bindings. Forbidden inference — Do not infer real accuracy, acoustic safety, field performance, production behavior, or approval. Transfer rule — Preserve the same decision/evidence job when the model family or runtime changes. Each existing case-specific limitation and authority owner remains unchanged.
+
 `CASE-06` is a public method, not a universal experiment gate. `CASE-07` remains a first-party production pattern: its reported workflow and experiment-store gaps are facts attributed to Uber, and its scale/adoption outcomes do not transfer.
 
 ## Durable, volatile, and conflicting evidence treatment
@@ -62,7 +64,7 @@
 
 ## Dated current examples
 
-- MLflow 3 living tracking documentation (`MLE-BSRC-018`) was verified on 2026-08-18. Any field, API, storage behavior, or executable example requires a pinned version before manuscript freeze.
+- `MLE-BSRC-018` is MLflow 3.15.1 versioned Tracking documentation; release 2026-08-03; retrieved 2026-08-23 at `https://mlflow.org/docs/3.15.1/ml/tracking/`. Tracking preserves only recorded metadata and confers no qualification or release authority. Recheck on MLflow release, Tracking field/API/storage change, or publication freeze; retain 3.15.1 for this edition.
 - PyTorch 2.13 reproducibility documentation (`MLE-BSRC-021`, published 2026-05-14) is the exact versioned current example; it explicitly does not guarantee exact results across releases or platforms.
 - Uber's Michelangelo report (`MLE-BSRC-043`) is dated 2017 and is used only as a first-party experiment-store and comparison-pattern report.
 

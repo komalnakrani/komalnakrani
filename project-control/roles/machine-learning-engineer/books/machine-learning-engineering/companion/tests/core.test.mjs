@@ -116,8 +116,11 @@ test('all produced positive, negative, and reopen records satisfy the closed JSO
     }
   }
   for (const trigger of REOPEN_TRIGGERS) {
-    const reopened = createNegativeRecord({
+    assert.throws(() => createNegativeRecord({
       milestoneId: 'BL-00', priorHash: ENTRY_HASH, incomingState: 'UNORIENTED', reopenTrigger: trigger.change,
+    }), (error) => error.code === 'DOSSIER_TRANSITION_INVALID');
+    const reopened = createNegativeRecord({
+      milestoneId: 'BL-18', priorHash: ENTRY_HASH, incomingState: 'REQUALIFIED', reopenTrigger: trigger.change,
     });
     validateClosedSchema(reopened, portSchema);
     assert.equal(reopened.disposition, 'REOPEN');

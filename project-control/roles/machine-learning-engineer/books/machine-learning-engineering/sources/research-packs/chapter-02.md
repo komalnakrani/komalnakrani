@@ -49,6 +49,8 @@
 | `CASE-05` — Shared ranking platform tenant | CONSTRUCTED SATELLITE | Separate workload purpose and qualification from platform tenancy. It is not a platform-engineering curriculum. |
 | `CASE-06` — Google ML Test Score production-readiness method | PUBLIC REPORTED CASE | Select evidence tests from failure modes after task contraction; never use the reported rubric as a universal score or gate. |
 
+Frozen constructed-case truth projections preserve zero reported facts, attributed outcomes, and source uses. `CASE-01`: allowed inference — The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence. Forbidden inference — Do not infer real industrial performance, safety, production readiness, business outcome, or external approval. Transfer rule — Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence. `CASE-02`: allowed inference — The constructed managed fixture may test exportable identity and evidence under provider opacity. Forbidden inference — Do not infer provider capability or outcome, real accuracy or use, approval, or a cloud tutorial. Transfer rule — Reproduce the same dossier fields without provider names using the selected service's actual evidence. `CASE-03`: allowed inference — The constructed classical fixture may test that qualification and authority gates still apply to a simple model. Forbidden inference — Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization. Transfer rule — Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally. `CASE-05`: allowed inference — The constructed shared-tenant fixture may test separation of workload evidence from tenant, fleet, and platform authority. Forbidden inference — Do not infer platform-wide SLO or performance, business effect, isolation assurance, or approval. Transfer rule — Preserve workload evidence when the substrate changes and recheck every substrate-bound relation. Each existing case-specific limitation and authority owner remains unchanged.
+
 For `CASE-06`, reported method facts remain attributed to the paper authors. The allowed inference is that missing release-critical evidence can justify HOLD; no universal causal outcome, point threshold, or certification is supported.
 
 ## Durable, volatile, and conflicting evidence treatment
@@ -62,7 +64,7 @@ For `CASE-06`, reported method facts remain attributed to the paper authors. The
 ## Dated current examples
 
 - AI RMF 1.0 (`MLE-BSRC-028`, 2023-01-26) is the fixed authority-framing source; its living Core rendering (`MLE-BSRC-027`) was verified on 2026-08-18.
-- Google's Rules of ML (`MLE-BSRC-015`) was live-checked on 2026-08-18 and is used only as current first-party practice for the simple-incumbent path.
+- Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze.
 - The October 2021 joint GMLP principles (`MLE-BSRC-038`) remain a historical sector-specific source and are not presented as current cross-sector law.
 
 ## Authority ceiling

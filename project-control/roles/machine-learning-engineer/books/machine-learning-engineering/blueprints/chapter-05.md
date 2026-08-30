@@ -147,28 +147,28 @@ Every port retains equal status: no provider, model family, device, or shared pl
   - Truth rule: All data, results, incidents, and outcomes are constructed; primary sources support doctrine only.
   - Reported facts: none; the fixture is constructed.
   - Attributed outcomes: none.
-  - Allowed inference: use only the synthetic decision trace defined in this chapter.
-  - Forbidden inference: Do not infer unreported outcomes for Benchline Inspection Dossier.
+  - Allowed inference: The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence.
+  - Forbidden inference: Do not infer real industrial performance, safety, production readiness, business outcome, or external approval.
   - Limitation: No real production, industrial, safety, performance, or business claim.
-  - Transfer rule: Every chapter decision must transfer to the four satellite ports.
+  - Transfer rule: Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence.
 
 - **CASE-03 — Classical credit triage** — CONSTRUCTED SATELLITE
   - Truth rule: Synthetic records only; no lending, fairness, compliance, or outcome claim.
   - Reported facts: none; the fixture is constructed.
   - Attributed outcomes: none.
-  - Allowed inference: use only the synthetic decision trace defined in this chapter.
-  - Forbidden inference: Do not infer unreported outcomes for Classical credit triage.
+  - Allowed inference: The constructed classical fixture may test that qualification and authority gates still apply to a simple model.
+  - Forbidden inference: Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization.
   - Limitation: Not financial advice or credit authorization.
-  - Transfer rule: Must satisfy the same evidence interface without deep-learning assumptions.
+  - Transfer rule: Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally.
 
 - **CASE-05 — Shared ranking platform tenant** — CONSTRUCTED SATELLITE
   - Truth rule: Synthetic tenant and fleet evidence; no SLO or platform assurance claim.
   - Reported facts: none; the fixture is constructed.
   - Attributed outcomes: none.
-  - Allowed inference: use only the synthetic decision trace defined in this chapter.
-  - Forbidden inference: Do not infer unreported outcomes for Shared ranking platform tenant.
+  - Allowed inference: The constructed shared-tenant fixture may test separation of workload evidence from tenant, fleet, and platform authority.
+  - Forbidden inference: Do not infer platform-wide SLO or performance, business effect, isolation assurance, or approval.
   - Limitation: Not a platform-engineering curriculum.
-  - Transfer rule: Workload evidence must remain valid when the shared substrate changes.
+  - Transfer rule: Preserve workload evidence when the substrate changes and recheck every substrate-bound relation.
 
 - **CASE-06 — Google ML Test Score production-readiness method** — PUBLIC REPORTED CASE
   - Truth rule: Use only the paper's reported 2017 test taxonomy and attributed author claims; treat NIST AI RMF and TensorFlow Data Validation only as bounded transfer context, and invent no certification, universal threshold, causal readiness outcome, or formal approval.
@@ -208,14 +208,14 @@ Every port retains equal status: no provider, model family, device, or shared pl
 
 ## Visual and accessibility contract
 
-A semantic lineage table carries exact IDs and values; reserved MLE-F05.1 may later provide a dimensional source-feature-consumer-feedback cutaway only if Phase 08 review still justifies it.
+A semantic lineage table carries exact IDs and values. `MLE-F05.1` is a 2400 × 1600, 3:2 landscape ImageGen candidate that is not generated; it may provide a dimensional source-feature-consumer-feedback cutaway while all identifiers and numeric truth stay selectable.
 
 | Visual | Treatment | Anchor | Essential labels | Candidate | Reserved path |
 |---|---|---|---|---|---|
 | `MLE-V05.1` | semantic-html-css | `MLE-CH-05-S03` | decision, evidence, state, owner, next action | not-applicable | none |
-| `MLE-F05.1` | imagegen-candidate | `MLE-CH-05-S03` | decision, evidence, state, owner, next action | reserved | assets/images/machine-learning-engineering/MLE-F05.1-2400x1600.png |
+| `MLE-F05.1` | imagegen-candidate | `MLE-CH-05-S03` | SOURCE, TRANSFORM, CONSUMER, FEEDBACK | not-generated | src/assets/books/machine-learning-engineering/figures/fig-mle-05-01.png |
 
-Caption intent: explain the `BL-04` decision evidence. Alt intent: identify the decision, evidence, state, owner, and next action. Long description follows the visual in reading order and enumerates every relationship. All IDs, values, thresholds, axes, tables, and numeric truth remain selectable semantic HTML/CSS; color is never the only signal.
+Candidate caption: “A separately owned consumer returns delayed feedback without erasing source and transformation ownership.” Alt text: “Four-plane lineage cutaway tracing source through transformation to a separately owned consumer and delayed feedback return.” Long description: “A source plane passes versioned inputs into a transformation bench; a separately owned consumer plane receives the output; a delayed feedback conduit returns consumer events toward future source evidence without erasing the ownership partitions; the adjacent semantic table retains every identity, state, owner, limitation, and next action.” Prompt: original crisp, colorful, realistic 3D technical cutaway in the frozen palette, four separated planes, ownership partitions, directional conduits, bright editorial lighting, generous label-safe space, and no people. Image provenance is ImageGen only, with the canonical PNG and prompt provenance retained when produced. Prohibit SVG, WebP, fake UI, logo, watermark, mascot, Komal likeness, neural glow, robot, stock laboratory, paragraph, code, number, chart, pseudo-text, unsafe industrial claim, and copied composition. All IDs, values, thresholds, axes, tables, and numeric truth remain selectable semantic HTML/CSS; color is never the only signal.
 
 ## Durable doctrine, volatile context, and re-verification
 
@@ -443,7 +443,7 @@ PHASE07-CHAPTER-PROJECTION-START
       "limitation": "Named Google mechanisms and observations require transfer tests; the guide does not decide intended purpose or acceptable consequence.",
       "durability": "volatile",
       "volatility": "medium",
-      "recheckTrigger": "Recheck the living page at all three publication freezes and record material rule-number or content changes."
+      "recheckTrigger": "Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze."
     },
     {
       "sourceId": "MLE-BSRC-015",
@@ -456,7 +456,7 @@ PHASE07-CHAPTER-PROJECTION-START
       "limitation": "Named Google mechanisms and observations require transfer tests; the guide does not decide intended purpose or acceptable consequence.",
       "durability": "volatile",
       "volatility": "medium",
-      "recheckTrigger": "Recheck the living page at all three publication freezes and record material rule-number or content changes."
+      "recheckTrigger": "Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze."
     },
     {
       "sourceId": "MLE-BSRC-024",
@@ -469,7 +469,7 @@ PHASE07-CHAPTER-PROJECTION-START
       "limitation": "Detection coverage and thresholds are implementation- and domain-specific. Passing input comparisons does not prove provenance, permission, representativeness, label truth, model adequacy, causal attribution, or permission to retrain and promote.",
       "durability": "volatile",
       "volatility": "medium",
-      "recheckTrigger": "Recheck at every freeze and whenever TFX/TFDV releases alter schemas, comparators, API fields, threshold behavior, or tutorial semantics."
+      "recheckTrigger": "Official TensorFlow Data Validation tutorial updated 2024-04-30; retrieved 2026-08-23. The living tutorial demonstrates schema, anomaly, drift, and skew mechanisms but does not determine semantic validity, acceptable shift, outcome degradation, or permission to retrain or promote; recheck tutorial/API semantics at each freeze."
     },
     {
       "sourceId": "MLE-BSRC-043",
@@ -903,18 +903,22 @@ PHASE07-CHAPTER-PROJECTION-START
       "insertionAnchor": "MLE-CH-05-S03",
       "decisionHelped": "Bind feature identity, transformations, feedback arrival, and source/consumer lineage without owning shared data architecture.",
       "essentialLabels": [
-        "decision",
-        "evidence",
-        "state",
-        "owner",
-        "next action"
+        "SOURCE",
+        "TRANSFORM",
+        "CONSUMER",
+        "FEEDBACK"
       ],
-      "captionIntent": "Explain the BL-04 decision evidence.",
-      "altIntent": "Text alternative for MLE-CH-05 evidence flow.",
-      "longDescriptionIntent": "Ordered description of MLE-CH-05 evidence, state, owner, and next action.",
+      "captionIntent": "A separately owned consumer returns delayed feedback without erasing source and transformation ownership.",
+      "altIntent": "Four-plane lineage cutaway tracing source through transformation to a separately owned consumer and delayed feedback return.",
+      "longDescriptionIntent": "A source plane passes versioned inputs into a transformation bench; a separately owned consumer plane receives the output; a delayed feedback conduit returns consumer events toward future source evidence without erasing the ownership partitions; the adjacent semantic table retains every identity, state, owner, limitation, and next action.",
       "numericTruthDisposition": "semantic-html-css",
-      "candidateStatus": "reserved",
-      "reservedPath": "assets/images/machine-learning-engineering/MLE-F05.1-2400x1600.png"
+      "candidateStatus": "not-generated",
+      "reservedPath": "src/assets/books/machine-learning-engineering/figures/fig-mle-05-01.png",
+      "dimensions": "2400x1600",
+      "aspectRatio": "3:2 landscape",
+      "provenance": "ImageGen only; retain canonical PNG and prompt provenance when produced",
+      "prompt": "Original crisp, colorful, realistic 3D technical cutaway in the frozen palette, four separated planes, ownership partitions, directional conduits, bright editorial lighting, generous label-safe space, and no people.",
+      "prohibitions": "No SVG, WebP, fake UI, logo, watermark, mascot, Komal likeness, neural glow, robot, stock laboratory, paragraph, code, number, chart, pseudo-text, unsafe industrial claim, or copied composition."
     }
   ],
   "handoff": {

@@ -1,0 +1,72 @@
+---
+interface Props {
+  type?: 'website' | 'product';
+  title?: string;
+  description?: string;
+}
+
+const {
+  type = 'website',
+  title = 'Komal Nakrani | 200 Premium Astro 5 & Next.js 15 Themes + Turnkey AI Solutions',
+  description = 'Ultra-fast, production-ready Astro 5 & Next.js 15 web themes paired with turnkey RAG agents, multi-agent pipelines, and local LLM architectures.',
+} = Astro.props;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Komal Nakrani Themes & AI Solutions',
+  url: 'https://komalnakrani.com',
+  logo: 'https://komalnakrani.com/favicon.svg',
+  description: 'Publisher of production-ready Astro 5 & Next.js 15 web templates and turnkey AI agent architectures.',
+  sameAs: [
+    'https://github.com',
+    'https://twitter.com'
+  ]
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Komal Nakrani Marketplace',
+  url: 'https://komalnakrani.com',
+  description: description,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Komal Nakrani'
+  }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What technologies are used in Komal Nakrani themes?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'All themes are engineered using Astro 5 or Next.js 15 App Router, React 19, TypeScript, and Vanilla CSS/Tailwind CSS with 100/100 Core Web Vitals speed scores.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How do the Turnkey AI Solutions work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Each AI Solution ($39) includes complete production-ready source code (RAG pipelines, CrewAI multi-agent workflows, Ollama wrappers, or LiveKit Voice AI) paired with a step-by-step Learning & Architecture Guide PDF.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What is included in the $199 Lifetime All-Access Pass?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The $199 Lifetime All-Access Pass unlocks full commercial source code access to all 100 Astro 5 themes, 100 Next.js 15 themes, and all turnkey AI Solution Kits with free lifetime updates.'
+      }
+    }
+  ]
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

@@ -36,9 +36,14 @@ evidence and requires the gate's independent review. The forbidden transitions
 The seventeen states are `UNORIENTED`, `ORIENTED`, `CONTRACTED`, `ADMISSIBLE`,
 `RECONSTRUCTIBLE`, `CANDIDATE`, `TECHNICALLY-QUALIFIED`, `HOLD`, `REJECT`,
 `RELEASABLE`, `OPERABLE`, `OBSERVED`, `REQUALIFIED`, `ROLLED-BACK`,
-`CONTROLLED`, `RETIRED`, and `REVIEWED`. Legal progress preserves every
-intermediate dossier record; repeated states such as `CONTRACTED → CONTRACTED`
-add required evidence rather than skipping a gate.
+`CONTROLLED`, `RETIRED`, and `REVIEWED`. The lifecycle declares nineteen legal
+state transitions. The synthetic companion persists the primary and rollback
+milestone scenarios; it does not claim to materialize every declared
+`HOLD`/`REJECT` repair transition. Four same-state records—`CONTRACTED →
+CONTRACTED`, `ADMISSIBLE → ADMISSIBLE`, `CANDIDATE → CANDIDATE`, and
+`TECHNICALLY-QUALIFIED → TECHNICALLY-QUALIFIED`—are dossier enrichments, not
+lifecycle promotions. This classification preserves evidence without claiming
+that cardinality alone proves transition coverage.
 
 Four reopen triggers are durable:
 
@@ -47,6 +52,11 @@ Four reopen triggers are durable:
 - runtime, dependency, interface, or serving-envelope change routes to
   `RECONSTRUCTIBLE`;
 - authority, constraint, or permitted-use change routes to `CONTRACTED`.
+
+A reopen is valid only when its source state is strictly later than the target,
+so the invalidated evidence could already exist. A reopen attempted at
+`BL-00`, from the target itself, or from an earlier state fails rather than
+advancing unevidenced state.
 
 ## Limitation language
 

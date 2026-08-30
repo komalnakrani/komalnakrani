@@ -51,17 +51,23 @@ The accepted inventory is `MLE-BSRC-001`, `MLE-BSRC-002`, `MLE-BSRC-003`,
 `MLE-BSRC-040`, `MLE-BSRC-041`, `MLE-BSRC-042`, `MLE-BSRC-043`,
 `MLE-BSRC-044`, `MLE-BSRC-045`, and `MLE-BSRC-046`. High-volatility
 sources are `017` (MLflow Models), `018` (MLflow Tracking), `019` (NIST AI RMF
-Playbook), `027` (AI RMF Core), and employer postings `045`–`046`. Recheck them
-at every freeze; pin concrete tool versions before executable examples, capture
-the playbook version where wording matters, react immediately to an AI RMF
-revision, and replace withdrawn or materially changed postings.
+Playbook), `027` (AI RMF Core), and employer postings `045`–`046`. For this
+edition, `017` and `018` resolve to the versioned MLflow 3.15.1 documentation
+(release 2026-08-03; retrieved 2026-08-23). Recheck them on an MLflow release or
+relevant field, API, schema, or storage change, while retaining 3.15.1 as this
+edition's identity. Source `045` is a dated historical signal: its registered
+posting was absent or unlisted on 2026-08-23 after a former application
+deadline of 2026-07-16, so it supports no current hiring, prevalence, doctrine,
+or authority claim. Recheck high-volatility sources at every freeze.
 
 Medium-volatility sources are `015`, `016`, `020`–`025`, `028`, `029`, `031`,
 `038`, and `042`–`044`. Their triggers include living-guide changes, Kubernetes
 semantics, ONNX/runtime versions, pinned PyTorch or scikit-learn behavior,
 TFX/TFDV releases, regulator publication status, AI RMF revision, sanitization
 FAQ changes, NIST control releases, incident corrections, and dated Uber system
-reports. Preserve version and as-of labels.
+reports. Source `015` is the official page last updated 2025-08-25 and source
+`024` is the official tutorial last updated 2024-04-30; both were retrieved
+2026-08-23. Preserve these version and as-of labels.
 
 Low-volatility sources are `001`–`014`, `026`, `030`, `032`–`037`, and
 `039`–`041`. Low does not mean timeless: recheck publication availability,

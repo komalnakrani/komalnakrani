@@ -17,7 +17,7 @@
 
 ## Exact book claims
 
-1. `MLE-BCLM-001` (`role-market-boundary`, high confidence, volatile): Current independent employers use the exact Machine Learning Engineer title for responsibilities that cross training, deployment, monitoring, data quality, and iteration, but these postings are volatile market signals and cannot define technical doctrine or transfer product, domain, platform, safety, or risk authority to the role.
+1. `MLE-BCLM-001` (`role-market-boundary`, high confidence, volatile): On 2026-08-18, two employer-controlled postings used the exact Machine Learning Engineer title for responsibilities spanning training, deployment, monitoring, data quality, and iteration; by 2026-08-23, Sprinter Health was the sole posting confirmed live and the registered Blissway posting was absent/unlisted. This dated observation cannot establish current prevalence, doctrine, or authority.
 2. `MLE-BCLM-002` (`technical-doctrine`, high confidence, durable): The supportable unit is a learning workload whose data dependencies, pipeline behavior, tests, release state, and monitoring evidence are inspectable; a trained model artifact or tracker entry alone is not production-readiness evidence.
 3. `MLE-BCLM-003` (`technical-doctrine`, high confidence, durable): Lifecycle responsibilities and lines of communication must be explicit across technical and nontechnical actors; the MLE can assemble and explain workload evidence but cannot self-assign purpose, domain validity, independent evaluation, risk acceptance, or formal authorization.
 
@@ -25,7 +25,7 @@
 
 | Claim | Accepted sources | Evidence carried | Authority limit |
 |---|---|---|---|
-| `MLE-BCLM-001` | `MLE-BSRC-045`, `MLE-BSRC-046` | Two independent employer-controlled postings live-checked on 2026-08-18 show the exact title spanning training, deployment, monitoring, validation or data work, and iteration. | Role-market breadth only; no prevalence, stable scope, technical doctrine, or authority allocation. |
+| `MLE-BCLM-001` | `MLE-BSRC-045`, `MLE-BSRC-046` | Two employer-controlled postings were observed on 2026-08-18; on 2026-08-23 Sprinter Health was the sole confirmed-live posting, while the old Blissway identity returned no posting and was absent from its board. | Dated role-market observation only; no current plural claim, prevalence, stable scope, doctrine, or authority allocation. |
 | `MLE-BCLM-002` | `MLE-BSRC-005`, `MLE-BSRC-007` | System-level failure mechanisms and the production-readiness test taxonomy require evidence beyond the model artifact. | The sources diagnose categories; neither supplies a universal readiness score or certifies a workload. |
 | `MLE-BCLM-003` | `MLE-BSRC-027`, `MLE-BSRC-028` | NIST AI RMF Core and AI RMF 1.0 support explicit roles, communication, accountability, lifecycle evidence, and contextual risk decisions. | NIST does not define the MLE title, allocate an organization chart, set thresholds, or confer legal authorization. |
 
@@ -47,20 +47,22 @@
 | `CASE-06` — Google ML Test Score production-readiness method | PUBLIC REPORTED CASE | Use the reported 28-test taxonomy to show why model-only review misses evidence. Transfer test decision jobs and evidence, never a universal score, certification threshold, Google implementation, figure, or outcome. |
 | `CASE-07` — Uber Michelangelo feature and deployment evidence pattern | PUBLIC REPORTED CASE | Separate workload evidence from a first-party shared-platform implementation. Re-express only provider-neutral fields; keep 2017 and 2025 reports distinct and do not transfer scale or attributed outcomes. |
 
+Frozen `CASE-01` truth projection: allowed inference — The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence. Forbidden inference — Do not infer real industrial performance, safety, production readiness, business outcome, or external approval. Transfer rule — Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence. Its existing limitation and authority owner remain unchanged.
+
 `CASE-06` reported facts remain the paper authors' method; its roadmap and technical-debt claims remain attributed, not universal causal results. `CASE-07` quantities and mechanisms remain first-party, date-bound reports rather than independent audit evidence.
 
 ## Durable, volatile, and conflicting evidence treatment
 
 - Keep workload identity, evidence state, lifecycle communication, and external decision rights as durable doctrine.
-- Keep `MLE-BSRC-045` and `MLE-BSRC-046` inside a visibly dated “live-checked 2026-08-18” market panel. Recheck or replace them at every freeze if withdrawn or retitled.
+- Keep the 2026-08-18 two-employer observation, the old Blissway identity and 2026-07-16 deadline, and the 2026-08-23 absent/unlisted retrieval together. Do not rebind Blissway silently. Recheck the sole confirmed-live Sprinter posting at every freeze.
 - Treat the AI RMF Core rendering as living and high-volatility; recheck at every freeze or NIST revision notice. Keep AI RMF 1.0 explicit rather than silently merging a future revision.
 - The title evidence shows breadth but cannot prove the book's accountability model. The Google and Uber cases show methods or mechanisms but cannot assign authority or prove adoption outcomes elsewhere.
 - No source conflicts with the workload-centered doctrine once employer scope, organizational authority, and vendor/platform mechanisms are kept as separate evidence classes.
 
 ## Dated current examples
 
-- As of 2026-08-18, Blissway's `Machine Learning Engineer` posting (`MLE-BSRC-045`) spans dataset curation, training, deployment, monitoring, and iteration from cloud to edge.
-- As of 2026-08-18, Sprinter Health's `Machine Learning Engineer (Staff)` posting (`MLE-BSRC-046`) spans training, serving, monitoring, validation, retraining, rollback, and cross-functional interfaces.
+- On 2026-08-18, Blissway's registered `Machine Learning Engineer` posting (`MLE-BSRC-045`) was part of the two-employer observation; by 2026-08-23 the old identity returned no posting and was absent from the official board, so it is historical evidence only.
+- As of 2026-08-23, Sprinter Health's `Machine Learning Engineer (Staff)` posting (`MLE-BSRC-046`) was the sole posting confirmed live and remains only a bounded role-market signal.
 - The NIST AI RMF Core living rendering (`MLE-BSRC-027`) was verified on 2026-08-18; AI RMF 1.0 (`MLE-BSRC-028`) remains the pinned framework identity.
 
 ## Authority ceiling

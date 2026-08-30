@@ -22,7 +22,12 @@
       "failuresOrRisks": [],
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+    "allowedInferences": [
+      "The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence."
+    ],
+    "forbiddenInferences": [
+      "Do not infer real industrial performance, safety, production readiness, business outcome, or external approval."
+    ],
       "lessons": [],
       "chapterIds": [
         "MLE-CH-01",
@@ -99,7 +104,9 @@
       ],
       "sourceResearchNeed": "Lifecycle doctrine, edge constraints, sensor/data shift, qualification, serving, controls, and retirement from primary sources.",
       "replaceabilityTest": "Every chapter decision must transfer to the four satellite ports.",
-      "transferRules": [],
+    "transferRules": [
+      "Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence."
+    ],
       "status": "constructed-frozen"
     },
     {
@@ -119,7 +126,12 @@
       "failuresOrRisks": [],
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+    "allowedInferences": [
+      "The constructed managed fixture may test exportable identity and evidence under provider opacity."
+    ],
+    "forbiddenInferences": [
+      "Do not infer provider capability or outcome, real accuracy or use, approval, or a cloud tutorial."
+    ],
       "lessons": [],
       "chapterIds": [
         "MLE-CH-02",
@@ -165,7 +177,9 @@
       ],
       "sourceResearchNeed": "Official exportability, managed lifecycle, monitoring, rollback, and deletion mechanisms plus independent limitations.",
       "replaceabilityTest": "Must produce the same dossier fields without provider names.",
-      "transferRules": [],
+    "transferRules": [
+      "Reproduce the same dossier fields without provider names using the selected service's actual evidence."
+    ],
       "status": "constructed-frozen"
     },
     {
@@ -185,7 +199,12 @@
       "failuresOrRisks": [],
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+    "allowedInferences": [
+      "The constructed classical fixture may test that qualification and authority gates still apply to a simple model."
+    ],
+    "forbiddenInferences": [
+      "Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization."
+    ],
       "lessons": [],
       "chapterIds": [
         "MLE-CH-02",
@@ -247,7 +266,9 @@
       ],
       "sourceResearchNeed": "Classical model qualification, calibration, segment analysis, monitoring, and formal credit-domain authority boundaries.",
       "replaceabilityTest": "Must satisfy the same evidence interface without deep-learning assumptions.",
-      "transferRules": [],
+    "transferRules": [
+      "Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally."
+    ],
       "status": "constructed-frozen"
     },
     {
@@ -267,7 +288,12 @@
       "failuresOrRisks": [],
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+    "allowedInferences": [
+      "The constructed deep fixture may test checkpoint, preprocessor, runtime, uncertainty, and serving identity bindings."
+    ],
+    "forbiddenInferences": [
+      "Do not infer real accuracy, acoustic safety, field performance, production behavior, or approval."
+    ],
       "lessons": [],
       "chapterIds": [
         "MLE-CH-04",
@@ -318,7 +344,9 @@
       ],
       "sourceResearchNeed": "Deep run identity, nondeterminism, checkpoint/preprocessor lineage, uncertainty, serving, and supply-chain controls.",
       "replaceabilityTest": "Must preserve the same decision/evidence job when swapped for another model family.",
-      "transferRules": [],
+    "transferRules": [
+      "Preserve the same decision/evidence job when the model family or runtime changes."
+    ],
       "status": "constructed-frozen"
     },
     {
@@ -338,7 +366,12 @@
       "failuresOrRisks": [],
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+    "allowedInferences": [
+      "The constructed shared-tenant fixture may test separation of workload evidence from tenant, fleet, and platform authority."
+    ],
+    "forbiddenInferences": [
+      "Do not infer platform-wide SLO or performance, business effect, isolation assurance, or approval."
+    ],
       "lessons": [],
       "chapterIds": [
         "MLE-CH-02",
@@ -394,7 +427,9 @@
       ],
       "sourceResearchNeed": "Tenant isolation, compatibility, shared serving, fleet incidents, access control, aliases, and workload retirement.",
       "replaceabilityTest": "Workload evidence must remain valid when the shared substrate changes.",
-      "transferRules": [],
+    "transferRules": [
+      "Preserve workload evidence when the substrate changes and recheck every substrate-bound relation."
+    ],
       "status": "constructed-frozen"
     },
     {

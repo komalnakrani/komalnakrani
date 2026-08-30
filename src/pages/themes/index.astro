@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import K from '../../components/K.astro';
+import ThemeCard from '../../components/ThemeCard.astro';
+import { themes } from '../../data/themes';
+
+const astroCount = themes.filter((t) => t.framework === 'astro').length;
+const nextCount = themes.filter((t) => t.framework === 'nextjs').length;
+---
+<Layout title="200 Premium Astro & Next.js Themes Catalog | Komal Nakrani" description="Search 200 production-ready Astro 5 & Next.js 15 themes for SaaS, Agencies, Portfolios, 3D Canvas, Docs, and E-Commerce.">
+  <main class="rise">
+    <section class="wrap section">
+      <div style="max-width: 720px; margin-bottom: 28px;">
+        <K idx="01">Themes Marketplace</K>
+        <h1 class="display" style="margin-top: 14px;">
+          Explore All <span class="grad">200 Themes</span>
+        </h1>
+        <p class="lead" style="margin-top: 14px;">
+          100 Astro 5 templates & 100 Next.js 15 App Router starters. Zero bloat, 100/100 Lighthouse speed.
+        </p>
+      </div>
+
+      <!-- Live Search & Filter Bar -->
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 28px;">
+        <div style="flex: 1; min-width: 280px; position: relative;">
+          <input type="text" id="theme-search-input" placeholder="🔍 Search 200 themes by name, framework, or tech stack (e.g. Astro, Next.js, Stripe, Three.js)..." class="form-input" style="padding: 14px 18px; font-size: 15px; border-radius: var(--r-pill);" />
+        </div>
+      </div>
+
+      <div class="filter-tabs" data-filter-tabs>
+        <button class="tab-btn active" data-filter="all">All ({themes.length})</button>
+        <button class="tab-btn" data-filter="astro">Astro 5 ({astroCount})</button>
+        <button class="tab-btn" data-filter="nextjs">Next.js 15 ({nextCount})</button>
+        <button class="tab-btn" data-filter="saas">SaaS</button>
+        <button class="tab-btn" data-filter="agency">Agency</button>
+        <button class="tab-btn" data-filter="docs">Docs</button>
+        <button class="tab-btn" data-filter="ecommerce">E-Commerce</button>
+      </div>
+
+      <div class="grid-cards" data-themes-grid>
+        {themes.map((theme) => (
+          <div data-framework={theme.framework} data-category={theme.category} data-name={theme.name.toLowerCase()} data-tech={theme.techStack.join(' ').toLowerCase()} class="theme-card-wrapper">
+            <ThemeCard theme={theme} />
+          </div>
+        ))}
+      </div>
+
+      <div id="no-results-msg" style="display: none; text-align: center; padding: 60px 20px; font-family: var(--body); color: var(--ink-3);">
+        <h3 class="h3" style="margin-bottom: 8px;">No matching themes found</h3>
+        <p>Try searching for different keywords like 'Astro', 'Next.js', 'Stripe', or 'SaaS'.</p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  function initThemeFilters() {
+    const searchInput = document.getElementById('theme-search-input') as HTMLInputElement | null;
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>('[data-filter-tabs] button');
+    const themeWrappers = document.querySelectorAll<HTMLElement>('[data-themes-grid] .theme-card-wrapper');
+    const noResults = document.getElementById('no-results-msg');
+
+    let currentFilter = 'all';
+
+    function applyFilter() {
+      const query = (searchInput?.value || '').toLowerCase().trim();
+      let visibleCount = 0;
+
+      themeWrappers.forEach((wrapper) => {
+        const framework = wrapper.getAttribute('data-framework');
+        const category = wrapper.getAttribute('data-category');
+        const name = wrapper.getAttribute('data-name') || '';
+        const tech = wrapper.getAttribute('data-tech') || '';
+
+        const matchesTab = (currentFilter === 'all') || 
+                           (currentFilter === framework) || 
+                           (currentFilter === category);
+        
+        const matchesQuery = !query || name.includes(query) || tech.includes(query) || (framework && framework.includes(query));
+
+        if (matchesTab && matchesQuery) {
+          wrapper.style.display = 'flex';
+          wrapper.style.flexDirection = 'column';
+          visibleCount++;
+        } else {
+          wrapper.style.display = 'none';
+        }
+      });
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter') || 'all';
+        applyFilter();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilter);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initThemeFilters);
+</script>

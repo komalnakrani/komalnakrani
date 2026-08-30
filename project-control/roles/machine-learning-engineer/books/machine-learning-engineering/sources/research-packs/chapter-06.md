@@ -50,6 +50,8 @@
 | `CASE-06` — Google ML Test Score production-readiness method | PUBLIC REPORTED CASE | Transfer selected data/feature test decision jobs and PASS/HOLD/REJECT evidence, not Google scoring. |
 | `CASE-07` — Uber Michelangelo feature and deployment evidence pattern | PUBLIC REPORTED CASE | Use reported conformance mechanisms as dated, first-party examples; require provider-neutral fields and no outcome transfer. |
 
+Frozen constructed-case truth projections preserve zero reported facts, attributed outcomes, and source uses. `CASE-01`: allowed inference — The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence. Forbidden inference — Do not infer real industrial performance, safety, production readiness, business outcome, or external approval. Transfer rule — Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence. `CASE-03`: allowed inference — The constructed classical fixture may test that qualification and authority gates still apply to a simple model. Forbidden inference — Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization. Transfer rule — Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally. `CASE-04`: allowed inference — The constructed deep fixture may test checkpoint, preprocessor, runtime, uncertainty, and serving identity bindings. Forbidden inference — Do not infer real accuracy, acoustic safety, field performance, production behavior, or approval. Transfer rule — Preserve the same decision/evidence job when the model family or runtime changes. `CASE-05`: allowed inference — The constructed shared-tenant fixture may test separation of workload evidence from tenant, fleet, and platform authority. Forbidden inference — Do not infer platform-wide SLO or performance, business effect, isolation assurance, or approval. Transfer rule — Preserve workload evidence when the substrate changes and recheck every substrate-bound relation. Each existing case-specific limitation and authority owner remains unchanged.
+
 `CASE-06` carries a method, not certification. `CASE-07` carries reported mechanisms and attributed scale/outcomes; the 2017 and 2025 states stay separate and no claim is made that similar checks universally prevent incidents.
 
 ## Durable, volatile, and conflicting evidence treatment
@@ -63,7 +65,8 @@
 ## Dated current examples
 
 - IMDRF N88 FINAL:2025 (`MLE-BSRC-025`, published 2025-01-29) is used only for representative intended-population and independent-test principles.
-- TFDV (`MLE-BSRC-024`) and Google's Rules of ML (`MLE-BSRC-015`) were verified on 2026-08-18; any API, comparator, rule number, or threshold is a current mechanism example.
+- Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze.
+- Official TensorFlow Data Validation tutorial updated 2024-04-30; retrieved 2026-08-23. The living tutorial demonstrates schema, anomaly, drift, and skew mechanisms but does not determine semantic validity, acceptable shift, outcome degradation, or permission to retrain or promote; recheck tutorial/API semantics at each freeze.
 - Uber's deployment-safety report (`MLE-BSRC-044`) is dated 2025-10-30 and remains a first-party account of schema, imputation, offline distribution, reporting, and validation mechanisms.
 
 ## Authority ceiling

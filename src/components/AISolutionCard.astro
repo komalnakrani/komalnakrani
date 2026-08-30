@@ -1,0 +1,68 @@
+---
+import type { AISolution } from '../data/ai-solutions';
+import Icon from './Icon.astro';
+
+interface Props {
+  solution: AISolution;
+}
+
+const { solution } = Astro.props;
+---
+<div class="ai-card">
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px;">
+    {solution.badge ? (
+      <span class="ai-badge" style="margin-bottom: 0;">{solution.badge}</span>
+    ) : <span />}
+    <span style="font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(255,103,17,0.1); padding: 2px 8px; border-radius: var(--r-xs);">
+      Includes Guide PDF
+    </span>
+  </div>
+
+  <h3 class="ai-title">{solution.name}</h3>
+  <p class="ai-tagline">{solution.tagline}</p>
+  
+  <div class="ai-arch-box">
+    <label>Architecture Pipeline</label>
+    <div>{solution.architecture}</div>
+  </div>
+
+  <ul class="ai-feature-list">
+    {solution.features.slice(0, 3).map((feat) => (
+      <li class="ai-feature-item">
+        <Icon name="check" />
+        <span>{feat}</span>
+      </li>
+    ))}
+  </ul>
+
+  <div class="ai-card-footer">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; width: 100%; margin-bottom: 14px;">
+      <div>
+        <span style="font-family: var(--display); font-weight: 700; font-size: 26px; color: var(--ink);">${solution.price}</span>
+        <span style="font-family: var(--mono); font-size: 11px; color: var(--ink-3);">/kit + learning doc</span>
+      </div>
+      <span style="font-family: var(--mono); font-size: 11px; color: var(--accent); font-weight: 600;">
+        Or in $199 Pass
+      </span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+      <a href={`/ai-solutions/${solution.slug}/`} class="btn btn-secondary" style="font-size: 13px; padding: 9px 12px; text-align: center;">
+        View Specs
+      </a>
+      <button data-plan-price="39" data-plan-name={solution.name} class="btn btn-primary pay-trigger-btn" style="font-size: 13px; padding: 9px 12px;">
+        Buy $39
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+.ai-card-footer {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+</style>

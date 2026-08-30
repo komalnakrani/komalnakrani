@@ -3,7 +3,7 @@ import { execFile } from 'node:child_process';
 import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
-import test from 'node:test';
+import test, { after, before } from 'node:test';
 import { promisify } from 'node:util';
 
 import {
@@ -18,6 +18,7 @@ import {
   PHASE08_CHECKPOINT,
   parseGitStatus,
   REVIEW_CONTRACTS,
+  TASK07_CANONICAL_PATH_FINDINGS,
   loadRepositorySnapshot,
   parseReviewMarkdown,
   runHistoricalPhase08Replay,
@@ -26,8 +27,10 @@ import {
   validateLoadedReviews,
   validatePhase09Snapshot,
   validateFindingRegister,
+  validateRevisionLedger,
   validateRepository,
   validateReviewRecord,
+  validateSharedTruthContracts,
 } from './validate-phase-09.mjs';
 
 const REPO = process.env.MLE_PHASE09_FIXTURE_REPO ?? '/Applications/ServBay/www/komalnakrani';
@@ -44,6 +47,10 @@ const FINAL_VERIFICATION = `${BOOK}/phase-09-verification.json`;
 const TASK01_REVIEW = `${ROLE}/reviews/phase-09/task-01-bootstrap.md`;
 const TASK01_REPAIR = `${ROLE}/reviews/phase-09/task-01-bootstrap-repair.md`;
 const execFileAsync = promisify(execFile);
+const TASK01_ACCEPTED_CHECKPOINT = 'f2df4d10f1ec9df378ac52ccc2725e6c8972d5ca';
+const TASK01_FAILED_CHECKPOINT = 'd370ab578f5a1911185b0c86515f4b8d091cefc6';
+let bootstrapFixtureBase;
+let bootstrapFixtureRoot;
 
 const CURRENT_COMMIT = '6a1f1b861b33e0dcf3b5087784a15763e8ca599b';
 const bootstrapGit = {
@@ -55,7 +62,7 @@ const bootstrapGit = {
   changedPaths: [...ALLOWED_BOOTSTRAP_DIRT],
 };
 
-async function bootstrapGithub(root = REPO) {
+async function bootstrapGithub(root = bootstrapFixtureRoot ?? REPO) {
   const [rootBody, childBody, phase08Body] = await Promise.all([
     readFile(`${root}/${ROLE}/issues/root.md`, 'utf8'),
     readFile(`${root}/${ROLE}/issues/phase-09-book-qa.md`, 'utf8'),
@@ -69,12 +76,33 @@ async function bootstrapGithub(root = REPO) {
 }
 
 async function loadBootstrap() {
-  return loadRepositorySnapshot(REPO, {
+  return loadRepositorySnapshot(bootstrapFixtureRoot, {
     stage: 'bootstrap',
     git: bootstrapGit,
     github: await bootstrapGithub(),
   });
 }
+
+async function createRepositoryFixture(checkpoint) {
+  const base = await mkdtemp(join(tmpdir(), 'mle-p9-repository-fixture-'));
+  const root = join(base, 'tree');
+  await execFileAsync('git', ['clone', '--quiet', '--no-checkout', REPO, root]);
+  await execFileAsync('git', ['checkout', '--quiet', '--detach', checkpoint], { cwd: root });
+  for (const lane of ['lane-a', 'lane-b', 'lane-c']) {
+    const path = `.superpowers/sdd/2026-08-22-machine-learning-engineer-phase-08/${lane}-manifest.json`;
+    await mkdir(dirname(join(root, path)), { recursive: true });
+    await cp(join(REPO, path), join(root, path));
+  }
+  return { base, root };
+}
+
+before(async () => {
+  ({ base: bootstrapFixtureBase, root: bootstrapFixtureRoot } = await createRepositoryFixture(TASK01_ACCEPTED_CHECKPOINT));
+});
+
+after(async () => {
+  if (bootstrapFixtureBase) await rm(bootstrapFixtureBase, { recursive: true, force: true });
+});
 
 function cleanGit(commit = 'd370ab578f5a1911185b0c86515f4b8d091cefc6') {
   return { branch: 'main', head: commit, originMain: commit, remoteMain: commit, clean: true, changedPaths: [] };
@@ -107,7 +135,7 @@ test('Git porcelain parser preserves the first tracked path and all untracked pa
 });
 
 test('loads real repository bytes and accepts the active bootstrap only', async () => {
-  const report = await validateRepository(REPO, {
+  const report = await validateRepository(bootstrapFixtureRoot, {
     stage: 'bootstrap',
     git: bootstrapGit,
     github: await bootstrapGithub(),
@@ -135,7 +163,7 @@ test('binds the historical checkpoint separately from the current closed tree', 
 });
 
 test('historical Phase 08 pre-close replay is isolated and remains exactly 263/263', { timeout: 180_000 }, async () => {
-  const replay = await runHistoricalPhase08Replay(REPO);
+  const replay = await runHistoricalPhase08Replay(bootstrapFixtureRoot);
   assert.deepEqual(replay, {
     schema: 'mle-phase-08-historical-replay/v1',
     checkpoint: PHASE08_CHECKPOINT,
@@ -274,9 +302,11 @@ test('bootstrap distinguishes exact producer working-tree dirt from a clean immu
   assert.equal(codes(errors).includes('GIT_CHECKPOINT_CLEAN'), false, JSON.stringify(errors, null, 2));
 });
 
-test('audit remains closed while the real preserved Task 01 review is failed and unrepaired', async () => {
-  const snapshot = await loadRepositorySnapshot(REPO, {
-    stage: 'audit', git: cleanGit(), github: await bootstrapGithub(),
+test('audit remains closed in an isolated exact Task 01 failed-base checkpoint', async (t) => {
+  const fixture = await createRepositoryFixture(TASK01_FAILED_CHECKPOINT);
+  t.after(async () => rm(fixture.base, { recursive: true, force: true }));
+  const snapshot = await loadRepositorySnapshot(fixture.root, {
+    stage: 'audit', git: cleanGit(TASK01_FAILED_CHECKPOINT), github: await bootstrapGithub(fixture.root),
   });
   expectCode(validatePhase09Snapshot(snapshot, { stage: 'audit', mode: 'checkpoint', relaxMissingStageArtifacts: true }), 'TASK01_REVIEW_NOT_ACCEPTED');
 });
@@ -599,23 +629,95 @@ test('canonical Phase 08 bytes stay exact unless an accepted finding freeze and 
   const findingRegister = {
     schema: 'mle-phase-09-finding-register/v1',
     openingFindings: KNOWN_OPENING_FINDINGS.map(({ id, audit }) => ({ id, audit, disposition: 'open', evidence: ['audit'] })),
-    findings: [{ id: 'P09-OPEN-01', disposition: 'accepted', path }],
+    findings: [
+      { id: 'P09-CON-001', disposition: 'accepted' },
+      { id: 'P09-CON-002', disposition: 'accepted' },
+    ],
   };
   const ledger = {
-    schema: 'mle-phase-09-revision-ledger/v1', entries: [{
-      findingId: 'P09-OPEN-01', path, beforeSha256: before, afterSha256: snapshot.files[path].sha256,
+    schema: 'mle-phase-09-revision-ledger/v1',
+    phase08ActivePackageCheckpoint: PHASE08_CHECKPOINT,
+    findingRegisterSha256: record(`${JSON.stringify(findingRegister)}\n`).sha256,
+    entries: [{
+      findingIds: ['P09-CON-001', 'P09-CON-002'], path,
+      beforeBytes: snapshot.phase08Verification.artifacts.find((item) => item.path === path).bytes,
+      beforeSha256: before,
+      afterBytes: snapshot.files[path].bytes,
+      afterSha256: snapshot.files[path].sha256,
       reason: 'Accepted reader-facing factory leakage repair', affectedGraphProjections: ['chapter-01'],
       verificationCommands: ['node --test validate-phase-09.test.mjs'], producerIdentity: '/root/mle_p9_integration',
-      reviewerIdentity: '/root/mle_p9_integration_review', disposition: 'accepted',
+      expectedReviewerIdentity: '/root/mle_p9_integration_review', disposition: 'applied-pending-independent-review',
     }],
   };
   snapshot.files[`${BOOK}/qa/finding-register.json`] = record(`${JSON.stringify(findingRegister)}\n`);
   snapshot.files[`${BOOK}/qa/revision-ledger.json`] = record(`${JSON.stringify(ledger)}\n`);
+  assert.deepEqual(validateRevisionLedger(snapshot, { findingFreezeAccepted: true }), []);
   assert.deepEqual(validateCanonicalBindings(snapshot, { stage: 'repair', findingFreezeAccepted: true }), []);
+
+  await t.test('a path row may bind multiple accepted findings but never an unauthorized one', () => {
+    const invalid = clone(ledger);
+    invalid.entries[0].findingIds.push('P09-SYS-006');
+    snapshot.files[`${BOOK}/qa/revision-ledger.json`] = record(`${JSON.stringify(invalid)}\n`);
+    expectCode(validateRevisionLedger(snapshot, { findingFreezeAccepted: true }), 'REVISION_FINDING_PATH');
+  });
+
+  await t.test('producer cannot pre-approve its own revision row', () => {
+    const invalid = clone(ledger);
+    invalid.entries[0].disposition = 'accepted';
+    snapshot.files[`${BOOK}/qa/revision-ledger.json`] = record(`${JSON.stringify(invalid)}\n`);
+    expectCode(validateRevisionLedger(snapshot, { findingFreezeAccepted: true }), 'REVISION_DISPOSITION');
+  });
 
   await t.test('an unchanged/unlisted second artifact still cannot drift', () => {
     const second = `${BOOK}/manuscript/chapter-02.md`;
     snapshot.files[second] = record(`${snapshot.files[second].text}\nunlisted drift\n`);
     expectCode(validateCanonicalBindings(snapshot, { stage: 'repair', findingFreezeAccepted: true }), 'PHASE08_CURRENT_BINDING');
+  });
+});
+
+test('Task 07 canonical allowlist is exact and finding-scoped', () => {
+  const chapter01 = `${BOOK}/manuscript/chapter-01.md`;
+  assert.deepEqual(TASK07_CANONICAL_PATH_FINDINGS[chapter01], [
+    'P09-CON-001', 'P09-CON-002', 'P09-CON-003', 'P09-CON-004',
+    'P09-EVD-001', 'P09-EVD-005', 'P09-SYS-001', 'P09-SYS-003', 'P09-SYS-004',
+  ]);
+  assert.deepEqual(TASK07_CANONICAL_PATH_FINDINGS[`${BOOK}/blueprints/chapter-19.md`], ['P09-COV-001']);
+  assert.deepEqual(TASK07_CANONICAL_PATH_FINDINGS[`${BOOK}/visual-forecast.md`], ['P09-SYS-006']);
+  assert.equal(Object.hasOwn(TASK07_CANONICAL_PATH_FINDINGS, `${BOOK}/manuscript/verification-report.md`), false);
+  assert.equal(Object.hasOwn(TASK07_CANONICAL_PATH_FINDINGS, `${BOOK}/companion/expected/bl-00.json`), false);
+});
+
+test('shared source, case, visual, and companion truth contracts are exact and mutation-sensitive', async (t) => {
+  const snapshot = await loadRepositorySnapshot(REPO, { stage: 'repair' });
+  assert.deepEqual(validateSharedTruthContracts(snapshot), []);
+
+  await t.test('rejects source freeze identity drift', () => {
+    const mutated = clone(snapshot);
+    const path = `${BOOK}/sources/source-register.json`;
+    const register = JSON.parse(mutated.files[path].text);
+    register.sources.find(({ sourceId }) => sourceId === 'MLE-BSRC-018').version = 'latest';
+    mutated.files[path] = record(`${JSON.stringify(register)}\n`);
+    expectCode(validateSharedTruthContracts(mutated), 'SHARED_SOURCE_TRUTH');
+  });
+
+  await t.test('rejects constructed-case truth projection drift', () => {
+    const mutated = clone(snapshot);
+    const path = `${BOOK}/case-studies/case-study-register.json`;
+    const register = JSON.parse(mutated.files[path].text);
+    register.cases.find(({ caseId }) => caseId === 'CASE-03').allowedInferences = ['proof'];
+    mutated.files[path] = record(`${JSON.stringify(register)}\n`);
+    expectCode(validateSharedTruthContracts(mutated), 'SHARED_CASE_TRUTH');
+  });
+
+  await t.test('rejects visual path/accessibility drift and generated assets', () => {
+    const mutated = clone(snapshot);
+    const path = `${BOOK}/blueprints/blueprint-register.json`;
+    const register = JSON.parse(mutated.files[path].text);
+    register.visuals.find(({ visualId }) => visualId === 'MLE-F16.1').essentialLabels[0] = 'LOAD';
+    mutated.files[path] = record(`${JSON.stringify(register)}\n`);
+    mutated.repositoryFilesystemInventory.push('public/images/machine-learning-engineering/fig-mle-16-01.png');
+    const errors = validateSharedTruthContracts(mutated);
+    expectCode(errors, 'SHARED_VISUAL_TRUTH');
+    expectCode(errors, 'SHARED_VISUAL_ASSET');
   });
 });

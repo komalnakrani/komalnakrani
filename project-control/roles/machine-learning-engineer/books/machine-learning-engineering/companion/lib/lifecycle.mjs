@@ -39,6 +39,12 @@ export const REOPEN_TRIGGERS = deepFreeze([
 ]);
 
 const normalize = (value) => String(value).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const EVIDENCE_RANK = deepFreeze({
+  UNORIENTED: 0, ORIENTED: 1, CONTRACTED: 2, ADMISSIBLE: 3, RECONSTRUCTIBLE: 4,
+  CANDIDATE: 5, 'TECHNICALLY-QUALIFIED': 6, HOLD: 6, REJECT: 6, RELEASABLE: 7,
+  OPERABLE: 8, OBSERVED: 9, REQUALIFIED: 10, 'ROLLED-BACK': 10, CONTROLLED: 11,
+  RETIRED: 12, REVIEWED: 13,
+});
 
 export function assertLegalTransition(from, to, options = {}) {
   const key = `${from}->${to}`;
@@ -50,9 +56,13 @@ export function assertLegalTransition(from, to, options = {}) {
   return true;
 }
 
-export function resolveReopen(change) {
+export function resolveReopen(change, sourceState = null) {
   const wanted = normalize(change);
   const trigger = REOPEN_TRIGGERS.find((candidate) => normalize(candidate.change) === wanted);
   if (!trigger) throw Object.assign(new Error(`unknown reopen trigger: ${change}`), { code: 'REOPEN_TRIGGER_UNKNOWN' });
+  if (sourceState !== null && (!Object.hasOwn(EVIDENCE_RANK, sourceState)
+      || EVIDENCE_RANK[sourceState] <= EVIDENCE_RANK[trigger.reopenTarget])) {
+    throw Object.assign(new Error(`reopen target ${trigger.reopenTarget} is not earlier than ${sourceState}`), { code: 'DOSSIER_TRANSITION_INVALID' });
+  }
   return trigger;
 }

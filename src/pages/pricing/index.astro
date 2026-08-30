@@ -1,0 +1,135 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import K from '../../components/K.astro';
+import Icon from '../../components/Icon.astro';
+
+const matrixFeatures = [
+  { feature: 'Number of Themes Included', single: '1 Theme', aiKit: 'None', pass: 'All 200 Themes (100 Astro + 100 Next.js)' },
+  { feature: 'Turnkey AI Solution Kits Included', single: 'None', aiKit: '1 AI Solution Kit', pass: 'All 4 AI Solution Kits' },
+  { feature: 'Learning & Architecture Guide PDF', single: 'Basic Docs', aiKit: 'Full Learning Guide', pass: 'All Learning & Integration Guides' },
+  { feature: 'Source Code Access', single: 'Full 100% Access', aiKit: 'Full 100% Access', pass: 'Full 100% Access to All Products' },
+  { feature: 'Commercial & Client Licenses', single: 'Unlimited Clients', aiKit: 'Unlimited Clients', pass: 'Unlimited Clients & Personal Sites' },
+  { feature: 'Core Web Vitals Speed Score', single: '100/100 Guarantee', aiKit: 'Production Grade', pass: '100/100 Guarantee Across All' },
+  { feature: 'Future Template Releases', single: 'Theme Updates Only', aiKit: 'Kit Updates Only', pass: 'Free Access to All Future Releases' },
+  { feature: 'Support & Discord Community Access', single: 'Standard Support', aiKit: 'Priority AI Support', pass: 'VIP Priority Support' },
+];
+---
+<Layout title="Pricing & Feature Matrix | Komal Nakrani" description="Compare $29 Single Theme, $39 Single AI Kit, and $199 Lifetime All-Access Pass features and commercial license rights.">
+  <main class="rise">
+    <section class="wrap section">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 48px;">
+        <K idx="01">Pricing Plans</K>
+        <h1 class="display" style="margin-top: 14px;">
+          Simple, Transparent <span class="grad">Pricing</span>
+        </h1>
+        <p class="lead" style="margin-top: 16px;">
+          Choose individual $29 themes, $39 AI solution kits, or unlock the complete library of 200 themes + AI kits for a single $199 lifetime fee.
+        </p>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto 64px; align-items: stretch;">
+        <!-- 1. Single Theme ($29) -->
+        <div style="background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-lg); padding: 36px 28px; display: flex; flex-direction: column;">
+          <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); margin-bottom: 6px;">Starter Option</div>
+          <h3 class="h3">Single Theme License</h3>
+          <p class="small" style="margin: 6px 0 20px;">For launching one specific project.</p>
+          <div style="font-family: var(--display); font-weight: 700; font-size: 44px; color: var(--ink);">$29 <span style="font-size: 14px; color: var(--ink-3); font-weight: 400;">/ theme</span></div>
+          
+          <ul style="list-style: none; padding: 0; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <li class="ai-feature-item"><Icon name="check" /> Full source code for 1 Theme</li>
+            <li class="ai-feature-item"><Icon name="check" /> Astro 5 or Next.js 15 version</li>
+            <li class="ai-feature-item"><Icon name="check" /> Commercial & Client License</li>
+            <li class="ai-feature-item"><Icon name="check" /> Lifetime Theme Updates</li>
+            <li class="ai-feature-item"><Icon name="check" /> 100/100 Lighthouse Speed</li>
+          </ul>
+          <a href="/themes/" class="btn btn-secondary" style="width: 100%;">
+            Browse $29 Themes
+          </a>
+        </div>
+
+        <!-- 2. Single AI Kit ($39) -->
+        <div style="background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-lg); padding: 36px 28px; display: flex; flex-direction: column;">
+          <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 6px;">AI Developer Kit</div>
+          <h3 class="h3">Turnkey AI Solution</h3>
+          <p class="small" style="margin: 6px 0 20px;">Code repo + Learning Guide PDF.</p>
+          <div style="font-family: var(--display); font-weight: 700; font-size: 44px; color: var(--ink);">$39 <span style="font-size: 14px; color: var(--ink-3); font-weight: 400;">/ kit</span></div>
+          
+          <ul style="list-style: none; padding: 0; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <li class="ai-feature-item"><Icon name="check" /> 1 Production AI Solution Kit</li>
+            <li class="ai-feature-item"><Icon name="check" /> Full Learning & Architecture PDF</li>
+            <li class="ai-feature-item"><Icon name="check" /> Pinecone, CrewAI or Ollama code</li>
+            <li class="ai-feature-item"><Icon name="check" /> Commercial & Client License</li>
+            <li class="ai-feature-item"><Icon name="check" /> Step-by-step Setup Playbook</li>
+          </ul>
+          <a href="/ai-solutions/" class="btn btn-secondary" style="width: 100%;">
+            Browse $39 AI Kits
+          </a>
+        </div>
+
+        <!-- 3. All-Access Pass ($199) -->
+        <div style="background: var(--ark-ink); color: #ffffff; border: 2px solid var(--accent); border-radius: var(--r-lg); padding: 40px 32px; display: flex; flex-direction: column; position: relative; box-shadow: var(--sh-lg); transform: translateY(-4px);">
+          <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #ffffff; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px; border-radius: var(--r-pill); box-shadow: 0 4px 12px rgba(255, 103, 17, 0.4);">
+            MOST POPULAR · ALL INCLUSIVE
+          </div>
+          <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 6px;">Complete Platform Access</div>
+          <h3 class="h3" style="color: #ffffff;">All-Access Lifetime Pass</h3>
+          <p class="small" style="margin: 6px 0 20px; color: var(--ark-grey-300);">Get everything today + all future releases.</p>
+          <div style="font-family: var(--display); font-weight: 700; font-size: 50px; color: #ffffff; line-height: 1;">
+            $199 <span style="font-size: 15px; color: var(--ark-grey-400); font-weight: 400;">/ lifetime</span>
+          </div>
+
+          <ul style="list-style: none; padding: 0; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <li class="ai-feature-item" style="color: #ffffff;"><Icon name="check" /> <strong>All 100 Astro 5 Themes</strong></li>
+            <li class="ai-feature-item" style="color: #ffffff;"><Icon name="check" /> <strong>All 100 Next.js 15 Themes</strong></li>
+            <li class="ai-feature-item" style="color: #ffffff;"><Icon name="check" /> <strong>All 4 Turnkey AI Solution Kits</strong></li>
+            <li class="ai-feature-item" style="color: #ffffff;"><Icon name="check" /> All Learning & Setup Guides</li>
+            <li class="ai-feature-item" style="color: #ffffff;"><Icon name="check" /> Unlimited Personal & Client Licenses</li>
+            <li class="ai-feature-item" style="color: #ffffff;"><Icon name="check" /> Free Future Updates Forever</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-lg" style="width: 100%;">
+            Get All-Access Pass ($199) <Icon name="arrow-right" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature Comparison Matrix Table (#features) -->
+      <div id="features" style="max-width: 1100px; margin: 64px auto 0;">
+        <div style="text-align: center; margin-bottom: 36px;">
+          <K idx="02">Full Feature Matrix</K>
+          <h2 class="h1" style="margin-top: 10px;">Compare Plan Features</h2>
+          <p class="body-t" style="margin-top: 6px;">Detailed breakdown of capabilities, licensing, and updates included in each plan.</p>
+        </div>
+
+        <div style="background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-sm);">
+          <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+              <tr style="background: var(--surface-2); border-bottom: 1px solid var(--line-2);">
+                <th style="padding: 18px 24px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3);">Features & Capabilities</th>
+                <th style="padding: 18px 24px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3);">Single Theme ($29)</th>
+                <th style="padding: 18px 24px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3);">AI Kit ($39)</th>
+                <th style="padding: 18px 24px; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">All-Access Pass ($199)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {matrixFeatures.map((row, idx) => (
+                <tr style={`border-bottom: ${idx < matrixFeatures.length - 1 ? '1px solid var(--line)' : 'none'}; background: ${idx % 2 === 0 ? 'var(--surface)' : 'var(--surface-2)'};`}>
+                  <td style="padding: 18px 24px; font-family: var(--body); font-weight: 600; font-size: 15px; color: var(--ink);">{row.feature}</td>
+                  <td style="padding: 18px 24px; font-family: var(--body); font-size: 14.5px; color: var(--ink-2);">{row.single}</td>
+                  <td style="padding: 18px 24px; font-family: var(--body); font-size: 14.5px; color: var(--ink-2);">{row.aiKit}</td>
+                  <td style="padding: 18px 24px; font-family: var(--body); font-weight: 600; font-size: 14.5px; color: var(--accent);">{row.pass}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+@media (max-width: 900px) {
+  table { display: block; overflow-x: auto; }
+}
+</style>

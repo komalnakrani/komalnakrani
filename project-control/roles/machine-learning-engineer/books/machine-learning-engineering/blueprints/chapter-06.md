@@ -147,37 +147,37 @@ Every port retains equal status: no provider, model family, device, or shared pl
   - Truth rule: All data, results, incidents, and outcomes are constructed; primary sources support doctrine only.
   - Reported facts: none; the fixture is constructed.
   - Attributed outcomes: none.
-  - Allowed inference: use only the synthetic decision trace defined in this chapter.
-  - Forbidden inference: Do not infer unreported outcomes for Benchline Inspection Dossier.
+  - Allowed inference: The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence.
+  - Forbidden inference: Do not infer real industrial performance, safety, production readiness, business outcome, or external approval.
   - Limitation: No real production, industrial, safety, performance, or business claim.
-  - Transfer rule: Every chapter decision must transfer to the four satellite ports.
+  - Transfer rule: Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence.
 
 - **CASE-03 — Classical credit triage** — CONSTRUCTED SATELLITE
   - Truth rule: Synthetic records only; no lending, fairness, compliance, or outcome claim.
   - Reported facts: none; the fixture is constructed.
   - Attributed outcomes: none.
-  - Allowed inference: use only the synthetic decision trace defined in this chapter.
-  - Forbidden inference: Do not infer unreported outcomes for Classical credit triage.
+  - Allowed inference: The constructed classical fixture may test that qualification and authority gates still apply to a simple model.
+  - Forbidden inference: Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization.
   - Limitation: Not financial advice or credit authorization.
-  - Transfer rule: Must satisfy the same evidence interface without deep-learning assumptions.
+  - Transfer rule: Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally.
 
 - **CASE-04 — Deep acoustic event classifier** — CONSTRUCTED SATELLITE
   - Truth rule: Synthetic fixtures and bounded local runs only; no field performance claim.
   - Reported facts: none; the fixture is constructed.
   - Attributed outcomes: none.
-  - Allowed inference: use only the synthetic decision trace defined in this chapter.
-  - Forbidden inference: Do not infer unreported outcomes for Deep acoustic event classifier.
+  - Allowed inference: The constructed deep fixture may test checkpoint, preprocessor, runtime, uncertainty, and serving identity bindings.
+  - Forbidden inference: Do not infer real accuracy, acoustic safety, field performance, production behavior, or approval.
   - Limitation: Not a deep-learning recipe book.
-  - Transfer rule: Must preserve the same decision/evidence job when swapped for another model family.
+  - Transfer rule: Preserve the same decision/evidence job when the model family or runtime changes.
 
 - **CASE-05 — Shared ranking platform tenant** — CONSTRUCTED SATELLITE
   - Truth rule: Synthetic tenant and fleet evidence; no SLO or platform assurance claim.
   - Reported facts: none; the fixture is constructed.
   - Attributed outcomes: none.
-  - Allowed inference: use only the synthetic decision trace defined in this chapter.
-  - Forbidden inference: Do not infer unreported outcomes for Shared ranking platform tenant.
+  - Allowed inference: The constructed shared-tenant fixture may test separation of workload evidence from tenant, fleet, and platform authority.
+  - Forbidden inference: Do not infer platform-wide SLO or performance, business effect, isolation assurance, or approval.
   - Limitation: Not a platform-engineering curriculum.
-  - Transfer rule: Workload evidence must remain valid when the shared substrate changes.
+  - Transfer rule: Preserve workload evidence when the substrate changes and recheck every substrate-bound relation.
 
 - **CASE-06 — Google ML Test Score production-readiness method** — PUBLIC REPORTED CASE
   - Truth rule: Use only the paper's reported 2017 test taxonomy and attributed author claims; treat NIST AI RMF and TensorFlow Data Validation only as bounded transfer context, and invent no certification, universal threshold, causal readiness outcome, or formal approval.
@@ -410,7 +410,7 @@ PHASE07-CHAPTER-PROJECTION-START
       "limitation": "Named Google mechanisms and observations require transfer tests; the guide does not decide intended purpose or acceptable consequence.",
       "durability": "volatile",
       "volatility": "medium",
-      "recheckTrigger": "Recheck the living page at all three publication freezes and record material rule-number or content changes."
+      "recheckTrigger": "Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze."
     },
     {
       "sourceId": "MLE-BSRC-013",
@@ -449,7 +449,7 @@ PHASE07-CHAPTER-PROJECTION-START
       "limitation": "Named Google mechanisms and observations require transfer tests; the guide does not decide intended purpose or acceptable consequence.",
       "durability": "volatile",
       "volatility": "medium",
-      "recheckTrigger": "Recheck the living page at all three publication freezes and record material rule-number or content changes."
+      "recheckTrigger": "Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze."
     },
     {
       "sourceId": "MLE-BSRC-024",
@@ -462,7 +462,7 @@ PHASE07-CHAPTER-PROJECTION-START
       "limitation": "Detection coverage and thresholds are implementation- and domain-specific. Passing input comparisons does not prove provenance, permission, representativeness, label truth, model adequacy, causal attribution, or permission to retrain and promote.",
       "durability": "volatile",
       "volatility": "medium",
-      "recheckTrigger": "Recheck at every freeze and whenever TFX/TFDV releases alter schemas, comparators, API fields, threshold behavior, or tutorial semantics."
+      "recheckTrigger": "Official TensorFlow Data Validation tutorial updated 2024-04-30; retrieved 2026-08-23. The living tutorial demonstrates schema, anomaly, drift, and skew mechanisms but does not determine semantic validity, acceptable shift, outcome degradation, or permission to retrain or promote; recheck tutorial/API semantics at each freeze."
     },
     {
       "sourceId": "MLE-BSRC-044",

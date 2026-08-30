@@ -1,0 +1,107 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import K from '../../../components/K.astro';
+import Icon from '../../../components/Icon.astro';
+
+const faqCategories = [
+  {
+    title: 'General & Purchases',
+    faqs: [
+      {
+        q: 'What is Komal Nakrani Themes & AI Solutions?',
+        a: 'Komal Nakrani is a developer marketplace publishing production-ready Astro 5 themes, Next.js 15 App Router starters, and turnkey AI Solution Kits (RAG agents, multi-agent workflows, local LLM wrappers, voice AI) engineered for high speed and clean architecture.'
+      },
+      {
+        q: 'What payment methods do you accept?',
+        a: 'We accept all major credit cards (Visa, MasterCard, American Express), Apple Pay, Google Pay, and PayPal securely processed through Stripe and LemonSqueezy.'
+      },
+      {
+        q: 'How do I access my files after purchasing?',
+        a: 'Immediately after checkout, you will receive an automated email containing your license key (KN-KEY-XXXX-YYYY) and instant download links to the raw source code repos and learning PDF guides.'
+      }
+    ]
+  },
+  {
+    title: 'Licensing & Commercial Use',
+    faqs: [
+      {
+        q: 'Can I use purchased themes and AI kits for paying client projects?',
+        a: 'Yes! Both individual purchases ($29 themes / $39 AI kits) and the $199 Lifetime All-Access Pass include full commercial licensing to build unlimited client sites and commercial SaaS applications.'
+      },
+      {
+        q: 'Can I re-sell or redistribute the template source code?',
+        a: 'No. You are prohibited from re-selling, sub-licensing, or distributing the uncompiled source code files on public marketplaces or open repos.'
+      }
+    ]
+  },
+  {
+    title: 'Technical & Framework Questions',
+    faqs: [
+      {
+        q: 'What version of Astro and Next.js do these themes support?',
+        a: 'Our themes are built on Astro 5 (Content Layer API) and Next.js 15 App Router with React 19 and Tailwind CSS.'
+      },
+      {
+        q: 'Are the AI Solution Kits ready for production deployment?',
+        a: 'Yes. Each AI Kit ($39) includes battle-tested code for vector databases (Pinecone/Qdrant), CrewAI multi-agent crews, or local Ollama wrappers, along with a step-by-step Learning & Setup Document PDF.'
+      },
+      {
+        q: 'What performance scores do these themes achieve?',
+        a: 'All Astro themes achieve 100/100 Core Web Vitals Lighthouse scores out of the box with zero JavaScript bloat.'
+      }
+    ]
+  }
+];
+---
+<Layout title="Legal FAQ & Knowledge Base | Komal Nakrani" description="Frequently Asked Questions regarding theme licensing, commercial usage, AI solution guides, and payment support.">
+  <main class="rise">
+    <section class="wrap section">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <K idx="01">Legal & Support</K>
+          <h1 class="display" style="margin-top: 14px;">
+            Frequently Asked <span class="grad">Questions</span>
+          </h1>
+          <p class="lead" style="margin-top: 14px;">
+            Clear answers regarding template licensing, commercial client rights, refund policies, and technical specifications.
+          </p>
+        </div>
+
+        <!-- Quick Links Pill Bar -->
+        <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 48px; flex-wrap: wrap;">
+          <a href="/legal/faq/" class="btn btn-secondary active" style="font-size: 13.5px;">FAQ Overview</a>
+          <a href="/legal/license/" class="btn btn-secondary" style="font-size: 13.5px;">License Agreement</a>
+          <a href="/legal/terms/" class="btn btn-secondary" style="font-size: 13.5px;">Terms of Service</a>
+          <a href="/legal/privacy/" class="btn btn-secondary" style="font-size: 13.5px;">Privacy Policy</a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 40px;">
+          {faqCategories.map((cat) => (
+            <div>
+              <h2 class="h2" style="margin-bottom: 20px; border-bottom: 1px solid var(--line-2); padding-bottom: 10px; color: var(--ink);">
+                {cat.title}
+              </h2>
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                {cat.faqs.map((item) => (
+                  <div style="background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-lg); padding: 24px;">
+                    <h3 class="h3" style="font-size: 18px; color: var(--ink); margin-bottom: 10px;">{item.q}</h3>
+                    <p class="body-t" style="font-size: 15px; line-height: 1.6; margin: 0; color: var(--ink-2);">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Need Help Banner -->
+        <div style="margin-top: 64px; padding: 36px; background: var(--surface-2); border: 1px solid var(--line-2); border-radius: var(--r-lg); text-align: center;">
+          <h3 class="h3">Have a question not listed here?</h3>
+          <p class="body-t" style="margin: 8px 0 20px;">Reach out directly to our technical support team for fast assistance.</p>
+          <a href="/docs/getting-started/" class="btn btn-primary">
+            Visit Documentation Center <Icon name="arrow-right" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

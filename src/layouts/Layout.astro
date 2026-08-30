@@ -3,6 +3,8 @@ import '../styles/theme.css';
 import '../styles/components.css';
 import Masthead from '../components/Masthead.astro';
 import Footer from '../components/Footer.astro';
+import CheckoutModal from '../components/CheckoutModal.astro';
+import SEOJsonLd from '../components/SEOJsonLd.astro';
 
 interface Props {
   title?: string;
@@ -11,8 +13,8 @@ interface Props {
 }
 
 const {
-  title = 'Komal Nakrani | Role-based books for applied AI work',
-  description = 'Original, evidence-led books that teach the real work behind applied AI and production engineering roles.',
+  title = 'Komal Nakrani | 200 Premium Astro 5 & Next.js 15 Themes + Turnkey AI Solutions',
+  description = 'Ultra-fast, production-grade Astro 5 & Next.js 15 templates combined with ready-to-deploy AI agent architectures and learning guides.',
   noindex = false,
 } = Astro.props;
 
@@ -26,22 +28,28 @@ const canonical = new URL(Astro.url.pathname, site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#121212" />
+    <meta name="theme-color" content="#101820" />
+    <meta name="author" content="Komal Nakrani" />
+    <meta name="keywords" content="Astro 5 Themes, Next.js 15 Templates, RAG Agent Starter, Multi-Agent Framework, Local LLM Ollama, WebGL Shaders, Web Architecture" />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Komal Nakrani" />
+    <meta property="og:site_name" content="Komal Nakrani Themes & Turnkey AI Solutions" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <title>{title}</title>
+    <SEOJsonLd title={title} description={description} />
   </head>
   <body>
     <Masthead />
     <slot />
     <Footer />
+    <CheckoutModal />
   </body>
 </html>

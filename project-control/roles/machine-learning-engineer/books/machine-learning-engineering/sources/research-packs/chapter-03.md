@@ -47,6 +47,8 @@
 | `CASE-03` — Classical credit triage | CONSTRUCTED SATELLITE | Test whether simplicity preserves incumbent, segment, and authority duties. It is not financial advice or credit authorization. |
 | `CASE-06` — Google ML Test Score production-readiness method | PUBLIC REPORTED CASE | Use selected test decision jobs to expose missing incumbent or consequence evidence. Do not transfer point values, a universal threshold, or certification. |
 
+Frozen constructed-case truth projections preserve zero reported facts, attributed outcomes, and source uses. `CASE-01`: allowed inference — The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence. Forbidden inference — Do not infer real industrial performance, safety, production readiness, business outcome, or external approval. Transfer rule — Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence. `CASE-03`: allowed inference — The constructed classical fixture may test that qualification and authority gates still apply to a simple model. Forbidden inference — Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization. Transfer rule — Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally. Each existing case-specific limitation and authority owner remains unchanged.
+
 `CASE-06` supports the inference that a model-only review can miss system evidence and that a release-critical missing test can justify HOLD. The paper's roadmap language remains an attributed outcome, not a quantified universal effect.
 
 ## Durable, volatile, and conflicting evidence treatment
@@ -59,7 +61,7 @@
 
 ## Dated current examples
 
-- Google's Rules of ML (`MLE-BSRC-015`) was verified on 2026-08-18 and supports current simple-baseline practice only.
+- Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze.
 - The NIST Core living rendering (`MLE-BSRC-027`) was verified on 2026-08-18; AI RMF 1.0 (`MLE-BSRC-028`, 2023-01-26) remains the pinned authority framework.
 - The October 2021 GMLP source (`MLE-BSRC-038`) is retained only for its historical joint intended-use and relevant-condition principles, not as current cross-sector authorization.
 

@@ -49,6 +49,8 @@
 | `CASE-06` — Google ML Test Score production-readiness method | PUBLIC REPORTED CASE | Transfer selected feature/data test decision jobs and expected evidence without Google scoring or tooling. |
 | `CASE-07` — Uber Michelangelo feature and deployment evidence pattern | PUBLIC REPORTED CASE | Use dated first-party facts only to motivate provider-neutral feature, transformation, consumer, parity, and limitation fields. |
 
+Frozen constructed-case truth projections preserve zero reported facts, attributed outcomes, and source uses. `CASE-01`: allowed inference — The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence. Forbidden inference — Do not infer real industrial performance, safety, production readiness, business outcome, or external approval. Transfer rule — Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence. `CASE-03`: allowed inference — The constructed classical fixture may test that qualification and authority gates still apply to a simple model. Forbidden inference — Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization. Transfer rule — Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally. `CASE-05`: allowed inference — The constructed shared-tenant fixture may test separation of workload evidence from tenant, fleet, and platform authority. Forbidden inference — Do not infer platform-wide SLO or performance, business effect, isolation assurance, or approval. Transfer rule — Preserve workload evidence when the substrate changes and recheck every substrate-bound relation. Each existing case-specific limitation and authority owner remains unchanged.
+
 `CASE-07` reported facts include the 2017 six-step workflow, shared feature mechanisms, and the 2025 conformance controls. Its scale and adoption statements remain attributed outcomes. The two system states must remain distinct, and no Uber-specific topology or claimed result transfers.
 
 ## Durable, volatile, and conflicting evidence treatment
@@ -61,7 +63,8 @@
 
 ## Dated current examples
 
-- TFDV living documentation (`MLE-BSRC-024`) and Google's Rules of ML (`MLE-BSRC-015`) were verified on 2026-08-18; any API, field, rule number, or threshold example must be date-stamped.
+- Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze.
+- Official TensorFlow Data Validation tutorial updated 2024-04-30; retrieved 2026-08-23. The living tutorial demonstrates schema, anomaly, drift, and skew mechanisms but does not determine semantic validity, acceptable shift, outcome degradation, or permission to retrain or promote; recheck tutorial/API semantics at each freeze.
 - Uber's Michelangelo report (`MLE-BSRC-043`) is a 2017 first-party system description, not a current universal platform model.
 - Uber's deployment-safety report (`MLE-BSRC-044`) is a 2025 first-party account of schema, imputation, distribution, reporting, and validation mechanisms; its quantities and outcomes retain the 2025 attribution.
 

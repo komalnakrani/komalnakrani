@@ -1,0 +1,306 @@
+---
+import Icon from './Icon.astro';
+---
+<div id="checkout-modal" class="checkout-overlay" style="display: none;">
+  <div class="checkout-box">
+    <button id="close-checkout" class="close-btn" aria-label="Close Checkout">
+      <Icon name="x" />
+    </button>
+
+    <div class="checkout-header">
+      <div class="wm" style="margin-bottom: 8px;">
+        <span class="glyph">KN</span>
+        <span class="wmt">Komal</span>
+        <span class="badge">Checkout</span>
+      </div>
+      <h3 id="checkout-title" class="h3" style="font-size: 22px;">Complete Your Order</h3>
+      <p class="small" style="color: var(--ink-3); margin-top: 4px;">Instant download & license key generator.</p>
+    </div>
+
+    <!-- Plan Toggle Tabs -->
+    <div style="display: flex; gap: 6px; margin-top: 16px; background: var(--surface-2); padding: 4px; border-radius: var(--r-sm); border: 1px solid var(--line-2);">
+      <button id="plan-btn-29" type="button" class="plan-toggle-btn" data-price="29">Theme ($29)</button>
+      <button id="plan-btn-39" type="button" class="plan-toggle-btn" data-price="39">AI Kit ($39)</button>
+      <button id="plan-btn-199" type="button" class="plan-toggle-btn active" data-price="199">All-Access ($199)</button>
+    </div>
+
+    <!-- Order Summary Box -->
+    <div class="order-summary">
+      <div>
+        <div id="summary-plan-name" style="font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--ink);">Lifetime All-Access Pass</div>
+        <div id="summary-plan-desc" style="font-family: var(--mono); font-size: 11px; color: var(--accent); margin-top: 2px;">200 Themes + 4 AI Agent Kits</div>
+      </div>
+      <div id="summary-plan-price" style="font-family: var(--display); font-weight: 700; font-size: 28px; color: var(--ink);">$199</div>
+    </div>
+
+    <!-- Payment Form -->
+    <form id="payment-form" onsubmit="return false;" style="margin-top: 20px;">
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" id="customer-email" required placeholder="developer@company.com" class="form-input" />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Card Number</label>
+        <div class="card-input-wrapper">
+          <input type="text" id="card-number" required placeholder="4242 4242 4242 4242" maxlength="19" class="form-input" />
+          <span class="card-brand">VISA / MC</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div class="form-group">
+          <label class="form-label">Expiry Date</label>
+          <input type="text" id="card-expiry" required placeholder="MM/YY" maxlength="5" class="form-input" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">CVC Code</label>
+          <input type="password" id="card-cvc" required placeholder="123" maxlength="4" class="form-input" />
+        </div>
+      </div>
+
+      <button type="submit" id="pay-submit-btn" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 16px; font-size: 16px; padding: 14px;">
+        Complete Payment <Icon name="arrow-right" />
+      </button>
+
+      <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 14px; font-family: var(--mono); font-size: 11px; color: var(--ink-3);">
+        <span>🔒 256-bit SSL Encrypted</span>
+        <span>·</span>
+        <span>Stripe & LemonSqueezy</span>
+      </div>
+    </form>
+
+    <!-- Payment Success / License Key Screen -->
+    <div id="payment-success-screen" style="display: none; text-align: center; padding: 20px 0;">
+      <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--accent-tint); color: var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 1px solid var(--accent);">
+        <Icon name="check" />
+      </div>
+      <h3 class="h3" style="font-size: 24px;">Payment Successful!</h3>
+      <p class="body-t" style="margin: 8px 0 20px; font-size: 15px;">Your license key & learning guide download link generated.</p>
+
+      <div style="background: var(--ark-ink); color: #ffffff; padding: 16px; border-radius: var(--r-sm); font-family: var(--mono); font-size: 13px; border: 1px solid var(--accent); margin-bottom: 20px;">
+        <div style="font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Your License Key</div>
+        <div id="generated-license-key" style="font-weight: 700; font-size: 18px; letter-spacing: 0.1em; color: var(--ark-orange-bright);">KN-KEY-9842-7719</div>
+      </div>
+
+      <button id="close-success-btn" class="btn btn-secondary" style="width: 100%;">
+        Close & Access Downloads
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+.checkout-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(16, 24, 32, 0.75);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.checkout-box {
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-lg);
+  width: 100%;
+  max-width: 480px;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(16, 24, 32, 0.3);
+  animation: modalRise 250ms var(--ease) both;
+}
+@keyframes modalRise {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  cursor: pointer;
+}
+.plan-toggle-btn {
+  flex: 1;
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 7px 8px;
+  border-radius: var(--r-xs);
+  border: none;
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+}
+.plan-toggle-btn.active {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--sh-sm);
+}
+.order-summary {
+  background: var(--surface-2);
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-sm);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.form-group {
+  margin-bottom: 14px;
+}
+.form-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.form-input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line-2);
+  background: var(--surface);
+  font-family: var(--body);
+  font-size: 14.5px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color var(--dur) var(--ease);
+}
+.form-input:focus {
+  border-color: var(--accent);
+}
+.card-input-wrapper {
+  position: relative;
+}
+.card-brand {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-3);
+}
+</style>
+
+<script>
+  function initCheckout() {
+    const modal = document.getElementById('checkout-modal');
+    const closeBtn = document.getElementById('close-checkout');
+    const form = document.getElementById('payment-form') as HTMLFormElement | null;
+    const successScreen = document.getElementById('payment-success-screen');
+    const licenseKeyEl = document.getElementById('generated-license-key');
+    const closeSuccessBtn = document.getElementById('close-success-btn');
+
+    const btn29 = document.getElementById('plan-btn-29');
+    const btn39 = document.getElementById('plan-btn-39');
+    const btn199 = document.getElementById('plan-btn-199');
+    const nameEl = document.getElementById('summary-plan-name');
+    const descEl = document.getElementById('summary-plan-desc');
+    const priceEl = document.getElementById('summary-plan-price');
+    const submitBtn = document.getElementById('pay-submit-btn');
+
+    function setPlan(price: number, customName?: string) {
+      if (price === 29) {
+        if (btn29) btn29.classList.add('active');
+        if (btn39) btn39.classList.remove('active');
+        if (btn199) btn199.classList.remove('active');
+        if (nameEl) nameEl.innerText = customName || 'Single Theme License';
+        if (descEl) descEl.innerText = '1 Theme License · Commercial Use';
+        if (priceEl) priceEl.innerText = '$29';
+        if (submitBtn) submitBtn.innerHTML = `Complete Payment ($29) →`;
+      } else if (price === 39) {
+        if (btn39) btn39.classList.add('active');
+        if (btn29) btn29.classList.remove('active');
+        if (btn199) btn199.classList.remove('active');
+        if (nameEl) nameEl.innerText = customName || 'Single AI Solution Kit';
+        if (descEl) descEl.innerText = 'Includes Code Repo + Learning Guide PDF';
+        if (priceEl) priceEl.innerText = '$39';
+        if (submitBtn) submitBtn.innerHTML = `Complete Payment ($39) →`;
+      } else {
+        if (btn199) btn199.classList.add('active');
+        if (btn29) btn29.classList.remove('active');
+        if (btn39) btn39.classList.remove('active');
+        if (nameEl) nameEl.innerText = 'Lifetime All-Access Pass';
+        if (descEl) descEl.innerText = '200 Themes + 4 AI Agent Kits';
+        if (priceEl) priceEl.innerText = '$199';
+        if (submitBtn) submitBtn.innerHTML = `Complete Payment ($199) →`;
+      }
+    }
+
+    if (btn29) btn29.addEventListener('click', () => setPlan(29));
+    if (btn39) btn39.addEventListener('click', () => setPlan(39));
+    if (btn199) btn199.addEventListener('click', () => setPlan(199));
+
+    // Trigger checkout on any buy button or pass link
+    document.querySelectorAll<HTMLElement>('[href="/bundles/"], [href="#pay"], .btn-primary, .pay-trigger-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const text = btn.innerText || '';
+        const planPrice = btn.getAttribute('data-plan-price');
+        const planName = btn.getAttribute('data-plan-name');
+
+        if (planPrice === '39' || text.includes('39')) {
+          e.preventDefault();
+          setPlan(39, planName || undefined);
+          if (modal) modal.style.display = 'flex';
+        } else if (text.includes('29') || planPrice === '29' || text.includes('Single Theme')) {
+          e.preventDefault();
+          setPlan(29, planName || undefined);
+          if (modal) modal.style.display = 'flex';
+        } else if (text.includes('Pass') || text.includes('199') || text.includes('All Access')) {
+          e.preventDefault();
+          setPlan(199);
+          if (modal) modal.style.display = 'flex';
+        }
+      });
+    });
+
+    if (closeBtn && modal) {
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+    }
+
+    if (form && successScreen && modal && licenseKeyEl) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const randomNum1 = Math.floor(1000 + Math.random() * 9000);
+        const randomNum2 = Math.floor(1000 + Math.random() * 9000);
+        licenseKeyEl.innerText = `KN-KEY-${randomNum1}-${randomNum2}`;
+
+        form.style.display = 'none';
+        successScreen.style.display = 'block';
+      });
+    }
+
+    if (closeSuccessBtn && modal) {
+      closeSuccessBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        if (form && successScreen) {
+          form.style.display = 'block';
+          successScreen.style.display = 'none';
+        }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initCheckout);
+</script>

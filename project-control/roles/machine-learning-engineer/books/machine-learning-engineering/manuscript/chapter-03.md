@@ -2,6 +2,8 @@
 
 Author: Komal Nakrani
 Chapter ID: `MLE-CH-03`
+Slug: `retain-the-incumbent-and-name-consequences`
+Part: `PART-01`
 Milestone: `BL-02`
 
 ## MLE-CH-03-S01 — Decision and Bench Setup
@@ -49,7 +51,7 @@ Targets and thresholds stay separate. A target expresses an aim, such as reducin
 Construct the measurement contract before seeing candidate results. Choose measures because they represent the task and consequence, not because they flatter the candidate. Record metric direction and calculation over fixed identities. If a measure is undefined for sparse rows, preserve that fact. If a population slice is missing, mark it MISSING rather than treating absence as zero failures. If a threshold is proposed after results are visible, record that timing and require independent review.
 
 Retain segment rows alongside the aggregate. Benchline’s synthetic fixture uses lighting condition and surface class as bounded segments. The manuscript does not claim those are sufficient for a real inspection system. It demonstrates precedence: a consequence-linked segment can HOLD the workload even when the aggregate improves. Segment selection and sufficiency remain domain and evaluation decisions.
-The baseline treatment carries a dated source ledger. `MLE-BSRC-007` is final IEEE Big Data 2017, verified 2026-08-18; its 28-test rubric is a dated diagnostic, not certification, a universal threshold, or an audited outcome. Recheck publication-record and final-paper availability at every freeze and translate its tests into current workload evidence rather than copying a score. `MLE-BSRC-015` is unversioned living Google guidance verified 2026-08-18; its rules are contextual to Google systems. Recheck at blueprint, manuscript, and publication freezes and record material content or rule-number changes.
+> **Currentness record — `MLE-BSRC-007` / `MLE-BSRC-015`.** The ML Test Score is final IEEE Big Data 2017, verified 2026-08-18; its rubric is a dated diagnostic, not certification, a universal threshold, or an audited outcome. Recheck publication-record and final-paper availability at every freeze and translate its tests into current workload evidence rather than copying a score. Official Google Rules of ML page updated 2025-08-25; retrieved 2026-08-23. Living first-party guidance from Google systems, not universal doctrine; recheck the page update date and material rule changes at each publication freeze.
 
 `MLE-BSRC-006` is the final FAT* 2019 Model Cards paper, verified 2026-08-18. Reporting fields cannot prove suitability or impose a mandatory standard. Recheck the research record and final-paper link at all three freezes while preserving the 2019 identity. `MLE-BSRC-028` is final NIST AI 100-1, AI RMF 1.0, verified 2026-08-18; it is voluntary, under announced revision, and cannot authorize this workload. Recheck at all three freezes and keep 1.0 explicit until a revision is published.
 
@@ -77,7 +79,9 @@ A cold reader must be able to state that distinction and point to the exact fiel
 
 ## MLE-CH-03-S04 — Worked trace and truth boundaries
 
-`CASE-01` is the FICTIONAL SYNTHETIC CAPSTONE. Benchline’s fixture, thresholds, segments, and results are constructed. `CASE-03`, classical credit triage, is a CONSTRUCTED SATELLITE and is not financial advice or credit authorization. `CASE-06` is the PUBLIC REPORTED ML Test Score method. These truth labels remain visible beside every result.
+> **Case-truth record — `CASE-01`.** `CASE-01` is the FICTIONAL SYNTHETIC CAPSTONE with no reported facts or attributed outcomes. The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence. Do not infer real industrial performance, safety, production readiness, business outcome, or external approval. Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence. Its limitation remains no real production, industrial, safety, performance, or business claim.
+
+> **Case-truth record — `CASE-03`.** `CASE-03`, classical credit triage, is a CONSTRUCTED SATELLITE with no reported facts or attributed outcomes. The constructed classical fixture may test that qualification and authority gates still apply to a simple model. Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization. Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally. Its limitation remains that it is not financial advice or credit authorization. `CASE-06` is the PUBLIC REPORTED ML Test Score method.
 
 Benchline retains the deterministic heuristic from Chapter 2 as incumbent `INC-BL-001`. Its input is the exact synthetic snapshot named in `BL-01`. Its output is a priority band and abstention. The measure set includes a synthetic aggregate match rate, low-light segment result, abstention count, and processing-time observation. The numbers exist only to exercise the contract; they do not describe an industrial process.
 
@@ -85,7 +89,7 @@ The first trace shows an aggregate that meets its proposed target while the low-
 
 The second trace changes the input snapshot for the proposed candidate but keeps the incumbent result from the earlier snapshot. The apparent gain is larger. The comparator drift is detected by input hashes and the comparison is REJECTED. Repair reruns both on a common accepted snapshot or explicitly states that no direct improvement claim is supportable. It never edits the old result.
 
-In the classical credit triage satellite, a simple estimator still receives exact feature order, preprocessing, population, segment, and consequence records. Its simplicity does not authorize a lending decision. The example’s allowed inference is that lifecycle evidence applies to classical systems. The forbidden inference is any real credit, fairness, compliance, or business conclusion.
+In the classical credit triage satellite, a simple estimator still receives exact feature order, preprocessing, population, segment, and consequence records. Its simplicity does not authorize a lending decision.
 
 For `CASE-06`, the reported facts are the paper’s 28-test taxonomy, its system-wide categories, and the authors’ experience claim. Attributed outcomes are limited to their roadmap characterization. The allowed inference is that a missing incumbent or consequence test can expose readiness gaps. The forbidden inference is that a point value selects Benchline’s threshold. Limitations include dated organization-specific practice and no universal causal outcome. Transfer derives tests from failure and consequence, issues owner-bound dispositions instead of point totals, treats current mechanisms only as illustrative implementations, and keeps the decision portable across all five ports without requiring a shared platform.
 
@@ -98,6 +102,8 @@ A “do nothing” incumbent can also be valid. Its outcome might be no automate
 The Benchline example remains careful about causal language. Because the fixture is synthetic and the experiment has not yet been designed, `BL-02` cannot say the heuristic causes a change in review delay. It records observed fixture results under a procedure. Causal attribution, external validity, and business effects are outside this record. That ceiling makes the later controlled-comparison chapter necessary.
 
 ## MLE-CH-03-S05 — Failure lab
+
+The companion does not run an incumbent. It converts fixed scenario labels into a deterministic evidence envelope with hashes, generic fields, disposition, owner route, limitation, and truth state. Recalculation, segment interpretation, and threshold ownership remain conceptual work for the reader, so the results below describe the answer contract.
 
 The two labs are `synthetic-deterministic`, offline, fixed, and free of external effects. `MLE-CH-03-LAB-01` executes `FIX-MLE-CH-03-1`, recomputes the incumbent record, binds its input and measurement hashes, and emits deterministic `BL-02`. Repetition produces byte-identical evidence.
 
@@ -122,6 +128,8 @@ Finally, the lab verifies that no result can change authority. A PASS record can
 Illegal promotion and self-approval are always tested. A HOLD or REJECT cannot jump to RELEASABLE. The MLE cannot sign the evaluation or consequence owner field. No network, provider, production, credential, real person, or authority mutation occurs.
 
 ## MLE-CH-03-S06 — Five-port transfer
+
+Five-port equality means the same incumbent evidence fields can be reviewed side by side. It does not mean the adapter executed provider benchmarks, local estimators, checkpoint workloads, constrained hardware, or platform releases. Each port’s actual measurements remain outside the fixture.
 
 `PORT-MANAGED` must export the incumbent configuration, input basis, results, limits, and owner decisions. A provider benchmark is not the workload baseline. Opaque preprocessing or snapshot identity blocks comparison.
 
@@ -171,10 +179,10 @@ The authority limit remains: the MLE implements and measures the incumbent but d
 
 ## MLE-CH-03-S08 — Durable handoff
 
-Durable dossier record: BL-02 version 1.0.0 consumes BL-01 from incoming state CONTRACTED without silent repair. Its frozen planning linkage binds the accepted input identity to hash aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa; that accepted linkage is not presented as a newly executed hash. The record carries incumbent identity, input snapshot, executable procedure, aggregate and segment results, tolerances, owners, limitations, and replacement conditions. Its evidence manifest is MLE-BCLM-007, MLE-BCLM-008, MLE-BCLM-009. Earlier dossier bytes remain immutable, and any correction creates a new artifact identity and lineage edge.
+`BL-02` version 1.0.0 extends the accepted CONTRACTED task in `BL-01` without modifying its bytes. The recorded link hash is `aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`, an accepted identity rather than new execution proof. Incumbent identity, snapshot, procedure, aggregate and segment observations, tolerances, owners, limitations, and replacement conditions form the delta, with support from `MLE-BCLM-007` through `MLE-BCLM-009`. Later corrections branch from this record.
 
-The only legal outgoing state is CONTRACTED. HOLD to RELEASABLE and REJECT to RELEASABLE are forbidden transitions. The four reopen routes are exact: purpose or intended use goes to CONTRACTED; data, labels, features, or population goes to ADMISSIBLE; runtime, dependencies, interface, or serving envelope goes to RECONSTRUCTIBLE; authority, constraint, or permitted use goes to CONTRACTED. A reopen invalidates only affected downstream evidence, retains the triggering record, names its authority owner, and cannot silently promote state.
+Retaining an incumbent does not move the lifecycle beyond CONTRACTED. The Appendix B precondition prevents forward motion disguised as reopen: source must be later than target and the named evidence must be historically possible. `UNORIENTED` to `CONTRACTED` is therefore illegal. A changed purpose or consequence basis returns downstream comparison work to its owned contract without erasing the incumbent observation.
 
-The chapter-specific rechecks travel with the record: Blueprint an incumbent record with executable identity, input snapshot, measure set, limitations, and replacement conditions. Create a baseline-versus-target decision table that exposes aggregate gain alongside a failing consequence segment. Blueprint threshold cells with proposed value, evidence, accepting owner, status, and unresolved assumption rather than a single score. These are evidence obligations, not claims that an illustration, lab, or external system has run. The limitations also travel: the dossier proves only this chapter’s bounded decision under its named inputs and fixtures; PASS cannot certify later gates, public-case outcomes remain attributed, and synthetic evidence remains synthetic-deterministic.
+The chapter-specific rechecks travel with the record: the incumbent record retains executable identity, input snapshot, measure set, limitations, and replacement conditions; the baseline-versus-target table exposes aggregate gain beside any failing consequence segment; and threshold cells retain proposed value, evidence, accepting owner, status, and unresolved assumption. These are evidence obligations, not claims about an external system. The dossier supports only this chapter’s bounded decision; PASS cannot certify later gates, public-case outcomes remain attributed, and synthetic evidence remains synthetic-deterministic.
 
-Prohibited claims remain explicit: No unilateral business tolerance, domain consequence judgment, evaluation self-certification, or candidate selection. Do not invent public-case facts, outcomes, authority, production results, or certification. Do not activate Phase 08, create code, or generate assets from this blueprint. The continuity rule is: Consume BL-01 without silent repair; produce BL-02 for MLE-CH-04. Chapter 4 receives a bounded incumbent comparison and must next establish snapshot and label admissibility without changing accepted tolerances. This exact next dependency, together with the evidence manifest, legal state, limitations, rechecks, and lineage, is the handoff; no asset, external approval, or production result is implied.
+The evidence ceiling excludes unilateral business tolerance, domain consequence judgment, evaluation self-certification, and candidate selection. Consume `BL-01` without silent repair and produce `BL-02` for Chapter 4. The next chapter receives a bounded incumbent comparison and must establish snapshot and label admissibility without changing accepted tolerances. The evidence manifest, legal state, limitations, rechecks, lineage, and exact next dependency travel together.

@@ -1,0 +1,58 @@
+---
+import type { Theme } from '../data/themes';
+import Icon from './Icon.astro';
+
+interface Props {
+  theme: Theme;
+}
+
+const { theme } = Astro.props;
+---
+<div class="theme-card">
+  <a href={`/preview/${theme.slug}/`} target="_blank" rel="noopener" class="theme-preview" style={`background: ${theme.imageBg}`}>
+    <!-- Mac Window Bar Mockup -->
+    <div style="position: absolute; top: 12px; left: 16px; display: flex; align-items: center; gap: 6px; z-index: 3;">
+      <span style="width: 9px; height: 9px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+      <span style="width: 9px; height: 9px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+      <span style="width: 9px; height: 9px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+      <span style="font-family: var(--mono); font-size: 9px; color: rgba(255,255,255,0.6); margin-left: 6px; letter-spacing: 0.05em;">{theme.slug}.astro</span>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px; width: 100%;">
+      {theme.badge ? (
+        <span class="theme-badge">{theme.badge}</span>
+      ) : <span />}
+    </div>
+
+    <div class="theme-frameworks">
+      {theme.techStack.slice(0, 3).map((tech) => (
+        <span class="fw-pill">{tech}</span>
+      ))}
+    </div>
+  </a>
+
+  <div class="theme-content">
+    <div class="theme-header">
+      <a href={`/themes/${theme.slug}/`} style="text-decoration: none;">
+        <h3 class="theme-title">{theme.name}</h3>
+      </a>
+      <div class="theme-price">${theme.price}<span>/single</span></div>
+    </div>
+    <p class="theme-tagline">{theme.tagline}</p>
+    
+    <div class="tech-stack-row">
+      {theme.techStack.map((tech) => (
+        <span class="tech-item">{tech}</span>
+      ))}
+    </div>
+
+    <div class="theme-footer">
+      <a href={`/preview/${theme.slug}/`} target="_blank" rel="noopener" class="demo-link">
+        Preview Theme <Icon name="arrow-right" />
+      </a>
+      <button data-plan-price="29" data-plan-name={theme.name} class="btn btn-primary pay-trigger-btn" style="font-size: 12.5px; padding: 6px 12px;">
+        Buy $29
+      </button>
+    </div>
+  </div>
+</div>

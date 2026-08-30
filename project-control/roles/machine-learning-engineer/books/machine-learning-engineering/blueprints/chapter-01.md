@@ -97,7 +97,7 @@ Claim/source contract:
 
 | Claim | Accepted sources | Limitation | Treatment |
 |---|---|---|---|
-| `MLE-BCLM-001` | `MLE-BSRC-045`, `MLE-BSRC-046` | Two current postings establish a bounded cross-industry signal, not prevalence, stable scope, or universal ownership. | volatile |
+| `MLE-BCLM-001` | `MLE-BSRC-045`, `MLE-BSRC-046` | Two employer-controlled postings were observed on 2026-08-18; on 2026-08-23 Sprinter Health was the sole confirmed-live posting, while the old Blissway identity returned no posting and was absent from its board. No current plural claim, prevalence, stable scope, or universal ownership follows. | volatile |
 | `MLE-BCLM-002` | `MLE-BSRC-005`, `MLE-BSRC-007` | The cited taxonomies identify evidence categories and failure patterns, not a universal readiness score. | durable |
 | `MLE-BCLM-003` | `MLE-BSRC-027`, `MLE-BSRC-028` | NIST specifies risk-management outcomes, not the exact organization chart or MLE title. | durable |
 
@@ -147,10 +147,10 @@ Every port retains equal status: no provider, model family, device, or shared pl
   - Truth rule: All data, results, incidents, and outcomes are constructed; primary sources support doctrine only.
   - Reported facts: none; the fixture is constructed.
   - Attributed outcomes: none.
-  - Allowed inference: use only the synthetic decision trace defined in this chapter.
-  - Forbidden inference: Do not infer unreported outcomes for Benchline Inspection Dossier.
+  - Allowed inference: The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence.
+  - Forbidden inference: Do not infer real industrial performance, safety, production readiness, business outcome, or external approval.
   - Limitation: No real production, industrial, safety, performance, or business claim.
-  - Transfer rule: Every chapter decision must transfer to the four satellite ports.
+  - Transfer rule: Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence.
 
 - **CASE-06 — Google ML Test Score production-readiness method** — PUBLIC REPORTED CASE
   - Truth rule: Use only the paper's reported 2017 test taxonomy and attributed author claims; treat NIST AI RMF and TensorFlow Data Validation only as bounded transfer context, and invent no certification, universal threshold, causal readiness outcome, or formal approval.
@@ -298,11 +298,11 @@ PHASE07-CHAPTER-PROJECTION-START
         "CASE-01",
         "CASE-07"
       ],
-      "limitation": "Two current postings establish a bounded cross-industry signal, not prevalence, stable scope, or universal ownership.",
+      "limitation": "Two employer-controlled postings were observed on 2026-08-18; on 2026-08-23 Sprinter Health was the sole confirmed-live posting, while the old Blissway identity returned no posting and was absent from its board. This cannot support a current plural claim, prevalence, stable scope, or universal ownership.",
       "durability": "volatile",
-      "volatilityTreatment": "Date-stamp every role example and recheck or replace it at each publication freeze; keep role evidence isolated from technical claims.",
+      "volatilityTreatment": "Preserve the 2026-08-18 two-employer observation, the old Blissway identity and 2026-07-16 deadline, and the 2026-08-23 absent/unlisted retrieval; recheck the sole confirmed-live Sprinter posting at each publication freeze.",
       "recheckTriggers": [
-        "Open Chapter 01 with artifact and decision tests, then use the current postings only in a visibly dated market-signal panel."
+        "Open Chapter 01 with artifact and decision tests, then use only the dated market-signal states: 2026-08-18 two employers and 2026-08-23 Sprinter sole confirmed live."
       ]
     },
     {
@@ -356,10 +356,10 @@ PHASE07-CHAPTER-PROJECTION-START
         "MLE-CH-01-S02"
       ],
       "evidenceRole": "transfer-context",
-      "limitation": "Supports only role-market breadth and cannot prove a stable decision boundary.",
+      "limitation": "The 2026-08-18 Blissway posting is historical role-market evidence only; by 2026-08-23 its registered identity returned no posting and was absent from the official board.",
       "durability": "volatile",
       "volatility": "high",
-      "recheckTrigger": "Recheck before every freeze; replace if withdrawn, materially retitled, or no longer employer-controlled."
+      "recheckTrigger": "Preserve the old ID, former 2026-07-16 deadline, and 2026-08-23 absent/unlisted retrieval; do not silently rebind it."
     },
     {
       "sourceId": "MLE-BSRC-046",
@@ -372,7 +372,7 @@ PHASE07-CHAPTER-PROJECTION-START
       "limitation": "Supports only a bounded current market signal, not the book's authority model or a universal role definition.",
       "durability": "volatile",
       "volatility": "high",
-      "recheckTrigger": "Recheck before every freeze; replace if withdrawn, materially retitled, or no longer employer-controlled."
+      "recheckTrigger": "Confirmed live 2026-08-23; recheck before every freeze and narrow the market panel if withdrawn, materially retitled, or no longer employer-controlled."
     },
     {
       "sourceId": "MLE-BSRC-005",

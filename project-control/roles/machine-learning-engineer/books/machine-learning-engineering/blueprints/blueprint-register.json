@@ -4860,14 +4860,19 @@
       "truthLabel": "FICTIONAL SYNTHETIC CAPSTONE",
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+      "allowedInferences": [
+        "The fixed Benchline dossier may exercise whether each lifecycle decision carries named evidence, limitation, owner, authority route, and next evidence."
+      ],
       "forbiddenInferences": [
-        "Do not infer unreported outcomes for Benchline Inspection Dossier."
+        "Do not infer real industrial performance, safety, production readiness, business outcome, or external approval."
       ],
       "limitations": [
         "No real production, industrial, safety, performance, or business claim."
       ],
-      "transferRules": []
+      "transferRules": [
+        "Move only the decision/evidence interface to another port; replace fixture data, mechanisms, thresholds, owners, and evidence."
+      ],
+      "authorityOwner": "Fictional product, operations, domain, evaluation, platform, security, safety, privacy, legal, and governance owners remain separate."
     },
     {
       "caseId": "CASE-02",
@@ -4997,14 +5002,19 @@
       "truthLabel": "CONSTRUCTED SATELLITE",
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+      "allowedInferences": [
+        "The constructed managed fixture may test exportable identity and evidence under provider opacity."
+      ],
       "forbiddenInferences": [
-        "Do not infer unreported outcomes for Managed demand forecast."
+        "Do not infer provider capability or outcome, real accuracy or use, approval, or a cloud tutorial."
       ],
       "limitations": [
         "Not a cloud-provider tutorial."
       ],
-      "transferRules": []
+      "transferRules": [
+        "Reproduce the same dossier fields without provider names using the selected service's actual evidence."
+      ],
+      "authorityOwner": "Product/domain/provider/platform/formal owners remain external."
     },
     {
       "caseId": "CASE-03",
@@ -5171,14 +5181,19 @@
       "truthLabel": "CONSTRUCTED SATELLITE",
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+      "allowedInferences": [
+        "The constructed classical fixture may test that qualification and authority gates still apply to a simple model."
+      ],
       "forbiddenInferences": [
-        "Do not infer unreported outcomes for Classical credit triage."
+        "Do not infer a lending outcome, measured fairness or compliance, financial advice, or credit authorization."
       ],
       "limitations": [
         "Not financial advice or credit authorization."
       ],
-      "transferRules": []
+      "transferRules": [
+        "Preserve the evidence interface without deep-learning assumptions and route local domain and risk decisions externally."
+      ],
+      "authorityOwner": "Product, domain, evaluation, privacy, legal, and risk owners remain external."
     },
     {
       "caseId": "CASE-04",
@@ -5320,14 +5335,19 @@
       "truthLabel": "CONSTRUCTED SATELLITE",
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+      "allowedInferences": [
+        "The constructed deep fixture may test checkpoint, preprocessor, runtime, uncertainty, and serving identity bindings."
+      ],
       "forbiddenInferences": [
-        "Do not infer unreported outcomes for Deep acoustic event classifier."
+        "Do not infer real accuracy, acoustic safety, field performance, production behavior, or approval."
       ],
       "limitations": [
         "Not a deep-learning recipe book."
       ],
-      "transferRules": []
+      "transferRules": [
+        "Preserve the same decision/evidence job when the model family or runtime changes."
+      ],
+      "authorityOwner": "Research, evaluation, platform, domain, safety, and product owners remain external."
     },
     {
       "caseId": "CASE-05",
@@ -5495,14 +5515,19 @@
       "truthLabel": "CONSTRUCTED SATELLITE",
       "reportedFacts": [],
       "attributedOutcomes": [],
-      "allowedInferences": [],
+      "allowedInferences": [
+        "The constructed shared-tenant fixture may test separation of workload evidence from tenant, fleet, and platform authority."
+      ],
       "forbiddenInferences": [
-        "Do not infer unreported outcomes for Shared ranking platform tenant."
+        "Do not infer platform-wide SLO or performance, business effect, isolation assurance, or approval."
       ],
       "limitations": [
         "Not a platform-engineering curriculum."
       ],
-      "transferRules": []
+      "transferRules": [
+        "Preserve workload evidence when the substrate changes and recheck every substrate-bound relation."
+      ],
+      "authorityOwner": "Platform, SRE, security, product, domain, and evaluation owners remain external."
     },
     {
       "caseId": "CASE-06",
@@ -13277,18 +13302,34 @@
       "insertionAnchor": "MLE-CH-05-S03",
       "decisionHelped": "Bind feature identity, transformations, feedback arrival, and source/consumer lineage without owning shared data architecture.",
       "essentialLabels": [
-        "decision",
-        "evidence",
-        "state",
-        "owner",
-        "next action"
+        "SOURCE",
+        "TRANSFORM",
+        "CONSUMER",
+        "FEEDBACK"
       ],
-      "captionIntent": "Explain the BL-04 decision evidence.",
-      "altIntent": "Text alternative for MLE-CH-05 evidence flow.",
-      "longDescriptionIntent": "Ordered description of MLE-CH-05 evidence, state, owner, and next action.",
-      "numericTruthDisposition": "semantic-html-css",
-      "candidateStatus": "reserved",
-      "reservedPath": "assets/images/machine-learning-engineering/MLE-F05.1-2400x1600.png"
+      "captionIntent": "Trace delayed feedback across separately owned source, transformation, and consumer planes; exact identifiers and measurements remain in adjacent semantic text.",
+      "altIntent": "A source plane feeds a transformation bench and a separately owned consumer plane, whose delayed feedback returns through a distinct route.",
+      "longDescriptionIntent": "Describe four separated planes, their directional conduits, the ownership boundaries, and the delayed feedback return without asserting quantitative performance.",
+      "numericTruthDisposition": "adjacent-semantic-text-only",
+      "candidateStatus": "reserved-not-generated",
+      "reservedPath": "src/assets/books/machine-learning-engineering/figures/fig-mle-05-01.png",
+      "dimensions": {
+        "width": 2400,
+        "height": 1600,
+        "ratio": "3:2",
+        "format": "PNG"
+      },
+      "provenance": "ImageGen-only",
+      "canonicalPngOnly": true,
+      "prohibitions": [
+        "quantitative truth",
+        "logos",
+        "watermarks",
+        "fake UI",
+        "generated paragraph text",
+        "SVG",
+        "WebP"
+      ]
     },
     {
       "visualId": "MLE-V06.1",
@@ -13477,18 +13518,34 @@
       "insertionAnchor": "MLE-CH-14-S03",
       "decisionHelped": "Freeze request/response contracts, consumer identities, coexistence/migration evidence, and fallback ownership.",
       "essentialLabels": [
-        "decision",
-        "evidence",
-        "state",
-        "owner",
-        "next action"
+        "PACKAGE",
+        "OLD",
+        "NEW",
+        "FALLBACK"
       ],
-      "captionIntent": "Explain the BL-13 decision evidence.",
-      "altIntent": "Text alternative for MLE-CH-14 evidence flow.",
-      "longDescriptionIntent": "Ordered description of MLE-CH-14 evidence, state, owner, and next action.",
-      "numericTruthDisposition": "semantic-html-css",
-      "candidateStatus": "reserved",
-      "reservedPath": "assets/images/machine-learning-engineering/MLE-F14.1-2400x1600.png"
+      "captionIntent": "Inspect package coexistence across old and new consumers with a physically separate fallback route; exact versions and outcomes remain in adjacent semantic text.",
+      "altIntent": "A versioned package socket branches to old and new consumer adapters while a separate fallback route remains available.",
+      "longDescriptionIntent": "Describe the central package, old and new consumer branches, migration gate, owner zones, and separate fallback path without asserting compatibility or release success.",
+      "numericTruthDisposition": "adjacent-semantic-text-only",
+      "candidateStatus": "reserved-not-generated",
+      "reservedPath": "src/assets/books/machine-learning-engineering/figures/fig-mle-14-01.png",
+      "dimensions": {
+        "width": 2400,
+        "height": 1600,
+        "ratio": "3:2",
+        "format": "PNG"
+      },
+      "provenance": "ImageGen-only",
+      "canonicalPngOnly": true,
+      "prohibitions": [
+        "quantitative truth",
+        "logos",
+        "watermarks",
+        "fake UI",
+        "generated paragraph text",
+        "SVG",
+        "WebP"
+      ]
     },
     {
       "visualId": "MLE-V15.1",
@@ -13537,18 +13594,34 @@
       "insertionAnchor": "MLE-CH-16-S03",
       "decisionHelped": "Measure representative demand, latency, error, capacity, staged exposure, bake/abort rules, and degraded mode for the workload.",
       "essentialLabels": [
-        "decision",
-        "evidence",
-        "state",
-        "owner",
-        "next action"
+        "DEMAND",
+        "PRESSURE",
+        "ABORT",
+        "DEGRADED"
       ],
-      "captionIntent": "Explain the BL-15 decision evidence.",
-      "altIntent": "Text alternative for MLE-CH-16 evidence flow.",
-      "longDescriptionIntent": "Ordered description of MLE-CH-16 evidence, state, owner, and next action.",
-      "numericTruthDisposition": "semantic-html-css",
-      "candidateStatus": "reserved",
-      "reservedPath": "assets/images/machine-learning-engineering/MLE-F16.1-2400x1600.png"
+      "captionIntent": "Show qualitative serving-pressure propagation toward abort and degraded mode; every threshold, percentile, and measured value remains in adjacent semantic text.",
+      "altIntent": "Demand enters a bounded serving cell, pressure narrows the available channel, and an abort gate diverts work toward degraded mode.",
+      "longDescriptionIntent": "Describe the demand stream, bounded serving cell, qualitative pressure propagation, abort diversion, and degraded recovery route without encoding any numeric truth in the raster.",
+      "numericTruthDisposition": "adjacent-semantic-text-only",
+      "candidateStatus": "reserved-not-generated",
+      "reservedPath": "src/assets/books/machine-learning-engineering/figures/fig-mle-16-01.png",
+      "dimensions": {
+        "width": 2400,
+        "height": 1600,
+        "ratio": "3:2",
+        "format": "PNG"
+      },
+      "provenance": "ImageGen-only",
+      "canonicalPngOnly": true,
+      "prohibitions": [
+        "quantitative truth",
+        "logos",
+        "watermarks",
+        "fake UI",
+        "generated paragraph text",
+        "SVG",
+        "WebP"
+      ]
     },
     {
       "visualId": "MLE-V17.1",
@@ -13597,18 +13670,34 @@
       "insertionAnchor": "MLE-CH-18-S03",
       "decisionHelped": "Separate incident command from workload diagnosis, contain or roll back, bind changed evidence, and require a new candidate identity after repair.",
       "essentialLabels": [
-        "decision",
-        "evidence",
-        "state",
-        "owner",
-        "next action"
+        "INCIDENT",
+        "ROLLBACK",
+        "NEW ID",
+        "REQUALIFY"
       ],
-      "captionIntent": "Explain the BL-17 decision evidence.",
-      "altIntent": "Text alternative for MLE-CH-18 evidence flow.",
-      "longDescriptionIntent": "Ordered description of MLE-CH-18 evidence, state, owner, and next action.",
-      "numericTruthDisposition": "semantic-html-css",
-      "candidateStatus": "reserved",
-      "reservedPath": "assets/images/machine-learning-engineering/MLE-F18.1-2400x1600.png"
+      "captionIntent": "Separate incident command and diagnosis from rollback and new-identity requalification; exact evidence and state remain in adjacent semantic text.",
+      "altIntent": "An incident enters a split authority chamber; one branch rolls back while another assigns a new identity before requalification.",
+      "longDescriptionIntent": "Describe the incident entry, separate command and diagnosis partitions, previous-good rollback branch, new-identity gate, requalification branch, and controlled reunion without depicting a real incident.",
+      "numericTruthDisposition": "adjacent-semantic-text-only",
+      "candidateStatus": "reserved-not-generated",
+      "reservedPath": "src/assets/books/machine-learning-engineering/figures/fig-mle-18-01.png",
+      "dimensions": {
+        "width": 2400,
+        "height": 1600,
+        "ratio": "3:2",
+        "format": "PNG"
+      },
+      "provenance": "ImageGen-only",
+      "canonicalPngOnly": true,
+      "prohibitions": [
+        "quantitative truth",
+        "logos",
+        "watermarks",
+        "fake UI",
+        "generated paragraph text",
+        "SVG",
+        "WebP"
+      ]
     },
     {
       "visualId": "MLE-V19.1",

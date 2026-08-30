@@ -34,8 +34,9 @@ authority.
 
 ## FURN-BZ-03 — Edition and copyright
 
-**Edition record:** First manuscript edition. Phase 08 is private manuscript
-production; it is not a published PDF, website, certification, or course.
+**Edition record:** First manuscript edition. Publication status, identifier,
+and public availability belong to the edition record and must not be inferred
+from the teaching material.
 
 Copyright © Komal Nakrani. All original explanatory prose, constructed
 examples, and synthetic fixtures are presented as teaching material. External
@@ -47,9 +48,9 @@ branding, or proprietary implementations.
 All companion results and Benchline lab values are synthetic and deterministic.
 They demonstrate record mechanics only. They do not prove real model quality,
 hardware reproducibility, production availability, safety, legal or privacy
-approval, business value, or complete retirement of unknown paths. Four later
-PNG candidates are reserved by identifier only: `MLE-F05.1`, `MLE-F14.1`,
-`MLE-F16.1`, and `MLE-F18.1`. No image asset is created or implied here.
+approval, business value, or complete retirement of unknown paths. Optional
+spatial figures remain subordinate to the selectable explanations, captions,
+and long descriptions in Appendix G.
 
 Errata and currentness are part of the evidence, not a quiet rewrite. A later
 edition must preserve the prior claim, record what changed, recheck every source

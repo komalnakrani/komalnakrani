@@ -171,6 +171,63 @@ export const EXPECTED_REVIEW_IDENTITIES = Object.freeze({
   'TASK-08': { producerIdentity: '/root/mle_p9_hostile_fixture', reviewerIdentity: '/root/mle_p9_hostile_review' },
 });
 
+function freezePathFindings(entries) {
+  return Object.freeze(Object.fromEntries(entries.map(([path, findingIds]) => [
+    path,
+    Object.freeze([...new Set(findingIds)].sort()),
+  ])));
+}
+
+const chapterPathFindings = Array.from({ length: 21 }, (_, index) => {
+  const chapter = index + 1;
+  const number = String(chapter).padStart(2, '0');
+  const findings = ['P09-CON-001', 'P09-CON-002', 'P09-CON-003', 'P09-EVD-005', 'P09-SYS-001', 'P09-SYS-003', 'P09-SYS-004'];
+  if (chapter <= 7) findings.push('P09-CON-004');
+  if (chapter >= 8 && chapter <= 14) findings.push('P09-CON-005');
+  if ([18, 19].includes(chapter)) findings.push('P09-CON-006');
+  if (chapter === 19) findings.push('P09-COV-001');
+  if (chapter === 1) findings.push('P09-EVD-001');
+  if ([2, 5, 7, 8, 14].includes(chapter)) findings.push('P09-EVD-002');
+  if (chapter === 21) findings.push('P09-EVD-003', 'P09-EVD-004');
+  if ([5, 14, 16, 18].includes(chapter)) findings.push('P09-SYS-006');
+  return [`${BOOK}/manuscript/chapter-${number}.md`, findings];
+});
+
+const packPathFindings = Array.from({ length: 21 }, (_, index) => [
+  `${BOOK}/sources/research-packs/chapter-${String(index + 1).padStart(2, '0')}.md`,
+  ['P09-EVD-005'],
+]);
+
+export const TASK07_CANONICAL_PATH_FINDINGS = freezePathFindings([
+  ...chapterPathFindings,
+  ...packPathFindings,
+  [`${BOOK}/manuscript/opening-and-closing.md`, ['P09-CON-001']],
+  [`${BOOK}/manuscript/part-07.md`, ['P09-CON-006']],
+  [`${BOOK}/manuscript/appendix-a.md`, ['P09-CON-005', 'P09-SYS-001', 'P09-SYS-003']],
+  [`${BOOK}/manuscript/appendix-b.md`, ['P09-CON-004', 'P09-CON-005', 'P09-SYS-001', 'P09-SYS-002']],
+  [`${BOOK}/manuscript/appendix-c.md`, ['P09-SYS-004']],
+  [`${BOOK}/manuscript/appendix-e.md`, ['P09-CON-005']],
+  [`${BOOK}/manuscript/appendix-f.md`, ['P09-CON-005']],
+  [`${BOOK}/manuscript/appendix-g.md`, ['P09-CON-001', 'P09-SYS-006']],
+  [`${BOOK}/manuscript/manuscript-register.json`, [
+    'P09-COV-001', 'P09-CON-001', 'P09-CON-002', 'P09-CON-003', 'P09-CON-004', 'P09-CON-005', 'P09-CON-006',
+    'P09-EVD-001', 'P09-EVD-002', 'P09-EVD-003', 'P09-EVD-004', 'P09-EVD-005',
+    'P09-SYS-001', 'P09-SYS-002', 'P09-SYS-003', 'P09-SYS-004', 'P09-SYS-005', 'P09-SYS-006',
+  ]],
+  [`${BOOK}/blueprints/chapter-19.md`, ['P09-COV-001']],
+  [`${BOOK}/blueprints/blueprint-register.json`, ['P09-COV-001', 'P09-EVD-005', 'P09-SYS-006']],
+  [`${BOOK}/case-studies/case-study-register.json`, ['P09-EVD-004', 'P09-EVD-005']],
+  [`${BOOK}/sources/source-register.json`, ['P09-EVD-001', 'P09-EVD-002']],
+  [`${BOOK}/visual-forecast.md`, ['P09-SYS-006']],
+  [`${BOOK}/companion/README.md`, ['P09-SYS-002', 'P09-SYS-005']],
+  [`${BOOK}/companion/lib/lifecycle.mjs`, ['P09-SYS-001', 'P09-SYS-002']],
+  [`${BOOK}/companion/lib/dossier.mjs`, ['P09-SYS-001', 'P09-SYS-002']],
+  [`${BOOK}/companion/lib/run.mjs`, ['P09-SYS-005']],
+  [`${BOOK}/companion/tests/lifecycle.test.mjs`, ['P09-SYS-001', 'P09-SYS-002']],
+  [`${BOOK}/companion/tests/core.test.mjs`, ['P09-SYS-001']],
+  [`${BOOK}/companion/tests/effects.test.mjs`, ['P09-SYS-001', 'P09-SYS-005']],
+]);
+
 const REVIEW_NAMES = [
   'task-00-plan.md', 'task-00-plan-repair.md', 'task-01-bootstrap.md', 'task-01-bootstrap-repair.md',
   'task-02-coverage-depth.md', 'task-02-coverage-depth-repair.md',
@@ -328,6 +385,7 @@ export async function loadRepositorySnapshot(root, options = {}) {
   const required = [
     ...Object.keys(FROZEN_ENTRY), ...AUTHORITY_PATHS, ...VALIDATOR_PATHS,
     `${ROLE}/issues/phase-08-manuscript.md`, `${BOOK}/blueprints/blueprint-register.json`,
+    ...Object.keys(TASK07_CANONICAL_PATH_FINDINGS),
   ];
   for (const path of [...new Set(required)]) files[path] = await readRecord(root, path, true);
 
@@ -366,6 +424,18 @@ export async function loadRepositorySnapshot(root, options = {}) {
   }
   const repositoryFilesystemInventory = await listFiles(root, '.');
 
+  const entryCanonicalBindings = {};
+  for (const path of Object.keys(TASK07_CANONICAL_PATH_FINDINGS)) {
+    try {
+      const bytes = execFileSync('git', ['show', `${PHASE08_CHECKPOINT}:${path}`], {
+        cwd: root, maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'],
+      });
+      entryCanonicalBindings[path] = { path, bytes: bytes.byteLength, sha256: sha256(bytes) };
+    } catch {
+      entryCanonicalBindings[path] = null;
+    }
+  }
+
   const reviewCheckpointBindings = {};
   for (const path of reviewInventory.filter((item) => !item.endsWith('-repair.md'))) {
     const parsed = parseReviewMarkdown(files[path]?.text ?? '');
@@ -388,7 +458,7 @@ export async function loadRepositorySnapshot(root, options = {}) {
     qaInventory: qaInventory.filter((path) => QA_PATHS.includes(path)),
     reviewInventory,
     repositoryCommittedInventory, repositoryUntrackedInventory, repositoryFilesystemInventory,
-    activationInventory, reviewCheckpointBindings,
+    activationInventory, reviewCheckpointBindings, entryCanonicalBindings,
     git: options.git ? structuredClone(options.git) : null,
     github: options.github ? structuredClone(options.github) : null,
     historicalReplay: options.historicalReplay ? structuredClone(options.historicalReplay) : null,
@@ -400,7 +470,7 @@ function isRepairStage(stage) {
 }
 
 function isMutableCanonicalPath(path) {
-  return path.startsWith(`${BOOK}/manuscript/`) || path.startsWith(`${BOOK}/companion/`);
+  return Object.hasOwn(TASK07_CANONICAL_PATH_FINDINGS, path);
 }
 
 function validateFrozenEntry(snapshot, stage = 'bootstrap') {
@@ -424,6 +494,79 @@ function validateCounts(snapshot) {
   return errors;
 }
 
+function parseJsonRecord(snapshot, path) {
+  try { return JSON.parse(snapshot.files[path]?.text ?? 'null'); }
+  catch { return null; }
+}
+
+export function validateRevisionLedger(snapshot, context = {}) {
+  const errors = [];
+  const registerPath = `${BOOK}/qa/finding-register.json`;
+  const ledgerPath = `${BOOK}/qa/revision-ledger.json`;
+  const register = parseJsonRecord(snapshot, registerPath);
+  const ledger = parseJsonRecord(snapshot, ledgerPath);
+  if (!ledger || ledger.schema !== 'mle-phase-09-revision-ledger/v1' || !Array.isArray(ledger.entries)
+      || ledger.phase08ActivePackageCheckpoint !== PHASE08_CHECKPOINT
+      || ledger.findingRegisterSha256 !== snapshot.files[registerPath]?.sha256) {
+    return [error('REVISION_LEDGER_SCHEMA', 'revision ledger must bind the accepted finding freeze and Phase 08 entry checkpoint', ledgerPath)];
+  }
+  if (context.findingFreezeAccepted !== true) {
+    errors.push(error('REVISION_FREEZE_NOT_ACCEPTED', 'canonical repairs require the independently accepted Task 06 finding freeze', ledgerPath));
+  }
+  const findings = new Map((register?.findings ?? []).map((finding) => [finding.id, finding]));
+  const seen = new Set();
+  for (const entry of ledger.entries) {
+    const required = [
+      'path', 'findingIds', 'beforeBytes', 'beforeSha256', 'afterBytes', 'afterSha256', 'reason',
+      'affectedGraphProjections', 'verificationCommands', 'producerIdentity', 'expectedReviewerIdentity', 'disposition',
+    ];
+    if (!entry || required.some((key) => !Object.hasOwn(entry, key)) || seen.has(entry.path)) {
+      errors.push(error('REVISION_ENTRY_SCHEMA', 'revision rows must be unique path-level records with exact before/after fields', entry?.path));
+      continue;
+    }
+    seen.add(entry.path);
+    const authorized = TASK07_CANONICAL_PATH_FINDINGS[entry.path];
+    const findingIds = Array.isArray(entry.findingIds) ? entry.findingIds : [];
+    const exactFindingSet = findingIds.length > 0
+      && new Set(findingIds).size === findingIds.length
+      && findingIds.every((id, index) => id === [...findingIds].sort()[index])
+      && findingIds.every((id) => authorized?.includes(id) && findings.get(id)?.disposition === 'accepted');
+    if (!authorized || !exactFindingSet) {
+      errors.push(error('REVISION_FINDING_PATH', 'every sorted finding ID must be accepted and authorized for the exact path', entry.path));
+    }
+    const before = snapshot.entryCanonicalBindings?.[entry.path];
+    const after = snapshot.files[entry.path];
+    if (!before || !after || entry.beforeBytes !== before.bytes || entry.beforeSha256 !== before.sha256
+        || entry.afterBytes !== after.bytes || entry.afterSha256 !== after.sha256
+        || entry.beforeSha256 === entry.afterSha256) {
+      errors.push(error('REVISION_BYTE_BINDING', 'revision row must bind exact changed entry and current bytes', entry.path));
+    }
+    if (typeof entry.reason !== 'string' || entry.reason.trim().length === 0
+        || !Array.isArray(entry.affectedGraphProjections) || entry.affectedGraphProjections.length === 0
+        || !Array.isArray(entry.verificationCommands) || entry.verificationCommands.length === 0) {
+      errors.push(error('REVISION_EVIDENCE', 'revision row requires reason, projections, and verification commands', entry.path));
+    }
+    if (entry.producerIdentity !== '/root/mle_p9_integration'
+        || entry.expectedReviewerIdentity !== '/root/mle_p9_integration_review'
+        || entry.producerIdentity === entry.expectedReviewerIdentity) {
+      errors.push(error('REVISION_IDENTITY', 'revision producer and expected independent reviewer identities are frozen', entry.path));
+    }
+    if (entry.disposition !== 'applied-pending-independent-review') {
+      errors.push(error('REVISION_DISPOSITION', 'producer may apply but may not pre-approve a canonical revision', entry.path));
+    }
+  }
+  const changed = Object.keys(TASK07_CANONICAL_PATH_FINDINGS).filter((path) => {
+    const before = snapshot.entryCanonicalBindings?.[path];
+    const after = snapshot.files[path];
+    return before && after && (before.sha256 !== after.sha256 || before.bytes !== after.bytes);
+  }).sort();
+  const ledgerPaths = ledger.entries.map((entry) => entry.path).sort();
+  if (changed.length !== ledgerPaths.length || changed.some((path, index) => path !== ledgerPaths[index])) {
+    errors.push(error('REVISION_PATH_SET', 'ledger path set must exactly equal every finding-authorized canonical byte change', ledgerPath));
+  }
+  return errors;
+}
+
 export function validateCanonicalBindings(snapshot, context = {}) {
   const errors = [];
   const stage = context.stage ?? snapshot.stage ?? 'bootstrap';
@@ -442,18 +585,21 @@ export function validateCanonicalBindings(snapshot, context = {}) {
     const entry = revisionLedger?.schema === 'mle-phase-09-revision-ledger/v1'
       ? revisionLedger.entries?.find((item) => item.path === binding.path)
       : null;
-    const finding = findingRegister?.findings?.find((item) => item.id === entry?.findingId);
+    const findings = (entry?.findingIds ?? []).map((id) => findingRegister?.findings?.find((item) => item.id === id));
     const validReplacement = canReplace && entry
-      && finding?.disposition === 'accepted'
+      && findings.length > 0 && findings.every((finding) => finding?.disposition === 'accepted')
+      && (entry.findingIds ?? []).every((id) => TASK07_CANONICAL_PATH_FINDINGS[binding.path]?.includes(id))
+      && entry.beforeBytes === binding.bytes
       && entry.beforeSha256 === binding.sha256
+      && entry.afterBytes === loaded?.bytes
       && entry.afterSha256 === loaded?.sha256
       && typeof entry.reason === 'string' && entry.reason.trim().length > 0
       && Array.isArray(entry.affectedGraphProjections) && entry.affectedGraphProjections.length > 0
       && Array.isArray(entry.verificationCommands) && entry.verificationCommands.length > 0
       && entry.producerIdentity === '/root/mle_p9_integration'
-      && entry.reviewerIdentity === '/root/mle_p9_integration_review'
-      && entry.producerIdentity !== entry.reviewerIdentity
-      && entry.disposition === 'accepted';
+      && entry.expectedReviewerIdentity === '/root/mle_p9_integration_review'
+      && entry.producerIdentity !== entry.expectedReviewerIdentity
+      && entry.disposition === 'applied-pending-independent-review';
     if (!validReplacement) errors.push(error('PHASE08_CURRENT_BINDING', 'current bytes require an independently frozen finding and exact before/after revision entry', binding.path));
   }
   return errors;
@@ -789,6 +935,11 @@ export function validatePhase09Snapshot(snapshot, options = {}) {
   }
   const reviewErrors = validateLoadedReviews(snapshot, { stage, mode });
   const findingFreezeAccepted = isRepairStage(stage) && reviewErrors.length === 0;
+  const revisionErrors = snapshot.files[`${BOOK}/qa/revision-ledger.json`]
+    ? validateRevisionLedger(snapshot, { findingFreezeAccepted })
+    : (['integration', 'pre-hostile', 'pre-close', 'final-content', 'final'].includes(stage)
+      ? [error('REVISION_LEDGER_SCHEMA', 'Task 07 requires a revision ledger', `${BOOK}/qa/revision-ledger.json`)]
+      : []);
   return [
     ...validateFrozenEntry(snapshot, stage),
     ...validateCounts(snapshot),
@@ -800,6 +951,7 @@ export function validatePhase09Snapshot(snapshot, options = {}) {
     ...validateInventory(snapshot, stage, options),
     ...reviewErrors,
     ...findingErrors,
+    ...revisionErrors,
     ...validateStopBoundary(snapshot),
   ];
 }
