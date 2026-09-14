@@ -18,20 +18,42 @@ const { article } = Astro.props;
 
 // Simple markdown-to-html renderer helper for doc content
 function renderMarkdown(md: string) {
-  return md
+  const codeBlocks: string[] = [];
+
+  // Extract multi-line code blocks FIRST to prevent inline backtick parsing from corrupting them
+  let html = md.replace(/```([a-z0-9_-]*)\n?([\s\S]*?)```/gim, (_, lang, code) => {
+    const langLabel = lang || 'code';
+    const escapedCode = code
+      .trim()
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+
+    const blockIndex = codeBlocks.length;
+    codeBlocks.push(
+      `<div class="doc-code-block"><div class="doc-code-header"><span>${langLabel}</span><button class="copy-code-btn" type="button">Copy</button></div><pre><code>${escapedCode}</code></pre></div>`
+    );
+    return `__CODE_BLOCK_${blockIndex}__`;
+  });
+
+  html = html
     .replace(/^### (.*$)/gim, '<h3 class="doc-h3">$1</h3>')
     .replace(/^## (.*$)/gim, '<h2 class="doc-h2">$1</h2>')
     .replace(/^# (.*$)/gim, '<h1 class="doc-h1">$1</h1>')
     .replace(/^> (.*$)/gim, '<blockquote class="doc-callout">$1</blockquote>')
-    .replace(/```(bash|env|css|ts|python|mdx)([\s\S]*?)```/gim, (_, lang, code) => {
-      return `<div class="doc-code-block"><div class="doc-code-header"><span>${lang}</span><button class="copy-code-btn" onclick="navigator.clipboard.writeText(\`${code.trim().replace(/`/g, '\\`').replace(/\$/g, '\\$')}\`)">Copy</button></div><pre><code>${code.trim()}</code></pre></div>`;
-    })
     .replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/\n\n/g, '</p><p class="doc-p">')
     .replace(/- ✅ (.*$)/gim, '<li class="doc-li check">✅ $1</li>')
     .replace(/- ❌ (.*$)/gim, '<li class="doc-li cross">❌ $1</li>')
     .replace(/- (.*$)/gim, '<li class="doc-li">$1</li>');
+
+  // Re-insert code blocks safely using a replacer function (avoids JS $ special character expansion)
+  codeBlocks.forEach((block, i) => {
+    html = html.replace(`__CODE_BLOCK_${i}__`, () => block);
+  });
+
+  return html;
 }
 
 const htmlContent = renderMarkdown(article.content);
@@ -42,10 +64,10 @@ const htmlContent = renderMarkdown(article.content);
       <!-- Left Sidebar Navigation -->
       <aside class="docs-sidebar">
         <div style="margin-bottom: 24px;">
-          <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 4px;">
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-text); margin-bottom: 4px;">
             DOCUMENTATION CENTER
           </div>
-          <div style="font-family: var(--display); font-weight: 700; font-size: 18px; color: var(--ink);">
+          <div style="font-family: var(--display); font-weight: 400; font-size: 19px; letter-spacing: -.02em; color: var(--ink);">
             Komal Architecture
           </div>
         </div>
@@ -99,13 +121,13 @@ const htmlContent = renderMarkdown(article.content);
         <div class="doc-content-body" set:html={htmlContent} />
 
         <!-- Bottom All-Access Pass Banner -->
-        <div style="margin-top: 56px; padding: 32px; background: var(--ark-ink); color: #ffffff; border-radius: var(--r-lg); border: 1px solid rgba(255, 103, 17, 0.4); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+        <div style="margin-top: 56px; padding: 32px; background: var(--ink-900); color: var(--ink-inverse); border-radius: var(--r-lg); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
           <div>
-            <div style="font-family: var(--display); font-weight: 700; font-size: 22px; color: #ffffff;">Unlock All 200 Themes + AI Kits</div>
-            <p style="font-family: var(--body); font-size: 14.5px; color: var(--ark-grey-300); margin: 6px 0 0;">Get full source code ownership for $199 lifetime.</p>
+            <div style="font-family: var(--display); font-weight: 400; font-size: 24px; letter-spacing: -.025em; color: var(--ink-inverse);">Unlock every theme</div>
+            <p style="font-family: var(--body); font-size: 14.5px; color: rgba(243,241,234,.72); margin: 6px 0 0;">Get full source code ownership for $99.</p>
           </div>
-          <a href="/bundles/" class="btn btn-primary" style="font-size: 14px; padding: 10px 20px;">
-            Get All-Access Pass ($199) <Icon name="arrow-right" />
+          <a href="/pricing/" class="btn btn-primary" style="font-size: 14px; padding: 10px 20px;">
+            Get All-Access Pass ($99) <Icon name="arrow-right" />
           </a>
         </div>
       </article>
@@ -125,7 +147,7 @@ const htmlContent = renderMarkdown(article.content);
   position: sticky;
   top: 96px;
   background: var(--surface);
-  border: 1px solid var(--line-2);
+  border: 1px solid var(--rule-3);
   border-radius: var(--r-lg);
   padding: 24px;
 }
@@ -133,9 +155,8 @@ const htmlContent = renderMarkdown(article.content);
   margin-bottom: 20px;
 }
 .doc-nav-heading {
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: 11px;
-  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--ink-3);
@@ -154,20 +175,18 @@ const htmlContent = renderMarkdown(article.content);
   font-size: 14px;
   color: var(--ink-2);
   display: block;
-  padding: 6px 10px;
-  border-radius: var(--r-sm);
+  padding: 7px 12px;
+  border-radius: var(--r-pill);
   text-decoration: none;
   transition: all var(--dur) var(--ease);
 }
 .doc-nav-link:hover {
   color: var(--ink);
-  background: var(--surface-2);
+  background: var(--paper-3);
 }
 .doc-nav-link.active {
-  background: rgba(255, 103, 17, 0.12);
-  color: var(--accent);
-  font-weight: 600;
-  border: 1px solid rgba(255, 103, 17, 0.25);
+  background: var(--ink-900);
+  color: var(--paper);
 }
 
 .doc-breadcrumbs {
@@ -182,7 +201,7 @@ const htmlContent = renderMarkdown(article.content);
   color: var(--ink-2);
   text-decoration: none;
 }
-.doc-breadcrumbs a:hover { color: var(--accent); }
+.doc-breadcrumbs a:hover { color: var(--ink); }
 
 /* Document Content Typography */
 .doc-content-body {
@@ -193,63 +212,65 @@ const htmlContent = renderMarkdown(article.content);
 }
 :global(.doc-h1), :global(.doc-h2), :global(.doc-h3) {
   font-family: var(--display);
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: -.025em;
   color: var(--ink);
   margin: 32px 0 16px;
 }
-:global(.doc-h2) { font-size: 24px; border-bottom: 1px solid var(--line-2); padding-bottom: 8px; }
+:global(.doc-h2) { font-size: 26px; border-bottom: 1px solid var(--rule); padding-bottom: 10px; }
 :global(.doc-h3) { font-size: 20px; }
 :global(.doc-p) { margin-bottom: 18px; }
 
 :global(.doc-code-block) {
-  background: var(--ark-ink);
-  color: #ffffff;
+  background: var(--ink-900);
+  color: var(--ink-inverse);
   border-radius: var(--r-sm);
-  border: 1px solid rgba(255, 103, 17, 0.25);
   margin: 20px 0;
   overflow: hidden;
 }
 :global(.doc-code-header) {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 8px 16px;
+  background: rgba(243, 241, 234, 0.05);
+  padding: 9px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: 11px;
-  color: var(--accent);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--sage);
+  border-bottom: 1px solid rgba(243, 241, 234, 0.1);
 }
 :global(.copy-code-btn) {
-  background: rgba(255, 103, 17, 0.2);
-  color: #ffffff;
+  background: rgba(243, 241, 234, 0.12);
+  color: var(--ink-inverse);
   border: none;
-  padding: 3px 8px;
-  border-radius: var(--r-xs);
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
   cursor: pointer;
-  font-family: var(--mono);
-  font-size: 10px;
+  font-family: var(--body);
+  font-size: 11px;
 }
 :global(.doc-code-block pre) {
   padding: 16px;
   margin: 0;
   overflow-x: auto;
-  font-family: var(--mono);
+  font-family: var(--code);
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 :global(.inline-code) {
-  font-family: var(--mono);
-  font-size: 13.5px;
-  background: var(--surface-2);
-  color: var(--accent);
-  padding: 2px 6px;
+  font-family: var(--code);
+  font-size: 13px;
+  background: var(--paper-3);
+  color: var(--accent-text);
+  padding: 2px 7px;
   border-radius: var(--r-xs);
-  border: 1px solid var(--line-2);
+  border: 1px solid var(--rule);
 }
 :global(.doc-callout) {
-  background: rgba(255, 103, 17, 0.08);
-  border-left: 4px solid var(--accent);
+  background: var(--sage-tint);
+  border-left: 3px solid var(--sage);
   padding: 14px 18px;
   margin: 20px 0;
   border-radius: var(--r-sm);
@@ -269,3 +290,22 @@ const htmlContent = renderMarkdown(article.content);
   }
 }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.copy-code-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const codeBlock = btn.closest('.doc-code-block');
+        const codeElement = codeBlock ? codeBlock.querySelector('code') : null;
+        if (codeElement) {
+          navigator.clipboard.writeText(codeElement.innerText);
+          const originalText = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => {
+            btn.textContent = originalText;
+          }, 2000);
+        }
+      });
+    });
+  });
+</script>

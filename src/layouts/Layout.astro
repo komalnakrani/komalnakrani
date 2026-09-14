@@ -13,8 +13,8 @@ interface Props {
 }
 
 const {
-  title = 'Komal Nakrani | Premium Next.js 16 Themes & Production Web Templates',
-  description = 'Ultra-fast, production-grade Next.js 16 App Router web themes built with TypeScript, Tailwind CSS, and Framer Motion for high-performing tech startups, agencies, and developers.',
+  title = 'Komal Nakrani | Production-ready web themes',
+  description = 'Hand-built, production-ready Astro web themes with zero-JS output and full source. Preview every breakpoint before you pay.',
   noindex = false,
 } = Astro.props;
 
@@ -28,15 +28,15 @@ const canonical = new URL(Astro.url.pathname, site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#090d16" />
+    <meta name="theme-color" content="#FBFAF6" />
     <meta name="author" content="Komal Nakrani" />
-    <meta name="keywords" content="Next.js 16 Themes, Next.js Templates, React 19 Starters, Tailwind CSS Templates, TypeScript Web Apps, SaaS Web Templates" />
+    <meta name="keywords" content="Astro themes, web templates, static site templates, portfolio templates, e-commerce templates, zero-JS websites" />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Komal Nakrani Next.js Themes" />
+    <meta property="og:site_name" content="Komal Nakrani Themes" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />

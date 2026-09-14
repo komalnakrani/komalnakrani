@@ -1,3 +1,108 @@
 ---
-return Astro.redirect('/docs/getting-started/');
+import Layout from '../../layouts/Layout.astro';
+import { docSections, docArticles } from '../../data/docs';
+
+// A real index rather than a redirect: /docs/ is a URL people type directly,
+// and a section landing page is more use to them than a bounce.
+const sections = docSections.map((section) => ({
+  title: section.title,
+  items: section.items.map((item) => ({
+    ...item,
+    description: docArticles[item.slug]?.description ?? ''
+  }))
+}));
 ---
+<Layout
+  title="Documentation | Komal Nakrani"
+  description="How to run, customise and deploy an Astro theme — setup, content collections, styling and going live."
+>
+  <main class="rise">
+    <section class="wrap" style="padding: 72px 24px 0;">
+      <div style="max-width: 640px;">
+        <div class="k" style="margin-bottom: 14px;">Documentation</div>
+        <h1 class="display" style="font-size: clamp(34px, 5vw, 54px); margin: 0;">
+          Everything you need after checkout.
+        </h1>
+        <p class="lead" style="margin: 20px 0 0;">
+          Every theme is an Astro project that builds to static files. These pages cover running one
+          locally, changing how it looks, managing its content and putting it online.
+        </p>
+        <div style="margin-top: 28px;">
+          <a href="/docs/getting-started/" class="btn btn-primary btn-lg">Start with the quickstart</a>
+        </div>
+      </div>
+    </section>
+
+    {sections.map((section) => (
+      <section class="wrap" style="padding: 64px 24px 0;">
+        <div class="sec-head">
+          <h2 class="h2" style="margin: 0;">{section.title}</h2>
+        </div>
+        <div class="doc-grid">
+          {section.items.map((item) => (
+            <a class="doc-card" href={`/docs/${item.slug}/`}>
+              <h3 class="doc-card-title">{item.title}</h3>
+              <p class="doc-card-desc">{item.description}</p>
+              <span class="doc-card-go">Read ➔</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <section class="wrap" style="padding: 64px 24px 100px;">
+      <div class="panel-ink" style="padding: clamp(28px, 5vw, 44px); display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
+        <div style="flex: 1; min-width: 260px;">
+          <h2 style="font-size: clamp(22px, 3vw, 30px); letter-spacing: -.03em; color: var(--ink-inverse); margin: 0;">
+            Something here not clear?
+          </h2>
+          <p style="font-size: 15px; line-height: 1.7; color: rgba(243,241,234,.72); margin: 12px 0 0; text-wrap: pretty;">
+            Every theme includes direct email access to Komal. If a step in these docs does not match
+            what you are seeing, that is worth knowing about.
+          </p>
+        </div>
+        <a href="/legal/faq/" class="btn btn-lg" style="background: var(--ink-inverse); color: var(--ink-900);">
+          Read the FAQ
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 20px;
+  }
+  .doc-card {
+    background: #ffffff;
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  }
+  .doc-card:hover {
+    border-color: var(--ink-200);
+    transform: translateY(-3px);
+    box-shadow: var(--sh);
+    opacity: 1;
+  }
+  .doc-card-title {
+    font-size: 18px;
+    letter-spacing: -.02em;
+    margin: 0;
+    color: var(--ink);
+  }
+  .doc-card-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin: 9px 0 18px;
+    flex: 1;
+    text-wrap: pretty;
+  }
+  .doc-card-go { font-size: 13px; color: var(--accent-text); }
+</style>

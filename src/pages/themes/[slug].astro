@@ -1,9 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import K from '../../components/K.astro';
 import Icon from '../../components/Icon.astro';
-import CheckoutModal from '../../components/CheckoutModal.astro';
-import { themes, type Theme } from '../../data/themes';
+import ThemeCard from '../../components/ThemeCard.astro';
+import { themes, isThemeInCategory, type Theme } from '../../data/themes';
+import { accentFor, kindFor, nameFor, scarcityFor, liveUrlFor, liveHostFor, DROP, DEVICES } from '../../data/design';
 
 export function getStaticPaths() {
   return themes.map((theme) => ({
@@ -18,176 +18,501 @@ interface Props {
 
 const { theme } = Astro.props;
 
-const pagesList = [
-  { name: 'Homepage', desc: 'Hero section, feature grid, testimonials, pricing table, and newsletter CTA' },
-  { name: 'About Us', desc: 'Company mission, studio timeline, team grid, and brand values' },
-  { name: 'Services & Capabilities', desc: 'Detailed service offerings, feature breakdowns, and process flow' },
-  { name: 'Pricing & Plans', desc: 'Interactive monthly/annual pricing comparison table with feature badges' },
-  { name: 'MDX Blog Hub & Articles', desc: 'MDX-powered blog index with tag filtering and single post reader' },
-  { name: 'Contact & Support', desc: 'Interactive contact form, support channels, and office location cards' },
-  { name: 'Legal & Cookie Consent', desc: 'GDPR Privacy Policy, Terms of Service, and Osano CookieConsent banner' },
-];
+// Everything on this page derives from the theme's brief plus its preview URL.
+const accent = accentFor(theme);
+const kind = kindFor(theme);
+const scarcity = scarcityFor(theme);
+const liveUrl = liveUrlFor(theme);
+const liveHost = liveHostFor(theme);
+const name = nameFor(theme);
+const was = theme.wasPrice;
+
+const related = themes
+  .filter((t) => t.slug !== theme.slug && isThemeInCategory(t, theme.category))
+  .slice(0, 3);
+
+// The real routes this theme ships, from its own record.
+const pagesList = theme.pages ?? [];
+// liveUrl carries no trailing slash and every path starts with one, so join
+// them without letting a double or missing slash through.
+const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
 ---
-<Layout title={`${theme.name} - ${theme.framework === 'astro' ? 'Next.js 16' : 'Next.js 15'} Theme | Komal Nakrani`} description={theme.description}>
+<Layout title={`${name} — ${kind.toLowerCase()} theme | Komal Nakrani`} description={theme.description}>
   <main class="rise">
-    <!-- Theme Detail Hero -->
-    <section class="wrap section" style="padding-top: 40px;">
-      <!-- Breadcrumb -->
-      <div style="font-family: var(--mono); font-size: 12px; color: var(--ink-3); margin-bottom: 20px; display: flex; gap: 8px; align-items: center;">
-        <a href="/themes/" style="color: var(--ink-2); text-decoration: none;">Themes</a>
+    <!-- ========================== BRIEF ========================== -->
+    <section class="wrap" style="padding: 32px 24px 0;">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/themes/">Themes</a>
         <span>/</span>
-        <a href={`/themes/${theme.framework}/`} style="color: var(--ink-2); text-decoration: none; text-transform: uppercase;">{theme.framework}</a>
+        <a href={`/categories/${theme.category}/`}>{kind}</a>
         <span>/</span>
-        <span style="color: var(--accent); font-weight: 600;">{theme.name}</span>
-      </div>
+        <span class="here">{name}</span>
+      </nav>
 
-      <div style="display: grid; grid-template-columns: 1fr 340px; gap: 48px; align-items: start;">
+      <div class="brief">
         <div>
-          <div class="hero-badge" style="margin-bottom: 16px;">
-            <span class="dot"></span>
-            {theme.badge}
-          </div>
-          <h1 class="display" style="font-size: clamp(36px, 4.5vw, 56px); margin: 0 0 16px; line-height: 1.1;">
-            {theme.name}
-          </h1>
-          <p class="lead" style="font-size: 19px; color: var(--ink-2); line-height: 1.6; margin-bottom: 24px;">
-            {theme.tagline}
-          </p>
-
-          <!-- Tech Stack Pills -->
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;">
-            {theme.techStack.map((tech) => (
-              <span style="font-family: var(--mono); font-size: 11.5px; background: var(--surface-2); color: var(--ink); border: 1px solid var(--line-2); padding: 4px 12px; border-radius: var(--r-pill);">
-                {tech}
-              </span>
-            ))}
+          <div class="drop-badge">
+            <span class="pill-new" style={`background: ${accent};`}>{theme.badge || 'THEME'}</span>
+            {kind}
           </div>
 
-          <!-- Dual CTAs -->
-          <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
-            <a href={`/preview/${theme.slug}/`} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-              Live Preview <Icon name="arrow-right" />
-            </a>
-            <button data-plan-price="29" data-plan-name={theme.name} class="btn btn-secondary btn-lg pay-trigger-btn">
-              Buy Theme ($29)
+          <h1 class="display" style="font-size: clamp(34px, 5vw, 56px); margin: 20px 0 0;">{name}</h1>
+
+          <p class="lead" style="margin: 18px 0 0; max-width: 560px;">{theme.tagline}</p>
+
+          <div class="stack-pills">
+            {theme.techStack.map((tech) => <span class="stack-pill">{tech}</span>)}
+          </div>
+
+          <div class="brief-actions">
+            <a href={`/preview/${theme.slug}/`} class="btn btn-primary btn-lg">Open live preview</a>
+            <button data-plan="single" data-plan-price={theme.price} data-plan-name={name} class="btn btn-secondary btn-lg pay-trigger-btn">
+              Buy theme (${theme.price})
             </button>
-            <a href="/bundles/" class="btn btn-secondary btn-lg" style="color: var(--accent);">
-              Get All-Access ($199)
-            </a>
           </div>
         </div>
 
-        <!-- Right Pricing Box Sidebar -->
-        <div style="background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-lg); padding: 32px; box-shadow: var(--sh-md);">
-          <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 6px;">COMMERCIAL LICENSE</div>
-          <div style="font-family: var(--display); font-weight: 700; font-size: 40px; color: var(--ink); line-height: 1;">$29 <span style="font-size: 14px; color: var(--ink-3); font-weight: 400;">/ single theme</span></div>
-          <p class="small" style="color: var(--ink-3); margin: 8px 0 24px;">One-time payment · Instant source code download</p>
+        <!-- Licence card -->
+        <aside class="licence">
+          <div class="price-eyebrow">COMMERCIAL LICENSE</div>
+          <div style="display: flex; align-items: baseline; gap: 10px; margin: 12px 0 4px;">
+            <span style="font-size: 40px; letter-spacing: -.03em;">${theme.price}</span>
+            {was && <span style="font-size: 15px; color: var(--ink-3); text-decoration: line-through;">${was}</span>}
+          </div>
+          <p class="small" style="margin: 0 0 20px;">One-time payment · instant source download</p>
 
-          <ul style="list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-direction: column; gap: 10px;">
-            <li class="ai-feature-item"><Icon name="check" /> Full 100% Source Code Access</li>
-            <li class="ai-feature-item"><Icon name="check" /> 7 Multi-Page Layouts Included</li>
-            <li class="ai-feature-item"><Icon name="check" /> Pages / Sanity CMS Pre-configured</li>
-            <li class="ai-feature-item"><Icon name="check" /> Osano CookieConsent Banner</li>
-            <li class="ai-feature-item"><Icon name="check" /> Unlimited Personal & Client License</li>
-            <li class="ai-feature-item"><Icon name="check" /> Free Lifetime Updates</li>
+          <ul class="licence-list">
+            <li class="ai-feature-item"><Icon name="check" /> Full source code access</li>
+            {pagesList.length > 0 && <li class="ai-feature-item"><Icon name="check" /> {pagesList.length} page layouts, all built out</li>}
+            <li class="ai-feature-item"><Icon name="check" /> Commented, readable source</li>
+            <li class="ai-feature-item"><Icon name="check" /> Unlimited client projects</li>
+            <li class="ai-feature-item"><Icon name="check" /> Free lifetime updates</li>
           </ul>
 
-          <button data-plan-price="29" data-plan-name={theme.name} class="btn btn-primary btn-lg pay-trigger-btn" style="width: 100%; margin-bottom: 12px;">
-            Buy Single License ($29)
+          <div class="tcard-track" style="margin-bottom: 8px;">
+            <div style={`height: 100%; border-radius: 4px; width: ${scarcity.percent}%; background: ${accent};`}></div>
+          </div>
+          <div class={`small ${scarcity.low ? 'low' : ''}`} style="margin-bottom: 18px;">
+            {scarcity.label} of {scarcity.total} licenses
+          </div>
+
+          <button data-plan="single" data-plan-price={theme.price} data-plan-name={name} class="btn btn-primary pay-trigger-btn licence-cta">
+            Buy single license (${theme.price})
           </button>
-          <a href="/bundles/" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center;">
-            Or Unlock All 200 Themes ($199)
+          <a href="/pricing/" class="btn btn-secondary licence-cta" style="margin-top: 10px;">
+            Or all-access (${DROP.allAccessPrice})
           </a>
-        </div>
+        </aside>
       </div>
+    </section>
 
-      <!-- Main Browser Preview Stage -->
-      <div style="margin-top: 48px; background: var(--ark-ink); border-radius: var(--r-lg); overflow: hidden; border: 1px solid rgba(255, 103, 17, 0.3); box-shadow: var(--sh-lg);">
-        <div style="padding: 12px 20px; background: rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between;">
-          <div style="display: flex; gap: 6px;">
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56;"></span>
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e;"></span>
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f;"></span>
+    <!-- ====================== LIVE PREVIEW ======================= -->
+    <section class="wrap" style="padding: 48px 24px 0;">
+      <div class="panel-warm" style="padding: 16px;">
+        <div class="pv-toolbar">
+          <div class="pv-address">{liveHost}</div>
+          <div style="flex: 1;"></div>
+          <div class="pv-tabs" role="tablist" aria-label="Choose a device size">
+            {DEVICES.map((d, i) => (
+              <button type="button" class={`pv-tab ${i === 0 ? 'on' : ''}`} data-device-tab={d.id} role="tab" aria-selected={i === 0}>
+                {d.label}
+              </button>
+            ))}
           </div>
-          <div style="font-family: var(--mono); font-size: 12px; color: var(--accent);">komalnakrani.com/preview/{theme.slug}/</div>
-          <a href={`/preview/${theme.slug}/`} target="_blank" rel="noopener" style="font-family: var(--mono); font-size: 11px; color: #ffffff; text-decoration: none; background: rgba(255,103,17,0.2); padding: 3px 10px; border-radius: var(--r-xs);">
-            Open Full Preview ↗
-          </a>
+          <a href={`/preview/${theme.slug}/`} class="pv-full">Full screen ➚</a>
         </div>
-        <div style="height: 540px; background: #0d0d0d;">
-          <iframe src={`/preview-demos/${theme.slug}/`} style="width: 100%; height: 100%; border: none;"></iframe>
+
+        <div style="display: flex; justify-content: center; padding: 6px 0 2px;">
+          <div class="pv-frame" data-frame>
+            <div class="pv-fallback" data-fallback>
+              <div class="pv-fallback-dot" style={`background: ${accent};`}></div>
+              <div>Loading the live preview from <strong>{liveHost}</strong></div>
+              <a href={liveUrl} target="_blank" rel="noopener">Open it directly ➚</a>
+            </div>
+            <iframe
+              data-live-frame
+              src={liveUrl}
+              title={`Live preview of ${name}`}
+              loading="lazy"
+              referrerpolicy="no-referrer"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="pv-caption">
+          <span data-frame-label>{DEVICES[0].note}</span>
+          <span class="pv-sep"></span>
+          <span>{name} — {scarcity.remaining} of {scarcity.total} licenses left</span>
         </div>
       </div>
     </section>
 
-    <!-- Included Multi-Page Breakdown (Komal Bastion Style) -->
-    <section class="wrap section" style="border-top: 1px dashed var(--line-2);">
-      <div style="text-align: center; max-width: 680px; margin: 0 auto 48px;">
-        <K idx="01">Complete Theme Architecture</K>
-        <h2 class="h1" style="margin-top: 10px;">Included Multi-Page Layouts</h2>
-        <p class="body-t" style="margin-top: 8px;">
-          Every theme includes a full suite of pre-built production pages with zero dummy placeholders.
-        </p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
-        {pagesList.map((pg, idx) => (
-          <div style="background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-lg); padding: 24px;">
-            <div style="font-family: var(--mono); font-size: 12px; color: var(--accent); font-weight: 700; margin-bottom: 8px;">0{idx + 1}. PAGE LAYOUT</div>
-            <h3 class="h3" style="font-size: 19px; color: var(--ink); margin-bottom: 8px;">{pg.name}</h3>
-            <p class="body-t" style="font-size: 14px; color: var(--ink-2); margin: 0; line-height: 1.5;">{pg.desc}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <!-- Features & Technical Specifications -->
-    <section class="wrap section" style="background: var(--surface-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-      <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <K idx="02">Engineering Standard</K>
-            <h2 class="h1">Technical Specifications</h2>
-            <p class="body-t" style="margin-top: 6px;">Built to modern Web standards for maximum speed and SEO optimization.</p>
-          </div>
+    <!-- ========================= THE BRIEF ======================== -->
+    <section class="wrap" style="padding: 84px 24px 0;">
+      <div class="brief-body">
+        <div>
+          <h2 class="h2" style="margin: 0;">What this theme is for</h2>
+          <p class="body-t" style="margin: 18px 0 0;">{theme.description}</p>
         </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+        <div class="spec-list">
           {theme.features.map((feat) => (
-            <div style="background: var(--surface); border: 1px solid var(--line-2); padding: 24px; border-radius: var(--r-lg);">
-              <div style="color: var(--accent); margin-bottom: 12px;"><Icon name="check" /></div>
-              <h4 style="font-family: var(--display); font-weight: 700; font-size: 17px; color: var(--ink); margin: 0 0 6px;">{feat}</h4>
-              <p class="small" style="color: var(--ink-2); margin: 0; line-height: 1.5;">Type-safe, battle-tested implementation for production builds.</p>
+            <div class="spec-row">
+              <span class="spec-tick" style={`color: ${accent};`}><Icon name="check" size={16} /></span>
+              <span>{feat}</span>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- All-Access Pass Banner -->
-    <section class="wrap section">
-      <div class="pass-banner">
-        <div class="pass-content">
-          <div>
-            <span class="hero-badge" style="background: rgba(255,103,17,0.15); color: var(--ark-orange-bright); border-color: rgba(255,103,17,0.4);">
-              UNLIMITED ACCESS PASS
-            </span>
-            <h2 class="pass-title">Get {theme.name} + 199 Other Themes</h2>
-            <p class="pass-desc">
-              Unlock full commercial source code access to all 100 Web sites, all 100 Next.js 15 themes, and all 4 AI Solution Kits for $199 lifetime.
-            </p>
+    <!-- ========================= INCLUDED ========================= -->
+    {pagesList.length > 0 && (
+    <section class="wrap" style="padding: 84px 24px 0;">
+      <div class="sec-head">
+        <h2 class="h2" style="margin: 0;">Every page, already built</h2>
+        <p style="margin: 0; font-size: 14px; color: var(--ink-3);">Every route below is live — open any one of them.</p>
+      </div>
+
+      <div class="page-grid">
+        {pagesList.map((pg, idx) => (
+          <a class="page-card" href={pageUrl(pg.path)} target="_blank" rel="noopener">
+            <div class="page-idx" style={`color: ${accent};`}>{String(idx + 1).padStart(2, '0')}</div>
+            <h3 style="font-size: 17px; letter-spacing: -.02em; margin: 8px 0 0;">{pg.name}</h3>
+            <p class="page-desc">{pg.desc}</p>
+            <p class="page-path">{pg.path} ➚</p>
+          </a>
+        ))}
+      </div>
+    </section>
+    )}
+
+    <!-- ========================== RELATED ========================= -->
+    {related.length > 0 && (
+      <section class="wrap" style="padding: 84px 24px 0;">
+        <div class="sec-head">
+          <h2 class="h2" style="margin: 0;">More in {kind.toLowerCase()}</h2>
+          <a href={`/categories/${theme.category}/`} style="font-size: 14px; color: var(--accent-text);">See the category ➔</a>
+        </div>
+        <div class="drop-grid">
+          {related.map((t) => <ThemeCard theme={t} />)}
+        </div>
+      </section>
+    )}
+
+    <!-- ======================== ALL-ACCESS ======================== -->
+    <section class="wrap" style="padding: 84px 24px 100px;">
+      <div class="panel-ink" style="padding: clamp(28px, 5vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 40px; align-items: center;">
+        <div>
+          <div style="font-size: 12px; letter-spacing: .1em; color: var(--sage);">ALL-ACCESS PASS</div>
+          <h2 style="font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -.03em; line-height: 1.2; color: var(--ink-inverse); margin: 14px 0 0;">
+            Get {name} and every other theme.
+          </h2>
+          <p style="font-size: 16px; line-height: 1.7; color: rgba(243,241,234,.75); margin: 16px 0 0; text-wrap: pretty;">
+            One pass unlocks every theme in the catalog, every Friday drop from here on, and
+            unlimited client projects.
+          </p>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 44px; letter-spacing: -.03em; color: var(--ink-inverse);">
+            ${DROP.allAccessPrice}
+            <span style="font-size: 16px; opacity: .45; text-decoration: line-through; margin-left: 8px;">${DROP.allAccessWas}</span>
           </div>
-          <div class="pass-pricing-card">
-            <div class="pass-price">$199 <span>/ lifetime</span></div>
-            <p class="small" style="color: var(--ark-grey-400); margin: 8px 0 20px;">Single payment · Unlimited commercial use</p>
-            <a href="/bundles/" class="btn btn-primary btn-lg" style="width: 100%;">
-              Get All-Access Pass ($199) <Icon name="arrow-right" />
-            </a>
-          </div>
+          <p style="font-size: 13px; color: rgba(243,241,234,.55); margin: 8px 0 20px;">Single payment · unlimited commercial use</p>
+          <a href="/pricing/" class="btn btn-lg" style="width: 100%; background: var(--ink-inverse); color: var(--ink-900);">
+            Get all-access (${DROP.allAccessPrice})
+          </a>
         </div>
       </div>
     </section>
   </main>
-  
-  <CheckoutModal />
+
+
+  <script define:vars={{ DEVICES }}>
+    // A cross-origin iframe still fires `load` for an error page, so this only
+    // clears the placeholder once the browser reports something arrived.
+    const liveFrame = document.querySelector('[data-live-frame]');
+    const fallback = document.querySelector('[data-fallback]');
+    liveFrame?.addEventListener('load', () => {
+      if (fallback) fallback.style.display = 'none';
+    });
+
+    const frameBox = document.querySelector('[data-frame]');
+    const frameLabel = document.querySelector('[data-frame-label]');
+    const deviceTabs = Array.from(document.querySelectorAll('[data-device-tab]'));
+
+    deviceTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const device = DEVICES.find((d) => d.id === tab.dataset.deviceTab) || DEVICES[0];
+        deviceTabs.forEach((n) => {
+          const on = n === tab;
+          n.classList.toggle('on', on);
+          n.setAttribute('aria-selected', String(on));
+        });
+        if (frameBox) {
+          frameBox.style.maxWidth = device.w + 'px';
+          frameBox.style.borderRadius =
+            device.id === 'mobile' ? '32px' : device.id === 'tablet' ? '22px' : '14px';
+          frameBox.style.padding = device.id === 'desktop' ? '10px' : '14px';
+        }
+        if (frameLabel) frameLabel.textContent = device.note;
+      });
+    });
+  </script>
 </Layout>
+
+<style>
+  .crumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .crumbs a { color: var(--ink-2); }
+  .crumbs a:hover { color: var(--ink); opacity: 1; }
+  .crumbs .here { color: var(--accent-text); }
+
+  .brief {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 48px;
+    align-items: start;
+  }
+  .drop-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--paper-3);
+    border: 1px solid var(--rule-2);
+    padding: 6px 16px 6px 7px;
+    border-radius: var(--r-pill);
+    font-size: 12px;
+    letter-spacing: .06em;
+    color: var(--ink-3);
+  }
+  .drop-badge .pill-new { color: #fff; letter-spacing: .07em; }
+
+  .stack-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 28px; }
+  .stack-pill {
+    font-size: 12px;
+    background: var(--paper-3);
+    color: var(--ink-2);
+    border: 1px solid var(--rule);
+    padding: 5px 13px;
+    border-radius: var(--r-pill);
+  }
+  .brief-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+  .licence {
+    background: #ffffff;
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r-lg);
+    padding: 28px;
+    position: sticky;
+    top: 96px;
+  }
+  .price-eyebrow { font-size: 12px; letter-spacing: .1em; color: var(--ink-4); }
+  .licence-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .licence-cta { width: 100%; }
+  .tcard-track {
+    height: 4px;
+    background: var(--paper-3);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .small.low { color: var(--clay); }
+
+  /* Preview panel */
+  .pv-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .pv-address {
+    background: var(--paper);
+    border: 1px solid var(--rule-2);
+    border-radius: var(--r-pill);
+    padding: 9px 18px;
+    font-size: 13px;
+    color: var(--ink-3);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .pv-tabs {
+    display: flex;
+    gap: 3px;
+    background: var(--paper);
+    border: 1px solid var(--rule-2);
+    border-radius: var(--r-pill);
+    padding: 4px;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  .pv-tab {
+    border: 0;
+    font-family: inherit;
+    font-size: 13px;
+    padding: 8px 15px;
+    border-radius: var(--r-pill);
+    cursor: pointer;
+    white-space: nowrap;
+    background: transparent;
+    color: var(--ink-500);
+    transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+  }
+  .pv-tab:hover { color: var(--ink); }
+  .pv-tab.on { background: var(--ink-900); color: var(--paper); }
+  .pv-full {
+    font-size: 13px;
+    color: var(--paper);
+    background: var(--ink-900);
+    padding: 10px 18px;
+    border-radius: var(--r-pill);
+  }
+  .pv-full:hover { opacity: .88; }
+
+  .pv-frame {
+    width: 100%;
+    max-width: 1000px;
+    height: 620px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid var(--rule-2);
+    border-radius: 14px;
+    box-shadow: var(--sh-lg);
+    transition: max-width .35s var(--ease), border-radius .3s var(--ease), padding .3s var(--ease);
+  }
+  .pv-frame { position: relative; }
+  .pv-frame iframe {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    border-radius: 10px;
+    background: #fff;
+  }
+  /* Sits behind the iframe: visible while the remote page loads, and left
+     showing if the URL never resolves, so a dead preview reads as an
+     explanation rather than a blank rectangle. */
+  .pv-fallback {
+    position: absolute;
+    inset: 10px;
+    z-index: 0;
+    border-radius: 10px;
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+    color: var(--ink-3);
+  }
+  .pv-fallback strong { color: var(--ink-2); font-weight: 400; }
+  .pv-fallback a { color: var(--accent-text); }
+  .pv-fallback-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: pulse 2.4s infinite;
+  }
+  .pv-caption {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--ink-3);
+  }
+  .pv-sep { width: 1px; height: 12px; background: var(--rule-2); }
+
+  /* Brief body */
+  .brief-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 40px;
+    align-items: start;
+  }
+  .spec-list { display: flex; flex-direction: column; gap: 12px; }
+  .spec-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    background: #ffffff;
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r);
+    padding: 14px 18px;
+  }
+  .spec-tick { display: flex; flex-shrink: 0; margin-top: 2px; }
+
+  /* Included pages */
+  .page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
+    gap: 20px;
+  }
+  .page-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r-lg);
+    padding: 24px;
+    transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  }
+  .page-card:hover {
+    border-color: var(--ink-200);
+    transform: translateY(-3px);
+    box-shadow: var(--sh);
+    opacity: 1;
+  }
+  .page-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin: 8px 0 0;
+    text-wrap: pretty;
+  }
+  .page-path {
+    font-family: var(--code);
+    font-size: 12.5px;
+    color: var(--ink-3);
+    margin: 12px 0 0;
+    word-break: break-all;
+  }
+  .page-idx { font-size: 13px; letter-spacing: .08em; }
+
+  .drop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .brief { grid-template-columns: 1fr; gap: 32px; }
+    .licence { position: static; }
+    .pv-frame { height: 460px; }
+  }
+</style>

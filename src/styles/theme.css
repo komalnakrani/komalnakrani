@@ -1,89 +1,129 @@
 /* =====================================================================
-   Komal Nakrani Themes & AI Solutions - Design System
-   Color Palette: Ark Warm Paper & Deep Ink with Ark Orange Accent
-   Typography: Orlean / AventaLight / Satoshi / Inter / Helvetica / JetBrains Mono
+   Komal Nakrani Themes — Design System
+   Source of truth: "Komal Themes.dc.html" (Claude Design)
+   Palette:    Warm paper (#FBFAF6) · Deep ink (#14140F) · Sage (#9BA88C)
+   Typography: Century Gothic / Questrial / URW Gothic / Poppins / Futura
+   Geometry:   Pill radii (64px), 20px cards, hairline warm borders
    ===================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Poppins:wght@200;300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Requested Color Tokens */
-  --ark-orange: #ff6711;
-  --ark-orange-bright: #ff8200;
-  --ark-orange-warm: #ff8400;
-  --ark-orange-deep: #ff6b35;
-  --ark-ink: #101820;
-  --ark-ink-soft: #111822;
-  --ark-paper: #fffdfa;
-  --ark-paper-2: #fffbf6;
-  --ark-paper-3: #fdf9f4;
-  --ark-shell: #ede9e3;
-  --ark-silver: #dadddf;
-  --ark-grey-500: #8a8f8d;
-  --ark-grey-400: #7e8280;
-  --ark-grey-300: #adb5bd;
-  --ark-grey-200: #ced4da;
-  --ark-grey-100: #dee2e6;
-  --ark-dark: #0d0d0d;
-  --ark-dark-2: #1a1a1a;
-  --ark-dark-3: #1b1b1b;
-  
-  --fg-primary: var(--ark-ink);
-  --fg-secondary: var(--ark-grey-500);
-  --fg-inverse: #ffffff;
-  --bg-primary: var(--ark-paper);
-  --bg-dark: var(--ark-dark);
-  --accent: var(--ark-orange);
+  /* ---------- Core palette (design source) ---------- */
+  --paper:       #FBFAF6;  /* page ground */
+  --paper-2:     #F3F1EA;  /* raised warm panel */
+  --paper-3:     #EFEDE3;  /* chip / inset */
+  --paper-4:     #F2EFE6;  /* preview well */
 
-  /* Requested Typography Tokens */
-  --font-display: "Orlean", "Inter", Georgia, serif;
-  --font-body: "AventaLight", "Inter", system-ui, -apple-system, sans-serif;
-  --font-satoshi: "Satoshi", "Inter", sans-serif;
-  --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ink-900:     #14140F;  /* headings, primary action */
+  --ink-700:     #2A2A22;
+  --ink-500:     #5C5B51;  /* body copy */
+  --ink-400:     #6E6C61;  /* muted meta */
+  --ink-300:     #8A887C;  /* faint label */
+  --ink-200:     #A9A79A;
 
-  /* Global Theme Aliases */
-  --display: var(--font-display);
-  --body: var(--font-body);
-  --satoshi: var(--font-satoshi);
-  --helvetica: var(--font-helvetica);
-  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --rule:        #EAE6DC;  /* hairline */
+  --rule-2:      #E4E0D2;  /* stronger hairline */
+  --rule-3:      #E9E5D9;  /* card border */
 
-  /* Surfaces & Ink */
-  --bg:        var(--ark-paper);
+  /* Sage accent. --sage is decorative only (no text sits on it);
+     --sage-deep is the text-bearing variant (4.9:1 on white, 4.7:1 on paper). */
+  --sage:        #9BA88C;
+  --sage-deep:   #64764F;
+  --sage-tint:   rgba(155, 168, 140, 0.16);
+
+  --clay:        #9A5B48;  /* scarcity / warning */
+  --clay-tint:   rgba(154, 91, 72, 0.12);
+
+  --ink-inverse: #F3F1EA;  /* copy on ink surfaces */
+
+  /* ---------- Legacy aliases (kept so existing markup keeps working) ---------- */
+  --ark-orange:        var(--sage);
+  --ark-orange-bright: var(--sage);
+  --ark-orange-warm:   var(--sage);
+  --ark-orange-deep:   var(--sage-deep);
+  --ark-ink:           var(--ink-900);
+  --ark-ink-soft:      var(--ink-700);
+  --ark-paper:         var(--paper);
+  --ark-paper-2:       var(--paper-2);
+  --ark-paper-3:       var(--paper-3);
+  --ark-shell:         var(--rule);
+  --ark-silver:        var(--rule-2);
+  --ark-grey-500:      var(--ink-400);
+  --ark-grey-400:      var(--ink-300);
+  --ark-grey-300:      rgba(243, 241, 234, 0.72);
+  --ark-grey-200:      var(--ink-200);
+  --ark-grey-100:      var(--rule-2);
+  --ark-dark:          var(--ink-900);
+  --ark-dark-2:        var(--ink-700);
+  --ark-dark-3:        var(--ink-700);
+
+  --fg-primary:   var(--ink-900);
+  --fg-secondary: var(--ink-400);
+  --fg-inverse:   var(--ink-inverse);
+  --bg-primary:   var(--paper);
+  --bg-dark:      var(--ink-900);
+
+  /* ---------- Typography ---------- */
+  --font-display: 'Century Gothic', Questrial, 'URW Gothic', Poppins, Futura, sans-serif;
+  --font-body:    'Century Gothic', Questrial, 'URW Gothic', Poppins, Futura, sans-serif;
+  --font-satoshi: var(--font-body);
+  --font-helvetica: var(--font-body);
+
+  --display:   var(--font-display);
+  --body:      var(--font-body);
+  --satoshi:   var(--font-body);
+  --helvetica: var(--font-body);
+  /* Eyebrows and meta labels are the sans at a tight tracking in this system,
+     not a monospace. --code stays a true mono for docs code blocks. */
+  --mono:      var(--font-body);
+  --code:      'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* ---------- Surfaces & ink ---------- */
+  --bg:        var(--paper);
   --surface:   #ffffff;
-  --surface-2: var(--ark-paper-2);
-  --surface-3: var(--ark-paper-3);
+  --surface-2: var(--paper-2);
+  --surface-3: var(--paper-3);
 
-  --ink:   var(--ark-ink);
-  --ink-2: var(--ark-ink-soft);
-  --ink-3: var(--ark-grey-500);
-  --ink-4: var(--ark-grey-300);
+  --ink:   var(--ink-900);
+  --ink-2: var(--ink-500);
+  --ink-3: var(--ink-400);
+  --ink-4: var(--ink-300);
 
-  /* Lines & Borders */
-  --line:   var(--ark-shell);
-  --line-2: var(--ark-silver);
+  --line:   var(--rule);
+  --line-2: var(--rule-2);
 
-  /* Accent details */
-  --accent-press: var(--ark-orange-deep);
-  --accent-tint:  rgba(255, 103, 17, 0.12);
+  /* ---------- Accent roles ----------
+     Primary action in this system is INK, not the accent. The sage reads as a
+     quiet mark (dots, bars, eyebrows), which is why --accent-ink pairs with the
+     deep sage rather than the decorative one. */
+  --accent:       var(--sage);
+  --accent-press: var(--sage-deep);
+  --accent-tint:  var(--sage-tint);
   --accent-ink:   #ffffff;
+  --accent-text:  var(--sage-deep);
 
-  --signal:      var(--accent);
-  --signal-tint: var(--accent-tint);
+  --signal:      var(--sage-deep);
+  --signal-tint: var(--sage-tint);
 
-  /* Radii */
-  --r-xs: 3px;
-  --r-sm: 6px;
-  --r:    10px;
-  --r-lg: 16px;
-  --r-pill: 9999px;
+  --action:       var(--ink-900);
+  --action-ink:   var(--paper);
+  --action-hover: #23231B;
 
-  /* Shadows */
-  --sh-sm: 0 1px 3px rgba(16, 24, 32, 0.06), 0 1px 2px rgba(16, 24, 32, 0.04);
-  --sh:    0 4px 12px rgba(16, 24, 32, 0.08), 0 2px 4px rgba(16, 24, 32, 0.04);
-  --sh-lg: 0 12px 32px rgba(16, 24, 32, 0.12), 0 4px 12px rgba(16, 24, 32, 0.06);
-  --sh-accent: 0 4px 20px rgba(255, 103, 17, 0.35);
+  /* ---------- Radii ---------- */
+  --r-xs:   6px;
+  --r-sm:   10px;
+  --r:      14px;
+  --r-lg:   20px;
+  --r-xl:   24px;
+  --r-pill: 64px;
 
-  --ease: cubic-bezier(.22,.61,.36,1);
+  /* ---------- Shadows (warm, low) ---------- */
+  --sh-sm: 0 1px 2px rgba(20, 20, 15, 0.04);
+  --sh:    0 10px 26px rgba(20, 20, 15, 0.07);
+  --sh-lg: 0 22px 50px rgba(20, 20, 15, 0.09);
+  --sh-accent: 0 10px 26px rgba(20, 20, 15, 0.10);
+
+  --ease: cubic-bezier(.2,.7,.2,1);
   --dur: 200ms;
   --dur-slow: 380ms;
 }
@@ -95,83 +135,233 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--body);
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  background-image: radial-gradient(rgba(16, 24, 32, 0.03) 1px, transparent 1px);
-  background-size: 24px 24px;
+  overflow-x: hidden;
 }
 
 #root { min-height: 100vh; }
 button { font-family: inherit; cursor: pointer; }
-a { color: inherit; text-decoration: none; }
+a { color: inherit; text-decoration: none; transition: opacity var(--dur) var(--ease); }
 img { display: block; max-width: 100%; }
-::selection { background: var(--accent); color: #ffffff; }
+::selection { background: var(--ink-900); color: var(--paper); }
 
-.wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 .measure { max-width: 720px; }
 
-/* ---------- Typography Utility Classes ---------- */
-.k { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); display: inline-flex; align-items: center; gap: 8px; }
-.k .idx { color: var(--accent); font-weight: 700; }
-.k.sig { color: var(--accent); }
+/* ---------- Typography utilities ----------
+   The display face carries weight through size and tracking, not boldness —
+   400 is the heaviest weight used on headings in this system. */
+.k {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.k .idx { color: var(--accent-text); }
+.k.sig { color: var(--accent-text); }
 
-h1, h2, h3, h4 { font-family: var(--display); color: var(--ink); margin: 0; }
-.display { font-family: var(--display); font-weight: 700; font-size: clamp(40px, 5vw, 72px); line-height: 1.02; letter-spacing: -.03em; color: var(--ink); }
-.h1 { font-family: var(--display); font-weight: 700; font-size: clamp(34px, 4vw, 54px); line-height: 1.05; letter-spacing: -.025em; }
-.h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 3vw, 38px); line-height: 1.1; letter-spacing: -.02em; }
-.h3 { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: -.015em; }
-.lead { font-family: var(--body); font-weight: 400; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; color: var(--ink-2); }
-.body-t { font-family: var(--body); font-weight: 400; font-size: 16.5px; line-height: 1.6; color: var(--ink-2); }
-.small { font-family: var(--body); font-size: 14px; line-height: 1.5; color: var(--ink-3); }
-.mono { font-family: var(--mono); font-size: 13px; color: var(--ink-2); }
+h1, h2, h3, h4 { font-family: var(--display); color: var(--ink); margin: 0; font-weight: 400; }
+.display { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 6.2vw, 68px); line-height: 1.07; letter-spacing: -.035em; color: var(--ink); text-wrap: balance; }
+.h1 { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 4.6vw, 52px); line-height: 1.08; letter-spacing: -.032em; }
+.h2 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4vw, 42px); line-height: 1.12; letter-spacing: -.03em; }
+.h3 { font-family: var(--display); font-weight: 400; font-size: 19px; line-height: 1.25; letter-spacing: -.02em; }
+.lead { font-family: var(--body); font-weight: 400; font-size: 18px; line-height: 1.72; color: var(--ink-2); text-wrap: pretty; }
+.body-t { font-family: var(--body); font-size: 16px; line-height: 1.78; color: var(--ink-2); text-wrap: pretty; }
+.small { font-family: var(--body); font-size: 14px; line-height: 1.65; color: var(--ink-3); }
+.mono { font-family: var(--body); font-size: 13px; color: var(--ink-2); }
+.code { font-family: var(--code); font-size: 13px; color: var(--ink-2); }
 
 /* ---------- Buttons ---------- */
-.btn { font-family: var(--body); font-weight: 600; font-size: 14.5px; border-radius: var(--r-sm); padding: 12px 20px; border: 1px solid transparent; transition: all var(--dur) var(--ease); display: inline-flex; align-items: center; justify-content: center; gap: 8px; line-height: 1; white-space: nowrap; cursor: pointer; text-decoration: none; }
+.btn {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: var(--r-pill);
+  padding: 12px 26px;
+  border: 1px solid transparent;
+  transition: all var(--dur) var(--ease);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
 .btn:active { transform: translateY(1px); }
-.btn svg { width: 16px; height: 16px; stroke-width: 2; }
-.btn-primary { background: var(--accent); color: #ffffff; box-shadow: var(--sh-accent); }
-.btn-primary:hover { background: var(--ark-orange-deep); box-shadow: 0 6px 24px rgba(255, 103, 17, 0.45); transform: translateY(-1px); }
-.btn-secondary { background: var(--surface); color: var(--ink); border-color: var(--line-2); }
-.btn-secondary:hover { border-color: var(--ink); background: var(--surface-2); }
-.btn-ghost { background: transparent; color: var(--ink); padding-left: 4px; padding-right: 4px; }
-.btn-ghost:hover { color: var(--accent); }
-.btn-lg { font-size: 16px; padding: 14px 26px; border-radius: var(--r); }
+.btn svg { width: 16px; height: 16px; stroke-width: 1.6; }
 
-/* ---------- Tags & Badges ---------- */
-.tag { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--ink-3); border: 1px solid var(--line-2); border-radius: var(--r-pill); padding: 4px 10px; background: var(--surface); transition: all var(--dur) var(--ease); }
-.tag:hover { border-color: var(--accent); color: var(--accent); }
-.tag.on { background: var(--accent); color: #ffffff; border-color: var(--accent); }
+.btn-primary { background: var(--action); color: var(--action-ink); }
+.btn-primary:hover { background: var(--action-hover); opacity: 1; }
+
+.btn-secondary { background: #ffffff; color: var(--ink); border-color: var(--rule-2); }
+.btn-secondary:hover { border-color: var(--ink-300); background: #ffffff; opacity: 1; }
+
+.btn-ghost { background: transparent; color: var(--ink); padding-left: 6px; padding-right: 6px; }
+.btn-ghost:hover { color: var(--accent-text); opacity: 1; }
+
+.btn-signal { background: var(--sage-deep); color: #ffffff; }
+.btn-signal:hover { background: #55653F; opacity: 1; }
+
+.btn-lg { font-size: 16px; padding: 15px 34px; }
+
+/* ---------- Tags & badges ---------- */
+.tag {
+  font-family: var(--body);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--ink-3);
+  border: 1px solid var(--rule-2);
+  border-radius: var(--r-pill);
+  padding: 5px 13px;
+  background: #ffffff;
+  transition: all var(--dur) var(--ease);
+}
+.tag:hover { border-color: var(--ink-300); color: var(--ink); opacity: 1; }
+.tag.on { background: var(--ink-900); color: var(--paper); border-color: var(--ink-900); }
+
+.pill-new {
+  background: var(--sage-deep);
+  color: #ffffff;
+  border-radius: var(--r-pill);
+  padding: 3px 10px;
+  font-size: 11px;
+  letter-spacing: .07em;
+}
+
+/* ---------- Announcement bar ---------- */
+.announce {
+  background: var(--ink-900);
+  color: var(--ink-inverse);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 11px 20px;
+  font-size: 13px;
+}
+.announce .dim { opacity: .72; }
+.announce .num { font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+.announce .sep { width: 1px; height: 12px; background: rgba(243, 241, 234, .28); }
+.announce a { color: var(--ink-inverse); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Masthead ---------- */
-.mast { position: sticky; top: 0; z-index: 60; background: rgba(255, 253, 250, 0.88); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
-.mast-in { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.wm { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.wm .glyph { width: 34px; height: 34px; border-radius: var(--r-sm); background: var(--ark-ink); color: var(--ark-orange); font-family: var(--display); font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 103, 17, 0.3); }
-.wm .wmt { font-family: var(--display); font-weight: 700; font-size: 19px; letter-spacing: -.02em; color: var(--ink); }
-.wm .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: var(--r-pill); background: rgba(255, 103, 17, 0.12); color: var(--accent); border: 1px solid rgba(255, 103, 17, 0.25); text-transform: uppercase; }
+.mast {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(251, 250, 246, .84);
+  border-bottom: 1px solid var(--rule);
+}
+.mast-in { display: flex; align-items: center; gap: 26px; height: 64px; }
 
-.nav { display: flex; gap: 6px; align-items: center; }
-.nav-link { font-family: var(--body); font-weight: 500; font-size: 14.5px; color: var(--ink-2); padding: 8px 14px; border-radius: var(--r-sm); transition: all var(--dur) var(--ease); }
-.nav-link:hover { color: var(--ink); background: var(--surface-2); }
-.nav-link.active { color: var(--accent); font-weight: 600; }
-.nav-sep { width: 1px; height: 20px; background: var(--line-2); margin: 0 10px; }
-.menu-btn { display: none; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-sm); width: 40px; height: 40px; align-items: center; justify-content: center; color: var(--ink); }
+.wm { display: flex; align-items: center; gap: 2px; text-decoration: none; }
+.wm .wmt { font-family: var(--display); font-weight: 400; font-size: 19px; letter-spacing: -.02em; color: var(--ink); }
+.wm .wmt .sage { color: var(--sage); }
+.wm .glyph { display: none; }
+.wm .badge {
+  font-size: 10px;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  background: var(--sage-tint);
+  color: var(--accent-text);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+.nav { display: flex; gap: 22px; align-items: center; }
+.nav-link {
+  font-family: var(--body);
+  font-size: 14px;
+  color: var(--ink-500);
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: all var(--dur) var(--ease);
+}
+.nav-link:hover { color: var(--ink); opacity: 1; }
+.nav-link.active { color: var(--ink); border-bottom-color: var(--sage); }
+.nav-sep { display: none; }
+
+.menu-btn {
+  display: none;
+  background: #ffffff;
+  border: 1px solid var(--rule-2);
+  border-radius: var(--r-pill);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
 .mobile-nav { display: none; }
 
-/* ---------- Section Scaffolding ---------- */
-.section { padding-top: 72px; padding-bottom: 72px; }
-.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line-2); padding-bottom: 18px; margin-bottom: 40px; }
+/* ---------- Section scaffolding ---------- */
+.section { padding-top: 84px; padding-bottom: 84px; }
+.sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
 .sec-head .h2 { margin: 0; }
 .sec-head .k { margin-bottom: 8px; }
 
-/* Entrance Animation */
+/* ---------- Panels ---------- */
+.panel {
+  background: #ffffff;
+  border: 1px solid var(--rule-3);
+  border-radius: var(--r-lg);
+}
+.panel-warm {
+  background: linear-gradient(180deg, var(--paper-4) 0%, #ECEFE8 100%);
+  border: 1px solid var(--rule-2);
+  border-radius: var(--r-lg);
+}
+.panel-ink {
+  background: var(--ink-900);
+  color: var(--ink-inverse);
+  border-radius: var(--r-lg);
+}
+
+/* ---------- Entrance animation ---------- */
 .rise { animation: rise var(--dur-slow) var(--ease) both; }
 @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .rise { animation: none; } }
+@keyframes komalUp { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+  * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
 
 @media (max-width: 900px) {
   .nav, .nav-sep { display: none; }
   .menu-btn { display: flex; }
-  .mobile-nav.open { display: flex; flex-direction: column; padding: 12px 32px 24px; border-bottom: 1px solid var(--line); background: var(--bg); }
-  .mobile-nav a { text-align: left; font-family: var(--body); font-size: 16px; font-weight: 500; color: var(--ink); padding: 12px 0; border-bottom: 1px solid var(--line); }
-  .section { padding-top: 48px; padding-bottom: 48px; }
+  .mobile-nav.open {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px 24px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg);
+  }
+  .mobile-nav a {
+    text-align: left;
+    font-family: var(--body);
+    font-size: 16px;
+    color: var(--ink);
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section { padding-top: 56px; padding-bottom: 56px; }
 }

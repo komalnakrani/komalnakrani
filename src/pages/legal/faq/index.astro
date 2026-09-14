@@ -8,16 +8,16 @@ const faqCategories = [
     title: 'General & Purchases',
     faqs: [
       {
-        q: 'What is Komal Nakrani Themes & AI Solutions?',
-        a: 'Komal Nakrani is a developer marketplace publishing production-ready Web sites, Next.js 15 App Router starters, and turnkey AI Solution Kits (RAG agents, multi-agent workflows, local LLM wrappers, voice AI) engineered for high speed and clean architecture.'
+        q: 'What is Komal Nakrani Themes?',
+        a: 'A small catalog of hand-built web themes. Every theme is an Astro project that builds to static files, ships with its full source, and has a live preview you can open at any breakpoint before you pay.'
       },
       {
         q: 'What payment methods do you accept?',
-        a: 'We accept all major credit cards (Visa, MasterCard, American Express), Apple Pay, Google Pay, and PayPal securely processed through Stripe and LemonSqueezy.'
+        a: 'All major credit cards (Visa, MasterCard, American Express), Apple Pay, Google Pay and PayPal, processed through Stripe and LemonSqueezy.'
       },
       {
         q: 'How do I access my files after purchasing?',
-        a: 'Immediately after checkout, you will receive an automated email containing your license key (KN-KEY-XXXX-YYYY) and instant download links to the raw source code repos and learning PDF guides.'
+        a: 'Immediately after checkout you receive an email with your license key and a download link for the theme source.'
       }
     ]
   },
@@ -25,35 +25,43 @@ const faqCategories = [
     title: 'Licensing & Commercial Use',
     faqs: [
       {
-        q: 'Can I use purchased themes and AI kits for paying client projects?',
-        a: 'Yes! Both individual purchases ($29 themes / $39 AI kits) and the $199 Lifetime All-Access Pass include full commercial licensing to build unlimited client sites and commercial SaaS applications.'
+        q: 'Can I use a purchased theme for paying client work?',
+        a: 'Yes. Both individual theme purchases and the $99 All-Access Pass include full commercial licensing to build unlimited sites for yourself or for clients.'
       },
       {
-        q: 'Can I re-sell or redistribute the template source code?',
-        a: 'No. You are prohibited from re-selling, sub-licensing, or distributing the uncompiled source code files on public marketplaces or open repos.'
+        q: 'Can I re-sell or redistribute the theme source code?',
+        a: 'No. You may not re-sell, sub-license or redistribute the theme files as a template, kit or starter. Sell the site you built, not the thing you built it from.'
+      },
+      {
+        q: 'Do individual themes cost the same?',
+        a: 'No. Each theme is priced on its own page according to its scope — a five-page landing site and a site with a full product catalog are not the same amount of work. The All-Access Pass is a flat $99 for all of them.'
       }
     ]
   },
   {
-    title: 'Technical & Framework Questions',
+    title: 'Technical Questions',
     faqs: [
       {
-        q: 'What version of Astro and Next.js do these themes support?',
-        a: 'Our themes are built on Next.js 16 (Content Layer API) and Next.js 15 App Router with React 19 and Tailwind CSS.'
+        q: 'What are the themes built with?',
+        a: 'Astro. Each theme builds to a directory of static HTML, CSS and assets with no server runtime, and ships zero JavaScript by default — a page with no interactive component sends none at all.'
       },
       {
-        q: 'Are the AI Solution Kits ready for production deployment?',
-        a: 'Yes. Each AI Kit ($39) includes battle-tested code for vector databases (Pinecone/Qdrant), CrewAI multi-agent crews, or local Ollama wrappers, along with a step-by-step Learning & Setup Document PDF.'
+        q: 'Where can I host them?',
+        a: 'Anywhere that serves static files. Every live preview in the catalog runs on Cloudflare Pages, and the docs cover that setup along with Netlify, Vercel and GitHub Pages.'
       },
       {
-        q: 'What performance scores do these themes achieve?',
-        a: 'All sites achieve 100/100 Core Web Vitals Lighthouse scores out of the box with zero JavaScript bloat.'
+        q: 'Do the themes include a CMS, payments or user accounts?',
+        a: 'No. These are static sites. Editorial content is handled with Markdown content collections in the repo, and each theme ships a working RSS feed. Anything requiring a server — checkout, logins, a database — is yours to add.'
+      },
+      {
+        q: 'Can I see a theme before buying it?',
+        a: 'Yes, in full. Every theme has a live preview of the real deployed site, and its detail page lists every route it ships so you can open any of them directly.'
       }
     ]
   }
 ];
 ---
-<Layout title="Legal FAQ & Knowledge Base | Komal Nakrani" description="Frequently Asked Questions regarding theme licensing, commercial usage, AI solution guides, and payment support.">
+<Layout title="FAQ | Komal Nakrani" description="Answers on theme licensing, commercial use, the Astro stack these themes are built on, hosting and payment.">
   <main class="rise">
     <section class="wrap section">
       <div style="max-width: 800px; margin: 0 auto;">
@@ -71,8 +79,7 @@ const faqCategories = [
         <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 48px; flex-wrap: wrap;">
           <a href="/legal/faq/" class="btn btn-secondary active" style="font-size: 13.5px;">FAQ Overview</a>
           <a href="/legal/license/" class="btn btn-secondary" style="font-size: 13.5px;">License Agreement</a>
-          <a href="/legal/terms/" class="btn btn-secondary" style="font-size: 13.5px;">Terms of Service</a>
-          <a href="/legal/privacy/" class="btn btn-secondary" style="font-size: 13.5px;">Privacy Policy</a>
+          <a href="/docs/licensing/" class="btn btn-secondary" style="font-size: 13.5px;">Licensing Guide</a>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 40px;">
@@ -81,12 +88,17 @@ const faqCategories = [
               <h2 class="h2" style="margin-bottom: 20px; border-bottom: 1px solid var(--line-2); padding-bottom: 10px; color: var(--ink);">
                 {cat.title}
               </h2>
-              <div style="display: flex; flex-direction: column; gap: 16px;">
-                {cat.faqs.map((item) => (
-                  <div style="background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-lg); padding: 24px;">
-                    <h3 class="h3" style="font-size: 18px; color: var(--ink); margin-bottom: 10px;">{item.q}</h3>
-                    <p class="body-t" style="font-size: 15px; line-height: 1.6; margin: 0; color: var(--ink-2);">{item.a}</p>
-                  </div>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                {cat.faqs.map((item, idx) => (
+                  <details class="faq-item" open={idx === 0}>
+                    <summary class="faq-summary">
+                      <span class="faq-q-text">{item.q}</span>
+                      <span class="faq-icon"><Icon name="chevron-down" size={18} /></span>
+                    </summary>
+                    <div class="faq-content">
+                      <p class="faq-a-text">{item.a}</p>
+                    </div>
+                  </details>
                 ))}
               </div>
             </div>
@@ -105,3 +117,58 @@ const faqCategories = [
     </section>
   </main>
 </Layout>
+
+<style>
+  .faq-item {
+    background: #ffffff;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-lg);
+    box-shadow: var(--sh-sm);
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .faq-item[open] {
+    border-color: var(--ink-200);
+    box-shadow: var(--sh);
+  }
+  .faq-summary {
+    padding: 20px 24px;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    list-style: none;
+    user-select: none;
+    transition: color 0.15s ease;
+  }
+  .faq-summary:hover {
+    color: var(--accent-text);
+  }
+  .faq-summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-icon {
+    color: var(--accent-text);
+    transition: transform 0.25s ease;
+    display: flex;
+    align-items: center;
+  }
+  .faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+  }
+  .faq-content {
+    padding: 0 24px 22px;
+    border-top: 1px solid var(--line);
+  }
+  .faq-a-text {
+    font-size: 15px;
+    color: var(--ink-2);
+    line-height: 1.65;
+    margin: 16px 0 0;
+  }
+</style>
+

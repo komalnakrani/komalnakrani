@@ -1,7 +1,7 @@
 ---
-import Icon from '../../components/Icon.astro';
 import CheckoutModal from '../../components/CheckoutModal.astro';
 import { themes, type Theme } from '../../data/themes';
+import { kindFor, nameFor, liveUrlFor, liveHostFor, DROP, DEVICES } from '../../data/design';
 import '../../styles/theme.css';
 import '../../styles/components.css';
 
@@ -18,196 +18,316 @@ interface Props {
 
 const { theme } = Astro.props;
 
-const cleanSlug = theme.slug
-  .replace(/\.webflow\.io$/g, '')
-  .replace(/webflow-html-website-template/g, 'template')
-  .replace(/webflow-ecommerce-template/g, 'ecommerce')
-  .replace(/-webflow-/g, '-')
-  .replace(/^webflow-/g, '')
-  .replace(/-webflow$/g, '')
-  .replace(/webflow/g, 'komal')
-  .replace(/-next$/g, '')
-  .replace(/-astro$/g, '')
-  .toLowerCase();
-
-const customSubdomainUrl = `https://${cleanSlug}.komalnakrani.com`;
+const liveUrl = liveUrlFor(theme);
+const liveHost = liveHostFor(theme);
+const name = nameFor(theme);
+const kind = kindFor(theme);
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Live Preview: {theme.name} | Komal Nakrani</title>
+    <title>{`Live preview: ${name} | Komal Nakrani`}</title>
+    <meta name="description" content={theme.tagline} />
+    <meta name="robots" content="noindex,follow" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body style="margin: 0; padding: 0; background: #0d0d0d; color: #ffffff; overflow: hidden; font-family: var(--body);">
-    
-    <!-- Floating Minimal Top Bar -->
-    <header class="preview-top-bar">
-      <div class="ptb-left">
-        <a href="/" class="wm" style="text-decoration: none;">
-          <span class="glyph" style="width: 28px; height: 28px; font-size: 13px;">KN</span>
-          <span class="wmt" style="color: #ffffff; font-size: 15px;">Komal Nakrani</span>
+  <body class="pv-body">
+    <header class="pv-bar">
+      <div class="pv-bar-left">
+        <a class="wm" href="/" aria-label="Komal Nakrani Home">
+          <span class="wmt">komal<span class="sage">.</span>nakrani</span>
         </a>
 
-        <!-- Theme Selector Dropdown -->
-        <select id="preview-theme-select" class="theme-select-dropdown">
+        <label class="sr-only" for="preview-theme-select">Choose a theme to preview</label>
+        <select id="preview-theme-select" class="pv-select">
           {themes.map((t) => (
             <option value={`/preview/${t.slug}/`} selected={t.slug === theme.slug}>
-              {t.name}
+              {nameFor(t)}
             </option>
           ))}
         </select>
       </div>
 
-      <!-- Responsive Viewport Switcher -->
-      <div class="ptb-center">
-        <div class="device-switcher">
-          <button class="device-btn active" data-viewport="100%" title="Desktop View">
-            <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            <span>Desktop</span>
-          </button>
-          <button class="device-btn" data-viewport="768px" title="Tablet View">
-            <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            <span>Tablet</span>
-          </button>
-          <button class="device-btn" data-viewport="375px" title="Mobile View">
-            <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            <span>Mobile</span>
-          </button>
+      <div class="pv-bar-center">
+        <a class="pv-address" href={liveUrl} target="_blank" rel="noopener" title={liveUrl}>{liveHost} ➚</a>
+        <div class="pv-tabs" role="tablist" aria-label="Choose a device size">
+          {DEVICES.map((d, i) => (
+            <button type="button" class={`pv-tab ${i === 0 ? 'on' : ''}`} data-viewport={d.id} data-width={d.w} role="tab" aria-selected={i === 0}>
+              {d.label}
+            </button>
+          ))}
         </div>
       </div>
 
-      <!-- Single Primary CTA Button (White buttons removed) -->
-      <div class="ptb-right">
-        <a href="/bundles/" class="btn btn-primary" style="font-size: 13px; padding: 8px 18px; background: var(--accent); color: #ffffff; box-shadow: 0 4px 14px rgba(255, 103, 17, 0.4);">
-          Get All-Access Bundle ($199) <Icon name="arrow-right" />
-        </a>
+      <div class="pv-bar-right">
+        <a href={`/themes/${theme.slug}/`} class="pv-ghost">Theme details</a>
+        <a href="/pricing/" class="pv-cta">All-access — ${DROP.allAccessPrice}</a>
       </div>
     </header>
 
-    <!-- Secure Full-Screen Viewport iFrame Container -->
-    <main class="iframe-view-main">
-      <div id="iframe-viewport-wrapper" class="viewport-wrapper" style="width: 100%;">
-        <iframe 
-          id="preview-iframe" 
-          src={customSubdomainUrl} 
-          class="preview-iframe"
-          title={`Live Interactive Preview of ${theme.name}`}
+    <main class="pv-stage">
+      <h1 class="sr-only">{`Live preview: ${name} — ${kind.toLowerCase()} theme`}</h1>
+      <div id="pv-viewport" class="pv-viewport">
+        <div class="pv-fallback" data-fallback>
+          <div class="pv-fallback-dot"></div>
+          <div>Loading the live preview from <strong>{liveHost}</strong></div>
+          <a href={liveUrl} target="_blank" rel="noopener">Open it directly ➚</a>
+        </div>
+        <iframe
+          id="preview-iframe"
+          src={liveUrl}
+          class="pv-iframe"
+          title={`Live interactive preview of ${name}`}
+          referrerpolicy="no-referrer"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
         ></iframe>
       </div>
     </main>
 
+    <footer class="pv-foot">
+      <span>{name}</span>
+      <span class="pv-dot"></span>
+      <span>{kind}</span>
+      <span class="pv-dot"></span>
+      <span>${theme.price} single license</span>
+      <span class="pv-dot"></span>
+      <a href={liveUrl} target="_blank" rel="noopener" style="color: var(--accent-text);">Preview not loading? Open it directly ➚</a>
+      <div style="flex: 1;"></div>
+      <button data-plan="single" data-plan-price={theme.price} data-plan-name={name} class="pv-buy pay-trigger-btn">
+        Buy this theme (${theme.price})
+      </button>
+    </footer>
+
     <CheckoutModal />
 
     <style>
-      .preview-top-bar {
-        height: 52px;
-        background: #0b0f19;
-        color: #ffffff;
+      .pv-body {
+        margin: 0;
+        background: var(--paper-2);
+        color: var(--ink);
+        font-family: var(--body);
+        overflow: hidden;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .pv-bar {
+        height: 60px;
+        background: rgba(251, 250, 246, .92);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--rule);
         padding: 0 20px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid rgba(255, 103, 17, 0.3);
+        gap: 18px;
       }
-      .ptb-left {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-      .theme-select-dropdown {
-        background: #1e293b;
-        color: #ffffff;
-        border: 1px solid rgba(255, 103, 17, 0.35);
-        border-radius: var(--r-sm);
-        padding: 6px 12px;
-        font-family: var(--mono);
-        font-size: 12.5px;
+      .pv-bar-left { display: flex; align-items: center; gap: 16px; min-width: 0; }
+      .pv-bar-center { display: flex; align-items: center; gap: 10px; flex: 1; justify-content: center; min-width: 0; }
+      .pv-bar-right { display: flex; align-items: center; gap: 10px; }
+
+      /* appearance:none so the padding below actually controls the box — the
+         native chevron ignores padding-right and crowds the label. */
+      .pv-select {
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%235C5B51' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 18px center;
+        color: var(--ink);
+        border: 1px solid var(--rule-2);
+        border-radius: var(--r-pill);
+        padding: 12px 44px 12px 22px;
+        font-family: var(--body);
+        font-size: 13.5px;
+        line-height: 1.2;
         outline: none;
         cursor: pointer;
+        max-width: 240px;
+        text-overflow: ellipsis;
+        transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
       }
-      .ptb-center {
-        display: flex;
-        align-items: center;
-      }
-      .device-switcher {
-        display: flex;
-        gap: 4px;
-        background: #1e293b;
-        padding: 4px;
-        border-radius: var(--r-sm);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .device-btn {
-        background: transparent;
-        border: none;
-        color: #94a3b8;
-        padding: 4px 10px;
-        border-radius: var(--r-xs);
-        font-size: 12px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.2s ease;
-      }
-      .device-btn:hover {
-        color: #ffffff;
-      }
-      .device-btn.active {
-        background: #ff6711;
-        color: #ffffff;
-      }
-      .ptb-right {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+      .pv-select:hover { border-color: var(--ink-300); }
+      .pv-select:focus {
+        border-color: var(--sage);
+        box-shadow: 0 0 0 3px var(--sage-tint);
       }
 
-      .iframe-view-main {
-        height: calc(100vh - 52px);
-        width: 100vw;
-        background: #020617;
+      .pv-address {
+        background: #ffffff;
+        border: 1px solid var(--rule-2);
+        border-radius: var(--r-pill);
+        padding: 8px 18px;
+        font-size: 13px;
+        color: var(--ink-3);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 280px;
+        text-decoration: none;
+      }
+      .pv-address:hover { border-color: var(--ink-300); opacity: 1; }
+
+      .pv-tabs {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        gap: 3px;
+        background: #ffffff;
+        border: 1px solid var(--rule-2);
+        border-radius: var(--r-pill);
+        padding: 4px;
       }
-      .viewport-wrapper {
-        height: 100%;
-        transition: width 300ms ease;
+      .pv-tab {
+        border: 0;
+        background: transparent;
+        color: var(--ink-500);
+        font-family: inherit;
+        font-size: 13px;
+        padding: 7px 15px;
+        border-radius: var(--r-pill);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
       }
-      .preview-iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
+      .pv-tab:hover { color: var(--ink); }
+      .pv-tab.on { background: var(--ink-900); color: var(--paper); }
+
+      .pv-ghost {
+        font-size: 13px;
+        color: var(--ink-2);
+        padding: 9px 16px;
+        border-radius: var(--r-pill);
+        border: 1px solid var(--rule-2);
         background: #ffffff;
       }
+      .pv-ghost:hover { border-color: var(--ink-300); opacity: 1; }
+      .pv-cta {
+        font-size: 13px;
+        background: var(--ink-900);
+        color: var(--paper);
+        padding: 10px 20px;
+        border-radius: var(--r-pill);
+        white-space: nowrap;
+      }
+      .pv-cta:hover { opacity: .88; }
 
-      @media (max-width: 768px) {
-        .ptb-center { display: none; }
-        .theme-select-dropdown { max-width: 140px; }
+      .pv-stage {
+        height: calc(100vh - 60px - 52px);
+        width: 100%;
+        background: var(--paper-2);
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 16px;
+      }
+      .pv-viewport {
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        border: 1px solid var(--rule-2);
+        border-radius: 14px;
+        box-shadow: var(--sh-lg);
+        overflow: hidden;
+        transition: width 350ms var(--ease), border-radius 300ms var(--ease);
+      }
+      .pv-viewport { position: relative; }
+      .pv-iframe { position: relative; z-index: 1; width: 100%; height: 100%; border: none; background: #ffffff; display: block; }
+      /* Behind the iframe — see themes/[slug].astro for the rationale. */
+      .pv-fallback {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+        padding: 24px;
+        font-size: 14px;
+        color: var(--ink-3);
+        background: var(--paper);
+      }
+      .pv-fallback strong { color: var(--ink-2); font-weight: 400; }
+      .pv-fallback a { color: var(--accent-text); }
+      .pv-fallback-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--sage); animation: pulse 2.4s infinite; }
+
+      .pv-foot {
+        height: 52px;
+        border-top: 1px solid var(--rule);
+        background: var(--paper);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 0 20px;
+        font-size: 13px;
+        color: var(--ink-3);
+      }
+      .pv-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--rule-2); }
+      .pv-buy {
+        background: var(--ink-900);
+        color: var(--paper);
+        border: 0;
+        font-family: inherit;
+        font-size: 13px;
+        padding: 10px 20px;
+        border-radius: var(--r-pill);
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .pv-buy:hover { background: var(--action-hover); }
+
+      @media (max-width: 1024px) {
+        .pv-address { display: none; }
+      }
+      @media (max-width: 820px) {
+        .pv-bar { height: auto; flex-wrap: wrap; gap: 10px; padding: 10px 16px; }
+        .pv-bar-center { order: 3; width: 100%; justify-content: flex-start; }
+        .pv-ghost { display: none; }
+        .pv-stage { height: auto; min-height: 60vh; padding: 12px; }
+        .pv-viewport { height: 70vh; }
+        .pv-foot { height: auto; flex-wrap: wrap; padding: 12px 16px; gap: 10px; }
       }
     </style>
 
     <script>
+      const liveFrame = document.getElementById('preview-iframe');
+      const fallback = document.querySelector<HTMLElement>('[data-fallback]');
+      liveFrame?.addEventListener('load', () => {
+        if (fallback) fallback.style.display = 'none';
+      });
+
       const select = document.getElementById('preview-theme-select') as HTMLSelectElement | null;
-      if (select) {
-        select.addEventListener('change', (e) => {
-          const target = (e.target as HTMLSelectElement).value;
-          if (target) window.location.href = target;
-        });
-      }
+      select?.addEventListener('change', (event) => {
+        const target = (event.target as HTMLSelectElement).value;
+        if (target) window.location.href = target;
+      });
 
-      const deviceBtns = document.querySelectorAll<HTMLButtonElement>('.device-btn');
-      const wrapper = document.getElementById('iframe-viewport-wrapper');
-
-      deviceBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          deviceBtns.forEach((b) => b.classList.remove('active'));
-          btn.classList.add('active');
-          const vp = btn.getAttribute('data-viewport') || '100%';
-          if (wrapper) wrapper.style.width = vp;
+      const tabs = document.querySelectorAll<HTMLButtonElement>('[data-viewport]');
+      const viewport = document.getElementById('pv-viewport');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach((t) => {
+            const on = t === tab;
+            t.classList.toggle('on', on);
+            t.setAttribute('aria-selected', String(on));
+          });
+          if (!viewport) return;
+          const id = tab.dataset.viewport;
+          const width = tab.dataset.width;
+          viewport.style.width = id === 'desktop' ? '100%' : `${width}px`;
+          viewport.style.borderRadius = id === 'mobile' ? '32px' : id === 'tablet' ? '22px' : '14px';
         });
       });
     </script>

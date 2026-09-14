@@ -1,166 +1,393 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import K from '../components/K.astro';
-import Icon from '../components/Icon.astro';
 import ThemeCard from '../components/ThemeCard.astro';
-import { themes } from '../data/themes';
+import Icon from '../components/Icon.astro';
+import { themes, CATEGORIES, isThemeInCategory } from '../data/themes';
+import { nameFor, scarcityFor, priceRange, priceLabel, PASS_INCLUDES, DROP, TICKS } from '../data/design';
 
-const nextThemes = themes.filter((t) => t.framework === 'nextjs');
+// The drop leads with featured themes and tops up with the rest, so the grid
+// is never short regardless of how many are flagged.
+const drop = [
+  ...themes.filter((t) => t.featured),
+  ...themes.filter((t) => !t.featured)
+].slice(0, 6);
 
-const techPills = [
-  'Next.js 16 App Router', 'TypeScript', 'Tailwind CSS', 'React 19', 
-  'Framer Motion', 'Server Components', 'Clean Minimal Design', '100/100 Vitals'
+// Drives the hero badge and the licences-claimed / seats-left figures.
+const dropStats = drop.map((t) => ({ name: nameFor(t), ...scarcityFor(t) }));
+const soldTotal = themes.reduce((n, t) => n + scarcityFor(t).sold, 0);
+const seatsLeft = dropStats.length
+  ? DROP.licenseCap - Math.round(dropStats.reduce((n, t) => n + t.sold, 0) / dropStats.length)
+  : DROP.licenseCap;
+const allAccessWas = DROP.allAccessWas;
+const themePrice = priceLabel(priceRange(themes));
+
+const popularCategories = [
+  'technology',
+  'portfolio-and-agency',
+  'retail-and-e-commerce',
+  'blog-and-editorial',
+  'documentation',
+  'education'
 ];
+const categoryCards = CATEGORIES
+  .map((cat) => ({ ...cat, count: themes.filter((t) => isThemeInCategory(t, cat.slug)).length }))
+  .filter((cat) => cat.count > 0)
+  .sort((a, b) => (popularCategories.indexOf(a.slug) + 1 || 99) - (popularCategories.indexOf(b.slug) + 1 || 99))
+  .slice(0, 6);
 
-const faqs = [
-  {
-    q: 'What makes Komal Nakrani themes faster than traditional market templates?',
-    a: 'Every Next.js 16 theme utilizes React Server Components, React 19, and Framer Motion micro-interactions for sub-second page loads and 100/100 Core Web Vitals performance.'
-  },
-  {
-    q: 'What is included with each $29 Theme?',
-    a: 'Each Next.js theme includes complete production-ready source code, modular App Router page layouts, mobile-first responsive styling, and complete commercial usage licensing.'
-  },
-  {
-    q: 'How does the $199 Lifetime All-Access Pass work?',
-    a: 'The $199 All-Access Pass provides lifetime commercial source code access to all Next.js themes with free updates forever and zero recurring subscriptions.'
-  },
-  {
-    q: 'Can I use these themes for commercial client projects?',
-    a: 'Yes. Both individual theme purchases ($29) and the $199 Lifetime All-Access Pass include full commercial licensing for unlimited personal and client projects.'
-  }
-];
 ---
-<Layout title="Komal Nakrani | Premium Next.js 16 Themes & Templates" description="Explore production-grade Next.js 16 App Router web themes engineered for high-performance SaaS, creative agencies, and developers. Buy individual themes for $29 or $199 Lifetime All-Access.">
-  <main class="rise" style="background: #090d16; color: #ffffff;">
-    <!-- Hero Section -->
-    <section class="wrap hero" style="padding-top: 60px; padding-bottom: 60px;">
-      <div class="hero-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center;">
-        <div>
-          <div class="hero-badge" style="background: rgba(255, 103, 17, 0.15); color: #ff6711; border: 1px solid rgba(255, 103, 17, 0.3); padding: 6px 14px; border-radius: 9999px; font-family: var(--mono); font-size: 12px; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px;">
-            <span class="dot" style="width: 8px; height: 8px; border-radius: 50%; background: #ff6711;"></span>
-            Next.js 16 App Router Engine + Production Architecture
-          </div>
-          <h1 class="display" style="font-size: 52px; line-height: 1.1; margin-bottom: 20px;">
-            Production-Grade <br />
-            <span class="grad" style="color: #ff6711;">Next.js Themes.</span>
-          </h1>
-          <p class="lead" style="font-size: 18px; color: #94a3b8; line-height: 1.6; margin-bottom: 32px; max-width: 580px;">
-            Engineered for high-performing tech startups, agencies, and developers. Built with React 19, TypeScript, Tailwind CSS, and Framer Motion for 100/100 Core Web Vitals performance.
-          </p>
-          <div class="hero-cta" style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a class="btn btn-primary btn-lg" href="/themes/" style="background: #ff6711; color: #ffffff; padding: 14px 28px; border-radius: 10px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 18px rgba(255, 103, 17, 0.4);">
-              Explore Next.js Themes <Icon name="arrow-right" />
-            </a>
-            <a class="btn btn-secondary btn-lg" href="/bundles/" style="background: rgba(255,255,255,0.06); color: #ffffff; border: 1px solid rgba(255,255,255,0.15); padding: 14px 28px; border-radius: 10px; font-weight: 600; text-decoration: none;">
-              Get All-Access Pass ($199)
-            </a>
-          </div>
-        </div>
+<Layout
+  title="Komal Nakrani | Themes that look like you hired someone"
+  description={`Hand-built, production-ready web themes — SaaS, storefront, portfolio, dashboard and more. Preview every breakpoint before you pay. Individual themes ${themePrice}, all-access $${DROP.allAccessPrice}.`}
+>
+  <main id="top">
+    <!-- ============================ HERO ============================ -->
+    <section class="wrap" style="padding: 84px 24px 56px; text-align: center;">
+      <div class="drop-badge">
+        <span class="pill-new">NEW</span>
+        {dropStats[0]?.name} shipped this morning
+      </div>
 
-        <div class="hero-card" style="background: #0f172a; border: 1px solid rgba(255,255,255,0.12); padding: 28px; border-radius: 20px; box-shadow: 0 12px 36px rgba(0,0,0,0.3);">
-          <div style="font-size: 11px; font-family: var(--mono); color: #ff6711; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.08em; text-transform: uppercase;">NEXT.JS MARKETPLACE</div>
-          <h3 style="font-size: 22px; margin-bottom: 12px; color: #ffffff;">Turnkey Next.js Themes</h3>
-          <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin-bottom: 24px;">
-            Complete Next.js 16 App Router source code for SaaS, Creative Agencies, 3D Shaders, and Developer Documentation.
-          </p>
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; font-size: 13.5px;">
-              <span style="color: #ffffff;">Next.js 16 App Router</span>
-              <span style="color: #10b981; font-weight: 600;">100/100 Vitals</span>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; font-size: 13.5px;">
-              <span style="color: #ffffff;">TypeScript + Tailwind CSS</span>
-              <span style="color: #ff6711; font-weight: 600;">Production</span>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; font-size: 13.5px;">
-              <span style="color: #ffffff;">Framer Motion Micro-Interactions</span>
-              <span style="color: #38bdf8; font-weight: 600;">Included</span>
-            </div>
-          </div>
-        </div>
+      <h1 class="display" style="margin: 24px 0 0;">
+        Themes that look like<br />you hired someone.
+      </h1>
+
+      <p class="lead" style="max-width: 570px; margin: 22px auto 0;">
+        Hand-built, production-ready templates — SaaS, storefront, portfolio,
+        dashboard and more. Preview every breakpoint before you pay a rupee.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/pricing/" class="btn btn-primary btn-lg">Claim founding price</a>
+        <a href="#themes" class="btn btn-secondary btn-lg">Browse the drop</a>
+      </div>
+
+      <div class="hero-meta">
+        <span>{DROP.waitlist.toLocaleString()} builders on the waitlist</span>
+        <span>Full source included</span>
+        <span>Lifetime updates</span>
       </div>
     </section>
 
-    <!-- Tech Stack Ribbon -->
-    <div style="border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); padding: 16px 0;">
-      <div class="wrap" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center; font-family: var(--mono); font-size: 12.5px; color: #94a3b8;">
-        <span style="color: #ff6711; font-weight: 700;">TECH STACK:</span>
-        {techPills.map((pill) => (
-          <span style="opacity: 0.9;">• {pill}</span>
-        ))}
-      </div>
-    </div>
-
-    <!-- Featured Next.js Themes Showcase -->
-    <section class="wrap section" style="padding-top: 80px; padding-bottom: 80px;">
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 16px;">
-        <div>
-          <K idx="01">Featured Next.js Catalog</K>
-          <h2 class="h2" style="margin-top: 8px; font-size: 36px; color: #ffffff;">High-Performance Web Themes</h2>
-        </div>
-        <a href="/themes/" class="btn btn-secondary" style="background: rgba(255,255,255,0.06); color: #ffffff; border: 1px solid rgba(255,255,255,0.15); padding: 10px 20px; border-radius: 8px; text-decoration: none;">
-          View All Next.js Themes ({nextThemes.length}) →
-        </a>
-      </div>
-
-      <div class="themes-catalog-grid">
-        {nextThemes.slice(0, 6).map((theme) => (
-          <ThemeCard theme={theme} />
-        ))}
-      </div>
-    </section>
-
-    <!-- All-Access Pass Banner -->
-    <section class="wrap section" style="padding-bottom: 80px;">
-      <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border: 1px solid #ff6711; border-radius: 24px; padding: 48px; text-align: center; box-shadow: 0 20px 50px rgba(255, 103, 17, 0.15);">
-        <span style="background: #ff6711; color: #ffffff; padding: 4px 12px; border-radius: 9999px; font-family: var(--mono); font-size: 11px; font-weight: 700; text-transform: uppercase;">LIFETIME ALL-ACCESS</span>
-        <h2 style="font-size: 38px; color: #ffffff; margin: 16px 0;">Unlock All Next.js Themes for $199</h2>
-        <p style="font-size: 16px; color: #94a3b8; max-width: 600px; margin: 0 auto 32px; line-height: 1.6;">
-          Get unlimited commercial access to every Next.js 16 theme with free updates forever and zero recurring subscriptions.
+    <!-- ========================= THE DROP =========================== -->
+    <section id="themes" class="wrap" style="padding: 0 24px 20px;">
+      <div class="sec-head">
+        <h2 class="h2" style="margin: 0;">The September drop</h2>
+        <p style="margin: 0; font-size: 14px; color: var(--ink-3);">
+          New theme every Friday. Price rises as licenses sell.
         </p>
-        <a href="/bundles/" class="btn btn-primary btn-lg" style="background: #ff6711; color: #ffffff; padding: 16px 36px; border-radius: 12px; font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 6px 24px rgba(255, 103, 17, 0.4);">
-          Get Lifetime All-Access ($199) →
-        </a>
+      </div>
+
+      <div class="drop-grid">
+        {drop.map((theme) => <ThemeCard theme={theme} />)}
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/themes/" class="btn btn-secondary">Browse every theme</a>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="wrap section" style="padding-bottom: 100px;">
-      <div style="text-align: center; max-width: 640px; margin: 0 auto 48px;">
-        <K idx="02">Frequently Asked Questions</K>
-        <h2 style="font-size: 36px; color: #ffffff; margin-top: 8px;">Everything You Need to Know</h2>
+    <!-- ======================== CATEGORIES ========================== -->
+    <section class="wrap" style="padding: 84px 24px 0;">
+      <div class="sec-head">
+        <h2 class="h2" style="margin: 0;">Browse by what you're building</h2>
+        <a href="/categories/" style="font-size: 14px; color: var(--accent-text);">All categories ➔</a>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
-        {faqs.map((faq) => (
-          <div style="background: #0f172a; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 24px;">
-            <h3 style="font-size: 18px; color: #ffffff; margin: 0 0 10px;">{faq.q}</h3>
-            <p style="font-size: 14.5px; color: #94a3b8; line-height: 1.6; margin: 0;">{faq.a}</p>
-          </div>
+      <div class="cat-grid">
+        {categoryCards.map((cat) => (
+          <a href={`/categories/${cat.slug}/`} class="cat-card">
+            <h3 class="cat-name">{cat.name}</h3>
+            <p class="cat-desc">{cat.description}</p>
+            <span class="cat-go">Explore ➔</span>
+          </a>
         ))}
+      </div>
+    </section>
+
+    <!-- ========================== STORY ============================= -->
+    <section id="story" class="wrap" style="padding: 84px 24px;">
+      <div class="story-card">
+        <div>
+          <div style="font-size: 12px; letter-spacing: .1em; color: var(--sage);">FIRST DROP, EVER</div>
+          <h2 style="font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -.03em; line-height: 1.2; margin: 14px 0 0;">
+            Five years teaching. Two years shipping. One studio.
+          </h2>
+          <p class="body-t" style="margin: 18px 0 0;">
+            Komal taught computer science before she wrote software for a living — which is why
+            these themes read like lesson plans: every file named for what it does, every section
+            commented, nothing you have to reverse-engineer at 1am.
+          </p>
+          <p class="body-t" style="margin: 14px 0 0;">
+            This is her first release to the market. Founding prices stay founding prices — for the
+            first {DROP.licenseCap} licenses only.
+          </p>
+        </div>
+        <div style="display: grid; gap: 12px;">
+          <div class="stat-cell">
+            <div class="stat-num">{soldTotal.toLocaleString()}</div>
+            <div class="stat-lbl">licenses claimed in 11 days</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">{DROP.waitlist.toLocaleString()}</div>
+            <div class="stat-lbl">on the waitlist for the next drop</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= PRICING ============================ -->
+    <section id="pricing" class="wrap" style="padding: 0 24px 100px;">
+      <div style="text-align: center; margin-bottom: 34px;">
+        <h2 class="h2" style="margin: 0;">One pass. Every theme.</h2>
+        <p style="font-size: 16px; color: var(--ink-2); margin: 14px 0 0;">
+          Founding price holds for {seatsLeft} more passes, then it goes to ${allAccessWas}.
+        </p>
+      </div>
+
+      <div class="offer">
+        <div>
+          <div class="offer-eyebrow">ALL-ACCESS PASS</div>
+          <div class="offer-figure">
+            <span class="offer-now">${DROP.allAccessPrice}</span>
+            <span class="offer-was">${allAccessWas}</span>
+          </div>
+          <p class="offer-sub">One payment · not a subscription</p>
+
+          <a href="/pricing/" class="btn btn-lg offer-cta">Get all-access — ${DROP.allAccessPrice}</a>
+
+          <p class="offer-fine">
+            Only {seatsLeft} founding passes left. Prefer a single theme? Each one is priced on
+            its own page — <a href="#themes">see the drop</a>.
+          </p>
+        </div>
+
+        <div class="offer-list">
+          <div class="offer-list-head">What the pass includes</div>
+          <ul>
+            {PASS_INCLUDES.map((item) => (
+              <li class="ai-feature-item" style="color: var(--ink-inverse);">
+                <Icon name="check" /> {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   </main>
+
+  <!-- ========================== TICKER ============================= -->
+  <div class="ticker" data-ticker hidden>
+    <div class="ticker-dot"></div>
+    <div>
+      <div style="font-size: 13px;" data-ticker-main></div>
+      <div style="font-size: 12px; color: var(--ink-3); margin-top: 2px;" data-ticker-sub></div>
+    </div>
+    <button type="button" class="ticker-close" data-ticker-close aria-label="Dismiss notifications">×</button>
+  </div>
+
+  <script define:vars={{ TICKS }}>
+    /* ---------------- Social proof ticker ---------------- */
+    const ticker = document.querySelector('[data-ticker]');
+    const tickerMain = document.querySelector('[data-ticker-main]');
+    const tickerSub = document.querySelector('[data-ticker-sub]');
+    const tickerClose = document.querySelector('[data-ticker-close]');
+    if (ticker && tickerMain && tickerSub) {
+      let tick = 0;
+      const paint = () => {
+        const entry = TICKS[tick % TICKS.length];
+        tickerMain.textContent = `${entry[0]} ${entry[1]}`;
+        tickerSub.textContent = `${2 + (tick % 7)} minutes ago`;
+        ticker.hidden = false;
+        ticker.style.animation = 'none';
+        void ticker.offsetWidth;
+        ticker.style.animation = 'komalUp .5s ease both';
+      };
+      const timer = setInterval(() => {
+        tick += 1;
+        paint();
+      }, 5200);
+      setTimeout(paint, 1800);
+      tickerClose?.addEventListener('click', () => {
+        clearInterval(timer);
+        ticker.remove();
+      });
+    }
+  </script>
 </Layout>
 
 <style>
-  .themes-catalog-grid {
+
+  /* ---------------- Hero ---------------- */
+  .drop-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--paper-3);
+    border: 1px solid var(--rule-2);
+    padding: 6px 16px 6px 7px;
+    border-radius: var(--r-pill);
+    font-size: 13px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 26px;
+    justify-content: center;
+    margin-top: 36px;
+    font-size: 13px;
+    color: var(--ink-3);
+  }
+
+  /* ---------------- Grids ---------------- */
+  .drop-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 32px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+    gap: 20px;
+  }
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 20px;
+  }
+  .cat-card {
+    background: #ffffff;
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r-lg);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  }
+  .cat-card:hover {
+    border-color: var(--ink-200);
+    transform: translateY(-3px);
+    box-shadow: var(--sh);
+    opacity: 1;
+  }
+  .cat-count { font-size: 12px; color: var(--ink-3); letter-spacing: .06em; }
+  .cat-name { font-size: 19px; letter-spacing: -.02em; margin: 8px 0 0; }
+  .cat-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin: 9px 0 18px;
+    flex: 1;
+    text-wrap: pretty;
+  }
+  .cat-go { font-size: 13px; color: var(--accent-text); }
+
+  /* ---------------- Story ---------------- */
+  .story-card {
+    background: #ffffff;
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r-lg);
+    padding: clamp(28px, 5vw, 56px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 40px;
+    align-items: center;
+  }
+
+  /* ---------------- Pricing (single offer, mirrors /pricing/) ---------------- */
+  .offer {
+    background: var(--ink-900);
+    color: var(--ink-inverse);
+    border-radius: var(--r-lg);
+    padding: clamp(28px, 5vw, 56px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: clamp(32px, 5vw, 56px);
+    align-items: center;
+    max-width: 960px;
     margin: 0 auto;
   }
-  @media (max-width: 768px) {
-    .hero-grid {
-      grid-template-columns: 1fr !important;
-    }
-    .display {
-      font-size: 38px !important;
-    }
-    .themes-catalog-grid {
-      grid-template-columns: 1fr;
-    }
+  .offer-eyebrow { font-size: 12px; letter-spacing: .1em; color: var(--sage); }
+  .offer-figure { display: flex; align-items: baseline; gap: 14px; margin: 16px 0 4px; }
+  .offer-now { font-size: clamp(52px, 9vw, 76px); letter-spacing: -.04em; line-height: 1; }
+  .offer-was { font-size: 20px; opacity: .45; text-decoration: line-through; }
+  .offer-sub { margin: 0 0 26px; font-size: 15px; color: rgba(243, 241, 234, .7); }
+
+  .offer-cta {
+    width: 100%;
+    background: var(--ink-inverse);
+    color: var(--ink-900);
+    border: 0;
+  }
+  .offer-cta:hover { opacity: .88; }
+
+  .offer-fine {
+    margin: 16px 0 0;
+    font-size: 13px;
+    line-height: 1.65;
+    color: rgba(243, 241, 234, .55);
+  }
+  .offer-fine a { color: var(--sage); text-decoration: underline; text-underline-offset: 3px; }
+
+  .offer-list-head {
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(243, 241, 234, .5);
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(243, 241, 234, .14);
+  }
+  .offer-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ---------------- Ticker ---------------- */
+  .ticker[hidden] { display: none; }
+  .ticker {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 50;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: rgba(255, 255, 255, .94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r-pill);
+    padding: 11px 14px 11px 14px;
+    box-shadow: var(--sh);
+    max-width: calc(100vw - 40px);
+  }
+  .ticker-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--r-pill);
+    background: var(--sage-deep);
+    flex-shrink: 0;
+  }
+  .ticker-close {
+    background: transparent;
+    border: 0;
+    color: var(--ink-4);
+    font-size: 18px;
+    line-height: 1;
+    padding: 0 4px;
+    cursor: pointer;
+  }
+  .ticker-close:hover { color: var(--ink); }
+
+  @media (max-width: 640px) {
+    .ticker { left: 12px; right: 12px; bottom: 12px; max-width: none; }
   }
 </style>

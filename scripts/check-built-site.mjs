@@ -35,8 +35,15 @@ const htmlFiles = filesBelow(root).filter((file) => file.endsWith('.html'));
 const failures = [];
 let checked = 0;
 
+// Documentation pages embed escaped sample markup inside <pre><code>. Those
+// attributes are illustrations, not links the site has to resolve, so strip
+// code blocks before scanning or every example URL reads as a broken link.
+function withoutCodeBlocks(html) {
+  return html.replace(/<pre\b[^>]*>[\s\S]*?<\/pre>/gi, ' ');
+}
+
 for (const htmlFile of htmlFiles) {
-  const html = readFileSync(htmlFile, 'utf8');
+  const html = withoutCodeBlocks(readFileSync(htmlFile, 'utf8'));
   for (const match of html.matchAll(/\b(?:href|src)=(?:"([^"]+)"|'([^']+)')/g)) {
     const value = localTarget(match[1] ?? match[2]);
     if (!value) continue;

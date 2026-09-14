@@ -1,37 +1,48 @@
+---
+import { themes } from '../data/themes';
+import { DROP, priceRange, priceLabel } from '../data/design';
+
+const themePrice = priceLabel(priceRange(themes));
+---
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
       <div>
         <a class="wm" href="/" aria-label="Komal Nakrani Home">
-          <span class="glyph">KN</span>
-          <span class="wmt">Komal Nakrani</span>
+          <span class="wmt">komal<span class="sage">.</span>nakrani</span>
         </a>
-        <p class="small" style="max-width: 360px; margin: 16px 0 0; font-size: 14.5px; line-height: 1.6; color: var(--ink-2);">
-          Ultra-fast Next.js 16 App Router themes paired with turnkey web architectures. Built for founders, AI engineers, and agencies.
+        <p style="max-width: 340px; margin: 16px 0 0; font-size: 14px; line-height: 1.7; color: var(--ink-2); text-wrap: pretty;">
+          Hand-built, production-ready web themes. Every file named for what it does,
+          every section commented, nothing to reverse-engineer at 1am.
         </p>
       </div>
       <div class="foot-col">
-        <h4>Themes & Products</h4>
-        <a href="/themes/">Next.js Themes ($29)</a>
-        <a href="/bundles/">All-Access Pass ($199)</a>
+        <h4>Themes</h4>
+        <a href="/themes/">All themes ({themePrice})</a>
+        <a href="/categories/">Browse by category</a>
+        <a href="/pricing/">All-access pass (${DROP.allAccessPrice})</a>
       </div>
       <div class="foot-col">
-        <h4>Documentation & Resources</h4>
-        <a href="/docs/getting-started/">Getting Started Guide</a>
-        <a href="/docs/installation/">Installation & Setup</a>
-        <a href="/docs/licensing/">Licensing Guide</a>
+        <h4>Documentation</h4>
+        <a href="/docs/getting-started/">Getting started</a>
+        <a href="/docs/installation/">Installation & setup</a>
+        <a href="/docs/licensing/">Licensing guide</a>
       </div>
       <div class="foot-col">
-        <h4>Company & Legal</h4>
-        <a href="/bundles/">Pricing & All-Access ($199)</a>
+        <h4>Company</h4>
+        <a href="/pricing/">Pricing</a>
         <a href="/legal/faq/">Legal & FAQ</a>
-        <a href="/legal/license/">Commercial License</a>
+        <a href="/legal/license/">Commercial license</a>
         <a href="https://github.com/alpeshznakrani" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <div class="cp">© 2026 Komal Nakrani · Premium Next.js 16 Web Themes</div>
-      <div>Crafted with Next.js 16 & Tailwind CSS</div>
+      <div>© 2026 Komal Nakrani</div>
+      <div style="display: flex; gap: 22px; flex-wrap: wrap;">
+        <a href="/themes/">Themes</a>
+        <a href="/legal/license/">Licensing</a>
+        <a href="/pricing/">Pricing</a>
+      </div>
     </div>
   </div>
 </footer>

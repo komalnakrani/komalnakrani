@@ -1,54 +1,59 @@
 ---
 import Icon from './Icon.astro';
-
-const nav = [
-  ['/themes/', 'Themes'],
-  ['/docs/getting-started/', 'Docs'],
-  ['/bundles/', 'All-Access Pass'],
-] as const;
+import { DROP, ALL_ACCESS_DISCOUNT } from '../data/design';
 
 const pathname = Astro.url.pathname;
 ---
-<!-- Announcement Bar -->
-<div style="background: var(--ark-ink); color: #ffffff; padding: 8px 16px; text-align: center; font-family: var(--mono); font-size: 11.5px; border-bottom: 1px solid rgba(255, 103, 17, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px;">
-  <span style="background: var(--accent); color: #ffffff; padding: 2px 6px; border-radius: var(--r-xs); font-weight: 700; font-size: 10px; text-transform: uppercase;">NEW</span>
-  <span>Production Web Themes & Turnkey Architectures</span>
-  <a href="/bundles/" style="color: var(--accent); text-decoration: underline; font-weight: 600; margin-left: 4px;">Get Lifetime Pass ($199) →</a>
+<!-- Announcement bar — live countdown, per the design -->
+<div class="announce">
+  <span class="dim">Founding drop — {ALL_ACCESS_DISCOUNT}% off all-access</span>
+  <span class="num" data-countdown>48h 00m 00s</span>
+  <span class="sep"></span>
+  <span class="dim" data-seats>Only 26 founding passes left</span>
 </div>
 
 <header class="mast">
   <div class="wrap mast-in">
     <a class="wm" href="/" aria-label="Komal Nakrani Home">
-      <span class="glyph">KN</span>
-      <span class="wmt">Komal Nakrani</span>
+      <span class="wmt">komal<span class="sage">.</span>nakrani</span>
     </a>
+
     <nav class="nav" aria-label="Primary navigation">
-      {nav.map(([href, label]) => {
-        const isActive = pathname === href || (href !== '/' && pathname.startsWith(href));
-        return (
-          <a class={`nav-link ${isActive ? 'active' : ''}`} href={href}>
-            {label}
-          </a>
-        );
-      })}
+      <a class={`nav-link ${pathname.startsWith('/themes') ? 'active' : ''}`} href="/themes/">Themes</a>
+      <a class={`nav-link ${pathname.startsWith('/categories') ? 'active' : ''}`} href="/categories/">Categories</a>
+      <a class={`nav-link ${pathname.startsWith('/docs') ? 'active' : ''}`} href="/docs/getting-started/">Docs</a>
+      <a class={`nav-link ${pathname.startsWith('/bundles') || pathname.startsWith('/pricing') ? 'active' : ''}`} href="/pricing/">Pricing</a>
     </nav>
+
+    <div style="flex: 1;"></div>
+
     <div style="display: flex; align-items: center; gap: 12px;">
-      <a href="/bundles/" class="btn btn-primary" style="font-size: 13.5px; padding: 9px 16px;">
-        Get All Access
-      </a>
+      <a href="/pricing/" class="btn btn-primary mast-cta">Get all-access</a>
       <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" data-menu-btn>
         <span data-menu-icon-closed><Icon name="menu" /></span>
         <span data-menu-icon-open hidden><Icon name="x" /></span>
       </button>
     </div>
   </div>
+
   <div class="mobile-nav" data-mobile-nav>
-    {nav.map(([href, label]) => <a href={href}>{label}</a>)}
-    <a href="/bundles/" style="color: var(--accent); font-weight: 600;">Get All Access ($199)</a>
+    <a href="/themes/">Themes</a>
+    <a href="/categories/">Categories</a>
+    <a href="/docs/getting-started/">Docs</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/pricing/" style="color: var(--accent-text);">Get all-access (${DROP.allAccessPrice})</a>
   </div>
 </header>
 
+<style>
+  .mast-cta { font-size: 14px; padding: 11px 24px; }
+  @media (max-width: 560px) {
+    .mast-cta { display: none; }
+  }
+</style>
+
 <script>
+  // Mobile navigation
   const button = document.querySelector<HTMLButtonElement>('[data-menu-btn]');
   const navigation = document.querySelector<HTMLElement>('[data-mobile-nav]');
   const closed = document.querySelector<HTMLElement>('[data-menu-icon-closed]');
@@ -60,5 +65,23 @@ const pathname = Astro.url.pathname;
       closed.hidden = expanded;
       open.hidden = !expanded;
     });
+  }
+
+  // Announcement countdown
+  const countdownEl = document.querySelector<HTMLElement>('[data-countdown]');
+  if (countdownEl) {
+    const pad = (n: number) => String(n).padStart(2, '0');
+    let left = 172800;
+    const render = () => {
+      const h = Math.floor(left / 3600);
+      const m = Math.floor((left % 3600) / 60);
+      const s = left % 60;
+      countdownEl.textContent = `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+    };
+    render();
+    setInterval(() => {
+      if (left > 0) left -= 1;
+      render();
+    }, 1000);
   }
 </script>

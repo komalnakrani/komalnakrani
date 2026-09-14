@@ -1,5 +1,10 @@
 ---
 import Icon from './Icon.astro';
+import { themes } from '../data/themes';
+import { DROP, priceRange } from '../data/design';
+
+const allAccessPrice = DROP.allAccessPrice;
+const fallbackThemePrice = priceRange(themes).min;
 ---
 <div id="checkout-modal" class="checkout-overlay" style="display: none;">
   <div class="checkout-box">
@@ -17,20 +22,20 @@ import Icon from './Icon.astro';
       <p class="small" style="color: var(--ink-3); margin-top: 4px;">Instant download & license key generator.</p>
     </div>
 
-    <!-- Plan Toggle Tabs -->
-    <div style="display: flex; gap: 6px; margin-top: 16px; background: var(--surface-2); padding: 4px; border-radius: var(--r-sm); border: 1px solid var(--line-2);">
-      <button id="plan-btn-29" type="button" class="plan-toggle-btn" data-price="29">Theme ($29)</button>
-      <button id="plan-btn-39" type="button" class="plan-toggle-btn" data-price="39">AI Kit ($39)</button>
-      <button id="plan-btn-199" type="button" class="plan-toggle-btn active" data-price="199">All-Access ($199)</button>
+    <!-- Plan toggle. Theme prices are per-theme, so the single-theme tab is
+         labelled from whichever theme opened the modal. -->
+    <div style="display: flex; gap: 6px; margin-top: 16px; background: var(--paper-3); padding: 4px; border-radius: var(--r-pill); border: 1px solid var(--rule-2);">
+      <button id="plan-btn-single" type="button" class="plan-toggle-btn" data-plan="single">Single theme</button>
+      <button id="plan-btn-pass" type="button" class="plan-toggle-btn active" data-plan="pass">All-access (${allAccessPrice})</button>
     </div>
 
     <!-- Order Summary Box -->
     <div class="order-summary">
       <div>
-        <div id="summary-plan-name" style="font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--ink);">Lifetime All-Access Pass</div>
-        <div id="summary-plan-desc" style="font-family: var(--mono); font-size: 11px; color: var(--accent); margin-top: 2px;">200 Themes + 4 AI Agent Kits</div>
+        <div id="summary-plan-name" style="font-family: var(--display); font-weight: 400; font-size: 16px; color: var(--ink);">Lifetime All-Access Pass</div>
+        <div id="summary-plan-desc" style="font-size: 12px; color: var(--accent-text); margin-top: 2px;">Every theme · unlimited projects</div>
       </div>
-      <div id="summary-plan-price" style="font-family: var(--display); font-weight: 700; font-size: 28px; color: var(--ink);">$199</div>
+      <div id="summary-plan-price" style="font-family: var(--display); font-weight: 400; font-size: 28px; letter-spacing: -.02em; color: var(--ink);">${allAccessPrice}</div>
     </div>
 
     <!-- Payment Form -->
@@ -72,15 +77,15 @@ import Icon from './Icon.astro';
 
     <!-- Payment Success / License Key Screen -->
     <div id="payment-success-screen" style="display: none; text-align: center; padding: 20px 0;">
-      <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--accent-tint); color: var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 1px solid var(--accent);">
+      <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--sage-tint); color: var(--accent-text); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
         <Icon name="check" />
       </div>
       <h3 class="h3" style="font-size: 24px;">Payment Successful!</h3>
       <p class="body-t" style="margin: 8px 0 20px; font-size: 15px;">Your license key & learning guide download link generated.</p>
 
-      <div style="background: var(--ark-ink); color: #ffffff; padding: 16px; border-radius: var(--r-sm); font-family: var(--mono); font-size: 13px; border: 1px solid var(--accent); margin-bottom: 20px;">
-        <div style="font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Your License Key</div>
-        <div id="generated-license-key" style="font-weight: 700; font-size: 18px; letter-spacing: 0.1em; color: var(--ark-orange-bright);">KN-KEY-9842-7719</div>
+      <div style="background: var(--ink-900); color: var(--ink-inverse); padding: 16px; border-radius: var(--r-sm); font-size: 13px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: var(--sage); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">Your License Key</div>
+        <div id="generated-license-key" style="font-family: var(--code); font-size: 17px; letter-spacing: 0.1em; color: var(--ink-inverse);">KN-KEY-9842-7719</div>
       </div>
 
       <button id="close-success-btn" class="btn btn-secondary" style="width: 100%;">
@@ -185,7 +190,7 @@ import Icon from './Icon.astro';
   transition: border-color var(--dur) var(--ease);
 }
 .form-input:focus {
-  border-color: var(--accent);
+  border-color: var(--sage);
 }
 .card-input-wrapper {
   position: relative;
@@ -201,105 +206,90 @@ import Icon from './Icon.astro';
 }
 </style>
 
-<script>
+<script is:inline define:vars={{ allAccessPrice, fallbackThemePrice }}>
   function initCheckout() {
     const modal = document.getElementById('checkout-modal');
     const closeBtn = document.getElementById('close-checkout');
-    const form = document.getElementById('payment-form') as HTMLFormElement | null;
+    const form = document.getElementById('payment-form');
     const successScreen = document.getElementById('payment-success-screen');
     const licenseKeyEl = document.getElementById('generated-license-key');
     const closeSuccessBtn = document.getElementById('close-success-btn');
 
-    const btn29 = document.getElementById('plan-btn-29');
-    const btn39 = document.getElementById('plan-btn-39');
-    const btn199 = document.getElementById('plan-btn-199');
+    const btnSingle = document.getElementById('plan-btn-single');
+    const btnPass = document.getElementById('plan-btn-pass');
     const nameEl = document.getElementById('summary-plan-name');
     const descEl = document.getElementById('summary-plan-desc');
     const priceEl = document.getElementById('summary-plan-price');
     const submitBtn = document.getElementById('pay-submit-btn');
 
-    function setPlan(price: number, customName?: string) {
-      if (price === 29) {
-        if (btn29) btn29.classList.add('active');
-        if (btn39) btn39.classList.remove('active');
-        if (btn199) btn199.classList.remove('active');
-        if (nameEl) nameEl.innerText = customName || 'Single Theme License';
-        if (descEl) descEl.innerText = '1 Theme License · Commercial Use';
-        if (priceEl) priceEl.innerText = '$29';
-        if (submitBtn) submitBtn.innerHTML = `Complete Payment ($29) →`;
-      } else if (price === 39) {
-        if (btn39) btn39.classList.add('active');
-        if (btn29) btn29.classList.remove('active');
-        if (btn199) btn199.classList.remove('active');
-        if (nameEl) nameEl.innerText = customName || 'Single AI Solution Kit';
-        if (descEl) descEl.innerText = 'Includes Code Repo + Learning Guide PDF';
-        if (priceEl) priceEl.innerText = '$39';
-        if (submitBtn) submitBtn.innerHTML = `Complete Payment ($39) →`;
-      } else {
-        if (btn199) btn199.classList.add('active');
-        if (btn29) btn29.classList.remove('active');
-        if (btn39) btn39.classList.remove('active');
-        if (nameEl) nameEl.innerText = 'Lifetime All-Access Pass';
-        if (descEl) descEl.innerText = '200 Themes + 4 AI Agent Kits';
-        if (priceEl) priceEl.innerText = '$199';
-        if (submitBtn) submitBtn.innerHTML = `Complete Payment ($199) →`;
+    // Remembers the theme that opened the modal, so toggling back to the
+    // single-theme tab re-quotes that theme's own price rather than a constant.
+    let lastTheme = { price: fallbackThemePrice, name: 'Single theme license' };
+
+    function setPlan(plan, theme) {
+      const isPass = plan === 'pass';
+      if (theme) lastTheme = theme;
+
+      btnPass?.classList.toggle('active', isPass);
+      btnSingle?.classList.toggle('active', !isPass);
+
+      const price = isPass ? allAccessPrice : lastTheme.price;
+      if (nameEl) nameEl.textContent = isPass ? 'Lifetime all-access pass' : lastTheme.name;
+      if (descEl) {
+        descEl.textContent = isPass
+          ? 'Every theme · unlimited projects'
+          : '1 theme license · commercial use';
       }
+      if (priceEl) priceEl.textContent = `$${price}`;
+      if (submitBtn) submitBtn.textContent = `Complete payment ($${price})`;
     }
 
-    if (btn29) btn29.addEventListener('click', () => setPlan(29));
-    if (btn39) btn39.addEventListener('click', () => setPlan(39));
-    if (btn199) btn199.addEventListener('click', () => setPlan(199));
+    btnSingle?.addEventListener('click', () => setPlan('single'));
+    btnPass?.addEventListener('click', () => setPlan('pass'));
 
-    // Trigger checkout on any buy button or pass link
-    document.querySelectorAll<HTMLElement>('[href="/bundles/"], [href="#pay"], .btn-primary, .pay-trigger-btn').forEach((btn) => {
-      btn.addEventListener('click', (e) => {
-        const text = btn.innerText || '';
-        const planPrice = btn.getAttribute('data-plan-price');
-        const planName = btn.getAttribute('data-plan-name');
-
-        if (planPrice === '39' || text.includes('39')) {
-          e.preventDefault();
-          setPlan(39, planName || undefined);
-          if (modal) modal.style.display = 'flex';
-        } else if (text.includes('29') || planPrice === '29' || text.includes('Single Theme')) {
-          e.preventDefault();
-          setPlan(29, planName || undefined);
-          if (modal) modal.style.display = 'flex';
-        } else if (text.includes('Pass') || text.includes('199') || text.includes('All Access')) {
-          e.preventDefault();
-          setPlan(199);
-          if (modal) modal.style.display = 'flex';
+    // Only explicit triggers open checkout. The old handler bound every
+    // .btn-primary on the page and guessed the plan from button text, which
+    // breaks the moment a theme's price contains "29" or "199".
+    document.querySelectorAll('[data-plan-price]').forEach((btn) => {
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        const price = Number(btn.getAttribute('data-plan-price'));
+        const name = btn.getAttribute('data-plan-name') || 'Single theme license';
+        // Explicit, so a theme that happens to cost exactly the pass price is
+        // still quoted as a single theme.
+        if (btn.getAttribute('data-plan') === 'pass') {
+          setPlan('pass');
+        } else {
+          setPlan('single', { price, name });
         }
+        if (modal) modal.style.display = 'flex';
       });
     });
 
-    if (closeBtn && modal) {
-      closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
-    }
+    setPlan('pass');
+
+    closeBtn?.addEventListener('click', () => {
+      if (modal) modal.style.display = 'none';
+    });
 
     if (form && successScreen && modal && licenseKeyEl) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const randomNum1 = Math.floor(1000 + Math.random() * 9000);
-        const randomNum2 = Math.floor(1000 + Math.random() * 9000);
-        licenseKeyEl.innerText = `KN-KEY-${randomNum1}-${randomNum2}`;
-
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const a = Math.floor(1000 + Math.random() * 9000);
+        const b = Math.floor(1000 + Math.random() * 9000);
+        licenseKeyEl.textContent = `KN-KEY-${a}-${b}`;
         form.style.display = 'none';
         successScreen.style.display = 'block';
       });
     }
 
-    if (closeSuccessBtn && modal) {
-      closeSuccessBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-        if (form && successScreen) {
-          form.style.display = 'block';
-          successScreen.style.display = 'none';
-        }
-      });
-    }
+    closeSuccessBtn?.addEventListener('click', () => {
+      if (modal) modal.style.display = 'none';
+      if (form && successScreen) {
+        form.style.display = 'block';
+        successScreen.style.display = 'none';
+      }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', initCheckout);

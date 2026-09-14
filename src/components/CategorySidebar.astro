@@ -1,0 +1,180 @@
+---
+import { CATEGORIES, themes, isThemeInCategory } from '../data/themes';
+
+interface Props {
+  activeCategory?: string;
+}
+
+const { activeCategory = 'all' } = Astro.props;
+
+// Calculate theme counts per category
+const categoryItems = CATEGORIES
+  .map((cat) => ({ ...cat, count: themes.filter((t) => isThemeInCategory(t, cat.slug)).length }))
+  .filter((cat) => cat.count > 0);
+
+const totalThemes = themes.length;
+const featuredThemesCount = themes.filter((t) => isThemeInCategory(t, 'featured')).length;
+---
+
+<aside class="cat-sidebar">
+  <div class="cat-sidebar-inner">
+    <div class="cat-sidebar-header">
+      <h3 class="cat-sidebar-title">Categories</h3>
+      <span class="cat-sidebar-badge">Verticals</span>
+    </div>
+
+    <nav class="cat-sidebar-nav" aria-label="Category navigation">
+      <a
+        href="/themes/"
+        class={`cat-sidebar-link ${activeCategory === 'all' ? 'active' : ''}`}
+      >
+        <span class="cat-icon-dot"></span>
+        <span class="cat-sidebar-label">All</span>
+        <span class="cat-sidebar-count">{totalThemes}</span>
+      </a>
+
+      <a
+        href="/categories/featured/"
+        class={`cat-sidebar-link ${activeCategory === 'featured' ? 'active' : ''}`}
+      >
+        <span class="cat-icon-dot"></span>
+        <span class="cat-sidebar-label">Featured</span>
+        <span class="cat-sidebar-count">{featuredThemesCount}</span>
+      </a>
+
+      <div class="cat-sidebar-divider"></div>
+
+      {categoryItems.map((cat) => {
+        const isActive = activeCategory === cat.slug;
+        return (
+          <a
+            href={`/categories/${cat.slug}/`}
+            class={`cat-sidebar-link ${isActive ? 'active' : ''}`}
+          >
+            <span class="cat-icon-dot"></span>
+            <span class="cat-sidebar-label">{cat.name}</span>
+            <span class="cat-sidebar-count">{cat.count}</span>
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+</aside>
+
+<style>
+  .cat-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+  }
+  .cat-sidebar-inner {
+    position: sticky;
+    top: 92px;
+    background: #ffffff;
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r-lg);
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--sh-sm);
+  }
+  .cat-sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .cat-sidebar-title {
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin: 0;
+  }
+  .cat-sidebar-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent-text);
+    background: var(--sage-tint);
+    padding: 3px 9px;
+    border-radius: var(--r-pill);
+    text-transform: uppercase;
+  }
+  .cat-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .cat-sidebar-divider {
+    height: 1px;
+    background: var(--line);
+    margin: 6px 0;
+  }
+  .cat-sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: var(--r-pill);
+    color: var(--ink-2);
+    font-family: var(--body);
+    font-size: 13.5px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .cat-sidebar-link .cat-icon-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--rule-2);
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+  .cat-sidebar-label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .cat-sidebar-count {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    background: var(--paper-3);
+    border: 1px solid var(--rule);
+    padding: 2px 8px;
+    border-radius: var(--r-pill);
+    transition: all 0.15s ease;
+  }
+  .cat-sidebar-link:hover {
+    background: var(--paper-3);
+    color: var(--ink);
+  }
+  .cat-sidebar-link:hover .cat-icon-dot {
+    background: var(--sage);
+  }
+  .cat-sidebar-link.active {
+    background: var(--ink-900);
+    color: var(--paper);
+  }
+  .cat-sidebar-link.active .cat-icon-dot {
+    background: var(--sage);
+  }
+  .cat-sidebar-link.active .cat-sidebar-count {
+    background: rgba(243, 241, 234, 0.14);
+    color: var(--paper);
+    border-color: transparent;
+  }
+
+  @media (max-width: 960px) {
+    .cat-sidebar {
+      width: 100%;
+    }
+    .cat-sidebar-inner {
+      position: static;
+    }
+  }
+</style>
+

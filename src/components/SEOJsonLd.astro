@@ -1,4 +1,9 @@
 ---
+import { themes } from '../data/themes';
+import { DROP, priceRange } from '../data/design';
+
+const range = priceRange(themes);
+
 interface Props {
   type?: 'website' | 'product';
   title?: string;
@@ -7,17 +12,17 @@ interface Props {
 
 const {
   type = 'website',
-  title = 'Komal Nakrani | 200 Premium Next.js 16 & Next.js 15 Themes + Turnkey AI Solutions',
-  description = 'Ultra-fast, production-ready Next.js 16 & Next.js 15 web themes paired with turnkey RAG agents, multi-agent pipelines, and local LLM architectures.',
+  title = 'Komal Nakrani | Production-ready web themes',
+  description = 'Hand-built, production-ready Astro web themes with zero-JS output and full commercial source.',
 } = Astro.props;
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Komal Nakrani Themes & AI Solutions',
+  name: 'Komal Nakrani Themes',
   url: 'https://komalnakrani.com',
   logo: 'https://komalnakrani.com/favicon.svg',
-  description: 'Publisher of production-ready Next.js 16 & Next.js 15 web templates and turnkey AI agent architectures.',
+  description: 'Publisher of production-ready web themes for founders, agencies and developers.',
   sameAs: [
     'https://github.com',
     'https://twitter.com'
@@ -42,31 +47,48 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What technologies are used in Komal Nakrani themes?',
+      name: 'What are the themes built with?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'All themes are engineered using Next.js 16 or Next.js 15 App Router, React 19, TypeScript, and Vanilla CSS/Tailwind CSS with 100/100 Core Web Vitals speed scores.'
+        text: 'Every theme is built with Astro and ships static, zero-JS-by-default output with hand-written CSS. You get the full source, and each theme has a live preview at every breakpoint before you buy.'
       }
     },
     {
       '@type': 'Question',
-      name: 'How do the Turnkey AI Solutions work?',
+      name: 'How much does a single theme cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Each AI Solution ($39) includes complete production-ready source code (RAG pipelines, CrewAI multi-agent workflows, Ollama wrappers, or LiveKit Voice AI) paired with a step-by-step Learning & Architecture Guide PDF.'
+        text: range.flat
+          ? `Every theme is $${range.min}, which includes full commercial source code and lifetime updates for that theme.`
+          : `Themes are priced individually from $${range.min} to $${range.max}. Each price is listed on that theme's own page and includes full commercial source code and lifetime updates.`
       }
     },
     {
       '@type': 'Question',
-      name: 'What is included in the $199 Lifetime All-Access Pass?',
+      name: `What is included in the $${DROP.allAccessPrice} All-Access Pass?`,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The $199 Lifetime All-Access Pass unlocks full commercial source code access to all 100 Web sites, 100 Next.js 15 themes, and all turnkey AI Solution Kits with free lifetime updates.'
+        text: `The $${DROP.allAccessPrice} All-Access Pass unlocks full commercial source code access to every theme in the catalog, every theme released from here on, unlimited client projects, and free updates forever. It is a single payment with no renewal.`
       }
     }
   ]
 };
+const passOfferSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Komal Nakrani All-Access Pass',
+  description: 'Full commercial access to every production-ready web theme in the catalog, plus every theme released from here on. One payment, no renewal.',
+  brand: { '@type': 'Brand', name: 'Komal Nakrani' },
+  offers: {
+    '@type': 'Offer',
+    price: String(DROP.allAccessPrice),
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: 'https://komalnakrani.com/pricing/'
+  }
+};
 ---
 <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(passOfferSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
