@@ -175,6 +175,34 @@ export const PASS_INCLUDES = [
   'One payment — there is nothing to renew'
 ];
 
+/* ---------------------------------------------------------------------
+   Dodo Payments — one-time digital products.
+
+   The site is static, so we use Dodo's hosted checkout ("static payment
+   links"). No API key ever reaches the browser and no server is required.
+   Dodo is Merchant of Record: it handles tax, delivers the files and issues
+   the licence key, then returns the buyer to RETURN_PATH.
+   --------------------------------------------------------------------- */
+
+export const DODO = {
+  checkoutBase: 'https://checkout.dodopayments.com/buy',
+  /** Where Dodo sends the buyer after payment. Must be an absolute URL. */
+  returnUrl: 'https://komalnakrani.com/checkout/success/',
+  /** Product id for the all-access pass. Set once created in Dodo. */
+  allAccessProductId: '' as string
+} as const;
+
+/**
+ * Hosted checkout URL for a Dodo product, or null when the product has not
+ * been created yet — callers render a disabled state rather than a dead link.
+ */
+export function checkoutUrl(productId: string | undefined, opts: { quantity?: number } = {}): string | null {
+  if (!productId) return null;
+  const params = new URLSearchParams({ redirect_url: DODO.returnUrl });
+  if (opts.quantity && opts.quantity !== 1) params.set('quantity', String(opts.quantity));
+  return `${DODO.checkoutBase}/${productId}?${params.toString()}`;
+}
+
 export interface PriceRange {
   min: number;
   max: number;

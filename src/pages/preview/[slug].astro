@@ -1,7 +1,6 @@
 ---
-import CheckoutModal from '../../components/CheckoutModal.astro';
 import { themes, type Theme } from '../../data/themes';
-import { kindFor, nameFor, liveUrlFor, liveHostFor, DROP, DEVICES } from '../../data/design';
+import { kindFor, nameFor, liveUrlFor, liveHostFor, checkoutUrl, DROP, DEVICES } from '../../data/design';
 import '../../styles/theme.css';
 import '../../styles/components.css';
 
@@ -22,6 +21,7 @@ const liveUrl = liveUrlFor(theme);
 const liveHost = liveHostFor(theme);
 const name = nameFor(theme);
 const kind = kindFor(theme);
+const buyUrl = checkoutUrl(theme.dodoProductId);
 ---
 <!doctype html>
 <html lang="en">
@@ -95,12 +95,13 @@ const kind = kindFor(theme);
       <span class="pv-dot"></span>
       <a href={liveUrl} target="_blank" rel="noopener" style="color: var(--accent-text);">Preview not loading? Open it directly ➚</a>
       <div style="flex: 1;"></div>
-      <button data-plan="single" data-plan-price={theme.price} data-plan-name={name} class="pv-buy pay-trigger-btn">
-        Buy this theme (${theme.price})
-      </button>
+      {buyUrl ? (
+        <a href={buyUrl} class="pv-buy">Buy this theme (${theme.price})</a>
+      ) : (
+        <span class="pv-buy pv-buy-off" aria-disabled="true">Checkout opening soon</span>
+      )}
     </footer>
 
-    <CheckoutModal />
 
     <style>
       .pv-body {
@@ -287,6 +288,7 @@ const kind = kindFor(theme);
         white-space: nowrap;
       }
       .pv-buy:hover { background: var(--action-hover); }
+      .pv-buy-off { opacity: .45; cursor: not-allowed; pointer-events: none; }
 
       @media (max-width: 1024px) {
         .pv-address { display: none; }

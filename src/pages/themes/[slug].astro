@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import ThemeCard from '../../components/ThemeCard.astro';
 import { themes, isThemeInCategory, type Theme } from '../../data/themes';
-import { accentFor, kindFor, nameFor, scarcityFor, liveUrlFor, liveHostFor, DROP, DEVICES } from '../../data/design';
+import { accentFor, kindFor, nameFor, scarcityFor, liveUrlFor, liveHostFor, checkoutUrl, DROP, DEVICES } from '../../data/design';
 
 export function getStaticPaths() {
   return themes.map((theme) => ({
@@ -26,6 +26,7 @@ const liveUrl = liveUrlFor(theme);
 const liveHost = liveHostFor(theme);
 const name = nameFor(theme);
 const was = theme.wasPrice;
+const buyUrl = checkoutUrl(theme.dodoProductId);
 
 const related = themes
   .filter((t) => t.slug !== theme.slug && isThemeInCategory(t, theme.category))
@@ -66,9 +67,11 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
 
           <div class="brief-actions">
             <a href={`/preview/${theme.slug}/`} class="btn btn-primary btn-lg">Open live preview</a>
-            <button data-plan="single" data-plan-price={theme.price} data-plan-name={name} class="btn btn-secondary btn-lg pay-trigger-btn">
-              Buy theme (${theme.price})
-            </button>
+            {buyUrl ? (
+              <a href={buyUrl} class="btn btn-secondary btn-lg">Buy theme (${theme.price})</a>
+            ) : (
+              <span class="btn btn-secondary btn-lg is-disabled" aria-disabled="true">Checkout opening soon</span>
+            )}
           </div>
         </div>
 
@@ -96,9 +99,11 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
             {scarcity.label} of {scarcity.total} licenses
           </div>
 
-          <button data-plan="single" data-plan-price={theme.price} data-plan-name={name} class="btn btn-primary pay-trigger-btn licence-cta">
-            Buy single license (${theme.price})
-          </button>
+          {buyUrl ? (
+            <a href={buyUrl} class="btn btn-primary licence-cta">Buy single license (${theme.price})</a>
+          ) : (
+            <span class="btn btn-primary licence-cta is-disabled" aria-disabled="true">Checkout opening soon</span>
+          )}
           <a href="/pricing/" class="btn btn-secondary licence-cta" style="margin-top: 10px;">
             Or all-access (${DROP.allAccessPrice})
           </a>
@@ -327,6 +332,11 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
     gap: 10px;
   }
   .licence-cta { width: 100%; }
+  .is-disabled {
+    opacity: .45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
   .tcard-track {
     height: 4px;
     background: var(--paper-3);

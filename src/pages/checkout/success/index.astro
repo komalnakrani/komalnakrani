@@ -1,0 +1,181 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Icon from '../../../components/Icon.astro';
+
+// Dodo returns the buyer here with payment details on the query string:
+//   ?payment_id=pay_xxx&status=succeeded&email=…&license_key=LK-001
+// Everything is read client-side because this page is statically generated.
+// Fulfilment itself is Dodo's job — this page only reports what happened.
+---
+<Layout
+  title="Order complete | Komal Nakrani"
+  description="Your purchase is complete. Your download and licence key are on their way."
+  noindex
+>
+  <main class="rise">
+    <section class="wrap" style="padding: 96px 24px 120px;">
+      <div class="receipt" data-receipt>
+        <!-- Succeeded -->
+        <div data-state="succeeded" hidden>
+          <div class="mark ok"><Icon name="check" /></div>
+          <h1 class="h1" style="margin: 0;">You're in.</h1>
+          <p class="lead" style="margin: 16px 0 0;">
+            Payment received. Your download link and licence key are on their way to
+            <strong data-email>your inbox</strong>.
+          </p>
+
+          <div class="key-box" data-key-box hidden>
+            <div class="key-label">Your licence key</div>
+            <div class="key-value" data-license></div>
+          </div>
+
+          <dl class="meta">
+            <div><dt>Order</dt><dd data-payment-id>—</dd></div>
+          </dl>
+
+          <p class="note">
+            Nothing in your inbox after a few minutes? Check spam, then email Komal with
+            your order number above and she'll sort it out.
+          </p>
+
+          <div class="cta-row">
+            <a href="/themes/" class="btn btn-primary">Browse more themes</a>
+            <a href="/docs/getting-started/" class="btn btn-secondary">Read the quickstart</a>
+          </div>
+        </div>
+
+        <!-- Still processing -->
+        <div data-state="processing" hidden>
+          <div class="mark wait"></div>
+          <h1 class="h1" style="margin: 0;">Payment processing.</h1>
+          <p class="lead" style="margin: 16px 0 0;">
+            Your bank hasn't finished confirming this one yet. It usually takes a moment.
+            You'll get an email as soon as it clears — no need to pay again.
+          </p>
+          <dl class="meta">
+            <div><dt>Order</dt><dd data-payment-id>—</dd></div>
+          </dl>
+          <div class="cta-row"><a href="/themes/" class="btn btn-secondary">Back to themes</a></div>
+        </div>
+
+        <!-- Failed or cancelled -->
+        <div data-state="failed" hidden>
+          <div class="mark bad"></div>
+          <h1 class="h1" style="margin: 0;">That payment didn't go through.</h1>
+          <p class="lead" style="margin: 16px 0 0;">
+            Nothing has been charged. You can try again, or email Komal if it keeps failing.
+          </p>
+          <div class="cta-row">
+            <a href="/themes/" class="btn btn-primary">Try again</a>
+            <a href="/legal/faq/" class="btn btn-secondary">Read the FAQ</a>
+          </div>
+        </div>
+
+        <!-- Opened directly, with no payment context -->
+        <div data-state="unknown" hidden>
+          <h1 class="h1" style="margin: 0;">Nothing to show here.</h1>
+          <p class="lead" style="margin: 16px 0 0;">
+            This page shows your order confirmation after a purchase. It looks like you
+            arrived without one.
+          </p>
+          <div class="cta-row"><a href="/themes/" class="btn btn-primary">Browse themes</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const status = (params.get('status') || '').toLowerCase();
+    const paymentId = params.get('payment_id');
+    const email = params.get('email');
+    const licenseKey = params.get('license_key');
+
+    const state = !paymentId && !status
+      ? 'unknown'
+      : status === 'succeeded' || status === 'active'
+        ? 'succeeded'
+        : status === 'processing'
+          ? 'processing'
+          : 'failed';
+
+    const panel = document.querySelector<HTMLElement>(`[data-state="${state}"]`);
+    if (panel) panel.hidden = false;
+
+    if (paymentId) {
+      document.querySelectorAll<HTMLElement>('[data-payment-id]').forEach((el) => {
+        el.textContent = paymentId;
+      });
+    }
+    if (email) {
+      const el = document.querySelector<HTMLElement>('[data-email]');
+      if (el) el.textContent = email;
+    }
+    if (licenseKey) {
+      const box = document.querySelector<HTMLElement>('[data-key-box]');
+      const value = document.querySelector<HTMLElement>('[data-license]');
+      if (box && value) {
+        value.textContent = licenseKey;
+        box.hidden = false;
+      }
+    }
+  </script>
+</Layout>
+
+<style>
+  .receipt {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid var(--rule-3);
+    border-radius: var(--r-lg);
+    padding: clamp(28px, 5vw, 52px);
+  }
+  .mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+  }
+  .mark.ok { background: var(--sage-tint); color: var(--accent-text); }
+  .mark.wait { background: var(--paper-3); border: 2px solid var(--rule-2); }
+  .mark.bad { background: var(--clay-tint); border: 2px solid var(--clay); }
+
+  .key-box {
+    margin: 26px 0 0;
+    background: var(--ink-900);
+    color: var(--ink-inverse);
+    border-radius: var(--r);
+    padding: 18px 20px;
+  }
+  .key-label {
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 8px;
+  }
+  .key-value {
+    font-family: var(--code);
+    font-size: 17px;
+    letter-spacing: .08em;
+    word-break: break-all;
+  }
+
+  .meta { margin: 24px 0 0; display: grid; gap: 8px; }
+  .meta div { display: flex; gap: 12px; align-items: baseline; }
+  .meta dt { font-size: 13px; color: var(--ink-4); margin: 0; }
+  .meta dd { font-family: var(--code); font-size: 13px; color: var(--ink-2); margin: 0; word-break: break-all; }
+
+  .note {
+    margin: 22px 0 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-3);
+    text-wrap: pretty;
+  }
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+</style>

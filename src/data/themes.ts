@@ -178,6 +178,12 @@ export interface Theme {
   categories?: ThemeCategory[];
   price: number;
   /**
+   * Dodo Payments product id (pdt_…) for this theme's one-time purchase.
+   * Until it is set, the buy button renders disabled rather than linking
+   * to a checkout that does not exist.
+   */
+  dodoProductId?: string;
+  /**
    * Optional former price, struck through beside `price` on cards and the
    * detail page. Leave unset and no strikethrough is shown — it is only ever
    * rendered from a real number you set here, never derived from a discount.

@@ -3,7 +3,6 @@ import '../styles/theme.css';
 import '../styles/components.css';
 import Masthead from '../components/Masthead.astro';
 import Footer from '../components/Footer.astro';
-import CheckoutModal from '../components/CheckoutModal.astro';
 import SEOJsonLd from '../components/SEOJsonLd.astro';
 
 interface Props {
@@ -58,6 +57,5 @@ const ogImage = new URL(image, site).href;
     <Masthead />
     <slot />
     <Footer />
-    <CheckoutModal />
   </body>
 </html>

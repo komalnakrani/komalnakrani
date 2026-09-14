@@ -2,11 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import { themes } from '../../data/themes';
-import { DROP, ALL_ACCESS_DISCOUNT, PASS_INCLUDES, priceRange, priceLabel } from '../../data/design';
+import { DODO } from '../../data/design';
+import { DROP, ALL_ACCESS_DISCOUNT, PASS_INCLUDES, priceRange, priceLabel, checkoutUrl } from '../../data/design';
 
 // Individual themes are priced on their own records and quoted on their own
 // pages. This page quotes one number: the pass.
 const range = priceRange(themes);
+const passUrl = checkoutUrl(DODO.allAccessProductId);
 
 const faqs = [
   {
@@ -58,9 +60,11 @@ const faqs = [
           </div>
           <p class="offer-sub">One payment · not a subscription</p>
 
-          <a href="#pay" data-plan="pass" data-plan-price={DROP.allAccessPrice} data-plan-name="Lifetime all-access pass" class="btn btn-lg offer-cta pay-trigger-btn">
-            Get all-access — ${DROP.allAccessPrice}
-          </a>
+          {passUrl ? (
+            <a href={passUrl} class="btn btn-lg offer-cta">Get all-access — ${DROP.allAccessPrice}</a>
+          ) : (
+            <span class="btn btn-lg offer-cta is-disabled" aria-disabled="true">Checkout opening soon</span>
+          )}
 
           <p class="offer-fine">
             Prefer just one? Every theme is sold on its own page at its own price
@@ -168,6 +172,7 @@ const faqs = [
     cursor: pointer;
   }
   .offer-cta:hover { opacity: .88; }
+  .is-disabled { opacity: .5; cursor: not-allowed; pointer-events: none; }
 
   .offer-fine {
     margin: 16px 0 0;
