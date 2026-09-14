@@ -242,7 +242,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": true,
     "badge": "Featured",
-    "liveUrl": "https://ob-studio.pages.dev",
+    "liveUrl": "https://cast-and-render.pages.dev",
     "techStack": [
       "Astro",
       "Zero-JS output",
