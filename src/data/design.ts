@@ -189,7 +189,7 @@ export const DODO = {
   /** Where Dodo sends the buyer after payment. Must be an absolute URL. */
   returnUrl: 'https://komalnakrani.com/checkout/success/',
   /** Product id for the all-access pass. Set once created in Dodo. */
-  allAccessProductId: '' as string
+  allAccessProductId: 'pdt_0NnZBOvGt6qPNFYimLKVC' as string
 } as const;
 
 /**
