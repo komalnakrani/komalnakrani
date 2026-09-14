@@ -52,14 +52,17 @@ export const docArticles: Record<string, DocArticle> = {
     slug: 'getting-started',
     category: 'Getting Started',
     title: 'Quickstart Guide',
-    description: 'Download, extract and run your theme locally in about two minutes.',
+    description: 'Clone your theme and run it locally in about two minutes.',
     lastUpdated: 'September 2026',
     content: `
 ### Running your theme
 
-1. **Extract the archive you downloaded**:
+Your purchase grants read access to the theme's private GitHub repository —
+the invitation goes to your order email. Accept it, then:
+
+1. **Clone the repository**:
 \`\`\`bash
-unzip your-theme.zip
+git clone git@github.com:komalnakrani/your-theme.git
 cd your-theme/
 \`\`\`
 
@@ -90,6 +93,20 @@ npm run preview
 \`\`\`
 
 > Every theme ships zero JavaScript by default. If a page has no interactive component, the browser downloads no JS at all.
+
+### Getting updates
+
+Because your theme is a repository rather than a one-off download, updates arrive with a pull:
+
+\`\`\`bash
+git pull origin main
+\`\`\`
+
+Keep your own work on a branch so that stays painless:
+
+\`\`\`bash
+git checkout -b my-site
+\`\`\`
 `
   },
 
