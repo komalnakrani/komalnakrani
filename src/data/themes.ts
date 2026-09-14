@@ -221,9 +221,9 @@ export function isThemeInCategory(theme: Theme, categorySlug: string): boolean {
 
 export const themes: Theme[] = [
   {
-    "id": "ob-studio",
+    "id": "cast-and-render",
     "name": "Cast & Render",
-    "slug": "ob-studio",
+    "slug": "cast-and-render",
     "tagline": "A 3D object studio portfolio that opens on the reel and closes on a brief.",
     "description": "Cast & Render is a portfolio for a studio whose work is the pitch. A timed loading sequence runs into a reel-first hero, the work index insists that nothing was rendered before the brief was signed, and the about page lays out a four-step pipeline in the same order every time. The brief page promises a written reply — scope, price band and the next free slot on the farm — inside two working days. Built for render houses, product-CGI teams and motion studios.",
     "framework": "astro",
