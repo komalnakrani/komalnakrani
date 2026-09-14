@@ -1,1 +1,8 @@
 /sitemap.xml  /sitemap-index.xml  200
+
+# ob-studio was renamed to cast-and-render (theme name: Cast & Render).
+# Both routes were publicly live, so keep the old paths resolving.
+/themes/ob-studio      /themes/cast-and-render      301
+/themes/ob-studio/*    /themes/cast-and-render/:splat   301
+/preview/ob-studio     /preview/cast-and-render     301
+/preview/ob-studio/*   /preview/cast-and-render/:splat  301
