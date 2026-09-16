@@ -1,16 +1,19 @@
-## Hi there 👋
+# Hi, I'm Komal Nakrani 👋
 
-<!--
-**komalnakrani/komalnakrani** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Primary school teacher turned programmer.**
 
-Here are some ideas to get you started:
+I build and sell website themes, and make AI simple so anyone can learn, create, and bring ideas to life.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## What I do
+
+- **Website themes** — I create themes for people building their own websites.
+- **AI made simple** — I help make AI easier to understand and use.
+- **Learning and creating** — I bring a teacher's perspective to technology, breaking ideas into approachable steps.
+
+## Explore my work
+
+Visit **[komalnakrani.com](https://komalnakrani.com)** to explore my website themes and work.
+
+---
+
+Thanks for stopping by! 🌱
