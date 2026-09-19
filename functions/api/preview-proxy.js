@@ -20,13 +20,26 @@ export async function onRequest(context) {
     });
 
     let html = await resp.text();
-    
-    // Inject <base href> right after <head> so all relative CSS, images, and links resolve to the source
+
+    // 1. Inject <base href> right after <head> so all relative CSS, images, and fonts resolve
     if (html.includes('<head>')) {
       html = html.replace('<head>', '<head><base href="' + baseHref + '">');
     } else if (html.includes('<head ')) {
-      html = html.replace(/<head([^>]*)>/i, '<head><base href="' + baseHref + '">');
+      html = html.replace(/<head([^>]*)>/i, '<head$1><base href="' + baseHref + '">');
     }
+
+    // 2. Rewrite internal links in <a> tags so in-frame navigation stays proxied
+    html = html.replace(/(<a\s+[^>]*?href=[\"'])\/([^/'"][^'"]*)?([\"'])/gi, (m, prefix, path, suffix) => {
+      const full = origin + '/' + (path || '');
+      return `${prefix}/api/preview-proxy?url=${encodeURIComponent(full)}${suffix}`;
+    });
+
+    const escapedOrigin = origin.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const reg = new RegExp(`(<a\\s+[^>]*?href=[\"'])${escapedOrigin}(/[^'"]*)?([\"'])`, 'gi');
+    html = html.replace(reg, (m, prefix, path, suffix) => {
+      const full = origin + (path || '');
+      return `${prefix}/api/preview-proxy?url=${encodeURIComponent(full)}${suffix}`;
+    });
 
     const newHeaders = new Headers(resp.headers);
     // Strip security headers that prevent embedding in an iframe

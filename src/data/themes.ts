@@ -1618,7 +1618,7 @@ export const themes: Theme[] = [
   {
     "id": "62bdeffbd787c40858d9d93f",
     "name": "Evan Maison",
-    "slug": "62bdeffbd787c40858d9d93f",
+    "slug": "evan-maison",
     "dodoProductId": "pdt_0NnuWiWKhImrKcpUxxhNt",
     "tagline": "Modern, high-performance Evan Maison website template.",
     "description": "Modern bold dark personal portfolio template designed mostly for creatives. Show your portfolio cases not in the ordinary way, just customize them and be fancy. Do you write articles? Just add blog pages to your website so simple.",
@@ -1685,7 +1685,7 @@ export const themes: Theme[] = [
   {
     "id": "63475773f759d2418b649b34",
     "name": "Aquapure",
-    "slug": "63475773f759d2418b649b34",
+    "slug": "aquapure-website-template",
     "dodoProductId": "pdt_0NnuaRARdkMJWg10wE8M5",
     "tagline": "Modern, high-performance Aquapure website template.",
     "description": "Elegant online store webflow template with an extensive collection of refined, modern websites and multiple practical shop features. Exclusively built for single product, shop, store, and Ecommerce websites.",
