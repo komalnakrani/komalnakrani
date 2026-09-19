@@ -1356,7 +1356,7 @@ export const themes: Theme[] = [
     "slug": "3dbento-agency-website-template",
     "dodoProductId": "pdt_0NnuWOqZ1hU0zdtP2Jk7P",
     "tagline": "Modern, high-performance 3D BENTO website template.",
-    "description": "Elevate your digital presence with 3D BENTO Agency. This cutting-edge agency Webflow template combines innovative design with advanced e-commerce tools, creating an immersive online platform that captivates customers and drives success.",
+    "description": "Elevate your digital presence with 3D BENTO Agency. This cutting-edge agency Astro template combines innovative design with advanced e-commerce tools, creating an immersive online platform that captivates customers and drives success.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -1423,7 +1423,7 @@ export const themes: Theme[] = [
     "slug": "1833-studio-website-template",
     "dodoProductId": "pdt_0NnuWdzlyu3i4cBimyd3w",
     "tagline": "Modern, high-performance 1833 Studio website template.",
-    "description": "1833 Studio a clean and modern website Webflow template for tattoo salon websites. It can be used for Tattoo Salon, Ink, Piercing, Body Art, Tattoo Studio, Barber, Salon, Tattoo Artist, Art Barbershop websites.",
+    "description": "1833 Studio a clean and modern website Astro template for tattoo salon websites. It can be used for Tattoo Salon, Ink, Piercing, Body Art, Tattoo Studio, Barber, Salon, Tattoo Artist, Art Barbershop websites.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -1554,7 +1554,7 @@ export const themes: Theme[] = [
     "slug": "3dentity-website-template",
     "dodoProductId": "pdt_0NnuWgbfvH9o5dIkze60c",
     "tagline": "Modern, high-performance 3D Entity website template.",
-    "description": "Maximize your digital presence with 3D Entity Agency. This cutting-edge Webflow agency template merges modern design with robust e-commerce capabilities, creating an immersive online experience that captivates customers and drives growth.",
+    "description": "Maximize your digital presence with 3D Entity Agency. This cutting-edge Astro agency template merges modern design with robust e-commerce capabilities, creating an immersive online experience that captivates customers and drives growth.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -1688,7 +1688,7 @@ export const themes: Theme[] = [
     "slug": "aquapure-website-template",
     "dodoProductId": "pdt_0NnuaRARdkMJWg10wE8M5",
     "tagline": "Modern, high-performance Aquapure website template.",
-    "description": "Elegant online store webflow template with an extensive collection of refined, modern websites and multiple practical shop features. Exclusively built for single product, shop, store, and Ecommerce websites.",
+    "description": "Elegant online store Astro template with an extensive collection of refined, modern websites and multiple practical shop features. Exclusively built for single product, shop, store, and Ecommerce websites.",
     "framework": "astro",
     "category": "retail-and-e-commerce",
     "categories": [
@@ -1869,7 +1869,7 @@ export const themes: Theme[] = [
     "slug": "99club-website-template",
     "dodoProductId": "pdt_0Nnuajq1NMVFxohk7BCc6",
     "tagline": "Modern, high-performance 99Club website template.",
-    "description": "99club is a modern and stylish Webflow template designed for nightclubs, party organizers, and event management businesses. With its bold and energetic design, 99club makes it easy to promote your events, attract more guests, and grow your nightlife",
+    "description": "99club is a modern and stylish Astro template designed for nightclubs, party organizers, and event management businesses. With its bold and energetic design, 99club makes it easy to promote your events, attract more guests, and grow your nightlife",
     "framework": "astro",
     "category": "weddings-and-events",
     "categories": [
@@ -1916,7 +1916,7 @@ export const themes: Theme[] = [
     "slug": "Arnexo-website-template",
     "dodoProductId": "pdt_0NnuatcFZpkYWT6V3fVWE",
     "tagline": "Modern, high-performance Arnexo website template.",
-    "description": "Arnexo is a responsive Webflow template for architects and modern architecture studios. Showcase your portfolio of residential and commercial design projects using 3 homepages, 20+ pages, and a stunning, high-conversion visual aesthetic.",
+    "description": "Arnexo is a responsive Astro template for architects and modern architecture studios. Showcase your portfolio of residential and commercial design projects using 3 homepages, 20+ pages, and a stunning, high-conversion visual aesthetic.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -1983,7 +1983,7 @@ export const themes: Theme[] = [
     "slug": "Arooth-website-template",
     "dodoProductId": "pdt_0Nnub0K6FxgKdARxZHJyU",
     "tagline": "Modern, high-performance Arooth website template.",
-    "description": "Arooth is a premium Creative Digital Agency Webflow Template designed for creatives, studios, and digital agencies. Fully responsive, CMS-powered, and easy to customize.",
+    "description": "Arooth is a premium Creative Digital Agency Astro template designed for creatives, studios, and digital agencies. Fully responsive, CMS-powered, and easy to customize.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -2050,7 +2050,7 @@ export const themes: Theme[] = [
     "slug": "Axtira-website-template",
     "dodoProductId": "pdt_0Nnub9EqhLduGhrLr9Cf6",
     "tagline": "Modern, high-performance Axtira website template.",
-    "description": "Axtira is a premium Webflow template for industrial, oil, gas, and energy businesses. It features 3 homepages, 21+ unique pages, cool animations, and a user-friendly design to build a powerful site.",
+    "description": "Axtira is a premium Astro template for industrial, oil, gas, and energy businesses. It features 3 homepages, 21+ unique pages, cool animations, and a user-friendly design to build a powerful site.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -2117,7 +2117,7 @@ export const themes: Theme[] = [
     "slug": "Bisqueria-website-template",
     "dodoProductId": "pdt_0NnubFwnSFYJjk9HmZJiJ",
     "tagline": "Modern, high-performance Bisqueria website template.",
-    "description": "Create a refreshing Bakery website with Bakery, a vibrant Webflow Template designed for bakeries, caf\u00e9s, pastry shops, and family-run businesses.",
+    "description": "Create a refreshing Bakery website with Bakery, a vibrant Astro template designed for bakeries, caf\u00e9s, pastry shops, and family-run businesses.",
     "framework": "astro",
     "category": "food-and-drink",
     "categories": [
@@ -2184,7 +2184,7 @@ export const themes: Theme[] = [
     "slug": "Furino-website-template",
     "dodoProductId": "pdt_0NnubMDMeT7PFPubazDxq",
     "tagline": "Modern, high-performance Furino website template.",
-    "description": "Furino is a refined and modern Webflow template crafted for interior studios, architecture firms, and home styling agencies looking to showcase their work with elegance and clarity.",
+    "description": "Furino is a refined and modern Astro template crafted for interior studios, architecture firms, and home styling agencies looking to showcase their work with elegance and clarity.",
     "framework": "astro",
     "category": "architecture-and-design",
     "categories": [
@@ -2251,7 +2251,7 @@ export const themes: Theme[] = [
     "slug": "LaunchHub-website-template",
     "dodoProductId": "pdt_0NnubOoODiz8WPBIb1tZV",
     "tagline": "Modern, high-performance LaunchHub website template.",
-    "description": "Take your AI support to new heights with LaunchHub \ud83e\udde0\ud83d\ude80! Built for AI startups and digital tools, this Webflow Template offers modern layouts and easy customization to showcase your services with clarity and confidence.",
+    "description": "Take your AI support to new heights with LaunchHub \ud83e\udde0\ud83d\ude80! Built for AI startups and digital tools, this Astro template offers modern layouts and easy customization to showcase your services with clarity and confidence.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -2318,7 +2318,7 @@ export const themes: Theme[] = [
     "slug": "LittleSteps-website-template",
     "dodoProductId": "pdt_0NnubUeAudWe97rpxGOpr",
     "tagline": "Modern, high-performance LittleSteps website template.",
-    "description": "LittleSteps is a colorful and friendly Webflow template designed for preschools, kindergartens, and early learning centers. It features playful layouts, programs, testimonials, and enrollment sections built to engage parents and educators.",
+    "description": "LittleSteps is a colorful and friendly Astro template designed for preschools, kindergartens, and early learning centers. It features playful layouts, programs, testimonials, and enrollment sections built to engage parents and educators.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -2385,7 +2385,7 @@ export const themes: Theme[] = [
     "slug": "Movers-website-template",
     "dodoProductId": "pdt_0Nnuba6lusq2bRJMDBG4E",
     "tagline": "Modern, high-performance Movers website template.",
-    "description": "Movers is a modern Webflow template designed for logistics, shipping, and freight companies. It features service-focused layouts, pricing plans, testimonials, FAQs, and lead-generation sections built to convert visitors into clients.",
+    "description": "Movers is a modern Astro template designed for logistics, shipping, and freight companies. It features service-focused layouts, pricing plans, testimonials, FAQs, and lead-generation sections built to convert visitors into clients.",
     "framework": "astro",
     "category": "transportation",
     "categories": [
@@ -2452,7 +2452,7 @@ export const themes: Theme[] = [
     "slug": "Nexivo-website-template",
     "dodoProductId": "pdt_0NnubgTspCP6Omsx7xx05",
     "tagline": "Modern, high-performance Nexivo website template.",
-    "description": "Nexivo \u2013 Portfolio & Creative Agency Webflow Template",
+    "description": "Nexivo \u2013 Portfolio & Creative Agency Astro template",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -2519,7 +2519,7 @@ export const themes: Theme[] = [
     "slug": "Omenflex-website-template",
     "dodoProductId": "pdt_0NnubmaapFEkCdOVxEppw",
     "tagline": "Modern, high-performance OmenFlex website template.",
-    "description": "OmenFlex is a refined one-page Webflow template for freelancers and consultants. Clean grids, smooth animations, and a premium aesthetic help you showcase your work, process, and personal brand with confidence.",
+    "description": "OmenFlex is a refined one-page Astro template for freelancers and consultants. Clean grids, smooth animations, and a premium aesthetic help you showcase your work, process, and personal brand with confidence.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -2700,7 +2700,7 @@ export const themes: Theme[] = [
     "slug": "Velonic-website-template",
     "dodoProductId": "pdt_0Nnuc7PGYpn870P2jhalE",
     "tagline": "Modern, high-performance Velonic website template.",
-    "description": "VELONIC is a dark, modern Webflow template for creative agencies and studios. With clean UI, cinematic visuals, GSAP micro-interactions, and flexible CMS collections, it helps you showcase design, motion, and digital work with clarity and style.",
+    "description": "VELONIC is a dark, modern Astro template for creative agencies and studios. With clean UI, cinematic visuals, GSAP micro-interactions, and flexible CMS collections, it helps you showcase design, motion, and digital work with clarity and style.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -2767,7 +2767,7 @@ export const themes: Theme[] = [
     "slug": "aagency-agency-website-template",
     "dodoProductId": "pdt_0NnucENai2nvVFniGTyON",
     "tagline": "Modern, high-performance \u00c3agency website template.",
-    "description": "\u00c3agency is a novel Webflow template that underscores smooth user engagements and attention-grabbing web design.",
+    "description": "\u00c3agency is a novel Astro template that underscores smooth user engagements and attention-grabbing web design.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -2834,7 +2834,7 @@ export const themes: Theme[] = [
     "slug": "aaing-agency-website-template",
     "dodoProductId": "pdt_0NnucL7u0k80Zcgve80xU",
     "tagline": "Modern, high-performance Aaing website template.",
-    "description": "Looking for a stunning agency template or business template? Check out the Aaing business website template. This business Webflow template comes with a sleek design and functionality that is built to meet the needs of modern business websites.",
+    "description": "Looking for a stunning agency template or business template? Check out the Aaing business website template. This business Astro template comes with a sleek design and functionality that is built to meet the needs of modern business websites.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -2968,7 +2968,7 @@ export const themes: Theme[] = [
     "slug": "aalborg-doctor-website-template",
     "dodoProductId": "pdt_0Nnucd8YsMRPV6nnM5LEA",
     "tagline": "Modern, high-performance Aalborg website template.",
-    "description": "Aalborg is a modern Webflow template perfectly suited for Doctors, Dentists, Therapists or other Medical Services. It comes with an elegant and minimal design and CMS integration.",
+    "description": "Aalborg is a modern Astro template perfectly suited for Doctors, Dentists, Therapists or other Medical Services. It comes with an elegant and minimal design and CMS integration.",
     "framework": "astro",
     "category": "medical",
     "categories": [
@@ -3035,7 +3035,7 @@ export const themes: Theme[] = [
     "slug": "aarchiesta-architecture-website-template",
     "dodoProductId": "pdt_0NnucmKru3yMfv8Guzcr1",
     "tagline": "Modern, high-performance Aarchiesta website template.",
-    "description": "Archiesta, the ultimate architecture and architect agency Webflow template, offers a refined and modern design perfect for showcasing innovative projects. With responsive layout, it's ideal for creating impactful architecture portfolios.",
+    "description": "Archiesta, the ultimate architecture and architect agency Astro template, offers a refined and modern design perfect for showcasing innovative projects. With responsive layout, it's ideal for creating impactful architecture portfolios.",
     "framework": "astro",
     "category": "architecture-and-design",
     "categories": [
@@ -3102,7 +3102,7 @@ export const themes: Theme[] = [
     "slug": "aaron-plus-portfolio-website-template",
     "dodoProductId": "pdt_0NnucsPALvOoMOFkYiReb",
     "tagline": "Modern, high-performance Aaron Plus website template.",
-    "description": "Aaron Plus is a Webflow template that is designed with simplicity in mind, featuring a sleek and modern layout that is easy on the eyes and showcases your work in the best light. It comes with CMS integration for easy updates and maintenance.",
+    "description": "Aaron Plus is a Astro template that is designed with simplicity in mind, featuring a sleek and modern layout that is easy on the eyes and showcases your work in the best light. It comes with CMS integration for easy updates and maintenance.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -3169,7 +3169,7 @@ export const themes: Theme[] = [
     "slug": "aaron-portfolio-website-template",
     "dodoProductId": "pdt_0NnucyFP1jli8M0r0nWmB",
     "tagline": "Modern, high-performance Aaron website template.",
-    "description": "Aaron is a Webflow template that is designed with simplicity in mind, featuring a sleek and modern layout that is easy on the eyes and showcases your work in the best light. It comes with CMS integration for easy updates and maintenance.",
+    "description": "Aaron is a Astro template that is designed with simplicity in mind, featuring a sleek and modern layout that is easy on the eyes and showcases your work in the best light. It comes with CMS integration for easy updates and maintenance.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -3417,7 +3417,7 @@ export const themes: Theme[] = [
     "slug": "aavo-website-template",
     "dodoProductId": "pdt_0NnudSQGV2dhghQ8yczjh",
     "tagline": "Modern, high-performance Aavo website template.",
-    "description": "Aavo is a sleek Webflow template \ud83c\udf1f crafted for AI \ud83e\udd16, SaaS \ud83d\ude80, software \ud83d\udcbb, startups \ud83c\udfe2, and businesses \ud83d\udcbc. Perfect for web apps \ud83c\udf10, corporate sites \ud83c\udfd9\ufe0f, and modern apps \ud83d\udcf1, it blends style and functionality to showcase your brand professionally.",
+    "description": "Aavo is a sleek Astro template \ud83c\udf1f crafted for AI \ud83e\udd16, SaaS \ud83d\ude80, software \ud83d\udcbb, startups \ud83c\udfe2, and businesses \ud83d\udcbc. Perfect for web apps \ud83c\udf10, corporate sites \ud83c\udfd9\ufe0f, and modern apps \ud83d\udcf1, it blends style and functionality to showcase your brand professionally.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -3484,7 +3484,7 @@ export const themes: Theme[] = [
     "slug": "aawans-law-firm-website-template-1ea86",
     "dodoProductId": "pdt_0NnudZ9jeqsZjysvwylzw",
     "tagline": "Modern, high-performance Aawans website template.",
-    "description": "Aawans is an exclusive Webflow website template designed for law firms to help build a modern and professional law firm website. It is a powerful tool for legal professionals to show their services, team, and contact info.",
+    "description": "Aawans is an exclusive Astro website template designed for law firms to help build a modern and professional law firm website. It is a powerful tool for legal professionals to show their services, team, and contact info.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -3551,7 +3551,7 @@ export const themes: Theme[] = [
     "slug": "aaxon-website-template",
     "dodoProductId": "pdt_0NnudbKgX15dkYY2iwdlR",
     "tagline": "Modern, high-performance Aaxon website template.",
-    "description": "A\u00e1xon is a sleek, modern Webflow portfolio template for freelancers and professionals. Designed to showcase your work, skills, and style, it ensures your portfolio stands out and looks stunning on any device.",
+    "description": "A\u00e1xon is a sleek, modern Astro portfolio template for freelancers and professionals. Designed to showcase your work, skills, and style, it ensures your portfolio stands out and looks stunning on any device.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -3618,7 +3618,7 @@ export const themes: Theme[] = [
     "slug": "abbey-agency-website-template",
     "dodoProductId": "pdt_0Nnuds288lqQ3ZbQTjPGj",
     "tagline": "Modern, high-performance Abbey website template.",
-    "description": "Abbey is a clean and minimalist Webflow template designed for agencies seeking to make a lasting impression.",
+    "description": "Abbey is a clean and minimalist Astro template designed for agencies seeking to make a lasting impression.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -3670,7 +3670,7 @@ export const themes: Theme[] = [
     "slug": "abency-agency-website-template",
     "dodoProductId": "pdt_0NnudzwT48UXJakRmAGgR",
     "tagline": "Modern, high-performance Abency website template.",
-    "description": "Discover ABENCY, an exceptional Webflow template for agencies. Elevate your online presence with a chic design, seamless integration of e-commerce, and premium services. Capture customers' attention effortlessly and grow your business with ABENCY.",
+    "description": "Discover ABENCY, an exceptional Astro template for agencies. Elevate your online presence with a chic design, seamless integration of e-commerce, and premium services. Capture customers' attention effortlessly and grow your business with ABENCY.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -3737,7 +3737,7 @@ export const themes: Theme[] = [
     "slug": "abetor-website-template",
     "dodoProductId": "pdt_0Nnue7V3QCBcfHFDcEh4n",
     "tagline": "Modern, high-performance Abetor website template.",
-    "description": "A modern Portfolio Webflow Template designed with smooth scrolling and stylish animations. Perfect for creatives and professionals to showcase projects with a polished, interactive, and visually engaging presentation.",
+    "description": "A modern Portfolio Astro template designed with smooth scrolling and stylish animations. Perfect for creatives and professionals to showcase projects with a polished, interactive, and visually engaging presentation.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -3866,7 +3866,7 @@ export const themes: Theme[] = [
     "slug": "abreto-website-template",
     "dodoProductId": "pdt_0NnueKPY4v07JKOETQsXv",
     "tagline": "Modern, high-performance Abreto website template.",
-    "description": "Abreto is a modern Webflow template built for finance apps, budgeting tools, and fintech startups. It features a clean design, fast performance, and easy customization for any financial platform.",
+    "description": "Abreto is a modern Astro template built for finance apps, budgeting tools, and fintech startups. It features a clean design, fast performance, and easy customization for any financial platform.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -3933,7 +3933,7 @@ export const themes: Theme[] = [
     "slug": "absolute-website-template",
     "dodoProductId": "pdt_0NnueQlqNkjlzEYIoOlQ7",
     "tagline": "Modern, high-performance Absolute website template.",
-    "description": "A bold, modern Webflow template for creative studios, branding agencies, marketing teams, and design portfolios. Clean layout, flexible sections, and smooth animations, fully responsive and easy to customize.",
+    "description": "A bold, modern Astro template for creative studios, branding agencies, marketing teams, and design portfolios. Clean layout, flexible sections, and smooth animations, fully responsive and easy to customize.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -4000,7 +4000,7 @@ export const themes: Theme[] = [
     "slug": "abstraact-website-template",
     "dodoProductId": "pdt_0NnueYgaEWpG9OsCd2mkd",
     "tagline": "Modern, high-performance Abstraact website template.",
-    "description": "Abstract is a professionally designed Webflow template specifically created for businesses in the interior design, architecture, renovation, and building industries.",
+    "description": "Abstract is a professionally designed Astro template specifically created for businesses in the interior design, architecture, renovation, and building industries.",
     "framework": "astro",
     "category": "architecture-and-design",
     "categories": [
@@ -4134,7 +4134,7 @@ export const themes: Theme[] = [
     "slug": "ac-service-website-template",
     "dodoProductId": "pdt_0NnuenGWnWrPoQCU19MwJ",
     "tagline": "Modern, high-performance AC Service website template.",
-    "description": "AC Service is a modern Webflow template crafted for AC service providers, repair specialists, and HVAC businesses. With professionalism and functionality, this template is perfect for showcasing repair services and installation solutions.",
+    "description": "AC Service is a modern Astro template crafted for AC service providers, repair specialists, and HVAC businesses. With professionalism and functionality, this template is perfect for showcasing repair services and installation solutions.",
     "framework": "astro",
     "category": "home-services",
     "categories": [
@@ -4201,7 +4201,7 @@ export const themes: Theme[] = [
     "slug": "academic-multi-layout-website-template",
     "dodoProductId": "pdt_0NnuetK1PkDFN0HUpg40D",
     "tagline": "Modern, high-performance Academic website template.",
-    "description": "Introducing Academic, the ultimate multi-layout Webflow template for universities and educational institutions. Seamlessly showcase programs, faculty, campus life, and more with style and flexibility. Elevate your online presence with Academic today",
+    "description": "Introducing Academic, the ultimate multi-layout Astro template for universities and educational institutions. Seamlessly showcase programs, faculty, campus life, and more with style and flexibility. Elevate your online presence with Academic today",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -4330,7 +4330,7 @@ export const themes: Theme[] = [
     "slug": "academix-website-template",
     "dodoProductId": "pdt_0Nnuf70igRhBNL29aL7p9",
     "tagline": "Modern, high-performance Academix website template.",
-    "description": "Academix is a modern education Webflow template for online courses, coaching, and training programs. With responsive layouts and easy customization, it helps you deliver content clearly and professionally.",
+    "description": "Academix is a modern education Astro template for online courses, coaching, and training programs. With responsive layouts and easy customization, it helps you deliver content clearly and professionally.",
     "framework": "astro",
     "category": "wellness",
     "categories": [
@@ -4397,7 +4397,7 @@ export const themes: Theme[] = [
     "slug": "academy-school-website-template",
     "dodoProductId": "pdt_0NnufEZYy1jssmeYuZfCl",
     "tagline": "Modern, high-performance Academy website template.",
-    "description": "Academy is a premium Webflow Template for Online Courses, Education Platforms, or Digital Schools. If you are looking to create an amazing online learning experience for your users, search no more. Get Academy and wow your students!",
+    "description": "Academy is a premium Astro template for Online Courses, Education Platforms, or Digital Schools. If you are looking to create an amazing online learning experience for your users, search no more. Get Academy and wow your students!",
     "framework": "astro",
     "category": "education",
     "categories": [
@@ -4531,7 +4531,7 @@ export const themes: Theme[] = [
     "slug": "accountant128-accounting-website-template",
     "dodoProductId": "pdt_0NnufRN7jYcBBso3bR5SN",
     "tagline": "Modern, high-performance Accountant 128 website template.",
-    "description": "Accountant 128 is a professional website Webflow template for accountant, accounting consultant, consulting, consulting services, corporate, adviser,  financial technology, insurance, investor, tax consultant websites.",
+    "description": "Accountant 128 is a professional website Astro template for accountant, accounting consultant, consulting, consulting services, corporate, adviser,  financial technology, insurance, investor, tax consultant websites.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -4598,7 +4598,7 @@ export const themes: Theme[] = [
     "slug": "accountantx-accounting-website-template",
     "dodoProductId": "pdt_0NnufZ43ec68ROqjDUdxs",
     "tagline": "Modern, high-performance Accountant X website template.",
-    "description": "Stand out in the financial industry with Accountant X \ud83d\udcbc\ud83e\uddee. Our specialized Accountant Webflow template elevates your brand, showcasing your unique insights and building a powerful reputation for your advisory services.",
+    "description": "Stand out in the financial industry with Accountant X \ud83d\udcbc\ud83e\uddee. Our specialized Accountant Astro template elevates your brand, showcasing your unique insights and building a powerful reputation for your advisory services.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -4665,7 +4665,7 @@ export const themes: Theme[] = [
     "slug": "accountantyou-accounting-website-template",
     "dodoProductId": "pdt_0Nnufh33stoAfGnk7kELe",
     "tagline": "Modern, high-performance Accountant You website template.",
-    "description": "Accountant You is a premium and modern Webflow Template designed for accounting offices and freelancers seeking a trustworthy online presence.",
+    "description": "Accountant You is a premium and modern Astro template designed for accounting offices and freelancers seeking a trustworthy online presence.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -4732,7 +4732,7 @@ export const themes: Theme[] = [
     "slug": "accountex-website-template",
     "dodoProductId": "pdt_0NnufokswCNMTv5Rn1HIL",
     "tagline": "Modern, high-performance Accountex website template.",
-    "description": "Accountex is a modern Webflow template designed for the Accounting and Finance sector. It features a sleek design, multi-page layout, responsive structure, and easy customization for businesses.",
+    "description": "Accountex is a modern Astro template designed for the Accounting and Finance sector. It features a sleek design, multi-page layout, responsive structure, and easy customization for businesses.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -4799,7 +4799,7 @@ export const themes: Theme[] = [
     "slug": "accountix-website-template",
     "dodoProductId": "pdt_0NnufuvNAPone5VWsrRA8",
     "tagline": "Modern, high-performance Accountix website template.",
-    "description": "Accountix is a modern, responsive Webflow template for accountants, featuring customizable design, SEO-friendly structure, and built-in contact forms to help showcase financial services professionally.",
+    "description": "Accountix is a modern, responsive Astro template for accountants, featuring customizable design, SEO-friendly structure, and built-in contact forms to help showcase financial services professionally.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -4866,7 +4866,7 @@ export const themes: Theme[] = [
     "slug": "accounts-accounting-website-template",
     "dodoProductId": "pdt_0Nnug22xOAjqxYtJgXOaz",
     "tagline": "Modern, high-performance Accounts website template.",
-    "description": "A Webflow CMS template for any Accountancy business looking for an elegant, luxurious design. Easily demonstrate your value and high-class services to prospective clients; matching traditional, historical style with modern features and function.",
+    "description": "A Astro Content Collections template for any Accountancy business looking for an elegant, luxurious design. Easily demonstrate your value and high-class services to prospective clients; matching traditional, historical style with modern features and function.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -4933,7 +4933,7 @@ export const themes: Theme[] = [
     "slug": "accruefy-website-template",
     "dodoProductId": "pdt_0NnugB6Jy2EPQ9aKD4WBN",
     "tagline": "Modern, high-performance Accruefy website template.",
-    "description": "Transform your financial future with Accruefy Our custom Accountant Webflow template enhances your brand, highlights your expertise, and boosts the online presence of your advisory services.",
+    "description": "Transform your financial future with Accruefy Our custom Accountant Astro template enhances your brand, highlights your expertise, and boosts the online presence of your advisory services.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -5000,7 +5000,7 @@ export const themes: Theme[] = [
     "slug": "accting-accounting-website-template",
     "dodoProductId": "pdt_0NnugIT5WhkrAuKhGEuSv",
     "tagline": "Modern, high-performance Accting website template.",
-    "description": "Accting is a clean and modern website Webflow template for accountant and consulting websites, also for advisory, broker, coaching, consultant, corporate, insurance, law office, lawyer, attorney, analyst, audit, investment, investor websites.",
+    "description": "Accting is a clean and modern website Astro template for accountant and consulting websites, also for advisory, broker, coaching, consultant, corporate, insurance, law office, lawyer, attorney, analyst, audit, investment, investor websites.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -5067,7 +5067,7 @@ export const themes: Theme[] = [
     "slug": "acctinglite-accounting-website-template",
     "dodoProductId": "pdt_0NnugQJJqzP1RTGjKPbCq",
     "tagline": "Modern, high-performance Accting Lite website template.",
-    "description": "Accting Lite is a clean and modern website Webflow template for accountant and consulting websites, also for advisory, broker, coaching, consultant, corporate, insurance, law office, lawyer, attorney, analyst, audit, investment, investor websites.",
+    "description": "Accting Lite is a clean and modern website Astro template for accountant and consulting websites, also for advisory, broker, coaching, consultant, corporate, insurance, law office, lawyer, attorney, analyst, audit, investment, investor websites.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -5134,7 +5134,7 @@ export const themes: Theme[] = [
     "slug": "ace-agency-website-template",
     "dodoProductId": "pdt_0NnugZvMRpQgcoanJCj73",
     "tagline": "Modern, high-performance Ace website template.",
-    "description": "ACE Agency is a modern Webflow template. It can be used as a personal portfolio, photography website or a digital/design agency website.",
+    "description": "ACE Agency is a modern Astro template. It can be used as a personal portfolio, photography website or a digital/design agency website.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -5335,7 +5335,7 @@ export const themes: Theme[] = [
     "slug": "achernar-architecture-website-template",
     "dodoProductId": "pdt_0NnugszdWhZMmdgENw2BU",
     "tagline": "Modern, high-performance Achernar website template.",
-    "description": "Achernar Webflow template with a dark layout, velvety animations, neat typography, and trending design will make you stand out amongst your competitors. Appropriate for any Architectural Firms, Interior Design Studios, Agencies, or Startups.",
+    "description": "Achernar Astro template with a dark layout, velvety animations, neat typography, and trending design will make you stand out amongst your competitors. Appropriate for any Architectural Firms, Interior Design Studios, Agencies, or Startups.",
     "framework": "astro",
     "category": "architecture-and-design",
     "categories": [
@@ -5536,7 +5536,7 @@ export const themes: Theme[] = [
     "slug": "acme-website-template",
     "dodoProductId": "pdt_0NnuhCVvQsTd6krB5jsks",
     "tagline": "Modern, high-performance Acme website template.",
-    "description": "Acme is a modern horizontal portfolio Webflow template designed for creative professionals. Showcase your work with smooth scrolling, clean typography, and a bold visual layout.",
+    "description": "Acme is a modern horizontal portfolio Astro template designed for creative professionals. Showcase your work with smooth scrolling, clean typography, and a bold visual layout.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -5603,7 +5603,7 @@ export const themes: Theme[] = [
     "slug": "acomiks-website-template",
     "dodoProductId": "pdt_0NnuhIvzsvEZyh3nQUUM1",
     "tagline": "Modern, high-performance Acomiks website template.",
-    "description": "Elevate your furniture brand with Acomik, a sleek Webflow e-commerce template designed for modern online stores. Fully responsive, customizable, and built for seamless shopping experiences.",
+    "description": "Elevate your furniture brand with Acomik, a sleek Astro e-commerce template designed for modern online stores. Fully responsive, customizable, and built for seamless shopping experiences.",
     "framework": "astro",
     "category": "architecture-and-design",
     "categories": [
@@ -5670,7 +5670,7 @@ export const themes: Theme[] = [
     "slug": "acounty-128-accounting-website-template",
     "dodoProductId": "pdt_0NnuhPP6SIzlbbwvdGCdo",
     "tagline": "Modern, high-performance Acounty 128 website template.",
-    "description": "Acounty 128 is a professional website Webflow template for accounting and financial consulting websites. It also suits for accountant,  advisor, agency, broker, consultant, consulting, finance, insurance, coaching.",
+    "description": "Acounty 128 is a professional website Astro template for accounting and financial consulting websites. It also suits for accountant,  advisor, agency, broker, consultant, consulting, finance, insurance, coaching.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -5804,7 +5804,7 @@ export const themes: Theme[] = [
     "slug": "acron-consulting-website-template",
     "dodoProductId": "pdt_0NnuhUz3oeKxCnEQcsMMp",
     "tagline": "Modern, high-performance Acron website template.",
-    "description": "Acron is an ideal Webflow template for business and consulting services, offering a seamless blend of aesthetic appeal and robust functionality. With its sleek design and customization options, it provides all you need to showcase your services.",
+    "description": "Acron is an ideal Astro template for business and consulting services, offering a seamless blend of aesthetic appeal and robust functionality. With its sleek design and customization options, it provides all you need to showcase your services.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -5938,7 +5938,7 @@ export const themes: Theme[] = [
     "slug": "active-x-fitness-website-template",
     "dodoProductId": "pdt_0NnuhhPPQYhmBZMyBQIHB",
     "tagline": "Modern, high-performance Active-X website template.",
-    "description": "Active-X is a Webflow template designed for Fitness Professionals, Health Clubs, Gyms, Personal Trainers and Nutritionists looking to take their business online.",
+    "description": "Active-X is a Astro template designed for Fitness Professionals, Health Clubs, Gyms, Personal Trainers and Nutritionists looking to take their business online.",
     "framework": "astro",
     "category": "wellness",
     "categories": [
@@ -6005,7 +6005,7 @@ export const themes: Theme[] = [
     "slug": "activeaura-website-template",
     "dodoProductId": "pdt_0NnuhpbpRdhOnctHRXc9C",
     "tagline": "Modern, high-performance Active Aura website template.",
-    "description": "Active Aura is a modern Webflow template for gyms, fitness trainers, and health clubs. It offers bold, responsive layouts with customizable sections to showcase classes, trainers, and programs, delivering an engaging and dynamic user\u00a0experience.",
+    "description": "Active Aura is a modern Astro template for gyms, fitness trainers, and health clubs. It offers bold, responsive layouts with customizable sections to showcase classes, trainers, and programs, delivering an engaging and dynamic user\u00a0experience.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -6072,7 +6072,7 @@ export const themes: Theme[] = [
     "slug": "activitee-website-template",
     "dodoProductId": "pdt_0NnuhxVd64SdRPjMRWNZw",
     "tagline": "Modern, high-performance ActiviTee website template.",
-    "description": "ActiviTee is a sleek and professional Webflow template designed specifically for tailor and clothing websites. Perfect for clothing store, custom tailoring services, dress shops, and fashion boutiques, this template offers a stylish platform to show.",
+    "description": "ActiviTee is a sleek and professional Astro template designed specifically for tailor and clothing websites. Perfect for clothing store, custom tailoring services, dress shops, and fashion boutiques, this template offers a stylish platform to show.",
     "framework": "astro",
     "category": "retail-and-e-commerce",
     "categories": [
@@ -6139,7 +6139,7 @@ export const themes: Theme[] = [
     "slug": "actos-event-website-template",
     "dodoProductId": "pdt_0Nnui4Czc0NzGtm3To8tK",
     "tagline": "Modern, high-performance Actos website template.",
-    "description": "The ultimate Webflow template for event organizers! Elevate your event's online presence with sleek design, seamless navigation, and customizable features. Perfect for conferences, festivals, and more. Turn your vision into reality.",
+    "description": "The ultimate Astro template for event organizers! Elevate your event's online presence with sleek design, seamless navigation, and customizable features. Perfect for conferences, festivals, and more. Turn your vision into reality.",
     "framework": "astro",
     "category": "weddings-and-events",
     "categories": [
@@ -6206,7 +6206,7 @@ export const themes: Theme[] = [
     "slug": "acuvic-consulting-website-template",
     "dodoProductId": "pdt_0NnuiAYp9l3IjyHgoLUav",
     "tagline": "Modern, high-performance Acuvic website template.",
-    "description": "Acuvic HR Consulting Website Template is a ready website template for a human resource consulting website. This Webflow template embodies a sleek design with customizable features, including services, teams, testimonials, and more pages.",
+    "description": "Acuvic HR Consulting Website Template is a ready website template for a human resource consulting website. This Astro template embodies a sleek design with customizable features, including services, teams, testimonials, and more pages.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -6407,7 +6407,7 @@ export const themes: Theme[] = [
     "slug": "adelaide-portfolio-website-template",
     "dodoProductId": "pdt_0NnuiV3rp8fcGcBjoxnv8",
     "tagline": "Modern, high-performance Adelaide website template.",
-    "description": "Adelaide is a modern Webflow portfolio template with dynamic color schemes, smooth animations, and a clean design. Perfect for creators looking to showcase projects with a responsive layout, integrated CMS, and e-commerce features.",
+    "description": "Adelaide is a modern Astro portfolio template with dynamic color schemes, smooth animations, and a clean design. Perfect for creators looking to showcase projects with a responsive layout, integrated CMS, and e-commerce features.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -6655,7 +6655,7 @@ export const themes: Theme[] = [
     "slug": "adgenie-website-template",
     "dodoProductId": "pdt_0Nnuise8tLt0HnSB7LtVf",
     "tagline": "Modern, high-performance AdGenie website template.",
-    "description": "AdGenie delivers a sleek, responsive marketing Webflow template with captivating dashboards, smooth animations, and full CMS\u2014perfect for ad agencies, marketers, and creative teams.",
+    "description": "AdGenie delivers a sleek, responsive marketing Astro template with captivating dashboards, smooth animations, and full CMS\u2014perfect for ad agencies, marketers, and creative teams.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -6722,7 +6722,7 @@ export const themes: Theme[] = [
     "slug": "adigital-website-template",
     "dodoProductId": "pdt_0NnuiwVPKIuhfg70kr1NO",
     "tagline": "Modern, high-performance Adigital website template.",
-    "description": "Adigital - Digital Agency Webflow template",
+    "description": "Adigital - Digital Agency Astro template",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -6856,7 +6856,7 @@ export const themes: Theme[] = [
     "slug": "adlivo-website-template",
     "dodoProductId": "pdt_0NnujBpR5DDJjafwSYgSR",
     "tagline": "Modern, high-performance Adlivo website template.",
-    "description": "Adlivo is a Webflow template for Facebook ad agencies and digital marketing firms. Create a professional agency website with this modern, feature-rich template solution. Attract more clients and showcase your expertise effectively with Adlivo.",
+    "description": "Adlivo is a Astro template for Facebook ad agencies and digital marketing firms. Create a professional agency website with this modern, feature-rich template solution. Attract more clients and showcase your expertise effectively with Adlivo.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -7057,7 +7057,7 @@ export const themes: Theme[] = [
     "slug": "adox-studio-website-template",
     "dodoProductId": "pdt_0NnujS3UWilwKFru8jGRq",
     "tagline": "Modern, high-performance Adox Studio website template.",
-    "description": "\ud83c\udfa8 Adox is a bold and modern Webflow template designed for creative agencies, digital studios, portfolios, and design professionals to showcase services, projects, and brand identity with a premium visual experience.",
+    "description": "\ud83c\udfa8 Adox is a bold and modern Astro template designed for creative agencies, digital studios, portfolios, and design professionals to showcase services, projects, and brand identity with a premium visual experience.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -7124,7 +7124,7 @@ export const themes: Theme[] = [
     "slug": "adoxin-website-template",
     "dodoProductId": "pdt_0NnujXMSkk3gULq7xmsQc",
     "tagline": "Modern, high-performance Adoxin website template.",
-    "description": "Adoxin is a bold, modern, and highly creative Webflow template crafted for design agencies, digital studios, and creative professionals who want to stand out with impact. Built with a strong focus on visual storytelling and user experience...",
+    "description": "Adoxin is a bold, modern, and highly creative Astro template crafted for design agencies, digital studios, and creative professionals who want to stand out with impact. Built with a strong focus on visual storytelling and user experience...",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -7258,7 +7258,7 @@ export const themes: Theme[] = [
     "slug": "adroven-website-template",
     "dodoProductId": "pdt_0NnujkPdHK0hAXYMsFWWj",
     "tagline": "Modern, high-performance Adroven website template.",
-    "description": "Adroven is a modern and visually stunning Webflow template for creative agencies and professionals. It\u2019s designed to help you showcase your portfolio with elegance and impact, blending innovative design with seamless functionality.",
+    "description": "Adroven is a modern and visually stunning Astro template for creative agencies and professionals. It\u2019s designed to help you showcase your portfolio with elegance and impact, blending innovative design with seamless functionality.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -7325,7 +7325,7 @@ export const themes: Theme[] = [
     "slug": "ads-park-website-template",
     "dodoProductId": "pdt_0Nnujodx66cJa7mGRjGx5",
     "tagline": "Modern, high-performance Ads-park website template.",
-    "description": "Adspark is a modern Webflow template built for digital advertising and marketing agencies. It features a clean layout, service-focused sections, case studies, pricing plans, and CMS-powered blogs\u2014perfect for growing agencies and performance marketers",
+    "description": "Adspark is a modern Astro template built for digital advertising and marketing agencies. It features a clean layout, service-focused sections, case studies, pricing plans, and CMS-powered blogs\u2014perfect for growing agencies and performance marketers",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -7392,7 +7392,7 @@ export const themes: Theme[] = [
     "slug": "adsprint-website-template",
     "dodoProductId": "pdt_0Nnujt1LguQaQSJgj8Vx2",
     "tagline": "Modern, high-performance AdSprint website template.",
-    "description": "AdSprint is a dynamic Webflow template tailored for coaches, agencies, and service-based businesses. Elevate your lead generation, streamline marketing efforts, and build stunning, conversion-focused websites with ease.",
+    "description": "AdSprint is a dynamic Astro template tailored for coaches, agencies, and service-based businesses. Elevate your lead generation, streamline marketing efforts, and build stunning, conversion-focused websites with ease.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -7434,7 +7434,7 @@ export const themes: Theme[] = [
     "slug": "adstik-website-template",
     "dodoProductId": "pdt_0NnujxWvCxQX6m9FUgdlQ",
     "tagline": "Modern, high-performance Adstik website template.",
-    "description": "Adstik is a complete Webflow marketing template built for agencies that want to look professional and win more clients. This digital marketing agency template comes with 17 ready-to-use pages that cover everything your agency needs.",
+    "description": "Adstik is a complete Astro marketing template built for agencies that want to look professional and win more clients. This digital marketing agency template comes with 17 ready-to-use pages that cover everything your agency needs.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -7501,7 +7501,7 @@ export const themes: Theme[] = [
     "slug": "advanced-website-template",
     "dodoProductId": "pdt_0Nnuk3ZNaWccCFsv6rb39",
     "tagline": "Modern, high-performance AdvancEd website template.",
-    "description": "AdvancEd is a clean corporate website Webflow template for Online Education and Courses websites. It can be easily used for online classes, online courses, online learning, online academy, school, online studying, teaching, training websites.",
+    "description": "AdvancEd is a clean corporate website Astro template for Online Education and Courses websites. It can be easily used for online classes, online courses, online learning, online academy, school, online studying, teaching, training websites.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -7568,7 +7568,7 @@ export const themes: Theme[] = [
     "slug": "advantek-it-company-website-template",
     "dodoProductId": "pdt_0Nnuk6xXwmypuJoGMZ4U6",
     "tagline": "Modern, high-performance Advantek website template.",
-    "description": "Advantek, an exceptional technology website template, is tailor-made for a spectrum of IT-related ventures. Ideal for IT companies, IT consulting firms, Saas and technology businesses, this Webflow template boasts a sleek and contemporary design.",
+    "description": "Advantek, an exceptional technology website template, is tailor-made for a spectrum of IT-related ventures. Ideal for IT companies, IT consulting firms, Saas and technology businesses, this Astro template boasts a sleek and contemporary design.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -7635,7 +7635,7 @@ export const themes: Theme[] = [
     "slug": "adventria-website-template",
     "dodoProductId": "pdt_0NnukHxZ9OsUmIxAB23nY",
     "tagline": "Modern, high-performance Adventria website template.",
-    "description": "Adventria is a premium, versatile Webflow template for Business Consulting, Financial Advisory, and Professional Services. It offers 3 home, 3 service, and 3 blog layouts, cool animations, and a user-friendly clean design",
+    "description": "Adventria is a premium, versatile Astro template for Business Consulting, Financial Advisory, and Professional Services. It offers 3 home, 3 service, and 3 blog layouts, cool animations, and a user-friendly clean design",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -7702,7 +7702,7 @@ export const themes: Theme[] = [
     "slug": "advertise-x-consulting-website-template",
     "dodoProductId": "pdt_0NnukMb4V7n23x3fL8slI",
     "tagline": "Modern, high-performance Advertise X website template.",
-    "description": "Impress your website visitors and transform them into paying clients with Advertise X, our premium marketing agency Webflow Template designed for video, content and social media marketing agencies looking to take their website to the next level.",
+    "description": "Impress your website visitors and transform them into paying clients with Advertise X, our premium marketing agency Astro template designed for video, content and social media marketing agencies looking to take their website to the next level.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -7769,7 +7769,7 @@ export const themes: Theme[] = [
     "slug": "advertising-x-saas-website-template",
     "dodoProductId": "pdt_0NnukR3IG15VRlz2vKn8A",
     "tagline": "Modern, high-performance Advertising X website template.",
-    "description": "Unleash your SaaS startup full potential with Advertising X \ud83d\ude80\u2699\ufe0f, the ultimate modern SaaS Webflow Template designed specifically for the technology industry. Our tailor-made template will help your SaaS company skyrocket to the next level.",
+    "description": "Unleash your SaaS startup full potential with Advertising X \ud83d\ude80\u2699\ufe0f, the ultimate modern SaaS Astro template designed specifically for the technology industry. Our tailor-made template will help your SaaS company skyrocket to the next level.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -7836,7 +7836,7 @@ export const themes: Theme[] = [
     "slug": "adveza-finance-website-template",
     "dodoProductId": "pdt_0NnukU9OzmEtFQX7T6JnZ",
     "tagline": "Modern, high-performance Adveza website template.",
-    "description": "Adveza is a versatile Webflow website template tailored for finance and financial consulting businesses. It's an ideal choice for accounting firms, financial companies, fintech startups, investment firms, and providers of financial services.",
+    "description": "Adveza is a versatile Astro website template tailored for finance and financial consulting businesses. It's an ideal choice for accounting firms, financial companies, fintech startups, investment firms, and providers of financial services.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -7903,7 +7903,7 @@ export const themes: Theme[] = [
     "slug": "advibe-website-template",
     "dodoProductId": "pdt_0NnukZI9LVQd0dPJV7Mfg",
     "tagline": "Modern, high-performance Advibe website template.",
-    "description": "Elevate your agency\u2019s online presence with AdVibe, a bold and conversion-focused Webflow template crafted for digital marketing agencies, creative studios, performance marketers, and growth teams.",
+    "description": "Elevate your agency\u2019s online presence with AdVibe, a bold and conversion-focused Astro template crafted for digital marketing agencies, creative studios, performance marketers, and growth teams.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -7970,7 +7970,7 @@ export const themes: Theme[] = [
     "slug": "advin-website-template",
     "dodoProductId": "pdt_0NnukeE3RbB945tgo3gHp",
     "tagline": "Modern, high-performance Advin website template.",
-    "description": "Advin is a bold, modern Webflow template for creative agencies, startups & digital providers. Its clean layouts, vibrant visuals and conversion-focused design let modern brands showcase projects, present services easily and connect with clients",
+    "description": "Advin is a bold, modern Astro template for creative agencies, startups & digital providers. Its clean layouts, vibrant visuals and conversion-focused design let modern brands showcase projects, present services easily and connect with clients",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -8037,7 +8037,7 @@ export const themes: Theme[] = [
     "slug": "advis-one-page-website-template",
     "dodoProductId": "pdt_0NnukiIUY7zNrgKwkFgGN",
     "tagline": "Modern, high-performance Advis website template.",
-    "description": "Advis Webflow template is highly suitable for creating websites for small businesses, consulting companies, financial enterprises, investment businesses, and agencies.",
+    "description": "Advis Astro template is highly suitable for creating websites for small businesses, consulting companies, financial enterprises, investment businesses, and agencies.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -8074,7 +8074,7 @@ export const themes: Theme[] = [
     "slug": "advisio-website-template",
     "dodoProductId": "pdt_0Nnukn53CBNRiNT8JOLBh",
     "tagline": "Modern, high-performance Advisio website template.",
-    "description": "Advisory is a sleek Webflow template for consulting and business services, featuring CMS-driven case studies, service pages, and a modern design to help you build trust and win clients.",
+    "description": "Advisory is a sleek Astro template for consulting and business services, featuring CMS-driven case studies, service pages, and a modern design to help you build trust and win clients.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -8141,7 +8141,7 @@ export const themes: Theme[] = [
     "slug": "advisor-consulting-website-template",
     "dodoProductId": "pdt_0Nnuks25YYcXKHR1oBtMo",
     "tagline": "Modern, high-performance Advisor website template.",
-    "description": "Advisor is a clean and modern website Webflow template for business consulting websites. It can be easily used for accountant, adviser, consultant, financial advisor, adviser, human resources, insurance, legal, multipurpose, consulting services.",
+    "description": "Advisor is a clean and modern website Astro template for business consulting websites. It can be easily used for accountant, adviser, consultant, financial advisor, adviser, human resources, insurance, legal, multipurpose, consulting services.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -8208,7 +8208,7 @@ export const themes: Theme[] = [
     "slug": "advisorx-business-website-template",
     "dodoProductId": "pdt_0NnukwxweXRbcpSNUFhHM",
     "tagline": "Modern, high-performance Advisor X website template.",
-    "description": "Designed for consulting experts, Advisor X \ud83d\udcca\ud83d\udcbc offers a professional and polished website to showcase your business. This Business Consultant Webflow Template is perfect for building credibility and attracting high-value clients.",
+    "description": "Designed for consulting experts, Advisor X \ud83d\udcca\ud83d\udcbc offers a professional and polished website to showcase your business. This Business Consultant Astro template is perfect for building credibility and attracting high-value clients.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -8476,7 +8476,7 @@ export const themes: Theme[] = [
     "slug": "advocix-website-template",
     "dodoProductId": "pdt_0NnulHY5qdUGcbs1ra3n3",
     "tagline": "Modern, high-performance Dorbar website template.",
-    "description": "Dorbar is the modern law firm Webflow template for your practice. It offers a sophisticated and professional web design right out of the box. This advocacy platform ensures your firm looks credible and technologically current.",
+    "description": "Dorbar is the modern law firm Astro template for your practice. It offers a sophisticated and professional web design right out of the box. This advocacy platform ensures your firm looks credible and technologically current.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -8543,7 +8543,7 @@ export const themes: Theme[] = [
     "slug": "advon-website-template",
     "dodoProductId": "pdt_0NnulM9MC41r6yolGg3rm",
     "tagline": "Modern, high-performance Advon website template.",
-    "description": "Advon Webflow Template is a sleek and modern solution for travel and adventure agencies seeking to showcase their services. It features a clean design, smooth animations, and customizable layouts, making it ideal for your website.",
+    "description": "Advon Astro template is a sleek and modern solution for travel and adventure agencies seeking to showcase their services. It features a clean design, smooth animations, and customizable layouts, making it ideal for your website.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -8590,7 +8590,7 @@ export const themes: Theme[] = [
     "slug": "advorus-website-template",
     "dodoProductId": "pdt_0NnulR98Wcxfv9xbcudh3",
     "tagline": "Modern, high-performance Advorus website template.",
-    "description": "Advorus is a professional lawyer and attorneys portfolio Webflow template with CMS support, built for lawyers, legal services, and modern attorneys featuring a clean, trust-focused design that converts visitors into consultations.",
+    "description": "Advorus is a professional lawyer and attorneys portfolio Astro template with CMS support, built for lawyers, legal services, and modern attorneys featuring a clean, trust-focused design that converts visitors into consultations.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -8724,7 +8724,7 @@ export const themes: Theme[] = [
     "slug": "adworx-website-template",
     "dodoProductId": "pdt_0NnulcEagBydGU10InVTV",
     "tagline": "Modern, high-performance Adworx website template.",
-    "description": "Bring your Marketing & Advertising agency online \ud83d\udcc8 with a modern Webflow template designed for creative agencies, digital marketers, branding studios, and advertising firms. Showcase your services, portfolio, and expertise with engaging layouts.",
+    "description": "Bring your Marketing & Advertising agency online \ud83d\udcc8 with a modern Astro template designed for creative agencies, digital marketers, branding studios, and advertising firms. Showcase your services, portfolio, and expertise with engaging layouts.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -8791,7 +8791,7 @@ export const themes: Theme[] = [
     "slug": "adzan-website-template",
     "dodoProductId": "pdt_0NnulipthfIq9FzxA6I8O",
     "tagline": "Modern, high-performance Adzan website template.",
-    "description": "Adzan is a versatile Webflow agency template with multiple layout options, clean design, and smooth interactions \u2014 perfect for agencies, studios, and creatives.",
+    "description": "Adzan is a versatile Astro agency template with multiple layout options, clean design, and smooth interactions \u2014 perfect for agencies, studios, and creatives.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -8900,7 +8900,7 @@ export const themes: Theme[] = [
     "slug": "aeline-website-template",
     "dodoProductId": "pdt_0Nnulx26c9Q7i4O8ct1Qf",
     "tagline": "Modern, high-performance Aeline website template.",
-    "description": "Aeline is a Webflow template for Finance & Accounting and Software & SaaS. It has flexible layouts and scalable sections to showcase services, pricing, and build a strong online presence.",
+    "description": "Aeline is a Astro template for Finance & Accounting and Software & SaaS. It has flexible layouts and scalable sections to showcase services, pricing, and build a strong online presence.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -8967,7 +8967,7 @@ export const themes: Theme[] = [
     "slug": "aelixa-website-template",
     "dodoProductId": "pdt_0Nnum1y6ljX79jXwMzZmV",
     "tagline": "Modern, high-performance Aelixa website template.",
-    "description": "Aelixa is a premium, modern Webflow template designed for freelancers, digital marketers, consultants, and small agencies who want to build a strong and credible online presence.",
+    "description": "Aelixa is a premium, modern Astro template designed for freelancers, digital marketers, consultants, and small agencies who want to build a strong and credible online presence.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -9034,7 +9034,7 @@ export const themes: Theme[] = [
     "slug": "aelo-website-template",
     "dodoProductId": "pdt_0Nnum6HrTu8X33LMD2hxo",
     "tagline": "Modern, high-performance Aelo website template.",
-    "description": "The Aelo Webflow template features a sleek and modern design, ideal for property listings, real estate agencies, rental platforms, and any business in the real estate industry.",
+    "description": "The Aelo Astro template features a sleek and modern design, ideal for property listings, real estate agencies, rental platforms, and any business in the real estate industry.",
     "framework": "astro",
     "category": "real-estate",
     "categories": [
@@ -9101,7 +9101,7 @@ export const themes: Theme[] = [
     "slug": "aerialix-website-template",
     "dodoProductId": "pdt_0NnumAVobm2coNpposXTi",
     "tagline": "Modern, high-performance Aerialix website template.",
-    "description": "Aerialix is a Webflow website system for solo drone operators who want to attract professional aerial projects, build trust fast, and get better enquiries without looking like a studio or spending weeks on design.",
+    "description": "Aerialix is a Astro website system for solo drone operators who want to attract professional aerial projects, build trust fast, and get better enquiries without looking like a studio or spending weeks on design.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -9235,7 +9235,7 @@ export const themes: Theme[] = [
     "slug": "aerio-website-template",
     "dodoProductId": "pdt_0NnumIaz85zPATrW6p2rN",
     "tagline": "Modern, high-performance Aerio website template.",
-    "description": "Aerio \u2014 A premium Webflow template built for creative agencies and digital studios. Its elegant light and dark theme design, sleek aesthetics, and modular layout provide the perfect backdrop to showcase your work in style.",
+    "description": "Aerio \u2014 A premium Astro template built for creative agencies and digital studios. Its elegant light and dark theme design, sleek aesthetics, and modular layout provide the perfect backdrop to showcase your work in style.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -9302,7 +9302,7 @@ export const themes: Theme[] = [
     "slug": "aero-blog-website-template",
     "dodoProductId": "pdt_0NnumMskfPOKFYfKpIR3N",
     "tagline": "Modern, high-performance Aero website template.",
-    "description": "Aero is a modern Webflow Blog Template, easy-to-use and fully responsive.",
+    "description": "Aero is a modern Astro Blog Template, easy-to-use and fully responsive.",
     "framework": "astro",
     "category": "blog-and-editorial",
     "categories": [
@@ -9369,7 +9369,7 @@ export const themes: Theme[] = [
     "slug": "aerofly-website-template",
     "dodoProductId": "pdt_0NnumR73j2jcR9jnYAt3D",
     "tagline": "Modern, high-performance AeroFly website template.",
-    "description": "AeroFly: Premium Webflow B2B template for AgTech & drone companies. Industrial, modern design featuring CMS for products, Bento grid solutions, video CTA, and conversion-optimized layouts. The ultimate professional kit to scale your drone business",
+    "description": "AeroFly: Premium Astro B2B template for AgTech & drone companies. Industrial, modern design featuring CMS for products, Bento grid solutions, video CTA, and conversion-optimized layouts. The ultimate professional kit to scale your drone business",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -9436,7 +9436,7 @@ export const themes: Theme[] = [
     "slug": "aeron-portfolio-website-template",
     "dodoProductId": "pdt_0NnumVIHaCfZrpnf3kXJv",
     "tagline": "Modern, high-performance Aeron website template.",
-    "description": "Aeron Webflow template is a creative & unique portfolio resume specifically created for the developer, designer, programmer, freelancer, writer, artist, web developer, photographer, or any other digital professional.",
+    "description": "Aeron Astro template is a creative & unique portfolio resume specifically created for the developer, designer, programmer, freelancer, writer, artist, web developer, photographer, or any other digital professional.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -9503,7 +9503,7 @@ export const themes: Theme[] = [
     "slug": "aesth-website-template",
     "dodoProductId": "pdt_0NnumZanGp5Xz3ypEcc9j",
     "tagline": "Modern, high-performance Aesth\u00e9 website template.",
-    "description": "Aesthe is a sleek Webflow template for interior designers and studios, featuring smooth animations, responsive design, and a clean layout perfect for showcasing portfolios and attracting high-end clients.",
+    "description": "Aesthe is a sleek Astro template for interior designers and studios, featuring smooth animations, responsive design, and a clean layout perfect for showcasing portfolios and attracting high-end clients.",
     "framework": "astro",
     "category": "architecture-and-design",
     "categories": [
@@ -9570,7 +9570,7 @@ export const themes: Theme[] = [
     "slug": "aesthetica-website-template",
     "dodoProductId": "pdt_0Nnume2MElY2qhchQGCWs",
     "tagline": "Modern, high-performance Aesthetica website template.",
-    "description": "Aesthetica is a sleek Webflow template for design agencies, freelancers, and creatives, featuring 15+ pages and 2 CMS collections. Launch in hours, not days, and stand out with style.",
+    "description": "Aesthetica is a sleek Astro template for design agencies, freelancers, and creatives, featuring 15+ pages and 2 CMS collections. Launch in hours, not days, and stand out with style.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -9689,7 +9689,7 @@ export const themes: Theme[] = [
     "slug": "aesthiva-website-template",
     "dodoProductId": "pdt_0NnumlbADYSlP5hHw8Wz0",
     "tagline": "Modern, high-performance Aesthiva website template.",
-    "description": "Aesthiva is a premium med spa and aesthetic clinic Webflow template for skincare clinics, beauty studios, and wellness brands with CMS blog, treatment pages, responsive layouts, and appointment-focused sections.",
+    "description": "Aesthiva is a premium med spa and aesthetic clinic Astro template for skincare clinics, beauty studios, and wellness brands with CMS blog, treatment pages, responsive layouts, and appointment-focused sections.",
     "framework": "astro",
     "category": "wellness",
     "categories": [
@@ -9823,7 +9823,7 @@ export const themes: Theme[] = [
     "slug": "aethera-website-template",
     "dodoProductId": "pdt_0Nnumumd8vduFIvaIcLek",
     "tagline": "Modern, high-performance Aethera website template.",
-    "description": "Aethera is a professional website Webflow template for public science outreach organizations websites. It suits public science, science outreach, science nonprofit, research outreach, educational science, science program websites.",
+    "description": "Aethera is a professional website Astro template for public science outreach organizations websites. It suits public science, science outreach, science nonprofit, research outreach, educational science, science program websites.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -9890,7 +9890,7 @@ export const themes: Theme[] = [
     "slug": "aextera-website-template",
     "dodoProductId": "pdt_0Nnumzo6TMb3XZS2cI62E",
     "tagline": "Modern, high-performance Aextera website template.",
-    "description": "Aextera \u2013 A sleek Webflow template design for creative agencies and studios. With bold layouts, smooth animations, and a dynamic CMS for portfolio and blog, it\u2019s perfect for showcasing design, branding, marketing, and digital service websites.",
+    "description": "Aextera \u2013 A sleek Astro template design for creative agencies and studios. With bold layouts, smooth animations, and a dynamic CMS for portfolio and blog, it\u2019s perfect for showcasing design, branding, marketing, and digital service websites.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -9957,7 +9957,7 @@ export const themes: Theme[] = [
     "slug": "aeye-website-template",
     "dodoProductId": "pdt_0Nnun32npxDzeKholBdGI",
     "tagline": "Modern, high-performance Aeye website template.",
-    "description": "Aeye is a Webflow Template built for AI Products, SaaS Startups, and Technical Platforms. 19 pages with CMS-powered Docs, Blog, and Career, designed with a technical aesthetic, smooth interactions. Figma file included.",
+    "description": "Aeye is a Astro template built for AI Products, SaaS Startups, and Technical Platforms. 19 pages with CMS-powered Docs, Blog, and Career, designed with a technical aesthetic, smooth interactions. Figma file included.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -10091,7 +10091,7 @@ export const themes: Theme[] = [
     "slug": "affiliatex-blog-website-template",
     "dodoProductId": "pdt_0NnunC6XpL4FVnxC0gn2C",
     "tagline": "Modern, high-performance Affiliate X website template.",
-    "description": "Meet Affiliate X \ud83d\udd8a\ufe0f\ud83d\udcb0, our perfect Blog Webflow Template for affiliate marketing enthusiasts. This template offers a user-friendly experience and beautiful design, making sharing your insights and monetizing your content more accessible.",
+    "description": "Meet Affiliate X \ud83d\udd8a\ufe0f\ud83d\udcb0, our perfect Blog Astro template for affiliate marketing enthusiasts. This template offers a user-friendly experience and beautiful design, making sharing your insights and monetizing your content more accessible.",
     "framework": "astro",
     "category": "blog-and-editorial",
     "categories": [
@@ -10158,7 +10158,7 @@ export const themes: Theme[] = [
     "slug": "affilliate-news-website-template",
     "dodoProductId": "pdt_0NnunGJq7GwyhPSTxIUmK",
     "tagline": "Modern, high-performance Affiliate website template.",
-    "description": "Affiliate is a Webflow template made for entrepreneurs who want a professional and polished site ready to start and grow their affiliate marketing business in any niche.",
+    "description": "Affiliate is a Astro template made for entrepreneurs who want a professional and polished site ready to start and grow their affiliate marketing business in any niche.",
     "framework": "astro",
     "category": "blog-and-editorial",
     "categories": [
@@ -10225,7 +10225,7 @@ export const themes: Theme[] = [
     "slug": "afirma-website-template",
     "dodoProductId": "pdt_0NnunLkhtE3xxNgm7pi9d",
     "tagline": "Modern, high-performance Afirma website template.",
-    "description": "Afirma is a Webflow template for lawyers and law firms, offering a clean, professional design with flexible layouts. Perfect for showcasing legal services and building trust with clients. Easily customizable to fit your firm\u2019s identity.",
+    "description": "Afirma is a Astro template for lawyers and law firms, offering a clean, professional design with flexible layouts. Perfect for showcasing legal services and building trust with clients. Easily customizable to fit your firm\u2019s identity.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -10292,7 +10292,7 @@ export const themes: Theme[] = [
     "slug": "agado-website-template",
     "dodoProductId": "pdt_0NnunQAUWHTjBQnlXebRb",
     "tagline": "Modern, high-performance Agado website template.",
-    "description": "Agado is a clean, modern Webflow agency template designed for creative studios and digital service providers. It features sleek layouts, bold typography, and smooth interactions to showcase your portfolio, services, and team with a professional edge.",
+    "description": "Agado is a clean, modern Astro agency template designed for creative studios and digital service providers. It features sleek layouts, bold typography, and smooth interactions to showcase your portfolio, services, and team with a professional edge.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -10359,7 +10359,7 @@ export const themes: Theme[] = [
     "slug": "agata-agency-website-template",
     "dodoProductId": "pdt_0NnunUUwL6A3rRYtHdSAD",
     "tagline": "Modern, high-performance Agata website template.",
-    "description": "Agata CMS is a beautiful Agency Webflow Template, showcase your work in a practical and pleasant way to yours visitors, use its multiple sections to create a unique design for your business. Try Agata CMS today.",
+    "description": "Agata CMS is a beautiful Agency Astro template, showcase your work in a practical and pleasant way to yours visitors, use its multiple sections to create a unique design for your business. Try Agata CMS today.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -10426,7 +10426,7 @@ export const themes: Theme[] = [
     "slug": "ageento-website-template",
     "dodoProductId": "pdt_0Nnunc9VcpkggkT1IpmKU",
     "tagline": "Modern, high-performance Ageento website template.",
-    "description": "Agento is a modern Webflow template crafted for AI agent startups, automation tools, and AI-based assistants.Built for speed and clarity, Agento is designed to instantly explain what your AI tool does, how it helps, and why users should trust it.",
+    "description": "Agento is a modern Astro template crafted for AI agent startups, automation tools, and AI-based assistants.Built for speed and clarity, Agento is designed to instantly explain what your AI tool does, how it helps, and why users should trust it.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -10493,7 +10493,7 @@ export const themes: Theme[] = [
     "slug": "ageenzi-website-template",
     "dodoProductId": "pdt_0NnunfPMlLvpx5jN4AsBj",
     "tagline": "Modern, high-performance Ageenzi website template.",
-    "description": "Ageenzi is a modern and high-performing Webflow template built for startups, creative agencies, SaaS companies, and digital service providers. With a bold design, CMS support, and conversion-optimized layouts, it helps you showcase services, projects",
+    "description": "Ageenzi is a modern and high-performing Astro template built for startups, creative agencies, SaaS companies, and digital service providers. With a bold design, CMS support, and conversion-optimized layouts, it helps you showcase services, projects",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -10560,7 +10560,7 @@ export const themes: Theme[] = [
     "slug": "agenca-agency-website-template",
     "dodoProductId": "pdt_0Nnunk0pBIqr5pvf8iMFD",
     "tagline": "Modern, high-performance AGENCA website template.",
-    "description": "Explore AGENCA, an exceptional Webflow template crafted for agencies. Elevate your online presence with its stylish design, seamless e-commerce integration, and premium services. Capture customers' attention effortlessly and grow your business.",
+    "description": "Explore AGENCA, an exceptional Astro template crafted for agencies. Elevate your online presence with its stylish design, seamless e-commerce integration, and premium services. Capture customers' attention effortlessly and grow your business.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -10627,7 +10627,7 @@ export const themes: Theme[] = [
     "slug": "agencfireagency-agency-website-template",
     "dodoProductId": "pdt_0NnunoleYy4ZkWUKoUoEZ",
     "tagline": "Modern, high-performance AGENCFIRE Agency website template.",
-    "description": "Introducing AGENCFIRE, an innovative Webflow template crafted for agencies. Enhance your digital presence with its sleek design, seamless e-commerce integration, and premium services. Easily engage potential clients and expand your business.",
+    "description": "Introducing AGENCFIRE, an innovative Astro template crafted for agencies. Enhance your digital presence with its sleek design, seamless e-commerce integration, and premium services. Easily engage potential clients and expand your business.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -10694,7 +10694,7 @@ export const themes: Theme[] = [
     "slug": "agencflow-agency-website-template",
     "dodoProductId": "pdt_0NnuntJN2ZIDHv0YQb4nm",
     "tagline": "Modern, high-performance AgenCFlow website template.",
-    "description": "AgenCFlow is a perfect design & development agency Webflow template. It suits web design, web development, digital marketing, startups, technology, IT solutions, UI/UX Design, freelancers, SEO, consulting, branding, and developers website.",
+    "description": "AgenCFlow is a perfect design & development agency Astro template. It suits web design, web development, digital marketing, startups, technology, IT solutions, UI/UX Design, freelancers, SEO, consulting, branding, and developers website.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -10761,7 +10761,7 @@ export const themes: Theme[] = [
     "slug": "agenci-agency-website-template",
     "dodoProductId": "pdt_0NnunxsOMwSv1luRsUhHh",
     "tagline": "Modern, high-performance Agenci website template.",
-    "description": "Agenci is the ultimate Webflow template for agencies, startups, and small businesses looking to make a strong online presence.",
+    "description": "Agenci is the ultimate Astro template for agencies, startups, and small businesses looking to make a strong online presence.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -10828,7 +10828,7 @@ export const themes: Theme[] = [
     "slug": "agenciax-agency-website-template",
     "dodoProductId": "pdt_0Nnuo2onR6B0OdVsLaCzL",
     "tagline": "Modern, high-performance Agencia X website template.",
-    "description": "Revolutionize your agency with Agencia X \ud83c\udfaf\ud83d\ude80! Our premium Marketing Agency Webflow Template is specially crafted for marketing agencies and studios, offering dynamic ways to present your work.",
+    "description": "Revolutionize your agency with Agencia X \ud83c\udfaf\ud83d\ude80! Our premium Marketing Agency Astro template is specially crafted for marketing agencies and studios, offering dynamic ways to present your work.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -10962,7 +10962,7 @@ export const themes: Theme[] = [
     "slug": "agencier-agency-website-template",
     "dodoProductId": "pdt_0NnuoDJevmXHvVsURHnpn",
     "tagline": "Modern, high-performance AGENCIER website template.",
-    "description": "Presenting AGENCIER, a state-of-the-art Webflow template designed specifically for agencies. Elevate your online presence with its stylish design, seamless e-commerce integration, and premium services. Effortlessly captivate potential clients.",
+    "description": "Presenting AGENCIER, a state-of-the-art Astro template designed specifically for agencies. Elevate your online presence with its stylish design, seamless e-commerce integration, and premium services. Effortlessly captivate potential clients.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11029,7 +11029,7 @@ export const themes: Theme[] = [
     "slug": "agencies-x-agency-website-template",
     "dodoProductId": "pdt_0NnuoHyVKbTAOYeGfDWEZ",
     "tagline": "Modern, high-performance Agencies X website template.",
-    "description": "Agencies X is our ultimate agency Webflow Template & UI Kit. It includes a total of over 25 pages, and over 60 sections, making it a perfect choice to launch an amazing website for your creative agency as easy as 1, 2, 3.",
+    "description": "Agencies X is our ultimate agency Astro template & UI Kit. It includes a total of over 25 pages, and over 60 sections, making it a perfect choice to launch an amazing website for your creative agency as easy as 1, 2, 3.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11096,7 +11096,7 @@ export const themes: Theme[] = [
     "slug": "agenciflow-website-template",
     "dodoProductId": "pdt_0NnuoMgE5KL9hkrjWaxPF",
     "tagline": "Modern, high-performance Agenciflow website template.",
-    "description": "Agenciflow is a modern, clean Webflow template designed for creative agencies, digital studios, and startups that want to present their brand with clarity, confidence, and impact.",
+    "description": "Agenciflow is a modern, clean Astro template designed for creative agencies, digital studios, and startups that want to present their brand with clarity, confidence, and impact.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11148,7 +11148,7 @@ export const themes: Theme[] = [
     "slug": "agencikaagency-agency-website-template",
     "dodoProductId": "pdt_0NnuoRsUlb0mugIj1GFl5",
     "tagline": "Modern, high-performance AGENCIKA Agency website template.",
-    "description": "Ditch the ordinary. AGENCIKA is the ultimate Webflow template designed for agencies that crave distinction. Elevate your online presence with a sleek, modern design and seamless e-commerce integration. Watch your business take flight with AGENCIKA.",
+    "description": "Ditch the ordinary. AGENCIKA is the ultimate Astro template designed for agencies that crave distinction. Elevate your online presence with a sleek, modern design and seamless e-commerce integration. Watch your business take flight with AGENCIKA.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11215,7 +11215,7 @@ export const themes: Theme[] = [
     "slug": "agencio-agency-website-template",
     "dodoProductId": "pdt_0Nnuoc76QCWJWIlC1de2F",
     "tagline": "Modern, high-performance Agencio website template.",
-    "description": "Agencio is a premium Webflow template created for agencies of all sizes. The template is easy to use and fully responsive. Perfect for Agencies and all kinds of service-oriented businesses.",
+    "description": "Agencio is a premium Astro template created for agencies of all sizes. The template is easy to use and fully responsive. Perfect for Agencies and all kinds of service-oriented businesses.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11282,7 +11282,7 @@ export const themes: Theme[] = [
     "slug": "agenciup-agency-website-template",
     "dodoProductId": "pdt_0Nnuognw0FLedQuvVUye7",
     "tagline": "Modern, high-performance AgenciUp website template.",
-    "description": "Power up your online presence with AgenciUp \ud83c\udfaf! This Webflow template offers dynamic solutions to elevate your digital presence, creating a lasting impression that resonates with clients. Revolutionize how you showcase your projects effortlessly.",
+    "description": "Power up your online presence with AgenciUp \ud83c\udfaf! This Astro template offers dynamic solutions to elevate your digital presence, creating a lasting impression that resonates with clients. Revolutionize how you showcase your projects effortlessly.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11416,7 +11416,7 @@ export const themes: Theme[] = [
     "slug": "agencu-agency-website-template",
     "dodoProductId": "pdt_0NnuonpxlrV6PahAasxv2",
     "tagline": "Modern, high-performance Agenc\u016b website template.",
-    "description": "Agenc\u016b is an innovative Webflow template that places a strong emphasis on seamless user experiences and captivating site design.",
+    "description": "Agenc\u016b is an innovative Astro template that places a strong emphasis on seamless user experiences and captivating site design.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11550,7 +11550,7 @@ export const themes: Theme[] = [
     "slug": "agency-x-de-marketing-website-template",
     "dodoProductId": "pdt_0NnuoxAuShKeWmIOjz9hw",
     "tagline": "Modern, high-performance Agency X (DE) website template.",
-    "description": "Agency X is a premium Webflow Template & UI Kit for marketing agencies. Our new Agency Webflow Template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
+    "description": "Agency X is a premium Astro template & UI Kit for marketing agencies. Our new Agency Astro template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11617,7 +11617,7 @@ export const themes: Theme[] = [
     "slug": "agency-x-fr-marketing-website-template",
     "dodoProductId": "pdt_0Nnup26mJW8WO0wpVbZPR",
     "tagline": "Modern, high-performance Agency X (FR) website template.",
-    "description": "Agency X is a premium Webflow Template & UI Kit for marketing agencies. Our new Agency Webflow Template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
+    "description": "Agency X is a premium Astro template & UI Kit for marketing agencies. Our new Agency Astro template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11684,7 +11684,7 @@ export const themes: Theme[] = [
     "slug": "agency-x-marketing-website-template",
     "dodoProductId": "pdt_0Nnup8eBYNXHQKlGvNJ7S",
     "tagline": "Modern, high-performance Agency X website template.",
-    "description": "Agency X is a premium Webflow Template & UI Kit for marketing agencies. Our new Agency Webflow Template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
+    "description": "Agency X is a premium Astro template & UI Kit for marketing agencies. Our new Agency Astro template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11818,7 +11818,7 @@ export const themes: Theme[] = [
     "slug": "agencyace-agency-website-template",
     "dodoProductId": "pdt_0NnupKpq72Rr4chz9L9HD",
     "tagline": "Modern, high-performance Agencyace website template.",
-    "description": "Agencyace is the all-in-one Creative Agency & Design Stdio Webflow Template with ultra-high performance, exclusive features, and an award-winning design collection. It includes 2+ Landing page, 50+ section templates, and 15+ inner pages.",
+    "description": "Agencyace is the all-in-one Creative Agency & Design Stdio Astro template with ultra-high performance, exclusive features, and an award-winning design collection. It includes 2+ Landing page, 50+ section templates, and 15+ inner pages.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11885,7 +11885,7 @@ export const themes: Theme[] = [
     "slug": "agencye-website-template",
     "dodoProductId": "pdt_0NnupQTifv778ktgoJmHi",
     "tagline": "Modern, high-performance Agencye website template.",
-    "description": "Agencye is a webflow template for agencies that want to stand out. With clean layouts, smooth animations, and a seamless design, it keeps the focus on your work. Showcase projects, highlight services, and attract clients with this agency template.",
+    "description": "Agencye is a Astro template for agencies that want to stand out. With clean layouts, smooth animations, and a seamless design, it keeps the focus on your work. Showcase projects, highlight services, and attract clients with this agency template.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -11952,7 +11952,7 @@ export const themes: Theme[] = [
     "slug": "agencyis-creative-website-template",
     "dodoProductId": "pdt_0NnupUkigasmMxpxqrmeZ",
     "tagline": "Modern, high-performance Agencyis website template.",
-    "description": "Agencyis is a unique and modern Webflow template with the main focus on a smooth user experience to make your site stand out from the crowd.",
+    "description": "Agencyis is a unique and modern Astro template with the main focus on a smooth user experience to make your site stand out from the crowd.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12019,7 +12019,7 @@ export const themes: Theme[] = [
     "slug": "agencymkt-website-template",
     "dodoProductId": "pdt_0NnupZlTS9ofD7PtGtRAt",
     "tagline": "Modern, high-performance AgencyMKT website template.",
-    "description": "Showcase your expertise and attract more clients with AgencyMKT. This Agency Webflow Template is perfect for agencies, freelancers, and creative professionals looking to build a portfolio with ease.",
+    "description": "Showcase your expertise and attract more clients with AgencyMKT. This Agency Astro template is perfect for agencies, freelancers, and creative professionals looking to build a portfolio with ease.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12086,7 +12086,7 @@ export const themes: Theme[] = [
     "slug": "agencynice-website-template",
     "dodoProductId": "pdt_0NnupeKOjf0LbEuWTg9lL",
     "tagline": "Modern, high-performance AgencyNice website template.",
-    "description": "The Nice Webflow agency template offers a professional design with seamless animations, easy customization, responsive layouts, and integrated CMS & e-commerce features. Perfect for showcasing agency portfolios with elegance and boosting visibility.",
+    "description": "The Nice Astro agency template offers a professional design with seamless animations, easy customization, responsive layouts, and integrated CMS & e-commerce features. Perfect for showcasing agency portfolios with elegance and boosting visibility.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -12153,7 +12153,7 @@ export const themes: Theme[] = [
     "slug": "agencywave-website-template",
     "dodoProductId": "pdt_0Nnupj5AKknyNby6f7VLP",
     "tagline": "Modern, high-performance AgencyWave website template.",
-    "description": "AgencyWave is a modern Marketing Webflow template designed for digital agencies, startups, SEO & Marketing companies. With cutting-edge transitions and a sleek light theme this is a go to agency template for startups.",
+    "description": "AgencyWave is a modern Marketing Astro template designed for digital agencies, startups, SEO & Marketing companies. With cutting-edge transitions and a sleek light theme this is a go to agency template for startups.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12195,7 +12195,7 @@ export const themes: Theme[] = [
     "slug": "agencyx-agency-website-template",
     "dodoProductId": "pdt_0Nnupni5MknQJ9QbLzdPR",
     "tagline": "Modern, high-performance Agency-X website template.",
-    "description": "Agency - X  is a premium-quality Webflow template perfect for digital agencies, creative agencies, design studios, digital marketing agencies, IT agencies, software agencies, portfolio showcases, web design agencies and SEO agencies",
+    "description": "Agency - X  is a premium-quality Astro template perfect for digital agencies, creative agencies, design studios, digital marketing agencies, IT agencies, software agencies, portfolio showcases, web design agencies and SEO agencies",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12262,7 +12262,7 @@ export const themes: Theme[] = [
     "slug": "agencyyportfolioo-website-template",
     "dodoProductId": "pdt_0Nnups8oyVoVXVESFciWb",
     "tagline": "Modern, high-performance Agencyy Portfolioo website template.",
-    "description": "Agency is a modern Corporate Webflow template designed for digital agencies, startups, corporate companies. With cutting-edge transitions and a sleek dark theme this is a go to agency template for startups, service and corporate companies.",
+    "description": "Agency is a modern Corporate Astro template designed for digital agencies, startups, corporate companies. With cutting-edge transitions and a sleek dark theme this is a go to agency template for startups, service and corporate companies.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -12329,7 +12329,7 @@ export const themes: Theme[] = [
     "slug": "agencyz-agency-website-template",
     "dodoProductId": "pdt_0NnupwIR8eEMURyOEvZxO",
     "tagline": "Modern, high-performance Agencyz website template.",
-    "description": "Agencyz is an elegant and modern Webflow template designed for digital agencies looking for a bold online presence. With immersive 3D animations and a dark color palette, it exudes sophistication while ensuring a seamless user experience.",
+    "description": "Agencyz is an elegant and modern Astro template designed for digital agencies looking for a bold online presence. With immersive 3D animations and a dark color palette, it exudes sophistication while ensuring a seamless user experience.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12463,7 +12463,7 @@ export const themes: Theme[] = [
     "slug": "agenflow-website-template",
     "dodoProductId": "pdt_0Nnuq7ZEe8ikCvMpd3IWI",
     "tagline": "Modern, high-performance Agenflow website template.",
-    "description": "Agenflow is a bold Digital Agency Webflow Template for creative agencies, startups, and growing businesses. Showcase your services, projects, pricing, testimonials, and expertise with a modern, responsive, and conversion-focused website.",
+    "description": "Agenflow is a bold Digital Agency Astro template for creative agencies, startups, and growing businesses. Showcase your services, projects, pricing, testimonials, and expertise with a modern, responsive, and conversion-focused website.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12530,7 +12530,7 @@ export const themes: Theme[] = [
     "slug": "ageniix-website-template",
     "dodoProductId": "pdt_0NnuqC5nN7f3XAGK26FSC",
     "tagline": "Modern, high-performance Ageniix website template.",
-    "description": "Meet Agenix, the perfect Webflow template for AI agent platforms and artificial intelligence companies. This template makes your AI business look smart and trustworthy.",
+    "description": "Meet Agenix, the perfect Astro template for AI agent platforms and artificial intelligence companies. This template makes your AI business look smart and trustworthy.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -12597,7 +12597,7 @@ export const themes: Theme[] = [
     "slug": "agenix-agency-website-template",
     "dodoProductId": "pdt_0NnuqGYaeBzerCxIjXFKu",
     "tagline": "Modern, high-performance Agenix website template.",
-    "description": "Experience the power of exceptional web design with the Agenix Webflow agency template. Are you ready to take your agency's online presence to new heights? Look no further! Our Template is specifically designed to empower digital agencies.",
+    "description": "Experience the power of exceptional web design with the Agenix Astro agency template. Are you ready to take your agency's online presence to new heights? Look no further! Our Template is specifically designed to empower digital agencies.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12664,7 +12664,7 @@ export const themes: Theme[] = [
     "slug": "agennix-agency-website-template",
     "dodoProductId": "pdt_0NnuqL1RhxYHJUpjrkfTj",
     "tagline": "Modern, high-performance Agennix website template.",
-    "description": "Experience the power of exceptional web design with the Agennix Webflow agency template. Are you ready to take your agency's online presence to new heights? Look no further! Our Template is specifically designed to empower digital agencies.",
+    "description": "Experience the power of exceptional web design with the Agennix Astro agency template. Are you ready to take your agency's online presence to new heights? Look no further! Our Template is specifically designed to empower digital agencies.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12731,7 +12731,7 @@ export const themes: Theme[] = [
     "slug": "agens-agency-website-template",
     "dodoProductId": "pdt_0NnuqPVPUgcD4hwUtb0qM",
     "tagline": "Modern, high-performance AGENS website template.",
-    "description": "Introducing AGENS, a cutting-edge Webflow template tailored for agencies. Enhance your digital footprint with its stylish design, flawless e-commerce integration, and top-tier services. Seamlessly captivate potential clients and expand your business.",
+    "description": "Introducing AGENS, a cutting-edge Astro template tailored for agencies. Enhance your digital footprint with its stylish design, flawless e-commerce integration, and top-tier services. Seamlessly captivate potential clients and expand your business.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12798,7 +12798,7 @@ export const themes: Theme[] = [
     "slug": "agense-agency-website-template",
     "dodoProductId": "pdt_0NnuqTpQqssu7unpM1uYG",
     "tagline": "Modern, high-performance Agense website template.",
-    "description": "Agense is a sleek and modern agency Webflow template designed for digital agencies, creative studios, and startups. Customize your agency website with ease and showcase your projects, services, and portfolio professionally.",
+    "description": "Agense is a sleek and modern agency Astro template designed for digital agencies, creative studios, and startups. Customize your agency website with ease and showcase your projects, services, and portfolio professionally.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12932,7 +12932,7 @@ export const themes: Theme[] = [
     "slug": "agensight-x-agency-website-template",
     "dodoProductId": "pdt_0NnuqbZO5mgXtd8XX3hyt",
     "tagline": "Modern, high-performance Agensight X website template.",
-    "description": "Take your agency to the next level. Get Agensight X, our top-notch advertising & marketing agency Webflow Template that includes everything you will need to launch your agency website and start getting clients.",
+    "description": "Take your agency to the next level. Get Agensight X, our top-notch advertising & marketing agency Astro template that includes everything you will need to launch your agency website and start getting clients.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -12999,7 +12999,7 @@ export const themes: Theme[] = [
     "slug": "agensoaragency-agency-website-template",
     "dodoProductId": "pdt_0Nnuqgcv4XwsM6GlrWitG",
     "tagline": "Modern, high-performance AGENSOAR Agency website template.",
-    "description": "Unleash the power of AGENSOAR, a revolutionary Webflow template designed to propel agencies to new heights. Navigate the digital seas with unparalleled style, harness the effortless power of integrated e-commerce, and showcase your premium services.",
+    "description": "Unleash the power of AGENSOAR, a revolutionary Astro template designed to propel agencies to new heights. Navigate the digital seas with unparalleled style, harness the effortless power of integrated e-commerce, and showcase your premium services.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -13066,7 +13066,7 @@ export const themes: Theme[] = [
     "slug": "agent-insurance-website-template",
     "dodoProductId": "pdt_0Nnuql7CXqfJIzOntwyEF",
     "tagline": "Modern, high-performance Agent website template.",
-    "description": "Agent is a clean and modern website Webflow template for insurance company websites. It can be easily used for accounting, auto insurance, car insurance, broker, health insurance, insurance agency, insurance agent, life insurance, consulting firm,",
+    "description": "Agent is a clean and modern website Astro template for insurance company websites. It can be easily used for accounting, auto insurance, car insurance, broker, health insurance, insurance agency, insurance agent, life insurance, consulting firm,",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -13133,7 +13133,7 @@ export const themes: Theme[] = [
     "slug": "agentflow-website-template",
     "dodoProductId": "pdt_0NnuqoFxxS2t46vSmYfOU",
     "tagline": "Modern, high-performance Agentflow website template.",
-    "description": "Level up your AI project with Agentflow \ud83d\ude80\ud83e\udde0! Crafted for developers and tech innovators, this AI Coding Agent Webflow Template helps you present your product with modern design, smooth UX, and powerful customization tools.",
+    "description": "Level up your AI project with Agentflow \ud83d\ude80\ud83e\udde0! Crafted for developers and tech innovators, this AI Coding Agent Astro template helps you present your product with modern design, smooth UX, and powerful customization tools.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -13200,7 +13200,7 @@ export const themes: Theme[] = [
     "slug": "agentic-consulting-website-template",
     "dodoProductId": "pdt_0Nnuqqx5HNdFQFgX5XXdG",
     "tagline": "Modern, high-performance Agentic website template.",
-    "description": "Agentic, an exclusive Webflow Template designed for corporate & consulting websites, business coaches and consultants. Elevate your online presence, that guarantees to leave an impression on your potential clients right from the first glance.",
+    "description": "Agentic, an exclusive Astro template designed for corporate & consulting websites, business coaches and consultants. Elevate your online presence, that guarantees to leave an impression on your potential clients right from the first glance.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -13267,7 +13267,7 @@ export const themes: Theme[] = [
     "slug": "agentifye-website-template",
     "dodoProductId": "pdt_0NnuqwTQCXXsoetgJiccb",
     "tagline": "Modern, high-performance Agentifye website template.",
-    "description": "Discover Agentifye \u2013 a sleek Webflow landing page template for ai agency teams and creative artist companies blending design, automation, and artificial intelligence. Built to communicate innovation, trust, and performance instantly.",
+    "description": "Discover Agentifye \u2013 a sleek Astro landing page template for ai agency teams and creative artist companies blending design, automation, and artificial intelligence. Built to communicate innovation, trust, and performance instantly.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -13319,7 +13319,7 @@ export const themes: Theme[] = [
     "slug": "agentixagency-agency-website-template",
     "dodoProductId": "pdt_0Nnur0iq07KM5KxAkRpR2",
     "tagline": "Modern, high-performance AGENTIX Agency website template.",
-    "description": "Unleash the Power of AGENTIX: The revolutionary agency Webflow solution designed to ignite your digital presence. Crafted specifically for agencies, AGENTIX boasts a sleek, modern design that will captivate potential clients.",
+    "description": "Unleash the Power of AGENTIX: The revolutionary agency Astro solution designed to ignite your digital presence. Crafted specifically for agencies, AGENTIX boasts a sleek, modern design that will captivate potential clients.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -13386,7 +13386,7 @@ export const themes: Theme[] = [
     "slug": "agentlite-insurance-website-template",
     "dodoProductId": "pdt_0Nnur5EX58v8PWCnrOlTr",
     "tagline": "Modern, high-performance Agent Lite website template.",
-    "description": "Agent Lite is a clean and modern website Webflow template for insurance company websites. It can be easily used for accounting, auto insurance, car insurance, health insurance, insurance agency, insurance agent, life insurance, consulting firm.",
+    "description": "Agent Lite is a clean and modern website Astro template for insurance company websites. It can be easily used for accounting, auto insurance, car insurance, health insurance, insurance agency, insurance agent, life insurance, consulting firm.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -13520,7 +13520,7 @@ export const themes: Theme[] = [
     "slug": "agentra0-website-template",
     "dodoProductId": "pdt_0NnurDIoQLpb5CgtDETAf",
     "tagline": "Modern, high-performance Agentra0 website template.",
-    "description": "Agentra is a modern AI SaaS Webflow template for startups, automation platforms, software companies, and technology businesses that need a professional, responsive, and conversion-focused website.",
+    "description": "Agentra is a modern AI SaaS Astro template for startups, automation platforms, software companies, and technology businesses that need a professional, responsive, and conversion-focused website.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -13587,7 +13587,7 @@ export const themes: Theme[] = [
     "slug": "agentrai-website-template",
     "dodoProductId": "pdt_0NnurHvY9atP6a7fzMgwf",
     "tagline": "Modern, high-performance AutomateX website template.",
-    "description": "AutomateX is the go-to Webflow template for AI agent and automation SaaS products. A bold, modern design packed with conversion-optimized sections from hero and integrations to pricing, testimonials, and FAQ.",
+    "description": "AutomateX is the go-to Astro template for AI agent and automation SaaS products. A bold, modern design packed with conversion-optimized sections from hero and integrations to pricing, testimonials, and FAQ.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -13654,7 +13654,7 @@ export const themes: Theme[] = [
     "slug": "agentrao-website-template",
     "dodoProductId": "pdt_0NnurKPIi05dVdyEiT7Mi",
     "tagline": "Modern, high-performance Agentrao website template.",
-    "description": "Agentrao a clean, modern Webflow HTML website template for creative agencies, saas, and freelancers\u2014fully responsive, performance-optimized, and easy to customize.",
+    "description": "Agentrao a clean, modern Astro HTML website template for creative agencies, saas, and freelancers\u2014fully responsive, performance-optimized, and easy to customize.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -13721,7 +13721,7 @@ export const themes: Theme[] = [
     "slug": "agentro-website-template",
     "dodoProductId": "pdt_0NnurOy9SLuSdcgEEfZf2",
     "tagline": "Modern, high-performance Agentro website template.",
-    "description": "Agentro is a premium Creative Digital Agency Webflow template designed for modern agencies, startups, and freelancers. Showcase your services, portfolio, and brand with a sleek, responsive, and user-friendly design.",
+    "description": "Agentro is a premium Creative Digital Agency Astro template designed for modern agencies, startups, and freelancers. Showcase your services, portfolio, and brand with a sleek, responsive, and user-friendly design.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -13788,7 +13788,7 @@ export const themes: Theme[] = [
     "slug": "agenus-website-template",
     "dodoProductId": "pdt_0NnurTAbd5oitMbFP472W",
     "tagline": "Modern, high-performance Agenus website template.",
-    "description": "Agenus is a sleek and modern Webflow template designed for creative agencies, freelancers, and studios. It features a clean design, responsive layout, and customizable sections to showcase your portfolio & services.",
+    "description": "Agenus is a sleek and modern Astro template designed for creative agencies, freelancers, and studios. It features a clean design, responsive layout, and customizable sections to showcase your portfolio & services.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -13902,7 +13902,7 @@ export const themes: Theme[] = [
     "slug": "agenzaagency-agency-website-template",
     "dodoProductId": "pdt_0NnuraylWkSykfOP19zij",
     "tagline": "Modern, high-performance Agenza website template.",
-    "description": "Introducing the Agenza Webflow template, a premier solution for modern consulting firms. Agenza transcends the typical website template. It's an expertly designed digital platform tailored for agencies aiming to elevate their online presence.",
+    "description": "Introducing the Agenza Astro template, a premier solution for modern consulting firms. Agenza transcends the typical website template. It's an expertly designed digital platform tailored for agencies aiming to elevate their online presence.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -13969,7 +13969,7 @@ export const themes: Theme[] = [
     "slug": "agenzai-agency-website-template",
     "dodoProductId": "pdt_0NnurfcEaTsS6fvYodvuU",
     "tagline": "Modern, high-performance Agenzai website template.",
-    "description": "Agenzai is a fully-responsive website template to build your upcoming Agency webflow website. Agenzai is a responsive modern webflow template for Agency websites with all essential CMS & E-commerce features.",
+    "description": "Agenzai is a fully-responsive website template to build your upcoming Agency Astro website. Agenzai is a responsive modern Astro template for Agency websites with all essential CMS & E-commerce features.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -14036,7 +14036,7 @@ export const themes: Theme[] = [
     "slug": "agenzi-website-template",
     "dodoProductId": "pdt_0Nnurn6tgrvqt4hTA8Acs",
     "tagline": "Modern, high-performance Agenzi website template.",
-    "description": "Agenzi is a powerful Creative Agency Webflow Template crafted for agencies aiming to stand out. This customizable template offers vibrant design, seamless functionality, and flexibility to showcase your projects, ensuring a dynamic online presence.",
+    "description": "Agenzi is a powerful Creative Agency Astro template crafted for agencies aiming to stand out. This customizable template offers vibrant design, seamless functionality, and flexibility to showcase your projects, ensuring a dynamic online presence.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -14237,7 +14237,7 @@ export const themes: Theme[] = [
     "slug": "aggregator-x-directory-website-template",
     "dodoProductId": "pdt_0NnurygR6h5HpzEDZWxmd",
     "tagline": "Modern, high-performance Aggregator X website template.",
-    "description": "Looking to create a product discovery website \ud83d\udd0e\ud83d\udcbb? Look no further than Aggregator X! Our curated directory Webflow Template. It's awesome design make it easy to build a website that helps users discover new and exciting products \ud83d\udca1.",
+    "description": "Looking to create a product discovery website \ud83d\udd0e\ud83d\udcbb? Look no further than Aggregator X! Our curated directory Astro template. It's awesome design make it easy to build a website that helps users discover new and exciting products \ud83d\udca1.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -14371,7 +14371,7 @@ export const themes: Theme[] = [
     "slug": "agnci-agency-website-template",
     "dodoProductId": "pdt_0Nnus7gQPNcy5HSAsZ9ja",
     "tagline": "Modern, high-performance AGNCI website template.",
-    "description": "Showcase your agency's creativity with AGNCI! Tailored for design agencies and studios, our Webflow template offers a sleek and elegant platform to present your creative services with style and sophistication.",
+    "description": "Showcase your agency's creativity with AGNCI! Tailored for design agencies and studios, our Astro template offers a sleek and elegant platform to present your creative services with style and sophistication.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -14505,7 +14505,7 @@ export const themes: Theme[] = [
     "slug": "agnio-website-template",
     "dodoProductId": "pdt_0NnusFLzfBfYl3n51fDSe",
     "tagline": "Modern, high-performance Avido website template.",
-    "description": "Avido is a creative agency specializing in branding, design, and Webflow development, helping modern brands stand out with clarity and impact.",
+    "description": "Avido is a creative agency specializing in branding, design, and Astro development, helping modern brands stand out with clarity and impact.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -14572,7 +14572,7 @@ export const themes: Theme[] = [
     "slug": "agnos-website-template",
     "dodoProductId": "pdt_0NnusJsfv0bXlv2cyj0SQ",
     "tagline": "Modern, high-performance Agnos website template.",
-    "description": "Creative agency and design studio Webflow template for branding teams, digital agencies, and studios that want to showcase work with clarity, strong visuals, and a clean, professional layout.",
+    "description": "Creative agency and design studio Astro template for branding teams, digital agencies, and studios that want to showcase work with clarity, strong visuals, and a clean, professional layout.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -14773,7 +14773,7 @@ export const themes: Theme[] = [
     "slug": "agotastudio-one-page-website-template",
     "dodoProductId": "pdt_0NnusWK929r6Ttc8oa6cR",
     "tagline": "Modern, high-performance Agota Studio website template.",
-    "description": "EnergyUp template is a dynamic and versatile Webflow design, meticulously crafted for businesses seeking innovative solutions. Perfect for showcasing products or services related to renewable energy, smart home integration, or eco-friendly products.",
+    "description": "EnergyUp template is a dynamic and versatile Astro design, meticulously crafted for businesses seeking innovative solutions. Perfect for showcasing products or services related to renewable energy, smart home integration, or eco-friendly products.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -14815,7 +14815,7 @@ export const themes: Theme[] = [
     "slug": "agricultural-group-website-template",
     "dodoProductId": "pdt_0Nnusdyqg5WqKdZ1LiNQk",
     "tagline": "Modern, high-performance Freshfield Group website template.",
-    "description": "Agricultural Group is a professional website Webflow template for agriculture and organic farm websites. It suits agribusiness, farmers market, farming, harvest, cultivation, natural, organic food, eco-friendly, plantation websites.",
+    "description": "Agricultural Group is a professional website Astro template for agriculture and organic farm websites. It suits agribusiness, farmers market, farming, harvest, cultivation, natural, organic food, eco-friendly, plantation websites.",
     "framework": "astro",
     "category": "food-and-drink",
     "categories": [
@@ -14882,7 +14882,7 @@ export const themes: Theme[] = [
     "slug": "agriflow-agriculture-website-template",
     "dodoProductId": "pdt_0NnusjABCFlDPI4nNvddx",
     "tagline": "Modern, high-performance AgriFlow website template.",
-    "description": "AgriFlow is a fresh-faced organic and agriculture Webflow template. It's suitable for agriculture, organic farming, food, plant, poultry, husbandry, ecology, cultivation, agritourism, dairy farming, nature, forestry, florist, and gardener websites.",
+    "description": "AgriFlow is a fresh-faced organic and agriculture Astro template. It's suitable for agriculture, organic farming, food, plant, poultry, husbandry, ecology, cultivation, agritourism, dairy farming, nature, forestry, florist, and gardener websites.",
     "framework": "astro",
     "category": "food-and-drink",
     "categories": [
@@ -14949,7 +14949,7 @@ export const themes: Theme[] = [
     "slug": "agrilead-agriculture-website-template",
     "dodoProductId": "pdt_0NnusoJaNb7a6kghja43c",
     "tagline": "Modern, high-performance Agrilead website template.",
-    "description": "If you're looking for a clean, minimal, and elegant agriculture website template in Webflow CMS, look no further than Agrilead. This agriculture website template has all the essential features to launch your farming, gardening, or related website.",
+    "description": "If you're looking for a clean, minimal, and elegant agriculture website template in Astro Content Collections, look no further than Agrilead. This agriculture website template has all the essential features to launch your farming, gardening, or related website.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -15016,7 +15016,7 @@ export const themes: Theme[] = [
     "slug": "agrius-agriculture-website-template",
     "dodoProductId": "pdt_0Nnusus3MbONTlyfLr9iA",
     "tagline": "Modern, high-performance Agrius website template.",
-    "description": "Agrius is a clean and modern website Webflow template for agriculture and organic farm websites. It can be easily used for eco farm, farm products, food market, organic food, fruit shop, honey, meat shop, agriculture farmer, dairy farm.",
+    "description": "Agrius is a clean and modern website Astro template for agriculture and organic farm websites. It can be easily used for eco farm, farm products, food market, organic food, fruit shop, honey, meat shop, agriculture farmer, dairy farm.",
     "framework": "astro",
     "category": "food-and-drink",
     "categories": [
@@ -15083,7 +15083,7 @@ export const themes: Theme[] = [
     "slug": "agriwark-website-template",
     "dodoProductId": "pdt_0NnuszYvE3VSpZj1obGCp",
     "tagline": "Modern, high-performance Agriwark website template.",
-    "description": "Agriwark is a modern and responsive Webflow template designed for agriculture, organic farming, and eco-friendly businesses. Perfect for showcasing farm services, products, and sustainable practices with a clean, professional design.",
+    "description": "Agriwark is a modern and responsive Astro template designed for agriculture, organic farming, and eco-friendly businesses. Perfect for showcasing farm services, products, and sustainable practices with a clean, professional design.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -15150,7 +15150,7 @@ export const themes: Theme[] = [
     "slug": "agrizone-website-template",
     "dodoProductId": "pdt_0Nnut5lagjCVn6OyLEcwS",
     "tagline": "Modern, high-performance Agrona website template.",
-    "description": "Agrona is a modern agriculture Webflow template built for farms, agritech startups, and agricultural services. Designed for sustainability and growth, it features CMS blogs, eCommerce, smooth animations, and responsive layouts.",
+    "description": "Agrona is a modern agriculture Astro template built for farms, agritech startups, and agricultural services. Designed for sustainability and growth, it features CMS blogs, eCommerce, smooth animations, and responsive layouts.",
     "framework": "astro",
     "category": "retail-and-e-commerce",
     "categories": [
@@ -15217,7 +15217,7 @@ export const themes: Theme[] = [
     "slug": "agroflow-website-template",
     "dodoProductId": "pdt_0NnutCJay0Ahiy9YGrzTp",
     "tagline": "Modern, high-performance Ranchflow website template.",
-    "description": "Grow your farm's online presence with Ranchflow \ud83c\udf3e\ud83d\ude9c! Our Farm Webflow Template is perfect for farmers, agriculture businesses, and organic producers looking to showcase their products, land, and story in a clean, modern design.",
+    "description": "Grow your farm's online presence with Ranchflow \ud83c\udf3e\ud83d\ude9c! Our Farm Astro template is perfect for farmers, agriculture businesses, and organic producers looking to showcase their products, land, and story in a clean, modern design.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -15284,7 +15284,7 @@ export const themes: Theme[] = [
     "slug": "agrofy-agriculture-website-template",
     "dodoProductId": "pdt_0NnutHciDMJMwdo2Cgghm",
     "tagline": "Modern, high-performance Agrofy website template.",
-    "description": "Agrofy is agriculture business Webflow template for Agriculture and Gardening websites. It can be easily used for agriculture, ecology, florist, gardener, groundskeeper, landscape, farming, garden, landscape architects, plants.",
+    "description": "Agrofy is agriculture business Astro template for Agriculture and Gardening websites. It can be easily used for agriculture, ecology, florist, gardener, groundskeeper, landscape, farming, garden, landscape architects, plants.",
     "framework": "astro",
     "category": "architecture-and-design",
     "categories": [
@@ -15351,7 +15351,7 @@ export const themes: Theme[] = [
     "slug": "agroveon-website-template",
     "dodoProductId": "pdt_0NnutPzPqa3znFnvhYwbl",
     "tagline": "Modern, high-performance Harvestra website template.",
-    "description": "Harvestra is a minimal and professional Webflow template for Agriculture based websites, crafted with a unique design and smooth animations. Featuring an organized CMS for services and blogs, you can easily launch your new website.",
+    "description": "Harvestra is a minimal and professional Astro template for Agriculture based websites, crafted with a unique design and smooth animations. Featuring an organized CMS for services and blogs, you can easily launch your new website.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -15485,7 +15485,7 @@ export const themes: Theme[] = [
     "slug": "ai-chatbot-saas-website-template",
     "dodoProductId": "pdt_0NnutZBfsa45ekFUeC8BS",
     "tagline": "Modern, high-performance Ai-Chatbot website template.",
-    "description": "SaaS website template for AI chatbots in customer support and service, powered by ChatGPT. It caters to business of ai chat bot industry for customer support. Showcase chatbot capabilities with webflow template designed for artificial intelligence.",
+    "description": "SaaS website template for AI chatbots in customer support and service, powered by ChatGPT. It caters to business of ai chat bot industry for customer support. Showcase chatbot capabilities with Astro template designed for artificial intelligence.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -15609,7 +15609,7 @@ export const themes: Theme[] = [
     "slug": "ai-copywriting-saas-website-template",
     "dodoProductId": "pdt_0NnutiDBco3955YE6QH4j",
     "tagline": "Modern, high-performance Ai Copywriting website template.",
-    "description": "SaaS webflow website template for AI copywriting tool business that generates high-quality\u00a0ai copywriting. It caters to business of ai copywriting industry and artificial intelligence writing assistant to Showcase Saas AI copywriting capabilities.",
+    "description": "SaaS Astro website template for AI copywriting tool business that generates high-quality\u00a0ai copywriting. It caters to business of ai copywriting industry and artificial intelligence writing assistant to Showcase Saas AI copywriting capabilities.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -15676,7 +15676,7 @@ export const themes: Theme[] = [
     "slug": "ai-email-technology-website-template",
     "dodoProductId": "pdt_0NnutmeWxoS5I3tLcFIgO",
     "tagline": "Modern, high-performance AI Email website template.",
-    "description": "SaaS Webflow Multilayout website template for AI Email tool. A cutting-edge and aesthetically pleasing solution made for email-centric businesses harnessing AI technology. Caters to the Saas AI Email industry for showcasing Artificial Intelligence.",
+    "description": "SaaS Astro Multilayout website template for AI Email tool. A cutting-edge and aesthetically pleasing solution made for email-centric businesses harnessing AI technology. Caters to the Saas AI Email industry for showcasing Artificial Intelligence.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -15810,7 +15810,7 @@ export const themes: Theme[] = [
     "slug": "ai-schedule",
     "dodoProductId": "pdt_0NnutwDxtsPRb5BHTEtZh",
     "tagline": "Modern, high-performance Ai Schedule website template.",
-    "description": "SaaS webflow Multilayout website template for AI Schedule tool, that helps with smart scheduling/calendar/tasks for busy teams. Caters to the AI Schedule industry for showcasing Aritificial Intelligence Scheduling capabilities.",
+    "description": "SaaS Astro Multilayout website template for AI Schedule tool, that helps with smart scheduling/calendar/tasks for busy teams. Caters to the AI Schedule industry for showcasing Aritificial Intelligence Scheduling capabilities.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -15877,7 +15877,7 @@ export const themes: Theme[] = [
     "slug": "ai-tech-x-technology-website-template",
     "dodoProductId": "pdt_0Nnuu0wIQgl5dX3plP8bl",
     "tagline": "Modern, high-performance AI-Tech X website template.",
-    "description": "Introducing AI-Tech X \ud83d\ude80\ud83d\udcbb, our perfect Artificial Intelligence Webflow Template for AI experts, machine learning startups, and data science projects. Elevate your AI services with a sleek layout and comprehensive features.",
+    "description": "Introducing AI-Tech X \ud83d\ude80\ud83d\udcbb, our perfect Artificial Intelligence Astro template for AI experts, machine learning startups, and data science projects. Elevate your AI services with a sleek layout and comprehensive features.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -15944,7 +15944,7 @@ export const themes: Theme[] = [
     "slug": "ai-tool-startup-website-template",
     "dodoProductId": "pdt_0Nnuu5XJeShB3uvljmVYJ",
     "tagline": "Modern, high-performance AI Tool website template.",
-    "description": "Building a website for your tech business or start-up has never been easier thanks to AI Tool Template. The minimalistic colorful design and cool animations paired with all the features you need make creating a professional Webflow site a breeze.",
+    "description": "Building a website for your tech business or start-up has never been easier thanks to AI Tool Template. The minimalistic colorful design and cool animations paired with all the features you need make creating a professional Astro site a breeze.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -16011,7 +16011,7 @@ export const themes: Theme[] = [
     "slug": "ai-x-technology-website-template",
     "dodoProductId": "pdt_0NnuuALALsbhN9tAxjkRR",
     "tagline": "Modern, high-performance AI X+ website template.",
-    "description": "Lead innovation with AI X+ \ud83c\udf1f\ud83e\udd16! Ideal for tech startups, AI labs, and ML companies, this artificial intelligence Webflow Template offers a seamless website customizable to showcase your cutting-edge AI models.",
+    "description": "Lead innovation with AI X+ \ud83c\udf1f\ud83e\udd16! Ideal for tech startups, AI labs, and ML companies, this artificial intelligence Astro template offers a seamless website customizable to showcase your cutting-edge AI models.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -16078,7 +16078,7 @@ export const themes: Theme[] = [
     "slug": "aiagency-website-template",
     "dodoProductId": "pdt_0NnuuFgY9oA0tDHGn0jhG",
     "tagline": "Modern, high-performance AiAgency website template.",
-    "description": "Introducing the AiAgency webflow template, designed specifically for digital agencies offering AI-related services. This template combines modern design with powerful functionality, making it the perfect choice for showcasing your AI solutions.",
+    "description": "Introducing the AiAgency Astro template, designed specifically for digital agencies offering AI-related services. This template combines modern design with powerful functionality, making it the perfect choice for showcasing your AI solutions.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -16145,7 +16145,7 @@ export const themes: Theme[] = [
     "slug": "aiaiaiai-website-template",
     "dodoProductId": "pdt_0NnuuLzQuExL2BN4acCrr",
     "tagline": "Modern, high-performance aiaiaiai website template.",
-    "description": "aiaiaiai\u2122 is a premium multi-layout Webflow template designed for agencies and creators. Featuring sleek design, versatile and minimalistic layouts, it\u2019s the perfect choice for showcasing creativity and professionalism with ease.",
+    "description": "aiaiaiai\u2122 is a premium multi-layout Astro template designed for agencies and creators. Featuring sleek design, versatile and minimalistic layouts, it\u2019s the perfect choice for showcasing creativity and professionalism with ease.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -16212,7 +16212,7 @@ export const themes: Theme[] = [
     "slug": "aiassistant-saas-website-template",
     "dodoProductId": "pdt_0NnuuQLTdZTBgOLNTDdyF",
     "tagline": "Modern, high-performance AI Assistant website template.",
-    "description": "Introducing Webflow AI Assistant SaaS Startup Multilayout Website Template. A sleek solution for startups using Artificial Intelligence. Elevate online presence, showcase expertise with this visually engaging template crafted for digital success.",
+    "description": "Introducing Astro AI Assistant SaaS Startup Multilayout Website Template. A sleek solution for startups using Artificial Intelligence. Elevate online presence, showcase expertise with this visually engaging template crafted for digital success.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -16279,7 +16279,7 @@ export const themes: Theme[] = [
     "slug": "aico-saas-website-template",
     "dodoProductId": "pdt_0NnuuUxmD5DPXRiYWQtGs",
     "tagline": "Modern, high-performance Aico website template.",
-    "description": "Aico is the ultimate Webflow template for SaaS companies. Aico focuses on delivering a seamless user experience and making a powerful online impact. No more wasting time with complex templates - choose Aico and watch your business thrive.",
+    "description": "Aico is the ultimate Astro template for SaaS companies. Aico focuses on delivering a seamless user experience and making a powerful online impact. No more wasting time with complex templates - choose Aico and watch your business thrive.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -16346,7 +16346,7 @@ export const themes: Theme[] = [
     "slug": "aicourse-learning-website-template",
     "dodoProductId": "pdt_0NnuuZFCc24A6xJ7dQEoV",
     "tagline": "Modern, high-performance Ai Course website template.",
-    "description": "Get our AI Course Landing Page and one page Webflow Template, perfect for AI education, online learning, and course promotion. This one-page, fully responsive template is ideal for showcasing AI programs.",
+    "description": "Get our AI Course Landing Page and one page Astro template, perfect for AI education, online learning, and course promotion. This one-page, fully responsive template is ideal for showcasing AI programs.",
     "framework": "astro",
     "category": "education",
     "categories": [
@@ -16547,7 +16547,7 @@ export const themes: Theme[] = [
     "slug": "aiden-portfolio-website-template",
     "dodoProductId": "pdt_0Nnuun1pnc3uAqYBzR0Ew",
     "tagline": "Modern, high-performance Aiden website template.",
-    "description": "A user-friendly Webflow template for portfolios, designed with simplicity in mind. Clean, minimalistic design highlights essential elements, ensuring an elegant appearance. Seamlessly browse with minimal interaction, ideal for effortless project",
+    "description": "A user-friendly Astro template for portfolios, designed with simplicity in mind. Clean, minimalistic design highlights essential elements, ensuring an elegant appearance. Seamlessly browse with minimal interaction, ideal for effortless project",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -16614,7 +16614,7 @@ export const themes: Theme[] = [
     "slug": "aifinancial-saas-website-template",
     "dodoProductId": "pdt_0NnuurLWjsCnLdlz10j25",
     "tagline": "Modern, high-performance Ai Financial website template.",
-    "description": "Discover the Ai Financial Webflow SaaS Website template. Crafted for effortless customisation, it empowers Artificial Intelligence Finance startups, Ai softwares companies and enterprises alike to build stunning, responsive websites with ease.",
+    "description": "Discover the Ai Financial Astro SaaS Website template. Crafted for effortless customisation, it empowers Artificial Intelligence Finance startups, Ai softwares companies and enterprises alike to build stunning, responsive websites with ease.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -16748,7 +16748,7 @@ export const themes: Theme[] = [
     "slug": "aigen-saas-website-template",
     "dodoProductId": "pdt_0Nnuv0TcQX0PR55pfgKzH",
     "tagline": "Modern, high-performance Aigen website template.",
-    "description": "Introducing our cutting-edge Webflow template Aigen, designed specifically for AI companies. This sleek and modern template is tailor-made to showcase the innovative capabilities and technological advancements of AI-driven organizations.",
+    "description": "Introducing our cutting-edge Astro template Aigen, designed specifically for AI companies. This sleek and modern template is tailor-made to showcase the innovative capabilities and technological advancements of AI-driven organizations.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -16815,7 +16815,7 @@ export const themes: Theme[] = [
     "slug": "aigenerator-website-template",
     "dodoProductId": "pdt_0NnuvAYQhT0SYwQuPNf3x",
     "tagline": "Modern, high-performance Imagenerator website template.",
-    "description": "AIgenerator is an AI image and video generator Webflow template designed for artificial intelligence websites. Perfect for showcasing AI-driven content, this template helps you create powerful platforms for AI-based image and video generation.",
+    "description": "AIgenerator is an AI image and video generator Astro template designed for artificial intelligence websites. Perfect for showcasing AI-driven content, this template helps you create powerful platforms for AI-based image and video generation.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -16882,7 +16882,7 @@ export const themes: Theme[] = [
     "slug": "aigeng-website-template",
     "dodoProductId": "pdt_0NnuvFp04EUIOlEuwI8B7",
     "tagline": "Modern, high-performance Aigeng website template.",
-    "description": "Premium AI SaaS startup Webflow template for founders and product teams. CMS blog, pricing page, features, and conversion-ready layouts. Best Webflow template for AI SaaS, AI agent, startup, and tech product launch.",
+    "description": "Premium AI SaaS startup Astro template for founders and product teams. CMS blog, pricing page, features, and conversion-ready layouts. Best Astro template for AI SaaS, AI agent, startup, and tech product launch.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -17016,7 +17016,7 @@ export const themes: Theme[] = [
     "slug": "aiken-app-website-template",
     "dodoProductId": "pdt_0NnuvPD2exzykCgz0wqO1",
     "tagline": "Modern, high-performance Aiken website template.",
-    "description": "Aiken, our Webflow template for AI-powered image generation. This cutting-edge template is perfect for people looking to create a website that utilizes the latest advancements in artificial intelligence to generate unique and captivating images.",
+    "description": "Aiken, our Astro template for AI-powered image generation. This cutting-edge template is perfect for people looking to create a website that utilizes the latest advancements in artificial intelligence to generate unique and captivating images.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -17068,7 +17068,7 @@ export const themes: Theme[] = [
     "slug": "aiko-portfolio-website-template",
     "dodoProductId": "pdt_0NnuvTaEQVf0t3Lq6fTt9",
     "tagline": "Modern, high-performance Aiko website template.",
-    "description": "Aiko is a minimal & modern Portfolio Webflow Template perfectly suited for freelancers, designers, web designers, Webflow developers, agencies or your personal portfolio. It comes with advanced interactions, CMS and Ecommerce integration.",
+    "description": "Aiko is a minimal & modern Portfolio Astro template perfectly suited for freelancers, designers, web designers, Astro developers, agencies or your personal portfolio. It comes with advanced interactions, CMS and Ecommerce integration.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -17135,7 +17135,7 @@ export const themes: Theme[] = [
     "slug": "aikol-saas-website-template",
     "dodoProductId": "pdt_0NnuvY6qv5I0gixb9YNDi",
     "tagline": "Modern, high-performance Aikol website template.",
-    "description": "Aikol, a sleek website webflow template meticulously tailored with a keen focus on SaaS and Startup endeavors, provides the perfect digital canvas for your companies eager to showcase your flagship products or services.",
+    "description": "Aikol, a sleek website Astro template meticulously tailored with a keen focus on SaaS and Startup endeavors, provides the perfect digital canvas for your companies eager to showcase your flagship products or services.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -17202,7 +17202,7 @@ export const themes: Theme[] = [
     "slug": "ailoom-website-template",
     "dodoProductId": "pdt_0NnuvddKvf7uHP7LjWZtr",
     "tagline": "Modern, high-performance Ailoom website template.",
-    "description": "Ailoom is an AI SaaS Webflow template for startups and tech products. Showcase features, integrations, pricing, blogs, and demo flows with a modern, conversion-focused design built for growth.",
+    "description": "Ailoom is an AI SaaS Astro template for startups and tech products. Showcase features, integrations, pricing, blogs, and demo flows with a modern, conversion-focused design built for growth.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -17269,7 +17269,7 @@ export const themes: Theme[] = [
     "slug": "ailoq-website-template",
     "dodoProductId": "pdt_0NnuvgEX2S31N1fbXzjlR",
     "tagline": "Modern, high-performance Ailoq website template.",
-    "description": "Discover our Ailoq Webflow Template for AI startups. Elevate your online presence and effortlessly showcase Artificial Intelligence SaaS solutions. Unleash your AI startup's potential with our unique page AI website template.",
+    "description": "Discover our Ailoq Astro template for AI startups. Elevate your online presence and effortlessly showcase Artificial Intelligence SaaS solutions. Unleash your AI startup's potential with our unique page AI website template.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -17331,7 +17331,7 @@ export const themes: Theme[] = [
     "slug": "aione-one-page-website-template",
     "dodoProductId": "pdt_0NnuvkiL2LfpHUgIX2YjB",
     "tagline": "Modern, high-performance Ai One website template.",
-    "description": "Discover our Ai One Page Webflow Template for AI startups. Elevate your online presence and effortlessly showcase Artificial Intelligence SaaS solutions. Unleash your AI startup's potential with our unique one-page AI website template.",
+    "description": "Discover our Ai One Page Astro template for AI startups. Elevate your online presence and effortlessly showcase Artificial Intelligence SaaS solutions. Unleash your AI startup's potential with our unique one-page AI website template.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -17388,7 +17388,7 @@ export const themes: Theme[] = [
     "slug": "aipromax-website-template",
     "dodoProductId": "pdt_0Nnuvp9DgI9ir2kD5dXGh",
     "tagline": "Modern, high-performance MonoAI website template.",
-    "description": "MonoAI is a modern, high-converting Webflow template perfectly crafted for AI SaaS companies, productivity apps, and technology startups. It features a clean, professional design focused on showcasing AI tools for workflow automation.",
+    "description": "MonoAI is a modern, high-converting Astro template perfectly crafted for AI SaaS companies, productivity apps, and technology startups. It features a clean, professional design focused on showcasing AI tools for workflow automation.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -17564,7 +17564,7 @@ export const themes: Theme[] = [
     "slug": "air-conditioning-small-business-website-template",
     "dodoProductId": "pdt_0Nnuw9X9u4C6oLDjLW6Y7",
     "tagline": "Modern, high-performance Air Conditioning 128 website template.",
-    "description": "Air Conditioning 128 is a professional website Webflow template for air conditioning and heating websites. It suits perfectly for ac service, air cooling, conditioner repair, home repair, heat pump, heating, heating company, ventilation, air supply.",
+    "description": "Air Conditioning 128 is a professional website Astro template for air conditioning and heating websites. It suits perfectly for ac service, air cooling, conditioner repair, home repair, heat pump, heating, heating company, ventilation, air supply.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -17631,7 +17631,7 @@ export const themes: Theme[] = [
     "slug": "airbase-x-website-template",
     "dodoProductId": "pdt_0NnuwDo04b2e4doczSzf9",
     "tagline": "Modern, high-performance AirBase X website template.",
-    "description": "AirBaseX is a modern Webflow template for app marketing and SaaS companies. Featuring 26+ pages, sleek animations, Finsweet Client First naming, and a free Figma file, it ensures exceptional customization, performance, and responsive design.",
+    "description": "AirBaseX is a modern Astro template for app marketing and SaaS companies. Featuring 26+ pages, sleek animations, Finsweet Client First naming, and a free Figma file, it ensures exceptional customization, performance, and responsive design.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -17698,7 +17698,7 @@ export const themes: Theme[] = [
     "slug": "airbrick-website-template",
     "dodoProductId": "pdt_0NnuwGM1lzgBRgz1RGWgo",
     "tagline": "Modern, high-performance Airbrick website template.",
-    "description": "Airbrick is a high-converting real estate Webflow template crafted to showcase properties and architectural projects with clarity and elegance. Designed for architects, and developers, it combines modern aesthetics with flexible customization.",
+    "description": "Airbrick is a high-converting real estate Astro template crafted to showcase properties and architectural projects with clarity and elegance. Designed for architects, and developers, it combines modern aesthetics with flexible customization.",
     "framework": "astro",
     "category": "real-estate",
     "categories": [
@@ -17765,7 +17765,7 @@ export const themes: Theme[] = [
     "slug": "airbuild-website-template",
     "dodoProductId": "pdt_0NnuwKyn3B6K6PdGChMij",
     "tagline": "Modern, high-performance AirBuild website template.",
-    "description": "AirBuild is a Webflow template made for SaaS companies offering website builder platforms. It helps startups showcase features, pricing, and customer success stories with a fast and professional design.",
+    "description": "AirBuild is a Astro template made for SaaS companies offering website builder platforms. It helps startups showcase features, pricing, and customer success stories with a fast and professional design.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -17832,7 +17832,7 @@ export const themes: Theme[] = [
     "slug": "aircanvas-website-template",
     "dodoProductId": "pdt_0NnuwPUq2P67eu41W8ahr",
     "tagline": "Modern, high-performance AirCanvas website template.",
-    "description": "AirCanvas is a flexible Webflow portfolio template with multiple layouts for Home, Works, and Blog. Perfect for agencies and creatives, it includes all essential pages to showcase projects, services, and insights.",
+    "description": "AirCanvas is a flexible Astro portfolio template with multiple layouts for Home, Works, and Blog. Perfect for agencies and creatives, it includes all essential pages to showcase projects, services, and insights.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -17899,7 +17899,7 @@ export const themes: Theme[] = [
     "slug": "aircare-hospital-website-template",
     "dodoProductId": "pdt_0NnuwTzClZEU7Qmmjbd61",
     "tagline": "Modern, high-performance AirCare website template.",
-    "description": "AirCare is a versatile Webflow e-commerce template tailored for medical and healthcare services. It features over 34 pages and 100 customizable sections, including appointment and service sections, ensuring a professional user experience.",
+    "description": "AirCare is a versatile Astro e-commerce template tailored for medical and healthcare services. It features over 34 pages and 100 customizable sections, including appointment and service sections, ensuring a professional user experience.",
     "framework": "astro",
     "category": "medical",
     "categories": [
@@ -17966,7 +17966,7 @@ export const themes: Theme[] = [
     "slug": "airco-x-website-template",
     "dodoProductId": "pdt_0NnuwZrgOBfehlqIcPDzl",
     "tagline": "Modern, high-performance AirCo X website template.",
-    "description": "AirCo is a modern Webflow template for sustainability and eco\u2011focused businesses, featuring responsive layouts, service pages, pricing tables, testimonials, and blog integration to help you launch with impact.",
+    "description": "AirCo is a modern Astro template for sustainability and eco\u2011focused businesses, featuring responsive layouts, service pages, pricing tables, testimonials, and blog integration to help you launch with impact.",
     "framework": "astro",
     "category": "blog-and-editorial",
     "categories": [
@@ -18033,7 +18033,7 @@ export const themes: Theme[] = [
     "slug": "aircode-website-template",
     "dodoProductId": "pdt_0NnuweMY7t37ZECLwUW0h",
     "tagline": "Modern, high-performance AirCode website template.",
-    "description": "AirCode is a versatile Webflow template for SaaS startups and tech companies. Featuring 25+ pages, sleek animations, Finsweet Client First naming, and a free Figma file, it offers unmatched performance, customization, and modern design excellence.",
+    "description": "AirCode is a versatile Astro template for SaaS startups and tech companies. Featuring 25+ pages, sleek animations, Finsweet Client First naming, and a free Figma file, it offers unmatched performance, customization, and modern design excellence.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -18100,7 +18100,7 @@ export const themes: Theme[] = [
     "slug": "aircoin-website-template",
     "dodoProductId": "pdt_0Nnuwk6OtVGqA3Ku6mT9w",
     "tagline": "Modern, high-performance AirCoin website template.",
-    "description": "AirCoin is a modern Web3 Webflow template with 20 ready\u2011to\u2011use pages. It is perfect for crypto, finance, or tech projects. With smooth animations, bold layouts, and interactive design, AirCoin helps you show your brand in a professional way.",
+    "description": "AirCoin is a modern Web3 Astro template with 20 ready\u2011to\u2011use pages. It is perfect for crypto, finance, or tech projects. With smooth animations, bold layouts, and interactive design, AirCoin helps you show your brand in a professional way.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -18301,7 +18301,7 @@ export const themes: Theme[] = [
     "slug": "airdent-website-template",
     "dodoProductId": "pdt_0NnuwyFIJtzrfcvfXunEM",
     "tagline": "Modern, high-performance AirOral website template.",
-    "description": "A modern Webflow template for dental and medical websites, built with reusable components, smooth GSAP animations, and industry-standard best practices. Easy to customize, responsive, and perfect for showcasing services and team members.",
+    "description": "A modern Astro template for dental and medical websites, built with reusable components, smooth GSAP animations, and industry-standard best practices. Easy to customize, responsive, and perfect for showcasing services and team members.",
     "framework": "astro",
     "category": "medical",
     "categories": [
@@ -18368,7 +18368,7 @@ export const themes: Theme[] = [
     "slug": "airdish-website-template",
     "dodoProductId": "pdt_0Nnux2bDWNskKPQBXFUIw",
     "tagline": "Modern, high-performance AirDish website template.",
-    "description": "A modern Webflow template for restaurants, cafes, and food businesses. Built with reusable components, smooth GSAP animations, and industry\u2011standard best practices for easy customization.",
+    "description": "A modern Astro template for restaurants, cafes, and food businesses. Built with reusable components, smooth GSAP animations, and industry\u2011standard best practices for easy customization.",
     "framework": "astro",
     "category": "food-and-drink",
     "categories": [
@@ -18435,7 +18435,7 @@ export const themes: Theme[] = [
     "slug": "airdoc-website-template",
     "dodoProductId": "pdt_0Nnux7HdQn42DKi9YpoTd",
     "tagline": "Modern, high-performance AirDoc website template.",
-    "description": "A clean and professional Webflow template for doctors, clinics, and healthcare providers. Built with reusable components, smooth GSAP animations, and industry-standard best practices for easy customization.",
+    "description": "A clean and professional Astro template for doctors, clinics, and healthcare providers. Built with reusable components, smooth GSAP animations, and industry-standard best practices for easy customization.",
     "framework": "astro",
     "category": "medical",
     "categories": [
@@ -18502,7 +18502,7 @@ export const themes: Theme[] = [
     "slug": "airedge-website-template",
     "dodoProductId": "pdt_0NnuxBgWCju8baqhyA2ES",
     "tagline": "Modern, high-performance AirEdge website template.",
-    "description": "AirEdge is a sleek, responsive Webflow template designed for airport transportation services. With modern features and an intuitive layout, it helps businesses offer seamless booking experiences, showcase services, and connect with customers.",
+    "description": "AirEdge is a sleek, responsive Astro template designed for airport transportation services. With modern features and an intuitive layout, it helps businesses offer seamless booking experiences, showcase services, and connect with customers.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -18569,7 +18569,7 @@ export const themes: Theme[] = [
     "slug": "airestate-real-estate-website-template",
     "dodoProductId": "pdt_0NnuxG0jcVIjJChWl75CE",
     "tagline": "Modern, high-performance AirEstate website template.",
-    "description": "Stand out with AirEstate - a beautiful Webflow template for real estate. 35+ pages including 2 homepages. Sleek animations engage visitors. Customize easily with Finsweet naming system. Attracts clients for boutique or major real estate brands.",
+    "description": "Stand out with AirEstate - a beautiful Astro template for real estate. 35+ pages including 2 homepages. Sleek animations engage visitors. Customize easily with Finsweet naming system. Attracts clients for boutique or major real estate brands.",
     "framework": "astro",
     "category": "real-estate",
     "categories": [
@@ -18636,7 +18636,7 @@ export const themes: Theme[] = [
     "slug": "airevoke-saas-website-template",
     "dodoProductId": "pdt_0NnuxKh3RPpxb4GrhzXXH",
     "tagline": "Modern, high-performance AirEvoke website template.",
-    "description": "Meet AirEvoke \u2013 your new favorite SaaS Webflow template for kickass marketing websites. From industry showcases to product promotions, AirEvoke blends style and functionality seamlessly. Elevate your online game effortlessly.",
+    "description": "Meet AirEvoke \u2013 your new favorite SaaS Astro template for kickass marketing websites. From industry showcases to product promotions, AirEvoke blends style and functionality seamlessly. Elevate your online game effortlessly.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -18703,7 +18703,7 @@ export const themes: Theme[] = [
     "slug": "airexplorex-tourism-website-template",
     "dodoProductId": "pdt_0NnuxQ1KUeoobgf8Hgauj",
     "tagline": "Modern, high-performance AirExploreX website template.",
-    "description": "AirExploreX is a stunning Webflow template designed exclusively for travel enthusiasts. Whether you're a travel agency, a tour operator, or a travel blogger, AirExploreX provides the perfect platform to showcase your adventures.",
+    "description": "AirExploreX is a stunning Astro template designed exclusively for travel enthusiasts. Whether you're a travel agency, a tour operator, or a travel blogger, AirExploreX provides the perfect platform to showcase your adventures.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -18770,7 +18770,7 @@ export const themes: Theme[] = [
     "slug": "airfalah-religion-website-template",
     "dodoProductId": "pdt_0NnuxUx3HBkEIeM0t4D5W",
     "tagline": "Modern, high-performance AirFalah website template.",
-    "description": "Explore AirFalah, a captivating Webflow template for donations, charity, events. With sleek animations and 18+ pages, customize effortlessly using Client First class naming.",
+    "description": "Explore AirFalah, a captivating Astro template for donations, charity, events. With sleek animations and 18+ pages, customize effortlessly using Client First class naming.",
     "framework": "astro",
     "category": "community-and-nonprofit",
     "categories": [
@@ -18837,7 +18837,7 @@ export const themes: Theme[] = [
     "slug": "airfintech-finance-website-template",
     "dodoProductId": "pdt_0NnuxZQftMpqXhO3CBUQ9",
     "tagline": "Modern, high-performance AirFintech website template.",
-    "description": "Discover AirFintech, the ultimate Webflow template for fintech startups. Craft a sleek website for Cryptocurrency, DeFi, Blockchain, and Finance industries.",
+    "description": "Discover AirFintech, the ultimate Astro template for fintech startups. Craft a sleek website for Cryptocurrency, DeFi, Blockchain, and Finance industries.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -18904,7 +18904,7 @@ export const themes: Theme[] = [
     "slug": "airfloow-website-template",
     "dodoProductId": "pdt_0Nnuxc0IZvy6vhd0Gn7WM",
     "tagline": "Modern, high-performance Airfloow website template.",
-    "description": "Airflow is a clean, professional HVAC & Air Conditioning Services Webflow template built for cooling and heating businesses. Featuring service, blog, booking & more \u2014 designed to generate leads and build local service trust.",
+    "description": "Airflow is a clean, professional HVAC & Air Conditioning Services Astro template built for cooling and heating businesses. Featuring service, blog, booking & more \u2014 designed to generate leads and build local service trust.",
     "framework": "astro",
     "category": "travel",
     "categories": [
@@ -19038,7 +19038,7 @@ export const themes: Theme[] = [
     "slug": "airfund-x-website-template",
     "dodoProductId": "pdt_0NnuxkqNf4jNn3K2cjhhl",
     "tagline": "Modern, high-performance AirFund X website template.",
-    "description": "AirFund X is a modern Webflow template for startups, finance, and AI. With 35+ pages, 3 Home, About, Pricing options, clean design, and smooth animations, it\u2019s perfect for a professional website.",
+    "description": "AirFund X is a modern Astro template for startups, finance, and AI. With 35+ pages, 3 Home, About, Pricing options, clean design, and smooth animations, it\u2019s perfect for a professional website.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -19105,7 +19105,7 @@ export const themes: Theme[] = [
     "slug": "airfz-small-business-website-template",
     "dodoProductId": "pdt_0Nnuxps7dH4tSbvSRqeIg",
     "tagline": "Modern, high-performance Air FZ website template.",
-    "description": "Air FZ is a premium Webflow template designed for air conditioning and heating services. Featuring a clean, modern design, this template is perfect for showcasing your services, team, and projects in a professional and engaging way.",
+    "description": "Air FZ is a premium Astro template designed for air conditioning and heating services. Featuring a clean, modern design, this template is perfect for showcasing your services, team, and projects in a professional and engaging way.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -19172,7 +19172,7 @@ export const themes: Theme[] = [
     "slug": "airgro-website-template",
     "dodoProductId": "pdt_0NnuxuhpAfuIrT0fM6rNV",
     "tagline": "Modern, high-performance AirGro website template.",
-    "description": "Airgro is a modern Webflow template for farms, agribusinesses, and sustainability-focused brands, built to showcase your produce, share your process, and turn visitors into buyers and partners with a clean, natural design.",
+    "description": "Airgro is a modern Astro template for farms, agribusinesses, and sustainability-focused brands, built to showcase your produce, share your process, and turn visitors into buyers and partners with a clean, natural design.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -19239,7 +19239,7 @@ export const themes: Theme[] = [
     "slug": "airinvest-website-template",
     "dodoProductId": "pdt_0NnuxzUxKSNY6SU2QUDVE",
     "tagline": "Modern, high-performance AirInvest website template.",
-    "description": "AirInvest is a sleek Webflow template for investment firms. It offers 35+ pages, 3 homepages, 3 investor, and 3 blog variations. Built with Finsweet\u2019s Client First system, it's easy to customize and includes a free Figma file.",
+    "description": "AirInvest is a sleek Astro template for investment firms. It offers 35+ pages, 3 homepages, 3 investor, and 3 blog variations. Built with Finsweet\u2019s Client First system, it's easy to customize and includes a free Figma file.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -19306,7 +19306,7 @@ export const themes: Theme[] = [
     "slug": "airlift-website-template",
     "dodoProductId": "pdt_0Nnuy3vvIf7BewUQ3fdkI",
     "tagline": "Modern, high-performance AirLift website template.",
-    "description": "AirLift is a premium Webflow template for design studios and creative agencies, built to showcase portfolios, services, and case studies with a modern, professional aesthetic.",
+    "description": "AirLift is a premium Astro template for design studios and creative agencies, built to showcase portfolios, services, and case studies with a modern, professional aesthetic.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -19373,7 +19373,7 @@ export const themes: Theme[] = [
     "slug": "airlink-startup-website-template",
     "dodoProductId": "pdt_0Nnuy8FHp4hw7UtpSrsmp",
     "tagline": "Modern, high-performance AirLink website template.",
-    "description": "Introducing AirLink - the sleek, customizable Webflow template for SaaS in Finance, Startups, Tech, Software & Apps. 30+ animated pages offer modern engagement. Built with Finsweet naming for seamless customization.",
+    "description": "Introducing AirLink - the sleek, customizable Astro template for SaaS in Finance, Startups, Tech, Software & Apps. 30+ animated pages offer modern engagement. Built with Finsweet naming for seamless customization.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -19507,7 +19507,7 @@ export const themes: Theme[] = [
     "slug": "airmentors-website-template",
     "dodoProductId": "pdt_0NnuyI3G2cJYaMMz0RKDL",
     "tagline": "Modern, high-performance AirMentor website template.",
-    "description": "AirMentor is a sleek and modern Webflow landing and Marketing Site template for AI tools and SaaS platforms. Perfect for AI sales agents, automation tools, and tech startups. Easy to edit and built to convert visitors into customers.",
+    "description": "AirMentor is a sleek and modern Astro landing and Marketing Site template for AI tools and SaaS platforms. Perfect for AI sales agents, automation tools, and tech startups. Easy to edit and built to convert visitors into customers.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -19574,7 +19574,7 @@ export const themes: Theme[] = [
     "slug": "airmin-retail-website-template",
     "dodoProductId": "pdt_0NnuyN3x2yhYbiGbDqqsF",
     "tagline": "Modern, high-performance Airmin website template.",
-    "description": "A minimalist online store Webflow template exclusively designed for single-product shops or e-commerce stores with a small inventory. Perfect for those seeking a minimalist e-commerce website.",
+    "description": "A minimalist online store Astro template exclusively designed for single-product shops or e-commerce stores with a small inventory. Perfect for those seeking a minimalist e-commerce website.",
     "framework": "astro",
     "category": "retail-and-e-commerce",
     "categories": [
@@ -19641,7 +19641,7 @@ export const themes: Theme[] = [
     "slug": "airnexa-website-template",
     "dodoProductId": "pdt_0NnuyS8NyEGnzCxNCnd19",
     "tagline": "Modern, high-performance AirNexa website template.",
-    "description": "Launch your Fintech or SaaS site fast with AirNexa. This clean Webflow template is fully responsive and easy to edit. It features a CMS blog and a global Style Guide to help your tech brand look professional on every screen.",
+    "description": "Launch your Fintech or SaaS site fast with AirNexa. This clean Astro template is fully responsive and easy to edit. It features a CMS blog and a global Style Guide to help your tech brand look professional on every screen.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -19775,7 +19775,7 @@ export const themes: Theme[] = [
     "slug": "airnur-learning-website-template",
     "dodoProductId": "pdt_0NnuyatNHDZrZm4RmjBCx",
     "tagline": "Modern, high-performance AirNur website template.",
-    "description": "AirNur is a Webflow template for online education. Includes 16+ sleek pages like Home, Courses, and Blog. Customize effortlessly with Finsweet's Client First naming convention and enjoy engaging animations.",
+    "description": "AirNur is a Astro template for online education. Includes 16+ sleek pages like Home, Courses, and Blog. Customize effortlessly with Finsweet's Client First naming convention and enjoy engaging animations.",
     "framework": "astro",
     "category": "blog-and-editorial",
     "categories": [
@@ -19837,7 +19837,7 @@ export const themes: Theme[] = [
     "slug": "airpay-website-template",
     "dodoProductId": "pdt_0NnuynudCQMJeu1MLlrBE",
     "tagline": "Modern, high-performance AirPay website template.",
-    "description": "AirPay is a multi-layout SaaS Webflow template with 3 homepages, 3 about pages, 3 contact pages, and more. Perfect for fintech, startups, and digital payment platforms. Includes a free Figma file with purchase.",
+    "description": "AirPay is a multi-layout SaaS Astro template with 3 homepages, 3 about pages, 3 contact pages, and more. Perfect for fintech, startups, and digital payment platforms. Includes a free Figma file with purchase.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -19971,7 +19971,7 @@ export const themes: Theme[] = [
     "slug": "airpixel-website-template",
     "dodoProductId": "pdt_0NnuywK8bd9yMUPnGWPSs",
     "tagline": "Modern, high-performance AirPixel website template.",
-    "description": "AirPixel is a modern Webflow template for design studios and creative teams. It helps you show your portfolio, services, and case studies with a clean and thoughtful layout.",
+    "description": "AirPixel is a modern Astro template for design studios and creative teams. It helps you show your portfolio, services, and case studies with a clean and thoughtful layout.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -20038,7 +20038,7 @@ export const themes: Theme[] = [
     "slug": "airplace-website-template",
     "dodoProductId": "pdt_0NnuyzDu4m7kTsV18uLEr",
     "tagline": "Modern, high-performance AirPlace website template.",
-    "description": "Airplace is a modern Webflow template for architecture firms, interior design studios, and property developers, built to showcase your projects, present your expertise, and turn visitors into clients with a refined, editorial design.",
+    "description": "Airplace is a modern Astro template for architecture firms, interior design studios, and property developers, built to showcase your projects, present your expertise, and turn visitors into clients with a refined, editorial design.",
     "framework": "astro",
     "category": "architecture-and-design",
     "categories": [
@@ -20105,7 +20105,7 @@ export const themes: Theme[] = [
     "slug": "airstead-website-template",
     "dodoProductId": "pdt_0Nnuz1j5khJ1kyPRCAdMo",
     "tagline": "Modern, high-performance Airstead website template.",
-    "description": "Airstead is a modern HVAC Webflow template designed for heating, cooling, ventilation, air conditioning, repair, maintenance, and home service businesses. Featuring a clean design, CMS-powered blog, and conversion-focused layouts, it helps HVAC compa",
+    "description": "Airstead is a modern HVAC Astro template designed for heating, cooling, ventilation, air conditioning, repair, maintenance, and home service businesses. Featuring a clean design, CMS-powered blog, and conversion-focused layouts, it helps HVAC compa",
     "framework": "astro",
     "category": "blog-and-editorial",
     "categories": [
@@ -20172,7 +20172,7 @@ export const themes: Theme[] = [
     "slug": "airstudio-website-template",
     "dodoProductId": "pdt_0Nnuz6kuFQ18Xtf23S8WW",
     "tagline": "Modern, high-performance AirStudio website template.",
-    "description": "AirStudio: Modern, bold Webflow template for creative agencies. Features 3 page variations, smooth animations, CMS integration, and a dark theme. Easy to customize with included Figma file. Responsive design and quick support.",
+    "description": "AirStudio: Modern, bold Astro template for creative agencies. Features 3 page variations, smooth animations, CMS integration, and a dark theme. Easy to customize with included Figma file. Responsive design and quick support.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -20239,7 +20239,7 @@ export const themes: Theme[] = [
     "slug": "airsuite-website-template",
     "dodoProductId": "pdt_0NnuzBcO66hcadV7qp7ax",
     "tagline": "Modern, high-performance AirSuite website template.",
-    "description": "AirSuite is a Webflow template made for finance SaaS and app marketing websites. It helps startups and software companies present features, pricing, and customer stories with a fast and professional design.",
+    "description": "AirSuite is a Astro template made for finance SaaS and app marketing websites. It helps startups and software companies present features, pricing, and customer stories with a fast and professional design.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -20306,7 +20306,7 @@ export const themes: Theme[] = [
     "slug": "airswift-saas-website-template",
     "dodoProductId": "pdt_0NnuzGR2g1ScKCduN3Eqf",
     "tagline": "Modern, high-performance AirSwift website template.",
-    "description": "AirSwift is a dynamic Webflow template for Fintech and SaaS. With 35+ pages, 60+ sections, and 2 homepage variations, it's your all-in-one solution for Banking, Software, Technology, Marketing, Startup, Investment, and eCommerce excellence.",
+    "description": "AirSwift is a dynamic Astro template for Fintech and SaaS. With 35+ pages, 60+ sections, and 2 homepage variations, it's your all-in-one solution for Banking, Software, Technology, Marketing, Startup, Investment, and eCommerce excellence.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -20373,7 +20373,7 @@ export const themes: Theme[] = [
     "slug": "airsync-website-template",
     "dodoProductId": "pdt_0NnuzMMnXQXwsJ1wjYhBl",
     "tagline": "Modern, high-performance AirSync website template.",
-    "description": "AirSync is a premium SaaS marketing Webflow template designed to help startups and software companies showcase products, highlight features, and drive conversions with a modern, professional design.",
+    "description": "AirSync is a premium SaaS marketing Astro template designed to help startups and software companies showcase products, highlight features, and drive conversions with a modern, professional design.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -20440,7 +20440,7 @@ export const themes: Theme[] = [
     "slug": "airtask-website-template",
     "dodoProductId": "pdt_0NnuzQzZYhzmKEcEdZWVL",
     "tagline": "Modern, high-performance AirTask website template.",
-    "description": "AirTask is a SaaS Webflow template made for task management solutions. It helps remote teams organize projects, track progress, and collaborate in a simple and professional way.",
+    "description": "AirTask is a SaaS Astro template made for task management solutions. It helps remote teams organize projects, track progress, and collaborate in a simple and professional way.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -20507,7 +20507,7 @@ export const themes: Theme[] = [
     "slug": "airtech-saas-website-template",
     "dodoProductId": "pdt_0NnuzVFkA6BOKfmsXqF8w",
     "tagline": "Modern, high-performance AirTech website template.",
-    "description": "\u200bAirtech is an easy-to-use Webflow template for your SaaS. It features a clean and modern design, with ample space for showcasing your products or services, as well as highlighting your team, mission, and vision.",
+    "description": "\u200bAirtech is an easy-to-use Astro template for your SaaS. It features a clean and modern design, with ample space for showcasing your products or services, as well as highlighting your team, mission, and vision.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -20574,7 +20574,7 @@ export const themes: Theme[] = [
     "slug": "airtechx-saas-website-template",
     "dodoProductId": "pdt_0NnuzZjrmLyDKy9DNlRnY",
     "tagline": "Modern, high-performance AirTech X website template.",
-    "description": "AirWise is the ideal B2B SaaS Webflow template for finance, startups, and tech. With 40+ customizable pages, sleek animations, and Finsweet\u2019s Client First system, it's easy to create an engaging digital presence.",
+    "description": "AirWise is the ideal B2B SaaS Astro template for finance, startups, and tech. With 40+ customizable pages, sleek animations, and Finsweet\u2019s Client First system, it's easy to create an engaging digital presence.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -20641,7 +20641,7 @@ export const themes: Theme[] = [
     "slug": "airtelier-website-template",
     "dodoProductId": "pdt_0Nnuze5qktX7vNxZ7wQNP",
     "tagline": "Modern, high-performance AirTelier website template.",
-    "description": "AirTelier is a modern Webflow template made for architecture firms. It helps you showcase projects, share services, and present your design style in a professional way.",
+    "description": "AirTelier is a modern Astro template made for architecture firms. It helps you showcase projects, share services, and present your design style in a professional way.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -20708,7 +20708,7 @@ export const themes: Theme[] = [
     "slug": "airtflo-website-template",
     "dodoProductId": "pdt_0NnuziX6r59QqhIaG79zb",
     "tagline": "Modern, high-performance Airtflo website template.",
-    "description": "Our Modern Airtflo Landing Page, a webflow Template that exemplifies  excellence in digital design.This is perfect for designers, developers, photographers, and other creatives, simply displays your work.",
+    "description": "Our Modern Airtflo Landing Page, a Astro template that exemplifies  excellence in digital design.This is perfect for designers, developers, photographers, and other creatives, simply displays your work.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -20755,7 +20755,7 @@ export const themes: Theme[] = [
     "slug": "airtide-website-template",
     "dodoProductId": "pdt_0Nnuzo0bkbd87DscvhK2F",
     "tagline": "Modern, high-performance AirTide website template.",
-    "description": "AirTide is a SaaS marketing Webflow template for finance, banking, and tech startups. It features 35+ pages, 3 homepage variations, interactive animations, and a free Figma file and is optimized for customization, performance, and responsiveness.",
+    "description": "AirTide is a SaaS marketing Astro template for finance, banking, and tech startups. It features 35+ pages, 3 homepage variations, interactive animations, and a free Figma file and is optimized for customization, performance, and responsiveness.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -20822,7 +20822,7 @@ export const themes: Theme[] = [
     "slug": "airtwist-website-template",
     "dodoProductId": "pdt_0NnuzsAkPBvPaUK2otky8",
     "tagline": "Modern, high-performance AirTwist website template.",
-    "description": "AirTwist is a modern Webflow template for startups and software companies. With 36+ pages, 3 Home, Pricing, Contact options, SEO-friendly design, and smooth animations, it\u2019s perfect for data analytics SaaS websites.",
+    "description": "AirTwist is a modern Astro template for startups and software companies. With 36+ pages, 3 Home, Pricing, Contact options, SEO-friendly design, and smooth animations, it\u2019s perfect for data analytics SaaS websites.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -20889,7 +20889,7 @@ export const themes: Theme[] = [
     "slug": "airvault-website-template",
     "dodoProductId": "pdt_0NnuzwWtxHNqYlSlN1VBo",
     "tagline": "Modern, high-performance AirVault website template.",
-    "description": "AirVault is a modern Webflow template for IT and SaaS businesses. It features 32+ pages, sleek animations, Client First naming, and a bonus Figma file. It's highly customizable, responsive, and optimized for performance and SEO.",
+    "description": "AirVault is a modern Astro template for IT and SaaS businesses. It features 32+ pages, sleek animations, Client First naming, and a bonus Figma file. It's highly customizable, responsive, and optimized for performance and SEO.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -20956,7 +20956,7 @@ export const themes: Theme[] = [
     "slug": "airvest-website-template",
     "dodoProductId": "pdt_0Nnv00leurmiVlsexCsXK",
     "tagline": "Modern, high-performance AirVest website template.",
-    "description": "AirVest is a dark crypto trading Webflow template for fintech startups, exchanges, and investment platforms, with two home layouts, pricing, blog, auth pages, legal pages, and conversion sections.",
+    "description": "AirVest is a dark crypto trading Astro template for fintech startups, exchanges, and investment platforms, with two home layouts, pricing, blog, auth pages, legal pages, and conversion sections.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -21090,7 +21090,7 @@ export const themes: Theme[] = [
     "slug": "airway-website-template",
     "dodoProductId": "pdt_0Nnv09V5XXwKBpucEhfM0",
     "tagline": "Modern, high-performance AirWay website template.",
-    "description": "AirWay is a professional travel agency Webflow template with 2 homepages and 10+ pages for destinations, packages, blogs, and services. Perfect for agencies looking to market tours and attract travelers.",
+    "description": "AirWay is a professional travel agency Astro template with 2 homepages and 10+ pages for destinations, packages, blogs, and services. Perfect for agencies looking to market tours and attract travelers.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -21157,7 +21157,7 @@ export const themes: Theme[] = [
     "slug": "airzen-software-website-template",
     "dodoProductId": "pdt_0Nnv0EfsocsxmO30Ho8PP",
     "tagline": "Modern, high-performance AirZen website template.",
-    "description": "Elevate your SaaS brand with AirZen - the premium Webflow template & UI kit. 40+ pages, 3 homepages, blogs, contacts. Easy customization with Finsweet naming. Engaging animations shine.",
+    "description": "Elevate your SaaS brand with AirZen - the premium Astro template & UI kit. 40+ pages, 3 homepages, blogs, contacts. Easy customization with Finsweet naming. Engaging animations shine.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -21224,7 +21224,7 @@ export const themes: Theme[] = [
     "slug": "aisav-website-template",
     "dodoProductId": "pdt_0Nnv0IuWEHLXlawasNM1g",
     "tagline": "Modern, high-performance Aisav website template.",
-    "description": "Power Your AI Startup with Aisav - A Cutting-Edge Webflow Template. Showcase your AI SaaS solutions beautifully and effortlessly establish a strong online presence.",
+    "description": "Power Your AI Startup with Aisav - A Cutting-Edge Astro template. Showcase your AI SaaS solutions beautifully and effortlessly establish a strong online presence.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -21276,7 +21276,7 @@ export const themes: Theme[] = [
     "slug": "aistartuq-startup-website-template",
     "dodoProductId": "pdt_0Nnv0NWZfJcWZuwvFlqJU",
     "tagline": "Modern, high-performance Ai Startuq website template.",
-    "description": "Unleash your AI startup's potential with our Webflow template. Elevate startup online presence, and showcase Artificial Intelligence solutions seamlessly. Customize and optimize for maximum visibility. Propel your venture forward today",
+    "description": "Unleash your AI startup's potential with our Astro template. Elevate startup online presence, and showcase Artificial Intelligence solutions seamlessly. Customize and optimize for maximum visibility. Propel your venture forward today",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -21343,7 +21343,7 @@ export const themes: Theme[] = [
     "slug": "aitech-it-company-website-template",
     "dodoProductId": "pdt_0Nnv0QJcr3iZ7jEdZbvUq",
     "tagline": "Modern, high-performance Aitech website template.",
-    "description": "Maximize your AI startup's impact with our dynamic AITech Webflow template. With its clean design and intuitive layout, this template effortlessly highlights your Artificial Intelligence innovations, capturing the attention of your audience.",
+    "description": "Maximize your AI startup's impact with our dynamic AITech Astro template. With its clean design and intuitive layout, this template effortlessly highlights your Artificial Intelligence innovations, capturing the attention of your audience.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -21410,7 +21410,7 @@ export const themes: Theme[] = [
     "slug": "aithra-website-template",
     "dodoProductId": "pdt_0Nnv0Ua0JPercNWwjlPCJ",
     "tagline": "Modern, high-performance Aithra website template.",
-    "description": "Aithra \u2014 a dark, futuristic Webflow template for AI startups. Built for modern SaaS, featuring a sleek UI, CMS blog, and fluid motion design.",
+    "description": "Aithra \u2014 a dark, futuristic Astro template for AI startups. Built for modern SaaS, featuring a sleek UI, CMS blog, and fluid motion design.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -21544,7 +21544,7 @@ export const themes: Theme[] = [
     "slug": "aivestor-website-template",
     "dodoProductId": "pdt_0Nnv0e0fIvg32HRcBiiar",
     "tagline": "Modern, high-performance Vestorix website template.",
-    "description": "AI-powered portfolio insights delivered instantly.\nA modern, high-performance Webflow template built for investment firms, fund managers, and financial advisors who want to showcase real-time analytics, automated reporting, and smart portfolio tools\u2014",
+    "description": "AI-powered portfolio insights delivered instantly.\nA modern, high-performance Astro template built for investment firms, fund managers, and financial advisors who want to showcase real-time analytics, automated reporting, and smart portfolio tools\u2014",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -21586,7 +21586,7 @@ export const themes: Theme[] = [
     "slug": "aivio-website-template",
     "dodoProductId": "pdt_0Nnv0iUvFt7XBHWf0Odhd",
     "tagline": "Modern, high-performance Aivio website template.",
-    "description": "Aivio is a modern and professional Webflow template built for AI agencies, digital marketing companies, automation businesses, SaaS startups, creative agencies, and technology consultants.",
+    "description": "Aivio is a modern and professional Astro template built for AI agencies, digital marketing companies, automation businesses, SaaS startups, creative agencies, and technology consultants.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -21762,7 +21762,7 @@ export const themes: Theme[] = [
     "slug": "aizflex-agency-website-template",
     "dodoProductId": "pdt_0Nnv0ut6NX5Pob2UoArom",
     "tagline": "Modern, high-performance Aizflex website template.",
-    "description": "Looking for a stunning agency template or business template? Check out the Aizflex business website template. This business Webflow template comes with a sleek design and functionality that is built to meet the needs of modern business webs",
+    "description": "Looking for a stunning agency template or business template? Check out the Aizflex business website template. This business Astro template comes with a sleek design and functionality that is built to meet the needs of modern business webs",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -21829,7 +21829,7 @@ export const themes: Theme[] = [
     "slug": "ajency-website-template",
     "dodoProductId": "pdt_0Nnv0zKoQK9qdkIdsX0jA",
     "tagline": "Modern, high-performance Ajency website template.",
-    "description": "Ajency is a creative agency template designed for creative, marketing, and design agencies. This Webflow template offers customization options to match your brands. It\u2019s SEO-optimized and mobile responsive feature ensures a seamless user experience.",
+    "description": "Ajency is a creative agency template designed for creative, marketing, and design agencies. This Astro template offers customization options to match your brands. It\u2019s SEO-optimized and mobile responsive feature ensures a seamless user experience.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -21896,7 +21896,7 @@ export const themes: Theme[] = [
     "slug": "akari-website-template",
     "dodoProductId": "pdt_0Nnv13X2HIpJvU5o97kvc",
     "tagline": "Modern, high-performance Akari website template.",
-    "description": "Akari is a sleek, single-page Webflow template built for AI course creators. Highlight your curriculum, benefits, pricing, and more, all in a high-converting layout designed to drive sign-ups and showcase your expertise.",
+    "description": "Akari is a sleek, single-page Astro template built for AI course creators. Highlight your curriculum, benefits, pricing, and more, all in a high-converting layout designed to drive sign-ups and showcase your expertise.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -21933,7 +21933,7 @@ export const themes: Theme[] = [
     "slug": "akaunt-finance-website-template",
     "dodoProductId": "pdt_0Nnv17wIRiIZksDugGy2C",
     "tagline": "Modern, high-performance Akaunt website template.",
-    "description": "If you're planning to build a reliable and credible website for your accounting or finance business, you're in the right place! Our Akaunt Webflow template is designed perfectly for accounting firms, financial advisors, and tax consultants.",
+    "description": "If you're planning to build a reliable and credible website for your accounting or finance business, you're in the right place! Our Akaunt Astro template is designed perfectly for accounting firms, financial advisors, and tax consultants.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -22000,7 +22000,7 @@ export const themes: Theme[] = [
     "slug": "akin-agency-website-template",
     "dodoProductId": "pdt_0Nnv1C2FDWZF0xpSJnNHh",
     "tagline": "Modern, high-performance Akin website template.",
-    "description": "Akin is a responsive portfolio for Webflow CMS built for showcasing works of a visual nature. A stylish, minimal aesthetic makes Akin suitable as an artist portfolio, creative agency site, photography showcase and much more.",
+    "description": "Akin is a responsive portfolio for Astro Content Collections built for showcasing works of a visual nature. A stylish, minimal aesthetic makes Akin suitable as an artist portfolio, creative agency site, photography showcase and much more.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22067,7 +22067,7 @@ export const themes: Theme[] = [
     "slug": "akito-portfolio-website-template",
     "dodoProductId": "pdt_0Nnv1GK3pSmAtFBHr4fb5",
     "tagline": "Modern, high-performance Akito website template.",
-    "description": "Akito, a sleek Portfolio Webflow Template, is ideally suited for individuals showcasing personal portfolios, creative professionals, designers, freelancers, agencies, and design studios alike.",
+    "description": "Akito, a sleek Portfolio Astro template, is ideally suited for individuals showcasing personal portfolios, creative professionals, designers, freelancers, agencies, and design studios alike.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22134,7 +22134,7 @@ export const themes: Theme[] = [
     "slug": "akjo-website-template",
     "dodoProductId": "pdt_0Nnv1KxqVYxX49xl8bMKY",
     "tagline": "Modern, high-performance Akjo website template.",
-    "description": "Akjo is a modern Webflow portfolio template crafted for designers and creative professionals who value clarity, aesthetics, and impact. Clean layouts, bold typography, and smooth interactions help your work stand out\u2014without distraction.",
+    "description": "Akjo is a modern Astro portfolio template crafted for designers and creative professionals who value clarity, aesthetics, and impact. Clean layouts, bold typography, and smooth interactions help your work stand out\u2014without distraction.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22201,7 +22201,7 @@ export const themes: Theme[] = [
     "slug": "akra-real-estate-website-template",
     "dodoProductId": "pdt_0Nnv1PA6daKkyblotnp3I",
     "tagline": "Modern, high-performance Akra website template.",
-    "description": "The Akra Webflow template is a clean, sleek, and modern design suitable for property, real estate, directories, listings, rentals, and any business related to the real estate industry.",
+    "description": "The Akra Astro template is a clean, sleek, and modern design suitable for property, real estate, directories, listings, rentals, and any business related to the real estate industry.",
     "framework": "astro",
     "category": "real-estate",
     "categories": [
@@ -22310,7 +22310,7 @@ export const themes: Theme[] = [
     "slug": "alabama-agency-website-template",
     "dodoProductId": "pdt_0Nnv1Xq9xFPMojkQEuVp9",
     "tagline": "Modern, high-performance Alabama website template.",
-    "description": "Alabama is a sophisticated Webflow template designed for agencies, featuring a modern dark theme, subtle animations, and effortless customization. Its clean design and SEO-friendly structure ensure a professional and engaging online presence.",
+    "description": "Alabama is a sophisticated Astro template designed for agencies, featuring a modern dark theme, subtle animations, and effortless customization. Its clean design and SEO-friendly structure ensure a professional and engaging online presence.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22377,7 +22377,7 @@ export const themes: Theme[] = [
     "slug": "alan-foto-portfolio-website-template",
     "dodoProductId": "pdt_0Nnv1cCBB4XU4lkhdcqLJ",
     "tagline": "Modern, high-performance Alan Foto website template.",
-    "description": "Display your work, make a lasting impression, and convert potential clients using Alan Foto Webflow template, a clean and minimal portfolio website built for photographers, designers, and creative professionals.",
+    "description": "Display your work, make a lasting impression, and convert potential clients using Alan Foto Astro template, a clean and minimal portfolio website built for photographers, designers, and creative professionals.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22444,7 +22444,7 @@ export const themes: Theme[] = [
     "slug": "alastair-website-template",
     "dodoProductId": "pdt_0Nnv1gYJyVs6PTuvnpaIr",
     "tagline": "Modern, high-performance Alastair website template.",
-    "description": "This is Alastair, a Webflow template for creative agencies looking for a modern and beautiful website to showcase their work and expertise. Initially made for a Shopify agency, this template can be used by freelancers and adapted to other areas.",
+    "description": "This is Alastair, a Astro template for creative agencies looking for a modern and beautiful website to showcase their work and expertise. Initially made for a Shopify agency, this template can be used by freelancers and adapted to other areas.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22511,7 +22511,7 @@ export const themes: Theme[] = [
     "slug": "albadoe-website-template",
     "dodoProductId": "pdt_0Nnv1jKoQwlBX4uyZ0Kqt",
     "tagline": "Modern, high-performance Albadoe website template.",
-    "description": "Albadoe is a minimal and professional Webflow template for House Cleaning & Maintenance based websites, crafted with a unique design and smooth animations. Featuring an organized CMS for services and blogs, you can easily launch your new website.",
+    "description": "Albadoe is a minimal and professional Astro template for House Cleaning & Maintenance based websites, crafted with a unique design and smooth animations. Featuring an organized CMS for services and blogs, you can easily launch your new website.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22578,7 +22578,7 @@ export const themes: Theme[] = [
     "slug": "albeit-website-template",
     "dodoProductId": "pdt_0Nnv1nCyjpzYSosPIn9bt",
     "tagline": "Modern, high-performance Albeit website template.",
-    "description": "Albeit Webflow Template is a sleek and modern solution for creative agencies seeking to showcase their services. It features a minimal design, smooth animations, and customizable layouts, making it ideal for your website.",
+    "description": "Albeit Astro template is a sleek and modern solution for creative agencies seeking to showcase their services. It features a minimal design, smooth animations, and customizable layouts, making it ideal for your website.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22625,7 +22625,7 @@ export const themes: Theme[] = [
     "slug": "albert-portfolio-website-template",
     "dodoProductId": "pdt_0Nnv1rM0escgHCfnjuk1R",
     "tagline": "Modern, high-performance Albert website template.",
-    "description": "Beautifully designed Webflow Template for Portfolio with a distinct design and subtle animations. With a well-thought-out CMS structure for services, team, and blog, you can set up your new Portfolio website in no time.",
+    "description": "Beautifully designed Astro template for Portfolio with a distinct design and subtle animations. With a well-thought-out CMS structure for services, team, and blog, you can set up your new Portfolio website in no time.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22692,7 +22692,7 @@ export const themes: Theme[] = [
     "slug": "albion-construction-website-template",
     "dodoProductId": "pdt_0Nnv1vguMTL2raxnQIpyD",
     "tagline": "Modern, high-performance Albion website template.",
-    "description": "Albion Webflow template is highly suitable for creating websites for construction companies, architectural agencies, development, and real estate business.",
+    "description": "Albion Astro template is highly suitable for creating websites for construction companies, architectural agencies, development, and real estate business.",
     "framework": "astro",
     "category": "real-estate",
     "categories": [
@@ -22759,7 +22759,7 @@ export const themes: Theme[] = [
     "slug": "alderas-website-template",
     "dodoProductId": "pdt_0Nnv1zfMWLw5nAvMilwsC",
     "tagline": "Modern, high-performance Alderas website template.",
-    "description": "Alderas is an elder care Webflow template designed for senior living communities, home care agencies, and companion services. It features service overview grids, caregiver profiles, and contact layouts to capture family care inquiries.",
+    "description": "Alderas is an elder care Astro template designed for senior living communities, home care agencies, and companion services. It features service overview grids, caregiver profiles, and contact layouts to capture family care inquiries.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -22826,7 +22826,7 @@ export const themes: Theme[] = [
     "slug": "aldo-website-template",
     "dodoProductId": "pdt_0Nnv25OYUQQDWOneEPz9i",
     "tagline": "Modern, high-performance Aldo website template.",
-    "description": "ALDO is a bold Webflow template designed to transform your portfolio into a visual masterpiece. With striking animations and a modern edge, it\u2019s perfect for designers and creatives who want to stand out and leave an unforgettable impression.",
+    "description": "ALDO is a bold Astro template designed to transform your portfolio into a visual masterpiece. With striking animations and a modern edge, it\u2019s perfect for designers and creatives who want to stand out and leave an unforgettable impression.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22893,7 +22893,7 @@ export const themes: Theme[] = [
     "slug": "alec-website-template",
     "dodoProductId": "pdt_0Nnv29uMP0GI8CdKuF0ct",
     "tagline": "Modern, high-performance Alec website template.",
-    "description": "Alec is a sleek dark Webflow template for storytellers, bloggers, vloggers, and content creators. Featuring a CMS-powered blog and video hub, responsive layouts, global styles, and flexible components to showcase content with style and clarity.",
+    "description": "Alec is a sleek dark Astro template for storytellers, bloggers, vloggers, and content creators. Featuring a CMS-powered blog and video hub, responsive layouts, global styles, and flexible components to showcase content with style and clarity.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -22960,7 +22960,7 @@ export const themes: Theme[] = [
     "slug": "alegis-website-template",
     "dodoProductId": "pdt_0Nnv2FBKg6M3pIhacieYh",
     "tagline": "Modern, high-performance Alegis website template.",
-    "description": "Alegis is a contemporary Webflow template for attorneys and service providers. Unlike traditional law templates with heavy, rigid layouts, Alegis embraces a modern, light design that communicates trust, professionalism, and clarity across industries.",
+    "description": "Alegis is a contemporary Astro template for attorneys and service providers. Unlike traditional law templates with heavy, rigid layouts, Alegis embraces a modern, light design that communicates trust, professionalism, and clarity across industries.",
     "framework": "astro",
     "category": "professional-services",
     "categories": [
@@ -23027,7 +23027,7 @@ export const themes: Theme[] = [
     "slug": "alehous-shop-website-template",
     "dodoProductId": "pdt_0Nnv2JP9SoogDz6JQqgLF",
     "tagline": "Modern, high-performance Alehous website template.",
-    "description": "Alehous is a Webflow Template designed for brewery companies that need to present their products in a professional way. It comes with e-commerce capabilities and can be adapted not only to foods and drinks but many other niches like clothing.",
+    "description": "Alehous is a Astro template designed for brewery companies that need to present their products in a professional way. It comes with e-commerce capabilities and can be adapted not only to foods and drinks but many other niches like clothing.",
     "framework": "astro",
     "category": "retail-and-e-commerce",
     "categories": [
@@ -23094,7 +23094,7 @@ export const themes: Theme[] = [
     "slug": "alenai-website-template",
     "dodoProductId": "pdt_0Nnv2NmjP75cyIOdd4AI1",
     "tagline": "Modern, high-performance Alenai website template.",
-    "description": "Alenai is a modern AI SaaS Webflow template featuring clean design, dynamic CMS, and conversion-focused layouts\u2014perfect for launching AI tools, startups, and product landing pages with speed and style.",
+    "description": "Alenai is a modern AI SaaS Astro template featuring clean design, dynamic CMS, and conversion-focused layouts\u2014perfect for launching AI tools, startups, and product landing pages with speed and style.",
     "framework": "astro",
     "category": "technology",
     "categories": [
@@ -23228,7 +23228,7 @@ export const themes: Theme[] = [
     "slug": "alex-baena-website-template",
     "dodoProductId": "pdt_0Nnv2YVaB15xTc5P9RHQm",
     "tagline": "Modern, high-performance Alex Baena website template.",
-    "description": "Alex Baena is a sleek and modern Webflow portfolio template for creative professionals and freelancers. Showcase your best projects, highlight your skills and services, and build a strong online presence with a clean, minimal design.",
+    "description": "Alex Baena is a sleek and modern Astro portfolio template for creative professionals and freelancers. Showcase your best projects, highlight your skills and services, and build a strong online presence with a clean, minimal design.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -23278,8 +23278,8 @@ export const themes: Theme[] = [
         "desc": "Detailed services, deliverables, and offerings."
       },
       {
-        "name": "Services Webflow Development",
-        "path": "/services_webflow-development/",
+        "name": "Services Astro Development",
+        "path": "/services_astro-development/",
         "desc": "Detailed services, deliverables, and offerings."
       },
       {
@@ -23409,7 +23409,7 @@ export const themes: Theme[] = [
     "slug": "alex-gregor-website-template",
     "dodoProductId": "pdt_0Nnv2lwewtX8maJWsNvC3",
     "tagline": "Modern, high-performance Alex Gregor website template.",
-    "description": "Alex Gregor is a sleek and modern Webflow template designed for designers, creatives, and agencies. Fully responsive and customizable, it offers a seamless portfolio showcase with elegant layouts, smooth animations, and a user-friendly experience.",
+    "description": "Alex Gregor is a sleek and modern Astro template designed for designers, creatives, and agencies. Fully responsive and customizable, it offers a seamless portfolio showcase with elegant layouts, smooth animations, and a user-friendly experience.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -23476,7 +23476,7 @@ export const themes: Theme[] = [
     "slug": "alex-portz-website-template",
     "dodoProductId": "pdt_0Nnv2qtkLtb57dMGlB7GC",
     "tagline": "Modern, high-performance Alex Portz website template.",
-    "description": "A modern, responsive Webflow template for portfolios and creative agencies. Clean design, fast loading, and easy to customize\u2014perfect for showcasing work and services.",
+    "description": "A modern, responsive Astro template for portfolios and creative agencies. Clean design, fast loading, and easy to customize\u2014perfect for showcasing work and services.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -23528,7 +23528,7 @@ export const themes: Theme[] = [
     "slug": "alexaa-website-template",
     "dodoProductId": "pdt_0Nnv2v5iJkqV2adgLGqfh",
     "tagline": "Modern, high-performance Alexaa website template.",
-    "description": "Alexaa \u2013 Designer Portfolio Webflow Template is built for creatives who value clean UI and smooth UX. Showcase your projects, highlight your skills, and connect with clients through modern layouts designed to build trust and capture attention.",
+    "description": "Alexaa \u2013 Designer Portfolio Astro template is built for creatives who value clean UI and smooth UX. Showcase your projects, highlight your skills, and connect with clients through modern layouts designed to build trust and capture attention.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -23595,7 +23595,7 @@ export const themes: Theme[] = [
     "slug": "alexander-portfolio-website-template",
     "dodoProductId": "pdt_0Nnv2zGb3UnjU7PfjmKPt",
     "tagline": "Modern, high-performance Alexander website template.",
-    "description": "Whether you're creating a personal website, portfolio, CV, or resume, this Webflow template provides a sleek and modern platform to showcase your creativity and professional achievements.",
+    "description": "Whether you're creating a personal website, portfolio, CV, or resume, this Astro template provides a sleek and modern platform to showcase your creativity and professional achievements.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -23662,7 +23662,7 @@ export const themes: Theme[] = [
     "slug": "alexia-website-template",
     "dodoProductId": "pdt_0Nnv33OIbQ55DJYagzxxz",
     "tagline": "Modern, high-performance Alexia website template.",
-    "description": "Alexia is a high-quality blog template built for Webflow. It has been meticulously designed and is simple to customize. This makes it ideal for designers, entrepreneurs, or small businesses looking to share their written content.",
+    "description": "Alexia is a high-quality blog template built with Astro. It has been meticulously designed and is simple to customize. This makes it ideal for designers, entrepreneurs, or small businesses looking to share their written content.",
     "framework": "astro",
     "category": "blog-and-editorial",
     "categories": [
@@ -23863,7 +23863,7 @@ export const themes: Theme[] = [
     "slug": "algarve-studio-website-template",
     "dodoProductId": "pdt_0Nnv3Hsjj8BBUptLjtEwy",
     "tagline": "Modern, high-performance Algarve Studio website template.",
-    "description": "Algarve Studio is a modern Webflow template for creative studios and agencies. Built with GSAP animations, Variables system, and modular layouts - designed for storytelling, performance, and bold digital presence.",
+    "description": "Algarve Studio is a modern Astro template for creative studios and agencies. Built with GSAP animations, Variables system, and modular layouts - designed for storytelling, performance, and bold digital presence.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [

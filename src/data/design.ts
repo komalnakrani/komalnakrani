@@ -124,7 +124,7 @@ export function liveUrlFor(theme: Pick<Theme, 'slug' | 'liveUrl'>): string {
   return theme.liveUrl ?? `https://${cleanSlugFor(theme)}.${PREVIEW_HOST}`;
 }
 
-/** The iframe embed URL — if the source blocks iframing (like Webflow's frame-ancestors CSP), route via the preview proxy. */
+/** The iframe embed URL for the live demo. */
 export function iframeSrcFor(theme: Pick<Theme, 'slug' | 'liveUrl'>): string {
   const url = liveUrlFor(theme);
   if (url.includes('webflow.io')) {
