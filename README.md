@@ -1,26 +1,19 @@
-# KomalNakrani.com
+# Hi, I'm Komal Nakrani 👋
 
-Technical publishing, books, learning material, and professional mastery resources
-for the Abhyaas × Komal role ecosystem.
+**Primary school teacher turned programmer.**
 
-The site is an Astro static application. Its light editorial interface was
-intentionally bootstrapped from AlpeshNakrani.com and is the approved visual
-baseline; all inherited identity, content, assets, and commercial integrations
-have been removed. Product work should adapt the visual system rather than
-redesign it, and every publication must be written fresh.
+I build and sell website themes, and make AI simple so anyone can learn, create, and bring ideas to life.
 
-## Local verification
+## What I do
 
-```sh
-npm ci
-npm run build
-```
+- **Website themes** — I create themes for people building their own websites.
+- **AI made simple** — I help make AI easier to understand and use.
+- **Learning and creating** — I bring a teacher's perspective to technology, breaking ideas into approachable steps.
 
-## Autonomous role factory
+## Explore my work
 
-Durable execution state starts at
-`project-control/role-factory/FACTORY-STATE.md`. Role-specific state lives under
-`project-control/roles/<role-slug>/ROLE-STATE.md`.
+Visit **[komalnakrani.com](https://komalnakrani.com)** to explore my website themes and work.
 
-Komal teaches. Abhyaas independently defines and certifies competence. No Komal
-book or course is required to sit or pass an Abhyaas certification.
+---
+
+Thanks for stopping by! 🌱
