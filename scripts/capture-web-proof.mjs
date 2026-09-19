@@ -132,7 +132,7 @@ try {
     })`,
     returnByValue: true,
   });
-  const capture = await command('Page.captureScreenshot', { format: 'png', fromSurface: true });
+  const capture = await command('Page.captureScreenshot', { format: 'webp', quality: 85, fromSurface: true });
   writeFileSync(output, Buffer.from(capture.data, 'base64'));
   const result = JSON.parse(metrics.result.value);
   console.log(JSON.stringify({ output, url, ...result, overflowX: result.scrollWidth > result.innerWidth }, null, 2));

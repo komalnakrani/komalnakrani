@@ -32,7 +32,20 @@ const was = theme.wasPrice;
         height="800"
         loading="lazy"
         decoding="async"
+        onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';"
       />
+      <div class="tcard-placeholder" style={`display: none; background: linear-gradient(145deg, ${accent}18 0%, #ffffff 70%); border: 1px solid ${accent}22;`}>
+        <div class="tcard-ph-badge" style={`color: ${accent}; border-color: ${accent}44; background: ${accent}12;`}>{kind}</div>
+        <div class="tcard-ph-title">{name}</div>
+        <div class="tcard-ph-wireframe">
+          <div class="tcard-ph-line" style="width: 70%;"></div>
+          <div class="tcard-ph-line" style="width: 45%;"></div>
+          <div class="tcard-ph-grid">
+            <div class="tcard-ph-box" style={`background: ${accent}18; border: 1px solid ${accent}33;`}></div>
+            <div class="tcard-ph-box" style={`background: ${accent}18; border: 1px solid ${accent}33;`}></div>
+          </div>
+        </div>
+      </div>
     </div>
   </a>
 
@@ -90,6 +103,8 @@ const was = theme.wasPrice;
     flex-direction: column;
     gap: 8px;
     transition: transform var(--dur-slow) var(--ease);
+    position: relative;
+    overflow: hidden;
   }
   .tcard:hover .tcard-window { transform: translateY(-3px); }
 
@@ -105,6 +120,58 @@ const was = theme.wasPrice;
     border-radius: 6px;
     background: var(--paper-3);
     display: block;
+  }
+
+  .tcard-placeholder {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    border-radius: 6px;
+    padding: 18px 16px;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .tcard-ph-badge {
+    align-self: flex-start;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid;
+    text-transform: uppercase;
+  }
+  .tcard-ph-title {
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.25;
+    margin: 6px 0 10px;
+  }
+  .tcard-ph-wireframe {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+  }
+  .tcard-ph-line {
+    height: 6px;
+    background: #E8E5DC;
+    border-radius: 3px;
+  }
+  .tcard-ph-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 6px;
+    flex: 1;
+  }
+  .tcard-ph-box {
+    border-radius: 6px;
+    min-height: 38px;
   }
 
   .tcard-body {
