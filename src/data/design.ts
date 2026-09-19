@@ -124,6 +124,15 @@ export function liveUrlFor(theme: Pick<Theme, 'slug' | 'liveUrl'>): string {
   return theme.liveUrl ?? `https://${cleanSlugFor(theme)}.${PREVIEW_HOST}`;
 }
 
+/** The iframe embed URL — if the source blocks iframing (like Webflow's frame-ancestors CSP), route via the preview proxy. */
+export function iframeSrcFor(theme: Pick<Theme, 'slug' | 'liveUrl'>): string {
+  const url = liveUrlFor(theme);
+  if (url.includes('webflow.io')) {
+    return '/api/preview-proxy?url=' + encodeURIComponent(url);
+  }
+  return url;
+}
+
 /** The host label shown in the fake browser address bar. */
 export function liveHostFor(theme: Pick<Theme, 'slug' | 'liveUrl'>): string {
   try {

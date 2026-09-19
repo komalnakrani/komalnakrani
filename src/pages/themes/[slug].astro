@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import ThemeCard from '../../components/ThemeCard.astro';
 import { themes, isThemeInCategory, type Theme } from '../../data/themes';
-import { accentFor, kindFor, nameFor, liveUrlFor, liveHostFor, checkoutUrl, DROP, DEVICES } from '../../data/design';
+import { accentFor, kindFor, nameFor, liveUrlFor, liveHostFor, iframeSrcFor, checkoutUrl, DROP, DEVICES } from '../../data/design';
 
 export function getStaticPaths() {
   return themes.map((theme) => ({
@@ -22,6 +22,7 @@ const { theme } = Astro.props;
 const accent = accentFor(theme);
 const kind = kindFor(theme);
 const liveUrl = liveUrlFor(theme);
+const iframeSrc = iframeSrcFor(theme);
 const liveHost = liveHostFor(theme);
 const name = nameFor(theme);
 const was = theme.wasPrice;
@@ -131,7 +132,7 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
             </div>
             <iframe
               data-live-frame
-              src={liveUrl}
+              src={iframeSrc}
               title={`Live preview of ${name}`}
               loading="lazy"
               referrerpolicy="no-referrer"
