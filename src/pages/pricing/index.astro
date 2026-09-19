@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import { themes } from '../../data/themes';
 import { DODO } from '../../data/design';
-import { DROP, ALL_ACCESS_DISCOUNT, PASS_INCLUDES, priceRange, priceLabel, checkoutUrl } from '../../data/design';
+import { DROP, PASS_INCLUDES, priceRange, priceLabel, checkoutUrl } from '../../data/design';
 
 // Individual themes are priced on their own records and quoted on their own
 // pages. This page quotes one number: the pass.
@@ -36,11 +36,6 @@ const faqs = [
   <main class="rise">
     <!-- ========================= THE OFFER ========================= -->
     <section class="wrap" style="padding: 84px 24px 0; text-align: center;">
-      <div class="drop-badge">
-        <span class="pill-new">FOUNDING</span>
-        {ALL_ACCESS_DISCOUNT}% off while the drop is live
-      </div>
-
       <h1 class="display" style="margin: 24px 0 0;">One pass.<br />Every theme.</h1>
 
       <p class="lead" style="max-width: 560px; margin: 22px auto 0;">
@@ -56,7 +51,6 @@ const faqs = [
 
           <div class="offer-figure">
             <span class="offer-now">${DROP.allAccessPrice}</span>
-            <span class="offer-was">${DROP.allAccessWas}</span>
           </div>
           <p class="offer-sub">One payment · not a subscription</p>
 

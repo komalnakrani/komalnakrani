@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import ThemeCard from '../../components/ThemeCard.astro';
 import { themes, isThemeInCategory, type Theme } from '../../data/themes';
-import { accentFor, kindFor, nameFor, scarcityFor, liveUrlFor, liveHostFor, checkoutUrl, DROP, DEVICES } from '../../data/design';
+import { accentFor, kindFor, nameFor, liveUrlFor, liveHostFor, checkoutUrl, DROP, DEVICES } from '../../data/design';
 
 export function getStaticPaths() {
   return themes.map((theme) => ({
@@ -21,7 +21,6 @@ const { theme } = Astro.props;
 // Everything on this page derives from the theme's brief plus its preview URL.
 const accent = accentFor(theme);
 const kind = kindFor(theme);
-const scarcity = scarcityFor(theme);
 const liveUrl = liveUrlFor(theme);
 const liveHost = liveHostFor(theme);
 const name = nameFor(theme);
@@ -82,7 +81,7 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
             <span style="font-size: 40px; letter-spacing: -.03em;">${theme.price}</span>
             {was && <span style="font-size: 15px; color: var(--ink-3); text-decoration: line-through;">${was}</span>}
           </div>
-          <p class="small" style="margin: 0 0 20px;">One-time payment · instant source download</p>
+          <p class="small" style="margin: 0 0 20px;">One-time payment · private GitHub repository access</p>
 
           <ul class="licence-list">
             <li class="ai-feature-item"><Icon name="check" /> Full source code access</li>
@@ -91,13 +90,6 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
             <li class="ai-feature-item"><Icon name="check" /> Unlimited client projects</li>
             <li class="ai-feature-item"><Icon name="check" /> Free lifetime updates</li>
           </ul>
-
-          <div class="tcard-track" style="margin-bottom: 8px;">
-            <div style={`height: 100%; border-radius: 4px; width: ${scarcity.percent}%; background: ${accent};`}></div>
-          </div>
-          <div class={`small ${scarcity.low ? 'low' : ''}`} style="margin-bottom: 18px;">
-            {scarcity.label} of {scarcity.total} licenses
-          </div>
 
           {buyUrl ? (
             <a href={buyUrl} class="btn btn-primary licence-cta">Buy single license (${theme.price})</a>
@@ -151,7 +143,7 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
         <div class="pv-caption">
           <span data-frame-label>{DEVICES[0].note}</span>
           <span class="pv-sep"></span>
-          <span>{name} — {scarcity.remaining} of {scarcity.total} licenses left</span>
+          <span>{name} — live site</span>
         </div>
       </div>
     </section>
@@ -217,14 +209,13 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
             Get {name} and every other theme.
           </h2>
           <p style="font-size: 16px; line-height: 1.7; color: rgba(243,241,234,.75); margin: 16px 0 0; text-wrap: pretty;">
-            One pass unlocks every theme in the catalog, every Friday drop from here on, and
+            One pass unlocks every theme in the catalog, every theme released from here on, and
             unlimited client projects.
           </p>
         </div>
         <div style="text-align: center;">
           <div style="font-size: 44px; letter-spacing: -.03em; color: var(--ink-inverse);">
             ${DROP.allAccessPrice}
-            <span style="font-size: 16px; opacity: .45; text-decoration: line-through; margin-left: 8px;">${DROP.allAccessWas}</span>
           </div>
           <p style="font-size: 13px; color: rgba(243,241,234,.55); margin: 8px 0 20px;">Single payment · unlimited commercial use</p>
           <a href="/pricing/" class="btn btn-lg" style="width: 100%; background: var(--ink-inverse); color: var(--ink-900);">

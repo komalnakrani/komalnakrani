@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import ThemeCard from '../components/ThemeCard.astro';
 import Icon from '../components/Icon.astro';
 import { themes, CATEGORIES, isThemeInCategory } from '../data/themes';
-import { nameFor, scarcityFor, priceRange, priceLabel, PASS_INCLUDES, DROP, TICKS } from '../data/design';
+import { priceRange, priceLabel, PASS_INCLUDES, DROP } from '../data/design';
 
 // The drop leads with featured themes and tops up with the rest, so the grid
 // is never short regardless of how many are flagged.
@@ -12,13 +12,7 @@ const drop = [
   ...themes.filter((t) => !t.featured)
 ].slice(0, 6);
 
-// Drives the hero badge and the licences-claimed / seats-left figures.
-const dropStats = drop.map((t) => ({ name: nameFor(t), ...scarcityFor(t) }));
-const soldTotal = themes.reduce((n, t) => n + scarcityFor(t).sold, 0);
-const seatsLeft = dropStats.length
-  ? DROP.licenseCap - Math.round(dropStats.reduce((n, t) => n + t.sold, 0) / dropStats.length)
-  : DROP.licenseCap;
-const allAccessWas = DROP.allAccessWas;
+const themeCount = themes.length;
 const themePrice = priceLabel(priceRange(themes));
 
 const popularCategories = [
@@ -43,11 +37,6 @@ const categoryCards = CATEGORIES
   <main id="top">
     <!-- ============================ HERO ============================ -->
     <section class="wrap" style="padding: 84px 24px 56px; text-align: center;">
-      <div class="drop-badge">
-        <span class="pill-new">NEW</span>
-        {dropStats[0]?.name} shipped this morning
-      </div>
-
       <h1 class="display" style="margin: 24px 0 0;">
         Themes that look like<br />you hired someone.
       </h1>
@@ -58,12 +47,12 @@ const categoryCards = CATEGORIES
       </p>
 
       <div class="hero-actions">
-        <a href="/pricing/" class="btn btn-primary btn-lg">Claim founding price</a>
-        <a href="#themes" class="btn btn-secondary btn-lg">Browse the drop</a>
+        <a href="/pricing/" class="btn btn-primary btn-lg">Get all-access</a>
+        <a href="#themes" class="btn btn-secondary btn-lg">Browse the themes</a>
       </div>
 
       <div class="hero-meta">
-        <span>{DROP.waitlist.toLocaleString()} builders on the waitlist</span>
+        <span>{themeCount} themes, {themePrice} each</span>
         <span>Full source included</span>
         <span>Lifetime updates</span>
       </div>
@@ -72,9 +61,9 @@ const categoryCards = CATEGORIES
     <!-- ========================= THE DROP =========================== -->
     <section id="themes" class="wrap" style="padding: 0 24px 20px;">
       <div class="sec-head">
-        <h2 class="h2" style="margin: 0;">The September drop</h2>
+        <h2 class="h2" style="margin: 0;">The themes</h2>
         <p style="margin: 0; font-size: 14px; color: var(--ink-3);">
-          New theme every Friday. Price rises as licenses sell.
+          Every one is a full multi-page Astro site, not a landing page.
         </p>
       </div>
 
@@ -109,7 +98,7 @@ const categoryCards = CATEGORIES
     <section id="story" class="wrap" style="padding: 84px 24px;">
       <div class="story-card">
         <div>
-          <div style="font-size: 12px; letter-spacing: .1em; color: var(--sage);">FIRST DROP, EVER</div>
+          <div style="font-size: 12px; letter-spacing: .1em; color: var(--sage);">ABOUT THE STUDIO</div>
           <h2 style="font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -.03em; line-height: 1.2; margin: 14px 0 0;">
             Five years teaching. Two years shipping. One studio.
           </h2>
@@ -119,18 +108,18 @@ const categoryCards = CATEGORIES
             commented, nothing you have to reverse-engineer at 1am.
           </p>
           <p class="body-t" style="margin: 14px 0 0;">
-            This is her first release to the market. Founding prices stay founding prices — for the
-            first {DROP.licenseCap} licenses only.
+            Every theme is a real Astro project you clone from a private repository — not a zip of
+            static HTML. Buy one and the updates keep arriving with a git pull.
           </p>
         </div>
         <div style="display: grid; gap: 12px;">
           <div class="stat-cell">
-            <div class="stat-num">{soldTotal.toLocaleString()}</div>
-            <div class="stat-lbl">licenses claimed in 11 days</div>
+            <div class="stat-num">{themeCount}</div>
+            <div class="stat-lbl">themes, each one a full multi-page site</div>
           </div>
           <div class="stat-cell">
-            <div class="stat-num">{DROP.waitlist.toLocaleString()}</div>
-            <div class="stat-lbl">on the waitlist for the next drop</div>
+            <div class="stat-num">{themePrice}</div>
+            <div class="stat-lbl">per theme, or ${DROP.allAccessPrice} for all of them</div>
           </div>
         </div>
       </div>
@@ -141,7 +130,7 @@ const categoryCards = CATEGORIES
       <div style="text-align: center; margin-bottom: 34px;">
         <h2 class="h2" style="margin: 0;">One pass. Every theme.</h2>
         <p style="font-size: 16px; color: var(--ink-2); margin: 14px 0 0;">
-          Founding price holds for {seatsLeft} more passes, then it goes to ${allAccessWas}.
+          Every theme in the catalog, plus every theme released from here on.
         </p>
       </div>
 
@@ -150,15 +139,14 @@ const categoryCards = CATEGORIES
           <div class="offer-eyebrow">ALL-ACCESS PASS</div>
           <div class="offer-figure">
             <span class="offer-now">${DROP.allAccessPrice}</span>
-            <span class="offer-was">${allAccessWas}</span>
           </div>
           <p class="offer-sub">One payment · not a subscription</p>
 
           <a href="/pricing/" class="btn btn-lg offer-cta">Get all-access — ${DROP.allAccessPrice}</a>
 
           <p class="offer-fine">
-            Only {seatsLeft} founding passes left. Prefer a single theme? Each one is priced on
-            its own page — <a href="#themes">see the drop</a>.
+            Prefer a single theme? Each one is priced on its own page —
+            <a href="#themes">see them all</a>.
           </p>
         </div>
 
@@ -176,44 +164,6 @@ const categoryCards = CATEGORIES
     </section>
   </main>
 
-  <!-- ========================== TICKER ============================= -->
-  <div class="ticker" data-ticker hidden>
-    <div class="ticker-dot"></div>
-    <div>
-      <div style="font-size: 13px;" data-ticker-main></div>
-      <div style="font-size: 12px; color: var(--ink-3); margin-top: 2px;" data-ticker-sub></div>
-    </div>
-    <button type="button" class="ticker-close" data-ticker-close aria-label="Dismiss notifications">×</button>
-  </div>
-
-  <script define:vars={{ TICKS }}>
-    /* ---------------- Social proof ticker ---------------- */
-    const ticker = document.querySelector('[data-ticker]');
-    const tickerMain = document.querySelector('[data-ticker-main]');
-    const tickerSub = document.querySelector('[data-ticker-sub]');
-    const tickerClose = document.querySelector('[data-ticker-close]');
-    if (ticker && tickerMain && tickerSub) {
-      let tick = 0;
-      const paint = () => {
-        const entry = TICKS[tick % TICKS.length];
-        tickerMain.textContent = `${entry[0]} ${entry[1]}`;
-        tickerSub.textContent = `${2 + (tick % 7)} minutes ago`;
-        ticker.hidden = false;
-        ticker.style.animation = 'none';
-        void ticker.offsetWidth;
-        ticker.style.animation = 'komalUp .5s ease both';
-      };
-      const timer = setInterval(() => {
-        tick += 1;
-        paint();
-      }, 5200);
-      setTimeout(paint, 1800);
-      tickerClose?.addEventListener('click', () => {
-        clearInterval(timer);
-        ticker.remove();
-      });
-    }
-  </script>
 </Layout>
 
 <style>
@@ -351,43 +301,7 @@ const categoryCards = CATEGORIES
   }
 
   /* ---------------- Ticker ---------------- */
-  .ticker[hidden] { display: none; }
-  .ticker {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 50;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    background: rgba(255, 255, 255, .94);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--rule-3);
-    border-radius: var(--r-pill);
-    padding: 11px 14px 11px 14px;
-    box-shadow: var(--sh);
-    max-width: calc(100vw - 40px);
-  }
-  .ticker-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: var(--r-pill);
-    background: var(--sage-deep);
-    flex-shrink: 0;
-  }
-  .ticker-close {
-    background: transparent;
-    border: 0;
-    color: var(--ink-4);
-    font-size: 18px;
-    line-height: 1;
-    padding: 0 4px;
-    cursor: pointer;
-  }
-  .ticker-close:hover { color: var(--ink); }
 
   @media (max-width: 640px) {
-    .ticker { left: 12px; right: 12px; bottom: 12px; max-width: none; }
   }
 </style>

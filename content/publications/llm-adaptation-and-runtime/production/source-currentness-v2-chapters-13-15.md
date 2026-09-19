@@ -1,2 +1,0 @@
-# Source Currentness V2 Chapters 13-15
-Checked 2026-08-16: 21/21 unique primary-research, standards, and authoritative maintained-documentation URLs returned HTTP 200 after redirects. Distillation, domain adaptation, corpus, model-card, serialization, PagedAttention, speculative decoding, quantization, benchmarking, vLLM, PyTorch, and FlashAttention evidence remains model, corpus, hardware, runtime, workload, and version bounded. Maintained interfaces require final publication recheck; no published outcome transfers to Mosaic Desk.

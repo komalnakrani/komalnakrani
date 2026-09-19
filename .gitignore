@@ -24,3 +24,4 @@ scripts/__pycache__/
 tools/fde-design-proof/build/
 tools/screen-first-books/build/
 .vercel
+.env*

@@ -134,31 +134,17 @@ export function liveHostFor(theme: Pick<Theme, 'slug' | 'liveUrl'>): string {
 }
 
 /* ---------------------------------------------------------------------
-   Launch / scarcity configuration.
+   Pricing configuration.
    --------------------------------------------------------------------- */
 
 export const DROP = {
-  /** Countdown length in seconds (48h), per the design. */
-  countdownSeconds: 172800,
-  /** Licence ceiling per theme, used for the scarcity bar. */
-  licenseCap: 200,
-  /** Waitlist size shown in the hero and story block. */
-  waitlist: 1284,
-
   /**
    * The all-access pass is the only price the pricing page quotes. Individual
    * themes carry their own `price` on the Theme record and are quoted on their
    * own cards and detail pages — never here.
    */
-  allAccessPrice: 99,
-  /** The pass's previous list price, struck through on the pass card. */
-  allAccessWas: 199
+  allAccessPrice: 99
 } as const;
-
-/** Discount the pass is currently advertised at, derived so copy can't drift. */
-export const ALL_ACCESS_DISCOUNT = Math.round(
-  (1 - DROP.allAccessPrice / DROP.allAccessWas) * 100
-);
 
 /**
  * What the all-access pass includes. Shared by the pricing page and the
@@ -226,43 +212,6 @@ export function priceRange(list: Array<Pick<Theme, 'price'>>): PriceRange {
 export function priceLabel(range: PriceRange): string {
   return range.flat ? `$${range.min}` : `from $${range.min}`;
 }
-
-export interface Scarcity {
-  sold: number;
-  total: number;
-  remaining: number;
-  percent: number;
-  label: string;
-  low: boolean;
-}
-
-/**
- * Per-theme licence counts. Derived from a hash of the slug so the bars are
- * deterministic — the same theme shows the same number on every build.
- */
-export function scarcityFor(theme: Pick<Theme, 'slug'>): Scarcity {
-  const total = DROP.licenseCap;
-  const sold = 58 + (hash(theme.slug) % 139);
-  const remaining = total - sold;
-  return {
-    sold,
-    total,
-    remaining,
-    percent: Math.round((sold / total) * 100),
-    label: remaining <= 15 ? `Only ${remaining} left` : `${sold} sold`,
-    low: remaining <= 15
-  };
-}
-
-/** Rotating social-proof entries shown in the fixed ticker. */
-export const TICKS: Array<[string, string]> = [
-  ['Priya in Bengaluru', 'bought the All-Access Pass'],
-  ['Daniel in Berlin', 'bought a theme licence'],
-  ['Mei in Singapore', 'joined the waitlist'],
-  ['Rafael in Lisbon', 'bought a theme licence'],
-  ['Sam in Austin', 'bought the All-Access Pass'],
-  ['Nadia in Dubai', 'bought a theme licence']
-];
 
 /** Device frames for the live-preview panel. */
 export const DEVICES = [

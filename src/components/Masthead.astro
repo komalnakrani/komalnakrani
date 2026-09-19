@@ -1,15 +1,11 @@
 ---
 import Icon from './Icon.astro';
-import { DROP, ALL_ACCESS_DISCOUNT } from '../data/design';
+import { DROP } from '../data/design';
 
 const pathname = Astro.url.pathname;
 ---
-<!-- Announcement bar — live countdown, per the design -->
 <div class="announce">
-  <span class="dim">Founding drop — {ALL_ACCESS_DISCOUNT}% off all-access</span>
-  <span class="num" data-countdown>48h 00m 00s</span>
-  <span class="sep"></span>
-  <span class="dim" data-seats>Only 26 founding passes left</span>
+  <span class="dim">All-access — every theme, one payment of ${DROP.allAccessPrice}</span>
 </div>
 
 <header class="mast">
@@ -67,21 +63,4 @@ const pathname = Astro.url.pathname;
     });
   }
 
-  // Announcement countdown
-  const countdownEl = document.querySelector<HTMLElement>('[data-countdown]');
-  if (countdownEl) {
-    const pad = (n: number) => String(n).padStart(2, '0');
-    let left = 172800;
-    const render = () => {
-      const h = Math.floor(left / 3600);
-      const m = Math.floor((left % 3600) / 60);
-      const s = left % 60;
-      countdownEl.textContent = `${pad(h)}h ${pad(m)}m ${pad(s)}s`;
-    };
-    render();
-    setInterval(() => {
-      if (left > 0) left -= 1;
-      render();
-    }, 1000);
-  }
 </script>

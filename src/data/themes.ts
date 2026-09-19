@@ -239,7 +239,7 @@ export const themes: Theme[] = [
       "portfolio-and-agency",
       "arts-and-entertainment"
     ],
-    "price": 39,
+    "price": 19,
     "featured": true,
     "badge": "Featured",
     "liveUrl": "https://cast-and-render.pages.dev",
@@ -278,7 +278,7 @@ export const themes: Theme[] = [
       "arts-and-entertainment",
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 25,
     "featured": true,
     "badge": "Featured",
     "liveUrl": "https://prisma-studio.pages.dev",
@@ -318,7 +318,7 @@ export const themes: Theme[] = [
       "technology",
       "professional-services"
     ],
-    "price": 45,
+    "price": 25,
     "featured": true,
     "badge": "Featured",
     "liveUrl": "https://halo-usd.pages.dev",
@@ -359,7 +359,7 @@ export const themes: Theme[] = [
       "transportation",
       "technology"
     ],
-    "price": 59,
+    "price": 29,
     "featured": true,
     "badge": "Most complete",
     "liveUrl": "https://cordex-dn2.pages.dev",
@@ -401,7 +401,7 @@ export const themes: Theme[] = [
       "wellness",
       "professional-services"
     ],
-    "price": 49,
+    "price": 25,
     "featured": false,
     "liveUrl": "https://dental-health.pages.dev",
     "techStack": [
@@ -441,7 +441,7 @@ export const themes: Theme[] = [
       "arts-and-entertainment",
       "blog-and-editorial"
     ],
-    "price": 55,
+    "price": 25,
     "featured": true,
     "badge": "Featured",
     "liveUrl": "https://hollow-press.pages.dev",
@@ -481,7 +481,7 @@ export const themes: Theme[] = [
       "retail-and-e-commerce",
       "arts-and-entertainment"
     ],
-    "price": 55,
+    "price": 19,
     "featured": false,
     "liveUrl": "https://toonhub-7o7.pages.dev",
     "techStack": [
@@ -520,7 +520,7 @@ export const themes: Theme[] = [
       "technology",
       "environment"
     ],
-    "price": 59,
+    "price": 29,
     "featured": true,
     "badge": "Featured",
     "liveUrl": "https://meridian-ev.pages.dev",
@@ -562,7 +562,7 @@ export const themes: Theme[] = [
       "wellness",
       "launch-and-coming-soon"
     ],
-    "price": 39,
+    "price": 19,
     "featured": false,
     "liveUrl": "https://drift-planner.pages.dev",
     "techStack": [
@@ -585,5 +585,23295 @@ export const themes: Theme[] = [
       { "name": "Journal", "path": "/journal/", "desc": "Notes on attention, planning, and building quiet software." },
       { "name": "Start for free", "path": "/start/", "desc": "Join the early access list." }
     ]
+  },
+  {
+    "id": "stillwater",
+    "name": "Stillwater",
+    "slug": "stillwater",
+    "dodoProductId": "pdt_0NnlZm0VMKeLCKmBC1ojm",
+    "tagline": "A breathwork and slow-movement studio site with a live breathing pacer.",
+    "description": "Stillwater is built for a studio that sells slowing down, so the site does too. The home page centres on a pure-CSS breathing pacer — 5.5 seconds in, 5.5 out — and the timetable is generated from the class files themselves, so there is no second schedule to keep in sync. Teachers are a typed list the build checks every class against, the membership page states the cancellation rule in one sentence, and the booking form prefills from any class or plan link. Suited to breathwork, yoga, pilates and small movement studios that book by the mat.",
+    "framework": "astro",
+    "category": "wellness",
+    "categories": [
+      "wellness",
+      "medical"
+    ],
+    "price": 25,
+    "featured": false,
+    "badge": "New",
+    "liveUrl": "https://stillwater-7pp.pages.dev",
+    "techStack": [
+      "Astro",
+      "CSS breathing pacer",
+      "Responsive CSS",
+      "RSS"
+    ],
+    "features": [
+      "Pure-CSS breathing pacer that stills under reduced motion",
+      "Weekly timetable generated from the class collection",
+      "Six class pages with length, intensity, price and times",
+      "Teacher bios checked against classes at build time",
+      "Membership page with four plans and a one-line cancellation rule",
+      "Booking form with validation, honeypot and ?class= prefill"
+    ],
+    "pages": [
+      { "name": "Home", "path": "/", "desc": "Stillwater is a breathwork and slow-movement studio at 9 Farrow Yard. Sixteen mats, no mirrors, nothing before 9:30, and phones in the basket by the door." },
+      { "name": "Classes", "path": "/classes/", "desc": "The Stillwater timetable: 6 breathwork and slow-movement classes, 11 slots a week, Wednesday to Sunday at 9 Farrow Yard." },
+      { "name": "Class detail", "path": "/classes/downshift/", "desc": "Fifty minutes at resonance pace — 5.5 seconds in, 5.5 seconds out — until your heart rate stops arguing with you." },
+      { "name": "Teachers", "path": "/teachers/", "desc": "The four people who teach at Stillwater: a respiratory physiotherapist, a choral conductor, a Feldenkrais practitioner and a retired midwife." },
+      { "name": "Membership", "path": "/membership/", "desc": "£16 drop-in, £8 first class, blocks of 6 and 12, and a £108 monthly membership. No joining fee, and a six-hour cancellation rule." },
+      { "name": "Journal", "path": "/journal/", "desc": "Why nothing starts before 9:30, the basket by the door, counting breath out loud, and what sixteen mats cost." },
+      { "name": "Book a mat", "path": "/book/", "desc": "Pick a class, say if it is your first time, and the front desk confirms by email within the day." }
+    ]
+  },
+  {
+    "id": "longitude",
+    "name": "Longitude",
+    "slug": "longitude",
+    "dodoProductId": "pdt_0NnlcD4uvJ5IMssLTHpyo",
+    "tagline": "A bold editorial site for a travel house that plans a handful of journeys a year.",
+    "description": "Longitude sells scarcity honestly: nine departures, eight travellers, five regions, and a catalogue that says so in heavyweight type. Journeys sit in a staggered grid, and each one gets a page with the route, a day-by-day shape, the planner and fixer by name, and a list of what is pointedly not included beside what is. SVG landscapes drawn from each journey's colour tokens turn from grey to colour on hover, so the theme needs no photography to look finished. Suited to tour operators, expedition outfits, retreats and any small house that sells by enquiry.",
+    "framework": "astro",
+    "category": "travel",
+    "categories": [
+      "travel",
+      "blog-and-editorial",
+      "professional-services"
+    ],
+    "price": 29,
+    "featured": false,
+    "badge": "New",
+    "liveUrl": "https://longitude-5gz.pages.dev",
+    "techStack": [
+      "Astro",
+      "SVG landscapes",
+      "Responsive CSS",
+      "RSS"
+    ],
+    "features": [
+      "Staggered journey catalogue with grayscale-to-colour SVG plates",
+      "Seven journey pages with route, day-by-day shape and price",
+      "Included and not-included lists on every journey",
+      "Destinations page with planner, fixer and way out per region",
+      "House page with team and a four-step planning process",
+      "Enquiry form with validation, honeypot and journey picker"
+    ],
+    "pages": [
+      { "name": "Home", "path": "/", "desc": "A small travel house in Edinburgh. Nine journeys a year, eight travellers at most, five regions it actually knows." },
+      { "name": "Journeys", "path": "/journeys/", "desc": "Seven journeys across five regions, seven to fourteen days, two to eight travellers, from £11,800 per person." },
+      { "name": "Journey detail", "path": "/journeys/the-aysen-traverse/", "desc": "Fourteen days down the Carretera Austral from Balmaceda to Villa O'Higgins, on foot, by boat and by a truck that has done it forty times." },
+      { "name": "Destinations", "path": "/destinations/", "desc": "The five regions the house works in — Aysén, northern Japan, the Anti-Atlas, the North Atlantic and the Skeleton Coast — and why there is no sixth." },
+      { "name": "About", "path": "/about/", "desc": "Five people at 9 Fettes Row: three planners, one desk, one person who does the money — and four rules they will not bend." },
+      { "name": "Journal", "path": "/journal/", "desc": "Notes from the desk: the rules, the money, the fixers, and the four times a journey was called off." },
+      { "name": "Enquire", "path": "/enquire/", "desc": "Say which journey, when, and who is coming. A planner replies within two working days to book a forty-minute call." }
+    ]
+  },
+  {
+    "id": "stonecrop",
+    "name": "Stonecrop",
+    "slug": "stonecrop",
+    "dodoProductId": "pdt_0NnleTizLlNjqLEmxGuJZ",
+    "tagline": "A dark, unhurried site for a boutique winery with a tasting room.",
+    "description": "Stonecrop is built for a winery small enough to name every block. The home page is a wall of six wines that each reveal a drawn bottle and a strata layer, and scrolling moves the light across it from morning to evening. Every wine page carries the particulars a buyer actually asks for — block, picking date, alcohol, pH, acidity, bottles made, drinking window — beside the tasting notes and what to eat with it. The visit page prices three tasting flights, and the booking form knows which days and party sizes each flight allows. Suited to wineries, cideries, distilleries and any maker with a cellar door.",
+    "framework": "astro",
+    "category": "food-and-drink",
+    "categories": [
+      "food-and-drink",
+      "retail-and-e-commerce",
+      "travel"
+    ],
+    "price": 29,
+    "featured": false,
+    "badge": "New",
+    "liveUrl": "https://stonecrop.pages.dev",
+    "techStack": [
+      "Astro",
+      "Scroll-driven light",
+      "Responsive CSS",
+      "RSS"
+    ],
+    "features": [
+      "Wine wall with per-bottle reveal and CSS-drawn bottles",
+      "Home-page light that moves from morning to evening on scroll",
+      "Six wine pages with full technical particulars",
+      "Visit page with three priced tasting flights and directions",
+      "Estate page with blocks, soil section and team",
+      "Booking form that enforces each flight's days and party size"
+    ],
+    "pages": [
+      { "name": "Home", "path": "/", "desc": "4.1 planted hectares on the Ladderback wall — slate over limestone, dry-farmed, under twelve thousand bottles a year." },
+      { "name": "Wines", "path": "/wines/", "desc": "The current release: six wines from five grapes, with technical particulars, tasting notes and what to eat with each." },
+      { "name": "Wine detail", "path": "/wines/coldfoot-pinot-noir/", "desc": "The wine held back fourteen months past plan. The frost hollow's one generous year, and the slowest wine the estate has made." },
+      { "name": "Visit", "path": "/visit/", "desc": "Fourteen seats in the old barn, Thursday to Sunday. Three flights from £16, how to find Quarry Road, and what to expect." },
+      { "name": "Estate", "path": "/estate/", "desc": "11.4 hectares on the north wall of the Ladderback valley: five blocks, three people, and five rules the estate does not bend." },
+      { "name": "Journal", "path": "/journal/", "desc": "Pruning, frost, the drystone wall, and why a wine was held back fourteen months." },
+      { "name": "Book a flight", "path": "/book/", "desc": "The Short Walk, The Whole Wall or Quarry & Cellar. Thursday to Sunday, confirmed by email within a day." }
+    ]
+  },
+  {
+    "id": "auric-clinic-glow",
+    "name": "Auric Clinic Glow",
+    "slug": "auric-clinic-glow",
+    "dodoProductId": "pdt_0NnqniQf2KWyPGSKcaISB",
+    "tagline": "A warm, clinical site for a dermatology practice that explains itself.",
+    "description": "Auric is built for a clinic that has to earn trust before it sells anything. Every treatment page carries the things patients actually ask — how many sessions, the worst-case downtime, the real price, and a plain list of who it does not suit — instead of hiding them behind a consultation. Practitioners get registration numbers and the days they are in, the journal explains the science without marketing gloss, and the booking form asks the questions a real front desk would. Suited to dermatology, aesthetics, laser and specialist clinics that book by consultation.",
+    "framework": "astro",
+    "category": "medical",
+    "categories": [
+      "medical",
+      "wellness",
+      "hair-and-beauty"
+    ],
+    "price": 25,
+    "featured": false,
+    "badge": "New",
+    "liveUrl": "https://auric-clinic-glow.pages.dev",
+    "techStack": [
+      "Astro",
+      "CSS-art visuals",
+      "Responsive CSS",
+      "RSS"
+    ],
+    "features": [
+      "Eight treatment pages with sessions, downtime, price and contraindications",
+      "A stated list of who each treatment does not suit",
+      "Practitioner profiles with registration numbers and clinic days",
+      "Consultation form with validation, honeypot and a real intake questionnaire",
+      "Journal that explains skincare science in plain language",
+      "Warm clinical palette built entirely from CSS art — no photography needed"
+    ],
+    "pages": [
+      { "name": "Home", "path": "/", "desc": "A consultant-led skin clinic: five rooms, one camera rig, a written protocol before anything is switched on." },
+      { "name": "Treatments", "path": "/treatments/", "desc": "The whole menu: what each treatment is, how many sessions it takes, what it costs, and who it does not suit." },
+      { "name": "Treatment detail", "path": "/treatments/vascular-laser/", "desc": "KTP 532nm for fixed facial vessels, rosacea erythema and the broken capillaries that no cream has ever reached." },
+      { "name": "Practitioners", "path": "/practitioners/", "desc": "The clinicians, with registration numbers and the days they are in." },
+      { "name": "About", "path": "/about/", "desc": "How the clinic runs, and the six rules it holds to." },
+      { "name": "Journal", "path": "/journal/", "desc": "Skin science explained properly, written by the people who do the treatments." },
+      { "name": "Book a consultation", "path": "/book/", "desc": "Fifty minutes — history, dermoscopy, a Wood's lamp and four frames on the fixed rig, redeemable against treatment." }
+    ]
+  },
+  {
+    "id": "lantern-broth-midnight-ramen",
+    "name": "Lantern Broth",
+    "slug": "lantern-broth-midnight-ramen",
+    "dodoProductId": "pdt_0NnqoaMDVROMUqVnUr977",
+    "tagline": "A warm bento-grid site for a ramen counter that closes when the pots run dry.",
+    "description": "Lantern Broth is built for a restaurant with a point of view rather than a franchise. The menu is a content collection, so every dish gets its own page carrying the broth, the noodle, what is in the bowl, the heat level and the price — and the house rules run through the copy on three separate pages rather than sitting in a forgotten About paragraph. Bowls, lanterns and drifting steam are drawn entirely in CSS, so the theme looks finished before a single food photograph exists. Suited to ramen bars, izakayas, cafes and any small restaurant that sells a short menu well.",
+    "framework": "astro",
+    "category": "food-and-drink",
+    "categories": [
+      "food-and-drink",
+      "retail-and-e-commerce"
+    ],
+    "price": 25,
+    "featured": false,
+    "badge": "New",
+    "liveUrl": "https://lantern-broth-midnight-ramen.pages.dev",
+    "techStack": [
+      "Astro",
+      "CSS-art bowls",
+      "Bento grid",
+      "RSS"
+    ],
+    "features": [
+      "Twelve dish pages with broth, noodle, toppings, heat and price",
+      "Menu grouped into ramen, sides and drinks from one collection",
+      "Bento-grid home page with CSS-art bowls, lanterns and steam",
+      "Locations page with per-site hours and seating",
+      "Booth reservation form with validation and honeypot",
+      "House rules carried through the copy, not buried in About"
+    ],
+    "pages": [
+      { "name": "Home", "path": "/", "desc": "A fourteen-seat ramen counter. Three broths, one noodle, open until 3am at weekends — and closed the minute the pots run dry." },
+      { "name": "Menu", "path": "/menu/", "desc": "The card: six bowls, the sides worth ordering, and three things to drink, with prices and spice levels." },
+      { "name": "Dish detail", "path": "/menu/nineteen-hour-tonkotsu/", "desc": "Pork bone broth pushed for nineteen hours, thin straight noodles, and nothing on top that has to be explained." },
+      { "name": "Locations", "path": "/locations/", "desc": "The counter on Kettle Lane and the standing window at the market — hours, seating and how to get there." },
+      { "name": "About", "path": "/about/", "desc": "Three pots, one noodle maker, fourteen stools, and a short list of things the bar refuses to do." },
+      { "name": "Journal", "path": "/journal/", "desc": "Notes from behind the pass: broth timings, the noodle maker up the road, and the year the salt drifted." },
+      { "name": "Reserve", "path": "/reserve/", "desc": "The counter is walk-in; the two booths take a booking up to three weeks out." }
+    ]
+  },
+  {
+    "id": "aegis-console",
+    "name": "Aegis Console",
+    "slug": "aegis-console",
+    "dodoProductId": "pdt_0NnqpK8pE6Lq7ppbysXOF",
+    "tagline": "A precision-grid SaaS site built around a security console drawn in CSS.",
+    "description": "Aegis Console is for a technical product sold to people who read the docs before the pricing page. The home page centres on a live-looking security console — charts, counters and streaming telemetry — drawn entirely in CSS, so the theme ships with no product screenshots to go stale. The product page explains mechanisms rather than adjectives, every pricing tier states plainly what it does not include, and customer stories are content files carrying named workloads and real numbers. Suited to security, infrastructure, developer tooling and any B2B SaaS with an engineering audience.",
+    "framework": "astro",
+    "category": "portfolio-and-agency",
+    "categories": [
+      "portfolio-and-agency",
+      "documentation",
+      "professional-services"
+    ],
+    "price": 25,
+    "featured": true,
+    "badge": "New",
+    "liveUrl": "https://aegis-console.pages.dev",
+    "techStack": [
+      "Astro",
+      "CSS-art console",
+      "Responsive CSS",
+      "RSS"
+    ],
+    "features": [
+      "Animated security console built in CSS — no product screenshots",
+      "Product page written as mechanisms, not adjectives",
+      "Three pricing tiers, each stating what it does not include",
+      "Five customer stories as a content collection",
+      "Engineering journal with prose styling and RSS",
+      "Demo request form with validation and honeypot"
+    ],
+    "pages": [
+      { "name": "Home", "path": "/", "desc": "Watches identity, egress, syscalls and control-plane change at runtime — and pages a human in a median of 38 seconds." },
+      { "name": "Product", "path": "/product/", "desc": "Four signal domains, normalisation, per-workload baselines, correlation patterns and a console that shows its evidence." },
+      { "name": "Pricing", "path": "/pricing/", "desc": "Three plans with real limits — and an explicit list of what each tier does not include." },
+      { "name": "Customers", "path": "/customers/", "desc": "Five customer stories with named workloads, real timestamps and the numbers afterwards." },
+      { "name": "Customer story", "path": "/customers/helix-bank/", "desc": "Keeping every security-relevant event inside the EU — and proving it to a regulator." },
+      { "name": "Journal", "path": "/blog/", "desc": "Engineering notes: detection design, measured eBPF overhead, latency budgets, and the arguments lost." },
+      { "name": "Request a demo", "path": "/demo/", "desc": "Thirty minutes with an engineer who works on the detection pipeline." }
+    ]
+  },
+  {
+    "id": "amberhaus-pet-atelier",
+    "name": "Amberhaus Pet Atelier",
+    "slug": "amberhaus-pet-atelier",
+    "dodoProductId": "pdt_0Nnqt5okHe8GmJrQFr9fE",
+    "tagline": "A warm editorial site for a grooming, boarding and pet-care house.",
+    "description": "Amberhaus treats a pet business like a craft workshop rather than a shop. Each service is a content file carrying its real duration, price and exactly what is included, and the home page is built around the six things the house refuses to do — no cage dryers, no walk-ins, one animal on the floor at a time — which is the part that actually wins trust. Boarding, grooming and made-to-measure goods all live in the same collection, so the offering is edited in one place. Suited to groomers, boarding houses, vets, trainers and any appointment-led care business.",
+    "framework": "astro",
+    "category": "portfolio-and-agency",
+    "categories": [
+      "portfolio-and-agency",
+      "wellness",
+      "retail-and-e-commerce"
+    ],
+    "price": 19,
+    "featured": false,
+    "badge": "New",
+    "liveUrl": "https://amberhaus-pet-atelier.pages.dev",
+    "techStack": [
+      "Astro",
+      "CSS-art visuals",
+      "Responsive CSS",
+      "RSS"
+    ],
+    "features": [
+      "Six service pages with duration, price and what is included",
+      "House-rules section built from the things the business refuses to do",
+      "Grooming, boarding and made-to-measure goods in one collection",
+      "Journal with prose styling and RSS",
+      "Booking form with validation and honeypot",
+      "Warm amber palette drawn entirely in CSS — no photography needed"
+    ],
+    "pages": [
+      { "name": "Home", "path": "/", "desc": "One grooming table, six boarding suites, and a bench where collars are cut to measure." },
+      { "name": "Services", "path": "/services/", "desc": "Grooming by appointment, hand-stripping on a rolling calendar, six private suites, and a leather bench." },
+      { "name": "Service detail", "path": "/services/the-full-groom/", "desc": "Bath, hand-dry and a finish cut to the coat in front of us — not to a breed diagram." },
+      { "name": "About", "path": "/about/", "desc": "Four people on one floor: a grooming atelier, six boarding suites and a saddler's bench." },
+      { "name": "Journal", "path": "/journal/", "desc": "Why the house will never own a cage dryer, and what a rolled coat really costs." },
+      { "name": "Book a visit", "path": "/book/", "desc": "Tell us the dog, the coat and when you need it — answered within one working day." }
+    ]
+  },
+  {
+    "id": "wayfare-expedition-journal",
+    "name": "Wayfare",
+    "slug": "wayfare-expedition-journal",
+    "dodoProductId": "pdt_0NnrkasPpI9tOKov46mk4",
+    "tagline": "A field-notebook site for an expedition outfit that tells you what you are not ready for.",
+    "description": "Wayfare is built for adventure travel sold on competence rather than scenery. Every route page carries the things a serious client needs before booking — grade, party size, season, price, a day-by-day shape, and a plainly worded list of what the outfit will not do. Terrain is drawn as CSS and inline SVG plates, so the theme looks complete before a single photograph exists, which is exactly the problem most travel templates cannot solve. Suited to expedition companies, guiding outfits, trekking operators and any travel business that sells by enquiry rather than by cart.",
+    "framework": "astro",
+    "category": "travel",
+    "categories": [
+      "travel",
+      "blog-and-editorial"
+    ],
+    "price": 29,
+    "featured": false,
+    "badge": "New",
+    "liveUrl": "https://wayfare-expedition-journal.pages.dev",
+    "techStack": [
+      "Astro",
+      "CSS/SVG terrain",
+      "Responsive CSS",
+      "RSS"
+    ],
+    "features": [
+      "Seven route pages with grade, party size, season and price",
+      "Day-by-day shape on every expedition",
+      "An explicit list of what the outfit will not do",
+      "Destinations page grouped by range",
+      "Trip-report journal with prose styling and RSS",
+      "Enquiry form with validation and honeypot"
+    ],
+    "pages": [
+      { "name": "Home", "path": "/", "desc": "Seven routes out of a yard in Tromsø, fourteen departures a year, at six to a rope and never more." },
+      { "name": "Expeditions", "path": "/expeditions/", "desc": "Seven routes, six ranges, fourteen departures a year — with grade, duration and price on each." },
+      { "name": "Expedition detail", "path": "/expeditions/the-lyngen-traverse/", "desc": "Nine days across the spine of the Lyngen peninsula on skis, sleeping in four huts and one boat." },
+      { "name": "Destinations", "path": "/destinations/", "desc": "The ranges the outfit actually works in, and why it does not add more." },
+      { "name": "About", "path": "/about/", "desc": "Eleven people who go, and take six of you — how a party is prepared before it leaves the yard." },
+      { "name": "Journal", "path": "/journal/", "desc": "Field notes and trip reports, including the day they turned back at 1,180 metres." },
+      { "name": "Enquire", "path": "/enquire/", "desc": "Tell them the route, the season and your experience — answered by someone who has been on it." }
+    ]
+  },
+  {
+      "id": "3dbento-agency-website-template",
+      "name": "3D BENTO",
+      "slug": "3dbento-agency-website-template",
+      "dodoProductId": "pdt_0NnuWOqZ1hU0zdtP2Jk7P",
+      "tagline": "Modern, high-performance 3D BENTO website template.",
+      "description": "Elevate your digital presence with 3D BENTO Agency. This cutting-edge agency Webflow template combines innovative design with advanced e-commerce tools, creating an immersive online platform that captivates customers and drives success.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": true,
+      "badge": "New Release",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Modern",
+              "path": "/works_modern/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "1833-studio-website-template",
+      "name": "1833 Studio",
+      "slug": "1833-studio-website-template",
+      "dodoProductId": "pdt_0NnuWdzlyu3i4cBimyd3w",
+      "tagline": "Modern, high-performance 1833 Studio website template.",
+      "description": "1833 Studio a clean and modern website Webflow template for tattoo salon websites. It can be used for Tattoo Salon, Ink, Piercing, Body Art, Tattoo Studio, Barber, Salon, Tattoo Artist, Art Barbershop websites.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "1936redcliff-real-estate-website-template",
+      "name": "1936 Redcliff",
+      "slug": "1936redcliff-real-estate-website-template",
+      "dodoProductId": "pdt_0NnuWeoWW1P2VQ65SjwDa",
+      "tagline": "Modern, high-performance 1936 Redcliff website template.",
+      "description": "\"1936 Redcliff\" Property Real Estate Landing Page \u2013 Exclusive digital showcase for your exceptional property.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "3dbento-agency",
+      "name": "3Dbento Agency",
+      "slug": "3dbento-agency",
+      "dodoProductId": "pdt_0NnuWfgrtwjCGbXeoqopI",
+      "tagline": "Modern, high-performance 3Dbento Agency website template.",
+      "description": "Astro 5 and Tailwind CSS starter template for 3Dbento Agency.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "3dentity-website-template",
+      "name": "3D Entity",
+      "slug": "3dentity-website-template",
+      "dodoProductId": "pdt_0NnuWgbfvH9o5dIkze60c",
+      "tagline": "Modern, high-performance 3D Entity website template.",
+      "description": "Maximize your digital presence with 3D Entity Agency. This cutting-edge Webflow agency template merges modern design with robust e-commerce capabilities, creating an immersive online experience that captivates customers and drives growth.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "62bdeffbd787c40858d9d93f",
+      "name": "Evan Maison",
+      "slug": "62bdeffbd787c40858d9d93f",
+      "dodoProductId": "pdt_0NnuWiWKhImrKcpUxxhNt",
+      "tagline": "Modern, high-performance Evan Maison website template.",
+      "description": "Modern bold dark personal portfolio template designed mostly for creatives. Show your portfolio cases not in the ordinary way, just customize them and be fancy. Do you write articles? Just add blog pages to your website so simple.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Categories Mmobile App",
+              "path": "/categories_mmobile-app/",
+              "desc": "Dedicated Categories Mmobile App page with responsive components."
+          },
+          {
+              "name": "Categories Photography",
+              "path": "/categories_photography/",
+              "desc": "Dedicated Categories Photography page with responsive components."
+          },
+          {
+              "name": "Categories Ui Ux Design",
+              "path": "/categories_ui-ux-design/",
+              "desc": "Dedicated Categories Ui Ux Design page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "63475773f759d2418b649b34",
+      "name": "Aquapure",
+      "slug": "63475773f759d2418b649b34",
+      "dodoProductId": "pdt_0NnuaRARdkMJWg10wE8M5",
+      "tagline": "Modern, high-performance Aquapure website template.",
+      "description": "Elegant online store webflow template with an extensive collection of refined, modern websites and multiple practical shop features. Exclusively built for single product, shop, store, and Ecommerce websites.",
+      "framework": "astro",
+      "category": "retail-and-e-commerce",
+      "categories": [
+          "retail-and-e-commerce"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://63475773f759d2418b649b34.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "88settle-real-estate-website-template",
+      "name": "88settle",
+      "slug": "88settle-real-estate-website-template",
+      "dodoProductId": "pdt_0NnuaXu7gorgIpGysmNTh",
+      "tagline": "Modern, high-performance 88settle website template.",
+      "description": "Introducing 88Settle, an elegant and professional template for real estate agencies. With a distinctive clean and modern feel, handpicked colors and fonts, 88Settle is easy to use, responsive, and blazing-fast on every device.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://88settle-real-estate.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Listing 3 Floors Office In Ameyoko Ueno",
+              "path": "/listing_3-floors-office-in-ameyoko-ueno/",
+              "desc": "Dedicated Listing 3 Floors Office In Ameyoko Ueno page with responsive components."
+          },
+          {
+              "name": "Listings",
+              "path": "/listings/",
+              "desc": "Dedicated Listings page with responsive components."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "92-rhys-real-estate-website-template",
+      "name": "92 Rhys",
+      "slug": "92-rhys-real-estate-website-template",
+      "dodoProductId": "pdt_0Nnuad6A1TOlcDrqbfkj9",
+      "tagline": "Modern, high-performance 92 Rhys website template.",
+      "description": "92 Rhys is a sleek and modern business landing page, with sophisticated 3D animations, for property development, architecture firms, leasing agencies and real estate companies.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://92-rhys-real-estate.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Image Licensing",
+              "path": "/image-licensing/",
+              "desc": "Dedicated Image Licensing page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "99club-website-template",
+      "name": "99Club",
+      "slug": "99club-website-template",
+      "dodoProductId": "pdt_0Nnuajq1NMVFxohk7BCc6",
+      "tagline": "Modern, high-performance 99Club website template.",
+      "description": "99club is a modern and stylish Webflow template designed for nightclubs, party organizers, and event management businesses. With its bold and energetic design, 99club makes it easy to promote your events, attract more guests, and grow your nightlife",
+      "framework": "astro",
+      "category": "weddings-and-events",
+      "categories": [
+          "weddings-and-events"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://99club.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Template Pages License",
+              "path": "/template-pages_license/",
+              "desc": "Dedicated Template Pages License page with responsive components."
+          },
+          {
+              "name": "Template Pages Style Guide",
+              "path": "/template-pages_style-guide/",
+              "desc": "Dedicated Template Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "Arnexo-website-template",
+      "name": "Arnexo",
+      "slug": "Arnexo-website-template",
+      "dodoProductId": "pdt_0NnuatcFZpkYWT6V3fVWE",
+      "tagline": "Modern, high-performance Arnexo website template.",
+      "description": "Arnexo is a responsive Webflow template for architects and modern architecture studios. Showcase your portfolio of residential and commercial design projects using 3 homepages, 20+ pages, and a stunning, high-conversion visual aesthetic.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://arnexo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service One",
+              "path": "/service-one/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Three",
+              "path": "/service-three/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Two",
+              "path": "/service-two/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "Arooth-website-template",
+      "name": "Arooth",
+      "slug": "Arooth-website-template",
+      "dodoProductId": "pdt_0Nnub0K6FxgKdARxZHJyU",
+      "tagline": "Modern, high-performance Arooth website template.",
+      "description": "Arooth is a premium Creative Digital Agency Webflow Template designed for creatives, studios, and digital agencies. Fully responsive, CMS-powered, and easy to customize.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://arooth.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Brand Identity",
+              "path": "/services_brand-identity/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Ui Ux Strategy",
+              "path": "/services_ui-ux-strategy/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "Axtira-website-template",
+      "name": "Axtira",
+      "slug": "Axtira-website-template",
+      "dodoProductId": "pdt_0Nnub9EqhLduGhrLr9Cf6",
+      "tagline": "Modern, high-performance Axtira website template.",
+      "description": "Axtira is a premium Webflow template for industrial, oil, gas, and energy businesses. It features 3 homepages, 21+ unique pages, cool animations, and a user-friendly design to build a powerful site.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://axtira.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Three",
+              "path": "/about-three/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Two",
+              "path": "/about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "Bisqueria-website-template",
+      "name": "Bisqueria",
+      "slug": "Bisqueria-website-template",
+      "dodoProductId": "pdt_0NnubFwnSFYJjk9HmZJiJ",
+      "tagline": "Modern, high-performance Bisqueria website template.",
+      "description": "Create a refreshing Bakery website with Bakery, a vibrant Webflow Template designed for bakeries, caf\u00e9s, pastry shops, and family-run businesses.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://bisqueria.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs Honeycomb Bakes A Nature Inspired Name Symbolizing Sweetness And Quality",
+              "path": "/blogs_honeycomb-bakes-a-nature-inspired-name-symbolizing-sweetness-and-quality/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "Furino-website-template",
+      "name": "Furino",
+      "slug": "Furino-website-template",
+      "dodoProductId": "pdt_0NnubMDMeT7PFPubazDxq",
+      "tagline": "Modern, high-performance Furino website template.",
+      "description": "Furino is a refined and modern Webflow template crafted for interior studios, architecture firms, and home styling agencies looking to showcase their work with elegance and clarity.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 59,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://furino.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "LaunchHub-website-template",
+      "name": "LaunchHub",
+      "slug": "LaunchHub-website-template",
+      "dodoProductId": "pdt_0NnubOoODiz8WPBIb1tZV",
+      "tagline": "Modern, high-performance LaunchHub website template.",
+      "description": "Take your AI support to new heights with LaunchHub \ud83e\udde0\ud83d\ude80! Built for AI startups and digital tools, this Webflow Template offers modern layouts and easy customization to showcase your services with clarity and confidence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 169,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://launchhub.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Pages Blog V1",
+              "path": "/blog-pages_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Pages Blog V2",
+              "path": "/blog-pages_blog-v2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Company Pages About",
+              "path": "/company-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "LittleSteps-website-template",
+      "name": "LittleSteps",
+      "slug": "LittleSteps-website-template",
+      "dodoProductId": "pdt_0NnubUeAudWe97rpxGOpr",
+      "tagline": "Modern, high-performance LittleSteps website template.",
+      "description": "LittleSteps is a colorful and friendly Webflow template designed for preschools, kindergartens, and early learning centers. It features playful layouts, programs, testimonials, and enrollment sections built to engage parents and educators.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://littlesteps.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Admission",
+              "path": "/admission/",
+              "desc": "Dedicated Admission page with responsive components."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Programs",
+              "path": "/programs/",
+              "desc": "Dedicated Programs page with responsive components."
+          },
+          {
+              "name": "Teachers",
+              "path": "/teachers/",
+              "desc": "Dedicated Teachers page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "Movers-website-template",
+      "name": "Movers",
+      "slug": "Movers-website-template",
+      "dodoProductId": "pdt_0Nnuba6lusq2bRJMDBG4E",
+      "tagline": "Modern, high-performance Movers website template.",
+      "description": "Movers is a modern Webflow template designed for logistics, shipping, and freight companies. It features service-focused layouts, pricing plans, testimonials, FAQs, and lead-generation sections built to convert visitors into clients.",
+      "framework": "astro",
+      "category": "transportation",
+      "categories": [
+          "transportation"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://movers.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs Innovations Redefining Cargo Transportation",
+              "path": "/blogs_innovations-redefining-cargo-transportation/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "Nexivo-website-template",
+      "name": "Nexivo",
+      "slug": "Nexivo-website-template",
+      "dodoProductId": "pdt_0NnubgTspCP6Omsx7xx05",
+      "tagline": "Modern, high-performance Nexivo website template.",
+      "description": "Nexivo \u2013 Portfolio & Creative Agency Webflow Template",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://nexivo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Designing Impact Elevating Brands Through Innovation",
+              "path": "/projects_designing-impact-elevating-brands-through-innovation/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Branding",
+              "path": "/services_branding/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Templates Style Guide",
+              "path": "/templates_style-guide/",
+              "desc": "Dedicated Templates Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "Omenflex-website-template",
+      "name": "OmenFlex",
+      "slug": "Omenflex-website-template",
+      "dodoProductId": "pdt_0NnubmaapFEkCdOVxEppw",
+      "tagline": "Modern, high-performance OmenFlex website template.",
+      "description": "OmenFlex is a refined one-page Webflow template for freelancers and consultants. Clean grids, smooth animations, and a premium aesthetic help you showcase your work, process, and personal brand with confidence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://omenflex.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utility Pages Licenses",
+              "path": "/utility-pages_licenses/",
+              "desc": "Dedicated Utility Pages Licenses page with responsive components."
+          },
+          {
+              "name": "Utility Pages Style Guide",
+              "path": "/utility-pages_style-guide/",
+              "desc": "Dedicated Utility Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "OptiBot-website-template",
+      "name": "OptiBot",
+      "slug": "OptiBot-website-template",
+      "dodoProductId": "pdt_0NnubtfvKkNV3MJomFmTY",
+      "tagline": "Modern, high-performance OptiBot website template.",
+      "description": "Automate tasks, boost productivity, and make smarter business decisions with OptiBot - your AI-powered solution for modern teams.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://optibot.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Product",
+              "path": "/product/",
+              "desc": "Dedicated Product page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "Sarfa-website-template",
+      "name": "Sarfa",
+      "slug": "Sarfa-website-template",
+      "dodoProductId": "pdt_0Nnuc0ALW1zESbCjFI1w4",
+      "tagline": "Modern, high-performance Sarfa website template.",
+      "description": "Sarfa is a clean and modern SaaS SEO landing page template built for startups, marketing tools, analytics apps, and AI SEO platforms. Featuring premium UI, CMS-powered sections, responsive layouts, and a conversion-focused structure.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://sarfa.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Jobs Seo Strategist",
+              "path": "/jobs_seo-strategist/",
+              "desc": "Dedicated Jobs Seo Strategist page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Product Starter Plan W",
+              "path": "/product_starter-plan-w/",
+              "desc": "Dedicated Product Starter Plan W page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "Velonic-website-template",
+      "name": "Velonic",
+      "slug": "Velonic-website-template",
+      "dodoProductId": "pdt_0Nnuc7PGYpn870P2jhalE",
+      "tagline": "Modern, high-performance Velonic website template.",
+      "description": "VELONIC is a dark, modern Webflow template for creative agencies and studios. With clean UI, cinematic visuals, GSAP micro-interactions, and flexible CMS collections, it helps you showcase design, motion, and digital work with clarity and style.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://velonic.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Insights",
+              "path": "/insights/",
+              "desc": "Dedicated Insights page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aagency-agency-website-template",
+      "name": "\u00c3agency",
+      "slug": "aagency-agency-website-template",
+      "dodoProductId": "pdt_0NnucENai2nvVFniGTyON",
+      "tagline": "Modern, high-performance \u00c3agency website template.",
+      "description": "\u00c3agency is a novel Webflow template that underscores smooth user engagements and attention-grabbing web design.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aagency-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Project Aenean Imper",
+              "path": "/project_aenean-imper/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Proin Pretium",
+              "path": "/project_proin-pretium/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aaing-agency-website-template",
+      "name": "Aaing",
+      "slug": "aaing-agency-website-template",
+      "dodoProductId": "pdt_0NnucL7u0k80Zcgve80xU",
+      "tagline": "Modern, high-performance Aaing website template.",
+      "description": "Looking for a stunning agency template or business template? Check out the Aaing business website template. This business Webflow template comes with a sleek design and functionality that is built to meet the needs of modern business websites.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aaing-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aalbatros-startup-website-template",
+      "name": "Aalbatros",
+      "slug": "aalbatros-startup-website-template",
+      "dodoProductId": "pdt_0NnucWNfJ3DH6vr5XMeIx",
+      "tagline": "Modern, high-performance Aalbatros website template.",
+      "description": "Aalbatros is a collection of 12 landing pages for Apps, SaaS, and Startups. Designed to perform and convert, Aalbatros is fast and easy to customize.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aalbatros-startup.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Landings Landing Page 1",
+              "path": "/landings_landing-page-1/",
+              "desc": "Dedicated Landings Landing Page 1 page with responsive components."
+          },
+          {
+              "name": "Landings Landing Page 2",
+              "path": "/landings_landing-page-2/",
+              "desc": "Dedicated Landings Landing Page 2 page with responsive components."
+          },
+          {
+              "name": "Landings Landing Page 3",
+              "path": "/landings_landing-page-3/",
+              "desc": "Dedicated Landings Landing Page 3 page with responsive components."
+          },
+          {
+              "name": "Landings Landing Page 4",
+              "path": "/landings_landing-page-4/",
+              "desc": "Dedicated Landings Landing Page 4 page with responsive components."
+          },
+          {
+              "name": "Landings Landing Page 5",
+              "path": "/landings_landing-page-5/",
+              "desc": "Dedicated Landings Landing Page 5 page with responsive components."
+          },
+          {
+              "name": "Landings Landing Page 6",
+              "path": "/landings_landing-page-6/",
+              "desc": "Dedicated Landings Landing Page 6 page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aalborg-doctor-website-template",
+      "name": "Aalborg",
+      "slug": "aalborg-doctor-website-template",
+      "dodoProductId": "pdt_0Nnucd8YsMRPV6nnM5LEA",
+      "tagline": "Modern, high-performance Aalborg website template.",
+      "description": "Aalborg is a modern Webflow template perfectly suited for Doctors, Dentists, Therapists or other Medical Services. It comes with an elegant and minimal design and CMS integration.",
+      "framework": "astro",
+      "category": "medical",
+      "categories": [
+          "medical"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aalborg-doctor.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service General Health",
+              "path": "/service_general-health/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Specialized Care",
+              "path": "/service_specialized-care/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Telemedicine",
+              "path": "/service_telemedicine/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aarchiesta-architecture-website-template",
+      "name": "Aarchiesta",
+      "slug": "aarchiesta-architecture-website-template",
+      "dodoProductId": "pdt_0NnucmKru3yMfv8Guzcr1",
+      "tagline": "Modern, high-performance Aarchiesta website template.",
+      "description": "Archiesta, the ultimate architecture and architect agency Webflow template, offers a refined and modern design perfect for showcasing innovative projects. With responsive layout, it's ideal for creating impactful architecture portfolios.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 129,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://aarchiesta-architecture.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Three",
+              "path": "/about-three/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Two",
+              "path": "/about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aaron-plus-portfolio-website-template",
+      "name": "Aaron Plus",
+      "slug": "aaron-plus-portfolio-website-template",
+      "dodoProductId": "pdt_0NnucsPALvOoMOFkYiReb",
+      "tagline": "Modern, high-performance Aaron Plus website template.",
+      "description": "Aaron Plus is a Webflow template that is designed with simplicity in mind, featuring a sleek and modern layout that is easy on the eyes and showcases your work in the best light. It comes with CMS integration for easy updates and maintenance.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aaron-plus-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Impression",
+              "path": "/work_impression/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Sense",
+              "path": "/work_sense/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Sync",
+              "path": "/work_sync/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aaron-portfolio-website-template",
+      "name": "Aaron",
+      "slug": "aaron-portfolio-website-template",
+      "dodoProductId": "pdt_0NnucyFP1jli8M0r0nWmB",
+      "tagline": "Modern, high-performance Aaron website template.",
+      "description": "Aaron is a Webflow template that is designed with simplicity in mind, featuring a sleek and modern layout that is easy on the eyes and showcases your work in the best light. It comes with CMS integration for easy updates and maintenance.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aaron-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Reference Style Guide",
+              "path": "/reference_style-guide/",
+              "desc": "Dedicated Reference Style Guide page with responsive components."
+          },
+          {
+              "name": "Work Fundezy",
+              "path": "/work_fundezy/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Impression",
+              "path": "/work_impression/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Mike",
+              "path": "/work_mike/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Sense",
+              "path": "/work_sense/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Sync",
+              "path": "/work_sync/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aascot-saas-website-template",
+      "name": "Aascot",
+      "slug": "aascot-saas-website-template",
+      "dodoProductId": "pdt_0Nnud8Y50hYjRnaLzp2mY",
+      "tagline": "Modern, high-performance Aascot website template.",
+      "description": "Expand at Will. With 40+ different pages, a modern and minimal design, blog functionality, and sections that you can mix and match, Aascot has all you need to kick-start your Saas Startup and win new clients.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aascot-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Landing Landing 1",
+              "path": "/landing_landing-1/",
+              "desc": "Dedicated Landing Landing 1 page with responsive components."
+          },
+          {
+              "name": "Landing Landing 2",
+              "path": "/landing_landing-2/",
+              "desc": "Dedicated Landing Landing 2 page with responsive components."
+          },
+          {
+              "name": "Landing Landing 3",
+              "path": "/landing_landing-3/",
+              "desc": "Dedicated Landing Landing 3 page with responsive components."
+          },
+          {
+              "name": "Landing Landing 4",
+              "path": "/landing_landing-4/",
+              "desc": "Dedicated Landing Landing 4 page with responsive components."
+          },
+          {
+              "name": "Landing Landing 5",
+              "path": "/landing_landing-5/",
+              "desc": "Dedicated Landing Landing 5 page with responsive components."
+          },
+          {
+              "name": "Landing Landing 6",
+              "path": "/landing_landing-6/",
+              "desc": "Dedicated Landing Landing 6 page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aastronaut-saas-website-template",
+      "name": "Aastronaut",
+      "slug": "aastronaut-saas-website-template",
+      "dodoProductId": "pdt_0NnudJBUqOZaSwvySqxW6",
+      "tagline": "Modern, high-performance Aastronaut website template.",
+      "description": "Expand at Will. With 28 pages, a modern and minimal design, blog functionality, and sections that you can mix and match, Aastronaut has all you need to kick-start your Saas Startup and win new clients.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aastronaut-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Homepage Demo 1",
+              "path": "/homepage_demo-1/",
+              "desc": "Dedicated Homepage Demo 1 page with responsive components."
+          },
+          {
+              "name": "Homepage Demo 2",
+              "path": "/homepage_demo-2/",
+              "desc": "Dedicated Homepage Demo 2 page with responsive components."
+          },
+          {
+              "name": "Homepage Demo 3",
+              "path": "/homepage_demo-3/",
+              "desc": "Dedicated Homepage Demo 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing Demo 1",
+              "path": "/pricing_demo-1/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing Demo 2",
+              "path": "/pricing_demo-2/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing Demo 3",
+              "path": "/pricing_demo-3/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aaveron-website-template",
+      "name": "Aaveron",
+      "slug": "aaveron-website-template",
+      "dodoProductId": "pdt_0NnudLqg0Afoyu3N5Gexp",
+      "tagline": "Modern, high-performance Aaveron website template.",
+      "description": "A SaaS platform landing page for business automation tools. Built for B2B software companies showcasing workflow management, team collaboration, and real-time analytics dashboards.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aaveron.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Info Licenses",
+              "path": "/info_licenses/",
+              "desc": "Dedicated Info Licenses page with responsive components."
+          },
+          {
+              "name": "Info Style Guide",
+              "path": "/info_style-guide/",
+              "desc": "Dedicated Info Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aavo-website-template",
+      "name": "Aavo",
+      "slug": "aavo-website-template",
+      "dodoProductId": "pdt_0NnudSQGV2dhghQ8yczjh",
+      "tagline": "Modern, high-performance Aavo website template.",
+      "description": "Aavo is a sleek Webflow template \ud83c\udf1f crafted for AI \ud83e\udd16, SaaS \ud83d\ude80, software \ud83d\udcbb, startups \ud83c\udfe2, and businesses \ud83d\udcbc. Perfect for web apps \ud83c\udf10, corporate sites \ud83c\udfd9\ufe0f, and modern apps \ud83d\udcf1, it blends style and functionality to showcase your brand professionally.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aavo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aawans-law-firm-website-template-1ea86",
+      "name": "Aawans",
+      "slug": "aawans-law-firm-website-template-1ea86",
+      "dodoProductId": "pdt_0NnudZ9jeqsZjysvwylzw",
+      "tagline": "Modern, high-performance Aawans website template.",
+      "description": "Aawans is an exclusive Webflow website template designed for law firms to help build a modern and professional law firm website. It is a powerful tool for legal professionals to show their services, team, and contact info.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aawans-law-firm-1ea86.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Attorney",
+              "path": "/attorney/",
+              "desc": "Dedicated Attorney page with responsive components."
+          },
+          {
+              "name": "Blog Post",
+              "path": "/blog-post/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Cases",
+              "path": "/cases/",
+              "desc": "Dedicated Cases page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Practice Areas",
+              "path": "/practice-areas/",
+              "desc": "Dedicated Practice Areas page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aaxon-website-template",
+      "name": "Aaxon",
+      "slug": "aaxon-website-template",
+      "dodoProductId": "pdt_0NnudbKgX15dkYY2iwdlR",
+      "tagline": "Modern, high-performance Aaxon website template.",
+      "description": "A\u00e1xon is a sleek, modern Webflow portfolio template for freelancers and professionals. Designed to showcase your work, skills, and style, it ensures your portfolio stands out and looks stunning on any device.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aaxon.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blogs The Designers Playbook Strategies For Next Level Creativity",
+              "path": "/blogs_the-designers-playbook-strategies-for-next-level-creativity/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Inner Pages About",
+              "path": "/inner-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Inner Pages Project",
+              "path": "/inner-pages_project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Product Starter",
+              "path": "/product_starter/",
+              "desc": "Dedicated Product Starter page with responsive components."
+          },
+          {
+              "name": "Projects Nurobite",
+              "path": "/projects_nurobite/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Motion Graphics",
+              "path": "/service_motion-graphics/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "abbey-agency-website-template",
+      "name": "Abbey",
+      "slug": "abbey-agency-website-template",
+      "dodoProductId": "pdt_0Nnuds288lqQ3ZbQTjPGj",
+      "tagline": "Modern, high-performance Abbey website template.",
+      "description": "Abbey is a clean and minimalist Webflow template designed for agencies seeking to make a lasting impression.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://abbey-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Documentation Instructions",
+              "path": "/documentation_instructions/",
+              "desc": "Dedicated Documentation Instructions page with responsive components."
+          },
+          {
+              "name": "Documentation Licenses",
+              "path": "/documentation_licenses/",
+              "desc": "Dedicated Documentation Licenses page with responsive components."
+          },
+          {
+              "name": "Documentation Style Guide",
+              "path": "/documentation_style-guide/",
+              "desc": "Dedicated Documentation Style Guide page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "abency-agency-website-template",
+      "name": "Abency",
+      "slug": "abency-agency-website-template",
+      "dodoProductId": "pdt_0NnudzwT48UXJakRmAGgR",
+      "tagline": "Modern, high-performance Abency website template.",
+      "description": "Discover ABENCY, an exceptional Webflow template for agencies. Elevate your online presence with a chic design, seamless integration of e-commerce, and premium services. Capture customers' attention effortlessly and grow your business with ABENCY.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://abency-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Design",
+              "path": "/services_design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "abetor-website-template",
+      "name": "Abetor",
+      "slug": "abetor-website-template",
+      "dodoProductId": "pdt_0Nnue7V3QCBcfHFDcEh4n",
+      "tagline": "Modern, high-performance Abetor website template.",
+      "description": "A modern Portfolio Webflow Template designed with smooth scrolling and stylish animations. Perfect for creatives and professionals to showcase projects with a polished, interactive, and visually engaging presentation.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://abetor.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Works Design Dock",
+              "path": "/works_design-dock/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Eventura",
+              "path": "/works_eventura/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Launch Space",
+              "path": "/works_launch-space/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Pixel Hive",
+              "path": "/works_pixel-hive/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Urban Nest",
+              "path": "/works_urban-nest/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "abode-interior-design-website-template",
+      "name": "Abode",
+      "slug": "abode-interior-design-website-template",
+      "dodoProductId": "pdt_0NnueDuGHwOBhF8pyiDI5",
+      "tagline": "Modern, high-performance Abode website template.",
+      "description": "Abode provides a home for artists, interior design professionals, architects and fine craftspeople - whether working alone or as a studio collective.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://abode-interior-design.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Journal",
+              "path": "/journal/",
+              "desc": "Dedicated Journal page with responsive components."
+          },
+          {
+              "name": "Studio",
+              "path": "/studio/",
+              "desc": "Dedicated Studio page with responsive components."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "abreto-website-template",
+      "name": "Abreto",
+      "slug": "abreto-website-template",
+      "dodoProductId": "pdt_0NnueKPY4v07JKOETQsXv",
+      "tagline": "Modern, high-performance Abreto website template.",
+      "description": "Abreto is a modern Webflow template built for finance apps, budgeting tools, and fintech startups. It features a clean design, fast performance, and easy customization for any financial platform.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://abreto.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          },
+          {
+              "name": "Utility Style Guide",
+              "path": "/utility_style-guide/",
+              "desc": "Dedicated Utility Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "absolute-website-template",
+      "name": "Absolute",
+      "slug": "absolute-website-template",
+      "dodoProductId": "pdt_0NnueQlqNkjlzEYIoOlQ7",
+      "tagline": "Modern, high-performance Absolute website template.",
+      "description": "A bold, modern Webflow template for creative studios, branding agencies, marketing teams, and design portfolios. Clean layout, flexible sections, and smooth animations, fully responsive and easy to customize.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://absolute.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faqs",
+              "path": "/faqs/",
+              "desc": "Dedicated Faqs page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Heritage Drive For Novaro",
+              "path": "/project_heritage-drive-for-novaro/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "abstraact-website-template",
+      "name": "Abstraact",
+      "slug": "abstraact-website-template",
+      "dodoProductId": "pdt_0NnueYgaEWpG9OsCd2mkd",
+      "tagline": "Modern, high-performance Abstraact website template.",
+      "description": "Abstract is a professionally designed Webflow template specifically created for businesses in the interior design, architecture, renovation, and building industries.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://abstraact.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About V1",
+              "path": "/about-v1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About V2",
+              "path": "/about-v2/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service V1",
+              "path": "/service-v1/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "abudhabi-portfolio-website-template",
+      "name": "Abu Dhabi",
+      "slug": "abudhabi-portfolio-website-template",
+      "dodoProductId": "pdt_0NnuegxMg11XxLigWsHCs",
+      "tagline": "Modern, high-performance Abu Dhabi website template.",
+      "description": "Meet Abu Dhabi, your portfolio's gateway to luxury. Dark-themed, and adorned with unique animations, it radiates premium allure. Effortlessly personalize for freelancers, creators, and designers, creating a sophisticated showcase that captivates.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://abudhabi-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Insights",
+              "path": "/insights/",
+              "desc": "Dedicated Insights page with responsive components."
+          },
+          {
+              "name": "Me",
+              "path": "/me/",
+              "desc": "Dedicated Me page with responsive components."
+          },
+          {
+              "name": "Project The Old Ways",
+              "path": "/project_the-old-ways/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "ac-service-website-template",
+      "name": "AC Service",
+      "slug": "ac-service-website-template",
+      "dodoProductId": "pdt_0NnuenGWnWrPoQCU19MwJ",
+      "tagline": "Modern, high-performance AC Service website template.",
+      "description": "AC Service is a modern Webflow template crafted for AC service providers, repair specialists, and HVAC businesses. With professionalism and functionality, this template is perfect for showcasing repair services and installation solutions.",
+      "framework": "astro",
+      "category": "home-services",
+      "categories": [
+          "home-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ac-service.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Static",
+              "path": "/service-static/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "academic-multi-layout-website-template",
+      "name": "Academic",
+      "slug": "academic-multi-layout-website-template",
+      "dodoProductId": "pdt_0NnuetK1PkDFN0HUpg40D",
+      "tagline": "Modern, high-performance Academic website template.",
+      "description": "Introducing Academic, the ultimate multi-layout Webflow template for universities and educational institutions. Seamlessly showcase programs, faculty, campus life, and more with style and flexibility. Elevate your online presence with Academic today",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://academic-multi-layout.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Courses",
+              "path": "/courses/",
+              "desc": "Dedicated Courses page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Templates License",
+              "path": "/templates_license/",
+              "desc": "Dedicated Templates License page with responsive components."
+          },
+          {
+              "name": "Templates Styleguide",
+              "path": "/templates_styleguide/",
+              "desc": "Dedicated Templates Styleguide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "academiccms-university-website-template",
+      "name": "Academic CMS",
+      "slug": "academiccms-university-website-template",
+      "dodoProductId": "pdt_0NnuezPmV5EupShc8RMZn",
+      "tagline": "Modern, high-performance Academic CMS website template.",
+      "description": "Academic CMS is a modern, responsive template designed for universities, featuring light and dark themes, customizable layouts, SEO-friendly structure, and built-in contact forms.",
+      "framework": "astro",
+      "category": "education",
+      "categories": [
+          "education"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://academiccms-university.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Details Ace Your Next Exam A Stress Busting Study Guide",
+              "path": "/blog-details_ace-your-next-exam-a-stress-busting-study-guide/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Details Unveiling The World Through Academic Tours",
+              "path": "/blog-details_unveiling-the-world-through-academic-tours/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Courses",
+              "path": "/courses/",
+              "desc": "Dedicated Courses page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "academix-website-template",
+      "name": "Academix",
+      "slug": "academix-website-template",
+      "dodoProductId": "pdt_0Nnuf70igRhBNL29aL7p9",
+      "tagline": "Modern, high-performance Academix website template.",
+      "description": "Academix is a modern education Webflow template for online courses, coaching, and training programs. With responsive layouts and easy customization, it helps you deliver content clearly and professionally.",
+      "framework": "astro",
+      "category": "wellness",
+      "categories": [
+          "wellness"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://academix.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Courses",
+              "path": "/courses/",
+              "desc": "Dedicated Courses page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "academy-school-website-template",
+      "name": "Academy",
+      "slug": "academy-school-website-template",
+      "dodoProductId": "pdt_0NnufEZYy1jssmeYuZfCl",
+      "tagline": "Modern, high-performance Academy website template.",
+      "description": "Academy is a premium Webflow Template for Online Courses, Education Platforms, or Digital Schools. If you are looking to create an amazing online learning experience for your users, search no more. Get Academy and wow your students!",
+      "framework": "astro",
+      "category": "education",
+      "categories": [
+          "education"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://academy-school.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Course Brand Identity Design For Marketers",
+              "path": "/course_brand-identity-design-for-marketers/",
+              "desc": "Dedicated Course Brand Identity Design For Marketers page with responsive components."
+          },
+          {
+              "name": "Courses",
+              "path": "/courses/",
+              "desc": "Dedicated Courses page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Primary Home",
+              "path": "/primary-home/",
+              "desc": "Dedicated Primary Home page with responsive components."
+          },
+          {
+              "name": "Product Brand Identity Design For Marketers",
+              "path": "/product_brand-identity-design-for-marketers/",
+              "desc": "Dedicated Product Brand Identity Design For Marketers page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "accent-designer-website-template",
+      "name": "Accent",
+      "slug": "accent-designer-website-template",
+      "dodoProductId": "pdt_0NnufKsmrxEdKtOBVAVWk",
+      "tagline": "Modern, high-performance Accent website template.",
+      "description": "Accent is a simple, colourful, and minimal design portfolio template. Perfect for designers, freelancers and creatives.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accent-designer.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Admin Licenses",
+              "path": "/admin_licenses/",
+              "desc": "Dedicated Admin Licenses page with responsive components."
+          },
+          {
+              "name": "Admin Styleguide",
+              "path": "/admin_styleguide/",
+              "desc": "Dedicated Admin Styleguide page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work Factory Rotation",
+              "path": "/work_factory-rotation/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Nomination",
+              "path": "/work_nomination/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Painter",
+              "path": "/work_painter/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Thick Format",
+              "path": "/work_thick-format/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "accountant128-accounting-website-template",
+      "name": "Accountant 128",
+      "slug": "accountant128-accounting-website-template",
+      "dodoProductId": "pdt_0NnufRN7jYcBBso3bR5SN",
+      "tagline": "Modern, high-performance Accountant 128 website template.",
+      "description": "Accountant 128 is a professional website Webflow template for accountant, accounting consultant, consulting, consulting services, corporate, adviser,  financial technology, insurance, investor, tax consultant websites.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accountant128-accounting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "How We Work",
+              "path": "/how-we-work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "accountantx-accounting-website-template",
+      "name": "Accountant X",
+      "slug": "accountantx-accounting-website-template",
+      "dodoProductId": "pdt_0NnufZ43ec68ROqjDUdxs",
+      "tagline": "Modern, high-performance Accountant X website template.",
+      "description": "Stand out in the financial industry with Accountant X \ud83d\udcbc\ud83e\uddee. Our specialized Accountant Webflow template elevates your brand, showcasing your unique insights and building a powerful reputation for your advisory services.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accountantx-accounting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Page Contact V1",
+              "path": "/contact-page_contact-v1/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Contact Page Contact V2",
+              "path": "/contact-page_contact-v2/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "accountantyou-accounting-website-template",
+      "name": "Accountant You",
+      "slug": "accountantyou-accounting-website-template",
+      "dodoProductId": "pdt_0Nnufh33stoAfGnk7kELe",
+      "tagline": "Modern, high-performance Accountant You website template.",
+      "description": "Accountant You is a premium and modern Webflow Template designed for accounting offices and freelancers seeking a trustworthy online presence.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accountantyou-accounting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Homepage",
+              "path": "/homepage/",
+              "desc": "Dedicated Homepage page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "accountex-website-template",
+      "name": "Accountex",
+      "slug": "accountex-website-template",
+      "dodoProductId": "pdt_0NnufokswCNMTv5Rn1HIL",
+      "tagline": "Modern, high-performance Accountex website template.",
+      "description": "Accountex is a modern Webflow template designed for the Accounting and Finance sector. It features a sleek design, multi-page layout, responsive structure, and easy customization for businesses.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accountex.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs Automate Your Bookkeeping",
+              "path": "/blogs_automate-your-bookkeeping/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs Demystifying Tax Changes",
+              "path": "/blogs_demystifying-tax-changes/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "accountix-website-template",
+      "name": "Accountix",
+      "slug": "accountix-website-template",
+      "dodoProductId": "pdt_0NnufuvNAPone5VWsrRA8",
+      "tagline": "Modern, high-performance Accountix website template.",
+      "description": "Accountix is a modern, responsive Webflow template for accountants, featuring customizable design, SEO-friendly structure, and built-in contact forms to help showcase financial services professionally.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accountix.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Details Demystifying Tax Changes",
+              "path": "/blog-details_demystifying-tax-changes/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Details Startup Costs Demystified",
+              "path": "/blog-details_startup-costs-demystified/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "accounts-accounting-website-template",
+      "name": "Accounts",
+      "slug": "accounts-accounting-website-template",
+      "dodoProductId": "pdt_0Nnug22xOAjqxYtJgXOaz",
+      "tagline": "Modern, high-performance Accounts website template.",
+      "description": "A Webflow CMS template for any Accountancy business looking for an elegant, luxurious design. Easily demonstrate your value and high-class services to prospective clients; matching traditional, historical style with modern features and function.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accounts-accounting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Auditing",
+              "path": "/services_auditing/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Financial Analysis",
+              "path": "/services_financial-analysis/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Tax Advising",
+              "path": "/services_tax-advising/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "accruefy-website-template",
+      "name": "Accruefy",
+      "slug": "accruefy-website-template",
+      "dodoProductId": "pdt_0NnugB6Jy2EPQ9aKD4WBN",
+      "tagline": "Modern, high-performance Accruefy website template.",
+      "description": "Transform your financial future with Accruefy Our custom Accountant Webflow template enhances your brand, highlights your expertise, and boosts the online presence of your advisory services.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accruefy.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Price",
+              "path": "/price/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Bookkeeping And Reporting",
+              "path": "/service_bookkeeping-and-reporting/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Cash Flow Management",
+              "path": "/service_cash-flow-management/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "accting-accounting-website-template",
+      "name": "Accting",
+      "slug": "accting-accounting-website-template",
+      "dodoProductId": "pdt_0NnugIT5WhkrAuKhGEuSv",
+      "tagline": "Modern, high-performance Accting website template.",
+      "description": "Accting is a clean and modern website Webflow template for accountant and consulting websites, also for advisory, broker, coaching, consultant, corporate, insurance, law office, lawyer, attorney, analyst, audit, investment, investor websites.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://accting-accounting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "How We Work",
+              "path": "/how-we-work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "acctinglite-accounting-website-template",
+      "name": "Accting Lite",
+      "slug": "acctinglite-accounting-website-template",
+      "dodoProductId": "pdt_0NnugQJJqzP1RTGjKPbCq",
+      "tagline": "Modern, high-performance Accting Lite website template.",
+      "description": "Accting Lite is a clean and modern website Webflow template for accountant and consulting websites, also for advisory, broker, coaching, consultant, corporate, insurance, law office, lawyer, attorney, analyst, audit, investment, investor websites.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://acctinglite-accounting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "How We Work",
+              "path": "/how-we-work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "ace-agency-website-template",
+      "name": "Ace",
+      "slug": "ace-agency-website-template",
+      "dodoProductId": "pdt_0NnugZvMRpQgcoanJCj73",
+      "tagline": "Modern, high-performance Ace website template.",
+      "description": "ACE Agency is a modern Webflow template. It can be used as a personal portfolio, photography website or a digital/design agency website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ace-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Brandush",
+              "path": "/projects_brandush/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Silverwood",
+              "path": "/projects_silverwood/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "acelia-website-template",
+      "name": "Acelia",
+      "slug": "acelia-website-template",
+      "dodoProductId": "pdt_0Nnugg5E8UYJQ7dTZzims",
+      "tagline": "Modern, high-performance Acelia website template.",
+      "description": "Acelia is a flexible consulting & SaaS template, perfect for showcasing professional services, strategic solutions, and success stories. With a modern design and customizable components, it ensures fast implementation.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://acelia.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About 1",
+              "path": "/about_about-1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Contact 1",
+              "path": "/contact_contact-1/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Home 1",
+              "path": "/home_home-1/",
+              "desc": "Dedicated Home Home 1 page with responsive components."
+          },
+          {
+              "name": "Home Home 2",
+              "path": "/home_home-2/",
+              "desc": "Dedicated Home Home 2 page with responsive components."
+          },
+          {
+              "name": "Home Home 3",
+              "path": "/home_home-3/",
+              "desc": "Dedicated Home Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "achate-retail-website-template",
+      "name": "Achate",
+      "slug": "achate-retail-website-template",
+      "dodoProductId": "pdt_0NnugmcgSYKqEXUqbHMif",
+      "tagline": "Modern, high-performance Achate website template.",
+      "description": "Use Achate to launch your marketing website in mere minutes.",
+      "framework": "astro",
+      "category": "retail-and-e-commerce",
+      "categories": [
+          "retail-and-e-commerce"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://achate-retail.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Customers",
+              "path": "/customers/",
+              "desc": "Dedicated Customers page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Login",
+              "path": "/login/",
+              "desc": "Dedicated Login page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Tour",
+              "path": "/tour/",
+              "desc": "Dedicated Tour page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "achernar-architecture-website-template",
+      "name": "Achernar",
+      "slug": "achernar-architecture-website-template",
+      "dodoProductId": "pdt_0NnugszdWhZMmdgENw2BU",
+      "tagline": "Modern, high-performance Achernar website template.",
+      "description": "Achernar Webflow template with a dark layout, velvety animations, neat typography, and trending design will make you stand out amongst your competitors. Appropriate for any Architectural Firms, Interior Design Studios, Agencies, or Startups.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://achernar-architecture.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Details",
+              "path": "/service-details/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aciel-portfolio-website-template",
+      "name": "Aciel",
+      "slug": "aciel-portfolio-website-template",
+      "dodoProductId": "pdt_0NnugyqxNabDC7nrmGi0I",
+      "tagline": "Modern, high-performance Aciel website template.",
+      "description": "Introducing Aciel - Minimal Portfolio Template: Showcasing Creativity, Innovation, and Design Excellence",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aciel-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work Gray",
+              "path": "/work_gray/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Ikigai",
+              "path": "/work_ikigai/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Saason",
+              "path": "/work_saason/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Save Agency",
+              "path": "/work_save-agency/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Seven",
+              "path": "/work_seven/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Shaun",
+              "path": "/work_shaun/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "acilav-website-template",
+      "name": "Acilav",
+      "slug": "acilav-website-template",
+      "dodoProductId": "pdt_0Nnuh5dUDJpXrMYpkKtzn",
+      "tagline": "Modern, high-performance Acilav website template.",
+      "description": "Acilav - Professional Services Website Template",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://acilav.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Insights Content Marketing And Seo",
+              "path": "/insights_content-marketing-and-seo/",
+              "desc": "Dedicated Insights Content Marketing And Seo page with responsive components."
+          },
+          {
+              "name": "Insights Link Building Strategies That Work",
+              "path": "/insights_link-building-strategies-that-work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Insights Local Seo For Small Businesses",
+              "path": "/insights_local-seo-for-small-businesses/",
+              "desc": "Dedicated Insights Local Seo For Small Businesses page with responsive components."
+          },
+          {
+              "name": "Insights On Page Seo Optimization Guide",
+              "path": "/insights_on-page-seo-optimization-guide/",
+              "desc": "Dedicated Insights On Page Seo Optimization Guide page with responsive components."
+          },
+          {
+              "name": "Insights Seo Performance Tracking",
+              "path": "/insights_seo-performance-tracking/",
+              "desc": "Dedicated Insights Seo Performance Tracking page with responsive components."
+          },
+          {
+              "name": "Insights Technical Seo For Better Performance",
+              "path": "/insights_technical-seo-for-better-performance/",
+              "desc": "Dedicated Insights Technical Seo For Better Performance page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "acme-website-template",
+      "name": "Acme",
+      "slug": "acme-website-template",
+      "dodoProductId": "pdt_0NnuhCVvQsTd6krB5jsks",
+      "tagline": "Modern, high-performance Acme website template.",
+      "description": "Acme is a modern horizontal portfolio Webflow template designed for creative professionals. Showcase your work with smooth scrolling, clean typography, and a bold visual layout.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://acme.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          },
+          {
+              "name": "Portfolio Bigclick Digital Marketing Seo",
+              "path": "/portfolio_bigclick-digital-marketing-seo/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Shinobi Web Design",
+              "path": "/portfolio_shinobi-web-design/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Solstice Branding Identity",
+              "path": "/portfolio_solstice-branding-identity/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Xenova Web Development",
+              "path": "/portfolio_xenova-web-development/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "acomiks-website-template",
+      "name": "Acomiks",
+      "slug": "acomiks-website-template",
+      "dodoProductId": "pdt_0NnuhIvzsvEZyh3nQUUM1",
+      "tagline": "Modern, high-performance Acomiks website template.",
+      "description": "Elevate your furniture brand with Acomik, a sleek Webflow e-commerce template designed for modern online stores. Fully responsive, customizable, and built for seamless shopping experiences.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://acomiks.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Categories",
+              "path": "/categories/",
+              "desc": "Dedicated Categories page with responsive components."
+          },
+          {
+              "name": "Clients",
+              "path": "/clients/",
+              "desc": "Dedicated Clients page with responsive components."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "acounty-128-accounting-website-template",
+      "name": "Acounty 128",
+      "slug": "acounty-128-accounting-website-template",
+      "dodoProductId": "pdt_0NnuhPP6SIzlbbwvdGCdo",
+      "tagline": "Modern, high-performance Acounty 128 website template.",
+      "description": "Acounty 128 is a professional website Webflow template for accounting and financial consulting websites. It also suits for accountant,  advisor, agency, broker, consultant, consulting, finance, insurance, coaching.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://acounty-128-accounting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "How We Work",
+              "path": "/how-we-work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "acre-studio-website-template",
+      "name": "Acre",
+      "slug": "acre-studio-website-template",
+      "dodoProductId": "pdt_0NnuhRpRV4pPgGSGxmY2v",
+      "tagline": "Modern, high-performance Acre website template.",
+      "description": "Acre Studio is a modern and clean template for agencies, architects and freelancers. It is easy to customize to your specific needs while maintaining a professional and simple experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://acre-studio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Cases",
+              "path": "/cases/",
+              "desc": "Dedicated Cases page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Hidden Gems",
+              "path": "/project_hidden-gems/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Lake Side",
+              "path": "/project_lake-side/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Minimalist",
+              "path": "/project_minimalist/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Tropical Steps",
+              "path": "/project_tropical-steps/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "acron-consulting-website-template",
+      "name": "Acron",
+      "slug": "acron-consulting-website-template",
+      "dodoProductId": "pdt_0NnuhUz3oeKxCnEQcsMMp",
+      "tagline": "Modern, high-performance Acron website template.",
+      "description": "Acron is an ideal Webflow template for business and consulting services, offering a seamless blend of aesthetic appeal and robust functionality. With its sleek design and customization options, it provides all you need to showcase your services.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://acron-consulting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About One",
+              "path": "/about_about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About About Two",
+              "path": "/about_about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Home One",
+              "path": "/home_home-one/",
+              "desc": "Dedicated Home Home One page with responsive components."
+          },
+          {
+              "name": "Home Home Three",
+              "path": "/home_home-three/",
+              "desc": "Dedicated Home Home Three page with responsive components."
+          },
+          {
+              "name": "Home Home Two",
+              "path": "/home_home-two/",
+              "desc": "Dedicated Home Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Service One",
+              "path": "/service_service-one/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "active-startup-website-template",
+      "name": "Active",
+      "slug": "active-startup-website-template",
+      "dodoProductId": "pdt_0NnuhbCoUBpPajmMU0OWx",
+      "tagline": "Modern, high-performance Active website template.",
+      "description": "With 6 different pages, and a modern and fully responsive design, Active has all you need to showcase your projects and win new clients.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 34,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://active-startup.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Demo Demo 1",
+              "path": "/demo_demo-1/",
+              "desc": "Dedicated Demo Demo 1 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 2",
+              "path": "/demo_demo-2/",
+              "desc": "Dedicated Demo Demo 2 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 3",
+              "path": "/demo_demo-3/",
+              "desc": "Dedicated Demo Demo 3 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 4",
+              "path": "/demo_demo-4/",
+              "desc": "Dedicated Demo Demo 4 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 5",
+              "path": "/demo_demo-5/",
+              "desc": "Dedicated Demo Demo 5 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 6",
+              "path": "/demo_demo-6/",
+              "desc": "Dedicated Demo Demo 6 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "active-x-fitness-website-template",
+      "name": "Active-X",
+      "slug": "active-x-fitness-website-template",
+      "dodoProductId": "pdt_0NnuhhPPQYhmBZMyBQIHB",
+      "tagline": "Modern, high-performance Active-X website template.",
+      "description": "Active-X is a Webflow template designed for Fitness Professionals, Health Clubs, Gyms, Personal Trainers and Nutritionists looking to take their business online.",
+      "framework": "astro",
+      "category": "wellness",
+      "categories": [
+          "wellness"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://active-x-fitness.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Group Classes",
+              "path": "/group-classes/",
+              "desc": "Dedicated Group Classes page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Meet The Team",
+              "path": "/meet-the-team/",
+              "desc": "Dedicated Meet The Team page with responsive components."
+          },
+          {
+              "name": "Nutrition",
+              "path": "/nutrition/",
+              "desc": "Dedicated Nutrition page with responsive components."
+          },
+          {
+              "name": "Personal Training",
+              "path": "/personal-training/",
+              "desc": "Dedicated Personal Training page with responsive components."
+          },
+          {
+              "name": "Success Stories",
+              "path": "/success-stories/",
+              "desc": "Dedicated Success Stories page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "activeaura-website-template",
+      "name": "Active Aura",
+      "slug": "activeaura-website-template",
+      "dodoProductId": "pdt_0NnuhpbpRdhOnctHRXc9C",
+      "tagline": "Modern, high-performance Active Aura website template.",
+      "description": "Active Aura is a modern Webflow template for gyms, fitness trainers, and health clubs. It offers bold, responsive layouts with customizable sections to showcase classes, trainers, and programs, delivering an engaging and dynamic user\u00a0experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://activeaura.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Trainers",
+              "path": "/trainers/",
+              "desc": "Dedicated Trainers page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "activitee-website-template",
+      "name": "ActiviTee",
+      "slug": "activitee-website-template",
+      "dodoProductId": "pdt_0NnuhxVd64SdRPjMRWNZw",
+      "tagline": "Modern, high-performance ActiviTee website template.",
+      "description": "ActiviTee is a sleek and professional Webflow template designed specifically for tailor and clothing websites. Perfect for clothing store, custom tailoring services, dress shops, and fashion boutiques, this template offers a stylish platform to show.",
+      "framework": "astro",
+      "category": "retail-and-e-commerce",
+      "categories": [
+          "retail-and-e-commerce"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://activitee.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Collection",
+              "path": "/collection/",
+              "desc": "Dedicated Collection page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Wardrobe Revamp Service",
+              "path": "/service_wardrobe-revamp-service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "actos-event-website-template",
+      "name": "Actos",
+      "slug": "actos-event-website-template",
+      "dodoProductId": "pdt_0Nnui4Czc0NzGtm3To8tK",
+      "tagline": "Modern, high-performance Actos website template.",
+      "description": "The ultimate Webflow template for event organizers! Elevate your event's online presence with sleek design, seamless navigation, and customizable features. Perfect for conferences, festivals, and more. Turn your vision into reality.",
+      "framework": "astro",
+      "category": "weddings-and-events",
+      "categories": [
+          "weddings-and-events"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://actos-event.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Events",
+              "path": "/events/",
+              "desc": "Dedicated Events page with responsive components."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Speakers",
+              "path": "/speakers/",
+              "desc": "Dedicated Speakers page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "acuvic-consulting-website-template",
+      "name": "Acuvic",
+      "slug": "acuvic-consulting-website-template",
+      "dodoProductId": "pdt_0NnuiAYp9l3IjyHgoLUav",
+      "tagline": "Modern, high-performance Acuvic website template.",
+      "description": "Acuvic HR Consulting Website Template is a ready website template for a human resource consulting website. This Webflow template embodies a sleek design with customizable features, including services, teams, testimonials, and more pages.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://acuvic-consulting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Teams",
+              "path": "/teams/",
+              "desc": "Dedicated Teams page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "adaptiv-agency-website-template",
+      "name": "Adaptiv",
+      "slug": "adaptiv-agency-website-template",
+      "dodoProductId": "pdt_0NnuiGVSRFwijxKZi9VR4",
+      "tagline": "Modern, high-performance Adaptiv website template.",
+      "description": "An immersive showcase of your agency's prowess in crafting unforgettable brand stories for your clientele.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adaptiv-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Journal",
+              "path": "/journal/",
+              "desc": "Dedicated Journal page with responsive components."
+          },
+          {
+              "name": "Work Aesop Wines",
+              "path": "/work_aesop-wines/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Neuralink",
+              "path": "/work_neuralink/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "adaptoai-website-template",
+      "name": "AdaptoAI",
+      "slug": "adaptoai-website-template",
+      "dodoProductId": "pdt_0NnuiNHEO2WmhU1a8ld5c",
+      "tagline": "Modern, high-performance AdaptoAI website template.",
+      "description": "Boost your content strategy with AI-powered tools for social media management, SEO optimization, and automated content creation. Save time, enhance engagement, and grow your online presence effortlessly.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adaptoai.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Pages About V1",
+              "path": "/about-pages_about-v1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Features Pages Features V1",
+              "path": "/features-pages_features-v1/",
+              "desc": "Dedicated Features Pages Features V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "adelaide-portfolio-website-template",
+      "name": "Adelaide",
+      "slug": "adelaide-portfolio-website-template",
+      "dodoProductId": "pdt_0NnuiV3rp8fcGcBjoxnv8",
+      "tagline": "Modern, high-performance Adelaide website template.",
+      "description": "Adelaide is a modern Webflow portfolio template with dynamic color schemes, smooth animations, and a clean design. Perfect for creators looking to showcase projects with a responsive layout, integrated CMS, and e-commerce features.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adelaide-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Privacy",
+              "path": "/privacy/",
+              "desc": "Dedicated Privacy page with responsive components."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "adept-folio-portfolio-website-template",
+      "name": "Adept Folio",
+      "slug": "adept-folio-portfolio-website-template",
+      "dodoProductId": "pdt_0NnuiXi1ZCSQijCp9yQCN",
+      "tagline": "Modern, high-performance Adept Folio website template.",
+      "description": "Create a clean, focused freelance or salaried designer portfolio in minutes. Use the build-in project case study CMS, design services options, and links to your published content to easily\u00a0share your work and passion.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adept-folio-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Bio",
+              "path": "/about-bio/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Form",
+              "path": "/contact-form/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Simple Intro",
+              "path": "/home-simple-intro/",
+              "desc": "Dedicated Home Simple Intro page with responsive components."
+          },
+          {
+              "name": "Home Single Page Site",
+              "path": "/home-single-page-site/",
+              "desc": "Dedicated Home Single Page Site page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          },
+          {
+              "name": "Work Horizontal",
+              "path": "/work-horizontal/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "adept-startup-website-template",
+      "name": "Adept",
+      "slug": "adept-startup-website-template",
+      "dodoProductId": "pdt_0NnuidtyPfgbBCB6ebcxu",
+      "tagline": "Modern, high-performance Adept website template.",
+      "description": "Packed with charming design flourishes, Adept injects life and a bit of fun into the seen-it-all SaaS template space. Built with software startups in mind, Adept is laden with the essential pages and features you\u2019ll need to get started.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adept-startup.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blank Page Template",
+              "path": "/blank-page-template/",
+              "desc": "Dedicated Blank Page Template page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Product Tours Product Tour 1",
+              "path": "/product-tours_product-tour-1/",
+              "desc": "Dedicated Product Tours Product Tour 1 page with responsive components."
+          },
+          {
+              "name": "Product Tours Product Tour 2",
+              "path": "/product-tours_product-tour-2/",
+              "desc": "Dedicated Product Tours Product Tour 2 page with responsive components."
+          },
+          {
+              "name": "Product Tours Product Tour 3",
+              "path": "/product-tours_product-tour-3/",
+              "desc": "Dedicated Product Tours Product Tour 3 page with responsive components."
+          },
+          {
+              "name": "Template Getting Started",
+              "path": "/template_getting-started/",
+              "desc": "Dedicated Template Getting Started page with responsive components."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "adfusion-website-template",
+      "name": "AdFusion",
+      "slug": "adfusion-website-template",
+      "dodoProductId": "pdt_0NnuijcyKrn7Udn22RoRJ",
+      "tagline": "Modern, high-performance AdFusion website template.",
+      "description": "You can maximize your business growth with the AdFusion Marketing Agency Template. Our data-driven design optimizes your landing page to convert visitors into loyal clients effectively.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adfusion.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Templates Licenses",
+              "path": "/templates_licenses/",
+              "desc": "Dedicated Templates Licenses page with responsive components."
+          },
+          {
+              "name": "Templates Style Guide",
+              "path": "/templates_style-guide/",
+              "desc": "Dedicated Templates Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "adgenie-website-template",
+      "name": "AdGenie",
+      "slug": "adgenie-website-template",
+      "dodoProductId": "pdt_0Nnuise8tLt0HnSB7LtVf",
+      "tagline": "Modern, high-performance AdGenie website template.",
+      "description": "AdGenie delivers a sleek, responsive marketing Webflow template with captivating dashboards, smooth animations, and full CMS\u2014perfect for ad agencies, marketers, and creative teams.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adgenie.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Building A Brand With Advertising",
+              "path": "/blog_building-a-brand-with-advertising/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "adigital-website-template",
+      "name": "Adigital",
+      "slug": "adigital-website-template",
+      "dodoProductId": "pdt_0NnuiwVPKIuhfg70kr1NO",
+      "tagline": "Modern, high-performance Adigital website template.",
+      "description": "Adigital - Digital Agency Webflow template",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adigital.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Clickboost",
+              "path": "/project_clickboost/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "adione-website-template",
+      "name": "Adione",
+      "slug": "adione-website-template",
+      "dodoProductId": "pdt_0Nnuiz7DCTAQlERueAXxL",
+      "tagline": "Modern, high-performance Adione website template.",
+      "description": "Adion Digital Agency delivers innovative marketing, web development, and creative branding solutions designed to accelerate your business growth online",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adione.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Ausi Mobile Mockup Design",
+              "path": "/projects_ausi-mobile-mockup-design/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Project Loyee",
+              "path": "/projects_project-loyee/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "adlivo-website-template",
+      "name": "Adlivo",
+      "slug": "adlivo-website-template",
+      "dodoProductId": "pdt_0NnujBpR5DDJjafwSYgSR",
+      "tagline": "Modern, high-performance Adlivo website template.",
+      "description": "Adlivo is a Webflow template for Facebook ad agencies and digital marketing firms. Create a professional agency website with this modern, feature-rich template solution. Attract more clients and showcase your expertise effectively with Adlivo.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adlivo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "adnac-agency-website-template",
+      "name": "Adnac",
+      "slug": "adnac-agency-website-template",
+      "dodoProductId": "pdt_0NnujIfn8NW7rvVenrB3E",
+      "tagline": "Modern, high-performance Adnac website template.",
+      "description": "Empower your agency with limitless creativity using Adnac. Demonstrate your readiness to transform the world and captivate your audience with cutting-edge animations and interactions. Adnac is a versatile template designed to meet your agency needs.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adnac-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Details",
+              "path": "/service-details/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service One",
+              "path": "/service-one/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Three",
+              "path": "/service-three/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Two",
+              "path": "/service-two/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "adoptable-pets-website-template",
+      "name": "Adoptable",
+      "slug": "adoptable-pets-website-template",
+      "dodoProductId": "pdt_0NnujLBUXiXxfLYtxUQAs",
+      "tagline": "Modern, high-performance Adoptable website template.",
+      "description": "Adoptable is a playful website template designed to help animal shelters put their best paw forward. Help your furry friends find their perfect match with fun profiles, useful filtering and e-commerce functionality to collect donations.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adoptable-pets.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Adopt A Cat",
+              "path": "/adopt-a-cat/",
+              "desc": "Dedicated Adopt A Cat page with responsive components."
+          },
+          {
+              "name": "Adopt A Dog",
+              "path": "/adopt-a-dog/",
+              "desc": "Dedicated Adopt A Dog page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Donate",
+              "path": "/donate/",
+              "desc": "Dedicated Donate page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Ways To Help",
+              "path": "/ways-to-help/",
+              "desc": "Dedicated Ways To Help page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "adox-studio-website-template",
+      "name": "Adox Studio",
+      "slug": "adox-studio-website-template",
+      "dodoProductId": "pdt_0NnujS3UWilwKFru8jGRq",
+      "tagline": "Modern, high-performance Adox Studio website template.",
+      "description": "\ud83c\udfa8 Adox is a bold and modern Webflow template designed for creative agencies, digital studios, portfolios, and design professionals to showcase services, projects, and brand identity with a premium visual experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://adox-studio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "adoxin-website-template",
+      "name": "Adoxin",
+      "slug": "adoxin-website-template",
+      "dodoProductId": "pdt_0NnujXMSkk3gULq7xmsQc",
+      "tagline": "Modern, high-performance Adoxin website template.",
+      "description": "Adoxin is a bold, modern, and highly creative Webflow template crafted for design agencies, digital studios, and creative professionals who want to stand out with impact. Built with a strong focus on visual storytelling and user experience...",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adoxin.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "adriankingsley-website-template",
+      "name": "Adrian Kingsley",
+      "slug": "adriankingsley-website-template",
+      "dodoProductId": "pdt_0NnujcnJ0HYM2JODwIK1p",
+      "tagline": "Modern, high-performance Adrian Kingsley website template.",
+      "description": "\"Adrian Kingsley\" is a personal journal template designed for sharing insights, stories, and reflections. Perfect for leaders, creators, and visionaries to inspire and connect through engaging content.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adriankingsley.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Categories Growth",
+              "path": "/categories_growth/",
+              "desc": "Dedicated Categories Growth page with responsive components."
+          },
+          {
+              "name": "Categories Insights",
+              "path": "/categories_insights/",
+              "desc": "Dedicated Categories Insights page with responsive components."
+          },
+          {
+              "name": "Categories Lifestyle",
+              "path": "/categories_lifestyle/",
+              "desc": "Dedicated Categories Lifestyle page with responsive components."
+          },
+          {
+              "name": "Categories Trends",
+              "path": "/categories_trends/",
+              "desc": "Dedicated Categories Trends page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "adroven-website-template",
+      "name": "Adroven",
+      "slug": "adroven-website-template",
+      "dodoProductId": "pdt_0NnujkPdHK0hAXYMsFWWj",
+      "tagline": "Modern, high-performance Adroven website template.",
+      "description": "Adroven is a modern and visually stunning Webflow template for creative agencies and professionals. It\u2019s designed to help you showcase your portfolio with elegance and impact, blending innovative design with seamless functionality.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adroven.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Three",
+              "path": "/about-three/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Two",
+              "path": "/about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "ads-park-website-template",
+      "name": "Ads-park",
+      "slug": "ads-park-website-template",
+      "dodoProductId": "pdt_0Nnujodx66cJa7mGRjGx5",
+      "tagline": "Modern, high-performance Ads-park website template.",
+      "description": "Adspark is a modern Webflow template built for digital advertising and marketing agencies. It features a clean layout, service-focused sections, case studies, pricing plans, and CMS-powered blogs\u2014perfect for growing agencies and performance marketers",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ads-park.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects Digital Ads",
+              "path": "/projects_digital-ads/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Social Ad Campaign",
+              "path": "/projects_social-ad-campaign/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services Content Marketing Strategy 5Ombd",
+              "path": "/services_content-marketing-strategy-5ombd/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Pay Per Click Advertising Ppc",
+              "path": "/services_pay-per-click-advertising-ppc/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Social Media Marketing",
+              "path": "/services_social-media-marketing/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "adsprint-website-template",
+      "name": "AdSprint",
+      "slug": "adsprint-website-template",
+      "dodoProductId": "pdt_0Nnujt1LguQaQSJgj8Vx2",
+      "tagline": "Modern, high-performance AdSprint website template.",
+      "description": "AdSprint is a dynamic Webflow template tailored for coaches, agencies, and service-based businesses. Elevate your lead generation, streamline marketing efforts, and build stunning, conversion-focused websites with ease.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adsprint.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "adstik-website-template",
+      "name": "Adstik",
+      "slug": "adstik-website-template",
+      "dodoProductId": "pdt_0NnujxWvCxQX6m9FUgdlQ",
+      "tagline": "Modern, high-performance Adstik website template.",
+      "description": "Adstik is a complete Webflow marketing template built for agencies that want to look professional and win more clients. This digital marketing agency template comes with 17 ready-to-use pages that cover everything your agency needs.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adstik.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Case Studies Luminous Fashion Ads",
+              "path": "/case-studies_luminous-fashion-ads/",
+              "desc": "Dedicated Case Studies Luminous Fashion Ads page with responsive components."
+          },
+          {
+              "name": "Find Talent",
+              "path": "/find-talent/",
+              "desc": "Dedicated Find Talent page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "advanced-website-template",
+      "name": "AdvancEd",
+      "slug": "advanced-website-template",
+      "dodoProductId": "pdt_0Nnuk3ZNaWccCFsv6rb39",
+      "tagline": "Modern, high-performance AdvancEd website template.",
+      "description": "AdvancEd is a clean corporate website Webflow template for Online Education and Courses websites. It can be easily used for online classes, online courses, online learning, online academy, school, online studying, teaching, training websites.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advanced.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Teachers",
+              "path": "/our-teachers/",
+              "desc": "Dedicated Our Teachers page with responsive components."
+          },
+          {
+              "name": "Schedule",
+              "path": "/schedule/",
+              "desc": "Dedicated Schedule page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "advantek-it-company-website-template",
+      "name": "Advantek",
+      "slug": "advantek-it-company-website-template",
+      "dodoProductId": "pdt_0Nnuk6xXwmypuJoGMZ4U6",
+      "tagline": "Modern, high-performance Advantek website template.",
+      "description": "Advantek, an exceptional technology website template, is tailor-made for a spectrum of IT-related ventures. Ideal for IT companies, IT consulting firms, Saas and technology businesses, this Webflow template boasts a sleek and contemporary design.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advantek-it-company.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About One",
+              "path": "/about_about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About About Three",
+              "path": "/about_about-three/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About About Two",
+              "path": "/about_about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Home One",
+              "path": "/home_home-one/",
+              "desc": "Dedicated Home Home One page with responsive components."
+          },
+          {
+              "name": "Home Home Three",
+              "path": "/home_home-three/",
+              "desc": "Dedicated Home Home Three page with responsive components."
+          },
+          {
+              "name": "Home Home Two",
+              "path": "/home_home-two/",
+              "desc": "Dedicated Home Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "adventria-website-template",
+      "name": "Adventria",
+      "slug": "adventria-website-template",
+      "dodoProductId": "pdt_0NnukHxZ9OsUmIxAB23nY",
+      "tagline": "Modern, high-performance Adventria website template.",
+      "description": "Adventria is a premium, versatile Webflow template for Business Consulting, Financial Advisory, and Professional Services. It offers 3 home, 3 service, and 3 blog layouts, cool animations, and a user-friendly clean design",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adventria.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Three",
+              "path": "/about-three/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Two",
+              "path": "/about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "advertise-x-consulting-website-template",
+      "name": "Advertise X",
+      "slug": "advertise-x-consulting-website-template",
+      "dodoProductId": "pdt_0NnukMb4V7n23x3fL8slI",
+      "tagline": "Modern, high-performance Advertise X website template.",
+      "description": "Impress your website visitors and transform them into paying clients with Advertise X, our premium marketing agency Webflow Template designed for video, content and social media marketing agencies looking to take their website to the next level.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advertise-x-consulting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Pages Blog V1",
+              "path": "/blog-pages_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "advertising-x-saas-website-template",
+      "name": "Advertising X",
+      "slug": "advertising-x-saas-website-template",
+      "dodoProductId": "pdt_0NnukR3IG15VRlz2vKn8A",
+      "tagline": "Modern, high-performance Advertising X website template.",
+      "description": "Unleash your SaaS startup full potential with Advertising X \ud83d\ude80\u2699\ufe0f, the ultimate modern SaaS Webflow Template designed specifically for the technology industry. Our tailor-made template will help your SaaS company skyrocket to the next level.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advertising-x-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features Single",
+              "path": "/features-single/",
+              "desc": "Dedicated Features Single page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team John Carter",
+              "path": "/team_john-carter/",
+              "desc": "Dedicated Team John Carter page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "adveza-finance-website-template",
+      "name": "Adveza",
+      "slug": "adveza-finance-website-template",
+      "dodoProductId": "pdt_0NnukU9OzmEtFQX7T6JnZ",
+      "tagline": "Modern, high-performance Adveza website template.",
+      "description": "Adveza is a versatile Webflow website template tailored for finance and financial consulting businesses. It's an ideal choice for accounting firms, financial companies, fintech startups, investment firms, and providers of financial services.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adveza-finance.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About One",
+              "path": "/about_about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About About Two",
+              "path": "/about_about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Home One",
+              "path": "/home_home-one/",
+              "desc": "Dedicated Home Home One page with responsive components."
+          },
+          {
+              "name": "Home Home Three",
+              "path": "/home_home-three/",
+              "desc": "Dedicated Home Home Three page with responsive components."
+          },
+          {
+              "name": "Home Home Two",
+              "path": "/home_home-two/",
+              "desc": "Dedicated Home Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Service One",
+              "path": "/service_service-one/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "advibe-website-template",
+      "name": "Advibe",
+      "slug": "advibe-website-template",
+      "dodoProductId": "pdt_0NnukZI9LVQd0dPJV7Mfg",
+      "tagline": "Modern, high-performance Advibe website template.",
+      "description": "Elevate your agency\u2019s online presence with AdVibe, a bold and conversion-focused Webflow template crafted for digital marketing agencies, creative studios, performance marketers, and growth teams.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advibe.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Career Marketing Specialist",
+              "path": "/career_marketing-specialist/",
+              "desc": "Dedicated Career Marketing Specialist page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Reference Licenses",
+              "path": "/reference_licenses/",
+              "desc": "Dedicated Reference Licenses page with responsive components."
+          },
+          {
+              "name": "Reference Style Guide",
+              "path": "/reference_style-guide/",
+              "desc": "Dedicated Reference Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "advin-website-template",
+      "name": "Advin",
+      "slug": "advin-website-template",
+      "dodoProductId": "pdt_0NnukeE3RbB945tgo3gHp",
+      "tagline": "Modern, high-performance Advin website template.",
+      "description": "Advin is a bold, modern Webflow template for creative agencies, startups & digital providers. Its clean layouts, vibrant visuals and conversion-focused design let modern brands showcase projects, present services easily and connect with clients",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advin.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Price Plan",
+              "path": "/price-plan/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "advis-one-page-website-template",
+      "name": "Advis",
+      "slug": "advis-one-page-website-template",
+      "dodoProductId": "pdt_0NnukiIUY7zNrgKwkFgGN",
+      "tagline": "Modern, high-performance Advis website template.",
+      "description": "Advis Webflow template is highly suitable for creating websites for small businesses, consulting companies, financial enterprises, investment businesses, and agencies.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advis-one-page.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "advisio-website-template",
+      "name": "Advisio",
+      "slug": "advisio-website-template",
+      "dodoProductId": "pdt_0Nnukn53CBNRiNT8JOLBh",
+      "tagline": "Modern, high-performance Advisio website template.",
+      "description": "Advisory is a sleek Webflow template for consulting and business services, featuring CMS-driven case studies, service pages, and a modern design to help you build trust and win clients.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advisio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Service Page 1",
+              "path": "/services_service-page-1/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Service Page 2",
+              "path": "/services_service-page-2/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Service Page 3",
+              "path": "/services_service-page-3/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Service Page 4",
+              "path": "/services_service-page-4/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "advisor-consulting-website-template",
+      "name": "Advisor",
+      "slug": "advisor-consulting-website-template",
+      "dodoProductId": "pdt_0Nnuks25YYcXKHR1oBtMo",
+      "tagline": "Modern, high-performance Advisor website template.",
+      "description": "Advisor is a clean and modern website Webflow template for business consulting websites. It can be easily used for accountant, adviser, consultant, financial advisor, adviser, human resources, insurance, legal, multipurpose, consulting services.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advisor-consulting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "advisorx-business-website-template",
+      "name": "Advisor X",
+      "slug": "advisorx-business-website-template",
+      "dodoProductId": "pdt_0NnukwxweXRbcpSNUFhHM",
+      "tagline": "Modern, high-performance Advisor X website template.",
+      "description": "Designed for consulting experts, Advisor X \ud83d\udcca\ud83d\udcbc offers a professional and polished website to showcase your business. This Business Consultant Webflow Template is perfect for building credibility and attracting high-value clients.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advisorx-business.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Pages Blog V1",
+              "path": "/blog-pages_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Company Pages About",
+              "path": "/company-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Company Pages Contact V1",
+              "path": "/company-pages_contact-v1/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "advisory-agency-website-template",
+      "name": "Advisory",
+      "slug": "advisory-agency-website-template",
+      "dodoProductId": "pdt_0Nnul3TJl8APSpZa3uA0P",
+      "tagline": "Modern, high-performance Advisory website template.",
+      "description": "Advisory is a premium consulting website template for agencies, strategy firms, SME advisors, and independent consultants. It's built to showcase services, case studies, and expertise, build trust with founders and executives, for conversion.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advisory-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Due Diligence Assessment",
+              "path": "/service_due-diligence-assessment/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "advisory-website-template",
+      "name": "Advisora",
+      "slug": "advisory-website-template",
+      "dodoProductId": "pdt_0Nnul7jqEij1IBCX7K2PD",
+      "tagline": "Modern, high-performance Advisora website template.",
+      "description": "Advisora is a professional Finance & SaaS template. Designed to empower individuals and businesses, it combines financial services and software tools in a customizable, offering scalable components that adapt to any business need.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://advisory.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About Us 1",
+              "path": "/about_about-us-1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Contact 1",
+              "path": "/contact_contact-1/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Home 1",
+              "path": "/home_home-1/",
+              "desc": "Dedicated Home Home 1 page with responsive components."
+          },
+          {
+              "name": "Home Home 2",
+              "path": "/home_home-2/",
+              "desc": "Dedicated Home Home 2 page with responsive components."
+          },
+          {
+              "name": "Home Home 3",
+              "path": "/home_home-3/",
+              "desc": "Dedicated Home Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "advocate-bureau-db-law-firm-website-template",
+      "name": "Advocate Bureau DB",
+      "slug": "advocate-bureau-db-law-firm-website-template",
+      "dodoProductId": "pdt_0NnulCBW2T7cA2x9mMznO",
+      "tagline": "Modern, high-performance Advocate Bureau DB website template.",
+      "description": "Wanna a clean and light template for your law firm website? You found it. 100% clear UX \ud83d\udcbb / 110% clean UI \ud83c\udfa8, full CMS-ready. Figma file included \ud83c\udf1f",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advocate-bureau-db-law-firm.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Category Contractual Disputes",
+              "path": "/case-category_contractual-disputes/",
+              "desc": "Dedicated Case Category Contractual Disputes page with responsive components."
+          },
+          {
+              "name": "Case Category Real Estate And Rental",
+              "path": "/case-category_real-estate-and-rental/",
+              "desc": "Dedicated Case Category Real Estate And Rental page with responsive components."
+          },
+          {
+              "name": "Case Category Settlement Of Damage And Compensation",
+              "path": "/case-category_settlement-of-damage-and-compensation/",
+              "desc": "Dedicated Case Category Settlement Of Damage And Compensation page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "advocix-website-template",
+      "name": "Dorbar",
+      "slug": "advocix-website-template",
+      "dodoProductId": "pdt_0NnulHY5qdUGcbs1ra3n3",
+      "tagline": "Modern, high-performance Dorbar website template.",
+      "description": "Dorbar is the modern law firm Webflow template for your practice. It offers a sophisticated and professional web design right out of the box. This advocacy platform ensures your firm looks credible and technologically current.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advocix.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Attorney",
+              "path": "/attorney/",
+              "desc": "Dedicated Attorney page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Corporate Law",
+              "path": "/services_corporate-law/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "advon-website-template",
+      "name": "Advon",
+      "slug": "advon-website-template",
+      "dodoProductId": "pdt_0NnulM9MC41r6yolGg3rm",
+      "tagline": "Modern, high-performance Advon website template.",
+      "description": "Advon Webflow Template is a sleek and modern solution for travel and adventure agencies seeking to showcase their services. It features a clean design, smooth animations, and customizable layouts, making it ideal for your website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://advon.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utilities License",
+              "path": "/utilities_license/",
+              "desc": "Dedicated Utilities License page with responsive components."
+          },
+          {
+              "name": "Utilities Style Guide",
+              "path": "/utilities_style-guide/",
+              "desc": "Dedicated Utilities Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "advorus-website-template",
+      "name": "Advorus",
+      "slug": "advorus-website-template",
+      "dodoProductId": "pdt_0NnulR98Wcxfv9xbcudh3",
+      "tagline": "Modern, high-performance Advorus website template.",
+      "description": "Advorus is a professional lawyer and attorneys portfolio Webflow template with CMS support, built for lawyers, legal services, and modern attorneys featuring a clean, trust-focused design that converts visitors into consultations.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://advorus.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Me",
+              "path": "/about-me/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Studies Winning A Complex Settlement",
+              "path": "/case-studies_winning-a-complex-settlement/",
+              "desc": "Dedicated Case Studies Winning A Complex Settlement page with responsive components."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Legal Consultation Advice",
+              "path": "/services_legal-consultation-advice/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "adwork-agency-website-template",
+      "name": "Adwork",
+      "slug": "adwork-agency-website-template",
+      "dodoProductId": "pdt_0NnulVzAThh96Clec2yET",
+      "tagline": "Modern, high-performance Adwork website template.",
+      "description": "Looking to create an agency website? Elevate your brand & online presence with our Adwork website template with a vintage touch. Engage, impress, & convert visitors into loyal clients. Maximize your agency's potential and launch your future today!",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adwork-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Details",
+              "path": "/service-details/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "adworx-website-template",
+      "name": "Adworx",
+      "slug": "adworx-website-template",
+      "dodoProductId": "pdt_0NnulcEagBydGU10InVTV",
+      "tagline": "Modern, high-performance Adworx website template.",
+      "description": "Bring your Marketing & Advertising agency online \ud83d\udcc8 with a modern Webflow template designed for creative agencies, digital marketers, branding studios, and advertising firms. Showcase your services, portfolio, and expertise with engaging layouts.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adworx.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "adzan-website-template",
+      "name": "Adzan",
+      "slug": "adzan-website-template",
+      "dodoProductId": "pdt_0NnulipthfIq9FzxA6I8O",
+      "tagline": "Modern, high-performance Adzan website template.",
+      "description": "Adzan is a versatile Webflow agency template with multiple layout options, clean design, and smooth interactions \u2014 perfect for agencies, studios, and creatives.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://adzan.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About 01",
+              "path": "/about-01/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About 02",
+              "path": "/about-02/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About 03",
+              "path": "/about-03/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project 01",
+              "path": "/project-01/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "adzen-agency-website-template",
+      "name": "ADZEN",
+      "slug": "adzen-agency-website-template",
+      "dodoProductId": "pdt_0NnuloeKUdO9aZiO9BPXi",
+      "tagline": "Modern, high-performance ADZEN website template.",
+      "description": "ADZEN is a vibrant, modern website template designed for marketing agencies. With fun, customizable layouts and an easy-to-use interface, ADZEN helps you showcase your services, making your online presence as dynamic as your brand.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://adzen-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aeline-website-template",
+      "name": "Aeline",
+      "slug": "aeline-website-template",
+      "dodoProductId": "pdt_0Nnulx26c9Q7i4O8ct1Qf",
+      "tagline": "Modern, high-performance Aeline website template.",
+      "description": "Aeline is a Webflow template for Finance & Accounting and Software & SaaS. It has flexible layouts and scalable sections to showcase services, pricing, and build a strong online presence.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 169,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://aeline.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us About Us 2",
+              "path": "/about-us_about-us-2/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Us About Us",
+              "path": "/about-us_about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Home V2",
+              "path": "/home_home-v2/",
+              "desc": "Dedicated Home Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Home V3",
+              "path": "/home_home-v3/",
+              "desc": "Dedicated Home Home V3 page with responsive components."
+          },
+          {
+              "name": "Home Home",
+              "path": "/home_home/",
+              "desc": "Dedicated Home Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aelixa-website-template",
+      "name": "Aelixa",
+      "slug": "aelixa-website-template",
+      "dodoProductId": "pdt_0Nnum1y6ljX79jXwMzZmV",
+      "tagline": "Modern, high-performance Aelixa website template.",
+      "description": "Aelixa is a premium, modern Webflow template designed for freelancers, digital marketers, consultants, and small agencies who want to build a strong and credible online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aelixa.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Seo Optimization",
+              "path": "/services_seo-optimization/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works Aura Luxe    Scale Strategy",
+              "path": "/works_aura-luxe----scale-strategy/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aelo-website-template",
+      "name": "Aelo",
+      "slug": "aelo-website-template",
+      "dodoProductId": "pdt_0Nnum6HrTu8X33LMD2hxo",
+      "tagline": "Modern, high-performance Aelo website template.",
+      "description": "The Aelo Webflow template features a sleek and modern design, ideal for property listings, real estate agencies, rental platforms, and any business in the real estate industry.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aelo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Agents",
+              "path": "/agents/",
+              "desc": "Dedicated Agents page with responsive components."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Properties",
+              "path": "/properties/",
+              "desc": "Dedicated Properties page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aerialix-website-template",
+      "name": "Aerialix",
+      "slug": "aerialix-website-template",
+      "dodoProductId": "pdt_0NnumAVobm2coNpposXTi",
+      "tagline": "Modern, high-performance Aerialix website template.",
+      "description": "Aerialix is a Webflow website system for solo drone operators who want to attract professional aerial projects, build trust fast, and get better enquiries without looking like a studio or spending weeks on design.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://aerialix.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Event Location Aerial Capture",
+              "path": "/project_event-location-aerial-capture/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Infrastructure Site Inspection",
+              "path": "/project_infrastructure-site-inspection/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aerials-photography-website-template",
+      "name": "Aerials",
+      "slug": "aerials-photography-website-template",
+      "dodoProductId": "pdt_0NnumFvV5JrW9489ioibh",
+      "tagline": "Modern, high-performance Aerials website template.",
+      "description": "Aerials is a set of modern and minimalistic template designed specifically for photographers. Aerials feature clean, elegant layouts that put the focus on your stunning photography.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aerials-photography.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Blondie",
+              "path": "/project_blondie/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Elia",
+              "path": "/project_elia/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Elsa",
+              "path": "/project_elsa/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Sara",
+              "path": "/project_sara/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aerio-website-template",
+      "name": "Aerio",
+      "slug": "aerio-website-template",
+      "dodoProductId": "pdt_0NnumIaz85zPATrW6p2rN",
+      "tagline": "Modern, high-performance Aerio website template.",
+      "description": "Aerio \u2014 A premium Webflow template built for creative agencies and digital studios. Its elegant light and dark theme design, sleek aesthetics, and modular layout provide the perfect backdrop to showcase your work in style.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://aerio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects Halo",
+              "path": "/projects_Halo/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Drift",
+              "path": "/projects_drift/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Orbit",
+              "path": "/projects_orbit/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Prism",
+              "path": "/projects_prism/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Pulse",
+              "path": "/projects_pulse/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Wave",
+              "path": "/projects_wave/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aero-blog-website-template",
+      "name": "Aero",
+      "slug": "aero-blog-website-template",
+      "dodoProductId": "pdt_0NnumMskfPOKFYfKpIR3N",
+      "tagline": "Modern, high-performance Aero website template.",
+      "description": "Aero is a modern Webflow Blog Template, easy-to-use and fully responsive.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aero-blog.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Category",
+              "path": "/category/",
+              "desc": "Dedicated Category page with responsive components."
+          },
+          {
+              "name": "Category Photo",
+              "path": "/category_photo/",
+              "desc": "Dedicated Category Photo page with responsive components."
+          },
+          {
+              "name": "Category Tech",
+              "path": "/category_tech/",
+              "desc": "Dedicated Category Tech page with responsive components."
+          },
+          {
+              "name": "Category Travel",
+              "path": "/category_travel/",
+              "desc": "Dedicated Category Travel page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Instructions",
+              "path": "/instructions/",
+              "desc": "Dedicated Instructions page with responsive components."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aerofly-website-template",
+      "name": "AeroFly",
+      "slug": "aerofly-website-template",
+      "dodoProductId": "pdt_0NnumR73j2jcR9jnYAt3D",
+      "tagline": "Modern, high-performance AeroFly website template.",
+      "description": "AeroFly: Premium Webflow B2B template for AgTech & drone companies. Industrial, modern design featuring CMS for products, Bento grid solutions, video CTA, and conversion-optimized layouts. The ultimate professional kit to scale your drone business",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aerofly.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          },
+          {
+              "name": "Products Aero X Pro",
+              "path": "/products_aero-x-pro/",
+              "desc": "Dedicated Products Aero X Pro page with responsive components."
+          },
+          {
+              "name": "Products Obsidian 8 Heavy Lift",
+              "path": "/products_obsidian-8-heavy-lift/",
+              "desc": "Dedicated Products Obsidian 8 Heavy Lift page with responsive components."
+          },
+          {
+              "name": "Products Velox 9 Stealth",
+              "path": "/products_velox-9-stealth/",
+              "desc": "Dedicated Products Velox 9 Stealth page with responsive components."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aeron-portfolio-website-template",
+      "name": "Aeron",
+      "slug": "aeron-portfolio-website-template",
+      "dodoProductId": "pdt_0NnumVIHaCfZrpnf3kXJv",
+      "tagline": "Modern, high-performance Aeron website template.",
+      "description": "Aeron Webflow template is a creative & unique portfolio resume specifically created for the developer, designer, programmer, freelancer, writer, artist, web developer, photographer, or any other digital professional.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aeron-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Me",
+              "path": "/about-me/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Me",
+              "path": "/contact-me/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Reviews",
+              "path": "/reviews/",
+              "desc": "Dedicated Reviews page with responsive components."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Flexa",
+              "path": "/works_flexa/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aesth-website-template",
+      "name": "Aesth\u00e9",
+      "slug": "aesth-website-template",
+      "dodoProductId": "pdt_0NnumZanGp5Xz3ypEcc9j",
+      "tagline": "Modern, high-performance Aesth\u00e9 website template.",
+      "description": "Aesthe is a sleek Webflow template for interior designers and studios, featuring smooth animations, responsive design, and a clean layout perfect for showcasing portfolios and attracting high-end clients.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aesth.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Modern Elegance Residence",
+              "path": "/projects_modern-elegance-residence/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aesthetica-website-template",
+      "name": "Aesthetica",
+      "slug": "aesthetica-website-template",
+      "dodoProductId": "pdt_0Nnume2MElY2qhchQGCWs",
+      "tagline": "Modern, high-performance Aesthetica website template.",
+      "description": "Aesthetica is a sleek Webflow template for design agencies, freelancers, and creatives, featuring 15+ pages and 2 CMS collections. Launch in hours, not days, and stand out with style.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aesthetica.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Insights",
+              "path": "/insights/",
+              "desc": "Dedicated Insights page with responsive components."
+          },
+          {
+              "name": "Studio",
+              "path": "/studio/",
+              "desc": "Dedicated Studio page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Aura Fashion E Commerce Store",
+              "path": "/work_aura-fashion-e-commerce-store/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Harmony Wellness Studio Website",
+              "path": "/work_harmony-wellness-studio-website/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aesthetics-creative-website-template",
+      "name": "AesThetics",
+      "slug": "aesthetics-creative-website-template",
+      "dodoProductId": "pdt_0NnumhejSFRKmN6ZAypr0",
+      "tagline": "Modern, high-performance AesThetics website template.",
+      "description": "Dynamic template designed for creative agencies offering digital services. With its design and professional features like smooth scrolling, Aesthetics is ideal for showcasing services and portfolios.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aesthetics-creative.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Designs",
+              "path": "/designs/",
+              "desc": "Dedicated Designs page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aesthiva-website-template",
+      "name": "Aesthiva",
+      "slug": "aesthiva-website-template",
+      "dodoProductId": "pdt_0NnumlbADYSlP5hHw8Wz0",
+      "tagline": "Modern, high-performance Aesthiva website template.",
+      "description": "Aesthiva is a premium med spa and aesthetic clinic Webflow template for skincare clinics, beauty studios, and wellness brands with CMS blog, treatment pages, responsive layouts, and appointment-focused sections.",
+      "framework": "astro",
+      "category": "wellness",
+      "categories": [
+          "wellness"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aesthiva.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Botox Vs Dermal Fillers What Is The Difference",
+              "path": "/blog_botox-vs-dermal-fillers-what-is-the-difference/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog How To Choose The Right Facial Treatment For Your Skin",
+              "path": "/blog_how-to-choose-the-right-facial-treatment-for-your-skin/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog What To Expect Before Your First Med Spa Consultation",
+              "path": "/blog_what-to-expect-before-your-first-med-spa-consultation/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Treatment Botox Wrinkle Relaxers",
+              "path": "/treatment_botox-wrinkle-relaxers/",
+              "desc": "Dedicated Treatment Botox Wrinkle Relaxers page with responsive components."
+          },
+          {
+              "name": "Treatment Minimally Invasive Procedures",
+              "path": "/treatment_minimally-invasive-procedures/",
+              "desc": "Dedicated Treatment Minimally Invasive Procedures page with responsive components."
+          },
+          {
+              "name": "Treatment Personalized Treatment Plans",
+              "path": "/treatment_personalized-treatment-plans/",
+              "desc": "Dedicated Treatment Personalized Treatment Plans page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aestho-website-template",
+      "name": "Aestho",
+      "slug": "aestho-website-template",
+      "dodoProductId": "pdt_0NnumpggWiDwUo6ErNlka",
+      "tagline": "Modern, high-performance Aestho website template.",
+      "description": "Aestho \u2013 A stylish and modern template for interior designers and studios. Showcase projects, share design insights, and attract clients easily. With a refined, responsive layout, Aestho helps you create a sophisticated online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aestho.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Testimonials",
+              "path": "/testimonials/",
+              "desc": "Dedicated Testimonials page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aethera-website-template",
+      "name": "Aethera",
+      "slug": "aethera-website-template",
+      "dodoProductId": "pdt_0Nnumumd8vduFIvaIcLek",
+      "tagline": "Modern, high-performance Aethera website template.",
+      "description": "Aethera is a professional website Webflow template for public science outreach organizations websites. It suits public science, science outreach, science nonprofit, research outreach, educational science, science program websites.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aethera.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Mission",
+              "path": "/our-mission/",
+              "desc": "Dedicated Our Mission page with responsive components."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aextera-website-template",
+      "name": "Aextera",
+      "slug": "aextera-website-template",
+      "dodoProductId": "pdt_0Nnumzo6TMb3XZS2cI62E",
+      "tagline": "Modern, high-performance Aextera website template.",
+      "description": "Aextera \u2013 A sleek Webflow template design for creative agencies and studios. With bold layouts, smooth animations, and a dynamic CMS for portfolio and blog, it\u2019s perfect for showcasing design, branding, marketing, and digital service websites.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aextera.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aeye-website-template",
+      "name": "Aeye",
+      "slug": "aeye-website-template",
+      "dodoProductId": "pdt_0Nnun32npxDzeKholBdGI",
+      "tagline": "Modern, high-performance Aeye website template.",
+      "description": "Aeye is a Webflow Template built for AI Products, SaaS Startups, and Technical Platforms. 19 pages with CMS-powered Docs, Blog, and Career, designed with a technical aesthetic, smooth interactions. Figma file included.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aeye.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Docs",
+              "path": "/docs/",
+              "desc": "Dedicated Docs page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aezo-agency-website-template",
+      "name": "Aezo",
+      "slug": "aezo-agency-website-template",
+      "dodoProductId": "pdt_0Nnun7T7kGSStxk8xr83h",
+      "tagline": "Modern, high-performance Aezo website template.",
+      "description": "Aezo - digital agency template. Boost your website's conversion and build trust among your clients with our template. It's ideal for any small to mid-sized digital marketing agencies aiming for a strong online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aezo-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Career Ui Ux Designer",
+              "path": "/career_ui-ux-designer/",
+              "desc": "Dedicated Career Ui Ux Designer page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Inner Pages About",
+              "path": "/inner-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Inner Pages Carrer",
+              "path": "/inner-pages_carrer/",
+              "desc": "Dedicated Inner Pages Carrer page with responsive components."
+          },
+          {
+              "name": "Inner Pages Contact",
+              "path": "/inner-pages_contact/",
+              "desc": "Inquiry intake and message form."
+          }
+      ]
+  },
+  {
+      "id": "affiliatex-blog-website-template",
+      "name": "Affiliate X",
+      "slug": "affiliatex-blog-website-template",
+      "dodoProductId": "pdt_0NnunC6XpL4FVnxC0gn2C",
+      "tagline": "Modern, high-performance Affiliate X website template.",
+      "description": "Meet Affiliate X \ud83d\udd8a\ufe0f\ud83d\udcb0, our perfect Blog Webflow Template for affiliate marketing enthusiasts. This template offers a user-friendly experience and beautiful design, making sharing your insights and monetizing your content more accessible.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://affiliatex-blog.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Company Pages About",
+              "path": "/company-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Review Pages Articles",
+              "path": "/review-pages_articles/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Review Pages Guides",
+              "path": "/review-pages_guides/",
+              "desc": "Dedicated Review Pages Guides page with responsive components."
+          },
+          {
+              "name": "Review Pages Reviews V1",
+              "path": "/review-pages_reviews-v1/",
+              "desc": "Dedicated Review Pages Reviews V1 page with responsive components."
+          },
+          {
+              "name": "Shop Pages Shop V1",
+              "path": "/shop-pages_shop-v1/",
+              "desc": "Dedicated Shop Pages Shop V1 page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "affilliate-news-website-template",
+      "name": "Affiliate",
+      "slug": "affilliate-news-website-template",
+      "dodoProductId": "pdt_0NnunGJq7GwyhPSTxIUmK",
+      "tagline": "Modern, high-performance Affiliate website template.",
+      "description": "Affiliate is a Webflow template made for entrepreneurs who want a professional and polished site ready to start and grow their affiliate marketing business in any niche.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://affilliate-news.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Affiliate Disclosure",
+              "path": "/affiliate-disclosure/",
+              "desc": "Dedicated Affiliate Disclosure page with responsive components."
+          },
+          {
+              "name": "Blank Page",
+              "path": "/blank-page/",
+              "desc": "Dedicated Blank Page page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Course Landing Page",
+              "path": "/course-landing-page/",
+              "desc": "Dedicated Course Landing Page page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Tools List",
+              "path": "/tools-list/",
+              "desc": "Dedicated Tools List page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "afirma-website-template",
+      "name": "Afirma",
+      "slug": "afirma-website-template",
+      "dodoProductId": "pdt_0NnunLkhtE3xxNgm7pi9d",
+      "tagline": "Modern, high-performance Afirma website template.",
+      "description": "Afirma is a Webflow template for lawyers and law firms, offering a clean, professional design with flexible layouts. Perfect for showcasing legal services and building trust with clients. Easily customizable to fit your firm\u2019s identity.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://afirma.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Family Law Explained Divorce Custody And Support",
+              "path": "/blog_family-law-explained-divorce-custody-and-support/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Family Law",
+              "path": "/services_family-law/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Teams Emily A Novak",
+              "path": "/teams_emily-a-novak/",
+              "desc": "Dedicated Teams Emily A Novak page with responsive components."
+          },
+          {
+              "name": "Template Styleguide",
+              "path": "/template_styleguide/",
+              "desc": "Dedicated Template Styleguide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agado-website-template",
+      "name": "Agado",
+      "slug": "agado-website-template",
+      "dodoProductId": "pdt_0NnunQAUWHTjBQnlXebRb",
+      "tagline": "Modern, high-performance Agado website template.",
+      "description": "Agado is a clean, modern Webflow agency template designed for creative studios and digital service providers. It features sleek layouts, bold typography, and smooth interactions to showcase your portfolio, services, and team with a professional edge.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agado.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs Mastering Customer Journeys With Marketing Funnel Analytics",
+              "path": "/blogs_mastering-customer-journeys-with-marketing-funnel-analytics/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Innovation In Every Swipe 7Faef",
+              "path": "/projects_innovation-in-every-swipe-7faef/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agata-agency-website-template",
+      "name": "Agata",
+      "slug": "agata-agency-website-template",
+      "dodoProductId": "pdt_0NnunUUwL6A3rRYtHdSAD",
+      "tagline": "Modern, high-performance Agata website template.",
+      "description": "Agata CMS is a beautiful Agency Webflow Template, showcase your work in a practical and pleasant way to yours visitors, use its multiple sections to create a unique design for your business. Try Agata CMS today.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agata-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Rebranding Of An Important Company",
+              "path": "/work_rebranding-of-an-important-company/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "ageento-website-template",
+      "name": "Ageento",
+      "slug": "ageento-website-template",
+      "dodoProductId": "pdt_0Nnunc9VcpkggkT1IpmKU",
+      "tagline": "Modern, high-performance Ageento website template.",
+      "description": "Agento is a modern Webflow template crafted for AI agent startups, automation tools, and AI-based assistants.Built for speed and clarity, Agento is designed to instantly explain what your AI tool does, how it helps, and why users should trust it.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ageento.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Posts The Secret Behind 24 7 Support Without Hiring A Night Shift",
+              "path": "/blog-posts_the-secret-behind-24-7-support-without-hiring-a-night-shift/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "ageenzi-website-template",
+      "name": "Ageenzi",
+      "slug": "ageenzi-website-template",
+      "dodoProductId": "pdt_0NnunfPMlLvpx5jN4AsBj",
+      "tagline": "Modern, high-performance Ageenzi website template.",
+      "description": "Ageenzi is a modern and high-performing Webflow template built for startups, creative agencies, SaaS companies, and digital service providers. With a bold design, CMS support, and conversion-optimized layouts, it helps you showcase services, projects",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ageenzi.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Black Panther Exploring The Cultural Influence On Design",
+              "path": "/blog_black-panther-exploring-the-cultural-influence-on-design/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home 02",
+              "path": "/home-02/",
+              "desc": "Dedicated Home 02 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Website Development",
+              "path": "/service_website-development/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agenca-agency-website-template",
+      "name": "AGENCA",
+      "slug": "agenca-agency-website-template",
+      "dodoProductId": "pdt_0Nnunk0pBIqr5pvf8iMFD",
+      "tagline": "Modern, high-performance AGENCA website template.",
+      "description": "Explore AGENCA, an exceptional Webflow template crafted for agencies. Elevate your online presence with its stylish design, seamless e-commerce integration, and premium services. Capture customers' attention effortlessly and grow your business.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenca-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Design",
+              "path": "/services_design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencfireagency-agency-website-template",
+      "name": "AGENCFIRE Agency",
+      "slug": "agencfireagency-agency-website-template",
+      "dodoProductId": "pdt_0NnunoleYy4ZkWUKoUoEZ",
+      "tagline": "Modern, high-performance AGENCFIRE Agency website template.",
+      "description": "Introducing AGENCFIRE, an innovative Webflow template crafted for agencies. Enhance your digital presence with its sleek design, seamless e-commerce integration, and premium services. Easily engage potential clients and expand your business.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencfireagency-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Design",
+              "path": "/services_design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencflow-agency-website-template",
+      "name": "AgenCFlow",
+      "slug": "agencflow-agency-website-template",
+      "dodoProductId": "pdt_0NnuntJN2ZIDHv0YQb4nm",
+      "tagline": "Modern, high-performance AgenCFlow website template.",
+      "description": "AgenCFlow is a perfect design & development agency Webflow template. It suits web design, web development, digital marketing, startups, technology, IT solutions, UI/UX Design, freelancers, SEO, consulting, branding, and developers website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencflow-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agenci-agency-website-template",
+      "name": "Agenci",
+      "slug": "agenci-agency-website-template",
+      "dodoProductId": "pdt_0NnunxsOMwSv1luRsUhHh",
+      "tagline": "Modern, high-performance Agenci website template.",
+      "description": "Agenci is the ultimate Webflow template for agencies, startups, and small businesses looking to make a strong online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenci-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Project Company Mockup",
+              "path": "/project_company-mockup/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Digital Font",
+              "path": "/project_digital-font/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Pyramid Illustration",
+              "path": "/project_pyramid-illustration/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agenciax-agency-website-template",
+      "name": "Agencia X",
+      "slug": "agenciax-agency-website-template",
+      "dodoProductId": "pdt_0Nnuo2onR6B0OdVsLaCzL",
+      "tagline": "Modern, high-performance Agencia X website template.",
+      "description": "Revolutionize your agency with Agencia X \ud83c\udfaf\ud83d\ude80! Our premium Marketing Agency Webflow Template is specially crafted for marketing agencies and studios, offering dynamic ways to present your work.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenciax-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Pages Blog V1",
+              "path": "/blog-pages_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team Members John Carter",
+              "path": "/team-members_john-carter/",
+              "desc": "Dedicated Team Members John Carter page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agencieos-agency-website-template",
+      "name": "Agencieos",
+      "slug": "agencieos-agency-website-template",
+      "dodoProductId": "pdt_0Nnuo8amOPGSH1R2UtLrl",
+      "tagline": "Modern, high-performance Agencieos website template.",
+      "description": "A complete template for your Digital Agency, Graphic Design Studio, Photographers or Freelancer Portfolio.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 149,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencieos-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Agency Demo Home",
+              "path": "/agency-demo_home/",
+              "desc": "Dedicated Agency Demo Home page with responsive components."
+          },
+          {
+              "name": "Freelancer Demo Home",
+              "path": "/freelancer-demo_home/",
+              "desc": "Dedicated Freelancer Demo Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Studio Demo A Home",
+              "path": "/studio-demo-a_home/",
+              "desc": "Dedicated Studio Demo A Home page with responsive components."
+          },
+          {
+              "name": "Studio Demo B Home",
+              "path": "/studio-demo-b_home/",
+              "desc": "Dedicated Studio Demo B Home page with responsive components."
+          },
+          {
+              "name": "Studio Demo C Home",
+              "path": "/studio-demo-c_home/",
+              "desc": "Dedicated Studio Demo C Home page with responsive components."
+          },
+          {
+              "name": "Styleguide",
+              "path": "/styleguide/",
+              "desc": "Dedicated Styleguide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agencier-agency-website-template",
+      "name": "AGENCIER",
+      "slug": "agencier-agency-website-template",
+      "dodoProductId": "pdt_0NnuoDJevmXHvVsURHnpn",
+      "tagline": "Modern, high-performance AGENCIER website template.",
+      "description": "Presenting AGENCIER, a state-of-the-art Webflow template designed specifically for agencies. Elevate your online presence with its stylish design, seamless e-commerce integration, and premium services. Effortlessly captivate potential clients.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencier-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Design",
+              "path": "/services_design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencies-x-agency-website-template",
+      "name": "Agencies X",
+      "slug": "agencies-x-agency-website-template",
+      "dodoProductId": "pdt_0NnuoHyVKbTAOYeGfDWEZ",
+      "tagline": "Modern, high-performance Agencies X website template.",
+      "description": "Agencies X is our ultimate agency Webflow Template & UI Kit. It includes a total of over 25 pages, and over 60 sections, making it a perfect choice to launch an amazing website for your creative agency as easy as 1, 2, 3.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencies-x-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Abouts About V1",
+              "path": "/abouts_about-v1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Homes Home V1",
+              "path": "/homes_home-v1/",
+              "desc": "Dedicated Homes Home V1 page with responsive components."
+          },
+          {
+              "name": "Homes Home V2",
+              "path": "/homes_home-v2/",
+              "desc": "Dedicated Homes Home V2 page with responsive components."
+          },
+          {
+              "name": "Homes Home V3",
+              "path": "/homes_home-v3/",
+              "desc": "Dedicated Homes Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agenciflow-website-template",
+      "name": "Agenciflow",
+      "slug": "agenciflow-website-template",
+      "dodoProductId": "pdt_0NnuoMgE5KL9hkrjWaxPF",
+      "tagline": "Modern, high-performance Agenciflow website template.",
+      "description": "Agenciflow is a modern, clean Webflow template designed for creative agencies, digital studios, and startups that want to present their brand with clarity, confidence, and impact.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenciflow.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utility Pages Instructions",
+              "path": "/utility-pages_instructions/",
+              "desc": "Dedicated Utility Pages Instructions page with responsive components."
+          },
+          {
+              "name": "Utility Pages Licenses",
+              "path": "/utility-pages_licenses/",
+              "desc": "Dedicated Utility Pages Licenses page with responsive components."
+          },
+          {
+              "name": "Utility Pages Style Guide",
+              "path": "/utility-pages_style-guide/",
+              "desc": "Dedicated Utility Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agencikaagency-agency-website-template",
+      "name": "AGENCIKA Agency",
+      "slug": "agencikaagency-agency-website-template",
+      "dodoProductId": "pdt_0NnuoRsUlb0mugIj1GFl5",
+      "tagline": "Modern, high-performance AGENCIKA Agency website template.",
+      "description": "Ditch the ordinary. AGENCIKA is the ultimate Webflow template designed for agencies that crave distinction. Elevate your online presence with a sleek, modern design and seamless e-commerce integration. Watch your business take flight with AGENCIKA.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencikaagency-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Branding",
+              "path": "/services_branding/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencio-agency-website-template",
+      "name": "Agencio",
+      "slug": "agencio-agency-website-template",
+      "dodoProductId": "pdt_0Nnuoc76QCWJWIlC1de2F",
+      "tagline": "Modern, high-performance Agencio website template.",
+      "description": "Agencio is a premium Webflow template created for agencies of all sizes. The template is easy to use and fully responsive. Perfect for Agencies and all kinds of service-oriented businesses.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencio-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Project Skinco",
+              "path": "/project_skinco/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agenciup-agency-website-template",
+      "name": "AgenciUp",
+      "slug": "agenciup-agency-website-template",
+      "dodoProductId": "pdt_0Nnuognw0FLedQuvVUye7",
+      "tagline": "Modern, high-performance AgenciUp website template.",
+      "description": "Power up your online presence with AgenciUp \ud83c\udfaf! This Webflow template offers dynamic solutions to elevate your digital presence, creating a lasting impression that resonates with clients. Revolutionize how you showcase your projects effortlessly.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenciup-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Static",
+              "path": "/service-static/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agencor-website-template",
+      "name": "Agencor",
+      "slug": "agencor-website-template",
+      "dodoProductId": "pdt_0NnuojTHk05BYyyGexRXT",
+      "tagline": "Modern, high-performance Agencor website template.",
+      "description": "Agencor is a clean and modern agency template designed for creative professionals, digital agencies, and freelancers. It features a clean layout, engaging animations, and a fully responsive design to showcase your work in an elegant way.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencor.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs Designing With Dev In Mind How We Avoid Handoff Headaches",
+              "path": "/blogs_designing-with-dev-in-mind-how-we-avoid-handoff-headaches/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Ethique",
+              "path": "/works_ethique/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencu-agency-website-template",
+      "name": "Agenc\u016b",
+      "slug": "agencu-agency-website-template",
+      "dodoProductId": "pdt_0NnuonpxlrV6PahAasxv2",
+      "tagline": "Modern, high-performance Agenc\u016b website template.",
+      "description": "Agenc\u016b is an innovative Webflow template that places a strong emphasis on seamless user experiences and captivating site design.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencu-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Project Aenean Imper",
+              "path": "/project_aenean-imper/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencx-agency-website-template",
+      "name": "AgencX",
+      "slug": "agencx-agency-website-template",
+      "dodoProductId": "pdt_0NnuosATMCXIsFEgmY6Zz",
+      "tagline": "Modern, high-performance AgencX website template.",
+      "description": "Agenx \u2014 Crafting Intuitive User Experiences. We're proud recipients of 10 awards in website design. Explore our portfolio for in-depth insights into our acclaimed projects.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencx-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog 1",
+              "path": "/blog-1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact 1",
+              "path": "/contact-1/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Colorful Journeys",
+              "path": "/project_colorful-journeys/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Dreamy Visions",
+              "path": "/project_dreamy-visions/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Whimsy Tales",
+              "path": "/project_whimsy-tales/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agency-x-de-marketing-website-template",
+      "name": "Agency X (DE)",
+      "slug": "agency-x-de-marketing-website-template",
+      "dodoProductId": "pdt_0NnuoxAuShKeWmIOjz9hw",
+      "tagline": "Modern, high-performance Agency X (DE) website template.",
+      "description": "Agency X is a premium Webflow Template & UI Kit for marketing agencies. Our new Agency Webflow Template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agency-x-de-marketing.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Homes Home V1",
+              "path": "/homes_home-v1/",
+              "desc": "Dedicated Homes Home V1 page with responsive components."
+          },
+          {
+              "name": "Homes Home V2",
+              "path": "/homes_home-v2/",
+              "desc": "Dedicated Homes Home V2 page with responsive components."
+          },
+          {
+              "name": "Homes Home V3",
+              "path": "/homes_home-v3/",
+              "desc": "Dedicated Homes Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services Services V1",
+              "path": "/services_services-v1/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agency-x-fr-marketing-website-template",
+      "name": "Agency X (FR)",
+      "slug": "agency-x-fr-marketing-website-template",
+      "dodoProductId": "pdt_0Nnup26mJW8WO0wpVbZPR",
+      "tagline": "Modern, high-performance Agency X (FR) website template.",
+      "description": "Agency X is a premium Webflow Template & UI Kit for marketing agencies. Our new Agency Webflow Template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agency-x-fr-marketing.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Homes Home V1",
+              "path": "/homes_home-v1/",
+              "desc": "Dedicated Homes Home V1 page with responsive components."
+          },
+          {
+              "name": "Homes Home V2",
+              "path": "/homes_home-v2/",
+              "desc": "Dedicated Homes Home V2 page with responsive components."
+          },
+          {
+              "name": "Homes Home V3",
+              "path": "/homes_home-v3/",
+              "desc": "Dedicated Homes Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services Services V1",
+              "path": "/services_services-v1/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agency-x-marketing-website-template",
+      "name": "Agency X",
+      "slug": "agency-x-marketing-website-template",
+      "dodoProductId": "pdt_0Nnup8eBYNXHQKlGvNJ7S",
+      "tagline": "Modern, high-performance Agency X website template.",
+      "description": "Agency X is a premium Webflow Template & UI Kit for marketing agencies. Our new Agency Webflow Template includes everything your marketing agency will need to amaze your visitors and convert them into happy clients.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agency-x-marketing.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Homes Home V1",
+              "path": "/homes_home-v1/",
+              "desc": "Dedicated Homes Home V1 page with responsive components."
+          },
+          {
+              "name": "Homes Home V2",
+              "path": "/homes_home-v2/",
+              "desc": "Dedicated Homes Home V2 page with responsive components."
+          },
+          {
+              "name": "Homes Home V3",
+              "path": "/homes_home-v3/",
+              "desc": "Dedicated Homes Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services Services V1",
+              "path": "/services_services-v1/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agency3dcube-agency-website-template",
+      "name": "AGENCY3D CUBE",
+      "slug": "agency3dcube-agency-website-template",
+      "dodoProductId": "pdt_0NnupEEyGB4jbKMfoUO1x",
+      "tagline": "Modern, high-performance AGENCY3D CUBE website template.",
+      "description": "AGENCY3D CUBE: Build the future of your agency. Stunning design, seamless e-commerce & unrivaled support. Craft a captivating online presence & propel your business forward.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agency3dcube-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Branding",
+              "path": "/services_branding/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencyace-agency-website-template",
+      "name": "Agencyace",
+      "slug": "agencyace-agency-website-template",
+      "dodoProductId": "pdt_0NnupKpq72Rr4chz9L9HD",
+      "tagline": "Modern, high-performance Agencyace website template.",
+      "description": "Agencyace is the all-in-one Creative Agency & Design Stdio Webflow Template with ultra-high performance, exclusive features, and an award-winning design collection. It includes 2+ Landing page, 50+ section templates, and 15+ inner pages.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencyace-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services Details",
+              "path": "/services-details/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agencye-website-template",
+      "name": "Agencye",
+      "slug": "agencye-website-template",
+      "dodoProductId": "pdt_0NnupQTifv778ktgoJmHi",
+      "tagline": "Modern, high-performance Agencye website template.",
+      "description": "Agencye is a webflow template for agencies that want to stand out. With clean layouts, smooth animations, and a seamless design, it keeps the focus on your work. Showcase projects, highlight services, and attract clients with this agency template.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencye.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Anaro",
+              "path": "/works_anaro/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Outshift",
+              "path": "/works_outshift/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Pureat",
+              "path": "/works_pureat/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencyis-creative-website-template",
+      "name": "Agencyis",
+      "slug": "agencyis-creative-website-template",
+      "dodoProductId": "pdt_0NnupUkigasmMxpxqrmeZ",
+      "tagline": "Modern, high-performance Agencyis website template.",
+      "description": "Agencyis is a unique and modern Webflow template with the main focus on a smooth user experience to make your site stand out from the crowd.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencyis-creative.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Project Logan Mann Template",
+              "path": "/project_logan-mann-template/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Roby Template",
+              "path": "/project_roby-template/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencymkt-website-template",
+      "name": "AgencyMKT",
+      "slug": "agencymkt-website-template",
+      "dodoProductId": "pdt_0NnupZlTS9ofD7PtGtRAt",
+      "tagline": "Modern, high-performance AgencyMKT website template.",
+      "description": "Showcase your expertise and attract more clients with AgencyMKT. This Agency Webflow Template is perfect for agencies, freelancers, and creative professionals looking to build a portfolio with ease.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencymkt.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home_2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home_3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work 1",
+              "path": "/work_1/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work 2",
+              "path": "/work_2/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work 3",
+              "path": "/work_3/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencynice-website-template",
+      "name": "AgencyNice",
+      "slug": "agencynice-website-template",
+      "dodoProductId": "pdt_0NnupeKOjf0LbEuWTg9lL",
+      "tagline": "Modern, high-performance AgencyNice website template.",
+      "description": "The Nice Webflow agency template offers a professional design with seamless animations, easy customization, responsive layouts, and integrated CMS & e-commerce features. Perfect for showcasing agency portfolios with elegance and boosting visibility.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencynice.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Insights",
+              "path": "/insights/",
+              "desc": "Dedicated Insights page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agencywave-website-template",
+      "name": "AgencyWave",
+      "slug": "agencywave-website-template",
+      "dodoProductId": "pdt_0Nnupj5AKknyNby6f7VLP",
+      "tagline": "Modern, high-performance AgencyWave website template.",
+      "description": "AgencyWave is a modern Marketing Webflow template designed for digital agencies, startups, SEO & Marketing companies. With cutting-edge transitions and a sleek light theme this is a go to agency template for startups.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencywave.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utility License",
+              "path": "/utility_license/",
+              "desc": "Dedicated Utility License page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agencyx-agency-website-template",
+      "name": "Agency-X",
+      "slug": "agencyx-agency-website-template",
+      "dodoProductId": "pdt_0Nnupni5MknQJ9QbLzdPR",
+      "tagline": "Modern, high-performance Agency-X website template.",
+      "description": "Agency - X  is a premium-quality Webflow template perfect for digital agencies, creative agencies, design studios, digital marketing agencies, IT agencies, software agencies, portfolio showcases, web design agencies and SEO agencies",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencyx-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agencyyportfolioo-website-template",
+      "name": "Agencyy Portfolioo",
+      "slug": "agencyyportfolioo-website-template",
+      "dodoProductId": "pdt_0Nnups8oyVoVXVESFciWb",
+      "tagline": "Modern, high-performance Agencyy Portfolioo website template.",
+      "description": "Agency is a modern Corporate Webflow template designed for digital agencies, startups, corporate companies. With cutting-edge transitions and a sleek dark theme this is a go to agency template for startups, service and corporate companies.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencyyportfolioo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Ui Ux Design",
+              "path": "/services_ui-ux-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agencyz-agency-website-template",
+      "name": "Agencyz",
+      "slug": "agencyz-agency-website-template",
+      "dodoProductId": "pdt_0NnupwIR8eEMURyOEvZxO",
+      "tagline": "Modern, high-performance Agencyz website template.",
+      "description": "Agencyz is an elegant and modern Webflow template designed for digital agencies looking for a bold online presence. With immersive 3D animations and a dark color palette, it exudes sophistication while ensuring a seamless user experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agencyz-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Billboard",
+              "path": "/project_billboard/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Onwards",
+              "path": "/project_onwards/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agenex-website-template",
+      "name": "Agenex",
+      "slug": "agenex-website-template",
+      "dodoProductId": "pdt_0Nnuq2nSLUraAad2VcOjC",
+      "tagline": "Modern, high-performance Agenex website template.",
+      "description": "Agenex is a modern, conversion-focused Consulting Website Template built to help consultants, coaches, and professional service providers establish trust, attract clients, and grow online with confidence.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenex.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Balance",
+              "path": "/project_balance/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Clarity",
+              "path": "/project_clarity/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agenflow-website-template",
+      "name": "Agenflow",
+      "slug": "agenflow-website-template",
+      "dodoProductId": "pdt_0Nnuq7ZEe8ikCvMpd3IWI",
+      "tagline": "Modern, high-performance Agenflow website template.",
+      "description": "Agenflow is a bold Digital Agency Webflow Template for creative agencies, startups, and growing businesses. Showcase your services, projects, pricing, testimonials, and expertise with a modern, responsive, and conversion-focused website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenflow.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Corporate Branding Project",
+              "path": "/projects_corporate-branding-project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Social Media Marketing",
+              "path": "/services_social-media-marketing/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "ageniix-website-template",
+      "name": "Ageniix",
+      "slug": "ageniix-website-template",
+      "dodoProductId": "pdt_0NnuqC5nN7f3XAGK26FSC",
+      "tagline": "Modern, high-performance Ageniix website template.",
+      "description": "Meet Agenix, the perfect Webflow template for AI agent platforms and artificial intelligence companies. This template makes your AI business look smart and trustworthy.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ageniix.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Our Suite Of Tools Is Specifically Designed For Creative",
+              "path": "/blog_our-suite-of-tools-is-specifically-designed-for-creative/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "agenix-agency-website-template",
+      "name": "Agenix",
+      "slug": "agenix-agency-website-template",
+      "dodoProductId": "pdt_0NnuqGYaeBzerCxIjXFKu",
+      "tagline": "Modern, high-performance Agenix website template.",
+      "description": "Experience the power of exceptional web design with the Agenix Webflow agency template. Are you ready to take your agency's online presence to new heights? Look no further! Our Template is specifically designed to empower digital agencies.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenix-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Cashsend Mobile App Design",
+              "path": "/project_cashsend-mobile-app-design/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Eligendi Incidunt Soluta Nulla",
+              "path": "/project_eligendi-incidunt-soluta-nulla/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Untitled",
+              "path": "/untitled/",
+              "desc": "Dedicated Untitled page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agennix-agency-website-template",
+      "name": "Agennix",
+      "slug": "agennix-agency-website-template",
+      "dodoProductId": "pdt_0NnuqL1RhxYHJUpjrkfTj",
+      "tagline": "Modern, high-performance Agennix website template.",
+      "description": "Experience the power of exceptional web design with the Agennix Webflow agency template. Are you ready to take your agency's online presence to new heights? Look no further! Our Template is specifically designed to empower digital agencies.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agennix-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Cashsend Mobile App Design",
+              "path": "/project_cashsend-mobile-app-design/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Eligendi Incidunt Soluta Nulla",
+              "path": "/project_eligendi-incidunt-soluta-nulla/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Untitled",
+              "path": "/untitled/",
+              "desc": "Dedicated Untitled page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agens-agency-website-template",
+      "name": "AGENS",
+      "slug": "agens-agency-website-template",
+      "dodoProductId": "pdt_0NnuqPVPUgcD4hwUtb0qM",
+      "tagline": "Modern, high-performance AGENS website template.",
+      "description": "Introducing AGENS, a cutting-edge Webflow template tailored for agencies. Enhance your digital footprint with its stylish design, flawless e-commerce integration, and top-tier services. Seamlessly captivate potential clients and expand your business.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agens-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Design",
+              "path": "/services_design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agense-agency-website-template",
+      "name": "Agense",
+      "slug": "agense-agency-website-template",
+      "dodoProductId": "pdt_0NnuqTpQqssu7unpM1uYG",
+      "tagline": "Modern, high-performance Agense website template.",
+      "description": "Agense is a sleek and modern agency Webflow template designed for digital agencies, creative studios, and startups. Customize your agency website with ease and showcase your projects, services, and portfolio professionally.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agense-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agensia-agency-website-template",
+      "name": "Agensia",
+      "slug": "agensia-agency-website-template",
+      "dodoProductId": "pdt_0NnuqWqoSzYc3prHJe5AA",
+      "tagline": "Modern, high-performance Agensia website template.",
+      "description": "Unlock your digital potential with Agensia! Your ultimate solution for Creative Agencies, Web Design, Web Development, Business, Digital Marketing, Online Marketing, and SEO. Elevate your online presence for stunning websites and seamless journeys.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agensia-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Three",
+              "path": "/about-three/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Two",
+              "path": "/about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "agensight-x-agency-website-template",
+      "name": "Agensight X",
+      "slug": "agensight-x-agency-website-template",
+      "dodoProductId": "pdt_0NnuqbZO5mgXtd8XX3hyt",
+      "tagline": "Modern, high-performance Agensight X website template.",
+      "description": "Take your agency to the next level. Get Agensight X, our top-notch advertising & marketing agency Webflow Template that includes everything you will need to launch your agency website and start getting clients.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agensight-x-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Case Studies How We Helped Business To Increase Conversion Rate On G Suite By 25",
+              "path": "/case-studies_how-we-helped-business-to-increase-conversion-rate-on-g-suite-by-25/",
+              "desc": "Dedicated Case Studies How We Helped Business To Increase Conversion Rate On G Suite By 25 page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agensoaragency-agency-website-template",
+      "name": "AGENSOAR Agency",
+      "slug": "agensoaragency-agency-website-template",
+      "dodoProductId": "pdt_0Nnuqgcv4XwsM6GlrWitG",
+      "tagline": "Modern, high-performance AGENSOAR Agency website template.",
+      "description": "Unleash the power of AGENSOAR, a revolutionary Webflow template designed to propel agencies to new heights. Navigate the digital seas with unparalleled style, harness the effortless power of integrated e-commerce, and showcase your premium services.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agensoaragency-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Design",
+              "path": "/services_design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agent-insurance-website-template",
+      "name": "Agent",
+      "slug": "agent-insurance-website-template",
+      "dodoProductId": "pdt_0Nnuql7CXqfJIzOntwyEF",
+      "tagline": "Modern, high-performance Agent website template.",
+      "description": "Agent is a clean and modern website Webflow template for insurance company websites. It can be easily used for accounting, auto insurance, car insurance, broker, health insurance, insurance agency, insurance agent, life insurance, consulting firm,",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agent-insurance.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Testimonials",
+              "path": "/testimonials/",
+              "desc": "Dedicated Testimonials page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agentflow-website-template",
+      "name": "Agentflow",
+      "slug": "agentflow-website-template",
+      "dodoProductId": "pdt_0NnuqoFxxS2t46vSmYfOU",
+      "tagline": "Modern, high-performance Agentflow website template.",
+      "description": "Level up your AI project with Agentflow \ud83d\ude80\ud83e\udde0! Crafted for developers and tech innovators, this AI Coding Agent Webflow Template helps you present your product with modern design, smooth UX, and powerful customization tools.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 169,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://agentflow.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Pages Blog V1",
+              "path": "/blog-pages_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Pages Blog V2",
+              "path": "/blog-pages_blog-v2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Company Pages About",
+              "path": "/company-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "agentic-consulting-website-template",
+      "name": "Agentic",
+      "slug": "agentic-consulting-website-template",
+      "dodoProductId": "pdt_0Nnuqqx5HNdFQFgX5XXdG",
+      "tagline": "Modern, high-performance Agentic website template.",
+      "description": "Agentic, an exclusive Webflow Template designed for corporate & consulting websites, business coaches and consultants. Elevate your online presence, that guarantees to leave an impression on your potential clients right from the first glance.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentic-consulting.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing One",
+              "path": "/pricing-one/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service One",
+              "path": "/service-one/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agentifye-website-template",
+      "name": "Agentifye",
+      "slug": "agentifye-website-template",
+      "dodoProductId": "pdt_0NnuqwTQCXXsoetgJiccb",
+      "tagline": "Modern, high-performance Agentifye website template.",
+      "description": "Discover Agentifye \u2013 a sleek Webflow landing page template for ai agency teams and creative artist companies blending design, automation, and artificial intelligence. Built to communicate innovation, trust, and performance instantly.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentifye.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utilities Instructions",
+              "path": "/utilities_instructions/",
+              "desc": "Dedicated Utilities Instructions page with responsive components."
+          },
+          {
+              "name": "Utilities Licenses",
+              "path": "/utilities_licenses/",
+              "desc": "Dedicated Utilities Licenses page with responsive components."
+          },
+          {
+              "name": "Utilities Style Guides",
+              "path": "/utilities_style-guides/",
+              "desc": "Dedicated Utilities Style Guides page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agentixagency-agency-website-template",
+      "name": "AGENTIX Agency",
+      "slug": "agentixagency-agency-website-template",
+      "dodoProductId": "pdt_0Nnur0iq07KM5KxAkRpR2",
+      "tagline": "Modern, high-performance AGENTIX Agency website template.",
+      "description": "Unleash the Power of AGENTIX: The revolutionary agency Webflow solution designed to ignite your digital presence. Crafted specifically for agencies, AGENTIX boasts a sleek, modern design that will captivate potential clients.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentixagency-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Packages",
+              "path": "/category_packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Design",
+              "path": "/services_design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agentlite-insurance-website-template",
+      "name": "Agent Lite",
+      "slug": "agentlite-insurance-website-template",
+      "dodoProductId": "pdt_0Nnur5EX58v8PWCnrOlTr",
+      "tagline": "Modern, high-performance Agent Lite website template.",
+      "description": "Agent Lite is a clean and modern website Webflow template for insurance company websites. It can be easily used for accounting, auto insurance, car insurance, health insurance, insurance agency, insurance agent, life insurance, consulting firm.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentlite-insurance.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Testimonials",
+              "path": "/testimonials/",
+              "desc": "Dedicated Testimonials page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agentor-website-template",
+      "name": "Agentor.",
+      "slug": "agentor-website-template",
+      "dodoProductId": "pdt_0NnurAj3Sc2158f9Ky84i",
+      "tagline": "Modern, high-performance Agentor. website template.",
+      "description": "Agentor is a real estate and property management website template for a real estate agency, real estate business, or real estate company. It features a real estate property collection with a page for each apartment and luxury property, real estate agent profiles, a real estate viewing booking form, and CMS collections for property listings, blog posts, and categories. Ideal for a real estate agency, realtor, or property management business, Agentor provides a professional real estate landing page for showcasing apartment listings, luxury property, property listings, real estate property, property services, and property management services through a clear online presence.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentor.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Properties",
+              "path": "/properties/",
+              "desc": "Dedicated Properties page with responsive components."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agentra0-website-template",
+      "name": "Agentra0",
+      "slug": "agentra0-website-template",
+      "dodoProductId": "pdt_0NnurDIoQLpb5CgtDETAf",
+      "tagline": "Modern, high-performance Agentra0 website template.",
+      "description": "Agentra is a modern AI SaaS Webflow template for startups, automation platforms, software companies, and technology businesses that need a professional, responsive, and conversion-focused website.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentra0.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Agent",
+              "path": "/agent/",
+              "desc": "Dedicated Agent page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          },
+          {
+              "name": "Use Cases",
+              "path": "/use-cases/",
+              "desc": "Dedicated Use Cases page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agentrai-website-template",
+      "name": "AutomateX",
+      "slug": "agentrai-website-template",
+      "dodoProductId": "pdt_0NnurHvY9atP6a7fzMgwf",
+      "tagline": "Modern, high-performance AutomateX website template.",
+      "description": "AutomateX is the go-to Webflow template for AI agent and automation SaaS products. A bold, modern design packed with conversion-optimized sections from hero and integrations to pricing, testimonials, and FAQ.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentrai.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Agents",
+              "path": "/agents/",
+              "desc": "Dedicated Agents page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "agentrao-website-template",
+      "name": "Agentrao",
+      "slug": "agentrao-website-template",
+      "dodoProductId": "pdt_0NnurKPIi05dVdyEiT7Mi",
+      "tagline": "Modern, high-performance Agentrao website template.",
+      "description": "Agentrao a clean, modern Webflow HTML website template for creative agencies, saas, and freelancers\u2014fully responsive, performance-optimized, and easy to customize.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentrao.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Authentication Pages Sing Up",
+              "path": "/authentication-pages_sing-up/",
+              "desc": "Dedicated Authentication Pages Sing Up page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Inner Page Careers",
+              "path": "/inner-page_careers/",
+              "desc": "Dedicated Inner Page Careers page with responsive components."
+          },
+          {
+              "name": "Inner Page Enterprise",
+              "path": "/inner-page_enterprise/",
+              "desc": "Dedicated Inner Page Enterprise page with responsive components."
+          },
+          {
+              "name": "Inner Page Pricing",
+              "path": "/inner-page_pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Inner Page Product",
+              "path": "/inner-page_product/",
+              "desc": "Dedicated Inner Page Product page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agentro-website-template",
+      "name": "Agentro",
+      "slug": "agentro-website-template",
+      "dodoProductId": "pdt_0NnurOy9SLuSdcgEEfZf2",
+      "tagline": "Modern, high-performance Agentro website template.",
+      "description": "Agentro is a premium Creative Digital Agency Webflow template designed for modern agencies, startups, and freelancers. Showcase your services, portfolio, and brand with a sleek, responsive, and user-friendly design.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agentro.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Servieces Digital Marketing",
+              "path": "/servieces_digital-marketing/",
+              "desc": "Dedicated Servieces Digital Marketing page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agenus-website-template",
+      "name": "Agenus",
+      "slug": "agenus-website-template",
+      "dodoProductId": "pdt_0NnurTAbd5oitMbFP472W",
+      "tagline": "Modern, high-performance Agenus website template.",
+      "description": "Agenus is a sleek and modern Webflow template designed for creative agencies, freelancers, and studios. It features a clean design, responsive layout, and customizable sections to showcase your portfolio & services.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenus.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utilities License",
+              "path": "/utilities_license/",
+              "desc": "Dedicated Utilities License page with responsive components."
+          },
+          {
+              "name": "Utilities Style Guide",
+              "path": "/utilities_style-guide/",
+              "desc": "Dedicated Utilities Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ageny-agency-website-template",
+      "name": "Ageny",
+      "slug": "ageny-agency-website-template",
+      "dodoProductId": "pdt_0NnurXnPADsZe3iEolEzN",
+      "tagline": "Modern, high-performance Ageny website template.",
+      "description": "Ageny is the ultimate website template for digital agencies, designed to showcase your creative services & grow your client base. It offers a modern, sleek design tailored for digital businesses looking to make a lasting impression online.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ageny-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Static",
+              "path": "/service-static/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agenzaagency-agency-website-template",
+      "name": "Agenza",
+      "slug": "agenzaagency-agency-website-template",
+      "dodoProductId": "pdt_0NnuraylWkSykfOP19zij",
+      "tagline": "Modern, high-performance Agenza website template.",
+      "description": "Introducing the Agenza Webflow template, a premier solution for modern consulting firms. Agenza transcends the typical website template. It's an expertly designed digital platform tailored for agencies aiming to elevate their online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenzaagency-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Three",
+              "path": "/about-three/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Two",
+              "path": "/about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "agenzai-agency-website-template",
+      "name": "Agenzai",
+      "slug": "agenzai-agency-website-template",
+      "dodoProductId": "pdt_0NnurfcEaTsS6fvYodvuU",
+      "tagline": "Modern, high-performance Agenzai website template.",
+      "description": "Agenzai is a fully-responsive website template to build your upcoming Agency webflow website. Agenzai is a responsive modern webflow template for Agency websites with all essential CMS & E-commerce features.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenzai-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Post How To Increase Facebook Reach By Over 200 With This Simple Trick",
+              "path": "/blog-post_how-to-increase-facebook-reach-by-over-200-with-this-simple-trick/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "agenzi-website-template",
+      "name": "Agenzi",
+      "slug": "agenzi-website-template",
+      "dodoProductId": "pdt_0Nnurn6tgrvqt4hTA8Acs",
+      "tagline": "Modern, high-performance Agenzi website template.",
+      "description": "Agenzi is a powerful Creative Agency Webflow Template crafted for agencies aiming to stand out. This customizable template offers vibrant design, seamless functionality, and flexibility to showcase your projects, ensuring a dynamic online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://agenzi.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Two",
+              "path": "/about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service One",
+              "path": "/service-one/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agenzo-agency-website-template",
+      "name": "Agenzo",
+      "slug": "agenzo-agency-website-template",
+      "dodoProductId": "pdt_0NnurrdQ8XwkU4pAdlZtb",
+      "tagline": "Modern, high-performance Agenzo website template.",
+      "description": "Are you a creative professional in search of a stylish and contemporary website to highlight your portfolio and services? Agenz provides all the essentials to your creative agency. Display your latest projects in a stunning and engaging way!",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agenzo-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About One",
+              "path": "/about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Three",
+              "path": "/about-three/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Two",
+              "path": "/about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "ageva-website-template",
+      "name": "Ageva",
+      "slug": "ageva-website-template",
+      "dodoProductId": "pdt_0NnuruKvb0TTktQ00uUBn",
+      "tagline": "Modern, high-performance Ageva website template.",
+      "description": "Ageva is a modern agency template crafted for design studios, creative teams, and independent professionals. It offers a refined layout, smooth interactions, and a fully responsive structure to present your work with clarity and impact.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ageva.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Resources",
+              "path": "/resources/",
+              "desc": "Dedicated Resources page with responsive components."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Driftor",
+              "path": "/works_driftor/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Dustline",
+              "path": "/works_dustline/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aggregator-x-directory-website-template",
+      "name": "Aggregator X",
+      "slug": "aggregator-x-directory-website-template",
+      "dodoProductId": "pdt_0NnurygR6h5HpzEDZWxmd",
+      "tagline": "Modern, high-performance Aggregator X website template.",
+      "description": "Looking to create a product discovery website \ud83d\udd0e\ud83d\udcbb? Look no further than Aggregator X! Our curated directory Webflow Template. It's awesome design make it easy to build a website that helps users discover new and exciting products \ud83d\udca1.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aggregator-x-directory.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Product Categories Business",
+              "path": "/product-categories_business/",
+              "desc": "Dedicated Product Categories Business page with responsive components."
+          },
+          {
+              "name": "Product Tags Communication",
+              "path": "/product-tags_communication/",
+              "desc": "Dedicated Product Tags Communication page with responsive components."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          },
+          {
+              "name": "Products Startuper",
+              "path": "/products_startuper/",
+              "desc": "Dedicated Products Startuper page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agnce-agency-website-template",
+      "name": "Agnce",
+      "slug": "agnce-agency-website-template",
+      "dodoProductId": "pdt_0Nnus33eMZqds60lCb6YZ",
+      "tagline": "Modern, high-performance Agnce website template.",
+      "description": "Elevate your digital agency with Agnce, the ultimate Creative Agency Template. Ideal for digital marketing experts, branding studios, and startups, Agnce features a modern design to attract clients and boost business growth.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agnce-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Static",
+              "path": "/service-static/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agnci-agency-website-template",
+      "name": "AGNCI",
+      "slug": "agnci-agency-website-template",
+      "dodoProductId": "pdt_0Nnus7gQPNcy5HSAsZ9ja",
+      "tagline": "Modern, high-performance AGNCI website template.",
+      "description": "Showcase your agency's creativity with AGNCI! Tailored for design agencies and studios, our Webflow template offers a sleek and elegant platform to present your creative services with style and sophistication.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agnci-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Static",
+              "path": "/service-static/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agnez-website-template",
+      "name": "Agnez",
+      "slug": "agnez-website-template",
+      "dodoProductId": "pdt_0NnusCh3bMXuwVek2gxsl",
+      "tagline": "Modern, high-performance Agnez website template.",
+      "description": "Agnez is a professional and modern website designed for chiropractic and physiotherapy clinics, offering expert care for pain relief and mobility restoration.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agnez.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Apppointment",
+              "path": "/apppointment/",
+              "desc": "Dedicated Apppointment page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agnio-website-template",
+      "name": "Avido",
+      "slug": "agnio-website-template",
+      "dodoProductId": "pdt_0NnusFLzfBfYl3n51fDSe",
+      "tagline": "Modern, high-performance Avido website template.",
+      "description": "Avido is a creative agency specializing in branding, design, and Webflow development, helping modern brands stand out with clarity and impact.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agnio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Canvas Tote Bag Mockup",
+              "path": "/project_canvas-tote-bag-mockup/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Minimal Square Box Mockup",
+              "path": "/project_minimal-square-box-mockup/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agnos-website-template",
+      "name": "Agnos",
+      "slug": "agnos-website-template",
+      "dodoProductId": "pdt_0NnusJsfv0bXlv2cyj0SQ",
+      "tagline": "Modern, high-performance Agnos website template.",
+      "description": "Creative agency and design studio Webflow template for branding teams, digital agencies, and studios that want to showcase work with clarity, strong visuals, and a clean, professional layout.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agnos.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Harvest Organics",
+              "path": "/project_harvest-organics/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Summit Finance",
+              "path": "/project_summit-finance/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agolas-agency-website-template",
+      "name": "Agolas",
+      "slug": "agolas-agency-website-template",
+      "dodoProductId": "pdt_0NnusPC4ZKC1gLqIvXH1L",
+      "tagline": "Modern, high-performance Agolas website template.",
+      "description": "Agolas is a sleek, modern website template designed for creative agencies. With customizable layouts, dynamic interactions, and responsive design, it effortlessly showcases your services, team, and portfolio, delivering a polished.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agolas-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agors-website-template",
+      "name": "Agors",
+      "slug": "agors-website-template",
+      "dodoProductId": "pdt_0NnusTsLOmGNrfkIeY0UQ",
+      "tagline": "Modern, high-performance Agors website template.",
+      "description": "The Agor Agency website template is a modern, responsive design ideal for creative agencies, freelancers, and businesses seeking a professional online presence. Featuring customizable sections, clean layouts, and intuitive navigation",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agors.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Design Studio",
+              "path": "/design-studio/",
+              "desc": "Dedicated Design Studio page with responsive components."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio Two",
+              "path": "/portfolio-two/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "agotastudio-one-page-website-template",
+      "name": "Agota Studio",
+      "slug": "agotastudio-one-page-website-template",
+      "dodoProductId": "pdt_0NnusWK929r6Ttc8oa6cR",
+      "tagline": "Modern, high-performance Agota Studio website template.",
+      "description": "EnergyUp template is a dynamic and versatile Webflow design, meticulously crafted for businesses seeking innovative solutions. Perfect for showcasing products or services related to renewable energy, smart home integration, or eco-friendly products.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agotastudio-one-page.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agricultural-group-website-template",
+      "name": "Freshfield Group",
+      "slug": "agricultural-group-website-template",
+      "dodoProductId": "pdt_0Nnusdyqg5WqKdZ1LiNQk",
+      "tagline": "Modern, high-performance Freshfield Group website template.",
+      "description": "Agricultural Group is a professional website Webflow template for agriculture and organic farm websites. It suits agribusiness, farmers market, farming, harvest, cultivation, natural, organic food, eco-friendly, plantation websites.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agricultural-group.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services 1",
+              "path": "/services-1/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agriflow-agriculture-website-template",
+      "name": "AgriFlow",
+      "slug": "agriflow-agriculture-website-template",
+      "dodoProductId": "pdt_0NnusjABCFlDPI4nNvddx",
+      "tagline": "Modern, high-performance AgriFlow website template.",
+      "description": "AgriFlow is a fresh-faced organic and agriculture Webflow template. It's suitable for agriculture, organic farming, food, plant, poultry, husbandry, ecology, cultivation, agritourism, dairy farming, nature, forestry, florist, and gardener websites.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agriflow-agriculture.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agrilead-agriculture-website-template",
+      "name": "Agrilead",
+      "slug": "agrilead-agriculture-website-template",
+      "dodoProductId": "pdt_0NnusoJaNb7a6kghja43c",
+      "tagline": "Modern, high-performance Agrilead website template.",
+      "description": "If you're looking for a clean, minimal, and elegant agriculture website template in Webflow CMS, look no further than Agrilead. This agriculture website template has all the essential features to launch your farming, gardening, or related website.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agrilead-agriculture.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Eco And Agriculture",
+              "path": "/project_eco-and-agriculture/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Quality Standards",
+              "path": "/services_quality-standards/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agrius-agriculture-website-template",
+      "name": "Agrius",
+      "slug": "agrius-agriculture-website-template",
+      "dodoProductId": "pdt_0Nnusus3MbONTlyfLr9iA",
+      "tagline": "Modern, high-performance Agrius website template.",
+      "description": "Agrius is a clean and modern website Webflow template for agriculture and organic farm websites. It can be easily used for eco farm, farm products, food market, organic food, fruit shop, honey, meat shop, agriculture farmer, dairy farm.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agrius-agriculture.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agriwark-website-template",
+      "name": "Agriwark",
+      "slug": "agriwark-website-template",
+      "dodoProductId": "pdt_0NnuszYvE3VSpZj1obGCp",
+      "tagline": "Modern, high-performance Agriwark website template.",
+      "description": "Agriwark is a modern and responsive Webflow template designed for agriculture, organic farming, and eco-friendly businesses. Perfect for showcasing farm services, products, and sustainable practices with a clean, professional design.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agriwark.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Homepage 2",
+              "path": "/homepage-2/",
+              "desc": "Dedicated Homepage 2 page with responsive components."
+          },
+          {
+              "name": "Homepage 3",
+              "path": "/homepage-3/",
+              "desc": "Dedicated Homepage 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Pricing Plan",
+              "path": "/pricing-plan/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "agrizone-website-template",
+      "name": "Agrona",
+      "slug": "agrizone-website-template",
+      "dodoProductId": "pdt_0Nnut5lagjCVn6OyLEcwS",
+      "tagline": "Modern, high-performance Agrona website template.",
+      "description": "Agrona is a modern agriculture Webflow template built for farms, agritech startups, and agricultural services. Designed for sustainability and growth, it features CMS blogs, eCommerce, smooth animations, and responsive layouts.",
+      "framework": "astro",
+      "category": "retail-and-e-commerce",
+      "categories": [
+          "retail-and-e-commerce"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agrizone.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agroflow-website-template",
+      "name": "Ranchflow",
+      "slug": "agroflow-website-template",
+      "dodoProductId": "pdt_0NnutCJay0Ahiy9YGrzTp",
+      "tagline": "Modern, high-performance Ranchflow website template.",
+      "description": "Grow your farm's online presence with Ranchflow \ud83c\udf3e\ud83d\ude9c! Our Farm Webflow Template is perfect for farmers, agriculture businesses, and organic producers looking to showcase their products, land, and story in a clean, modern design.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 169,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agroflow.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Company Pages About",
+              "path": "/company-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Company Pages Team",
+              "path": "/company-pages_team/",
+              "desc": "Dedicated Company Pages Team page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team John Carter",
+              "path": "/team_john-carter/",
+              "desc": "Dedicated Team John Carter page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "agrofy-agriculture-website-template",
+      "name": "Agrofy",
+      "slug": "agrofy-agriculture-website-template",
+      "dodoProductId": "pdt_0NnutHciDMJMwdo2Cgghm",
+      "tagline": "Modern, high-performance Agrofy website template.",
+      "description": "Agrofy is agriculture business Webflow template for Agriculture and Gardening websites. It can be easily used for agriculture, ecology, florist, gardener, groundskeeper, landscape, farming, garden, landscape architects, plants.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agrofy-agriculture.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service Smart Agriculture Services",
+              "path": "/service_smart-agriculture-services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "agroveon-website-template",
+      "name": "Harvestra",
+      "slug": "agroveon-website-template",
+      "dodoProductId": "pdt_0NnutPzPqa3znFnvhYwbl",
+      "tagline": "Modern, high-performance Harvestra website template.",
+      "description": "Harvestra is a minimal and professional Webflow template for Agriculture based websites, crafted with a unique design and smooth animations. Featuring an organized CMS for services and blogs, you can easily launch your new website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://agroveon.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Data Driven Growth For Every Acre Discover How Smart Technologies",
+              "path": "/blog_data-driven-growth-for-every-acre-discover-how-smart-technologies/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Climate Resilient",
+              "path": "/services_climate-resilient/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "ai-bot-app-website-template",
+      "name": "AI Bot",
+      "slug": "ai-bot-app-website-template",
+      "dodoProductId": "pdt_0NnutUkumRiVeJnWzWCEj",
+      "tagline": "Modern, high-performance AI Bot website template.",
+      "description": "AI is a website template for artificial intelligence or AI tools such as Chat GPT. Showcase your ai app or software with a high-converting marketing website that is easy to modify.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-bot-app.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Admin Style Guide",
+              "path": "/admin_style-guide/",
+              "desc": "Dedicated Admin Style Guide page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "ai-chatbot-saas-website-template",
+      "name": "Ai-Chatbot",
+      "slug": "ai-chatbot-saas-website-template",
+      "dodoProductId": "pdt_0NnutZBfsa45ekFUeC8BS",
+      "tagline": "Modern, high-performance Ai-Chatbot website template.",
+      "description": "SaaS website template for AI chatbots in customer support and service, powered by ChatGPT. It caters to business of ai chat bot industry for customer support. Showcase chatbot capabilities with webflow template designed for artificial intelligence.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-chatbot-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Usecase Handling Frequently Asked Questions Faqs",
+              "path": "/usecase_handling-frequently-asked-questions-faqs/",
+              "desc": "Dedicated Usecase Handling Frequently Asked Questions Faqs page with responsive components."
+          },
+          {
+              "name": "Usecase Responding To User Specific Inquiries",
+              "path": "/usecase_responding-to-user-specific-inquiries/",
+              "desc": "Dedicated Usecase Responding To User Specific Inquiries page with responsive components."
+          },
+          {
+              "name": "Usecase Streamlining The Onboarding Process",
+              "path": "/usecase_streamlining-the-onboarding-process/",
+              "desc": "Dedicated Usecase Streamlining The Onboarding Process page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ai-content-saas-website-template",
+      "name": "Ai-Content",
+      "slug": "ai-content-saas-website-template",
+      "dodoProductId": "pdt_0NnutdV7hkY0sZUvcpLt7",
+      "tagline": "Modern, high-performance Ai-Content website template.",
+      "description": "SaaS landing page website template for AI content tool businesses that generate quality\u00a0ai content, copywriting industry and artificial intelligence writing assistant. Showcase Saas ai capabilities with our stunning one page saas ai website template.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-content-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Template Pages Change Logs",
+              "path": "/template-pages_change-logs/",
+              "desc": "Dedicated Template Pages Change Logs page with responsive components."
+          },
+          {
+              "name": "Template Pages License",
+              "path": "/template-pages_license/",
+              "desc": "Dedicated Template Pages License page with responsive components."
+          },
+          {
+              "name": "Template Pages Style Guide",
+              "path": "/template-pages_style-guide/",
+              "desc": "Dedicated Template Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ai-copywriting-saas-website-template",
+      "name": "Ai Copywriting",
+      "slug": "ai-copywriting-saas-website-template",
+      "dodoProductId": "pdt_0NnutiDBco3955YE6QH4j",
+      "tagline": "Modern, high-performance Ai Copywriting website template.",
+      "description": "SaaS webflow website template for AI copywriting tool business that generates high-quality\u00a0ai copywriting. It caters to business of ai copywriting industry and artificial intelligence writing assistant to Showcase Saas AI copywriting capabilities.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-copywriting-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Docs",
+              "path": "/docs/",
+              "desc": "Dedicated Docs page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          },
+          {
+              "name": "Use Case",
+              "path": "/use-case/",
+              "desc": "Dedicated Use Case page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ai-email-technology-website-template",
+      "name": "AI Email",
+      "slug": "ai-email-technology-website-template",
+      "dodoProductId": "pdt_0NnutmeWxoS5I3tLcFIgO",
+      "tagline": "Modern, high-performance AI Email website template.",
+      "description": "SaaS Webflow Multilayout website template for AI Email tool. A cutting-edge and aesthetically pleasing solution made for email-centric businesses harnessing AI technology. Caters to the Saas AI Email industry for showcasing Artificial Intelligence.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-email-technology.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          },
+          {
+              "name": "Use Case",
+              "path": "/use-case/",
+              "desc": "Dedicated Use Case page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ai-gency-agency-website-template",
+      "name": "AI-gency",
+      "slug": "ai-gency-agency-website-template",
+      "dodoProductId": "pdt_0NnutrtJJeavEWMBWthQB",
+      "tagline": "Modern, high-performance AI-gency website template.",
+      "description": "AI-gency, a specially crafted template designed for AI and machine learning agencies. Showcase your services and latest work in a uniquely tailored AI-specific manner. Acquire the template today!",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-gency-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Detail",
+              "path": "/service-detail/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "ai-schedule",
+      "name": "Ai Schedule",
+      "slug": "ai-schedule",
+      "dodoProductId": "pdt_0NnutwDxtsPRb5BHTEtZh",
+      "tagline": "Modern, high-performance Ai Schedule website template.",
+      "description": "SaaS webflow Multilayout website template for AI Schedule tool, that helps with smart scheduling/calendar/tasks for busy teams. Caters to the AI Schedule industry for showcasing Aritificial Intelligence Scheduling capabilities.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-schedule.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          },
+          {
+              "name": "Use Case",
+              "path": "/use-case/",
+              "desc": "Dedicated Use Case page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ai-tech-x-technology-website-template",
+      "name": "AI-Tech X",
+      "slug": "ai-tech-x-technology-website-template",
+      "dodoProductId": "pdt_0Nnuu0wIQgl5dX3plP8bl",
+      "tagline": "Modern, high-performance AI-Tech X website template.",
+      "description": "Introducing AI-Tech X \ud83d\ude80\ud83d\udcbb, our perfect Artificial Intelligence Webflow Template for AI experts, machine learning startups, and data science projects. Elevate your AI services with a sleek layout and comprehensive features.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-tech-x-technology.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog 6 Ways To Optimize Your Marketing Campaigns Using Ai",
+              "path": "/blog_6-ways-to-optimize-your-marketing-campaigns-using-ai/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Team John Carter",
+              "path": "/team_john-carter/",
+              "desc": "Dedicated Team John Carter page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ai-tool-startup-website-template",
+      "name": "AI Tool",
+      "slug": "ai-tool-startup-website-template",
+      "dodoProductId": "pdt_0Nnuu5XJeShB3uvljmVYJ",
+      "tagline": "Modern, high-performance AI Tool website template.",
+      "description": "Building a website for your tech business or start-up has never been easier thanks to AI Tool Template. The minimalistic colorful design and cool animations paired with all the features you need make creating a professional Webflow site a breeze.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-tool-startup.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Homepage",
+              "path": "/homepage/",
+              "desc": "Dedicated Homepage page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "ai-x-technology-website-template",
+      "name": "AI X+",
+      "slug": "ai-x-technology-website-template",
+      "dodoProductId": "pdt_0NnuuALALsbhN9tAxjkRR",
+      "tagline": "Modern, high-performance AI X+ website template.",
+      "description": "Lead innovation with AI X+ \ud83c\udf1f\ud83e\udd16! Ideal for tech startups, AI labs, and ML companies, this artificial intelligence Webflow Template offers a seamless website customizable to showcase your cutting-edge AI models.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ai-x-technology.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Pages Blog V1",
+              "path": "/blog-pages_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aiagency-website-template",
+      "name": "AiAgency",
+      "slug": "aiagency-website-template",
+      "dodoProductId": "pdt_0NnuuFgY9oA0tDHGn0jhG",
+      "tagline": "Modern, high-performance AiAgency website template.",
+      "description": "Introducing the AiAgency webflow template, designed specifically for digital agencies offering AI-related services. This template combines modern design with powerful functionality, making it the perfect choice for showcasing your AI solutions.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiagency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Static",
+              "path": "/service-static/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aiaiaiai-website-template",
+      "name": "aiaiaiai",
+      "slug": "aiaiaiai-website-template",
+      "dodoProductId": "pdt_0NnuuLzQuExL2BN4acCrr",
+      "tagline": "Modern, high-performance aiaiaiai website template.",
+      "description": "aiaiaiai\u2122 is a premium multi-layout Webflow template designed for agencies and creators. Featuring sleek design, versatile and minimalistic layouts, it\u2019s the perfect choice for showcasing creativity and professionalism with ease.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://aiaiaiai.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About A",
+              "path": "/about_about-a/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About About B",
+              "path": "/about_about-b/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Homepage Home A",
+              "path": "/homepage_home-a/",
+              "desc": "Dedicated Homepage Home A page with responsive components."
+          },
+          {
+              "name": "Homepage Home B",
+              "path": "/homepage_home-b/",
+              "desc": "Dedicated Homepage Home B page with responsive components."
+          },
+          {
+              "name": "Homepage Home C",
+              "path": "/homepage_home-c/",
+              "desc": "Dedicated Homepage Home C page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aiassistant-saas-website-template",
+      "name": "AI Assistant",
+      "slug": "aiassistant-saas-website-template",
+      "dodoProductId": "pdt_0NnuuQLTdZTBgOLNTDdyF",
+      "tagline": "Modern, high-performance AI Assistant website template.",
+      "description": "Introducing Webflow AI Assistant SaaS Startup Multilayout Website Template. A sleek solution for startups using Artificial Intelligence. Elevate online presence, showcase expertise with this visually engaging template crafted for digital success.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiassistant-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          },
+          {
+              "name": "Use Case",
+              "path": "/use-case/",
+              "desc": "Dedicated Use Case page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aico-saas-website-template",
+      "name": "Aico",
+      "slug": "aico-saas-website-template",
+      "dodoProductId": "pdt_0NnuuUxmD5DPXRiYWQtGs",
+      "tagline": "Modern, high-performance Aico website template.",
+      "description": "Aico is the ultimate Webflow template for SaaS companies. Aico focuses on delivering a seamless user experience and making a powerful online impact. No more wasting time with complex templates - choose Aico and watch your business thrive.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aico-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aicourse-learning-website-template",
+      "name": "Ai Course",
+      "slug": "aicourse-learning-website-template",
+      "dodoProductId": "pdt_0NnuuZFCc24A6xJ7dQEoV",
+      "tagline": "Modern, high-performance Ai Course website template.",
+      "description": "Get our AI Course Landing Page and one page Webflow Template, perfect for AI education, online learning, and course promotion. This one-page, fully responsive template is ideal for showcasing AI programs.",
+      "framework": "astro",
+      "category": "education",
+      "categories": [
+          "education"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aicourse-learning.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Login",
+              "path": "/login/",
+              "desc": "Dedicated Login page with responsive components."
+          },
+          {
+              "name": "Post How Companies Are Succeeding With Ai Chatbots",
+              "path": "/post_how-companies-are-succeeding-with-ai-chatbots/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post Why Learning Chatbot Development Is A Game Change",
+              "path": "/post_why-learning-chatbot-development-is-a-game-change/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Signup",
+              "path": "/signup/",
+              "desc": "Dedicated Signup page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aid-documentation-website-template",
+      "name": "Aid",
+      "slug": "aid-documentation-website-template",
+      "dodoProductId": "pdt_0NnuuddpW38Fwo3N9cftX",
+      "tagline": "Modern, high-performance Aid website template.",
+      "description": "Aid, the straightforward documentation template! With just a few clicks, you can customize Aid to match your branding using just 1 main color swatch and simple classes. Aid is designed to be minimal and effective, without any unnecessary features.",
+      "framework": "astro",
+      "category": "documentation",
+      "categories": [
+          "documentation"
+      ],
+      "price": 34,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aid-documentation.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Articles Familiarizing Yourself With Our Api",
+              "path": "/articles_familiarizing-yourself-with-our-api/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Articles Using Asynchronous Programming Techniques",
+              "path": "/articles_using-asynchronous-programming-techniques/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Guides Advanced Use",
+              "path": "/guides_advanced-use/",
+              "desc": "Dedicated Guides Advanced Use page with responsive components."
+          },
+          {
+              "name": "Guides Basic Use",
+              "path": "/guides_basic-use/",
+              "desc": "Dedicated Guides Basic Use page with responsive components."
+          },
+          {
+              "name": "Guides Errors",
+              "path": "/guides_errors/",
+              "desc": "Dedicated Guides Errors page with responsive components."
+          },
+          {
+              "name": "Guides Getting Started",
+              "path": "/guides_getting-started/",
+              "desc": "Dedicated Guides Getting Started page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aidem-website-template",
+      "name": "Aydem",
+      "slug": "aidem-website-template",
+      "dodoProductId": "pdt_0NnuuiUUkS8vKYs5nO2n0",
+      "tagline": "Modern, high-performance Aydem website template.",
+      "description": "Aydem is a dark mode personal portfolio template made for designers, developers, artists, content creators, illustrators, and creatives. Bright color accents and a clean layout help showcase your work with clarity, confidence, and personality.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aidem.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Bloom Crm Sales Dashboard",
+              "path": "/work_bloom-crm-sales-dashboard/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Brandora Creative Agency Website",
+              "path": "/work_brandora-creative-agency-website/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Insightly Analytics Saas Website",
+              "path": "/work_insightly-analytics-saas-website/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Quicktask Productivity App",
+              "path": "/work_quicktask-productivity-app/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Shoppr E Commerce Landing Page",
+              "path": "/work_shoppr-e-commerce-landing-page/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aiden-portfolio-website-template",
+      "name": "Aiden",
+      "slug": "aiden-portfolio-website-template",
+      "dodoProductId": "pdt_0Nnuun1pnc3uAqYBzR0Ew",
+      "tagline": "Modern, high-performance Aiden website template.",
+      "description": "A user-friendly Webflow template for portfolios, designed with simplicity in mind. Clean, minimalistic design highlights essential elements, ensuring an elegant appearance. Seamlessly browse with minimal interaction, ideal for effortless project",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiden-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Aurora",
+              "path": "/works_aurora/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Nexus",
+              "path": "/works_nexus/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Zenith",
+              "path": "/works_zenith/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aifinancial-saas-website-template",
+      "name": "Ai Financial",
+      "slug": "aifinancial-saas-website-template",
+      "dodoProductId": "pdt_0NnuurLWjsCnLdlz10j25",
+      "tagline": "Modern, high-performance Ai Financial website template.",
+      "description": "Discover the Ai Financial Webflow SaaS Website template. Crafted for effortless customisation, it empowers Artificial Intelligence Finance startups, Ai softwares companies and enterprises alike to build stunning, responsive websites with ease.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aifinancial-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post Best Practices For Data Security In Saas Applications",
+              "path": "/post_best-practices-for-data-security-in-saas-applications/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post The Ultimate Guide To Choosing The Right Saas Solution For Your Business",
+              "path": "/post_the-ultimate-guide-to-choosing-the-right-saas-solution-for-your-business/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aiflow-website-template",
+      "name": "Aiflow",
+      "slug": "aiflow-website-template",
+      "dodoProductId": "pdt_0NnuuvsXRJfhnTzU5tlwL",
+      "tagline": "Modern, high-performance Aiflow website template.",
+      "description": "Aiflow is perfect for showcasing your AI-powered SaaS product with clarity and confidence. Designed to engage users and build credibility, this template uses sleek layouts and custom visuals to highlight your platform\u2019s smartest features.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiflow.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aigen-saas-website-template",
+      "name": "Aigen",
+      "slug": "aigen-saas-website-template",
+      "dodoProductId": "pdt_0Nnuv0TcQX0PR55pfgKzH",
+      "tagline": "Modern, high-performance Aigen website template.",
+      "description": "Introducing our cutting-edge Webflow template Aigen, designed specifically for AI companies. This sleek and modern template is tailor-made to showcase the innovative capabilities and technological advancements of AI-driven organizations.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aigen-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing 1",
+              "path": "/pricing-1/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing 2",
+              "path": "/pricing-2/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aigenerator-website-template",
+      "name": "Imagenerator",
+      "slug": "aigenerator-website-template",
+      "dodoProductId": "pdt_0NnuvAYQhT0SYwQuPNf3x",
+      "tagline": "Modern, high-performance Imagenerator website template.",
+      "description": "AIgenerator is an AI image and video generator Webflow template designed for artificial intelligence websites. Perfect for showcasing AI-driven content, this template helps you create powerful platforms for AI-based image and video generation.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aigenerator.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing One",
+              "path": "/pricing-one/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aigeng-website-template",
+      "name": "Aigeng",
+      "slug": "aigeng-website-template",
+      "dodoProductId": "pdt_0NnuvFp04EUIOlEuwI8B7",
+      "tagline": "Modern, high-performance Aigeng website template.",
+      "description": "Premium AI SaaS startup Webflow template for founders and product teams. CMS blog, pricing page, features, and conversion-ready layouts. Best Webflow template for AI SaaS, AI agent, startup, and tech product launch.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aigeng.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Posts Mastering Real Time Collaboration For Modern Teams",
+              "path": "/blog-posts_mastering-real-time-collaboration-for-modern-teams/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aigentflow-website-template",
+      "name": "AigentFlow",
+      "slug": "aigentflow-website-template",
+      "dodoProductId": "pdt_0NnuvKkRSx0ffW6h0Q30M",
+      "tagline": "Modern, high-performance AigentFlow website template.",
+      "description": "AigentFlow suits for AI, agency, SaaS, startup, dashboard, digital marketing, IT service, SEO, software, automation, AI generator, technology, robotics, chatbot, cybersecurity, machine learning, web & app development, freelancer websites.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aigentflow.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aiken-app-website-template",
+      "name": "Aiken",
+      "slug": "aiken-app-website-template",
+      "dodoProductId": "pdt_0NnuvPD2exzykCgz0wqO1",
+      "tagline": "Modern, high-performance Aiken website template.",
+      "description": "Aiken, our Webflow template for AI-powered image generation. This cutting-edge template is perfect for people looking to create a website that utilizes the latest advancements in artificial intelligence to generate unique and captivating images.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiken-app.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Template Change Log",
+              "path": "/template_change-log/",
+              "desc": "Dedicated Template Change Log page with responsive components."
+          },
+          {
+              "name": "Template Instructions",
+              "path": "/template_instructions/",
+              "desc": "Dedicated Template Instructions page with responsive components."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aiko-portfolio-website-template",
+      "name": "Aiko",
+      "slug": "aiko-portfolio-website-template",
+      "dodoProductId": "pdt_0NnuvTaEQVf0t3Lq6fTt9",
+      "tagline": "Modern, high-performance Aiko website template.",
+      "description": "Aiko is a minimal & modern Portfolio Webflow Template perfectly suited for freelancers, designers, web designers, Webflow developers, agencies or your personal portfolio. It comes with advanced interactions, CMS and Ecommerce integration.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiko-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Ylva",
+              "path": "/work_ylva/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aikol-saas-website-template",
+      "name": "Aikol",
+      "slug": "aikol-saas-website-template",
+      "dodoProductId": "pdt_0NnuvY6qv5I0gixb9YNDi",
+      "tagline": "Modern, high-performance Aikol website template.",
+      "description": "Aikol, a sleek website webflow template meticulously tailored with a keen focus on SaaS and Startup endeavors, provides the perfect digital canvas for your companies eager to showcase your flagship products or services.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aikol-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "ailoom-website-template",
+      "name": "Ailoom",
+      "slug": "ailoom-website-template",
+      "dodoProductId": "pdt_0NnuvddKvf7uHP7LjWZtr",
+      "tagline": "Modern, high-performance Ailoom website template.",
+      "description": "Ailoom is an AI SaaS Webflow template for startups and tech products. Showcase features, integrations, pricing, blogs, and demo flows with a modern, conversion-focused design built for growth.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ailoom.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Book A Demo",
+              "path": "/book-a-demo/",
+              "desc": "Dedicated Book A Demo page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          },
+          {
+              "name": "Legal",
+              "path": "/legal/",
+              "desc": "Dedicated Legal page with responsive components."
+          },
+          {
+              "name": "Templates License",
+              "path": "/templates_license/",
+              "desc": "Dedicated Templates License page with responsive components."
+          },
+          {
+              "name": "Templates Style Guide",
+              "path": "/templates_style-guide/",
+              "desc": "Dedicated Templates Style Guide page with responsive components."
+          },
+          {
+              "name": "Waitlist",
+              "path": "/waitlist/",
+              "desc": "Dedicated Waitlist page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ailoq-website-template",
+      "name": "Ailoq",
+      "slug": "ailoq-website-template",
+      "dodoProductId": "pdt_0NnuvgEX2S31N1fbXzjlR",
+      "tagline": "Modern, high-performance Ailoq website template.",
+      "description": "Discover our Ailoq Webflow Template for AI startups. Elevate your online presence and effortlessly showcase Artificial Intelligence SaaS solutions. Unleash your AI startup's potential with our unique page AI website template.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ailoq.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Aricles Navigating A Complex Landscape",
+              "path": "/aricles_navigating-a-complex-landscape/",
+              "desc": "Dedicated Aricles Navigating A Complex Landscape page with responsive components."
+          },
+          {
+              "name": "Aricles New Era Of Personalized Experiences",
+              "path": "/aricles_new-era-of-personalized-experiences/",
+              "desc": "Dedicated Aricles New Era Of Personalized Experiences page with responsive components."
+          },
+          {
+              "name": "Aricles The Future Of Business",
+              "path": "/aricles_the-future-of-business/",
+              "desc": "Dedicated Aricles The Future Of Business page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Templates Info License",
+              "path": "/templates-info_license/",
+              "desc": "Dedicated Templates Info License page with responsive components."
+          },
+          {
+              "name": "Waitlyst",
+              "path": "/waitlyst/",
+              "desc": "Dedicated Waitlyst page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aione-one-page-website-template",
+      "name": "Ai One",
+      "slug": "aione-one-page-website-template",
+      "dodoProductId": "pdt_0NnuvkiL2LfpHUgIX2YjB",
+      "tagline": "Modern, high-performance Ai One website template.",
+      "description": "Discover our Ai One Page Webflow Template for AI startups. Elevate your online presence and effortlessly showcase Artificial Intelligence SaaS solutions. Unleash your AI startup's potential with our unique one-page AI website template.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aione-one-page.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utility Pages Instruction",
+              "path": "/utility-pages_instruction/",
+              "desc": "Dedicated Utility Pages Instruction page with responsive components."
+          },
+          {
+              "name": "Utility Pages License",
+              "path": "/utility-pages_license/",
+              "desc": "Dedicated Utility Pages License page with responsive components."
+          },
+          {
+              "name": "Utility Pages Style Guide",
+              "path": "/utility-pages_style-guide/",
+              "desc": "Dedicated Utility Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aipromax-website-template",
+      "name": "MonoAI",
+      "slug": "aipromax-website-template",
+      "dodoProductId": "pdt_0Nnuvp9DgI9ir2kD5dXGh",
+      "tagline": "Modern, high-performance MonoAI website template.",
+      "description": "MonoAI is a modern, high-converting Webflow template perfectly crafted for AI SaaS companies, productivity apps, and technology startups. It features a clean, professional design focused on showcasing AI tools for workflow automation.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aipromax.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blogs Top 10 Ai Tools To Boost Workplace Productivity In 2025",
+              "path": "/blogs_top-10-ai-tools-to-boost-workplace-productivity-in-2025/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team Darlene Robertson",
+              "path": "/team_darlene-robertson/",
+              "desc": "Dedicated Team Darlene Robertson page with responsive components."
+          },
+          {
+              "name": "Team Eleanor Pena",
+              "path": "/team_eleanor-pena/",
+              "desc": "Dedicated Team Eleanor Pena page with responsive components."
+          },
+          {
+              "name": "Team Robert Fox",
+              "path": "/team_robert-fox/",
+              "desc": "Dedicated Team Robert Fox page with responsive components."
+          },
+          {
+              "name": "Team Theresa Webb",
+              "path": "/team_theresa-webb/",
+              "desc": "Dedicated Team Theresa Webb page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aiq-recruitment-website-template",
+      "name": "AIQ",
+      "slug": "aiq-recruitment-website-template",
+      "dodoProductId": "pdt_0Nnuvz9pKKE8L10RF8ezP",
+      "tagline": "Modern, high-performance AIQ website template.",
+      "description": "Introducing AIQ, the HR website template!  Craft your brand, showcase solutions, and attract talent. Sleek design & engaging content captivate visitors. Dynamic features leave a lasting impression. Build your perfect HR website effortlessly.",
+      "framework": "astro",
+      "category": "hr-and-hiring",
+      "categories": [
+          "hr-and-hiring"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiq-recruitment.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aiqextend-recruitment-website-template",
+      "name": "AIQ Extend",
+      "slug": "aiqextend-recruitment-website-template",
+      "dodoProductId": "pdt_0Nnuw4pWTfsmkOHEfXsH4",
+      "tagline": "Modern, high-performance AIQ Extend website template.",
+      "description": "Introducing AIQ Extend, the HR website template! Craft your brand, showcase solutions, and attract talent. Sleek design & engaging content captivate visitors. Dynamic features leave a lasting impression. Build your perfect HR website.",
+      "framework": "astro",
+      "category": "hr-and-hiring",
+      "categories": [
+          "hr-and-hiring"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiqextend-recruitment.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Careers Computer Vision Engineer",
+              "path": "/careers_computer-vision-engineer/",
+              "desc": "Dedicated Careers Computer Vision Engineer page with responsive components."
+          },
+          {
+              "name": "Careers Data Scientists Quash",
+              "path": "/careers_data-scientists-quash/",
+              "desc": "Dedicated Careers Data Scientists Quash page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "air-conditioning-small-business-website-template",
+      "name": "Air Conditioning 128",
+      "slug": "air-conditioning-small-business-website-template",
+      "dodoProductId": "pdt_0Nnuw9X9u4C6oLDjLW6Y7",
+      "tagline": "Modern, high-performance Air Conditioning 128 website template.",
+      "description": "Air Conditioning 128 is a professional website Webflow template for air conditioning and heating websites. It suits perfectly for ac service, air cooling, conditioner repair, home repair, heat pump, heating, heating company, ventilation, air supply.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://air-conditioning-small-business.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Testimonials",
+              "path": "/testimonials/",
+              "desc": "Dedicated Testimonials page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airbase-x-website-template",
+      "name": "AirBase X",
+      "slug": "airbase-x-website-template",
+      "dodoProductId": "pdt_0NnuwDo04b2e4doczSzf9",
+      "tagline": "Modern, high-performance AirBase X website template.",
+      "description": "AirBaseX is a modern Webflow template for app marketing and SaaS companies. Featuring 26+ pages, sleek animations, Finsweet Client First naming, and a free Figma file, it ensures exceptional customization, performance, and responsive design.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://airbase-x.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Feature Advanced App Analytics",
+              "path": "/feature_advanced-app-analytics/",
+              "desc": "Dedicated Feature Advanced App Analytics page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Login",
+              "path": "/login/",
+              "desc": "Dedicated Login page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "airbrick-website-template",
+      "name": "Airbrick",
+      "slug": "airbrick-website-template",
+      "dodoProductId": "pdt_0NnuwGM1lzgBRgz1RGWgo",
+      "tagline": "Modern, high-performance Airbrick website template.",
+      "description": "Airbrick is a high-converting real estate Webflow template crafted to showcase properties and architectural projects with clarity and elegance. Designed for architects, and developers, it combines modern aesthetics with flexible customization.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airbrick.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Agents",
+              "path": "/agents/",
+              "desc": "Dedicated Agents page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Properties",
+              "path": "/properties/",
+              "desc": "Dedicated Properties page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airbuild-website-template",
+      "name": "AirBuild",
+      "slug": "airbuild-website-template",
+      "dodoProductId": "pdt_0NnuwKyn3B6K6PdGChMij",
+      "tagline": "Modern, high-performance AirBuild website template.",
+      "description": "AirBuild is a Webflow template made for SaaS companies offering website builder platforms. It helps startups showcase features, pricing, and customer success stories with a fast and professional design.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airbuild.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Login",
+              "path": "/login/",
+              "desc": "Dedicated Login page with responsive components."
+          },
+          {
+              "name": "Post Top 10 Ai Powered Website Builders For 2024 2",
+              "path": "/post_top-10-ai-powered-website-builders-for-2024-2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aircanvas-website-template",
+      "name": "AirCanvas",
+      "slug": "aircanvas-website-template",
+      "dodoProductId": "pdt_0NnuwPUq2P67eu41W8ahr",
+      "tagline": "Modern, high-performance AirCanvas website template.",
+      "description": "AirCanvas is a flexible Webflow portfolio template with multiple layouts for Home, Works, and Blog. Perfect for agencies and creatives, it includes all essential pages to showcase projects, services, and insights.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 169,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aircanvas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Lightcraft",
+              "path": "/project_lightcraft/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Resources",
+              "path": "/resources/",
+              "desc": "Dedicated Resources page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works V1",
+              "path": "/works-v1/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aircare-hospital-website-template",
+      "name": "AirCare",
+      "slug": "aircare-hospital-website-template",
+      "dodoProductId": "pdt_0NnuwTzClZEU7Qmmjbd61",
+      "tagline": "Modern, high-performance AirCare website template.",
+      "description": "AirCare is a versatile Webflow e-commerce template tailored for medical and healthcare services. It features over 34 pages and 100 customizable sections, including appointment and service sections, ensuring a professional user experience.",
+      "framework": "astro",
+      "category": "medical",
+      "categories": [
+          "medical"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aircare-hospital.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Us Version 1",
+              "path": "/contact-us-version-1/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Version 1",
+              "path": "/home-version-1/",
+              "desc": "Dedicated Home Version 1 page with responsive components."
+          },
+          {
+              "name": "Home Version 2",
+              "path": "/home-version-2/",
+              "desc": "Dedicated Home Version 2 page with responsive components."
+          },
+          {
+              "name": "Home Version 3",
+              "path": "/home-version-3/",
+              "desc": "Dedicated Home Version 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airco-x-website-template",
+      "name": "AirCo X",
+      "slug": "airco-x-website-template",
+      "dodoProductId": "pdt_0NnuwZrgOBfehlqIcPDzl",
+      "tagline": "Modern, high-performance AirCo X website template.",
+      "description": "AirCo is a modern Webflow template for sustainability and eco\u2011focused businesses, featuring responsive layouts, service pages, pricing tables, testimonials, and blog integration to help you launch with impact.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airco-x.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Sustainability Consulting",
+              "path": "/services_sustainability-consulting/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Sustainable Cities Smart Living",
+              "path": "/services_sustainable-cities-smart-living/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aircode-website-template",
+      "name": "AirCode",
+      "slug": "aircode-website-template",
+      "dodoProductId": "pdt_0NnuweMY7t37ZECLwUW0h",
+      "tagline": "Modern, high-performance AirCode website template.",
+      "description": "AirCode is a versatile Webflow template for SaaS startups and tech companies. Featuring 25+ pages, sleek animations, Finsweet Client First naming, and a free Figma file, it offers unmatched performance, customization, and modern design excellence.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aircode.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Documentation",
+              "path": "/documentation/",
+              "desc": "Dedicated Documentation page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          },
+          {
+              "name": "Utility Pages Instructions",
+              "path": "/utility-pages_instructions/",
+              "desc": "Dedicated Utility Pages Instructions page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aircoin-website-template",
+      "name": "AirCoin",
+      "slug": "aircoin-website-template",
+      "dodoProductId": "pdt_0Nnuwk6OtVGqA3Ku6mT9w",
+      "tagline": "Modern, high-performance AirCoin website template.",
+      "description": "AirCoin is a modern Web3 Webflow template with 20 ready\u2011to\u2011use pages. It is perfect for crypto, finance, or tech projects. With smooth animations, bold layouts, and interactive design, AirCoin helps you show your brand in a professional way.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aircoin.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Customers",
+              "path": "/customers/",
+              "desc": "Dedicated Customers page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Product",
+              "path": "/product/",
+              "desc": "Dedicated Product page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aircraft-agency-website-template",
+      "name": "AirCraft",
+      "slug": "aircraft-agency-website-template",
+      "dodoProductId": "pdt_0NnuwpC8dBfTJQyUV7KPw",
+      "tagline": "Modern, high-performance AirCraft website template.",
+      "description": "Welcome aboard AirCraft. With over 19 pages, showcase your agency's portfolio, story, and more. Easy customization and sleek animations await.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aircraft-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services 3D Animation",
+              "path": "/services_3d-animation/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Digital Marketing",
+              "path": "/services_digital-marketing/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aircrypto-finance-website-template",
+      "name": "AirCrypto",
+      "slug": "aircrypto-finance-website-template",
+      "dodoProductId": "pdt_0NnuwtneoAVuGqb89yKFE",
+      "tagline": "Modern, high-performance AirCrypto website template.",
+      "description": "AirCrypto is a modern Web3 SaaS template with 30+ pages, including multiple homepages, blogs, and contact page layouts. Built for easy customization using Finsweet\u2019s Client First system, it offers sleek animations and interactive design.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aircrypto-finance.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Version 2",
+              "path": "/home-version-2/",
+              "desc": "Dedicated Home Version 2 page with responsive components."
+          },
+          {
+              "name": "Home Version 3",
+              "path": "/home-version-3/",
+              "desc": "Dedicated Home Version 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration Bitcoin",
+              "path": "/integration_bitcoin/",
+              "desc": "Dedicated Integration Bitcoin page with responsive components."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airdent-website-template",
+      "name": "AirOral",
+      "slug": "airdent-website-template",
+      "dodoProductId": "pdt_0NnuwyFIJtzrfcvfXunEM",
+      "tagline": "Modern, high-performance AirOral website template.",
+      "description": "A modern Webflow template for dental and medical websites, built with reusable components, smooth GSAP animations, and industry-standard best practices. Easy to customize, responsive, and perfect for showcasing services and team members.",
+      "framework": "astro",
+      "category": "medical",
+      "categories": [
+          "medical"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airdent.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Dentist",
+              "path": "/dentist/",
+              "desc": "Dedicated Dentist page with responsive components."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airdish-website-template",
+      "name": "AirDish",
+      "slug": "airdish-website-template",
+      "dodoProductId": "pdt_0Nnux2bDWNskKPQBXFUIw",
+      "tagline": "Modern, high-performance AirDish website template.",
+      "description": "A modern Webflow template for restaurants, cafes, and food businesses. Built with reusable components, smooth GSAP animations, and industry\u2011standard best practices for easy customization.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airdish.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Menu",
+              "path": "/menu/",
+              "desc": "Dedicated Menu page with responsive components."
+          },
+          {
+              "name": "Menu Classic Spaghetti Bolognese",
+              "path": "/menu_classic-spaghetti-bolognese/",
+              "desc": "Dedicated Menu Classic Spaghetti Bolognese page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airdoc-website-template",
+      "name": "AirDoc",
+      "slug": "airdoc-website-template",
+      "dodoProductId": "pdt_0Nnux7HdQn42DKi9YpoTd",
+      "tagline": "Modern, high-performance AirDoc website template.",
+      "description": "A clean and professional Webflow template for doctors, clinics, and healthcare providers. Built with reusable components, smooth GSAP animations, and industry-standard best practices for easy customization.",
+      "framework": "astro",
+      "category": "medical",
+      "categories": [
+          "medical"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airdoc.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog How To Protect Your Finances Online Security Tips For Every User 2",
+              "path": "/blog_how-to-protect-your-finances-online-security-tips-for-every-user-2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airedge-website-template",
+      "name": "AirEdge",
+      "slug": "airedge-website-template",
+      "dodoProductId": "pdt_0NnuxBgWCju8baqhyA2ES",
+      "tagline": "Modern, high-performance AirEdge website template.",
+      "description": "AirEdge is a sleek, responsive Webflow template designed for airport transportation services. With modern features and an intuitive layout, it helps businesses offer seamless booking experiences, showcase services, and connect with customers.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airedge.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Priority Boarding Access",
+              "path": "/service_priority-boarding-access/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airestate-real-estate-website-template",
+      "name": "AirEstate",
+      "slug": "airestate-real-estate-website-template",
+      "dodoProductId": "pdt_0NnuxG0jcVIjJChWl75CE",
+      "tagline": "Modern, high-performance AirEstate website template.",
+      "description": "Stand out with AirEstate - a beautiful Webflow template for real estate. 35+ pages including 2 homepages. Sleek animations engage visitors. Customize easily with Finsweet naming system. Attracts clients for boutique or major real estate brands.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airestate-real-estate.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Properties",
+              "path": "/properties/",
+              "desc": "Dedicated Properties page with responsive components."
+          },
+          {
+              "name": "Rent",
+              "path": "/rent/",
+              "desc": "Dedicated Rent page with responsive components."
+          },
+          {
+              "name": "Sell",
+              "path": "/sell/",
+              "desc": "Dedicated Sell page with responsive components."
+          },
+          {
+              "name": "Team Guy Hawkins",
+              "path": "/team_guy-hawkins/",
+              "desc": "Dedicated Team Guy Hawkins page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airevoke-saas-website-template",
+      "name": "AirEvoke",
+      "slug": "airevoke-saas-website-template",
+      "dodoProductId": "pdt_0NnuxKh3RPpxb4GrhzXXH",
+      "tagline": "Modern, high-performance AirEvoke website template.",
+      "description": "Meet AirEvoke \u2013 your new favorite SaaS Webflow template for kickass marketing websites. From industry showcases to product promotions, AirEvoke blends style and functionality seamlessly. Elevate your online game effortlessly.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airevoke-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Product",
+              "path": "/product/",
+              "desc": "Dedicated Product page with responsive components."
+          },
+          {
+              "name": "Team Jacob Jones",
+              "path": "/team_jacob-jones/",
+              "desc": "Dedicated Team Jacob Jones page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airexplorex-tourism-website-template",
+      "name": "AirExploreX",
+      "slug": "airexplorex-tourism-website-template",
+      "dodoProductId": "pdt_0NnuxQ1KUeoobgf8Hgauj",
+      "tagline": "Modern, high-performance AirExploreX website template.",
+      "description": "AirExploreX is a stunning Webflow template designed exclusively for travel enthusiasts. Whether you're a travel agency, a tour operator, or a travel blogger, AirExploreX provides the perfect platform to showcase your adventures.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airexplorex-tourism.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "All Tour",
+              "path": "/all-tour/",
+              "desc": "Dedicated All Tour page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Destination",
+              "path": "/destination/",
+              "desc": "Dedicated Destination page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "airfalah-religion-website-template",
+      "name": "AirFalah",
+      "slug": "airfalah-religion-website-template",
+      "dodoProductId": "pdt_0NnuxUx3HBkEIeM0t4D5W",
+      "tagline": "Modern, high-performance AirFalah website template.",
+      "description": "Explore AirFalah, a captivating Webflow template for donations, charity, events. With sleek animations and 18+ pages, customize effortlessly using Client First class naming.",
+      "framework": "astro",
+      "category": "community-and-nonprofit",
+      "categories": [
+          "community-and-nonprofit"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airfalah-religion.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Events",
+              "path": "/events/",
+              "desc": "Dedicated Events page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Product Climate Change",
+              "path": "/product_climate-change/",
+              "desc": "Dedicated Product Climate Change page with responsive components."
+          },
+          {
+              "name": "Team Savannah Nguyen",
+              "path": "/team_savannah-nguyen/",
+              "desc": "Dedicated Team Savannah Nguyen page with responsive components."
+          },
+          {
+              "name": "Zakat",
+              "path": "/zakat/",
+              "desc": "Dedicated Zakat page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airfintech-finance-website-template",
+      "name": "AirFintech",
+      "slug": "airfintech-finance-website-template",
+      "dodoProductId": "pdt_0NnuxZQftMpqXhO3CBUQ9",
+      "tagline": "Modern, high-performance AirFintech website template.",
+      "description": "Discover AirFintech, the ultimate Webflow template for fintech startups. Craft a sleek website for Cryptocurrency, DeFi, Blockchain, and Finance industries.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airfintech-finance.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airfloow-website-template",
+      "name": "Airfloow",
+      "slug": "airfloow-website-template",
+      "dodoProductId": "pdt_0Nnuxc0IZvy6vhd0Gn7WM",
+      "tagline": "Modern, high-performance Airfloow website template.",
+      "description": "Airflow is a clean, professional HVAC & Air Conditioning Services Webflow template built for cooling and heating businesses. Featuring service, blog, booking & more \u2014 designed to generate leads and build local service trust.",
+      "framework": "astro",
+      "category": "travel",
+      "categories": [
+          "travel"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airfloow.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog 5 Signs Your Hvac System Needs Professional Repair",
+              "path": "/blog_5-signs-your-hvac-system-needs-professional-repair/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Air Conditioning Installation",
+              "path": "/services_air-conditioning-installation/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airfolio-portfolio-website-template",
+      "name": "AirFolio",
+      "slug": "airfolio-portfolio-website-template",
+      "dodoProductId": "pdt_0NnuxgM9Eu1oP8ifgEkIs",
+      "tagline": "Modern, high-performance AirFolio website template.",
+      "description": "Craft your online identity with AirFolio, the go-to portfolio for designers, developers, marketers, photographers, and creatives. Make an impact effortlessly.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airfolio-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Product",
+              "path": "/product/",
+              "desc": "Dedicated Product page with responsive components."
+          },
+          {
+              "name": "Product Pixel 5 Mockups",
+              "path": "/product_pixel-5-mockups/",
+              "desc": "Dedicated Product Pixel 5 Mockups page with responsive components."
+          },
+          {
+              "name": "Project Airtech Saas Website Template",
+              "path": "/project_airtech-saas-website-template/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "airfund-x-website-template",
+      "name": "AirFund X",
+      "slug": "airfund-x-website-template",
+      "dodoProductId": "pdt_0NnuxkqNf4jNn3K2cjhhl",
+      "tagline": "Modern, high-performance AirFund X website template.",
+      "description": "AirFund X is a modern Webflow template for startups, finance, and AI. With 35+ pages, 3 Home, About, Pricing options, clean design, and smooth animations, it\u2019s perfect for a professional website.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airfund-x.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Version 1",
+              "path": "/about-version-1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Version 2",
+              "path": "/about-version-2/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Version 2",
+              "path": "/home-version-2/",
+              "desc": "Dedicated Home Version 2 page with responsive components."
+          },
+          {
+              "name": "Home Version 3",
+              "path": "/home-version-3/",
+              "desc": "Dedicated Home Version 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "airfz-small-business-website-template",
+      "name": "Air FZ",
+      "slug": "airfz-small-business-website-template",
+      "dodoProductId": "pdt_0Nnuxps7dH4tSbvSRqeIg",
+      "tagline": "Modern, high-performance Air FZ website template.",
+      "description": "Air FZ is a premium Webflow template designed for air conditioning and heating services. Featuring a clean, modern design, this template is perfect for showcasing your services, team, and projects in a professional and engaging way.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airfz-small-business.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Post 5 Simple Tips To Improve Your Indoor Air Quality",
+              "path": "/blog-post_5-simple-tips-to-improve-your-indoor-air-quality/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs Articles",
+              "path": "/blogs-articles/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airgro-website-template",
+      "name": "AirGro",
+      "slug": "airgro-website-template",
+      "dodoProductId": "pdt_0NnuxuhpAfuIrT0fM6rNV",
+      "tagline": "Modern, high-performance AirGro website template.",
+      "description": "Airgro is a modern Webflow template for farms, agribusinesses, and sustainability-focused brands, built to showcase your produce, share your process, and turn visitors into buyers and partners with a clean, natural design.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airgro.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airinvest-website-template",
+      "name": "AirInvest",
+      "slug": "airinvest-website-template",
+      "dodoProductId": "pdt_0NnuxzUxKSNY6SU2QUDVE",
+      "tagline": "Modern, high-performance AirInvest website template.",
+      "description": "AirInvest is a sleek Webflow template for investment firms. It offers 35+ pages, 3 homepages, 3 investor, and 3 blog variations. Built with Finsweet\u2019s Client First system, it's easy to customize and includes a free Figma file.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airinvest.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Version 2",
+              "path": "/home-version-2/",
+              "desc": "Dedicated Home Version 2 page with responsive components."
+          },
+          {
+              "name": "Home Version 3",
+              "path": "/home-version-3/",
+              "desc": "Dedicated Home Version 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Investors Version 1",
+              "path": "/investors-version-1/",
+              "desc": "Dedicated Investors Version 1 page with responsive components."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Team Corey Dokidis",
+              "path": "/team_corey-dokidis/",
+              "desc": "Dedicated Team Corey Dokidis page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airlift-website-template",
+      "name": "AirLift",
+      "slug": "airlift-website-template",
+      "dodoProductId": "pdt_0Nnuy3vvIf7BewUQ3fdkI",
+      "tagline": "Modern, high-performance AirLift website template.",
+      "description": "AirLift is a premium Webflow template for design studios and creative agencies, built to showcase portfolios, services, and case studies with a modern, professional aesthetic.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airlift.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Modern Agency Templates 2",
+              "path": "/work_modern-agency-templates-2/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Revamping Techcos Website 2",
+              "path": "/work_revamping-techcos-website-2/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "airlink-startup-website-template",
+      "name": "AirLink",
+      "slug": "airlink-startup-website-template",
+      "dodoProductId": "pdt_0Nnuy8FHp4hw7UtpSrsmp",
+      "tagline": "Modern, high-performance AirLink website template.",
+      "description": "Introducing AirLink - the sleek, customizable Webflow template for SaaS in Finance, Startups, Tech, Software & Apps. 30+ animated pages offer modern engagement. Built with Finsweet naming for seamless customization.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airlink-startup.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Features Account Management",
+              "path": "/features_account-management/",
+              "desc": "Dedicated Features Account Management page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Utility Pages Demo",
+              "path": "/utility-pages_demo/",
+              "desc": "Dedicated Utility Pages Demo page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airloop-website-template",
+      "name": "Airloop",
+      "slug": "airloop-website-template",
+      "dodoProductId": "pdt_0NnuyCyJOvhIIvKhGRpNC",
+      "tagline": "Modern, high-performance Airloop website template.",
+      "description": "Airloom \u2014 A modern website template for design, development, and digital marketing agencies. Featuring customizable sections and responsive layouts, it helps agencies showcase their services and stand out in a competitive market.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airloop.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airmentors-website-template",
+      "name": "AirMentor",
+      "slug": "airmentors-website-template",
+      "dodoProductId": "pdt_0NnuyI3G2cJYaMMz0RKDL",
+      "tagline": "Modern, high-performance AirMentor website template.",
+      "description": "AirMentor is a sleek and modern Webflow landing and Marketing Site template for AI tools and SaaS platforms. Perfect for AI sales agents, automation tools, and tech startups. Easy to edit and built to convert visitors into customers.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airmentors.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "airmin-retail-website-template",
+      "name": "Airmin",
+      "slug": "airmin-retail-website-template",
+      "dodoProductId": "pdt_0NnuyN3x2yhYbiGbDqqsF",
+      "tagline": "Modern, high-performance Airmin website template.",
+      "description": "A minimalist online store Webflow template exclusively designed for single-product shops or e-commerce stores with a small inventory. Perfect for those seeking a minimalist e-commerce website.",
+      "framework": "astro",
+      "category": "retail-and-e-commerce",
+      "categories": [
+          "retail-and-e-commerce"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airmin-retail.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faqs",
+              "path": "/faqs/",
+              "desc": "Dedicated Faqs page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airnexa-website-template",
+      "name": "AirNexa",
+      "slug": "airnexa-website-template",
+      "dodoProductId": "pdt_0NnuyS8NyEGnzCxNCnd19",
+      "tagline": "Modern, high-performance AirNexa website template.",
+      "description": "Launch your Fintech or SaaS site fast with AirNexa. This clean Webflow template is fully responsive and easy to edit. It features a CMS blog and a global Style Guide to help your tech brand look professional on every screen.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airnexa.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post How Real Time Analytics Can Transform Your Money Strategy 2",
+              "path": "/post_how-real-time-analytics-can-transform-your-money-strategy-2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post Simplify And Empower Your Financial Management With Mezgo",
+              "path": "/post_simplify-and-empower-your-financial-management-with-mezgo/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Resources",
+              "path": "/resources/",
+              "desc": "Dedicated Resources page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airnova-technology-website-template",
+      "name": "AirNova",
+      "slug": "airnova-technology-website-template",
+      "dodoProductId": "pdt_0NnuyWZtuONN6B4u5p7SR",
+      "tagline": "Modern, high-performance AirNova website template.",
+      "description": "Introducing AirNova, the ultimate Marketing SaaS template for Banking, Finance, Startups, Tech, Software, and Apps. With 38+ pages and dual variations, it's your ticket to online success.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airnova-technology.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About V1",
+              "path": "/about_about-v1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About About V2",
+              "path": "/about_about-v2/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Blog V1",
+              "path": "/blog_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "airnur-learning-website-template",
+      "name": "AirNur",
+      "slug": "airnur-learning-website-template",
+      "dodoProductId": "pdt_0NnuyatNHDZrZm4RmjBCx",
+      "tagline": "Modern, high-performance AirNur website template.",
+      "description": "AirNur is a Webflow template for online education. Includes 16+ sleek pages like Home, Courses, and Blog. Customize effortlessly with Finsweet's Client First naming convention and enjoy engaging animations.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airnur-learning.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Categories",
+              "path": "/categories/",
+              "desc": "Dedicated Categories page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Courses",
+              "path": "/courses/",
+              "desc": "Dedicated Courses page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team Cody Fisher",
+              "path": "/team_cody-fisher/",
+              "desc": "Dedicated Team Cody Fisher page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airpay-website-template",
+      "name": "AirPay",
+      "slug": "airpay-website-template",
+      "dodoProductId": "pdt_0NnuynudCQMJeu1MLlrBE",
+      "tagline": "Modern, high-performance AirPay website template.",
+      "description": "AirPay is a multi-layout SaaS Webflow template with 3 homepages, 3 about pages, 3 contact pages, and more. Perfect for fintech, startups, and digital payment platforms. Includes a free Figma file with purchase.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airpay.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About V1",
+              "path": "/about-v1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About V2",
+              "path": "/about-v2/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "airpix-agency-website-template",
+      "name": "AirPix",
+      "slug": "airpix-agency-website-template",
+      "dodoProductId": "pdt_0Nnuys2y3dzkWtIhqhHMg",
+      "tagline": "Modern, high-performance AirPix website template.",
+      "description": "AirPix by AirDokan is a versatile agency template with multiple pages and 3 variations for home, blog, and contact pages. It\u2019s easy to customize with Finsweet Client First naming and features sleek animations for an engaging, dynamic experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airpix-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team Jacob Jones",
+              "path": "/team_jacob-jones/",
+              "desc": "Dedicated Team Jacob Jones page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airpixel-website-template",
+      "name": "AirPixel",
+      "slug": "airpixel-website-template",
+      "dodoProductId": "pdt_0NnuywK8bd9yMUPnGWPSs",
+      "tagline": "Modern, high-performance AirPixel website template.",
+      "description": "AirPixel is a modern Webflow template for design studios and creative teams. It helps you show your portfolio, services, and case studies with a clean and thoughtful layout.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airpixel.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Aether    Modern Branding Ui Web Design 3",
+              "path": "/project_aether----modern-branding-ui-web-design-3/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Airpixel    Brand Strategy Guidelines 3",
+              "path": "/project_airpixel----brand-strategy-guidelines-3/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Visura    Website Design Brand Refresh 3",
+              "path": "/project_visura----website-design-brand-refresh-3/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "airplace-website-template",
+      "name": "AirPlace",
+      "slug": "airplace-website-template",
+      "dodoProductId": "pdt_0NnuyzDu4m7kTsV18uLEr",
+      "tagline": "Modern, high-performance AirPlace website template.",
+      "description": "Airplace is a modern Webflow template for architecture firms, interior design studios, and property developers, built to showcase your projects, present your expertise, and turn visitors into clients with a refined, editorial design.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airplace.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Interior Design",
+              "path": "/services_interior-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airstead-website-template",
+      "name": "Airstead",
+      "slug": "airstead-website-template",
+      "dodoProductId": "pdt_0Nnuz1j5khJ1kyPRCAdMo",
+      "tagline": "Modern, high-performance Airstead website template.",
+      "description": "Airstead is a modern HVAC Webflow template designed for heating, cooling, ventilation, air conditioning, repair, maintenance, and home service businesses. Featuring a clean design, CMS-powered blog, and conversion-focused layouts, it helps HVAC compa",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airstead.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Info Licenses",
+              "path": "/info_licenses/",
+              "desc": "Dedicated Info Licenses page with responsive components."
+          },
+          {
+              "name": "Info Style Guide",
+              "path": "/info_style-guide/",
+              "desc": "Dedicated Info Style Guide page with responsive components."
+          },
+          {
+              "name": "Post Common Hvac Problems",
+              "path": "/post_common-hvac-problems/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post Hvac Installation Guide",
+              "path": "/post_hvac-installation-guide/",
+              "desc": "Editorial articles, news, and insights."
+          }
+      ]
+  },
+  {
+      "id": "airstudio-website-template",
+      "name": "AirStudio",
+      "slug": "airstudio-website-template",
+      "dodoProductId": "pdt_0Nnuz6kuFQ18Xtf23S8WW",
+      "tagline": "Modern, high-performance AirStudio website template.",
+      "description": "AirStudio: Modern, bold Webflow template for creative agencies. Features 3 page variations, smooth animations, CMS integration, and a dark theme. Easy to customize with included Figma file. Responsive design and quick support.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airstudio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog V1",
+              "path": "/blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airsuite-website-template",
+      "name": "AirSuite",
+      "slug": "airsuite-website-template",
+      "dodoProductId": "pdt_0NnuzBcO66hcadV7qp7ax",
+      "tagline": "Modern, high-performance AirSuite website template.",
+      "description": "AirSuite is a Webflow template made for finance SaaS and app marketing websites. It helps startups and software companies present features, pricing, and customer stories with a fast and professional design.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airsuite.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post How Real Time Analytics Can Transform Your Money Strategy 2",
+              "path": "/post_how-real-time-analytics-can-transform-your-money-strategy-2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "airswift-saas-website-template",
+      "name": "AirSwift",
+      "slug": "airswift-saas-website-template",
+      "dodoProductId": "pdt_0NnuzGR2g1ScKCduN3Eqf",
+      "tagline": "Modern, high-performance AirSwift website template.",
+      "description": "AirSwift is a dynamic Webflow template for Fintech and SaaS. With 35+ pages, 60+ sections, and 2 homepage variations, it's your all-in-one solution for Banking, Software, Technology, Marketing, Startup, Investment, and eCommerce excellence.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airswift-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home V1",
+              "path": "/home-v1/",
+              "desc": "Dedicated Home V1 page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Team Kathryn Murphy",
+              "path": "/team_kathryn-murphy/",
+              "desc": "Dedicated Team Kathryn Murphy page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airsync-website-template",
+      "name": "AirSync",
+      "slug": "airsync-website-template",
+      "dodoProductId": "pdt_0NnuzMMnXQXwsJ1wjYhBl",
+      "tagline": "Modern, high-performance AirSync website template.",
+      "description": "AirSync is a premium SaaS marketing Webflow template designed to help startups and software companies showcase products, highlight features, and drive conversions with a modern, professional design.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airsync.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post Mastering Data Integration A Comprehensive Guide",
+              "path": "/post_mastering-data-integration-a-comprehensive-guide/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Sign In",
+              "path": "/sign-in/",
+              "desc": "Dedicated Sign In page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airtask-website-template",
+      "name": "AirTask",
+      "slug": "airtask-website-template",
+      "dodoProductId": "pdt_0NnuzQzZYhzmKEcEdZWVL",
+      "tagline": "Modern, high-performance AirTask website template.",
+      "description": "AirTask is a SaaS Webflow template made for task management solutions. It helps remote teams organize projects, track progress, and collaborate in a simple and professional way.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airtask.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home 02",
+              "path": "/home-02/",
+              "desc": "Dedicated Home 02 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing 01",
+              "path": "/pricing-01/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing 02",
+              "path": "/pricing-02/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Sign In",
+              "path": "/sign-in/",
+              "desc": "Dedicated Sign In page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airtech-saas-website-template",
+      "name": "AirTech",
+      "slug": "airtech-saas-website-template",
+      "dodoProductId": "pdt_0NnuzVFkA6BOKfmsXqF8w",
+      "tagline": "Modern, high-performance AirTech website template.",
+      "description": "\u200bAirtech is an easy-to-use Webflow template for your SaaS. It features a clean and modern design, with ample space for showcasing your products or services, as well as highlighting your team, mission, and vision.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airtech-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Forgot Password",
+              "path": "/forgot-password/",
+              "desc": "Dedicated Forgot Password page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Sign In",
+              "path": "/sign-in/",
+              "desc": "Dedicated Sign In page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airtechx-saas-website-template",
+      "name": "AirTech X",
+      "slug": "airtechx-saas-website-template",
+      "dodoProductId": "pdt_0NnuzZjrmLyDKy9DNlRnY",
+      "tagline": "Modern, high-performance AirTech X website template.",
+      "description": "AirWise is the ideal B2B SaaS Webflow template for finance, startups, and tech. With 40+ customizable pages, sleek animations, and Finsweet\u2019s Client First system, it's easy to create an engaging digital presence.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airtechx-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Version 1",
+              "path": "/about-version-1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features Version 1",
+              "path": "/features-version-1/",
+              "desc": "Dedicated Features Version 1 page with responsive components."
+          },
+          {
+              "name": "Home Version 1",
+              "path": "/home-version-1/",
+              "desc": "Dedicated Home Version 1 page with responsive components."
+          },
+          {
+              "name": "Home Version 2",
+              "path": "/home-version-2/",
+              "desc": "Dedicated Home Version 2 page with responsive components."
+          },
+          {
+              "name": "Home Version 3",
+              "path": "/home-version-3/",
+              "desc": "Dedicated Home Version 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "airtelier-website-template",
+      "name": "AirTelier",
+      "slug": "airtelier-website-template",
+      "dodoProductId": "pdt_0Nnuze5qktX7vNxZ7wQNP",
+      "tagline": "Modern, high-performance AirTelier website template.",
+      "description": "AirTelier is a modern Webflow template made for architecture firms. It helps you showcase projects, share services, and present your design style in a professional way.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airtelier.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Insights",
+              "path": "/insights/",
+              "desc": "Dedicated Insights page with responsive components."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Architecture Design",
+              "path": "/services_architecture-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Interior Design",
+              "path": "/services_interior-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airtflo-website-template",
+      "name": "Airtflo",
+      "slug": "airtflo-website-template",
+      "dodoProductId": "pdt_0NnuziX6r59QqhIaG79zb",
+      "tagline": "Modern, high-performance Airtflo website template.",
+      "description": "Our Modern Airtflo Landing Page, a webflow Template that exemplifies  excellence in digital design.This is perfect for designers, developers, photographers, and other creatives, simply displays your work.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://airtflo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Admin License",
+              "path": "/admin_license/",
+              "desc": "Dedicated Admin License page with responsive components."
+          },
+          {
+              "name": "Admin Old Home",
+              "path": "/admin_old-home/",
+              "desc": "Dedicated Admin Old Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "airtide-website-template",
+      "name": "AirTide",
+      "slug": "airtide-website-template",
+      "dodoProductId": "pdt_0Nnuzo0bkbd87DscvhK2F",
+      "tagline": "Modern, high-performance AirTide website template.",
+      "description": "AirTide is a SaaS marketing Webflow template for finance, banking, and tech startups. It features 35+ pages, 3 homepage variations, interactive animations, and a free Figma file and is optimized for customization, performance, and responsiveness.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airtide.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Version 1",
+              "path": "/blog-version-1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Feature Scalable Architecture",
+              "path": "/feature_scalable-architecture/",
+              "desc": "Dedicated Feature Scalable Architecture page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Version 2",
+              "path": "/home-version-2/",
+              "desc": "Dedicated Home Version 2 page with responsive components."
+          },
+          {
+              "name": "Home Version 3",
+              "path": "/home-version-3/",
+              "desc": "Dedicated Home Version 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "airtwist-website-template",
+      "name": "AirTwist",
+      "slug": "airtwist-website-template",
+      "dodoProductId": "pdt_0NnuzsAkPBvPaUK2otky8",
+      "tagline": "Modern, high-performance AirTwist website template.",
+      "description": "AirTwist is a modern Webflow template for startups and software companies. With 36+ pages, 3 Home, Pricing, Contact options, SEO-friendly design, and smooth animations, it\u2019s perfect for data analytics SaaS websites.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airtwist.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Version 2",
+              "path": "/home-version-2/",
+              "desc": "Dedicated Home Version 2 page with responsive components."
+          },
+          {
+              "name": "Home Version 3",
+              "path": "/home-version-3/",
+              "desc": "Dedicated Home Version 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing Version 1",
+              "path": "/pricing-version-1/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing Version 2",
+              "path": "/pricing-version-2/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "airvault-website-template",
+      "name": "AirVault",
+      "slug": "airvault-website-template",
+      "dodoProductId": "pdt_0NnuzwWtxHNqYlSlN1VBo",
+      "tagline": "Modern, high-performance AirVault website template.",
+      "description": "AirVault is a modern Webflow template for IT and SaaS businesses. It features 32+ pages, sleek animations, Client First naming, and a bonus Figma file. It's highly customizable, responsive, and optimized for performance and SEO.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airvault.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Version 1",
+              "path": "/home-version-1/",
+              "desc": "Dedicated Home Version 1 page with responsive components."
+          },
+          {
+              "name": "Home Version 2",
+              "path": "/home-version-2/",
+              "desc": "Dedicated Home Version 2 page with responsive components."
+          },
+          {
+              "name": "Home Version 3",
+              "path": "/home-version-3/",
+              "desc": "Dedicated Home Version 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "airvest-website-template",
+      "name": "AirVest",
+      "slug": "airvest-website-template",
+      "dodoProductId": "pdt_0Nnv00leurmiVlsexCsXK",
+      "tagline": "Modern, high-performance AirVest website template.",
+      "description": "AirVest is a dark crypto trading Webflow template for fintech startups, exchanges, and investment platforms, with two home layouts, pricing, blog, auth pages, legal pages, and conversion sections.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airvest.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Login",
+              "path": "/login/",
+              "desc": "Dedicated Login page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "airvocal-podcast-website-template",
+      "name": "AirVocal",
+      "slug": "airvocal-podcast-website-template",
+      "dodoProductId": "pdt_0Nnv03EZM2hgF6frNVwdL",
+      "tagline": "Modern, high-performance AirVocal website template.",
+      "description": "AirVocal by AirDokan is a sleek and interactive podcast website template featuring over 28+ pages. Built with the industry-standard Finsweet Client First class naming convention, it\u2019s designed for easy customization and adaptability.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airvocal-podcast.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contacts",
+              "path": "/contacts/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Episodes",
+              "path": "/episodes/",
+              "desc": "Dedicated Episodes page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Sign In",
+              "path": "/sign-in/",
+              "desc": "Dedicated Sign In page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "airway-website-template",
+      "name": "AirWay",
+      "slug": "airway-website-template",
+      "dodoProductId": "pdt_0Nnv09V5XXwKBpucEhfM0",
+      "tagline": "Modern, high-performance AirWay website template.",
+      "description": "AirWay is a professional travel agency Webflow template with 2 homepages and 10+ pages for destinations, packages, blogs, and services. Perfect for agencies looking to market tours and attract travelers.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airway.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Destination Stunning View Of Milford Sound",
+              "path": "/destination_stunning-view-of-milford-sound/",
+              "desc": "Dedicated Destination Stunning View Of Milford Sound page with responsive components."
+          },
+          {
+              "name": "Destinations",
+              "path": "/destinations/",
+              "desc": "Dedicated Destinations page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Tour Package",
+              "path": "/tour-package/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Tour Package Patagonia Untamed Nature",
+              "path": "/tour-package_patagonia-untamed-nature/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "airzen-software-website-template",
+      "name": "AirZen",
+      "slug": "airzen-software-website-template",
+      "dodoProductId": "pdt_0Nnv0EfsocsxmO30Ho8PP",
+      "tagline": "Modern, high-performance AirZen website template.",
+      "description": "Elevate your SaaS brand with AirZen - the premium Webflow template & UI kit. 40+ pages, 3 homepages, blogs, contacts. Easy customization with Finsweet naming. Engaging animations shine.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://airzen-software.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog V1",
+              "path": "/blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home V1",
+              "path": "/home-v1/",
+              "desc": "Dedicated Home V1 page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aisav-website-template",
+      "name": "Aisav",
+      "slug": "aisav-website-template",
+      "dodoProductId": "pdt_0Nnv0IuWEHLXlawasNM1g",
+      "tagline": "Modern, high-performance Aisav website template.",
+      "description": "Power Your AI Startup with Aisav - A Cutting-Edge Webflow Template. Showcase your AI SaaS solutions beautifully and effortlessly establish a strong online presence.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aisav.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Templates Info License",
+              "path": "/templates-info_license/",
+              "desc": "Dedicated Templates Info License page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aistartuq-startup-website-template",
+      "name": "Ai Startuq",
+      "slug": "aistartuq-startup-website-template",
+      "dodoProductId": "pdt_0Nnv0NWZfJcWZuwvFlqJU",
+      "tagline": "Modern, high-performance Ai Startuq website template.",
+      "description": "Unleash your AI startup's potential with our Webflow template. Elevate startup online presence, and showcase Artificial Intelligence solutions seamlessly. Customize and optimize for maximum visibility. Propel your venture forward today",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aistartuq-startup.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aitech-it-company-website-template",
+      "name": "Aitech",
+      "slug": "aitech-it-company-website-template",
+      "dodoProductId": "pdt_0Nnv0QJcr3iZ7jEdZbvUq",
+      "tagline": "Modern, high-performance Aitech website template.",
+      "description": "Maximize your AI startup's impact with our dynamic AITech Webflow template. With its clean design and intuitive layout, this template effortlessly highlights your Artificial Intelligence innovations, capturing the attention of your audience.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aitech-it-company.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us About One",
+              "path": "/about-us_about-one/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Us About Two",
+              "path": "/about-us_about-two/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Four",
+              "path": "/home-four/",
+              "desc": "Dedicated Home Four page with responsive components."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aithra-website-template",
+      "name": "Aithra",
+      "slug": "aithra-website-template",
+      "dodoProductId": "pdt_0Nnv0Ua0JPercNWwjlPCJ",
+      "tagline": "Modern, high-performance Aithra website template.",
+      "description": "Aithra \u2014 a dark, futuristic Webflow template for AI startups. Built for modern SaaS, featuring a sleek UI, CMS blog, and fluid motion design.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 99,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://aithra.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Navigating Ai In Marketing Strategies",
+              "path": "/blog_navigating-ai-in-marketing-strategies/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aiveflow-website-template",
+      "name": "AiveFlow",
+      "slug": "aiveflow-website-template",
+      "dodoProductId": "pdt_0Nnv0Zh6hBr5Y7O98XJol",
+      "tagline": "Modern, high-performance AiveFlow website template.",
+      "description": "Aiveflow suits for AI, agency, SaaS, startup, dashboard, digital marketing, IT service, SEO, software, automation, AI generator, technology, robotics, chatbot, cybersecurity, machine learning, web & app development, freelancer websites.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiveflow.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aivestor-website-template",
+      "name": "Vestorix",
+      "slug": "aivestor-website-template",
+      "dodoProductId": "pdt_0Nnv0e0fIvg32HRcBiiar",
+      "tagline": "Modern, high-performance Vestorix website template.",
+      "description": "AI-powered portfolio insights delivered instantly.\nA modern, high-performance Webflow template built for investment firms, fund managers, and financial advisors who want to showcase real-time analytics, automated reporting, and smart portfolio tools\u2014",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aivestor.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Info Style Guide",
+              "path": "/info_style-guide/",
+              "desc": "Dedicated Info Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aivio-website-template",
+      "name": "Aivio",
+      "slug": "aivio-website-template",
+      "dodoProductId": "pdt_0Nnv0iUvFt7XBHWf0Odhd",
+      "tagline": "Modern, high-performance Aivio website template.",
+      "description": "Aivio is a modern and professional Webflow template built for AI agencies, digital marketing companies, automation businesses, SaaS startups, creative agencies, and technology consultants.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aivio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aiwrite-saas-website-template",
+      "name": "Aiwrite",
+      "slug": "aiwrite-saas-website-template",
+      "dodoProductId": "pdt_0Nnv0mZB0K1YJwdBqgibp",
+      "tagline": "Modern, high-performance Aiwrite website template.",
+      "description": "Aiwrite is a SaaS startup product page for AI content and writing software, presenting AI software tools for code generation, ad creation, image generation, video scripts, tags, and AI chat in one focused scroll. Built for a SaaS startup business offering AI writing software, Aiwrite clearly showcases each software tool while including privacy policy and terms pages for a complete SaaS startup website structure.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aiwrite-saas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utility License",
+              "path": "/utility_license/",
+              "desc": "Dedicated Utility License page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aixus-website-template",
+      "name": "Aixus",
+      "slug": "aixus-website-template",
+      "dodoProductId": "pdt_0Nnv0qpEojRQyYkZm1MJV",
+      "tagline": "Modern, high-performance Aixus website template.",
+      "description": "Aixus is a SaaS website template designed for SaaS products, SaaS platforms, SaaS businesses, SaaS solutions, technology, AI, startup, app, B2B, software, and AI agency businesses. This SaaS template includes dedicated SaaS Features, SaaS Pricing, and SaaS FAQ pages, an integrations section, and a CMS-driven SaaS blog with categories. Ideal for launching a SaaS product, growing a SaaS platform, promoting SaaS software, or showcasing an AI tool, technology product, startup, app, B2B software, or AI agency service. Aixus gives you a complete SaaS website structure for presenting SaaS products, SaaS features, SaaS solutions, SaaS software, AI, technology, startup services, app features, B2B solutions, software services, and AI agency offerings.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://aixus.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Transforming Businesses With Ai Driven Saas Solutions",
+              "path": "/blog_transforming-businesses-with-ai-driven-saas-solutions/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aizflex-agency-website-template",
+      "name": "Aizflex",
+      "slug": "aizflex-agency-website-template",
+      "dodoProductId": "pdt_0Nnv0ut6NX5Pob2UoArom",
+      "tagline": "Modern, high-performance Aizflex website template.",
+      "description": "Looking for a stunning agency template or business template? Check out the Aizflex business website template. This business Webflow template comes with a sleek design and functionality that is built to meet the needs of modern business webs",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://aizflex-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Page",
+              "path": "/blog-page/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Page",
+              "path": "/project-page/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Page",
+              "path": "/service-page/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service E Mail Merketing",
+              "path": "/service_e-mail-merketing/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "ajency-website-template",
+      "name": "Ajency",
+      "slug": "ajency-website-template",
+      "dodoProductId": "pdt_0Nnv0zKoQK9qdkIdsX0jA",
+      "tagline": "Modern, high-performance Ajency website template.",
+      "description": "Ajency is a creative agency template designed for creative, marketing, and design agencies. This Webflow template offers customization options to match your brands. It\u2019s SEO-optimized and mobile responsive feature ensures a seamless user experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://ajency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Home One",
+              "path": "/home_home-one/",
+              "desc": "Dedicated Home Home One page with responsive components."
+          },
+          {
+              "name": "Home Home Two",
+              "path": "/home_home-two/",
+              "desc": "Dedicated Home Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Brew Buddy Cafe",
+              "path": "/project_brew-buddy-cafe/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "akari-website-template",
+      "name": "Akari",
+      "slug": "akari-website-template",
+      "dodoProductId": "pdt_0Nnv13X2HIpJvU5o97kvc",
+      "tagline": "Modern, high-performance Akari website template.",
+      "description": "Akari is a sleek, single-page Webflow template built for AI course creators. Highlight your curriculum, benefits, pricing, and more, all in a high-converting layout designed to drive sign-ups and showcase your expertise.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://akari.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "akaunt-finance-website-template",
+      "name": "Akaunt",
+      "slug": "akaunt-finance-website-template",
+      "dodoProductId": "pdt_0Nnv17wIRiIZksDugGy2C",
+      "tagline": "Modern, high-performance Akaunt website template.",
+      "description": "If you're planning to build a reliable and credible website for your accounting or finance business, you're in the right place! Our Akaunt Webflow template is designed perfectly for accounting firms, financial advisors, and tax consultants.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://akaunt-finance.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Consultants",
+              "path": "/our-consultants/",
+              "desc": "Dedicated Our Consultants page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "akin-agency-website-template",
+      "name": "Akin",
+      "slug": "akin-agency-website-template",
+      "dodoProductId": "pdt_0Nnv1C2FDWZF0xpSJnNHh",
+      "tagline": "Modern, high-performance Akin website template.",
+      "description": "Akin is a responsive portfolio for Webflow CMS built for showcasing works of a visual nature. A stylish, minimal aesthetic makes Akin suitable as an artist portfolio, creative agency site, photography showcase and much more.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://akin-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Me",
+              "path": "/about-me/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Extended",
+              "path": "/contact-extended/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Contact Simple",
+              "path": "/contact-simple/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Grid",
+              "path": "/home-grid/",
+              "desc": "Dedicated Home Grid page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Journal",
+              "path": "/journal/",
+              "desc": "Dedicated Journal page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "akito-portfolio-website-template",
+      "name": "Akito",
+      "slug": "akito-portfolio-website-template",
+      "dodoProductId": "pdt_0Nnv1GK3pSmAtFBHr4fb5",
+      "tagline": "Modern, high-performance Akito website template.",
+      "description": "Akito, a sleek Portfolio Webflow Template, is ideally suited for individuals showcasing personal portfolios, creative professionals, designers, freelancers, agencies, and design studios alike.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://akito-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Stellar",
+              "path": "/project_stellar/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "akjo-website-template",
+      "name": "Akjo",
+      "slug": "akjo-website-template",
+      "dodoProductId": "pdt_0Nnv1KxqVYxX49xl8bMKY",
+      "tagline": "Modern, high-performance Akjo website template.",
+      "description": "Akjo is a modern Webflow portfolio template crafted for designers and creative professionals who value clarity, aesthetics, and impact. Clean layouts, bold typography, and smooth interactions help your work stand out\u2014without distraction.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://akjo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          },
+          {
+              "name": "Work The Luminaria",
+              "path": "/work_the-luminaria/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work The Snapped Identity",
+              "path": "/work_the-snapped-identity/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work The Surfaces Studio",
+              "path": "/work_the-surfaces-studio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work The Vision Frame",
+              "path": "/work_the-vision-frame/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "akra-real-estate-website-template",
+      "name": "Akra",
+      "slug": "akra-real-estate-website-template",
+      "dodoProductId": "pdt_0Nnv1PA6daKkyblotnp3I",
+      "tagline": "Modern, high-performance Akra website template.",
+      "description": "The Akra Webflow template is a clean, sleek, and modern design suitable for property, real estate, directories, listings, rentals, and any business related to the real estate industry.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://akra-real-estate.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Properties",
+              "path": "/properties/",
+              "desc": "Dedicated Properties page with responsive components."
+          },
+          {
+              "name": "Reviews",
+              "path": "/reviews/",
+              "desc": "Dedicated Reviews page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "akussa-website-template",
+      "name": "Akussa",
+      "slug": "akussa-website-template",
+      "dodoProductId": "pdt_0Nnv1TQOmEfqnKKfFv8RX",
+      "tagline": "Modern, high-performance Akussa website template.",
+      "description": "Discover a modern real estate website featuring new property listings, expert agents, and full-service solutions \u2014 perfect for buying, selling, or renting your next home.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://akussa.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Template Styleguide",
+              "path": "/template_styleguide/",
+              "desc": "Dedicated Template Styleguide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alabama-agency-website-template",
+      "name": "Alabama",
+      "slug": "alabama-agency-website-template",
+      "dodoProductId": "pdt_0Nnv1Xq9xFPMojkQEuVp9",
+      "tagline": "Modern, high-performance Alabama website template.",
+      "description": "Alabama is a sophisticated Webflow template designed for agencies, featuring a modern dark theme, subtle animations, and effortless customization. Its clean design and SEO-friendly structure ensure a professional and engaging online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alabama-agency.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Privacy",
+              "path": "/privacy/",
+              "desc": "Dedicated Privacy page with responsive components."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alan-foto-portfolio-website-template",
+      "name": "Alan Foto",
+      "slug": "alan-foto-portfolio-website-template",
+      "dodoProductId": "pdt_0Nnv1cCBB4XU4lkhdcqLJ",
+      "tagline": "Modern, high-performance Alan Foto website template.",
+      "description": "Display your work, make a lasting impression, and convert potential clients using Alan Foto Webflow template, a clean and minimal portfolio website built for photographers, designers, and creative professionals.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alan-foto-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Sunset Balloon",
+              "path": "/portfolio_sunset-balloon/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Product Waves",
+              "path": "/product_waves/",
+              "desc": "Dedicated Product Waves page with responsive components."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alastair-website-template",
+      "name": "Alastair",
+      "slug": "alastair-website-template",
+      "dodoProductId": "pdt_0Nnv1gYJyVs6PTuvnpaIr",
+      "tagline": "Modern, high-performance Alastair website template.",
+      "description": "This is Alastair, a Webflow template for creative agencies looking for a modern and beautiful website to showcase their work and expertise. Initially made for a Shopify agency, this template can be used by freelancers and adapted to other areas.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alastair.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Transforming Furniture Ecommerce With Intuitive Design And Smart Functionality",
+              "path": "/work_transforming-furniture-ecommerce-with-intuitive-design-and-smart-functionality/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Translating Bedding Shopping Into An Stylish Online Experience",
+              "path": "/work_translating-bedding-shopping-into-an-stylish-online-experience/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "albadoe-website-template",
+      "name": "Albadoe",
+      "slug": "albadoe-website-template",
+      "dodoProductId": "pdt_0Nnv1jKoQwlBX4uyZ0Kqt",
+      "tagline": "Modern, high-performance Albadoe website template.",
+      "description": "Albadoe is a minimal and professional Webflow template for House Cleaning & Maintenance based websites, crafted with a unique design and smooth animations. Featuring an organized CMS for services and blogs, you can easily launch your new website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://albadoe.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog What Are The Common Problems That A Handyman Can Fix",
+              "path": "/blog_what-are-the-common-problems-that-a-handyman-can-fix/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Commercial Cleaning",
+              "path": "/service_commercial-cleaning/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "albeit-website-template",
+      "name": "Albeit",
+      "slug": "albeit-website-template",
+      "dodoProductId": "pdt_0Nnv1nCyjpzYSosPIn9bt",
+      "tagline": "Modern, high-performance Albeit website template.",
+      "description": "Albeit Webflow Template is a sleek and modern solution for creative agencies seeking to showcase their services. It features a minimal design, smooth animations, and customizable layouts, making it ideal for your website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://albeit.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utilities License",
+              "path": "/utilities_license/",
+              "desc": "Dedicated Utilities License page with responsive components."
+          },
+          {
+              "name": "Utilities Style Guide",
+              "path": "/utilities_style-guide/",
+              "desc": "Dedicated Utilities Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "albert-portfolio-website-template",
+      "name": "Albert",
+      "slug": "albert-portfolio-website-template",
+      "dodoProductId": "pdt_0Nnv1rM0escgHCfnjuk1R",
+      "tagline": "Modern, high-performance Albert website template.",
+      "description": "Beautifully designed Webflow Template for Portfolio with a distinct design and subtle animations. With a well-thought-out CMS structure for services, team, and blog, you can set up your new Portfolio website in no time.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://albert-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Saas App",
+              "path": "/work_saas-app/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "albion-construction-website-template",
+      "name": "Albion",
+      "slug": "albion-construction-website-template",
+      "dodoProductId": "pdt_0Nnv1vguMTL2raxnQIpyD",
+      "tagline": "Modern, high-performance Albion website template.",
+      "description": "Albion Webflow template is highly suitable for creating websites for construction companies, architectural agencies, development, and real estate business.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://albion-construction.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home B",
+              "path": "/home-b/",
+              "desc": "Dedicated Home B page with responsive components."
+          },
+          {
+              "name": "Home C",
+              "path": "/home-c/",
+              "desc": "Dedicated Home C page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "alderas-website-template",
+      "name": "Alderas",
+      "slug": "alderas-website-template",
+      "dodoProductId": "pdt_0Nnv1zfMWLw5nAvMilwsC",
+      "tagline": "Modern, high-performance Alderas website template.",
+      "description": "Alderas is an elder care Webflow template designed for senior living communities, home care agencies, and companion services. It features service overview grids, caregiver profiles, and contact layouts to capture family care inquiries.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 99,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://alderas.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Companionship",
+              "path": "/companionship/",
+              "desc": "Dedicated Companionship page with responsive components."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Personal Care",
+              "path": "/personal-care/",
+              "desc": "Dedicated Personal Care page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aldo-website-template",
+      "name": "Aldo",
+      "slug": "aldo-website-template",
+      "dodoProductId": "pdt_0Nnv25OYUQQDWOneEPz9i",
+      "tagline": "Modern, high-performance Aldo website template.",
+      "description": "ALDO is a bold Webflow template designed to transform your portfolio into a visual masterpiece. With striking animations and a modern edge, it\u2019s perfect for designers and creatives who want to stand out and leave an unforgettable impression.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://aldo.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Works Bento Kards",
+              "path": "/works_bento-kards/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Ella Editoral",
+              "path": "/works_ella-editoral/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Okocha Drink",
+              "path": "/works_okocha-drink/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Sneaker Air Four",
+              "path": "/works_sneaker-air-four/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Xogan Outfit",
+              "path": "/works_xogan-outfit/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alec-website-template",
+      "name": "Alec",
+      "slug": "alec-website-template",
+      "dodoProductId": "pdt_0Nnv29uMP0GI8CdKuF0ct",
+      "tagline": "Modern, high-performance Alec website template.",
+      "description": "Alec is a sleek dark Webflow template for storytellers, bloggers, vloggers, and content creators. Featuring a CMS-powered blog and video hub, responsive layouts, global styles, and flexible components to showcase content with style and clarity.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alec.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs 5 Coffee Shops In Lisbon That Spark Creativity",
+              "path": "/blogs_5-coffee-shops-in-lisbon-that-spark-creativity/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs Finding Creativity In Dark Mode",
+              "path": "/blogs_finding-creativity-in-dark-mode/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Vlogs",
+              "path": "/vlogs/",
+              "desc": "Dedicated Vlogs page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alegis-website-template",
+      "name": "Alegis",
+      "slug": "alegis-website-template",
+      "dodoProductId": "pdt_0Nnv2FBKg6M3pIhacieYh",
+      "tagline": "Modern, high-performance Alegis website template.",
+      "description": "Alegis is a contemporary Webflow template for attorneys and service providers. Unlike traditional law templates with heavy, rigid layouts, Alegis embraces a modern, light design that communicates trust, professionalism, and clarity across industries.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alegis.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Expertise Criminal Law",
+              "path": "/expertise_criminal-law/",
+              "desc": "Dedicated Expertise Criminal Law page with responsive components."
+          },
+          {
+              "name": "Expertise Family Law",
+              "path": "/expertise_family-law/",
+              "desc": "Dedicated Expertise Family Law page with responsive components."
+          },
+          {
+              "name": "Expertise Immigration Law",
+              "path": "/expertise_immigration-law/",
+              "desc": "Dedicated Expertise Immigration Law page with responsive components."
+          },
+          {
+              "name": "Expertise Personal Law",
+              "path": "/expertise_personal-law/",
+              "desc": "Dedicated Expertise Personal Law page with responsive components."
+          },
+          {
+              "name": "Expertise Tax Law",
+              "path": "/expertise_tax-law/",
+              "desc": "Dedicated Expertise Tax Law page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "alehous-shop-website-template",
+      "name": "Alehous",
+      "slug": "alehous-shop-website-template",
+      "dodoProductId": "pdt_0Nnv2JP9SoogDz6JQqgLF",
+      "tagline": "Modern, high-performance Alehous website template.",
+      "description": "Alehous is a Webflow Template designed for brewery companies that need to present their products in a professional way. It comes with e-commerce capabilities and can be adapted not only to foods and drinks but many other niches like clothing.",
+      "framework": "astro",
+      "category": "retail-and-e-commerce",
+      "categories": [
+          "retail-and-e-commerce"
+      ],
+      "price": 129,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alehous-shop.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Beers",
+              "path": "/beers/",
+              "desc": "Dedicated Beers page with responsive components."
+          },
+          {
+              "name": "Blog Variants Blog V2",
+              "path": "/blog-variants_blog-v2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Events",
+              "path": "/events/",
+              "desc": "Dedicated Events page with responsive components."
+          },
+          {
+              "name": "Home Variants Home V1",
+              "path": "/home-variants_home-v1/",
+              "desc": "Dedicated Home Variants Home V1 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Shop Variants Shop V2",
+              "path": "/shop-variants_shop-v2/",
+              "desc": "Dedicated Shop Variants Shop V2 page with responsive components."
+          },
+          {
+              "name": "User Account",
+              "path": "/user-account/",
+              "desc": "Dedicated User Account page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alenai-website-template",
+      "name": "Alenai",
+      "slug": "alenai-website-template",
+      "dodoProductId": "pdt_0Nnv2NmjP75cyIOdd4AI1",
+      "tagline": "Modern, high-performance Alenai website template.",
+      "description": "Alenai is a modern AI SaaS Webflow template featuring clean design, dynamic CMS, and conversion-focused layouts\u2014perfect for launching AI tools, startups, and product landing pages with speed and style.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 59,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alenai.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "alevia-website-template",
+      "name": "Alevia",
+      "slug": "alevia-website-template",
+      "dodoProductId": "pdt_0Nnv2UM8b8T2epLXDObbX",
+      "tagline": "Modern, high-performance Alevia website template.",
+      "description": "A modern medical template built for clinics, healthcare providers, and wellness professionals.",
+      "framework": "astro",
+      "category": "medical",
+      "categories": [
+          "medical"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alevia.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Understanding Hypertension The Silent Killer",
+              "path": "/blog_understanding-hypertension-the-silent-killer/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services General Family Medicine",
+              "path": "/services_general-family-medicine/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Teams Dr Daniel H Morrow",
+              "path": "/teams_dr-daniel-h-morrow/",
+              "desc": "Dedicated Teams Dr Daniel H Morrow page with responsive components."
+          },
+          {
+              "name": "Template Styleguide",
+              "path": "/template_styleguide/",
+              "desc": "Dedicated Template Styleguide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alex-baena-website-template",
+      "name": "Alex Baena",
+      "slug": "alex-baena-website-template",
+      "dodoProductId": "pdt_0Nnv2YVaB15xTc5P9RHQm",
+      "tagline": "Modern, high-performance Alex Baena website template.",
+      "description": "Alex Baena is a sleek and modern Webflow portfolio template for creative professionals and freelancers. Showcase your best projects, highlight your skills and services, and build a strong online presence with a clean, minimal design.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alex-baena.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects Fit Fuel",
+              "path": "/projects_fit-fuel/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services Branding Creative Direction",
+              "path": "/services_branding-creative-direction/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Ui Ux Design",
+              "path": "/services_ui-ux-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Webflow Development",
+              "path": "/services_webflow-development/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Website Optimization",
+              "path": "/services_website-optimization/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "alex-carter-website-template",
+      "name": "Alex Carter",
+      "slug": "alex-carter-website-template",
+      "dodoProductId": "pdt_0Nnv2dIp8LpgBlc6hREaJ",
+      "tagline": "Modern, high-performance Alex Carter website template.",
+      "description": "Alex Carter is a modern and professional personal portfolio template built for designers, developers, and creatives to showcase their projects, skills, and experience with clarity and style.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alex-carter.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Fitcore Landing Page",
+              "path": "/work_fitcore-landing-page/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Motion Branding",
+              "path": "/work_motion-branding/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alex-chen-website-template",
+      "name": "Alex Chen",
+      "slug": "alex-chen-website-template",
+      "dodoProductId": "pdt_0Nnv2hWqlBidCI6KyDvp5",
+      "tagline": "Modern, high-performance Alex Chen website template.",
+      "description": "Alex Chen - Portfolio & Agency Website Template",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alex-chen.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Admin License",
+              "path": "/admin_license/",
+              "desc": "Dedicated Admin License page with responsive components."
+          },
+          {
+              "name": "Admin Style Guide",
+              "path": "/admin_style-guide/",
+              "desc": "Dedicated Admin Style Guide page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "alex-gregor-website-template",
+      "name": "Alex Gregor",
+      "slug": "alex-gregor-website-template",
+      "dodoProductId": "pdt_0Nnv2lwewtX8maJWsNvC3",
+      "tagline": "Modern, high-performance Alex Gregor website template.",
+      "description": "Alex Gregor is a sleek and modern Webflow template designed for designers, creatives, and agencies. Fully responsive and customizable, it offers a seamless portfolio showcase with elegant layouts, smooth animations, and a user-friendly experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://alex-gregor.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alex-portz-website-template",
+      "name": "Alex Portz",
+      "slug": "alex-portz-website-template",
+      "dodoProductId": "pdt_0Nnv2qtkLtb57dMGlB7GC",
+      "tagline": "Modern, high-performance Alex Portz website template.",
+      "description": "A modern, responsive Webflow template for portfolios and creative agencies. Clean design, fast loading, and easy to customize\u2014perfect for showcasing work and services.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alex-portz.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects Bruno Portfolio Website",
+              "path": "/projects_bruno-portfolio-website/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Runes Studio Web Design",
+              "path": "/projects_runes-studio-web-design/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Swiss App Design",
+              "path": "/projects_swiss-app-design/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alexaa-website-template",
+      "name": "Alexaa",
+      "slug": "alexaa-website-template",
+      "dodoProductId": "pdt_0Nnv2v5iJkqV2adgLGqfh",
+      "tagline": "Modern, high-performance Alexaa website template.",
+      "description": "Alexaa \u2013 Designer Portfolio Webflow Template is built for creatives who value clean UI and smooth UX. Showcase your projects, highlight your skills, and connect with clients through modern layouts designed to build trust and capture attention.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alexaa.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "alexander-portfolio-website-template",
+      "name": "Alexander",
+      "slug": "alexander-portfolio-website-template",
+      "dodoProductId": "pdt_0Nnv2zGb3UnjU7PfjmKPt",
+      "tagline": "Modern, high-performance Alexander website template.",
+      "description": "Whether you're creating a personal website, portfolio, CV, or resume, this Webflow template provides a sleek and modern platform to showcase your creativity and professional achievements.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alexander-portfolio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects Luxury Glassware",
+              "path": "/projects_luxury-glassware/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Review",
+              "path": "/review/",
+              "desc": "Dedicated Review page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alexia-website-template",
+      "name": "Alexia",
+      "slug": "alexia-website-template",
+      "dodoProductId": "pdt_0Nnv33OIbQ55DJYagzxxz",
+      "tagline": "Modern, high-performance Alexia website template.",
+      "description": "Alexia is a high-quality blog template built for Webflow. It has been meticulously designed and is simple to customize. This makes it ideal for designers, entrepreneurs, or small businesses looking to share their written content.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alexia.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Art",
+              "path": "/category_art/",
+              "desc": "Dedicated Category Art page with responsive components."
+          },
+          {
+              "name": "Category Culture",
+              "path": "/category_culture/",
+              "desc": "Dedicated Category Culture page with responsive components."
+          },
+          {
+              "name": "Category Design",
+              "path": "/category_design/",
+              "desc": "Dedicated Category Design page with responsive components."
+          },
+          {
+              "name": "Category Music",
+              "path": "/category_music/",
+              "desc": "Dedicated Category Music page with responsive components."
+          },
+          {
+              "name": "Category Photography",
+              "path": "/category_photography/",
+              "desc": "Dedicated Category Photography page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "alexis-designer-website-template",
+      "name": "Alexis",
+      "slug": "alexis-designer-website-template",
+      "dodoProductId": "pdt_0Nnv389CU6sGAdl2MOPkQ",
+      "tagline": "Modern, high-performance Alexis website template.",
+      "description": "Alexis is a dark and modern portfolio template for freelance designers and creatives. With a strong focus on clean aesthetics it serves as the perfect foundation for showcasing your work in an appealing way.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alexis-designer.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Alma Brava",
+              "path": "/project_alma-brava/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Curology",
+              "path": "/project_curology/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Water Journal",
+              "path": "/project_water-journal/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alezon-website-template",
+      "name": "Alezon",
+      "slug": "alezon-website-template",
+      "dodoProductId": "pdt_0Nnv3DLm5teKD4j9pnxai",
+      "tagline": "Modern, high-performance Alezon website template.",
+      "description": "A high-performance strategy marketing template for your professional brand management firm. Suits digital marketing, advertising agency, and creative agency portfolios. A strategic choice for growth consulting and brand management agency websites.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://alezon.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Service Detail Digital Growth Experts",
+              "path": "/service-detail_digital-growth-experts/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "algarve-studio-website-template",
+      "name": "Algarve Studio",
+      "slug": "algarve-studio-website-template",
+      "dodoProductId": "pdt_0Nnv3Hsjj8BBUptLjtEwy",
+      "tagline": "Modern, high-performance Algarve Studio website template.",
+      "description": "Algarve Studio is a modern Webflow template for creative studios and agencies. Built with GSAP animations, Variables system, and modular layouts - designed for storytelling, performance, and bold digital presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 99,
+      "featured": true,
+      "badge": "New Release",
+      "liveUrl": "https://algarve-studio.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Grids Blog A",
+              "path": "/blog-grids_blog-a/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Contact B",
+              "path": "/contact_contact-b/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Projects Glow Skin Tm",
+              "path": "/projects_glow-skin-tm/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Studio",
+              "path": "/studio/",
+              "desc": "Dedicated Studio page with responsive components."
+          },
+          {
+              "name": "Works Works A",
+              "path": "/works_works-a/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "algenius-it-company-website-template",
+      "name": "Algenius",
+      "slug": "algenius-it-company-website-template",
+      "dodoProductId": "pdt_0Nnv3Lr5q1ZcuFeUlPB2Q",
+      "tagline": "Modern, high-performance Algenius website template.",
+      "description": "Introducing Algenius - AI Solutions Website Template. Crafted with precision, Algenius empowers businesses to establish a strong presence in the AI solutions market while delivering an unparalleled user experience.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 29,
+      "featured": false,
+      "badge": "New Release",
+      "liveUrl": "https://algenius-it-company.pages.dev",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
