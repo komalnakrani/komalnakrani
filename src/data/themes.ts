@@ -23965,8 +23965,76 @@ export const themes: Theme[] = [
         "desc": "Dedicated Licenses page with responsive components."
       }
     ]
+  },
+  {
+      "id": "airotek-website-template",
+      "name": "AI Rotek",
+      "slug": "airotek-website-template",
+      "dodoProductId": "pdt_0Nnvb0VIwDkZKCPFaLeET",
+      "tagline": "Modern, high-performance AI Rotek website template.",
+      "description": "Elevate your AI startup with our customizable Astro template. Designed for visibility and impact, it helps you showcase AI solutions and reach the right audience. Start building your success today!",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://airotek.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Develop A Content Generation System That Uses Ai",
+              "path": "/project_develop-a-content-generation-system-that-uses-ai/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Predictive Analysis",
+              "path": "/services_predictive-analysis/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
   }
 ];
+
 
 
 
