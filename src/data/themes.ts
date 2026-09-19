@@ -242,7 +242,7 @@ export const themes: Theme[] = [
     "price": 19,
     "featured": true,
     "badge": "Featured",
-    "liveUrl": "https://cast-and-render.pages.dev",
+    "liveUrl": "https://cast-and-render.komalnakrani.com",
     "techStack": [
       "Astro",
       "Zero-JS output",
@@ -301,7 +301,7 @@ export const themes: Theme[] = [
     "price": 25,
     "featured": true,
     "badge": "Featured",
-    "liveUrl": "https://prisma-studio.pages.dev",
+    "liveUrl": "https://prisma-studio.komalnakrani.com",
     "techStack": [
       "Astro",
       "Character-split animation",
@@ -365,7 +365,7 @@ export const themes: Theme[] = [
     "price": 25,
     "featured": true,
     "badge": "Featured",
-    "liveUrl": "https://halo-usd.pages.dev",
+    "liveUrl": "https://halo-usd.komalnakrani.com",
     "techStack": [
       "Astro",
       "Marquee animation",
@@ -430,7 +430,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": true,
     "badge": "Most complete",
-    "liveUrl": "https://cordex-dn2.pages.dev",
+    "liveUrl": "https://cordex.komalnakrani.com",
     "techStack": [
       "Astro",
       "Spec tables",
@@ -499,7 +499,7 @@ export const themes: Theme[] = [
     ],
     "price": 25,
     "featured": false,
-    "liveUrl": "https://dental-health.pages.dev",
+    "liveUrl": "https://dental-health.komalnakrani.com",
     "techStack": [
       "Astro",
       "Booking form",
@@ -564,7 +564,7 @@ export const themes: Theme[] = [
     "price": 25,
     "featured": true,
     "badge": "Featured",
-    "liveUrl": "https://hollow-press.pages.dev",
+    "liveUrl": "https://hollow-press.komalnakrani.com",
     "techStack": [
       "Astro",
       "Editorial layout",
@@ -627,7 +627,7 @@ export const themes: Theme[] = [
     ],
     "price": 19,
     "featured": false,
-    "liveUrl": "https://toonhub-7o7.pages.dev",
+    "liveUrl": "https://toonhub.komalnakrani.com",
     "techStack": [
       "Astro",
       "Product pages",
@@ -687,7 +687,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": true,
     "badge": "Featured",
-    "liveUrl": "https://meridian-ev.pages.dev",
+    "liveUrl": "https://meridian-ev.komalnakrani.com",
     "techStack": [
       "Astro",
       "Spec tables",
@@ -756,7 +756,7 @@ export const themes: Theme[] = [
     ],
     "price": 19,
     "featured": false,
-    "liveUrl": "https://drift-planner.pages.dev",
+    "liveUrl": "https://drift-planner.komalnakrani.com",
     "techStack": [
       "Astro",
       "Low-motion design",
@@ -814,7 +814,7 @@ export const themes: Theme[] = [
     "price": 25,
     "featured": false,
     "badge": "New",
-    "liveUrl": "https://stillwater-7pp.pages.dev",
+    "liveUrl": "https://stillwater.komalnakrani.com",
     "techStack": [
       "Astro",
       "CSS breathing pacer",
@@ -884,7 +884,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New",
-    "liveUrl": "https://longitude-5gz.pages.dev",
+    "liveUrl": "https://longitude.komalnakrani.com",
     "techStack": [
       "Astro",
       "SVG landscapes",
@@ -954,7 +954,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New",
-    "liveUrl": "https://stonecrop.pages.dev",
+    "liveUrl": "https://stonecrop.komalnakrani.com",
     "techStack": [
       "Astro",
       "Scroll-driven light",
@@ -1024,7 +1024,7 @@ export const themes: Theme[] = [
     "price": 25,
     "featured": false,
     "badge": "New",
-    "liveUrl": "https://auric-clinic-glow.pages.dev",
+    "liveUrl": "https://auric-clinic-glow.komalnakrani.com",
     "techStack": [
       "Astro",
       "CSS-art visuals",
@@ -1093,7 +1093,7 @@ export const themes: Theme[] = [
     "price": 25,
     "featured": false,
     "badge": "New",
-    "liveUrl": "https://lantern-broth-midnight-ramen.pages.dev",
+    "liveUrl": "https://lantern-broth-midnight-ramen.komalnakrani.com",
     "techStack": [
       "Astro",
       "CSS-art bowls",
@@ -1163,7 +1163,7 @@ export const themes: Theme[] = [
     "price": 25,
     "featured": true,
     "badge": "New",
-    "liveUrl": "https://aegis-console.pages.dev",
+    "liveUrl": "https://aegis-console.komalnakrani.com",
     "techStack": [
       "Astro",
       "CSS-art console",
@@ -1233,7 +1233,7 @@ export const themes: Theme[] = [
     "price": 19,
     "featured": false,
     "badge": "New",
-    "liveUrl": "https://amberhaus-pet-atelier.pages.dev",
+    "liveUrl": "https://amberhaus-pet-atelier.komalnakrani.com",
     "techStack": [
       "Astro",
       "CSS-art visuals",
@@ -1297,7 +1297,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New",
-    "liveUrl": "https://wayfare-expedition-journal.pages.dev",
+    "liveUrl": "https://wayfare-expedition-journal.komalnakrani.com",
     "techStack": [
       "Astro",
       "CSS/SVG terrain",
@@ -1415,7 +1415,7 @@ export const themes: Theme[] = [
         "desc": "Selected case studies and featured works."
       }
     ],
-    "liveUrl": "https://3d-bento-webflow-template.webflow.io/"
+    "liveUrl": "https://3dbento-agency-website-template.komalnakrani.com"
   },
   {
     "id": "1833-studio-website-template",
@@ -1452,7 +1452,7 @@ export const themes: Theme[] = [
         "desc": "Clean, modern responsive landing page and showcase."
       }
     ],
-    "liveUrl": "https://1833-studio-wcopilot.webflow.io/"
+    "liveUrl": "https://1833-studio-website-template.komalnakrani.com"
   },
   {
     "id": "1936redcliff-real-estate-website-template",
@@ -1494,7 +1494,7 @@ export const themes: Theme[] = [
         "desc": "Dedicated Licenses page with responsive components."
       }
     ],
-    "liveUrl": "https://1936-redcliff.webflow.io/"
+    "liveUrl": "https://1936redcliff-real-estate-website-template.komalnakrani.com"
   },
   {
     "id": "3dbento-agency",
@@ -1546,7 +1546,7 @@ export const themes: Theme[] = [
         "desc": "Detailed services, deliverables, and offerings."
       }
     ],
-    "liveUrl": "https://3d-bento-webflow-template.webflow.io/"
+    "liveUrl": "https://3dbento-agency.komalnakrani.com"
   },
   {
     "id": "3dentity-website-template",
@@ -1613,7 +1613,7 @@ export const themes: Theme[] = [
         "desc": "Selected case studies and featured works."
       }
     ],
-    "liveUrl": "https://3d-entity-webflow-template.webflow.io/"
+    "liveUrl": "https://3dentity-website-template.komalnakrani.com"
   },
   {
     "id": "62bdeffbd787c40858d9d93f",
@@ -1680,7 +1680,7 @@ export const themes: Theme[] = [
         "desc": "Selected case studies and featured works."
       }
     ],
-    "liveUrl": "https://evan-maison.webflow.io/"
+    "liveUrl": "https://evan-maison.komalnakrani.com"
   },
   {
     "id": "63475773f759d2418b649b34",
@@ -1697,7 +1697,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://63475773f759d2418b649b34.pages.dev",
+    "liveUrl": "https://aquapure-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -1764,7 +1764,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://88settle-real-estate.pages.dev",
+    "liveUrl": "https://88settle-real-estate-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -1831,7 +1831,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://92-rhys-real-estate.pages.dev",
+    "liveUrl": "https://92-rhys-real-estate-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -1878,7 +1878,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://99club.pages.dev",
+    "liveUrl": "https://99club-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -1925,7 +1925,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://arnexo.pages.dev",
+    "liveUrl": "https://arnexo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -1992,7 +1992,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://arooth.pages.dev",
+    "liveUrl": "https://arooth-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2059,7 +2059,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://axtira.pages.dev",
+    "liveUrl": "https://axtira-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2126,7 +2126,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://bisqueria.pages.dev",
+    "liveUrl": "https://bisqueria-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2193,7 +2193,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://furino.pages.dev",
+    "liveUrl": "https://furino-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2260,7 +2260,7 @@ export const themes: Theme[] = [
     "price": 169,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://launchhubtemplate.webflow.io/company-pages/careers",
+    "liveUrl": "https://launchhub-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2327,7 +2327,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://littlesteps.pages.dev",
+    "liveUrl": "https://littlesteps-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2394,7 +2394,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://movers.pages.dev",
+    "liveUrl": "https://movers-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2461,7 +2461,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://nexivo.pages.dev",
+    "liveUrl": "https://nexivo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2528,7 +2528,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://omenflex.pages.dev",
+    "liveUrl": "https://omenflex-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2575,7 +2575,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://optibot.pages.dev",
+    "liveUrl": "https://optibot-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2642,7 +2642,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://sarfa.pages.dev",
+    "liveUrl": "https://sarfa-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2709,7 +2709,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://velonic.pages.dev",
+    "liveUrl": "https://velonic-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2776,7 +2776,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aagency-agency.pages.dev",
+    "liveUrl": "https://aagency-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2843,7 +2843,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aaing-agency.pages.dev",
+    "liveUrl": "https://aaing-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2910,7 +2910,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aalbatros-startup.pages.dev",
+    "liveUrl": "https://aalbatros-startup-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -2977,7 +2977,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aalborg-doctor.pages.dev",
+    "liveUrl": "https://aalborg-doctor-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3044,7 +3044,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://archiesta.webflow.io/",
+    "liveUrl": "https://aarchiesta-architecture-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3111,7 +3111,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aaron-plus-portfolio.pages.dev",
+    "liveUrl": "https://aaron-plus-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3178,7 +3178,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aaron-portfolio.pages.dev",
+    "liveUrl": "https://aaron-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3245,7 +3245,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aascot-saas.pages.dev",
+    "liveUrl": "https://aascot-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3312,7 +3312,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aastronaut-saas.pages.dev",
+    "liveUrl": "https://aastronaut-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3379,7 +3379,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aaveron.webflow.io/",
+    "liveUrl": "https://aaveron-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3426,7 +3426,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aavo.pages.dev",
+    "liveUrl": "https://aavo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3493,7 +3493,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aawans-law-firm-1ea86.pages.dev",
+    "liveUrl": "https://aawans-law-firm-website-template-1ea86.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3560,7 +3560,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aaxon.webflow.io/",
+    "liveUrl": "https://aaxon-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3627,7 +3627,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://abbey-agency.pages.dev",
+    "liveUrl": "https://abbey-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3679,7 +3679,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://abency-agency.pages.dev",
+    "liveUrl": "https://abency-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3746,7 +3746,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://abetor.webflow.io/",
+    "liveUrl": "https://abetor-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3813,7 +3813,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://abode-interior-design.pages.dev",
+    "liveUrl": "https://abode-interior-design-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3875,7 +3875,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://abreto.pages.dev",
+    "liveUrl": "https://abreto-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -3942,7 +3942,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://absolute.pages.dev",
+    "liveUrl": "https://absolute-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4009,7 +4009,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://abstraact.pages.dev",
+    "liveUrl": "https://abstraact-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4076,7 +4076,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://az-abu-dhabi.webflow.io/",
+    "liveUrl": "https://abudhabi-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4143,7 +4143,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ac-service.pages.dev",
+    "liveUrl": "https://ac-service-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4210,7 +4210,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://academic-multi-layout.pages.dev",
+    "liveUrl": "https://academic-multi-layout-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4272,7 +4272,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://academiccms-university.pages.dev",
+    "liveUrl": "https://academiccms-university-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4339,7 +4339,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://academix-oly.webflow.io/",
+    "liveUrl": "https://academix-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4406,7 +4406,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://academy-school.pages.dev",
+    "liveUrl": "https://academy-school-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4473,7 +4473,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accent-designer.pages.dev",
+    "liveUrl": "https://accent-designer-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4540,7 +4540,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accountant128-accounting.pages.dev",
+    "liveUrl": "https://accountant128-accounting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4607,7 +4607,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accountantx-accounting.pages.dev",
+    "liveUrl": "https://accountantx-accounting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4674,7 +4674,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accountantyou-accounting.pages.dev",
+    "liveUrl": "https://accountantyou-accounting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4741,7 +4741,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accountex.pages.dev",
+    "liveUrl": "https://accountex-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4808,7 +4808,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accountix.pages.dev",
+    "liveUrl": "https://accountix-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4875,7 +4875,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accounts-accounting.pages.dev",
+    "liveUrl": "https://accounts-accounting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -4942,7 +4942,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accruefy.pages.dev",
+    "liveUrl": "https://accruefy-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5009,7 +5009,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://accting-accounting.pages.dev",
+    "liveUrl": "https://accting-accounting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5076,7 +5076,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://acctinglite-accounting.pages.dev",
+    "liveUrl": "https://acctinglite-accounting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5143,7 +5143,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ace-agency.pages.dev",
+    "liveUrl": "https://ace-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5210,7 +5210,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://acelia.pages.dev",
+    "liveUrl": "https://acelia-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5277,7 +5277,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://achate-retail.pages.dev",
+    "liveUrl": "https://achate-retail-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5344,7 +5344,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://achernar-architecture.pages.dev",
+    "liveUrl": "https://achernar-architecture-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5411,7 +5411,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aciel-portfolio.pages.dev",
+    "liveUrl": "https://aciel-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5478,7 +5478,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://acilav.pages.dev",
+    "liveUrl": "https://acilav-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5545,7 +5545,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://acme.pages.dev",
+    "liveUrl": "https://acme-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5612,7 +5612,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://acomiks.pages.dev",
+    "liveUrl": "https://acomiks-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5679,7 +5679,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://acounty-128-accounting.pages.dev",
+    "liveUrl": "https://acounty-128-accounting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5746,7 +5746,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://acrestudio-template.webflow.io/",
+    "liveUrl": "https://acre-studio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5813,7 +5813,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://acron.webflow.io",
+    "liveUrl": "https://acron-consulting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5880,7 +5880,7 @@ export const themes: Theme[] = [
     "price": 34,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://active-startup.pages.dev",
+    "liveUrl": "https://active-startup-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -5947,7 +5947,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://active-x-fitness.pages.dev",
+    "liveUrl": "https://active-x-fitness-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6014,7 +6014,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://activeaura.pages.dev",
+    "liveUrl": "https://activeaura-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6081,7 +6081,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://activitee.pages.dev",
+    "liveUrl": "https://activitee-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6148,7 +6148,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://actos-event.pages.dev",
+    "liveUrl": "https://actos-event-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6215,7 +6215,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://acuvic-consulting.pages.dev",
+    "liveUrl": "https://acuvic-consulting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6282,7 +6282,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adaptiv-agency.pages.dev",
+    "liveUrl": "https://adaptiv-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6349,7 +6349,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adaptoai.pages.dev",
+    "liveUrl": "https://adaptoai-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6416,7 +6416,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adelaide-portfolio.pages.dev",
+    "liveUrl": "https://adelaide-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6483,7 +6483,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adept-portfolio.webflow.io/",
+    "liveUrl": "https://adept-folio-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6550,7 +6550,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adept-startup.pages.dev",
+    "liveUrl": "https://adept-startup-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6617,7 +6617,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adfusion.pages.dev",
+    "liveUrl": "https://adfusion-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6664,7 +6664,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adgenie.pages.dev",
+    "liveUrl": "https://adgenie-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6731,7 +6731,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adigital1.webflow.io/",
+    "liveUrl": "https://adigital-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6798,7 +6798,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adionn.webflow.io/",
+    "liveUrl": "https://adione-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6865,7 +6865,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adlivo.pages.dev",
+    "liveUrl": "https://adlivo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6932,7 +6932,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adnac-agency.pages.dev",
+    "liveUrl": "https://adnac-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -6999,7 +6999,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adoptable-template.webflow.io/",
+    "liveUrl": "https://adoptable-pets-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7066,7 +7066,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://adoxstudio.webflow.io/",
+    "liveUrl": "https://adox-studio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7133,7 +7133,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adoxin.webflow.io/",
+    "liveUrl": "https://adoxin-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7200,7 +7200,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adrian-kingsley.webflow.io/",
+    "liveUrl": "https://adriankingsley-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7267,7 +7267,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adroven.webflow.io",
+    "liveUrl": "https://adroven-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7334,7 +7334,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adspark99.webflow.io/",
+    "liveUrl": "https://ads-park-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7401,7 +7401,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adsprint.webflow.io/",
+    "liveUrl": "https://adsprint-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7443,7 +7443,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adstik-ecom.webflow.io/",
+    "liveUrl": "https://adstik-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7510,7 +7510,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advanced.pages.dev",
+    "liveUrl": "https://advanced-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7577,7 +7577,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advantek.webflow.io/",
+    "liveUrl": "https://advantek-it-company-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7644,7 +7644,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adventria.webflow.io",
+    "liveUrl": "https://adventria-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7711,7 +7711,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advertisetemplate.webflow.io/",
+    "liveUrl": "https://advertise-x-consulting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7778,7 +7778,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advertisingtemplate.webflow.io/",
+    "liveUrl": "https://advertising-x-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7845,7 +7845,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adveza.webflow.io",
+    "liveUrl": "https://adveza-finance-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7912,7 +7912,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advibe-agency.webflow.io/",
+    "liveUrl": "https://advibe-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -7979,7 +7979,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advin.pages.dev",
+    "liveUrl": "https://advin-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8046,7 +8046,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advis-template.webflow.io/",
+    "liveUrl": "https://advis-one-page-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8083,7 +8083,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advisio-consulting.webflow.io",
+    "liveUrl": "https://advisio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8150,7 +8150,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advisor-wcopilot.webflow.io/",
+    "liveUrl": "https://advisor-consulting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8217,7 +8217,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advisortemplate.webflow.io/",
+    "liveUrl": "https://advisorx-business-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8284,7 +8284,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advisory-agency.webflow.io/",
+    "liveUrl": "https://advisory-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8351,7 +8351,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://advisory.pages.dev",
+    "liveUrl": "https://advisory-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8418,7 +8418,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://lawyency-db-template.webflow.io",
+    "liveUrl": "https://advocate-bureau-db-law-firm-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8485,7 +8485,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://dorbar.webflow.io/",
+    "liveUrl": "https://advocix-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8552,7 +8552,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://kitpro-advon.webflow.io/",
+    "liveUrl": "https://advon-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8599,7 +8599,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://advorus.webflow.io/",
+    "liveUrl": "https://advorus-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8666,7 +8666,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adwork-wbs.webflow.io/",
+    "liveUrl": "https://adwork-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8733,7 +8733,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adworx-webflipin.webflow.io/",
+    "liveUrl": "https://adworx-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8800,7 +8800,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://adzan.pages.dev",
+    "liveUrl": "https://adzan-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8867,7 +8867,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://adzen.webflow.io/",
+    "liveUrl": "https://adzen-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8909,7 +8909,7 @@ export const themes: Theme[] = [
     "price": 169,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://aeline.webflow.io",
+    "liveUrl": "https://aeline-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -8976,7 +8976,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aelixa.webflow.io/",
+    "liveUrl": "https://aelixa-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9043,7 +9043,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aelo.pages.dev",
+    "liveUrl": "https://aelo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9110,7 +9110,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://aerialix-flouix.webflow.io/",
+    "liveUrl": "https://aerialix-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9177,7 +9177,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ovo-aerials.webflow.io/",
+    "liveUrl": "https://aerials-photography-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9244,7 +9244,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://aerio.pages.dev",
+    "liveUrl": "https://aerio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9311,7 +9311,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aero-cms.webflow.io/",
+    "liveUrl": "https://aero-blog-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9378,7 +9378,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aerofly.webflow.io/",
+    "liveUrl": "https://aerofly-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9445,7 +9445,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aeron-template.webflow.io/",
+    "liveUrl": "https://aeron-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9512,7 +9512,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aesthe-interior-template.webflow.io/",
+    "liveUrl": "https://aesth-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9579,7 +9579,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aesthetica-template.webflow.io",
+    "liveUrl": "https://aesthetica-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9646,7 +9646,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aesthetics-template.webflow.io/",
+    "liveUrl": "https://aesthetics-creative-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9698,7 +9698,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aesthiva.webflow.io/",
+    "liveUrl": "https://aesthiva-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9765,7 +9765,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aesthoxio.webflow.io/",
+    "liveUrl": "https://aestho-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9832,7 +9832,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aethera.pages.dev",
+    "liveUrl": "https://aethera-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9899,7 +9899,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aextera.webflow.io/",
+    "liveUrl": "https://aextera-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -9966,7 +9966,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aeye.pages.dev",
+    "liveUrl": "https://aeye-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10033,7 +10033,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aezo.webflow.io/",
+    "liveUrl": "https://aezo-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10100,7 +10100,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://affiliatetemplates.webflow.io/",
+    "liveUrl": "https://affiliatex-blog-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10167,7 +10167,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://affiliate-template-1e0ad6.webflow.io/",
+    "liveUrl": "https://affilliate-news-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10234,7 +10234,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://afirma.webflow.io/",
+    "liveUrl": "https://afirma-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10301,7 +10301,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agado.webflow.io/",
+    "liveUrl": "https://agado-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10368,7 +10368,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agata-cms.webflow.io/",
+    "liveUrl": "https://agata-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10435,7 +10435,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agento-eco.webflow.io/",
+    "liveUrl": "https://ageento-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10502,7 +10502,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ageenzi.webflow.io/",
+    "liveUrl": "https://ageenzi-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10569,7 +10569,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenca-template.webflow.io/",
+    "liveUrl": "https://agenca-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10636,7 +10636,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencfire.webflow.io/",
+    "liveUrl": "https://agencfireagency-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10703,7 +10703,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencflow-template.webflow.io/",
+    "liveUrl": "https://agencflow-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10770,7 +10770,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenci-template.webflow.io/",
+    "liveUrl": "https://agenci-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10837,7 +10837,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenciatemplates.webflow.io/",
+    "liveUrl": "https://agenciax-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10904,7 +10904,7 @@ export const themes: Theme[] = [
     "price": 149,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agency-portfolio-template.webflow.io/",
+    "liveUrl": "https://agencieos-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -10971,7 +10971,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencier.webflow.io/",
+    "liveUrl": "https://agencier-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11038,7 +11038,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenciestemplate.webflow.io/",
+    "liveUrl": "https://agencies-x-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11105,7 +11105,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenciflow-studio.webflow.io",
+    "liveUrl": "https://agenciflow-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11157,7 +11157,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencika.webflow.io/",
+    "liveUrl": "https://agencikaagency-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11224,7 +11224,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenciotemplate.webflow.io/",
+    "liveUrl": "https://agencio-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11291,7 +11291,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenciup-wbs.webflow.io/",
+    "liveUrl": "https://agenciup-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11358,7 +11358,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencor-agency.webflow.io/",
+    "liveUrl": "https://agencor-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11425,7 +11425,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencu-template.webflow.io/",
+    "liveUrl": "https://agencu-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11492,7 +11492,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencx-template.webflow.io/",
+    "liveUrl": "https://agencx-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11559,7 +11559,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencyxtemplate-de.webflow.io/",
+    "liveUrl": "https://agency-x-de-marketing-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11626,7 +11626,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencyxtemplate-fr.webflow.io/",
+    "liveUrl": "https://agency-x-fr-marketing-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11693,7 +11693,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencyxtemplate.webflow.io/",
+    "liveUrl": "https://agency-x-marketing-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11760,7 +11760,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agency-3d-cube-webflow-template.webflow.io/",
+    "liveUrl": "https://agency3dcube-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11827,7 +11827,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencyace.webflow.io/",
+    "liveUrl": "https://agencyace-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11894,7 +11894,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencye.pages.dev",
+    "liveUrl": "https://agencye-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -11961,7 +11961,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencyis-template.webflow.io/",
+    "liveUrl": "https://agencyis-creative-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12028,7 +12028,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencymkt-template.webflow.io/",
+    "liveUrl": "https://agencymkt-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12095,7 +12095,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://az-nice.webflow.io/",
+    "liveUrl": "https://agencynice-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12162,7 +12162,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://office-zone.webflow.io/",
+    "liveUrl": "https://agencywave-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12204,7 +12204,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agency-x-design.webflow.io/",
+    "liveUrl": "https://agencyx-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12271,7 +12271,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agency-portfolioo.webflow.io/",
+    "liveUrl": "https://agencyyportfolioo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12338,7 +12338,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agencyz.webflow.io/",
+    "liveUrl": "https://agencyz-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12405,7 +12405,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenex-oly.webflow.io/",
+    "liveUrl": "https://agenex-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12472,7 +12472,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenflow.webflow.io/",
+    "liveUrl": "https://agenflow-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12539,7 +12539,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenixx-eco.webflow.io/",
+    "liveUrl": "https://ageniix-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12606,7 +12606,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenix-fd19ff044eed32a1997562a.webflow.io/",
+    "liveUrl": "https://agenix-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12673,7 +12673,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agennix-agency.webflow.io/",
+    "liveUrl": "https://agennix-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12740,7 +12740,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agens-template.webflow.io/",
+    "liveUrl": "https://agens-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12807,7 +12807,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agense-wbs.webflow.io/",
+    "liveUrl": "https://agense-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12874,7 +12874,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agensia.webflow.io",
+    "liveUrl": "https://agensia-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -12941,7 +12941,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agensighttemplate.webflow.io/",
+    "liveUrl": "https://agensight-x-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13008,7 +13008,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agensoar-webflow-template.webflow.io/",
+    "liveUrl": "https://agensoaragency-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13075,7 +13075,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agent-insurance.pages.dev",
+    "liveUrl": "https://agent-insurance-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13142,7 +13142,7 @@ export const themes: Theme[] = [
     "price": 169,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://agentflowtemplate.webflow.io",
+    "liveUrl": "https://agentflow-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13209,7 +13209,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agentic.webflow.io",
+    "liveUrl": "https://agentic-consulting-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13276,7 +13276,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agentify-template.webflow.io/",
+    "liveUrl": "https://agentifye-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13328,7 +13328,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agentix-webflow-template.webflow.io/",
+    "liveUrl": "https://agentixagency-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13395,7 +13395,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agent-lite-wcopilot.webflow.io/",
+    "liveUrl": "https://agentlite-insurance-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13462,7 +13462,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agentor.webflow.io/",
+    "liveUrl": "https://agentor-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13529,7 +13529,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agentra0.webflow.io/",
+    "liveUrl": "https://agentra0-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13596,7 +13596,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://automatex-wbs.webflow.io/",
+    "liveUrl": "https://agentrai-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13663,7 +13663,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agentrao.webflow.io/",
+    "liveUrl": "https://agentrao-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13730,7 +13730,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agentro.webflow.io/",
+    "liveUrl": "https://agentro-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13797,7 +13797,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://kitpro-agenus.webflow.io/",
+    "liveUrl": "https://agenus-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13844,7 +13844,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agensy-wbs.webflow.io/",
+    "liveUrl": "https://ageny-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13911,7 +13911,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenza.webflow.io/",
+    "liveUrl": "https://agenzaagency-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -13978,7 +13978,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenzai.webflow.io/",
+    "liveUrl": "https://agenzai-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14045,7 +14045,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://agenzi.webflow.io/",
+    "liveUrl": "https://agenzi-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14112,7 +14112,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agenzo.webflow.io",
+    "liveUrl": "https://agenzo-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14179,7 +14179,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ageva.pages.dev",
+    "liveUrl": "https://ageva-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14246,7 +14246,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aggregatortemplate.webflow.io/",
+    "liveUrl": "https://aggregator-x-directory-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14313,7 +14313,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agnce-wbs.webflow.io/",
+    "liveUrl": "https://agnce-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14380,7 +14380,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agnci-wbs.webflow.io/",
+    "liveUrl": "https://agnci-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14447,7 +14447,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agnez.webflow.io/",
+    "liveUrl": "https://agnez-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14514,7 +14514,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://avido.webflow.io/",
+    "liveUrl": "https://agnio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14581,7 +14581,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agnos-wbs.webflow.io/",
+    "liveUrl": "https://agnos-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14648,7 +14648,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agolas.webflow.io/",
+    "liveUrl": "https://agolas-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14715,7 +14715,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agors.webflow.io/",
+    "liveUrl": "https://agors-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14782,7 +14782,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://energyup-template.webflow.io/",
+    "liveUrl": "https://agotastudio-one-page-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14824,7 +14824,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://freshfield-group-128.webflow.io/",
+    "liveUrl": "https://agricultural-group-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14891,7 +14891,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agriflow-template.webflow.io/",
+    "liveUrl": "https://agriflow-agriculture-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -14958,7 +14958,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agrilead.webflow.io/",
+    "liveUrl": "https://agrilead-agriculture-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15025,7 +15025,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agrius-wcopilot.webflow.io/",
+    "liveUrl": "https://agrius-agriculture-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15092,7 +15092,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agriwark.webflow.io/",
+    "liveUrl": "https://agriwark-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15159,7 +15159,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agrona.webflow.io/",
+    "liveUrl": "https://agrizone-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15226,7 +15226,7 @@ export const themes: Theme[] = [
     "price": 169,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agroflow.pages.dev",
+    "liveUrl": "https://agroflow-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15293,7 +15293,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://agrofy-webflipin.webflow.io/",
+    "liveUrl": "https://agrofy-agriculture-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15360,7 +15360,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://harvestra.webflow.io/",
+    "liveUrl": "https://agroveon-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15427,7 +15427,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-bot-app.pages.dev",
+    "liveUrl": "https://ai-bot-app-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15494,7 +15494,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-chatbot-saas.pages.dev",
+    "liveUrl": "https://ai-chatbot-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15561,7 +15561,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-content-template.webflow.io/",
+    "liveUrl": "https://ai-content-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15618,7 +15618,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-copywriting.webflow.io/",
+    "liveUrl": "https://ai-copywriting-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15685,7 +15685,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-email.webflow.io/",
+    "liveUrl": "https://ai-email-technology-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15752,7 +15752,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-gency-wbs.webflow.io/",
+    "liveUrl": "https://ai-gency-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15819,7 +15819,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-schedule.pages.dev",
+    "liveUrl": "https://ai-schedule.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15886,7 +15886,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-techtemplate.webflow.io/",
+    "liveUrl": "https://ai-tech-x-technology-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -15953,7 +15953,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-tool-template.webflow.io/",
+    "liveUrl": "https://ai-tool-startup-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16020,7 +16020,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aitemplate.webflow.io/",
+    "liveUrl": "https://ai-x-technology-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16087,7 +16087,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiagency.pages.dev",
+    "liveUrl": "https://aiagency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16154,7 +16154,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://aiaiaiai-template.webflow.io/",
+    "liveUrl": "https://aiaiaiai-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16221,7 +16221,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-assistant-template.webflow.io/",
+    "liveUrl": "https://aiassistant-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16288,7 +16288,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aicotemplate.webflow.io/",
+    "liveUrl": "https://aico-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16355,7 +16355,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-course-template.webflow.io/",
+    "liveUrl": "https://aicourse-learning-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16422,7 +16422,7 @@ export const themes: Theme[] = [
     "price": 34,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aid-template.webflow.io",
+    "liveUrl": "https://aid-documentation-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16489,7 +16489,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aidem.pages.dev",
+    "liveUrl": "https://aidem-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16556,7 +16556,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiden-portfolio.pages.dev",
+    "liveUrl": "https://aiden-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16623,7 +16623,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aifinancial.webflow.io/",
+    "liveUrl": "https://aifinancial-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16690,7 +16690,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiflow.pages.dev",
+    "liveUrl": "https://aiflow-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16757,7 +16757,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aigen-template.webflow.io/",
+    "liveUrl": "https://aigen-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16824,7 +16824,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aigenerator.pages.dev",
+    "liveUrl": "https://aigenerator-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16891,7 +16891,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiigen.webflow.io/",
+    "liveUrl": "https://aigeng-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -16958,7 +16958,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aigentflow-template.webflow.io/",
+    "liveUrl": "https://aigentflow-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17025,7 +17025,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://az-aiken.webflow.io/",
+    "liveUrl": "https://aiken-app-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17077,7 +17077,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiko-template.webflow.io/",
+    "liveUrl": "https://aiko-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17144,7 +17144,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aikol-template.webflow.io/",
+    "liveUrl": "https://aikol-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17211,7 +17211,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ailoom-saas-software-webflow-template.webflow.io/",
+    "liveUrl": "https://ailoom-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17278,7 +17278,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ailoq.webflow.io/",
+    "liveUrl": "https://ailoq-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17340,7 +17340,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-one-template.webflow.io/",
+    "liveUrl": "https://aione-one-page-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17397,7 +17397,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aipromax.pages.dev",
+    "liveUrl": "https://aipromax-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17464,7 +17464,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiq-site.webflow.io/",
+    "liveUrl": "https://aiq-recruitment-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17506,7 +17506,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiq-extend.webflow.io/",
+    "liveUrl": "https://aiqextend-recruitment-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17573,7 +17573,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://air-conditioning-128.webflow.io/",
+    "liveUrl": "https://air-conditioning-small-business-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17640,7 +17640,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://airbasex.webflow.io/",
+    "liveUrl": "https://airbase-x-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17707,7 +17707,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airbrick.webflow.io/",
+    "liveUrl": "https://airbrick-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17774,7 +17774,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airbuild-x.webflow.io/",
+    "liveUrl": "https://airbuild-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17841,7 +17841,7 @@ export const themes: Theme[] = [
     "price": 169,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aircanvas-template.webflow.io/",
+    "liveUrl": "https://aircanvas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17908,7 +17908,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aircare-website.webflow.io/",
+    "liveUrl": "https://aircare-hospital-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -17975,7 +17975,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airco-template.webflow.io/",
+    "liveUrl": "https://airco-x-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18042,7 +18042,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aircode.pages.dev",
+    "liveUrl": "https://aircode-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18109,7 +18109,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aircoin.pages.dev",
+    "liveUrl": "https://aircoin-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18176,7 +18176,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aircraft-website.webflow.io/",
+    "liveUrl": "https://aircraft-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18243,7 +18243,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aircrypto.webflow.io/",
+    "liveUrl": "https://aircrypto-finance-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18310,7 +18310,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airoral.webflow.io/",
+    "liveUrl": "https://airdent-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18377,7 +18377,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airdish.webflow.io/",
+    "liveUrl": "https://airdish-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18444,7 +18444,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airdoc.pages.dev",
+    "liveUrl": "https://airdoc-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18511,7 +18511,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airedge.webflow.io/",
+    "liveUrl": "https://airedge-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18578,7 +18578,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airestates.webflow.io/",
+    "liveUrl": "https://airestate-real-estate-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18645,7 +18645,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airevoke.webflow.io/",
+    "liveUrl": "https://airevoke-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18712,7 +18712,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airexplorex.webflow.io/",
+    "liveUrl": "https://airexplorex-tourism-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18779,7 +18779,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airfalah.webflow.io/",
+    "liveUrl": "https://airfalah-religion-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18846,7 +18846,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airfintech.webflow.io/",
+    "liveUrl": "https://airfintech-finance-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18913,7 +18913,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airfloow.webflow.io/",
+    "liveUrl": "https://airfloow-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -18980,7 +18980,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://air-folio.webflow.io/",
+    "liveUrl": "https://airfolio-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19047,7 +19047,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airfundx.webflow.io/",
+    "liveUrl": "https://airfund-x-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19114,7 +19114,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airfz.webflow.io/",
+    "liveUrl": "https://airfz-small-business-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19181,7 +19181,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airgro.webflow.io/",
+    "liveUrl": "https://airgro-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19248,7 +19248,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airinvest.webflow.io/",
+    "liveUrl": "https://airinvest-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19315,7 +19315,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airlift.pages.dev",
+    "liveUrl": "https://airlift-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19382,7 +19382,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://air-link.webflow.io/",
+    "liveUrl": "https://airlink-startup-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19449,7 +19449,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airloop.webflow.io/",
+    "liveUrl": "https://airloop-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19516,7 +19516,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airmentors.webflow.io/",
+    "liveUrl": "https://airmentors-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19583,7 +19583,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airmin-wbs.webflow.io/",
+    "liveUrl": "https://airmin-retail-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19650,7 +19650,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airnexa-template.webflow.io/",
+    "liveUrl": "https://airnexa-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19717,7 +19717,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airnova.webflow.io/",
+    "liveUrl": "https://airnova-technology-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19784,7 +19784,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airnur.webflow.io/",
+    "liveUrl": "https://airnur-learning-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19846,7 +19846,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airpay.webflow.io/",
+    "liveUrl": "https://airpay-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19913,7 +19913,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airpix-template.webflow.io/",
+    "liveUrl": "https://airpix-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -19980,7 +19980,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airpixel-template.webflow.io/",
+    "liveUrl": "https://airpixel-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20047,7 +20047,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airplace.webflow.io/",
+    "liveUrl": "https://airplace-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20114,7 +20114,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airstead.webflow.io/",
+    "liveUrl": "https://airstead-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20181,7 +20181,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airstudio.pages.dev",
+    "liveUrl": "https://airstudio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20248,7 +20248,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airsuite.webflow.io/",
+    "liveUrl": "https://airsuite-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20315,7 +20315,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airswift.webflow.io/",
+    "liveUrl": "https://airswift-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20382,7 +20382,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airsync.pages.dev",
+    "liveUrl": "https://airsync-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20449,7 +20449,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airtask.pages.dev",
+    "liveUrl": "https://airtask-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20516,7 +20516,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airtech.webflow.io/",
+    "liveUrl": "https://airtech-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20583,7 +20583,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airtech-x.webflow.io/",
+    "liveUrl": "https://airtechx-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20650,7 +20650,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airtelier.webflow.io/",
+    "liveUrl": "https://airtelier-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20717,7 +20717,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://artiflo.webflow.io",
+    "liveUrl": "https://airtflo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20764,7 +20764,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airtide.pages.dev",
+    "liveUrl": "https://airtide-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20831,7 +20831,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airtwist.webflow.io/",
+    "liveUrl": "https://airtwist-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20898,7 +20898,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airvault.pages.dev",
+    "liveUrl": "https://airvault-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -20965,7 +20965,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airvest.webflow.io/",
+    "liveUrl": "https://airvest-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21032,7 +21032,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airvocal.webflow.io/",
+    "liveUrl": "https://airvocal-podcast-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21099,7 +21099,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airway.pages.dev",
+    "liveUrl": "https://airway-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21166,7 +21166,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://airzen.webflow.io/",
+    "liveUrl": "https://airzen-software-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21233,7 +21233,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aisav.webflow.io/",
+    "liveUrl": "https://aisav-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21285,7 +21285,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ai-startuq.webflow.io/",
+    "liveUrl": "https://aistartuq-startup-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21352,7 +21352,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aitech-template.webflow.io",
+    "liveUrl": "https://aitech-it-company-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21419,7 +21419,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://aithra.pages.dev",
+    "liveUrl": "https://aithra-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21486,7 +21486,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiveflow-template.webflow.io/",
+    "liveUrl": "https://aiveflow-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21553,7 +21553,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://vestorix.webflow.io/",
+    "liveUrl": "https://aivestor-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21595,7 +21595,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aivio.pages.dev",
+    "liveUrl": "https://aivio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21662,7 +21662,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aiwrite.webflow.io/",
+    "liveUrl": "https://aiwrite-saas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21704,7 +21704,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://aixus.webflow.io/",
+    "liveUrl": "https://aixus-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21771,7 +21771,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://aizflex.webflow.io/",
+    "liveUrl": "https://aizflex-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21838,7 +21838,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://ajency-template.webflow.io/",
+    "liveUrl": "https://ajency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21905,7 +21905,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://akari.pages.dev",
+    "liveUrl": "https://akari-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -21942,7 +21942,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://akaunt-template.webflow.io/",
+    "liveUrl": "https://akaunt-finance-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22009,7 +22009,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "http://akin-template.webflow.io/",
+    "liveUrl": "https://akin-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22076,7 +22076,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://akito-template.webflow.io/",
+    "liveUrl": "https://akito-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22143,7 +22143,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://akjo-portfolio-template.webflow.io/",
+    "liveUrl": "https://akjo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22210,7 +22210,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://akra-template.webflow.io/",
+    "liveUrl": "https://akra-real-estate-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22277,7 +22277,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://akussa.webflow.io",
+    "liveUrl": "https://akussa-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22319,7 +22319,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://az-alabama.webflow.io/",
+    "liveUrl": "https://alabama-agency-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22386,7 +22386,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alan-foto.webflow.io/",
+    "liveUrl": "https://alan-foto-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22453,7 +22453,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alastair.pages.dev",
+    "liveUrl": "https://alastair-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22520,7 +22520,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://albadoe.webflow.io/",
+    "liveUrl": "https://albadoe-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22587,7 +22587,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://kitpro-albeit.webflow.io/",
+    "liveUrl": "https://albeit-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22634,7 +22634,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://albert-portfolio.pages.dev",
+    "liveUrl": "https://albert-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22701,7 +22701,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://albion-template.webflow.io/",
+    "liveUrl": "https://albion-construction-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22768,7 +22768,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://alderas.webflow.io/",
+    "liveUrl": "https://alderas-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22835,7 +22835,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://aldo-template.webflow.io/",
+    "liveUrl": "https://aldo-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22902,7 +22902,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alec.pages.dev",
+    "liveUrl": "https://alec-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -22969,7 +22969,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alegislaw.webflow.io/",
+    "liveUrl": "https://alegis-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23036,7 +23036,7 @@ export const themes: Theme[] = [
     "price": 129,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alehous-template.webflow.io/",
+    "liveUrl": "https://alehous-shop-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23103,7 +23103,7 @@ export const themes: Theme[] = [
     "price": 59,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alenai.webflow.io/",
+    "liveUrl": "https://alenai-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23170,7 +23170,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alevia.webflow.io",
+    "liveUrl": "https://alevia-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23237,7 +23237,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alex-baena.webflow.io/",
+    "liveUrl": "https://alex-baena-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23304,7 +23304,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alex-carter.pages.dev",
+    "liveUrl": "https://alex-carter-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23371,7 +23371,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alexchen.webflow.io/",
+    "liveUrl": "https://alex-chen-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23418,7 +23418,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://alexgregor.webflow.io/",
+    "liveUrl": "https://alex-gregor-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23485,7 +23485,7 @@ export const themes: Theme[] = [
     "price": 39,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://portz-template.webflow.io/",
+    "liveUrl": "https://alex-portz-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23537,7 +23537,7 @@ export const themes: Theme[] = [
     "price": 79,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alexaa.pages.dev",
+    "liveUrl": "https://alexaa-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23604,7 +23604,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alexander-portfolio.pages.dev",
+    "liveUrl": "https://alexander-portfolio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23671,7 +23671,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alexia.pages.dev",
+    "liveUrl": "https://alexia-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23738,7 +23738,7 @@ export const themes: Theme[] = [
     "price": 49,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alexis-template.webflow.io/",
+    "liveUrl": "https://alexis-designer-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23805,7 +23805,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://alezon.webflow.io/",
+    "liveUrl": "https://alezon-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23872,7 +23872,7 @@ export const themes: Theme[] = [
     "price": 99,
     "featured": true,
     "badge": "New Release",
-    "liveUrl": "https://algarve-template.webflow.io/",
+    "liveUrl": "https://algarve-studio-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
@@ -23939,7 +23939,7 @@ export const themes: Theme[] = [
     "price": 29,
     "featured": false,
     "badge": "New Release",
-    "liveUrl": "https://algenius.webflow.io/",
+    "liveUrl": "https://algenius-it-company-website-template.komalnakrani.com",
     "techStack": [
       "Astro 5",
       "Tailwind CSS",
