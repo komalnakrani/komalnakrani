@@ -105,8 +105,13 @@ try {
   });
   const loaded = event('Page.loadEventFired');
   await command('Page.navigate', { url });
-  await loaded;
-  await command('Runtime.evaluate', { expression: 'document.fonts.ready', awaitPromise: true });
+  const waitTimeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  await Promise.race([loaded, waitTimeout(4000)]);
+  await Promise.race([
+    command('Runtime.evaluate', { expression: 'document.fonts.ready', awaitPromise: true }),
+    waitTimeout(1500)
+  ]);
+  await waitTimeout(500);
   const metrics = await command('Runtime.evaluate', {
     expression: `JSON.stringify({
       innerWidth,

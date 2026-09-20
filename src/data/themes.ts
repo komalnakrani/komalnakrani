@@ -24384,8 +24384,688 @@ export const themes: Theme[] = [
               "desc": "Clean, modern responsive landing page and showcase."
           }
       ]
+  },
+  {
+      "id": "alignify-website-template",
+      "name": "Alignify",
+      "slug": "alignify-website-template",
+      "dodoProductId": "pdt_0NnybAUQ5XKsCaJvBFr2V",
+      "tagline": "Modern, high-performance Alignify website template.",
+      "description": "A modern SaaS Astro template designed for startups and digital products. Clean layout, responsive design, CMS-ready pages, pricing sections, and smooth animations to help you launch faster and convert better.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 59,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://alignify.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blogs How Customer Relationship Will Evolve In The Next",
+              "path": "/blogs_how-customer-relationship-will-evolve-in-the-next/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Inner Pages About",
+              "path": "/inner-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Inner Pages Blog",
+              "path": "/inner-pages_blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Inner Pages Features",
+              "path": "/inner-pages_features/",
+              "desc": "Dedicated Inner Pages Features page with responsive components."
+          },
+          {
+              "name": "Inner Pages Pricing",
+              "path": "/inner-pages_pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Product Growth",
+              "path": "/product_growth/",
+              "desc": "Dedicated Product Growth page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aligntech-website-template",
+      "name": "AlignTech",
+      "slug": "aligntech-website-template",
+      "dodoProductId": "pdt_0NnybFb2z1wa6TASwjMvw",
+      "tagline": "Modern, high-performance AlignTech website template.",
+      "description": "AlignTech is a cutting-edge Astro template crafted for digital agencies. With stunning portfolios, seamless navigation, and effortless customization, it helps you showcase expertise, engage clients, and drive results all in one powerful solution.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://aligntech.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service List",
+              "path": "/service-list/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Webflow Development",
+              "path": "/service_webflow-development/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work List",
+              "path": "/work-list/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alisa-nails-website-template",
+      "name": "Alisa Nails",
+      "slug": "alisa-nails-website-template",
+      "dodoProductId": "pdt_0NnybOeSZ7QAgD8xua80B",
+      "tagline": "Modern, high-performance Alisa Nails website template.",
+      "description": "Alisa Nails is a vibrant Astro template for nail & beauty professionals. With built-in booking, smooth animations, and powerful marketing tools, creating your dream website has never been easier.",
+      "framework": "astro",
+      "category": "travel",
+      "categories": [
+          "travel"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alisa-nails.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services Correction",
+              "path": "/services_correction/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Nail Art",
+              "path": "/services_nail-art/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Nail Care",
+              "path": "/services_nail-care/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Styleguide Get Started",
+              "path": "/styleguide_get-started/",
+              "desc": "Dedicated Styleguide Get Started page with responsive components."
+          },
+          {
+              "name": "Styleguide Licenses",
+              "path": "/styleguide_licenses/",
+              "desc": "Dedicated Styleguide Licenses page with responsive components."
+          },
+          {
+              "name": "Styleguide Style Guide",
+              "path": "/styleguide_style-guide/",
+              "desc": "Dedicated Styleguide Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "all-about-website-template",
+      "name": "ALL ABT",
+      "slug": "all-about-website-template",
+      "dodoProductId": "pdt_0NnybUfJywhko9MCOz7Dk",
+      "tagline": "Modern, high-performance ALL ABT website template.",
+      "description": "A contemporary Astro template for creative agencies, studios, and freelancers. ALL ABOUT features multiple sleek homepage layouts, bold typography, dynamic visuals, and a modern portfolio to showcase your work with confidence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://all-about.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Homepage Home B",
+              "path": "/homepage_home-b/",
+              "desc": "Dedicated Homepage Home B page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio Portfolio A",
+              "path": "/portfolio_portfolio-a/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "all-my-links-artist-website-template",
+      "name": "All My Links",
+      "slug": "all-my-links-artist-website-template",
+      "dodoProductId": "pdt_0NnybZNyrRzx8MXAjqSzh",
+      "tagline": "Modern, high-performance All My Links website template.",
+      "description": "With 12 different pages, and a modern and fully responsive design, All My Links has all you need to showcase your works.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://all-my-links-artist.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Homepages Designer Dark",
+              "path": "/homepages_designer-dark/",
+              "desc": "Dedicated Homepages Designer Dark page with responsive components."
+          },
+          {
+              "name": "Homepages Designer Light",
+              "path": "/homepages_designer-light/",
+              "desc": "Dedicated Homepages Designer Light page with responsive components."
+          },
+          {
+              "name": "Homepages Photographer Dark",
+              "path": "/homepages_photographer-dark/",
+              "desc": "Dedicated Homepages Photographer Dark page with responsive components."
+          },
+          {
+              "name": "Homepages Photographer Light",
+              "path": "/homepages_photographer-light/",
+              "desc": "Dedicated Homepages Photographer Light page with responsive components."
+          },
+          {
+              "name": "Homepages Videomaker Light",
+              "path": "/homepages_videomaker-light/",
+              "desc": "Dedicated Homepages Videomaker Light page with responsive components."
+          },
+          {
+              "name": "Homepages Writer Light",
+              "path": "/homepages_writer-light/",
+              "desc": "Dedicated Homepages Writer Light page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "all-recipes-restaurant-website-template",
+      "name": "All Recipes",
+      "slug": "all-recipes-restaurant-website-template",
+      "dodoProductId": "pdt_0Nnybd79fOjdUu7JQIUGd",
+      "tagline": "Modern, high-performance All Recipes website template.",
+      "description": "A modern and stylish looking recipe website using built-in CMS features. Simply add your recipes and see your recipe collection on your website grow! Fun for home cooks but professionals as well! Adding multiple recipe authors/cooks and blogging is possible as well.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://all-recipes-restaurant.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Favorite Recipes",
+              "path": "/favorite-recipes/",
+              "desc": "Dedicated Favorite Recipes page with responsive components."
+          },
+          {
+              "name": "Home Sidebar",
+              "path": "/home-sidebar/",
+              "desc": "Dedicated Home Sidebar page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Recipes",
+              "path": "/recipes/",
+              "desc": "Dedicated Recipes page with responsive components."
+          },
+          {
+              "name": "Video Recipes",
+              "path": "/video-recipes/",
+              "desc": "Dedicated Video Recipes page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "all-you-can-eat-recipe-website-template",
+      "name": "All You Can Eat",
+      "slug": "all-you-can-eat-recipe-website-template",
+      "dodoProductId": "pdt_0NnybgdkoXexGGdHllB7U",
+      "tagline": "Modern, high-performance All You Can Eat website template.",
+      "description": "All You Can Eat is a recipe and blog template crafted for food and drink bloggers and content creators. This professional blog template is easy to manage, has all the features you need to engage your readers, and is perfect for sharing recipes.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://all-you-can-eat-recipe.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Category Breakfast",
+              "path": "/category_breakfast/",
+              "desc": "Dedicated Category Breakfast page with responsive components."
+          },
+          {
+              "name": "Category Dessert",
+              "path": "/category_dessert/",
+              "desc": "Dedicated Category Dessert page with responsive components."
+          },
+          {
+              "name": "Category Dinner",
+              "path": "/category_dinner/",
+              "desc": "Dedicated Category Dinner page with responsive components."
+          },
+          {
+              "name": "Category Lunch",
+              "path": "/category_lunch/",
+              "desc": "Dedicated Category Lunch page with responsive components."
+          },
+          {
+              "name": "Category Snack",
+              "path": "/category_snack/",
+              "desc": "Dedicated Category Snack page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Recipes",
+              "path": "/recipes/",
+              "desc": "Dedicated Recipes page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aller-one-page-website-template",
+      "name": "Aller",
+      "slug": "aller-one-page-website-template",
+      "dodoProductId": "pdt_0NnybkBvR1GdD5XL1cnJw",
+      "tagline": "Modern, high-performance Aller website template.",
+      "description": "Aller is a one page responsive agency Astro template. Perfect to promote your work or your business. Is compatible with all modern mobile devices. Other than the minimalistic single page design, it also has a blog.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 34,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aller-one-page.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post About Graphic Design",
+              "path": "/post_about-graphic-design/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Post History Of Web Design",
+              "path": "/post_history-of-web-design/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post Myths About Design",
+              "path": "/post_myths-about-design/",
+              "desc": "Brand story, philosophy, and overview."
+          }
+      ]
+  },
+  {
+      "id": "allex-website-template",
+      "name": "Allex",
+      "slug": "allex-website-template",
+      "dodoProductId": "pdt_0NnyboG0bv8CZHRCyh5wz",
+      "tagline": "Modern, high-performance Allex website template.",
+      "description": "Present yourself professionally! Allex is a sleek personal portfolio template designed to showcase your work, skills, and experience. Perfect for building a Portfolio, Resume, or CV website to boost your career and personal brand with ease.",
+      "framework": "astro",
+      "category": "personal",
+      "categories": [
+          "personal"
+      ],
+      "price": 79,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://allex.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Bookmark",
+              "path": "/bookmark/",
+              "desc": "Dedicated Bookmark page with responsive components."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Cv",
+              "path": "/cv/",
+              "desc": "Dedicated Cv page with responsive components."
+          },
+          {
+              "name": "Home Four",
+              "path": "/home-four/",
+              "desc": "Dedicated Home Four page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "alley-real-estate-website-template",
+      "name": "Alley",
+      "slug": "alley-real-estate-website-template",
+      "dodoProductId": "pdt_0NnybwtQ0N1exz3gI47P4",
+      "tagline": "Modern, high-performance Alley website template.",
+      "description": "Alley is a modern and complex real estate template for companies that wants a ready-made website with powerful Astro Content Collections management. Unique design, a bunch of custom animations, fully responsive. Take a look.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alley-real-estate.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Cities",
+              "path": "/cities/",
+              "desc": "Dedicated Cities page with responsive components."
+          },
+          {
+              "name": "For Buyers",
+              "path": "/for-buyers/",
+              "desc": "Dedicated For Buyers page with responsive components."
+          },
+          {
+              "name": "For Sellers",
+              "path": "/for-sellers/",
+              "desc": "Dedicated For Sellers page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Lifestyles 1",
+              "path": "/lifestyles-1/",
+              "desc": "Dedicated Lifestyles 1 page with responsive components."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
 
 
 
