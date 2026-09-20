@@ -24032,8 +24032,366 @@ export const themes: Theme[] = [
               "desc": "Dedicated Team page with responsive components."
           }
       ]
+  },
+  {
+      "id": "algeniuswaitlist-technology-website-template",
+      "name": "Algenius Waitlist",
+      "slug": "algeniuswaitlist-technology-website-template",
+      "dodoProductId": "pdt_0Nnya3OXyRyOK7YzbahKV",
+      "tagline": "Modern, high-performance Algenius Waitlist website template.",
+      "description": "Meet Algenius Waitlist \u2013 the perfect tool to build excitement before your product launch. With its sleek design and dynamic animations, engaging visitors is effortless. Customize it to reflect your brand and gather interest seamlessly.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://algeniuswaitlist-technology.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alice-restaurant-website-template",
+      "name": "Alice",
+      "slug": "alice-restaurant-website-template",
+      "dodoProductId": "pdt_0NnyaCvJRxBzkJbqo0ABh",
+      "tagline": "Modern, high-performance Alice website template.",
+      "description": "This single page template helps you craft a feature-rich website easy to adapt to any food&drink business.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 24,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alice-restaurant.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alien-website-template",
+      "name": "Alien",
+      "slug": "alien-website-template",
+      "dodoProductId": "pdt_0NnyaLSSWE04dKkf69q7u",
+      "tagline": "Modern, high-performance Alien website template.",
+      "description": "Alien is a modern and creative one-page Astro template perfect for showcasing photography, graphic design, or any personal portfolio.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alien.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Beach",
+              "path": "/project_beach/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Building",
+              "path": "/project_building/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Feeling Y",
+              "path": "/project_feeling-y/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project My Soulmate",
+              "path": "/project_my-soulmate/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Roof",
+              "path": "/project_roof/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Sun",
+              "path": "/project_sun/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aliens-website-template",
+      "name": "Aliens",
+      "slug": "aliens-website-template",
+      "dodoProductId": "pdt_0NnyaPVNCst7rwpZHe72R",
+      "tagline": "Modern, high-performance Aliens website template.",
+      "description": "Aliens is a modern AI SaaS Astro template designed for SaaS websites, AI startups, and digital platforms. Perfect for launching your AI website with sleek design, fast loading, and conversion-optimized sections. No coding needed.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 99,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aliens.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Inner Pages About",
+              "path": "/inner-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Inner Pages Contact",
+              "path": "/inner-pages_contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Inner Pages Features",
+              "path": "/inner-pages_features/",
+              "desc": "Dedicated Inner Pages Features page with responsive components."
+          },
+          {
+              "name": "Inner Pages Integration",
+              "path": "/inner-pages_integration/",
+              "desc": "Dedicated Inner Pages Integration page with responsive components."
+          },
+          {
+              "name": "Inner Pages Pricing",
+              "path": "/inner-pages_pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Inner Pages Waiting Link",
+              "path": "/inner-pages_waiting-link/",
+              "desc": "Dedicated Inner Pages Waiting Link page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "align-business-website-template",
+      "name": "Align",
+      "slug": "align-business-website-template",
+      "dodoProductId": "pdt_0NnyaTZ2hBZmJ5JUyaGJF",
+      "tagline": "Modern, high-performance Align website template.",
+      "description": "Build a beautiful business website with the Align UI Kit. Align helps businesses showcase their offering with world class visual design and enterprise quality development. Start building and customising with complete ease",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://align-business.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Company About 1",
+              "path": "/company_about-1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Company About 2",
+              "path": "/company_about-2/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Company About 3",
+              "path": "/company_about-3/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Home 1",
+              "path": "/home_home-1/",
+              "desc": "Dedicated Home Home 1 page with responsive components."
+          },
+          {
+              "name": "Home Home 2",
+              "path": "/home_home-2/",
+              "desc": "Dedicated Home Home 2 page with responsive components."
+          },
+          {
+              "name": "Home Home 3",
+              "path": "/home_home-3/",
+              "desc": "Dedicated Home Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "aligna-website-template",
+      "name": "Aligna",
+      "slug": "aligna-website-template",
+      "dodoProductId": "pdt_0NnyaZDQzegQzXwVIk7K2",
+      "tagline": "Modern, high-performance Aligna website template.",
+      "description": "Aligna is a clean and modern website Astro template is for pilates and body balance websites. It can be used for welness, fitness studio, yoga, core strength, mind-body, flexibility, mat pilates, fitness classes, pilates instructor websites.",
+      "framework": "astro",
+      "category": "wellness",
+      "categories": [
+          "wellness"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aligna.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Classes 1",
+              "path": "/classes-1/",
+              "desc": "Dedicated Classes 1 page with responsive components."
+          },
+          {
+              "name": "Events 1",
+              "path": "/events-1/",
+              "desc": "Dedicated Events 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
 
 
 

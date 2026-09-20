@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import ThemeCard from '../../components/ThemeCard.astro';
 import { themes, isThemeInCategory, type Theme } from '../../data/themes';
+import fs from 'node:fs';
+import path from 'node:path';
 import { accentFor, kindFor, nameFor, liveUrlFor, liveHostFor, iframeSrcFor, checkoutUrl, DROP, DEVICES } from '../../data/design';
 
 export function getStaticPaths() {
@@ -23,6 +25,7 @@ const accent = accentFor(theme);
 const kind = kindFor(theme);
 const liveUrl = liveUrlFor(theme);
 const iframeSrc = iframeSrcFor(theme);
+const hasPoster = fs.existsSync(path.resolve('public/themes/' + theme.slug + '.webp'));
 const liveHost = liveHostFor(theme);
 const name = nameFor(theme);
 const was = theme.wasPrice;
@@ -123,7 +126,7 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
         <div style="display: flex; justify-content: center; padding: 6px 0 2px;">
           <div class="pv-frame" data-frame>
             <div class="pv-fallback" data-fallback>
-              <img class="pv-poster" src={`/themes/${theme.slug}.webp`} alt="" aria-hidden="true" width="800" height="500" />
+              {hasPoster && <img class="pv-poster" src={`/themes/${theme.slug}.webp`} alt="" aria-hidden="true" width="800" height="500" />}
               <div class="pv-fallback-note">
                 <div class="pv-fallback-dot" style={`background: ${accent};`}></div>
                 <span>Loading the live site from <strong>{liveHost}</strong></span>
