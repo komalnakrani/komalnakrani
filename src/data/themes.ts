@@ -25359,8 +25359,1678 @@ export const themes: Theme[] = [
               "desc": "Selected case studies and featured works."
           }
       ]
+  },
+  {
+      "id": "alpha128-website-template",
+      "name": "Alpha 128",
+      "slug": "alpha128-website-template",
+      "dodoProductId": "pdt_0Nnye91hF9bTTK9F78Vau",
+      "tagline": "Modern, high-performance Alpha 128 website template.",
+      "description": "Alpha 128 is a professional website Astro template for digital agency websites. It suits  creative agency, freelancer, web design, web development, digital marketing, SEO agency, branding, social media marketing, content marketing, email marketing.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alpha128.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home 4",
+              "path": "/home-4/",
+              "desc": "Dedicated Home 4 page with responsive components."
+          },
+          {
+              "name": "Home 5",
+              "path": "/home-5/",
+              "desc": "Dedicated Home 5 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "alphafloris-florist-website-template",
+      "name": "AlphaFloris",
+      "slug": "alphafloris-florist-website-template",
+      "dodoProductId": "pdt_0NnyeDzNdxiqN0LXqRTfj",
+      "tagline": "Modern, high-performance AlphaFloris website template.",
+      "description": "The Alphafloris Template is a simple, and minimal Astro template crafted specifically for floral designers, wedding and event planners that want to showcase their portfolio of work like floral designs, venue decorations, event photography and more.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alphafloris-florist.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Anniversaries",
+              "path": "/anniversaries/",
+              "desc": "Dedicated Anniversaries page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Corporate",
+              "path": "/corporate/",
+              "desc": "Dedicated Corporate page with responsive components."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Weddings",
+              "path": "/weddings/",
+              "desc": "Dedicated Weddings page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alphamed-health-website-template",
+      "name": "Alphamed",
+      "slug": "alphamed-health-website-template",
+      "dodoProductId": "pdt_0NnyeJHBKAloFWX0J5Mma",
+      "tagline": "Modern, high-performance Alphamed website template.",
+      "description": "Alphamed is a professional healthcare template for physiotherapists, chiropractors, orthopedic clinics, and rehabilitation centers. Alphamed makes it easy for potential patients to find relevant information.",
+      "framework": "astro",
+      "category": "medical",
+      "categories": [
+          "medical"
+      ],
+      "price": 34,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alphamed-health.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "News Does Inflammation Harm Your Health",
+              "path": "/news_does-inflammation-harm-your-health/",
+              "desc": "Dedicated News Does Inflammation Harm Your Health page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Staff",
+              "path": "/staff/",
+              "desc": "Dedicated Staff page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alphaproalphapro-agency-website-template",
+      "name": "AlphaPro",
+      "slug": "alphaproalphapro-agency-website-template",
+      "dodoProductId": "pdt_0NnyeOT7bvBSqIWRTjGSG",
+      "tagline": "Modern, high-performance AlphaPro website template.",
+      "description": "Build a compelling agency website with Alpha. With a clean and minimal visual design,enterprise-quality development, and smooth animation. Alpha is easy to customize, blazing-fast and responsive on every device",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alphaproalphapro-agency.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Career",
+              "path": "/career/",
+              "desc": "Dedicated Career page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Lorrive",
+              "path": "/projects_lorrive/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alpun-website-template",
+      "name": "Alpun",
+      "slug": "alpun-website-template",
+      "dodoProductId": "pdt_0NnyeTEjM8s0yfUljpsBm",
+      "tagline": "Modern, high-performance Alpun website template.",
+      "description": "Alpun is a modern Astro template for construction, building, architecture, and contractor businesses. Showcase projects, services, and your team with a professional, responsive, and easy-to-customize website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alpun.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Insight Post Architectural Recognition Awards Results In Belgium 2026 Recap",
+              "path": "/insight-post_architectural-recognition-awards-results-in-belgium-2026-recap/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Insight Post Designing Efficient Workspaces The Role And Impact Of Architecture In Productivity",
+              "path": "/insight-post_designing-efficient-workspaces-the-role-and-impact-of-architecture-in-productivity/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Emerald Luxia Residentials",
+              "path": "/project_emerald-luxia-residentials/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Horizontal Industrial Warehouse",
+              "path": "/project_horizontal-industrial-warehouse/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Lombatori Space",
+              "path": "/project_lombatori-space/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Riverside Commercial Office",
+              "path": "/project_riverside-commercial-office/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alrion-website-template",
+      "name": "Alrion",
+      "slug": "alrion-website-template",
+      "dodoProductId": "pdt_0NnyeYbXUwGgNJ8Swftng",
+      "tagline": "Modern, high-performance Alrion website template.",
+      "description": "Alrion is a sleek, responsive Astro template designed for modern creative agencies in dark theme. Perfect for portfolios, services, or projects, it offers dynamic CMS content, visual storytelling, and easy customization.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alrion.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "alspire-website-template",
+      "name": "Alspire",
+      "slug": "alspire-website-template",
+      "dodoProductId": "pdt_0NnyedCuduwwpCfKV7pdg",
+      "tagline": "Modern, high-performance Alspire website template.",
+      "description": "Lead your startup into a new tech era with Alspire \ud83d\ude80! This Premium Astro template is engineered for modern startups, combining sleek aesthetics with powerful customization features to elevate your tech company's online presence.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alspire.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Pages Blog V1",
+              "path": "/blog-pages_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V3",
+              "path": "/home-pages_home-v3/",
+              "desc": "Dedicated Home Pages Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "alternative-medicine-health-website-template",
+      "name": "Alternative Medicine",
+      "slug": "alternative-medicine-health-website-template",
+      "dodoProductId": "pdt_0NnyehplxCPWXi5y1EQpV",
+      "tagline": "Modern, high-performance Alternative Medicine website template.",
+      "description": "Alternative Medicine is a professional website Astro template for alternative medicine websites. It suits perfectly for acupuncture, chiropractic, health, hypnotherapy, meditation, organic shop, oriental medicine, retreat, yoga, aromatherapy.",
+      "framework": "astro",
+      "category": "wellness",
+      "categories": [
+          "wellness"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alternative-medicine-health.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "How We Help",
+              "path": "/how-we-help/",
+              "desc": "Dedicated How We Help page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Staff",
+              "path": "/our-staff/",
+              "desc": "Dedicated Our Staff page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "altero-website-template",
+      "name": "Altero",
+      "slug": "altero-website-template",
+      "dodoProductId": "pdt_0Nnyen3KiJjoJTDFUNtED",
+      "tagline": "Modern, high-performance Altero website template.",
+      "description": "Altero is a modern, dark-themed template tailored for agencies and consulting firms. Highlight your expertise with dedicated sections for services, case studies, team, and convert visitors easily with a contact form.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://altero.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Admin Licenses",
+              "path": "/admin_licenses/",
+              "desc": "Dedicated Admin Licenses page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Adapting Strategy In Uncertain Markets",
+              "path": "/project_adapting-strategy-in-uncertain-markets/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Designing Teams For Modern Growth",
+              "path": "/project_designing-teams-for-modern-growth/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project The Power Of Data Driven Consulting",
+              "path": "/project_the-power-of-data-driven-consulting/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alterx-website-template",
+      "name": "Alterx",
+      "slug": "alterx-website-template",
+      "dodoProductId": "pdt_0Nnyes2SGlfHEKTP0Zrkh",
+      "tagline": "Modern, high-performance Alterx website template.",
+      "description": "Alterx is a premium Astro SaaS template built for startups and tech companies. Featuring a clean design, smooth interactions, and scalable layouts, it helps you launch a high-converting website effortlessly.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alterx.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "altnest-website-template",
+      "name": "Altnest",
+      "slug": "altnest-website-template",
+      "dodoProductId": "pdt_0Nnyf8XO2VpttqiQK7VoZ",
+      "tagline": "Modern, high-performance Altnest website template.",
+      "description": "Altnest is a modern real estate Astro template designed for real estate agencies, property managers, and agents. It is a complete solution for showcasing property listings and establishing professional authority in the real estate market.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://altnest.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Property Listing One",
+              "path": "/property-listing-one/",
+              "desc": "Dedicated Property Listing One page with responsive components."
+          },
+          {
+              "name": "Property Listing Two",
+              "path": "/property-listing-two/",
+              "desc": "Dedicated Property Listing Two page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alto-agency-website-template",
+      "name": "Alto",
+      "slug": "alto-agency-website-template",
+      "dodoProductId": "pdt_0NnyfEe62uSvN8brkXhi1",
+      "tagline": "Modern, high-performance Alto website template.",
+      "description": "The Alto Astro template is an elegant solution for those looking to build a unique portfolio for their creative business or freelancing needs. It features a modern layout, finely crafted typography & everything you need to stand out from the crowd.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 34,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alto-agency.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Archives",
+              "path": "/archives/",
+              "desc": "Dedicated Archives page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Works Asia Pacific Museum",
+              "path": "/works_asia-pacific-museum/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Floor 7Th",
+              "path": "/works_floor-7th/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Sister C",
+              "path": "/works_sister-c/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alton-news-website-template",
+      "name": "Alton",
+      "slug": "alton-news-website-template",
+      "dodoProductId": "pdt_0NnyfJfxYhcIq8K3MW5Yh",
+      "tagline": "Modern, high-performance Alton website template.",
+      "description": "Alton Astro template has a pixel-perfect design and outstanding design & features for news, magazines, and blogs, podcasts, and It also ensures top-notch performance and user experience.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alton-news.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News Categories Business",
+              "path": "/news-categories_business/",
+              "desc": "Dedicated News Categories Business page with responsive components."
+          },
+          {
+              "name": "News Categories Health",
+              "path": "/news-categories_health/",
+              "desc": "Dedicated News Categories Health page with responsive components."
+          },
+          {
+              "name": "News Categories Politics",
+              "path": "/news-categories_politics/",
+              "desc": "Dedicated News Categories Politics page with responsive components."
+          },
+          {
+              "name": "News Categories Science",
+              "path": "/news-categories_science/",
+              "desc": "Dedicated News Categories Science page with responsive components."
+          },
+          {
+              "name": "Newsletter Plans",
+              "path": "/newsletter-plans/",
+              "desc": "Dedicated Newsletter Plans page with responsive components."
+          },
+          {
+              "name": "Podcasts",
+              "path": "/podcasts/",
+              "desc": "Dedicated Podcasts page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "altorw-website-template",
+      "name": "Altor W",
+      "slug": "altorw-website-template",
+      "dodoProductId": "pdt_0NnyfPECOAi7dFMNtspx6",
+      "tagline": "Modern, high-performance Altor W website template.",
+      "description": "Altor W is clean and modern website Astro template for architecture website. It can be easily used for interior, interior design, architecture design, architect, residence, builder, building, contractor, engineering, painter, renovation websites.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://altorw.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services 1",
+              "path": "/services-1/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "altrion-website-template",
+      "name": "Altrion",
+      "slug": "altrion-website-template",
+      "dodoProductId": "pdt_0NnyfVB10D7jWZcnuDYEl",
+      "tagline": "Modern, high-performance Altrion website template.",
+      "description": "Altrion is a premium Astro template for an AI consulting agency offering AI service, machine learning consulting, automation solution, and digital transformation. Built for AI firm, data science team, and an enterprise AI service provider.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://altrion.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Case Study Financial Risk Detection",
+              "path": "/case-study_financial-risk-detection/",
+              "desc": "Dedicated Case Study Financial Risk Detection page with responsive components."
+          },
+          {
+              "name": "Case Study Predictive Fleet Maintenance Ai",
+              "path": "/case-study_predictive-fleet-maintenance-ai/",
+              "desc": "Dedicated Case Study Predictive Fleet Maintenance Ai page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "altrum-website-template",
+      "name": "Altrum",
+      "slug": "altrum-website-template",
+      "dodoProductId": "pdt_0NnyfaXsAFYc8iioNxnSF",
+      "tagline": "Modern, high-performance Altrum website template.",
+      "description": "Altrum\u2122 is a contemporary Astro template created to elevate your portfolio with clean composition and delicate motion effects.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://altrum.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Forma Digital",
+              "path": "/project_forma-digital/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alture-website-template",
+      "name": "Alture",
+      "slug": "alture-website-template",
+      "dodoProductId": "pdt_0NnyfhqX966kmHVN4HRKn",
+      "tagline": "Modern, high-performance Alture website template.",
+      "description": "A bold agency template with smooth animations, hype visuals, and a custom mouse trail effect.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://alture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog 1",
+              "path": "/blog_1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact 1",
+              "path": "/contact_1/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Contact 2",
+              "path": "/contact_2/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Studio",
+              "path": "/studio/",
+              "desc": "Dedicated Studio page with responsive components."
+          },
+          {
+              "name": "Work Bronx",
+              "path": "/work_bronx/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works 1",
+              "path": "/works_1/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "altus-website-template",
+      "name": "Altuss",
+      "slug": "altus-website-template",
+      "dodoProductId": "pdt_0NnyfnBKf9j8fLjFoGojT",
+      "tagline": "Modern, high-performance Altuss website template.",
+      "description": "Altus is a sophisticated Astro template for luxury real estate & property managers. Built with Finsweet\u2019s Client-First system for clean, scalable, and professional results. The ultimate solution for high-end property agencies.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://altus.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Post The Curated Home How Interior Design Shapes Your Daily Experience",
+              "path": "/blog-post_the-curated-home-how-interior-design-shapes-your-daily-experience/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Estates Details Azure Coastal Retreat",
+              "path": "/estates-details_azure-coastal-retreat/",
+              "desc": "Dedicated Estates Details Azure Coastal Retreat page with responsive components."
+          },
+          {
+              "name": "Estates",
+              "path": "/estates/",
+              "desc": "Dedicated Estates page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "altuz-website-template",
+      "name": "Altuz",
+      "slug": "altuz-website-template",
+      "dodoProductId": "pdt_0NnyfsypKTEitI42am1rK",
+      "tagline": "Modern, high-performance Altuz website template.",
+      "description": "Altuz is a versatile real estate template designed to showcase architectural projects and properties with style and ease. It features a customizable structure with editable components, offering flexibility, fast implementation, and a professional.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://altuz.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact Contact V1",
+              "path": "/contact_contact-v1/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Home V1",
+              "path": "/home_home-v1/",
+              "desc": "Dedicated Home Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Home V2",
+              "path": "/home_home-v2/",
+              "desc": "Dedicated Home Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Home V3",
+              "path": "/home_home-v3/",
+              "desc": "Dedicated Home Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Projects V1",
+              "path": "/project_projects-v1/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aluna-website-template",
+      "name": "Aluna",
+      "slug": "aluna-website-template",
+      "dodoProductId": "pdt_0NnyfzpVmUyjt9ID31i23",
+      "tagline": "Modern, high-performance Aluna website template.",
+      "description": "Aluna is a wellness website template designed to present classes, schedules, instructors, pricing, and studio locations. Ideal for yoga studios and coaching businesses that value simplicity, usability, and mindful design.",
+      "framework": "astro",
+      "category": "wellness",
+      "categories": [
+          "wellness"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aluna.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Course Pilates Flow",
+              "path": "/course_pilates-flow/",
+              "desc": "Dedicated Course Pilates Flow page with responsive components."
+          },
+          {
+              "name": "Course Restorative Reset",
+              "path": "/course_restorative-reset/",
+              "desc": "Dedicated Course Restorative Reset page with responsive components."
+          },
+          {
+              "name": "Courses",
+              "path": "/courses/",
+              "desc": "Dedicated Courses page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Schedule",
+              "path": "/schedule/",
+              "desc": "Dedicated Schedule page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aluro-website-template",
+      "name": "Aluro",
+      "slug": "aluro-website-template",
+      "dodoProductId": "pdt_0Nnyg4dLjQsyriV1mRONP",
+      "tagline": "Modern, high-performance Aluro website template.",
+      "description": "A sleek Astro portfolio template built for professionals, studios, and brands. Aluro features dark and light modes, smooth interactions, and a flexible, responsive layout.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aluro.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          },
+          {
+              "name": "Work Auralis",
+              "path": "/work_auralis/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Lumina Studio",
+              "path": "/work_lumina-studio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Moden Interiors",
+              "path": "/work_moden-interiors/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Nexora",
+              "path": "/work_nexora/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Verse",
+              "path": "/work_verse/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "alveora-website-template",
+      "name": "Alveora",
+      "slug": "alveora-website-template",
+      "dodoProductId": "pdt_0NnygDn4eiK7G9jd7Fhkz",
+      "tagline": "Modern, high-performance Alveora website template.",
+      "description": "A calm, trust-focused dental practice template with case studies, service pages, team profiles, and a blog \u2014 built for boutique dental clinics that prioritize patient comfort and aesthetic results.",
+      "framework": "astro",
+      "category": "medical",
+      "categories": [
+          "medical"
+      ],
+      "price": 99,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alveora.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "alvion-website-template",
+      "name": "Alvion",
+      "slug": "alvion-website-template",
+      "dodoProductId": "pdt_0NnygKiJaaUNJEvCoTBhm",
+      "tagline": "Modern, high-performance Alvion website template.",
+      "description": "Alvion is a refined personal portfolio designed with a modern minimal aesthetic. Built for designers and digital creators, it focuses on clarity, structure, and intentional presentation\u2014allowing work to stand out with confidence and precision.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://alvion.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Instruction",
+              "path": "/instruction/",
+              "desc": "Dedicated Instruction page with responsive components."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alvy-agency-website-template",
+      "name": "Alvy",
+      "slug": "alvy-agency-website-template",
+      "dodoProductId": "pdt_0NnygQMNWFdVKG68NMltU",
+      "tagline": "Modern, high-performance Alvy website template.",
+      "description": "Alvy is a versatile and functional Astro template for creative agencies, design studios, freelancers, and personal portfolios, boasting a modern and dark design, advanced interactions, and CMS and e-commerce integrations.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alvy-agency.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Jobs",
+              "path": "/jobs/",
+              "desc": "Dedicated Jobs page with responsive components."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Studio",
+              "path": "/studio/",
+              "desc": "Dedicated Studio page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "alyra-website-template",
+      "name": "Alyra",
+      "slug": "alyra-website-template",
+      "dodoProductId": "pdt_0NnygZPDZMeskoNBvZi6s",
+      "tagline": "Modern, high-performance Alyra website template.",
+      "description": "Alyra is a romantic and elegant Astro template designed for modern weddings. Showcase your love story, share event details, and collect RSVPs effortlessly with timeless design, smooth animations, and beautiful typography.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://alyra.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Event Ceremony",
+              "path": "/event_ceremony/",
+              "desc": "Dedicated Event Ceremony page with responsive components."
+          },
+          {
+              "name": "Event Reception",
+              "path": "/event_reception/",
+              "desc": "Dedicated Event Reception page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
