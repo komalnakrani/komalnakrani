@@ -46644,8 +46644,1575 @@ export const themes: Theme[] = [
               "desc": "Dedicated Treatments page with responsive components."
           }
       ]
+  },
+  {
+      "id": "auralis-website-template",
+      "name": "Auralis",
+      "slug": "auralis-website-template",
+      "dodoProductId": "pdt_0Nnzc8hCAwfw0squp6W9D",
+      "tagline": "Modern, high-performance Auralis website template.",
+      "description": "Auralis is a modern AI SaaS Astro template designed for AI startups and product photography tools. Featuring responsive layouts, bold visuals, and conversion-focused sections, it\u2019s perfect for AI apps, SaaS platforms, and tech products.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auralis.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Category Product",
+              "path": "/category_product/",
+              "desc": "Dedicated Category Product page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post From Clicks To Sales The Role Of Ai In Visual Marketing",
+              "path": "/post_from-clicks-to-sales-the-role-of-ai-in-visual-marketing/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "auralis-x-website-template",
+      "name": "Aureon",
+      "slug": "auralis-x-website-template",
+      "dodoProductId": "pdt_0NnzcDhKQXo29ppsUQjGs",
+      "tagline": "Modern, high-performance Aureon website template.",
+      "description": "Aureon is a modern AI SaaS Astro template for startups, automation tools, and software products, with complete pages for pricing, customers, blog, case studies, legal content, and conversion-focused product storytelling.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://auralis-x.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post Why We Replaced Our Prompt Registry With Versioned Eval Datasets 2",
+              "path": "/post_why-we-replaced-our-prompt-registry-with-versioned-eval-datasets-2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Solutions",
+              "path": "/solutions/",
+              "desc": "Dedicated Solutions page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "auralise-website-template",
+      "name": "Auralise",
+      "slug": "auralise-website-template",
+      "dodoProductId": "pdt_0NnzcIHcJ7ZJlkeINStD6",
+      "tagline": "Modern, high-performance Auralise website template.",
+      "description": "Auralise is a premium AI agency Astro template designed for automation studios, SaaS startups, and technology businesses. Modern, responsive, SEO-optimized, and easy to customize.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 99,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auralise.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Case Study Ai Agency 4",
+              "path": "/blog_case-study-ai-agency-4/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Case Study Ai Agency 5",
+              "path": "/blog_case-study-ai-agency-5/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "auraly-website-template",
+      "name": "Auraly",
+      "slug": "auraly-website-template",
+      "dodoProductId": "pdt_0NnzcPkpYJ8R39oxG8S8s",
+      "tagline": "Modern, high-performance Auraly website template.",
+      "description": "Auraly is a Astro template made for AI startups and SaaS companies that build text-to-voice tools. It helps you market your product with a fast, modern, and easy-to-customize design.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 99,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auraly.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Product",
+              "path": "/product/",
+              "desc": "Dedicated Product page with responsive components."
+          },
+          {
+              "name": "Resources",
+              "path": "/resources/",
+              "desc": "Dedicated Resources page with responsive components."
+          },
+          {
+              "name": "Start Free Trial",
+              "path": "/start-free-trial/",
+              "desc": "Dedicated Start Free Trial page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aurant-food-and-drink-website-template",
+      "name": "Aurant",
+      "slug": "aurant-food-and-drink-website-template",
+      "dodoProductId": "pdt_0NnzcWORKOkUqjkooZtRs",
+      "tagline": "Modern, high-performance Aurant website template.",
+      "description": "Transform your online presence with Aurant, a cutting-edge Astro template meticulously crafted for the food and drink category. Unlock a new era of gourmet experiences by connecting renowned chefs directly with your audience.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aurant-food-and-drink.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Menu",
+              "path": "/menu/",
+              "desc": "Dedicated Menu page with responsive components."
+          },
+          {
+              "name": "Others Licenses",
+              "path": "/others_licenses/",
+              "desc": "Dedicated Others Licenses page with responsive components."
+          },
+          {
+              "name": "Reservation",
+              "path": "/reservation/",
+              "desc": "Dedicated Reservation page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aureas-website-template",
+      "name": "AUREAS",
+      "slug": "aureas-website-template",
+      "dodoProductId": "pdt_0NnzccJxqgPbmWozKU9tS",
+      "tagline": "Modern, high-performance AUREAS website template.",
+      "description": "A minimal and modern Astro template designed for creative agencies. Clean layouts, light aesthetics, and smooth interactions help you showcase your work with style and clarity.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aureas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Art Direction",
+              "path": "/service_art-direction/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Brand Design",
+              "path": "/service_brand-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "aurelia-website-template",
+      "name": "Aurelia",
+      "slug": "aurelia-website-template",
+      "dodoProductId": "pdt_0NnzciBgdb1jxw5batyh4",
+      "tagline": "Modern, high-performance Aurelia website template.",
+      "description": "Aurelia is a refined Astro template for jewelry brands. Showcase collections, tell your brand story, and elevate shopping with a smooth UX. Elegant, responsive, and built to convert \u2014 perfect for luxury eCommerce.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://aurelia.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          },
+          {
+              "name": "Portfolio Aurora Opal Collection",
+              "path": "/portfolio_aurora-opal-collection/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Eclat Pearl Series",
+              "path": "/portfolio_eclat-pearl-series/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Luna Line Collection",
+              "path": "/portfolio_luna-line-collection/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Terra Textures Capsule",
+              "path": "/portfolio_terra-textures-capsule/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aurelo-website-template",
+      "name": "Aurelo",
+      "slug": "aurelo-website-template",
+      "dodoProductId": "pdt_0NnzcowHKfbFOO6Wg336u",
+      "tagline": "Modern, high-performance Aurelo website template.",
+      "description": "Bring your spaces to life with Aurelo \ud83c\udf3f\ud83e\ude9e. A modern Astro template tailored for interior design studios, featuring clean layouts and a refined user experience.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aurelo.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Templates License",
+              "path": "/templates_license/",
+              "desc": "Dedicated Templates License page with responsive components."
+          },
+          {
+              "name": "Templates Style Guide",
+              "path": "/templates_style-guide/",
+              "desc": "Dedicated Templates Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aureo-real-estate-website-template",
+      "name": "Aureo",
+      "slug": "aureo-real-estate-website-template",
+      "dodoProductId": "pdt_0NnzcuPoWwSK3ZroZOxkW",
+      "tagline": "Modern, high-performance Aureo website template.",
+      "description": "Astro template designed for real estate agencies, architects, and property showcases. With its intuitive design and captivating layout, Aureo is the perfect platform for showcasing properties and architectural projects.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aureo-real-estate.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Properties",
+              "path": "/properties/",
+              "desc": "Dedicated Properties page with responsive components."
+          },
+          {
+              "name": "Property Mountain View Condos",
+              "path": "/property_mountain-view-condos/",
+              "desc": "Dedicated Property Mountain View Condos page with responsive components."
+          },
+          {
+              "name": "Property Parkside Townhouses",
+              "path": "/property_parkside-townhouses/",
+              "desc": "Dedicated Property Parkside Townhouses page with responsive components."
+          },
+          {
+              "name": "Property Seaside Retreats",
+              "path": "/property_seaside-retreats/",
+              "desc": "Dedicated Property Seaside Retreats page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aureva-website-template",
+      "name": "Aureva",
+      "slug": "aureva-website-template",
+      "dodoProductId": "pdt_0Nnzd0SsgoMu3wU2N5rwN",
+      "tagline": "Modern, high-performance Aureva website template.",
+      "description": "Aureva is a refined Astro template for skincare brands and beauty professionals. Featuring clean layouts, elegant typography, and service-focused sections, it provides an intuitive booking flow and a seamless design to showcase your expertise.",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aureva.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs Beauty Secrets From Around The World Rituals And Ingredients You Need To Try Wsuml",
+              "path": "/blogs_beauty-secrets-from-around-the-world-rituals-and-ingredients-you-need-to-try-wsuml/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Product Aureva Dew Essence",
+              "path": "/product_aureva-dew-essence/",
+              "desc": "Dedicated Product Aureva Dew Essence page with responsive components."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aurexa-website-template",
+      "name": "Aurexa",
+      "slug": "aurexa-website-template",
+      "dodoProductId": "pdt_0Nnzd6rEdaBEUJrLYm1zu",
+      "tagline": "Modern, high-performance Aurexa website template.",
+      "description": "Aurexa is a modern Astro template crafted for AI SaaS and IT companies. It offers 16+ pages, 80+ sections, and seamless customization to build high-performance, visually engaging websites without coding.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://aurexa.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "auria-website-template",
+      "name": "Auria",
+      "slug": "auria-website-template",
+      "dodoProductId": "pdt_0NnzdETnKXB2bdGdGFQmO",
+      "tagline": "Modern, high-performance Auria website template.",
+      "description": "Meet Auria \u2014 a refined business template built around clarity, contrast, and a warm editorial aesthetic.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auria.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About 1",
+              "path": "/about_1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About 2",
+              "path": "/about_2/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About 3",
+              "path": "/about_3/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home_2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home_3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services 1",
+              "path": "/services_1/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aurion-website-template",
+      "name": "Aurion",
+      "slug": "aurion-website-template",
+      "dodoProductId": "pdt_0NnzdNcd3c0eh5s6yu57z",
+      "tagline": "Modern, high-performance Aurion website template.",
+      "description": "Aurion is a versatile SaaS template for tech companies. Its customizable structure allows services to be showcased with ease, offering editable components that adapt to any need, providing flexibility and fast implementation.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://aurion.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Blog 1",
+              "path": "/blog_blog-1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Home V1",
+              "path": "/home_home-v1/",
+              "desc": "Dedicated Home Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Home V2",
+              "path": "/home_home-v2/",
+              "desc": "Dedicated Home Home V2 page with responsive components."
+          },
+          {
+              "name": "Home Home V3",
+              "path": "/home_home-v3/",
+              "desc": "Dedicated Home Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing Pricing 1",
+              "path": "/pricing_pricing-1/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "aurora-app-website-template",
+      "name": "Aurora",
+      "slug": "aurora-app-website-template",
+      "dodoProductId": "pdt_0NnzdSzHQWH8CyoWu7M0j",
+      "tagline": "Modern, high-performance Aurora website template.",
+      "description": "Aurora is a creative Astro template designed & built for SaaS, software, startups, and mobile app. Aurora is equipped with tons of features like headers for web-app and mobile, multiple pricing tables, Q&A, testimonials, and much more.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aurora-app.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Download Mobile",
+              "path": "/download-mobile/",
+              "desc": "Dedicated Download Mobile page with responsive components."
+          },
+          {
+              "name": "Download",
+              "path": "/download/",
+              "desc": "Dedicated Download page with responsive components."
+          },
+          {
+              "name": "Features 1",
+              "path": "/features-1/",
+              "desc": "Dedicated Features 1 page with responsive components."
+          },
+          {
+              "name": "Features 2",
+              "path": "/features-2/",
+              "desc": "Dedicated Features 2 page with responsive components."
+          },
+          {
+              "name": "Home Mobile",
+              "path": "/home-mobile/",
+              "desc": "Dedicated Home Mobile page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Privacy",
+              "path": "/privacy/",
+              "desc": "Dedicated Privacy page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aurora-ecom-saas-website-template",
+      "name": "Aurora Ecommerce",
+      "slug": "aurora-ecom-saas-website-template",
+      "dodoProductId": "pdt_0NnzdXvsYIvot0FVD7Lov",
+      "tagline": "Modern, high-performance Aurora Ecommerce website template.",
+      "description": "Aurora is a creative Astro template designed & built for SaaS, software, startups, and mobile app. Aurora is equipped with tons of features like headers for web-app and mobile, multiple pricing tables, Q&A, testimonials, and much more.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aurora-ecom-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Download Mobile",
+              "path": "/download-mobile/",
+              "desc": "Dedicated Download Mobile page with responsive components."
+          },
+          {
+              "name": "Download",
+              "path": "/download/",
+              "desc": "Dedicated Download page with responsive components."
+          },
+          {
+              "name": "Features 1",
+              "path": "/features-1/",
+              "desc": "Dedicated Features 1 page with responsive components."
+          },
+          {
+              "name": "Features 2",
+              "path": "/features-2/",
+              "desc": "Dedicated Features 2 page with responsive components."
+          },
+          {
+              "name": "Home Mobile",
+              "path": "/home-mobile/",
+              "desc": "Dedicated Home Mobile page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Privacy",
+              "path": "/privacy/",
+              "desc": "Dedicated Privacy page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aurora-estate-website-template",
+      "name": "Aurora Estate",
+      "slug": "aurora-estate-website-template",
+      "dodoProductId": "pdt_0Nnzdgaa1RrDI28n5JdRg",
+      "tagline": "Modern, high-performance Aurora Estate website template.",
+      "description": "Aurora Estates is a sleek Astro template for luxury travel brands. Perfect for eco-resorts, adventure agencies, and Lapland experiences, it combines modern design with the beauty of the Arctic. Inspire travelers with stunning visuals.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aurora-estate.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Cabin Enchanted Forest Hideaway",
+              "path": "/cabin_enchanted-forest-hideaway/",
+              "desc": "Dedicated Cabin Enchanted Forest Hideaway page with responsive components."
+          },
+          {
+              "name": "Cabin Midnight Sun Villa",
+              "path": "/cabin_midnight-sun-villa/",
+              "desc": "Dedicated Cabin Midnight Sun Villa page with responsive components."
+          },
+          {
+              "name": "Cabins",
+              "path": "/cabins/",
+              "desc": "Dedicated Cabins page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Experiences",
+              "path": "/experiences/",
+              "desc": "Dedicated Experiences page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "auroradocs-documentation-website-template",
+      "name": "Aurora Docs",
+      "slug": "auroradocs-documentation-website-template",
+      "dodoProductId": "pdt_0Nnzdm7eK6RK7ZF7NmIkJ",
+      "tagline": "Modern, high-performance Aurora Docs website template.",
+      "description": "Introducing Aurora Docs \u2014 Whitepaper website template tailored for Web3 projects. Crafted with precision, it showcases your vision, technology, and ecosystem with a sleek design and intuitive interface.",
+      "framework": "astro",
+      "category": "documentation",
+      "categories": [
+          "documentation"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auroradocs-documentation.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Conclusion",
+              "path": "/conclusion/",
+              "desc": "Dedicated Conclusion page with responsive components."
+          },
+          {
+              "name": "Core Dimensions",
+              "path": "/core-dimensions/",
+              "desc": "Dedicated Core Dimensions page with responsive components."
+          },
+          {
+              "name": "Core Philosophy",
+              "path": "/core-philosophy/",
+              "desc": "Dedicated Core Philosophy page with responsive components."
+          },
+          {
+              "name": "Game Ecosystem",
+              "path": "/game-ecosystem/",
+              "desc": "Dedicated Game Ecosystem page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Team Mission",
+              "path": "/team-mission/",
+              "desc": "Dedicated Team Mission page with responsive components."
+          },
+          {
+              "name": "Tokenomics",
+              "path": "/tokenomics/",
+              "desc": "Dedicated Tokenomics page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "auroralp-finance-website-template",
+      "name": "AuroraLP",
+      "slug": "auroralp-finance-website-template",
+      "dodoProductId": "pdt_0Nnzdr3cBSoU3gKmRDSSD",
+      "tagline": "Modern, high-performance AuroraLP website template.",
+      "description": "AuroraLP is a Web 3.0-inspired template designed for trading businesses. With dark style, glowing elements, and slick animations, it's a responsive and modern solution to elevate your trading platform.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auroralp-finance.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Styleguide Licenses",
+              "path": "/styleguide_licenses/",
+              "desc": "Dedicated Styleguide Licenses page with responsive components."
+          },
+          {
+              "name": "Styleguide Style Guide",
+              "path": "/styleguide_style-guide/",
+              "desc": "Dedicated Styleguide Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "auroria-website-template",
+      "name": "Auroria",
+      "slug": "auroria-website-template",
+      "dodoProductId": "pdt_0Nnze0HdmX1tklcjKThmO",
+      "tagline": "Modern, high-performance Auroria website template.",
+      "description": "Aurora is a romantic Astro template designed for weddings. With elegant layouts, soft tones, and smooth animations, it beautifully showcases your love story, event details, and memories \u2014 perfect for modern couples and wedding planners.",
+      "framework": "astro",
+      "category": "weddings-and-events",
+      "categories": [
+          "weddings-and-events"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auroria.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Inside Aurora Weddings Events",
+              "path": "/blog_inside-aurora-weddings-events/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aurovia-website-template",
+      "name": "Aurovia",
+      "slug": "aurovia-website-template",
+      "dodoProductId": "pdt_0Nnze5xFd5qIUxmKUomlJ",
+      "tagline": "Modern, high-performance Aurovia website template.",
+      "description": "Aurovia is a portfolio template with sidebar navigation, built for designers, photographers, and studios. Fully responsive, fast-loading, and easy to customize, so your work stays the focus on every page.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aurovia.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Buy",
+              "path": "/buy/",
+              "desc": "Dedicated Buy page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aurox-website-template",
+      "name": "Aurox",
+      "slug": "aurox-website-template",
+      "dodoProductId": "pdt_0NnzeK78JSNPvOTauiWu4",
+      "tagline": "Modern, high-performance Aurox website template.",
+      "description": "Aurox Agency is a stylish and modern Astro template for creative design agencies. It features clean layouts, smooth animations, and CMS integration\u2014perfect for showcasing Works, services, and growing your digital presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aurox.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "authentic-designer-website-template",
+      "name": "Authentic",
+      "slug": "authentic-designer-website-template",
+      "dodoProductId": "pdt_0NnzeQRYyqugADUhlVcTd",
+      "tagline": "Modern, high-performance Authentic website template.",
+      "description": "With 9 different pages, and a modern and fully responsive design, Authentic has all you need to showcase your projects and win new clients.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 34,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://authentic-designer.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Demo Demo 1",
+              "path": "/demo_demo-1/",
+              "desc": "Dedicated Demo Demo 1 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 2",
+              "path": "/demo_demo-2/",
+              "desc": "Dedicated Demo Demo 2 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 3",
+              "path": "/demo_demo-3/",
+              "desc": "Dedicated Demo Demo 3 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 4",
+              "path": "/demo_demo-4/",
+              "desc": "Dedicated Demo Demo 4 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 5",
+              "path": "/demo_demo-5/",
+              "desc": "Dedicated Demo Demo 5 page with responsive components."
+          },
+          {
+              "name": "Demo Demo 6",
+              "path": "/demo_demo-6/",
+              "desc": "Dedicated Demo Demo 6 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "authorial-website-template",
+      "name": "Authorial",
+      "slug": "authorial-website-template",
+      "dodoProductId": "pdt_0NnzeXHc6vycxwXZh83Q9",
+      "tagline": "Modern, high-performance Authorial website template.",
+      "description": "Authorial is the perfect Book Author Website Template for you! Created by Theme Sleek, this template allows authors to showcase, sell, and promote their books in a captivating and modern way.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://authorial.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Books",
+              "path": "/books/",
+              "desc": "Dedicated Books page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "authority-consulting-website-template",
+      "name": "Authority",
+      "slug": "authority-consulting-website-template",
+      "dodoProductId": "pdt_0NnzecIzQyfC2MYJxAM92",
+      "tagline": "Modern, high-performance Authority website template.",
+      "description": "Freelancers search no more! Meet Authority, a premium Astro template for independent online marketing experts. Stand out with a bold, beautiful and easy to use template. Start growing your freelance business now!",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://authority-consulting.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services Page",
+              "path": "/services-page/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Utility Pages Licenses",
+              "path": "/utility-pages_licenses/",
+              "desc": "Dedicated Utility Pages Licenses page with responsive components."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
