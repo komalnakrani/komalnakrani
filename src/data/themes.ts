@@ -48187,8 +48187,1623 @@ export const themes: Theme[] = [
               "desc": "Dedicated Utility Pages Licenses page with responsive components."
           }
       ]
+  },
+  {
+      "id": "autivio-website-template",
+      "name": "Autivio",
+      "slug": "autivio-website-template",
+      "dodoProductId": "pdt_0NnzewGb5HXC1w5PuOv5b",
+      "tagline": "Modern, high-performance Autivio website template.",
+      "description": "Autivio is a modern auto repair website template designed for automotive services. It offers sleek layouts, fast performance, and advanced customization options. Its user-friendly interface.",
+      "framework": "astro",
+      "category": "transportation",
+      "categories": [
+          "transportation"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autivio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home Home One",
+              "path": "/home_home-one/",
+              "desc": "Dedicated Home Home One page with responsive components."
+          },
+          {
+              "name": "Home Home Two",
+              "path": "/home_home-two/",
+              "desc": "Dedicated Home Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "auto-towing-website-template",
+      "name": "Auto Towing",
+      "slug": "auto-towing-website-template",
+      "dodoProductId": "pdt_0Nnzf2aNlRDWZMVa1FawP",
+      "tagline": "Modern, high-performance Auto Towing website template.",
+      "description": "Auto Towing is a clean and modern website Astro template for auto towing and roadside assistance services websites. It can be used for auto towing service, emergency towing, 24/7 towing service, local towing company, fast towing service websites.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auto-towing.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Testimonials",
+              "path": "/testimonials/",
+              "desc": "Dedicated Testimonials page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "autocar-x-automotive-website-template",
+      "name": "Autocar X",
+      "slug": "autocar-x-automotive-website-template",
+      "dodoProductId": "pdt_0NnzfEa9f5GFtLxBr7mau",
+      "tagline": "Modern, high-performance Autocar X website template.",
+      "description": "Looking for an amazing template to showcase your car maintenance and repair service? Presenting Autocar X, our top-notch automotive Astro template designed for modern car service companies looking to have a great online presence.",
+      "framework": "astro",
+      "category": "transportation",
+      "categories": [
+          "transportation"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autocar-x-automotive.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog 10 Things To Do To Keep Your Car In A Great Shape",
+              "path": "/blog_10-things-to-do-to-keep-your-car-in-a-great-shape/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Packages",
+              "path": "/packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "autofix-automotive-website-template",
+      "name": "AutoFix",
+      "slug": "autofix-automotive-website-template",
+      "dodoProductId": "pdt_0NnzfKcSyjwBhLMw9GLZr",
+      "tagline": "Modern, high-performance AutoFix website template.",
+      "description": "Enhance your automotive service business with AutoFix! Tailored for technicians, workshops, and vehicle repair experts, our AutoFix Astro template provides an intuitive platform. Establish credibility with a remarkable online presence!",
+      "framework": "astro",
+      "category": "transportation",
+      "categories": [
+          "transportation"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autofix-automotive.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Mechanics",
+              "path": "/mechanics/",
+              "desc": "Dedicated Mechanics page with responsive components."
+          },
+          {
+              "name": "Pricing Tables",
+              "path": "/pricing-tables/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "autofye-website-template",
+      "name": "Autofye",
+      "slug": "autofye-website-template",
+      "dodoProductId": "pdt_0NnzfQrgMnEF2nAPZaeOb",
+      "tagline": "Modern, high-performance Autofye website template.",
+      "description": "Streamline your service business with Autofye.ai, a premium Astro template. It\u2019s fast, SEO-friendly, responsive, and packed with animations. Easy to customize and manage with CMS integration.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autofye.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Ai Copywriting 101 A Beginners Guide To Crafting Effective Marketing Messages",
+              "path": "/blog_ai-copywriting-101-a-beginners-guide-to-crafting-effective-marketing-messages/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "autoloantnc-website-template",
+      "name": "AutoLoan TNC",
+      "slug": "autoloantnc-website-template",
+      "dodoProductId": "pdt_0NnzfWo90jTTaMbF2SDv7",
+      "tagline": "Modern, high-performance AutoLoan TNC website template.",
+      "description": "AutoLoan TNC is a loan service website template built as a single focused landing page for car finance and vehicle loan services. It covers car finance product features, loan service security, required documents, customer testimonials, and a loan service FAQ in one scroll, ending with an enquiry form. Whether you are promoting car finance, vehicle loans, auto finance, or a professional loan service, AutoLoan TNC provides a focused car finance website structure for presenting your loan service clearly. It also works well for a credit union or finance startup offering car finance and vehicle loan services.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autoloantnc.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utility License",
+              "path": "/utility_license/",
+              "desc": "Dedicated Utility License page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "automate-saas-website-template",
+      "name": "Automate",
+      "slug": "automate-saas-website-template",
+      "dodoProductId": "pdt_0NnzfcbuJH9MSL5eWuLF9",
+      "tagline": "Modern, high-performance Automate website template.",
+      "description": "Saas Astro template: a sleek \"Landing Page\" & \"One Page\" solution crafted to simplify your online presence, specially tailored for Saas Automation, SDK integration, and coding software.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://automate-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post Exploring The Intersection Of Ai Automation And Data Analytics",
+              "path": "/post_exploring-the-intersection-of-ai-automation-and-data-analytics/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post Real Life Examples Of Ai Automation Transforming Businesses",
+              "path": "/post_real-life-examples-of-ai-automation-transforming-businesses/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post The Future Of Work How Ai Automation Is Revolutionizing Industries",
+              "path": "/post_the-future-of-work-how-ai-automation-is-revolutionizing-industries/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "automately-website-template",
+      "name": "Automately",
+      "slug": "automately-website-template",
+      "dodoProductId": "pdt_0Nnzfhl7MNc1WOscKR8ui",
+      "tagline": "Modern, high-performance Automately website template.",
+      "description": "Conversion-focused multi-page Astro template for AI automation studios, no-code agencies, and workflow consultants. 16 designed pages, 3 CMS collections (Case Studies, Services, Blog), GSAP animations, SEO-ready, fully responsive.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 99,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://automately.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Home Page",
+              "path": "/home-page/",
+              "desc": "Dedicated Home Page page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Old Home",
+              "path": "/old-home/",
+              "desc": "Dedicated Old Home page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "automatepro-saas-website-template",
+      "name": "AutomatePro",
+      "slug": "automatepro-saas-website-template",
+      "dodoProductId": "pdt_0NnzfnMdPh7b1cJzyAv7z",
+      "tagline": "Modern, high-performance AutomatePro website template.",
+      "description": "Introducing AutomatePro - The All-in-One Astro template for SaaS & Startup Businesses. With 18 ready-to-use page templates, seamless CMS integration, and optimized performance, AutomatePro simplifies website creation for you.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://automatepro-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Careers",
+              "path": "/careers/",
+              "desc": "Dedicated Careers page with responsive components."
+          },
+          {
+              "name": "Company",
+              "path": "/company/",
+              "desc": "Dedicated Company page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integration",
+              "path": "/integration/",
+              "desc": "Dedicated Integration page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "automator-saas-website-template",
+      "name": "Automator",
+      "slug": "automator-saas-website-template",
+      "dodoProductId": "pdt_0NnzfsHYHmAfIrl9a52sB",
+      "tagline": "Modern, high-performance Automator website template.",
+      "description": "Automator is a clean and modern CMS template for SaaS startups and other technology businesses. With 11 unique page layouts, it has everything you need to get your business online quickly, allowing you to focus on your product, not your website.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://automator-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Feature Automate",
+              "path": "/feature_automate/",
+              "desc": "Dedicated Feature Automate page with responsive components."
+          },
+          {
+              "name": "Feature Invest",
+              "path": "/feature_invest/",
+              "desc": "Dedicated Feature Invest page with responsive components."
+          },
+          {
+              "name": "Feature Manage",
+              "path": "/feature_manage/",
+              "desc": "Dedicated Feature Manage page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "automize-website-template",
+      "name": "AutoMize",
+      "slug": "automize-website-template",
+      "dodoProductId": "pdt_0NnzfwfSe24qOtTlah9Ub",
+      "tagline": "Modern, high-performance AutoMize website template.",
+      "description": "A high-converting Astro template designed for online courses and digital products. Perfect for coaching and education businesses. Clean, modern, and easy to customize.",
+      "framework": "astro",
+      "category": "education",
+      "categories": [
+          "education"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://automize.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          },
+          {
+              "name": "Styleguide",
+              "path": "/styleguide/",
+              "desc": "Dedicated Styleguide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "automora-website-template",
+      "name": "Automora",
+      "slug": "automora-website-template",
+      "dodoProductId": "pdt_0Nnzg1UN6bpnYBKa64uoZ",
+      "tagline": "Modern, high-performance Automora website template.",
+      "description": "Automora is a modern AI automation agency Astro template for consultants, chatbot service providers, and workflow automation experts. It includes responsive layouts, CMS blog, case studies, pricing, service pages, and lead-focused sections.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://automora.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Home 01",
+              "path": "/home-01/",
+              "desc": "Dedicated Home 01 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "automozai-automotive-website-template",
+      "name": "Automozai",
+      "slug": "automozai-automotive-website-template",
+      "dodoProductId": "pdt_0Nnzg6Loh2ecckodxT4y0",
+      "tagline": "Modern, high-performance Automozai website template.",
+      "description": "Automozai is a fully responsive website template to build your upcoming Automotive and Car Repair Astro website. Automozai is a responsive modern Astro template for Automotive and Car Repair websites with all essential CMS and E-commerce features",
+      "framework": "astro",
+      "category": "transportation",
+      "categories": [
+          "transportation"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://automozai-automotive.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V2",
+              "path": "/home-pages_home-v2/",
+              "desc": "Dedicated Home Pages Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Blogs Keeping Your Moving With Reliable Car Repairs",
+              "path": "/our-blogs_keeping-your-moving-with-reliable-car-repairs/",
+              "desc": "Editorial articles, news, and insights."
+          }
+      ]
+  },
+  {
+      "id": "autona-website-template",
+      "name": "Autona",
+      "slug": "autona-website-template",
+      "dodoProductId": "pdt_0NnzgAyfzJian6SyqlW9i",
+      "tagline": "Modern, high-performance Autona website template.",
+      "description": "A cutting-edge Marketing HTML template designed to help visionary brands launch faster.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 99,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://autona.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post Why Brand Consistency Is The Secret Weapon Behind Long Term Business Growth",
+              "path": "/post_why-brand-consistency-is-the-secret-weapon-behind-long-term-business-growth/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Project Bold Moves",
+              "path": "/project_bold-moves/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "autonex-website-template",
+      "name": "Autonex",
+      "slug": "autonex-website-template",
+      "dodoProductId": "pdt_0NnzgFuNyU6qJXrR4o6RY",
+      "tagline": "Modern, high-performance Autonex website template.",
+      "description": "Launch your AI SaaS website with ease\u2014this template is designed for AI automation tools but also works fine for other SaaS or tech websites; simply update the text and screenshots and go live within an hour.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autonex.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Page",
+              "path": "/contact-page/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          },
+          {
+              "name": "Post 5 Principles Of Effective Web Design",
+              "path": "/post_5-principles-of-effective-web-design/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "autonity-website-template",
+      "name": "Autonity",
+      "slug": "autonity-website-template",
+      "dodoProductId": "pdt_0NnzgKvXfsSShKnTmL5uY",
+      "tagline": "Modern, high-performance Autonity website template.",
+      "description": "Autonity is a modern landing page template specifically designed for workflow automation products.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autonity.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Change Log",
+              "path": "/change-log/",
+              "desc": "Dedicated Change Log page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          },
+          {
+              "name": "Integrations Clandestine",
+              "path": "/integrations_clandestine/",
+              "desc": "Dedicated Integrations Clandestine page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "autopulse-website-template",
+      "name": "AutoPulse",
+      "slug": "autopulse-website-template",
+      "dodoProductId": "pdt_0NnzgQy36ScRwm6kfLUK3",
+      "tagline": "Modern, high-performance AutoPulse website template.",
+      "description": "AutoPulse is a modern, bold Astro template for mechanic & auto repair shops, featuring responsive design, a CMS-powered blog, contact forms, and reusable components for showcasing services.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autopulse.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Engine Diagnostics",
+              "path": "/services_engine-diagnostics/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Safety Systems 15Cf2",
+              "path": "/services_safety-systems-15cf2/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "autorepairxtnc-website-template",
+      "name": "Auto RepairX TNC",
+      "slug": "autorepairxtnc-website-template",
+      "dodoProductId": "pdt_0NnzgWBaKUlWEgaOl78wk",
+      "tagline": "Modern, high-performance Auto RepairX TNC website template.",
+      "description": "Auto RepairX TNC is an auto repair website template built for auto repair businesses, repair shops, and automotive service providers. It includes an auto repair appointment request, a repair shop parts store with checkout, a work gallery, and testimonials. CMS collections cover auto repair services, repair shop products, categories, and blog posts, making it a complete website solution for any auto repair shop, mechanics or automotive business.",
+      "framework": "astro",
+      "category": "retail-and-e-commerce",
+      "categories": [
+          "retail-and-e-commerce"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autorepairxtnc.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Testimonials",
+              "path": "/testimonials/",
+              "desc": "Dedicated Testimonials page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "autrix-website-template",
+      "name": "Autrix",
+      "slug": "autrix-website-template",
+      "dodoProductId": "pdt_0Nnzgc92z7ixVnoewpqUA",
+      "tagline": "Modern, high-performance Autrix website template.",
+      "description": "Autrix is a modern single-page Astro template for car service centers, garages, and auto repair businesses. Showcase your services, team, pricing, and customer reviews with a clean, responsive design.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://autrix.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services Ac Repair Cooling Service",
+              "path": "/services_ac-repair-cooling-service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Battery Testing Replacement",
+              "path": "/services_battery-testing-replacement/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Brake Service Replacement",
+              "path": "/services_brake-service-replacement/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Engine Diagnostics Repair",
+              "path": "/services_engine-diagnostics-repair/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Oil Change Fluid Service",
+              "path": "/services_oil-change-fluid-service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Tire Alignment Balancing",
+              "path": "/services_tire-alignment-balancing/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "auxo-website-template",
+      "name": "Auxo",
+      "slug": "auxo-website-template",
+      "dodoProductId": "pdt_0Nnzgix9FFu3LtsjJuTY5",
+      "tagline": "Modern, high-performance Auxo website template.",
+      "description": "Auxo is a versatile, easy-to-use Astro template packed with 4 Homepage variations & 21 complete pages tailored for blockchain, crypto, and web3 business.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://auxo.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Company",
+              "path": "/company/",
+              "desc": "Dedicated Company page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Page Home 01",
+              "path": "/home-page_home-01/",
+              "desc": "Dedicated Home Page Home 01 page with responsive components."
+          },
+          {
+              "name": "Home Page Home 02",
+              "path": "/home-page_home-02/",
+              "desc": "Dedicated Home Page Home 02 page with responsive components."
+          },
+          {
+              "name": "Home Page Home 03",
+              "path": "/home-page_home-03/",
+              "desc": "Dedicated Home Page Home 03 page with responsive components."
+          },
+          {
+              "name": "Home Page Home 04",
+              "path": "/home-page_home-04/",
+              "desc": "Dedicated Home Page Home 04 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "ava-bennet-website-template",
+      "name": "Ava Bennet",
+      "slug": "ava-bennet-website-template",
+      "dodoProductId": "pdt_0Nnzgoit5xvXSIcO81y6Q",
+      "tagline": "Modern, high-performance Ava Bennet website template.",
+      "description": "Ava Bennet is a modern and sophisticated Astro template crafted for creatives, freelancers, and professionals who want to showcase their portfolio with elegance and confidence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://ava-bennet.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "ava-swift-portfolio-website-template",
+      "name": "Ava Swift",
+      "slug": "ava-swift-portfolio-website-template",
+      "dodoProductId": "pdt_0NnzgtLjd4LoupLKUbme8",
+      "tagline": "Modern, high-performance Ava Swift website template.",
+      "description": "Ava Swift is a contemporary and sleek Astro template boasting a minimalist and stylish design, tailored to assist you in establishing a compelling online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 34,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://ava-swift-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Post Exploring Webflows Canvas",
+              "path": "/post_exploring-webflows-canvas/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post Unleashing Webflows Creative Power",
+              "path": "/post_unleashing-webflows-creative-power/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Post Where Design Meets Functionality",
+              "path": "/post_where-design-meets-functionality/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Project Voluptate Nulla",
+              "path": "/project_voluptate-nulla/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "ava-veterinary-website-template",
+      "name": "Vet X",
+      "slug": "ava-veterinary-website-template",
+      "dodoProductId": "pdt_0Nnzgxv7dUOBZTBYoL92C",
+      "tagline": "Modern, high-performance Vet X website template.",
+      "description": "Looking to create an amazing website for your veterinary business? Presenting Vet X, our veterinarian Astro template designed for modern and friendly vet practices looking to offer their services online. Get Vet X today and launch your website!",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://ava-veterinary.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Cat Pet Visit",
+              "path": "/service_cat-pet-visit/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Dog Pet Visit",
+              "path": "/service_dog-pet-visit/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Pet Bath",
+              "path": "/service_pet-bath/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Pet Grooming",
+              "path": "/service_pet-grooming/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "avalonx-saas-website-template",
+      "name": "AvalonX",
+      "slug": "avalonx-saas-website-template",
+      "dodoProductId": "pdt_0Nnzh3EWFqkTVDJ5HEpLf",
+      "tagline": "Modern, high-performance AvalonX website template.",
+      "description": "AvalonX is a new modern Astro template purposely built for for saas software & mobile app startups. Ideal for app landing pages, saas agencies, and mobile app websites.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://avalonx-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "avante-ui-kit-website-template",
+      "name": "Avante",
+      "slug": "avante-ui-kit-website-template",
+      "dodoProductId": "pdt_0Nnzh86SqRLtuF3uMfuQs",
+      "tagline": "Modern, high-performance Avante website template.",
+      "description": "Avante is a stunning Astro UI Kit template packed with everything you need to make a stellar website for your business firm, digital agency, or startup \u2014 without any effort.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://avante-ui-kit.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Homepages Home V1",
+              "path": "/homepages_home-v1/",
+              "desc": "Dedicated Homepages Home V1 page with responsive components."
+          },
+          {
+              "name": "Homepages Home V2",
+              "path": "/homepages_home-v2/",
+              "desc": "Dedicated Homepages Home V2 page with responsive components."
+          },
+          {
+              "name": "Homepages Home V3",
+              "path": "/homepages_home-v3/",
+              "desc": "Dedicated Homepages Home V3 page with responsive components."
+          },
+          {
+              "name": "Homepages Home V4",
+              "path": "/homepages_home-v4/",
+              "desc": "Dedicated Homepages Home V4 page with responsive components."
+          },
+          {
+              "name": "Homepages Home V5",
+              "path": "/homepages_home-v5/",
+              "desc": "Dedicated Homepages Home V5 page with responsive components."
+          },
+          {
+              "name": "Homepages Home V6",
+              "path": "/homepages_home-v6/",
+              "desc": "Dedicated Homepages Home V6 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
