@@ -40154,8 +40154,1653 @@ export const themes: Theme[] = [
               "desc": "Detailed services, deliverables, and offerings."
           }
       ]
+  },
+  {
+      "id": "artflare-portfolio-website-template",
+      "name": "ArtFlare",
+      "slug": "artflare-portfolio-website-template",
+      "dodoProductId": "pdt_0NnzQicTqfj6KDrGU4IT3",
+      "tagline": "Modern, high-performance ArtFlare website template.",
+      "description": "Transform your presentations with our innovative template featuring a unique screw element and portfolio design. The blend of dark and white themes creates a striking visual appeal, while the horizontal scrolling adds a dynamic touch.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artflare-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Legal Change Log",
+              "path": "/legal_change-log/",
+              "desc": "Dedicated Legal Change Log page with responsive components."
+          },
+          {
+              "name": "Legal Instructions",
+              "path": "/legal_instructions/",
+              "desc": "Dedicated Legal Instructions page with responsive components."
+          },
+          {
+              "name": "Legal Licenses",
+              "path": "/legal_licenses/",
+              "desc": "Dedicated Legal Licenses page with responsive components."
+          },
+          {
+              "name": "Legal Style Guide",
+              "path": "/legal_style-guide/",
+              "desc": "Dedicated Legal Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "artful-portfolio-website-template",
+      "name": "Artful",
+      "slug": "artful-portfolio-website-template",
+      "dodoProductId": "pdt_0NnzQoQk5bkkbYKqQLWED",
+      "tagline": "Modern, high-performance Artful website template.",
+      "description": "Create the handcrafted look you've always wanted. Take a gander at Artful and you'll notice the meticulous attention to detail, beautifully crafted interactions\u00a0that work in tandem with thoughtfully designed attributes, and creatively built features that will make your new portfolio outstanding.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artful-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Creative Exchange",
+              "path": "/project_creative-exchange/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Homeplus",
+              "path": "/project_homeplus/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "artgallery-website-template",
+      "name": "ArtGallery",
+      "slug": "artgallery-website-template",
+      "dodoProductId": "pdt_0NnzQuDTC8KInEQJPET74",
+      "tagline": "Modern, high-performance ArtGallery website template.",
+      "description": "ArtGallery is a professional Astro template crafted for art galleries, museums, exhibitions, and art-related businesses. Highlight your artwork, manage events, and sell art merchandise seamlessly with its elegant, customizable design \ud83d\uddbc\ufe0f",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artgallery.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Events",
+              "path": "/events/",
+              "desc": "Dedicated Events page with responsive components."
+          },
+          {
+              "name": "Exhibitions",
+              "path": "/exhibitions/",
+              "desc": "Dedicated Exhibitions page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "artgram-artist-website-template",
+      "name": "Artgram",
+      "slug": "artgram-artist-website-template",
+      "dodoProductId": "pdt_0NnzQzjJtls6tvV8CflMf",
+      "tagline": "Modern, high-performance Artgram website template.",
+      "description": "Meet Artgram, a refined art gallery, and museum Astro template. A wide assortment of carefully designed layouts is at your complete disposal. Artgram represents a truly artful way to sell and showcase your art online!",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artgram-artist.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Event",
+              "path": "/event/",
+              "desc": "Dedicated Event page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Landscape With House",
+              "path": "/project_landscape-with-house/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Street Scene Abstract",
+              "path": "/project_street-scene-abstract/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "arthic-website-template",
+      "name": "Arthic",
+      "slug": "arthic-website-template",
+      "dodoProductId": "pdt_0NnzR6iNJtMR4dUymXU3W",
+      "tagline": "Modern, high-performance Arthic website template.",
+      "description": "Arthic is a premium Astro template for financial technology companies and SaaS platforms. It features a fully responsive design, CMS and e-commerce integration, and is easy to customize, making it an ideal choice for modern startups.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://arthic.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog Posts How To Automate Your Workflow Without Writing Code",
+              "path": "/blog-posts_how-to-automate-your-workflow-without-writing-code/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "arthur-jones-website-template",
+      "name": "Arthur Jones",
+      "slug": "arthur-jones-website-template",
+      "dodoProductId": "pdt_0NnzRCNPi6oq4lS8b9Qtk",
+      "tagline": "Modern, high-performance Arthur Jones website template.",
+      "description": "Arthur Jones is a refined, Astro template crafted for professional photographers, designers, art directors, and creative studios. With a focus on modern aesthetics and a unique lens-zoom experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://arthur-jones.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Core Essentials",
+              "path": "/project_core-essentials/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Ethereak Unions",
+              "path": "/project_ethereak-unions/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Lumina Editorial",
+              "path": "/project_lumina-editorial/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project The Urban Silhouette",
+              "path": "/project_the-urban-silhouette/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Template Support Licenses",
+              "path": "/template-support_licenses/",
+              "desc": "Dedicated Template Support Licenses page with responsive components."
+          },
+          {
+              "name": "Template Support Style Guide",
+              "path": "/template-support_style-guide/",
+              "desc": "Dedicated Template Support Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "articl-blog-website-template",
+      "name": "Articl\u0113",
+      "slug": "articl-blog-website-template",
+      "dodoProductId": "pdt_0NnzRHx6PG32p7XQZgmrr",
+      "tagline": "Modern, high-performance Articl\u0113 website template.",
+      "description": "Article offers a high-quality Blog Astro template experience, tailored to showcase your work. Easy to navigate and equipped with dynamic Astro features, it's the ultimate solution for writers seeking a polished, professional platform.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://articl-blog.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About 1",
+              "path": "/about_about-1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Articles Article 1",
+              "path": "/articles_article-1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Category Lifestyle",
+              "path": "/category_lifestyle/",
+              "desc": "Dedicated Category Lifestyle page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Home 1",
+              "path": "/home_home-1/",
+              "desc": "Dedicated Home Home 1 page with responsive components."
+          },
+          {
+              "name": "Home Home 2",
+              "path": "/home_home-2/",
+              "desc": "Dedicated Home Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "article-dark-website-template",
+      "name": "Article Dark",
+      "slug": "article-dark-website-template",
+      "dodoProductId": "pdt_0NnzRNjY5t5IXGPQVxWaD",
+      "tagline": "Modern, high-performance Article Dark website template.",
+      "description": "Article offers a high-quality Blog Astro template experience, tailored to showcase your work. Easy to navigate and equipped with dynamic Astro features, it's the ultimate solution for writers seeking a polished, professional platform.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://article-dark.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About About 1",
+              "path": "/about_about-1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Articles Article 1",
+              "path": "/articles_article-1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Category Lifestyle",
+              "path": "/category_lifestyle/",
+              "desc": "Dedicated Category Lifestyle page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Home 1",
+              "path": "/home_home-1/",
+              "desc": "Dedicated Home Home 1 page with responsive components."
+          },
+          {
+              "name": "Home Home 2",
+              "path": "/home_home-2/",
+              "desc": "Dedicated Home Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "article-flowx-blog-website-template",
+      "name": "Article FlowX",
+      "slug": "article-flowx-blog-website-template",
+      "dodoProductId": "pdt_0NnzRT4Ntk3iHB74ijNiV",
+      "tagline": "Modern, high-performance Article FlowX website template.",
+      "description": "Transform blogging with Article FlowX \u2728\ud83d\udcdd! Our Premium Astro template, perfect for bloggers and writers, elevates your site's style, leaving a lasting impact on your audience.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://article-flowx-blog.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Webflow Wonders Transforming Your Business Landscape In The Digital Era",
+              "path": "/blog_webflow-wonders-transforming-your-business-landscape-in-the-digital-era/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Category Business",
+              "path": "/category_business/",
+              "desc": "Dedicated Category Business page with responsive components."
+          },
+          {
+              "name": "Category Network",
+              "path": "/category_network/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Category Tutorials",
+              "path": "/category_tutorials/",
+              "desc": "Dedicated Category Tutorials page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "artifact-website-template",
+      "name": "Artifact",
+      "slug": "artifact-website-template",
+      "dodoProductId": "pdt_0NnzRYVQxcLDCNEkt6ZOh",
+      "tagline": "Modern, high-performance Artifact website template.",
+      "description": "A minimal software template for AI SaaS apps, business software, cybersecurity, AI web app & cloud business apps like AI, API & finance. More than a SaaS app startup landing page, Artifact even suits trading software, marketing and finance SaaS apps.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://artifact.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Features 1",
+              "path": "/features-1/",
+              "desc": "Dedicated Features 1 page with responsive components."
+          },
+          {
+              "name": "Features 2",
+              "path": "/features-2/",
+              "desc": "Dedicated Features 2 page with responsive components."
+          },
+          {
+              "name": "Features 3",
+              "path": "/features-3/",
+              "desc": "Dedicated Features 3 page with responsive components."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "artifye-website-template",
+      "name": "Artifye",
+      "slug": "artifye-website-template",
+      "dodoProductId": "pdt_0NnzRfkJjfIbfClHBlDsJ",
+      "tagline": "Modern, high-performance Artifye website template.",
+      "description": "Artifye delivers a modern and creative structure built for creative agency and artist portfolio websites, combining a bold layout with smooth animations. Its organized CMS for projects and content helps creatives launch a high-impact",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artifye.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Career  Senior Ui Ux Designer",
+              "path": "/career_ senior-ui-ux-designer/",
+              "desc": "Dedicated Career  Senior Ui Ux Designer page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "artigianopasta-food-and-drink-website-template",
+      "name": "Artigiano Pasta",
+      "slug": "artigianopasta-food-and-drink-website-template",
+      "dodoProductId": "pdt_0NnzRl6y5eickhbZMhvjA",
+      "tagline": "Modern, high-performance Artigiano Pasta website template.",
+      "description": "Discover Artigiano Pasta, a premium dark theme website template tailored for restaurants & food business. Modern & sleek, it offers easy customization and multiple templates to showcase your store.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artigianopasta-food-and-drink.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Blog",
+              "path": "/about_blog/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Cooking Instructions",
+              "path": "/about_cooking-instructions/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Faq",
+              "path": "/about_faq/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Our Story",
+              "path": "/about_our-story/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "artimg-website-template",
+      "name": "Artimg",
+      "slug": "artimg-website-template",
+      "dodoProductId": "pdt_0NnzRr379FrNw821Sg67q",
+      "tagline": "Modern, high-performance Artimg website template.",
+      "description": "Artimg is a modern Astro template built for AI image and video generators. It helps creators launch visual platforms with elegant design and powerful features. With Artimg, users can showcase AI tools through stunning galleries and smart layouts.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artimg.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Image Generator",
+              "path": "/image-generator/",
+              "desc": "Dedicated Image Generator page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "artino-website-template",
+      "name": "Artino",
+      "slug": "artino-website-template",
+      "dodoProductId": "pdt_0NnzRwuSWva3pJ8SCDXPY",
+      "tagline": "Modern, high-performance Artino website template.",
+      "description": "Artino is an elegant Astro template crafted for studios, architects, and designers inspired by the timeless legacy of Italian architecture, designed to blend classical influence with modern digital aesthetics.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artino.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utility Pages Licenses",
+              "path": "/utility-pages_licenses/",
+              "desc": "Dedicated Utility Pages Licenses page with responsive components."
+          },
+          {
+              "name": "Utility Pages Style Guide",
+              "path": "/utility-pages_style-guide/",
+              "desc": "Dedicated Utility Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "artistry-portfolio-website-template",
+      "name": "Artistry",
+      "slug": "artistry-portfolio-website-template",
+      "dodoProductId": "pdt_0NnzS2NpAggJWPkHpSvJA",
+      "tagline": "Modern, high-performance Artistry website template.",
+      "description": "Artistry is a Single Page Astro Portfolio Website Template made for Designer, Blogger, Influencer, Photographer, Marketer, Chef and also used as personal CV. Artistry Astro template has two different themes and animation styles.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artistry-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Old Home",
+              "path": "/old-home/",
+              "desc": "Dedicated Old Home page with responsive components."
+          },
+          {
+              "name": "Utility Licenses",
+              "path": "/utility_licenses/",
+              "desc": "Dedicated Utility Licenses page with responsive components."
+          },
+          {
+              "name": "Utility Style Guide",
+              "path": "/utility_style-guide/",
+              "desc": "Dedicated Utility Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "artivo-website-template",
+      "name": "Artivo",
+      "slug": "artivo-website-template",
+      "dodoProductId": "pdt_0NnzS7lwAFV612T1T0TEQ",
+      "tagline": "Modern, high-performance Artivo website template.",
+      "description": "Artivo Collection is a modern Astro template for art galleries and exhibitions, featuring CMS-driven artworks, exhibitions, blog content, and a refined, minimal design.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 99,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artivo.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Artwork Eternal Flow",
+              "path": "/artwork_eternal-flow/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Exhibitions",
+              "path": "/exhibitions/",
+              "desc": "Dedicated Exhibitions page with responsive components."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "artiz-artist-website-template",
+      "name": "Artiz",
+      "slug": "artiz-artist-website-template",
+      "dodoProductId": "pdt_0NnzSCXhgtggWCMIN7IAU",
+      "tagline": "Modern, high-performance Artiz website template.",
+      "description": "Artiz is a full-service talent and artist management agency template, but it can be used for events, music, or any art project.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artiz-artist.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Artist",
+              "path": "/artist/",
+              "desc": "Dedicated Artist page with responsive components."
+          },
+          {
+              "name": "Artists Eva Dominguez",
+              "path": "/artists_eva-dominguez/",
+              "desc": "Dedicated Artists Eva Dominguez page with responsive components."
+          },
+          {
+              "name": "Artists Pinky",
+              "path": "/artists_pinky/",
+              "desc": "Dedicated Artists Pinky page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "artlst-website-template",
+      "name": "Artlst",
+      "slug": "artlst-website-template",
+      "dodoProductId": "pdt_0NnzSJVhPCLb0BPJhRYOd",
+      "tagline": "Modern, high-performance Artlst website template.",
+      "description": "Designed for artists, writers, and culture curators, this sleek and modern blog template is the perfect space to share ideas, showcase creative work, and engage with a community that values art, design, and storytelling.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artlst.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Articles Article 1",
+              "path": "/articles_article-1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Home 1",
+              "path": "/home_home-1/",
+              "desc": "Dedicated Home Home 1 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Subscribe",
+              "path": "/subscribe/",
+              "desc": "Dedicated Subscribe page with responsive components."
+          },
+          {
+              "name": "Topics",
+              "path": "/topics/",
+              "desc": "Dedicated Topics page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "artolio-website-template",
+      "name": "Artolio",
+      "slug": "artolio-website-template",
+      "dodoProductId": "pdt_0NnzSOYu38nx1f0eqYtbP",
+      "tagline": "Modern, high-performance Artolio website template.",
+      "description": "Artolio is a clean, modern Creative Digital Agency Astro template that also fits Creative Agency needs, with bold layouts, CMS-powered portfolios, fast performance, and SEO-ready pages\u2014ideal for agencies, studios, and freelancers to showcase work.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Brandly Watch Campaign",
+              "path": "/projects_brandly-watch-campaign/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Editorial Portrait Series",
+              "path": "/projects_editorial-portrait-series/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "artoral-agency-website-template",
+      "name": "Artoral",
+      "slug": "artoral-agency-website-template",
+      "dodoProductId": "pdt_0NnzSTbR7hyvO2EZKcawc",
+      "tagline": "Modern, high-performance Artoral website template.",
+      "description": "Artoral is a modern Astro template for Businesses, Marketing agency and consultant. Built with the best Astro features, Artoral is a bold and fresh layout that looks great on all devices. It has predefined styling + templates and many features.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artoral-agency.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Study",
+              "path": "/case-study/",
+              "desc": "Dedicated Case Study page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Utility Pages Getting Started",
+              "path": "/utility-pages_getting-started/",
+              "desc": "Dedicated Utility Pages Getting Started page with responsive components."
+          },
+          {
+              "name": "Utility Pages Style Guide",
+              "path": "/utility-pages_style-guide/",
+              "desc": "Dedicated Utility Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "artsy-portfolio-website-template",
+      "name": "Artsy",
+      "slug": "artsy-portfolio-website-template",
+      "dodoProductId": "pdt_0NnzSYM1NfsZ6aeYadVgT",
+      "tagline": "Modern, high-performance Artsy website template.",
+      "description": "Artsy is a clean, minimal, and responsive portfolio website template. It's easy to edit and promote your work or company.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 24,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://artsy-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "arue-website-template",
+      "name": "Arue",
+      "slug": "arue-website-template",
+      "dodoProductId": "pdt_0NnzSeUbkHSsfEYP4rtYV",
+      "tagline": "Modern, high-performance Arue website template.",
+      "description": "Arue is a creative, modern, and fully responsive Astro template designed for digital agencies, creative studios, and tech startups. It\u2019s SEO-friendly, CMS-powered, and perfect for showcasing portfolios, services, blogs, and team profiles.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://arue.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Minimal Portfolio Craft",
+              "path": "/projects_minimal-portfolio-craft/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Web Product Design",
+              "path": "/service_web-product-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "aruna-elara-website-template",
+      "name": "Aruna Ellara",
+      "slug": "aruna-elara-website-template",
+      "dodoProductId": "pdt_0NnzSlsqiIdCpd3CLYJ5T",
+      "tagline": "Modern, high-performance Aruna Ellara website template.",
+      "description": "Aruna is a premium Personal Portfolio Astro template built to help designers, photographers, and creatives showcase their work with impact. It's designed with an editorial, photo-led aesthetic and a clean, story-driven structure\u2014perfect for present",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aruna-elara.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Project Auralis",
+              "path": "/project_auralis/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Nexra",
+              "path": "/project_nexra/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "arvexa-website-template",
+      "name": "Tulexa",
+      "slug": "arvexa-website-template",
+      "dodoProductId": "pdt_0NnzSrxrk2eDODMnLoirs",
+      "tagline": "Modern, high-performance Tulexa website template.",
+      "description": "Tulexa is a modern digital branding studio template for creative agencies and design teams. With bold typography, refined layouts, immersive visuals, and smooth interactions, it helps showcase creative services, projects, and brand expertise.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://arvexa.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Price Plan",
+              "path": "/price-plan/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "arvia-website-template",
+      "name": "Arvia",
+      "slug": "arvia-website-template",
+      "dodoProductId": "pdt_0NnzSymf6MSLFtlR4NbwF",
+      "tagline": "Modern, high-performance Arvia website template.",
+      "description": "A refined Astro template for creative studios, branding agencies, and independent designers seeking clarity, beauty, and emotional storytelling.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://arvia.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Lunia Soft Glow Identity",
+              "path": "/project_lunia-soft-glow-identity/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Mira Portraits Of Presence",
+              "path": "/project_mira-portraits-of-presence/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Solva Sculpted Objects",
+              "path": "/project_solva-sculpted-objects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
