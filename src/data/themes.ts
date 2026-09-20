@@ -35234,8 +35234,1658 @@ export const themes: Theme[] = [
               "desc": "Detailed services, deliverables, and offerings."
           }
       ]
+  },
+  {
+      "id": "architectures-architecture-website-template",
+      "name": "Architectures",
+      "slug": "architectures-architecture-website-template",
+      "dodoProductId": "pdt_0NnytPPcNT5NSQ3sRdZKD",
+      "tagline": "Modern, high-performance Architectures website template.",
+      "description": "Showcase your architecture firm, interior design studio, or landscape architecture services with our sleek one-page/landing page Astro template. Featuring a modern, responsive design, it\u2019s perfect for architects, designers, and builders.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://architectures-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects Elevate Pavilion",
+              "path": "/projects_elevate-pavilion/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Skyline Nexus",
+              "path": "/projects_skyline-nexus/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Terraforma Studios",
+              "path": "/projects_terraforma-studios/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects The Horizon Vista",
+              "path": "/projects_the-horizon-vista/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "architekta-architecture-website-template",
+      "name": "Architekta",
+      "slug": "architekta-architecture-website-template",
+      "dodoProductId": "pdt_0NnytUy4mIot9bEwd7dvV",
+      "tagline": "Modern, high-performance Architekta website template.",
+      "description": "The Architekta Template features a sleek, minimalist design with customizable layouts, high-quality image displays, and sections for team bios, testimonials, and portfolios, perfect for showcasing architectural work.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://architekta-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Canyon Retreat",
+              "path": "/portfolio_canyon-retreat/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Horizon Eco Village",
+              "path": "/portfolio_horizon-eco-village/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Portfolio Lush Enclave",
+              "path": "/portfolio_lush-enclave/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "architera-website-template",
+      "name": "Architera",
+      "slug": "architera-website-template",
+      "dodoProductId": "pdt_0NnytZzqDDmkSyLgIj28L",
+      "tagline": "Modern, high-performance Architera website template.",
+      "description": "The Architera Astro template is a modern and elegant design tailored for architecture and real estate firms. Featuring clean layouts, responsive design, and minimalistic aesthetics, it highlights your projects and services with precision.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://architera.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About V1",
+              "path": "/about-v1/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About V2",
+              "path": "/about-v2/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About V3",
+              "path": "/about-v3/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home V1",
+              "path": "/home-v1/",
+              "desc": "Dedicated Home V1 page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "architus-website-template",
+      "name": "Architus",
+      "slug": "architus-website-template",
+      "dodoProductId": "pdt_0NnytfBzLvuEfWhBHtbS6",
+      "tagline": "Modern, high-performance Architus website template.",
+      "description": "Elevate Your Architecture Brand with Architus! \ud83c\udfe0\ud83d\udcd0 Designed for architects and firms, this Astro template blends style and functionality to showcase projects, services, and testimonials and make professional presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://architus.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "architype-architecture-website-template",
+      "name": "ArchiType",
+      "slug": "architype-architecture-website-template",
+      "dodoProductId": "pdt_0NnytlDVYTC3KjXmcp6Bj",
+      "tagline": "Modern, high-performance ArchiType website template.",
+      "description": "ArchiType is a Astro HTML template for an architecture & construction firm. The template entirely comes with an extensive set of carefully chosen & pixely crafted layouts with many practical sections to give a revolutionary feel for your site.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://architype-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services Single",
+              "path": "/services-single/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "archiv-architecture-website-template",
+      "name": "archiv",
+      "slug": "archiv-architecture-website-template",
+      "dodoProductId": "pdt_0NnytrA2m6qeY7CievjUR",
+      "tagline": "Modern, high-performance archiv website template.",
+      "description": "Archiv is a cutting-edge architecture website template for firms and agencies. This Astro template offers stunning designs for construction, building, industry, architects, and interior design professionals. It is fully responsive on all devices.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archiv-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home Home One",
+              "path": "/home_home-one/",
+              "desc": "Dedicated Home Home One page with responsive components."
+          },
+          {
+              "name": "Home Home Two",
+              "path": "/home_home-two/",
+              "desc": "Dedicated Home Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Architectural Design",
+              "path": "/services_architectural-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "archivanta-website-template",
+      "name": "Archivanta",
+      "slug": "archivanta-website-template",
+      "dodoProductId": "pdt_0NnytxNlxTzqiWzetOmLj",
+      "tagline": "Modern, high-performance Archivanta website template.",
+      "description": "Archivanta - Architecture & Design Website Template",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archivanta.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Journals Functional Interiors The Secret",
+              "path": "/journals_functional-interiors-the-secret/",
+              "desc": "Dedicated Journals Functional Interiors The Secret page with responsive components."
+          },
+          {
+              "name": "Journals Real Estate Market Trends",
+              "path": "/journals_real-estate-market-trends/",
+              "desc": "Dedicated Journals Real Estate Market Trends page with responsive components."
+          },
+          {
+              "name": "Journals Real Estate Market",
+              "path": "/journals_real-estate-market/",
+              "desc": "Dedicated Journals Real Estate Market page with responsive components."
+          },
+          {
+              "name": "Utility Pages Instructions",
+              "path": "/utility-pages_instructions/",
+              "desc": "Dedicated Utility Pages Instructions page with responsive components."
+          },
+          {
+              "name": "Utility Pages Lisense",
+              "path": "/utility-pages_lisense/",
+              "desc": "Dedicated Utility Pages Lisense page with responsive components."
+          },
+          {
+              "name": "Utility Pages Style Guide",
+              "path": "/utility-pages_style-guide/",
+              "desc": "Dedicated Utility Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "archives-website-template",
+      "name": "Archives",
+      "slug": "archives-website-template",
+      "dodoProductId": "pdt_0Nnyu2UsLibE2pa8DDUa7",
+      "tagline": "Modern, high-performance Archives website template.",
+      "description": "A bold, minimal portfolio/directory template for designers, photographers, and AI creators. Built on clean grids and brutalist typography, Archives is made for visual thinkers who want their work to speak for itself.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://archives.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Admin Style Guide",
+              "path": "/admin_style-guide/",
+              "desc": "Dedicated Admin Style Guide page with responsive components."
+          },
+          {
+              "name": "Archives",
+              "path": "/archives/",
+              "desc": "Dedicated Archives page with responsive components."
+          },
+          {
+              "name": "Blog Tag All",
+              "path": "/blog-tag_all/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Category Ceramic",
+              "path": "/category_ceramic/",
+              "desc": "Dedicated Category Ceramic page with responsive components."
+          },
+          {
+              "name": "Category Jewelry",
+              "path": "/category_jewelry/",
+              "desc": "Dedicated Category Jewelry page with responsive components."
+          },
+          {
+              "name": "Category Textile",
+              "path": "/category_textile/",
+              "desc": "Dedicated Category Textile page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "archivex-portfolio-website-template",
+      "name": "Archivex",
+      "slug": "archivex-portfolio-website-template",
+      "dodoProductId": "pdt_0Nnyu75ZwCSHNqHZmXG5o",
+      "tagline": "Modern, high-performance Archivex website template.",
+      "description": "Designed with minimalism, simplicity and functionality, the Archivex Portfolio Astro template is designed for creatives who want to showcase their experience and works. Exclusively designed for writers, it can be applied to other creatives.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archivex-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Templates Licenses",
+              "path": "/templates_licenses/",
+              "desc": "Dedicated Templates Licenses page with responsive components."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Atomic Love",
+              "path": "/works_atomic-love/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Beyond The Winds",
+              "path": "/works_beyond-the-winds/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Harnessing Creativity",
+              "path": "/works_harnessing-creativity/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Psalms",
+              "path": "/works_psalms/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "archivo-website-template",
+      "name": "Archivo",
+      "slug": "archivo-website-template",
+      "dodoProductId": "pdt_0NnyuDZ6xO5Sp4GXJMt23",
+      "tagline": "Modern, high-performance Archivo website template.",
+      "description": "Archivo is an architect portfolio website template for practices and studios. Projects, services and team pages with an enquiry form that captures project type, location and estimated budget, plus CMS collections for projects, services and blog.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archivo.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "archiword-architecture-website-template",
+      "name": "ArchiWord",
+      "slug": "archiword-architecture-website-template",
+      "dodoProductId": "pdt_0NnyuIzAr8puoTixVHyx1",
+      "tagline": "Modern, high-performance ArchiWord website template.",
+      "description": "With an elegant and luxurious design and captivating animations, ArchiWord is the perfect choice for those seeking a luxurious and conversion-friendly website. Showcase your projects with style",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archiword-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Articles",
+              "path": "/articles/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Designs",
+              "path": "/designs/",
+              "desc": "Dedicated Designs page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "archix-architecture-website-template",
+      "name": "Archix",
+      "slug": "archix-architecture-website-template",
+      "dodoProductId": "pdt_0NnyuNus664BycK7iDLa7",
+      "tagline": "Modern, high-performance Archix website template.",
+      "description": "Archix is a Professional Astro template for architecture websites. It can be easily used for construction, business, design, interior design, house design, building, building design, modern, Renovation Minimal Website, blog.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archix-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home 4",
+              "path": "/home-4/",
+              "desc": "Dedicated Home 4 page with responsive components."
+          },
+          {
+              "name": "Home 5",
+              "path": "/home-5/",
+              "desc": "Dedicated Home 5 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "archline-studio-website-template",
+      "name": "ArchLine Studio",
+      "slug": "archline-studio-website-template",
+      "dodoProductId": "pdt_0NnyuXcj5CudgzT6bVf0Y",
+      "tagline": "Modern, high-performance ArchLine Studio website template.",
+      "description": "A bold architecture and interior design studio template with project portfolios, service pages, a shop, and a blog \u2014 built for firms showcasing residential and commercial work.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archline-studio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Product Page",
+              "path": "/product-page/",
+              "desc": "Dedicated Product Page page with responsive components."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service Post Architectural Design",
+              "path": "/service-post_architectural-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "archline-website-template",
+      "name": "Formedge",
+      "slug": "archline-website-template",
+      "dodoProductId": "pdt_0NnyujE0VhVnkqtY8PC4S",
+      "tagline": "Modern, high-performance Formedge website template.",
+      "description": "Create a standout website for your Architecture firm with our Astro template. Perfect for architects and design studios, it features a bold, modern design to showcase projects, highlight services, and impress clients with your creative expertise.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archline.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service 3D Modeling Visuals",
+              "path": "/service_3d-modeling-visuals/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Architectural Design",
+              "path": "/service_architectural-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "archo-architecture-website-template",
+      "name": "Archo",
+      "slug": "archo-architecture-website-template",
+      "dodoProductId": "pdt_0NnyuoqBKi0cY1JmSC2iw",
+      "tagline": "Modern, high-performance Archo website template.",
+      "description": "Archo - Architecture Astro template is an ideal website template for architects, interior designers, agencies, and anyone who needs an attractive, minimalistic, & effective way to share their work with",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archo-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Opera House",
+              "path": "/work_opera-house/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "archon-website-template",
+      "name": "Archon",
+      "slug": "archon-website-template",
+      "dodoProductId": "pdt_0Nnyuv8SJGEKuE1DaAhJo",
+      "tagline": "Modern, high-performance Archon website template.",
+      "description": "Archon is a modern and sophisticated Astro template crafted for architects, interior studios, and design firms.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archon.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Utility Page License",
+              "path": "/utility-page_license/",
+              "desc": "Dedicated Utility Page License page with responsive components."
+          },
+          {
+              "name": "Utility Page Style Guide",
+              "path": "/utility-page_style-guide/",
+              "desc": "Dedicated Utility Page Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "archscale-website-template",
+      "name": "Archscale",
+      "slug": "archscale-website-template",
+      "dodoProductId": "pdt_0Nnyv2GdbAUi8rqlI8Fsm",
+      "tagline": "Modern, high-performance Archscale website template.",
+      "description": "Modern Astro template for architects, interior designer, studios, and design firms. Showcase projects, attract clients, and grow your business with a fully responsive, CMS-powered, and customizable architecture portfolio website.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archscale.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home Home B",
+              "path": "/home_home-b/",
+              "desc": "Dedicated Home Home B page with responsive components."
+          },
+          {
+              "name": "Home Home C",
+              "path": "/home_home-c/",
+              "desc": "Dedicated Home Home C page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Architectural Design",
+              "path": "/services_architectural-design/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "archstudio-architecture-website-template",
+      "name": "ArchStudio",
+      "slug": "archstudio-architecture-website-template",
+      "dodoProductId": "pdt_0Nnyv9brDRjlaZa5PDWck",
+      "tagline": "Modern, high-performance ArchStudio website template.",
+      "description": "Architecture & Construction Astro template suitable for Architecture, Construction, Interior, Industrial, Manufacturing, Factory, Business, and Engineering websites.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archstudio-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "archtix-website-template",
+      "name": "Archtix",
+      "slug": "archtix-website-template",
+      "dodoProductId": "pdt_0NnyvFb37qWcNgz1xEJEc",
+      "tagline": "Modern, high-performance Archtix website template.",
+      "description": "Archtix is a modern Astro template for architecture firms, studios, and interior designers. With clean layouts and a refined design, it\u2019s perfect for showcasing projects and building a professional portfolio.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archtix.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Harmony Residence",
+              "path": "/projects_harmony-residence/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "archvision-church-website-template",
+      "name": "ArchVision",
+      "slug": "archvision-church-website-template",
+      "dodoProductId": "pdt_0NnyvLJXIl2dkqzhJ8skX",
+      "tagline": "Modern, high-performance ArchVision website template.",
+      "description": "ArchVision, the elegant template designed for churches seeking to showcase their unique architecture and vibrant community, with a unique style.",
+      "framework": "astro",
+      "category": "community-and-nonprofit",
+      "categories": [
+          "community-and-nonprofit"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archvision-church.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Events",
+              "path": "/events/",
+              "desc": "Dedicated Events page with responsive components."
+          },
+          {
+              "name": "Holy Mass",
+              "path": "/holy-mass/",
+              "desc": "Dedicated Holy Mass page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Mass Harmony Service",
+              "path": "/mass_harmony-service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Mass Peace Mass",
+              "path": "/mass_peace-mass/",
+              "desc": "Dedicated Mass Peace Mass page with responsive components."
+          },
+          {
+              "name": "Mass Quia Qui Rem Qui",
+              "path": "/mass_quia-qui-rem-qui/",
+              "desc": "Dedicated Mass Quia Qui Rem Qui page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "archvista-architecture-website-template",
+      "name": "Archvista",
+      "slug": "archvista-architecture-website-template",
+      "dodoProductId": "pdt_0NnyvQtNo11idBn2QAtfR",
+      "tagline": "Modern, high-performance Archvista website template.",
+      "description": "A Astro Content Collections template for any Architecture business looking for a clean, minimalist design. Perfectly showcasing your design style and showing off your best projects for prospective clients. The perfect pairing for any contemporary business.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://archvista-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Hood View Cabin",
+              "path": "/projects_hood-view-cabin/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Pacific Beach House",
+              "path": "/projects_pacific-beach-house/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "arcite-website-template",
+      "name": "Arcite",
+      "slug": "arcite-website-template",
+      "dodoProductId": "pdt_0NnyvVnTMccDq4ZniHzeX",
+      "tagline": "Modern, high-performance Arcite website template.",
+      "description": "A bold, dark-toned template for architecture firms showcasing services, project galleries, and team credibility \u2014 built for studios offering design, planning, and 3D visualization.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://arcite.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          },
+          {
+              "name": "Privacy",
+              "path": "/privacy/",
+              "desc": "Dedicated Privacy page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "arco-one-page-website-template",
+      "name": "ARCO",
+      "slug": "arco-one-page-website-template",
+      "dodoProductId": "pdt_0NnyvblCbdwMaKNzYV8ng",
+      "tagline": "Modern, high-performance ARCO website template.",
+      "description": "ARCO is a striking and sophisticated Astro template designed with the avant-garde creative professional in mind. This one-page is infused with cutting-edge Spline 3D animations, setting an immersive stage for showcasing portfolios and projects.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://arco-one-page.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects Chroma",
+              "path": "/projects_chroma/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Evoke",
+              "path": "/projects_evoke/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Thorus",
+              "path": "/projects_thorus/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Vibrance",
+              "path": "/projects_vibrance/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Vividora",
+              "path": "/projects_vividora/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Utility Pages Style Guide",
+              "path": "/utility-pages_style-guide/",
+              "desc": "Dedicated Utility Pages Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "arcoria-website-template",
+      "name": "Arcoria",
+      "slug": "arcoria-website-template",
+      "dodoProductId": "pdt_0NnyvjvbDlzbSm7Y1S4o0",
+      "tagline": "Modern, high-performance Arcoria website template.",
+      "description": "Arcoria is a Astro template designed for architecture studios that value elegance and visual clarity. With a refined layout and impressive animations, it provides a fluid experience that reflects the purpose behind great architectural works.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 129,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://arcoria.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Contact",
+              "path": "/contact_contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Ridge",
+              "path": "/project_ridge/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Projects",
+              "path": "/projects_projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "arcos-portfoliio-website-template",
+      "name": "Arcos",
+      "slug": "arcos-portfoliio-website-template",
+      "dodoProductId": "pdt_0Nnyvp2s8fXZoEp4SqH9j",
+      "tagline": "Modern, high-performance Arcos website template.",
+      "description": "Arcos portfolio template is the perfect solution for showcasing your work and skills as a designer, developer or creative professional. With our portfolio template, you can create a professional and polished online presence to boost your career.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://arcos-portfoliio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects Brand Identity For Kraken",
+              "path": "/projects_brand-identity-for-kraken/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Landing Page For Roble",
+              "path": "/projects_landing-page-for-roble/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Logo Design For Aqua 1",
+              "path": "/projects_logo-design-for-aqua-1/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Packaging For Animi",
+              "path": "/projects_packaging-for-animi/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Packaging For Mocha",
+              "path": "/projects_packaging-for-mocha/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
