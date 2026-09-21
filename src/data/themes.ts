@@ -54687,8 +54687,2023 @@ export const themes: Theme[] = [
               "desc": "Commercial license tiers and payment options."
           }
       ]
+  },
+  {
+      "id": "azure-website-template",
+      "name": "Azure",
+      "slug": "azure-website-template",
+      "dodoProductId": "pdt_0NnzqtdGpB2Cy2li6K4BR",
+      "tagline": "Modern, high-performance Azure website template.",
+      "description": "Azure is a modern and versatile Astro template created for businesses looking to present their services in the best possible way.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://azure.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Template Instructions",
+              "path": "/template_instructions/",
+              "desc": "Dedicated Template Instructions page with responsive components."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "b2base-website-template",
+      "name": "B2Base",
+      "slug": "b2base-website-template",
+      "dodoProductId": "pdt_0NnzqyPYrhr0y7AOTPJN4",
+      "tagline": "Modern, high-performance B2Base website template.",
+      "description": "B2Base is a Astro template built for B2B SaaS platforms, CRM tools, and sales-focused tech startups. 23 pages with CMS, multi-layout variations, and Figma file included.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 169,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://b2base.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Features V1",
+              "path": "/features-v1/",
+              "desc": "Dedicated Features V1 page with responsive components."
+          },
+          {
+              "name": "Features V2",
+              "path": "/features-v2/",
+              "desc": "Dedicated Features V2 page with responsive components."
+          },
+          {
+              "name": "Features V3",
+              "path": "/features-v3/",
+              "desc": "Dedicated Features V3 page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home V3",
+              "path": "/home-v3/",
+              "desc": "Dedicated Home V3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Overview",
+              "path": "/overview/",
+              "desc": "Dedicated Overview page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "b2bizz-website-template",
+      "name": "B2bizz",
+      "slug": "b2bizz-website-template",
+      "dodoProductId": "pdt_0Nnzr4onDSbKReB5zSJr8",
+      "tagline": "Modern, high-performance B2bizz website template.",
+      "description": "B2bizz is a powerful Astro template designed for B2B consulting, SaaS startups, corporate service providers, and tech agencies. Its clean layout, strategic design, and built-in flexibility help you stand out and convert leads across industries.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://b2bizz.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Static",
+              "path": "/service-static/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "babuu-128",
+      "name": "Babuu",
+      "slug": "babuu-128",
+      "dodoProductId": "pdt_0NnzrBRKYczwmWFSWfQb0",
+      "tagline": "Modern, high-performance Babuu website template.",
+      "description": "Babuu is a professional website Astro template for Kids and Baby Store websites. It suits kids, baby shop, early education, children, children clothes, toys, e-commerce, kids fashion, kids store, baby accessories, toys store, kids gifts.",
+      "framework": "astro",
+      "category": "retail-and-e-commerce",
+      "categories": [
+          "retail-and-e-commerce"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://babuu-128.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "aquasailor-website-template",
+      "name": "Aquasailor",
+      "slug": "aquasailor-website-template",
+      "dodoProductId": "pdt_0No5SpTJUSgfa24gHj3hl",
+      "tagline": "Modern, high-performance Aquasailor website template.",
+      "description": "A luxury yacht and boat charter template with 3 homepages, online booking forms, fleet showcase pages, and 14+ inner pages built for charter companies and marina operators.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://aquasailor.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service One",
+              "path": "/service-one/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Two",
+              "path": "/service-two/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "ariko-sushi-website-template",
+      "name": "Ariko Sushi",
+      "slug": "ariko-sushi-website-template",
+      "dodoProductId": "pdt_0No5SuXWoWfX81tZ8Ef6K",
+      "tagline": "Modern, high-performance Ariko Sushi website template.",
+      "description": "Introducing Ariko Sushi \u2013 the ideal Astro template for sushi restaurants! Playful, modern, and vibrant, it features high-quality images and a stunning layout designed to captivate customers.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://ariko-sushi.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Documents Template Licenses",
+              "path": "/documents-template_licenses/",
+              "desc": "Dedicated Documents Template Licenses page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Menu Item Dragon Roll",
+              "path": "/menu-item_dragon-roll/",
+              "desc": "Dedicated Menu Item Dragon Roll page with responsive components."
+          },
+          {
+              "name": "Menu Item Philadelphia Roll",
+              "path": "/menu-item_philadelphia-roll/",
+              "desc": "Dedicated Menu Item Philadelphia Roll page with responsive components."
+          },
+          {
+              "name": "Menu Item Rainbow Roll",
+              "path": "/menu-item_rainbow-roll/",
+              "desc": "Dedicated Menu Item Rainbow Roll page with responsive components."
+          },
+          {
+              "name": "Menu Item Spicy Tuna Roll",
+              "path": "/menu-item_spicy-tuna-roll/",
+              "desc": "Dedicated Menu Item Spicy Tuna Roll page with responsive components."
+          },
+          {
+              "name": "Menu Item Tempura Roll",
+              "path": "/menu-item_tempura-roll/",
+              "desc": "Dedicated Menu Item Tempura Roll page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "avenue-agency-website-template",
+      "name": "Avenue",
+      "slug": "avenue-agency-website-template",
+      "dodoProductId": "pdt_0No5T3shqtaZVDdnHpYu1",
+      "tagline": "Modern, high-performance Avenue website template.",
+      "description": "Give your agency the unlimited power of creativity with Avenue. Show that your agency is ready to change the world, get in your customer's hearts with new-gen animations and interactions. Avenue is a creative agency template built for your need.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://avenue-agency.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Company",
+              "path": "/company/",
+              "desc": "Dedicated Company page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Journal",
+              "path": "/journal/",
+              "desc": "Dedicated Journal page with responsive components."
+          },
+          {
+              "name": "Project Old School New School",
+              "path": "/project_old-school-new-school/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "averint-website-template",
+      "name": "Averint",
+      "slug": "averint-website-template",
+      "dodoProductId": "pdt_0No5TGHOimPeUR1yfkSVf",
+      "tagline": "Modern, high-performance Averint website template.",
+      "description": "Averint is a business consulting Astro template for a consulting firm or advertising agency. It includes 20+ pages and 60+ sections to manage corporate strategy, business consulting projects, and professional agency growth.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://averint.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home One",
+              "path": "/home-one/",
+              "desc": "Dedicated Home One page with responsive components."
+          },
+          {
+              "name": "Home Three",
+              "path": "/home-three/",
+              "desc": "Dedicated Home Three page with responsive components."
+          },
+          {
+              "name": "Home Two",
+              "path": "/home-two/",
+              "desc": "Dedicated Home Two page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing One",
+              "path": "/pricing-one/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing Two",
+              "path": "/pricing-two/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "avery-creative-website-template",
+      "name": "Avery",
+      "slug": "avery-creative-website-template",
+      "dodoProductId": "pdt_0No5TWIrlZxYC1ZAhGbfd",
+      "tagline": "Modern, high-performance Avery website template.",
+      "description": "Sales-focused template for copywriters who wants to stand out with an exceptional website and easily book dream clients.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://avery-creative.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Category All Products",
+              "path": "/category_all-products/",
+              "desc": "Dedicated Category All Products page with responsive components."
+          },
+          {
+              "name": "Contacts",
+              "path": "/contacts/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Tools",
+              "path": "/tools/",
+              "desc": "Dedicated Tools page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "avery-estate-website-template",
+      "name": "Avery Estate",
+      "slug": "avery-estate-website-template",
+      "dodoProductId": "pdt_0No5TiJFUe8vLU4eMLLjO",
+      "tagline": "Modern, high-performance Avery Estate website template.",
+      "description": "Modern real estate Astro template for luxury real estate agents, brokerages, property advisors, and independent realtors. Designed to build trust, showcase sold properties, and generate qualified property inquiries.",
+      "framework": "astro",
+      "category": "real-estate",
+      "categories": [
+          "real-estate"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://avery-estate.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faqs",
+              "path": "/faqs/",
+              "desc": "Dedicated Faqs page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Privacy",
+              "path": "/privacy/",
+              "desc": "Dedicated Privacy page with responsive components."
+          },
+          {
+              "name": "Properties",
+              "path": "/properties/",
+              "desc": "Dedicated Properties page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "babylon-saas-website-template",
+      "name": "Babylon",
+      "slug": "babylon-saas-website-template",
+      "dodoProductId": "pdt_0No5Tsl4oWyoxSNJBgvLh",
+      "tagline": "Modern, high-performance Babylon website template.",
+      "description": "Introducing the Babylon Astro template, a beacon of innovation and sophistication in the SaaS world. With its captivating dark theme and seamless CMS integration, Babylon empowers SaaS companies to shine brighter in a crowded digital landscape.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://babylon-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Product Logo Jacket Pin Gold Coloured Border",
+              "path": "/product_logo-jacket-pin-gold-coloured-border/",
+              "desc": "Dedicated Product Logo Jacket Pin Gold Coloured Border page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "babyo-kids-website-template",
+      "name": "Babyo",
+      "slug": "babyo-kids-website-template",
+      "dodoProductId": "pdt_0No5U298BIvK8Q8EyP2i3",
+      "tagline": "Modern, high-performance Babyo website template.",
+      "description": "Babyo is a Astro template for baby care, food, clothes, play, children, skin, health, drink and baby bath.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://babyo-kids.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category All",
+              "path": "/category_all/",
+              "desc": "Dedicated Category All page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Product Bepanthen Cream",
+              "path": "/product_bepanthen-cream/",
+              "desc": "Dedicated Product Bepanthen Cream page with responsive components."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bacco-winery-website-template",
+      "name": "Bacco",
+      "slug": "bacco-winery-website-template",
+      "dodoProductId": "pdt_0No5UCODIfA9O1pe0iIYB",
+      "tagline": "Modern, high-performance Bacco website template.",
+      "description": "Introducing Bacco, the ultimate Astro template tailored for wineries, vineyards, and wine shops seeking an elegant yet powerful online presence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bacco-winery.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Category Rose Wines",
+              "path": "/category_rose-wines/",
+              "desc": "Dedicated Category Rose Wines page with responsive components."
+          },
+          {
+              "name": "Category Sparkling",
+              "path": "/category_sparkling/",
+              "desc": "Dedicated Category Sparkling page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "backofficew-website-template",
+      "name": "Backoffice W",
+      "slug": "backofficew-website-template",
+      "dodoProductId": "pdt_0No5UKv8nkaI8l6ssmYNs",
+      "tagline": "Modern, high-performance Backoffice W website template.",
+      "description": "Backoffice W is a clean and modern website Astro template for Office Support Services websites. It can be easily used for professional services, consulting, finance, accounting, Administrative, Technical, Call Center Support, Customer Service.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://backofficew.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Why Choose Us",
+              "path": "/why-choose-us/",
+              "desc": "Dedicated Why Choose Us page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "backsoft-website-template",
+      "name": "Backsoft",
+      "slug": "backsoft-website-template",
+      "dodoProductId": "pdt_0No5UZ7j9KC3YDpp1cuKq",
+      "tagline": "Modern, high-performance Backsoft website template.",
+      "description": "Discover \"Backsoft\" one of the newest, cleanest, and most polished Astro templates out there. Use it to make your business better and give your clients a smoother experience.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://backsoft.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Sign In",
+              "path": "/sign-in/",
+              "desc": "Dedicated Sign In page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "badi-consulting-website-template",
+      "name": "Badi",
+      "slug": "badi-consulting-website-template",
+      "dodoProductId": "pdt_0No5UgWxKN3rFxcw1Hvl4",
+      "tagline": "Modern, high-performance Badi website template.",
+      "description": "Badi is a carefully designed and modern consulting template, made to get your website up and running ASAP.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://badi-consulting.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog 1",
+              "path": "/blog-1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog 2",
+              "path": "/blog-2/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog 3",
+              "path": "/blog-3/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "bailey-hart-website-template",
+      "name": "Bailey Hart",
+      "slug": "bailey-hart-website-template",
+      "dodoProductId": "pdt_0No5Ur08YfwC8g04qrLRB",
+      "tagline": "Modern, high-performance Bailey Hart website template.",
+      "description": "A premium Astro template for consulting firms, law firm, agencies, advisors, B2B service businesses, and professional companies that sell expertise, trust, and measurable results. Built by Ariel J\u0119drzejczak for 108\u2122 Supply.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bailey-hart.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact A",
+              "path": "/contact-a/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home B",
+              "path": "/home-b/",
+              "desc": "Dedicated Home B page with responsive components."
+          },
+          {
+              "name": "Home C",
+              "path": "/home-c/",
+              "desc": "Dedicated Home C page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing A",
+              "path": "/pricing-a/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing B",
+              "path": "/pricing-b/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Testimonials",
+              "path": "/testimonials/",
+              "desc": "Dedicated Testimonials page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bakery-128-cafe-website-template",
+      "name": "Bakery 128",
+      "slug": "bakery-128-cafe-website-template",
+      "dodoProductId": "pdt_0No5V6GOtdrC7X8sp4ArV",
+      "tagline": "Modern, high-performance Bakery 128 website template.",
+      "description": "Bakery 128 is a professional website Astro template for bakery, sweets, cookies and pastry shop websites. It also suits perfectly for bread shop, cafe, cake shop, patisserie, recipe blog, sweet pastry, bistro, cupcake, menu, restaurant, coffee shop",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bakery-128-cafe.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Menu",
+              "path": "/menu/",
+              "desc": "Dedicated Menu page with responsive components."
+          },
+          {
+              "name": "Product Macarons",
+              "path": "/product_macarons/",
+              "desc": "Dedicated Product Macarons page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bakeryzf-website-template",
+      "name": "Bakery ZF",
+      "slug": "bakeryzf-website-template",
+      "dodoProductId": "pdt_0No5VXtXYWIHD0Uw0zypj",
+      "tagline": "Modern, high-performance Bakery ZF website template.",
+      "description": "Bakery ZF is a charming Astro template crafted for bakeries, chocolatiers, and pastry shops. Create a delightful online presence to showcase your offerings, captivate your audience, and easily build a fully functional, stunning website.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bakeryzf.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Inner Pages About Us",
+              "path": "/inner-pages_about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Inner Pages Bakery Menu",
+              "path": "/inner-pages_bakery-menu/",
+              "desc": "Dedicated Inner Pages Bakery Menu page with responsive components."
+          },
+          {
+              "name": "Inner Pages Book A Table",
+              "path": "/inner-pages_book-a-table/",
+              "desc": "Dedicated Inner Pages Book A Table page with responsive components."
+          },
+          {
+              "name": "Inner Pages Contact Us",
+              "path": "/inner-pages_contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Inner Pages Shop",
+              "path": "/inner-pages_shop/",
+              "desc": "Dedicated Inner Pages Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "baku-app-website-template",
+      "name": "Baku",
+      "slug": "baku-app-website-template",
+      "dodoProductId": "pdt_0No5VrN1hqpok4bMEsOzv",
+      "tagline": "Modern, high-performance Baku website template.",
+      "description": "Meet Baku, your App supercharger where multi-layout flexibility meets stunning design. Built-in CMS & E-commerce, SEO optimized for search dominance. Professional mockups for a head start. Elevate your brand, and skyrocket your sales.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://baku-app.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Pages Blog V1",
+              "path": "/blog-pages_blog-v1/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Company",
+              "path": "/company/",
+              "desc": "Dedicated Company page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home Pages Home V1",
+              "path": "/home-pages_home-v1/",
+              "desc": "Dedicated Home Pages Home V1 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          },
+          {
+              "name": "Support",
+              "path": "/support/",
+              "desc": "Dedicated Support page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bakzy-website-template",
+      "name": "Bakzy",
+      "slug": "bakzy-website-template",
+      "dodoProductId": "pdt_0No5WCGgSKSg5qM8lzM2V",
+      "tagline": "Modern, high-performance Bakzy website template.",
+      "description": "Bakzy helps bakeries, caf\u00e9s, and dessert brands build a warm, professional website to share their story, present their menu, and connect with more customers. \ud83c\udf70",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 59,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bakzy.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Bakers",
+              "path": "/bakers/",
+              "desc": "Dedicated Bakers page with responsive components."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Menu",
+              "path": "/menu/",
+              "desc": "Dedicated Menu page with responsive components."
+          },
+          {
+              "name": "Reservation",
+              "path": "/reservation/",
+              "desc": "Dedicated Reservation page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "balance-wellness-website-template",
+      "name": "Balance",
+      "slug": "balance-wellness-website-template",
+      "dodoProductId": "pdt_0No5WSi2qNEpha3CdXQWM",
+      "tagline": "Modern, high-performance Balance website template.",
+      "description": "Balance is a Astro membership template focused on video library based content. It's the easiest way to gate any collection of videos on a beautiful site that can easily be adapted to fit your brand.",
+      "framework": "astro",
+      "category": "wellness",
+      "categories": [
+          "wellness"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://balance-wellness.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "All Videos",
+              "path": "/all-videos/",
+              "desc": "Dedicated All Videos page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Library",
+              "path": "/library/",
+              "desc": "Dedicated Library page with responsive components."
+          },
+          {
+              "name": "Membership",
+              "path": "/membership/",
+              "desc": "Dedicated Membership page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "balancestartup-website-template",
+      "name": "Balance Startup",
+      "slug": "balancestartup-website-template",
+      "dodoProductId": "pdt_0No5Wa0XIEwn855K8kTW4",
+      "tagline": "Modern, high-performance Balance Startup website template.",
+      "description": "A fully customisable, responsive template for SaaS and startups, designed to make your brand shine with vibrant colours and imagery. Showcase products and services with a conversion-focused layout.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://balancestartup.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Admin Style Guide",
+              "path": "/admin_style-guide/",
+              "desc": "Dedicated Admin Style Guide page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "bale-law-firm-website-template",
+      "name": "Bale",
+      "slug": "bale-law-firm-website-template",
+      "dodoProductId": "pdt_0No5WhPTLcxGbf4tboD22",
+      "tagline": "Modern, high-performance Bale website template.",
+      "description": "Bale is a template optimized for legal and advisory businesses. This template features multiple pages, CMS powered blogs and reusable sections.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bale-law-firm.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post The Role Of Intellectual Property Law In Business Success",
+              "path": "/post_the-role-of-intellectual-property-law-in-business-success/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Team Kate Smith",
+              "path": "/team_kate-smith/",
+              "desc": "Dedicated Team Kate Smith page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "balitravels-website-template",
+      "name": "Bali Travels",
+      "slug": "balitravels-website-template",
+      "dodoProductId": "pdt_0No5X76QnsKzIyoP1BasJ",
+      "tagline": "Modern, high-performance Bali Travels website template.",
+      "description": "Bali Travels is a responsive Astro template for travel agencies and bloggers. Showcase tours, packages, and pricing with ease, featuring seamless customization.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://balitravels.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Destinations",
+              "path": "/destinations/",
+              "desc": "Dedicated Destinations page with responsive components."
+          },
+          {
+              "name": "Destinations Ocean Tours",
+              "path": "/destinations_ocean-tours/",
+              "desc": "Dedicated Destinations Ocean Tours page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Packages",
+              "path": "/packages/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Packages Event Package",
+              "path": "/packages_event-package/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Packages Premium Package",
+              "path": "/packages_premium-package/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Packages Regular Package",
+              "path": "/packages_regular-package/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "ballin-128-soccer-website-template",
+      "name": "Ballin 128",
+      "slug": "ballin-128-soccer-website-template",
+      "dodoProductId": "pdt_0No5XIT5dnGsF7zE6Wxx2",
+      "tagline": "Modern, high-performance Ballin 128 website template.",
+      "description": "Ballin 128 is a Professional Sport Club Website Astro template. It perfectly suits for football, soccer, baseball, basketball, hockey, rugby club websites, also, for league, match report, results, sport team, sports news, sports centre websites.",
+      "framework": "astro",
+      "category": "blog-and-editorial",
+      "categories": [
+          "blog-and-editorial"
+      ],
+      "price": 79,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://ballin-128-soccer.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Gallery",
+              "path": "/gallery/",
+              "desc": "Dedicated Gallery page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Team",
+              "path": "/our-team/",
+              "desc": "Dedicated Our Team page with responsive components."
+          },
+          {
+              "name": "Results",
+              "path": "/results/",
+              "desc": "Dedicated Results page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ballor-website-template",
+      "name": "Ballor",
+      "slug": "ballor-website-template",
+      "dodoProductId": "pdt_0No5XebUMIr7kesKhKtAz",
+      "tagline": "Modern, high-performance Ballor website template.",
+      "description": "Ballor is a professional Football Training Academy Astro template, perfect for Football Sport Centers, soccer clubs, coaching academies, and sports programs. Launch a modern, fast, and fully responsive sports website.",
+      "framework": "astro",
+      "category": "wellness",
+      "categories": [
+          "wellness"
+      ],
+      "price": 129,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://ballor.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home 1",
+              "path": "/home-1/",
+              "desc": "Dedicated Home 1 page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home 3",
+              "path": "/home-3/",
+              "desc": "Dedicated Home 3 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Programs 2",
+              "path": "/programs-2/",
+              "desc": "Dedicated Programs 2 page with responsive components."
+          },
+          {
+              "name": "Programs",
+              "path": "/programs/",
+              "desc": "Dedicated Programs page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "ballot-website-template",
+      "name": "Ballot",
+      "slug": "ballot-website-template",
+      "dodoProductId": "pdt_0No5XmfOHDmHj6Mm3vw1L",
+      "tagline": "Modern, high-performance Ballot website template.",
+      "description": "Ballot is a modern Politician Astro template for political campaigns, candidates, elections, government, advocacy, nonprofit organizations, political parties, fundraising, events, news, and campaign websites.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 99,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://ballot.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Events",
+              "path": "/events/",
+              "desc": "Dedicated Events page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Meet The Candidate",
+              "path": "/meet-the-candidate/",
+              "desc": "Dedicated Meet The Candidate page with responsive components."
+          },
+          {
+              "name": "Priorities",
+              "path": "/priorities/",
+              "desc": "Dedicated Priorities page with responsive components."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Team Raymond Kessler",
+              "path": "/team_raymond-kessler/",
+              "desc": "Dedicated Team Raymond Kessler page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "balme-photography-website-template",
+      "name": "Balme",
+      "slug": "balme-photography-website-template",
+      "dodoProductId": "pdt_0No5YB7hqsHPIk8jJTBev",
+      "tagline": "Modern, high-performance Balme website template.",
+      "description": "Introducing Balme, a sleek and minimalistic Astro template designed exclusively for your portfolio website. This template is equipped with all the essential elements needed to create a perfect online showcase for your wedding photography services.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://balme-photography.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work Emma Allan",
+              "path": "/work_emma-allan/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Kate Andre",
+              "path": "/work_kate-andre/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Maya Leo",
+              "path": "/work_maya-leo/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "banca-bank-website-template",
+      "name": "Banca",
+      "slug": "banca-bank-website-template",
+      "dodoProductId": "pdt_0No5YQB8hQoDC8Z1wbMPc",
+      "tagline": "Modern, high-performance Banca website template.",
+      "description": "Banca is a cutting-edge Astro template for Banks, Fintech Startups, and other businesses in the Finance Sector. It was carefully designed to offer a seamless browsing experience, to help you transform your visitors into clients.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 49,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://banca-bank.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Auto Loan",
+              "path": "/auto-loan/",
+              "desc": "Dedicated Auto Loan page with responsive components."
+          },
+          {
+              "name": "Home V2",
+              "path": "/home-v2/",
+              "desc": "Dedicated Home V2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Open Account",
+              "path": "/open-account/",
+              "desc": "Dedicated Open Account page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
