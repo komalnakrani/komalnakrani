@@ -1362,7 +1362,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "techStack": [
@@ -1560,7 +1560,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "techStack": [
@@ -1627,7 +1627,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "techStack": [
@@ -1694,7 +1694,7 @@ export const themes: Theme[] = [
     "categories": [
       "retail-and-e-commerce"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aquapure-website-template.komalnakrani.com",
@@ -1761,7 +1761,7 @@ export const themes: Theme[] = [
     "categories": [
       "real-estate"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://88settle-real-estate-website-template.komalnakrani.com",
@@ -1922,7 +1922,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://arnexo-website-template.komalnakrani.com",
@@ -1989,7 +1989,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://arooth-website-template.komalnakrani.com",
@@ -2056,7 +2056,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://axtira-website-template.komalnakrani.com",
@@ -2123,7 +2123,7 @@ export const themes: Theme[] = [
     "categories": [
       "food-and-drink"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://bisqueria-website-template.komalnakrani.com",
@@ -2190,7 +2190,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 59,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://furino-website-template.komalnakrani.com",
@@ -2257,7 +2257,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 169,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://launchhub-website-template.komalnakrani.com",
@@ -2324,7 +2324,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://littlesteps-website-template.komalnakrani.com",
@@ -2458,7 +2458,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://nexivo-website-template.komalnakrani.com",
@@ -2572,7 +2572,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://optibot-website-template.komalnakrani.com",
@@ -2639,7 +2639,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://sarfa-website-template.komalnakrani.com",
@@ -2706,7 +2706,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://velonic-website-template.komalnakrani.com",
@@ -2773,7 +2773,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aagency-agency-website-template.komalnakrani.com",
@@ -2840,7 +2840,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aaing-agency-website-template.komalnakrani.com",
@@ -2907,7 +2907,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aalbatros-startup-website-template.komalnakrani.com",
@@ -2974,7 +2974,7 @@ export const themes: Theme[] = [
     "categories": [
       "medical"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aalborg-doctor-website-template.komalnakrani.com",
@@ -3041,7 +3041,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 129,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://aarchiesta-architecture-website-template.komalnakrani.com",
@@ -3108,7 +3108,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aaron-plus-portfolio-website-template.komalnakrani.com",
@@ -3242,7 +3242,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aascot-saas-website-template.komalnakrani.com",
@@ -3309,7 +3309,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aastronaut-saas-website-template.komalnakrani.com",
@@ -3423,7 +3423,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aavo-website-template.komalnakrani.com",
@@ -3490,7 +3490,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aawans-law-firm-website-template-1ea86.komalnakrani.com",
@@ -3557,7 +3557,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aaxon-website-template.komalnakrani.com",
@@ -3676,7 +3676,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://abency-agency-website-template.komalnakrani.com",
@@ -3743,7 +3743,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://abetor-website-template.komalnakrani.com",
@@ -3810,7 +3810,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://abode-interior-design-website-template.komalnakrani.com",
@@ -3872,7 +3872,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://abreto-website-template.komalnakrani.com",
@@ -3939,7 +3939,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://absolute-website-template.komalnakrani.com",
@@ -4006,7 +4006,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://abstraact-website-template.komalnakrani.com",
@@ -4073,7 +4073,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://abudhabi-portfolio-website-template.komalnakrani.com",
@@ -4140,7 +4140,7 @@ export const themes: Theme[] = [
     "categories": [
       "home-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ac-service-website-template.komalnakrani.com",
@@ -4269,7 +4269,7 @@ export const themes: Theme[] = [
     "categories": [
       "education"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://academiccms-university-website-template.komalnakrani.com",
@@ -4336,7 +4336,7 @@ export const themes: Theme[] = [
     "categories": [
       "wellness"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://academix-website-template.komalnakrani.com",
@@ -4403,7 +4403,7 @@ export const themes: Theme[] = [
     "categories": [
       "education"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://academy-school-website-template.komalnakrani.com",
@@ -4537,7 +4537,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://accountant128-accounting-website-template.komalnakrani.com",
@@ -4604,7 +4604,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://accountantx-accounting-website-template.komalnakrani.com",
@@ -4671,7 +4671,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://accountantyou-accounting-website-template.komalnakrani.com",
@@ -4738,7 +4738,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://accountex-website-template.komalnakrani.com",
@@ -4805,7 +4805,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://accountix-website-template.komalnakrani.com",
@@ -4872,7 +4872,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://accounts-accounting-website-template.komalnakrani.com",
@@ -4939,7 +4939,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://accruefy-website-template.komalnakrani.com",
@@ -5006,7 +5006,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://accting-accounting-website-template.komalnakrani.com",
@@ -5073,7 +5073,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://acctinglite-accounting-website-template.komalnakrani.com",
@@ -5140,7 +5140,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ace-agency-website-template.komalnakrani.com",
@@ -5207,7 +5207,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://acelia-website-template.komalnakrani.com",
@@ -5274,7 +5274,7 @@ export const themes: Theme[] = [
     "categories": [
       "retail-and-e-commerce"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://achate-retail-website-template.komalnakrani.com",
@@ -5341,7 +5341,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://achernar-architecture-website-template.komalnakrani.com",
@@ -5609,7 +5609,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://acomiks-website-template.komalnakrani.com",
@@ -5676,7 +5676,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://acounty-128-accounting-website-template.komalnakrani.com",
@@ -5743,7 +5743,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://acre-studio-website-template.komalnakrani.com",
@@ -5810,7 +5810,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://acron-consulting-website-template.komalnakrani.com",
@@ -5944,7 +5944,7 @@ export const themes: Theme[] = [
     "categories": [
       "wellness"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://active-x-fitness-website-template.komalnakrani.com",
@@ -6011,7 +6011,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://activeaura-website-template.komalnakrani.com",
@@ -6078,7 +6078,7 @@ export const themes: Theme[] = [
     "categories": [
       "retail-and-e-commerce"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://activitee-website-template.komalnakrani.com",
@@ -6145,7 +6145,7 @@ export const themes: Theme[] = [
     "categories": [
       "weddings-and-events"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://actos-event-website-template.komalnakrani.com",
@@ -6212,7 +6212,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://acuvic-consulting-website-template.komalnakrani.com",
@@ -6279,7 +6279,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adaptiv-agency-website-template.komalnakrani.com",
@@ -6346,7 +6346,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adaptoai-website-template.komalnakrani.com",
@@ -6413,7 +6413,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adelaide-portfolio-website-template.komalnakrani.com",
@@ -6480,7 +6480,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adept-folio-portfolio-website-template.komalnakrani.com",
@@ -6547,7 +6547,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adept-startup-website-template.komalnakrani.com",
@@ -6661,7 +6661,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adgenie-website-template.komalnakrani.com",
@@ -6728,7 +6728,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adigital-website-template.komalnakrani.com",
@@ -6795,7 +6795,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adione-website-template.komalnakrani.com",
@@ -6862,7 +6862,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adlivo-website-template.komalnakrani.com",
@@ -6929,7 +6929,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adnac-agency-website-template.komalnakrani.com",
@@ -6996,7 +6996,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adoptable-pets-website-template.komalnakrani.com",
@@ -7063,7 +7063,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://adox-studio-website-template.komalnakrani.com",
@@ -7130,7 +7130,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adoxin-website-template.komalnakrani.com",
@@ -7197,7 +7197,7 @@ export const themes: Theme[] = [
     "categories": [
       "blog-and-editorial"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adriankingsley-website-template.komalnakrani.com",
@@ -7264,7 +7264,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adroven-website-template.komalnakrani.com",
@@ -7440,7 +7440,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adstik-website-template.komalnakrani.com",
@@ -7507,7 +7507,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advanced-website-template.komalnakrani.com",
@@ -7574,7 +7574,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advantek-it-company-website-template.komalnakrani.com",
@@ -7641,7 +7641,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adventria-website-template.komalnakrani.com",
@@ -7708,7 +7708,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advertise-x-consulting-website-template.komalnakrani.com",
@@ -7775,7 +7775,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advertising-x-saas-website-template.komalnakrani.com",
@@ -7842,7 +7842,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adveza-finance-website-template.komalnakrani.com",
@@ -7909,7 +7909,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advibe-website-template.komalnakrani.com",
@@ -7976,7 +7976,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advin-website-template.komalnakrani.com",
@@ -8080,7 +8080,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advisio-website-template.komalnakrani.com",
@@ -8147,7 +8147,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advisor-consulting-website-template.komalnakrani.com",
@@ -8214,7 +8214,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advisorx-business-website-template.komalnakrani.com",
@@ -8281,7 +8281,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advisory-agency-website-template.komalnakrani.com",
@@ -8348,7 +8348,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://advisory-website-template.komalnakrani.com",
@@ -8415,7 +8415,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advocate-bureau-db-law-firm-website-template.komalnakrani.com",
@@ -8482,7 +8482,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advocix-website-template.komalnakrani.com",
@@ -8596,7 +8596,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://advorus-website-template.komalnakrani.com",
@@ -8663,7 +8663,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adwork-agency-website-template.komalnakrani.com",
@@ -8730,7 +8730,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://adworx-website-template.komalnakrani.com",
@@ -8797,7 +8797,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://adzan-website-template.komalnakrani.com",
@@ -8906,7 +8906,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 169,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://aeline-website-template.komalnakrani.com",
@@ -8973,7 +8973,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aelixa-website-template.komalnakrani.com",
@@ -9040,7 +9040,7 @@ export const themes: Theme[] = [
     "categories": [
       "real-estate"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aelo-website-template.komalnakrani.com",
@@ -9107,7 +9107,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://aerialix-website-template.komalnakrani.com",
@@ -9174,7 +9174,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aerials-photography-website-template.komalnakrani.com",
@@ -9241,7 +9241,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://aerio-website-template.komalnakrani.com",
@@ -9308,7 +9308,7 @@ export const themes: Theme[] = [
     "categories": [
       "blog-and-editorial"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aero-blog-website-template.komalnakrani.com",
@@ -9375,7 +9375,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aerofly-website-template.komalnakrani.com",
@@ -9442,7 +9442,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aeron-portfolio-website-template.komalnakrani.com",
@@ -9509,7 +9509,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aesth-website-template.komalnakrani.com",
@@ -9576,7 +9576,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aesthetica-website-template.komalnakrani.com",
@@ -9643,7 +9643,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aesthetics-creative-website-template.komalnakrani.com",
@@ -9762,7 +9762,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aestho-website-template.komalnakrani.com",
@@ -9829,7 +9829,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aethera-website-template.komalnakrani.com",
@@ -9896,7 +9896,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aextera-website-template.komalnakrani.com",
@@ -9963,7 +9963,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aeye-website-template.komalnakrani.com",
@@ -10030,7 +10030,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aezo-agency-website-template.komalnakrani.com",
@@ -10097,7 +10097,7 @@ export const themes: Theme[] = [
     "categories": [
       "blog-and-editorial"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://affiliatex-blog-website-template.komalnakrani.com",
@@ -10164,7 +10164,7 @@ export const themes: Theme[] = [
     "categories": [
       "blog-and-editorial"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://affilliate-news-website-template.komalnakrani.com",
@@ -10231,7 +10231,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://afirma-website-template.komalnakrani.com",
@@ -10298,7 +10298,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agado-website-template.komalnakrani.com",
@@ -10365,7 +10365,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agata-agency-website-template.komalnakrani.com",
@@ -10432,7 +10432,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ageento-website-template.komalnakrani.com",
@@ -10499,7 +10499,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ageenzi-website-template.komalnakrani.com",
@@ -10566,7 +10566,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenca-agency-website-template.komalnakrani.com",
@@ -10633,7 +10633,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencfireagency-agency-website-template.komalnakrani.com",
@@ -10700,7 +10700,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencflow-agency-website-template.komalnakrani.com",
@@ -10767,7 +10767,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenci-agency-website-template.komalnakrani.com",
@@ -10834,7 +10834,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenciax-agency-website-template.komalnakrani.com",
@@ -10901,7 +10901,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 149,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencieos-agency-website-template.komalnakrani.com",
@@ -10968,7 +10968,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencier-agency-website-template.komalnakrani.com",
@@ -11035,7 +11035,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencies-x-agency-website-template.komalnakrani.com",
@@ -11154,7 +11154,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencikaagency-agency-website-template.komalnakrani.com",
@@ -11221,7 +11221,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencio-agency-website-template.komalnakrani.com",
@@ -11288,7 +11288,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenciup-agency-website-template.komalnakrani.com",
@@ -11355,7 +11355,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencor-website-template.komalnakrani.com",
@@ -11422,7 +11422,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencu-agency-website-template.komalnakrani.com",
@@ -11489,7 +11489,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencx-agency-website-template.komalnakrani.com",
@@ -11556,7 +11556,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agency-x-de-marketing-website-template.komalnakrani.com",
@@ -11623,7 +11623,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agency-x-fr-marketing-website-template.komalnakrani.com",
@@ -11690,7 +11690,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agency-x-marketing-website-template.komalnakrani.com",
@@ -11757,7 +11757,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agency3dcube-agency-website-template.komalnakrani.com",
@@ -11824,7 +11824,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencyace-agency-website-template.komalnakrani.com",
@@ -11891,7 +11891,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencye-website-template.komalnakrani.com",
@@ -11958,7 +11958,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencyis-creative-website-template.komalnakrani.com",
@@ -12025,7 +12025,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencymkt-website-template.komalnakrani.com",
@@ -12092,7 +12092,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencynice-website-template.komalnakrani.com",
@@ -12201,7 +12201,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencyx-agency-website-template.komalnakrani.com",
@@ -12268,7 +12268,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencyyportfolioo-website-template.komalnakrani.com",
@@ -12335,7 +12335,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agencyz-agency-website-template.komalnakrani.com",
@@ -12402,7 +12402,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenex-website-template.komalnakrani.com",
@@ -12469,7 +12469,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenflow-website-template.komalnakrani.com",
@@ -12536,7 +12536,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ageniix-website-template.komalnakrani.com",
@@ -12603,7 +12603,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenix-agency-website-template.komalnakrani.com",
@@ -12670,7 +12670,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agennix-agency-website-template.komalnakrani.com",
@@ -12737,7 +12737,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agens-agency-website-template.komalnakrani.com",
@@ -12804,7 +12804,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agense-agency-website-template.komalnakrani.com",
@@ -12871,7 +12871,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agensia-agency-website-template.komalnakrani.com",
@@ -12938,7 +12938,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agensight-x-agency-website-template.komalnakrani.com",
@@ -13005,7 +13005,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agensoaragency-agency-website-template.komalnakrani.com",
@@ -13072,7 +13072,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agent-insurance-website-template.komalnakrani.com",
@@ -13139,7 +13139,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 169,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://agentflow-website-template.komalnakrani.com",
@@ -13206,7 +13206,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agentic-consulting-website-template.komalnakrani.com",
@@ -13325,7 +13325,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agentixagency-agency-website-template.komalnakrani.com",
@@ -13392,7 +13392,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agentlite-insurance-website-template.komalnakrani.com",
@@ -13459,7 +13459,7 @@ export const themes: Theme[] = [
     "categories": [
       "real-estate"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agentor-website-template.komalnakrani.com",
@@ -13526,7 +13526,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agentra0-website-template.komalnakrani.com",
@@ -13593,7 +13593,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agentrai-website-template.komalnakrani.com",
@@ -13660,7 +13660,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agentrao-website-template.komalnakrani.com",
@@ -13727,7 +13727,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agentro-website-template.komalnakrani.com",
@@ -13841,7 +13841,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ageny-agency-website-template.komalnakrani.com",
@@ -13908,7 +13908,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenzaagency-agency-website-template.komalnakrani.com",
@@ -13975,7 +13975,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenzai-agency-website-template.komalnakrani.com",
@@ -14042,7 +14042,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://agenzi-website-template.komalnakrani.com",
@@ -14109,7 +14109,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agenzo-agency-website-template.komalnakrani.com",
@@ -14176,7 +14176,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ageva-website-template.komalnakrani.com",
@@ -14243,7 +14243,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aggregator-x-directory-website-template.komalnakrani.com",
@@ -14310,7 +14310,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agnce-agency-website-template.komalnakrani.com",
@@ -14377,7 +14377,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agnci-agency-website-template.komalnakrani.com",
@@ -14444,7 +14444,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agnez-website-template.komalnakrani.com",
@@ -14511,7 +14511,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agnio-website-template.komalnakrani.com",
@@ -14578,7 +14578,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agnos-website-template.komalnakrani.com",
@@ -14645,7 +14645,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agolas-agency-website-template.komalnakrani.com",
@@ -14712,7 +14712,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agors-website-template.komalnakrani.com",
@@ -14821,7 +14821,7 @@ export const themes: Theme[] = [
     "categories": [
       "food-and-drink"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agricultural-group-website-template.komalnakrani.com",
@@ -14888,7 +14888,7 @@ export const themes: Theme[] = [
     "categories": [
       "food-and-drink"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agriflow-agriculture-website-template.komalnakrani.com",
@@ -14955,7 +14955,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agrilead-agriculture-website-template.komalnakrani.com",
@@ -15022,7 +15022,7 @@ export const themes: Theme[] = [
     "categories": [
       "food-and-drink"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agrius-agriculture-website-template.komalnakrani.com",
@@ -15089,7 +15089,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agriwark-website-template.komalnakrani.com",
@@ -15156,7 +15156,7 @@ export const themes: Theme[] = [
     "categories": [
       "retail-and-e-commerce"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agrizone-website-template.komalnakrani.com",
@@ -15223,7 +15223,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 169,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agroflow-website-template.komalnakrani.com",
@@ -15290,7 +15290,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agrofy-agriculture-website-template.komalnakrani.com",
@@ -15357,7 +15357,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://agroveon-website-template.komalnakrani.com",
@@ -15424,7 +15424,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-bot-app-website-template.komalnakrani.com",
@@ -15491,7 +15491,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-chatbot-saas-website-template.komalnakrani.com",
@@ -15615,7 +15615,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-copywriting-saas-website-template.komalnakrani.com",
@@ -15682,7 +15682,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-email-technology-website-template.komalnakrani.com",
@@ -15749,7 +15749,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-gency-agency-website-template.komalnakrani.com",
@@ -15816,7 +15816,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-schedule.komalnakrani.com",
@@ -15883,7 +15883,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-tech-x-technology-website-template.komalnakrani.com",
@@ -15950,7 +15950,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-tool-startup-website-template.komalnakrani.com",
@@ -16017,7 +16017,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ai-x-technology-website-template.komalnakrani.com",
@@ -16084,7 +16084,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aiagency-website-template.komalnakrani.com",
@@ -16151,7 +16151,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://aiaiaiai-website-template.komalnakrani.com",
@@ -16218,7 +16218,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aiassistant-saas-website-template.komalnakrani.com",
@@ -16285,7 +16285,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aico-saas-website-template.komalnakrani.com",
@@ -16352,7 +16352,7 @@ export const themes: Theme[] = [
     "categories": [
       "education"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aicourse-learning-website-template.komalnakrani.com",
@@ -16486,7 +16486,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aidem-website-template.komalnakrani.com",
@@ -16553,7 +16553,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aiden-portfolio-website-template.komalnakrani.com",
@@ -16620,7 +16620,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aifinancial-saas-website-template.komalnakrani.com",
@@ -16687,7 +16687,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aiflow-website-template.komalnakrani.com",
@@ -16754,7 +16754,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aigen-saas-website-template.komalnakrani.com",
@@ -16821,7 +16821,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aigenerator-website-template.komalnakrani.com",
@@ -16888,7 +16888,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aigeng-website-template.komalnakrani.com",
@@ -16955,7 +16955,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aigentflow-website-template.komalnakrani.com",
@@ -17074,7 +17074,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aiko-portfolio-website-template.komalnakrani.com",
@@ -17141,7 +17141,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aikol-saas-website-template.komalnakrani.com",
@@ -17208,7 +17208,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ailoom-website-template.komalnakrani.com",
@@ -17275,7 +17275,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ailoq-website-template.komalnakrani.com",
@@ -17503,7 +17503,7 @@ export const themes: Theme[] = [
     "categories": [
       "hr-and-hiring"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aiqextend-recruitment-website-template.komalnakrani.com",
@@ -17570,7 +17570,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://air-conditioning-small-business-website-template.komalnakrani.com",
@@ -17637,7 +17637,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://airbase-x-website-template.komalnakrani.com",
@@ -17704,7 +17704,7 @@ export const themes: Theme[] = [
     "categories": [
       "real-estate"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airbrick-website-template.komalnakrani.com",
@@ -17771,7 +17771,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airbuild-website-template.komalnakrani.com",
@@ -17838,7 +17838,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 169,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aircanvas-website-template.komalnakrani.com",
@@ -17905,7 +17905,7 @@ export const themes: Theme[] = [
     "categories": [
       "medical"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aircare-hospital-website-template.komalnakrani.com",
@@ -17972,7 +17972,7 @@ export const themes: Theme[] = [
     "categories": [
       "blog-and-editorial"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airco-x-website-template.komalnakrani.com",
@@ -18039,7 +18039,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aircode-website-template.komalnakrani.com",
@@ -18106,7 +18106,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aircoin-website-template.komalnakrani.com",
@@ -18173,7 +18173,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aircraft-agency-website-template.komalnakrani.com",
@@ -18240,7 +18240,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aircrypto-finance-website-template.komalnakrani.com",
@@ -18307,7 +18307,7 @@ export const themes: Theme[] = [
     "categories": [
       "medical"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airdent-website-template.komalnakrani.com",
@@ -18374,7 +18374,7 @@ export const themes: Theme[] = [
     "categories": [
       "food-and-drink"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airdish-website-template.komalnakrani.com",
@@ -18441,7 +18441,7 @@ export const themes: Theme[] = [
     "categories": [
       "medical"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airdoc-website-template.komalnakrani.com",
@@ -18508,7 +18508,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airedge-website-template.komalnakrani.com",
@@ -18575,7 +18575,7 @@ export const themes: Theme[] = [
     "categories": [
       "real-estate"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airestate-real-estate-website-template.komalnakrani.com",
@@ -18642,7 +18642,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airevoke-saas-website-template.komalnakrani.com",
@@ -18709,7 +18709,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airexplorex-tourism-website-template.komalnakrani.com",
@@ -18776,7 +18776,7 @@ export const themes: Theme[] = [
     "categories": [
       "community-and-nonprofit"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airfalah-religion-website-template.komalnakrani.com",
@@ -18843,7 +18843,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airfintech-finance-website-template.komalnakrani.com",
@@ -18910,7 +18910,7 @@ export const themes: Theme[] = [
     "categories": [
       "travel"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airfloow-website-template.komalnakrani.com",
@@ -18977,7 +18977,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airfolio-portfolio-website-template.komalnakrani.com",
@@ -19044,7 +19044,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airfund-x-website-template.komalnakrani.com",
@@ -19111,7 +19111,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airfz-small-business-website-template.komalnakrani.com",
@@ -19178,7 +19178,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airgro-website-template.komalnakrani.com",
@@ -19245,7 +19245,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airinvest-website-template.komalnakrani.com",
@@ -19312,7 +19312,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airlift-website-template.komalnakrani.com",
@@ -19379,7 +19379,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airlink-startup-website-template.komalnakrani.com",
@@ -19446,7 +19446,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airloop-website-template.komalnakrani.com",
@@ -19513,7 +19513,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airmentors-website-template.komalnakrani.com",
@@ -19580,7 +19580,7 @@ export const themes: Theme[] = [
     "categories": [
       "retail-and-e-commerce"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airmin-retail-website-template.komalnakrani.com",
@@ -19647,7 +19647,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airnexa-website-template.komalnakrani.com",
@@ -19714,7 +19714,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airnova-technology-website-template.komalnakrani.com",
@@ -19781,7 +19781,7 @@ export const themes: Theme[] = [
     "categories": [
       "blog-and-editorial"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airnur-learning-website-template.komalnakrani.com",
@@ -19843,7 +19843,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airpay-website-template.komalnakrani.com",
@@ -19910,7 +19910,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airpix-agency-website-template.komalnakrani.com",
@@ -19977,7 +19977,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airpixel-website-template.komalnakrani.com",
@@ -20044,7 +20044,7 @@ export const themes: Theme[] = [
     "categories": [
       "architecture-and-design"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airplace-website-template.komalnakrani.com",
@@ -20111,7 +20111,7 @@ export const themes: Theme[] = [
     "categories": [
       "blog-and-editorial"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airstead-website-template.komalnakrani.com",
@@ -20178,7 +20178,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airstudio-website-template.komalnakrani.com",
@@ -20245,7 +20245,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airsuite-website-template.komalnakrani.com",
@@ -20312,7 +20312,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airswift-saas-website-template.komalnakrani.com",
@@ -20379,7 +20379,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airsync-website-template.komalnakrani.com",
@@ -20446,7 +20446,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airtask-website-template.komalnakrani.com",
@@ -20513,7 +20513,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airtech-saas-website-template.komalnakrani.com",
@@ -20580,7 +20580,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airtechx-saas-website-template.komalnakrani.com",
@@ -20647,7 +20647,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airtelier-website-template.komalnakrani.com",
@@ -20761,7 +20761,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airtide-website-template.komalnakrani.com",
@@ -20828,7 +20828,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airtwist-website-template.komalnakrani.com",
@@ -20895,7 +20895,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airvault-website-template.komalnakrani.com",
@@ -20962,7 +20962,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airvest-website-template.komalnakrani.com",
@@ -21029,7 +21029,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airvocal-podcast-website-template.komalnakrani.com",
@@ -21096,7 +21096,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airway-website-template.komalnakrani.com",
@@ -21163,7 +21163,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://airzen-software-website-template.komalnakrani.com",
@@ -21230,7 +21230,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aisav-website-template.komalnakrani.com",
@@ -21282,7 +21282,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aistartuq-startup-website-template.komalnakrani.com",
@@ -21349,7 +21349,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aitech-it-company-website-template.komalnakrani.com",
@@ -21416,7 +21416,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 99,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://aithra-website-template.komalnakrani.com",
@@ -21483,7 +21483,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aiveflow-website-template.komalnakrani.com",
@@ -21592,7 +21592,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aivio-website-template.komalnakrani.com",
@@ -21701,7 +21701,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 49,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://aixus-website-template.komalnakrani.com",
@@ -21768,7 +21768,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://aizflex-agency-website-template.komalnakrani.com",
@@ -21835,7 +21835,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://ajency-website-template.komalnakrani.com",
@@ -21902,7 +21902,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://akari-website-template.komalnakrani.com",
@@ -21939,7 +21939,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://akaunt-finance-website-template.komalnakrani.com",
@@ -22006,7 +22006,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://akin-agency-website-template.komalnakrani.com",
@@ -22073,7 +22073,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://akito-portfolio-website-template.komalnakrani.com",
@@ -22207,7 +22207,7 @@ export const themes: Theme[] = [
     "categories": [
       "real-estate"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://akra-real-estate-website-template.komalnakrani.com",
@@ -22316,7 +22316,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alabama-agency-website-template.komalnakrani.com",
@@ -22383,7 +22383,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alan-foto-portfolio-website-template.komalnakrani.com",
@@ -22450,7 +22450,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alastair-website-template.komalnakrani.com",
@@ -22517,7 +22517,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://albadoe-website-template.komalnakrani.com",
@@ -22631,7 +22631,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://albert-portfolio-website-template.komalnakrani.com",
@@ -22698,7 +22698,7 @@ export const themes: Theme[] = [
     "categories": [
       "real-estate"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://albion-construction-website-template.komalnakrani.com",
@@ -22765,7 +22765,7 @@ export const themes: Theme[] = [
     "categories": [
       "professional-services"
     ],
-    "price": 99,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://alderas-website-template.komalnakrani.com",
@@ -22832,7 +22832,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://aldo-website-template.komalnakrani.com",
@@ -22899,7 +22899,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alec-website-template.komalnakrani.com",
@@ -23033,7 +23033,7 @@ export const themes: Theme[] = [
     "categories": [
       "retail-and-e-commerce"
     ],
-    "price": 129,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alehous-shop-website-template.komalnakrani.com",
@@ -23100,7 +23100,7 @@ export const themes: Theme[] = [
     "categories": [
       "technology"
     ],
-    "price": 59,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alenai-website-template.komalnakrani.com",
@@ -23167,7 +23167,7 @@ export const themes: Theme[] = [
     "categories": [
       "medical"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alevia-website-template.komalnakrani.com",
@@ -23234,7 +23234,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alex-baena-website-template.komalnakrani.com",
@@ -23301,7 +23301,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alex-carter-website-template.komalnakrani.com",
@@ -23415,7 +23415,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://alex-gregor-website-template.komalnakrani.com",
@@ -23534,7 +23534,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 79,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alexaa-website-template.komalnakrani.com",
@@ -23601,7 +23601,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alexander-portfolio-website-template.komalnakrani.com",
@@ -23668,7 +23668,7 @@ export const themes: Theme[] = [
     "categories": [
       "blog-and-editorial"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alexia-website-template.komalnakrani.com",
@@ -23735,7 +23735,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 49,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alexis-designer-website-template.komalnakrani.com",
@@ -23802,7 +23802,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": false,
     "badge": "New Release",
     "liveUrl": "https://alezon-website-template.komalnakrani.com",
@@ -23869,7 +23869,7 @@ export const themes: Theme[] = [
     "categories": [
       "portfolio-and-agency"
     ],
-    "price": 99,
+    "price": 39,
     "featured": true,
     "badge": "New Release",
     "liveUrl": "https://algarve-studio-website-template.komalnakrani.com",
@@ -23978,7 +23978,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://airotek.komalnakrani.com",
@@ -24129,7 +24129,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alien.komalnakrani.com",
@@ -24196,7 +24196,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aliens.komalnakrani.com",
@@ -24263,7 +24263,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://align-business.komalnakrani.com",
@@ -24330,7 +24330,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aligna.komalnakrani.com",
@@ -24397,7 +24397,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://alignify.komalnakrani.com",
@@ -24464,7 +24464,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://aligntech.komalnakrani.com",
@@ -24531,7 +24531,7 @@ export const themes: Theme[] = [
       "categories": [
           "travel"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alisa-nails.komalnakrani.com",
@@ -24598,7 +24598,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://all-about.komalnakrani.com",
@@ -24665,7 +24665,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://all-my-links-artist.komalnakrani.com",
@@ -24732,7 +24732,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://all-recipes-restaurant.komalnakrani.com",
@@ -24799,7 +24799,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://all-you-can-eat-recipe.komalnakrani.com",
@@ -24933,7 +24933,7 @@ export const themes: Theme[] = [
       "categories": [
           "personal"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://allex.komalnakrani.com",
@@ -25000,7 +25000,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alley-real-estate.komalnakrani.com",
@@ -25109,7 +25109,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alloviz.komalnakrani.com",
@@ -25305,7 +25305,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alpha-studio.komalnakrani.com",
@@ -25372,7 +25372,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alpha128.komalnakrani.com",
@@ -25439,7 +25439,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alphafloris-florist.komalnakrani.com",
@@ -25573,7 +25573,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alphaproalphapro-agency.komalnakrani.com",
@@ -25707,7 +25707,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alrion.komalnakrani.com",
@@ -25774,7 +25774,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alspire.komalnakrani.com",
@@ -25841,7 +25841,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alternative-medicine-health.komalnakrani.com",
@@ -25908,7 +25908,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://altero.komalnakrani.com",
@@ -25975,7 +25975,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alterx.komalnakrani.com",
@@ -26037,7 +26037,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://altnest.komalnakrani.com",
@@ -26171,7 +26171,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alton-news.komalnakrani.com",
@@ -26238,7 +26238,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://altorw.komalnakrani.com",
@@ -26305,7 +26305,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://altrion.komalnakrani.com",
@@ -26372,7 +26372,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://altrum.komalnakrani.com",
@@ -26439,7 +26439,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://alture.komalnakrani.com",
@@ -26506,7 +26506,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://altus.komalnakrani.com",
@@ -26573,7 +26573,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://altuz.komalnakrani.com",
@@ -26640,7 +26640,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aluna.komalnakrani.com",
@@ -26774,7 +26774,7 @@ export const themes: Theme[] = [
       "categories": [
           "medical"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alveora.komalnakrani.com",
@@ -26893,7 +26893,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alvy-agency.komalnakrani.com",
@@ -27017,7 +27017,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://alzun.komalnakrani.com",
@@ -27084,7 +27084,7 @@ export const themes: Theme[] = [
       "categories": [
           "weddings-and-events"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://amanda-muse-photography.komalnakrani.com",
@@ -27218,7 +27218,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://amazona.komalnakrani.com",
@@ -27332,7 +27332,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ambessa.komalnakrani.com",
@@ -27399,7 +27399,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ambiente.komalnakrani.com",
@@ -27466,7 +27466,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://ambrosia.komalnakrani.com",
@@ -27533,7 +27533,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://amelia-artist.komalnakrani.com",
@@ -27600,7 +27600,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://amko.komalnakrani.com",
@@ -27667,7 +27667,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ampify-blog.komalnakrani.com",
@@ -27734,7 +27734,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://amplifia.komalnakrani.com",
@@ -27801,7 +27801,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://amplitux.komalnakrani.com",
@@ -27868,7 +27868,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://amplus.komalnakrani.com",
@@ -27935,7 +27935,7 @@ export const themes: Theme[] = [
       "categories": [
           "environment"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ampsa-technology.komalnakrani.com",
@@ -28002,7 +28002,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://amsterdam-agency.komalnakrani.com",
@@ -28069,7 +28069,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://analogue-agency.komalnakrani.com",
@@ -28136,7 +28136,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://analy-fz.komalnakrani.com",
@@ -28203,7 +28203,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anaro.komalnakrani.com",
@@ -28270,7 +28270,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anastasia.komalnakrani.com",
@@ -28337,7 +28337,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ancestor.komalnakrani.com",
@@ -28404,7 +28404,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://ancestra.komalnakrani.com",
@@ -28538,7 +28538,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://andalash.komalnakrani.com",
@@ -28605,7 +28605,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anderdark-portfolio.komalnakrani.com",
@@ -28667,7 +28667,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://andersen.komalnakrani.com",
@@ -28734,7 +28734,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://andersson-architecture.komalnakrani.com",
@@ -28801,7 +28801,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://andrew-portfolio.komalnakrani.com",
@@ -28868,7 +28868,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://andrewwilliams-portfolio.komalnakrani.com",
@@ -28935,7 +28935,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anero.komalnakrani.com",
@@ -29002,7 +29002,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://angestudio.komalnakrani.com",
@@ -29069,7 +29069,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://animalcove-pets.komalnakrani.com",
@@ -29136,7 +29136,7 @@ export const themes: Theme[] = [
       "categories": [
           "education"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://animately-education.komalnakrani.com",
@@ -29203,7 +29203,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://animatory.komalnakrani.com",
@@ -29270,7 +29270,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://animotion-x-video.komalnakrani.com",
@@ -29374,7 +29374,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anne-hathgate-portfolio.komalnakrani.com",
@@ -29441,7 +29441,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://annecy.komalnakrani.com",
@@ -29508,7 +29508,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anoir.komalnakrani.com",
@@ -29575,7 +29575,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anorva.komalnakrani.com",
@@ -29642,7 +29642,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anosta.komalnakrani.com",
@@ -29709,7 +29709,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anox-saas.komalnakrani.com",
@@ -29776,7 +29776,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://anthony-dale-jvf4o.komalnakrani.com",
@@ -29843,7 +29843,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://antoine-portfolio.komalnakrani.com",
@@ -29910,7 +29910,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://antony.komalnakrani.com",
@@ -29977,7 +29977,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://antoon-portfolio.komalnakrani.com",
@@ -30044,7 +30044,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://antrio.komalnakrani.com",
@@ -30111,7 +30111,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://anubis-game.komalnakrani.com",
@@ -30178,7 +30178,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aorevia.komalnakrani.com",
@@ -30245,7 +30245,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aose.komalnakrani.com",
@@ -30312,7 +30312,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apartb-128-real-estate.komalnakrani.com",
@@ -30379,7 +30379,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apartmentt.komalnakrani.com",
@@ -30446,7 +30446,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apartrent-real-estate.komalnakrani.com",
@@ -30580,7 +30580,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aperture-photography.komalnakrani.com",
@@ -30647,7 +30647,7 @@ export const themes: Theme[] = [
       "categories": [
           "weddings-and-events"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apex-night.komalnakrani.com",
@@ -30714,7 +30714,7 @@ export const themes: Theme[] = [
       "categories": [
           "medical"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apexcare.komalnakrani.com",
@@ -30781,7 +30781,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apexify-investment.komalnakrani.com",
@@ -30848,7 +30848,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apexstudios.komalnakrani.com",
@@ -30915,7 +30915,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apico-agency.komalnakrani.com",
@@ -30982,7 +30982,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aplumex.komalnakrani.com",
@@ -31049,7 +31049,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apnar.komalnakrani.com",
@@ -31230,7 +31230,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apollo-business.komalnakrani.com",
@@ -31297,7 +31297,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://app-x-app.komalnakrani.com",
@@ -31364,7 +31364,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apparel-x-shop.komalnakrani.com",
@@ -31431,7 +31431,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://appe-io.komalnakrani.com",
@@ -31498,7 +31498,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://appify-app.komalnakrani.com",
@@ -31612,7 +31612,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://appito-app.komalnakrani.com",
@@ -31679,7 +31679,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://appixy-app.komalnakrani.com",
@@ -31746,7 +31746,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://applyze.komalnakrani.com",
@@ -31813,7 +31813,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://appout-app.komalnakrani.com",
@@ -31927,7 +31927,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apps-app.komalnakrani.com",
@@ -31994,7 +31994,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://appstarter-ui-kit.komalnakrani.com",
@@ -32061,7 +32061,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://april-128-dance.komalnakrani.com",
@@ -32128,7 +32128,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aproxlab.komalnakrani.com",
@@ -32195,7 +32195,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://apsora.komalnakrani.com",
@@ -32262,7 +32262,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aptlo.komalnakrani.com",
@@ -32329,7 +32329,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aptonic-x-app.komalnakrani.com",
@@ -32396,7 +32396,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://aptus.komalnakrani.com",
@@ -32510,7 +32510,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aquafix.komalnakrani.com",
@@ -32577,7 +32577,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aquay-real-estate.komalnakrani.com",
@@ -32644,7 +32644,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aquemini-portfolio.komalnakrani.com",
@@ -32711,7 +32711,7 @@ export const themes: Theme[] = [
       "categories": [
           "travel"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aquvion.komalnakrani.com",
@@ -32778,7 +32778,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aquzen.komalnakrani.com",
@@ -32845,7 +32845,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aradia.komalnakrani.com",
@@ -32912,7 +32912,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ararat-portfolio.komalnakrani.com",
@@ -32979,7 +32979,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arata-portfolio.komalnakrani.com",
@@ -33046,7 +33046,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aravo-architecture.komalnakrani.com",
@@ -33113,7 +33113,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arbrixo.komalnakrani.com",
@@ -33180,7 +33180,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arc-tec-architecture.komalnakrani.com",
@@ -33247,7 +33247,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arcadium.komalnakrani.com",
@@ -33314,7 +33314,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arcanaa-finance.komalnakrani.com",
@@ -33381,7 +33381,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://arcane.komalnakrani.com",
@@ -33448,7 +33448,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arcarch-portfolio.komalnakrani.com",
@@ -33515,7 +33515,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://arcbes.komalnakrani.com",
@@ -33582,7 +33582,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arch-space.komalnakrani.com",
@@ -33649,7 +33649,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archdex.komalnakrani.com",
@@ -33716,7 +33716,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arches-architecture.komalnakrani.com",
@@ -33783,7 +33783,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archeta-studio.komalnakrani.com",
@@ -33840,7 +33840,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archevia.komalnakrani.com",
@@ -33907,7 +33907,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archfain.komalnakrani.com",
@@ -33974,7 +33974,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archflex.komalnakrani.com",
@@ -34041,7 +34041,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archfolio-architecture.komalnakrani.com",
@@ -34175,7 +34175,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archi-architecture.komalnakrani.com",
@@ -34242,7 +34242,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archicraft-architecture.komalnakrani.com",
@@ -34309,7 +34309,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archie-architecture.komalnakrani.com",
@@ -34376,7 +34376,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archiestudio-portfolio.komalnakrani.com",
@@ -34443,7 +34443,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archiflow.komalnakrani.com",
@@ -34510,7 +34510,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archify.komalnakrani.com",
@@ -34577,7 +34577,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archinest.komalnakrani.com",
@@ -34644,7 +34644,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archio-architecture.komalnakrani.com",
@@ -34711,7 +34711,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 169,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archipro.komalnakrani.com",
@@ -34778,7 +34778,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 8066,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architech-architecture.komalnakrani.com",
@@ -34845,7 +34845,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architecktura-architecture.komalnakrani.com",
@@ -34912,7 +34912,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architect-x-architecture.komalnakrani.com",
@@ -34979,7 +34979,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architectio.komalnakrani.com",
@@ -35046,7 +35046,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architecto-architecture.komalnakrani.com",
@@ -35113,7 +35113,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architectr-x-architecture.komalnakrani.com",
@@ -35180,7 +35180,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architecture-x-architecture.komalnakrani.com",
@@ -35247,7 +35247,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architectures-architecture.komalnakrani.com",
@@ -35314,7 +35314,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architekta-architecture.komalnakrani.com",
@@ -35381,7 +35381,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architera.komalnakrani.com",
@@ -35448,7 +35448,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architus.komalnakrani.com",
@@ -35515,7 +35515,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://architype-architecture.komalnakrani.com",
@@ -35582,7 +35582,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archiv-architecture.komalnakrani.com",
@@ -35716,7 +35716,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://archives.komalnakrani.com",
@@ -35783,7 +35783,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archivex-portfolio.komalnakrani.com",
@@ -35850,7 +35850,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archivo.komalnakrani.com",
@@ -35917,7 +35917,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archiword-architecture.komalnakrani.com",
@@ -35969,7 +35969,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archix-architecture.komalnakrani.com",
@@ -36036,7 +36036,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archline-studio.komalnakrani.com",
@@ -36103,7 +36103,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archline.komalnakrani.com",
@@ -36170,7 +36170,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archo-architecture.komalnakrani.com",
@@ -36237,7 +36237,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archon.komalnakrani.com",
@@ -36289,7 +36289,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archscale.komalnakrani.com",
@@ -36356,7 +36356,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archstudio-architecture.komalnakrani.com",
@@ -36423,7 +36423,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archtix.komalnakrani.com",
@@ -36490,7 +36490,7 @@ export const themes: Theme[] = [
       "categories": [
           "community-and-nonprofit"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archvision-church.komalnakrani.com",
@@ -36557,7 +36557,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://archvista-architecture.komalnakrani.com",
@@ -36738,7 +36738,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://arcoria.komalnakrani.com",
@@ -36805,7 +36805,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arcos-portfoliio.komalnakrani.com",
@@ -36872,7 +36872,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arcpark-architecture-2426f.komalnakrani.com",
@@ -36929,7 +36929,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arcpro.komalnakrani.com",
@@ -36996,7 +36996,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arcstructure.komalnakrani.com",
@@ -37063,7 +37063,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arcstudio-interior-design.komalnakrani.com",
@@ -37120,7 +37120,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arctic-fashion.komalnakrani.com",
@@ -37187,7 +37187,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://ardor.komalnakrani.com",
@@ -37254,7 +37254,7 @@ export const themes: Theme[] = [
       "categories": [
           "environment"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arelo.komalnakrani.com",
@@ -37321,7 +37321,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arena-bar.komalnakrani.com",
@@ -37388,7 +37388,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arenax.komalnakrani.com",
@@ -37455,7 +37455,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://areto.komalnakrani.com",
@@ -37522,7 +37522,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://arfito-consulting.komalnakrani.com",
@@ -37589,7 +37589,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://argen-agency.komalnakrani.com",
@@ -37656,7 +37656,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://argo-128-architecture.komalnakrani.com",
@@ -37723,7 +37723,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ari-studio.komalnakrani.com",
@@ -37790,7 +37790,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arial-saas.komalnakrani.com",
@@ -37857,7 +37857,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aries-agency.komalnakrani.com",
@@ -37924,7 +37924,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arisca.komalnakrani.com",
@@ -37991,7 +37991,7 @@ export const themes: Theme[] = [
       "categories": [
           "travel"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aristo-hotel.komalnakrani.com",
@@ -38058,7 +38058,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arivexa.komalnakrani.com",
@@ -38125,7 +38125,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://ariyana.komalnakrani.com",
@@ -38192,7 +38192,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arizona-portfolio.komalnakrani.com",
@@ -38326,7 +38326,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ark-studio-architecture.komalnakrani.com",
@@ -38393,7 +38393,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arkify.komalnakrani.com",
@@ -38460,7 +38460,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arkitect-architecture.komalnakrani.com",
@@ -38527,7 +38527,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arkkit-architecture.komalnakrani.com",
@@ -38594,7 +38594,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arktinyhomes-small-business.komalnakrani.com",
@@ -38661,7 +38661,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arktonic.komalnakrani.com",
@@ -38728,7 +38728,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arlop-saas.komalnakrani.com",
@@ -38795,7 +38795,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arlox.komalnakrani.com",
@@ -38862,7 +38862,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://armatura.komalnakrani.com",
@@ -38929,7 +38929,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://armelio.komalnakrani.com",
@@ -38996,7 +38996,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://armor.komalnakrani.com",
@@ -39063,7 +39063,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arocen-architecture.komalnakrani.com",
@@ -39130,7 +39130,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aroclux.komalnakrani.com",
@@ -39197,7 +39197,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arodesk.komalnakrani.com",
@@ -39264,7 +39264,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aroma-coffee-shop.komalnakrani.com",
@@ -39331,7 +39331,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aromix.komalnakrani.com",
@@ -39398,7 +39398,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aron-creative.komalnakrani.com",
@@ -39465,7 +39465,7 @@ export const themes: Theme[] = [
       "categories": [
           "hair-and-beauty"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arona-beauty-and-wellness.komalnakrani.com",
@@ -39532,7 +39532,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arqline.komalnakrani.com",
@@ -39661,7 +39661,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://art-128-artist.komalnakrani.com",
@@ -39728,7 +39728,7 @@ export const themes: Theme[] = [
       "categories": [
           "arts-and-entertainment"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://art-gallery-artist.komalnakrani.com",
@@ -39795,7 +39795,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artcraft.komalnakrani.com",
@@ -39862,7 +39862,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artdir-portfolio.komalnakrani.com",
@@ -39929,7 +39929,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arte-x-portfolio.komalnakrani.com",
@@ -39996,7 +39996,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arten-portfolio.komalnakrani.com",
@@ -40100,7 +40100,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artex-agency.komalnakrani.com",
@@ -40224,7 +40224,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artful-portfolio.komalnakrani.com",
@@ -40291,7 +40291,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artgallery.komalnakrani.com",
@@ -40358,7 +40358,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artgram-artist.komalnakrani.com",
@@ -40425,7 +40425,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arthic.komalnakrani.com",
@@ -40492,7 +40492,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arthur-jones.komalnakrani.com",
@@ -40559,7 +40559,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://articl-blog.komalnakrani.com",
@@ -40626,7 +40626,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://article-dark.komalnakrani.com",
@@ -40693,7 +40693,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://article-flowx-blog.komalnakrani.com",
@@ -40760,7 +40760,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://artifact.komalnakrani.com",
@@ -40827,7 +40827,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artifye.komalnakrani.com",
@@ -40894,7 +40894,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artigianopasta-food-and-drink.komalnakrani.com",
@@ -40961,7 +40961,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artimg.komalnakrani.com",
@@ -41127,7 +41127,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artivo.komalnakrani.com",
@@ -41194,7 +41194,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artiz-artist.komalnakrani.com",
@@ -41261,7 +41261,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artlst.komalnakrani.com",
@@ -41328,7 +41328,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artolio.komalnakrani.com",
@@ -41395,7 +41395,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://artoral-agency.komalnakrani.com",
@@ -41519,7 +41519,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arue.komalnakrani.com",
@@ -41586,7 +41586,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aruna-elara.komalnakrani.com",
@@ -41653,7 +41653,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arvexa.komalnakrani.com",
@@ -41720,7 +41720,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arvia.komalnakrani.com",
@@ -41787,7 +41787,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arvio.komalnakrani.com",
@@ -41854,7 +41854,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arvista-studio.komalnakrani.com",
@@ -41921,7 +41921,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arvix.komalnakrani.com",
@@ -41988,7 +41988,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arvy-ui-kit.komalnakrani.com",
@@ -42055,7 +42055,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arvynix.komalnakrani.com",
@@ -42122,7 +42122,7 @@ export const themes: Theme[] = [
       "categories": [
           "medical"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://arvzi-therapy.komalnakrani.com",
@@ -42189,7 +42189,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://asanayoga.komalnakrani.com",
@@ -42256,7 +42256,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://asanora.komalnakrani.com",
@@ -42323,7 +42323,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://asanya.komalnakrani.com",
@@ -42390,7 +42390,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://asatha.komalnakrani.com",
@@ -42457,7 +42457,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ascend.komalnakrani.com",
@@ -42591,7 +42591,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ascent-restaurant.komalnakrani.com",
@@ -42710,7 +42710,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ashfall-game.komalnakrani.com",
@@ -42767,7 +42767,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ashford.komalnakrani.com",
@@ -42834,7 +42834,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ashton-portfolio.komalnakrani.com",
@@ -42901,7 +42901,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://askim-portfolio.komalnakrani.com",
@@ -42968,7 +42968,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aspace-interior-design.komalnakrani.com",
@@ -43092,7 +43092,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aspekto.komalnakrani.com",
@@ -43159,7 +43159,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aspen-real-estate.komalnakrani.com",
@@ -43226,7 +43226,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://asper-one-page.komalnakrani.com",
@@ -43263,7 +43263,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aspiremarketing-consulting.komalnakrani.com",
@@ -43330,7 +43330,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://assado.komalnakrani.com",
@@ -43397,7 +43397,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://assistai-app.komalnakrani.com",
@@ -43464,7 +43464,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://assistia.komalnakrani.com",
@@ -43531,7 +43531,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://assurix.komalnakrani.com",
@@ -43598,7 +43598,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://astanaarch.komalnakrani.com",
@@ -43665,7 +43665,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://astera-real-estate.komalnakrani.com",
@@ -43779,7 +43779,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://asteria.komalnakrani.com",
@@ -43846,7 +43846,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://asterisk-saas.komalnakrani.com",
@@ -43913,7 +43913,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://astra-agency.komalnakrani.com",
@@ -43980,7 +43980,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://astrl.komalnakrani.com",
@@ -44047,7 +44047,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://astro-game.komalnakrani.com",
@@ -44114,7 +44114,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://astroin.komalnakrani.com",
@@ -44181,7 +44181,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://astrox-studio.komalnakrani.com",
@@ -44248,7 +44248,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://astryon.komalnakrani.com",
@@ -44315,7 +44315,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://asuric.komalnakrani.com",
@@ -44382,7 +44382,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atelier-norr.komalnakrani.com",
@@ -44449,7 +44449,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atelis.komalnakrani.com",
@@ -44516,7 +44516,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atento-consulting.komalnakrani.com",
@@ -44583,7 +44583,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atha-agency.komalnakrani.com",
@@ -44650,7 +44650,7 @@ export const themes: Theme[] = [
       "categories": [
           "medical"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://athelas.komalnakrani.com",
@@ -44769,7 +44769,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://athlenia.komalnakrani.com",
@@ -44836,7 +44836,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://athletic-w.komalnakrani.com",
@@ -44903,7 +44903,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://athletic.komalnakrani.com",
@@ -44970,7 +44970,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://athletix.komalnakrani.com",
@@ -45037,7 +45037,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atlantic-saas.komalnakrani.com",
@@ -45104,7 +45104,7 @@ export const themes: Theme[] = [
       "categories": [
           "transportation"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atlantio-logistics.komalnakrani.com",
@@ -45171,7 +45171,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atlasbuilder.komalnakrani.com",
@@ -45238,7 +45238,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atlasgroup.komalnakrani.com",
@@ -45305,7 +45305,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atmawell.komalnakrani.com",
@@ -45439,7 +45439,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atoks.komalnakrani.com",
@@ -45506,7 +45506,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atornee-law-firm.komalnakrani.com",
@@ -45573,7 +45573,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atraen.komalnakrani.com",
@@ -45640,7 +45640,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://atrium-architecture.komalnakrani.com",
@@ -45707,7 +45707,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://attice.komalnakrani.com",
@@ -45774,7 +45774,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://attope.komalnakrani.com",
@@ -45841,7 +45841,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://attorneyster-law-firm.komalnakrani.com",
@@ -45908,7 +45908,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://attornia-law-firm.komalnakrani.com",
@@ -45975,7 +45975,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://atypical-agency.komalnakrani.com",
@@ -46089,7 +46089,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aubrey.komalnakrani.com",
@@ -46156,7 +46156,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auditly.komalnakrani.com",
@@ -46223,7 +46223,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auditry.komalnakrani.com",
@@ -46290,7 +46290,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auditx-finance.komalnakrani.com",
@@ -46456,7 +46456,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aura-saas.komalnakrani.com",
@@ -46523,7 +46523,7 @@ export const themes: Theme[] = [
       "categories": [
           "hair-and-beauty"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aurae.komalnakrani.com",
@@ -46590,7 +46590,7 @@ export const themes: Theme[] = [
       "categories": [
           "medical"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aurain.komalnakrani.com",
@@ -46657,7 +46657,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auralis.komalnakrani.com",
@@ -46724,7 +46724,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://auralis-x.komalnakrani.com",
@@ -46791,7 +46791,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auralise.komalnakrani.com",
@@ -46858,7 +46858,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auraly.komalnakrani.com",
@@ -46925,7 +46925,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aurant-food-and-drink.komalnakrani.com",
@@ -47173,7 +47173,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aureo-real-estate.komalnakrani.com",
@@ -47240,7 +47240,7 @@ export const themes: Theme[] = [
       "categories": [
           "hair-and-beauty"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aureva.komalnakrani.com",
@@ -47307,7 +47307,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://aurexa.komalnakrani.com",
@@ -47374,7 +47374,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auria.komalnakrani.com",
@@ -47441,7 +47441,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://aurion.komalnakrani.com",
@@ -47508,7 +47508,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aurora-app.komalnakrani.com",
@@ -47575,7 +47575,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aurora-ecom-saas.komalnakrani.com",
@@ -47642,7 +47642,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aurora-estate.komalnakrani.com",
@@ -47875,7 +47875,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aurovia.komalnakrani.com",
@@ -47942,7 +47942,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aurox.komalnakrani.com",
@@ -48076,7 +48076,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://authorial.komalnakrani.com",
@@ -48143,7 +48143,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://authority-consulting.komalnakrani.com",
@@ -48200,7 +48200,7 @@ export const themes: Theme[] = [
       "categories": [
           "transportation"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://autivio.komalnakrani.com",
@@ -48267,7 +48267,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auto-towing.komalnakrani.com",
@@ -48334,7 +48334,7 @@ export const themes: Theme[] = [
       "categories": [
           "transportation"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://autocar-x-automotive.komalnakrani.com",
@@ -48401,7 +48401,7 @@ export const themes: Theme[] = [
       "categories": [
           "transportation"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://autofix-automotive.komalnakrani.com",
@@ -48468,7 +48468,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://autofye.komalnakrani.com",
@@ -48577,7 +48577,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://automate-saas.komalnakrani.com",
@@ -48634,7 +48634,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://automately.komalnakrani.com",
@@ -48701,7 +48701,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://automatepro-saas.komalnakrani.com",
@@ -48768,7 +48768,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://automator-saas.komalnakrani.com",
@@ -48882,7 +48882,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://automora.komalnakrani.com",
@@ -48949,7 +48949,7 @@ export const themes: Theme[] = [
       "categories": [
           "transportation"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://automozai-automotive.komalnakrani.com",
@@ -49016,7 +49016,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://autona.komalnakrani.com",
@@ -49083,7 +49083,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://autonex.komalnakrani.com",
@@ -49150,7 +49150,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://autonity.komalnakrani.com",
@@ -49217,7 +49217,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://autopulse.komalnakrani.com",
@@ -49284,7 +49284,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://autorepairxtnc.komalnakrani.com",
@@ -49418,7 +49418,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://auxo.komalnakrani.com",
@@ -49589,7 +49589,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ava-veterinary.komalnakrani.com",
@@ -49656,7 +49656,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avalonx-saas.komalnakrani.com",
@@ -49723,7 +49723,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avante-ui-kit.komalnakrani.com",
@@ -49790,7 +49790,7 @@ export const themes: Theme[] = [
       "categories": [
           "transportation"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avast-transport.komalnakrani.com",
@@ -49857,7 +49857,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avelety.komalnakrani.com",
@@ -49924,7 +49924,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avelon.komalnakrani.com",
@@ -49991,7 +49991,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avena.komalnakrani.com",
@@ -50058,7 +50058,7 @@ export const themes: Theme[] = [
       "categories": [
           "hair-and-beauty"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avenda.komalnakrani.com",
@@ -50125,7 +50125,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://avenir.komalnakrani.com",
@@ -50192,7 +50192,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avenor-consulting.komalnakrani.com",
@@ -50326,7 +50326,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avenors.komalnakrani.com",
@@ -50393,7 +50393,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aventiva.komalnakrani.com",
@@ -50460,7 +50460,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aventivo.komalnakrani.com",
@@ -50527,7 +50527,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avento.komalnakrani.com",
@@ -50594,7 +50594,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aventra.komalnakrani.com",
@@ -50661,7 +50661,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aventureux.komalnakrani.com",
@@ -50728,7 +50728,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avexa.komalnakrani.com",
@@ -50795,7 +50795,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avexis.komalnakrani.com",
@@ -50862,7 +50862,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avexou.komalnakrani.com",
@@ -50981,7 +50981,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avida-architecture.komalnakrani.com",
@@ -51048,7 +51048,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avionique.komalnakrani.com",
@@ -51115,7 +51115,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avirra.komalnakrani.com",
@@ -51182,7 +51182,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avix-studio.komalnakrani.com",
@@ -51249,7 +51249,7 @@ export const themes: Theme[] = [
       "categories": [
           "hair-and-beauty"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avlon-beauty-and-wellness.komalnakrani.com",
@@ -51316,7 +51316,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avocatsx-attorney.komalnakrani.com",
@@ -51383,7 +51383,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avolen.komalnakrani.com",
@@ -51450,7 +51450,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avolin.komalnakrani.com",
@@ -51517,7 +51517,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://avontiv.komalnakrani.com",
@@ -51584,7 +51584,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://avoora.komalnakrani.com",
@@ -51651,7 +51651,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://avora.komalnakrani.com",
@@ -51718,7 +51718,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avorica.komalnakrani.com",
@@ -51785,7 +51785,7 @@ export const themes: Theme[] = [
       "categories": [
           "transportation"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avorion.komalnakrani.com",
@@ -51852,7 +51852,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avrax-agency.komalnakrani.com",
@@ -51919,7 +51919,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://avrigo-agency.komalnakrani.com",
@@ -51986,7 +51986,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avvocati-law-firm.komalnakrani.com",
@@ -52053,7 +52053,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avynor.komalnakrani.com",
@@ -52120,7 +52120,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avyora.komalnakrani.com",
@@ -52187,7 +52187,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://awsa-studio.komalnakrani.com",
@@ -52254,7 +52254,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axaro.komalnakrani.com",
@@ -52321,7 +52321,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axcon.komalnakrani.com",
@@ -52388,7 +52388,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axdot.komalnakrani.com",
@@ -52455,7 +52455,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axel-finance.komalnakrani.com",
@@ -52522,7 +52522,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axelo.komalnakrani.com",
@@ -52589,7 +52589,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axels-jewelry.komalnakrani.com",
@@ -52698,7 +52698,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axentix.komalnakrani.com",
@@ -52807,7 +52807,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axgen.komalnakrani.com",
@@ -52941,7 +52941,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axiestudio-architecture.komalnakrani.com",
@@ -53008,7 +53008,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aximo.komalnakrani.com",
@@ -53127,7 +53127,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://axiom-power.komalnakrani.com",
@@ -53194,7 +53194,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axiom-x.komalnakrani.com",
@@ -53261,7 +53261,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axioma.komalnakrani.com",
@@ -53328,7 +53328,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axiona.komalnakrani.com",
@@ -53395,7 +53395,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axionics.komalnakrani.com",
@@ -53462,7 +53462,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axioniq.komalnakrani.com",
@@ -53561,7 +53561,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://axis-works.komalnakrani.com",
@@ -53628,7 +53628,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axislab.komalnakrani.com",
@@ -53695,7 +53695,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axjero.komalnakrani.com",
@@ -53762,7 +53762,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axora.komalnakrani.com",
@@ -53829,7 +53829,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://axure.komalnakrani.com",
@@ -53896,7 +53896,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://axyon.komalnakrani.com",
@@ -53963,7 +53963,7 @@ export const themes: Theme[] = [
       "categories": [
           "travel"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ayama-resort-hotel.komalnakrani.com",
@@ -54097,7 +54097,7 @@ export const themes: Theme[] = [
       "categories": [
           "architecture-and-design"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ayano-architecture.komalnakrani.com",
@@ -54164,7 +54164,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aygen-portfolio.komalnakrani.com",
@@ -54231,7 +54231,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ayzent.komalnakrani.com",
@@ -54298,7 +54298,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://azencyzf-agency.komalnakrani.com",
@@ -54365,7 +54365,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://azentie.komalnakrani.com",
@@ -54432,7 +54432,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://azenxi.komalnakrani.com",
@@ -54499,7 +54499,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://azlytics.komalnakrani.com",
@@ -54566,7 +54566,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://azul-agency.komalnakrani.com",
@@ -54633,7 +54633,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://azura-app.komalnakrani.com",
@@ -54700,7 +54700,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://azure.komalnakrani.com",
@@ -54767,7 +54767,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 169,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://b2base.komalnakrani.com",
@@ -54834,7 +54834,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://b2bizz.komalnakrani.com",
@@ -54901,7 +54901,7 @@ export const themes: Theme[] = [
       "categories": [
           "retail-and-e-commerce"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://babuu-128.komalnakrani.com",
@@ -54968,7 +54968,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://aquasailor.komalnakrani.com",
@@ -55035,7 +55035,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ariko-sushi.komalnakrani.com",
@@ -55102,7 +55102,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avenue-agency.komalnakrani.com",
@@ -55169,7 +55169,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://averint.komalnakrani.com",
@@ -55236,7 +55236,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avery-creative.komalnakrani.com",
@@ -55303,7 +55303,7 @@ export const themes: Theme[] = [
       "categories": [
           "real-estate"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://avery-estate.komalnakrani.com",
@@ -55370,7 +55370,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://babylon-saas.komalnakrani.com",
@@ -55437,7 +55437,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://babyo-kids.komalnakrani.com",
@@ -55504,7 +55504,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://bacco-winery.komalnakrani.com",
@@ -55571,7 +55571,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 1,
       "badge": "New Release",
       "liveUrl": "https://backofficew.komalnakrani.com",
@@ -55638,7 +55638,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://backsoft.komalnakrani.com",
@@ -55705,7 +55705,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://badi-consulting.komalnakrani.com",
@@ -55772,7 +55772,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://bailey-hart.komalnakrani.com",
@@ -55839,7 +55839,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://bakery-128-cafe.komalnakrani.com",
@@ -55906,7 +55906,7 @@ export const themes: Theme[] = [
       "categories": [
           "food-and-drink"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://bakeryzf.komalnakrani.com",
@@ -55973,7 +55973,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://baku-app.komalnakrani.com",
@@ -56040,7 +56040,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 59,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://bakzy.komalnakrani.com",
@@ -56107,7 +56107,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://balance-wellness.komalnakrani.com",
@@ -56231,7 +56231,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://bale-law-firm.komalnakrani.com",
@@ -56298,7 +56298,7 @@ export const themes: Theme[] = [
       "categories": [
           "portfolio-and-agency"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://balitravels.komalnakrani.com",
@@ -56365,7 +56365,7 @@ export const themes: Theme[] = [
       "categories": [
           "blog-and-editorial"
       ],
-      "price": 79,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ballin-128-soccer.komalnakrani.com",
@@ -56432,7 +56432,7 @@ export const themes: Theme[] = [
       "categories": [
           "wellness"
       ],
-      "price": 129,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ballor.komalnakrani.com",
@@ -56499,7 +56499,7 @@ export const themes: Theme[] = [
       "categories": [
           "professional-services"
       ],
-      "price": 99,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://ballot.komalnakrani.com",
@@ -56618,7 +56618,7 @@ export const themes: Theme[] = [
       "categories": [
           "technology"
       ],
-      "price": 49,
+      "price": 39,
       "featured": 0,
       "badge": "New Release",
       "liveUrl": "https://banca-bank.komalnakrani.com",
@@ -56672,8 +56672,2391 @@ export const themes: Theme[] = [
               "desc": "Detailed services, deliverables, and offerings."
           }
       ]
+  },
+  {
+      "id": "band-music-business-website-template",
+      "name": "Band",
+      "slug": "band-music-business-website-template",
+      "dodoProductId": "pdt_0No5ZX2JglKK3w9d6AtZM",
+      "tagline": "Modern, high-performance Band website template.",
+      "description": "Stylistic and edgy Band Ecommerce template, perfect for connecting to Printful for dropshipping your band merch to your fan base.",
+      "framework": "astro",
+      "category": "arts-and-entertainment",
+      "categories": [
+          "arts-and-entertainment"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://band-music-business.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Event Inventore Stadium",
+              "path": "/event_inventore-stadium/",
+              "desc": "Dedicated Event Inventore Stadium page with responsive components."
+          },
+          {
+              "name": "Event The Carnival Theatre",
+              "path": "/event_the-carnival-theatre/",
+              "desc": "Dedicated Event The Carnival Theatre page with responsive components."
+          },
+          {
+              "name": "Event Trebble Hat",
+              "path": "/event_trebble-hat/",
+              "desc": "Dedicated Event Trebble Hat page with responsive components."
+          },
+          {
+              "name": "Events",
+              "path": "/events/",
+              "desc": "Dedicated Events page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Merch Music",
+              "path": "/merch-music/",
+              "desc": "Dedicated Merch Music page with responsive components."
+          },
+          {
+              "name": "Product The Album",
+              "path": "/product_the-album/",
+              "desc": "Dedicated Product The Album page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bankpro-bank-website-template",
+      "name": "Bankpro",
+      "slug": "bankpro-bank-website-template",
+      "dodoProductId": "pdt_0No5Zf97RdWaQb6tDMlHc",
+      "tagline": "Modern, high-performance Bankpro website template.",
+      "description": "Elevate your banking and finance presence with Bankpro \ud83d\udcb3 This sleek and modern Astro template is perfect for banks, fintech startups, and financial institutions, offering a seamless user experience and stylish showcase for your financial solutions",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bankpro-bank.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Integrations",
+              "path": "/integrations/",
+              "desc": "Dedicated Integrations page with responsive components."
+          },
+          {
+              "name": "Pricing 2 Ecom",
+              "path": "/pricing-2-ecom/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "banksy-bank-website-template",
+      "name": "Banksy",
+      "slug": "banksy-bank-website-template",
+      "dodoProductId": "pdt_0No5Zmy0fGkBcFvlU4PJl",
+      "tagline": "Modern, high-performance Banksy website template.",
+      "description": "Banksy is a clean, minimalist Astro template for modern banks! Give your customers an engaging, lightning-fast user experience with a conversion-optimized website that prioritises performance.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://banksy-bank.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Et Saepe Et",
+              "path": "/blog_et-saepe-et/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Business Loan",
+              "path": "/business-loan/",
+              "desc": "Dedicated Business Loan page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Login",
+              "path": "/login/",
+              "desc": "Dedicated Login page with responsive components."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "brikzo-website-template",
+      "name": "Brikzo",
+      "slug": "brikzo-website-template",
+      "dodoProductId": "pdt_0No8bjZ1LoRDRuMX86RaF",
+      "tagline": "Modern, high-performance Brikzo website template.",
+      "description": "Brikzo is a sleek, modern Astro template designed for architecture firms and studios. Showcase projects with elegance, highlight services, and impress clients with a clean, professional layout built for design excellence.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://brikzo.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Residential Construction",
+              "path": "/services_residential-construction/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "banquee-bank-website-template",
+      "name": "Banquee",
+      "slug": "banquee-bank-website-template",
+      "dodoProductId": "pdt_0No8cqLd7JA2kpjl85FpZ",
+      "tagline": "Modern, high-performance Banquee website template.",
+      "description": "Banquee is a modern Astro template perfectly suited for banks, finance startups, fintech startups, tech startups and other SaaS businesses. It comes with an elegant and minimal design, advanced interactions and CMS integration.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://banquee-bank.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Category App",
+              "path": "/category_app/",
+              "desc": "Dedicated Category App page with responsive components."
+          },
+          {
+              "name": "Category Product",
+              "path": "/category_product/",
+              "desc": "Dedicated Category Product page with responsive components."
+          },
+          {
+              "name": "Category Technology",
+              "path": "/category_technology/",
+              "desc": "Dedicated Category Technology page with responsive components."
+          },
+          {
+              "name": "Compare",
+              "path": "/compare/",
+              "desc": "Dedicated Compare page with responsive components."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Support",
+              "path": "/support/",
+              "desc": "Dedicated Support page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "barberz-barber-website-template",
+      "name": "Barberz",
+      "slug": "barberz-barber-website-template",
+      "dodoProductId": "pdt_0No8dg00fTxRfcqOgTvDi",
+      "tagline": "Modern, high-performance Barberz website template.",
+      "description": "Welcome to Barberz Salon, where expert barber craftsmanship meets modern style. The best Barber shop template in Astro. Including all sections you'll need to get your barber shop online with pages like barber profile, team, pricing, services etc.",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://barberz-barber.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Barber",
+              "path": "/barber/",
+              "desc": "Dedicated Barber page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Styles",
+              "path": "/styles/",
+              "desc": "Dedicated Styles page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "base",
+      "name": "Base Studio",
+      "slug": "base",
+      "dodoProductId": "pdt_0No8ehVtxOaPGa6DnLnwC",
+      "tagline": "Modern, high-performance Base Studio website template.",
+      "description": "This Astro template is not only simple to handle and upkeep, but also boasts sophisticated Astro interactions. It features a striking, minimalist design that's ideal for any creative individual keen on highlighting their brand!",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://base.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "News",
+              "path": "/news/",
+              "desc": "Dedicated News page with responsive components."
+          },
+          {
+              "name": "Project Ventura Airlines",
+              "path": "/project_ventura-airlines/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Walton Candy",
+              "path": "/project_walton-candy/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "bearest-website-template",
+      "name": "Bearest",
+      "slug": "bearest-website-template",
+      "dodoProductId": "pdt_0No8hGO2wl18zJvUb1tZI",
+      "tagline": "Modern, high-performance Bearest website template.",
+      "description": "Introducing Bearest, a strategic Astro template to communicate the value and simplicity of your SaaS product, helping you attract and engage your target audience. Bearest provides the perfect foundation to showcase your powerful product and app.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bearest.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "License",
+              "path": "/license/",
+              "desc": "Dedicated License page with responsive components."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "beaut-website-template",
+      "name": "Beaut\u00e9",
+      "slug": "beaut-website-template",
+      "dodoProductId": "pdt_0No8i7E6qyfhPdA1uywe0",
+      "tagline": "Modern, high-performance Beaut\u00e9 website template.",
+      "description": "Beaut\u00e9 is a modern and stylish one-page portfolio template designed to help you showcase your work in a captivating way.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beaut.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Cereal",
+              "path": "/project_cereal/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Feeling Y",
+              "path": "/project_feeling-y/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Marcomit",
+              "path": "/project_marcomit/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Ron Busti",
+              "path": "/project_ron-busti/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bedrock-startup-website-template",
+      "name": "Bedrock",
+      "slug": "bedrock-startup-website-template",
+      "dodoProductId": "pdt_0No8kFz9AqItfa3AEApdC",
+      "tagline": "Modern, high-performance Bedrock website template.",
+      "description": "Bedrock\u2019s use of daring neon evokes feelings both futuristic and nostalgic, tastefully recalling an early-noughties sensibility seen through a modern lens.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bedrock-startup.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Product Tours Product Tour 1",
+              "path": "/product-tours_product-tour-1/",
+              "desc": "Dedicated Product Tours Product Tour 1 page with responsive components."
+          },
+          {
+              "name": "Product Tours Product Tour 2",
+              "path": "/product-tours_product-tour-2/",
+              "desc": "Dedicated Product Tours Product Tour 2 page with responsive components."
+          },
+          {
+              "name": "Template Getting Started",
+              "path": "/template_getting-started/",
+              "desc": "Dedicated Template Getting Started page with responsive components."
+          },
+          {
+              "name": "Template Licenses",
+              "path": "/template_licenses/",
+              "desc": "Dedicated Template Licenses page with responsive components."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          },
+          {
+              "name": "Template Ui Snippets",
+              "path": "/template_ui-snippets/",
+              "desc": "Dedicated Template Ui Snippets page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "biolab-website-template",
+      "name": "Biolab",
+      "slug": "biolab-website-template",
+      "dodoProductId": "pdt_0No9LpsPN5XqkePMueG8e",
+      "tagline": "Modern, high-performance Biolab website template.",
+      "description": "The BioLab Template is a clean, modern, and professional Astro design perfect for Laboratory services. It's also ideal for Science Research and Laboratory Center.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://biolab.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs Best Practices For Labs Waste Management",
+              "path": "/blogs_best-practices-for-labs-waste-management/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service",
+              "path": "/service/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Teams Dr Grace Taylor",
+              "path": "/teams_dr-grace-taylor/",
+              "desc": "Dedicated Teams Dr Grace Taylor page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "biom-website-template",
+      "name": "BIOM",
+      "slug": "biom-website-template",
+      "dodoProductId": "pdt_0No9M06Bg8YsvNQHHCqGe",
+      "tagline": "Modern, high-performance BIOM website template.",
+      "description": "Meet BIOM, a sleek portfolio template that allows you to effortlessly showcase your projects and services. Ideal for Professionals seeking a standout portfolio to showcase their work and attract new opportunities.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://biom.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Flux",
+              "path": "/work_flux/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Pulse",
+              "path": "/work_pulse/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Slate",
+              "path": "/work_slate/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Vertex",
+              "path": "/work_vertex/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "biotae-designer-website-template",
+      "name": "Biotae",
+      "slug": "biotae-designer-website-template",
+      "dodoProductId": "pdt_0No9MCLL1zxYnH5LmnqPY",
+      "tagline": "Modern, high-performance Biotae website template.",
+      "description": "Create a resume with Biotae, a Astro resume template especially designed to let you create a stunning personal portfolio with complete ease. Create your Resume or CV with Biotae!",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://biotae-designer.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Graphic Design",
+              "path": "/project_graphic-design/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Photography",
+              "path": "/project_photography/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Product Design",
+              "path": "/project_product-design/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Web Design",
+              "path": "/project_web-design/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "banky-app-website-template",
+      "name": "Banky",
+      "slug": "banky-app-website-template",
+      "dodoProductId": "pdt_0No9NTMT88rGI0yAK9Xnd",
+      "tagline": "Modern, high-performance Banky website template.",
+      "description": "Banky is a modern SaaS Astro template with modern design and smooth animations. Made for SaaS and tech companies.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 24,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://banky-app.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Tamplate Info Style Guide",
+              "path": "/tamplate-info_style-guide/",
+              "desc": "Dedicated Tamplate Info Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bankzai-dashboard-website-template",
+      "name": "Bankzai",
+      "slug": "bankzai-dashboard-website-template",
+      "dodoProductId": "pdt_0No9Neyy9kDj9aMxLZ6xo",
+      "tagline": "Modern, high-performance Bankzai website template.",
+      "description": "Bankzai - modern and minimal dashboard UI Kit for your next digital product, software/web app/admin panel dashboard project. Includes 24+ pages with different layouts and use cases. Responsive to all screen sizes and perfect for all modern browsers.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bankzai-dashboard.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Balance",
+              "path": "/balance/",
+              "desc": "Dedicated Balance page with responsive components."
+          },
+          {
+              "name": "Cards",
+              "path": "/cards/",
+              "desc": "Dedicated Cards page with responsive components."
+          },
+          {
+              "name": "Chat",
+              "path": "/chat/",
+              "desc": "Dedicated Chat page with responsive components."
+          },
+          {
+              "name": "Dashboard",
+              "path": "/dashboard/",
+              "desc": "Dedicated Dashboard page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Invoices List",
+              "path": "/invoices-list/",
+              "desc": "Dedicated Invoices List page with responsive components."
+          },
+          {
+              "name": "Transaction",
+              "path": "/transaction/",
+              "desc": "Dedicated Transaction page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "barbstyling-barber-website-template",
+      "name": "Barb Styling",
+      "slug": "barbstyling-barber-website-template",
+      "dodoProductId": "pdt_0No9OAim7vwE8nEmG9Ohg",
+      "tagline": "Modern, high-performance Barb Styling website template.",
+      "description": "The Barb Astro template is ideal if you want a minimal, clean, and modern design. Perfect for barbershops, hair salons, beauty shops, and stylists, it makes showcasing your work and connecting with clients easy and attractive.",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://barbstyling-barber.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Appointment",
+              "path": "/appointment/",
+              "desc": "Dedicated Appointment page with responsive components."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Specialists",
+              "path": "/specialists/",
+              "desc": "Dedicated Specialists page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "baseflow-website-template",
+      "name": "Baseflow",
+      "slug": "baseflow-website-template",
+      "dodoProductId": "pdt_0No9OQ3SkpbYHlwWmRBTF",
+      "tagline": "Modern, high-performance Baseflow website template.",
+      "description": "Baseflow - Technology Website Template",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://baseflow.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Admin License",
+              "path": "/admin_license/",
+              "desc": "Dedicated Admin License page with responsive components."
+          },
+          {
+              "name": "Admin Style Guide",
+              "path": "/admin_style-guide/",
+              "desc": "Dedicated Admin Style Guide page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "basel-saas-website-template",
+      "name": "Basel",
+      "slug": "basel-saas-website-template",
+      "dodoProductId": "pdt_0No9PCKJziCn7IX2XC8Fj",
+      "tagline": "Modern, high-performance Basel website template.",
+      "description": "Basel with its creative design, striking white and yellow color combinations, seamless CMS integration, and e-commerce capabilities, it is your gateway to attracting and growing your audience while excelling in the competitive SaaS industry.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://basel-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "basic-studio-website-template",
+      "name": "Basic Studio",
+      "slug": "basic-studio-website-template",
+      "dodoProductId": "pdt_0No9PJx7kNms9hF2w1xLc",
+      "tagline": "Modern, high-performance Basic Studio website template.",
+      "description": "BASIC is a modern and professional Astro template for creative agency portfolio websites. It suits creative agency, digital agency, design studio, and personal portfolio sites that want to showcase work with bold style and clean aesthetics.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://basic-studio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Work",
+              "path": "/work/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "basilico-restaurant-website-template",
+      "name": "Basilico",
+      "slug": "basilico-restaurant-website-template",
+      "dodoProductId": "pdt_0No9Pateg6wXQkIoIILTb",
+      "tagline": "Modern, high-performance Basilico website template.",
+      "description": "Basilico is a fully responsive template that suits a broad range of businesses in the foodservice industry. You can find two different layouts that share a minimal and elegant design with great attention to usability and appealing interactions.",
+      "framework": "astro",
+      "category": "food-and-drink",
+      "categories": [
+          "food-and-drink"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://basilico-restaurant.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Layout 1 About Us",
+              "path": "/layout-1_about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Layout 1 Blog",
+              "path": "/layout-1_blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Layout 1 Contact",
+              "path": "/layout-1_contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Layout 1 Home",
+              "path": "/layout-1_home/",
+              "desc": "Dedicated Layout 1 Home page with responsive components."
+          },
+          {
+              "name": "Layout 1 Menu",
+              "path": "/layout-1_menu/",
+              "desc": "Dedicated Layout 1 Menu page with responsive components."
+          },
+          {
+              "name": "Layout Home",
+              "path": "/layout_home/",
+              "desc": "Dedicated Layout Home page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "basisone-photography-website-template",
+      "name": "Basis/One",
+      "slug": "basisone-photography-website-template",
+      "dodoProductId": "pdt_0No9PiYsoFcczuHBU9LqY",
+      "tagline": "Modern, high-performance Basis/One website template.",
+      "description": "A clean and modern Astro template tailored for portfolios, photographers, and creative studios. Crafted with advanced Astro interactions, Basic/One offers a sleek and stylish platform to showcase your work.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://basisone-photography.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Featured",
+              "path": "/featured/",
+              "desc": "Dedicated Featured page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Licenses",
+              "path": "/licenses/",
+              "desc": "Dedicated Licenses page with responsive components."
+          },
+          {
+              "name": "Style Guide",
+              "path": "/style-guide/",
+              "desc": "Dedicated Style Guide page with responsive components."
+          },
+          {
+              "name": "Work Index",
+              "path": "/work-/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Work Overview",
+              "path": "/work-overview/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "bastion-hotel-website-template",
+      "name": "Bastion",
+      "slug": "bastion-hotel-website-template",
+      "dodoProductId": "pdt_0No9Pqp1CjZS0k0pjq6Uk",
+      "tagline": "Modern, high-performance Bastion website template.",
+      "description": "Offer your guests the ideal haven for a weekend escape with Bastion, the template for holiday rentals and short-stay vacation accommodation.",
+      "framework": "astro",
+      "category": "travel",
+      "categories": [
+          "travel"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bastion-hotel.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Journal",
+              "path": "/journal/",
+              "desc": "Dedicated Journal page with responsive components."
+          },
+          {
+              "name": "Locale",
+              "path": "/locale/",
+              "desc": "Dedicated Locale page with responsive components."
+          },
+          {
+              "name": "Property",
+              "path": "/property/",
+              "desc": "Dedicated Property page with responsive components."
+          },
+          {
+              "name": "Reviews",
+              "path": "/reviews/",
+              "desc": "Dedicated Reviews page with responsive components."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "baudi-bisiness-website-template",
+      "name": "Baudi",
+      "slug": "baudi-bisiness-website-template",
+      "dodoProductId": "pdt_0No9Q1NVoY5Zc1sPJAkjR",
+      "tagline": "Modern, high-performance Baudi website template.",
+      "description": "One page CMS template suitable for any creative agency, corporate business, startups, construction company, personal portfolio or crypto/finance business.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://baudi-bisiness.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home Home Layout 2",
+              "path": "/home_home-layout-2/",
+              "desc": "Dedicated Home Home Layout 2 page with responsive components."
+          },
+          {
+              "name": "Home Home Layout 3",
+              "path": "/home_home-layout-3/",
+              "desc": "Dedicated Home Home Layout 3 page with responsive components."
+          },
+          {
+              "name": "Home Home Layout 4",
+              "path": "/home_home-layout-4/",
+              "desc": "Dedicated Home Home Layout 4 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post 7 Things About Interior Design",
+              "path": "/post_7-things-about-interior-design/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Single Page Protfolio",
+              "path": "/single-page-protfolio/",
+              "desc": "Dedicated Single Page Protfolio page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bauform-website-template",
+      "name": "Bauform",
+      "slug": "bauform-website-template",
+      "dodoProductId": "pdt_0No9QBhmnM9fuat8Rr6Ol",
+      "tagline": "Modern, high-performance Bauform website template.",
+      "description": "Inspired by the bold geometry of modernist design, Bauform is a perfect blend of structure and creativity. Ideal for architects, studios, and design professionals, it highlights portfolios with minimalist layouts and sharp typography",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bauform.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Template Pages Styleguide",
+              "path": "/template-pages_styleguide/",
+              "desc": "Dedicated Template Pages Styleguide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bauwerk-website-template",
+      "name": "Bauwerk",
+      "slug": "bauwerk-website-template",
+      "dodoProductId": "pdt_0No9QQw9JKZOwDOAe7r53",
+      "tagline": "Modern, high-performance Bauwerk website template.",
+      "description": "Bauwerk is a powerful CMS template for home construction, civil engineering, and equipment rental businesses. Built with a structured CMS, native GSAP animations, and a modern design system, it\u2019s ready to launch a production-quality website",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bauwerk.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Clients",
+              "path": "/clients/",
+              "desc": "Dedicated Clients page with responsive components."
+          },
+          {
+              "name": "Company",
+              "path": "/company/",
+              "desc": "Dedicated Company page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Machines",
+              "path": "/machines/",
+              "desc": "Dedicated Machines page with responsive components."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "bavia-website-template",
+      "name": "Bavia",
+      "slug": "bavia-website-template",
+      "dodoProductId": "pdt_0No9Qjb0R71dA6TGv7lCG",
+      "tagline": "Modern, high-performance Bavia website template.",
+      "description": "Launch a stunning beauty store with Bavia. This Astro template is designed for skincare, makeup, and wellness brands. With clean layouts and smooth navigation, Bavia helps you create a professional online shop that feels premium and welcoming.",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 39,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://bavia.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Articles",
+              "path": "/articles/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Categories",
+              "path": "/categories/",
+              "desc": "Dedicated Categories page with responsive components."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Products",
+              "path": "/products/",
+              "desc": "Dedicated Products page with responsive components."
+          },
+          {
+              "name": "Reviews",
+              "path": "/reviews/",
+              "desc": "Dedicated Reviews page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "baxlor-website-template",
+      "name": "Baxlor",
+      "slug": "baxlor-website-template",
+      "dodoProductId": "pdt_0No9R802254nqrPYg82Pk",
+      "tagline": "Modern, high-performance Baxlor website template.",
+      "description": "Baxlor Agency Template is a sleek, modern solution for creating eye-catching agency websites, designed to keep your work in focus with a clean, uncluttered layout.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://baxlor.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project Cognixa",
+              "path": "/project_cognixa/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Project Flowence",
+              "path": "/project_flowence/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "bayan-hotel-website-template",
+      "name": "Bayan",
+      "slug": "bayan-hotel-website-template",
+      "dodoProductId": "pdt_0No9RetcXHqAiEIafQJ9z",
+      "tagline": "Modern, high-performance Bayan website template.",
+      "description": "Introducing Bayan, an elegant template for hotels and resorts. With a distinctive luxury feel, handpicked colors and fonts, Bayan is easy to use, responsive, and blazing-fast on every device.",
+      "framework": "astro",
+      "category": "travel",
+      "categories": [
+          "travel"
+      ],
+      "price": 24,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bayan-hotel.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Experiences",
+              "path": "/experiences/",
+              "desc": "Dedicated Experiences page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Restaurant Menu",
+              "path": "/restaurant-menu/",
+              "desc": "Dedicated Restaurant Menu page with responsive components."
+          },
+          {
+              "name": "Restaurant",
+              "path": "/restaurant/",
+              "desc": "Dedicated Restaurant page with responsive components."
+          },
+          {
+              "name": "Rooms",
+              "path": "/rooms/",
+              "desc": "Dedicated Rooms page with responsive components."
+          },
+          {
+              "name": "Spa",
+              "path": "/spa/",
+              "desc": "Dedicated Spa page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "beacon-agency-website-template",
+      "name": "Beacon",
+      "slug": "beacon-agency-website-template",
+      "dodoProductId": "pdt_0No9SRtYE39PoQ8hZlyHD",
+      "tagline": "Modern, high-performance Beacon website template.",
+      "description": "Beacon leads the way with a versatile design fusing classic elegance and modern panache. Perfect for creators in both the digital and physical spaces with Case Studies and Portfolio template powered by Astro Content Collections.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beacon-agency.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Sections Cms",
+              "path": "/sections_cms/",
+              "desc": "Dedicated Sections Cms page with responsive components."
+          },
+          {
+              "name": "Sections Combos",
+              "path": "/sections_combos/",
+              "desc": "Dedicated Sections Combos page with responsive components."
+          },
+          {
+              "name": "Sections Cta",
+              "path": "/sections_cta/",
+              "desc": "Dedicated Sections Cta page with responsive components."
+          },
+          {
+              "name": "Sections Footers",
+              "path": "/sections_footers/",
+              "desc": "Dedicated Sections Footers page with responsive components."
+          },
+          {
+              "name": "Sections Forms",
+              "path": "/sections_forms/",
+              "desc": "Dedicated Sections Forms page with responsive components."
+          },
+          {
+              "name": "Sections Heroes",
+              "path": "/sections_heroes/",
+              "desc": "Dedicated Sections Heroes page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bear-barber-barber-website-template",
+      "name": "Bear Barber",
+      "slug": "bear-barber-barber-website-template",
+      "dodoProductId": "pdt_0No9U5bW0wabtOJggorAI",
+      "tagline": "Modern, high-performance Bear Barber website template.",
+      "description": "The finest Barber shop template, featuring all you'll need to get your barber shop online, team section, locations and service pages, including Astro Content Collections Collections. Interactions and animations make the user experience even more memorable.",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bear-barber-barber.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Barber Gary Barnes",
+              "path": "/barber_gary-barnes/",
+              "desc": "Dedicated Barber Gary Barnes page with responsive components."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Locations",
+              "path": "/locations/",
+              "desc": "Dedicated Locations page with responsive components."
+          },
+          {
+              "name": "Locations Pall Mall",
+              "path": "/locations_pall-mall/",
+              "desc": "Dedicated Locations Pall Mall page with responsive components."
+          },
+          {
+              "name": "Locations Spitalfields",
+              "path": "/locations_spitalfields/",
+              "desc": "Dedicated Locations Spitalfields page with responsive components."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "beard-x-barber-website-template",
+      "name": "Beard X",
+      "slug": "beard-x-barber-website-template",
+      "dodoProductId": "pdt_0No9UKycB3QWBJqiqxWQW",
+      "tagline": "Modern, high-performance Beard X website template.",
+      "description": "Beard X is our premium barber shop Astro template designed for men's hair salons looking to have a modern and elegant website design. If you run a Barbershop and are looking for a great website this is the template you are looking for.",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beard-x-barber.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog How To Keep Your Razors Sharp As Brand New",
+              "path": "/blog_how-to-keep-your-razors-sharp-as-brand-new/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home",
+              "path": "/home/",
+              "desc": "Dedicated Home page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Shop",
+              "path": "/shop/",
+              "desc": "Dedicated Shop page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "basegrid-website-template",
+      "name": "Basegrid",
+      "slug": "basegrid-website-template",
+      "dodoProductId": "pdt_0No9USROCj8cdYlOtIUVK",
+      "tagline": "Modern, high-performance Basegrid website template.",
+      "description": "A modern Astro template for construction and industrial companies, built to showcase reliable project delivery, technical expertise, and end-to-end services across commercial, industrial, and large-scale residential projects.",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://basegrid.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services Industrial Construction",
+              "path": "/services_industrial-construction/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Template Pages About",
+              "path": "/template-pages_about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Template Pages Blog",
+              "path": "/template-pages_blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Template Pages Contact",
+              "path": "/template-pages_contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Template Pages Projects",
+              "path": "/template-pages_projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Template Pages Services",
+              "path": "/template-pages_services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "banqix-website-template",
+      "name": "Banqix",
+      "slug": "banqix-website-template",
+      "dodoProductId": "pdt_0No9UUv8hjqiqgbWS2p9u",
+      "tagline": "Modern, high-performance Banqix website template.",
+      "description": "The banqix Template is a modern Astro design perfect for banking and financial services. Ideal for banks, fintech companies, and investment firms, offering a clean, professional, and secure experience.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://banqix.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Post Unlock Accounts Easily With Auto Login",
+              "path": "/post_unlock-accounts-easily-with-auto-login/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Pricing Plan One",
+              "path": "/pricing-plan-one/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing Plan Two",
+              "path": "/pricing-plan-two/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Team",
+              "path": "/team/",
+              "desc": "Dedicated Team page with responsive components."
+          },
+          {
+              "name": "Team Emily Ross",
+              "path": "/team_emily-ross/",
+              "desc": "Dedicated Team Emily Ross page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bazaarspace-architecture-website-template",
+      "name": "BazaarSpace",
+      "slug": "bazaarspace-architecture-website-template",
+      "dodoProductId": "pdt_0No9UcsRwUpvmNMlQnsRz",
+      "tagline": "Modern, high-performance BazaarSpace website template.",
+      "description": "Elevate your architectural projects with the BazaarSpace Architecture Astro template, meticulously crafted for professional architects and interior design websites. Embrace a truly contemporary template tailored for company profiles.",
+      "framework": "astro",
+      "category": "architecture-and-design",
+      "categories": [
+          "architecture-and-design"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bazaarspace-architecture.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Projects",
+              "path": "/projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services Page",
+              "path": "/services-page/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services2",
+              "path": "/services2/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "beatrice-portfolio-website-template",
+      "name": "Beatrice",
+      "slug": "beatrice-portfolio-website-template",
+      "dodoProductId": "pdt_0No9UdWusNTdgqHHzkvRY",
+      "tagline": "Modern, high-performance Beatrice website template.",
+      "description": "Beatrice, a wonderful template for freelancers and agencies looking for an outstanding portfolio. Simple, minimal and at the same time elegant and well designed. With big images and typography, your work assumes the center of the stage on every page.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beatrice-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Journal",
+              "path": "/journal/",
+              "desc": "Dedicated Journal page with responsive components."
+          },
+          {
+              "name": "Project Categories Ui Ux",
+              "path": "/project-categories_ui-ux/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Binary Website",
+              "path": "/projects_binary-website/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Projects Colourful Watch",
+              "path": "/projects_colourful-watch/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "beamai-saas-website-template",
+      "name": "BeamAI",
+      "slug": "beamai-saas-website-template",
+      "dodoProductId": "pdt_0No9Uy2bbM1YdFOkcpTBN",
+      "tagline": "Modern, high-performance BeamAI website template.",
+      "description": "BeamAI is one of the most modern, clean, and highly polished Astro templates. Take your business to the next level and provide a better user experience to your clients.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beamai-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Account Sign In",
+              "path": "/account_sign-in/",
+              "desc": "Dedicated Account Sign In page with responsive components."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Company About Us",
+              "path": "/company_about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Company Features",
+              "path": "/company_features/",
+              "desc": "Dedicated Company Features page with responsive components."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
