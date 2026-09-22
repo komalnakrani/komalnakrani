@@ -59019,8 +59019,910 @@ export const themes: Theme[] = [
               "desc": "Commercial license tiers and payment options."
           }
       ]
+  },
+  {
+      "id": "beauteria-beatuy-website-template",
+      "name": "Beauteria",
+      "slug": "beauteria-beatuy-website-template",
+      "dodoProductId": "pdt_0No9VTtJBG2tEYjR7Ox77",
+      "tagline": "Modern, high-performance Beauteria website template.",
+      "description": "The main goal of this template was to create a vibe of an aesthetic and harmony for the customers that will visit a salon. If you feel that your business should display an atmosphere like that, so this design definitely will suit you.",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 34,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beauteria-beatuy.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Prices Your Body",
+              "path": "/prices_your-body/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Prices Your Hair",
+              "path": "/prices_your-hair/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Prices Your Nails",
+              "path": "/prices_your-nails/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Prices Your Skin",
+              "path": "/prices_your-skin/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Procedure Classic Massage",
+              "path": "/procedure_classic-massage/",
+              "desc": "Dedicated Procedure Classic Massage page with responsive components."
+          },
+          {
+              "name": "Procedure Full Body Massage",
+              "path": "/procedure_full-body-massage/",
+              "desc": "Dedicated Procedure Full Body Massage page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "beauteza-beauty-and-wellness-website-template",
+      "name": "Beauteza",
+      "slug": "beauteza-beauty-and-wellness-website-template",
+      "dodoProductId": "pdt_0No9VZasfmiPlWArhSYG0",
+      "tagline": "Modern, high-performance Beauteza website template.",
+      "description": "Transform your beauty salon's online presence with Beauteza. It includes everything you will need to launch your salons, beauty shop, SPA, cosmetic, makeup studios website \ud83d\udc87\u2702\ufe0f.",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beauteza-beauty-and-wellness.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Me",
+              "path": "/about-me/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Home 2",
+              "path": "/home-2/",
+              "desc": "Dedicated Home 2 page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Portfolio",
+              "path": "/portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "bebold-website-template",
+      "name": "BEBOLD",
+      "slug": "bebold-website-template",
+      "dodoProductId": "pdt_0No9WAZkOerShjVqHJXiS",
+      "tagline": "Modern, high-performance BEBOLD website template.",
+      "description": "BEBOLD is a clean, minimalist template with modern layouts, bold design, sophisticated animations, and a dark, neon-inspired cyberpunk aesthetic. Perfect for design & creative studios, digital, web, or marketing agencies, and creative professionals.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bebold.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Case Studies Rebranding Wildcrafted Architecture",
+              "path": "/case-studies_rebranding-wildcrafted-architecture/",
+              "desc": "Dedicated Case Studies Rebranding Wildcrafted Architecture page with responsive components."
+          },
+          {
+              "name": "Case Studies Revamping Ennlabs Portfolio",
+              "path": "/case-studies_revamping-ennlabs-portfolio/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "beefly-portfolio-website-template",
+      "name": "Beefly",
+      "slug": "beefly-portfolio-website-template",
+      "dodoProductId": "pdt_0No9WHlsQubi5Iq5vYcet",
+      "tagline": "Modern, high-performance Beefly website template.",
+      "description": "Beefly is a sleek and modern Astro portfolio template designed for creatives who value simplicity and smooth user experience. With its minimalist design and seamless animations, this template ensures your work takes center stage.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beefly-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs How Build Webflow Website Within Hours By Basecom",
+              "path": "/blogs_how-build-webflow-website-within-hours-by-basecom/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blogs How To Build Webflow Website Within Hours By Basecom Digital",
+              "path": "/blogs_how-to-build-webflow-website-within-hours-by-basecom-digital/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Project",
+              "path": "/project/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "beauttyl-website-template",
+      "name": "Veauly",
+      "slug": "beauttyl-website-template",
+      "dodoProductId": "pdt_0No9WL85w2Pjv1wIktJfu",
+      "tagline": "Modern, high-performance Veauly website template.",
+      "description": "Modern Astro template with scroll animations to move between sections, make your site stand out in the market with an unusual site, you can showcase your projects, services with scrolling animations",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beauttyl.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Clairvy",
+              "path": "/works_clairvy/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Delvies",
+              "path": "/works_delvies/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Works Reisfel",
+              "path": "/works_reisfel/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
+  },
+  {
+      "id": "belgrade-consulting-website-template",
+      "name": "Belgrade",
+      "slug": "belgrade-consulting-website-template",
+      "dodoProductId": "pdt_0No9We8QD3WEIaqazwKh3",
+      "tagline": "Modern, high-performance Belgrade website template.",
+      "description": "Belgrade, a contemporary Astro template, is impeccably tailored to meet the needs of Human Resources (HR) Consulting Companies. It boasts a sophisticated, minimalistic design and is seamlessly integrated with a Content Management System (CMS).",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://belgrade-consulting.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Service Compliance And Risk Management",
+              "path": "/service_compliance-and-risk-management/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Employee Development",
+              "path": "/service_employee-development/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Service Talent Acquisition",
+              "path": "/service_talent-acquisition/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "beautyeo-beauty-and-wellness-website-template",
+      "name": "Beautyeo",
+      "slug": "beautyeo-beauty-and-wellness-website-template",
+      "dodoProductId": "pdt_0No9Weltvosb2gBSt7441",
+      "tagline": "Modern, high-performance Beautyeo website template.",
+      "description": "Are you looking for the perfect template for your beauty salon? Do you want to have a professional, modern and elegant website that showcases your services, specialists and portfolio? If so, BEAUTYEO is the template designed especially for you!",
+      "framework": "astro",
+      "category": "hair-and-beauty",
+      "categories": [
+          "hair-and-beauty"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beautyeo-beauty-and-wellness.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services Aesthetic Medicine",
+              "path": "/services_aesthetic-medicine/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Body",
+              "path": "/services_body/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Face",
+              "path": "/services_face/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Hair",
+              "path": "/services_hair/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Makeup",
+              "path": "/services_makeup/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Services Nail",
+              "path": "/services_nail/",
+              "desc": "Detailed services, deliverables, and offerings."
+          }
+      ]
+  },
+  {
+      "id": "benevola-nonprofit-website-template",
+      "name": "Benevola",
+      "slug": "benevola-nonprofit-website-template",
+      "dodoProductId": "pdt_0No9XFKJWfdD928ewje2y",
+      "tagline": "Modern, high-performance Benevola website template.",
+      "description": "Benevola is a clean, modern Astro template designed for nonprofit organizations. It features flexible layouts, easy-to-customize sections, and everything you need to highlight your mission, projects, and impact.",
+      "framework": "astro",
+      "category": "community-and-nonprofit",
+      "categories": [
+          "community-and-nonprofit"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://benevola-nonprofit.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Get Involved",
+              "path": "/get-involved/",
+              "desc": "Dedicated Get Involved page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Our Blog",
+              "path": "/our-blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Our Programs",
+              "path": "/our-programs/",
+              "desc": "Dedicated Our Programs page with responsive components."
+          },
+          {
+              "name": "Our Projects",
+              "path": "/our-projects/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Programs Education For All",
+              "path": "/programs_education-for-all/",
+              "desc": "Dedicated Programs Education For All page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bemine-website-template",
+      "name": "Bemine",
+      "slug": "bemine-website-template",
+      "dodoProductId": "pdt_0No9XKdv2En8t8aO061sK",
+      "tagline": "Modern, high-performance Bemine website template.",
+      "description": "AI Bemine is a sleek and modern Astro template crafted to showcase your AI-powered SaaS solutions. Build a stunning online presence that reflects innovation, speed, and intelligence",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 1,
+      "badge": "New Release",
+      "liveUrl": "https://bemine.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Blog Ai As The Future Work Assistant",
+              "path": "/blog_ai-as-the-future-work-assistant/",
+              "desc": "Selected case studies and featured works."
+          },
+          {
+              "name": "Blog Ai In Business From Data To Smart Decisions",
+              "path": "/blog_ai-in-business-from-data-to-smart-decisions/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Blog Ai Powered Design Fast Creative Efficient",
+              "path": "/blog_ai-powered-design-fast-creative-efficient/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Templates Info License",
+              "path": "/templates-info_license/",
+              "desc": "Dedicated Templates Info License page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "berlin-saas-website-template",
+      "name": "Berlin",
+      "slug": "berlin-saas-website-template",
+      "dodoProductId": "pdt_0No9YFvtlSFR3iAdcAG67",
+      "tagline": "Modern, high-performance Berlin website template.",
+      "description": "Berlin is a premium one-page Astro template for SaaS, desktop & mobile, for the modern tech brands. Created to help you craft a visually stunning, seamless, fast-loading website for your software company.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 24,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://berlin-saas.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Template Change Log",
+              "path": "/template_change-log/",
+              "desc": "Dedicated Template Change Log page with responsive components."
+          },
+          {
+              "name": "Template Instructions",
+              "path": "/template_instructions/",
+              "desc": "Dedicated Template Instructions page with responsive components."
+          },
+          {
+              "name": "Template Style Guide",
+              "path": "/template_style-guide/",
+              "desc": "Dedicated Template Style Guide page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "bertix-website-template",
+      "name": "Bertix",
+      "slug": "bertix-website-template",
+      "dodoProductId": "pdt_0No9YGgMNcrJrtVeFpzCE",
+      "tagline": "Modern, high-performance Bertix website template.",
+      "description": "Introducing Bertix - a trendy and modern Astro template made for SaaS & Startup marketing websites. This premium template offers a trendy and visually stunning design, perfect for showcasing your cutting-edge products and services.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bertix.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About",
+              "path": "/about/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Case Studies",
+              "path": "/case-studies/",
+              "desc": "Dedicated Case Studies page with responsive components."
+          },
+          {
+              "name": "Feature",
+              "path": "/feature/",
+              "desc": "Dedicated Feature page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing 01",
+              "path": "/pricing-01/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing 02",
+              "path": "/pricing-02/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Pricing 03",
+              "path": "/pricing-03/",
+              "desc": "Commercial license tiers and payment options."
+          }
+      ]
+  },
+  {
+      "id": "becool-portfolio-website-template",
+      "name": "Becool",
+      "slug": "becool-portfolio-website-template",
+      "dodoProductId": "pdt_0No9YryGslGAjGnzjB92Z",
+      "tagline": "Modern, high-performance Becool website template.",
+      "description": "Unleash your creativity and stand out in the digital landscape with the BeCool Portfolio Template. Whether you\u2019re a creative, a designer, a product developer or an artist, this appealing single page template lets you showcase your work effortlessly.",
+      "framework": "astro",
+      "category": "portfolio-and-agency",
+      "categories": [
+          "portfolio-and-agency"
+      ],
+      "price": 29,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://becool-portfolio.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          }
+      ]
+  },
+  {
+      "id": "bexdin-website-template",
+      "name": "Bexdin",
+      "slug": "bexdin-website-template",
+      "dodoProductId": "pdt_0No9YwHo0TeHRCqK79sw4",
+      "tagline": "Modern, high-performance Bexdin website template.",
+      "description": "Bexdin is a premium Astro SaaS template built for startups and tech companies. Featuring a clean design, smooth interactions, and scalable layouts, it helps you launch a high-converting website effortlessly.",
+      "framework": "astro",
+      "category": "technology",
+      "categories": [
+          "technology"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://bexdin.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blogs",
+              "path": "/blogs/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact",
+              "path": "/contact/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Features",
+              "path": "/features/",
+              "desc": "Dedicated Features page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Pricing",
+              "path": "/pricing/",
+              "desc": "Commercial license tiers and payment options."
+          },
+          {
+              "name": "Product Monthly Starter",
+              "path": "/product_monthly-starter/",
+              "desc": "Dedicated Product Monthly Starter page with responsive components."
+          }
+      ]
+  },
+  {
+      "id": "beyond-consulting-website-template",
+      "name": "Beyond",
+      "slug": "beyond-consulting-website-template",
+      "dodoProductId": "pdt_0No9ZCUO2Vtn5EBpq85S5",
+      "tagline": "Modern, high-performance Beyond website template.",
+      "description": "Beyond is a CMS multipurpose Astro template that can be utilized by Business, Consulting Agencies, Digital Agencies as well as Professional Creatives",
+      "framework": "astro",
+      "category": "professional-services",
+      "categories": [
+          "professional-services"
+      ],
+      "price": 39,
+      "featured": 0,
+      "badge": "New Release",
+      "liveUrl": "https://beyond-consulting.komalnakrani.com",
+      "techStack": [
+          "Astro 5",
+          "Tailwind CSS",
+          "TypeScript",
+          "Scroll Reveal Engine"
+      ],
+      "features": [
+          "Hardware-accelerated cubic-bezier scroll reveal animations",
+          "Fully responsive across mobile, tablet, and 4K viewports",
+          "Multi-page architecture with semantic HTML5 hierarchy",
+          "Optimized performance with zero vendor tracking scripts",
+          "Commercial license with full private GitHub repository access"
+      ],
+      "pages": [
+          {
+              "name": "About Us",
+              "path": "/about-us/",
+              "desc": "Brand story, philosophy, and overview."
+          },
+          {
+              "name": "Blog",
+              "path": "/blog/",
+              "desc": "Editorial articles, news, and insights."
+          },
+          {
+              "name": "Contact Us",
+              "path": "/contact-us/",
+              "desc": "Inquiry intake and message form."
+          },
+          {
+              "name": "Faq",
+              "path": "/faq/",
+              "desc": "Dedicated Faq page with responsive components."
+          },
+          {
+              "name": "Home",
+              "path": "/",
+              "desc": "Clean, modern responsive landing page and showcase."
+          },
+          {
+              "name": "Services",
+              "path": "/services/",
+              "desc": "Detailed services, deliverables, and offerings."
+          },
+          {
+              "name": "Works",
+              "path": "/works/",
+              "desc": "Selected case studies and featured works."
+          }
+      ]
   }
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
