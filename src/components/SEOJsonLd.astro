@@ -83,7 +83,7 @@ const passOfferSchema = {
     '@type': 'Offer',
     price: String(DROP.allAccessPrice),
     priceCurrency: 'USD',
-    availability: 'https://schema.org/InStock',
+    availability: DROP.allAccessComingSoon ? 'https://schema.org/PreOrder' : 'https://schema.org/InStock',
     url: 'https://komalnakrani.com/pricing/'
   }
 };

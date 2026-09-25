@@ -152,7 +152,9 @@ export const DROP = {
    * themes carry their own `price` on the Theme record and are quoted on their
    * own cards and detail pages — never here.
    */
-  allAccessPrice: 99
+  allAccessPrice: 199,
+  /** Pass checkout is paused; every all-access CTA renders disabled. */
+  allAccessComingSoon: true
 } as const;
 
 /**

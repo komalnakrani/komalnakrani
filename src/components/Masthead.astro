@@ -5,7 +5,7 @@ import { DROP } from '../data/design';
 const pathname = Astro.url.pathname;
 ---
 <div class="announce">
-  <span class="dim">All-access — every theme, one payment of ${DROP.allAccessPrice}</span>
+  <span class="dim">All-access pass — coming soon at ${DROP.allAccessPrice}</span>
 </div>
 
 <header class="mast">
@@ -24,7 +24,7 @@ const pathname = Astro.url.pathname;
     <div style="flex: 1;"></div>
 
     <div style="display: flex; align-items: center; gap: 12px;">
-      <a href="/pricing/" class="btn btn-primary mast-cta">Get all-access</a>
+      <span class="btn btn-primary mast-cta is-disabled" aria-disabled="true">All-access coming soon</span>
       <button class="menu-btn" aria-label="Open navigation" aria-expanded="false" data-menu-btn>
         <span data-menu-icon-closed><Icon name="menu" /></span>
         <span data-menu-icon-open hidden><Icon name="x" /></span>
@@ -37,7 +37,7 @@ const pathname = Astro.url.pathname;
     <a href="/categories/">Categories</a>
     <a href="/docs/getting-started/">Docs</a>
     <a href="/pricing/">Pricing</a>
-    <a href="/pricing/" style="color: var(--accent-text);">Get all-access (${DROP.allAccessPrice})</a>
+    <span style="color: var(--ink-3, #888); opacity: .7;" aria-disabled="true">All-access coming soon (${DROP.allAccessPrice})</span>
   </div>
 </header>
 

@@ -32,7 +32,7 @@ const categoryCards = CATEGORIES
 ---
 <Layout
   title="Komal Nakrani | Themes that look like you hired someone"
-  description={`Hand-built, production-ready web themes — SaaS, storefront, portfolio, dashboard and more. Preview every breakpoint before you pay. Individual themes ${themePrice}, all-access $${DROP.allAccessPrice}.`}
+  description={`Hand-built, production-ready web themes — SaaS, storefront, portfolio, dashboard and more. Preview every breakpoint before you pay. Individual themes ${themePrice}, all-access pass coming soon at $${DROP.allAccessPrice}.`}
 >
   <main id="top">
     <!-- ============================ HERO ============================ -->
@@ -47,7 +47,7 @@ const categoryCards = CATEGORIES
       </p>
 
       <div class="hero-actions">
-        <a href="/pricing/" class="btn btn-primary btn-lg">Get all-access</a>
+        <span class="btn btn-primary btn-lg is-disabled" aria-disabled="true">All-access coming soon</span>
         <a href="#themes" class="btn btn-secondary btn-lg">Browse the themes</a>
       </div>
 
@@ -142,7 +142,7 @@ const categoryCards = CATEGORIES
           </div>
           <p class="offer-sub">One payment · not a subscription</p>
 
-          <a href="/pricing/" class="btn btn-lg offer-cta">Get all-access — ${DROP.allAccessPrice}</a>
+          <span class="btn btn-lg offer-cta is-disabled" aria-disabled="true">Coming soon — ${DROP.allAccessPrice}</span>
 
           <p class="offer-fine">
             Prefer a single theme? Each one is priced on its own page —

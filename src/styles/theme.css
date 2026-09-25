@@ -200,6 +200,7 @@ h1, h2, h3, h4 { font-family: var(--display); color: var(--ink); margin: 0; font
 
 .btn-primary { background: var(--action); color: var(--action-ink); }
 .btn-primary:hover { background: var(--action-hover); opacity: 1; }
+.btn.is-disabled, .btn.is-disabled:hover { opacity: .55; cursor: not-allowed; pointer-events: none; }
 
 .btn-secondary { background: #ffffff; color: var(--ink); border-color: var(--rule-2); }
 .btn-secondary:hover { border-color: var(--ink-300); background: #ffffff; opacity: 1; }

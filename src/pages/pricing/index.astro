@@ -8,7 +8,7 @@ import { DROP, PASS_INCLUDES, priceRange, priceLabel, checkoutUrl } from '../../
 // Individual themes are priced on their own records and quoted on their own
 // pages. This page quotes one number: the pass.
 const range = priceRange(themes);
-const passUrl = checkoutUrl(DODO.allAccessProductId);
+const passUrl = DROP.allAccessComingSoon ? null : checkoutUrl(DODO.allAccessProductId);
 
 const faqs = [
   {
@@ -30,8 +30,8 @@ const faqs = [
 ];
 ---
 <Layout
-  title={`Pricing — all-access pass $${DROP.allAccessPrice} | Komal Nakrani`}
-  description={`One pass, every theme — including every theme released from here on. Unlock the full catalog of production-ready web themes for $${DROP.allAccessPrice}. Individual themes ${priceLabel(range)}.`}
+  title={`Pricing — all-access pass coming soon | Komal Nakrani`}
+  description={`One pass, every theme — including every theme released from here on. The all-access pass is coming soon at $${DROP.allAccessPrice}. Individual themes ${priceLabel(range)}.`}
 >
   <main class="rise">
     <!-- ========================= THE OFFER ========================= -->
@@ -57,7 +57,7 @@ const faqs = [
           {passUrl ? (
             <a href={passUrl} class="btn btn-lg offer-cta">Get all-access — ${DROP.allAccessPrice}</a>
           ) : (
-            <span class="btn btn-lg offer-cta is-disabled" aria-disabled="true">Checkout opening soon</span>
+            <span class="btn btn-lg offer-cta is-disabled" aria-disabled="true">Coming soon — ${DROP.allAccessPrice}</span>
           )}
 
           <p class="offer-fine">

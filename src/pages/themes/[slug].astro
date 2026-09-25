@@ -100,9 +100,9 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
           ) : (
             <span class="btn btn-primary licence-cta is-disabled" aria-disabled="true">Checkout opening soon</span>
           )}
-          <a href="/pricing/" class="btn btn-secondary licence-cta" style="margin-top: 10px;">
-            Or all-access (${DROP.allAccessPrice})
-          </a>
+          <span class="btn btn-secondary licence-cta is-disabled" aria-disabled="true" style="margin-top: 10px;">
+            All-access coming soon (${DROP.allAccessPrice})
+          </span>
         </aside>
       </div>
     </section>
@@ -222,9 +222,9 @@ const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(
             ${DROP.allAccessPrice}
           </div>
           <p style="font-size: 13px; color: rgba(243,241,234,.55); margin: 8px 0 20px;">Single payment · unlimited commercial use</p>
-          <a href="/pricing/" class="btn btn-lg" style="width: 100%; background: var(--ink-inverse); color: var(--ink-900);">
-            Get all-access (${DROP.allAccessPrice})
-          </a>
+          <span class="btn btn-lg is-disabled" aria-disabled="true" style="width: 100%; background: var(--ink-inverse); color: var(--ink-900);">
+            Coming soon (${DROP.allAccessPrice})
+          </span>
         </div>
       </div>
     </section>
