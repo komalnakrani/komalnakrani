@@ -47,7 +47,7 @@ const categoryCards = CATEGORIES
       </p>
 
       <div class="hero-actions">
-        <span class="btn btn-primary btn-lg is-disabled" aria-disabled="true">All-access coming soon</span>
+        <a href="/pricing/" class="btn btn-primary btn-lg">Get All-Access Pass ($199)</a>
         <a href="#themes" class="btn btn-secondary btn-lg">Browse the themes</a>
       </div>
 
@@ -136,13 +136,14 @@ const categoryCards = CATEGORIES
 
       <div class="offer">
         <div>
-          <div class="offer-eyebrow">ALL-ACCESS PASS</div>
-          <div class="offer-figure">
-            <span class="offer-now">${DROP.allAccessPrice}</span>
+          <div class="offer-eyebrow" style="letter-spacing: 0.08em; text-transform: uppercase;">🔥 LAUNCH SPECIAL — FIRST 100 CUSTOMERS ONLY</div>
+          <div class="offer-figure" style="display: flex; align-items: baseline; justify-content: center; gap: 12px;">
+            <span class="offer-now">${DROP.allAccessPrice} USD</span>
+            <span style="font-size: 24px; text-decoration: line-through; opacity: 0.5;">${DROP.regularPrice} USD</span>
           </div>
-          <p class="offer-sub">One payment · not a subscription</p>
+          <p class="offer-sub">One-time payment · Save $300 USD</p>
 
-          <span class="btn btn-lg offer-cta is-disabled" aria-disabled="true">Coming soon — ${DROP.allAccessPrice}</span>
+          <a href="/pricing/" class="btn btn-lg offer-cta">Get All-Access Pass — ${DROP.allAccessPrice} USD</a>
 
           <p class="offer-fine">
             Prefer a single theme? Each one is priced on its own page —
