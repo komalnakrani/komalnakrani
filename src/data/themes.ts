@@ -1366,7 +1366,7 @@ export const themes: Theme[] = [
     "featured": true,
     "badge": "New Release",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1433,7 +1433,7 @@ export const themes: Theme[] = [
     "featured": false,
     "badge": "New Release",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1470,7 +1470,7 @@ export const themes: Theme[] = [
     "featured": false,
     "badge": "New Release",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1502,7 +1502,7 @@ export const themes: Theme[] = [
     "slug": "3dbento-agency",
     "dodoProductId": "pdt_0NnuWfgrtwjCGbXeoqopI",
     "tagline": "Modern, high-performance 3Dbento Agency website template.",
-    "description": "Astro 5 and Tailwind CSS starter template for 3Dbento Agency.",
+    "description": "Astro 7 and Tailwind CSS starter template for 3Dbento Agency.",
     "framework": "astro",
     "category": "portfolio-and-agency",
     "categories": [
@@ -1512,7 +1512,7 @@ export const themes: Theme[] = [
     "featured": false,
     "badge": "New Release",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1564,7 +1564,7 @@ export const themes: Theme[] = [
     "featured": false,
     "badge": "New Release",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1631,7 +1631,7 @@ export const themes: Theme[] = [
     "featured": false,
     "badge": "New Release",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1699,7 +1699,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aquapure-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1766,7 +1766,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://88settle-real-estate-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1833,7 +1833,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://92-rhys-real-estate-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1880,7 +1880,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://99club-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1927,7 +1927,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://arnexo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -1994,7 +1994,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://arooth-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2061,7 +2061,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://axtira-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2128,7 +2128,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://bisqueria-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2195,7 +2195,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://furino-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2262,7 +2262,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://launchhub-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2329,7 +2329,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://littlesteps-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2396,7 +2396,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://movers-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2463,7 +2463,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://nexivo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2530,7 +2530,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://omenflex-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2577,7 +2577,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://optibot-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2644,7 +2644,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://sarfa-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2711,7 +2711,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://velonic-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2778,7 +2778,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aagency-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2845,7 +2845,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aaing-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2912,7 +2912,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aalbatros-startup-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -2979,7 +2979,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aalborg-doctor-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3046,7 +3046,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aarchiesta-architecture-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3113,7 +3113,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aaron-plus-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3180,7 +3180,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aaron-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3247,7 +3247,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aascot-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3314,7 +3314,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aastronaut-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3381,7 +3381,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aaveron-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3428,7 +3428,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aavo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3495,7 +3495,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aawans-law-firm-website-template-1ea86.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3562,7 +3562,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aaxon-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3629,7 +3629,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://abbey-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3681,7 +3681,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://abency-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3748,7 +3748,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://abetor-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3815,7 +3815,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://abode-interior-design-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3877,7 +3877,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://abreto-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -3944,7 +3944,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://absolute-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4011,7 +4011,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://abstraact-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4078,7 +4078,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://abudhabi-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4145,7 +4145,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ac-service-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4212,7 +4212,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://academic-multi-layout-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4274,7 +4274,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://academiccms-university-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4341,7 +4341,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://academix-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4408,7 +4408,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://academy-school-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4475,7 +4475,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accent-designer-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4542,7 +4542,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accountant128-accounting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4609,7 +4609,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accountantx-accounting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4676,7 +4676,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accountantyou-accounting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4743,7 +4743,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accountex-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4810,7 +4810,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accountix-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4877,7 +4877,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accounts-accounting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -4944,7 +4944,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accruefy-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5011,7 +5011,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://accting-accounting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5078,7 +5078,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acctinglite-accounting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5145,7 +5145,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ace-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5212,7 +5212,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acelia-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5279,7 +5279,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://achate-retail-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5346,7 +5346,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://achernar-architecture-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5413,7 +5413,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aciel-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5480,7 +5480,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acilav-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5547,7 +5547,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acme-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5614,7 +5614,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acomiks-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5681,7 +5681,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acounty-128-accounting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5748,7 +5748,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acre-studio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5815,7 +5815,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acron-consulting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5882,7 +5882,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://active-startup-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -5949,7 +5949,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://active-x-fitness-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6016,7 +6016,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://activeaura-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6083,7 +6083,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://activitee-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6150,7 +6150,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://actos-event-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6217,7 +6217,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://acuvic-consulting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6284,7 +6284,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adaptiv-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6351,7 +6351,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adaptoai-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6418,7 +6418,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adelaide-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6485,7 +6485,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adept-folio-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6552,7 +6552,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adept-startup-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6619,7 +6619,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adfusion-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6666,7 +6666,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adgenie-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6733,7 +6733,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adigital-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6800,7 +6800,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adione-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6867,7 +6867,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adlivo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -6934,7 +6934,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adnac-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7001,7 +7001,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adoptable-pets-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7068,7 +7068,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adox-studio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7135,7 +7135,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adoxin-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7202,7 +7202,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adriankingsley-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7269,7 +7269,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adroven-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7336,7 +7336,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ads-park-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7403,7 +7403,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adsprint-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7445,7 +7445,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adstik-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7512,7 +7512,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advanced-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7579,7 +7579,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advantek-it-company-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7646,7 +7646,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adventria-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7713,7 +7713,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advertise-x-consulting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7780,7 +7780,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advertising-x-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7847,7 +7847,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adveza-finance-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7914,7 +7914,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advibe-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -7981,7 +7981,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advin-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8048,7 +8048,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advis-one-page-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8085,7 +8085,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advisio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8152,7 +8152,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advisor-consulting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8219,7 +8219,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advisorx-business-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8286,7 +8286,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advisory-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8353,7 +8353,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advisory-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8420,7 +8420,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advocate-bureau-db-law-firm-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8487,7 +8487,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advocix-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8554,7 +8554,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advon-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8601,7 +8601,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://advorus-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8668,7 +8668,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adwork-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8735,7 +8735,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adworx-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8802,7 +8802,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adzan-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8869,7 +8869,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://adzen-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8911,7 +8911,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aeline-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -8978,7 +8978,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aelixa-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9045,7 +9045,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aelo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9112,7 +9112,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aerialix-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9179,7 +9179,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aerials-photography-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9246,7 +9246,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aerio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9313,7 +9313,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aero-blog-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9380,7 +9380,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aerofly-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9447,7 +9447,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aeron-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9514,7 +9514,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aesth-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9581,7 +9581,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aesthetica-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9648,7 +9648,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aesthetics-creative-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9700,7 +9700,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aesthiva-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9767,7 +9767,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aestho-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9834,7 +9834,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aethera-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9901,7 +9901,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aextera-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -9968,7 +9968,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aeye-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10035,7 +10035,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aezo-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10102,7 +10102,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://affiliatex-blog-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10169,7 +10169,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://affilliate-news-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10236,7 +10236,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://afirma-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10303,7 +10303,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agado-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10370,7 +10370,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agata-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10437,7 +10437,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ageento-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10504,7 +10504,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ageenzi-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10571,7 +10571,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenca-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10638,7 +10638,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencfireagency-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10705,7 +10705,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencflow-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10772,7 +10772,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenci-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10839,7 +10839,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenciax-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10906,7 +10906,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencieos-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -10973,7 +10973,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencier-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11040,7 +11040,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencies-x-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11107,7 +11107,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenciflow-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11159,7 +11159,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencikaagency-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11226,7 +11226,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencio-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11293,7 +11293,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenciup-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11360,7 +11360,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencor-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11427,7 +11427,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencu-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11494,7 +11494,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencx-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11561,7 +11561,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agency-x-de-marketing-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11628,7 +11628,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agency-x-fr-marketing-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11695,7 +11695,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agency-x-marketing-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11762,7 +11762,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agency3dcube-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11829,7 +11829,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencyace-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11896,7 +11896,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencye-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -11963,7 +11963,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencyis-creative-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12030,7 +12030,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencymkt-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12097,7 +12097,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencynice-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12164,7 +12164,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencywave-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12206,7 +12206,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencyx-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12273,7 +12273,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencyyportfolioo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12340,7 +12340,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agencyz-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12407,7 +12407,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenex-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12474,7 +12474,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenflow-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12541,7 +12541,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ageniix-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12608,7 +12608,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenix-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12675,7 +12675,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agennix-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12742,7 +12742,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agens-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12809,7 +12809,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agense-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12876,7 +12876,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agensia-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -12943,7 +12943,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agensight-x-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13010,7 +13010,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agensoaragency-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13077,7 +13077,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agent-insurance-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13144,7 +13144,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentflow-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13211,7 +13211,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentic-consulting-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13278,7 +13278,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentifye-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13330,7 +13330,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentixagency-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13397,7 +13397,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentlite-insurance-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13464,7 +13464,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentor-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13531,7 +13531,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentra0-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13598,7 +13598,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentrai-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13665,7 +13665,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentrao-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13732,7 +13732,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agentro-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13799,7 +13799,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenus-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13846,7 +13846,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ageny-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13913,7 +13913,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenzaagency-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -13980,7 +13980,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenzai-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14047,7 +14047,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenzi-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14114,7 +14114,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agenzo-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14181,7 +14181,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ageva-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14248,7 +14248,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aggregator-x-directory-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14315,7 +14315,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agnce-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14382,7 +14382,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agnci-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14449,7 +14449,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agnez-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14516,7 +14516,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agnio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14583,7 +14583,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agnos-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14650,7 +14650,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agolas-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14717,7 +14717,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agors-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14784,7 +14784,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agotastudio-one-page-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14826,7 +14826,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agricultural-group-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14893,7 +14893,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agriflow-agriculture-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -14960,7 +14960,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agrilead-agriculture-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15027,7 +15027,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agrius-agriculture-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15094,7 +15094,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agriwark-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15161,7 +15161,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agrizone-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15228,7 +15228,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agroflow-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15295,7 +15295,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agrofy-agriculture-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15362,7 +15362,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://agroveon-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15429,7 +15429,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-bot-app-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15496,7 +15496,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-chatbot-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15563,7 +15563,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-content-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15620,7 +15620,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-copywriting-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15687,7 +15687,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-email-technology-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15754,7 +15754,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-gency-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15821,7 +15821,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-schedule.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15888,7 +15888,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-tech-x-technology-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -15955,7 +15955,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-tool-startup-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16022,7 +16022,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ai-x-technology-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16089,7 +16089,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiagency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16156,7 +16156,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiaiaiai-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16223,7 +16223,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiassistant-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16290,7 +16290,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aico-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16357,7 +16357,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aicourse-learning-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16424,7 +16424,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aid-documentation-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16491,7 +16491,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aidem-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16558,7 +16558,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiden-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16625,7 +16625,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aifinancial-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16692,7 +16692,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiflow-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16759,7 +16759,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aigen-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16826,7 +16826,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aigenerator-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16893,7 +16893,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aigeng-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -16960,7 +16960,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aigentflow-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17027,7 +17027,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiken-app-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17079,7 +17079,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiko-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17146,7 +17146,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aikol-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17213,7 +17213,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ailoom-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17280,7 +17280,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ailoq-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17342,7 +17342,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aione-one-page-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17399,7 +17399,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aipromax-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17466,7 +17466,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiq-recruitment-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17508,7 +17508,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiqextend-recruitment-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17575,7 +17575,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://air-conditioning-small-business-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17642,7 +17642,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airbase-x-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17709,7 +17709,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airbrick-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17776,7 +17776,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airbuild-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17843,7 +17843,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aircanvas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17910,7 +17910,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aircare-hospital-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -17977,7 +17977,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airco-x-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18044,7 +18044,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aircode-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18111,7 +18111,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aircoin-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18178,7 +18178,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aircraft-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18245,7 +18245,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aircrypto-finance-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18312,7 +18312,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airdent-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18379,7 +18379,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airdish-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18446,7 +18446,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airdoc-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18513,7 +18513,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airedge-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18580,7 +18580,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airestate-real-estate-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18647,7 +18647,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airevoke-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18714,7 +18714,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airexplorex-tourism-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18781,7 +18781,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airfalah-religion-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18848,7 +18848,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airfintech-finance-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18915,7 +18915,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airfloow-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -18982,7 +18982,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airfolio-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19049,7 +19049,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airfund-x-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19116,7 +19116,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airfz-small-business-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19183,7 +19183,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airgro-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19250,7 +19250,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airinvest-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19317,7 +19317,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airlift-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19384,7 +19384,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airlink-startup-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19451,7 +19451,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airloop-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19518,7 +19518,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airmentors-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19585,7 +19585,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airmin-retail-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19652,7 +19652,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airnexa-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19719,7 +19719,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airnova-technology-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19786,7 +19786,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airnur-learning-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19848,7 +19848,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airpay-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19915,7 +19915,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airpix-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -19982,7 +19982,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airpixel-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20049,7 +20049,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airplace-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20116,7 +20116,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airstead-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20183,7 +20183,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airstudio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20250,7 +20250,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airsuite-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20317,7 +20317,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airswift-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20384,7 +20384,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airsync-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20451,7 +20451,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airtask-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20518,7 +20518,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airtech-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20585,7 +20585,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airtechx-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20652,7 +20652,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airtelier-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20719,7 +20719,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airtflo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20766,7 +20766,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airtide-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20833,7 +20833,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airtwist-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20900,7 +20900,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airvault-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -20967,7 +20967,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airvest-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21034,7 +21034,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airvocal-podcast-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21101,7 +21101,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airway-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21168,7 +21168,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://airzen-software-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21235,7 +21235,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aisav-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21287,7 +21287,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aistartuq-startup-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21354,7 +21354,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aitech-it-company-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21421,7 +21421,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aithra-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21488,7 +21488,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiveflow-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21555,7 +21555,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aivestor-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21597,7 +21597,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aivio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21664,7 +21664,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aiwrite-saas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21706,7 +21706,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aixus-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21773,7 +21773,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aizflex-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21840,7 +21840,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://ajency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21907,7 +21907,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://akari-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -21944,7 +21944,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://akaunt-finance-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22011,7 +22011,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://akin-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22078,7 +22078,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://akito-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22145,7 +22145,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://akjo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22212,7 +22212,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://akra-real-estate-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22279,7 +22279,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://akussa-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22321,7 +22321,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alabama-agency-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22388,7 +22388,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alan-foto-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22455,7 +22455,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alastair-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22522,7 +22522,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://albadoe-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22589,7 +22589,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://albeit-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22636,7 +22636,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://albert-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22703,7 +22703,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://albion-construction-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22770,7 +22770,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alderas-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22837,7 +22837,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://aldo-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22904,7 +22904,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alec-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -22971,7 +22971,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alegis-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23038,7 +23038,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alehous-shop-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23105,7 +23105,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alenai-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23172,7 +23172,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alevia-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23239,7 +23239,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alex-baena-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23306,7 +23306,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alex-carter-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23373,7 +23373,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alex-chen-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23420,7 +23420,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alex-gregor-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23487,7 +23487,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alex-portz-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23539,7 +23539,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alexaa-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23606,7 +23606,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alexander-portfolio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23673,7 +23673,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alexia-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23740,7 +23740,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alexis-designer-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23807,7 +23807,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://alezon-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23874,7 +23874,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://algarve-studio-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23941,7 +23941,7 @@ export const themes: Theme[] = [
     "badge": "New Release",
     "liveUrl": "https://algenius-it-company-website-template.komalnakrani.com",
     "techStack": [
-      "Astro 5",
+      "Astro 7",
       "Tailwind CSS",
       "TypeScript",
       "Scroll Reveal Engine"
@@ -23983,7 +23983,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://airotek.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24050,7 +24050,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://algeniuswaitlist-technology.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24092,7 +24092,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alice-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24134,7 +24134,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alien.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24201,7 +24201,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aliens.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24268,7 +24268,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://align-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24335,7 +24335,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aligna.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24402,7 +24402,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alignify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24469,7 +24469,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aligntech.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24536,7 +24536,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alisa-nails.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24603,7 +24603,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://all-about.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24670,7 +24670,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://all-my-links-artist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24737,7 +24737,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://all-recipes-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24804,7 +24804,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://all-you-can-eat-recipe.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24871,7 +24871,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aller-one-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -24938,7 +24938,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://allex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25005,7 +25005,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alley-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25072,7 +25072,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://allora-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25114,7 +25114,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alloviz.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25181,7 +25181,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://almighty-one-church.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25248,7 +25248,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alpha-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25310,7 +25310,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alpha-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25377,7 +25377,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alpha128.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25444,7 +25444,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alphafloris-florist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25511,7 +25511,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alphamed-health.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25578,7 +25578,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alphaproalphapro-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25645,7 +25645,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alpun.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25712,7 +25712,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alrion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25779,7 +25779,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alspire.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25846,7 +25846,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alternative-medicine-health.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25913,7 +25913,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://altero.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -25980,7 +25980,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alterx.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26042,7 +26042,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://altnest.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26109,7 +26109,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alto-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26176,7 +26176,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alton-news.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26243,7 +26243,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://altorw.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26310,7 +26310,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://altrion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26377,7 +26377,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://altrum.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26444,7 +26444,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26511,7 +26511,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://altus.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26578,7 +26578,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://altuz.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26645,7 +26645,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aluna.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26712,7 +26712,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aluro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26779,7 +26779,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alveora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26846,7 +26846,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alvion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26898,7 +26898,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alvy-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -26965,7 +26965,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alyra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27022,7 +27022,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://alzun.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27089,7 +27089,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amanda-muse-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27156,7 +27156,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amara-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27223,7 +27223,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amazona.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27290,7 +27290,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amber-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27337,7 +27337,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ambessa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27404,7 +27404,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ambiente.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27471,7 +27471,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ambrosia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27538,7 +27538,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amelia-artist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27605,7 +27605,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amko.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27672,7 +27672,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ampify-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27739,7 +27739,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amplifia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27806,7 +27806,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amplitux.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27873,7 +27873,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amplus.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -27940,7 +27940,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ampsa-technology.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28007,7 +28007,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://amsterdam-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28074,7 +28074,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://analogue-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28141,7 +28141,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://analy-fz.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28208,7 +28208,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anaro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28275,7 +28275,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anastasia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28342,7 +28342,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ancestor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28409,7 +28409,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ancestra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28476,7 +28476,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anchiano-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28543,7 +28543,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://andalash.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28610,7 +28610,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anderdark-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28672,7 +28672,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://andersen.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28739,7 +28739,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://andersson-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28806,7 +28806,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://andrew-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28873,7 +28873,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://andrewwilliams-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -28940,7 +28940,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anero.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29007,7 +29007,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://angestudio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29074,7 +29074,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://animalcove-pets.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29141,7 +29141,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://animately-education.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29208,7 +29208,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://animatory.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29275,7 +29275,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://animotion-x-video.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29342,7 +29342,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://annaliving-interior-design.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29379,7 +29379,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anne-hathgate-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29446,7 +29446,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://annecy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29513,7 +29513,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anoir.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29580,7 +29580,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anorva.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29647,7 +29647,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anosta.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29714,7 +29714,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anox-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29781,7 +29781,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anthony-dale-jvf4o.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29848,7 +29848,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://antoine-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29915,7 +29915,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://antony.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -29982,7 +29982,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://antoon-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30049,7 +30049,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://antrio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30116,7 +30116,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://anubis-game.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30183,7 +30183,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aorevia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30250,7 +30250,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aose.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30317,7 +30317,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apartb-128-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30384,7 +30384,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apartmentt.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30451,7 +30451,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apartrent-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30518,7 +30518,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apero.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30585,7 +30585,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aperture-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30652,7 +30652,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apex-night.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30719,7 +30719,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apexcare.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30786,7 +30786,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apexify-investment.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30853,7 +30853,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apexstudios.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30920,7 +30920,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apico-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -30987,7 +30987,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aplumex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31054,7 +31054,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apnar.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31121,7 +31121,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apocalypse-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31188,7 +31188,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apolino-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31235,7 +31235,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apollo-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31302,7 +31302,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://app-x-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31369,7 +31369,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apparel-x-shop.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31436,7 +31436,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://appe-io.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31503,7 +31503,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://appify-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31570,7 +31570,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://appish-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31617,7 +31617,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://appito-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31684,7 +31684,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://appixy-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31751,7 +31751,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://applyze.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31818,7 +31818,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://appout-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31875,7 +31875,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://approach-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31932,7 +31932,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apps-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -31999,7 +31999,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://appstarter-ui-kit.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32066,7 +32066,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://april-128-dance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32133,7 +32133,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aproxlab.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32200,7 +32200,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apsora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32267,7 +32267,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aptlo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32334,7 +32334,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aptonic-x-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32401,7 +32401,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aptus.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32468,7 +32468,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://apura.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32515,7 +32515,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aquafix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32582,7 +32582,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aquay-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32649,7 +32649,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aquemini-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32716,7 +32716,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aquvion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32783,7 +32783,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aquzen.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32850,7 +32850,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aradia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32917,7 +32917,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ararat-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -32984,7 +32984,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arata-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33051,7 +33051,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aravo-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33118,7 +33118,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arbrixo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33185,7 +33185,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arc-tec-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33252,7 +33252,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcadium.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33319,7 +33319,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcanaa-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33386,7 +33386,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcane.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33453,7 +33453,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcarch-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33520,7 +33520,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcbes.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33587,7 +33587,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arch-space.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33654,7 +33654,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archdex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33721,7 +33721,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arches-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33788,7 +33788,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archeta-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33845,7 +33845,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archevia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33912,7 +33912,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archfain.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -33979,7 +33979,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archflex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34046,7 +34046,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archfolio-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34113,7 +34113,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archi-01.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34180,7 +34180,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archi-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34247,7 +34247,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archicraft-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34314,7 +34314,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archie-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34381,7 +34381,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archiestudio-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34448,7 +34448,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archiflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34515,7 +34515,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34582,7 +34582,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archinest.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34649,7 +34649,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archio-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34716,7 +34716,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archipro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34783,7 +34783,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architech-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34850,7 +34850,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architecktura-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34917,7 +34917,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architect-x-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -34984,7 +34984,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architectio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35051,7 +35051,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architecto-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35118,7 +35118,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architectr-x-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35185,7 +35185,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architecture-x-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35252,7 +35252,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architectures-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35319,7 +35319,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architekta-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35386,7 +35386,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architera.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35453,7 +35453,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architus.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35520,7 +35520,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://architype-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35587,7 +35587,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archiv-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35654,7 +35654,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archivanta.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35721,7 +35721,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archives.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35788,7 +35788,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archivex-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35855,7 +35855,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archivo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35922,7 +35922,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archiword-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -35974,7 +35974,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archix-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36041,7 +36041,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archline-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36108,7 +36108,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archline.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36175,7 +36175,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archo-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36242,7 +36242,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36294,7 +36294,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archscale.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36361,7 +36361,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archstudio-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36428,7 +36428,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archtix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36495,7 +36495,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archvision-church.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36562,7 +36562,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://archvista-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36629,7 +36629,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcite.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36676,7 +36676,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arco-one-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36743,7 +36743,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcoria.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36810,7 +36810,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcos-portfoliio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36877,7 +36877,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcpark-architecture-2426f.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -36934,7 +36934,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcpro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37001,7 +37001,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcstructure.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37068,7 +37068,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arcstudio-interior-design.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37125,7 +37125,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arctic-fashion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37192,7 +37192,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ardor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37259,7 +37259,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arelo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37326,7 +37326,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arena-bar.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37393,7 +37393,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arenax.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37460,7 +37460,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://areto.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37527,7 +37527,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arfito-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37594,7 +37594,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://argen-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37661,7 +37661,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://argo-128-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37728,7 +37728,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ari-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37795,7 +37795,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arial-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37862,7 +37862,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aries-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37929,7 +37929,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arisca.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -37996,7 +37996,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aristo-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38063,7 +38063,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arivexa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38130,7 +38130,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ariyana.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38197,7 +38197,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arizona-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38264,7 +38264,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ark-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38331,7 +38331,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ark-studio-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38398,7 +38398,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arkify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38465,7 +38465,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arkitect-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38532,7 +38532,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arkkit-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38599,7 +38599,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arktinyhomes-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38666,7 +38666,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arktonic.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38733,7 +38733,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arlop-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38800,7 +38800,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arlox.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38867,7 +38867,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://armatura.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -38934,7 +38934,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://armelio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39001,7 +39001,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://armor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39068,7 +39068,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arocen-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39135,7 +39135,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aroclux.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39202,7 +39202,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arodesk.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39269,7 +39269,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aroma-coffee-shop.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39336,7 +39336,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aromix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39403,7 +39403,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aron-creative.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39470,7 +39470,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arona-beauty-and-wellness.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39537,7 +39537,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arqline.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39604,7 +39604,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arqonmuseum.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39666,7 +39666,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://art-128-artist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39733,7 +39733,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://art-gallery-artist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39800,7 +39800,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artcraft.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39867,7 +39867,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artdir-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -39934,7 +39934,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arte-x-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40001,7 +40001,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arten-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40068,7 +40068,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artena.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40105,7 +40105,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artex-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40172,7 +40172,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artflare-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40229,7 +40229,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artful-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40296,7 +40296,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artgallery.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40363,7 +40363,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artgram-artist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40430,7 +40430,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arthic.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40497,7 +40497,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arthur-jones.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40564,7 +40564,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://articl-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40631,7 +40631,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://article-dark.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40698,7 +40698,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://article-flowx-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40765,7 +40765,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artifact.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40832,7 +40832,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artifye.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40899,7 +40899,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artigianopasta-food-and-drink.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -40966,7 +40966,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artimg.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41033,7 +41033,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artino.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41080,7 +41080,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artistry-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41132,7 +41132,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artivo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41199,7 +41199,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artiz-artist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41266,7 +41266,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artlst.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41333,7 +41333,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41400,7 +41400,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artoral-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41467,7 +41467,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://artsy-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41524,7 +41524,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arue.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41591,7 +41591,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aruna-elara.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41658,7 +41658,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arvexa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41725,7 +41725,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arvia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41792,7 +41792,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arvio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41859,7 +41859,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arvista-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41926,7 +41926,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arvix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -41993,7 +41993,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arvy-ui-kit.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42060,7 +42060,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arvynix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42127,7 +42127,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://arvzi-therapy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42194,7 +42194,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asanayoga.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42261,7 +42261,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asanora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42328,7 +42328,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asanya.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42395,7 +42395,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asatha.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42462,7 +42462,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ascend.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42529,7 +42529,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ascension-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42596,7 +42596,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ascent-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42663,7 +42663,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ash-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42715,7 +42715,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ashfall-game.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42772,7 +42772,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ashford.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42839,7 +42839,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ashton-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42906,7 +42906,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://askim-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -42973,7 +42973,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aspace-interior-design.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43040,7 +43040,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aspect-ratio-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43097,7 +43097,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aspekto.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43164,7 +43164,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aspen-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43231,7 +43231,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asper-one-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43268,7 +43268,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aspiremarketing-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43335,7 +43335,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://assado.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43402,7 +43402,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://assistai-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43469,7 +43469,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://assistia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43536,7 +43536,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://assurix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43603,7 +43603,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://astanaarch.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43670,7 +43670,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://astera-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43737,7 +43737,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asterer.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43784,7 +43784,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asteria.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43851,7 +43851,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asterisk-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43918,7 +43918,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://astra-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -43985,7 +43985,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://astrl.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44052,7 +44052,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://astro-game.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44119,7 +44119,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://astroin.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44186,7 +44186,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://astrox-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44253,7 +44253,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://astryon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44320,7 +44320,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://asuric.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44387,7 +44387,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atelier-norr.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44454,7 +44454,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atelis.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44521,7 +44521,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atento-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44588,7 +44588,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atha-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44655,7 +44655,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://athelas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44722,7 +44722,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://athen-conference.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44774,7 +44774,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://athlenia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44841,7 +44841,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://athletic-w.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44908,7 +44908,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://athletic.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -44975,7 +44975,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://athletix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45042,7 +45042,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atlantic-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45109,7 +45109,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atlantio-logistics.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45176,7 +45176,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atlasbuilder.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45243,7 +45243,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atlasgroup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45310,7 +45310,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atmawell.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45377,7 +45377,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atmosphere-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45444,7 +45444,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atoks.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45511,7 +45511,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atornee-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45578,7 +45578,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atraen.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45645,7 +45645,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atrium-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45712,7 +45712,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://attice.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45779,7 +45779,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://attope.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45846,7 +45846,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://attorneyster-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45913,7 +45913,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://attornia-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -45980,7 +45980,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://atypical-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46047,7 +46047,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auberg.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46094,7 +46094,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aubrey.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46161,7 +46161,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auditly.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46228,7 +46228,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auditry.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46295,7 +46295,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auditx-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46362,7 +46362,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://audrey.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46414,7 +46414,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aura-fram.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46461,7 +46461,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aura-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46528,7 +46528,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurae.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46595,7 +46595,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurain.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46662,7 +46662,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auralis.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46729,7 +46729,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auralis-x.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46796,7 +46796,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auralise.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46863,7 +46863,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auraly.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46930,7 +46930,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurant-food-and-drink.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -46992,7 +46992,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aureas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47059,7 +47059,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurelia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47126,7 +47126,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurelo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47178,7 +47178,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aureo-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47245,7 +47245,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aureva.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47312,7 +47312,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurexa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47379,7 +47379,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auria.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47446,7 +47446,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47513,7 +47513,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurora-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47580,7 +47580,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurora-ecom-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47647,7 +47647,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurora-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47714,7 +47714,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auroradocs-documentation.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47781,7 +47781,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auroralp-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47828,7 +47828,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auroria.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47880,7 +47880,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurovia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -47947,7 +47947,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aurox.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48014,7 +48014,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://authentic-designer.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48081,7 +48081,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://authorial.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48148,7 +48148,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://authority-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48205,7 +48205,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autivio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48272,7 +48272,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auto-towing.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48339,7 +48339,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autocar-x-automotive.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48406,7 +48406,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autofix-automotive.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48473,7 +48473,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autofye.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48540,7 +48540,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autoloantnc.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48582,7 +48582,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://automate-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48639,7 +48639,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://automately.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48706,7 +48706,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://automatepro-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48773,7 +48773,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://automator-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48840,7 +48840,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://automize.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48887,7 +48887,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://automora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -48954,7 +48954,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://automozai-automotive.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49021,7 +49021,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autona.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49088,7 +49088,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autonex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49155,7 +49155,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autonity.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49222,7 +49222,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autopulse.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49289,7 +49289,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autorepairxtnc.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49356,7 +49356,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://autrix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49423,7 +49423,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://auxo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49490,7 +49490,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ava-bennet.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49527,7 +49527,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ava-swift-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49594,7 +49594,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ava-veterinary.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49661,7 +49661,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avalonx-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49728,7 +49728,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avante-ui-kit.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49795,7 +49795,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avast-transport.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49862,7 +49862,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avelety.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49929,7 +49929,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avelon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -49996,7 +49996,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avena.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50063,7 +50063,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avenda.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50130,7 +50130,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avenir.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50197,7 +50197,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avenor-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50264,7 +50264,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avenora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50331,7 +50331,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avenors.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50398,7 +50398,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aventiva.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50465,7 +50465,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aventivo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50532,7 +50532,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avento.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50599,7 +50599,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aventra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50666,7 +50666,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aventureux.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50733,7 +50733,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avexa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50800,7 +50800,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avexis.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50867,7 +50867,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avexou.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50934,7 +50934,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aviana.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -50986,7 +50986,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avida-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51053,7 +51053,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avionique.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51120,7 +51120,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avirra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51187,7 +51187,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avix-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51254,7 +51254,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avlon-beauty-and-wellness.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51321,7 +51321,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avocatsx-attorney.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51388,7 +51388,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avolen.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51455,7 +51455,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avolin.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51522,7 +51522,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avontiv.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51589,7 +51589,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avoora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51656,7 +51656,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51723,7 +51723,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avorica.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51790,7 +51790,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avorion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51857,7 +51857,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avrax-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51924,7 +51924,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avrigo-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -51991,7 +51991,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avvocati-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52058,7 +52058,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avynor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52125,7 +52125,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avyora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52192,7 +52192,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://awsa-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52259,7 +52259,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axaro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52326,7 +52326,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axcon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52393,7 +52393,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axdot.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52460,7 +52460,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axel-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52527,7 +52527,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axelo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52594,7 +52594,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axels-jewelry.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52661,7 +52661,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axen-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52703,7 +52703,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axentix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52770,7 +52770,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axeris.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52812,7 +52812,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axgen.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52879,7 +52879,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axian.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -52946,7 +52946,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axiestudio-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53013,7 +53013,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aximo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53080,7 +53080,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axiolance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53132,7 +53132,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axiom-power.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53199,7 +53199,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axiom-x.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53266,7 +53266,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axioma.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53333,7 +53333,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axiona.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53400,7 +53400,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axionics.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53467,7 +53467,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axioniq.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53519,7 +53519,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axiora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53566,7 +53566,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axis-works.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53633,7 +53633,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axislab.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53700,7 +53700,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axjero.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53767,7 +53767,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53834,7 +53834,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axure.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53901,7 +53901,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://axyon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -53968,7 +53968,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ayama-resort-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54035,7 +54035,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ayana.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54102,7 +54102,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ayano-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54169,7 +54169,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aygen-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54236,7 +54236,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ayzent.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54303,7 +54303,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://azencyzf-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54370,7 +54370,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://azentie.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54437,7 +54437,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://azenxi.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54504,7 +54504,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://azlytics.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54571,7 +54571,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://azul-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54638,7 +54638,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://azura-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54705,7 +54705,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://azure.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54772,7 +54772,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://b2base.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54839,7 +54839,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://b2bizz.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54906,7 +54906,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://babuu-128.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -54973,7 +54973,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://aquasailor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55040,7 +55040,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ariko-sushi.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55107,7 +55107,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avenue-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55174,7 +55174,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://averint.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55241,7 +55241,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avery-creative.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55308,7 +55308,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://avery-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55375,7 +55375,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://babylon-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55442,7 +55442,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://babyo-kids.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55509,7 +55509,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bacco-winery.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55576,7 +55576,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://backofficew.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55643,7 +55643,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://backsoft.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55710,7 +55710,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://badi-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55777,7 +55777,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bailey-hart.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55844,7 +55844,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bakery-128-cafe.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55911,7 +55911,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bakeryzf.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -55978,7 +55978,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://baku-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56045,7 +56045,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bakzy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56112,7 +56112,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://balance-wellness.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56179,7 +56179,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://balancestartup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56236,7 +56236,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bale-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56303,7 +56303,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://balitravels.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56370,7 +56370,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ballin-128-soccer.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56437,7 +56437,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ballor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56504,7 +56504,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ballot.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56571,7 +56571,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://balme-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56623,7 +56623,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://banca-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56690,7 +56690,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://band-music-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56757,7 +56757,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bankpro-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56824,7 +56824,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://banksy-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56891,7 +56891,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brikzo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -56958,7 +56958,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://banquee-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57025,7 +57025,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://barberz-barber.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57092,7 +57092,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://base.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57159,7 +57159,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bearest.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57206,7 +57206,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beaut.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57273,7 +57273,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bedrock-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57340,7 +57340,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biolab.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57407,7 +57407,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biom.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57474,7 +57474,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biotae-designer.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57541,7 +57541,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://banky-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57583,7 +57583,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bankzai-dashboard.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57650,7 +57650,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://barbstyling-barber.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57717,7 +57717,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://baseflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57764,7 +57764,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://basel-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57831,7 +57831,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://basic-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57898,7 +57898,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://basilico-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -57965,7 +57965,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://basisone-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58032,7 +58032,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bastion-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58099,7 +58099,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://baudi-bisiness.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58166,7 +58166,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bauform.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58233,7 +58233,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bauwerk.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58300,7 +58300,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bavia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58367,7 +58367,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://baxlor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58434,7 +58434,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bayan-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58501,7 +58501,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beacon-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58568,7 +58568,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bear-barber-barber.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58635,7 +58635,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beard-x-barber.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58702,7 +58702,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://basegrid.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58769,7 +58769,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://banqix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58836,7 +58836,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bazaarspace-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58903,7 +58903,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beatrice-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -58970,7 +58970,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beamai-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59037,7 +59037,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beauteria-beatuy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59104,7 +59104,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beauteza-beauty-and-wellness.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59171,7 +59171,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bebold.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59238,7 +59238,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beefly-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59305,7 +59305,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beauttyl.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59372,7 +59372,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belgrade-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59439,7 +59439,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beautyeo-beauty-and-wellness.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59506,7 +59506,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://benevola-nonprofit.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59573,7 +59573,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bemine.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59635,7 +59635,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://berlin-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59687,7 +59687,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bertix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59754,7 +59754,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://becool-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59791,7 +59791,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bexdin.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59858,7 +59858,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beyond-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59925,7 +59925,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bigstudiolight-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -59992,7 +59992,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biotechx.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60059,7 +60059,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bisfer.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60116,7 +60116,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizkon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60183,7 +60183,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blanko-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60250,7 +60250,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blaxi.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60317,7 +60317,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bliss-spa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60384,7 +60384,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://barrique-winery.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60451,7 +60451,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blobit-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60518,7 +60518,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://block-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60585,7 +60585,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blocktalk-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60652,7 +60652,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blockchains.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60719,7 +60719,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beacon-de-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60786,7 +60786,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beacon-fr-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60853,7 +60853,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beamw-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60920,7 +60920,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beautyrx.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -60987,7 +60987,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://banter.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61054,7 +61054,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://baseframe.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61121,7 +61121,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beanro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61188,7 +61188,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beautico-beauty.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61255,7 +61255,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beautco.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61322,7 +61322,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beautyness-beauty.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61389,7 +61389,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beclix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61456,7 +61456,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beco-128-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61523,7 +61523,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beekeeping-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61590,7 +61590,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beco128cms-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61657,7 +61657,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://befawned.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61719,7 +61719,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belize-wedding.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61786,7 +61786,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://behold.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61853,7 +61853,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bella-fashion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61920,7 +61920,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belfast-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -61987,7 +61987,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belle-amour.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62054,7 +62054,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belloa-beauty.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62121,7 +62121,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bellarn.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62188,7 +62188,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belluri-spa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62255,7 +62255,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beloved-wf.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62312,7 +62312,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belmont-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62379,7 +62379,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belt-music.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62446,7 +62446,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beltone-musician.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62513,7 +62513,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bendore.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62580,7 +62580,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belunaris.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62647,7 +62647,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://belvo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62714,7 +62714,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://benevia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62781,7 +62781,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://benk-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62848,7 +62848,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://benmo-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62915,7 +62915,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://benft128-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -62982,7 +62982,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://benjemin.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63049,7 +63049,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bent-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63116,7 +63116,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bentis-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63183,7 +63183,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bento-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63250,7 +63250,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bento-bloq-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63317,7 +63317,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bentonse.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63384,7 +63384,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bentoze-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63451,7 +63451,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://benvix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63518,7 +63518,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bentobox-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63585,7 +63585,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://benzila.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63652,7 +63652,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bergen-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63719,7 +63719,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bepta.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63786,7 +63786,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bermuda-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63853,7 +63853,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bermuda-ecommerce-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63920,7 +63920,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://besavvy-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -63987,7 +63987,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bespokecarpentry-interior-design.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64054,7 +64054,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bestbefore.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64106,7 +64106,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://betafin.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64173,7 +64173,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bethel-church.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64240,7 +64240,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bestra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64307,7 +64307,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beta128.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64374,7 +64374,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://betons.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64436,7 +64436,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://betony-richard.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64503,7 +64503,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://better-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64570,7 +64570,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://better-studio-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64637,7 +64637,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bewellfed-food.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64704,7 +64704,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bettertalent-job-portal.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64771,7 +64771,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bezix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64838,7 +64838,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biedo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64905,7 +64905,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bfolios.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -64972,7 +64972,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bextro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65034,7 +65034,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bienes.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65101,7 +65101,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65168,7 +65168,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bikefz-school.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65235,7 +65235,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bildox.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65302,7 +65302,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bigburger.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65369,7 +65369,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bilog-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65436,7 +65436,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bind.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65503,7 +65503,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bim.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65570,7 +65570,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bimacare.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65637,7 +65637,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bingo-fashion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65704,7 +65704,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://collabify-plus-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65771,7 +65771,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://flowbite-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65838,7 +65838,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://inlicy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65905,7 +65905,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brussels-bar.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -65962,7 +65962,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brune.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66024,7 +66024,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brynn.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66091,7 +66091,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brunivo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66158,7 +66158,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bubble-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66225,7 +66225,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bubblegum.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66277,7 +66277,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://client-dashboard.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66329,7 +66329,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bubblex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66396,7 +66396,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bubbleslaundry128-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66463,7 +66463,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buckley-designer.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66530,7 +66530,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buddhist-wellness.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66597,7 +66597,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://budgetify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66644,7 +66644,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buddhistlite-religion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66711,7 +66711,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builderstudio-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66778,7 +66778,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builderx-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66845,7 +66845,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildza-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66912,7 +66912,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buney.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -66979,7 +66979,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cardiome.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67031,7 +67031,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://campaign-landing-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67098,7 +67098,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cardfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67165,7 +67165,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://camping-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67232,7 +67232,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://campione.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67299,7 +67299,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cardland.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67366,7 +67366,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://care-by-dr.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67433,7 +67433,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://candid.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67500,7 +67500,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://candy-agency-7f897.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67557,7 +67557,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cardpay.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67624,7 +67624,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canela-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67691,7 +67691,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://care-insurance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67758,7 +67758,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://candle-n-calm-retail.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67825,7 +67825,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://care-hands.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67892,7 +67892,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://careaxis-therapy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -67959,7 +67959,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://careco-beauty.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68026,7 +68026,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canny-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68093,7 +68093,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canopy-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68160,7 +68160,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carecorner-hospital.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68227,7 +68227,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canopy-lawn.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68294,7 +68294,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68361,7 +68361,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carenova.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68428,7 +68428,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canvas-club-interior-design.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68495,7 +68495,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carepair.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68562,7 +68562,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canvas-personal.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68609,7 +68609,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canvasly.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68676,7 +68676,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carent.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68743,7 +68743,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canvass.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68810,7 +68810,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://careplus-pets.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68877,7 +68877,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canvus-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -68944,7 +68944,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://capital-x.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69011,7 +69011,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://capitax-accounting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69078,7 +69078,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://capitflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69145,7 +69145,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carevia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69212,7 +69212,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carfix-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69259,7 +69259,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://capra-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69326,7 +69326,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://captivate-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69393,7 +69393,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cargo-transport.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69460,7 +69460,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://capture-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69507,7 +69507,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carfixtnc.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69574,7 +69574,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cargo-x-transport.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69641,7 +69641,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://capvidai.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69708,7 +69708,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://car-wash-128-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69775,7 +69775,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cargo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69842,7 +69842,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://car-dealership-128-cars.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69909,7 +69909,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cargolane.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -69976,7 +69976,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cargolinq-logistics.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70043,7 +70043,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://car-wash-cars.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70110,7 +70110,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cargon-transport.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70177,7 +70177,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carbon-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70244,7 +70244,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cardly-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70286,7 +70286,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cargoworx-logistics.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70353,7 +70353,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://careari-job-portal-9eacf.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70420,7 +70420,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carezf-hospital.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70487,7 +70487,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carifypro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70554,7 +70554,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carisma-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70621,7 +70621,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carlux.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70688,7 +70688,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carmen-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70755,7 +70755,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://caranger-cars.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70822,7 +70822,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carolina-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70889,7 +70889,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carpentry128.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -70956,7 +70956,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carpenters-x-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71023,7 +71023,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carpentryy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71090,7 +71090,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carplus.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71157,7 +71157,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carrete-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71224,7 +71224,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carrepair-x-automotive.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71291,7 +71291,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carryclub-accessories.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71358,7 +71358,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carrgoflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71425,7 +71425,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carta.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71482,7 +71482,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carso-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71549,7 +71549,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cartelle.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71616,7 +71616,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carsy-cars.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71683,7 +71683,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://casaa-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71750,7 +71750,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cartflow-x.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71817,7 +71817,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carwashlite-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71884,7 +71884,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://casavera.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -71951,7 +71951,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://casewell.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72018,7 +72018,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cascade.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72085,7 +72085,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cashflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72152,7 +72152,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cash-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72219,7 +72219,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://casho.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72286,7 +72286,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cashpay.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72353,7 +72353,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://casper-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72420,7 +72420,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cashvex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72487,7 +72487,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://caspian-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72554,7 +72554,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://castleresort-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72621,7 +72621,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catalis.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72688,7 +72688,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catalyst-magazine.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72755,7 +72755,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catalogue-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72822,7 +72822,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catalystarch-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72889,7 +72889,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catalysty-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -72956,7 +72956,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catarina-catone.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73023,7 +73023,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catania.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73090,7 +73090,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catered-plate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73157,7 +73157,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cathedral-church.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73224,7 +73224,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://catering-128-food.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73291,7 +73291,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cattleya.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73343,7 +73343,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cause128-charity.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73410,7 +73410,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cavely.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73477,7 +73477,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cavada-cafe.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73544,7 +73544,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cavora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73611,7 +73611,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cc-club.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73663,7 +73663,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cavrix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73730,7 +73730,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cedar.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73797,7 +73797,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ceebee.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73864,7 +73864,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ceefa-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73926,7 +73926,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cegnify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -73993,7 +73993,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ceilor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74060,7 +74060,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://celeris.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74127,7 +74127,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://celeron-pro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74194,7 +74194,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://celeste-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74261,7 +74261,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://celestian.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74328,7 +74328,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://celvar.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74395,7 +74395,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://centim-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74462,7 +74462,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cento-retail.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74529,7 +74529,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cepta.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74596,7 +74596,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ceramika-retail.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74663,7 +74663,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://central.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74725,7 +74725,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cerulean-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74792,7 +74792,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cerebrox.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74859,7 +74859,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cetfar.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74926,7 +74926,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cetra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -74993,7 +74993,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chain-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75045,7 +75045,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chainly.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75112,7 +75112,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chalk-landing-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75174,7 +75174,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chamba-job-portal.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75241,7 +75241,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://changelog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75308,7 +75308,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chapeltnc-church.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75375,7 +75375,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chapter.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75442,7 +75442,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chargeup-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75479,7 +75479,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chaosagency-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75546,7 +75546,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://charged-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75613,7 +75613,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chargelite-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75660,7 +75660,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://charity128-charity.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75727,7 +75727,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://charitable.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75794,7 +75794,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://charles.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75856,7 +75856,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://charityflow-charity.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75923,7 +75923,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://charlie-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -75990,7 +75990,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://charlotte-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76057,7 +76057,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://charty-technology.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76124,7 +76124,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chatapap-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76161,7 +76161,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chat-fz.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76228,7 +76228,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chatbots.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76295,7 +76295,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chatbottnc-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76337,7 +76337,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chatfinity.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76404,7 +76404,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chatify-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76471,7 +76471,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chatnext.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76518,7 +76518,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chatpilot.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76585,7 +76585,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chauffeurspremiumchauffeurserviceswebsite.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76652,7 +76652,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chatvex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76699,7 +76699,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chauffure.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76766,7 +76766,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cherish.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76803,7 +76803,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chef128-food.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76840,7 +76840,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cherriesville-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76887,7 +76887,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chery-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -76939,7 +76939,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chicago-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77006,7 +77006,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chiaroscuro-one-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77053,7 +77053,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chicago-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77105,7 +77105,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chestry.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77172,7 +77172,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://careskn-shop.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77209,7 +77209,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chicsal-salon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77276,7 +77276,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://building-128-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77313,7 +77313,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://carelygo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77350,7 +77350,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chillcat-drinks.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77417,7 +77417,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildframe.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77454,7 +77454,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chiropractor-128-health.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77521,7 +77521,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildfirm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77558,7 +77558,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chisel-comb.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77615,7 +77615,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chipx.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77682,7 +77682,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chisel-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77744,7 +77744,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildex-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77781,7 +77781,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://choice-shop.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77848,7 +77848,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chopin.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77910,7 +77910,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildex-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -77947,7 +77947,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://choiceextend-shop.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78014,7 +78014,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builderz-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78051,7 +78051,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chrismartin-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78118,7 +78118,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chroma-software.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78185,7 +78185,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canoply.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78222,7 +78222,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chronicle-ui-kit.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78289,7 +78289,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builderw-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78326,7 +78326,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chrono.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78388,7 +78388,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chrone.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78435,7 +78435,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chromy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78502,7 +78502,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildersx-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78539,7 +78539,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://church-religion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78606,7 +78606,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://chteau-solaire.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78673,7 +78673,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builderss.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78710,7 +78710,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://church-x-church.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78777,7 +78777,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://churchy-church.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78844,7 +78844,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://canada-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78881,7 +78881,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cibery.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -78948,7 +78948,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ciciano-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79010,7 +79010,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builderflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79047,7 +79047,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builder-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79084,7 +79084,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cinemafolio-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79121,7 +79121,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cinemaflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79188,7 +79188,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildbes-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79225,7 +79225,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cimpix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79292,7 +79292,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://camply128cms-tourism.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79329,7 +79329,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builtflow-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79366,7 +79366,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bureau-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79403,7 +79403,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bunnyland-kids.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79440,7 +79440,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bulletin-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79477,7 +79477,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bulork.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79514,7 +79514,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bukland-book.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79551,7 +79551,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builtly-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79588,7 +79588,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildrex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79625,7 +79625,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://builting-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79662,7 +79662,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildzy-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79699,7 +79699,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildscape-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79736,7 +79736,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildy128-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79773,7 +79773,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildmasters-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79810,7 +79810,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79847,7 +79847,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildo-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79884,7 +79884,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildx-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79921,7 +79921,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildpro-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79958,7 +79958,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildpex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -79995,7 +79995,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildline.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80032,7 +80032,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildix-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80069,7 +80069,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buildaxis.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80106,7 +80106,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://buenos-aires-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80143,7 +80143,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bugshield.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80180,7 +80180,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bryant-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80217,7 +80217,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bryan-folio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80254,7 +80254,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brutalist-site.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80291,7 +80291,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brunchys-cafe.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80328,7 +80328,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brun-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80365,7 +80365,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brownfolio-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80402,7 +80402,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brooke-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80439,7 +80439,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bronzecreative-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80476,7 +80476,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bronxec-creative.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80513,7 +80513,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bronn-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80550,7 +80550,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brokerwise.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80587,7 +80587,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://briyva.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80624,7 +80624,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brixton-nfl.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80661,7 +80661,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brixsa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80698,7 +80698,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brixso-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80735,7 +80735,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brivo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80772,7 +80772,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brixon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80809,7 +80809,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brixel-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80846,7 +80846,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bricknet.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80883,7 +80883,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brivex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80920,7 +80920,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brisify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80957,7 +80957,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://briqs.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -80994,7 +80994,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bristin-watson.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81031,7 +81031,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brisk-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81068,7 +81068,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brisbane.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81105,7 +81105,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brim.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81142,7 +81142,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brighthive.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81179,7 +81179,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bribon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81216,7 +81216,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://breze-creative.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81253,7 +81253,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brian-miller-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81290,7 +81290,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brewlab.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81327,7 +81327,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brewfye.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81364,7 +81364,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://breathiva.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81401,7 +81401,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brewsia-coffee-shop.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81438,7 +81438,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brewhaven-cafe.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81475,7 +81475,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brewhaus.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81512,7 +81512,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brewery-128-bar.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81549,7 +81549,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bremen-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81586,7 +81586,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://braxton.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81623,7 +81623,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bremz-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81660,7 +81660,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://breezify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81697,7 +81697,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bravox.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81734,7 +81734,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://braxon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81771,7 +81771,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bravien.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81808,7 +81808,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://braxtons.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81845,7 +81845,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bravyn.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81882,7 +81882,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bravik.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81919,7 +81919,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bravico.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81956,7 +81956,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brave-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -81993,7 +81993,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bravest.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82030,7 +82030,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brasa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82067,7 +82067,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brann.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82104,7 +82104,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brave-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82141,7 +82141,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brava.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82178,7 +82178,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandt-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82215,7 +82215,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandova.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82252,7 +82252,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandze.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82289,7 +82289,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brands.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82326,7 +82326,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82363,7 +82363,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandor-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82400,7 +82400,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandlio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82437,7 +82437,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandily.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82474,7 +82474,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandon-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82511,7 +82511,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandfluencer.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82548,7 +82548,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandolk.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82585,7 +82585,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandlab-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82622,7 +82622,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandlize-documentation.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82659,7 +82659,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandingfoliox-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82696,7 +82696,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://branding-x-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82733,7 +82733,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandifix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82770,7 +82770,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandin-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82807,7 +82807,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandguide-design.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82844,7 +82844,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bounce.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82881,7 +82881,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandglow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82918,7 +82918,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://branddy-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82955,7 +82955,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brand-lab-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -82992,7 +82992,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boulevard.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83029,7 +83029,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://branch-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83066,7 +83066,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brandable.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83103,7 +83103,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brainora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83140,7 +83140,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brand-fuel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83177,7 +83177,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brand-creative.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83214,7 +83214,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brainstorm-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83251,7 +83251,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boxsi.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83288,7 +83288,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boxinside-secure-storage-safe-deposit-webflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83325,7 +83325,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brainglitch.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83362,7 +83362,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boxkit-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83399,7 +83399,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bored-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83436,7 +83436,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bouvard-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83473,7 +83473,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boulder.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83510,7 +83510,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bootlab.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83547,7 +83547,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://botflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83584,7 +83584,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bostonstudio-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83621,7 +83621,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://botcloud.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83658,7 +83658,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boono.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83695,7 +83695,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boston-lite.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83732,7 +83732,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bornomala.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83769,7 +83769,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boringstudio-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83806,7 +83806,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bossman-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83843,7 +83843,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boostr-o.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83880,7 +83880,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boostly.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83917,7 +83917,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boostflux.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83954,7 +83954,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boostique.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -83991,7 +83991,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boomslang-marketing.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84028,7 +84028,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bookx-book.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84065,7 +84065,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boostify-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84102,7 +84102,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boom-news.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84139,7 +84139,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bookstorextnc.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84176,7 +84176,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://booklandingbuilder-one-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84213,7 +84213,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bookland.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84250,7 +84250,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bookishtnc-book.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84287,7 +84287,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bookauthortnc-book.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84324,7 +84324,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://book-book.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84361,7 +84361,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bonsai.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84398,7 +84398,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bonnie-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84435,7 +84435,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bongo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84472,7 +84472,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bonanza-event.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84509,7 +84509,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bolton-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84546,7 +84546,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bolt-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84583,7 +84583,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldz.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84620,7 +84620,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldway.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84657,7 +84657,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldvibe-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84694,7 +84694,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldonse.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84731,7 +84731,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldmark.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84768,7 +84768,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldish.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84805,7 +84805,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldio-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84842,7 +84842,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldgrid.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84879,7 +84879,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldest-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84916,7 +84916,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldery.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84953,7 +84953,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -84990,7 +84990,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldd.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85027,7 +85027,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boldark.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85064,7 +85064,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bold-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85101,7 +85101,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bold-cms-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85138,7 +85138,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bold-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85175,7 +85175,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bokify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85212,7 +85212,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bodyguard128-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85249,7 +85249,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bodo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85286,7 +85286,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bochum.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85323,7 +85323,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bobs-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85360,7 +85360,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bobolobo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85397,7 +85397,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boatx-travel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85434,7 +85434,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clevora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85501,7 +85501,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clerk.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85568,7 +85568,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cleud.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85635,7 +85635,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boative-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85672,7 +85672,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boat-rental-128-transport.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85709,7 +85709,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clickify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85771,7 +85771,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://boardi.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85808,7 +85808,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://click.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85875,7 +85875,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clicknews-news.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -85942,7 +85942,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clickchat.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86009,7 +86009,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bnkly-x-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86046,7 +86046,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clientfirst128-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86113,7 +86113,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clikup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86180,7 +86180,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bnkifyx-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86217,7 +86217,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bnker-x-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86254,7 +86254,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clienzo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86321,7 +86321,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://climacosustainabilitystartuptemplate-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86388,7 +86388,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blust-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86425,7 +86425,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bluehours.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86462,7 +86462,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://climeta.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86529,7 +86529,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clinicallaboratory-health.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86596,7 +86596,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://climbr.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86663,7 +86663,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://black-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86700,7 +86700,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clinically-doctor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86767,7 +86767,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bjorn-creative.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86804,7 +86804,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clinicx-doctor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86871,7 +86871,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clinixa-dentist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86938,7 +86938,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bjelle-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -86975,7 +86975,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clinova.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87042,7 +87042,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizzflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87079,7 +87079,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clipingzf.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87146,7 +87146,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clipses-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87213,7 +87213,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clipster.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87275,7 +87275,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://noterx-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87312,7 +87312,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clixr-ecommerce-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87354,7 +87354,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://seaside-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87391,7 +87391,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clixr-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87433,7 +87433,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://zyntra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87470,7 +87470,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://closecrm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87537,7 +87537,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://zynix-software.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87574,7 +87574,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clipzo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87641,7 +87641,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloud-nest.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87708,7 +87708,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://zyntexa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87745,7 +87745,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudeo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87812,7 +87812,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://zynqehouse.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87849,7 +87849,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87916,7 +87916,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://closure-lite.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -87963,7 +87963,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blushify-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88000,7 +88000,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bluren.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88037,7 +88037,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudkit.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88104,7 +88104,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudis.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88171,7 +88171,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudlab.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88238,7 +88238,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blured.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88275,7 +88275,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudpeak-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88342,7 +88342,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blumeone.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88379,7 +88379,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudocean-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88446,7 +88446,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudly-x-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88513,7 +88513,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blur-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88550,7 +88550,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blume-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88587,7 +88587,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudswift-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88654,7 +88654,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bluewave.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88691,7 +88691,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudvista-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88758,7 +88758,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bluewake.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88795,7 +88795,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudweb.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88862,7 +88862,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bluetify-marketing.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88899,7 +88899,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blues.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -88936,7 +88936,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudsy-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89003,7 +89003,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudwhisper.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89070,7 +89070,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blueprintstudio-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89107,7 +89107,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudsstudio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89174,7 +89174,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudyx-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89241,7 +89241,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloudyflow-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89308,7 +89308,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blueprints-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89345,7 +89345,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bluepoint.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89382,7 +89382,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cloze.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89449,7 +89449,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clover-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89516,7 +89516,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blueprint-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89553,7 +89553,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://club-x-dj.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89620,7 +89620,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bluecollar-small-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89657,7 +89657,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clutch-fashion.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89724,7 +89724,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blue-print-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89761,7 +89761,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clyde-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89828,7 +89828,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blublock-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89865,7 +89865,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://clyra.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89912,7 +89912,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coach-128-coaching.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -89979,7 +89979,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coachina-coaching.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90046,7 +90046,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bloom-r.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90083,7 +90083,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coachfit-coaching.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90150,7 +90150,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coahfn.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90217,7 +90217,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coachx-coaching.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90284,7 +90284,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bloomava.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90321,7 +90321,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blossom-beauty.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90358,7 +90358,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coastal-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90425,7 +90425,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bloom-health.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90462,7 +90462,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coaxio-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90529,7 +90529,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bloky-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90566,7 +90566,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coco-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90628,7 +90628,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coburgdagency-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90695,7 +90695,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogzen-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90732,7 +90732,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cobalt-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90799,7 +90799,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogzan.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90836,7 +90836,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://code-house-dark-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90903,7 +90903,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://code-house-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -90970,7 +90970,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codara.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91037,7 +91037,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogy-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91074,7 +91074,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogwear-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91111,7 +91111,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://code-masters-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91178,7 +91178,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogsville-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91215,7 +91215,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://code-software.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91282,7 +91282,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogos-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91319,7 +91319,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codebase-it-company.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91386,7 +91386,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogmin-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91423,7 +91423,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://code-studio-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91490,7 +91490,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codebox.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91557,7 +91557,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blockflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91594,7 +91594,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codeconsult-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91661,7 +91661,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codegent.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91698,7 +91698,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codegen.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91765,7 +91765,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codelab-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91832,7 +91832,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogly.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91869,7 +91869,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogle.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91906,7 +91906,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codeless-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -91973,7 +91973,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blogin-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92010,7 +92010,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codely-x-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92077,7 +92077,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blnk-stdo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92114,7 +92114,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codeplus.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92181,7 +92181,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codepluz-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92248,7 +92248,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codenest.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92315,7 +92315,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bloggable.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92352,7 +92352,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codepro-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92419,7 +92419,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codesphere.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92486,7 +92486,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codevo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92553,7 +92553,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blog-ace-blog.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92590,7 +92590,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codexa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92657,7 +92657,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codeza.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92724,7 +92724,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blockchain-x-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92761,7 +92761,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92808,7 +92808,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codigo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92875,7 +92875,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blnk.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92912,7 +92912,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codot.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -92979,7 +92979,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blinkise.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93016,7 +93016,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://codx-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93083,7 +93083,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blisszai.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93120,7 +93120,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blissoria.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93157,7 +93157,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coffeemate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93224,7 +93224,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blinker-accessories.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93261,7 +93261,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cognia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93323,7 +93323,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bliex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93360,7 +93360,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cognix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93427,7 +93427,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coherent-marketing.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93494,7 +93494,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blicker-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93531,7 +93531,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cohen.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93598,7 +93598,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bldonse.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93635,7 +93635,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coin-z.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93702,7 +93702,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blanc-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93739,7 +93739,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coinect.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93806,7 +93806,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coincraft.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93873,7 +93873,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blake-photo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93910,7 +93910,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coflows-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -93977,7 +93977,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coinest.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94044,7 +94044,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blake-alexander.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94081,7 +94081,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blackzero-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94118,7 +94118,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coinly-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94185,7 +94185,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blackink-artist.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94222,7 +94222,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coinup-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94264,7 +94264,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blacksmith.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94301,7 +94301,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coinvaultamoderncryptowebflowtemplate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94368,7 +94368,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coinvest-128-investment.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94435,7 +94435,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blackmoonstudio-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94472,7 +94472,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://blackfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94509,7 +94509,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://colby.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94576,7 +94576,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://colibri-one-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94643,7 +94643,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://black-plus-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94680,7 +94680,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coliving-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94747,7 +94747,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://collab-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94814,7 +94814,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://collabflowtnclandingpage-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94866,7 +94866,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizzy-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94903,7 +94903,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://collateral-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -94970,7 +94970,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizz-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95007,7 +95007,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://colabify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95074,7 +95074,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://collabora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95141,7 +95141,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biznov-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95178,7 +95178,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://collected.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95245,7 +95245,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biznix-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95282,7 +95282,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coller.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95349,7 +95349,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biznest.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95386,7 +95386,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://collie-pets.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95453,7 +95453,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizmax-corporate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95490,7 +95490,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://colling.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95557,7 +95557,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cologne-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95624,7 +95624,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://colonia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95691,7 +95691,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizio-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95728,7 +95728,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://colorflow.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95795,7 +95795,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://colorsx-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95862,7 +95862,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizica.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95899,7 +95899,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://colorfolio-x-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -95966,7 +95966,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizgrowth.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96003,7 +96003,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizcron.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96040,7 +96040,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizcore-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96077,7 +96077,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizcoach.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96114,7 +96114,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizco-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96151,7 +96151,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bizcast.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96188,7 +96188,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bixol-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96225,7 +96225,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bixlue.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96262,7 +96262,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bivere.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96299,7 +96299,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bitteschon-studio-e-commerce.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96336,7 +96336,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bittersweet.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96373,7 +96373,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bitform.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96410,7 +96410,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bitflow-technology.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96447,7 +96447,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bitezai.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96484,7 +96484,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bitejoy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96521,7 +96521,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bitco.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96558,7 +96558,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bistrovia-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96595,7 +96595,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bistora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96632,7 +96632,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://binko.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96669,7 +96669,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biogax.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96706,7 +96706,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biodex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96743,7 +96743,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://binstack.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96780,7 +96780,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bildium.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96817,7 +96817,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://beano.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96854,7 +96854,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://birmingham-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96891,7 +96891,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://birkform.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96928,7 +96928,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://biotix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -96965,7 +96965,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brightsolar.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97002,7 +97002,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brightmind.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97039,7 +97039,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brightframe.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97076,7 +97076,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brightedgestudio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97113,7 +97113,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brightedge-studio-pro.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97150,7 +97150,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bright-form.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97187,7 +97187,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bright-beginnings-childcare-medical.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97224,7 +97224,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bright-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97261,7 +97261,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brideee-wedding.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97298,7 +97298,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bridebox-wedding.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97335,7 +97335,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bridaltnc-wedding.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97372,7 +97372,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brickzy-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97409,7 +97409,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brickyard.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97446,7 +97446,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brickstone.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97483,7 +97483,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bricksio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97520,7 +97520,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://bricks.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97557,7 +97557,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://brick-game.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97594,7 +97594,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://sway128.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97620,7 +97620,7 @@ export const themes: Theme[] = [
       "slug": "theme-gallery",
       "dodoProductId": "pdt_0NoNCTjGQBlSqluPFXXZP",
       "tagline": "Modern, high-performance Theme Gallery website template.",
-      "description": "Astro 5 and Tailwind CSS theme for Theme Gallery.",
+      "description": "Astro 7 and Tailwind CSS theme for Theme Gallery.",
       "framework": "astro",
       "category": "portfolio-and-agency",
       "categories": [
@@ -97631,7 +97631,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://theme-gallery.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97668,7 +97668,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultcorner-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97735,7 +97735,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultcraft-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97802,7 +97802,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultation-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97869,7 +97869,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultek-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -97936,7 +97936,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultex-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98003,7 +98003,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultflow-x-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98070,7 +98070,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultguide-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98137,7 +98137,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consulthink-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98204,7 +98204,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consulthqlight-corporate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98271,7 +98271,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultify.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98338,7 +98338,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consulting-firm-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98405,7 +98405,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultic.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98472,7 +98472,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultio-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98539,7 +98539,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultiq-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98606,7 +98606,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultingo-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98673,7 +98673,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consulting-x-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98740,7 +98740,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultive.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98807,7 +98807,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultivo-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98874,7 +98874,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -98941,7 +98941,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultminds-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99008,7 +99008,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99075,7 +99075,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultriseconsult-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99142,7 +99142,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultprodark-business.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99209,7 +99209,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultwise-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99276,7 +99276,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultvision-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99343,7 +99343,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consultwise-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99410,7 +99410,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://conteai-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99477,7 +99477,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://contabile-accounting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99519,7 +99519,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://consumer.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99586,7 +99586,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://contelas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99653,7 +99653,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://contek.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99720,7 +99720,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://contently.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99772,7 +99772,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://conto-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99839,7 +99839,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://contractor-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99906,7 +99906,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://contour.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -99973,7 +99973,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://control-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100025,7 +100025,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://contractor-x-construction.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100092,7 +100092,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://conversion-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100159,7 +100159,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://converso.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100206,7 +100206,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://conversionoptimised-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100273,7 +100273,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://conversion-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100340,7 +100340,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://convert.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100407,7 +100407,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://converge.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100474,7 +100474,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://convi-law-firm.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100541,7 +100541,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://convix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100608,7 +100608,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://converto.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100675,7 +100675,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://convoy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100742,7 +100742,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://conzult.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100809,7 +100809,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coolabs.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100846,7 +100846,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cooffice.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100913,7 +100913,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coolvia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -100980,7 +100980,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coonsult.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101047,7 +101047,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cooper-photography.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101114,7 +101114,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cooperbank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101181,7 +101181,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coorbizz.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101248,7 +101248,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coozi.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101315,7 +101315,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://copenhagen-doctor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101377,7 +101377,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://copyfolio-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101429,7 +101429,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://copyneat-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101496,7 +101496,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://copywriter-portfolio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101563,7 +101563,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://copora.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101630,7 +101630,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cora-one-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101672,7 +101672,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://core-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101739,7 +101739,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coreblock.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101806,7 +101806,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coreai.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101873,7 +101873,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corebuild.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -101940,7 +101940,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cores-dashboard.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102007,7 +102007,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corevia.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102074,7 +102074,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corelix.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102141,7 +102141,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coreon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102208,7 +102208,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corexa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102275,7 +102275,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corin-vale.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102342,7 +102342,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cornice-architecture.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102409,7 +102409,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corpath.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102476,7 +102476,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corpex-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102543,7 +102543,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corpkit-x-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102610,7 +102610,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corporateagency-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102677,7 +102677,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corporately-x-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102744,7 +102744,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corporation-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102811,7 +102811,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corporation-x-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102878,7 +102878,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corpotech-x-corporate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -102945,7 +102945,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cortane.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103012,7 +103012,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cortax.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103059,7 +103059,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cortex-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103126,7 +103126,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cosmico.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103193,7 +103193,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cosmo-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103260,7 +103260,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://corvairo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103327,7 +103327,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cospire.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103394,7 +103394,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cosmo-studio.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103461,7 +103461,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cosmos-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103528,7 +103528,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cosva.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103580,7 +103580,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://counsel-consulting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103642,7 +103642,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cottage.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103684,7 +103684,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://countwise-accounting.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103751,7 +103751,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://course-hub.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103818,7 +103818,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://course-craft.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103885,7 +103885,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://course-x-learning.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -103952,7 +103952,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://courier.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104019,7 +104019,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coursehub.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104086,7 +104086,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coursekitplus-school.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104153,7 +104153,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://courselifyx-education.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104220,7 +104220,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coursesnap-learning.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104287,7 +104287,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://couxc-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104354,7 +104354,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coursilo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104421,7 +104421,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://covex.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104488,7 +104488,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://covalt.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104555,7 +104555,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coverly.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104622,7 +104622,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://covze-software.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104689,7 +104689,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coworking-128-school.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104756,7 +104756,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://coworking-x-real-estate.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104823,7 +104823,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crownline.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104870,7 +104870,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cruise-hotel.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -104937,7 +104937,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crumbbread.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105004,7 +105004,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crumblr.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105071,7 +105071,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cruze.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105138,7 +105138,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptify-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105185,7 +105185,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crypto-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105252,7 +105252,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crypto-128-startup.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105319,7 +105319,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptocoin-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105386,7 +105386,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptocurrency-x-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105453,7 +105453,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptopin-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105520,7 +105520,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptoversex-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105587,7 +105587,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptotechx-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105654,7 +105654,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptow-finance.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105721,7 +105721,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptozy-app.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105788,7 +105788,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crypzai-dashboard.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105855,7 +105855,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cryptox.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105902,7 +105902,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crysiam.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -105969,7 +105969,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crypture-landing-page.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106011,7 +106011,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cube-directory.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106078,7 +106078,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://crystal-bank.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106130,7 +106130,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://ctrnsvzg.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106197,7 +106197,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cubetemplate-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106264,7 +106264,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cubex-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106331,7 +106331,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cubic-agency.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106398,7 +106398,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cubify-saas.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106465,7 +106465,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cuckoo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106532,7 +106532,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cuisine-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106599,7 +106599,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cublock.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106666,7 +106666,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://culinaryessentials-learning.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106713,7 +106713,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://culip.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106780,7 +106780,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://culini.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106847,7 +106847,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cullen-restaurant.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106914,7 +106914,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cultiva.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -106966,7 +106966,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://culture-exchange.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107033,7 +107033,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cunda.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107100,7 +107100,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://cuppa.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107167,7 +107167,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curaclinic-beauty.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107234,7 +107234,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curalane.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107301,7 +107301,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curated-creative.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107368,7 +107368,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curated-x-directory.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107435,7 +107435,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curemed-128-doctor.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107502,7 +107502,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curepoint.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107569,7 +107569,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curewell-therapy.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107636,7 +107636,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curly-locks-salon.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107703,7 +107703,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://custly.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107770,7 +107770,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curator.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
@@ -107837,7 +107837,7 @@ export const themes: Theme[] = [
       "badge": "New Release",
       "liveUrl": "https://curevo.komalnakrani.com",
       "techStack": [
-          "Astro 5",
+          "Astro 7",
           "Tailwind CSS",
           "TypeScript",
           "Scroll Reveal Engine"
