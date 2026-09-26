@@ -1,28 +1,51 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import K from '../../components/K.astro';
-import Icon from '../../components/Icon.astro';
 import ThemeCard from '../../components/ThemeCard.astro';
 import CategorySidebar from '../../components/CategorySidebar.astro';
-import { themes, CATEGORIES, isThemeInCategory } from '../../data/themes';
+import Pagination from '../../components/Pagination.astro';
+import { themes, type Theme } from '../../data/themes';
 
-// The catalog is no longer split by framework — every theme ships the same way.
-const catalogThemes = themes;
+export async function getStaticPaths({ paginate }: { paginate: any }) {
+  // Sort themes: featured first, then standard catalog order
+  const sortedThemes = [
+    ...themes.filter((t) => t.featured),
+    ...themes.filter((t) => !t.featured)
+  ];
+  return paginate(sortedThemes, { pageSize: 100 });
+}
 
-// Category Taxonomy
-const categoryFilters = [
-  { slug: 'all', name: 'All Categories' },
-  ...CATEGORIES,
-];
+interface Props {
+  page: {
+    data: Theme[];
+    start: number;
+    end: number;
+    total: number;
+    currentPage: number;
+    size: number;
+    lastPage: number;
+    url: {
+      current: string;
+      prev: string | undefined;
+      next: string | undefined;
+    };
+  };
+}
+
+const { page } = Astro.props;
+const catalogThemes = page.data;
 ---
-<Layout title="Production Themes | Komal Nakrani Marketplace" description="Explore production-grade templates categorized across our curated theme categories.">
+<Layout
+  title={`Production Themes — Page ${page.currentPage} | Komal Nakrani Marketplace`}
+  description={`Explore production-grade templates (Page ${page.currentPage} of ${page.lastPage}) categorized across our curated theme categories.`}
+>
   <main class="rise" style="background: var(--bg); min-height: 100vh; color: var(--ink);">
     <section class="wrap section" style="padding-top: 40px; padding-bottom: 80px;">
       <div style="text-align: center; max-width: 760px; margin: 0 auto 40px;">
         <K idx="01">Theme Catalog</K>
         <h1 class="display" style="margin-top: 14px;">Production themes</h1>
         <p class="lead" style="margin-top: 14px; color: var(--ink-2); font-size: 17px; line-height: 1.6;">
-          Engineered for high-performing tech startups, agencies, and developers. Browse by curated categories.
+          Engineered for high-performing tech startups, agencies, and developers. Showing 100 themes per page.
         </p>
       </div>
 
@@ -38,7 +61,7 @@ const categoryFilters = [
             <input
               type="text"
               id="theme-search-input"
-              placeholder="Search themes by name, category, or tech stack..."
+              placeholder="Search themes by name, category, or tech stack on this page..."
               class="search-input"
             />
           </div>
@@ -62,9 +85,12 @@ const categoryFilters = [
           </div>
 
           <div id="no-results" style="display: none; text-align: center; padding: 60px 20px; background: #ffffff; border-radius: var(--r-lg); border: 1px solid var(--rule-3); margin-top: 24px;">
-            <p style="font-size: 18px; color: var(--ink-2);">No themes found matching your search criteria.</p>
+            <p style="font-size: 18px; color: var(--ink-2);">No themes found matching your search criteria on this page.</p>
             <button id="reset-filters-btn" class="btn btn-secondary" style="margin-top: 16px; padding: 10px 24px;">Reset Search</button>
           </div>
+
+          <!-- 100 Items Per Page Pagination Component -->
+          <Pagination page={page} baseUrl="/themes" />
         </div>
       </div>
     </section>
@@ -80,6 +106,22 @@ const categoryFilters = [
   .cat-main-content {
     flex: 1;
     min-width: 0;
+  }
+  .search-input {
+    width: 100%;
+    padding: 14px 22px;
+    border-radius: var(--r-pill);
+    background: #ffffff;
+    border: 1px solid var(--rule-2);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .search-input:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px var(--sage-tint);
   }
   .themes-catalog-grid {
     display: grid;
@@ -138,6 +180,3 @@ const categoryFilters = [
     }
   });
 </script>
-
-
-

@@ -106,12 +106,13 @@ try {
   const loaded = event('Page.loadEventFired');
   await command('Page.navigate', { url });
   const waitTimeout = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  await Promise.race([loaded, waitTimeout(4000)]);
+  await Promise.race([loaded, waitTimeout(6000)]);
   await Promise.race([
     command('Runtime.evaluate', { expression: 'document.fonts.ready', awaitPromise: true }),
-    waitTimeout(1500)
+    waitTimeout(3000)
   ]);
-  await waitTimeout(500);
+  const animationDelay = Number(option('--delay', '15000'));
+  await waitTimeout(animationDelay);
   const metrics = await command('Runtime.evaluate', {
     expression: `JSON.stringify({
       innerWidth,
