@@ -105,24 +105,30 @@ const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
 
   .tcard-thumb {
     display: block;
-    height: 300px;
-    padding: 14px 14px 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    padding: 10px 10px 0;
     border-bottom: 1px solid #EEEADE;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   .tcard-thumb:hover { opacity: 1; }
 
   .tcard-window {
     background: #ffffff;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, .07);
-    padding: 11px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+    padding: 8px 8px 0 8px;
     height: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     transition: transform var(--dur-slow) var(--ease);
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
   }
   .tcard:hover .tcard-window { transform: translateY(-3px); }
 
@@ -132,10 +138,11 @@ const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
   .tcard-shot {
     flex: 1;
     width: 100%;
-    min-height: 0;
+    height: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: top center;
-    border-radius: 6px;
+    border-radius: 4px 4px 0 0;
     background: var(--paper-3);
     display: block;
   }
