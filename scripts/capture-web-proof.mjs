@@ -12,11 +12,11 @@ function option(name, fallback) {
 
 const url = option('--url');
 const output = path.resolve(option('--output', 'tmp/web-proof/capture.png'));
-const width = Number(option('--width', '1440'));
-const height = Number(option('--height', '1100'));
+const width = Number(option('--width', '1200'));
+const height = Number(option('--height', '630'));
 const chrome = option('--chrome', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
 if (!url) {
-  console.error('Usage: node scripts/capture-web-proof.mjs --url <url> [--output file] [--width 1440] [--height 1100]');
+  console.error('Usage: node scripts/capture-web-proof.mjs --url <url> [--output file] [--width 1200] [--height 630]');
   process.exit(2);
 }
 mkdirSync(path.dirname(output), { recursive: true });

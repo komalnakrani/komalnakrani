@@ -1,6 +1,7 @@
 ---
 import fs from 'node:fs';
 import path from 'node:path';
+import { Image } from 'astro:assets';
 import { type Theme } from '../data/themes';
 import { accentFor, kindFor, nameFor } from '../data/design';
 
@@ -29,14 +30,15 @@ const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
         <div class="tcard-bar" style="width: 22px;"></div>
       </div>
       {hasShot ? (
-        <img
+        <Image
           class="tcard-shot"
           src={`/themes/${theme.slug}.webp`}
           alt={`Screenshot of the ${name} theme homepage`}
-          width="800"
-          height="800"
+          width={1200}
+          height={630}
           loading="lazy"
           decoding="async"
+          format="webp"
         />
       ) : (
         <div class="tcard-placeholder" style={`display: flex; background: linear-gradient(145deg, ${accent}18 0%, #ffffff 70%); border: 1px solid ${accent}22;`}>
