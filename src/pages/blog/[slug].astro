@@ -1,0 +1,357 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date);
+}
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Blog', url: '/blog/' },
+  { name: post.data.title, url: `/blog/${post.id}/` },
+];
+
+const articleMeta = {
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: post.data.updatedDate?.toISOString() || post.data.pubDate.toISOString(),
+  authorName: post.data.author,
+  image: post.data.image,
+};
+---
+
+<Layout
+  title={`${post.data.title} — Komal Nakrani Blog`}
+  description={post.data.description}
+  type="article"
+  article={articleMeta}
+  breadcrumbs={breadcrumbs}
+>
+  <article class="post-article">
+    <header class="post-header">
+      <div class="wrap post-header-wrap">
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+
+        <div class="post-header-meta">
+          <span class="post-cat-badge">{post.data.category}</span>
+          <span class="meta-sep">•</span>
+          <time datetime={post.data.pubDate.toISOString()}>
+            {formatDate(post.data.pubDate)}
+          </time>
+          <span class="meta-sep">•</span>
+          <span>By {post.data.author}</span>
+        </div>
+
+        <h1 class="post-main-title">{post.data.title}</h1>
+        <p class="post-main-desc">{post.data.description}</p>
+
+        <div class="post-header-tags">
+          {post.data.tags.map((tag) => (
+            <span class="tag-badge">#{tag}</span>
+          ))}
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap post-body-wrap">
+      <div class="prose">
+        <Content />
+      </div>
+
+      <!-- Post Footer Author Box -->
+      <footer class="post-footer">
+        <div class="author-box">
+          <div class="author-avatar">KN</div>
+          <div class="author-info">
+            <h4 class="author-name">Written by {post.data.author}</h4>
+            <p class="author-bio">
+              Founder & Web Architect at Komal Nakrani Themes. Engineering hyper-fast, zero-JS web templates and sharing insights on Astro, performance, and frontend design.
+            </p>
+          </div>
+        </div>
+
+        <div class="post-share-cta">
+          <a href="/blog/" class="btn btn-secondary">← Back to All Articles</a>
+          <a href="/pricing/" class="btn btn-primary">Explore All-Access Pass ($199) ➔</a>
+        </div>
+      </footer>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .post-article {
+    padding-bottom: 100px;
+  }
+
+  .post-header {
+    background: var(--paper-2, #F3F1EA);
+    border-bottom: 1px solid var(--rule-2, #E4E0D2);
+    padding: 48px 0 54px;
+    margin-bottom: 54px;
+  }
+
+  .post-header-wrap {
+    max-width: 820px;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--sage-deep, #64764F);
+    text-decoration: none;
+    margin-bottom: 24px;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .post-header-meta {
+    font-size: 13px;
+    color: var(--ink-400, #6E6C61);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .post-cat-badge {
+    font-weight: 600;
+    color: var(--sage-deep, #64764F);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .post-main-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ink-900, #14140F);
+    font-family: var(--font-display, sans-serif);
+    margin: 0 0 16px;
+  }
+
+  .post-main-desc {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-500, #5C5B51);
+    margin: 0 0 24px;
+  }
+
+  .post-header-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag-badge {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-500, #5C5B51);
+    background: #ffffff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--rule-2, #E4E0D2);
+  }
+
+  .post-body-wrap {
+    max-width: 820px;
+  }
+
+  /* Prose typography styling */
+  .prose {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-700, #2A2A22);
+  }
+
+  .prose :global(h2) {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 48px 0 20px;
+    color: var(--ink-900, #14140F);
+    font-family: var(--font-display, sans-serif);
+  }
+
+  .prose :global(h3) {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 36px 0 16px;
+    color: var(--ink-900, #14140F);
+    font-family: var(--font-display, sans-serif);
+  }
+
+  .prose :global(p) {
+    margin: 0 0 24px;
+  }
+
+  .prose :global(ul), .prose :global(ol) {
+    margin: 0 0 24px;
+    padding-left: 24px;
+  }
+
+  .prose :global(li) {
+    margin-bottom: 8px;
+  }
+
+  .prose :global(hr) {
+    border: 0;
+    border-top: 1px solid var(--rule-2, #E4E0D2);
+    margin: 40px 0;
+  }
+
+  .prose :global(blockquote) {
+    margin: 28px 0;
+    padding: 16px 24px;
+    border-left: 4px solid var(--sage-deep, #64764F);
+    background: var(--paper-2, #F3F1EA);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: var(--ink-700, #2A2A22);
+  }
+
+  .prose :global(a) {
+    color: var(--ink-900, #14140F);
+    text-decoration: underline;
+    text-decoration-color: var(--sage, #9BA88C);
+    text-underline-offset: 3px;
+  }
+
+  .prose :global(a:hover) {
+    color: var(--sage-deep, #64764F);
+  }
+
+  .prose :global(code:not(pre code)) {
+    background: var(--paper-3, #EFEDE3);
+    color: var(--ink-900, #14140F);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 14px;
+  }
+
+  .prose :global(pre) {
+    background: var(--ink-900, #14140F) !important;
+    color: #F3F1EA !important;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 28px 0;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .post-footer {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule-2, #E4E0D2);
+  }
+
+  .author-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: var(--paper-2, #F3F1EA);
+    border-radius: 16px;
+    border: 1px solid var(--rule-2, #E4E0D2);
+    margin-bottom: 40px;
+  }
+
+  .author-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--ink-900, #14140F);
+    color: #F3F1EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: var(--ink-900, #14140F);
+  }
+
+  .author-bio {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-500, #5C5B51);
+    margin: 0;
+  }
+
+  .post-share-cta {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+
+  .btn-primary {
+    background: var(--ink-900, #14140F);
+    color: #F3F1EA;
+  }
+
+  .btn-primary:hover {
+    background: var(--ink-700, #2A2A22);
+  }
+
+  .btn-secondary {
+    background: var(--paper-2, #F3F1EA);
+    color: var(--ink-900, #14140F);
+    border: 1px solid var(--rule-2, #E4E0D2);
+  }
+
+  .btn-secondary:hover {
+    background: var(--paper-3, #EFEDE3);
+  }
+
+  @media (max-width: 640px) {
+    .post-main-title {
+      font-size: 30px;
+    }
+    .author-box {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

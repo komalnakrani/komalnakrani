@@ -1,4 +1,19 @@
-// Collections are introduced with the first original manuscript. Keeping this
-// empty makes the visual shell explicit and prevents inherited content from
-// becoming a production dependency.
-export const collections = {};
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+
+const blog = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
+    author: z.string().default('Komal Nakrani'),
+    category: z.string().default('Astro & Themes'),
+    tags: z.array(z.string()).default([]),
+    image: z.string().optional(),
+    featured: z.boolean().default(false),
+  }),
+});
+
+export const collections = { blog };

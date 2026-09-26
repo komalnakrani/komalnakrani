@@ -1,0 +1,105 @@
+---
+interface Props {
+  topic: string;
+  docUrl: string;
+  summary: string;
+  codeSnippet?: string;
+  tag?: string;
+}
+
+const { topic, docUrl, summary, codeSnippet, tag = 'Astro Core Docs' } = Astro.props;
+---
+
+<div class="astro-doc-card">
+  <div class="doc-card-top">
+    <span class="doc-tag">{tag}</span>
+    <a href={docUrl} target="_blank" rel="noopener noreferrer" class="doc-link">
+      Read in Astro Docs ↗
+    </a>
+  </div>
+  <h4 class="doc-title">{topic}</h4>
+  <p class="doc-summary">{summary}</p>
+
+  {codeSnippet && (
+    <div class="doc-code-box">
+      <pre><code>{codeSnippet}</code></pre>
+    </div>
+  )}
+</div>
+
+<style>
+  .astro-doc-card {
+    margin: 32px 0;
+    padding: 24px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid var(--rule-3, #E9E5D9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .astro-doc-card:hover {
+    border-color: var(--sage, #9BA88C);
+    box-shadow: 0 6px 24px rgba(155, 168, 140, 0.15);
+  }
+
+  .doc-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .doc-tag {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 99px;
+    background: var(--paper-3, #EFEDE3);
+    color: var(--sage-deep, #64764F);
+  }
+
+  .doc-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-900, #14140F);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink-900, #14140F);
+    transition: opacity 0.15s;
+  }
+
+  .doc-link:hover {
+    opacity: 0.7;
+  }
+
+  .doc-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: var(--ink-900, #14140F);
+    font-family: var(--font-display, sans-serif);
+  }
+
+  .doc-summary {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-500, #5C5B51);
+    margin: 0 0 16px 0;
+  }
+
+  .doc-code-box {
+    background: var(--ink-900, #14140F);
+    color: #F3F1EA;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 13px;
+    overflow-x: auto;
+  }
+
+  .doc-code-box pre {
+    margin: 0;
+  }
+</style>

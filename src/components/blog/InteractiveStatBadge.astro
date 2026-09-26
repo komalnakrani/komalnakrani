@@ -1,0 +1,143 @@
+---
+---
+
+<div class="interactive-stat-widget" data-stat-widget>
+  <div class="stat-tabs">
+    <button class="stat-tab active" data-tab="perf">
+      <span>⚡ Performance</span>
+    </button>
+    <button class="stat-tab" data-tab="js">
+      <span>📦 JS Payload</span>
+    </button>
+    <button class="stat-tab" data-tab="catalog">
+      <span>📚 Theme Catalog</span>
+    </button>
+  </div>
+
+  <div class="stat-content active" data-content="perf">
+    <div class="stat-big">100 / 100</div>
+    <div class="stat-label">Lighthouse Score across Performance, Accessibility, & SEO</div>
+    <p class="stat-desc">
+      Astro compiles static HTML directly at build time. Zero client-side hydration overhead means perfect performance on mobile 4G and desktop alike.
+    </p>
+  </div>
+
+  <div class="stat-content" data-content="js">
+    <div class="stat-big">0 KB</div>
+    <div class="stat-label">Client-side JavaScript loaded by default</div>
+    <p class="stat-desc">
+      By adhering strictly to Astro's Islands Architecture, pages render fast without loading React, Vue, or heavy bundle scripts unless interactive islands are explicitly hydrated.
+    </p>
+  </div>
+
+  <div class="stat-content" data-content="catalog">
+    <div class="stat-big">6,900+</div>
+    <div class="stat-label">Production-Ready Web Themes Built & Ready to Deploy</div>
+    <p class="stat-desc">
+      From SaaS landing pages and agency portfolios to documentation sites, e-commerce storefronts, and restaurant menus—all hand-coded with zero bloated dependencies.
+    </p>
+  </div>
+</div>
+
+<style>
+  .interactive-stat-widget {
+    margin: 36px 0;
+    padding: 28px;
+    background: var(--paper-2, #F3F1EA);
+    border: 1px solid var(--rule-2, #E4E0D2);
+    border-radius: 16px;
+  }
+
+  .stat-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  .stat-tab {
+    padding: 8px 16px;
+    border-radius: 99px;
+    border: 1px solid var(--rule-2, #E4E0D2);
+    background: #ffffff;
+    color: var(--ink-700, #2A2A22);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .stat-tab:hover {
+    border-color: var(--sage, #9BA88C);
+  }
+
+  .stat-tab.active {
+    background: var(--ink-900, #14140F);
+    color: #F3F1EA;
+    border-color: var(--ink-900, #14140F);
+  }
+
+  .stat-content {
+    display: none;
+    animation: fadeIn 0.25s ease-in-out;
+  }
+
+  .stat-content.active {
+    display: block;
+  }
+
+  .stat-big {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--ink-900, #14140F);
+    font-family: var(--font-display, sans-serif);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--sage-deep, #64764F);
+    margin-bottom: 12px;
+  }
+
+  .stat-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-500, #5C5B51);
+    margin: 0;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  function setupStatWidget() {
+    const widgets = document.querySelectorAll('[data-stat-widget]');
+    widgets.forEach((widget) => {
+      const tabs = widget.querySelectorAll('[data-tab]');
+      const contents = widget.querySelectorAll('[data-content]');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.getAttribute('data-tab');
+          tabs.forEach((t) => t.classList.remove('active'));
+          contents.forEach((c) => c.classList.remove('active'));
+
+          tab.classList.add('active');
+          const activeContent = widget.querySelector(`[data-content="${target}"]`);
+          if (activeContent) {
+            activeContent.classList.add('active');
+          }
+        });
+      });
+    });
+  }
+
+  setupStatWidget();
+  document.addEventListener('astro:page-load', setupStatWidget);
+</script>

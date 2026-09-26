@@ -1,0 +1,124 @@
+---
+import { themes } from '../../data/themes';
+
+interface Props {
+  limit?: number;
+}
+
+const { limit = 3 } = Astro.props;
+
+const featuredThemes = themes.slice(0, limit);
+---
+
+<div class="theme-blog-grid">
+  {featuredThemes.map((theme) => (
+    <div class="theme-blog-card">
+      <div class="theme-card-top">
+        <span class="theme-cat">{theme.category}</span>
+        <span class="theme-price">${theme.price}</span>
+      </div>
+      <h4 class="theme-name">{theme.name}</h4>
+      <p class="theme-desc">{theme.description}</p>
+      <div class="theme-card-actions">
+        <a href={`/preview/${theme.id}`} target="_blank" class="theme-btn secondary">Live Demo</a>
+        <a href={`/themes/${theme.id}`} class="theme-btn primary">View Details ➔</a>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .theme-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .theme-blog-card {
+    background: #ffffff;
+    border: 1px solid var(--rule-3, #E9E5D9);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .theme-blog-card:hover {
+    border-color: var(--sage, #9BA88C);
+    transform: translateY(-2px);
+  }
+
+  .theme-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .theme-cat {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--sage-deep, #64764F);
+  }
+
+  .theme-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink-900, #14140F);
+  }
+
+  .theme-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    color: var(--ink-900, #14140F);
+    font-family: var(--font-display, sans-serif);
+  }
+
+  .theme-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-500, #5C5B51);
+    margin: 0 0 16px 0;
+  }
+
+  .theme-card-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  .theme-btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+
+  .theme-btn.primary {
+    background: var(--ink-900, #14140F);
+    color: #F3F1EA;
+  }
+
+  .theme-btn.primary:hover {
+    background: var(--ink-700, #2A2A22);
+  }
+
+  .theme-btn.secondary {
+    background: var(--paper-2, #F3F1EA);
+    color: var(--ink-900, #14140F);
+    border: 1px solid var(--rule-2, #E4E0D2);
+  }
+
+  .theme-btn.secondary:hover {
+    background: var(--paper-3, #EFEDE3);
+  }
+</style>

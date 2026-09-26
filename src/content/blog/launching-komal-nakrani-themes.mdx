@@ -1,0 +1,134 @@
+---
+title: "Launching Komal Nakrani Themes: High-Performance Astro Templates Built for Speed"
+description: "We are thrilled to launch our curated catalog of production-ready Astro web themes. Learn why we chose Astro, explore core Astro docs concepts, and interact with live code components."
+pubDate: 2026-09-26
+author: "Komal Nakrani"
+category: "Theme Launch & Astro Docs"
+tags: ["Astro", "Launch", "Web Performance", "Zero-JS", "Content Collections", "MDX"]
+featured: true
+image: "/og/default.jpg"
+---
+
+import Callout from '../../components/blog/Callout.astro';
+import AstroDocRef from '../../components/blog/AstroDocRef.astro';
+import InteractiveStatBadge from '../../components/blog/InteractiveStatBadge.astro';
+import CodeComparison from '../../components/blog/CodeComparison.astro';
+import ThemeShowcaseGrid from '../../components/blog/ThemeShowcaseGrid.astro';
+
+Welcome to the official launch of **Komal Nakrani Web Themes**! 🚀
+
+After months of architectural work, performance optimization, and refined typography design, we are introducing a collection of over **6,900+ production-ready Astro website templates** engineered specifically for developers, agencies, freelancers, and business owners who value speed, clean source code, and zero runtime bloat.
+
+<Callout type="tip" title="All-Access Pass Launch Special">
+To celebrate our official launch, the **All-Access Pass** is available for **$199 USD** (regularly $499) for the first 100 customers. Get unlimited access and source code for every theme in our catalog!
+</Callout>
+
+---
+
+## ⚡ Why We Built With Astro
+
+Modern web development has suffered from client-side bundle inflation. Traditional single-page applications (SPAs) ship megabytes of JavaScript just to display static text and images, leading to poor mobile performance and low Lighthouse scores.
+
+**Astro changed everything.** By shifting rendering overhead to build time and serving zero JavaScript by default, Astro delivers pre-rendered HTML that loads instantly on any network.
+
+### Performance Benchmarks at a Glance
+
+Interact with the widget below to explore how Astro's architecture elevates performance, bundle size, and theme coverage:
+
+<InteractiveStatBadge />
+
+---
+
+## 📖 Key Takeaways from Astro Docs
+
+When building our theme architecture, we relied heavily on core patterns from the official [Astro Documentation](https://docs.astro.build). Here are the foundational concepts powering our templates:
+
+<AstroDocRef 
+  topic="1. Astro Islands & Component Hydration"
+  docUrl="https://docs.astro.build/en/concepts/islands/"
+  summary="Astro Islands extract UI elements into isolated client components (React, Vue, Svelte, Alpine) that only load JavaScript when explicitly needed via directives like client:load or client:visible."
+  codeSnippet={`<!-- Static HTML rendered at build time -->
+<Header />
+<HeroSection />
+
+<!-- Client JS loaded only when user scrolls island into view -->
+<InteractiveCalculator client:visible />
+
+<Footer />`}
+  tag="Core Architecture"
+/>
+
+<AstroDocRef 
+  topic="2. Type-Safe Content Collections & Content Layer"
+  docUrl="https://docs.astro.build/en/guides/content-collections/"
+  summary="Content Collections allow you to manage local Markdown, MDX, or JSON files with full Zod schema validation and automatic TypeScript type generation."
+  codeSnippet={`// src/content.config.ts
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+
+export const collections = {
+  blog: defineCollection({
+    loader: glob({ pattern: '**/*.mdx', base: './src/content/blog' }),
+    schema: z.object({
+      title: z.string(),
+      pubDate: z.coerce.date(),
+    }),
+  }),
+};`}
+  tag="Data & Content"
+/>
+
+---
+
+## 🛠 Code Component Showcase: Astro vs Traditional Frameworks
+
+Let's look at a code comparison showing how Astro handles static components versus traditional framework client-side hydration:
+
+<CodeComparison 
+  astroTitle="Astro Zero-JS Component"
+  traditionalTitle="React Hydrated Client Component"
+  astroCode={`---
+// Executed at BUILD TIME only
+const { title, date } = Astro.props;
+---
+<article class="post">
+  <h2>{title}</h2>
+  <time>{date}</time>
+</article>`}
+  traditionalCode={`import React from 'react';
+
+// Runs on server AND re-hydrates in browser
+export default function Post({ title, date }) {
+  return (
+    <article className="post">
+      <h2>{title}</h2>
+      <time>{date}</time>
+    </article>
+  );
+}`}
+/>
+
+<Callout type="astro" title="Notice the Zero-JS Output">
+In the Astro example above, zero JavaScript is sent to the client browser. The resulting output is raw, hyper-optimized HTML and CSS.
+</Callout>
+
+---
+
+## 🎨 Featured Launch Themes
+
+Explore a selection of our hand-built Astro themes included with our platform:
+
+<ThemeShowcaseGrid limit={3} />
+
+---
+
+## 🚀 What's Coming Next on the Blog
+
+This launch post is just the beginning! In upcoming articles, we will dive deeper into:
+
+1. **Astro 5 Content Layer Tutorials**: How to build custom loaders for remote APIs and databases.
+2. **View Transitions Masterclass**: Creating smooth app-like page transitions without SPA frameworks.
+3. **Typography & Design Systems in Astro**: Styling warm, readable, aesthetic web pages with zero CSS framework bloat.
+4. **Step-by-Step Code Component Guides**: Building interactive MDX widgets for technical blogs and documentation.
+
+Stay tuned, explore our theme catalog, and happy building with Astro!

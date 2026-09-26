@@ -18,6 +18,7 @@ const pathname = Astro.url.pathname;
       <a class={`nav-link ${pathname.startsWith('/themes') ? 'active' : ''}`} href="/themes/">Themes</a>
       <a class={`nav-link ${pathname.startsWith('/categories') ? 'active' : ''}`} href="/categories/">Categories</a>
       <a class={`nav-link ${pathname.startsWith('/docs') ? 'active' : ''}`} href="/docs/getting-started/">Docs</a>
+      <a class={`nav-link ${pathname.startsWith('/blog') ? 'active' : ''}`} href="/blog/">Blog</a>
       <a class={`nav-link ${pathname.startsWith('/bundles') || pathname.startsWith('/pricing') ? 'active' : ''}`} href="/pricing/">Pricing</a>
     </nav>
 
@@ -36,6 +37,7 @@ const pathname = Astro.url.pathname;
     <a href="/themes/">Themes</a>
     <a href="/categories/">Categories</a>
     <a href="/docs/getting-started/">Docs</a>
+    <a href="/blog/">Blog</a>
     <a href="/pricing/">Pricing</a>
     <a href="/pricing/" style="color: var(--accent-text, #a88261); font-weight: 600;">Get All-Access Pass ($199)</a>
   </div>

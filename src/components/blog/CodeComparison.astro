@@ -1,0 +1,84 @@
+---
+interface Props {
+  astroCode: string;
+  traditionalCode: string;
+  astroTitle?: string;
+  traditionalTitle?: string;
+}
+
+const {
+  astroCode,
+  traditionalCode,
+  astroTitle = 'Astro (Zero-JS Component)',
+  traditionalTitle = 'React/Next.js (Client Hydration)',
+} = Astro.props;
+---
+
+<div class="code-comparison-widget">
+  <div class="code-comp-col">
+    <div class="comp-badge astro-badge">{astroTitle}</div>
+    <div class="comp-code-block">
+      <pre><code>{astroCode}</code></pre>
+    </div>
+  </div>
+
+  <div class="code-comp-col">
+    <div class="comp-badge trad-badge">{traditionalTitle}</div>
+    <div class="comp-code-block">
+      <pre><code>{traditionalCode}</code></pre>
+    </div>
+  </div>
+</div>
+
+<style>
+  .code-comparison-widget {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  @media (max-width: 768px) {
+    .code-comparison-widget {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .code-comp-col {
+    background: #ffffff;
+    border: 1px solid var(--rule-2, #E4E0D2);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .comp-badge {
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--rule-2, #E4E0D2);
+  }
+
+  .astro-badge {
+    background: rgba(155, 168, 140, 0.2);
+    color: var(--sage-deep, #64764F);
+  }
+
+  .trad-badge {
+    background: var(--paper-3, #EFEDE3);
+    color: var(--ink-700, #2A2A22);
+  }
+
+  .comp-code-block {
+    background: var(--ink-900, #14140F);
+    color: #F3F1EA;
+    padding: 16px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-x: auto;
+  }
+
+  .comp-code-block pre {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+interface Props {
+  type?: 'info' | 'tip' | 'warning' | 'astro';
+  title?: string;
+}
+
+const { type = 'info', title } = Astro.props;
+
+const icons = {
+  info: '💡',
+  tip: '⚡',
+  warning: '⚠️',
+  astro: '🚀',
+};
+
+const labels = {
+  info: 'Note',
+  tip: 'Pro Tip',
+  warning: 'Important',
+  astro: 'Astro Docs Feature',
+};
+---
+
+<div class={`blog-callout blog-callout-${type}`}>
+  <div class="callout-header">
+    <span class="callout-icon">{icons[type]}</span>
+    <strong class="callout-title">{title || labels[type]}</strong>
+  </div>
+  <div class="callout-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .blog-callout {
+    margin: 28px 0;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: var(--paper-2, #F3F1EA);
+    border: 1px solid var(--rule-2, #E4E0D2);
+    border-left: 4px solid var(--ink-900, #14140F);
+  }
+
+  .blog-callout-tip {
+    border-left-color: var(--sage-deep, #64764F);
+    background: rgba(155, 168, 140, 0.12);
+  }
+
+  .blog-callout-warning {
+    border-left-color: var(--clay, #9A5B48);
+    background: var(--clay-tint, rgba(154, 91, 72, 0.12));
+  }
+
+  .blog-callout-astro {
+    border-left-color: #ff5e00;
+    background: rgba(255, 94, 0, 0.05);
+  }
+
+  .callout-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .callout-icon {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .callout-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink-900, #14140F);
+    font-family: var(--font-display, sans-serif);
+  }
+
+  .callout-body {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-700, #2A2A22);
+  }
+
+  .callout-body :global(p) {
+    margin: 0;
+  }
+  .callout-body :global(p + p) {
+    margin-top: 10px;
+  }
+</style>
