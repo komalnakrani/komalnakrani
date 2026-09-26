@@ -57,8 +57,27 @@ function renderMarkdown(md: string) {
 }
 
 const htmlContent = renderMarkdown(article.content);
+
+const docBreadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Documentation', url: '/docs/' },
+  { name: article.title, url: `/docs/${article.slug}/` }
+];
+
+const docArticle = {
+  title: article.title,
+  description: article.description,
+  author: 'Komal Nakrani',
+  url: `https://komalnakrani.com/docs/${article.slug}/`
+};
 ---
-<Layout title={`${article.title} - Documentation | Komal Nakrani`} description={article.description}>
+<Layout
+  title={`${article.title} - Documentation | Komal Nakrani`}
+  description={article.description}
+  type="article"
+  breadcrumbs={docBreadcrumbs}
+  article={docArticle}
+>
   <main class="rise wrap section" style="padding-top: 40px;">
     <div class="docs-layout">
       <!-- Left Sidebar Navigation -->

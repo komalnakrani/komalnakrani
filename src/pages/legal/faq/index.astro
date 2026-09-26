@@ -60,8 +60,20 @@ const faqCategories = [
     ]
   }
 ];
+const allFaqs = faqCategories.flatMap((cat) => cat.faqs);
+const faqBreadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Legal & Support', url: '/legal/faq/' },
+  { name: 'FAQ Overview', url: '/legal/faq/' }
+];
 ---
-<Layout title="FAQ | Komal Nakrani" description="Answers on theme licensing, commercial use, the Astro stack these themes are built on, hosting and payment.">
+<Layout
+  title="FAQ | Komal Nakrani"
+  description="Answers on theme licensing, commercial use, the Astro stack these themes are built on, hosting and payment."
+  faqs={allFaqs}
+  breadcrumbs={faqBreadcrumbs}
+  type="faq"
+>
   <main class="rise">
     <section class="wrap section">
       <div style="max-width: 800px; margin: 0 auto;">

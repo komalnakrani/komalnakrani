@@ -3,7 +3,13 @@ import '../styles/theme.css';
 import '../styles/components.css';
 import Masthead from '../components/Masthead.astro';
 import Footer from '../components/Footer.astro';
-import SEOJsonLd from '../components/SEOJsonLd.astro';
+import SEOJsonLd, {
+  type FAQItem,
+  type BreadcrumbItem,
+  type ProductItem,
+  type ArticleItem,
+  type ListItem
+} from '../components/SEOJsonLd.astro';
 
 interface Props {
   title?: string;
@@ -11,6 +17,12 @@ interface Props {
   noindex?: boolean;
   /** Social preview image, root-relative. Defaults to the site card. */
   image?: string;
+  type?: 'website' | 'product' | 'article' | 'faq' | 'category';
+  faqs?: FAQItem[];
+  breadcrumbs?: BreadcrumbItem[];
+  product?: ProductItem;
+  article?: ArticleItem;
+  itemList?: ListItem[];
 }
 
 const {
@@ -18,6 +30,12 @@ const {
   description = 'Hand-built, production-ready Astro web themes with zero-JS output and full source. Preview every breakpoint before you pay.',
   noindex = false,
   image = '/og/default.jpg',
+  type = 'website',
+  faqs = [],
+  breadcrumbs = [],
+  product,
+  article,
+  itemList,
 } = Astro.props;
 
 const site = 'https://komalnakrani.com';
@@ -38,7 +56,7 @@ const ogImage = new URL(image, site).href;
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type === 'product' ? 'og:product' : 'website'} />
     <meta property="og:site_name" content="Komal Nakrani Themes" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -51,7 +69,17 @@ const ogImage = new URL(image, site).href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <title>{title}</title>
-    <SEOJsonLd title={title} description={description} />
+    <SEOJsonLd
+      title={title}
+      description={description}
+      canonicalUrl={canonical}
+      type={type}
+      faqs={faqs}
+      breadcrumbs={breadcrumbs}
+      product={product}
+      article={article}
+      itemList={itemList}
+    />
   </head>
   <body>
     <Masthead />

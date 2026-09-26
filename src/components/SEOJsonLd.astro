@@ -4,78 +4,239 @@ import { DROP, priceRange } from '../data/design';
 
 const range = priceRange(themes);
 
+export interface FAQItem {
+  q?: string;
+  question?: string;
+  a?: string;
+  answer?: string;
+}
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+export interface ProductItem {
+  name: string;
+  description: string;
+  price: number | string;
+  wasPrice?: number | string;
+  currency?: string;
+  image?: string;
+  url?: string;
+  sku?: string;
+  brand?: string;
+  category?: string;
+  inStock?: boolean;
+}
+
+export interface ArticleItem {
+  title: string;
+  description: string;
+  datePublished?: string;
+  dateModified?: string;
+  author?: string;
+  url?: string;
+}
+
+export interface ListItem {
+  name: string;
+  url: string;
+  description?: string;
+  image?: string;
+}
+
 interface Props {
-  type?: 'website' | 'product';
+  type?: 'website' | 'product' | 'article' | 'faq' | 'category';
   title?: string;
   description?: string;
+  canonicalUrl?: string;
+  faqs?: FAQItem[];
+  breadcrumbs?: BreadcrumbItem[];
+  product?: ProductItem;
+  article?: ArticleItem;
+  itemList?: ListItem[];
 }
 
 const {
   type = 'website',
   title = 'Komal Nakrani | Production-ready web themes',
   description = 'Hand-built, production-ready Astro web themes with zero-JS output and full commercial source.',
+  canonicalUrl = Astro.url.href,
+  faqs = [],
+  breadcrumbs = [],
+  product,
+  article,
+  itemList,
 } = Astro.props;
 
+const siteUrl = 'https://komalnakrani.com';
+
+// 1. Organization Schema
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
   name: 'Komal Nakrani Themes',
-  url: 'https://komalnakrani.com',
-  logo: 'https://komalnakrani.com/favicon.svg',
+  url: siteUrl,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${siteUrl}/favicon.svg`
+  },
   description: 'Publisher of production-ready web themes for founders, agencies and developers.',
   sameAs: [
-    'https://github.com',
-    'https://twitter.com'
+    'https://github.com/komalnakrani',
+    'https://twitter.com/komalnakrani'
   ]
 };
 
+// 2. WebSite Schema with Sitelinks Search Box
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
   name: 'Komal Nakrani Marketplace',
-  url: 'https://komalnakrani.com',
   description: description,
   publisher: {
-    '@type': 'Organization',
-    name: 'Komal Nakrani'
+    '@id': `${siteUrl}/#organization`
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteUrl}/themes/?q={search_term_string}`
+    },
+    'query-input': 'required name=search_term_string'
   }
 };
 
-const faqSchema = {
+// 3. WebPage Schema for current page
+const webPageSchema = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
+  '@type': 'WebPage',
+  '@id': `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: title,
+  description: description,
+  isPartOf: {
+    '@id': `${siteUrl}/#website`
+  },
+  breadcrumb: breadcrumbs && breadcrumbs.length > 0 ? {
+    '@id': `${canonicalUrl}#breadcrumb`
+  } : undefined
+};
+
+// 4. BreadcrumbList Schema (if breadcrumbs provided)
+let breadcrumbSchema = null;
+if (breadcrumbs && breadcrumbs.length > 0) {
+  breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': `${canonicalUrl}#breadcrumb`,
+    itemListElement: breadcrumbs.map((crumb, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      name: crumb.name,
+      item: crumb.url.startsWith('http') ? crumb.url : `${siteUrl}${crumb.url.startsWith('/') ? crumb.url : '/' + crumb.url}`
+    }))
+  };
+}
+
+// 5. FAQPage Schema (if faqs provided)
+let faqSchema = null;
+if (faqs && faqs.length > 0) {
+  faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${canonicalUrl}#faq`,
+    mainEntity: faqs.map((item) => ({
       '@type': 'Question',
-      name: 'What are the themes built with?',
+      name: item.q || item.question || '',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every theme is built with Astro and ships static, zero-JS-by-default output with hand-written CSS. You get the full source, and each theme has a live preview at every breakpoint before you buy.'
+        text: item.a || item.answer || ''
       }
+    }))
+  };
+}
+
+// 6. Product / SoftwareApplication Schema (if product details provided or product type)
+let productSchema = null;
+if (product) {
+  productSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['Product', 'SoftwareApplication'],
+    '@id': `${canonicalUrl}#product`,
+    name: product.name,
+    description: product.description,
+    image: product.image ? (product.image.startsWith('http') ? product.image : `${siteUrl}${product.image.startsWith('/') ? product.image : '/' + product.image}`) : undefined,
+    url: product.url || canonicalUrl,
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'All',
+    brand: {
+      '@type': 'Brand',
+      name: product.brand || 'Komal Nakrani'
     },
-    {
-      '@type': 'Question',
-      name: 'How much does a single theme cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: range.flat
-          ? `Every theme is $${range.min}, which includes full commercial source code and lifetime updates for that theme.`
-          : `Themes are priced individually from $${range.min} to $${range.max}. Each price is listed on that theme's own page and includes full commercial source code and lifetime updates.`
-      }
-    },
-    {
-      '@type': 'Question',
-      name: `What is included in the $${DROP.allAccessPrice} All-Access Pass?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `The $${DROP.allAccessPrice} All-Access Pass unlocks full commercial source code access to every theme in the catalog, every theme released from here on, unlimited client projects, and free updates forever. It is a single payment with no renewal.`
+    offers: {
+      '@type': 'Offer',
+      price: String(product.price),
+      priceCurrency: product.currency || 'USD',
+      availability: product.inStock !== false ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      url: product.url || canonicalUrl,
+      seller: {
+        '@id': `${siteUrl}/#organization`
       }
     }
-  ]
-};
+  };
+}
+
+// 7. ItemList / CollectionPage Schema (if itemList provided)
+let itemListSchema = null;
+if (itemList && itemList.length > 0) {
+  itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': `${canonicalUrl}#itemlist`,
+    name: title,
+    description: description,
+    itemListElement: itemList.map((item, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      name: item.name,
+      url: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url.startsWith('/') ? item.url : '/' + item.url}`,
+      description: item.description
+    }))
+  };
+}
+
+// 8. TechArticle / Article Schema (if article provided)
+let articleSchema = null;
+if (article) {
+  articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    '@id': `${canonicalUrl}#article`,
+    headline: article.title,
+    description: article.description,
+    mainEntityOfPage: canonicalUrl,
+    author: {
+      '@type': 'Person',
+      name: article.author || 'Komal Nakrani'
+    },
+    publisher: {
+      '@id': `${siteUrl}/#organization`
+    },
+    datePublished: article.datePublished || '2024-01-01',
+    dateModified: article.dateModified || new Date().toISOString().split('T')[0]
+  };
+}
+
+// Global All-Access Pass Product Schema
 const passOfferSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
+  '@id': `${siteUrl}/#all-access-pass`,
   name: 'Komal Nakrani All-Access Pass',
   description: 'Full commercial access to every production-ready web theme in the catalog, plus every theme released from here on. One payment, no renewal.',
   brand: { '@type': 'Brand', name: 'Komal Nakrani' },
@@ -84,11 +245,20 @@ const passOfferSchema = {
     price: String(DROP.allAccessPrice),
     priceCurrency: 'USD',
     availability: DROP.allAccessComingSoon ? 'https://schema.org/PreOrder' : 'https://schema.org/InStock',
-    url: 'https://komalnakrani.com/pricing/'
+    url: `${siteUrl}/pricing/`
   }
 };
 ---
+
+<!-- Core Domain & Site Schema -->
 <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
-<script type="application/ld+json" set:html={JSON.stringify(passOfferSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(passOfferSchema)} />
+
+<!-- Dynamic Page Schemas -->
+{breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+{productSchema && <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
+{itemListSchema && <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />}
+{articleSchema && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}

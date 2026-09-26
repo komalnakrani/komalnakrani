@@ -25,10 +25,27 @@ interface Props {
 
 const { category } = Astro.props;
 
-// Filter themes for this specific category (including multi-category themes)
+const categoryBreadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Categories', url: '/categories/' },
+  { name: category.name, url: `/categories/${category.slug}/` }
+];
+
 const categoryThemes = themes.filter((t) => isThemeInCategory(t, category.slug));
+
+const categoryItems = categoryThemes.map((t) => ({
+  name: t.name || t.slug,
+  url: `/themes/${t.slug}/`,
+  description: t.description || t.tagline
+}));
 ---
-<Layout title={`${category.name} Themes | Komal Nakrani`} description={`Explore production-ready themes in the ${category.name} category.`}>
+<Layout
+  title={`${category.name} Themes | Komal Nakrani`}
+  description={`Explore production-ready themes in the ${category.name} category.`}
+  type="category"
+  breadcrumbs={categoryBreadcrumbs}
+  itemList={categoryItems}
+>
   <main class="rise" style="background: var(--bg); min-height: 100vh; color: var(--ink);">
     <section class="wrap section" style="padding-top: 36px; padding-bottom: 80px;">
       <!-- Breadcrumbs -->

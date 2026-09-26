@@ -148,13 +148,13 @@ export function liveHostFor(theme: Pick<Theme, 'slug' | 'liveUrl'>): string {
 
 export const DROP = {
   /**
-   * The all-access pass is the only price the pricing page quotes. Individual
-   * themes carry their own `price` on the Theme record and are quoted on their
-   * own cards and detail pages — never here.
+   * The all-access pass price. Launch price: $199 (Regular: $499 for first 100 customers).
    */
   allAccessPrice: 199,
-  /** Pass checkout is paused; every all-access CTA renders disabled. */
-  allAccessComingSoon: true
+  regularPrice: 499,
+  launchOfferLimit: 100,
+  /** Pass checkout is live! */
+  allAccessComingSoon: false
 } as const;
 
 /**

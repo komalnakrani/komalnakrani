@@ -11,10 +11,26 @@ const sections = docSections.map((section) => ({
     description: docArticles[item.slug]?.description ?? ''
   }))
 }));
+
+const docsBreadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Documentation', url: '/docs/' }
+];
+
+const docsItems = sections.flatMap((sec) =>
+  sec.items.map((item) => ({
+    name: item.title,
+    url: `/docs/${item.slug}/`,
+    description: item.description
+  }))
+);
 ---
 <Layout
   title="Documentation | Komal Nakrani"
   description="How to run, customise and deploy an Astro theme — setup, content collections, styling and going live."
+  type="category"
+  breadcrumbs={docsBreadcrumbs}
+  itemList={docsItems}
 >
   <main class="rise">
     <section class="wrap" style="padding: 72px 24px 0;">

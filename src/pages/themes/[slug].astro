@@ -37,11 +37,47 @@ const related = themes
 
 // The real routes this theme ships, from its own record.
 const pagesList = theme.pages ?? [];
-// liveUrl carries no trailing slash and every path starts with one, so join
-// them without letting a double or missing slash through.
 const pageUrl = (path: string) => `${liveUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+
+const themeBreadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Themes', url: '/themes/' },
+  { name: kind, url: `/categories/${theme.category}/` },
+  { name: name, url: `/themes/${theme.slug}/` }
+];
+
+const themeProduct = {
+  name: name,
+  description: theme.description || theme.tagline,
+  price: theme.price,
+  wasPrice: theme.wasPrice,
+  currency: 'USD',
+  image: hasPoster ? `/themes/${theme.slug}.webp` : '/og/default.jpg',
+  url: `https://komalnakrani.com/themes/${theme.slug}/`,
+  brand: 'Komal Nakrani',
+  category: kind,
+};
+
+const themeFaqs = [
+  {
+    q: `What is included with the ${name} theme?`,
+    a: `Full commercial source code access via private GitHub repository, ${pagesList.length || 'multiple'} page layouts, and lifetime free updates.`
+  },
+  {
+    q: `Can I use ${name} for commercial client projects?`,
+    a: `Yes, individual purchases include full commercial rights to build unlimited websites for clients or yourself.`
+  }
+];
 ---
-<Layout title={`${name} — ${kind.toLowerCase()} theme | Komal Nakrani`} description={theme.description} image={`/og/${theme.slug}.jpg`}>
+<Layout
+  title={`${name} — ${kind.toLowerCase()} theme | Komal Nakrani`}
+  description={theme.description}
+  image={`/og/${theme.slug}.jpg`}
+  type="product"
+  product={themeProduct}
+  breadcrumbs={themeBreadcrumbs}
+  faqs={themeFaqs}
+>
   <main class="rise">
     <!-- ========================== BRIEF ========================== -->
     <section class="wrap" style="padding: 32px 24px 0;">
