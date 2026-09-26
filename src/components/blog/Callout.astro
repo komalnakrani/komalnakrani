@@ -1,4 +1,6 @@
 ---
+import Icon from '../Icon.astro';
+
 interface Props {
   type?: 'info' | 'tip' | 'warning' | 'astro';
   title?: string;
@@ -6,14 +8,14 @@ interface Props {
 
 const { type = 'info', title } = Astro.props;
 
-const icons = {
-  info: '💡',
-  tip: '⚡',
-  warning: '⚠️',
-  astro: '🚀',
+const iconNames: Record<string, string> = {
+  info: 'info',
+  tip: 'zap',
+  warning: 'warning',
+  astro: 'rocket',
 };
 
-const labels = {
+const labels: Record<string, string> = {
   info: 'Note',
   tip: 'Pro Tip',
   warning: 'Important',
@@ -23,7 +25,9 @@ const labels = {
 
 <div class={`blog-callout blog-callout-${type}`}>
   <div class="callout-header">
-    <span class="callout-icon">{icons[type]}</span>
+    <span class="callout-icon">
+      <Icon name={iconNames[type]} size={18} />
+    </span>
     <strong class="callout-title">{title || labels[type]}</strong>
   </div>
   <div class="callout-body">
@@ -64,8 +68,21 @@ const labels = {
   }
 
   .callout-icon {
-    font-size: 18px;
-    line-height: 1;
+    display: flex;
+    align-items: center;
+    color: var(--ink-900, #14140F);
+  }
+
+  .blog-callout-tip .callout-icon {
+    color: var(--sage-deep, #64764F);
+  }
+
+  .blog-callout-warning .callout-icon {
+    color: var(--clay, #9A5B48);
+  }
+
+  .blog-callout-astro .callout-icon {
+    color: #ff5e00;
   }
 
   .callout-title {
