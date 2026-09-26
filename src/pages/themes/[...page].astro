@@ -12,7 +12,7 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
     ...themes.filter((t) => t.featured),
     ...themes.filter((t) => !t.featured)
   ];
-  return paginate(sortedThemes, { pageSize: 100 });
+  return paginate(sortedThemes, { pageSize: 50 });
 }
 
 interface Props {
@@ -45,7 +45,7 @@ const catalogThemes = page.data;
         <K idx="01">Theme Catalog</K>
         <h1 class="display" style="margin-top: 14px;">Production themes</h1>
         <p class="lead" style="margin-top: 14px; color: var(--ink-2); font-size: 17px; line-height: 1.6;">
-          Engineered for high-performing tech startups, agencies, and developers. Showing 100 themes per page.
+          Engineered for high-performing tech startups, agencies, and developers. Showing 50 themes per page.
         </p>
       </div>
 
