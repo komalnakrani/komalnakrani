@@ -113,6 +113,36 @@ try {
   ]);
   const animationDelay = Number(option('--delay', '15000'));
   await waitTimeout(animationDelay);
+
+  // Unhide preloader overlays, trigger scroll animations, and force opacity on animated hero elements
+  await command('Runtime.evaluate', {
+    expression: `(() => {
+      try {
+        const loaders = document.querySelectorAll('.preloader, .loader, #preloader, #loader, [class*="preloader"], [class*="loading-screen"], [id*="preloader"]');
+        loaders.forEach(el => { el.style.display = 'none'; el.style.opacity = '0'; });
+
+        window.scrollTo(0, 150);
+        window.scrollTo(0, 0);
+        window.dispatchEvent(new Event('scroll'));
+        window.dispatchEvent(new Event('resize'));
+
+        const allEls = document.querySelectorAll('header *, section *, main *, .hero *');
+        allEls.forEach(el => {
+          const style = window.getComputedStyle(el);
+          if (style.opacity === '0') {
+            el.style.opacity = '1';
+          }
+          if (style.visibility === 'hidden') {
+            el.style.visibility = 'visible';
+          }
+        });
+      } catch (e) {}
+    })()`,
+    awaitPromise: true
+  });
+
+  await waitTimeout(1000);
+
   const metrics = await command('Runtime.evaluate', {
     expression: `JSON.stringify({
       innerWidth,
