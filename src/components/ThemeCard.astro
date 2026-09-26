@@ -20,8 +20,11 @@ const was = theme.wasPrice;
 const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
 ---
 <article class="tcard">
+  <!-- Stretched link overlay covering the entire card, opening the theme detail page -->
+  <a href={`/themes/${theme.slug}/`} class="tcard-overlay-link" aria-label={`View details of ${name}`}></a>
+
   <!-- Accent-tinted frame holding a screenshot of the real site -->
-  <a class="tcard-thumb" href={`/preview/${theme.slug}/`} style={`background: linear-gradient(140deg, ${accent}26, ${accent}0d);`} aria-label={`Live preview of ${name}`}>
+  <div class="tcard-thumb" style={`background: linear-gradient(140deg, ${accent}26, ${accent}0d);`}>
     <div class="tcard-window">
       <div class="tcard-chrome">
         <div class="tcard-dot" style={`background: ${accent};`}></div>
@@ -55,7 +58,7 @@ const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
         </div>
       )}
     </div>
-  </a>
+  </div>
 
   <div class="tcard-body">
     <div class="tcard-head">
@@ -79,6 +82,7 @@ const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
 
 <style>
   .tcard {
+    position: relative;
     background: #ffffff;
     border: 1px solid var(--rule-3);
     border-radius: var(--r-lg);
@@ -91,6 +95,12 @@ const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
     border-color: var(--ink-200);
     box-shadow: var(--sh);
     transform: translateY(-3px);
+  }
+
+  .tcard-overlay-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
   }
 
   .tcard-thumb {
@@ -197,6 +207,8 @@ const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
     font-weight: 400;
     letter-spacing: -.02em;
     line-height: 1.25;
+    position: relative;
+    z-index: 2;
   }
   .tcard-name a { color: var(--ink); }
   .tcard-was { font-size: 12px; color: var(--ink-3); text-decoration: line-through; }
@@ -217,6 +229,8 @@ const hasShot = fs.existsSync(path.resolve(`public/themes/${theme.slug}.webp`));
   .tcard-stack { font-size: 12px; color: var(--ink-3); }
 
   .tcard-cta {
+    position: relative;
+    z-index: 2;
     background: var(--ink-900);
     color: var(--paper);
     padding: 10px 20px;
