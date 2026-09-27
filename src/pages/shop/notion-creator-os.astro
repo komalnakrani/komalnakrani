@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Shop', url: '/shop/' },
+  { name: 'Notion Creator OS', url: '/shop/notion-creator-os/' }
+];
+
+const productMeta = {
+  name: 'Notion Solopreneur & Creator OS',
+  description: 'All-in-one Notion business operating system for solopreneurs, Instagram creators, and digital template sellers.',
+  price: 47,
+  currency: 'USD',
+  image: '/images/blog/notion-creator-os-dashboard.jpg',
+  brand: 'Komal Nakrani',
+  category: 'Solopreneur Workspace'
+};
+---
+
+<Layout
+  title="Notion Solopreneur & Creator OS Dashboard | Komal Nakrani"
+  description="Run your digital product business without software fatigue. Content calendar, product launch pipeline, client CRM, and revenue tracker in Notion."
+  product={productMeta}
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px;">
+    <section class="product-hero">
+      <div class="product-info">
+        <span class="badge" style="background: var(--ink-900, #1A1A1A); color: #fff; padding: 6px 14px; font-weight: 700; border-radius: 6px; font-size: 12px;">SOLOPRENEUR WORKSPACE</span>
+        <h1 class="display" style="font-size: 40px; margin: 16px 0 12px;">Notion Creator OS Dashboard</h1>
+        <p style="font-size: 18px; color: var(--sage-deep, #2C4A3E); font-weight: 600; margin-bottom: 16px;">Run Your Digital Product Business Without Software Fatigue</p>
+        <p style="font-size: 16px; color: var(--ink-600, #555555); line-height: 1.6; margin-bottom: 24px;">
+          The ultimate digital business operating system. Replace 5 expensive SaaS subscriptions with a single relational Notion dashboard to organize content batching, product launches, client CRMs, and shop finances.
+        </p>
+
+        <div class="price-box">
+          <span class="price">$47 <small style="font-size: 14px; color: #777; font-weight: 400;">USD (One-time payment)</small></span>
+          <span class="guarantee">✓ Instant Duplicate Link • Lifetime Access • Free Updates</span>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <a href="https://gumroad.com" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 16px 32px; font-size: 18px; display: inline-block;">Get Notion Creator OS ($47) ➔</a>
+        </div>
+      </div>
+
+      <div class="product-preview">
+        <img src="/images/blog/notion-creator-os-dashboard.jpg" alt="Notion Creator OS Dashboard Preview" class="hero-img" />
+      </div>
+    </section>
+
+    <section class="features-section">
+      <h2 style="font-size: 32px; text-align: center; margin-bottom: 40px;">Included Databases & Workspaces</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>📅 Multi-Platform Content Pipeline</h3>
+          <p>Schedule Instagram carousels, Reels, LinkedIn posts, and email newsletters in one visual calendar.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🚀 Digital Product Launch Tracker</h3>
+          <p>From initial idea validation to sales page copywriting and checkout link delivery.</p>
+        </div>
+        <div class="feature-card">
+          <h3>👥 Client CRM & Project Portal</h3>
+          <p>Track 1:1 coaching clients, workshop registrants, call notes, and deliverables seamlessly.</p>
+        </div>
+        <div class="feature-card">
+          <h3>💰 Revenue & Bookkeeping Tracker</h3>
+          <p>Monitor daily template sales, subscription income, software expenses, and profit margins.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .product-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; }
+  .price-box { background: var(--paper-2, #F3F1EA); padding: 20px; border-radius: 12px; border: 1px solid var(--rule-2, #E4E0D2); }
+  .price { font-size: 36px; font-weight: 800; color: var(--ink-900, #1A1A1A); display: block; }
+  .guarantee { font-size: 13px; color: var(--sage-deep, #2C4A3E); font-weight: 600; margin-top: 6px; display: block; }
+  .hero-img { width: 100%; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.1); border: 1px solid var(--rule-2, #E4E0D2); }
+  .features-section { padding-top: 40px; border-top: 1px solid var(--rule-2, #E4E0D2); }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .feature-card { background: var(--paper-1, #FAF8F5); padding: 28px; border-radius: 14px; border: 1px solid var(--rule-2, #E4E0D2); }
+  .feature-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .feature-card p { font-size: 15px; color: var(--ink-600, #555555); line-height: 1.5; }
+  @media (max-width: 768px) { .product-hero { grid-template-columns: 1fr; } }
+</style>

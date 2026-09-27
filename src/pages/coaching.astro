@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'AI Coaching', url: '/coaching/' }
+];
+
+const faqs = [
+  {
+    q: 'Who is 1-on-1 AI Coaching for?',
+    a: 'It is designed specifically for primary & secondary classroom teachers, school leaders, female solopreneurs, and digital creators who want personalized, non-intimidating guidance on building custom AI workflows.'
+  },
+  {
+    q: 'How does the 60-minute session work?',
+    a: 'We meet live over Zoom. You share your biggest administrative bottlenecks or business goals, and together we configure your custom ChatGPT assistants, Notion databases, and automated workflows on the call.'
+  },
+  {
+    q: 'Will I get recordings and template copies?',
+    a: 'Yes! After your session, you will receive full Zoom call recordings, custom prompt templates created during the call, and personalized action steps.'
+  }
+];
+---
+
+<Layout
+  title="1-on-1 AI Coaching for Teachers & Creators | Komal Nakrani"
+  description="Book a 60-minute private AI coaching session with Komal Nakrani. Save 10+ hours a week with customized ChatGPT prompts, Notion systems, and educator workflows."
+  faqs={faqs}
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px;">
+    <section class="coaching-hero">
+      <div class="hero-info">
+        <span class="badge" style="background: var(--sage-deep, #2C4A3E); color: #fff; padding: 6px 14px; font-weight: 700; border-radius: 6px; font-size: 12px;">PRIVATE MENTORSHIP</span>
+        <h1 class="display" style="font-size: 42px; margin: 16px 0 12px;">1-on-1 AI Coaching for Educators & Solopreneurs</h1>
+        <p style="font-size: 20px; color: var(--sage-deep, #2C4A3E); font-weight: 600; margin-bottom: 16px;">Transform Your Admin Bottlenecks into Automated Systems in 60 Minutes</p>
+        <p style="font-size: 16px; color: var(--ink-600, #555555); line-height: 1.6; margin-bottom: 28px;">
+          Stop trying to figure out AI by trial and error. Work directly with Komal Nakrani — former primary school teacher turned AI coach — to build tailor-made ChatGPT assistants, Notion Teacher OS dashboards, and content batching workflows.
+        </p>
+
+        <div class="booking-card">
+          <div class="booking-header">
+            <div>
+              <h3 style="font-size: 22px; margin: 0; color: #1A1A1A;">60-Minute Intensive Session</h3>
+              <p style="font-size: 14px; color: #666; margin: 4px 0 0;">Includes Zoom recording + Custom Prompt Stack</p>
+            </div>
+            <div style="font-size: 32px; font-weight: 800; color: var(--sage-deep, #2C4A3E);">$149</div>
+          </div>
+          <div style="margin-top: 20px;">
+            <a href="/contact/" class="btn btn-primary" style="width: 100%; text-align: center; display: block; padding: 14px 24px; font-size: 16px;">Book Your Coaching Session ➔</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <img src="/images/blog/ai-coaching-for-teachers.jpg" alt="AI Coaching for Teachers" class="hero-img" />
+      </div>
+    </section>
+
+    <!-- Session Breakdown -->
+    <section class="session-breakdown" style="margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--rule-2, #E4E0D2);">
+      <h2 style="font-size: 32px; text-align: center; margin-bottom: 48px;">What We Build Together in 60 Minutes</h2>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>Workflow Diagnostic</h3>
+          <p>We analyze your current weekly routine, identifying the top administrative tasks draining your energy.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Custom GPT & Prompt Stack</h3>
+          <p>We build and test personalized ChatGPT and Claude prompts tuned specifically for your subject or business niche.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Workspace Integration</h3>
+          <p>We configure your Notion dashboard or Canva templates so everything runs in one calm, organized hub.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h3>30-Day Execution Roadmap</h3>
+          <p>You leave with a clear, step-by-step checklist to save 10 to 15 hours every single week moving forward.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .coaching-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .booking-card { background: var(--paper-1, #FAF8F5); border: 2px solid var(--sage-deep, #2C4A3E); border-radius: 16px; padding: 28px; box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+  .booking-header { display: flex; justify-content: space-between; align-items: center; }
+  .hero-img { width: 100%; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.1); border: 1px solid var(--rule-2, #E4E0D2); }
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+  .step-card { background: var(--paper-1, #FAF8F5); padding: 28px; border-radius: 14px; border: 1px solid var(--rule-2, #E4E0D2); position: relative; }
+  .step-num { font-size: 14px; font-weight: 800; color: var(--sage-deep, #2C4A3E); background: var(--paper-2, #F3F1EA); padding: 4px 10px; border-radius: 6px; display: inline-block; margin-bottom: 12px; }
+  .step-card h3 { font-size: 20px; margin-bottom: 8px; }
+  .step-card p { font-size: 14px; color: var(--ink-600, #555555); line-height: 1.5; }
+  @media (max-width: 768px) { .coaching-hero { grid-template-columns: 1fr; } }
+</style>

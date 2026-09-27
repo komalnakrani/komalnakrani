@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Shop', url: '/shop/' },
+  { name: 'Canva Instagram Themes', url: '/shop/canva-instagram-themes/' }
+];
+
+const productMeta = {
+  name: 'Aesthetic Canva Instagram Theme Kits',
+  description: 'Plug-and-play Canva carousel swipe templates, reel covers, and story highlights for female coaches and digital creators.',
+  price: 37,
+  currency: 'USD',
+  image: '/images/blog/canva-instagram-templates-for-coaches.jpg',
+  brand: 'Komal Nakrani',
+  category: 'Canva Templates'
+};
+---
+
+<Layout
+  title="Aesthetic Canva Instagram Theme Kits | Komal Nakrani"
+  description="Turn feed followers into paying clients with high-converting Canva carousel swipe posts, story highlight covers, and digital product mockups."
+  product={productMeta}
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px;">
+    <section class="product-hero">
+      <div class="product-info">
+        <span class="badge" style="background: #8B5E67; color: #fff; padding: 6px 14px; font-weight: 700; border-radius: 6px; font-size: 12px;">CANVA TEMPLATES</span>
+        <h1 class="display" style="font-size: 40px; margin: 16px 0 12px;">Aesthetic Canva Instagram Theme Kits</h1>
+        <p style="font-size: 18px; color: #8B5E67; font-weight: 600; margin-bottom: 16px;">Turn Feed Followers into Paying Digital Clients</p>
+        <p style="font-size: 16px; color: var(--ink-600, #555555); line-height: 1.6; margin-bottom: 24px;">
+          Batch 30 days of stunning visual content in 1 hour. Designed for female solopreneurs, educators, and coaches who want a calm, cohesive Instagram brand identity without paying high graphic designer fees.
+        </p>
+
+        <div class="price-box">
+          <span class="price">$37 <small style="font-size: 14px; color: #777; font-weight: 400;">USD (One-time payment)</small></span>
+          <span class="guarantee">✓ Works on Free & Pro Canva Accounts • Fully Editable</span>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <a href="https://gumroad.com" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 16px 32px; font-size: 18px; display: inline-block;">Get Canva Theme Kit ($37) ➔</a>
+        </div>
+      </div>
+
+      <div class="product-preview">
+        <img src="/images/blog/canva-instagram-templates-for-coaches.jpg" alt="Canva Theme Kit Preview" class="hero-img" />
+      </div>
+    </section>
+
+    <section class="features-section">
+      <h2 style="font-size: 32px; text-align: center; margin-bottom: 40px;">What Included in the Canva Theme Kit?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>🎠 50+ Carousel Swipe Post Slides</h3>
+          <p>Educational infographic layouts, text quote carousels, and multi-slide tutorials optimized for saves and shares.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🎬 20+ Aesthetic Reel Cover Templates</h3>
+          <p>Cohesive video covers and titles that keep your profile grid looking clean and intentional.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📱 Story Highlight & Lead Magnet Covers</h3>
+          <p>Branded highlight icons and opt-in freebie mockups that drive DMs and email signups.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🎨 Brand Kit Setup & Typography Guide</h3>
+          <p>Warm neutral color palettes, font pairing rules, and step-by-step Canva customization tutorial.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .product-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; }
+  .price-box { background: var(--paper-2, #F3F1EA); padding: 20px; border-radius: 12px; border: 1px solid var(--rule-2, #E4E0D2); }
+  .price { font-size: 36px; font-weight: 800; color: var(--ink-900, #1A1A1A); display: block; }
+  .guarantee { font-size: 13px; color: var(--sage-deep, #2C4A3E); font-weight: 600; margin-top: 6px; display: block; }
+  .hero-img { width: 100%; border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.1); border: 1px solid var(--rule-2, #E4E0D2); }
+  .features-section { padding-top: 40px; border-top: 1px solid var(--rule-2, #E4E0D2); }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .feature-card { background: var(--paper-1, #FAF8F5); padding: 28px; border-radius: 14px; border: 1px solid var(--rule-2, #E4E0D2); }
+  .feature-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .feature-card p { font-size: 15px; color: var(--ink-600, #555555); line-height: 1.5; }
+  @media (max-width: 768px) { .product-hero { grid-template-columns: 1fr; } }
+</style>

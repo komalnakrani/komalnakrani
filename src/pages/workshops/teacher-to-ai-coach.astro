@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Workshops', url: '/shop/' },
+  { name: 'Teacher to AI Coach', url: '/workshops/teacher-to-ai-coach/' }
+];
+---
+
+<Layout
+  title="Teacher to AI Coach Masterclass | Komal Nakrani"
+  description="Learn how to package your teaching expertise into high-ticket AI consulting, Notion templates, and digital offers online."
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px;">
+    <section style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <span class="badge" style="background: var(--sage-deep, #2C4A3E); color: #fff; padding: 6px 14px; font-weight: 700; border-radius: 6px; font-size: 12px;">LIVE WORKSHOP & MASTERCLASS</span>
+      <h1 class="display" style="font-size: 42px; margin: 16px 0 16px;">Teacher-to-AI-Coach Masterclass</h1>
+      <p style="font-size: 18px; color: var(--ink-600, #555555); line-height: 1.6; margin-bottom: 32px;">
+        Monetize your pedagogical skills online. Learn the exact step-by-step roadmap to transition from classroom educator to 6-figure AI coach, digital product creator, and online consultant.
+      </p>
+
+      <div style="background: var(--paper-1, #FAF8F5); border: 2px solid var(--sage-deep, #2C4A3E); padding: 36px; border-radius: 16px; margin-bottom: 40px;">
+        <h3 style="font-size: 24px; margin-bottom: 12px;">Next Live Masterclass Cohort</h3>
+        <p style="font-size: 16px; color: #666; margin-bottom: 20px;">Includes 3-Hour Intensive Workshop + Notion Solopreneur OS + AI Consulting Templates</p>
+        <div style="font-size: 36px; font-weight: 800; color: var(--sage-deep, #2C4A3E); margin-bottom: 24px;">$199 USD</div>
+        <a href="/contact/" class="btn btn-primary" style="padding: 16px 36px; font-size: 18px;">Reserve Your Masterclass Seat ➔</a>
+      </div>
+    </section>
+  </main>
+</Layout>

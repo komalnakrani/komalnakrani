@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about/' }
+];
+---
+
+<Layout
+  title="About Komal Nakrani — Primary Teacher turned AI Coach"
+  description="Learn about Komal Nakrani's journey from primary school teacher drowning in paperwork to AI coach, consultant, Notion creator, and partner to AI author Alpesh Nakrani."
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px; max-width: 860px;">
+    <header style="margin-bottom: 40px;">
+      <span class="badge" style="background: var(--sage-deep, #2C4A3E); color: #fff; padding: 6px 14px; font-weight: 700; border-radius: 6px; font-size: 12px;">OUR STORY</span>
+      <h1 class="display" style="font-size: 42px; margin: 16px 0 16px; color: var(--ink-900, #1A1A1A);">Hi, I'm Komal Nakrani</h1>
+      <p style="font-size: 20px; color: var(--sage-deep, #2C4A3E); font-weight: 600; line-height: 1.5;">
+        Former Primary School Teacher turned AI Coach, Notion Creator, & Digital Workflows Consultant.
+      </p>
+    </header>
+
+    <div class="prose" style="font-size: 17px; line-height: 1.7; color: var(--ink-800, #333333);">
+      <p>
+        For years, I spent my Sunday evenings sitting at my kitchen table surrounded by stacks of marking folders, printouts of curriculum standards, and messy spreadsheets. As much as I loved teaching, the sheer volume of administrative paperwork was overwhelming.
+      </p>
+
+      <p>
+        The turning point came when I discovered how to harness modern digital tools — structured Notion relational databases, aesthetic Canva templates, and precise ChatGPT/Claude prompt engineering — to streamline my workload. What used to take me 15 hours every weekend was suddenly taking less than 90 minutes.
+      </p>
+
+      <h2 style="font-size: 28px; margin-top: 40px; color: var(--ink-900, #1A1A1A);">The Tech & Educator Synergy</h2>
+      <p>
+        Together with my husband <strong>Alpesh Nakrani</strong> (<a href="https://alpeshnakrani.com" target="_blank" rel="noopener">alpeshnakrani.com</a>) — VP of Growth and author on AI-Native Software Engineering — we bridge the gap between deep AI technical capabilities and real-world everyday productivity for non-technical creators.
+      </p>
+
+      <blockquote style="background: var(--paper-2, #F3F1EA); border-left: 4px solid var(--sage-deep, #2C4A3E); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 32px 0;">
+        "While Alpesh looks under the hood at AI architectures and enterprise systems, I focus on how real people — teachers, solopreneurs, and busy creators — use AI to reclaim their time and build calm, profitable businesses."
+      </blockquote>
+
+      <h2 style="font-size: 28px; margin-top: 40px; color: var(--ink-900, #1A1A1A);">Our Mission</h2>
+      <p>
+        Our mission is simple: to empower 10,000+ educators, coaches, and female entrepreneurs to replace technological overwhelm with calm, repeatable systems.
+      </p>
+
+      <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="/shop/" class="btn btn-primary">Browse Digital Shop ➔</a>
+        <a href="/coaching/" class="btn btn-secondary">Explore 1-on-1 AI Coaching ➔</a>
+      </div>
+    </div>
+  </main>
+</Layout>

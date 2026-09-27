@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: '/shop/' },
+  { name: 'Workflow Consulting', url: '/services/workflow-consulting/' }
+];
+---
+
+<Layout
+  title="Custom AI Workflow Consulting for Small Business | Komal Nakrani"
+  description="Tailored AI prompt engineering, team workflow automation, and custom Notion system builds for small businesses and creators."
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px;">
+    <section style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <span class="badge" style="background: var(--ink-900, #1A1A1A); color: #fff; padding: 6px 14px; font-weight: 700; border-radius: 6px; font-size: 12px;">SMALL BUSINESS CONSULTING</span>
+      <h1 class="display" style="font-size: 42px; margin: 16px 0 16px;">Custom AI Workflow Consulting</h1>
+      <p style="font-size: 18px; color: var(--ink-600, #555555); line-height: 1.6; margin-bottom: 32px;">
+        Tailored AI prompt stacks, automated team content pipelines, and custom Notion business architecture designed by Komal & Alpesh Nakrani.
+      </p>
+
+      <div style="background: var(--paper-1, #FAF8F5); border: 2px solid var(--ink-900, #1A1A1A); padding: 36px; border-radius: 16px; margin-bottom: 40px;">
+        <h3 style="font-size: 24px; margin-bottom: 12px;">Done-With-You Workflow Build</h3>
+        <p style="font-size: 16px; color: #666; margin-bottom: 20px;">2x Strategy Calls + Custom Brand Voice Prompt File + Custom Notion Hub Build</p>
+        <div style="font-size: 36px; font-weight: 800; color: var(--ink-900, #1A1A1A); margin-bottom: 24px;">$299 USD</div>
+        <a href="/contact/" class="btn btn-primary" style="padding: 16px 36px; font-size: 18px;">Book Discovery Call ➔</a>
+      </div>
+    </section>
+  </main>
+</Layout>

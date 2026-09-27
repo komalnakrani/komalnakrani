@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Contact', url: '/contact/' }
+];
+---
+
+<Layout
+  title="Contact & Consultation Requests | Komal Nakrani"
+  description="Get in touch with Komal Nakrani for 1-on-1 AI coaching inquiries, custom workflow consulting, speaking engagements, or digital shop support."
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px; max-width: 720px;">
+    <header style="text-align: center; margin-bottom: 48px;">
+      <span class="badge" style="background: var(--sage-deep, #2C4A3E); color: #fff; padding: 6px 14px; font-weight: 700; border-radius: 6px; font-size: 12px;">GET IN TOUCH</span>
+      <h1 class="display" style="font-size: 40px; margin: 16px 0 12px; color: var(--ink-900, #1A1A1A);">Let's Connect</h1>
+      <p style="font-size: 17px; color: var(--ink-600, #555555); line-height: 1.6;">
+        Have a question about our Notion templates, Canva theme kits, or private AI coaching? Drop a message below and we will get back to you within 24 hours.
+      </p>
+    </header>
+
+    <div class="contact-box" style="background: var(--paper-1, #FAF8F5); padding: 40px; border-radius: 16px; border: 1px solid var(--rule-2, #E4E0D2);">
+      <form action="https://formspree.io/f/placeholder" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <div>
+          <label style="display: block; font-weight: 600; margin-bottom: 6px; color: #1A1A1A;">Your Full Name</label>
+          <input type="text" name="name" required placeholder="e.g. Sarah Jenkins" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--rule-2, #E4E0D2); font-size: 16px;" />
+        </div>
+
+        <div>
+          <label style="display: block; font-weight: 600; margin-bottom: 6px; color: #1A1A1A;">Email Address</label>
+          <input type="email" name="email" required placeholder="sarah@example.com" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--rule-2, #E4E0D2); font-size: 16px;" />
+        </div>
+
+        <div>
+          <label style="display: block; font-weight: 600; margin-bottom: 6px; color: #1A1A1A;">What can we help you with?</label>
+          <select name="inquiry_type" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--rule-2, #E4E0D2); font-size: 16px;">
+            <option value="coaching">1-on-1 AI Coaching Session</option>
+            <option value="templates">Notion Templates & Canva Kits Support</option>
+            <option value="consulting">Custom Team AI Workflow Consulting</option>
+            <option value="speaking">Workshop / Speaking Inquiry</option>
+            <option value="other">Other Inquiry</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="display: block; font-weight: 600; margin-bottom: 6px; color: #1A1A1A;">Message</label>
+          <textarea name="message" rows="5" required placeholder="Tell us about your classroom or business goals..." style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--rule-2, #E4E0D2); font-size: 16px;"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="padding: 14px 28px; font-size: 16px; width: 100%;">Send Message ➔</button>
+      </form>
+    </div>
+  </main>
+</Layout>

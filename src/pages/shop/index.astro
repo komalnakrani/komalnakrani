@@ -1,0 +1,174 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Digital Shop', url: '/shop/' }
+];
+
+const products = [
+  {
+    slug: 'notion-teacher-os',
+    title: 'Notion Teacher OS',
+    subtitle: 'The Ultimate All-in-One Dashboard for Educators',
+    description: 'Consolidate lesson planning, automated grade tracking, student progress logs, and embedded AI prompt helpers into one calm, aesthetic workspace.',
+    price: '$47',
+    badge: 'BESTSELLER',
+    category: 'Notion Workspace',
+    link: '/shop/notion-teacher-os/'
+  },
+  {
+    slug: 'notion-creator-os',
+    title: 'Notion Solopreneur & Creator OS',
+    subtitle: 'Run Your Digital Business Without Software Fatigue',
+    description: 'Multi-platform social media content calendar, digital product launch pipeline, client CRM, and revenue tracker designed for solo creators.',
+    price: '$47',
+    badge: 'POPULAR',
+    category: 'Notion Workspace',
+    link: '/shop/notion-creator-os/'
+  },
+  {
+    slug: 'canva-instagram-themes',
+    title: 'Canva Instagram Theme Kits',
+    subtitle: 'Aesthetic Carousel Swipe & Reel Cover Templates',
+    description: 'Turn feed followers into paying clients with high-converting Instagram carousel swipe posts, story highlights, and digital product mockups.',
+    price: '$37',
+    badge: 'CREATOR FAVORITE',
+    category: 'Canva Templates',
+    link: '/shop/canva-instagram-themes/'
+  },
+  {
+    slug: 'ai-prompt-vault',
+    title: 'ChatGPT & Claude Prompt Vault',
+    subtitle: '200+ Field-Tested AI Prompts for Educators',
+    description: 'Copy-and-paste prompt library for instant lesson planning, differentiated instruction, report card comment generation, and parent emails.',
+    price: '$27',
+    badge: 'ESSENTIAL',
+    category: 'Prompt Engineering',
+    link: '/shop/ai-prompt-vault/'
+  }
+];
+---
+
+<Layout
+  title="Digital Shop — Notion Templates & Canva Kits | Komal Nakrani"
+  description="Explore our curated catalog of aesthetic Notion dashboards, Canva Instagram theme kits, and ChatGPT prompt vaults built for teachers, coaches, and creators."
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px;">
+    <header style="text-align: center; max-width: 680px; margin: 0 auto 54px;">
+      <span class="badge" style="font-size: 12px; letter-spacing: 0.1em; padding: 6px 14px; background: var(--paper-2, #F3F1EA); border-radius: 20px; font-weight: 600;">KOMAL NAKRANI DIGITAL SHOP</span>
+      <h1 class="display" style="font-size: 42px; margin: 16px 0 12px; color: var(--ink-900, #1A1A1A);">Calm Systems for Busy Educators & Creators</h1>
+      <p style="font-size: 18px; color: var(--ink-600, #555555); line-height: 1.6;">
+        High-performing Notion dashboards, aesthetic Canva Instagram templates, and field-tested AI prompt vaults engineered to save 10+ hours every week.
+      </p>
+    </header>
+
+    <div class="shop-grid">
+      {products.map((p) => (
+        <article class="shop-card">
+          <div class="card-header">
+            <span class="card-badge">{p.badge}</span>
+            <span class="card-price">{p.price}</span>
+          </div>
+          <h2 class="card-title">{p.title}</h2>
+          <p class="card-subtitle">{p.subtitle}</p>
+          <p class="card-desc">{p.description}</p>
+          <div class="card-footer">
+            <a href={p.link} class="btn btn-primary">View Product Details ➔</a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- 1:1 Coaching Banner -->
+    <section class="coaching-banner">
+      <div class="coaching-content">
+        <span class="badge" style="background: rgba(255,255,255,0.2); color: #fff;">1-ON-1 MENTORSHIP</span>
+        <h2 style="font-size: 28px; margin: 12px 0 8px;">Need Personalized AI & Workflow Coaching?</h2>
+        <p style="opacity: 0.9; font-size: 16px; margin-bottom: 20px;">
+          Book a 60-minute private strategy session with Komal Nakrani to build custom ChatGPT prompts, Notion systems, and AI workflows tailored to your classroom or business.
+        </p>
+        <a href="/coaching/" class="btn btn-secondary" style="background: #fff; color: #1A1A1A; border: none;">Book 1-on-1 AI Coaching ➔</a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+  .shop-card {
+    background: var(--paper-1, #FAF8F5);
+    border: 1px solid var(--rule-2, #E4E0D2);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .shop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .card-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    background: var(--sage-deep, #2C4A3E);
+    color: #fff;
+    border-radius: 6px;
+  }
+  .card-price {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--ink-900, #1A1A1A);
+  }
+  .card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink-900, #1A1A1A);
+  }
+  .card-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sage-deep, #2C4A3E);
+    margin-bottom: 14px;
+  }
+  .card-desc {
+    font-size: 15px;
+    color: var(--ink-600, #555555);
+    line-height: 1.5;
+    margin-bottom: 24px;
+    flex-grow: 1;
+  }
+  .card-footer .btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 12px 20px;
+  }
+  .coaching-banner {
+    background: linear-gradient(135deg, #2C4A3E 0%, #1E332B 100%);
+    color: #fff;
+    border-radius: 20px;
+    padding: 48px;
+    box-shadow: 0 12px 32px rgba(44, 74, 62, 0.2);
+  }
+  .coaching-content {
+    max-width: 640px;
+  }
+</style>

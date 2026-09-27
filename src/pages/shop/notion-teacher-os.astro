@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Shop', url: '/shop/' },
+  { name: 'Notion Teacher OS', url: '/shop/notion-teacher-os/' }
+];
+
+const faqs = [
+  {
+    q: 'Do I need a paid Notion subscription to use Teacher OS?',
+    a: 'No! Notion Teacher OS works 100% on free Notion accounts. Educators can also claim Notion Plus for free using an official school email address.'
+  },
+  {
+    q: 'Is it hard to set up?',
+    a: 'Not at all. You will receive a 1-click duplicate link that imports the entire pre-structured dashboard into your Notion workspace in under 10 seconds, along with a 15-minute video walkthrough.'
+  },
+  {
+    q: 'Does it include embedded AI prompts?',
+    a: 'Yes! Every database view includes embedded ChatGPT and Claude prompt blocks designed specifically for primary and secondary school lesson planning, differentiation, and parent communication.'
+  }
+];
+
+const productMeta = {
+  name: 'Notion Teacher OS Dashboard',
+  description: 'The ultimate all-in-one Notion workspace for primary and secondary teachers. Includes lesson plan database, automated gradebook, student logs, and AI prompts.',
+  price: 47,
+  currency: 'USD',
+  image: '/images/blog/notion-teacher-os-guide.jpg',
+  brand: 'Komal Nakrani',
+  category: 'Educator Workspace'
+};
+---
+
+<Layout
+  title="Notion Teacher OS Dashboard — All-in-One Educator System | Komal Nakrani"
+  description="Reclaim 10+ hours every week with Notion Teacher OS. The ultimate Notion template for primary & secondary teachers featuring lesson planning, automated gradebook, and AI prompts."
+  faqs={faqs}
+  product={productMeta}
+  breadcrumbs={breadcrumbs}
+>
+  <main class="wrap" style="padding: 64px 24px 100px;">
+    <!-- Hero Section -->
+    <section class="product-hero">
+      <div class="product-info">
+        <span class="badge" style="background: var(--sage-deep, #2C4A3E); color: #fff; padding: 6px 14px; font-weight: 700; border-radius: 6px; font-size: 12px; letter-spacing: 0.08em;">NOTION TEMPLATE FOR TEACHERS</span>
+        <h1 class="display" style="font-size: 40px; margin: 16px 0 12px; color: var(--ink-900, #1A1A1A);">Notion Teacher OS Dashboard</h1>
+        <p style="font-size: 18px; color: var(--sage-deep, #2C4A3E); font-weight: 600; margin-bottom: 16px;">The Ultimate All-in-One Workspace for Primary & Secondary Educators</p>
+        <p style="font-size: 16px; color: var(--ink-600, #555555); line-height: 1.6; margin-bottom: 24px;">
+          Eliminate Sunday night admin anxiety. Consolidate paper planners, messy grade spreadsheets, student progress notes, and lesson plans into one calm, drag-and-drop dashboard.
+        </p>
+
+        <div class="price-box">
+          <span class="price">$47 <small style="font-size: 14px; color: #777; font-weight: 400;">USD (One-time payment)</small></span>
+          <span class="guarantee">✓ Instant Duplicate Link • Lifetime Access • Free Updates</span>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <a href="https://gumroad.com" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 16px 32px; font-size: 18px; display: inline-block;">Get Notion Teacher OS Now ($47) ➔</a>
+        </div>
+      </div>
+
+      <div class="product-preview">
+        <img src="/images/blog/notion-teacher-os-guide.jpg" alt="Notion Teacher OS Dashboard Preview" class="hero-img" />
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <h2 style="font-size: 32px; text-align: center; margin-bottom: 40px;">What Inside the Teacher OS Workspace?</h2>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>📚 Differentiated Lesson Plan Database</h3>
+          <p>Organize units by subject, curriculum standard, learning objective, and differentiated student groupings with custom tag filters.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📊 Automated Student Gradebook & Tracker</h3>
+          <p>Calculates student percentages, performance averages, and assessment milestones automatically using built-in Notion formulas.</p>
+        </div>
+        <div class="feature-card">
+          <h3>📝 Parent Communication & IEP Log</h3>
+          <p>Document parent emails, phone calls, IEP meeting notes, and behavioral accommodations in one secure, searchable database.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🤖 Embedded ChatGPT & Claude Prompt Stack</h3>
+          <p>Copy-and-paste prompt blocks right inside your lesson templates to generate differentiated worksheets and rubrics in 30 seconds.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .product-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  .price-box {
+    background: var(--paper-2, #F3F1EA);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--rule-2, #E4E0D2);
+  }
+  .price {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--ink-900, #1A1A1A);
+    display: block;
+  }
+  .guarantee {
+    font-size: 13px;
+    color: var(--sage-deep, #2C4A3E);
+    font-weight: 600;
+    margin-top: 6px;
+    display: block;
+  }
+  .hero-img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    border: 1px solid var(--rule-2, #E4E0D2);
+  }
+  .features-section {
+    padding-top: 40px;
+    border-top: 1px solid var(--rule-2, #E4E0D2);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .feature-card {
+    background: var(--paper-1, #FAF8F5);
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid var(--rule-2, #E4E0D2);
+  }
+  .feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .feature-card p {
+    font-size: 15px;
+    color: var(--ink-600, #555555);
+    line-height: 1.5;
+  }
+  @media (max-width: 768px) {
+    .product-hero {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
